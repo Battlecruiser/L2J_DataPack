@@ -237,6 +237,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="GHOST_STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -252,7 +253,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalVisualEffect="dancestun" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5013" levels="1" name="Frintezza Ghost Drain">
@@ -331,6 +332,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="FLOATING_ROOT" />
 		<set name="activateRate" val="80" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -348,7 +350,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Paralyze" abnormalVisualEffect="floatroot" />
+			<effect name="Paralyze" />
 		</for>
 	</skill>
 	<skill id="5017" levels="1" name="Frintezza's Daemon Morph">
@@ -357,6 +359,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="BIG_BODY" />
+		<set name="abnormalVisualEffect" val="BIG_BODY" />
 		<set name="activateRate" val="0" />
 		<set name="coolTime" val="1000" />
 		<set name="effectPoint" val="100" />
@@ -461,6 +464,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
@@ -699,6 +703,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -707,7 +712,7 @@
 		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ImmobileBuff" abnormalVisualEffect="invulnerable">
+			<effect name="ImmobileBuff">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<add order="0x40" stat="mDef" val="#mDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -1222,6 +1227,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SILENCE_PHYSICAL" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="0" />
 		<set name="blowChance" val="20" />
 		<set name="castRange" val="40" />
@@ -1262,6 +1268,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1315,6 +1322,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ANESTHESIA" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="20" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
@@ -1331,6 +1339,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="CRITICAL_POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -1349,6 +1358,7 @@
 		<table name="#pAtk"> 1.9 2.8 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<table name="#pDef"> 1 2.8 </table>
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
@@ -1401,6 +1411,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="90" />
 		<set name="affectRange" val="400" />
 		<set name="basicProperty" val="MEN" />
@@ -1506,9 +1517,11 @@
 	<skill id="5098" levels="2" name="Capture Penalty">
 		<!-- TODO: Implement me! -->
 		<table name="#abnormalLvls"> 1 2 </table>
+		<table name="#abnormalVisualEffects"> SEIZURE1 SEIZURE2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SEIZURE_PENALTY" />
+		<set name="abnormalVisualEffect" val="#abnormalVisualEffects" />
 		<set name="effectPoint" val="566" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />

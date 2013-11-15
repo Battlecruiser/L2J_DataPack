@@ -10,6 +10,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -53,6 +54,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="900" />
@@ -173,6 +175,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="35" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
@@ -193,7 +196,7 @@
 		<set name="targetType" val="AREA_CORPSE_MOB" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 			<effect name="ConsumeBody" />
 		</for>
 	</skill>
@@ -307,6 +310,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
@@ -393,6 +397,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0110" />
@@ -407,28 +412,28 @@
 		<enchant2 name="reuseDelay" val="#ench2reuseDelay" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="ImmobileBuff" abnormalVisualEffect="invulnerable">
+			<effect name="ImmobileBuff">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<add order="0x40" stat="mDef" val="#mDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="ImmobileBuff" abnormalVisualEffect="invulnerable">
+			<effect name="ImmobileBuff">
 				<add order="0x40" stat="pDef" val="#enchpDef" />
 				<add order="0x40" stat="mDef" val="#enchmDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="ImmobileBuff" abnormalVisualEffect="invulnerable">
+			<effect name="ImmobileBuff">
 				<add order="0x40" stat="pDef" val="#enchpDef" />
 				<add order="0x40" stat="mDef" val="#enchmDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Buff" abnormalVisualEffect="invulnerable">
+			<effect name="Buff">
 				<add order="0x40" stat="pDef" val="#enchpDef" />
 				<add order="0x40" stat="mDef" val="#enchmDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -636,6 +641,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -834,6 +840,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
@@ -853,7 +860,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="130" levels="2" name="Thrill Fight" enchantGroup1="1">
@@ -1479,6 +1486,7 @@
 		</for>
 	</skill>
 	<skill id="196" levels="1" name="Holy Blade">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="icon" val="icon.skill0196" />
 		<set name="magicLvl" val="43" />
@@ -1495,6 +1503,7 @@
 		<table name="#darkRes"> 7 10 </table>
 		<table name="#magicLvl"> 40 46 </table>
 		<table name="#mpConsume"> 7 9 </table>
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill0197" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />

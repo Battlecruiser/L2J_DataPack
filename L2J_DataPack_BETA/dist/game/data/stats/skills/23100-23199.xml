@@ -620,6 +620,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="icon" val="icon.skill1086" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -680,6 +681,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -731,6 +733,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="icon" val="icon.skill4443" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -825,6 +828,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="activateRate" val="0" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -841,7 +845,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Invincible" special="invincible" />
+			<effect name="Invincible" />
 			<effect name="CpHealPercent" val="100" />
 			<effect name="HealPercent" val="100" />
 			<effect name="ManaHealPercent" val="100" />
@@ -885,6 +889,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="HIDE" />
+		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -899,6 +904,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="HIDE" />
+		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill0922" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -913,6 +919,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="STEALTH" />
+		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -927,6 +934,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="STEALTH" />
+		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill0411" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -944,14 +952,14 @@
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="600" />
-		<!-- <set name="hitTime" val="500" /> -->
+		<set name="hitTime" val="500" />
 		<set name="icon" val="BranchSys2.icon.br_vitality_day_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>
@@ -960,7 +968,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="600" />
-		<!-- <set name="hitTime" val="500" /> -->
+		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />

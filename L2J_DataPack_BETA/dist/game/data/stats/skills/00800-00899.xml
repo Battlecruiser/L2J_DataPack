@@ -113,6 +113,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -731,6 +732,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="DARK_SEED" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -752,7 +754,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="ManaDamOverTime" ticks="3" val="#mdot" abnormalVisualEffect="bleed" />
+			<effect name="ManaDamOverTime" ticks="3" val="#mdot" />
 			<effect name="ChanceSkillTrigger" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -781,6 +783,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="1000" />
@@ -792,7 +795,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Invincible" special="invincible" />
+			<effect name="Invincible" />
 		</for>
 	</skill>
 	<skill id="838" levels="1" name="Switch Stance">
@@ -1534,6 +1537,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DISARM" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="STR" />
 		<set name="castRange" val="40" />
@@ -1551,7 +1555,7 @@
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Disarm" abnormalVisualEffect="bleed">
+			<effect name="Disarm">
 				<mul order="0x30" stat="pAtk" val="0.6" />
 			</effect>
 		</for>
@@ -1584,6 +1588,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="40" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -1611,6 +1616,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
 		<set name="effectPoint" val="438" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0110" />
@@ -1620,7 +1626,7 @@
 		<set name="reuseDelay" val="900000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ImmobileBuff" abnormalVisualEffect="invulnerable">
+			<effect name="ImmobileBuff">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -1681,6 +1687,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
@@ -1752,7 +1759,7 @@
 		<for>
 			<effect self="1" name="Blink" />
 			<effect name="PhysicalAttack" />
-			<effect name="Stun" special="airstun" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="886" levels="11" name="Air Shock Bomb">
@@ -1764,6 +1771,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="AIR_BATTLE_SLOW" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
@@ -1782,7 +1790,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="Stun" special="airstun" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="887" levels="11" name="Sky Clutch">
@@ -1794,6 +1802,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="AIR_BATTLE_ROOT" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="900" />
@@ -1813,7 +1822,7 @@
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="Root" special="airroot" />
+			<effect name="Root" />
 		</for>
 	</skill>
 	<skill id="888" levels="11" name="Energy Storm">

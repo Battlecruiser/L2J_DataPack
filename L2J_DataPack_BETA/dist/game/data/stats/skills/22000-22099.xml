@@ -35,6 +35,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys.icon.etc_kimchi_power_i00" />
@@ -62,6 +63,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BR_EVENT_BUF2" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys.icon.etc_ginseng_recovery_i00" />
@@ -71,7 +73,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -545,6 +547,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="abnormalVisualEffect" val="BR_AFRO_NORMAL" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
@@ -557,7 +560,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="Buff" event="afrobaguette1">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
 			</effect>
 		</for>
@@ -567,6 +570,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="abnormalVisualEffect" val="BR_AFRO_GOLD" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys.icon.br_herb_of_cream_i00" />
@@ -579,7 +583,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="Buff" event="afrobaguette2" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -589,6 +593,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="abnormalVisualEffect" val="BR_AFRO_PINK" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys.icon.br_herb_of_cheesecake_i00" />
@@ -601,7 +606,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="Buff" event="afrobaguette3">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.08" />
 			</effect>
 		</for>
@@ -974,6 +979,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="icon" val="icon.skilltransform4" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -982,7 +988,7 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>

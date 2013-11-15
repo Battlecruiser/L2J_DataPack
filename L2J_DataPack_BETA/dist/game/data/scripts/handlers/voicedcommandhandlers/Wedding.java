@@ -150,7 +150,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You are already engaged.");
 			if (Config.L2JMOD_WEDDING_PUNISH_INFIDELITY)
 			{
-				activeChar.startAbnormalEffect(AbnormalVisualEffect.BIG_HEAD); // give player a Big Head
+				activeChar.startAbnormalVisualEffect(true, AbnormalVisualEffect.BIG_HEAD); // give player a Big Head
 				// lets recycle the sevensigns debuffs
 				int skillId;
 				

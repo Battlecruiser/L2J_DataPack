@@ -105,6 +105,7 @@
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TURN_STONE" />
+		<set name="abnormalVisualEffect" val="FLESH_STONE" />
 		<set name="canBeDispeled" val="false" />
 		<set name="castRange" val="1500" />
 		<set name="effectPoint" val="-100" />
@@ -139,6 +140,7 @@
 		</for>
 	</skill>
 	<skill id="4517" levels="1" name="Quest - BOSS Defend">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
@@ -151,6 +153,7 @@
 		</for>
 	</skill>
 	<skill id="4518" levels="1" name="Quest - BOSS Rampage">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
@@ -163,6 +166,7 @@
 		</for>
 	</skill>
 	<skill id="4519" levels="1" name="Quest - BOSS Defend">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
@@ -176,6 +180,7 @@
 		</for>
 	</skill>
 	<skill id="4520" levels="1" name="Quest - BOSS Rampage">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
@@ -256,6 +261,7 @@
 		</for>
 	</skill>
 	<skill id="4525" levels="1" name="Quest - BOSS Defend">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
@@ -351,6 +357,7 @@
 		</for>
 	</skill>
 	<skill id="4532" levels="1" name="Quest - BOSS Reflect">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
@@ -587,6 +594,7 @@
 		</for>
 	</skill>
 	<skill id="4545" levels="1" name="Quest - BOSS Reflect">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
@@ -658,6 +666,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SPA_DISEASE_A" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -670,7 +679,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalVisualEffect="poison">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 				<add order="0x40" stat="rCrit" val="#rCrit" />
 			</effect>
@@ -683,6 +692,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SPA_DISEASE_B" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -695,7 +705,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalVisualEffect="poison">
+			<effect name="Debuff">
 				<sub order="0x40" stat="rEvas" val="#rEvas" />
 				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
@@ -708,6 +718,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SPA_DISEASE_C" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -720,7 +731,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalVisualEffect="poison">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
@@ -733,6 +744,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SPA_DISEASE_D" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -745,7 +757,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalVisualEffect="poison">
+			<effect name="Debuff">
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
 			</effect>
@@ -822,6 +834,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -829,7 +842,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="BigHead" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" />
 		</for>
 	</skill>
 	<skill id="4560" levels="12" name="NPC Fire Burn">
@@ -1237,6 +1250,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="TURN_STONE" />
+		<set name="abnormalVisualEffect" val="FLESH_STONE" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -1263,6 +1277,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="blowChance" val="20" />
@@ -1282,7 +1297,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="FatalBlow" />
-			<effect name="DamOverTime" ticks="3" val="#damage" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#damage" />
 		</for>
 	</skill>
 	<skill id="4580" levels="12" name="Decrease P. Atk.">
@@ -1320,6 +1335,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="40" />
@@ -1348,6 +1364,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1365,7 +1382,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dmg" />
 		</for>
 	</skill>
 	<skill id="4583" levels="12" name="Decrease Speed">
@@ -1404,6 +1421,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1441,6 +1459,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="abnormalVisualEffect" val="BIG_BODY" />
 		<set name="affectRange" val="900" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="2000" />
@@ -1767,6 +1786,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
@@ -1785,7 +1805,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#damage" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#damage" />
 		</for>
 	</skill>
 	<skill id="4597" levels="12" name="Bleed">
@@ -1796,6 +1816,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
@@ -1813,7 +1834,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#damage" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#damage" />
 		</for>
 	</skill>
 	<skill id="4598" levels="12" name="Bleed">
@@ -1824,6 +1845,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="1000" />
@@ -1841,7 +1863,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#damage" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#damage" />
 		</for>
 	</skill>
 	<skill id="4599" levels="12" name="Decrease Speed">

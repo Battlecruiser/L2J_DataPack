@@ -304,6 +304,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="effectPoint" val="-707" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1201" />
@@ -317,6 +318,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="effectPoint" val="-707" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1201" />
@@ -1147,6 +1149,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -1168,6 +1171,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -1189,6 +1193,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -1210,6 +1215,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -1224,7 +1230,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="63" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="63" />
 		</for>
 	</skill>
 	<skill id="5669" levels="1" name="Stun">
@@ -1232,6 +1238,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -1253,6 +1260,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -1274,6 +1282,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -1295,6 +1304,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -1315,6 +1325,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1767,6 +1778,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SILENCE_ALL" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="99" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />

@@ -8,6 +8,7 @@
 		<table name="#pAtk"> 4.5 14 33.5 66.5 90.5 141.5 208.5 247 310 375.5 </table>
 		<table name="#ench1patk"> 418 421 424 427 430 433 436 439 442 445 448 451 454 457 460 463 466 469 472 475 478 481 484 487 490 493 496 499 502 505 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill1001" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -888,6 +889,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="40" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
@@ -1291,6 +1293,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SILENCE" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -1371,6 +1374,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -1473,6 +1477,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="9-10" />
 		<set name="affectRange" val="200" />
@@ -1889,6 +1894,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="40" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -1928,6 +1934,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
@@ -1947,7 +1954,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="1096" levels="16" name="Seal of Chaos" enchantGroup1="1" enchantGroup2="1">
@@ -2009,6 +2016,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />

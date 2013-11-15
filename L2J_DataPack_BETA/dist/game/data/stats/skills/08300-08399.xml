@@ -444,6 +444,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.etc_pig_candy_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1000,6 +1001,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="VP_KEEP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1008,7 +1010,7 @@
 		<set name="reuseDelay" val="82800000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>

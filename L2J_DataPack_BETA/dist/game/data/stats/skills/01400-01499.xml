@@ -628,6 +628,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
@@ -642,7 +643,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Invincible" special="invincible" />
+			<effect name="Invincible" />
 		</for>
 	</skill>
 	<skill id="1419" levels="1" name="Volcano">
@@ -856,6 +857,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="affectRange" val="900" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill1427" />
@@ -874,7 +876,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Invincible" special="invincible" />
+			<effect name="Invincible" />
 		</for>
 	</skill>
 	<skill id="1428" levels="1" name="Mass Recharge">
@@ -1078,6 +1080,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DEATH_MARK" />
+		<set name="abnormalVisualEffect" val="DEATH_MARK" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
@@ -1100,13 +1103,13 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" abnormalVisualEffect="deathmark">
+			<effect name="DamOverTime" ticks="3" val="#dmg">
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mDef" val="#amount" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="3" val="#ench1dmg" abnormalVisualEffect="deathmark">
+			<effect name="DamOverTime" ticks="3" val="#ench1dmg">
 				<mul order="0x30" stat="pDef" val="0.77" />
 				<mul order="0x30" stat="mDef" val="0.77" />
 			</effect>
@@ -1177,6 +1180,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="200" />
@@ -1578,6 +1582,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
@@ -1602,7 +1607,7 @@
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Root" abnormalVisualEffect="root" />
+			<effect name="Root" />
 		</for>
 	</skill>
 	<skill id="1447" levels="9" name="Voice Bind" enchantGroup1="1" enchantGroup2="1">
@@ -1616,6 +1621,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SILENCE" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
@@ -1640,7 +1646,7 @@
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Mute" abnormalVisualEffect="mute" />
+			<effect name="Mute" />
 		</for>
 	</skill>
 	<skill id="1448" levels="1" name="Blink" enchantGroup1="2" enchantGroup2="2">
@@ -1651,6 +1657,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="99" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
@@ -1793,6 +1800,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="FIRE_DOT" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="80" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -1910,6 +1918,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="WATER_DOT" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="900" />
@@ -2010,6 +2019,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="WIND_DOT" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="80" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -2725,6 +2735,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="OBLIVION" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -2750,7 +2761,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="TriggerSkillByDamage" abnormalVisualEffect="poison">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
@@ -2774,6 +2785,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="WEAK_CONSTITUTION" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
@@ -2798,7 +2810,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="TriggerSkillByDamage" abnormalVisualEffect="poison">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
@@ -2822,6 +2834,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="THIN_SKIN" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
@@ -2846,11 +2859,11 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="TriggerSkillByDamage" abnormalVisualEffect="poison">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
-				<param skillId="5450" skillLevel="1" /> <!-- Tin Skin -->
+				<param skillId="5450" skillLevel="1" /> <!-- Thin Skin -->
 				<param targetType="SELF" />
 			</effect>
 		</for>
@@ -2870,6 +2883,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ENERVATION" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -2894,7 +2908,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="TriggerSkillByDamage" abnormalVisualEffect="poison">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
@@ -2919,6 +2933,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPITE" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
@@ -2943,7 +2958,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="TriggerSkillByDamage" abnormalVisualEffect="poison">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
@@ -2967,6 +2982,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="MENTAL_IMPOVERISH" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -2990,7 +3006,7 @@
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="TriggerSkillByDamage" abnormalVisualEffect="poison">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
@@ -3247,6 +3263,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="669" />
 		<set name="effectRange" val="900" />
@@ -3262,7 +3279,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SERVITOR" />
 		<for>
-			<effect name="Invincible" special="invincible" />
+			<effect name="Invincible" />
 		</for>
 	</skill>
 	<skill id="1497" levels="1" name="Excessive Loyalty">

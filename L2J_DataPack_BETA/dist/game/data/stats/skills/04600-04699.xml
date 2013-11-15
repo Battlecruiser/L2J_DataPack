@@ -8,6 +8,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="40" />
 		<set name="affectRange" val="150" />
 		<set name="basicProperty" val="CON" />
@@ -196,6 +197,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="35" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -214,7 +216,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="4607" levels="1" name="Magma Attack">
@@ -399,6 +401,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="500" />
@@ -417,13 +420,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#dmg" />
 		</for>
 	</skill>
 	<skill id="4616" levels="1" name="Fake Petrification">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="360" />
 		<set name="abnormalType" val="TURN_STONE" />
+		<set name="abnormalVisualEffect" val="FLESH_STONE" />
 		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
@@ -490,6 +494,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
@@ -991,6 +996,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="activateRate" val="40" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="500" />
@@ -1177,6 +1183,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="35" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="CON" />
@@ -1192,7 +1199,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="4650" levels="1" name="NPC AE - Dispel Hold">
@@ -1326,6 +1333,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -1357,6 +1365,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -1387,6 +1396,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="1000" />
@@ -1417,6 +1427,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -1449,6 +1460,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -1480,6 +1492,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="1000" />
@@ -1656,6 +1669,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1919,7 +1933,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="216" abnormalVisualEffect="flame" />
+			<effect name="DamOverTime" ticks="3" val="216" />
 		</for>
 	</skill>
 	<skill id="4684" levels="1" name="Valakas Dragon Breath">
@@ -1949,7 +1963,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="216" abnormalVisualEffect="flame" />
+			<effect name="DamOverTime" ticks="3" val="216" />
 		</for>
 	</skill>
 	<skill id="4685" levels="1" name="Valakas Tail Stomp">
@@ -2044,6 +2058,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="#activateRates" />
 		<set name="affectRange" val="1000" />
 		<set name="basicProperty" val="#basicProperties" />
@@ -2102,6 +2117,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BIG_BODY" />
+		<set name="abnormalVisualEffect" val="BIG_BODY" />
 		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />

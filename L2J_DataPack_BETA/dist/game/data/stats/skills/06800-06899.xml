@@ -845,6 +845,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="100" />
@@ -862,7 +863,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="100" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="1" val="100" />
 		</for>
 	</skill>
 	<skill id="6863" levels="1" name="Poison">
@@ -871,6 +872,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="150" />
@@ -888,7 +890,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="120" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="1" val="120" />
 		</for>
 	</skill>
 	<skill id="6864" levels="1" name="Summon">
@@ -903,6 +905,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="castRange" val="100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2500" />
@@ -916,7 +919,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="100" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="1" val="100" />
 		</for>
 	</skill>
 	<skill id="6866" levels="1" name="Vampiric Claw">
@@ -1094,6 +1097,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="300" />
@@ -1109,7 +1113,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="#dmg" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="1" val="#dmg" />
 		</for>
 	</skill>
 	<skill id="6876" levels="1" name="Power Strike">

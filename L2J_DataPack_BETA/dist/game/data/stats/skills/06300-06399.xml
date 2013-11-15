@@ -86,6 +86,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -134,6 +135,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -155,7 +157,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="139" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="139" />
 		</for>
 	</skill>
 	<skill id="6307" levels="1" name="Opus of the Hand">
@@ -296,6 +298,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="500" />
@@ -310,7 +313,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
-			<effect name="Buff" abnormalVisualEffect="stun">
+			<effect name="Buff">
 				<mul order="0x30" stat="physicalSkillPower" val="2" />
 			</effect>
 		</for>
@@ -724,6 +727,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="1" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -744,7 +748,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="200" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="200" />
 		</for>
 	</skill>
 	<skill id="6334" levels="1" name="Shock">
@@ -753,6 +757,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="4" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="40" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -853,6 +858,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="1" />
 		<set name="affectRange" val="300" />
 		<set name="basicProperty" val="CON" />
@@ -874,7 +880,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="200" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="200" />
 		</for>
 	</skill>
 	<skill id="6340" levels="1" name="Shock">
@@ -883,6 +889,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="4" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="0" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1084,6 +1091,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -1180,6 +1188,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="500" />
@@ -1199,6 +1208,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SILENCE_ALL" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="80" />
 		<set name="affectRange" val="300" />
 		<set name="basicProperty" val="MEN" />
@@ -1226,6 +1236,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SILENCE_ALL" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="700" />
@@ -1252,6 +1263,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="300" />
 		<set name="basicProperty" val="CON" />
@@ -1271,13 +1283,14 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="93" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="93" />
 		</for>
 	</skill>
 	<skill id="6383" levels="1" name="Bistakon Deadly Roar">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SILENCE_ALL" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="500" />
@@ -1321,6 +1334,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="150" />
@@ -1341,13 +1355,14 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="95" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="95" />
 		</for>
 	</skill>
 	<skill id="6386" levels="1" name="Bistakon Earth Rise">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="60" />
@@ -1453,6 +1468,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="60" />
@@ -1480,6 +1496,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="affectRange" val="150" />
 		<set name="basicProperty" val="MEN" />
@@ -1536,6 +1553,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1555,13 +1573,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="93" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="93" />
 		</for>
 	</skill>
 	<skill id="6396" levels="1" name="Cokrakon Panic">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -1588,6 +1607,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1614,6 +1634,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="80" />
 		<set name="affectRange" val="300" />
 		<set name="basicProperty" val="MEN" />

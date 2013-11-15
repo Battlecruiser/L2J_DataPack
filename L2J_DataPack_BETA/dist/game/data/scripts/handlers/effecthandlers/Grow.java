@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
@@ -51,8 +50,6 @@ public final class Grow extends AbstractEffect
 			// TODO: Uncomment line when fix for mobs falling underground is found
 			// npc.setCollisionHeight(npc.getTemplate().collisionHeight);
 			npc.setCollisionRadius(npc.getTemplate().getfCollisionRadius());
-			
-			info.getEffected().stopAbnormalEffect(AbnormalVisualEffect.GROW);
 		}
 	}
 	
@@ -65,8 +62,6 @@ public final class Grow extends AbstractEffect
 			// TODO: Uncomment line when fix for mobs falling underground is found
 			// npc.setCollisionHeight((int) (npc.getCollisionHeight() * 1.24));
 			npc.setCollisionRadius((npc.getCollisionRadius() * 1.19));
-			
-			info.getEffected().startAbnormalEffect(AbnormalVisualEffect.GROW);
 		}
 	}
 }

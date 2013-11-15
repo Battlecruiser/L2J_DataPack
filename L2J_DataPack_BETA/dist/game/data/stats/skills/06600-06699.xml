@@ -279,6 +279,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="98" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -310,6 +311,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="98" />
 		<set name="basicProperty" val="CON" />
 		<set name="icon" val="icon.skill0100" />
@@ -533,7 +535,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="BigHead" abnormalVisualEffect="bighead">
+			<effect name="BigHead">
 				<mul order="0x30" stat="regHp" val="2" />
 				<mul order="0x30" stat="regMp" val="2" />
 			</effect>
@@ -544,6 +546,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
@@ -560,7 +563,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="BigHead" abnormalVisualEffect="bighead">
+			<effect name="BigHead">
 				<mul order="0x30" stat="regHp" val="2" />
 				<mul order="0x30" stat="regMp" val="2" />
 			</effect>
@@ -591,6 +594,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="castRange" val="2000" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="2000" />
@@ -601,7 +605,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -683,6 +687,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -731,6 +736,7 @@
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SILENCE_ALL" />
+		<set name="abnormalVisualEffect" val="FLESH_STONE" />
 		<set name="icon" val="icon.skill4111" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
@@ -741,6 +747,7 @@
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SILENCE_ALL" />
+		<set name="abnormalVisualEffect" val="FLESH_STONE" />
 		<set name="icon" val="icon.skill4111" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
@@ -827,6 +834,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalType" val="FREEZING" />
+		<set name="abnormalVisualEffect" val="FROZEN_PILLAR" />
 		<set name="activateRate" val="#activateRates" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="100" />
@@ -840,7 +848,7 @@
 		<set name="power" val="#power" /> <!-- Base Land Rate -->
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Paralyze" special="freezing" />
+			<effect name="Paralyze" />
 			<effect name="DamOverTime" ticks="#ticks" val="115" />
 			<effect name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="6302" />
 		</for>
@@ -1078,6 +1086,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4047" />
@@ -1307,6 +1316,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="95" />
 		<set name="basicProperty" val="MEN" />
 		<set name="coolTime" val="2000" />
@@ -1394,6 +1404,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="FREEZING" />
+		<set name="abnormalVisualEffect" val="FROZEN_PILLAR" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill6274" />
@@ -1405,7 +1416,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Paralyze" special="freezing" />
+			<effect name="Paralyze" />
 			<effect name="DamOverTime" ticks="3" val="115" />
 			<effect name="ManaDamOverTime" ticks="3" val="5" />
 			<effect name="ChanceSkillTrigger" triggeredId="6302" chanceType="ON_EXIT" />

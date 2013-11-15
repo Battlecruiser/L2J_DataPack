@@ -10,6 +10,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -43,6 +44,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="35" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
@@ -77,6 +79,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_MP" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -176,6 +179,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="750" />
@@ -209,6 +213,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="60" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="300" />
@@ -1030,6 +1035,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="35" />
 		<set name="affectLimit" val="9-10" />
 		<set name="affectRange" val="200" />
@@ -1058,10 +1064,10 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="power" val="#ench3Power" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="3" val="#ench1dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#ench1dot" />
 		</enchant1for>
 	</skill>
 	<skill id="1168" levels="7" name="Curse: Poison">
@@ -1074,6 +1080,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
@@ -1093,7 +1100,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="1169" levels="14" name="Curse Fear" enchantGroup1="2" enchantGroup2="2">
@@ -1110,6 +1117,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="40" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -1497,6 +1505,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />

@@ -48,6 +48,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -60,7 +61,7 @@
 			<player agathionId="1501" />
 		</cond>
 		<for>
-			<effect name="BigHead" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" />
 		</for>
 	</skill>
 	<skill id="23005" levels="1" name="Gold Majo Agathion Special Skill - Power of Blessed Resurrection">
@@ -112,6 +113,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -124,7 +126,7 @@
 			<player agathionId="1504" />
 		</cond>
 		<for>
-			<effect name="BigHead" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" />
 		</for>
 	</skill>
 	<skill id="23008" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Return">
@@ -209,6 +211,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -221,7 +224,7 @@
 			<player agathionId="1505" />
 		</cond>
 		<for>
-			<effect name="BigHead" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" />
 		</for>
 	</skill>
 	<skill id="23014" levels="1" name="Bamboo Panda Agathion Special Skill - Power of Blessed Resurrection">
@@ -286,7 +289,7 @@
 			<player agathionId="16033" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -419,7 +422,7 @@
 			<player agathionId="16049" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -542,7 +545,7 @@
 			<player agathionId="1512" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -599,7 +602,7 @@
 			<player agathionId="1513" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -945,6 +948,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -957,7 +961,7 @@
 			<player agathionId="1521" />
 		</cond>
 		<for>
-			<effect name="BigHead" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" />
 		</for>
 	</skill>
 	<skill id="23060" levels="1" name="Great Sumo Match Agathion Special Skill - Ability of Firework">
@@ -1034,7 +1038,7 @@
 			<player agathionId="1522" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -1057,7 +1061,7 @@
 			<player agathionId="1523" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -1196,6 +1200,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="70" />
 		<set name="abnormalType" val="BR_EVENT_BUF2" />
+		<set name="abnormalVisualEffect" val="BR_POWER_OF_EVA" />
 		<set name="affectRange" val="600" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="BranchSys.icon.br_power_of_eva_i00" />
@@ -1204,7 +1209,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Buff" event="evaswrath" />
+			<effect name="Buff" />
 		</for>
 	</skill>
 	<skill id="23073" levels="1" name="Switch Mode">
@@ -1455,6 +1460,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />

@@ -1664,6 +1664,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
@@ -1678,6 +1679,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
@@ -1783,6 +1785,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_KEEP" />
+		<set name="abnormalVisualEffect" val="VP_KEEP" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_candle_yellow_i00" />
@@ -1853,6 +1856,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="WP_CHANGE_EVENT" />
+		<set name="abnormalVisualEffect" val="CHANGE_WP;CHANGE_HAIR_B" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_herb_of_baguette" />
@@ -1862,7 +1866,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" special="baguettesword,blackafro">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.1" />
 				<mul order="0x30" stat="regHp" val="1.2" />
 			</effect>
@@ -1873,6 +1877,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="WP_CHANGE_EVENT" />
+		<set name="abnormalVisualEffect" val="CHANGE_WP;CHANGE_HAIR_G" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_herb_of_cream" />
@@ -1882,7 +1887,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" special="baguettesword,yellowafro">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.1" />
 				<mul order="0x30" stat="maxMp" val="1.1" />
 				<mul order="0x30" stat="mAtkSpd" val="1.1" />
@@ -1898,6 +1903,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="WP_CHANGE_EVENT" />
+		<set name="abnormalVisualEffect" val="CHANGE_WP;CHANGE_HAIR_P" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_herb_of_cheesecake" />
@@ -1907,7 +1913,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" special="baguettesword,pinkafro">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxMp" val="1.1" />
 				<mul order="0x30" stat="regMp" val="1.2" />
 			</effect>

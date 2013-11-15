@@ -251,6 +251,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill2513" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -268,7 +269,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="BigHead" abnormalVisualEffect="bighead">
+			<effect name="BigHead">
 				<mul order="0x30" stat="regHp" val="2" />
 				<mul order="0x30" stat="regMp" val="2" />
 			</effect>
@@ -1468,7 +1469,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Invincible" special="invincible" />
+			<effect name="Invincible" />
 		</for>
 	</skill>
 	<skill id="2578" levels="1" name="Cure Poison Paralyze">
@@ -1499,6 +1500,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.skilltransform4" />
@@ -1511,7 +1513,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>

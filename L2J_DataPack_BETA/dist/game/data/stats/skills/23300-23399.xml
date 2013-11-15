@@ -157,6 +157,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="80" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
@@ -172,7 +173,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="170" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="170" />
 		</for>
 	</skill>
 	<skill id="23320" levels="1" name="Greedy Throat">
@@ -181,6 +182,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="80" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
@@ -196,7 +198,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="230" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="230" />
 		</for>
 	</skill>
 	<skill id="23321" levels="1" name="Draconic Evolver">

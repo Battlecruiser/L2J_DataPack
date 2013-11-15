@@ -101,6 +101,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -110,7 +111,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="BigHead" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" />
 		</for>
 	</skill>
 	<skill id="21008" levels="1" name="Release Seal on Agathion - Baby Panda">
@@ -157,6 +158,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -165,7 +167,7 @@
 		<set name="reuseDelay" val="43200000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -175,6 +177,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -183,7 +186,7 @@
 		<set name="reuseDelay" val="43200000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -193,6 +196,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="BranchSys.icon.br_Bamboo_Hat_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -201,7 +205,7 @@
 		<set name="reuseDelay" val="43200000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -981,7 +985,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -1324,7 +1328,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -1347,6 +1351,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="activateRate" val="0" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="BranchSys.icon.br_garland_i00" />
@@ -1357,7 +1362,7 @@
 		<set name="reuseDelay" val="14400000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Invincible" special="invincible" />
+			<effect name="Invincible" />
 		</for>
 	</skill>
 	<skill id="21087" levels="1" name="Berserker Spirit">
@@ -1419,6 +1424,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_SHADOW" />
+		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="effectPoint" val="666" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="BranchSys.icon.br_invokespirit_stick_a_i00" />
@@ -1428,7 +1434,7 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SilentMove" abnormalVisualEffect="stealth">
+			<effect name="SilentMove">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
 		</for>

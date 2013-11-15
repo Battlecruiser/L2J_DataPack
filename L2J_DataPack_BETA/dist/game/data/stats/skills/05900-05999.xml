@@ -4,6 +4,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="OBLIVION" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="90" />
 		<set name="affectLimit" val="5-15" />
 		<set name="basicProperty" val="MEN" />
@@ -24,6 +25,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="OBLIVION" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="90" />
 		<set name="affectLimit" val="10-10" />
 		<set name="basicProperty" val="MEN" />
@@ -53,6 +55,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="DISARM" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="70" />
 		<set name="affectLimit" val="5-15" />
 		<set name="basicProperty" val="STR" />
@@ -72,7 +75,7 @@
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="Disarm" abnormalVisualEffect="bleed" />
+			<effect name="Disarm" />
 		</for>
 	</skill>
 	<skill id="5904" levels="3" name="Mist of Souleater">
@@ -103,6 +106,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="SILENCE_ALL" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="10-10" />
 		<set name="basicProperty" val="MEN" />
@@ -341,6 +345,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_F" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="5-15" />
 		<set name="affectRange" val="600" />
@@ -362,7 +367,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="HpDrain" val="0.8" />
-			<effect name="Debuff" abnormalVisualEffect="bleed">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtk" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.95" />
 				<mul order="0x30" stat="mAtk" val="0.95" />
@@ -378,6 +383,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_G" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="5-15" />
 		<set name="affectRange" val="300" />
@@ -397,7 +403,7 @@
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="Debuff" abnormalVisualEffect="bleed">
+			<effect name="Debuff">
 				<sub order="0x40" stat="rEvas" val="3" />
 				<mul order="0x30" stat="pDef" val="0.5" />
 				<mul order="0x30" stat="mDef" val="0.5" />
@@ -501,6 +507,7 @@
 	<skill id="5931" levels="1" name="Ultimate Shield">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="T" />
@@ -611,6 +618,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -747,6 +755,7 @@
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="43200" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1500" />
@@ -757,7 +766,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -857,6 +866,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="10" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -872,6 +882,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="6-12" />
 		<set name="basicProperty" val="CON" />
@@ -962,6 +973,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="440" />
@@ -1288,6 +1300,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="3500" />
 		<set name="magicLvl" val="85" />
@@ -1336,6 +1349,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="OBLIVION" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="90" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="300" />
@@ -1354,7 +1368,7 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="TriggerSkillByDamage" abnormalVisualEffect="poison">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Attackable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="90" />
@@ -1369,6 +1383,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-1" />
@@ -1381,7 +1396,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="BigHead" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" />
 		</for>
 	</skill>
 	<skill id="5995" levels="1" name="not_used">

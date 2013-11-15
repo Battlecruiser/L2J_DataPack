@@ -517,6 +517,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="1500" />
@@ -535,7 +536,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="200" abnormalVisualEffect="bleed">
+			<effect name="DamOverTime" ticks="1" val="200">
 				<sub order="0x40" stat="darkRes" val="60" />
 			</effect>
 		</for>
@@ -681,6 +682,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="150" />
 		<set name="basicProperty" val="CON" />
@@ -697,7 +699,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="200" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="1" val="200" />
 		</for>
 	</skill>
 	<skill id="6755" levels="1" name="Death Strike">
@@ -1150,6 +1152,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="300" />
 		<set name="basicProperty" val="CON" />
@@ -1166,7 +1169,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="200" abnormalVisualEffect="bleed">
+			<effect name="DamOverTime" ticks="1" val="200">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 			<effect name="Petrification" />

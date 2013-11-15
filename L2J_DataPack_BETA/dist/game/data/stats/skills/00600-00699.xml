@@ -471,6 +471,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="40" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="200" />
@@ -1548,6 +1549,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1576,6 +1578,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
@@ -1604,6 +1607,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
 		<set name="effectPoint" val="676" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill_transform_buff" />
@@ -1613,7 +1617,7 @@
 		<set name="reuseDelay" val="900000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ImmobileBuff" abnormalVisualEffect="invulnerable">
+			<effect name="ImmobileBuff">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -1649,6 +1653,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="900" />
@@ -1698,6 +1703,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1719,7 +1725,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="139" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="139" />
 		</for>
 	</skill>
 	<skill id="689" levels="1" name="Divine Rogue Deadly Blow">
@@ -1862,6 +1868,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="9-10" />
 		<set name="affectRange" val="200" />

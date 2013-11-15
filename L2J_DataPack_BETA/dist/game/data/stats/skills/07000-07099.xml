@@ -157,48 +157,56 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7014" levels="1" name="Test - Critical Damage Up">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7015" levels="1" name="Test - Critical Damage Down">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7016" levels="1" name="Test - Critical Damage Up">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7017" levels="1" name="Test - Critical Damage Down">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7018" levels="1" name="Test - Critical Rate Up">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7019" levels="1" name="Test - Critical Rate Down">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7020" levels="1" name="Test - Critical Rate Up">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7021" levels="1" name="Test - Critical Rate Down">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
@@ -974,6 +982,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="200" />
@@ -993,6 +1002,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="200" />
@@ -1093,6 +1103,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="720" />
@@ -1110,6 +1121,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -1120,6 +1132,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="5-12" />
 		<set name="basicProperty" val="CON" />

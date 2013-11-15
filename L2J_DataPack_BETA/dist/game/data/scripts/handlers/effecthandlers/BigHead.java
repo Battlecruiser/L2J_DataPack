@@ -21,9 +21,6 @@ package handlers.effecthandlers;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Big Head effect implementation.
@@ -34,23 +31,5 @@ public final class BigHead extends AbstractEffect
 	public BigHead(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.BUFF;
-	}
-	
-	@Override
-	public void onExit(BuffInfo info)
-	{
-		info.getEffected().stopAbnormalEffect(AbnormalVisualEffect.BIG_HEAD);
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		info.getEffected().startAbnormalEffect(AbnormalVisualEffect.BIG_HEAD);
 	}
 }

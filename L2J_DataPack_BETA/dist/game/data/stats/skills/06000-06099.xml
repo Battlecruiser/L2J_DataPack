@@ -618,6 +618,7 @@
 	</skill>
 	<skill id="6054" levels="1" name="Switch State">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
@@ -931,6 +932,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill0279" />
 		<set name="isDebuff" val="true" />
@@ -950,6 +952,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="isDebuff" val="true" />
@@ -969,6 +972,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill0791" />
 		<set name="isDebuff" val="true" />
@@ -988,6 +992,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="HIDE" />
+		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="effectPoint" val="679" />
 		<set name="icon" val="icon.skill6093" />
 		<set name="magicLvl" val="78" />
