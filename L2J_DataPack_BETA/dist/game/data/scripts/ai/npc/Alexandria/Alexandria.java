@@ -101,29 +101,14 @@ public final class Alexandria extends AbstractNpcAI
 				chance3 += agathion.getChance();
 				if ((chance >= chance2) && (chance2 < chance3))
 				{
-					boolean hasAllItems = true;
-					for (ItemHolder item : REQUIRED_ITEMS)
+					if (takeAllItems(player, REQUIRED_ITEMS))
 					{
-						if (getQuestItemsCount(player, item.getId()) < item.getCount())
-						{
-							hasAllItems = false;
-							break;
-						}
-					}
-					if (hasAllItems)
-					{
-						for (ItemHolder item : REQUIRED_ITEMS)
-						{
-							takeItems(player, item);
-						}
-						
-						giveItems(player, agathion.getId(), 1);
+						giveItems(player, agathion);
 						htmltext = "30098-03.html";
 						
 						if (agathion instanceof AdditionalQuestItemHolder)
 						{
-							final AdditionalQuestItemHolder addAgathion = (AdditionalQuestItemHolder) agathion;
-							giveItems(player, addAgathion.getAdditionalId(), 1);
+							giveItems(player, ((AdditionalQuestItemHolder) agathion).getAdditionalId(), 1);
 							htmltext = "30098-03a.html";
 						}
 					}

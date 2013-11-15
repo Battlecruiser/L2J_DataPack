@@ -20,6 +20,7 @@ package quests.Q00291_RevengeOfTheRedbonnet;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
@@ -33,7 +34,7 @@ public final class Q00291_RevengeOfTheRedbonnet extends Quest
 	// NPC
 	private static final int MARYSE_REDBONNET = 30553;
 	// Item
-	private static final int BLACK_WOLF_PELT = 1482;
+	private static final ItemHolder BLACK_WOLF_PELT = new ItemHolder(1482, 40);
 	// Monster
 	private static final int BLACK_WOLF = 20317;
 	// Rewards
@@ -51,14 +52,14 @@ public final class Q00291_RevengeOfTheRedbonnet extends Quest
 		addStartNpc(MARYSE_REDBONNET);
 		addTalkId(MARYSE_REDBONNET);
 		addKillId(BLACK_WOLF);
-		registerQuestItems(BLACK_WOLF_PELT);
+		registerQuestItems(BLACK_WOLF_PELT.getId());
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && event.equalsIgnoreCase("30553-03.htm"))
+		if ((qs != null) && event.equals("30553-03.htm"))
 		{
 			qs.startQuest();
 			return event;
@@ -70,9 +71,9 @@ public final class Q00291_RevengeOfTheRedbonnet extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(1500, npc, killer, true) && (getQuestItemsCount(killer, BLACK_WOLF_PELT) < 40))
+		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(1500, npc, killer, true))
 		{
-			if (giveItemRandomly(killer, npc, BLACK_WOLF_PELT, 1, 40, 1, true))
+			if (giveItemRandomly(qs.getPlayer(), npc, BLACK_WOLF_PELT.getId(), 1, BLACK_WOLF_PELT.getCount(), 1.0, true))
 			{
 				qs.setCond(2);
 			}
@@ -91,9 +92,9 @@ public final class Q00291_RevengeOfTheRedbonnet extends Quest
 		}
 		else if (qs.isStarted())
 		{
-			if (qs.isCond(2) && (getQuestItemsCount(player, BLACK_WOLF_PELT) >= 40))
+			if (qs.isCond(2) && hasItem(player, BLACK_WOLF_PELT))
 			{
-				takeItems(player, BLACK_WOLF_PELT, -1);
+				takeItem(player, BLACK_WOLF_PELT);
 				final int chance = getRandom(100);
 				if (chance <= 2)
 				{

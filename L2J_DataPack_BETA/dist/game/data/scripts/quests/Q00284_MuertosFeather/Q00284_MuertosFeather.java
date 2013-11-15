@@ -111,7 +111,7 @@ public final class Q00284_MuertosFeather extends Quest
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
 		if (qs != null)
 		{
-			giveItemRandomly(killer, npc, MUERTOS_FEATHER, 1, 0, MOB_DROP_CHANCE.get(npc.getId()), true);
+			giveItemRandomly(qs.getPlayer(), npc, MUERTOS_FEATHER, 1, 0, MOB_DROP_CHANCE.get(npc.getId()), true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

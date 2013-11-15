@@ -23,6 +23,7 @@ import java.util.Map;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
@@ -35,7 +36,7 @@ public final class Q00286_FabulousFeathers extends Quest
 	// NPC
 	private static final int ERINU = 32164;
 	// Item
-	private static final int COMMANDERS_FEATHER = 9746;
+	private static final ItemHolder COMMANDERS_FEATHER = new ItemHolder(9746, 80);
 	// Monsters
 	private static final Map<Integer, Double> MOB_DROP_CHANCES = new HashMap<>();
 	static
@@ -55,7 +56,7 @@ public final class Q00286_FabulousFeathers extends Quest
 		addStartNpc(ERINU);
 		addTalkId(ERINU);
 		addKillId(MOB_DROP_CHANCES.keySet());
-		registerQuestItems(COMMANDERS_FEATHER);
+		registerQuestItems(COMMANDERS_FEATHER.getId());
 	}
 	
 	@Override
@@ -77,9 +78,9 @@ public final class Q00286_FabulousFeathers extends Quest
 			}
 			case "32164-06.html":
 			{
-				if (qs.isCond(2) && (getQuestItemsCount(player, COMMANDERS_FEATHER) >= 80))
+				if (qs.isCond(2) && hasItem(player, COMMANDERS_FEATHER))
 				{
-					takeItems(player, COMMANDERS_FEATHER, -1);
+					takeItem(player, COMMANDERS_FEATHER);
 					giveAdena(player, 4160, true);
 					qs.exitQuest(true, true);
 					html = event;
@@ -100,7 +101,7 @@ public final class Q00286_FabulousFeathers extends Quest
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
 		if (qs != null)
 		{
-			if (giveItemRandomly(killer, npc, COMMANDERS_FEATHER, 1, 80, MOB_DROP_CHANCES.get(npc.getId()), true))
+			if (giveItemRandomly(qs.getPlayer(), npc, COMMANDERS_FEATHER.getId(), 1, COMMANDERS_FEATHER.getCount(), MOB_DROP_CHANCES.get(npc.getId()), true))
 			{
 				qs.setCond(2);
 			}
@@ -119,7 +120,7 @@ public final class Q00286_FabulousFeathers extends Quest
 		}
 		else if (qs.isStarted())
 		{
-			html = ((qs.isCond(2) && (getQuestItemsCount(player, COMMANDERS_FEATHER) >= 80)) ? "32164-04.html" : "32164-05.html");
+			html = ((qs.isCond(2) && hasItem(player, COMMANDERS_FEATHER)) ? "32164-04.html" : "32164-05.html");
 		}
 		return html;
 	}
