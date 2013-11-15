@@ -56,7 +56,7 @@ import com.l2jserver.gameserver.util.Util;
  * Castle Chamberlain AI.
  * @author malyelfik
  */
-public class CastleChamberlain extends AbstractNpcAI
+public final class CastleChamberlain extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPC =
@@ -120,9 +120,9 @@ public class CastleChamberlain extends AbstractNpcAI
 		new SkillHolder(4360, 1), // Death Whisper Lv.1
 	};
 	
-	private CastleChamberlain(String name, String descr)
+	private CastleChamberlain()
 	{
-		super(name, descr);
+		super(CastleChamberlain.class.getSimpleName(), "ai/npc");
 		addStartNpc(NPC);
 		addTalkId(NPC);
 		addFirstTalkId(NPC);
@@ -1314,6 +1314,6 @@ public class CastleChamberlain extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new CastleChamberlain(CastleChamberlain.class.getSimpleName(), "ai/npc");
+		new CastleChamberlain();
 	}
 }

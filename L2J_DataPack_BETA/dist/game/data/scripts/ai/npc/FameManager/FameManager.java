@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.UserInfo;
  * Fame Manager AI.
  * @author St3eT
  */
-public class FameManager extends AbstractNpcAI
+public final class FameManager extends AbstractNpcAI
 {
 	// Npc
 	private static final int[] FAME_MANAGER =
@@ -44,9 +44,9 @@ public class FameManager extends AbstractNpcAI
 	private static final int MIN_CLAN_LVL = 5;
 	private static final int CLASS_LVL = 2;
 	
-	private FameManager(String name, String descr)
+	private FameManager()
 	{
-		super(name, descr);
+		super(FameManager.class.getSimpleName(), "ai/npc");
 		addStartNpc(FAME_MANAGER);
 		addTalkId(FAME_MANAGER);
 		addFirstTalkId(FAME_MANAGER);
@@ -125,6 +125,6 @@ public class FameManager extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new FameManager(FameManager.class.getSimpleName(), "ai/npc");
+		new FameManager();
 	}
 }

@@ -34,7 +34,7 @@ import com.l2jserver.util.L2FastMap;
  * Manages minion's spawn, idle despawn and Teleportation Cube spawn.
  * @author GKR
  */
-public class Epidos extends AbstractNpcAI
+public final class Epidos extends AbstractNpcAI
 {
 	private static final int[] EPIDOSES =
 	{
@@ -61,9 +61,9 @@ public class Epidos extends AbstractNpcAI
 	
 	private final Map<Integer, Double> _lastHp = new L2FastMap<>(true);
 	
-	private Epidos(String name, String descr)
+	private Epidos()
 	{
-		super(name, descr);
+		super(Epidos.class.getSimpleName(), "ai/individual");
 		addKillId(EPIDOSES);
 		addSpawnId(EPIDOSES);
 	}
@@ -140,6 +140,6 @@ public class Epidos extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Epidos(Epidos.class.getSimpleName(), "ai");
+		new Epidos();
 	}
 }

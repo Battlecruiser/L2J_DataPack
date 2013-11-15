@@ -33,17 +33,16 @@ import com.l2jserver.gameserver.model.quest.State;
  * Black Marketeer of Mammon - Exchange Adena for AA.
  * @author Adry_85
  */
-public class BlackMarketeerOfMammon extends AbstractNpcAI
+public final class BlackMarketeerOfMammon extends AbstractNpcAI
 {
 	// NPC
 	private static final int BLACK_MARKETEER = 31092;
 	// Misc
 	private static final int MIN_LEVEL = 60;
 	
-	private BlackMarketeerOfMammon(String name, String descr)
+	private BlackMarketeerOfMammon()
 	{
-		super(name, descr);
-		
+		super(BlackMarketeerOfMammon.class.getSimpleName(), "ai/npc");
 		addStartNpc(BLACK_MARKETEER);
 		addTalkId(BLACK_MARKETEER);
 	}
@@ -116,6 +115,6 @@ public class BlackMarketeerOfMammon extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new BlackMarketeerOfMammon(BlackMarketeerOfMammon.class.getSimpleName(), "ai/npc");
+		new BlackMarketeerOfMammon();
 	}
 }

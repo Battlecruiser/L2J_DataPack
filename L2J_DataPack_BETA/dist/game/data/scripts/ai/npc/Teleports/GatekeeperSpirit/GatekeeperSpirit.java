@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Gatekeeper Spirit AI.
  * @author Zoey76
  */
-public class GatekeeperSpirit extends AbstractNpcAI
+public final class GatekeeperSpirit extends AbstractNpcAI
 {
 	// NPCs
 	private static final int GATEKEEPER_SPIRIT_ENTER = 31111;

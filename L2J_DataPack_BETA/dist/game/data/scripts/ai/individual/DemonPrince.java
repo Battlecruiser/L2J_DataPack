@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
  * Demon Prince's AI.
  * @author GKR
  */
-public class DemonPrince extends AbstractNpcAI
+public final class DemonPrince extends AbstractNpcAI
 {
 	private static final int DEMON_PRINCE = 25540;
 	private static final int FIEND = 25541;
@@ -47,9 +47,9 @@ public class DemonPrince extends AbstractNpcAI
 	
 	private static final Map<Integer, Boolean> ATTACK_STATE = new FastMap<>();
 	
-	private DemonPrince(String name, String descr)
+	private DemonPrince()
 	{
-		super(name, descr);
+		super(DemonPrince.class.getSimpleName(), "ai/individual");
 		addAttackId(DEMON_PRINCE);
 		addKillId(DEMON_PRINCE);
 		addSpawnId(FIEND);
@@ -127,6 +127,6 @@ public class DemonPrince extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new DemonPrince(DemonPrince.class.getSimpleName(), "ai");
+		new DemonPrince();
 	}
 }

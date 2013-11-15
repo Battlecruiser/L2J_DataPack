@@ -29,13 +29,13 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Removes minions after master's death.
  * @author GKR
  */
-public class NaiaLock extends AbstractNpcAI
+public final class NaiaLock extends AbstractNpcAI
 {
 	private static final int LOCK = 18491;
 	
-	public NaiaLock(String name, String descr)
+	private NaiaLock()
 	{
-		super(name, descr);
+		super(NaiaLock.class.getSimpleName(), "ai/individual");
 		addKillId(LOCK);
 	}
 	
@@ -48,6 +48,6 @@ public class NaiaLock extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new NaiaLock(NaiaLock.class.getSimpleName(), "ai");
+		new NaiaLock();
 	}
 }

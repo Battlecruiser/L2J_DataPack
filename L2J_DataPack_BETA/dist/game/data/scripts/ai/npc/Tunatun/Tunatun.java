@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  * Beast Herder Tunatun AI.
  * @author Adry_85
  */
-public class Tunatun extends AbstractNpcAI
+public final class Tunatun extends AbstractNpcAI
 {
 	// NPC
 	private static final int TUNATUN = 31537;
@@ -37,6 +37,14 @@ public class Tunatun extends AbstractNpcAI
 	private static final int BEAST_HANDLERS_WHIP = 15473;
 	// Misc
 	private static final int MIN_LEVEL = 82;
+	
+	private Tunatun()
+	{
+		super(Tunatun.class.getSimpleName(), "ai/npc");
+		addStartNpc(TUNATUN);
+		addFirstTalkId(TUNATUN);
+		addTalkId(TUNATUN);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -62,16 +70,8 @@ public class Tunatun extends AbstractNpcAI
 		return event;
 	}
 	
-	private Tunatun(String name, String descr)
-	{
-		super(name, descr);
-		addStartNpc(TUNATUN);
-		addFirstTalkId(TUNATUN);
-		addTalkId(TUNATUN);
-	}
-	
 	public static void main(String[] args)
 	{
-		new Tunatun(Tunatun.class.getSimpleName(), "ai/npc");
+		new Tunatun();
 	}
 }

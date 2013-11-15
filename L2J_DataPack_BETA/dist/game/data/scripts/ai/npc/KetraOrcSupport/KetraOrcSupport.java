@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.util.Util;
  * Original Jython script by Emperorc and Kerberos_20.
  * @authors Nyaran
  */
-public class KetraOrcSupport extends AbstractNpcAI
+public final class KetraOrcSupport extends AbstractNpcAI
 {
 	private static class BuffsData
 	{
@@ -90,9 +90,9 @@ public class KetraOrcSupport extends AbstractNpcAI
 		BUFF.put(8, new BuffsData(4357, 6)); // Haste: Requires 6 Buffalo Horns
 	}
 	
-	private KetraOrcSupport(String name, String descr)
+	private KetraOrcSupport()
 	{
-		super(name, descr);
+		super(KetraOrcSupport.class.getSimpleName(), "ai/npc");
 		addFirstTalkId(KADUN, WAHKAN, ASEFA, ATAN, JAFF, JUMARA, KURFA);
 		addTalkId(ASEFA, KURFA, JAFF);
 		addStartNpc(KURFA, JAFF);
@@ -210,6 +210,6 @@ public class KetraOrcSupport extends AbstractNpcAI
 	
 	public static void main(String args[])
 	{
-		new KetraOrcSupport(KetraOrcSupport.class.getSimpleName(), "ai/npc");
+		new KetraOrcSupport();
 	}
 }

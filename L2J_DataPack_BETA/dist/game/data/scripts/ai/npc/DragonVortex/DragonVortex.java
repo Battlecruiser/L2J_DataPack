@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Dragon Vortex AI.
  * @author UnAfraid, improved by Adry_85
  */
-public class DragonVortex extends AbstractNpcAI
+public final class DragonVortex extends AbstractNpcAI
 {
 	// NPC
 	private static final int VORTEX = 32871;
@@ -48,9 +48,9 @@ public class DragonVortex extends AbstractNpcAI
 	// Misc
 	private static final int DESPAWN_DELAY = 1800000; // 30min
 	
-	private DragonVortex(String name, String descr)
+	private DragonVortex()
 	{
-		super(name, descr);
+		super(DragonVortex.class.getSimpleName(), "ai/npc");
 		addStartNpc(VORTEX);
 		addFirstTalkId(VORTEX);
 		addTalkId(VORTEX);
@@ -107,6 +107,6 @@ public class DragonVortex extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new DragonVortex(DragonVortex.class.getSimpleName(), "ai/npc");
+		new DragonVortex();
 	}
 }

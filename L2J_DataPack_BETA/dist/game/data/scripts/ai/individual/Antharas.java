@@ -56,7 +56,7 @@ import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
  * Antharas' AI.
  * @author L2J_JP SANDMAN
  */
-public class Antharas extends AbstractNpcAI
+public final class Antharas extends AbstractNpcAI
 {
 	// config
 	private static final int FWA_ACTIVITYTIMEOFANTHARAS = 120;
@@ -118,9 +118,9 @@ public class Antharas extends AbstractNpcAI
 	
 	protected static L2BossZone _Zone;
 	
-	private Antharas(String name, String descr)
+	private Antharas()
 	{
-		super(name, descr);
+		super(Antharas.class.getSimpleName(), "ai/individual");
 		registerMobs(ANTHARAS_OLD_ID, ANTHARAS_WEAK_ID, ANTHARAS_NORMAL_ID, ANTHARAS_STRONG_ID, 29069, 29070, 29071, 29072, 29073, 29074, 29075, 29076);
 		init();
 	}
@@ -951,6 +951,6 @@ public class Antharas extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Antharas(Antharas.class.getSimpleName(), "ai");
+		new Antharas();
 	}
 }

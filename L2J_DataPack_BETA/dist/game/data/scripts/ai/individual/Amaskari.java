@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Manages Amaskari's and minions' chat and some skill usage.
  * @author GKR
  */
-public class Amaskari extends AbstractNpcAI
+public final class Amaskari extends AbstractNpcAI
 {
 	private static final int AMASKARI = 22449;
 	private static final int AMASKARI_PRISONER = 22450;
@@ -66,10 +66,9 @@ public class Amaskari extends AbstractNpcAI
 		NpcStringId.EEEK_I_FEEL_SICKYOW
 	};
 	
-	private Amaskari(String name, String descr)
+	private Amaskari()
 	{
-		super(name, descr);
-		
+		super(Amaskari.class.getSimpleName(), "ai/individual");
 		addKillId(AMASKARI, AMASKARI_PRISONER);
 		addAttackId(AMASKARI);
 		addSpawnId(AMASKARI_PRISONER);
@@ -186,6 +185,6 @@ public class Amaskari extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Amaskari(Amaskari.class.getSimpleName(), "ai");
+		new Amaskari();
 	}
 }

@@ -30,16 +30,15 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
  * Typhoon's AI.
  * @author GKR
  */
-public class Typhoon extends AbstractNpcAI
+public final class Typhoon extends AbstractNpcAI
 {
 	private static final int TYPHOON = 25539;
 	
 	private static SkillHolder STORM = new SkillHolder(5434, 1);
 	
-	private Typhoon(String name, String descr)
+	private Typhoon()
 	{
-		super(name, descr);
-		
+		super(Typhoon.class.getSimpleName(), "ai/individual");
 		addAggroRangeEnterId(TYPHOON);
 		addSpawnId(TYPHOON);
 		
@@ -81,6 +80,6 @@ public class Typhoon extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Typhoon(Typhoon.class.getSimpleName(), "ai");
+		new Typhoon();
 	}
 }

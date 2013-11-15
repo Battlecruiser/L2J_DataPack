@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
  * Original Jython script by Kerberos.
  * @author Plim
  */
-public class Survivor extends AbstractNpcAI
+public final class Survivor extends AbstractNpcAI
 {
 	// NPC
 	private static final int SURVIVOR = 32632;
@@ -38,6 +38,13 @@ public class Survivor extends AbstractNpcAI
 	private static final int MIN_LEVEL = 75;
 	// Location
 	private static final Location TELEPORT = new Location(-149406, 255247, -80);
+	
+	private Survivor()
+	{
+		super(Survivor.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(SURVIVOR);
+		addTalkId(SURVIVOR);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -68,15 +75,8 @@ public class Survivor extends AbstractNpcAI
 		return "32632-1.htm";
 	}
 	
-	private Survivor(String name, String descr)
-	{
-		super(name, descr);
-		addStartNpc(SURVIVOR);
-		addTalkId(SURVIVOR);
-	}
-	
 	public static void main(String[] args)
 	{
-		new Survivor(Survivor.class.getSimpleName(), "ai/npc/Teleports");
+		new Survivor();
 	}
 }

@@ -38,9 +38,9 @@ public final class CrimsonHatuOtis extends AbstractNpcAI
 	private static SkillHolder BOSS_SPINING_SLASH = new SkillHolder(4737, 1);
 	private static SkillHolder BOSS_HASTE = new SkillHolder(4175, 1);
 	
-	private CrimsonHatuOtis(String name, String descr)
+	private CrimsonHatuOtis()
 	{
-		super(name, descr);
+		super(CrimsonHatuOtis.class.getSimpleName(), "ai/individual");
 		addAttackId(CRIMSON_HATU_OTIS);
 		addKillId(CRIMSON_HATU_OTIS);
 	}
@@ -98,6 +98,6 @@ public final class CrimsonHatuOtis extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new CrimsonHatuOtis(CrimsonHatuOtis.class.getSimpleName(), "ai");
+		new CrimsonHatuOtis();
 	}
 }

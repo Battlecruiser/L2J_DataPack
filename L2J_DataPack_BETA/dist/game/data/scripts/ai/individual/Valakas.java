@@ -49,7 +49,7 @@ import com.l2jserver.gameserver.util.Util;
  * Valakas' AI.
  * @author Tryskell
  */
-public class Valakas extends AbstractNpcAI
+public final class Valakas extends AbstractNpcAI
 {
 	// NPC
 	private static final int VALAKAS = 29028;
@@ -117,13 +117,12 @@ public class Valakas extends AbstractNpcAI
 	private L2Playable _actualVictim; // Actual target of Valakas.
 	private static L2BossZone ZONE;
 	
-	private Valakas(String name, String descr)
+	private Valakas()
 	{
-		super(name, descr);
+		super(Valakas.class.getSimpleName(), "ai/individual");
 		registerMobs(VALAKAS);
 		
 		ZONE = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
-		
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(VALAKAS);
 		final int status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
 		
@@ -567,6 +566,6 @@ public class Valakas extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Valakas(Valakas.class.getSimpleName(), "ai");
+		new Valakas();
 	}
 }

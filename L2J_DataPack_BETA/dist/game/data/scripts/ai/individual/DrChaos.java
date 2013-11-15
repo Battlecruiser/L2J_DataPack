@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
  * DrChaos' AI.
  * @author Kerberos
  */
-public class DrChaos extends Quest
+public final class DrChaos extends Quest
 {
 	private static final int DR_CHAOS = 32033;
 	private static final int STRANGE_MACHINE = 32032;
@@ -42,9 +42,10 @@ public class DrChaos extends Quest
 	private static final Location PLAYER_TELEPORT = new Location(94832, -112624, -3304);
 	private static final Location NPC_LOCATION = new Location(-113091, -243942, -15536);
 	
-	private DrChaos(int questId, String name, String descr)
+	private DrChaos()
 	{
-		super(questId, name, descr);
+		// TODO extends AbstractNpcAI
+		super(-1, "Doctor Chaos", "ai/individual");
 		addFirstTalkId(DR_CHAOS);
 		_IsGolemSpawned = false;
 	}
@@ -69,7 +70,6 @@ public class DrChaos extends Quest
 			}
 			else
 			{
-				// print "Dr Chaos AI: problem finding Strange Machine (npcid = "+STRANGE_MACHINE+"). Error: not spawned!"
 				startQuestTimer("2", 2000, npc, player);
 			}
 			startQuestTimer("3", 10000, npc, player);
@@ -120,6 +120,6 @@ public class DrChaos extends Quest
 	
 	public static void main(String[] args)
 	{
-		new DrChaos(-1, "Doctor Chaos", "ai");
+		new DrChaos();
 	}
 }

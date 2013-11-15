@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Weaver Olf - Pins And Pouch Unseal AI.
  * @author Gigiikun, Bloodshed, Adry_85
  */
-public class WeaverOlf extends AbstractNpcAI
+public final class WeaverOlf extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCs =
@@ -152,9 +152,9 @@ public class WeaverOlf extends AbstractNpcAI
 		}
 	};
 	
-	private WeaverOlf(String name, String descr)
+	private WeaverOlf()
 	{
-		super(name, descr);
+		super(WeaverOlf.class.getSimpleName(), "ai/npc");
 		addStartNpc(NPCs);
 		addTalkId(NPCs);
 	}
@@ -242,6 +242,6 @@ public class WeaverOlf extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new WeaverOlf(WeaverOlf.class.getSimpleName(), "ai/npc");
+		new WeaverOlf();
 	}
 }

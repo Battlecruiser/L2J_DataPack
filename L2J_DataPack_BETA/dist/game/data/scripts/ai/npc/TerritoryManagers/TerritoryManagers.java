@@ -41,7 +41,7 @@ import com.l2jserver.gameserver.network.serverpackets.UserInfo;
  * @author Zoey76
  * @version 1.0b
  */
-public class TerritoryManagers extends AbstractNpcAI
+public final class TerritoryManagers extends AbstractNpcAI
 {
 	private static final int[] preciousSoul1ItemIds =
 	{
@@ -63,6 +63,18 @@ public class TerritoryManagers extends AbstractNpcAI
 		7592,
 		7593
 	};
+	
+	private TerritoryManagers()
+	{
+		super(TerritoryManagers.class.getSimpleName(), "ai/npc");
+		
+		for (int i = 0; i < 9; i++)
+		{
+			addFirstTalkId(36490 + i);
+			addTalkId(36490 + i);
+			addStartNpc(36490 + i);
+		}
+	}
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
@@ -298,18 +310,6 @@ public class TerritoryManagers extends AbstractNpcAI
 		if (item != null)
 		{
 			player.destroyItem(event, item, npc, true);
-		}
-	}
-	
-	public TerritoryManagers()
-	{
-		super(TerritoryManagers.class.getSimpleName(), "ai/npc");
-		
-		for (int i = 0; i < 9; i++)
-		{
-			addFirstTalkId(36490 + i);
-			addTalkId(36490 + i);
-			addStartNpc(36490 + i);
 		}
 	}
 	

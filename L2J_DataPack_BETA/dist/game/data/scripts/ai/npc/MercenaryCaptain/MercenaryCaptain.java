@@ -39,7 +39,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
  * Mercenary Captain AI.
  * @author malyelfik
  */
-public class MercenaryCaptain extends AbstractNpcAI
+public final class MercenaryCaptain extends AbstractNpcAI
 {
 	// NPCs
 	private static final Map<Integer, Integer> NPCS = new HashMap<>();
@@ -67,9 +67,9 @@ public class MercenaryCaptain extends AbstractNpcAI
 	private static final int MIN_LEVEL = 40;
 	private static final int CLASS_LEVEL = 2;
 	
-	private MercenaryCaptain(String name, String descr)
+	private MercenaryCaptain()
 	{
-		super(name, descr);
+		super(MercenaryCaptain.class.getSimpleName(), "ai/npc");
 		for (int id : NPCS.keySet())
 		{
 			addStartNpc(id);
@@ -228,6 +228,6 @@ public class MercenaryCaptain extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new MercenaryCaptain(MercenaryCaptain.class.getSimpleName(), "ai/npc");
+		new MercenaryCaptain();
 	}
 }

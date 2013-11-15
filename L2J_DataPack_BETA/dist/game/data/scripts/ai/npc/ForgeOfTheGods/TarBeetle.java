@@ -30,21 +30,28 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
  * Tar Beetle AI
  * @author nonom, malyelfik
  */
-public class TarBeetle extends AbstractNpcAI
+public final class TarBeetle extends AbstractNpcAI
 {
 	// NPC
 	private static final int TAR_BEETLE = 18804;
-	
 	// Skills
-	private static final int SKILL_ID = 6142;
+	private static final int TAR_SPITE = 6142;
 	private static SkillHolder[] SKILLS =
 	{
-		new SkillHolder(SKILL_ID, 1),
-		new SkillHolder(SKILL_ID, 2),
-		new SkillHolder(SKILL_ID, 3)
+		new SkillHolder(TAR_SPITE, 1),
+		new SkillHolder(TAR_SPITE, 2),
+		new SkillHolder(TAR_SPITE, 3)
 	};
 	
 	private static final TarBeetleSpawn spawn = new TarBeetleSpawn();
+	
+	private TarBeetle()
+	{
+		super(TarBeetle.class.getSimpleName(), "ai/npc");
+		addAggroRangeEnterId(TAR_BEETLE);
+		addSpellFinishedId(TAR_BEETLE);
+		spawn.startTasks();
+	}
 	
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
@@ -52,7 +59,7 @@ public class TarBeetle extends AbstractNpcAI
 		if ((spawn.getBeetle(npc).getScriptValue() > 0) && canCastSkill(npc))
 		{
 			int level = 0;
-			final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(SKILL_ID);
+			final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(TAR_SPITE);
 			if (info != null)
 			{
 				level = info.getSkill().getAbnormalLvl();
@@ -70,7 +77,7 @@ public class TarBeetle extends AbstractNpcAI
 	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
-		if ((skill != null) && (skill.getId() == SKILL_ID))
+		if ((skill != null) && (skill.getId() == TAR_SPITE))
 		{
 			int val = spawn.getBeetle(npc).getScriptValue() - 1;
 			if ((val <= 0) || (SKILLS[0].getSkill().getMpConsume() > npc.getCurrentMp()))
@@ -97,17 +104,8 @@ public class TarBeetle extends AbstractNpcAI
 		return true;
 	}
 	
-	public TarBeetle(String name, String descr)
-	{
-		super(name, descr);
-		addAggroRangeEnterId(TAR_BEETLE);
-		addSpellFinishedId(TAR_BEETLE);
-		
-		spawn.startTasks();
-	}
-	
 	public static void main(String[] args)
 	{
-		new TarBeetle(TarBeetle.class.getSimpleName(), "ai/npc");
+		new TarBeetle();
 	}
 }

@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Outpost Captain's AI.
  * @author DS
  */
-public class OutpostCaptain extends AbstractNpcAI
+public final class OutpostCaptain extends AbstractNpcAI
 {
 	private static final int CAPTAIN = 18466;
 	
@@ -42,9 +42,9 @@ public class OutpostCaptain extends AbstractNpcAI
 	
 	private static final int DOORKEEPER = 32351;
 	
-	private OutpostCaptain(String name, String descr)
+	private OutpostCaptain()
 	{
-		super(name, descr);
+		super(OutpostCaptain.class.getSimpleName(), "ai/individual");
 		addKillId(CAPTAIN);
 		addSpawnId(CAPTAIN, DOORKEEPER);
 		addSpawnId(DEFENDERS);
@@ -95,6 +95,6 @@ public class OutpostCaptain extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new OutpostCaptain(OutpostCaptain.class.getSimpleName(), "ai");
+		new OutpostCaptain();
 	}
 }

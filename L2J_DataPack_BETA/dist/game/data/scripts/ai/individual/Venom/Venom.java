@@ -99,10 +99,9 @@ public final class Venom extends AbstractNpcAI
 	
 	private static List<L2PcInstance> _targets = new ArrayList<>();
 	
-	private Venom(String name, String descr)
+	private Venom()
 	{
-		super(name, descr);
-		
+		super(Venom.class.getSimpleName(), "ai/individual");
 		addStartNpc(DUNGEON_KEEPER, TELEPORT_CUBE);
 		addFirstTalkId(DUNGEON_KEEPER, TELEPORT_CUBE);
 		addTalkId(DUNGEON_KEEPER, TELEPORT_CUBE);
@@ -414,6 +413,6 @@ public final class Venom extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Venom(Venom.class.getSimpleName(), "ai/individual");
+		new Venom();
 	}
 }

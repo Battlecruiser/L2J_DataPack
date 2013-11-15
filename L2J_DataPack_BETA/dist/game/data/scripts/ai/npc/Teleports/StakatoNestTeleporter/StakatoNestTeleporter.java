@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  * Stakato Nest Teleport AI.
  * @author Charus
  */
-public class StakatoNestTeleporter extends AbstractNpcAI
+public final class StakatoNestTeleporter extends AbstractNpcAI
 {
 	// Locations
 	private final static Location[] LOCS =
@@ -44,9 +44,9 @@ public class StakatoNestTeleporter extends AbstractNpcAI
 	// NPC
 	private final static int KINTAIJIN = 32640;
 	
-	private StakatoNestTeleporter(String name, String descr)
+	private StakatoNestTeleporter()
 	{
-		super(name, descr);
+		super(StakatoNestTeleporter.class.getSimpleName(), "ai/npc/Teleports");
 		addStartNpc(KINTAIJIN);
 		addTalkId(KINTAIJIN);
 	}
@@ -79,11 +79,11 @@ public class StakatoNestTeleporter extends AbstractNpcAI
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState accessQuest = player.getQuestState(Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName());
-		return ((accessQuest != null) && accessQuest.isCompleted()) ? "32640.htm" : "32640-no.htm";
+		return (((accessQuest != null) && accessQuest.isCompleted()) ? "32640.htm" : "32640-no.htm");
 	}
 	
 	public static void main(String[] args)
 	{
-		new StakatoNestTeleporter(StakatoNestTeleporter.class.getSimpleName(), "ai/npc/Teleports");
+		new StakatoNestTeleporter();
 	}
 }

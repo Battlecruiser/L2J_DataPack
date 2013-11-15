@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-public class FleeNpc extends AbstractNpcAI
+public final class FleeNpc extends AbstractNpcAI
 {
 	private static final int[] MOBS =
 	{
@@ -41,9 +41,9 @@ public class FleeNpc extends AbstractNpcAI
 		18157
 	};
 	
-	private FleeNpc(String name, String descr)
+	private FleeNpc()
 	{
-		super(name, descr);
+		super(FleeNpc.class.getSimpleName(), "ai/individual");
 		addAttackId(MOBS);
 	}
 	
@@ -71,6 +71,6 @@ public class FleeNpc extends AbstractNpcAI
 	// Register the new Script at the Script System
 	public static void main(String[] args)
 	{
-		new FleeNpc(FleeNpc.class.getSimpleName(), "ai");
+		new FleeNpc();
 	}
 }

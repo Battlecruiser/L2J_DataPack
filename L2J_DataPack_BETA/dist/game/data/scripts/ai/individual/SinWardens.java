@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Manages Sin Wardens disappearing and chat.
  * @author GKR
  */
-public class SinWardens extends AbstractNpcAI
+public final class SinWardens extends AbstractNpcAI
 {
 	private static final int[] SIN_WARDEN_MINIONS =
 	{
@@ -56,9 +56,9 @@ public class SinWardens extends AbstractNpcAI
 	
 	private final Map<Integer, Integer> killedMinionsCount = new FastMap<>();
 	
-	private SinWardens(String name, String descr)
+	private SinWardens()
 	{
-		super(name, descr);
+		super(SinWardens.class.getSimpleName(), "ai/individual");
 		addKillId(SIN_WARDEN_MINIONS);
 	}
 	
@@ -90,6 +90,6 @@ public class SinWardens extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new SinWardens(SinWardens.class.getSimpleName(), "ai");
+		new SinWardens();
 	}
 }

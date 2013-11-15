@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Rafforty AI.
  * @author malyelfik, Gladicek
  */
-public class Rafforty extends AbstractNpcAI
+public final class Rafforty extends AbstractNpcAI
 {
 	// NPC
 	private static final int RAFFORTY = 32020;
@@ -67,9 +67,9 @@ public class Rafforty extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private Rafforty(String name, String descr)
+	private Rafforty()
 	{
-		super(name, descr);
+		super(Rafforty.class.getSimpleName(), "ai/npc");
 		addStartNpc(RAFFORTY);
 		addFirstTalkId(RAFFORTY);
 		addTalkId(RAFFORTY);
@@ -77,6 +77,6 @@ public class Rafforty extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Rafforty(Rafforty.class.getSimpleName(), "ai/npc");
+		new Rafforty();
 	}
 }

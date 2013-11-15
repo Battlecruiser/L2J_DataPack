@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.util.Util;
  * Monastery Minigame AI.
  * @author nonom
  */
-public class Minigame extends AbstractNpcAI
+public final class Minigame extends AbstractNpcAI
 {
 	private static final int SUMIEL = 32758;
 	private static final int BURNER = 18913;
@@ -56,9 +56,9 @@ public class Minigame extends AbstractNpcAI
 	
 	private final MinigameRoom _rooms[] = new MinigameRoom[2];
 	
-	public Minigame(String name, String descr)
+	private Minigame()
 	{
-		super(name, descr);
+		super(Minigame.class.getSimpleName(), "ai/npc");
 		addStartNpc(SUMIEL);
 		addFirstTalkId(SUMIEL);
 		addTalkId(SUMIEL);
@@ -510,6 +510,6 @@ public class Minigame extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Minigame(Minigame.class.getSimpleName(), "ai/npc");
+		new Minigame();
 	}
 }

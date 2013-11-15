@@ -47,7 +47,7 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
  * Orfen's AI
  * @author Emperorc
  */
-public class Orfen extends AbstractNpcAI
+public final class Orfen extends AbstractNpcAI
 {
 	private static final Location[] POS =
 	{
@@ -78,9 +78,9 @@ public class Orfen extends AbstractNpcAI
 	private static final byte ALIVE = 0;
 	private static final byte DEAD = 1;
 	
-	private Orfen(String name, String descr)
+	private Orfen()
 	{
-		super(name, descr);
+		super(Orfen.class.getSimpleName(), "ai/individual");
 		int[] mobs =
 		{
 			ORFEN,
@@ -352,6 +352,6 @@ public class Orfen extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Orfen(Orfen.class.getSimpleName(), "ai");
+		new Orfen();
 	}
 }

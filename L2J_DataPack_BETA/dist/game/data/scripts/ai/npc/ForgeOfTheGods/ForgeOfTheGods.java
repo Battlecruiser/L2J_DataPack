@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Forge of the Gods AI
  * @author nonom, malyelfik
  */
-public class ForgeOfTheGods extends AbstractNpcAI
+public final class ForgeOfTheGods extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] FOG_MOBS =
@@ -81,6 +81,14 @@ public class ForgeOfTheGods extends AbstractNpcAI
 	private static int _npcCount = 0;
 	
 	// private static int _npcsAlive = 0; TODO: Require zone spawn support
+	
+	private ForgeOfTheGods()
+	{
+		super(ForgeOfTheGods.class.getSimpleName(), "ai/npc");
+		addKillId(FOG_MOBS);
+		addSpawnId(LAVASAURUSES);
+		startQuestTimer("refresh", REFRESH * 1000, null, null, true);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -189,17 +197,8 @@ public class ForgeOfTheGods extends AbstractNpcAI
 		return mob;
 	}
 	
-	public ForgeOfTheGods(String name, String descr)
-	{
-		super(name, descr);
-		addKillId(FOG_MOBS);
-		addSpawnId(LAVASAURUSES);
-		
-		startQuestTimer("refresh", REFRESH * 1000, null, null, true);
-	}
-	
 	public static void main(String[] args)
 	{
-		new ForgeOfTheGods(ForgeOfTheGods.class.getSimpleName(), "ai/npc");
+		new ForgeOfTheGods();
 	}
 }

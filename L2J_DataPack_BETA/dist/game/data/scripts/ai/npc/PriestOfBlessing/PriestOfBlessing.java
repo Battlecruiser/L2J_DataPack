@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.util.Util;
  * Priest Of Blessing AI.
  * @author Gnacik
  */
-public class PriestOfBlessing extends AbstractNpcAI
+public final class PriestOfBlessing extends AbstractNpcAI
 {
 	// NPC
 	private static final int PRIEST = 32783;
@@ -86,7 +86,7 @@ public class PriestOfBlessing extends AbstractNpcAI
 		new Location(116972, 77255, -2688, 41951)
 	};
 	
-	public PriestOfBlessing()
+	private PriestOfBlessing()
 	{
 		super(PriestOfBlessing.class.getSimpleName(), "ai/npc");
 		addStartNpc(PRIEST);

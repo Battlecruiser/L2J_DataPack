@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.util.Util;
  * Dragon Valley AI.
  * @author St3eT
  */
-public class DragonValley extends AbstractNpcAI
+public final class DragonValley extends AbstractNpcAI
 {
 	// NPC
 	private static final int NECROMANCER_OF_THE_VALLEY = 22858;
@@ -63,9 +63,9 @@ public class DragonValley extends AbstractNpcAI
 	// Skill
 	private static SkillHolder SELF_DESTRUCTION = new SkillHolder(6850, 1);
 	
-	private DragonValley(String name, String descr)
+	private DragonValley()
 	{
-		super(name, descr);
+		super(DragonValley.class.getSimpleName(), "ai/group_template");
 		addAttackId(NECROMANCER_OF_THE_VALLEY);
 		addKillId(NECROMANCER_OF_THE_VALLEY);
 		addKillId(HERB_DROP);
@@ -153,6 +153,6 @@ public class DragonValley extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new DragonValley(DragonValley.class.getSimpleName(), "ai");
+		new DragonValley();
 	}
 }

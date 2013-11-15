@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.util.MinionList;
  * Ranku's AI.
  * @author GKR
  */
-public class Ranku extends AbstractNpcAI
+public final class Ranku extends AbstractNpcAI
 {
 	private static final int RANKU = 25542;
 	private static final int MINION = 32305;
@@ -44,9 +44,9 @@ public class Ranku extends AbstractNpcAI
 	
 	private static final Set<Integer> MY_TRACKING_SET = new FastSet<Integer>().shared();
 	
-	private Ranku(String name, String descr)
+	private Ranku()
 	{
-		super(name, descr);
+		super(Ranku.class.getSimpleName(), "ai/individual");
 		addAttackId(RANKU);
 		addKillId(RANKU, MINION);
 	}
@@ -120,6 +120,6 @@ public class Ranku extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Ranku(Ranku.class.getSimpleName(), "ai");
+		new Ranku();
 	}
 }

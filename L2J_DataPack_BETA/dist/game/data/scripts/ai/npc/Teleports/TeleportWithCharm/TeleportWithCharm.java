@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Original Jython script by DraX.
  * @author Plim
  */
-public class TeleportWithCharm extends AbstractNpcAI
+public final class TeleportWithCharm extends AbstractNpcAI
 {
 	// NPCs
 	private final static int WHIRPY = 30540;
@@ -40,6 +40,13 @@ public class TeleportWithCharm extends AbstractNpcAI
 	// Locations
 	private final static Location ORC_TELEPORT = new Location(-80826, 149775, -3043);
 	private final static Location DWARF_TELEPORT = new Location(-80826, 149775, -3043);
+	
+	private TeleportWithCharm()
+	{
+		super(TeleportWithCharm.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(WHIRPY, TAMIL);
+		addTalkId(WHIRPY, TAMIL);
+	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
@@ -76,15 +83,8 @@ public class TeleportWithCharm extends AbstractNpcAI
 		return super.onTalk(npc, player);
 	}
 	
-	private TeleportWithCharm(String name, String descr)
-	{
-		super(name, descr);
-		addStartNpc(WHIRPY, TAMIL);
-		addTalkId(WHIRPY, TAMIL);
-	}
-	
 	public static void main(String[] args)
 	{
-		new TeleportWithCharm(TeleportWithCharm.class.getSimpleName(), "ai/npc/Teleports");
+		new TeleportWithCharm();
 	}
 }

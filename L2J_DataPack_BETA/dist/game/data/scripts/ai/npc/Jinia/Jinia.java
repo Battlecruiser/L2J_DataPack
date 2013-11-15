@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  * Jinia AI.
  * @author Adry_85
  */
-public class Jinia extends AbstractNpcAI
+public final class Jinia extends AbstractNpcAI
 {
 	// NPC
 	private static final int JINIA = 32781;
@@ -38,9 +38,9 @@ public class Jinia extends AbstractNpcAI
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	private Jinia(String name, String descr)
+	private Jinia()
 	{
-		super(name, descr);
+		super(Jinia.class.getSimpleName(), "ai/npc");
 		addStartNpc(JINIA);
 		addFirstTalkId(JINIA);
 		addTalkId(JINIA);
@@ -81,6 +81,6 @@ public class Jinia extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Jinia(Jinia.class.getSimpleName(), "ai/npc");
+		new Jinia();
 	}
 }

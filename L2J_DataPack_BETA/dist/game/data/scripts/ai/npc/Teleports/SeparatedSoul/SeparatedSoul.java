@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Separated Soul teleport AI.
  * @author UnAfraid, improved by Adry_85
  */
-public class SeparatedSoul extends AbstractNpcAI
+public final class SeparatedSoul extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] SEPARATED_SOULS =
@@ -66,6 +66,13 @@ public class SeparatedSoul extends AbstractNpcAI
 		LOCATIONS.put("DragonValleySouth", new Location(113203, 121063, -3712));
 	}
 	
+	private SeparatedSoul()
+	{
+		super(SeparatedSoul.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(SEPARATED_SOULS);
+		addTalkId(SEPARATED_SOULS);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -96,15 +103,8 @@ public class SeparatedSoul extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	private SeparatedSoul(String name, String descr)
-	{
-		super(name, descr);
-		addStartNpc(SEPARATED_SOULS);
-		addTalkId(SEPARATED_SOULS);
-	}
-	
 	public static void main(String[] args)
 	{
-		new SeparatedSoul(SeparatedSoul.class.getSimpleName(), "ai/npc/Teleports");
+		new SeparatedSoul();
 	}
 }

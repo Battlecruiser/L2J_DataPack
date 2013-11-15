@@ -46,7 +46,7 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
  * Queen Ant's AI
  * @author Emperorc
  */
-public class QueenAnt extends AbstractNpcAI
+public final class QueenAnt extends AbstractNpcAI
 {
 	private static final int QUEEN = 29001;
 	private static final int LARVA = 29002;
@@ -84,15 +84,13 @@ public class QueenAnt extends AbstractNpcAI
 	private L2MonsterInstance _larva = null;
 	private final List<L2MonsterInstance> _nurses = new FastList<>(5);
 	
-	private QueenAnt(String name, String descr)
+	private QueenAnt()
 	{
-		super(name, descr);
-		
+		super(QueenAnt.class.getSimpleName(), "ai/individual");
 		registerMobs(MOBS, QuestEventType.ON_SPAWN, QuestEventType.ON_KILL, QuestEventType.ON_AGGRO_RANGE_ENTER);
 		addFactionCallId(NURSE);
 		
 		_zone = GrandBossManager.getInstance().getZone(QUEEN_X, QUEEN_Y, QUEEN_Z);
-		
 		StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
 		int status = GrandBossManager.getInstance().getBossStatus(QUEEN);
 		if (status == DEAD)
@@ -374,6 +372,6 @@ public class QueenAnt extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new QueenAnt(QueenAnt.class.getSimpleName(), "ai");
+		new QueenAnt();
 	}
 }
