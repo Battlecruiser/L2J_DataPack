@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Original Jython script by kerberos_20
  * @author Plim
  */
-public class ElrokiTeleporters extends AbstractNpcAI
+public final class ElrokiTeleporters extends AbstractNpcAI
 {
 	// NPCs
 	private static final int ORAHOCHIN = 32111;

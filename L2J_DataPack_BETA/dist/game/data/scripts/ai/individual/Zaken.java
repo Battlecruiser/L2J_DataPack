@@ -43,7 +43,7 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 /**
  * Zaken AI
  */
-public class Zaken extends AbstractNpcAI
+public final class Zaken extends AbstractNpcAI
 {
 	private int _1001 = 0; // used for first cancel of QuestTimer "1001"
 	private int _ai0 = 0; // used for zaken coords updater
@@ -125,9 +125,9 @@ public class Zaken extends AbstractNpcAI
 	
 	private static L2BossZone _Zone;
 	
-	private Zaken(String name, String descr)
+	private Zaken()
 	{
-		super(name, descr);
+		super(Zaken.class.getSimpleName(), "ai/individual");
 		
 		// Zaken doors handling
 		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new Runnable()
@@ -1027,6 +1027,6 @@ public class Zaken extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Zaken(Zaken.class.getSimpleName(), "ai");
+		new Zaken();
 	}
 }

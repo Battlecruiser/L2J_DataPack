@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Castle Warehouse Keeper AI.
  * @author malyelfik
  */
-public class CastleWarehouse extends AbstractNpcAI
+public final class CastleWarehouse extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCS =
@@ -46,9 +46,9 @@ public class CastleWarehouse extends AbstractNpcAI
 	private static final int BLOOD_OATH = 9910;
 	private static final int BLOOD_ALLIANCE = 9911;
 	
-	private CastleWarehouse(String name, String descr)
+	private CastleWarehouse()
 	{
-		super(name, descr);
+		super(CastleWarehouse.class.getSimpleName(), "ai/npc");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 		addFirstTalkId(NPCS);
@@ -114,6 +114,6 @@ public class CastleWarehouse extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new CastleWarehouse(CastleWarehouse.class.getSimpleName(), "ai/npc");
+		new CastleWarehouse();
 	}
 }

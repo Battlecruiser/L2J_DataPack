@@ -35,7 +35,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
  * Castle Mercenary Manager AI.
  * @author malyelfik
  */
-public class CastleMercenaryManager extends AbstractNpcAI
+public final class CastleMercenaryManager extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCS =
@@ -51,9 +51,9 @@ public class CastleMercenaryManager extends AbstractNpcAI
 		35557, // Kendrew
 	};
 	
-	private CastleMercenaryManager(String name, String descr)
+	private CastleMercenaryManager()
 	{
-		super(name, descr);
+		super(CastleMercenaryManager.class.getSimpleName(), "ai/npc");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 		addFirstTalkId(NPCS);
@@ -145,6 +145,6 @@ public class CastleMercenaryManager extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new CastleMercenaryManager(CastleMercenaryManager.class.getSimpleName(), "ai/npc");
+		new CastleMercenaryManager();
 	}
 }

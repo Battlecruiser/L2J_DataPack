@@ -98,9 +98,9 @@ public final class WyvernManager extends AbstractNpcAI
 		MANAGERS.put(36477, ManagerType.FORT);
 	}
 	
-	private WyvernManager(String name, String descr)
+	private WyvernManager()
 	{
-		super(name, descr);
+		super(WyvernManager.class.getSimpleName(), "ai/npc");
 		addStartNpc(MANAGERS.keySet());
 		addTalkId(MANAGERS.keySet());
 		addFirstTalkId(MANAGERS.keySet());
@@ -305,6 +305,6 @@ public final class WyvernManager extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new WyvernManager(WyvernManager.class.getSimpleName(), "ai/npc");
+		new WyvernManager();
 	}
 }

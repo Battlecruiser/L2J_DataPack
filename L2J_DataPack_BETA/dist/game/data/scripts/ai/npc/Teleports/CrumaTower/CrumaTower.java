@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Cruma Tower teleport AI.
  * @author Plim
  */
-public class CrumaTower extends AbstractNpcAI
+public final class CrumaTower extends AbstractNpcAI
 {
 	// NPC
 	private static final int MOZELLA = 30483;
@@ -48,15 +48,15 @@ public class CrumaTower extends AbstractNpcAI
 		return "30483-1.htm";
 	}
 	
-	private CrumaTower(String name, String descr)
+	private CrumaTower()
 	{
-		super(name, descr);
+		super(CrumaTower.class.getSimpleName(), "ai/npc/Teleports");
 		addStartNpc(MOZELLA);
 		addTalkId(MOZELLA);
 	}
 	
 	public static void main(String[] args)
 	{
-		new CrumaTower(CrumaTower.class.getSimpleName(), "ai/npc/Teleports");
+		new CrumaTower();
 	}
 }

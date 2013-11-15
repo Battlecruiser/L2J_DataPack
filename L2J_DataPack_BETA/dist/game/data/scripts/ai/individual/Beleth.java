@@ -58,7 +58,7 @@ import com.l2jserver.gameserver.util.Util;
  * Beleth's AI.
  * @author Treat
  */
-public class Beleth extends AbstractNpcAI
+public final class Beleth extends AbstractNpcAI
 {
 	protected static L2Npc CAMERA;
 	protected static L2Npc CAMERA2;
@@ -82,9 +82,9 @@ public class Beleth extends AbstractNpcAI
 	
 	protected static final Location BELETH_SPAWN = new Location(16323, 213059, -9357, 49152);
 	
-	private Beleth(String name, String descr)
+	private Beleth()
 	{
-		super(name, descr);
+		super(Beleth.class.getSimpleName(), "ai/individual");
 		ZONE = ZoneManager.getInstance().getZoneById(12018);
 		addEnterZoneId(12018);
 		registerMobs(29118, 29119);
@@ -777,6 +777,6 @@ public class Beleth extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Beleth(Beleth.class.getSimpleName(), "ai");
+		new Beleth();
 	}
 }

@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Castle Teleporter AI.
  * @author malyelfik
  */
-public class CastleTeleporter extends AbstractNpcAI
+public final class CastleTeleporter extends AbstractNpcAI
 {
 	// Teleporter IDs
 	private static final int[] NPCS =
@@ -49,9 +49,9 @@ public class CastleTeleporter extends AbstractNpcAI
 		35547, // Mass Gatekeeper (Schuttgart)
 	};
 	
-	private CastleTeleporter(String name, String descr)
+	private CastleTeleporter()
 	{
-		super(name, descr);
+		super(CastleTeleporter.class.getSimpleName(), "ai/npc");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 		addFirstTalkId(NPCS);
@@ -99,6 +99,6 @@ public class CastleTeleporter extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new CastleTeleporter(CastleTeleporter.class.getSimpleName(), "ai/npc");
+		new CastleTeleporter();
 	}
 }

@@ -30,14 +30,14 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Knoriks AI.
  * @author UnAfraid
  */
-public class Knoriks extends AbstractNpcAI
+public final class Knoriks extends AbstractNpcAI
 {
-	private static final int KNORIKS_ID = 22857;
+	private static final int KNORIKS = 22857;
 	
-	private Knoriks(String name, String descr)
+	private Knoriks()
 	{
-		super(name, descr);
-		addAggroRangeEnterId(KNORIKS_ID);
+		super(Knoriks.class.getSimpleName(), "ai/individual");
+		addAggroRangeEnterId(KNORIKS);
 	}
 	
 	@Override
@@ -56,6 +56,6 @@ public class Knoriks extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Knoriks(Knoriks.class.getSimpleName(), "ai");
+		new Knoriks();
 	}
 }

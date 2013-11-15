@@ -30,11 +30,10 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
  * Rooney AI
  * @author malyelfik
  */
-public class Rooney extends AbstractNpcAI
+public final class Rooney extends AbstractNpcAI
 {
-	// Rooney ID
-	private static final int NPC_ID = 32049;
-	
+	// NPC
+	private static final int ROONEY = 32049;
 	// Locations
 	private static final Location[] LOCATIONS =
 	{
@@ -79,6 +78,13 @@ public class Rooney extends AbstractNpcAI
 		new Location(186074, -118154, -3312)
 	};
 	
+	private Rooney()
+	{
+		super(Rooney.class.getSimpleName(), "ai/npc");
+		final L2Npc npc = addSpawn(ROONEY, LOCATIONS[getRandom(LOCATIONS.length)], false, 0);
+		startQuestTimer("checkArea", 1000, npc, null, true);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -116,15 +122,8 @@ public class Rooney extends AbstractNpcAI
 		return null;
 	}
 	
-	public Rooney(String name, String descr)
-	{
-		super(name, descr);
-		final L2Npc npc = addSpawn(NPC_ID, LOCATIONS[getRandom(LOCATIONS.length)], false, 0);
-		startQuestTimer("checkArea", 1000, npc, null, true);
-	}
-	
 	public static void main(String[] args)
 	{
-		new Rooney(Rooney.class.getSimpleName(), "ai/npc");
+		new Rooney();
 	}
 }

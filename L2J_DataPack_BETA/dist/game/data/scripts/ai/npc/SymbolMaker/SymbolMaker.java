@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.HennaRemoveList;
  * Symbol Maker AI.
  * @author Adry_85
  */
-public class SymbolMaker extends AbstractNpcAI
+public final class SymbolMaker extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCS =
@@ -47,9 +47,9 @@ public class SymbolMaker extends AbstractNpcAI
 		31953, // Rankar
 	};
 	
-	private SymbolMaker(String name, String descr)
+	private SymbolMaker()
 	{
-		super(name, descr);
+		super(SymbolMaker.class.getSimpleName(), "ai/npc");
 		addFirstTalkId(NPCS);
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
@@ -94,6 +94,6 @@ public class SymbolMaker extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new SymbolMaker(SymbolMaker.class.getSimpleName(), "ai/npc");
+		new SymbolMaker();
 	}
 }

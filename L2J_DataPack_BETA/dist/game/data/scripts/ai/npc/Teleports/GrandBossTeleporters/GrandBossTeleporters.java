@@ -39,7 +39,7 @@ import com.l2jserver.gameserver.model.zone.type.L2BossZone;
  * Original python script by Emperorc.
  * @author Plim
  */
-public class GrandBossTeleporters extends AbstractNpcAI
+public final class GrandBossTeleporters extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCs =
@@ -62,17 +62,14 @@ public class GrandBossTeleporters extends AbstractNpcAI
 	private static final Location TELEPORT_INTO_VALAKAS_LAIR = new Location(204328, -111874, 70);
 	private static final Location TELEPORT_OUT_OF_VALAKAS_LAIR = new Location(150037, -57720, -2976);
 	
-	private Quest valakasAI()
-	{
-		return QuestManager.getInstance().getQuest(Valakas.class.getSimpleName());
-	}
-	
-	private Quest antharasAI()
-	{
-		return QuestManager.getInstance().getQuest(Antharas.class.getSimpleName());
-	}
-	
 	private static int playerCount = 0;
+	
+	private GrandBossTeleporters()
+	{
+		super(GrandBossTeleporters.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(NPCs);
+		addTalkId(NPCs);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -261,15 +258,18 @@ public class GrandBossTeleporters extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private GrandBossTeleporters(String name, String descr)
+	private Quest valakasAI()
 	{
-		super(name, descr);
-		addStartNpc(NPCs);
-		addTalkId(NPCs);
+		return QuestManager.getInstance().getQuest(Valakas.class.getSimpleName());
+	}
+	
+	private Quest antharasAI()
+	{
+		return QuestManager.getInstance().getQuest(Antharas.class.getSimpleName());
 	}
 	
 	public static void main(String[] args)
 	{
-		new GrandBossTeleporters(GrandBossTeleporters.class.getSimpleName(), "ai/npc/Teleports");
+		new GrandBossTeleporters();
 	}
 }

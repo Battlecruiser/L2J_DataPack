@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.util.Util;
  * Hunting Grounds teleport AI.
  * @author Charus
  */
-public class HuntingGroundsTeleport extends AbstractNpcAI
+public final class HuntingGroundsTeleport extends AbstractNpcAI
 {
 	// NPCs
 	// @formatter:off

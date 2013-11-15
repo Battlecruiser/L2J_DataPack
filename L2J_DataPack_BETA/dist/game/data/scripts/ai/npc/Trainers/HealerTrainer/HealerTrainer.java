@@ -39,17 +39,24 @@ import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
  * Trainer healers AI.
  * @author Zoey76
  */
-public class HealerTrainer extends AbstractNpcAI
+public final class HealerTrainer extends AbstractNpcAI
 {
 	// NPC
 	// @formatter:off
-	private static final int[] HEALER_TRAINERS = { 30022, 30030, 30032, 30036, 30067, 30068, 30116, 30117, 30118, 30119, 30144, 30145, 30188, 30194, 30293, 30330, 30375, 30377, 30464, 30473, 30476, 30680, 30701, 30720, 30721, 30858, 30859, 30860, 30861, 30864, 30906, 30908, 30912, 31280, 31281, 31287, 31329, 31330, 31335, 31969, 31970, 31976, 32155, 32162 };
+	private static final int[] HEALER_TRAINERS =
+	{
+		30022, 30030, 30032, 30036, 30067, 30068, 30116, 30117, 30118, 30119,
+		30144, 30145, 30188, 30194, 30293, 30330, 30375, 30377, 30464, 30473,
+		30476, 30680, 30701, 30720, 30721, 30858, 30859, 30860, 30861, 30864,
+		30906, 30908, 30912, 31280, 31281, 31287, 31329, 31330, 31335, 31969,
+		31970, 31976, 32155, 32162
+	};
 	// @formatter:on
 	// Misc
 	private static final int MIN_LEVEL = 76;
 	private static final int MIN_CLASS_LEVEL = 3;
 	
-	public HealerTrainer()
+	private HealerTrainer()
 	{
 		super(HealerTrainer.class.getSimpleName(), "ai/npc/Trainers");
 		addStartNpc(HEALER_TRAINERS);

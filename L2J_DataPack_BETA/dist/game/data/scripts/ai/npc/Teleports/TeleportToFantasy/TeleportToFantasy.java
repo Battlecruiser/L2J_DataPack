@@ -37,7 +37,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Original python script by Kerberos.
  * @author Plim
  */
-public class TeleportToFantasy extends AbstractNpcAI
+public final class TeleportToFantasy extends AbstractNpcAI
 {
 	// NPC
 	private static final int PADDIES = 32378;
@@ -69,6 +69,31 @@ public class TeleportToFantasy extends AbstractNpcAI
 	};
 	
 	private static final Location RUNE_TOWNSHIP = new Location(43835, -47749, -792);
+	
+	private TeleportToFantasy()
+	{
+		super(TeleportToFantasy.class.getSimpleName(), "ai/npc/Teleports");
+		TELEPORTERS.put(30059, 3); // TRISHA
+		TELEPORTERS.put(30080, 4); // CLARISSA
+		TELEPORTERS.put(30177, 6); // VALENTIA
+		TELEPORTERS.put(30233, 8); // ESMERALDA
+		TELEPORTERS.put(30256, 2); // BELLA
+		TELEPORTERS.put(30320, 1); // RICHLIN
+		TELEPORTERS.put(30848, 7); // ELISA
+		TELEPORTERS.put(30899, 5); // FLAUEN
+		TELEPORTERS.put(31320, 9); // ILYANA
+		TELEPORTERS.put(31275, 10); // TATIANA
+		TELEPORTERS.put(31964, 11); // BILIA
+		
+		for (int npcId : TELEPORTERS.keySet())
+		{
+			addStartNpc(npcId);
+			addTalkId(npcId);
+		}
+		
+		addStartNpc(PADDIES);
+		addTalkId(PADDIES);
+	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
@@ -108,33 +133,8 @@ public class TeleportToFantasy extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private TeleportToFantasy(String name, String descr)
-	{
-		super(name, descr);
-		TELEPORTERS.put(30059, 3); // TRISHA
-		TELEPORTERS.put(30080, 4); // CLARISSA
-		TELEPORTERS.put(30177, 6); // VALENTIA
-		TELEPORTERS.put(30233, 8); // ESMERALDA
-		TELEPORTERS.put(30256, 2); // BELLA
-		TELEPORTERS.put(30320, 1); // RICHLIN
-		TELEPORTERS.put(30848, 7); // ELISA
-		TELEPORTERS.put(30899, 5); // FLAUEN
-		TELEPORTERS.put(31320, 9); // ILYANA
-		TELEPORTERS.put(31275, 10); // TATIANA
-		TELEPORTERS.put(31964, 11); // BILIA
-		
-		for (int npcId : TELEPORTERS.keySet())
-		{
-			addStartNpc(npcId);
-			addTalkId(npcId);
-		}
-		
-		addStartNpc(PADDIES);
-		addTalkId(PADDIES);
-	}
-	
 	public static void main(String[] args)
 	{
-		new TeleportToFantasy(TeleportToFantasy.class.getSimpleName(), "ai/npc/Teleports");
+		new TeleportToFantasy();
 	}
 }

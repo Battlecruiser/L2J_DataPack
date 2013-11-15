@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Zealot of Shilen AI.
  * @author nonom
  */
-public class ZealotOfShilen extends AbstractNpcAI
+public final class ZealotOfShilen extends AbstractNpcAI
 {
 	// NPCs
 	private static final int ZEALOT = 18782;
@@ -42,9 +42,9 @@ public class ZealotOfShilen extends AbstractNpcAI
 		32629
 	};
 	
-	private ZealotOfShilen(String name, String descr)
+	private ZealotOfShilen()
 	{
-		super(name, descr);
+		super(ZealotOfShilen.class.getSimpleName(), "ai/npc");
 		addSpawnId(ZEALOT);
 		addFirstTalkId(GUARDS);
 		
@@ -97,6 +97,6 @@ public class ZealotOfShilen extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new ZealotOfShilen(ZealotOfShilen.class.getSimpleName(), "ai/npc");
+		new ZealotOfShilen();
 	}
 }

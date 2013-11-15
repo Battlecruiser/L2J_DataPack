@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Original Jython script by BiTi.
  * @author Plim
  */
-public class PaganTeleporters extends AbstractNpcAI
+public final class PaganTeleporters extends AbstractNpcAI
 {
 	// NPCs
 	private static final int TRIOLS_MIRROR_1 = 32039;
@@ -54,6 +54,14 @@ public class PaganTeleporters extends AbstractNpcAI
 	private static final int VISITORS_MARK = 8064;
 	private static final int FADED_VISITORS_MARK = 8065;
 	private static final int PAGANS_MARK = 8067;
+	
+	private PaganTeleporters()
+	{
+		super(PaganTeleporters.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(NPCS);
+		addTalkId(NPCS);
+		addFirstTalkId(TRIOLS_MIRROR_1, TRIOLS_MIRROR_2);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -126,14 +134,6 @@ public class PaganTeleporters extends AbstractNpcAI
 			}
 		}
 		return super.onTalk(npc, player);
-	}
-	
-	private PaganTeleporters()
-	{
-		super(PaganTeleporters.class.getSimpleName(), "ai/npc/Teleports");
-		addStartNpc(NPCS);
-		addTalkId(NPCS);
-		addFirstTalkId(TRIOLS_MIRROR_1, TRIOLS_MIRROR_2);
 	}
 	
 	public static void main(String[] args)

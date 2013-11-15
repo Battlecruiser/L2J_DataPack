@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Dilios AI
  * @author JIV, Sephiroth, Apocalipce
  */
-public class GeneralDilios extends AbstractNpcAI
+public final class GeneralDilios extends AbstractNpcAI
 {
 	private static final int GENERAL_ID = 32549;
 	private static final int GUARD_ID = 32619;
@@ -54,9 +54,9 @@ public class GeneralDilios extends AbstractNpcAI
 	// NpcStringId.MESSENGER_INFORM_THE_BROTHERS_IN_KUCEREUS_CLAN_OUTPOST_EKIMUS_IS_ABOUT_TO_BE_REVIVED_BY_THE_RESURRECTED_UNDEAD_IN_SEED_OF_INFINITY_SEND_ALL_REINFORCEMENTS_TO_THE_HEART_AND_THE_HALL_OF_SUFFERING
 	};
 	
-	private GeneralDilios(String name, String descr)
+	private GeneralDilios()
 	{
-		super(name, descr);
+		super(GeneralDilios.class.getSimpleName(), "ai/individual");
 		_general = SpawnTable.getInstance().getFirstSpawn(GENERAL_ID).getLastSpawn();
 		_guards = SpawnTable.getInstance().getSpawns(GUARD_ID);
 		if ((_general == null) || _guards.isEmpty())
@@ -102,6 +102,6 @@ public class GeneralDilios extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new GeneralDilios(GeneralDilios.class.getSimpleName(), "ai");
+		new GeneralDilios();
 	}
 }

@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.util.Util;
  * Underground Coliseum teleport AI
  * @author malyelfik
  */
-public class TeleportToUndergroundColiseum extends AbstractNpcAI
+public final class TeleportToUndergroundColiseum extends AbstractNpcAI
 {
 	// NPCs
 	private static final int COLISEUM_HELPER = 32491;
@@ -85,6 +85,16 @@ public class TeleportToUndergroundColiseum extends AbstractNpcAI
 		}
 	};
 	
+	private TeleportToUndergroundColiseum()
+	{
+		super(TeleportToUndergroundColiseum.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(MANAGERS);
+		addStartNpc(COLISEUM_HELPER, PADDIES);
+		addFirstTalkId(COLISEUM_HELPER);
+		addTalkId(MANAGERS);
+		addTalkId(COLISEUM_HELPER, PADDIES);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -124,18 +134,8 @@ public class TeleportToUndergroundColiseum extends AbstractNpcAI
 		return "32491.htm";
 	}
 	
-	public TeleportToUndergroundColiseum(String name, String descr)
-	{
-		super(name, descr);
-		addStartNpc(MANAGERS);
-		addStartNpc(COLISEUM_HELPER, PADDIES);
-		addFirstTalkId(COLISEUM_HELPER);
-		addTalkId(MANAGERS);
-		addTalkId(COLISEUM_HELPER, PADDIES);
-	}
-	
 	public static void main(String[] args)
 	{
-		new TeleportToUndergroundColiseum(TeleportToUndergroundColiseum.class.getSimpleName(), "ai/npc/Teleports");
+		new TeleportToUndergroundColiseum();
 	}
 }

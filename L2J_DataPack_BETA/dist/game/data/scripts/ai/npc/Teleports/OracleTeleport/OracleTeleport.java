@@ -34,130 +34,40 @@ import com.l2jserver.gameserver.util.Util;
  * Oracle teleport AI.
  * @author Charus
  */
-public class OracleTeleport extends AbstractNpcAI
+public final class OracleTeleport extends AbstractNpcAI
 {
+	// @formatter:off
 	private final static int[] TOWN_DAWN =
 	{
-		31078,
-		31079,
-		31080,
-		31081,
-		31083,
-		31084,
-		31082,
-		31692,
-		31694,
-		31997,
-		31168
+		31078, 31079, 31080, 31081, 31083, 31084, 31082, 31692, 31694, 31997, 31168
 	};
 	
 	private final static int[] TOWN_DUSK =
 	{
-		31085,
-		31086,
-		31087,
-		31088,
-		31090,
-		31091,
-		31089,
-		31693,
-		31695,
-		31998,
-		31169
+		31085, 31086, 31087, 31088, 31090, 31091, 31089, 31693, 31695, 31998, 31169
 	};
 	
 	private final static int[] TEMPLE_PRIEST =
 	{
-		31127,
-		31128,
-		31129,
-		31130,
-		31131,
-		31137,
-		31138,
-		31139,
-		31140,
-		31141
+		31127, 31128, 31129, 31130, 31131, 31137, 31138, 31139, 31140, 31141
 	};
 	
 	private final static int[] RIFT_POSTERS =
 	{
-		31488,
-		31489,
-		31490,
-		31491,
-		31492,
-		31493
+		31488, 31489, 31490, 31491, 31492, 31493
 	};
 	
 	private final static int[] TELEPORTERS =
 	{
-		31078,
-		31079,
-		31080,
-		31081,
-		31082,
-		31083,
-		31084,
-		31692,
-		31694,
-		31997,
-		31168,
-		31085,
-		31086,
-		31087,
-		31088,
-		31089,
-		31090,
-		31091,
-		31693,
-		31695,
-		31998,
-		31169,
-		31494,
-		31495,
-		31496,
-		31497,
-		31498,
-		31499,
-		31500,
-		31501,
-		31502,
-		31503,
-		31504,
-		31505,
-		31506,
-		31507,
-		31095,
-		31096,
-		31097,
-		31098,
-		31099,
-		31100,
-		31101,
-		31102,
-		31103,
-		31104,
-		31105,
-		31106,
-		31107,
-		31108,
-		31109,
-		31110,
-		31114,
-		31115,
-		31116,
-		31117,
-		31118,
-		31119,
-		31120,
-		31121,
-		31122,
-		31123,
-		31124,
-		31125
+		31078, 31079, 31080, 31081, 31082, 31083, 31084, 31692, 31694, 31997,
+		31168, 31085, 31086, 31087, 31088, 31089, 31090, 31091, 31693, 31695,
+		31998, 31169, 31494, 31495, 31496, 31497, 31498, 31499, 31500, 31501,
+		31502, 31503, 31504, 31505, 31506, 31507, 31095, 31096, 31097, 31098,
+		31099, 31100, 31101, 31102, 31103, 31104, 31105, 31106, 31107, 31108,
+		31109, 31110, 31114, 31115, 31116, 31117, 31118, 31119, 31120, 31121,
+		31122, 31123, 31124, 31125
 	};
-	
+	// @formatter:on
 	private final static Location[] RETURN_LOCS =
 	{
 		new Location(-80555, 150337, -3040),
@@ -226,9 +136,12 @@ public class OracleTeleport extends AbstractNpcAI
 		new Location(12837, -248483, -9579)
 	};
 	
-	private OracleTeleport(String name, String descr)
+	// Item
+	private static final int DIMENSIONAL_FRAGMENT = 7079;
+	
+	private OracleTeleport()
 	{
-		super(name, descr);
+		super(OracleTeleport.class.getSimpleName(), "ai/npc/Teleports");
 		addStartNpc(RIFT_POSTERS);
 		addStartNpc(TELEPORTERS);
 		addStartNpc(TEMPLE_PRIEST);
@@ -240,9 +153,6 @@ public class OracleTeleport extends AbstractNpcAI
 		addTalkId(TOWN_DAWN);
 		addTalkId(TOWN_DUSK);
 	}
-	
-	// Item
-	private static final int DIMENSIONAL_FRAGMENT = 7079;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -480,6 +390,6 @@ public class OracleTeleport extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new OracleTeleport(OracleTeleport.class.getSimpleName(), "ai/npc/Teleports");
+		new OracleTeleport();
 	}
 }

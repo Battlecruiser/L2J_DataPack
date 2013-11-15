@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Clan Trader AI.
  * @author St3eT
  */
-public class ClanTrader extends AbstractNpcAI
+public final class ClanTrader extends AbstractNpcAI
 {
 	// Npc
 	private static final int[] CLAN_TRADER =
@@ -47,9 +47,9 @@ public class ClanTrader extends AbstractNpcAI
 	private static final int KNIGHTS_EPAULETTE = 9912; // Knight's Epaulette
 	private static final int KNIGHTS_EPAULETTE_COUNT = 100; // Knight's Epaulette Count
 	
-	private ClanTrader(String name, String descr)
+	private ClanTrader()
 	{
-		super(name, descr);
+		super(ClanTrader.class.getSimpleName(), "ai/npc");
 		addStartNpc(CLAN_TRADER);
 		addTalkId(CLAN_TRADER);
 		addFirstTalkId(CLAN_TRADER);
@@ -120,6 +120,6 @@ public class ClanTrader extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new ClanTrader(ClanTrader.class.getSimpleName(), "ai/npc");
+		new ClanTrader();
 	}
 }

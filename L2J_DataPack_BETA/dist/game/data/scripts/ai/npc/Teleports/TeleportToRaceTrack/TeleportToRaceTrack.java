@@ -35,7 +35,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Original python script by DraX & updated by DrLecter.
  * @author Plim
  */
-public class TeleportToRaceTrack extends AbstractNpcAI
+public final class TeleportToRaceTrack extends AbstractNpcAI
 {
 	// NPC
 	private static final int RACE_MANAGER = 30995;
@@ -59,6 +59,32 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 	};
 	private static final Location TELEPORT = new Location(12661, 181687, -3560);
 	private static final Location DION_CASTLE_TOWN = new Location(15670, 142983, -2700);
+	
+	private TeleportToRaceTrack()
+	{
+		super(TeleportToRaceTrack.class.getSimpleName(), "ai/npc/Teleports");
+		TELEPORTERS.put(30059, 3); // TRISHA
+		TELEPORTERS.put(30080, 4); // CLARISSA
+		TELEPORTERS.put(30177, 6); // VALENTIA
+		TELEPORTERS.put(30233, 8); // ESMERALDA
+		TELEPORTERS.put(30256, 2); // BELLA
+		TELEPORTERS.put(30320, 1); // RICHLIN
+		TELEPORTERS.put(30848, 7); // ELISA
+		TELEPORTERS.put(30899, 5); // FLAUEN
+		TELEPORTERS.put(31320, 9); // ILYANA
+		TELEPORTERS.put(31275, 10); // TATIANA
+		TELEPORTERS.put(31964, 11); // BILIA
+		TELEPORTERS.put(31210, 12); // RACE TRACK GK
+		
+		for (int npcId : TELEPORTERS.keySet())
+		{
+			addStartNpc(npcId);
+			addTalkId(npcId);
+		}
+		
+		addStartNpc(RACE_MANAGER);
+		addTalkId(RACE_MANAGER);
+	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
@@ -98,34 +124,8 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public TeleportToRaceTrack(String name, String descr)
-	{
-		super(name, descr);
-		TELEPORTERS.put(30059, 3); // TRISHA
-		TELEPORTERS.put(30080, 4); // CLARISSA
-		TELEPORTERS.put(30177, 6); // VALENTIA
-		TELEPORTERS.put(30233, 8); // ESMERALDA
-		TELEPORTERS.put(30256, 2); // BELLA
-		TELEPORTERS.put(30320, 1); // RICHLIN
-		TELEPORTERS.put(30848, 7); // ELISA
-		TELEPORTERS.put(30899, 5); // FLAUEN
-		TELEPORTERS.put(31320, 9); // ILYANA
-		TELEPORTERS.put(31275, 10); // TATIANA
-		TELEPORTERS.put(31964, 11); // BILIA
-		TELEPORTERS.put(31210, 12); // RACE TRACK GK
-		
-		for (int npcId : TELEPORTERS.keySet())
-		{
-			addStartNpc(npcId);
-			addTalkId(npcId);
-		}
-		
-		addStartNpc(RACE_MANAGER);
-		addTalkId(RACE_MANAGER);
-	}
-	
 	public static void main(String[] args)
 	{
-		new TeleportToRaceTrack(TeleportToRaceTrack.class.getSimpleName(), "ai/npc/Teleports");
+		new TeleportToRaceTrack();
 	}
 }

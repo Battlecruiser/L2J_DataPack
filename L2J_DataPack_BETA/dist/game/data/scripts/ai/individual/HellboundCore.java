@@ -30,16 +30,16 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
  * Manages Naia's cast on the Hellbound Core
  * @author GKR
  */
-public class HellboundCore extends AbstractNpcAI
+public final class HellboundCore extends AbstractNpcAI
 {
 	private static final int NAIA = 18484;
 	private static final int HELLBOUND_CORE = 32331;
 	
 	private static SkillHolder BEAM = new SkillHolder(5493, 1);
 	
-	private HellboundCore(String name, String descr)
+	private HellboundCore()
 	{
-		super(name, descr);
+		super(HellboundCore.class.getSimpleName(), "ai/individual");
 		addSpawnId(HELLBOUND_CORE);
 	}
 	
@@ -70,6 +70,6 @@ public class HellboundCore extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new HellboundCore(HellboundCore.class.getSimpleName(), "ai");
+		new HellboundCore();
 	}
 }

@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Original Jython script by Kerberos.
  * @author Plim
  */
-public class StrongholdsTeleports extends AbstractNpcAI
+public final class StrongholdsTeleports extends AbstractNpcAI
 {
 	// NPCs
 	private final static int[] NPCs =
@@ -39,20 +39,24 @@ public class StrongholdsTeleports extends AbstractNpcAI
 		32186
 	};
 	
+	private StrongholdsTeleports()
+	{
+		super(StrongholdsTeleports.class.getSimpleName(), "ai/npc/Teleports");
+		addFirstTalkId(NPCs);
+	}
+	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return player.getLevel() < 20 ? String.valueOf(npc.getId()) + ".htm" : String.valueOf(npc.getId()) + "-no.htm";
-	}
-	
-	private StrongholdsTeleports(String name, String descr)
-	{
-		super(name, descr);
-		addFirstTalkId(NPCs);
+		if (player.getLevel() < 20)
+		{
+			return String.valueOf(npc.getId()) + ".htm";
+		}
+		return String.valueOf(npc.getId()) + "-no.htm";
 	}
 	
 	public static void main(String[] args)
 	{
-		new StrongholdsTeleports(StrongholdsTeleports.class.getSimpleName(), "ai/npc/Teleports");
+		new StrongholdsTeleports();
 	}
 }

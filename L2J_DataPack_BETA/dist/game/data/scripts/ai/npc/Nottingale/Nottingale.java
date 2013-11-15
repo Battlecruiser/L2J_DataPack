@@ -52,9 +52,9 @@ public final class Nottingale extends AbstractNpcAI
 		RADARS.put(10, new RadarControl(0, -246899, 251918, 4352, 1));
 	}
 	
-	private Nottingale(String name, String descr)
+	private Nottingale()
 	{
-		super(name, descr);
+		super(Nottingale.class.getSimpleName(), "ai/npc");
 		addStartNpc(NOTTINGALE);
 		addTalkId(NOTTINGALE);
 		addFirstTalkId(NOTTINGALE);
@@ -122,6 +122,6 @@ public final class Nottingale extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Nottingale(Nottingale.class.getSimpleName(), "ai/npc");
+		new Nottingale();
 	}
 }

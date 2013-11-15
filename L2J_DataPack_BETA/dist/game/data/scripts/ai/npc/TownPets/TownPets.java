@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Town Pets AI
  * @author malyelfik
  */
-public class TownPets extends AbstractNpcAI
+public final class TownPets extends AbstractNpcAI
 {
 	// Pet IDs
 	private static final int[] PETS =
@@ -51,9 +51,9 @@ public class TownPets extends AbstractNpcAI
 		31955, // Ruby
 	};
 	
-	private TownPets(String name, String descr)
+	private TownPets()
 	{
-		super(name, descr);
+		super(TownPets.class.getSimpleName(), "ai/npc");
 		addSpawnId(PETS);
 		
 		for (int npcId : PETS)
@@ -91,6 +91,6 @@ public class TownPets extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new TownPets(TownPets.class.getSimpleName(), "ai/npc");
+		new TownPets();
 	}
 }

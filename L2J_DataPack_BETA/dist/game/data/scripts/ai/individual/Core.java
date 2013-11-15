@@ -39,7 +39,7 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
  * Core AI
  * @author DrLecter Revised By Emperorc
  */
-public class Core extends AbstractNpcAI
+public final class Core extends AbstractNpcAI
 {
 	private static final int CORE = 29006;
 	private static final int DEATH_KNIGHT = 29007;
@@ -58,9 +58,9 @@ public class Core extends AbstractNpcAI
 	
 	private final List<L2Attackable> Minions = new FastList<>();
 	
-	private Core(String name, String descr)
+	private Core()
 	{
-		super(name, descr);
+		super(Core.class.getSimpleName(), "ai/individual");
 		registerMobs(CORE, DEATH_KNIGHT, DOOM_WRAITH, SUSCEPTOR);
 		
 		_FirstAttacked = false;
@@ -225,6 +225,6 @@ public class Core extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Core(Core.class.getSimpleName(), "ai");
+		new Core();
 	}
 }

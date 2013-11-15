@@ -37,7 +37,7 @@ import com.l2jserver.gameserver.model.zone.L2ZoneType;
  * Warpgate teleport AI.
  * @author _DS_
  */
-public class Warpgate extends AbstractNpcAI
+public final class Warpgate extends AbstractNpcAI
 {
 	// Misc
 	private static final int MAP = 9994;
@@ -56,29 +56,13 @@ public class Warpgate extends AbstractNpcAI
 	private static final Location HELLBOUND = new Location(-11272, 236464, -3248);
 	protected static final Location REMOVE_LOC = new Location(-16555, 209375, -3670);
 	
-	private static final boolean canEnter(L2PcInstance player)
+	private Warpgate()
 	{
-		if (player.isFlying())
-		{
-			return false;
-		}
-		
-		if (Config.HELLBOUND_WITHOUT_QUEST)
-		{
-			return true;
-		}
-		
-		QuestState st;
-		if (!HellboundManager.getInstance().isLocked())
-		{
-			st = player.getQuestState(Q00130_PathToHellbound.class.getSimpleName());
-			if ((st != null) && st.isCompleted())
-			{
-				return true;
-			}
-		}
-		st = player.getQuestState(Q00133_ThatsBloodyHot.class.getSimpleName());
-		return ((st != null) && st.isCompleted());
+		super(Warpgate.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(WARPGATES);
+		addFirstTalkId(WARPGATES);
+		addTalkId(WARPGATES);
+		addEnterZoneId(ZONE);
 	}
 	
 	@Override
@@ -150,17 +134,33 @@ public class Warpgate extends AbstractNpcAI
 		}
 	}
 	
-	private Warpgate(String name, String descr)
+	private static final boolean canEnter(L2PcInstance player)
 	{
-		super(name, descr);
-		addStartNpc(WARPGATES);
-		addFirstTalkId(WARPGATES);
-		addTalkId(WARPGATES);
-		addEnterZoneId(ZONE);
+		if (player.isFlying())
+		{
+			return false;
+		}
+		
+		if (Config.HELLBOUND_WITHOUT_QUEST)
+		{
+			return true;
+		}
+		
+		QuestState st;
+		if (!HellboundManager.getInstance().isLocked())
+		{
+			st = player.getQuestState(Q00130_PathToHellbound.class.getSimpleName());
+			if ((st != null) && st.isCompleted())
+			{
+				return true;
+			}
+		}
+		st = player.getQuestState(Q00133_ThatsBloodyHot.class.getSimpleName());
+		return ((st != null) && st.isCompleted());
 	}
 	
 	public static void main(String[] args)
 	{
-		new Warpgate(Warpgate.class.getSimpleName(), "ai/npc/Teleports");
+		new Warpgate();
 	}
 }

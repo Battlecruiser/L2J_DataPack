@@ -55,7 +55,7 @@ import com.l2jserver.gameserver.util.Util;
  * Baium's AI.
  * @author Fulminus
  */
-public class Baium extends AbstractNpcAI
+public final class Baium extends AbstractNpcAI
 {
 	// NPCs
 	private static final int STONE_BAIUM = 29025;
@@ -103,9 +103,9 @@ public class Baium extends AbstractNpcAI
 	private L2Character _target;
 	private SkillHolder _skill;
 	
-	private Baium(String name, String descr)
+	private Baium()
 	{
-		super(name, descr);
+		super(Baium.class.getSimpleName(), "ai/individual");
 		registerMobs(LIVE_BAIUM);
 		// Quest NPC starter initialization
 		addStartNpc(STONE_BAIUM, ANGELIC_VORTEX, TELEPORT_CUBIC);
@@ -699,6 +699,6 @@ public class Baium extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Baium(Baium.class.getSimpleName(), "ai");
+		new Baium();
 	}
 }

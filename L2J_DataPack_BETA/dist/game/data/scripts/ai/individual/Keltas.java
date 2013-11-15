@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Manages Darion's Enforcer's and Darion's Executioner spawn/despawn
  * @author GKR
  */
-public class Keltas extends AbstractNpcAI
+public final class Keltas extends AbstractNpcAI
 {
 	private static final int KELTAS = 22341;
 	private static final int ENFORCER = 22342;
@@ -105,10 +105,9 @@ public class Keltas extends AbstractNpcAI
 		new Location(-28492, 250704, -3523)
 	};
 	
-	public Keltas(String name, String descr)
+	private Keltas()
 	{
-		super(name, descr);
-		
+		super(Keltas.class.getSimpleName(), "ai/individual");
 		addKillId(KELTAS);
 		addSpawnId(KELTAS);
 		
@@ -195,6 +194,6 @@ public class Keltas extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Keltas(Keltas.class.getSimpleName(), "ai");
+		new Keltas();
 	}
 }

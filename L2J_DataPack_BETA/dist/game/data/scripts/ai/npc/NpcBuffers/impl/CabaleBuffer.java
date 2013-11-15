@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
  * Preacher of Doom and Orator of Revelations AI
  * @author UnAfraid, malyelfik
  */
-public class CabaleBuffer extends AbstractNpcAI
+public final class CabaleBuffer extends AbstractNpcAI
 {
 	private static final int DISTANCE_TO_WATCH_OBJECT = 900;
 	
@@ -56,15 +56,15 @@ public class CabaleBuffer extends AbstractNpcAI
 		NpcStringId.THE_END_OF_TIME_HAS_COME_THE_PROPHECY_OF_DESTRUCTION_HAS_BEEN_FULFILLED
 	};
 	
-	// Skill Id
+	// Skills
 	private static final int ORATOR_FIGTER = 4364;
 	private static final int ORATOR_MAGE = 4365;
 	private static final int PREACHER_FIGTER = 4361;
 	private static final int PREACHER_MAGE = 4362;
 	
-	protected CabaleBuffer(String name, String descr)
+	private CabaleBuffer()
 	{
-		super(name, descr);
+		super(CabaleBuffer.class.getSimpleName(), "ai/npc");
 		addFirstTalkId(SevenSigns.ORATOR_NPC_ID, SevenSigns.PREACHER_NPC_ID);
 		addSpawnId(SevenSigns.ORATOR_NPC_ID, SevenSigns.PREACHER_NPC_ID);
 	}
@@ -298,6 +298,6 @@ public class CabaleBuffer extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new CabaleBuffer(CabaleBuffer.class.getSimpleName(), "ai/npc");
+		new CabaleBuffer();
 	}
 }

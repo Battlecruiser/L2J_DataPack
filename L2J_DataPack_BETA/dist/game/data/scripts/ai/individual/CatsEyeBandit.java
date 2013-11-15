@@ -39,9 +39,9 @@ public final class CatsEyeBandit extends AbstractNpcAI
 	private static final int BOW = 1181;
 	private static final int DAGGER = 1182;
 	
-	private CatsEyeBandit(String name, String descr)
+	private CatsEyeBandit()
 	{
-		super(name, descr);
+		super(CatsEyeBandit.class.getSimpleName(), "ai/individual");
 		addAttackId(MOB_ID);
 		addKillId(MOB_ID);
 	}
@@ -71,6 +71,6 @@ public final class CatsEyeBandit extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new CatsEyeBandit(CatsEyeBandit.class.getSimpleName(), "ai");
+		new CatsEyeBandit();
 	}
 }

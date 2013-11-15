@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.model.zone.type.L2BossZone;
  * Steel Citadel teleport AI.
  * @author GKR
  */
-public class SteelCitadelTeleport extends AbstractNpcAI
+public final class SteelCitadelTeleport extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BELETH = 29118;

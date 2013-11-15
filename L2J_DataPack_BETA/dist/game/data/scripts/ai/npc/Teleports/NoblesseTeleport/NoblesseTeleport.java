@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Original Jython script by Ham Wong.
  * @author Plim
  */
-public class NoblesseTeleport extends AbstractNpcAI
+public final class NoblesseTeleport extends AbstractNpcAI
 {
 	// Item
 	private static final int OLYMPIAD_TOKEN = 13722;
@@ -56,6 +56,13 @@ public class NoblesseTeleport extends AbstractNpcAI
 		32163
 	};
 	
+	private NoblesseTeleport()
+	{
+		super(NoblesseTeleport.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(NPCs);
+		addTalkId(NPCs);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -79,15 +86,8 @@ public class NoblesseTeleport extends AbstractNpcAI
 		return player.isNoble() ? "nobleteleporter.htm" : "nobleteleporter-no.htm";
 	}
 	
-	private NoblesseTeleport(String name, String descr)
-	{
-		super(name, descr);
-		addStartNpc(NPCs);
-		addTalkId(NPCs);
-	}
-	
 	public static void main(String[] args)
 	{
-		new NoblesseTeleport(NoblesseTeleport.class.getSimpleName(), "ai/npc/Teleports");
+		new NoblesseTeleport();
 	}
 }

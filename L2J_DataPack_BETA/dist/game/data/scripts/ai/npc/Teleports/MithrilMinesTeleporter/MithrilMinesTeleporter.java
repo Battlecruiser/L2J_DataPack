@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Mithril Mines teleport AI.
  * @author Charus
  */
-public class MithrilMinesTeleporter extends AbstractNpcAI
+public final class MithrilMinesTeleporter extends AbstractNpcAI
 {
 	// NPC
 	private final static int TELEPORT_CRYSTAL = 32652;

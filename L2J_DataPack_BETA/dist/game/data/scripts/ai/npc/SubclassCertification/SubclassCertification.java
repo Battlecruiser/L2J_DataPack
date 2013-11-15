@@ -38,7 +38,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Subclass certification
  * @author xban1x, jurchiks
  */
-public class SubclassCertification extends AbstractNpcAI
+public final class SubclassCertification extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] NPCS =

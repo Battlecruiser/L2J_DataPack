@@ -36,7 +36,7 @@ import com.l2jserver.util.L2FastMap;
 /**
  * Dark Water Dragon's AI.
  */
-public class DarkWaterDragon extends AbstractNpcAI
+public final class DarkWaterDragon extends AbstractNpcAI
 {
 	private static final int DRAGON = 22267;
 	private static final int SHADE1 = 22268;
@@ -48,9 +48,9 @@ public class DarkWaterDragon extends AbstractNpcAI
 	private static Set<Integer> MY_TRACKING_SET = new FastSet<>(); // Used to track instances of npcs
 	private static Map<Integer, L2PcInstance> ID_MAP = new L2FastMap<>(true); // Used to track instances of npcs
 	
-	private DarkWaterDragon(String name, String descr)
+	private DarkWaterDragon()
 	{
-		super(name, descr);
+		super(DarkWaterDragon.class.getSimpleName(), "ai/individual");
 		int[] mobs =
 		{
 			DRAGON,
@@ -242,6 +242,6 @@ public class DarkWaterDragon extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new DarkWaterDragon(DarkWaterDragon.class.getSimpleName(), "ai");
+		new DarkWaterDragon();
 	}
 }

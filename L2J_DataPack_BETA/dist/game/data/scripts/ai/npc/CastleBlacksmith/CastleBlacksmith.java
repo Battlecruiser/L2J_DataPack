@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Castle Blacksmith AI.
  * @author malyelfik
  */
-public class CastleBlacksmith extends AbstractNpcAI
+public final class CastleBlacksmith extends AbstractNpcAI
 {
 	// Blacksmith IDs
 	private static final int[] NPCS =
@@ -45,9 +45,9 @@ public class CastleBlacksmith extends AbstractNpcAI
 		35553, // Blacksmith (Schuttgart)
 	};
 	
-	private CastleBlacksmith(String name, String descr)
+	private CastleBlacksmith()
 	{
-		super(name, descr);
+		super(CastleBlacksmith.class.getSimpleName(), "ai/npc");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 		addFirstTalkId(NPCS);
@@ -72,6 +72,6 @@ public class CastleBlacksmith extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new CastleBlacksmith(CastleBlacksmith.class.getSimpleName(), "ai/npc");
+		new CastleBlacksmith();
 	}
 }

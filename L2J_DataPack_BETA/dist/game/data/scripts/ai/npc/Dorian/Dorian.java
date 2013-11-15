@@ -33,13 +33,24 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
  * Dorian (Raid Fighter) - Quest AI
  * @author malyelfik
  */
-public class Dorian extends AbstractNpcAI
+public final class Dorian extends AbstractNpcAI
 {
 	// NPC
 	private static final int DORIAN = 25332;
 	// Items
 	private static final int SILVER_CROSS = 7153;
 	private static final int BROKEN_SILVER_CROSS = 7154;
+	
+	private Dorian()
+	{
+		super(Dorian.class.getSimpleName(), "ai/npc");
+		addSpawnId(DORIAN);
+		
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(DORIAN))
+		{
+			startQuestTimer("checkArea", 3000, spawn.getLastSpawn(), null, true);
+		}
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -75,19 +86,8 @@ public class Dorian extends AbstractNpcAI
 		return null;
 	}
 	
-	public Dorian(String name, String descr)
-	{
-		super(name, descr);
-		addSpawnId(DORIAN);
-		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(DORIAN))
-		{
-			startQuestTimer("checkArea", 3000, spawn.getLastSpawn(), null, true);
-		}
-	}
-	
 	public static void main(String[] args)
 	{
-		new Dorian(Dorian.class.getSimpleName(), "ai/npc");
+		new Dorian();
 	}
 }
