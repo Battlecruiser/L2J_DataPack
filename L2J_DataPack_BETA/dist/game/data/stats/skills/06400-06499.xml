@@ -46,6 +46,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="2000" />
 		<set name="effectPoint" val="-100" />
@@ -62,7 +63,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="6403" levels="1" name="Torumba Numbing Poison">
@@ -87,7 +88,7 @@
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="58" abnormalVisualEffect="poison">
+			<effect name="DamOverTime" ticks="3" val="58">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -121,6 +122,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="1000" />
@@ -136,7 +138,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalVisualEffect="mute">
+			<effect name="Debuff">
 				<add order="0x40" stat="runSpd" val="20" />
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
@@ -147,6 +149,7 @@
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SILENCE_ALL" />
+		<set name="abnormalVisualEffect" val="FLESH_STONE" />
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2000" />
 		<set name="icon" val="icon.skill4111" />
@@ -215,6 +218,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="affectRange" val="100" />
 		<set name="basicProperty" val="CON" />
@@ -283,6 +287,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="60" />
@@ -324,6 +329,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="DOT_MP" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -345,13 +351,14 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="ManaDamOverTime" ticks="3" val="4" abnormalVisualEffect="poison" />
+			<effect name="ManaDamOverTime" ticks="3" val="4" />
 		</for>
 	</skill>
 	<skill id="6417" levels="1" name="Reptilikon Poison Shot">
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="DOT_MP" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -372,13 +379,14 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="ManaDamOverTime" ticks="3" val="4" abnormalVisualEffect="poison" />
+			<effect name="ManaDamOverTime" ticks="3" val="4" />
 		</for>
 	</skill>
 	<skill id="6418" levels="1" name="Reptilikon Fury Poison Bomb">
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="DOT_MP" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -399,7 +407,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="69" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="69" />
 			<effect name="ManaDamOverTime" ticks="3" val="4" />
 		</for>
 	</skill>
@@ -462,6 +470,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="900" />
@@ -551,6 +560,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="2000" />
@@ -755,6 +765,7 @@
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -769,13 +780,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="6438" levels="1" name="Penalty Area">
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -1113,6 +1125,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="icon" val="icon.ev_rotten_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />

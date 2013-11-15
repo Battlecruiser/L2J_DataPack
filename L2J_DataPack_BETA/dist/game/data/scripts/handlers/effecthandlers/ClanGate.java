@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -46,18 +45,11 @@ public final class ClanGate extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
-	{
-		info.getEffected().stopAbnormalEffect(AbnormalVisualEffect.MAGIC_CIRCLE);
-	}
-	
-	@Override
 	public void onStart(BuffInfo info)
 	{
-		info.getEffected().startAbnormalEffect(AbnormalVisualEffect.MAGIC_CIRCLE);
 		if (info.getEffected().isPlayer())
 		{
-			L2Clan clan = info.getEffected().getActingPlayer().getClan();
+			final L2Clan clan = info.getEffected().getActingPlayer().getClan();
 			if (clan != null)
 			{
 				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL);

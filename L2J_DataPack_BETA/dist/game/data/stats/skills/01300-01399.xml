@@ -549,6 +549,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
 		<set name="effectPoint" val="659" />
 		<set name="hitTime" val="1000" />
 		<set name="hpConsume" val="200" />
@@ -569,7 +570,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Buff" abnormalVisualEffect="invulnerable">
+			<effect name="Buff">
 				<add order="0x40" stat="pDef" val="3000" />
 				<mul order="0x30" stat="runSpd" val="1.25" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -588,6 +589,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
 		<set name="effectPoint" val="659" />
 		<set name="hitTime" val="1000" />
 		<set name="hpConsume" val="200" />
@@ -608,7 +610,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Buff" abnormalVisualEffect="invulnerable">
+			<effect name="Buff">
 				<add order="0x40" stat="mDef" val="4500" />
 				<mul order="0x30" stat="runSpd" val="1.25" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -899,6 +901,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SILENCE_ALL" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -2401,6 +2404,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="HERO_DEBUFF" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="80" />
 		<set name="affectRange" val="1000" />
 		<set name="basicProperty" val="MEN" />
@@ -2495,6 +2499,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
@@ -3088,6 +3093,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />

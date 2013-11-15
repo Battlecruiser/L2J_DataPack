@@ -1174,6 +1174,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="700" />
@@ -1251,7 +1252,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="SilentMove" abnormalVisualEffect="stealth" />
+			<effect name="SilentMove" />
 		</for>
 	</skill>
 	<skill id="4477" levels="12" name="NPC Frost Wall">
@@ -1373,6 +1374,7 @@
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SILENCE_ALL" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="castRange" val="1000" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1500" />
@@ -1396,6 +1398,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="40" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -1511,6 +1514,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="40" />
 		<set name="affectRange" val="150" />
 		<set name="basicProperty" val="MEN" />
@@ -1610,6 +1614,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="80" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
@@ -1626,7 +1631,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="BigHead" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" />
 		</for>
 	</skill>
 	<skill id="4493" levels="12" name="NPC Debuff Shield Slow">
@@ -1691,6 +1696,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="900" />

@@ -21,7 +21,6 @@ package handlers.effecthandlers;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
@@ -32,12 +31,6 @@ public final class ManaHealOverTime extends AbstractEffect
 	public ManaHealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.MANA_HEAL_OVER_TIME;
 	}
 	
 	@Override

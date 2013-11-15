@@ -103,6 +103,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="45" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
@@ -124,6 +125,7 @@
 			<effect name="DamOverTime" ticks="1" val="#dmg" />
 		</for>
 		<table name="#mpConsume"> 17 31 45 60 75 90 105 112 119 126 132 139 </table>
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4105" levels="12" name="NPC Straight Beam Cannon">
@@ -153,6 +155,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="affectRange" val="1100" />
 		<set name="coolTime" val="2000" />
 		<set name="effectPoint" val="-100" />
@@ -178,6 +181,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="FLY_AWAY" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="affectRange" val="1500" />
 		<set name="coolTime" val="3000" />
 		<set name="effectPoint" val="-100" />
@@ -206,6 +210,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="90" />
 		<set name="affectRange" val="400" />
 		<set name="basicProperty" val="MEN" />
@@ -291,6 +296,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="TURN_STONE" />
+		<set name="abnormalVisualEffect" val="FLESH_STONE" />
 		<set name="activateRate" val="50" />
 		<set name="affectRange" val="700" />
 		<set name="basicProperty" val="MEN" />
@@ -408,6 +414,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="40" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
@@ -438,6 +445,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="20" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -499,6 +507,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="700" />
@@ -687,6 +696,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="10" />
 		<set name="affectRange" val="150" />
 		<set name="basicProperty" val="MEN" />
@@ -846,6 +856,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="DOT_MP" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="1100" />
@@ -995,6 +1006,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="10" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -1007,7 +1019,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="4149" levels="12" name="Bleed">
@@ -1019,6 +1031,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="10" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
@@ -1031,7 +1044,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="4150" levels="12" name="Flame">
@@ -1043,6 +1056,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="10" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
@@ -1056,7 +1070,7 @@
 		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="4151" levels="12" name="NPC Windstrike - Magic">
@@ -1391,6 +1405,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="icon" val="icon.skill0279" />
@@ -1452,6 +1467,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1517,6 +1533,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="CON" />
@@ -1683,6 +1700,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1731,6 +1749,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="90" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="CON" />
@@ -1744,9 +1763,10 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dmg" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4183" levels="12" name="Decrease P. Atk.">
@@ -1808,6 +1828,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="activateRate" val="70" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -1825,6 +1846,7 @@
 			<effect name="Sleep" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4186" levels="12" name="Hold">
@@ -1833,6 +1855,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="70" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -1849,6 +1872,7 @@
 			<effect name="Root" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4187" levels="12" name="Decrease Speed">
@@ -1885,6 +1909,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="90" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="CON" />
@@ -1898,9 +1923,10 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#damage" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#damage" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4189" levels="12" name="Paralysis">
@@ -1909,6 +1935,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="20" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -1925,6 +1952,7 @@
 			<effect name="Paralyze" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4190" levels="12" name="Decrease MP">
@@ -1935,6 +1963,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DOT_MP" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="90" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -1949,6 +1978,7 @@
 			<effect name="ManaDamOverTime" ticks="3" val="#mdot" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4191" levels="12" name="BOSS Wind Strike">
@@ -2084,6 +2114,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="70" />
 		<set name="affectRange" val="300" />
 		<set name="basicProperty" val="MEN" />
@@ -2102,6 +2133,7 @@
 			<effect name="Root" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4198" levels="12" name="Poison">
@@ -2112,6 +2144,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="90" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="750" />
@@ -2126,9 +2159,10 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dmg" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4199" levels="12" name="Decrease P. Atk.">

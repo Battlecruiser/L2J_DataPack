@@ -395,6 +395,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#ench1Penalty"> 0.61 0.62 0.63 0.64 0.65 0.66 0.67 0.68 0.69 0.7 0.71 0.72 0.73 0.74 0.75 0.76 0.77 0.78 0.79 0.8 0.81 0.82 0.83 0.84 0.85 0.86 0.87 0.88 0.89 0.9 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="icon" val="icon.skill0221" />
 		<set name="magicLvl" val="40" />
 		<set name="mpConsume" val="7" />
@@ -402,18 +403,19 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="SilentMove" ticks="3" abnormalVisualEffect="stealth" val="9">
+			<effect name="SilentMove" ticks="3" val="9">
 				<mul order="0x30" stat="runSpd" val="0.6" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="SilentMove" ticks="3" abnormalVisualEffect="stealth" val="9">
+			<effect name="SilentMove" ticks="3" val="9">
 				<mul order="0x30" stat="runSpd" val="#ench1Penalty" />
 			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="222" levels="1" name="Fury Fists">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill0222" />
 		<set name="magicLvl" val="43" />
 		<set name="mpConsume" val="8" />
@@ -439,6 +441,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -469,11 +472,11 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 		<enchant1for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="67" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="67" />
 		</enchant1for>
 	</skill>
 	<skill id="225" levels="3" name="Acrobatic Move">
@@ -496,6 +499,7 @@
 		</for>
 	</skill>
 	<skill id="226" levels="1" name="Relax">
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill0226" />
 		<set name="magicLvl" val="5" />
 		<set name="mpConsume" val="2" />
@@ -1341,6 +1345,7 @@
 	<skill id="256" levels="1" name="Accuracy" enchantGroup1="1">
 		<table name="#ench1val"> 0.39 0.39 0.39 0.38 0.38 0.38 0.38 0.37 0.37 0.37 0.36 0.36 0.36 0.36 0.35 0.35 0.35 0.34 0.34 0.34 0.34 0.33 0.33 0.33 0.32 0.32 0.32 0.32 0.31 0.31 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill0256" />
 		<set name="magicLvl" val="24" />
 		<set name="mpConsume" val="5" />
@@ -1505,6 +1510,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="baseCritRate" val="15" />
 		<set name="basicProperty" val="CON" />
@@ -2288,6 +2294,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="baseCritRate" val="15" />
 		<set name="basicProperty" val="CON" />
@@ -2536,6 +2543,7 @@
 		<table name="#ench2mpConsume"> 12 12 12 11 11 10 10 10 9 9 9 9 8 8 8 7 7 7 6 6 6 5 5 5 4 4 4 3 3 3 </table>
 		<table name="#ench2val"> 1.98 1.96 1.95 1.93 1.91 1.9 1.88 1.86 1.85 1.83 1.81 1.8 1.78 1.76 1.75 1.73 1.71 1.7 1.68 1.66 1.65 1.63 1.61 1.6 1.58 1.56 1.55 1.53 1.51 1.5 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill0288" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -2758,13 +2766,14 @@
 		</for>
 	</skill>
 	<skill id="296" levels="1" name="Chameleon Rest">
+		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="icon" val="icon.skill0296" />
 		<set name="magicLvl" val="46" />
 		<set name="mpConsume" val="9" />
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChameleonRest" abnormalVisualEffect="stealth" ticks="3" val="2" />
+			<effect name="ChameleonRest" ticks="3" val="2" />
 		</for>
 	</skill>
 	<skill id="297" levels="2" name="Duelist Spirit" enchantGroup1="1" enchantGroup2="1">

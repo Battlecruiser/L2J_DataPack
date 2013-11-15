@@ -77,6 +77,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -87,7 +88,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="BigHead" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" />
 		</for>
 	</skill>
 	<skill id="3204" levels="3" name="Item Skill: Reflect Damage">
@@ -1099,6 +1100,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1107,7 +1109,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="BigHead" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" />
 		</for>
 	</skill>
 	<skill id="3266" levels="1" name="Large Fireworks Ability">
@@ -1364,6 +1366,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
+		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
@@ -1375,7 +1378,7 @@
 		<set name="reuseDelay" val="240000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SilentMove" abnormalVisualEffect="stealth">
+			<effect name="SilentMove">
 				<mul order="0x30" stat="runSpd" val="0.6" />
 			</effect>
 		</for>

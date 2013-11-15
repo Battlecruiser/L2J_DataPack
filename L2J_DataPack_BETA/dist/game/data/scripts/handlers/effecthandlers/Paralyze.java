@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
@@ -53,7 +52,6 @@ public final class Paralyze extends AbstractEffect
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		info.getEffected().stopAbnormalEffect(AbnormalVisualEffect.HOLD_1);
 		if (!info.getEffected().isPlayer())
 		{
 			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
@@ -63,7 +61,6 @@ public final class Paralyze extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		info.getEffected().startAbnormalEffect(AbnormalVisualEffect.HOLD_1);
 		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, info.getEffector());
 		info.getEffected().startParalyze();
 	}

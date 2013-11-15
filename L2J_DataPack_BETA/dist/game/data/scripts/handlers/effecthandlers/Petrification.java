@@ -23,8 +23,6 @@ import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
@@ -44,15 +42,8 @@ public final class Petrification extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.PETRIFICATION;
-	}
-	
-	@Override
 	public void onExit(BuffInfo info)
 	{
-		info.getEffected().stopAbnormalEffect(AbnormalVisualEffect.HOLD_2);
 		if (!info.getEffected().isPlayer())
 		{
 			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
@@ -62,7 +53,6 @@ public final class Petrification extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		info.getEffected().startAbnormalEffect(AbnormalVisualEffect.HOLD_2);
 		info.getEffected().startParalyze();
 	}
 }

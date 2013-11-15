@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.serverpackets.DeleteObject;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
@@ -50,7 +49,6 @@ public final class Hide extends AbstractEffect
 			{
 				activeChar.getAppearance().setVisible();
 			}
-			activeChar.stopAbnormalEffect(AbnormalVisualEffect.STEALTH);
 		}
 	}
 	
@@ -61,7 +59,6 @@ public final class Hide extends AbstractEffect
 		{
 			L2PcInstance activeChar = info.getEffected().getActingPlayer();
 			activeChar.getAppearance().setInvisible();
-			activeChar.startAbnormalEffect(AbnormalVisualEffect.STEALTH);
 			
 			if ((activeChar.getAI().getNextIntention() != null) && (activeChar.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK))
 			{

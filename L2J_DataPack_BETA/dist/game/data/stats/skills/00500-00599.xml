@@ -9,6 +9,7 @@
 		<table name="#ench1Power2"> 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 6 </table>
 		<table name="#ench2Cost"> 0.39 0.39 0.38 0.38 0.37 0.37 0.36 0.36 0.35 0.35 0.34 0.34 0.33 0.33 0.32 0.32 0.31 0.31 0.3 0.3 0.29 0.29 0.28 0.28 0.27 0.27 0.26 0.26 0.25 0.25 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill0500" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="T" />
@@ -406,6 +407,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="900" />
@@ -439,11 +441,11 @@
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 		<enchant3for>
 			<effect name="PhysicalSoulAttack" />
-			<effect name="DamOverTime" ticks="3" val="67" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="67" />
 		</enchant3for>
 	</skill>
 	<skill id="510" levels="5" name="Deadly Roulette" enchantGroup1="2" enchantGroup2="2">
@@ -888,6 +890,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="REAL_TARGET" />
+		<set name="abnormalVisualEffect" val="REAL_TARGET" />
 		<set name="castRange" val="#castRange" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="#effectRange" />
@@ -904,14 +907,14 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Debuff" abnormalVisualEffect="realtarget" />
+			<effect name="Debuff" />
 			<effect name="DefenceTrait">
 				<param BOW="#trait_bow" />
 				<param CROSSBOW="#trait_crossbow" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Debuff" abnormalVisualEffect="realtarget">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pDef" val="#enchVuln" />
 			</effect>
 			<effect name="DefenceTrait">
@@ -920,7 +923,7 @@
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Debuff" abnormalVisualEffect="realtarget">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtk" val="#enchVuln" />
 			</effect>
 			<effect name="DefenceTrait">
@@ -929,7 +932,7 @@
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Debuff" abnormalVisualEffect="realtarget">
+			<effect name="Debuff">
 				<mul order="0x30" stat="mDef" val="#enchVuln" />
 			</effect>
 			<effect name="DefenceTrait">
@@ -938,7 +941,7 @@
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Debuff" abnormalVisualEffect="realtarget">
+			<effect name="Debuff">
 				<mul order="0x30" stat="mAtk" val="#enchVuln" />
 			</effect>
 			<effect name="DefenceTrait">
@@ -957,6 +960,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="DARK_SEED" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -978,7 +982,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="5447" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
@@ -1873,6 +1877,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1894,7 +1899,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="123" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="123" />
 		</for>
 	</skill>
 	<skill id="560" levels="4" name="Power Slash">
@@ -2156,6 +2161,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="70" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="400" />
@@ -2175,7 +2181,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="58" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="58" />
 		</for>
 	</skill>
 	<skill id="572" levels="4" name="Double Slasher">
@@ -2210,6 +2216,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="250" />
@@ -2361,7 +2368,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="579" levels="4" name="Fire Armor">
@@ -2384,7 +2391,7 @@
 		<set name="reuseDelay" val="135000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ImmobileBuff" abnormalVisualEffect="invulnerable">
+			<effect name="ImmobileBuff">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<add order="0x40" stat="mDef" val="#mDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -2482,7 +2489,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="123" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="123" />
 		</for>
 	</skill>
 	<skill id="583" levels="4" name="Assimilation">
@@ -2492,6 +2499,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="STEALTH" />
+		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill_transform_etc" />
@@ -2501,7 +2509,7 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SilentMove" abnormalVisualEffect="stealth" />
+			<effect name="SilentMove" />
 		</for>
 	</skill>
 	<skill id="584" levels="1" name="Power Claw">
