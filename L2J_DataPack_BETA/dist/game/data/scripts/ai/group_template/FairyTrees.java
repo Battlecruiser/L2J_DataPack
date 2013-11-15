@@ -20,15 +20,11 @@ package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
-import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 
 /**
  * Fairy Trees AI.
@@ -36,40 +32,43 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class FairyTrees extends AbstractNpcAI
 {
-	// @formatter:off
+	// NPC
+	private static final int SOUL_GUARDIAN = 27189; // Soul of Tree Guardian
+	
 	private static final int[] MOBS =
 	{
-		27185, 27186, 27187, 27188
+		27185, // Fairy Tree of Wind
+		27186, // Fairy Tree of Star
+		27187, // Fairy Tree of Twilight
+		27188, // Fairy Tree of Abyss
 	};
-	// @formatter:on
+	
+	// Skill
+	private static SkillHolder VENOMOUS_POISON = new SkillHolder(4243, 1); // Venomous Poison
+	
+	// Misc
+	private static final int MIN_DISTANCE = 1500;
 	
 	private FairyTrees()
 	{
 		super(FairyTrees.class.getSimpleName(), "ai/group_template");
-		registerMobs(MOBS, QuestEventType.ON_KILL);
-		addSpawnId(27189); // TODO why is this here?
+		addKillId(MOBS);
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		int npcId = npc.getId();
-		if (Util.contains(MOBS, npcId))
+		if (npc.calculateDistance(killer, true, false) <= MIN_DISTANCE)
 		{
 			for (int i = 0; i < 20; i++)
 			{
-				L2Attackable newNpc = (L2Attackable) addSpawn(27189, npc.getX(), npc.getY(), npc.getZ(), 0, false, 30000);
-				L2Character originalKiller = isSummon ? killer.getSummon() : killer;
-				newNpc.setRunning();
-				newNpc.addDamageHate(originalKiller, 0, 999);
-				newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalKiller);
+				final L2Attackable Guardian = (L2Attackable) addSpawn(SOUL_GUARDIAN, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 30000);
+				final L2Playable attacker = isSummon ? killer.getSummon() : killer;
+				attackPlayer(Guardian, attacker);
 				if (getRandomBoolean())
 				{
-					L2Skill skill = SkillTable.getInstance().getInfo(4243, 1);
-					if ((skill != null) && (originalKiller != null))
-					{
-						skill.applyEffects(newNpc, originalKiller);
-					}
+					Guardian.setTarget(attacker);
+					Guardian.doCast(VENOMOUS_POISON.getSkill());
 				}
 			}
 		}
