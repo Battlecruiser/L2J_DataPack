@@ -66,7 +66,6 @@ public final class TeleportToTarget extends AbstractEffect
 			return;
 		}
 		
-		int x = 0, y = 0, z = 0;
 		int px = target.getX();
 		int py = target.getY();
 		double ph = Util.convertHeadingToDegree(target.getHeading());
@@ -78,11 +77,10 @@ public final class TeleportToTarget extends AbstractEffect
 		}
 		
 		ph = (Math.PI * ph) / 180;
-		x = (int) (px + (25 * Math.cos(ph)));
-		y = (int) (py + (25 * Math.sin(ph)));
-		z = target.getZ();
+		int x = (int) (px + (25 * Math.cos(ph)));
+		int y = (int) (py + (25 * Math.sin(ph)));
+		int z = target.getZ();
 		Location loc = new Location(x, y, z);
-		
 		if (Config.GEODATA > 0)
 		{
 			loc = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z, activeChar.getInstanceId());
@@ -92,7 +90,7 @@ public final class TeleportToTarget extends AbstractEffect
 		activeChar.broadcastPacket(new FlyToLocation(activeChar, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
 		activeChar.abortAttack();
 		activeChar.abortCast();
-		activeChar.setXYZ(loc.getX(), loc.getY(), loc.getZ());
+		activeChar.setXYZ(loc);
 		activeChar.broadcastPacket(new ValidateLocation(activeChar));
 	}
 }

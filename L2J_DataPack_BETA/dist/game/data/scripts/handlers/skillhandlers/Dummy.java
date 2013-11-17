@@ -30,9 +30,6 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
-/**
- * @version $Revision: 1.1.2.5.2.4 $ $Date: 2005/04/03 15:55:03 $
- */
 public class Dummy implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
@@ -82,7 +79,7 @@ public class Dummy implements ISkillHandler
 			{
 				activeChar.stopSkillEffects(true, skill.getId());
 			}
-			skill.applyEffects(activeChar, null, activeChar, true, false, false, 0);
+			skill.applyEffects(activeChar, null, activeChar, true, false, true, 0);
 		}
 		
 		if (skill.useSpiritShot())

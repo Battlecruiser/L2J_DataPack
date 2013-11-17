@@ -65,10 +65,8 @@ public final class EnemyCharge extends AbstractEffect
 			_log.info("EffectEnemyCharge was going to use invalid coordinates for characters, getEffector: " + curX + "," + curY + " and getEffected: " + info.getEffected().getX() + "," + info.getEffected().getY());
 			return;
 		}
-		int offset = Math.max((int) distance - info.getSkill().getFlyRadius(), 30);
 		
-		double cos;
-		double sin;
+		int offset = Math.max((int) distance - info.getSkill().getFlyRadius(), 30);
 		
 		// approximation for moving closer when z coordinates are different
 		// TODO: handle Z axis movement better
@@ -85,8 +83,8 @@ public final class EnemyCharge extends AbstractEffect
 		}
 		
 		// Calculate movement angles needed
-		sin = dy / distance;
-		cos = dx / distance;
+		double sin = dy / distance;
+		double cos = dx / distance;
 		
 		// Calculate the new destination with offset included
 		int x = curX + (int) ((distance - offset) * cos);
