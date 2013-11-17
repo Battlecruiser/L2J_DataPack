@@ -46,7 +46,7 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 /**
  * Pailaka (Devil's Isle) instance zone.
  */
-public class PailakaDevilsLegacy extends Quest
+public final class PailakaDevilsLegacy extends Quest
 {
 	private static final int MIN_LEVEL = 61;
 	private static final int MAX_LEVEL = 67;
@@ -169,6 +169,20 @@ public class PailakaDevilsLegacy extends Quest
 	
 	private static L2Skill boom_skill = SkillTable.getInstance().getInfo(5714, 1);
 	private static L2Skill energy_skill = SkillTable.getInstance().getInfo(5712, 1);
+	
+	private PailakaDevilsLegacy()
+	{
+		// TODO change the script to use the actual class name
+		super(129, "129_PailakaDevilsLegacy", "Pailaka - Devil's Legacy");
+		addStartNpc(SURVIVOR);
+		addFirstTalkId(SURVIVOR, SUPPORTER, ADVENTURER1, ADVENTURER2);
+		addTalkId(SURVIVOR, SUPPORTER, ADVENTURER1, ADVENTURER2);
+		addAttackId(TREASURE_BOX, POWDER_KEG, LEMATAN);
+		addKillId(MONSTERS);
+		addEnterZoneId(ZONE);
+		addSpawnId(FOLLOWERS);
+		registerQuestItems(ITEMS);
+	}
 	
 	private void attackPlayer(L2Attackable npc, L2Playable attacker)
 	{
@@ -602,19 +616,6 @@ public class PailakaDevilsLegacy extends Quest
 				e.printStackTrace();
 			}
 		}
-	}
-	
-	private PailakaDevilsLegacy()
-	{
-		super(129, "129_PailakaDevilsLegacy", "Pailaka - Devil's Legacy");
-		addStartNpc(SURVIVOR);
-		addFirstTalkId(SURVIVOR, SUPPORTER, ADVENTURER1, ADVENTURER2);
-		addTalkId(SURVIVOR, SUPPORTER, ADVENTURER1, ADVENTURER2);
-		addAttackId(TREASURE_BOX, POWDER_KEG, LEMATAN);
-		addKillId(MONSTERS);
-		addEnterZoneId(ZONE);
-		addSpawnId(FOLLOWERS);
-		registerQuestItems(ITEMS);
 	}
 	
 	public static void main(String[] args)

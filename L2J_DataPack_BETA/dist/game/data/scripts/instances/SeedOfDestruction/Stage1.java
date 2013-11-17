@@ -77,7 +77,7 @@ import com.l2jserver.gameserver.util.Util;
  * Please maintain consistency between the Seed scripts.
  * @author Gigiikun
  */
-public class Stage1 extends Quest
+public final class Stage1 extends Quest
 {
 	protected class SOD1World extends InstanceWorld
 	{
@@ -99,7 +99,6 @@ public class Stage1 extends Quest
 		public int count = 0;
 	}
 	
-	private static final String qn = "SoDStage1";
 	private static final int INSTANCEID = 110; // this is the client number
 	private static final int MIN_PLAYERS = 36;
 	private static final int MAX_PLAYERS = 45;
@@ -212,13 +211,41 @@ public class Stage1 extends Quest
 	private static final int FORTRESS_DOOR = 12240030;
 	private static final int THRONE_DOOR = 12240031;
 	
-	// spawns
-	
 	// Initialization at 6:30 am on Wednesday and Saturday
 	private static final int RESET_HOUR = 6;
 	private static final int RESET_MIN = 30;
 	private static final int RESET_DAY_1 = 4;
 	private static final int RESET_DAY_2 = 7;
+	
+	private Stage1()
+	{
+		// TODO change name to use actual class name
+		super(-1, "SoDStage1", "instances");
+		load();
+		addStartNpc(ALENOS);
+		addTalkId(ALENOS);
+		addStartNpc(TELEPORT);
+		addTalkId(TELEPORT);
+		addAttackId(OBELISK);
+		addSpawnId(OBELISK);
+		addKillId(OBELISK);
+		addSpawnId(POWERFUL_DEVICE);
+		addKillId(POWERFUL_DEVICE);
+		addSpawnId(THRONE_POWERFUL_DEVICE);
+		addKillId(THRONE_POWERFUL_DEVICE);
+		addAttackId(TIAT);
+		addKillId(TIAT);
+		addKillId(SPAWN_DEVICE);
+		addSpawnId(TIAT_GUARD);
+		addKillId(TIAT_GUARD);
+		addAggroRangeEnterId(TIAT_VIDEO_NPC);
+		// registering spawn traps which handled in this script
+		for (int i = 18771; i <= 18774; i++)
+		{
+			addTrapActionId(i);
+		}
+		addKillId(_mustKillMobsId);
+	}
 	
 	private void load()
 	{
@@ -992,7 +1019,7 @@ public class Stage1 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		int npcId = npc.getId();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);
@@ -1046,42 +1073,9 @@ public class Stage1 extends Quest
 		return null;
 	}
 	
-	public Stage1(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
-		load();
-		addStartNpc(ALENOS);
-		addTalkId(ALENOS);
-		addStartNpc(TELEPORT);
-		addTalkId(TELEPORT);
-		addAttackId(OBELISK);
-		addSpawnId(OBELISK);
-		addKillId(OBELISK);
-		addSpawnId(POWERFUL_DEVICE);
-		addKillId(POWERFUL_DEVICE);
-		addSpawnId(THRONE_POWERFUL_DEVICE);
-		addKillId(THRONE_POWERFUL_DEVICE);
-		addAttackId(TIAT);
-		addKillId(TIAT);
-		addKillId(SPAWN_DEVICE);
-		addSpawnId(TIAT_GUARD);
-		addKillId(TIAT_GUARD);
-		addAggroRangeEnterId(TIAT_VIDEO_NPC);
-		// registering spawn traps which handled in this script
-		for (int i = 18771; i <= 18774; i++)
-		{
-			addTrapActionId(i);
-		}
-		for (int mobId : _mustKillMobsId)
-		{
-			addKillId(mobId);
-		}
-	}
-	
 	public static void main(String[] args)
 	{
 		// now call the constructor (starts up the)
-		new Stage1(-1, qn, "instances");
+		new Stage1();
 	}
 }

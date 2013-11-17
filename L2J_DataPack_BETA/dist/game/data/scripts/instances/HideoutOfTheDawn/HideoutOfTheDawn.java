@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  * Hideout of the Dawn instance zone.
  * @author Adry_85
  */
-public class HideoutOfTheDawn extends Quest
+public final class HideoutOfTheDawn extends Quest
 {
 	protected class HotDWorld extends InstanceWorld
 	{
@@ -46,10 +46,9 @@ public class HideoutOfTheDawn extends Quest
 	private static final Location WOOD_LOC = new Location(-23758, -8959, -5384, 0, 0);
 	private static final Location JAINA_LOC = new Location(147072, 23743, -1984, 0);
 	
-	public HideoutOfTheDawn(int questId, String name, String descr)
+	private HideoutOfTheDawn()
 	{
-		super(questId, name, descr);
-		
+		super(-1, HideoutOfTheDawn.class.getSimpleName(), "instances");
 		addStartNpc(WOOD);
 		addTalkId(WOOD, JAINA);
 	}
@@ -119,6 +118,6 @@ public class HideoutOfTheDawn extends Quest
 	
 	public static void main(String[] args)
 	{
-		new HideoutOfTheDawn(-1, HideoutOfTheDawn.class.getSimpleName(), "instances");
+		new HideoutOfTheDawn();
 	}
 }

@@ -49,14 +49,14 @@ public final class ChamberOfDelusionTower extends Chamber
 	private static final int INSTANCEID = 132; // this is the client number
 	private static final String INSTANCE_TEMPLATE = "ChamberOfDelusionTower.xml";
 	
-	private ChamberOfDelusionTower(int questId, String name, String descr)
+	private ChamberOfDelusionTower()
 	{
-		super(questId, name, descr, INSTANCEID, INSTANCE_TEMPLATE, ENTRANCE_GATEKEEPER, ROOM_GATEKEEPER_FIRST, ROOM_GATEKEEPER_LAST, AENKINEL, BOX);
+		super(-1, ChamberOfDelusionTower.class.getSimpleName(), "instances", INSTANCEID, INSTANCE_TEMPLATE, ENTRANCE_GATEKEEPER, ROOM_GATEKEEPER_FIRST, ROOM_GATEKEEPER_LAST, AENKINEL, BOX);
 		ROOM_ENTER_POINTS = ENTER_POINTS;
 	}
 	
 	public static void main(String[] args)
 	{
-		new ChamberOfDelusionTower(-1, ChamberOfDelusionTower.class.getSimpleName(), "instances");
+		new ChamberOfDelusionTower();
 	}
 }

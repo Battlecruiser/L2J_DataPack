@@ -41,9 +41,8 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 /**
  * Dark Cloud Mansion instance zone.
  */
-public class DarkCloudMansion extends Quest
+public final class DarkCloudMansion extends Quest
 {
-	private static String qn = "DarkCloudMansion";
 	private static final int INSTANCEID = 9;
 	
 	private static boolean debug = false;
@@ -444,10 +443,9 @@ public class DarkCloudMansion extends Quest
 		}
 	};
 	
-	public DarkCloudMansion(int questId, String name, String descr)
+	private DarkCloudMansion()
 	{
-		super(questId, name, descr);
-		
+		super(-1, DarkCloudMansion.class.getSimpleName(), "instances");
 		addFirstTalkId(BSM);
 		addFirstTalkId(SOTruth);
 		addStartNpc(YIYEN);
@@ -566,7 +564,7 @@ public class DarkCloudMansion extends Quest
 		{
 			for (L2PcInstance partyMember : party.getMembers())
 			{
-				if (partyMember.getQuestState(qn) == null)
+				if (partyMember.getQuestState(getName()) == null)
 				{
 					newQuestState(partyMember);
 				}
@@ -1415,7 +1413,7 @@ public class DarkCloudMansion extends Quest
 			if ((npc.getId() == SOTruth) && (world.getStatus() == 10))
 			{
 				npc.showChatWindow(player);
-				QuestState st = player.getQuestState(qn);
+				QuestState st = player.getQuestState(getName());
 				if (st == null)
 				{
 					st = newQuestState(player);
@@ -1477,6 +1475,6 @@ public class DarkCloudMansion extends Quest
 	
 	public static void main(String[] args)
 	{
-		new DarkCloudMansion(-1, "DarkCloudMansion", qn);
+		new DarkCloudMansion();
 	}
 }

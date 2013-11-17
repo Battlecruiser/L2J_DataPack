@@ -65,7 +65,7 @@ import com.l2jserver.gameserver.util.Util;
  * Rainbow Springs Chateau clan hall siege script.
  * @author BiggBoss
  */
-public class RainbowSpringsChateau extends Quest
+public final class RainbowSpringsChateau extends Quest
 {
 	private static final Logger _log = Logger.getLogger(RainbowSpringsChateau.class.getName());
 	
@@ -203,8 +203,6 @@ public class RainbowSpringsChateau extends Quest
 		}
 	}
 	
-	private static final String qn = "RainbowSpringsChateau";
-	
 	private static final int RAINBOW_SPRINGS = 62;
 	
 	private static final int WAR_DECREES = 8034;
@@ -278,14 +276,9 @@ public class RainbowSpringsChateau extends Quest
 	protected static ScheduledFuture<?> _nextSiege, _siegeEnd;
 	private static String _registrationEnds;
 	
-	/**
-	 * @param questId
-	 * @param name
-	 * @param descr
-	 */
-	public RainbowSpringsChateau(int questId, String name, String descr)
+	private RainbowSpringsChateau()
 	{
-		super(questId, name, descr);
+		super(-1, RainbowSpringsChateau.class.getSimpleName(), "conquerablehalls");
 		
 		addFirstTalkId(MESSENGER);
 		addTalkId(MESSENGER);
@@ -942,6 +935,6 @@ public class RainbowSpringsChateau extends Quest
 	
 	public static void main(String[] args)
 	{
-		new RainbowSpringsChateau(-1, qn, "conquerablehalls");
+		new RainbowSpringsChateau();
 	}
 }

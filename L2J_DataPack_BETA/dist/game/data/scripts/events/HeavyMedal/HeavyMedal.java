@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  * Heavy Medals event AI.
  * @author Gnacik
  */
-public class HeavyMedal extends LongTimeEvent
+public final class HeavyMedal extends LongTimeEvent
 {
 	private final static int CAT_ROY = 31228;
 	private final static int CAT_WINNIE = 31229;
@@ -51,9 +51,9 @@ public class HeavyMedal extends LongTimeEvent
 		6402
 	};
 	
-	public HeavyMedal(String name, String descr)
+	private HeavyMedal()
 	{
-		super(name, descr);
+		super(HeavyMedal.class.getSimpleName(), "events");
 		addStartNpc(CAT_ROY);
 		addStartNpc(CAT_WINNIE);
 		addTalkId(CAT_ROY);
@@ -146,6 +146,6 @@ public class HeavyMedal extends LongTimeEvent
 	
 	public static void main(String[] args)
 	{
-		new HeavyMedal(HeavyMedal.class.getSimpleName(), "events");
+		new HeavyMedal();
 	}
 }

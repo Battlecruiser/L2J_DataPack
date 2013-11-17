@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  * Secret Area in the Keucereus Fortress instance zone.
  * @author Gladicek
  */
-public class SecretArea extends Quest
+public final class SecretArea extends Quest
 {
 	private static final int INSTANCE_ID = 117;
 	// TODO Unharcode htmls.
@@ -46,6 +46,14 @@ public class SecretArea extends Quest
 		new Location(-23758, -8959, -5384),
 		new Location(-185057, 242821, 1576)
 	};
+	
+	private SecretArea()
+	{
+		super(-1, SecretArea.class.getSimpleName(), "instances");
+		addStartNpc(GINBY);
+		addTalkId(GINBY);
+		addTalkId(LELRIKIA);
+	}
 	
 	protected void enterInstance(L2PcInstance player)
 	{
@@ -94,17 +102,8 @@ public class SecretArea extends Quest
 		return htmltext;
 	}
 	
-	public SecretArea(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
-		addStartNpc(GINBY);
-		addTalkId(GINBY);
-		addTalkId(LELRIKIA);
-	}
-	
 	public static void main(String[] args)
 	{
-		new SecretArea(-1, SecretArea.class.getSimpleName(), "instances");
+		new SecretArea();
 	}
 }

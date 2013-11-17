@@ -23,7 +23,7 @@ import vehicles.AirShipController;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.VehiclePathPoint;
 
-public class SoDController extends AirShipController
+public final class SoDController extends AirShipController
 {
 	private static final int DOCK_ZONE = 50601;
 	private static final int LOCATION = 102;
@@ -57,9 +57,9 @@ public class SoDController extends AirShipController
 		100
 	};
 	
-	public SoDController(int questId, String name, String descr)
+	private SoDController()
 	{
-		super(questId, name, descr);
+		super(-1, SoDController.class.getSimpleName(), "vehicles");
 		addStartNpc(CONTROLLER_ID);
 		addFirstTalkId(CONTROLLER_ID);
 		addTalkId(CONTROLLER_ID);
@@ -87,6 +87,6 @@ public class SoDController extends AirShipController
 	
 	public static void main(String[] args)
 	{
-		new SoDController(-1, SoDController.class.getSimpleName(), "vehicles");
+		new SoDController();
 	}
 }

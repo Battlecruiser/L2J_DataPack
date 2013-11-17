@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Master of Enchanting event AI.
  * @author Gnacik
  */
-public class MasterOfEnchanting extends LongTimeEvent
+public final class MasterOfEnchanting extends LongTimeEvent
 {
 	// NPC
 	private static final int MASTER_YOGI = 32599;
@@ -69,9 +69,9 @@ public class MasterOfEnchanting extends LongTimeEvent
 	@SuppressWarnings("deprecation")
 	private static final Date _eventStart = new Date(2011, 7, 1);
 	
-	public MasterOfEnchanting(String name, String descr)
+	private MasterOfEnchanting()
 	{
-		super(name, descr);
+		super(MasterOfEnchanting.class.getSimpleName(), "events");
 		addStartNpc(MASTER_YOGI);
 		addFirstTalkId(MASTER_YOGI);
 		addTalkId(MASTER_YOGI);
@@ -284,6 +284,6 @@ public class MasterOfEnchanting extends LongTimeEvent
 	
 	public static void main(String[] args)
 	{
-		new MasterOfEnchanting(MasterOfEnchanting.class.getSimpleName(), "events");
+		new MasterOfEnchanting();
 	}
 }

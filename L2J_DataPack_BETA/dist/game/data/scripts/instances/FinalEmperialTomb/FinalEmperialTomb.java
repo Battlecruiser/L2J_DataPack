@@ -81,7 +81,7 @@ import com.l2jserver.gameserver.util.Util;
  * Use proper zone spawn system.
  * @author Gigiikun
  */
-public class FinalEmperialTomb extends Quest
+public final class FinalEmperialTomb extends Quest
 {
 	private class FETWorld extends InstanceWorld
 	{
@@ -293,9 +293,24 @@ public class FinalEmperialTomb extends Quest
 	private static final int RESET_DAY_1 = 4;
 	private static final int RESET_DAY_2 = 7;
 	
-	@SuppressWarnings("unused")
+	private FinalEmperialTomb()
+	{
+		super(-1, FinalEmperialTomb.class.getSimpleName(), "instances");
+		load();
+		addAttackId(SCARLET1, FRINTEZZA);
+		addAttackId(PORTRAITS);
+		addStartNpc(GUIDE, CUBE);
+		addTalkId(GUIDE, CUBE);
+		addKillId(HALL_ALARM, HALL_KEEPER_CAPTAIN, DARK_CHOIR_PLAYER, SCARLET2);
+		addKillId(PORTRAITS);
+		addKillId(DEMONS);
+		addKillId(_mustKillMobsId);
+		addSpellFinishedId(HALL_KEEPER_SUICIDAL_SOLDIER);
+	}
+	
 	private void load()
 	{
+		@SuppressWarnings("unused")
 		int spawnCount = 0;
 		try
 		{
@@ -1578,24 +1593,8 @@ public class FinalEmperialTomb extends Quest
 		return "";
 	}
 	
-	public FinalEmperialTomb(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
-		load();
-		addAttackId(SCARLET1, FRINTEZZA);
-		addAttackId(PORTRAITS);
-		addStartNpc(GUIDE, CUBE);
-		addTalkId(GUIDE, CUBE);
-		addKillId(HALL_ALARM, HALL_KEEPER_CAPTAIN, DARK_CHOIR_PLAYER, SCARLET2);
-		addKillId(PORTRAITS);
-		addKillId(DEMONS);
-		addKillId(_mustKillMobsId);
-		addSpellFinishedId(HALL_KEEPER_SUICIDAL_SOLDIER);
-	}
-	
 	public static void main(String[] args)
 	{
-		new FinalEmperialTomb(-1, FinalEmperialTomb.class.getSimpleName(), "instances");
+		new FinalEmperialTomb();
 	}
 }

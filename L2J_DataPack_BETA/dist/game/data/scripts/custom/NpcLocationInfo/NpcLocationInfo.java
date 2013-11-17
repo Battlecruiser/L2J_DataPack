@@ -30,10 +30,8 @@ import com.l2jserver.gameserver.util.Util;
  * Npc Location Info AI.
  * @author Nyaran
  */
-public class NpcLocationInfo extends Quest
+public final class NpcLocationInfo extends Quest
 {
-	private static final String qn = "NpcLocationInfo";
-	
 	private static final int[] NPC =
 	{
 		30598,
@@ -261,15 +259,21 @@ public class NpcLocationInfo extends Quest
 		32158, // Warehouse Chief Fisler
 		32157, // Head Blacksmith Moka
 		32159, // Blacksmith Kincaid
-		32169
-	// Spellbook Trader Mifren
+		32169, // Spellbook Trader Mifren
 	};
+	
+	private NpcLocationInfo()
+	{
+		super(-1, NpcLocationInfo.class.getSimpleName(), "custom");
+		addStartNpc(NPC);
+		addTalkId(NPC);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -313,16 +317,8 @@ public class NpcLocationInfo extends Quest
 		return htmltext;
 	}
 	
-	public NpcLocationInfo(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		
-		addStartNpc(NPC);
-		addTalkId(NPC);
-	}
-	
 	public static void main(String args[])
 	{
-		new NpcLocationInfo(-1, qn, "custom");
+		new NpcLocationInfo();
 	}
 }

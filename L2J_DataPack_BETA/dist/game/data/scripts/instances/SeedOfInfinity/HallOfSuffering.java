@@ -51,7 +51,7 @@ import com.l2jserver.gameserver.util.Util;
  * - bound instance to quests<br>
  * @author Gigiikun, ZakaX, Didldak
  */
-public class HallOfSuffering extends Quest
+public final class HallOfSuffering extends Quest
 {
 	protected class HSWorld extends InstanceWorld
 	{
@@ -66,7 +66,6 @@ public class HallOfSuffering extends Quest
 		public boolean isRewarded = false;
 	}
 	
-	private static final String qn = "SeedOfInfinity";
 	private static final int INSTANCEID = 115; // this is the client number
 	private static final boolean debug = false;
 	
@@ -405,6 +404,19 @@ public class HallOfSuffering extends Quest
 	// default: 24h
 	private static final int INSTANCEPENALTY = 24;
 	
+	private HallOfSuffering()
+	{
+		// TODO change name to use actual class name
+		super(-1, "SeedOfInfinity", "instances");
+		addStartNpc(MOUTHOFEKIMUS, TEPIOS);
+		addTalkId(MOUTHOFEKIMUS, TEPIOS);
+		addFirstTalkId(TEPIOS);
+		addKillId(TUMOR_ALIVE, KLODEKUS, KLANIKUS);
+		addAttackId(KLODEKUS, KLANIKUS);
+		addSkillSeeId(TUMOR_MOBIDS);
+		addKillId(TUMOR_MOBIDS);
+	}
+	
 	private boolean checkConditions(L2PcInstance player)
 	{
 		if (debug)
@@ -501,7 +513,7 @@ public class HallOfSuffering extends Quest
 			{
 				teleportPlayer(partyMember, coords, instanceId);
 				world.addAllowed(partyMember.getObjectId());
-				if (partyMember.getQuestState(qn) == null)
+				if (partyMember.getQuestState(getName()) == null)
 				{
 					newQuestState(partyMember);
 				}
@@ -873,7 +885,7 @@ public class HallOfSuffering extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		int npcId = npc.getId();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);
@@ -900,7 +912,7 @@ public class HallOfSuffering extends Quest
 				((HSWorld) world).isRewarded = true;
 				for (L2PcInstance pl : player.getParty().getMembers())
 				{
-					st = pl.getQuestState(qn);
+					st = pl.getQuestState(getName());
 					if (st != null)
 					{
 						st.giveItems(736, 1);
@@ -915,20 +927,8 @@ public class HallOfSuffering extends Quest
 		return "";
 	}
 	
-	public HallOfSuffering(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(MOUTHOFEKIMUS, TEPIOS);
-		addTalkId(MOUTHOFEKIMUS, TEPIOS);
-		addFirstTalkId(TEPIOS);
-		addKillId(TUMOR_ALIVE, KLODEKUS, KLANIKUS);
-		addAttackId(KLODEKUS, KLANIKUS);
-		addSkillSeeId(TUMOR_MOBIDS);
-		addKillId(TUMOR_MOBIDS);
-	}
-	
 	public static void main(String[] args)
 	{
-		new HallOfSuffering(-1, qn, "instances");
+		new HallOfSuffering();
 	}
 }

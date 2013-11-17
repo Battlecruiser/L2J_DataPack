@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Gift of Vitality event AI.
  * @author Gnacik, Adry_85
  */
-public class GiftOfVitality extends LongTimeEvent
+public final class GiftOfVitality extends LongTimeEvent
 {
 	// NPC
 	private static final int STEVE_SHYAGEL = 4306;
@@ -76,9 +76,9 @@ public class GiftOfVitality extends LongTimeEvent
 		new SkillHolder(5636, 1), // Empower
 	};
 	
-	public GiftOfVitality(String name, String descr)
+	private GiftOfVitality()
 	{
-		super(name, descr);
+		super(GiftOfVitality.class.getSimpleName(), "events");
 		addStartNpc(STEVE_SHYAGEL);
 		addFirstTalkId(STEVE_SHYAGEL);
 		addTalkId(STEVE_SHYAGEL);
@@ -181,6 +181,6 @@ public class GiftOfVitality extends LongTimeEvent
 	
 	public static void main(String[] args)
 	{
-		new GiftOfVitality(GiftOfVitality.class.getSimpleName(), "events");
+		new GiftOfVitality();
 	}
 }

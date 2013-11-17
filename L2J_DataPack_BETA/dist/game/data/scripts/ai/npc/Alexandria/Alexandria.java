@@ -124,11 +124,6 @@ public final class Alexandria extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void main(String[] args)
-	{
-		new Alexandria();
-	}
-	
 	public static class AdditionalQuestItemHolder extends QuestItemHolder
 	{
 		private final int _additionalId;
@@ -143,5 +138,10 @@ public final class Alexandria extends AbstractNpcAI
 		{
 			return _additionalId;
 		}
+	}
+	
+	public static void main(String[] args)
+	{
+		new Alexandria();
 	}
 }
