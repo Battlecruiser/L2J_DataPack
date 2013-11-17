@@ -34,16 +34,16 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Blink effect implementation.<br>
- * This class handles warp effects, disappear and quickly turn up in a near location. If geodata enabled and an object is between initial and final point, flight is stopped just before colliding with object. Flight course and radius are set as skill properties (flyCourse and flyRadius):
+ * This class handles warp effects, disappear and quickly turn up in a near location.<br>
+ * If geodata enabled and an object is between initial and final point, flight is stopped just before colliding with object.<br>
+ * Flight course and radius are set as skill properties (flyCourse and flyRadius):
  * <ul>
  * <li>Fly Radius means the distance between starting point and final point, it must be an integer.</li>
  * <li>Fly Course means the movement direction: imagine a compass above player's head, making north player's heading. So if fly course is 180, player will go backwards (good for blink, e.g.).</li>
  * </ul>
  * By the way, if flyCourse = 360 or 0, player will be moved in in front of him. <br>
- * <br>
- * If target is effector, put in XML self = "1". This will make _actor = getEffector(). This, combined with target type, allows more complex actions like flying target's backwards or player's backwards.<br>
- * <br>
- * @author House
+ * If target is effector, put in XML self="1", this will make _actor = getEffector(). This, combined with target type, allows more complex actions like flying target's backwards or player's backwards.
+ * @author DrHouse
  */
 public final class Blink extends AbstractEffect
 {
@@ -72,21 +72,17 @@ public final class Blink extends AbstractEffect
 		int x = effected.getX() + x1;
 		int y = effected.getY() + y1;
 		int z = effected.getZ();
-		
+		Location loc = new Location(x, y, z);
 		if (Config.GEODATA > 0)
 		{
-			final Location destiny = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceId());
-			x = destiny.getX();
-			y = destiny.getY();
-			z = destiny.getZ();
+			loc = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceId());
 		}
 		
-		// TODO: check if this AI intention is retail-like. This stops player's previous movement
 		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		effected.broadcastPacket(new FlyToLocation(effected, x, y, z, FlyType.DUMMY));
+		effected.broadcastPacket(new FlyToLocation(effected, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
 		effected.abortAttack();
 		effected.abortCast();
-		effected.setXYZ(x, y, z);
+		effected.setXYZ(loc);
 		effected.broadcastPacket(new ValidateLocation(effected));
 	}
 }

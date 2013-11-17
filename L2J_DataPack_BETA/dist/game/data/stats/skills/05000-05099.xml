@@ -1318,40 +1318,50 @@
 		</for>
 	</skill>
 	<skill id="5085" levels="1" name="Anesthesia">
-		<!-- Temporarily stunned and Immobilized. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ANESTHESIA" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="20" />
+		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
 		<set name="icon" val="icon.skill5085" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="23" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="Stun" />
+		</for>
 	</skill>
 	<skill id="5086" levels="1" name="Deadly Poison">
-		<!-- Infected with poison and gradually losing HP. If HP falls to 0, death will ensue. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="CRITICAL_POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="50" />
+		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
 		<set name="icon" val="icon.skill5086" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="-1" />
+		<set name="mpConsume" val="23" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
+		<effect name="DamOverTime" ticks="5" val="12">
+			<param canKill="true" />
+		</effect>
 	</skill>
 	<skill id="5087" levels="2" name="Berserk">
 		<!-- Confirmed CT2.5 -->
