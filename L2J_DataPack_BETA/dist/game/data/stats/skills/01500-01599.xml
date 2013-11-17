@@ -255,8 +255,8 @@
 			<effect name="DefenceTrait">
 				<param HOLD="100" />
 			</effect>
-			<effect name="DamOverTime" ticks="3" val="90" />
-			<effect name="ManaDamOverTime" ticks="3" val="30" />
+			<effect name="DamOverTime" ticks="1" val="90" />
+			<effect name="ManaDamOverTime" ticks="1" val="30" />
 		</for>
 	</skill>
 	<skill id="1509" levels="1" name="Seal of Limit">
@@ -401,7 +401,7 @@
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
 			<effect name="MagicalSoulAttack" />
-			<effect name="ManaDamOverTime" ticks="3" val="12">
+			<effect name="ManaDamOverTime" ticks="5" val="12">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -409,7 +409,7 @@
 		</for>
 		<enchant3for>
 			<effect name="MagicalSoulAttack" />
-			<effect name="ManaDamOverTime" ticks="3" val="12">
+			<effect name="ManaDamOverTime" ticks="5" val="12">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -832,7 +832,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot">
+			<effect name="DamOverTime" ticks="5" val="#dot">
 				<mul order="0x30" stat="healEffect" val="0.5" />
 			</effect>
 		</for>

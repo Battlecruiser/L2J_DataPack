@@ -1299,7 +1299,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
-			<effect name="DamOverTimePercent" ticks="3" val="0.02">
+			<effect name="DamOverTimePercent" ticks="5" val="0.02">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 			</effect>
 		</for>
@@ -1417,8 +1417,8 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Paralyze" />
-			<effect name="DamOverTime" ticks="3" val="115" />
-			<effect name="ManaDamOverTime" ticks="3" val="5" />
+			<effect name="DamOverTime" ticks="5" val="115" />
+			<effect name="ManaDamOverTime" ticks="5" val="5" />
 			<effect name="ChanceSkillTrigger" triggeredId="6302" chanceType="ON_EXIT" />
 		</for>
 	</skill>

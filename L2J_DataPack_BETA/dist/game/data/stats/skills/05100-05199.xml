@@ -732,7 +732,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="109">
+			<effect name="DamOverTime" ticks="5" val="109">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 			</effect>
 		</for>
@@ -1485,7 +1485,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5175" levels="10" name="Bleed">
@@ -1515,7 +1515,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5176" levels="10" name="Silence">

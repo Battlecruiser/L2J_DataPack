@@ -1022,21 +1022,21 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.5">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.5">
 				<add order="0x40" stat="accCombat" val="#accCombat">
 					<using kind="Pole" />
 				</add>
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.5">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.5">
 				<add order="0x40" stat="accCombat" val="#ench1accCombat">
 					<using kind="Pole" />
 				</add>
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="MpConsumePerLevel" ticks="3" val="#ench2mpConsume">
+			<effect name="MpConsumePerLevel" ticks="5" val="#ench2mpConsume">
 				<add order="0x40" stat="accCombat" val="4">
 					<using kind="Pole" />
 				</add>
@@ -1083,21 +1083,21 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="1" />
+			<effect name="MpConsumePerLevel" ticks="5" val="1" />
 			<effect name="DefenceTrait">
 				<param SHOCK="#trait_shock" />
 				<param SLEEP="#trait_sleep" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="3" val="1" />
+			<effect name="MpConsumePerLevel" ticks="5" val="1" />
 			<effect name="DefenceTrait">
 				<param SHOCK="#ench1Trait_shock" />
 				<param SLEEP="#ench1Trait_sleep" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="MpConsumePerLevel" ticks="3" val="#ench2mpConsume" />
+			<effect name="MpConsumePerLevel" ticks="5" val="#ench2mpConsume" />
 			<effect name="DefenceTrait">
 				<param SHOCK="15" />
 				<param SLEEP="30" />
@@ -1572,8 +1572,8 @@
 			<effect name="Paralyze">
 				<mul order="0x30" stat="pDef" val="0.2" />
 			</effect>
-			<effect name="HealOverTime" ticks="3" val="60" />
-			<effect name="ManaHealOverTime" ticks="3" val="10" />
+			<effect name="HealOverTime" ticks="5" val="60" />
+			<effect name="ManaHealOverTime" ticks="5" val="10" />
 		</for>
 	</skill>
 	<skill id="442" levels="1" name="Sonic Barrier">
@@ -2444,7 +2444,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.2">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.2">
 				<add order="0x40" stat="vengeancePdam" val="3" />
 			</effect>
 		</for>
@@ -2559,7 +2559,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.4">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -3071,15 +3071,15 @@
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 		<enchant1for>
 			<effect name="PhysicalSoulAttack" />
-			<effect name="DamOverTime" ticks="3" val="#ench1Power" />
+			<effect name="DamOverTime" ticks="5" val="#ench1Power" />
 		</enchant1for>
 		<enchant2for>
 			<effect name="PhysicalSoulAttack" />
-			<effect name="DamOverTime" ticks="3" val="134" />
+			<effect name="DamOverTime" ticks="5" val="134" />
 		</enchant2for>
 	</skill>
 	<skill id="496" levels="31" name="Slashing Blade" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">

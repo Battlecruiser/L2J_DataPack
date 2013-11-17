@@ -53,7 +53,7 @@ public final class DamOverTimePercent extends AbstractEffect
 			return false;
 		}
 		
-		double damage = info.getEffected().getCurrentHp() * getValue() * getTicks();
+		double damage = info.getEffected().getCurrentHp() * getValue() * getTicksMultiplier();
 		if (damage >= (info.getEffected().getCurrentHp() - 1))
 		{
 			if (info.getSkill().isToggle())

@@ -50,7 +50,7 @@ public final class ManaHealOverTime extends AbstractEffect
 			return true;
 		}
 		
-		mp += getValue() * getTicks();
+		mp += getValue() * getTicksMultiplier();
 		mp = Math.min(mp, maxmp);
 		info.getEffected().setCurrentMp(mp);
 		return info.getSkill().isToggle();

@@ -22,8 +22,9 @@ import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExRegMax;
+import com.l2jserver.gameserver.network.serverpackets.ExRegenMax;
 
 /**
  * Heal Over Time effect implementation.
@@ -58,7 +59,7 @@ public final class HealOverTime extends AbstractEffect
 			return false;
 		}
 		
-		hp += getValue() * getTicks();
+		hp += getValue() * getTicksMultiplier();
 		hp = Math.min(hp, maxhp);
 		info.getEffected().setCurrentHp(hp);
 		return info.getSkill().isToggle();
@@ -67,9 +68,9 @@ public final class HealOverTime extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (info.getEffected().isPlayer() && (getTicks() > 0))
+		if (info.getEffected().isPlayer() && (getTicks() > 0) && (info.getSkill().getAbnormalType() == AbnormalType.HP_RECOVER))
 		{
-			info.getEffected().sendPacket(new ExRegMax(getValue(), info.getAbnormalTime(), info.getAbnormalTime() / getTicks()));
+			info.getEffected().sendPacket(new ExRegenMax(info.getAbnormalTime(), getTicks(), getValue()));
 		}
 	}
 }

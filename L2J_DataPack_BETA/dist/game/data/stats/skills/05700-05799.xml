@@ -246,7 +246,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="55">
+			<effect name="DamOverTime" ticks="5" val="55">
 				<mul order="0x30" stat="runSpd" val="0.77" />
 			</effect>
 		</for>

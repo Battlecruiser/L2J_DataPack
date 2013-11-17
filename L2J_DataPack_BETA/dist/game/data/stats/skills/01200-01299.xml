@@ -211,7 +211,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="1210" levels="4" name="Seal of Gloom">
@@ -245,7 +245,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttackMp" />
-			<effect name="ManaDamOverTime" ticks="3" val="#mdot" />
+			<effect name="ManaDamOverTime" ticks="5" val="#mdot" />
 		</for>
 	</skill>
 	<skill id="1213" levels="13" name="Seal of Mirage">
@@ -1154,11 +1154,11 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 		<enchant3for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="67" />
+			<effect name="DamOverTime" ticks="5" val="67" />
 		</enchant3for>
 	</skill>
 	<skill id="1238" levels="3" name="Freezing Skin" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
@@ -2076,12 +2076,12 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.2">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.2">
 				<add order="0x40" stat="transDam" val="#power" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.2">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.2">
 				<add order="0x40" stat="transDam" val="#ench1power" />
 			</effect>
 		</enchant1for>
@@ -2764,12 +2764,12 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ManaDamOverTime" ticks="3" val="#mdot">
+			<effect name="ManaDamOverTime" ticks="5" val="#mdot">
 				<add order="0x40" stat="pDef" val="#def" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="ManaDamOverTime" ticks="3" val="10">
+			<effect name="ManaDamOverTime" ticks="5" val="10">
 				<add order="0x40" stat="pDef" val="#ench1def" />
 			</effect>
 		</enchant1for>

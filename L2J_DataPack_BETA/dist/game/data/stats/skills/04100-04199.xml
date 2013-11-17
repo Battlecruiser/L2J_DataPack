@@ -869,7 +869,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ManaDamOverTime" ticks="3" val="#damage" />
+			<effect name="ManaDamOverTime" ticks="5" val="#damage" />
 		</for>
 	</skill>
 	<skill id="4141" levels="12" name="NPC Wind Fist">
@@ -1019,7 +1019,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="4149" levels="12" name="Bleed">
@@ -1044,7 +1044,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="4150" levels="12" name="Flame">
@@ -1070,7 +1070,7 @@
 		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="4151" levels="12" name="NPC Windstrike - Magic">
@@ -1763,7 +1763,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" />
+			<effect name="DamOverTime" ticks="5" val="#dmg" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
@@ -1923,7 +1923,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#damage" />
+			<effect name="DamOverTime" ticks="5" val="#damage" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -1975,7 +1975,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="ManaDamOverTime" ticks="3" val="#mdot" />
+			<effect name="ManaDamOverTime" ticks="5" val="#mdot" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -2159,7 +2159,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" />
+			<effect name="DamOverTime" ticks="5" val="#dmg" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="abnormalVisualEffect" val="DOT_POISON" />

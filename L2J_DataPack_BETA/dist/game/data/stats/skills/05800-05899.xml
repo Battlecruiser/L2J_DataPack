@@ -383,7 +383,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="70" />
+			<effect name="DamOverTime" ticks="5" val="70" />
 		</for>
 	</skill>
 	<skill id="5832" levels="1" name="Hate Aura">
@@ -1189,7 +1189,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="145" />
+			<effect name="DamOverTime" ticks="5" val="145" />
 		</for>
 	</skill>
 	<skill id="5880" levels="2" name="Vicious Mutilation">
@@ -1275,7 +1275,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="145" />
+			<effect name="DamOverTime" ticks="5" val="145" />
 		</for>
 	</skill>
 	<skill id="5884" levels="2" name="Weakened Sweep">

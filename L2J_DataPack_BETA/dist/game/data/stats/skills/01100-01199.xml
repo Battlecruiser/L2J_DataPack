@@ -99,7 +99,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttackMp" />
-			<effect name="ManaDamOverTime" ticks="3" val="#mdot" />
+			<effect name="ManaDamOverTime" ticks="5" val="#mdot" />
 		</for>
 	</skill>
 	<skill id="1104" levels="14" name="Seal of Winter" enchantGroup1="1" enchantGroup2="1">
@@ -1064,10 +1064,10 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="power" val="#ench3Power" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="3" val="#ench1dot" />
+			<effect name="DamOverTime" ticks="5" val="#ench1dot" />
 		</enchant1for>
 	</skill>
 	<skill id="1168" levels="7" name="Curse: Poison">
@@ -1100,7 +1100,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="1169" levels="14" name="Curse Fear" enchantGroup1="2" enchantGroup2="2">

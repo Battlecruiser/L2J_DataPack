@@ -57,7 +57,7 @@ public final class CpHealOverTime extends AbstractEffect
 			return false;
 		}
 		
-		cp += getValue() * getTicks();
+		cp += getValue() * getTicksMultiplier();
 		cp = Math.min(cp, maxcp);
 		info.getEffected().setCurrentCp(cp);
 		return true;

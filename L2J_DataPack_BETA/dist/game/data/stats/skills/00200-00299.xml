@@ -403,12 +403,12 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="SilentMove" ticks="3" val="9">
+			<effect name="SilentMove" ticks="5" val="9">
 				<mul order="0x30" stat="runSpd" val="0.6" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="SilentMove" ticks="3" val="9">
+			<effect name="SilentMove" ticks="5" val="9">
 				<mul order="0x30" stat="runSpd" val="#ench1Penalty" />
 			</effect>
 		</enchant1for>
@@ -472,11 +472,11 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 		<enchant1for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="67" />
+			<effect name="DamOverTime" ticks="5" val="67" />
 		</enchant1for>
 	</skill>
 	<skill id="225" levels="3" name="Acrobatic Move">
@@ -1306,7 +1306,7 @@
 			<effect name="Spoil" />
 		</enchant1for>
 		<enchant2for>
-			<effect name="DamOverTime" ticks="3" val="118" />
+			<effect name="DamOverTime" ticks="5" val="118" />
 			<effect name="Spoil" />
 		</enchant2for>
 		<enchant3for>
@@ -1353,12 +1353,12 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.4">
 				<add order="0x40" stat="accCombat" val="3" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="3" val="#ench1val">
+			<effect name="MpConsumePerLevel" ticks="5" val="#ench1val">
 				<add order="0x40" stat="accCombat" val="3" />
 			</effect>
 		</enchant1for>
@@ -2553,19 +2553,19 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="2">
+			<effect name="MpConsumePerLevel" ticks="5" val="2">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<mul order="0x30" stat="rShld" val="1.5" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="3" val="2">
+			<effect name="MpConsumePerLevel" ticks="5" val="2">
 				<add order="0x40" stat="pDef" val="#ench1pDef" />
 				<mul order="0x30" stat="rShld" val="1.5" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="MpConsumePerLevel" ticks="3" val="#ench2val">
+			<effect name="MpConsumePerLevel" ticks="5" val="#ench2val">
 				<add order="0x40" stat="pDef" val="256" />
 				<mul order="0x30" stat="rShld" val="1.5" />
 			</effect>
@@ -2773,7 +2773,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChameleonRest" ticks="3" val="2" />
+			<effect name="ChameleonRest" ticks="5" val="2" />
 		</for>
 	</skill>
 	<skill id="297" levels="2" name="Duelist Spirit" enchantGroup1="1" enchantGroup2="1">

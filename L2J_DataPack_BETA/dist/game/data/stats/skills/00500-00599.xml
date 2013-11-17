@@ -17,7 +17,7 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.4">
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pAtkSpd" val="#amount" />
 				<add order="0x40" stat="accCombat" val="#amount2" />
@@ -26,7 +26,7 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.4">
 				<mul order="0x30" stat="pAtk" val="#ench1Power" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
 				<add order="0x40" stat="accCombat" val="#ench1Power2" />
@@ -35,7 +35,7 @@
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="MpConsumePerLevel" ticks="3" val="#ench2Cost">
+			<effect name="MpConsumePerLevel" ticks="5" val="#ench2Cost">
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
 				<add order="0x40" stat="accCombat" val="4" />
@@ -441,11 +441,11 @@
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 		<enchant3for>
 			<effect name="PhysicalSoulAttack" />
-			<effect name="DamOverTime" ticks="3" val="67" />
+			<effect name="DamOverTime" ticks="5" val="67" />
 		</enchant3for>
 	</skill>
 	<skill id="510" levels="5" name="Deadly Roulette" enchantGroup1="2" enchantGroup2="2">
@@ -982,7 +982,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="5447" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
@@ -1899,7 +1899,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="123" />
+			<effect name="DamOverTime" ticks="5" val="123" />
 		</for>
 	</skill>
 	<skill id="560" levels="4" name="Power Slash">
@@ -2181,7 +2181,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="58" />
+			<effect name="DamOverTime" ticks="5" val="58" />
 		</for>
 	</skill>
 	<skill id="572" levels="4" name="Double Slasher">
@@ -2368,7 +2368,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="579" levels="4" name="Fire Armor">
@@ -2489,7 +2489,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="123" />
+			<effect name="DamOverTime" ticks="5" val="123" />
 		</for>
 	</skill>
 	<skill id="583" levels="4" name="Assimilation">
@@ -2620,7 +2620,7 @@
 		<set name="reuseDelay" val="11000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" />
+			<effect name="DamOverTime" ticks="5" val="#dmg" />
 		</for>
 	</skill>
 	<skill id="589" levels="2" name="Darkness Energy Drain">
