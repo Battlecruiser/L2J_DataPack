@@ -42,7 +42,7 @@ public final class MpConsumePerLevel extends AbstractEffect
 			return false;
 		}
 		
-		final double base = getValue() * getTicks();
+		final double base = getValue() * getTicksMultiplier();
 		final double consume = (info.getAbnormalTime() > 0) ? ((info.getEffected().getLevel() - 1) / 7.5) * base * info.getAbnormalTime() : base;
 		if (consume > info.getEffected().getCurrentMp())
 		{

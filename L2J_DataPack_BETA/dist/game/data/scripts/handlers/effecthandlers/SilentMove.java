@@ -49,7 +49,7 @@ public final class SilentMove extends AbstractEffect
 			return false;
 		}
 		
-		final double manaDam = getValue() * getTicks();
+		final double manaDam = getValue() * getTicksMultiplier();
 		if (manaDam > info.getEffected().getCurrentMp())
 		{
 			info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);

@@ -81,7 +81,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5303" levels="9" name="Bleed">
@@ -112,7 +112,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5304" levels="9" name="Paralysis">
@@ -173,7 +173,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5306" levels="9" name="Paralysis">
@@ -263,7 +263,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5309" levels="9" name="Bleed">
@@ -294,7 +294,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5310" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
@@ -1138,7 +1138,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5364" levels="9" name="Bleed">
@@ -1170,7 +1170,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5365" levels="9" name="Paralysis">
@@ -1230,7 +1230,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5367" levels="9" name="Paralysis">
@@ -1309,7 +1309,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5370" levels="9" name="Bleed">
@@ -1812,7 +1812,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="DamOverTime" ticks="3" val="75" />
+			<effect name="DamOverTime" ticks="5" val="75" />
 		</for>
 	</skill>
 </list>

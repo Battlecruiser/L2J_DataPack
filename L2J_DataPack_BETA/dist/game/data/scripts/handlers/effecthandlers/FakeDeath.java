@@ -52,7 +52,7 @@ public final class FakeDeath extends AbstractEffect
 			return false;
 		}
 		
-		final double manaDam = getValue() * getTicks();
+		final double manaDam = getValue() * getTicksMultiplier();
 		if (manaDam > info.getEffected().getCurrentMp())
 		{
 			if (info.getSkill().isToggle())

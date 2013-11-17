@@ -1297,7 +1297,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="FatalBlow" />
-			<effect name="DamOverTime" ticks="3" val="#damage" />
+			<effect name="DamOverTime" ticks="5" val="#damage" />
 		</for>
 	</skill>
 	<skill id="4580" levels="12" name="Decrease P. Atk.">
@@ -1382,7 +1382,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" />
+			<effect name="DamOverTime" ticks="5" val="#dmg" />
 		</for>
 	</skill>
 	<skill id="4583" levels="12" name="Decrease Speed">
@@ -1805,7 +1805,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#damage" />
+			<effect name="DamOverTime" ticks="5" val="#damage" />
 		</for>
 	</skill>
 	<skill id="4597" levels="12" name="Bleed">
@@ -1834,7 +1834,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#damage" />
+			<effect name="DamOverTime" ticks="5" val="#damage" />
 		</for>
 	</skill>
 	<skill id="4598" levels="12" name="Bleed">
@@ -1863,7 +1863,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#damage" />
+			<effect name="DamOverTime" ticks="5" val="#damage" />
 		</for>
 	</skill>
 	<skill id="4599" levels="12" name="Decrease Speed">

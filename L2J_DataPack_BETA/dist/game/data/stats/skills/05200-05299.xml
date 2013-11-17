@@ -974,7 +974,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 			<effect name="ChanceSkillTrigger" triggeredId="5248" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1076,7 +1076,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 			<effect name="ChanceSkillTrigger" triggeredId="5252" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1136,7 +1136,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="5252" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
@@ -1167,7 +1167,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 			<effect name="ChanceSkillTrigger" triggeredId="5255" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1493,7 +1493,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" />
+			<effect name="DamOverTime" ticks="5" val="#dmg" />
 		</for>
 	</skill>
 	<skill id="5269" levels="17" name="Slow Trap">

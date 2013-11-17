@@ -951,7 +951,7 @@
 			<effect name="Paralyze">
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
-			<effect name="ManaHealOverTime" ticks="3" val="#mhot" />
+			<effect name="ManaHealOverTime" ticks="5" val="#mhot" />
 		</for>
 	</skill>
 	<skill id="1431" levels="6" name="Fallen Arrow">
@@ -1103,13 +1103,13 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg">
+			<effect name="DamOverTime" ticks="5" val="#dmg">
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mDef" val="#amount" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="3" val="#ench1dmg">
+			<effect name="DamOverTime" ticks="5" val="#ench1dmg">
 				<mul order="0x30" stat="pDef" val="0.77" />
 				<mul order="0x30" stat="mDef" val="0.77" />
 			</effect>
@@ -1827,10 +1827,10 @@
 		<enchant3 name="elementPower" val="#ench3elementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="173" />
+			<effect name="DamOverTime" ticks="5" val="173" />
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="3" val="#ench1Power" />
+			<effect name="DamOverTime" ticks="5" val="#ench1Power" />
 		</enchant1for>
 	</skill>
 	<skill id="1453" levels="1" name="Ice Vortex Crusher" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -1943,10 +1943,10 @@
 		<enchant3 name="elementPower" val="#ench3elementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="173" />
+			<effect name="DamOverTime" ticks="5" val="173" />
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="3" val="#ench1Power" />
+			<effect name="DamOverTime" ticks="5" val="#ench1Power" />
 		</enchant1for>
 	</skill>
 	<skill id="1456" levels="1" name="Wind Vortex Slug" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -2045,10 +2045,10 @@
 		<enchant3 name="elementPower" val="#ench3elementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="173" />
+			<effect name="DamOverTime" ticks="5" val="173" />
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="3" val="#ench1Power" />
+			<effect name="DamOverTime" ticks="5" val="#ench1Power" />
 		</enchant1for>
 	</skill>
 	<skill id="1459" levels="1" name="Divine Power" enchantGroup1="5" enchantGroup2="5">

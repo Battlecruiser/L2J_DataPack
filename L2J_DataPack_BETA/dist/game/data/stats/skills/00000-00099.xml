@@ -1495,7 +1495,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="FakeDeath" ticks="3" val="10" />
+			<effect name="FakeDeath" ticks="5" val="10" />
 		</for>
 	</skill>
 	<skill id="61" levels="3" name="Cure Bleeding">
@@ -1965,11 +1965,11 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 		<enchant1for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="63" />
+			<effect name="DamOverTime" ticks="5" val="63" />
 		</enchant1for>
 	</skill>
 	<skill id="86" levels="3" name="Reflect Damage" enchantGroup1="1" enchantGroup2="1">
@@ -2306,18 +2306,18 @@
 			<using kind="Dagger,Dual Dagger" />
 		</cond>
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot">
+			<effect name="DamOverTime" ticks="5" val="#dot">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 		<enchant2for>
 			<effect name="HpByLevel" val="#ench2Sap" />
-			<effect name="DamOverTime" ticks="3" val="67">
+			<effect name="DamOverTime" ticks="5" val="67">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="DamOverTime" ticks="3" val="#ench3dot">
+			<effect name="DamOverTime" ticks="5" val="#ench3dot">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant3for>

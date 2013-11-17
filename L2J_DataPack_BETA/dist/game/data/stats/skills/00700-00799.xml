@@ -308,7 +308,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.4">
 				<add order="0x40" stat="transDam" val="50" />
 			</effect>
 		</for>
@@ -889,7 +889,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="351" />
+			<effect name="DamOverTime" ticks="5" val="351" />
 			<effect name="ChanceSkillTrigger" triggeredId="5248" triggeredLevel="9" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1011,7 +1011,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="52" />
+			<effect name="DamOverTime" ticks="5" val="52" />
 		</for>
 	</skill>
 	<skill id="742" levels="3" name="Vale Master Bursting Flame">
@@ -1303,7 +1303,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="134" />
+			<effect name="DamOverTime" ticks="5" val="134" />
 		</for>
 	</skill>
 	<skill id="753" levels="3" name="Doll Blader Throwing Knife">
@@ -2190,7 +2190,7 @@
 				<sub order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="healEffect" val="1.3" />
 			</effect>
-			<effect name="HealOverTime" ticks="3" val="50" />
+			<effect name="HealOverTime" ticks="5" val="50" />
 			<effect name="HealPercent" val="50" />
 		</for>
 	</skill>
@@ -2535,7 +2535,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="69" />
+			<effect name="DamOverTime" ticks="5" val="69" />
 		</for>
 	</skill>
 	<skill id="799" levels="3" name="Master Ability - Defense">

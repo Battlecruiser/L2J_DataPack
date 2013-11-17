@@ -37,7 +37,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="ManaDamOverTime" ticks="3" val="#mdot" />
+			<effect name="ManaDamOverTime" ticks="5" val="#mdot" />
 		</for>
 	</skill>
 	<skill id="6302" levels="1" name="Cold Air">
@@ -157,7 +157,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="139" />
+			<effect name="DamOverTime" ticks="5" val="139" />
 		</for>
 	</skill>
 	<skill id="6307" levels="1" name="Opus of the Hand">
@@ -748,7 +748,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="200" />
+			<effect name="DamOverTime" ticks="5" val="200" />
 		</for>
 	</skill>
 	<skill id="6334" levels="1" name="Shock">
@@ -880,7 +880,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="200" />
+			<effect name="DamOverTime" ticks="5" val="200" />
 		</for>
 	</skill>
 	<skill id="6340" levels="1" name="Shock">
@@ -1283,7 +1283,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="93" />
+			<effect name="DamOverTime" ticks="5" val="93" />
 		</for>
 	</skill>
 	<skill id="6383" levels="1" name="Bistakon Deadly Roar">
@@ -1355,7 +1355,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="95" />
+			<effect name="DamOverTime" ticks="5" val="95" />
 		</for>
 	</skill>
 	<skill id="6386" levels="1" name="Bistakon Earth Rise">
@@ -1573,7 +1573,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="93" />
+			<effect name="DamOverTime" ticks="5" val="93" />
 		</for>
 	</skill>
 	<skill id="6396" levels="1" name="Cokrakon Panic">

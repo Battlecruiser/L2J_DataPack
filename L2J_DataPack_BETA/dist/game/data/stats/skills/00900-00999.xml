@@ -121,7 +121,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="230" />
+			<effect name="DamOverTime" ticks="5" val="230" />
 		</for>
 	</skill>
 	<skill id="905" levels="6" name="Dark Detonation">
@@ -249,7 +249,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="230">
+			<effect name="DamOverTime" ticks="5" val="230">
 				<mul order="0x30" stat="runSpd" val="0.3" />
 				<mul order="0x30" stat="pAtkSpd" val="0.8" />
 				<mul order="0x30" stat="mAtkSpd" val="0.8" />
@@ -1231,7 +1231,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="3" val="52" />
+			<effect name="DamOverTime" ticks="5" val="52" />
 		</for>
 	</skill>
 	<skill id="955" levels="1" name="Strider Dash">

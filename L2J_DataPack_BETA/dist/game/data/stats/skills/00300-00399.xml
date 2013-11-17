@@ -92,7 +92,7 @@
 			<effect name="Spoil" />
 		</enchant1for>
 		<enchant2for>
-			<effect name="DamOverTime" ticks="3" val="118" />
+			<effect name="DamOverTime" ticks="5" val="118" />
 			<effect name="Spoil" />
 		</enchant2for>
 		<enchant3for>
@@ -396,17 +396,17 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.8">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.8">
 				<add order="0x40" stat="cAtkAdd" val="#crit" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.8">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.8">
 				<add order="0x40" stat="cAtkAdd" val="#ench1crit" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="MpConsumePerLevel" ticks="3" val="#ench2val">
+			<effect name="MpConsumePerLevel" ticks="5" val="#ench2val">
 				<add order="0x40" stat="cAtkAdd" val="609" />
 			</effect>
 		</enchant2for>
@@ -785,17 +785,17 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpConsume" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.8">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.8">
 				<add order="0x40" stat="sDef" val="#sDef" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="3" val="0.8">
+			<effect name="MpConsumePerLevel" ticks="5" val="0.8">
 				<add order="0x40" stat="sDef" val="#ench1sDef" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="MpConsumePerLevel" ticks="3" val="#ench2val">
+			<effect name="MpConsumePerLevel" ticks="5" val="#ench2val">
 				<add order="0x40" stat="sDef" val="560" />
 			</effect>
 		</enchant2for>
@@ -1042,7 +1042,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="2">
+			<effect name="MpConsumePerLevel" ticks="5" val="2">
 				<mul order="0x30" stat="skillMastery" val="2" />
 			</effect>
 		</for>
@@ -1088,13 +1088,13 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="50">
+			<effect name="DamOverTime" ticks="5" val="50">
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.7" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="3" val="50">
+			<effect name="DamOverTime" ticks="5" val="50">
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="#ench1mpConsume" />
 			</effect>
@@ -1111,13 +1111,13 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="50">
+			<effect name="DamOverTime" ticks="5" val="50">
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.1" />
 				<mul order="0x30" stat="mAtk" val="1.3" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="3" val="50">
+			<effect name="DamOverTime" ticks="5" val="50">
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.1" />
 				<mul order="0x30" stat="mAtk" val="#ench1mAtk" />
 			</effect>
@@ -1136,21 +1136,21 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="50">
+			<effect name="DamOverTime" ticks="5" val="50">
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mReuse" val="0.9" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.1" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="3" val="50">
+			<effect name="DamOverTime" ticks="5" val="50">
 				<mul order="0x30" stat="mAtkSpd" val="#ench1mAtkSpd" />
 				<mul order="0x30" stat="mReuse" val="0.9" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.1" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="DamOverTime" ticks="3" val="50">
+			<effect name="DamOverTime" ticks="5" val="50">
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mReuse" val="#ench2mReuse" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.1" />
@@ -1168,7 +1168,7 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="1">
+			<effect name="MpConsumePerLevel" ticks="5" val="1">
 				<mul order="0x30" stat="pDef" val="1.25" />
 				<mul order="0x30" stat="mDef" val="1.25" />
 				<mul order="0x30" stat="pAtkSpd" val="0.8" />
@@ -1177,7 +1177,7 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="3" val="1">
+			<effect name="MpConsumePerLevel" ticks="5" val="1">
 				<mul order="0x30" stat="pDef" val="#enchDef" />
 				<mul order="0x30" stat="mDef" val="#enchDef" />
 				<mul order="0x30" stat="pAtkSpd" val="0.8" />
@@ -1194,7 +1194,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" val="1">
+			<effect name="MpConsumePerLevel" ticks="5" val="1">
 				<add order="0x40" stat="reflectDam" val="30" />
 				<add order="0x40" stat="reflectSkillPhysic" val="30" />
 				<add order="0x40" stat="reflectSkillMagic" val="30" />
@@ -1239,7 +1239,7 @@
 				<sub order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="healEffect" val="1.3" />
 			</effect>
-			<effect name="HealOverTime" ticks="3" val="50" />
+			<effect name="HealOverTime" ticks="5" val="50" />
 			<effect name="HealPercent" val="50" />
 		</for>
 	</skill>

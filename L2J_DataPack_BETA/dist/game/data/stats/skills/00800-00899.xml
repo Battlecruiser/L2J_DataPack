@@ -754,7 +754,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="ManaDamOverTime" ticks="3" val="#mdot" />
+			<effect name="ManaDamOverTime" ticks="5" val="#mdot" />
 			<effect name="ChanceSkillTrigger" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>

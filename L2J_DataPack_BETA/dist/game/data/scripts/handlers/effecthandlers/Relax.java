@@ -74,7 +74,7 @@ public final class Relax extends AbstractEffect
 			}
 		}
 		
-		final double manaDam = getValue() * getTicks();
+		final double manaDam = getValue() * getTicksMultiplier();
 		if (manaDam > info.getEffected().getCurrentMp())
 		{
 			if (info.getSkill().isToggle())
