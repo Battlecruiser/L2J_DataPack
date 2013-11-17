@@ -45,14 +45,14 @@ public final class ChamberOfDelusionSouth extends Chamber
 	private static final int INSTANCEID = 129; // this is the client number
 	private static final String INSTANCE_TEMPLATE = "ChamberOfDelusionSouth.xml";
 	
-	private ChamberOfDelusionSouth(int questId, String name, String descr)
+	private ChamberOfDelusionSouth()
 	{
-		super(questId, name, descr, INSTANCEID, INSTANCE_TEMPLATE, ENTRANCE_GATEKEEPER, ROOM_GATEKEEPER_FIRST, ROOM_GATEKEEPER_LAST, AENKINEL, BOX);
+		super(-1, ChamberOfDelusionSouth.class.getSimpleName(), "instances", INSTANCEID, INSTANCE_TEMPLATE, ENTRANCE_GATEKEEPER, ROOM_GATEKEEPER_FIRST, ROOM_GATEKEEPER_LAST, AENKINEL, BOX);
 		ROOM_ENTER_POINTS = ENTER_POINTS;
 	}
 	
 	public static void main(String[] args)
 	{
-		new ChamberOfDelusionSouth(-1, ChamberOfDelusionSouth.class.getSimpleName(), "instances");
+		new ChamberOfDelusionSouth();
 	}
 }

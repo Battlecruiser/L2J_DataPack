@@ -56,13 +56,13 @@ import com.l2jserver.gameserver.scripting.scriptengine.impl.L2Script;
  * An example class of using Listeners.
  * @author UnAfraid
  */
-public class Listeners extends L2Script
+public final class Listeners extends L2Script
 {
 	private static final Logger _log = Logger.getLogger(Listeners.class.getName());
 	
-	public Listeners(String name, String descr)
+	private Listeners()
 	{
-		super(name, descr);
+		super(Listeners.class.getSimpleName(), "custom");
 		addLoginLogoutNotify();
 		addClanCreationLevelUpNotify();
 		addFortSiegeNotify();
@@ -448,6 +448,6 @@ public class Listeners extends L2Script
 	
 	public static void main(String[] args)
 	{
-		new Listeners(Listeners.class.getSimpleName(), "custom");
+		new Listeners();
 	}
 }

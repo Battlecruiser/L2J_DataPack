@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
  * IOP Race AI.
  * @author Gigiikun, Charus
  */
-public class IOPRace extends Quest
+public final class IOPRace extends Quest
 {
 	final private static int RIGNOS = 32349;
 	final private static int STAMP = 10013;
@@ -37,9 +37,9 @@ public class IOPRace extends Quest
 	
 	private int _player = -1;
 	
-	public IOPRace(int id, String name, String descr)
+	private IOPRace()
 	{
-		super(id, name, descr);
+		super(-1, IOPRace.class.getSimpleName(), "custom");
 		addStartNpc(RIGNOS);
 		addTalkId(RIGNOS);
 		addFirstTalkId(RIGNOS);
@@ -138,6 +138,6 @@ public class IOPRace extends Quest
 	
 	public static void main(String[] args)
 	{
-		new IOPRace(-1, "IOPRace", "custom");
+		new IOPRace();
 	}
 }

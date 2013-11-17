@@ -29,16 +29,16 @@ import com.l2jserver.gameserver.model.quest.State;
  * The Valentine Event event AI.
  * @author Gnacik
  */
-public class TheValentineEvent extends LongTimeEvent
+public final class TheValentineEvent extends LongTimeEvent
 {
 	// NPC
 	private static final int NPC = 4301;
 	// Item
 	private static final int RECIPE = 20191;
 	
-	public TheValentineEvent(String name, String descr)
+	private TheValentineEvent()
 	{
-		super(name, descr);
+		super(TheValentineEvent.class.getSimpleName(), "events");
 		addStartNpc(NPC);
 		addFirstTalkId(NPC);
 		addTalkId(NPC);
@@ -82,6 +82,6 @@ public class TheValentineEvent extends LongTimeEvent
 	
 	public static void main(String[] args)
 	{
-		new TheValentineEvent(TheValentineEvent.class.getSimpleName(), "events");
+		new TheValentineEvent();
 	}
 }

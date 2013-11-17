@@ -71,7 +71,7 @@ import com.l2jserver.gameserver.util.Util;
  * 4. Baylor Raid is missing a lot of things This script takes the best elements of different versions and combines them into one script to get the most optimal and retail-like experience.<br>
  * Original sources: theone, L2JEmu, L2JOfficial, L2JFree Contributing authors: TGS, Lantoc, Janiii, Gigiikun, RosT Please maintain consistency between the Crystal Caverns scripts.
  */
-public class CrystalCaverns extends Quest
+public final class CrystalCaverns extends Quest
 {
 	protected static class CrystalGolem
 	{
@@ -128,7 +128,6 @@ public class CrystalCaverns extends Quest
 		}
 	}
 	
-	private static final String qn = "CrystalCaverns";
 	private static final int INSTANCEID = 10; // this is the client number
 	private static final boolean debug = false;
 	
@@ -1440,6 +1439,44 @@ public class CrystalCaverns extends Quest
 	private static final int DRAGONSCALETIME = 3000;
 	private static final int DRAGONCLAWTIME = 3000;
 	
+	private CrystalCaverns()
+	{
+		super(-1, CrystalCaverns.class.getSimpleName(), "instances");
+		addStartNpc(ORACLE_GUIDE_1);
+		addTalkId(ORACLE_GUIDE_1);
+		addTalkId(ORACLE_GUIDE_3);
+		addStartNpc(ORACLE_GUIDE_4);
+		addFirstTalkId(ORACLE_GUIDE_4);
+		addTalkId(ORACLE_GUIDE_4);
+		addFirstTalkId(CRYSTAL_GOLEM);
+		addAttackId(TEARS);
+		addTrapActionId(DOOR_OPENING_TRAP[0]);
+		addKillId(TEARS);
+		addKillId(GK1);
+		addKillId(GK2);
+		addKillId(TEROD);
+		addKillId(WEYLIN);
+		addKillId(DOLPH);
+		addKillId(DARNEL);
+		addKillId(KECHI);
+		addKillId(GUARDIAN);
+		addKillId(GUARDIAN2);
+		addKillId(TOURMALINE);
+		addKillId(BAYLOR);
+		addSpellFinishedId(BAYLOR);
+		addKillId(ALARMID);
+		addFirstTalkId(32274, 32275, 32276, 32277, ORACLE_GUIDE_1, ORACLE_GUIDE_2);
+		addTalkId(32275, 32276, 32277);
+		addSkillSeeId(25534, 32275, 32276, 32277, BAYLOR);
+		addKillId(MOBLIST);
+		addKillId(CGMOBS);
+		for (int zones : ZONES)
+		{
+			addEnterZoneId(zones);
+			addExitZoneId(zones);
+		}
+	}
+	
 	private boolean checkConditions(L2PcInstance player)
 	{
 		if (debug)
@@ -2440,7 +2477,7 @@ public class CrystalCaverns extends Quest
 			{
 				if (partyMember.getInstanceId() == instanceId)
 				{
-					QuestState st = partyMember.getQuestState(qn);
+					QuestState st = partyMember.getQuestState(getName());
 					if (st == null)
 					{
 						st = newQuestState(partyMember);
@@ -2463,7 +2500,7 @@ public class CrystalCaverns extends Quest
 		}
 		else if (player.getInstanceId() == instanceId)
 		{
-			QuestState st = player.getQuestState(qn);
+			QuestState st = player.getQuestState(getName());
 			if (st == null)
 			{
 				st = newQuestState(player);
@@ -2722,7 +2759,7 @@ public class CrystalCaverns extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		int npcId = npc.getId();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);
@@ -2971,7 +3008,7 @@ public class CrystalCaverns extends Quest
 							{
 								return "";
 							}
-							QuestState st = ((L2PcInstance) character).getQuestState(qn);
+							QuestState st = ((L2PcInstance) character).getQuestState(getName());
 							if (st == null)
 							{
 								st = newQuestState((L2PcInstance) character);
@@ -3041,86 +3078,9 @@ public class CrystalCaverns extends Quest
 		return super.onExitZone(character, zone);
 	}
 	
-	public CrystalCaverns(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
-		addStartNpc(ORACLE_GUIDE_1);
-		addTalkId(ORACLE_GUIDE_1);
-		addTalkId(ORACLE_GUIDE_3);
-		addStartNpc(ORACLE_GUIDE_4);
-		addFirstTalkId(ORACLE_GUIDE_4);
-		addTalkId(ORACLE_GUIDE_4);
-		addFirstTalkId(CRYSTAL_GOLEM);
-		addAttackId(TEARS);
-		addTrapActionId(DOOR_OPENING_TRAP[0]);
-		addKillId(TEARS);
-		addKillId(GK1);
-		addKillId(GK2);
-		addKillId(TEROD);
-		addKillId(WEYLIN);
-		addKillId(DOLPH);
-		addKillId(DARNEL);
-		addKillId(KECHI);
-		addKillId(GUARDIAN);
-		addKillId(GUARDIAN2);
-		addKillId(TOURMALINE);
-		addKillId(BAYLOR);
-		addSpellFinishedId(BAYLOR);
-		addKillId(ALARMID);
-		int[] Talk =
-		{
-			32275,
-			32276,
-			32277
-		};
-		for (int npc : Talk)
-		{
-			addTalkId(npc);
-		}
-		int[] firstTalk =
-		{
-			32274,
-			32275,
-			32276,
-			32277,
-			ORACLE_GUIDE_1,
-			ORACLE_GUIDE_2
-		};
-		for (int npc : firstTalk)
-		{
-			addFirstTalkId(npc);
-		}
-		int[] skillSee =
-		{
-			25534,
-			32275,
-			32276,
-			32277,
-			BAYLOR
-		};
-		for (int npc : skillSee)
-		{
-			addSkillSeeId(npc);
-		}
-		for (int mob : MOBLIST)
-		{
-			addKillId(mob);
-		}
-		for (int mob : CGMOBS)
-		{
-			addKillId(mob);
-		}
-		for (int zones : ZONES)
-		{
-			addEnterZoneId(zones);
-			addExitZoneId(zones);
-		}
-	}
-	
 	public static void main(String[] args)
 	{
 		// now call the constructor (starts up the)
-		new CrystalCaverns(-1, qn, "instances");
+		new CrystalCaverns();
 	}
 }

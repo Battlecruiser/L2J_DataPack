@@ -37,26 +37,24 @@ import com.l2jserver.gameserver.util.Util;
  * Demon Prince Floor instance zone.
  * @author GKR
  */
-public class DemonPrinceFloor extends Quest
+public final class DemonPrinceFloor extends Quest
 {
-	private static final int INSTANCEID = 142; // this is the client number
-	private static final int RESET_HOUR = 6;
-	private static final int RESET_MIN = 30;
-	
 	// NPCs
 	private static final int GK_4 = 32748;
 	private static final int CUBE = 32375;
 	private static final int DEMON_PRINCE = 25540;
-	
+	// Item
 	private static final int SEAL_BREAKER_5 = 15515;
-	
+	// Misc
+	private static final int INSTANCEID = 142; // this is the client number
+	private static final int RESET_HOUR = 6;
+	private static final int RESET_MIN = 30;
 	private static final Location ENTRY_POINT = new Location(-22208, 277056, -8239);
 	private static final Location EXIT_POINT = new Location(-19024, 277122, -8256);
 	
-	public DemonPrinceFloor(int questId, String name, String descr)
+	private DemonPrinceFloor()
 	{
-		super(questId, name, descr);
-		
+		super(-1, DemonPrinceFloor.class.getSimpleName(), "instances");
 		addStartNpc(GK_4);
 		addStartNpc(CUBE);
 		addTalkId(GK_4);
@@ -274,6 +272,6 @@ public class DemonPrinceFloor extends Quest
 	
 	public static void main(String[] args)
 	{
-		new DemonPrinceFloor(-1, DemonPrinceFloor.class.getSimpleName(), "instances");
+		new DemonPrinceFloor();
 	}
 }

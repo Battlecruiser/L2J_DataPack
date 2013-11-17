@@ -45,7 +45,7 @@ import com.l2jserver.gameserver.util.Util;
  * @author Gnacik
  * @version 2010-10-15 Based on official server Naia
  */
-public class NornilsGarden extends Quest
+public final class NornilsGarden extends Quest
 {
 	protected class NornilsWorld extends InstanceWorld
 	{
@@ -56,7 +56,6 @@ public class NornilsGarden extends Quest
 		public boolean spawned_4 = false;
 	}
 	
-	private static final String qn = "NornilsGarden";
 	private static final int INSTANCE_ID = 11;
 	
 	private static final int DURATION_TIME = 70;
@@ -218,10 +217,29 @@ public class NornilsGarden extends Quest
 		}
 	}
 	
+	private NornilsGarden()
+	{
+		super(-1, NornilsGarden.class.getSimpleName(), "instances");
+		addStartNpc(_garden_guard);
+		addFirstTalkId(_garden_guard);
+		addTalkId(_garden_guard);
+		for (int i[] : _gatekeepers)
+		{
+			addKillId(i[0]);
+		}
+		for (int i[] : _auto_gates)
+		{
+			addEnterZoneId(i[0]);
+		}
+		addTalkId(_final_gates);
+		addAttackId(_herb_jar);
+		addAttackId(18362); // first garden guard
+	}
+	
 	@Override
 	public final void teleportPlayer(L2PcInstance player, Location loc, int instanceId)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);
@@ -510,7 +528,7 @@ public class NornilsGarden extends Quest
 		player.sendMessage("On Event");
 		
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -592,7 +610,7 @@ public class NornilsGarden extends Quest
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);
@@ -619,7 +637,7 @@ public class NornilsGarden extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -650,30 +668,8 @@ public class NornilsGarden extends Quest
 		return super.onKill(npc, player, isSummon);
 	}
 	
-	public NornilsGarden(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
-		addStartNpc(_garden_guard);
-		addFirstTalkId(_garden_guard);
-		addTalkId(_garden_guard);
-		
-		for (int i[] : _gatekeepers)
-		{
-			addKillId(i[0]);
-		}
-		for (int i[] : _auto_gates)
-		{
-			addEnterZoneId(i[0]);
-		}
-		addTalkId(_final_gates);
-		
-		addAttackId(_herb_jar);
-		addAttackId(18362); // first garden guard
-	}
-	
 	public static void main(String[] args)
 	{
-		new NornilsGarden(-1, qn, "instances");
+		new NornilsGarden();
 	}
 }

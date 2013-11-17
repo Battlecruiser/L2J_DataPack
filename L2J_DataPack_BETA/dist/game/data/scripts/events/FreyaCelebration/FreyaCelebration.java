@@ -37,7 +37,7 @@ import com.l2jserver.gameserver.util.Util;
  * Freya Celebration event AI.
  * @author Gnacik
  */
-public class FreyaCelebration extends LongTimeEvent
+public final class FreyaCelebration extends LongTimeEvent
 {
 	// NPC
 	private static final int FREYA = 13296;
@@ -66,6 +66,15 @@ public class FreyaCelebration extends LongTimeEvent
 		NpcStringId.BUT_I_KIND_OF_MISS_IT_LIKE_I_HAD_FELT_THIS_FEELING_BEFORE,
 		NpcStringId.I_AM_ICE_QUEEN_FREYA_THIS_FEELING_AND_EMOTION_ARE_NOTHING_BUT_A_PART_OF_MELISSAA_MEMORIES
 	};
+	
+	private FreyaCelebration()
+	{
+		super(FreyaCelebration.class.getSimpleName(), "events");
+		addStartNpc(FREYA);
+		addFirstTalkId(FREYA);
+		addTalkId(FREYA);
+		addSkillSeeId(FREYA);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -154,18 +163,8 @@ public class FreyaCelebration extends LongTimeEvent
 		return "13296.htm";
 	}
 	
-	public FreyaCelebration(String name, String descr)
-	{
-		super(name, descr);
-		
-		addStartNpc(FREYA);
-		addFirstTalkId(FREYA);
-		addTalkId(FREYA);
-		addSkillSeeId(FREYA);
-	}
-	
 	public static void main(String[] args)
 	{
-		new FreyaCelebration(FreyaCelebration.class.getSimpleName(), "events");
+		new FreyaCelebration();
 	}
 }

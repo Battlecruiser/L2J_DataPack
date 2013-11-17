@@ -41,7 +41,7 @@ import com.l2jserver.gameserver.util.Broadcast;
 /**
  * Pailaka (Forgotten Temple) instance zone.
  */
-public class PailakaSongOfIceAndFire extends Quest
+public final class PailakaSongOfIceAndFire extends Quest
 {
 	private static final int MIN_LEVEL = 36;
 	private static final int MAX_LEVEL = 42;
@@ -193,6 +193,20 @@ public class PailakaSongOfIceAndFire extends Quest
 	};
 	/** Flag for "see creature". */
 	private boolean _seenCreature = false;
+	
+	private PailakaSongOfIceAndFire()
+	{
+		// TODO change the script to use the actual class name
+		super(128, "128_PailakaSongOfIceAndFire", "Pailaka - Song of Ice and Fire");
+		addStartNpc(ADLER1);
+		addFirstTalkId(ADLER1, ADLER2, SINAI, INSPECTOR);
+		addTalkId(ADLER1, ADLER2, SINAI, INSPECTOR);
+		addAttackId(BOTTLE, BRAZIER);
+		addKillId(MONSTERS);
+		addExitZoneId(ZONE);
+		addSeeCreatureId(GARGOS);
+		registerQuestItems(ITEMS);
+	}
 	
 	private static final void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
 	{
@@ -552,19 +566,6 @@ public class PailakaSongOfIceAndFire extends Quest
 				e.printStackTrace();
 			}
 		}
-	}
-	
-	private PailakaSongOfIceAndFire()
-	{
-		super(128, "128_PailakaSongOfIceAndFire", "Pailaka - Song of Ice and Fire");
-		addStartNpc(ADLER1);
-		addFirstTalkId(ADLER1, ADLER2, SINAI, INSPECTOR);
-		addTalkId(ADLER1, ADLER2, SINAI, INSPECTOR);
-		addAttackId(BOTTLE, BRAZIER);
-		addKillId(MONSTERS);
-		addExitZoneId(ZONE);
-		addSeeCreatureId(GARGOS);
-		registerQuestItems(ITEMS);
 	}
 	
 	public static void main(String[] args)

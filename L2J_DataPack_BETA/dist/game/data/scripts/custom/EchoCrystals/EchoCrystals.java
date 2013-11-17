@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.util.Util;
  * Original Jython script by DrLecter, formerly based on Elektra's script.
  * @author Plim
  */
-public class EchoCrystals extends Quest
+public final class EchoCrystals extends Quest
 {
 	private final static int[] NPCs =
 	{
@@ -83,6 +83,25 @@ public class EchoCrystals extends Quest
 		}
 	}
 	
+	private EchoCrystals()
+	{
+		super(-1, EchoCrystals.class.getSimpleName(), "custom");
+		// Initialize Map
+		SCORES.put(4410, new ScoreData(4411, "01", "02", "03"));
+		SCORES.put(4409, new ScoreData(4412, "04", "05", "06"));
+		SCORES.put(4408, new ScoreData(4413, "07", "08", "09"));
+		SCORES.put(4420, new ScoreData(4414, "10", "11", "12"));
+		SCORES.put(4421, new ScoreData(4415, "13", "14", "15"));
+		SCORES.put(4419, new ScoreData(4417, "16", "05", "06"));
+		SCORES.put(4418, new ScoreData(4416, "17", "05", "06"));
+		
+		for (int npc : NPCs)
+		{
+			addStartNpc(npc);
+			addTalkId(npc);
+		}
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -129,28 +148,8 @@ public class EchoCrystals extends Quest
 		return "1.htm";
 	}
 	
-	public EchoCrystals(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
-		// Initialize Map
-		SCORES.put(4410, new ScoreData(4411, "01", "02", "03"));
-		SCORES.put(4409, new ScoreData(4412, "04", "05", "06"));
-		SCORES.put(4408, new ScoreData(4413, "07", "08", "09"));
-		SCORES.put(4420, new ScoreData(4414, "10", "11", "12"));
-		SCORES.put(4421, new ScoreData(4415, "13", "14", "15"));
-		SCORES.put(4419, new ScoreData(4417, "16", "05", "06"));
-		SCORES.put(4418, new ScoreData(4416, "17", "05", "06"));
-		
-		for (int npc : NPCs)
-		{
-			addStartNpc(npc);
-			addTalkId(npc);
-		}
-	}
-	
 	public static void main(String[] args)
 	{
-		new EchoCrystals(-1, EchoCrystals.class.getSimpleName(), "custom");
+		new EchoCrystals();
 	}
 }

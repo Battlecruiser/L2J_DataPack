@@ -39,7 +39,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Sanctum of the Lords of Dawn instance zone.
  * @author Adry_85
  */
-public class SanctumOftheLordsOfDawn extends Quest
+public final class SanctumOftheLordsOfDawn extends Quest
 {
 	protected class HSWorld extends InstanceWorld
 	{
@@ -70,9 +70,9 @@ public class SanctumOftheLordsOfDawn extends Quest
 	private static final Location ENTER = new Location(-76161, 213401, -7120, 0, 0);
 	private static final Location EXIT = new Location(-12585, 122305, -2989, 0, 0);
 	
-	public SanctumOftheLordsOfDawn(int questId, String name, String descr)
+	private SanctumOftheLordsOfDawn()
 	{
-		super(questId, name, descr);
+		super(-1, SanctumOftheLordsOfDawn.class.getSimpleName(), "instances");
 		addStartNpc(LIGHT_OF_DAWN);
 		addTalkId(LIGHT_OF_DAWN, IDENTITY_CONFIRM_DEVICE, PASSWORD_ENTRY_DEVICE, DARKNESS_OF_DAWN, SHELF);
 		addAggroRangeEnterId(GUARDS_OF_THE_DAWN, GUARDS_OF_THE_DAWN_2, GUARDS_OF_THE_DAWN_3);
@@ -245,6 +245,6 @@ public class SanctumOftheLordsOfDawn extends Quest
 	
 	public static void main(String[] args)
 	{
-		new SanctumOftheLordsOfDawn(-1, SanctumOftheLordsOfDawn.class.getSimpleName(), "instances");
+		new SanctumOftheLordsOfDawn();
 	}
 }

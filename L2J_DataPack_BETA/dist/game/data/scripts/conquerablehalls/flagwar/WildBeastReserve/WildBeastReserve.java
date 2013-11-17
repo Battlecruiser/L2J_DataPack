@@ -89,9 +89,9 @@ public final class WildBeastReserve extends FlagWar
 		CENTER = new Location(57762, -92696, -1359, 0);
 	}
 	
-	public WildBeastReserve(int questId, String name, String descr, int hallId)
+	private WildBeastReserve()
 	{
-		super(questId, name, descr, hallId);
+		super(-1, qn, "conquerablehalls/flagwar", BEAST_FARM);
 	}
 	
 	@Override
@@ -156,6 +156,6 @@ public final class WildBeastReserve extends FlagWar
 	
 	public static void main(String[] args)
 	{
-		new WildBeastReserve(-1, qn, "conquerablehalls/flagwar", BEAST_FARM);
+		new WildBeastReserve();
 	}
 }

@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.util.Util;
  * Updated to H5 by Nyaran.
  * @author Gnacik
  */
-public class CharacterBirthday extends Quest
+public final class CharacterBirthday extends Quest
 {
 	private static final int ALEGRIA = 32600;
 	private static int SPAWNS = 0;
@@ -58,9 +58,9 @@ public class CharacterBirthday extends Quest
 		32163
 	};
 	
-	public CharacterBirthday(int questId, String name, String descr)
+	private CharacterBirthday()
 	{
-		super(questId, name, descr);
+		super(-1, CharacterBirthday.class.getSimpleName(), "events");
 		addStartNpc(ALEGRIA);
 		addStartNpc(GK);
 		addTalkId(ALEGRIA);
@@ -130,6 +130,6 @@ public class CharacterBirthday extends Quest
 	
 	public static void main(String[] args)
 	{
-		new CharacterBirthday(-1, CharacterBirthday.class.getSimpleName(), "events");
+		new CharacterBirthday();
 	}
 }

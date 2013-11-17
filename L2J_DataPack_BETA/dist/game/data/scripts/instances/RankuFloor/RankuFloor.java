@@ -37,26 +37,24 @@ import com.l2jserver.gameserver.util.Util;
  * Tower of Infinitum (10th Floor) instance zone.
  * @author GKR
  */
-public class RankuFloor extends Quest
+public final class RankuFloor extends Quest
 {
-	private static final int INSTANCEID = 143; // this is the client number
-	private static final int RESET_HOUR = 6;
-	private static final int RESET_MIN = 30;
-	
 	// NPCs
 	private static final int GK_9 = 32752;
 	private static final int CUBE = 32374;
 	private static final int RANKU = 25542;
-	
+	// Item
 	private static final int SEAL_BREAKER_10 = 15516;
-	
+	// Misc
+	private static final int INSTANCEID = 143; // this is the client number
+	private static final int RESET_HOUR = 6;
+	private static final int RESET_MIN = 30;
 	private static final Location ENTRY_POINT = new Location(-19008, 277024, -15000);
 	private static final Location EXIT_POINT = new Location(-19008, 277122, -13376);
 	
-	public RankuFloor(int questId, String name, String descr)
+	private RankuFloor()
 	{
-		super(questId, name, descr);
-		
+		super(-1, RankuFloor.class.getSimpleName(), "instances");
 		addStartNpc(GK_9);
 		addStartNpc(CUBE);
 		addTalkId(GK_9);
@@ -276,6 +274,6 @@ public class RankuFloor extends Quest
 	
 	public static void main(String[] args)
 	{
-		new RankuFloor(-1, RankuFloor.class.getSimpleName(), "instances");
+		new RankuFloor();
 	}
 }

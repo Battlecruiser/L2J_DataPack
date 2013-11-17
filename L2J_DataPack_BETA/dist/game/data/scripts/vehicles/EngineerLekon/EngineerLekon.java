@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-public class EngineerLekon extends Quest
+public final class EngineerLekon extends Quest
 {
 	private static final int LEKON = 32557;
 	
@@ -37,9 +37,9 @@ public class EngineerLekon extends Quest
 	private static final SystemMessage SM_NO_PRIVS = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NO_PRIVILEGES);
 	private static final SystemMessage SM_LICENSE_ALREADY_ACQUIRED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ALREADY_ACQUIRED);
 	
-	public EngineerLekon(int questId, String name, String descr)
+	private EngineerLekon()
 	{
-		super(questId, name, descr);
+		super(-1, EngineerLekon.class.getSimpleName(), "vehicles");
 		addStartNpc(LEKON);
 		addFirstTalkId(LEKON);
 		addTalkId(LEKON);
@@ -89,6 +89,6 @@ public class EngineerLekon extends Quest
 	
 	public static void main(String[] args)
 	{
-		new EngineerLekon(-1, EngineerLekon.class.getSimpleName(), "vehicles");
+		new EngineerLekon();
 	}
 }

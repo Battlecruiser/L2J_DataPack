@@ -32,9 +32,9 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Love Your Gatekeeper event.
  * @author Gladicek
  */
-public class LoveYourGatekeeper extends LongTimeEvent
+public final class LoveYourGatekeeper extends LongTimeEvent
 {
-	// NCP
+	// NPC
 	private static final int GATEKEEPER = 32477;
 	// Item
 	private static final int GATEKEEPER_TRANSFORMATION_STICK = 12814;
@@ -44,7 +44,7 @@ public class LoveYourGatekeeper extends LongTimeEvent
 	// Skills
 	private static SkillHolder TELEPORTER_TRANSFORM = new SkillHolder(5655, 1);
 	
-	public LoveYourGatekeeper()
+	private LoveYourGatekeeper()
 	{
 		super(LoveYourGatekeeper.class.getSimpleName(), "events");
 		addStartNpc(GATEKEEPER);

@@ -45,7 +45,7 @@ import com.l2jserver.gameserver.util.Util;
  * Urban Area instance zone.
  * @author GKR
  */
-public class HellboundTown extends Quest
+public final class HellboundTown extends Quest
 {
 	protected class TownWorld extends InstanceWorld
 	{
@@ -54,7 +54,6 @@ public class HellboundTown extends Quest
 		public boolean isAmaskariDead = false;
 	}
 	
-	private static final String qn = "HellboundTown";
 	private static final int INSTANCEID = 2;
 	
 	private static final NpcStringId[] NPCSTRING_ID =
@@ -77,34 +76,24 @@ public class HellboundTown extends Quest
 	private static final int DOWNTOWN_NATIVE = 32358;
 	private static final int TOWN_GUARD = 22359;
 	private static final int TOWN_PATROL = 22360;
-	
 	private static final Location AMASKARI_SPAWN_POINT = new Location(19424, 253360, -2032, 16860);
-	
 	private static final Location ENTRY_POINT = new Location(14117, 255434, -2016);
-	
 	protected static final Location EXIT_POINT = new Location(16262, 283651, -9700);
-	
 	private static final SkillHolder STONE = new SkillHolder(4616, 1);
-	
 	private static final int KEY = 9714;
 	
-	public HellboundTown(int questId, String name, String descr)
+	private HellboundTown()
 	{
-		super(questId, name, descr);
-		
+		super(-1, HellboundTown.class.getSimpleName(), "instances");
 		addFirstTalkId(DOWNTOWN_NATIVE);
-		
 		addStartNpc(KANAF);
 		addStartNpc(DOWNTOWN_NATIVE);
 		addTalkId(KANAF);
 		addTalkId(DOWNTOWN_NATIVE);
-		
 		addAttackId(TOWN_GUARD);
 		addAttackId(KEYMASTER);
 		addAggroRangeEnterId(TOWN_GUARD);
-		
 		addKillId(AMASKARI);
-		
 		addSpawnId(DOWNTOWN_NATIVE);
 		addSpawnId(TOWN_GUARD);
 		addSpawnId(TOWN_PATROL);
@@ -493,6 +482,6 @@ public class HellboundTown extends Quest
 	
 	public static void main(String[] args)
 	{
-		new HellboundTown(-1, qn, "instances");
+		new HellboundTown();
 	}
 }

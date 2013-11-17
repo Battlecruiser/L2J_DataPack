@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 /**
  * @author DS
  */
-public class AirShipGludioGracia extends Quest implements Runnable
+public final class AirShipGludioGracia extends Quest implements Runnable
 {
 	private static final int[] CONTROLLERS =
 	{
@@ -109,14 +109,12 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	private boolean _foundAtcGracia = false;
 	private L2Npc _atcGracia = null;
 	
-	public AirShipGludioGracia(int questId, String name, String descr)
+	private AirShipGludioGracia()
 	{
-		super(questId, name, descr);
-		
+		super(-1, AirShipGludioGracia.class.getSimpleName(), "vehicles");
 		addStartNpc(CONTROLLERS);
 		addFirstTalkId(CONTROLLERS);
 		addTalkId(CONTROLLERS);
-		
 		_ship = AirShipManager.getInstance().getNewAirShip(-149378, 252552, 198, 33837);
 		_ship.setOustLoc(OUST_GLUDIO);
 		_ship.setInDock(GLUDIO_DOCK_ID);
@@ -312,6 +310,6 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	
 	public static void main(String[] args)
 	{
-		new AirShipGludioGracia(-1, AirShipGludioGracia.class.getSimpleName(), "vehicles");
+		new AirShipGludioGracia();
 	}
 }
