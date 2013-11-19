@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.L2DropCategory;
 import com.l2jserver.gameserver.model.L2DropData;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -118,7 +119,8 @@ public class L2NpcActionShift implements IActionHandler
 				if (((L2Npc) target).getSpawn().isTerritoryBased())
 				{
 					html.replace("%spawntype%", "Random");
-					html.replace("%spawn%", ((L2Npc) target).getSpawn().getX(target) + " " + ((L2Npc) target).getSpawn().getY(target) + " " + ((L2Npc) target).getSpawn().getZ(target));
+					final Location spawnLoc = ((L2Npc) target).getSpawn().getLocation(target);
+					html.replace("%spawn%", spawnLoc.getX() + " " + spawnLoc.getY() + " " + spawnLoc.getZ());
 				}
 				else
 				{
