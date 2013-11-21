@@ -23,6 +23,7 @@ import java.util.List;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
@@ -44,6 +45,12 @@ public final class StealAbnormal extends AbstractEffect
 		_slot = getParameters().getString("slot", null);
 		_rate = getParameters().getInt("rate", 0);
 		_max = getParameters().getInt("max", 0);
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.STEAL_ABNORMAL;
 	}
 	
 	@Override
