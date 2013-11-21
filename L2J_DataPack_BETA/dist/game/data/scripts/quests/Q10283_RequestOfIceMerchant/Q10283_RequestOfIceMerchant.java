@@ -113,7 +113,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		}
 		
 		final QuestState st = player.getQuestState(getName());
-		if ((npc.getId() == JINIA) && (st != null) && (st.isCond(2)))
+		if ((st != null) && st.isCond(2))
 		{
 			return "32760-01.html";
 		}
