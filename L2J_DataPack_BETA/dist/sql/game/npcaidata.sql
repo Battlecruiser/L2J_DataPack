@@ -4851,7 +4851,7 @@ INSERT INTO `npcaidata` VALUES
 (22763, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "cocracon_elite_clan", 300, "null", 0, 0, "fighter"), -- Elite Kanibi
 (22764, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "cocracon_elite_clan", 300, "null", 0, 0, "fighter"), -- Elite Kiriona
 (22765, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "cocracon_elite_clan", 300, "null", 0, 0, "fighter"), -- Elite Kaiona
-(22766, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Mithril Millipede
+(22766, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 1000, "null", 0, 0, "fighter"), -- Mithril Millipede
 (22767, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Archery Knight
 (22768, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 300, "null", 0, 0, "fighter"), -- Tanta Lizardman Scout
 (22769, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Tanta Lizardman Warrior
