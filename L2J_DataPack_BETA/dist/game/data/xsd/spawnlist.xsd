@@ -12,6 +12,9 @@
 										<xs:element type="xs:nonNegativeInteger" name="aggroRange" minOccurs="0" maxOccurs="1" />
 										<xs:element type="xs:boolean" name="disableRandomAnimation" minOccurs="0" maxOccurs="1" />
 										<xs:element type="xs:boolean" name="disableRandomWalk" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:integer" name="fleeX" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:integer" name="fleeY" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:integer" name="fleeZ" minOccurs="0" maxOccurs="1" />
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
