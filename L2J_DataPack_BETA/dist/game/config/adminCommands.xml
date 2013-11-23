@@ -289,14 +289,10 @@
 	<admin command="admin_removefort" accessLevel="7" />
 
 	<!-- ADMIN GEODATA -->
-	<admin command="admin_geo_z" accessLevel="7" />
-	<admin command="admin_geo_type" accessLevel="7" />
-	<admin command="admin_geo_nswe" accessLevel="7" />
-	<admin command="admin_geo_los" accessLevel="7" />
-	<admin command="admin_geo_position" accessLevel="7" />
-	<admin command="admin_geo_bug" accessLevel="7" />
-	<admin command="admin_geo_load" accessLevel="7" />
-	<admin command="admin_geo_unload" accessLevel="7" />
+	<admin command="admin_geo_pos" accessLevel="7" />
+	<admin command="admin_geo_spawn_pos" accessLevel="7" />
+	<admin command="admin_geo_can_see" accessLevel="7" />
+	<admin command="admin_geo_can_move" accessLevel="7" />
 
 	<!-- ADMIN GEO EDITOR -->
 	<admin command="admin_ge_status" accessLevel="7" />
