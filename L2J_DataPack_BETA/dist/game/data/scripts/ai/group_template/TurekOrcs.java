@@ -35,11 +35,18 @@ import com.l2jserver.gameserver.network.NpcStringId;
  * @author GKR
  */
 
-public class TurekOrcs extends AbstractNpcAI
+public final class TurekOrcs extends AbstractNpcAI
 {
 	// NPC's
-	// Turek War Hound, Turek Orc Warlord, Turek Orc Skirmisher, Turek Orc Supplier, Turek Orc Footman, Turek Orc Sentinel
-	private static final int[] MOBS = new int[] { 20494, 20495, 20497, 20498, 20499, 20500 };
+	private static final int[] MOBS =
+	{
+		20494, // Turek War Hound
+		20495, // Turek Orc Warlord
+		20497, // Turek Orc Skirmisher
+		20498, // Turek Orc Supplier
+		20499, // Turek Orc Footman
+		20500 // Turek Orc Sentinel
+	};
 	
 	private TurekOrcs()
 	{
