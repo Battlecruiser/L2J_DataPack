@@ -18,161 +18,107 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author -Nemesiss-
+ * @author FBIagent
  */
 public class AdminGeodata implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_geo_z",
-		"admin_geo_type",
-		"admin_geo_nswe",
-		"admin_geo_los",
-		"admin_geo_position",
-		"admin_geo_bug",
-		"admin_geo_load",
-		"admin_geo_unload"
+		"admin_geo_pos",
+		"admin_geo_spawn_pos",
+		"admin_geo_can_move",
+		"admin_geo_can_see"
 	};
 	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		if (Config.GEODATA < 1)
+		if ("admin_geo_pos".equals(command))
 		{
-			activeChar.sendMessage("Geo Engine is Turned Off!");
-			return true;
-		}
-		
-		if (command.equals("admin_geo_z"))
-		{
-			activeChar.sendMessage("GeoEngine: Geo_Z = " + GeoData.getInstance().getHeight(activeChar.getX(), activeChar.getY(), activeChar.getZ()) + " Loc_Z = " + activeChar.getZ());
-		}
-		else if (command.equals("admin_geo_type"))
-		{
-			short type = GeoData.getInstance().getType(activeChar.getX(), activeChar.getY());
-			activeChar.sendMessage("GeoEngine: Geo_Type = " + type);
-			short height = GeoData.getInstance().getHeight(activeChar.getX(), activeChar.getY(), activeChar.getZ());
-			activeChar.sendMessage("GeoEngine: height = " + height);
-		}
-		else if (command.equals("admin_geo_nswe"))
-		{
-			String result = "";
-			short nswe = GeoData.getInstance().getNSWE(activeChar.getX(), activeChar.getY(), activeChar.getZ());
-			if ((nswe & 8) == 0)
+			int worldX = activeChar.getX();
+			int worldY = activeChar.getY();
+			int worldZ = activeChar.getZ();
+			int geoX = GeoData.getInstance().getGeoX(worldX);
+			int geoY = GeoData.getInstance().getGeoY(worldY);
+			
+			if (GeoData.getInstance().hasGeoPos(geoX, geoY))
 			{
-				result += " N";
+				activeChar.sendMessage("WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoData.getInstance().getNearestZ(geoX, geoY, worldZ));
 			}
-			if ((nswe & 4) == 0)
+			else
 			{
-				result += " S";
+				activeChar.sendMessage("There is no geodata at this position.");
 			}
-			if ((nswe & 2) == 0)
-			{
-				result += " W";
-			}
-			if ((nswe & 1) == 0)
-			{
-				result += " E";
-			}
-			activeChar.sendMessage("GeoEngine: Geo_NSWE -> " + nswe + "->" + result);
 		}
-		else if (command.equals("admin_geo_los"))
+		else if ("admin_geo_spawn_pos".equals(command))
 		{
-			if (activeChar.getTarget() != null)
+			int worldX = activeChar.getX();
+			int worldY = activeChar.getY();
+			int worldZ = activeChar.getZ();
+			int geoX = GeoData.getInstance().getGeoX(worldX);
+			int geoY = GeoData.getInstance().getGeoY(worldY);
+			
+			if (GeoData.getInstance().hasGeoPos(geoX, geoY))
 			{
-				if (GeoData.getInstance().canSeeTargetDebug(activeChar, activeChar.getTarget()))
+				activeChar.sendMessage("WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoData.getInstance().getSpawnHeight(worldX, worldY, worldZ, worldZ));
+			}
+			else
+			{
+				activeChar.sendMessage("There is no geodata at this position.");
+			}
+		}
+		else if ("admin_geo_can_move".equals(command))
+		{
+			L2Object target = activeChar.getTarget();
+			if (target != null)
+			{
+				if (GeoData.getInstance().canSeeTarget(activeChar, target))
 				{
-					activeChar.sendMessage("GeoEngine: Can See Target");
+					activeChar.sendMessage("Can move beeline.");
 				}
 				else
 				{
-					activeChar.sendMessage("GeoEngine: Can't See Target");
+					activeChar.sendMessage("Can not move beeline!");
 				}
-				
 			}
 			else
 			{
-				activeChar.sendMessage("None Target!");
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			}
 		}
-		else if (command.equals("admin_geo_position"))
+		else if ("admin_geo_can_see".equals(command))
 		{
-			activeChar.sendMessage("GeoEngine: Your current position: ");
-			activeChar.sendMessage(".... world coords: x: " + activeChar.getX() + " y: " + activeChar.getY() + " z: " + activeChar.getZ());
-			activeChar.sendMessage(".... geo position: " + GeoData.getInstance().geoPosition(activeChar.getX(), activeChar.getY()));
-		}
-		else if (command.startsWith("admin_geo_load"))
-		{
-			String[] v = command.substring(15).split(" ");
-			if (v.length != 2)
+			L2Object target = activeChar.getTarget();
+			if (target != null)
 			{
-				activeChar.sendMessage("Usage: //admin_geo_load <regionX> <regionY>");
+				if (GeoData.getInstance().canSeeTarget(activeChar, target))
+				{
+					activeChar.sendMessage("Can see target.");
+				}
+				else
+				{
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANT_SEE_TARGET));
+				}
 			}
 			else
 			{
-				try
-				{
-					byte rx = Byte.parseByte(v[0]);
-					byte ry = Byte.parseByte(v[1]);
-					
-					boolean result = GeoData.loadGeodataFile(rx, ry);
-					
-					if (result)
-					{
-						activeChar.sendMessage("GeoEngine: File for region [" + rx + "," + ry + "] loaded succesfuly");
-					}
-					else
-					{
-						activeChar.sendMessage("GeoEngine: File for region [" + rx + "," + ry + "] couldn't be loaded");
-					}
-				}
-				catch (Exception e)
-				{
-					activeChar.sendMessage("You have to write numbers of regions <regionX> <regionY>");
-				}
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			}
 		}
-		else if (command.startsWith("admin_geo_unload"))
+		else
 		{
-			String[] v = command.substring(17).split(" ");
-			if (v.length != 2)
-			{
-				activeChar.sendMessage("Usage: //admin_geo_unload <regionX> <regionY>");
-			}
-			else
-			{
-				try
-				{
-					byte rx = Byte.parseByte(v[0]);
-					byte ry = Byte.parseByte(v[1]);
-					
-					GeoData.unloadGeodata(rx, ry);
-					activeChar.sendMessage("GeoEngine: File for region [" + rx + "," + ry + "] unloaded.");
-				}
-				catch (Exception e)
-				{
-					activeChar.sendMessage("You have to write numbers of regions <regionX> <regionY>");
-				}
-			}
+			return false;
 		}
-		else if (command.startsWith("admin_geo_bug"))
-		{
-			try
-			{
-				String comment = command.substring(14);
-				GeoData.getInstance().addGeoDataBug(activeChar, comment);
-			}
-			catch (StringIndexOutOfBoundsException e)
-			{
-				activeChar.sendMessage("Usage: //admin_geo_bug you coments here");
-			}
-		}
+		
 		return true;
 	}
 	

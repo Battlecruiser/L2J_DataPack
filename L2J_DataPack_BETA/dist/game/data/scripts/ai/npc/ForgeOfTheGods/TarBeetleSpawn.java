@@ -149,7 +149,7 @@ public class TarBeetleSpawn extends DocumentParser
 			spawn.setHeading(Rnd.get(65535));
 			spawn.setX(loc[0]);
 			spawn.setY(loc[1]);
-			spawn.setZ(GeoData.getInstance().getSpawnHeight(loc[0], loc[1], loc[2], loc[3], null));
+			spawn.setZ(GeoData.getInstance().getSpawnHeight(loc[0], loc[1], loc[2], loc[3]));
 			
 			final L2Npc npc = spawn.doSpawn();
 			npc.setIsNoRndWalk(true);
