@@ -66,14 +66,19 @@ public final class Lethal extends AbstractEffect
 			return;
 		}
 		
+		if (info.getSkill().getMagicLevel() < (target.getLevel() - 6))
+		{
+			return;
+		}
+		
 		if (!target.isLethalable() || target.isInvul())
 		{
 			return;
 		}
 		
-		double levelBonus = Formulas.calcLvlBonusMod(activeChar, target, info.getSkill());
+		double chanceMultiplier = Formulas.calcAttributeBonus(activeChar, target, info.getSkill()) * Formulas.calcGeneralTraitBonus(activeChar, target, info.getSkill().getTraitType(), false);
 		// Lethal Strike
-		if (Rnd.get(100) < (_fullLethal * levelBonus))
+		if (Rnd.get(100) < (_fullLethal * chanceMultiplier))
 		{
 			// for Players CP and HP is set to 1.
 			if (target.isPlayer())
@@ -92,7 +97,7 @@ public final class Lethal extends AbstractEffect
 			activeChar.sendPacket(SystemMessageId.LETHAL_STRIKE_SUCCESSFUL);
 		}
 		// Half-Kill
-		else if (Rnd.get(100) < (_halfLethal * levelBonus))
+		else if (Rnd.get(100) < (_halfLethal * chanceMultiplier))
 		{
 			// for Players CP is set to 1.
 			if (target.isPlayer())
