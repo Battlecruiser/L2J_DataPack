@@ -75,9 +75,9 @@ public final class TurekOrcs extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		if (!npc.getVariables().hasVariable("hitted"))
+		if (!npc.getVariables().hasVariable("isHit"))
 		{
-			npc.getVariables().set("hitted", 1);
+			npc.getVariables().set("isHit", 1);
 		}
 		else if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.5)) && (npc.getCurrentHp() > (npc.getMaxHp() * 0.3)) && 
 			(attacker.getCurrentHp() > (attacker.getMaxHp() * 0.25)) && npc.hasAIValue("fleeX") && npc.hasAIValue("fleeY") && npc.hasAIValue("fleeZ") && 
