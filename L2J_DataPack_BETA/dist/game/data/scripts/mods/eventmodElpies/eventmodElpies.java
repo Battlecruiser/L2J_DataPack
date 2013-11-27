@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2EventMonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Event;
 
@@ -238,7 +237,7 @@ public final class eventmodElpies extends Event
 		{
 			if (chance >= drop[1])
 			{
-				((L2MonsterInstance) mob).dropItem(player, drop[0], getRandom(drop[2], drop[3]));
+				mob.dropItem(player, drop[0], getRandom(drop[2], drop[3]));
 				break;
 			}
 		}

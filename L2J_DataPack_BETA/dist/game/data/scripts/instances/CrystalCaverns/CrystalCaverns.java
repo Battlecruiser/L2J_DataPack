@@ -39,7 +39,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TrapInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
@@ -2560,12 +2559,12 @@ public final class CrystalCaverns extends Quest
 			{
 				if (npc.getId() == GK1)
 				{
-					((L2MonsterInstance) npc).dropItem(player, 9698, 1);
+					npc.dropItem(player, 9698, 1);
 					runEmeraldSquare(world);
 				}
 				else if (npc.getId() == GK2)
 				{
-					((L2MonsterInstance) npc).dropItem(player, 9699, 1);
+					npc.dropItem(player, 9699, 1);
 					runSteamRooms(world, STEAM1_SPAWNS, 22);
 					L2Party party = player.getParty();
 					if (party != null)

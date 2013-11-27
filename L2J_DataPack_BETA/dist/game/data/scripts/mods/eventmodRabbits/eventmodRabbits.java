@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2EventChestInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2EventMonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Event;
 import com.l2jserver.gameserver.model.quest.QuestState;
@@ -284,7 +283,7 @@ public class eventmodRabbits extends Event
 		{
 			if (chance > drop[1])
 			{
-				((L2MonsterInstance) mob).dropItem(player, drop[0], getRandom(drop[2], drop[3]));
+				mob.dropItem(player, drop[0], getRandom(drop[2], drop[3]));
 				return;
 			}
 		}

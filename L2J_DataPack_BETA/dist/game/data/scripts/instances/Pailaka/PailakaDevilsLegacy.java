@@ -198,7 +198,7 @@ public final class PailakaDevilsLegacy extends Quest
 		{
 			if (chance < element[2])
 			{
-				((L2MonsterInstance) mob).dropItem(player, element[0], element[1]);
+				mob.dropItem(player, element[0], element[1]);
 				return;
 			}
 		}
@@ -214,7 +214,7 @@ public final class PailakaDevilsLegacy extends Quest
 			{
 				if (chance < drop[2])
 				{
-					((L2MonsterInstance) mob).dropItem(player, drop[1], getRandom(1, 6));
+					mob.dropItem(player, drop[1], getRandom(1, 6));
 					return;
 				}
 			}

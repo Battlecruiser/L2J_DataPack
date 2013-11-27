@@ -242,7 +242,7 @@ class Quest (JQuest) :
          st.showQuestionMark(3)
          qs.set("Ex","2")
       if Ex in [0,1,2] and st.getQuestItemsCount(6353) < 1 :
-         st.dropItem(npc,player,6353,1)
+         npc.dropItem(player, 6353, 1)
          st.playSound("ItemSound.quest_tutorial")
    return
 

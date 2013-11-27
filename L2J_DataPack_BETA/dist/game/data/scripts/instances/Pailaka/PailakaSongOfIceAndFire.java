@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
@@ -215,7 +214,7 @@ public final class PailakaSongOfIceAndFire extends Quest
 		{
 			if (chance < element[2])
 			{
-				((L2MonsterInstance) mob).dropItem(player, element[0], element[1]);
+				mob.dropItem(player, element[0], element[1]);
 				return;
 			}
 		}
@@ -231,7 +230,7 @@ public final class PailakaSongOfIceAndFire extends Quest
 			{
 				if (chance < drop[2])
 				{
-					((L2MonsterInstance) mob).dropItem(player, drop[1], getRandom(1, 6));
+					mob.dropItem(player, drop[1], getRandom(1, 6));
 					return;
 				}
 			}
