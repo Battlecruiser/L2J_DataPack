@@ -18,15 +18,15 @@
  */
 package quests.Q00327_RecoverTheFarmland;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Recover the Farmland (327).
@@ -73,7 +73,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 	private static final int MIN_LVL = 25;
 	private static final Map<String, ItemHolder> FRAGMENTS_REWARD_DATA = new HashMap<>(4);
 	private static final Map<Integer, Integer> FRAGMENTS_DROP_PROB = new HashMap<>(7);
-	private static final ItemHolder[] FULL_REWARD_DATA = 
+	private static final ItemHolder[] FULL_REWARD_DATA =
 	{
 		new ItemHolder(ANCIENT_CLAY_URN, 2766),
 		new ItemHolder(ANCIENT_BRASS_TIARA, 3227),
@@ -117,7 +117,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 		
 		String html = null;
 		
-		switch(event)
+		switch (event)
 		{
 			case "30034-01.html":
 			case "30313-01.html":
@@ -167,7 +167,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 					addExpAndSp(player, getQuestItemsCount(player, item.getId()) * item.getCount(), 0);
 					takeItems(player, item.getId(), -1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					html = event; 
+					html = event;
 				}
 				break;
 			}
@@ -181,7 +181,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 						addExpAndSp(player, getQuestItemsCount(player, it.getId()) * it.getCount(), 0);
 						takeItems(player, it.getId(), -1);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						rewarded = true; 
+						rewarded = true;
 					}
 				}
 				html = rewarded ? event : "30034-02.html";
@@ -275,7 +275,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 			{
 				if (!hasQuestItems(player, ANCIENT_CLAY_URN))
 				{
-					html = "30314-07.html"; 
+					html = "30314-07.html";
 				}
 				else
 				{
@@ -289,7 +289,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 			{
 				if (!hasQuestItems(player, ANCIENT_BRASS_TIARA))
 				{
-					html = "30314-07.html"; 
+					html = "30314-07.html";
 				}
 				else
 				{
@@ -315,7 +315,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 			{
 				if (!hasQuestItems(player, ANCIENT_BRONZE_MIRROR))
 				{
-					html = "30314-07.html"; 
+					html = "30314-07.html";
 				}
 				else
 				{
@@ -329,7 +329,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 			{
 				if (!hasQuestItems(player, ANCIENT_JADE_NECKLACE))
 				{
-					html = "30314-07.html"; 
+					html = "30314-07.html";
 				}
 				else
 				{
@@ -350,7 +350,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 		final QuestState st = getQuestState(killer, false);
 		if (st != null)
 		{
-			if((npc.getId() == TUREK_ORK_SHAMAN) || (npc.getId() == TUREK_ORK_WARLORD))
+			if ((npc.getId() == TUREK_ORK_SHAMAN) || (npc.getId() == TUREK_ORK_WARLORD))
 			{
 				giveItems(killer, TUREK_MEDALLION, 1);
 			}
@@ -373,12 +373,12 @@ public final class Q00327_RecoverTheFarmland extends Quest
 		final QuestState st = getQuestState(player, true);
 		String html = getNoQuestMsg(player);
 		
-		switch(npc.getId())
+		switch (npc.getId())
 		{
 			case LEIKAN:
 			{
 				if (st.isCreated())
-				{ 
+				{
 					html = ((player.getLevel() >= MIN_LVL) ? "30382-02.htm" : "30382-01.htm");
 				}
 				else if (st.isStarted())
@@ -457,7 +457,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 		}
 		
 		return html;
-	}	
+	}
 	
 	public static void main(String[] args)
 	{
