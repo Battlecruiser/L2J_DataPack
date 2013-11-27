@@ -21,7 +21,6 @@ package ai.group_template;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
@@ -148,7 +147,7 @@ public final class IsleOfPrayer extends AbstractNpcAI
 	{
 		if (getRandom(1000) <= chance)
 		{
-			((L2MonsterInstance) npc).dropItem(killer, itemId, 1);
+			npc.dropItem(killer, itemId, 1);
 		}
 	}
 	

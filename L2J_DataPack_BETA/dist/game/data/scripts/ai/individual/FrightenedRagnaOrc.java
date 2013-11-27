@@ -108,7 +108,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 						npc.doCast(SKILL.getSkill());
 						for (int i = 0; i < 10; i++)
 						{
-							((L2Attackable) npc).dropItem(player, PcInventory.ADENA_ID, ADENA2);
+							npc.dropItem(player, PcInventory.ADENA_ID, ADENA2);
 						}
 					}
 					else if (getRandom(100000) < CHANCE)

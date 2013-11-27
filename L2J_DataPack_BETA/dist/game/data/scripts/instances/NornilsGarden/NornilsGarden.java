@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
@@ -187,7 +186,7 @@ public final class NornilsGarden extends Quest
 		{
 			if (chance < element[2])
 			{
-				((L2MonsterInstance) mob).dropItem(player, element[0], element[1]);
+				mob.dropItem(player, element[0], element[1]);
 			}
 		}
 	}
@@ -648,7 +647,7 @@ public final class NornilsGarden extends Quest
 			if (npc.getId() == _gk[0])
 			{
 				// Drop key
-				((L2MonsterInstance) npc).dropItem(player, _gk[1], 1);
+				npc.dropItem(player, _gk[1], 1);
 				
 				// Check if gatekeeper should open bridge, and open it
 				if (_gk[2] > 0)

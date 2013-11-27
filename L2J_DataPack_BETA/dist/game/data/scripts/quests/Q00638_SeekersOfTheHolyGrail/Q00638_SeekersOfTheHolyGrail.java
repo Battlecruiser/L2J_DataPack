@@ -22,7 +22,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -224,7 +223,7 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 			{
 				if ((info.getKeyId() > 0) && (getRandom(100) < info.getKeyChance()))
 				{
-					((L2MonsterInstance) npc).dropItem(qs.getPlayer(), info.getKeyId(), info.getKeyCount());
+					npc.dropItem(qs.getPlayer(), info.getKeyId(), info.getKeyCount());
 				}
 			}
 		}

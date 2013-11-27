@@ -1549,7 +1549,7 @@ public final class FinalEmperialTomb extends Quest
 				{
 					if (getRandom(100) < 5)
 					{
-						((L2MonsterInstance) npc).dropItem(player, DEWDROP_OF_DESTRUCTION_ITEM_ID, 1);
+						npc.dropItem(player, DEWDROP_OF_DESTRUCTION_ITEM_ID, 1);
 					}
 				}
 				

@@ -23,7 +23,6 @@ import java.util.Map;
 
 import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -216,7 +215,7 @@ public class Q00464_Oath extends Quest
 	{
 		if (getRandom(1000) < MOBS.get(npc.getId()))
 		{
-			((L2MonsterInstance) npc).dropItem(killer, STRONGBOX, 1);
+			npc.dropItem(killer, STRONGBOX, 1);
 		}
 		
 		return super.onKill(npc, killer, isSummon);

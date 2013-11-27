@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -569,32 +568,31 @@ public abstract class Chamber extends Quest
 		if (!npc.isBusy() && (npc.getCurrentHp() < (npc.getMaxHp() / 10)))
 		{
 			npc.setBusy(true);
-			final L2MonsterInstance box = (L2MonsterInstance) npc;
 			if (getRandom(100) < 25) // 25% chance to reward
 			{
 				if (getRandom(100) < 33)
 				{
-					box.dropItem(attacker, ENRIA, (int) (3 * Config.RATE_DROP_ITEMS));
+					npc.dropItem(attacker, ENRIA, (int) (3 * Config.RATE_DROP_ITEMS));
 				}
 				if (getRandom(100) < 50)
 				{
-					box.dropItem(attacker, THONS, (int) (4 * Config.RATE_DROP_ITEMS));
+					npc.dropItem(attacker, THONS, (int) (4 * Config.RATE_DROP_ITEMS));
 				}
 				if (getRandom(100) < 50)
 				{
-					box.dropItem(attacker, ASOFE, (int) (4 * Config.RATE_DROP_ITEMS));
+					npc.dropItem(attacker, ASOFE, (int) (4 * Config.RATE_DROP_ITEMS));
 				}
 				if (getRandom(100) < 16)
 				{
-					box.dropItem(attacker, LEONARD, (int) (2 * Config.RATE_DROP_ITEMS));
+					npc.dropItem(attacker, LEONARD, (int) (2 * Config.RATE_DROP_ITEMS));
 				}
 				
-				box.broadcastEvent("SCE_LUCKY", 2000, null);
-				box.doCast(SUCCESS_SKILL.getSkill());
+				npc.broadcastEvent("SCE_LUCKY", 2000, null);
+				npc.doCast(SUCCESS_SKILL.getSkill());
 			}
 			else
 			{
-				box.broadcastEvent("SCE_DREAM_FIRE_IN_THE_HOLE", 2000, null);
+				npc.broadcastEvent("SCE_DREAM_FIRE_IN_THE_HOLE", 2000, null);
 			}
 		}
 		

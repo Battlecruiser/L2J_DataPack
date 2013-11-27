@@ -377,7 +377,7 @@ public class BeastFarm extends AbstractNpcAI
 		else
 		{
 			caster.sendMessage("The beast spit out the feed instead of eating it.");
-			((L2Attackable) npc).dropItem(caster, food, 1);
+			npc.dropItem(caster, food, 1);
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}

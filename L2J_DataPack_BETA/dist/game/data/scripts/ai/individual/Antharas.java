@@ -935,7 +935,7 @@ public final class Antharas extends AbstractNpcAI
 			int countMPHerb = getRandom(6, 18);
 			for (int i = 0; i < countHPHerb; i++)
 			{
-				((L2MonsterInstance) npc).dropItem(killer, 8602, 1);
+				npc.dropItem(killer, 8602, 1);
 			}
 			for (int i = 0; i < countMPHerb; i++)
 			{
