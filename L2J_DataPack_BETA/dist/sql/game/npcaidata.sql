@@ -2427,13 +2427,13 @@ INSERT INTO `npcaidata` VALUES
 (18924, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Door Golem
 (18925, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Trap
 (18926, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Mercenary Archer
-(18927, 7, 15, 0, 300, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Fire
+(18927, 7, 15, 0, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Fire
 (18928, 7, 15, 0, 300, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Annihilation Furnace
 (18929, 7, 15, 0, 300, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1500, 0, "grail_clan", 1500, "null", 0, 0, "fighter"), -- Ward of the Grail
 (18930, 7, 15, 0, 300, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), --
 (18931, 7, 15, 0, 300, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), --
 (18932, 7, 15, 0, 300, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), --
-(18933, 7, 15, 0, 300, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Fire Feed
+(18933, 7, 15, 0, 300, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "xel_private_clan", 300, "null", 0, 0, "fighter"), -- Fire Feed
 (18934, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Abbey Treasure Chest
 (18935, 7, 15, 0, 300, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Divine Sword Protection
 (18936, 7, 15, 0, 300, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), --
@@ -4860,17 +4860,17 @@ INSERT INTO `npcaidata` VALUES
 (22772, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "archer"), -- Tanta Lizardman Archer
 (22773, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 800, 0, "null", 300, "null", 0, 0, "mage"), -- Tanta Lizardman Magician
 (22774, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "mage"), -- Tanta Lizardman Summoner
-(22775, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sel Mahum Drill Sergeant
-(22776, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sel Mahum Training Officer
+(22775, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "sel_mahum_drill", 300, "null", 0, 0, "fighter"), -- Sel Mahum Drill Sergeant
+(22776, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "sel_mahum_drill", 300, "null", 0, 0, "fighter"), -- Sel Mahum Training Officer
 (22777, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sel Mahum Drill Sergeant
-(22778, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sel Mahum Drill Sergeant
+(22778, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "sel_mahum_drill", 300, "null", 0, 0, "fighter"), -- Sel Mahum Drill Sergeant
 (22779, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sel Mahum Escort Guard
-(22780, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 400, "null", 0, 0, "fighter"), -- Sel Mahum Recruit
+(22780, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "sel_mahum_drill", 400, "null", 0, 0, "fighter"), -- Sel Mahum Recruit
 (22781, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sel Mahum Soldier
-(22782, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 400, "null", 0, 0, "fighter"), -- Sel Mahum Recruit
-(22783, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sel Mahum Soldier
-(22784, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 400, "null", 0, 0, "fighter"), -- Sel Mahum Recruit
-(22785, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sel Mahum Soldier
+(22782, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "sel_mahum_drill", 400, "null", 0, 0, "fighter"), -- Sel Mahum Recruit
+(22783, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "sel_mahum_drill", 300, "null", 0, 0, "fighter"), -- Sel Mahum Soldier
+(22784, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "sel_mahum_drill", 400, "null", 0, 0, "fighter"), -- Sel Mahum Recruit
+(22785, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "sel_mahum_drill", 300, "null", 0, 0, "fighter"), -- Sel Mahum Soldier
 (22786, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "xel_private_clan", 400, "null", 0, 0, "fighter"), -- Sel Mahum Squad Leader
 (22787, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "xel_private_clan", 400, "null", 0, 0, "fighter"), -- Sel Mahum Squad Leader
 (22788, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "xel_private_clan", 400, "null", 0, 0, "fighter"), -- Sel Mahum Squad Leader
