@@ -944,6 +944,7 @@
 		</for>
 	</skill>
 	<skill id="6343" levels="2" name="Maguen Plasma - Power">
+		<!-- Confirmed CT2.5 -->
 		<table name="#icons"> icon.skill6343_1 icon.skill6343_2 </table>
 		<table name="#mAtk"> 1.08 1.15 </table>
 		<table name="#pAtk"> 1.02 1.03 </table>
@@ -962,7 +963,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
@@ -971,6 +972,7 @@
 		</for>
 	</skill>
 	<skill id="6365" levels="2" name="Maguen Plasma - Speed">
+		<!-- Confirmed CT2.5 -->
 		<table name="#icons"> icon.skill6365_1 icon.skill6365_2 </table>
 		<table name="#pmAtkSpd"> 1.04 1.08 </table>
 		<table name="#runSpd"> 5 10 </table>
@@ -989,7 +991,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="mAtkSpd" val="#pmAtkSpd" />
@@ -999,6 +1001,7 @@
 		</for>
 	</skill>
 	<skill id="6366" levels="2" name="Maguen Plasma - Critical">
+		<!-- Confirmed CT2.5 -->
 		<table name="#cAtk"> 1.05 1.1 </table>
 		<table name="#icons"> icon.skill6366_1 icon.skill6366_2 </table>
 		<table name="#mCritRate"> 0.02 0.04 </table>
@@ -1018,8 +1021,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="reuseDelay" val="2000" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
@@ -1029,49 +1031,70 @@
 		</for>
 	</skill>
 	<skill id="6367" levels="3" name="Maguen Plasma - Bistakon">
+		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#icons"> icon.skill6367_1 icon.skill6367_2 icon.skill6367_3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="SOA_BUFF1" />
+		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" /> <!-- TODO: Remove when support for buffs without effects is finished. -->
+		</for>
 	</skill>
 	<skill id="6368" levels="3" name="Maguen Plasma - Cokrakon">
+		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#icons"> icon.skill6368_1 icon.skill6368_2 icon.skill6368_3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="SOA_BUFF2" />
+		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" /> <!-- TODO: Remove when support for buffs without effects is finished. -->
+		</for>
 	</skill>
 	<skill id="6369" levels="3" name="Maguen Plasma - Reptilikon">
+		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#icons"> icon.skill6369_1 icon.skill6369_2 icon.skill6369_3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="SOA_BUFF3" />
+		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" /> <!-- TODO: Remove when support for buffs without effects is finished. -->
+		</for>
 	</skill>
 	<skill id="6370" levels="1" name="Thunderbolt">
 		<set name="abnormalLvl" val="1" />
