@@ -1160,9 +1160,7 @@
 		<table name="#ench2mpInitialConsume"> 13 13 13 12 12 12 12 11 11 11 11 10 10 10 10 10 9 9 9 9 8 8 8 8 7 7 7 7 7 6 </table>
 		<table name="#ench2Power"> 41 42 42 43 44 44 45 46 46 47 47 48 49 49 50 51 51 52 53 53 54 54 55 56 56 57 58 58 59 60 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="PARALYZE" />
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
@@ -1180,7 +1178,6 @@
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="ONE" />
-		<set name="trait" val="PARALYZE" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1190,11 +1187,12 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="6091">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
+			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="6091" />
 		</for>
 	</skill>
 	<skill id="1171" levels="19" name="Blazing Circle" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">

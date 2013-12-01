@@ -45,6 +45,7 @@
 	</skill>
 	<skill id="20004" levels="1" name="Dragon Dash">
 		<!-- Increases Speed by 100% for 5 seconds with a dragon's strength. -->
+		<set name="abnormalTime" val="5" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" /> <!-- FIXME: value unconfirmed -->
@@ -57,6 +58,7 @@
 	</skill>
 	<skill id="20005" levels="1" name="Dragon Aura">
 		<!-- Increases Critical Rate by 30% for 20 minutes with a dragon's strength. -->
+		<set name="abnormalTime" val="1200" />
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A2" />

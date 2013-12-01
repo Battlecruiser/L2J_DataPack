@@ -2283,10 +2283,7 @@
 	</skill>
 	<skill id="791" levels="1" name="Lightning Shock">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="PARALYZE" />
-		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="50" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
@@ -2305,14 +2302,14 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="AURA" />
-		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="MagicalSoulAttack" />
-			<effect name="ChanceSkillTrigger" triggeredId="6092" chanceType="ON_EXIT">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
+			<effect name="ChanceSkillTrigger" triggeredId="6092" chanceType="ON_EXIT" />
 		</for>
 	</skill>
 	<skill id="792" levels="1" name="Betrayal Mark">
