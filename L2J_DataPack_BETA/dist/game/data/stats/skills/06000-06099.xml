@@ -928,7 +928,7 @@
 	</skill>
 	<skill id="6090" levels="1" name="Lightning Strike">
 		<!-- Confirmed CT2.5 -->
-		<!-- Lightning Strike effect -->
+		<!-- Lightning Strike end effect. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PARALYZE" />
@@ -948,9 +948,10 @@
 		</for>
 	</skill>
 	<skill id="6091" levels="1" name="Anchor">
-		<!-- Anchor effect -->
+		<!-- Confirmed CT2.5 -->
+		<!-- Anchor end effect. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="effectPoint" val="1" />
@@ -968,9 +969,9 @@
 	</skill>
 	<skill id="6092" levels="1" name="Lightning Shock">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Lightning Shock effect -->
+		<!-- Lightning Shock end effect. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="8" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="effectPoint" val="1" />
