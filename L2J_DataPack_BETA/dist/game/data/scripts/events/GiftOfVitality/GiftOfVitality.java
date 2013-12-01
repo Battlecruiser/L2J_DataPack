@@ -119,7 +119,7 @@ public final class GiftOfVitality extends LongTimeEvent
 				else
 				{
 					player.doCast(GIFT_OF_VITALITY.getSkill());
-					player.doCast(JOY_OF_VITALITY.getSkill());
+					player.doSimultaneousCast(JOY_OF_VITALITY.getSkill());
 					st.setState(State.STARTED);
 					st.set("reuse", String.valueOf(System.currentTimeMillis() + (HOURS * 3600000)));
 					htmltext = "4306-okvitality.htm";
