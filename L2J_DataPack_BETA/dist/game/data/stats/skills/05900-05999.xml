@@ -412,6 +412,7 @@
 		</for>
 	</skill>
 	<skill id="5923" levels="1" name="Soul Retain">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="MA_UP" />
@@ -421,8 +422,15 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="0.95" />
+				<mul order="0x30" stat="mDef" val="0.95" />
+				<mul order="0x50" stat="regHp" val="0.95" />
+				<mul order="0x30" stat="mAtk" val="1.03" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5924" levels="1" name="Devour Soul">
 		<set name="effectPoint" val="-100" />
