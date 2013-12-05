@@ -2347,9 +2347,9 @@ INSERT INTO `npcaidata` VALUES
 (18844, 7, 15, 0, 300, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Reptilikon's Ward
 (18845, 7, 15, 0, 300, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Torumba's Telegraph
 (18846, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Kegor
-(18847, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Freya
-(18848, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Battalion Leader
-(18849, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Legionnaire
+(18847, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 900, 0, "null", 300, "null", 0, 0, "fighter"), -- Freya
+(18848, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 2000, "null", 0, 0, "fighter"), -- Battalion Leader
+(18849, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 2000, "null", 0, 0, "fighter"), -- Legionnaire
 (18850, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Jinia
 (18851, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Kegor
 (18852, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sirra
@@ -2426,7 +2426,7 @@ INSERT INTO `npcaidata` VALUES
 (18923, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Door Golem
 (18924, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Door Golem
 (18925, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Trap
-(18926, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Mercenary Archer
+(18926, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 2000, "null", 0, 0, "fighter"), -- Mercenary Archer
 (18927, 7, 15, 0, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Fire
 (18928, 7, 15, 0, 300, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Annihilation Furnace
 (18929, 7, 15, 0, 300, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1500, 0, "grail_clan", 1500, "null", 0, 0, "fighter"), -- Ward of the Grail
@@ -4852,7 +4852,7 @@ INSERT INTO `npcaidata` VALUES
 (22764, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "cocracon_elite_clan", 300, "null", 0, 0, "fighter"), -- Elite Kiriona
 (22765, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "cocracon_elite_clan", 300, "null", 0, 0, "fighter"), -- Elite Kaiona
 (22766, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 1000, "null", 0, 0, "fighter"), -- Mithril Millipede
-(22767, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Archery Knight
+(22767, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 300, "null", 0, 0, "fighter"), -- Archery Knight
 (22768, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 300, "null", 0, 0, "fighter"), -- Tanta Lizardman Scout
 (22769, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Tanta Lizardman Warrior
 (22770, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Tanta Lizardman Soldier
