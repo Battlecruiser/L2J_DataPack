@@ -18,6 +18,7 @@
  */
 package ai.npc.Jinia;
 
+import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -76,7 +77,8 @@ public final class Jinia extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return player.getLevel() < MIN_LEVEL ? "32781-01.html" : "32781-02.html";
+		final QuestState st = player.getQuestState(Q10285_MeetingSirra.class.getSimpleName());
+		return ((player.getLevel() >= MIN_LEVEL) && (st != null) && st.isCompleted()) ? "32781-02.html" : "32781-01.html";
 	}
 	
 	public static void main(String[] args)
