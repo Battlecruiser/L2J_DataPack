@@ -209,7 +209,7 @@ public final class IceQueensCastle extends Quest
 		world.setStatus(0);
 		((IQCWorld) world).storeTime = System.currentTimeMillis();
 		InstanceManager.getInstance().addWorld(world);
-		_log.info("SevenSign started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+		_log.info("Ice Queen's Castle started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 		// teleport players
 		teleportPlayer(player, loc, world.getInstanceId(), false);
 		world.addAllowed(player.getObjectId());

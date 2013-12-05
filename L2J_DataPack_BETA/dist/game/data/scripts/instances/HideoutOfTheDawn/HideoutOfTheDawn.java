@@ -98,7 +98,7 @@ public final class HideoutOfTheDawn extends Quest
 		world.setStatus(0);
 		((HotDWorld) world).storeTime = System.currentTimeMillis();
 		InstanceManager.getInstance().addWorld(world);
-		_log.info("SevenSign started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+		_log.info("Hideout of the Dawn started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 		// teleport players
 		teleportPlayer(player, loc, world.getInstanceId(), false);
 		removeBuffs(player);
