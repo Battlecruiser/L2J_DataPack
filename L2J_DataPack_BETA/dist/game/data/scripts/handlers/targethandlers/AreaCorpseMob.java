@@ -39,8 +39,7 @@ public class AreaCorpseMob implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
-		if (!target.isL2Attackable() || !target.isDead())
+		if ((target == null) || !target.isL2Attackable() || !target.isDead())
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return EMPTY_TARGET_LIST;
@@ -54,10 +53,10 @@ public class AreaCorpseMob implements ITargetTypeHandler
 			};
 		}
 		
+		final List<L2Character> targetList = new ArrayList<>();
 		targetList.add(target);
 		
-		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
-		
+		final boolean srcInArena = activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE);
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharacters();
 		for (L2Character obj : objs)
 		{
