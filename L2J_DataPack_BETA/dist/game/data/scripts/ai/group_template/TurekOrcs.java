@@ -45,7 +45,8 @@ public final class TurekOrcs extends AbstractNpcAI
 		20497, // Turek Orc Skirmisher
 		20498, // Turek Orc Supplier
 		20499, // Turek Orc Footman
-		20500 // Turek Orc Sentinel
+		20500
+	// Turek Orc Sentinel
 	};
 	
 	private TurekOrcs()
@@ -79,13 +80,11 @@ public final class TurekOrcs extends AbstractNpcAI
 		{
 			npc.getVariables().set("isHit", 1);
 		}
-		else if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.5)) && (npc.getCurrentHp() > (npc.getMaxHp() * 0.3)) && 
-			(attacker.getCurrentHp() > (attacker.getMaxHp() * 0.25)) && npc.hasAIValue("fleeX") && npc.hasAIValue("fleeY") && npc.hasAIValue("fleeZ") && 
-			(npc.getVariables().getInt("state") == 0) && (getRandom(100) < 10))
+		else if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.5)) && (npc.getCurrentHp() > (npc.getMaxHp() * 0.3)) && (attacker.getCurrentHp() > (attacker.getMaxHp() * 0.25)) && npc.hasAIValue("fleeX") && npc.hasAIValue("fleeY") && npc.hasAIValue("fleeZ") && (npc.getVariables().getInt("state") == 0) && (getRandom(100) < 10))
 		{
 			// Say and flee
-			broadcastNpcSay(npc, 0, NpcStringId.getNpcStringId(getRandom(1000007, 1000027)));	
-			npc.disableCoreAI(true);	// to avoid attacking behaviour, while flee
+			broadcastNpcSay(npc, 0, NpcStringId.getNpcStringId(getRandom(1000007, 1000027)));
+			npc.disableCoreAI(true); // to avoid attacking behaviour, while flee
 			npc.setIsRunning(true);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(npc.getAIValue("fleeX"), npc.getAIValue("fleeY"), npc.getAIValue("fleeZ")));
 			npc.getVariables().set("state", 1);
@@ -103,7 +102,7 @@ public final class TurekOrcs extends AbstractNpcAI
 			receiver.setIsRunning(true);
 			((L2Attackable) receiver).addDamageHate(reference.getActingPlayer(), 0, 99999);
 			receiver.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, reference.getActingPlayer());
-		}	
+		}
 		return null;
 	}
 	
