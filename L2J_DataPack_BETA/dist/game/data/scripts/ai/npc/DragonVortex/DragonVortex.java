@@ -20,7 +20,6 @@ package ai.npc.DragonVortex;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -54,7 +53,6 @@ public final class DragonVortex extends AbstractNpcAI
 		addStartNpc(VORTEX);
 		addFirstTalkId(VORTEX);
 		addTalkId(VORTEX);
-		addKillId(RAIDS);
 	}
 	
 	@Override
@@ -65,7 +63,7 @@ public final class DragonVortex extends AbstractNpcAI
 			if (hasQuestItems(player, LARGE_DRAGON_BONE))
 			{
 				takeItems(player, LARGE_DRAGON_BONE, 1);
-				int random = getRandom(1000);
+				final int random = getRandom(1000);
 				int raid = 0;
 				if (random < 292)
 				{
@@ -91,11 +89,11 @@ public final class DragonVortex extends AbstractNpcAI
 				{
 					raid = RAIDS[5]; // Shadow Summoner 5.6%
 				}
-				else if (random < 1000)
+				else
 				{
 					raid = RAIDS[6]; // Muscle Bomber 4.4%
 				}
-				addSpawn(raid, new Location(player.getX() + getRandom(100), player.getY() + getRandom(100), player.getZ(), player.getHeading()), true, DESPAWN_DELAY);
+				addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, DESPAWN_DELAY, true);
 			}
 			else
 			{
