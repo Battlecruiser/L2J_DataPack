@@ -25,8 +25,8 @@ import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
+import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -36,14 +36,13 @@ import com.l2jserver.gameserver.util.Util;
  * Sel Mahum Training Ground AI for drill groups.
  * @author GKR
  */
-
 public final class SelMahumDrill extends AbstractNpcAI
 {
 	private static final int[] MAHUM_CHIEFS =
 	{
 		22775, // Sel Mahum Drill Sergeant
 		22776, // Sel Mahum Training Officer
-		22778 // Sel Mahum Drill Sergeant
+		22778, // Sel Mahum Drill Sergeant
 	};
 	
 	private static final int[] MAHUM_SOLDIERS =
@@ -52,7 +51,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 		22782, // Sel Mahum Recruit
 		22783, // Sel Mahum Soldier
 		22784, // Sel Mahum Recruit
-		22785 // Sel Mahum Soldier
+		22785, // Sel Mahum Soldier
 	};
 	
 	private static final int[] CHIEF_SOCIAL_ACTIONS =
@@ -100,7 +99,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 		
 		private Actions(int socialActionId, int altSocialActionId, int repeatCount, int repeatInterval)
 		{
-	 		_socialActionId = socialActionId ;
+			_socialActionId = socialActionId;
 			_altSocialActionId = altSocialActionId;
 			_repeatCount = repeatCount;
 			_repeatInterval = repeatInterval;
@@ -138,19 +137,19 @@ public final class SelMahumDrill extends AbstractNpcAI
 		addSpawnId(MAHUM_CHIEFS);
 		addSpawnId(MAHUM_SOLDIERS);
 		
-		//Send event to monsters, that was spawned through SpawnTable at server start (it is impossible to track first spawn)
+		// Send event to monsters, that was spawned through SpawnTable at server start (it is impossible to track first spawn)
 		for (int npcId : MAHUM_CHIEFS)
 		{
 			for (L2Spawn npcSpawn : SpawnTable.getInstance().getSpawns(npcId))
 			{
-			  onSpawn(npcSpawn.getLastSpawn());
+				onSpawn(npcSpawn.getLastSpawn());
 			}
 		}
 		for (int npcId : MAHUM_SOLDIERS)
 		{
 			for (L2Spawn npcSpawn : SpawnTable.getInstance().getSpawns(npcId))
 			{
-			  onSpawn(npcSpawn.getLastSpawn());
+				onSpawn(npcSpawn.getLastSpawn());
 			}
 		}
 		
@@ -159,13 +158,13 @@ public final class SelMahumDrill extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		switch (event)
 		{
 			case "do_social_action":
 			{
-				if (npc != null && !npc.isDead()) 
+				if ((npc != null) && !npc.isDead())
 				{
 					if (Util.contains(MAHUM_CHIEFS, npc.getId()))
 					{
@@ -205,8 +204,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 					for (L2Spawn npcSpawn : SpawnTable.getInstance().getSpawns(npcId))
 					{
 						final L2Npc soldier = npcSpawn.getLastSpawn();
-						if ((soldier != null) && !soldier.isDead() && (npcSpawn.getName() != null) && npcSpawn.getName().startsWith("smtg_drill_group") && !soldier.staysInSpawnLoc()	&&
-							((soldier.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) || (soldier.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)))
+						if ((soldier != null) && !soldier.isDead() && (npcSpawn.getName() != null) && npcSpawn.getName().startsWith("smtg_drill_group") && !soldier.staysInSpawnLoc() && ((soldier.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) || (soldier.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)))
 						{
 							soldier.setHeading(npcSpawn.getHeading());
 							soldier.teleToLocation(npcSpawn.getLocation(), false);
@@ -216,12 +214,11 @@ public final class SelMahumDrill extends AbstractNpcAI
 				break;
 			}
 		}
-		
 		return null;
 	}
 	
 	@Override
-	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if (getRandom(10) < 1)
 		{
@@ -263,7 +260,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 						receiver.disableCoreAI(true);
 						receiver.getVariables().set("BUSY_STATE", 1);
 						receiver.setIsRunning(true);
-						receiver.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location((receiver.getX() + getRandom(-800, 800)), (receiver.getY()+ getRandom(-800, 800)), receiver.getZ(), receiver.getHeading()));
+						receiver.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location((receiver.getX() + getRandom(-800, 800)), (receiver.getY() + getRandom(-800, 800)), receiver.getZ(), receiver.getHeading()));
 						startQuestTimer("reset_busy_state", 5000, receiver, null);
 					}
 					break;
@@ -282,7 +279,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill (L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		npc.broadcastEvent("CHIEF_DIED", TRAINING_RANGE, null);
 		return null;
@@ -306,7 +303,6 @@ public final class SelMahumDrill extends AbstractNpcAI
 			// Restore AI handling by core
 			npc.disableCoreAI(false);
 		}
-		
 		return null;
 	}
 	
@@ -329,13 +325,13 @@ public final class SelMahumDrill extends AbstractNpcAI
 			npc.getVariables().set("SOCIAL_ACTION_REMAINED_COUNT", action.getRepeatCount());
 		}
 		
-	 	npc.broadcastSocialAction(socialActionId);
+		npc.broadcastSocialAction(socialActionId);
 		
 		final int remainedCount = npc.getVariables().getInt("SOCIAL_ACTION_REMAINED_COUNT");
 		if (remainedCount > 0)
 		{
-			 npc.getVariables().set("SOCIAL_ACTION_REMAINED_COUNT", (remainedCount - 1));
-			 startQuestTimer("do_social_action", action.getRepeatInterval(), npc, null);
+			npc.getVariables().set("SOCIAL_ACTION_REMAINED_COUNT", (remainedCount - 1));
+			startQuestTimer("do_social_action", action.getRepeatInterval(), npc, null);
 		}
 	}
 	

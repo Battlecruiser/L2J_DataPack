@@ -39,7 +39,6 @@ import com.l2jserver.gameserver.util.Util;
  * Sel Mahum Training Ground AI for squads and chefs.
  * @author GKR
  */
-
 public final class SelMahumSquad extends AbstractNpcAI
 {
 	// NPC's
@@ -168,7 +167,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 					npc.doCast(SkillTable.getInstance().getInfo(6332, 1));
 					npc.setDisplayEffect(MAHUM_EFFECT_EAT);
 				}
-			
+				
 				startQuestTimer("remove_effects", 300000, npc, null);
 				break;
 			}
@@ -197,9 +196,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 				}
 				break;
 			}
-
 		}
-		
 		return null;
 	}
 	
@@ -218,12 +215,10 @@ public final class SelMahumSquad extends AbstractNpcAI
 			startQuestTimer("chef_set_invul", 60000, npc, null); // 2019006
 			npc.getVariables().set("BUSY_STATE", 1);
 		}
-		
 		else if (Util.contains(SQUAD_LEADERS, npc.getId()))
 		{
 			handlePreAttackMotion(npc);
 		}
-		
 		return null;
 	}
 	
@@ -349,7 +344,6 @@ public final class SelMahumSquad extends AbstractNpcAI
 	}
 	
 	@Override
-	// @SCE_SOUP_FAILURE
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if ((npc.getId() == STOVE) && (skill.getId() == 9075) && Util.contains(targets, npc))

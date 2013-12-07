@@ -269,11 +269,17 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="STIGMA_A" />
+		<set name="castRange" val="1500" />
 		<set name="effectPoint" val="-671" />
+		<set name="effectRange" val="2000" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="76" />
+		<set name="mpConsume" val="42" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" />
+		</for>
 	</skill>
 	<skill id="6034" levels="1" name="Freeze">
 		<!-- CT2.5 retail confirmed -->
