@@ -5670,73 +5670,73 @@ INSERT INTO `npcaidata` VALUES
 (25732, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dragon Beast
 (25733, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Gem Dragon
 (25734, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Parasitic Leech
-(25735, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Fairy Warrior
-(25736, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Fairy Slasher
-(25737, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Fairy Attacker
-(25738, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Satyr Wizard
-(25739, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Satyr Summoner
-(25740, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Satyr Witch
-(25741, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Trichin Defender
-(25742, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Centaur Archer
-(25743, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Beorning Berserker
-(25744, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Double Nightmare
-(25745, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Kimerian
-(25746, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Kimerian Ghost
-(25747, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Kimerian
-(25748, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Fairy Warrior
-(25749, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Fairy Slasher
-(25750, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Fairy Attacker
-(25751, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Satyr Wizard
-(25752, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Satyr Summoner
-(25753, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Satyr Witch
-(25754, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Trichin Defender
-(25755, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Centaur Archer
-(25756, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Beorning Berserker
-(25757, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Double Nightmare
-(25758, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Kimerian
-(25759, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Kimerian Ghost
-(25760, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Turanclass
-(25761, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Georgios
-(25762, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Angelos
-(25763, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Theofanis
-(25764, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Steregos
-(25765, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Beast
-(25766, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Talicrome
-(25767, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Meikaliya
-(25768, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Evangelos
-(25769, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Sotiris
-(25770, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Lazaros
-(25771, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Noctum
-(25772, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Harnak Ghost
-(25773, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Demonic Noctum
-(25774, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Harnak's Evil Spirit
-(25775, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Apherus
-(25776, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Court Guard
-(25777, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Chasseur
-(25778, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Sentry
-(25779, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Spezion
-(25780, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Spezion's Subordinate
-(25781, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Spezion's Subordinate
-(25782, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Spezion's Subordinate
-(25783, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Eyesaroch
-(25784, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Overseer
-(25785, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Teredor
-(25786, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Lachikios
-(25787, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Lachikios
-(25788, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Lachikios
-(25789, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Lachikios
-(25790, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Royal Guard Member
-(25791, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Royal Guard Member
-(25792, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Rachicues
-(25793, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Rachicues
-(25794, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Rachicues
-(25795, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Rachicues
-(25796, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Veridan
-(25797, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Kechi
-(25798, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Kechi's Subordinate
-(25799, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Michaela
-(25800, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Michaela
-(25801, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Teredor
+(25735, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Greyclaw Kutus
+(25736, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Kutus' Guard
+(25737, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Kutus' Pawn
+(25738, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Lead Tracker Sharuk
+(25739, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sharuk's Minion
+(25740, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sharuk's Marksman
+(25741, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Sukar Wererat Chief
+(25742, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sukar Wererat Guard
+(25743, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sukar Wererat Priest
+(25744, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Ikuntai
+(25745, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Ikuntai's Servitor
+(25746, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Ikuntai's Pawn
+(25747, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Zombie Lord Crowl
+(25748, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 15, "archer"), -- Evil Spirit Archer
+(25749, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Evil Spirit Warrior
+(25750, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Zombie Lord Ferkel
+(25751, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Ferkel's Warrior
+(25752, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Ferkel's Priest
+(25753, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Guillotine Warden
+(25754, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Fire Lord Shadar
+(25755, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Sword of Shadar
+(25756, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Whip of Shadar
+(25757, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "balanced"), -- Soul Collector Acheron
+(25758, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Soul Slasher
+(25759, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Soul Strainer
+(25760, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Lord Ishka
+(25761, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Ishka's Elite Officer
+(25762, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Ishka's Elite Soldier
+(25763, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Demon Kuri
+(25764, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Kuri's Wife
+(25765, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Devil Blader of Chaos
+(25766, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "balanced"), -- Ancient Drake
+(25767, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Carnage Lord Gato
+(25768, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 15, "archer"), -- Gato's Marksman
+(25769, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Gato's Champion
+(25770, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Ketra Commander Atis
+(25771, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 15, "archer"), -- Ketra Marksman
+(25772, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Ketra Raider
+(25773, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Beacon of Blue Sky
+(25774, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 15, "archer"), -- Beacon's Shooter
+(25775, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Beacon's Warrior
+(25776, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Earth Protector Panathen
+(25777, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Panathen's Knight
+(25778, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Panathen's Protectors
+(25779, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Betrayer of Urutu Freki
+(25780, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Freki's Vampire Bat
+(25781, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Freki's Wild Bear
+(25782, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 500, 0, "null", 300, "null", 0, 0, "balanced"), -- Nellis' Vengeful Spirit
+(25783, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Nellis' Follower
+(25784, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 500, 0, "null", 300, "null", 0, 0, "balanced"), -- Rayito the Looter
+(25785, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Rayito's Henchman
+(25786, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Rayito's Henchman
+(25787, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Ketra's Hero Hekaton
+(25788, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 15, "archer"), -- Scout of Hekaton
+(25789, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Servant of Hekaton
+(25790, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Varka's Hero Shadith
+(25791, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Shadith's Royal Guard Captain
+(25792, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Shadith's Sentinel
+(25793, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "balanced"), -- Doom Blade Tanatos
+(25794, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Kernon
+(25795, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Taliadon
+(25796, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Vemsk
+(25797, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Meanas Anor
+(25798, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Wyvern of Marsh
+(25799, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Succubus of Marsh
+(25800, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Mammon Collector Talos
+(25801, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Talos' Cohort
 (27001, 7, 15, 0, 1000, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 15, "archer"), -- Orc Sniper
 (27002, 7, 15, 0, 1000, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Orc Fighter
 (27003, 7, 15, 0, 1000, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Spirit Of Mirrors

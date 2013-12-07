@@ -45225,6 +45225,343 @@ INSERT INTO `droplist` VALUES
 (25725, 17266, 1, 1, 2, 2000), -- Will of Antharas
 -- Behemoth Leader
 (25726, 17266, 1, 1, 2, 2000), -- Will of Antharas
+-- Greyclaw Kutus
+(25735, 69, 1, 1, 1, 67691.868545), -- Bastard Sword
+(25735, 125, 1, 1, 1, 67691.868545), -- Spinebone Sword
+(25735, 126, 1, 1, 1, 67691.868545), -- Artisan's Sword
+(25735, 128, 1, 1, 1, 67691.868545), -- Knight's Sword
+(25735, 348, 1, 1, 0, 272693.767227), -- Scale Mail
+(25735, 377, 4, 12, 0, 54506.950827), -- Scale Gaiters
+(25735, 1935, 53, 157, 0, 74357.519607), -- Scale Mail Fragment
+(25735, 1937, 24, 72, 0, 250134.762339), -- Scale Gaiters Fragment
+(25735, 2021, 3, 9, 1, 352919.52582), -- Spinebone Sword Blade
+(25735, 22229, 1, 1, 2, 40258.77498), -- Scroll: Enchant Weapon of Destruction (D-Grade)
+(25735, 22230, 1, 1, 2, 362331.59166), -- Scroll: Enchant Armor of Destruction (D-Grade)
+-- Lead Tracker Sharuk
+(25738, 86, 1, 1, 1, 33845.948), -- Tomahawk
+(25738, 179, 1, 1, 1, 33845.948), -- Mace of Prayer
+(25738, 180, 1, 1, 1, 33845.948), -- Mace of Judgment
+(25738, 181, 1, 1, 1, 33845.948), -- Mace of Miracle
+(25738, 182, 1, 1, 1, 33845.948), -- Doom Hammer
+(25738, 183, 1, 1, 1, 33845.948), -- Mystic Staff
+(25738, 184, 1, 1, 1, 33845.948), -- Conjuror's Staff
+(25738, 185, 1, 1, 1, 33845.948), -- Staff of Mana
+(25738, 433, 6, 16, 0, 16521.512524), -- Elven Tunic
+(25738, 434, 1, 1, 0, 181735.934182), -- White Tunic
+(25738, 435, 1, 1, 0, 181735.934182), -- Mystic's Tunic
+(25738, 466, 4, 12, 0, 36394.186114), -- Elven Stockings
+(25738, 467, 5, 13, 0, 32350.70036), -- Dark Stockings
+(25738, 468, 5, 15, 0, 29115.630324), -- Mystic's Stockings
+(25738, 22229, 4, 10, 2, 103522.612018), -- Scroll: Enchant Weapon of Destruction (D-Grade)
+(25738, 22230, 8, 22, 2, 402588.884744), -- Scroll: Enchant Armor of Destruction (D-Grade)
+(25738, 1933, 24, 72, 0, 171268.041186), -- Dark Stockings Fabric
+(25738, 1936, 53, 157, 0, 54460.061128), -- White Tunic Pattern
+(25738, 2022, 4, 12, 1, 163267.484), -- Mace of Judgment Head
+(25738, 2023, 2, 4, 1, 346364.932), -- Conjuror's Staff Head
+(25738, 6387, 24, 72, 2, 150970.503238), -- Blessed Scroll of Resurrection for Pets
+-- Sukar Wererat Chief
+(25741, 222, 1, 1, 1, 318120), -- Poniard Dagger
+(25741, 605, 4, 12, 0, 256556.773338), -- Leather Gauntlets
+(25741, 22229, 4, 10, 2, 97301.474655), -- Scroll: Enchant Weapon of Destruction (D-Grade)
+(25741, 22230, 8, 22, 2, 378395.51574), -- Scroll: Enchant Armor of Destruction (D-Grade)
+(25741, 1123, 8, 22, 0, 136830.226662), -- Blue Buckskin Boots
+(25741, 6387, 24, 72, 2, 141898.009605), -- Blessed Scroll of Resurrection for Pets
+-- Ikuntai
+(25744, 157, 1, 1, 1, 123684.743895), -- Spiked Club
+(25744, 186, 1, 1, 1, 123684.743895), -- Staff of Magic
+(25744, 849, 4, 10, 0, 132966.5024), -- Tiger's Eye Earring
+(25744, 880, 3, 7, 0, 278664.95744), -- Black Pearl Ring
+(25744, 912, 4, 12, 0, 87215.2064), -- Near Forest Necklace
+(25744, 1901, 72, 216, 0, 220513.33376), -- Tiger's Eye Earring Stone
+(25744, 2027, 12, 36, 1, 250975.51221), -- Spiked Club Head
+(25744, 6387, 60, 180, 2, 298017), -- Blessed Scroll of Resurrection for Pets
+-- Zombie Lord Crowl
+(25747, 83, 1, 1, 1, 53335.55656), -- Sword of Magic
+(25747, 124, 1, 1, 1, 39512.47916), -- Two-Handed Sword
+(25747, 127, 1, 1, 1, 39512.47916), -- Crimson Sword
+(25747, 130, 1, 1, 1, 39512.47916), -- Elven Sword
+(25747, 144, 1, 1, 1, 53335.55656), -- Sword of Occult
+(25747, 436, 2, 4, 0, 167391.631989), -- Tunic of Knowledge
+(25747, 469, 1, 3, 0, 401327.368011), -- Stockings of Knowledge
+(25747, 2026, 3, 9, 1, 294651.4494), -- Two-Handed Sword Edge
+(25747, 22230, 1, 3, 2, 571224), -- Scroll: Enchant Armor of Destruction (D-Grade)
+-- Zombie Lord Ferkel
+(25750, 156, 1, 1, 1, 171845.494821), -- Hand Axe
+(25750, 167, 1, 1, 1, 171845.494821), -- Scalpel
+(25750, 178, 1, 1, 1, 171846.010358), -- Bone Staff
+(25750, 347, 2, 4, 0, 281012.070567), -- Ring Mail Breastplate
+(25750, 376, 4, 12, 0, 168738.929433), -- Iron Plate Gaiters
+(25750, 955, 1, 3, 2, 350848.26512), -- Scroll: Enchant Weapon (D-Grade)
+(25750, 22229, 1, 1, 2, 38983.46976), -- Scroll: Enchant Weapon of Destruction (D-Grade)
+(25750, 22230, 1, 1, 2, 350848.26512), -- Scroll: Enchant Armor of Destruction (D-Grade)
+-- Guillotine Warden
+(25753, 159, 1, 1, 1, 17438.52864), -- Bonebreaker
+(25753, 187, 1, 1, 1, 17438.52864), -- Atuba Hammer
+(25753, 188, 1, 1, 1, 17438.52864), -- Ghost Staff
+(25753, 189, 1, 1, 1, 17438.52864), -- Staff of Life
+(25753, 190, 1, 1, 1, 17438.52864), -- Atuba Mace
+(25753, 353, 1, 1, 0, 134016.19392), -- Half Plate Armor
+(25753, 380, 1, 1, 0, 214426.15936), -- Plate Gaiters
+(25753, 1950, 53, 157, 0, 62305.00416), -- Half Plate Temper
+(25753, 1951, 24, 72, 0, 211972.64256), -- Plate Gaiters Part
+(25753, 2048, 18, 54, 1, 27776.526336), -- Bonebreaker Head
+(25753, 2049, 3, 7, 1, 199993.275456), -- Atuba Hammer Head
+(25753, 2050, 7, 21, 1, 75734.585472), -- Ghost Staff Head
+(25753, 2051, 12, 36, 1, 44178.608448), -- Staff of Life Shaft
+(25753, 2058, 3, 9, 1, 166660.361088), -- Atuba Mace Head
+(25753, 4591, 1, 3, 2, 326602.419916), -- Greater Dye of CON (Con+2 Str-2)
+(25753, 4592, 2, 4, 2, 217735.186845), -- Greater Dye of CON (Con+2 Dex-2)
+(25753, 4593, 2, 6, 2, 163301.209958), -- Greater Dye of DEX (Dex+2 Str-2)
+(25753, 22227, 1, 1, 2, 13064.183281), -- Scroll: Enchant Weapon of Destruction (C-Grade)
+-- Fire Lord Shadar
+(25754, 262, 1, 1, 1, 87192.585431), -- Scallop Jamadhr
+(25754, 438, 1, 1, 0, 219923.93547), -- Sage's Rag
+(25754, 1953, 12, 36, 0, 538011.06453), -- Sage's Rag Lining
+(25754, 2053, 12, 36, 1, 208326.414569), -- Scallop Jamadhr Edge
+(25754, 4594, 1, 3, 2, 326602.621394), -- Greater Dye of DEX (Dex+2 Con-2)
+(25754, 4595, 2, 4, 2, 217735.354135), -- Greater Dye of INT (Int+2 Men-2)
+(25754, 4596, 2, 6, 2, 163301.310697), -- Greater Dye of INT (Int+2 Wit-2)
+(25754, 22228, 1, 1, 2, 111977.713774), -- Scroll: Enchant Armor of Destruction (C-Grade)
+-- Soul Collector Acheron
+(25757, 61, 9, 25, 0, 10511.075844), -- Mithril Plate Gloves
+(25757, 225, 1, 1, 1, 87192.549621), -- Mithril Dagger
+(25757, 607, 9, 27, 0, 9927.127186), -- Ogre Power Gauntlets
+(25757, 22228, 15, 45, 2, 174187.78254), -- Scroll: Enchant Armor of Destruction (C-Grade)
+(25757, 1125, 10, 28, 0, 9405.017595), -- Assault Boots
+(25757, 1949, 112, 336, 0, 33476.852891), -- Mithril Gloves Design
+(25757, 1957, 320, 960, 0, 11716.546264), -- Assault Boots Part
+(25757, 1963, 203, 607, 0, 18515.712542), -- Ogre Power Gauntlets Part
+(25757, 2052, 12, 36, 1, 218498.450379), -- Mithril Dagger Blade
+(25757, 2427, 10, 30, 0, 8934.571022), -- Salamander Skin Boots
+(25757, 2428, 1, 1, 0, 178694.551532), -- Plate Boots
+(25757, 2451, 1, 1, 0, 178694.551532), -- Sage's Worn Gloves
+(25757, 2931, 28, 82, 0, 136341.835594), -- Salamander Skin Boot Lining
+(25757, 2932, 36, 108, 0, 104149.513196), -- Plate Boots Design
+(25757, 2933, 46, 136, 0, 82405.644802), -- Sage's Worn Gloves Lining
+(25757, 4600, 2, 6, 2, 326602.21746), -- Greater Dye of WIT (Wit+2 Men-2)
+-- Lord Ishka
+(25760, 97, 1, 1, 1, 23188.83161), -- Lance
+(25760, 22225, 1, 1, 2, 151671.79523), -- Scroll: Enchant Weapon of Destruction (B-Grade)
+(25760, 2398, 1, 1, 0, 21002.349345), -- Blue Wolf Tunic
+(25760, 2399, 1, 1, 0, 21002.349345), -- Tunic of Doom
+(25760, 2403, 1, 1, 0, 33613.267965), -- Blue Wolf Stockings
+(25760, 2404, 1, 1, 0, 33613.267965), -- Stockings of Doom
+(25760, 4084, 16, 48, 0, 105909.091515), -- Blue Wolf Tunic Fabric
+(25760, 4085, 23, 67, 0, 75313.022445), -- Tunic of Doom Pattern
+(25760, 4086, 60, 180, 0, 38133.874605), -- Blue Wolf Stockings Pattern
+(25760, 4087, 11, 31, 0, 217907.776815), -- Stockings of Doom Pattern
+(25760, 4115, 12, 36, 1, 212676.16839), -- Lance Blade
+(25760, 4613, 1, 3, 2, 261503.392436), -- Greater Dye of STR (Str+4 Con-4)
+(25760, 4614, 2, 4, 2, 174335.116116), -- Greater Dye of STR (Str+4 Dex-4)
+(25760, 4615, 2, 6, 2, 130751.696218), -- Greater Dye of CON (Con+4 Str-4)
+(25760, 8176, 1, 2, 2, 730000), -- Destruction Tombstone
+(25760, 9814, 1, 4, 2, 850000), -- Memento Mori
+-- Demon Kuri
+(25763, 80, 1, 1, 1, 9964.51008), -- Tallum Blade
+(25763, 150, 1, 1, 1, 9964.51008), -- Elemental Sword
+(25763, 22223, 1, 1, 2, 101168.5), -- Scroll: Enchant Weapon of Destruction (A-Grade)
+(25763, 5290, 1, 1, 0, 52614.08262), -- Sealed Dark Crystal Gloves
+(25763, 5291, 1, 1, 0, 52614.08262), -- Sealed Dark Crystal Boots
+(25763, 5295, 1, 1, 0, 52614.08262), -- Sealed Tallum Gloves
+(25763, 5296, 1, 1, 0, 52614.08262), -- Sealed Tallum Boots
+(25763, 5496, 116, 346, 0, 23764.658181), -- Sealed Dark Crystal Boots Lining
+(25763, 5497, 23, 67, 0, 121993.670769), -- Sealed Tallum Boots Lining
+(25763, 5508, 60, 180, 0, 45746.837958), -- Sealed Dark Crystal Gloves Design
+(25763, 5509, 16, 48, 0, 171551.502612), -- Sealed Tallum Gloves Design
+(25763, 5547, 8, 22, 1, 159315.06108), -- Elemental Sword Edge
+(25763, 5548, 4, 12, 1, 298715.91876), -- Tallum Blade Edge
+(25763, 22224, 1, 1, 2, 101168.5), -- Scroll: Enchant Armor of Destruction (A-Grade)
+(25763, 8176, 1, 2, 2, 700000), -- Destruction Tombstone
+(25763, 9814, 1, 4, 2, 830000), -- Memento Mori
+-- Ancient Drake
+(25766, 212, 1, 1, 1, 9869.14242), -- Dasparion's Staff
+(25766, 729, 1, 1, 2, 66800.186371), -- Scroll: Enchant Weapon (A-Grade)
+(25766, 730, 1, 1, 2, 501002.83733), -- Scroll: Enchant Armor (A-Grade)
+(25766, 2504, 1, 1, 1, 9869.14242), -- Meteor Shower
+(25766, 5289, 1, 1, 0, 46285.81449), -- Sealed Dark Crystal Helmet
+(25766, 5292, 1, 1, 0, 66137.0802), -- Sealed Dark Crystal Shield
+(25766, 5294, 1, 1, 0, 46285.81449), -- Sealed Tallum Helmet
+(25766, 5494, 40, 120, 0, 81169.70994), -- Sealed Dark Crystal Shield Fragment
+(25766, 5525, 9, 27, 0, 265532.06085), -- Sealed Dark Crystal Helmet Design
+(25766, 5526, 14, 42, 0, 170699.52003), -- Sealed Tallum Helm Design
+(25766, 5532, 8, 22, 1, 156394.95858), -- Meteor Shower Head
+(25766, 5543, 4, 12, 1, 296006.75658), -- Dasparion's Staff Head
+(25766, 22223, 1, 1, 2, 8015.976299), -- Scroll: Enchant Weapon of Destruction (A-Grade)
+(25766, 22224, 1, 1, 2, 72135.976299), -- Scroll: Enchant Armor of Destruction (A-Grade)
+(25766, 8176, 1, 2, 2, 720000), -- Destruction Tombstone
+(25766, 9815, 1, 4, 2, 850000), -- Dragon Heart
+-- Carnage Lord Gato
+(25767, 91, 1, 1, 1, 13813.737044), -- Heavy War Axe
+(25767, 92, 1, 1, 1, 13813.737044), -- Sprite's Staff
+(25767, 2397, 1, 1, 0, 34264.448611), -- Tunic of Zubei
+(25767, 2402, 1, 1, 0, 54809.727337), -- Stockings of Zubei
+(25767, 2406, 1, 1, 0, 21076.070966), -- Avadon Robe
+(25767, 4069, 9, 27, 0, 268603.794014), -- Tunic of Zubei Fabric
+(25767, 4070, 40, 120, 0, 91762.518009), -- Stockings of Zubei Fabric
+(25767, 4071, 14, 42, 0, 132656.441063), -- Avadon Robe Fabric
+(25767, 4105, 4, 12, 1, 330057.703012), -- Heavy War Axe Head
+(25767, 4106, 8, 22, 1, 173142.8229), -- Sprite's Staff Head
+(25767, 4610, 1, 3, 2, 332293.680726), -- Greater Dye of MEN (Men+3 Wit-3)
+(25767, 4611, 2, 4, 2, 221529.120484), -- Greater Dye of WIT (Wit+3 Int-3)
+(25767, 4612, 2, 6, 2, 166146.840363), -- Greater Dye of WIT (Wit+3 Men-3)
+(25767, 22228, 1, 1, 2, 170893.358427), -- Scroll: Enchant Armor of Destruction (C-Grade)
+(25767, 8176, 1, 1, 2, 850000), -- Destruction Tombstone
+(25767, 9814, 1, 3, 2, 850000), -- Memento Mori
+-- Ketra Commander Atis
+(25770, 119, 1, 1, 0, 96888.312381), -- Necklace of Seal
+(25770, 286, 1, 1, 1, 40181.852172), -- Eminence Bow
+(25770, 855, 1, 1, 0, 129184.198869), -- Nassen's Earring
+(25770, 886, 1, 1, 0, 193776.624762), -- Ring of Seal
+(25770, 1918, 81, 243, 0, 56259.246222), -- Nassen's Earring Gemstone
+(25770, 1920, 140, 420, 0, 25717.094796), -- Necklace of Seal Chain
+(25770, 2121, 3, 9, 1, 725814.147828), -- Eminence Bow Shaft
+(25770, 2917, 40, 120, 0, 151091.52297), -- Ring of Seal Gemstone
+(25770, 4607, 1, 3, 2, 340992.819254), -- Greater Dye of INT (Int+3 Men-3)
+(25770, 4608, 2, 4, 2, 227328.293077), -- Greater Dye of INT (Int+3 Wit-3)
+(25770, 4609, 2, 6, 2, 170496.409627), -- Greater Dye of MEN (Men+3 Int-3)
+(25770, 22227, 1, 1, 2, 20459.478042), -- Scroll: Enchant Weapon of Destruction (C-Grade)
+(25770, 8176, 1, 1, 2, 870000), -- Destruction Tombstone
+(25770, 9814, 1, 3, 2, 870000), -- Memento Mori
+-- Beacon of Blue Sky
+(25773, 64, 1, 1, 0, 286396.192443), -- Composite Boots
+(25773, 231, 1, 1, 1, 24546.01275), -- Grace Dagger
+(25773, 233, 1, 1, 1, 24546.01275), -- Dark Screamer
+(25773, 608, 1, 1, 0, 286396.192443), -- Mithril Gauntlets
+(25773, 22228, 3, 9, 2, 584107.704999), -- Scroll: Enchant Armor of Destruction (C-Grade)
+(25773, 1981, 53, 157, 0, 151461.578904), -- Mithril Gauntlets Design
+(25773, 2106, 4, 12, 1, 276249.704325), -- Grace Dagger Edge
+(25773, 2107, 8, 22, 1, 147333.270175), -- Dark Screamer Edge
+(25773, 2956, 192, 576, 0, 41415.03621), -- Composite Boots Part
+(25773, 4604, 2, 6, 2, 146026.690173), -- Greater Dye of CON (Con+3 Dex-3)
+(25773, 4605, 3, 7, 2, 116821.163277), -- Greater Dye of DEX (Dex+3 Str-3)
+(25773, 4606, 3, 9, 2, 97351.441551), -- Greater Dye of DEX (Dex+3 Con-3)
+(25773, 8176, 1, 1, 2, 750000), -- Destruction Tombstone
+(25773, 9816, 1, 3, 2, 750000), -- Earth Egg
+-- Earth Protector Panathen
+(25776, 325, 1, 1, 1, 67880.705832), -- Horn of Glory
+(25776, 440, 1, 1, 0, 165585.995067), -- Robe of Seal
+(25776, 1970, 12, 36, 0, 465225.004933), -- Robe of Seal Fabric
+(25776, 2088, 12, 36, 1, 220235.294168), -- Horn of Glory Fragment
+(25776, 22228, 1, 1, 2, 555541), -- Scroll: Enchant Armor of Destruction (C-Grade)
+(25776, 8176, 1, 1, 2, 700000), -- Destruction Tombstone
+(25776, 9816, 1, 2, 2, 890000), -- Earth Egg
+-- Betrayer of Urutu Freki
+(25779, 47, 2, 4, 0, 334212.335784), -- Helmet
+(25779, 278, 1, 1, 1, 118536.37999), -- Gastraphetes
+(25779, 628, 4, 12, 0, 179129.664216), -- Hoplon
+(25779, 22230, 12, 36, 2, 793367), -- Scroll: Enchant Armor of Destruction (D-Grade)
+(25779, 2029, 12, 36, 1, 219010.62001), -- Gastraphetes Shaft
+-- Nellis' Vengeful Spirit
+(25782, 62, 11, 33, 0, 4688.80347), -- Reinforced Mithril Boots
+(25782, 96, 1, 1, 1, 25567.548545), -- Scythe
+(25782, 298, 1, 1, 1, 25567.548545), -- Orcish Glaive
+(25782, 302, 1, 1, 1, 25567.548545), -- Body Slasher
+(25782, 951, 1, 1, 2, 531163.081987), -- Scroll: Enchant Weapon (C-Grade)
+(25782, 952, 12, 36, 2, 162299.850411), -- Scroll: Enchant Armor (C-Grade)
+(25782, 1958, 220, 660, 0, 10231.24544), -- Reinforced Mithril Boots Design
+(25782, 2062, 5, 15, 1, 176758.02781), -- Scythe Edge
+(25782, 2075, 9, 27, 1, 98199.25703), -- Orcish Glaive Blade
+(25782, 2076, 2, 6, 1, 441895.069525), -- Body Slasher Blade
+(25782, 2429, 12, 34, 0, 4484.706265), -- Chain Boots
+(25782, 2430, 12, 36, 0, 4297.68183), -- Karmian Boots
+(25782, 2431, 13, 37, 0, 4126.178095), -- Plated Leather Boots
+(25782, 2432, 13, 39, 0, 3967.09092), -- Dwarven Chain Boots
+(25782, 2433, 1, 1, 0, 103152.900305), -- Boots of Seal
+(25782, 2452, 1, 1, 0, 103152.900305), -- Reinforced Mithril Gloves
+(25782, 2453, 1, 1, 0, 103152.900305), -- Chain Gloves
+(25782, 2454, 1, 1, 0, 103152.900305), -- Karmian Gloves
+(25782, 2937, 378, 1134, 0, 5954.516555), -- Chain Boots Part
+(25782, 2938, 26, 78, 0, 86569.80839), -- Karmian Boots Fabric
+(25782, 2939, 35, 105, 0, 64309.244415), -- Plate Leather Boots Lining
+(25782, 2940, 45, 135, 0, 50018.55989), -- Dwarven Chain Boots Part
+(25782, 2941, 56, 168, 0, 40193.180755), -- Boots of Seal Pattern
+(25782, 2942, 68, 204, 0, 33100.220855), -- Reinforced Mithril Gloves Design
+(25782, 2943, 81, 243, 0, 27788.26128), -- Chain Gloves Design
+(25782, 2944, 95, 285, 0, 23693.90062), -- Karmian Gloves Fabric
+(25782, 22227, 1, 1, 2, 19476.067602), -- Scroll: Enchant Weapon of Destruction (C-Grade)
+-- Rayito the Looter
+(25784, 281, 1, 1, 1, 70503.761262), -- Crystallized Ice Bow
+(25784, 397, 1, 1, 0, 142372.411401), -- Mithril Shirt
+(25784, 1961, 53, 157, 0, 63131.7709), -- Mithril Shirt Fabric
+(25784, 2074, 12, 36, 1, 183398.238738), -- Crystallized Ice Bow Shaft
+(25784, 2387, 1, 1, 0, 227514.183226), -- Reinforced Mithril Gaiters
+(25784, 2935, 24, 72, 0, 229434.634473), -- Reinforced Mithril Gaiters Fragment
+(25784, 22228, 1, 1, 2, 460338), -- Scroll: Enchant Armor of Destruction (C-Grade)
+-- Ketra's Hero Hekaton
+(25787, 3936, 1, 1, 2, 509091.236248), -- Blessed Scroll of Resurrection
+(25787, 6367, 1, 1, 1, 7347.704126), -- Angel Slayer
+(25787, 22222, 1, 1, 2, 45252.763752), -- Scroll: Enchant Armor of Destruction (S-Grade)
+(25787, 6680, 1, 1, 0, 13446.4759), -- Sealed Draconic Leather Armor
+(25787, 6691, 3, 9, 1, 565930.295874), -- Angel Slayer Blade
+(25787, 6707, 12, 36, 0, 216211.5241), -- Sealed Draconic Leather Armor Part
+-- Varka's Hero Shadith
+(25790, 959, 1, 1, 2, 27151.629088), -- Scroll: Enchant Weapon (S-Grade)
+(25790, 960, 1, 1, 2, 271516.897268), -- Scroll: Enchant Armor (S-Grade)
+(25790, 6367, 1, 1, 1, 7347.704126), -- Angel Slayer
+(25790, 22221, 1, 1, 2, 4525.473644), -- Scroll: Enchant Weapon of Destruction (S-Grade)
+(25790, 6674, 1, 1, 0, 8194.02108), -- Sealed Imperial Crusader Breastplate
+(25790, 6675, 1, 1, 0, 13111.089512), -- Sealed Imperial Crusader Gaiters
+(25790, 6691, 3, 9, 1, 565930.295874), -- Angel Slayer Blade
+(25790, 6701, 8, 22, 0, 185866.891768), -- Sealed Imperial Crusader Breastplate Part
+(25790, 6702, 4, 12, 0, 448611.99764), -- Sealed Imperial Crusader Gaiters Pattern
+-- Doom Blade Tanatos
+(25793, 236, 1, 1, 1, 21512.677472), -- Soul Separator
+(25793, 730, 1, 3, 2, 602496.381482), -- Scroll: Enchant Armor (A-Grade)
+(25793, 5312, 1, 1, 0, 48796.385672), -- Sealed Helm of Nightmare
+(25793, 5315, 1, 1, 0, 69728.564108), -- Sealed Shield of Nightmare
+(25793, 5317, 1, 1, 0, 48796.385672), -- Sealed Majestic Circlet
+(25793, 5495, 40, 120, 0, 94102.800668), -- Sealed Shield of Nightmare Fragment
+(25793, 5527, 81, 243, 0, 36589.38878), -- Sealed Helm of Nightmare Design
+(25793, 5528, 14, 42, 0, 211694.4751), -- Sealed Majestic Circlet Design
+(25793, 5537, 12, 36, 1, 255028.322528), -- Soul Separator Head
+(25793, 22222, 1, 1, 2, 64266.618518), -- Scroll: Enchant Armor of Destruction (S-Grade)
+(25793, 8176, 1, 4, 2, 820000), -- Destruction Tombstone
+(25793, 8619, 1, 1, 2, 540000), -- Ancient Book: Divine Inspiration (Original Language Version)
+(25793, 9814, 3, 7, 2, 820000), -- Memento Mori
+-- Kernon
+(25794, 959, 1, 1, 2, 39110.313616), -- Scroll: Enchant Weapon (S-Grade)
+(25794, 960, 1, 1, 2, 391104.009626), -- Scroll: Enchant Armor (S-Grade)
+(25794, 6371, 1, 1, 1, 10583.905527), -- Demon Splinter
+(25794, 22221, 1, 1, 2, 6518.676758), -- Scroll: Enchant Weapon of Destruction (S-Grade)
+(25794, 6676, 1, 1, 0, 15738.553335), -- Sealed Imperial Crusader Gauntlet
+(25794, 6677, 1, 1, 0, 15738.553335), -- Sealed Imperial Crusader Boots
+(25794, 6681, 1, 1, 0, 15738.553335), -- Sealed Draconic Leather Glove
+(25794, 6682, 1, 1, 0, 15738.553335), -- Sealed Draconic Leather Boots
+(25794, 6685, 1, 1, 0, 15738.553335), -- Sealed Major Arcana Glove
+(25794, 6686, 1, 1, 0, 15738.553335), -- Sealed Major Arcana Boots
+(25794, 6695, 12, 36, 1, 199953.094473), -- Demon Splinter Blade
+(25794, 6703, 8, 24, 0, 223738.829795), -- Sealed Imperial Crusader Gauntlets Design
+(25794, 6704, 14, 40, 0, 132585.767464), -- Sealed Imperial Crusader Boots Design
+(25794, 6708, 20, 60, 0, 89495.531918), -- Sealed Draconic Leather Gloves Fabric
+(25794, 6709, 28, 82, 0, 65087.407068), -- Sealed Draconic Leather Boots Design
+(25794, 6712, 36, 108, 0, 49719.662799), -- Sealed Major Arcana Gloves fabric
+(25794, 6713, 46, 136, 0, 39340.480946), -- Sealed Major Arcana Boots Design
+-- Meanas Anor
+(25797, 305, 1, 1, 1, 21287.467624), -- Tallum Glaive
+(25797, 959, 1, 1, 2, 38156.405712), -- Scroll: Enchant Weapon (S-Grade)
+(25797, 960, 1, 1, 2, 381564.909282), -- Scroll: Enchant Armor (S-Grade)
+(25797, 5320, 1, 1, 0, 22289.045658), -- Sealed Leather Armor of Nightmare
+(25797, 5323, 1, 1, 0, 22289.045658), -- Sealed Majestic Leather Armor
+(25797, 5480, 4, 12, 0, 412748.06108), -- Sealed Leather Armor of Nightmare Fabric
+(25797, 5481, 8, 22, 0, 220131.847604), -- Sealed Majestic Leather Armor Fabric
+(25797, 5541, 12, 36, 1, 252256.532376), -- Tallum Glaive Edge
+(25797, 22221, 1, 1, 2, 6359.685006), -- Scroll: Enchant Weapon of Destruction (S-Grade)
+(25797, 8176, 1, 4, 2, 820000), -- Destruction Tombstone
+(25797, 8619, 1, 1, 2, 520000), -- Ancient Book: Divine Inspiration (Original Language Version)
+(25797, 9815, 3, 7, 2, 810000), -- Dragon Heart
+-- Mammon Collector Talos
+(25800, 223, 1, 1, 0, 19756.22141), -- Kukuri
+(25800, 238, 1, 1, 0, 19756.22141), -- Dagger of Mana
+(25800, 239, 1, 1, 0, 19756.22141), -- Mystic Knife
+(25800, 241, 1, 1, 0, 19756.22141), -- Shilen Knife
+(25800, 393, 1, 1, 0, 125543.801799), -- Mithril Banded Mail
+(25800, 394, 1, 1, 0, 125543.801799), -- Reinforced Leather Shirt
+(25800, 415, 1, 1, 0, 200664.255381), -- Mithril Banded Gaiters
+(25800, 416, 1, 1, 0, 200664.255381), -- Reinforced Leather Gaiters
+(25800, 1938, 60, 180, 1, 164578.510346), -- Mithril Banded Mail Material
+(25800, 1939, 28, 84, 1, 460776.635407), -- Mithril Banded Gaiters Material
+(25800, 2028, 27, 81, 1, 64637.854247), -- Shilen Knife Edge
+(25800, 22229, 1, 1, 2, 126939), -- Scroll: Enchant Weapon of Destruction (D-Grade)
 -- Queen Ant
 (29001, 2499, 1, 1, 0, 60000), -- Elven Long Sword
 (29001, 70, 1, 1, 0, 60000), -- Claymore
