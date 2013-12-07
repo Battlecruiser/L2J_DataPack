@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.type.L2EtcItemType;
 import com.l2jserver.gameserver.model.items.type.L2WeaponType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
@@ -37,16 +38,63 @@ import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.model.zone.type.L2FishingZone;
 import com.l2jserver.gameserver.model.zone.type.L2WaterZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
-public class Fishing implements ISkillHandler
+public final class Fishing implements ISkillHandler
 {
+	private static final int MIN_BAIT_DISTANCE = 90;
+	private static final int MAX_BAIT_DISTANCE = 250;
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.FISHING
 	};
+	
+	/**
+	 * Computes the Z of the bait.
+	 * @param player the player
+	 * @param baitX the bait x
+	 * @param baitY the bait y
+	 * @param fishingZone the fishing zone
+	 * @param waterZone the water zone
+	 * @return the bait z or {@link Integer#MIN_VALUE} when you cannot fish here
+	 */
+	private int computeBaitZ(final L2PcInstance player, final int baitX, final int baitY, final L2FishingZone fishingZone, final L2WaterZone waterZone)
+	{
+		if ((fishingZone == null))
+		{
+			return Integer.MIN_VALUE;
+		}
+		
+		if ((waterZone == null))
+		{
+			return Integer.MIN_VALUE;
+		}
+		
+		// always use water zone, fishing zone high z is high in the air...
+		int baitZ = waterZone.getWaterZ();
+		
+		if (!GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ(), baitX, baitY, baitZ))
+		{
+			return Integer.MIN_VALUE;
+		}
+		
+		if (GeoData.getInstance().hasGeo(baitX, baitY))
+		{
+			if (GeoData.getInstance().getHeight(baitX, baitY, baitZ) > baitZ)
+			{
+				return Integer.MIN_VALUE;
+			}
+			
+			if (GeoData.getInstance().getHeight(baitX, baitY, player.getZ()) > baitZ)
+			{
+				return Integer.MIN_VALUE;
+			}
+		}
+		
+		return baitZ;
+	}
 	
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
@@ -58,14 +106,12 @@ public class Fishing implements ISkillHandler
 		
 		final L2PcInstance player = activeChar.getActingPlayer();
 		
-		/*
-		 * If fishing is disabled, there isn't much point in doing anything else, unless you are GM. so this got moved up here, before anything else.
-		 */
 		if (!Config.ALLOWFISHING && !player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS))
 		{
-			player.sendMessage("Fishing server is currently offline");
+			player.sendMessage("Fishing is disabled!");
 			return;
 		}
+		
 		if (player.isFishing())
 		{
 			if (player.getFishCombat() != null)
@@ -76,30 +122,24 @@ public class Fishing implements ISkillHandler
 			{
 				player.endFishing(false);
 			}
-			// Cancels fishing
+			
 			player.sendPacket(SystemMessageId.FISHING_ATTEMPT_CANCELLED);
 			return;
 		}
-		L2Weapon weaponItem = player.getActiveWeaponItem();
-		if (((weaponItem == null) || (weaponItem.getItemType() != L2WeaponType.FISHINGROD)))
+		
+		// check for equiped fishing rod
+		L2Weapon equipedWeapon = player.getActiveWeaponItem();
+		if (((equipedWeapon == null) || (equipedWeapon.getItemType() != L2WeaponType.FISHINGROD)))
 		{
-			// Fishing poles are not installed
 			player.sendPacket(SystemMessageId.FISHING_POLE_NOT_EQUIPPED);
 			return;
 		}
-		L2ItemInstance lure = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-		if (lure == null)
-		{
-			// Bait not equiped.
-			player.sendPacket(SystemMessageId.BAIT_ON_HOOK_BEFORE_FISHING);
-			return;
-		}
-		player.setLure(lure);
-		L2ItemInstance lure2 = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		
-		if ((lure2 == null) || (lure2.getCount() < 1)) // Not enough bait.
+		// check for equiped lure
+		L2ItemInstance equipedLeftHand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		if ((equipedLeftHand == null) || (equipedLeftHand.getItemType() != L2EtcItemType.LURE))
 		{
-			player.sendPacket(SystemMessageId.NOT_ENOUGH_BAIT);
+			player.sendPacket(SystemMessageId.BAIT_ON_HOOK_BEFORE_FISHING);
 			return;
 		}
 		
@@ -107,7 +147,6 @@ public class Fishing implements ISkillHandler
 		{
 			if (player.isInBoat())
 			{
-				// You can't fish while you are on boat
 				player.sendPacket(SystemMessageId.CANNOT_FISH_ON_BOAT);
 				return;
 			}
@@ -120,112 +159,97 @@ public class Fishing implements ISkillHandler
 			
 			if (player.isInsideZone(ZoneId.WATER))
 			{
-				// You can't fish in water
 				player.sendPacket(SystemMessageId.CANNOT_FISH_UNDER_WATER);
-				return;
-			}
-			
-			if (player.isInsideZone(ZoneId.PEACE))
-			{
-				// You can't fish here.
-				player.sendPacket(SystemMessageId.CANNOT_FISH_HERE);
 				return;
 			}
 		}
 		
-		/*
-		 * If fishing is enabled, here is the code that was striped from startFishing() in L2PcInstance. Decide now where will the hook be cast...
-		 */
-		int rnd = Rnd.get(150) + 50;
-		double angle = Util.convertHeadingToDegree(player.getHeading());
-		double radian = Math.toRadians(angle);
-		double sin = Math.sin(radian);
-		double cos = Math.cos(radian);
-		int x = player.getX() + (int) (cos * rnd);
-		int y = player.getY() + (int) (sin * rnd);
-		int z = player.getZ() + 50;
-		/*
-		 * ...and if the spot is in a fishing zone. If it is, it will then position the hook on the water surface. If not, you have to be GM to proceed past here... in that case, the hook will be positioned using the old Z lookup method.
-		 */
-		L2FishingZone aimingTo = null;
-		L2WaterZone water = null;
-		boolean canFish = false;
-		for (L2ZoneType zone : ZoneManager.getInstance().getZones(x, y))
+		// calculate a position in front of the player with a random distance
+		int distance = Rnd.get(MIN_BAIT_DISTANCE, MAX_BAIT_DISTANCE);
+		final double angle = Util.convertHeadingToDegree(player.getHeading());
+		final double radian = Math.toRadians(angle);
+		final double sin = Math.sin(radian);
+		final double cos = Math.cos(radian);
+		int baitX = (int) (player.getX() + (cos * distance));
+		int baitY = (int) (player.getY() + (sin * distance));
+		
+		// search for fishing and water zone
+		L2FishingZone fishingZone = null;
+		L2WaterZone waterZone = null;
+		for (final L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
 		{
 			if (zone instanceof L2FishingZone)
 			{
-				aimingTo = (L2FishingZone) zone;
-				continue;
+				fishingZone = (L2FishingZone) zone;
 			}
-			if (zone instanceof L2WaterZone)
+			else if (zone instanceof L2WaterZone)
 			{
-				water = (L2WaterZone) zone;
+				waterZone = (L2WaterZone) zone;
+			}
+			
+			if ((fishingZone != null) && (waterZone != null))
+			{
+				break;
 			}
 		}
-		if (aimingTo != null)
+		
+		int baitZ = computeBaitZ(player, baitX, baitY, fishingZone, waterZone);
+		if (baitZ == Integer.MIN_VALUE)
 		{
-			// fishing zone found, we can fish here
-			if (Config.GEODATA > 0)
+			for (distance = MAX_BAIT_DISTANCE; distance >= MIN_BAIT_DISTANCE; --distance)
 			{
-				// geodata enabled, checking if we can see end of the pole
-				if (GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), z, x, y, z))
+				baitX = (int) (player.getX() + (cos * distance));
+				baitY = (int) (player.getY() + (sin * distance));
+				
+				// search for fishing and water zone again
+				fishingZone = null;
+				waterZone = null;
+				for (final L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
 				{
-					// finding z level for hook
-					if (water != null)
+					if (zone instanceof L2FishingZone)
 					{
-						// water zone exist
-						if (GeoData.getInstance().getHeight(x, y, z) < water.getWaterZ())
-						{
-							// water Z is higher than geo Z
-							z = water.getWaterZ() + 10;
-							canFish = true;
-						}
+						fishingZone = (L2FishingZone) zone;
 					}
-					else
+					else if (zone instanceof L2WaterZone)
 					{
-						// no water zone, using fishing zone
-						if (GeoData.getInstance().getHeight(x, y, z) < aimingTo.getWaterZ())
-						{
-							// fishing Z is higher than geo Z
-							z = aimingTo.getWaterZ() + 10;
-							canFish = true;
-						}
+						waterZone = (L2WaterZone) zone;
+					}
+					
+					if ((fishingZone != null) && (waterZone != null))
+					{
+						break;
 					}
 				}
-			}
-			else
-			{
-				// geodata disabled
-				// if water zone exist using it, if not - using fishing zone
-				if (water != null)
+				
+				baitZ = computeBaitZ(player, baitX, baitY, fishingZone, waterZone);
+				if (baitZ != Integer.MIN_VALUE)
 				{
-					z = water.getWaterZ() + 10;
+					break;
+				}
+			}
+			
+			if (baitZ == Integer.MIN_VALUE)
+			{
+				if (player.isGM())
+				{
+					baitZ = player.getZ();
 				}
 				else
 				{
-					z = aimingTo.getWaterZ() + 10;
+					player.sendPacket(SystemMessageId.CANNOT_FISH_HERE);
+					return;
 				}
-				canFish = true;
 			}
 		}
-		if (!canFish)
+		
+		if (!player.destroyItem("FishingSkillHandler", equipedLeftHand, 1, null, false))
 		{
-			// You can't fish here
-			player.sendPacket(SystemMessageId.CANNOT_FISH_HERE);
-			if (!player.isGM())
-			{
-				return;
-			}
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_BAIT);
+			return;
 		}
-		// Has enough bait, consume 1 and update inventory. Start fishing
-		// follows.
-		lure2 = player.getInventory().destroyItem("Consume", player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LHAND), 1, player, null);
-		InventoryUpdate iu = new InventoryUpdate();
-		iu.addModifiedItem(lure2);
-		player.sendPacket(iu);
-		// If everything else checks out, actually cast the hook and start
-		// fishing... :P
-		player.startFishing(x, y, z);
+		
+		player.setLure(equipedLeftHand);
+		player.startFishing(baitX, baitY, baitZ);
 	}
 	
 	@Override
