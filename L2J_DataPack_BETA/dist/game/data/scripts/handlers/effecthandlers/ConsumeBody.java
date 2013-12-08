@@ -44,7 +44,7 @@ public final class ConsumeBody extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffected().isNpc())
+		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffected().isNpc() || !info.getEffected().isDead())
 		{
 			return;
 		}
