@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00103_SpiritOfCraftsman' WHERE name='103_SpiritOfCraftsman';
