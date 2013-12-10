@@ -18,7 +18,7 @@
  */
 package ai.npc.Jinia;
 
-import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
+import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -59,7 +59,7 @@ public final class Jinia extends AbstractNpcAI
 			}
 			else
 			{
-				final QuestState st = player.getQuestState("Q10286_ReunionWithSirra");
+				final QuestState st = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
 				if ((st != null) && st.isCompleted())
 				{
 					giveItems(player, FROZEN_CORE, 1);
@@ -77,7 +77,7 @@ public final class Jinia extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(Q10285_MeetingSirra.class.getSimpleName());
+		final QuestState st = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
 		return ((player.getLevel() >= MIN_LEVEL) && (st != null) && st.isCompleted()) ? "32781-02.html" : "32781-01.html";
 	}
 	
