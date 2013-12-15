@@ -24,6 +24,7 @@ import java.util.StringTokenizer;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.communitybbs.Manager.RegionBBSManager;
 import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.enums.Team;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -385,7 +386,7 @@ public class AdminEffects implements IAdminCommandHandler
 				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
 				for (L2PcInstance player : plrs)
 				{
-					player.setTeam(0);
+					player.setTeam(Team.NONE);
 					player.broadcastUserInfo();
 				}
 			}
@@ -403,25 +404,24 @@ public class AdminEffects implements IAdminCommandHandler
 				{
 					radius = Integer.parseInt(st.nextToken());
 				}
-				int teamVal = Integer.parseInt(val);
+				Team team = Team.valueOf(val.toUpperCase());
 				Collection<L2Character> plrs = activeChar.getKnownList().getKnownCharactersInRadius(radius);
 				
 				for (L2Character player : plrs)
 				{
-					player.setTeam(teamVal);
+					player.setTeam(team);
 				}
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage: //setteam_close <teamId>");
+				activeChar.sendMessage("Usage: //setteam_close <none|blue|red> [radius]");
 			}
 		}
 		else if (command.startsWith("admin_setteam"))
 		{
 			try
 			{
-				String val = st.nextToken();
-				int teamVal = Integer.parseInt(val);
+				Team team = Team.valueOf(st.nextToken().toUpperCase());
 				L2Character target = null;
 				if (activeChar.getTarget() instanceof L2Character)
 				{
@@ -431,11 +431,11 @@ public class AdminEffects implements IAdminCommandHandler
 				{
 					return false;
 				}
-				target.setTeam(teamVal);
+				target.setTeam(team);
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage: //setteam <teamId>");
+				activeChar.sendMessage("Usage: //setteam <none|blue|red>");
 			}
 		}
 		else if (command.startsWith("admin_social"))
