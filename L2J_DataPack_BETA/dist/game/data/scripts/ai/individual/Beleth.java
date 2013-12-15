@@ -200,24 +200,24 @@ public final class Beleth extends AbstractNpcAI
 						CAMERA3 = spawn(29122, new Location(16323, 213170, -9357, 0, instanceId));
 						CAMERA4 = spawn(29123, new Location(16323, 214917, -9356, 0, instanceId));
 						ZONE.broadcastPacket(new PlaySound(1, "BS07_A", 1, CAMERA.getObjectId(), CAMERA.getX(), CAMERA.getY(), CAMERA.getZ()));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 75, -25, 0, 2500, 0, 0, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 75, -25, 0, 2500, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 75, -25, 0, 2500, 0, 0, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 75, -25, 0, 2500, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(2), 300);
 						break;
 					case 2:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 1800, -45, -45, 5000, 5000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 1800, -45, -45, 5000, 5000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(3), 4900);
 						break;
 					case 3:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 2500, -120, -45, 5000, 5000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 2500, -120, -45, 5000, 5000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(4), 4900);
 						break;
 					case 4:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA2.getObjectId(), 2200, 130, 0, 0, 1500, -20, 15, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA2, 2200, 130, 0, 0, 1500, -20, 15, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(5), 1400);
 						break;
 					case 5:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA2.getObjectId(), 2300, 100, 0, 2000, 4500, 0, 10, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA2, 2300, 100, 0, 2000, 4500, 0, 10, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(6), 2500);
 						break;
 					case 6:
@@ -228,17 +228,17 @@ public final class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(7), 1700);
 						break;
 					case 7:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA4.getObjectId(), 1500, 210, 0, 0, 1500, 0, 0, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA4.getObjectId(), 900, 255, 0, 5000, 6500, 0, 10, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA4, 1500, 210, 0, 0, 1500, 0, 0, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA4, 900, 255, 0, 5000, 6500, 0, 10, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(8), 6000);
 						break;
 					case 8:
 						spawn(29125, new Location(16323, 214917, -9356, 0, instanceId));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA4.getObjectId(), 900, 255, 0, 0, 1500, 0, 10, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA4, 900, 255, 0, 0, 1500, 0, 10, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(9), 1000);
 						break;
 					case 9:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA4.getObjectId(), 1000, 255, 0, 7000, 17000, 0, 25, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA4, 1000, 255, 0, 7000, 17000, 0, 25, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(10), 3000);
 						break;
 					case 10:
@@ -259,20 +259,20 @@ public final class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(12), 6800);
 						break;
 					case 12:
-						ZONE.broadcastPacket(new SpecialCamera(BELETH.getObjectId(), 0, 270, -5, 0, 4000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(BELETH, 0, 270, -5, 0, 4000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(13), 3500);
 						break;
 					case 13:
-						ZONE.broadcastPacket(new SpecialCamera(BELETH.getObjectId(), 800, 270, 10, 3000, 6000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(BELETH, 800, 270, 10, 3000, 6000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(14), 5000);
 						break;
 					case 14:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 100, 270, 15, 0, 5000, 0, 0, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 100, 270, 15, 0, 5000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 100, 270, 15, 0, 5000, 0, 0, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 100, 270, 15, 0, 5000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(15), 100);
 						break;
 					case 15:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 100, 270, 15, 3000, 6000, 0, 5, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 100, 270, 15, 3000, 6000, 0, 5, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(16), 1400);
 						break;
 					case 16:
@@ -284,11 +284,11 @@ public final class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(18), 2000);
 						break;
 					case 18:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 700, 270, 20, 1500, 8000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 700, 270, 20, 1500, 8000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(19), 6900);
 						break;
 					case 19:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 40, 260, 0, 0, 4000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 40, 260, 0, 0, 4000, 0, 0, 1, 0, 0));
 						for (L2Npc blth : MINIONS)
 						{
 							blth.spawnMe();
@@ -296,11 +296,11 @@ public final class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(20), 3000);
 						break;
 					case 20:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 40, 280, 0, 0, 4000, 5, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 40, 280, 0, 0, 4000, 5, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(21), 3000);
 						break;
 					case 21:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 5, 250, 5, 0, 13000, 20, 15, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 5, 250, 5, 0, 13000, 20, 15, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(22), 1000);
 						break;
 					case 22:
@@ -340,23 +340,23 @@ public final class Beleth extends AbstractNpcAI
 						BELETH.doDie(null);
 						CAMERA = spawn(29122, new Location(16323, 213170, -9357, 0, instanceId));
 						CAMERA.broadcastPacket(new PlaySound(1, "BS07_D", 1, CAMERA.getObjectId(), CAMERA.getX(), CAMERA.getY(), CAMERA.getZ()));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 290, 25, 0, 10000, 0, 0, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 290, 25, 0, 10000, 0, 0, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 110, 25, 4000, 10000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 290, 25, 0, 10000, 0, 0, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 290, 25, 0, 10000, 0, 0, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 110, 25, 4000, 10000, 0, 0, 1, 0, 0));
 						ZONE.broadcastPacket(new SocialAction(BELETH.getObjectId(), 5));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(28), 4000);
 						break;
 					case 28:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 295, 25, 4000, 5000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 295, 25, 4000, 5000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(29), 4500);
 						break;
 					case 29:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 295, 10, 4000, 11000, 0, 25, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 295, 10, 4000, 11000, 0, 25, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(30), 9000);
 						break;
 					case 30:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 250, 90, 25, 0, 1000, 0, 0, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 250, 90, 25, 0, 10000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 250, 90, 25, 0, 1000, 0, 0, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 250, 90, 25, 0, 10000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(31), 2000);
 						break;
 					case 31:
@@ -366,8 +366,8 @@ public final class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(32), 3500);
 						break;
 					case 32:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA2.getObjectId(), 800, 180, 0, 0, 4000, 0, 10, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA2.getObjectId(), 800, 180, 0, 0, 4000, 0, 10, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA2, 800, 180, 0, 0, 4000, 0, 10, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA2, 800, 180, 0, 0, 4000, 0, 10, 1, 0, 0));
 						L2DoorInstance door2 = DoorTable.getInstance().getDoor(20240002);
 						door2.openMe();
 						ZONE.broadcastPacket(new StaticObject(door2, false));

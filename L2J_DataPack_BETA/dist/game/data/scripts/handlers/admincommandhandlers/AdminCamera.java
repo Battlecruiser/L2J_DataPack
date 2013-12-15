@@ -21,29 +21,65 @@ package handlers.admincommandhandlers;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
+import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.network.SystemMessageId;
 
+/**
+ * Camera commands.
+ * @author Zoey76
+ */
 public class AdminCamera implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_camera"
+		"admin_cam",
+		"admin_camex",
+		"admin_cam3"
 	};
 	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		try
+		if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter())
 		{
-			final L2Character target = (L2Character) activeChar.getTarget();
-			final String[] com = command.split(" ");
-			
-			target.broadcastPacket(new SpecialCamera(target.getObjectId(), Integer.parseInt(com[1]), Integer.parseInt(com[2]), Integer.parseInt(com[3]), Integer.parseInt(com[4]), Integer.parseInt(com[5]), Integer.parseInt(com[6]), Integer.parseInt(com[7]), Integer.parseInt(com[8]), Integer.parseInt(com[9])));
-		}
-		catch (Exception e)
-		{
-			activeChar.sendMessage("Usage: //camera dist yaw pitch time duration turn rise widescreen unknown");
+			activeChar.sendPacket(SystemMessageId.TARGET_CANT_FOUND);
 			return false;
+		}
+		
+		final L2Character target = (L2Character) activeChar.getTarget();
+		final String[] com = command.split(" ");
+		switch (com[0])
+		{
+			case "admin_cam":
+			{
+				if (com.length != 12)
+				{
+					activeChar.sendMessage("Usage: //cam force angle1 angle2 time range duration relYaw relPitch isWide relAngle");
+					return false;
+				}
+				Quest.specialCamera(activeChar, target, Integer.parseInt(com[1]), Integer.parseInt(com[2]), Integer.parseInt(com[3]), Integer.parseInt(com[4]), Integer.parseInt(com[5]), Integer.parseInt(com[6]), Integer.parseInt(com[7]), Integer.parseInt(com[8]), Integer.parseInt(com[9]), Integer.parseInt(com[10]));
+				break;
+			}
+			case "admin_camex":
+			{
+				if (com.length != 10)
+				{
+					activeChar.sendMessage("Usage: //camex force angle1 angle2 time duration relYaw relPitch isWide relAngle");
+					return false;
+				}
+				Quest.specialCameraEx(activeChar, target, Integer.parseInt(com[1]), Integer.parseInt(com[2]), Integer.parseInt(com[3]), Integer.parseInt(com[4]), Integer.parseInt(com[5]), Integer.parseInt(com[6]), Integer.parseInt(com[7]), Integer.parseInt(com[8]), Integer.parseInt(com[9]));
+				break;
+			}
+			case "admin_cam3":
+			{
+				if (com.length != 12)
+				{
+					activeChar.sendMessage("Usage: //cam3 force angle1 angle2 time range duration relYaw relPitch isWide relAngle unk");
+					return false;
+				}
+				Quest.specialCamera3(activeChar, target, Integer.parseInt(com[1]), Integer.parseInt(com[2]), Integer.parseInt(com[3]), Integer.parseInt(com[4]), Integer.parseInt(com[5]), Integer.parseInt(com[6]), Integer.parseInt(com[7]), Integer.parseInt(com[8]), Integer.parseInt(com[9]), Integer.parseInt(com[10]), Integer.parseInt(com[11]));
+				break;
+			}
 		}
 		return true;
 	}

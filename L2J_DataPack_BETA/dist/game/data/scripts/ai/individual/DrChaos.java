@@ -66,7 +66,7 @@ public final class DrChaos extends Quest
 			if (machine != null)
 			{
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine);
-				machine.broadcastPacket(new SpecialCamera(machine.getObjectId(), 1, -200, 15, 10000, 20000, 0, 0, 1, 0));
+				machine.broadcastPacket(new SpecialCamera(machine, 1, -200, 15, 10000, 1000, 20000, 0, 0, 0, 0, 0));
 			}
 			else
 			{
@@ -80,7 +80,7 @@ public final class DrChaos extends Quest
 		}
 		else if (event.equalsIgnoreCase("3"))
 		{
-			npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1, -150, 10, 3000, 20000, 0, 0, 1, 0));
+			npc.broadcastPacket(new SpecialCamera(npc, 1, -150, 10, 3000, 1000, 20000, 0, 0, 0, 0, 0));
 			startQuestTimer("4", 2500, npc, player);
 		}
 		else if (event.equalsIgnoreCase("4"))
@@ -102,7 +102,7 @@ public final class DrChaos extends Quest
 		}
 		else if (event.equalsIgnoreCase("6"))
 		{
-			npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 30, -200, 20, 6000, 8000, 0, 0, 1, 0));
+			npc.broadcastPacket(new SpecialCamera(npc, 30, -200, 20, 6000, 700, 8000, 0, 0, 0, 0, 0));
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

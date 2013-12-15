@@ -2220,17 +2220,17 @@ public final class CrystalCaverns extends Quest
 			}
 			else if (event.equalsIgnoreCase("baylorCamera0"))
 			{
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 500, -45, 170, 5000, 9000, 0, 0, 1, 0));
+				npc.broadcastPacket(new SpecialCamera(npc, 500, -45, 170, 5000, 9000, 0, 0, 1, 0, 0));
 			}
 			else if (event.equalsIgnoreCase("baylorEffect1"))
 			{
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 300, 0, 120, 2000, 5000, 0, 0, 1, 0));
+				npc.broadcastPacket(new SpecialCamera(npc, 300, 0, 120, 2000, 5000, 0, 0, 1, 0, 0));
 				npc.broadcastSocialAction(3);
 				startQuestTimer("baylorEffect2", 4000, npc, null);
 			}
 			else if (event.equalsIgnoreCase("baylorEffect2"))
 			{
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 747, 0, 160, 2000, 3000, 0, 0, 1, 0));
+				npc.broadcastPacket(new SpecialCamera(npc, 747, 0, 160, 2000, 3000, 0, 0, 1, 0, 0));
 				npc.broadcastPacket(new MagicSkillUse(npc, npc, 5402, 1, 2000, 0));
 				startQuestTimer("RaidStart", 2000, npc, null);
 			}
@@ -2343,7 +2343,7 @@ public final class CrystalCaverns extends Quest
 				world._baylor = addSpawn(29099, 153572, 142075, -12738, 10800, false, 0, false, world.getInstanceId());
 				world._baylor.setIsParalyzed(true);
 				world._camera = addSpawn(29120, 153273, 141400, -12738, 10800, false, 0, false, world.getInstanceId());
-				world._camera.broadcastPacket(new SpecialCamera(world._camera.getObjectId(), 700, -45, 160, 500, 15200, 0, 0, 1, 0));
+				world._camera.broadcastPacket(new SpecialCamera(world._camera, 700, -45, 160, 500, 15200, 0, 0, 1, 0, 0));
 				startQuestTimer("baylorMinions", 2000, world._baylor, null);
 			}
 			else if (!event.endsWith("Food"))
