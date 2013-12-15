@@ -446,7 +446,7 @@ public final class Antharas extends AbstractNpcAI
 					break;
 				case 2:
 					// Set camera.
-					broadcastPacket(new SpecialCamera(_antharas.getObjectId(), 700, 13, -19, 0, 20000, 0, 0, 1, 0));
+					broadcastPacket(new SpecialCamera(_antharas, 700, 13, -19, 0, 10000, 20000, 0, 0, 0, 0, 0));
 					
 					// Set next task.
 					if (_socialTask != null)
@@ -459,7 +459,7 @@ public final class Antharas extends AbstractNpcAI
 				
 				case 3:
 					// Do social.
-					broadcastPacket(new SpecialCamera(_antharas.getObjectId(), 700, 13, 0, 6000, 20000, 0, 0, 1, 0));
+					broadcastPacket(new SpecialCamera(_antharas, 700, 13, 0, 6000, 10000, 20000, 0, 0, 0, 0, 0));
 					// Set next task.
 					if (_socialTask != null)
 					{
@@ -469,7 +469,7 @@ public final class Antharas extends AbstractNpcAI
 					_socialTask = ThreadPoolManager.getInstance().scheduleGeneral(new AntharasSpawn(4), 10000);
 					break;
 				case 4:
-					broadcastPacket(new SpecialCamera(_antharas.getObjectId(), 3700, 0, -3, 0, 10000, 0, 0, 1, 0));
+					broadcastPacket(new SpecialCamera(_antharas, 3700, 0, -3, 0, 10000, 10000, 0, 0, 0, 0, 0));
 					// Set next task.
 					if (_socialTask != null)
 					{
@@ -481,7 +481,7 @@ public final class Antharas extends AbstractNpcAI
 				
 				case 5:
 					// Do social.
-					broadcastPacket(new SpecialCamera(_antharas.getObjectId(), 1100, 0, -3, 22000, 30000, 0, 0, 1, 0));
+					broadcastPacket(new SpecialCamera(_antharas, 1100, 0, -3, 22000, 10000, 30000, 0, 0, 0, 0, 0));
 					// Set next task.
 					if (_socialTask != null)
 					{
@@ -493,7 +493,7 @@ public final class Antharas extends AbstractNpcAI
 				
 				case 6:
 					// Set camera.
-					broadcastPacket(new SpecialCamera(_antharas.getObjectId(), 1100, 0, -3, 300, 7000, 0, 0, 1, 0));
+					broadcastPacket(new SpecialCamera(_antharas, 1100, 0, -3, 300, 10000, 7000, 0, 0, 0, 0, 0));
 					// Set next task.
 					if (_socialTask != null)
 					{
@@ -915,7 +915,7 @@ public final class Antharas extends AbstractNpcAI
 	{
 		if ((npc.getId() == 29019) || (npc.getId() == 29066) || (npc.getId() == 29067) || (npc.getId() == 29068))
 		{
-			broadcastPacket(new SpecialCamera(_antharas.getObjectId(), 1200, 20, -10, 0, 13000, 0, 0, 1, 0));
+			broadcastPacket(new SpecialCamera(_antharas, 1200, 20, -10, 0, 10000, 13000, 0, 0, 0, 0, 0));
 			npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 			_cubeSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new CubeSpawn(0), 10000);
 			GrandBossManager.getInstance().setBossStatus(npc.getId(), DEAD);
