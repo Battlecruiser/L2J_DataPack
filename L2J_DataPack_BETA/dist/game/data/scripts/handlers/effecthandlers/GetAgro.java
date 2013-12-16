@@ -20,7 +20,7 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
+import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -52,12 +52,9 @@ public final class GetAgro extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (info.getEffected() instanceof L2NpcInstance)
+		if (info.getEffected() instanceof L2Attackable)
 		{
-			return;
+			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, info.getEffector());
 		}
-		
-		CtrlIntention intention = (info.getEffected().isInCombat() || info.getEffected().isL2Attackable()) ? CtrlIntention.AI_INTENTION_ATTACK : CtrlIntention.AI_INTENTION_FOLLOW;
-		info.getEffected().getAI().setIntention(intention, info.getEffector());
 	}
 }
