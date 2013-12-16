@@ -1808,7 +1808,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="6000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
@@ -1834,7 +1833,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="40000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="AURA" />
@@ -1941,7 +1939,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="TargetMe" />
+			<effect name="GetAgro" />
 		</for>
 	</skill>
 	<skill id="985" levels="1" name="Challenge for Fate">
@@ -1956,7 +1954,6 @@
 		<set name="icon" val="icon.skill0985" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="45000" />
 		<set name="targetType" val="AREA" />
 		<for>
