@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Reunion with Sirra (10286)
  * @author Adry_85
  */
-public class Q10286_ReunionWithSirra extends Quest
+public final class Q10286_ReunionWithSirra extends Quest
 {
 	// NPCs
 	private static final int RAFFORTY = 32020;
@@ -61,7 +61,7 @@ public class Q10286_ReunionWithSirra extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -92,7 +92,7 @@ public class Q10286_ReunionWithSirra extends Quest
 			{
 				if (st.isMemoState(1))
 				{
-					L2Npc sirra = addSpawn(SIRRA, -23905, -8790, -5384, 56238, false, 0, false, npc.getInstanceId());
+					final L2Npc sirra = addSpawn(SIRRA, -23905, -8790, -5384, 56238, false, 0, false, npc.getInstanceId());
 					sirra.broadcastPacket(new NpcSay(sirra.getObjectId(), Say2.NPC_ALL, sirra.getId(), NpcStringId.YOU_ADVANCED_BRAVELY_BUT_GOT_SUCH_A_TINY_RESULT_HOHOHO));
 					st.set("ex", 1);
 					st.setCond(3, true);
@@ -162,13 +162,8 @@ public class Q10286_ReunionWithSirra extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		switch (st.getState())
 		{
 			case State.COMPLETED:

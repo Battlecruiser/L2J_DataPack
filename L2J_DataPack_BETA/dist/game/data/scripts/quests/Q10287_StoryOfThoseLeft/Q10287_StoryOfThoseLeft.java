@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Story of Those Left (10287)
@@ -125,13 +124,21 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 				}
 				break;
 			}
-		}
-		
-		if (Util.isDigit(event) && st.isMemoState(2))
-		{
-			st.rewardItems(Integer.valueOf(event), 1);
-			htmltext = "32020-09.html";
-			st.exitQuest(false, true);
+			case "10549":
+			case "10550":
+			case "10551":
+			case "10552":
+			case "10553":
+			case "14219":
+			{
+				if (st.isMemoState(2))
+				{
+					st.rewardItems(Integer.valueOf(event), 1);
+					htmltext = "32020-09.html";
+					st.exitQuest(false, true);
+				}
+				break;
+			}
 		}
 		return htmltext;
 	}
@@ -141,11 +148,6 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 	{
 		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		switch (st.getState())
 		{
 			case State.COMPLETED:
