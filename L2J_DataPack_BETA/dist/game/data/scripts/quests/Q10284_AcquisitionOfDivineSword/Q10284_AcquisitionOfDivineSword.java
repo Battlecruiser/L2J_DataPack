@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.model.quest.State;
  * Acquisition of Divine Sword (10284)
  * @author Adry_85
  */
-public class Q10284_AcquisitionOfDivineSword extends Quest
+public final class Q10284_AcquisitionOfDivineSword extends Quest
 {
 	// NPCs
 	private static final int RAFFORTY = 32020;
@@ -58,7 +58,7 @@ public class Q10284_AcquisitionOfDivineSword extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -207,13 +207,8 @@ public class Q10284_AcquisitionOfDivineSword extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		switch (st.getState())
 		{
 			case State.COMPLETED:

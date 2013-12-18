@@ -176,7 +176,6 @@ public class Q00198_SevenSignsEmbryo extends Quest
 		{
 			return htmltext;
 		}
-		
 		return "32617-01.html";
 	}
 	
