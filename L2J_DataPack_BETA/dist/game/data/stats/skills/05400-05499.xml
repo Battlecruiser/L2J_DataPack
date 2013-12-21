@@ -223,7 +223,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="DamOverTime" ticks="5" val="#dot">
@@ -250,7 +249,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -677,7 +675,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="99" /> <!-- Base Land Rate -->
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -720,7 +717,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DamOverTime" ticks="5" val="#dot" />
