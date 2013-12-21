@@ -118,7 +118,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -226,7 +225,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -429,7 +427,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
@@ -461,7 +458,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="20" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="PARALYZE" />
@@ -710,7 +706,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -865,7 +860,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1015,7 +1009,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1040,7 +1033,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1067,7 +1059,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="5" val="#dot" />
@@ -1362,7 +1353,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1392,7 +1382,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="1" val="#dot" />
@@ -1414,7 +1403,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1759,7 +1747,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1786,7 +1773,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
@@ -1838,7 +1824,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="removedOnDamage" val="true" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SLEEP" />
@@ -1865,7 +1850,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -1919,7 +1903,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1945,7 +1928,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="20" /> <!-- Base Land Rate -->
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -2126,7 +2108,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -2155,7 +2136,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>

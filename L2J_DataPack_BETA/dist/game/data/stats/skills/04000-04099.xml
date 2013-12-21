@@ -234,7 +234,6 @@
 		<set name="lvlBonusRate" val="3" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="30">
@@ -542,7 +541,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
@@ -574,7 +572,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="35" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
@@ -795,7 +792,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
@@ -827,7 +823,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
@@ -922,7 +917,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="#dot" />
@@ -1117,7 +1111,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="50" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="30" /> <!-- Base Land Rate -->
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1370,7 +1363,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -1617,7 +1609,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
@@ -1829,7 +1820,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
