@@ -199,7 +199,7 @@ class Quest (JQuest) :
                      npc.setTarget(player)
                      skill = SkillTable.getInstance().getInfo(4167,1)
                      if skill != None:
-                        skill.getEffects(npc, player)
+                        skill.applyEffects(npc, player)
                      htmltext = "30747-18.htm"
                elif st.getQuestItemsCount(3501) == 1 :
                   item = player.getInventory().getItemByItemId(3501)
@@ -214,7 +214,7 @@ class Quest (JQuest) :
                      npc.setTarget(player)
                      skill = SkillTable.getInstance().getInfo(4167,1)
                      if skill != None:
-                        skill.getEffects(npc, player)
+                        skill.applyEffects(npc, player)
                      htmltext = "30747-18.htm"
                elif st.getQuestItemsCount(3502) == 1 :
                   item = player.getInventory().getItemByItemId(3502)
@@ -229,7 +229,7 @@ class Quest (JQuest) :
                      npc.setTarget(player)
                      skill = SkillTable.getInstance().getInfo(4167,1)
                      if skill != None:
-                        skill.getEffects(npc, player)
+                        skill.applyEffects(npc, player)
                      htmltext = "30747-18.htm"
                else :
                   htmltext = "30747-18.htm"
