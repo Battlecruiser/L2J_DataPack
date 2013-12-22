@@ -68,13 +68,6 @@ def leader(player) :
            leaderst = leader.getQuestState(qn)
     return leaderst
 
-def isEffected(player,skillId) :
-    bool = 0
-    effect = player.getFirstEffect(skillId)
-    if effect :
-        bool = 1
-    return bool
-        
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr) :
@@ -120,7 +113,7 @@ class Quest (JQuest) :
            st.set("cond","3")
            st.startQuestTimer("poison_timer",3600000)
            st.addNotifyOfDeath(player)
-           SkillTable.getInstance().getInfo(4082,1).getEffects(npc,player);
+           SkillTable.getInstance().getInfo(4082,1).applyEffects(npc,player);
        elif event == "poison_timer" :
            st.exitQuest(1)
            if DEBUG :
@@ -221,10 +214,10 @@ class Quest (JQuest) :
                htmltext = "01"
            elif part == 2 and symbol < 3 :
                htmltext = "05"
-           elif symbol >= 3 and not isEffected(player,4082) :
+           elif symbol >= 3 and not player.isAffectedBySkill(4082) :
                htmltext = "06"
            elif part == 5 and st.getQuestItemsCount(HERB_OF_HARIT) and st.getQuestItemsCount(HERB_OF_VANOR) and \
-                st.getQuestItemsCount(HERB_OF_OEL_MAHUM) and st.getQuestItemsCount(BLOOD_OF_EVA) and isEffected(player,4082):
+                st.getQuestItemsCount(HERB_OF_OEL_MAHUM) and st.getQuestItemsCount(BLOOD_OF_EVA) and player.isAffectedBySkill(4082):
                htmltext = "08"
                st.giveItems(VOUCHER_OF_FAITH,1)
                st.giveItems(POTION_OF_RECOVERY,1)
@@ -235,7 +228,7 @@ class Quest (JQuest) :
                timer = st.getQuestTimer("poison_timer")
                if timer != None : timer.cancel()
            elif part == 3 or part == 4 or part == 5 :
-               if not isEffected(player,4082) :
+               if not player.isAffectedBySkill(4082) :
                    htmltext = "09"
                    st.set("part","1")
                    st.takeItems(ANTIDOTE_RECIPE,-1)
