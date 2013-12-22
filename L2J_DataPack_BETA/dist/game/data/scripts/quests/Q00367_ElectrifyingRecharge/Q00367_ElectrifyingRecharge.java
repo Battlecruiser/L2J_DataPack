@@ -149,8 +149,7 @@ public final class Q00367_ElectrifyingRecharge extends Quest
 				{
 					giveItems(luckyPlayer, TITAN_LAMP5, 1);
 					takeItems(luckyPlayer, TITAN_LAMP4, -1);
-					luckyPlayer.getQuestState(getName()).setCond(2);
-					playSound(luckyPlayer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					luckyPlayer.getQuestState(getName()).setCond(2, true);
 				}
 			}
 			else if ((random == 1) && !hasQuestItems(luckyPlayer, BROKEN_TITAN_LAMP))
