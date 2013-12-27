@@ -2226,8 +2226,12 @@
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
-			<effect name="ChanceSkillTrigger" triggeredId="6090" chanceType="ON_EXIT" />
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6090" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="280" levels="37" name="Burning Fist" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#effectPoints"> -213 -219 -225 -231 -237 -242 -248 -254 -260 -265 -271 -277 -283 -288 -294 -299 -305 -310 -316 -321 -326 -331 -336 -340 -345 -350 -354 -358 -362 -366 -370 -373 -377 -380 -383 -386 -388 </table>

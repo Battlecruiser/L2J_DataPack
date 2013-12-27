@@ -1242,16 +1242,20 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="6126">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6126" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="3076" levels="6" name="Special Ability: Empower">
 		<!-- Confirmed CT2.5 -->
@@ -1328,12 +1332,17 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="6126">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6126" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="3080" levels="10" name="Item Skill: Aggression">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>

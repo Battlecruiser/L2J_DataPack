@@ -947,7 +947,7 @@
 		<table name="#dot"> 60 91 131 177 225 270 305 305 334 334 360 360 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DARK_SEED" />
@@ -972,8 +972,12 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="DamOverTime" ticks="5" val="#dot" />
-			<effect name="ChanceSkillTrigger" triggeredId="5248" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="5248" skillLevel="#calledSkillLevel" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="5248" levels="12" name="Seed Explosion">
 		<!-- CT2.5 retail confirmed -->
@@ -1051,7 +1055,7 @@
 		<table name="#dot"> 32 47 63 82 100 115 126 126 132 132 132 135 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 157 161 163 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="POISON" />
@@ -1073,8 +1077,12 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="DamOverTime" ticks="5" val="#dot" />
-			<effect name="ChanceSkillTrigger" triggeredId="5252" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="5252" skillLevel="#calledSkillLevel" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="5252" levels="12" name="Paralysis">
 		<!-- CT2.5 retail confirmed -->
@@ -1108,7 +1116,7 @@
 		<table name="#dot"> 35 50 68 87 107 123 134 134 139 139 142 142 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1132,8 +1140,12 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="DamOverTime" ticks="5" val="#dot" />
-			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="5252" triggeredLevel="#triggeredLevel" />
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="5252" skillLevel="#calledSkillLevel" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="5254" levels="12" name="Invasion of Spirit">
 		<!-- CT2.5 retail confirmed -->
@@ -1141,7 +1153,7 @@
 		<table name="#dot"> 4 6 8 11 14 17 20 21 22 23 23 23 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DOT_MP" />
@@ -1162,8 +1174,12 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="5" val="#dot" />
-			<effect name="ChanceSkillTrigger" triggeredId="5255" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="5255" skillLevel="#calledSkillLevel" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="5255" levels="12" name="Mana Burn">
 		<!-- CT2.5 retail confirmed -->
@@ -1200,9 +1216,11 @@
 		<set name="mpConsume" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="5257" />
-		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="5257" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="5257" levels="2" name="Death">
 		<!-- CT2.5 retail confirmed -->

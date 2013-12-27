@@ -1184,8 +1184,12 @@
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
-			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="6091" />
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6091" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="1171" levels="19" name="Blazing Circle" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#effectPoints"> -180 -190 -200 -209 -219 -229 -239 -248 -257 -266 -275 -283 -291 -299 -306 -312 -318 -323 -328 </table>

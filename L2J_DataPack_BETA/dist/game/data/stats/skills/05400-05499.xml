@@ -434,8 +434,12 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Stun" />
-			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="5494" />
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="5494" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="5435" levels="1" name="Gust">
 		<!-- Confirmed CT2.5 -->
@@ -460,8 +464,12 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Stun" />
-			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="5494" />
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="5494" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="5436" levels="1" name="Increase Recovery Rate">
 		<!-- Condition causing target to increase recovery rate of HP and MP. -->

@@ -1325,7 +1325,9 @@
 			<player hp="30" />
 		</cond>
 		<for>
-			<effect name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="23214" />
+			<effect name="CallSkill">
+				<param skillId="23214" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22176" levels="1" name="Rune of Spirit">
@@ -1338,7 +1340,9 @@
 			<player mp="10" />
 		</cond>
 		<for>
-			<effect name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="23215" />
+			<effect name="CallSkill">
+				<param skillId="23215" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22177" levels="1" name="Warrior's Breath">

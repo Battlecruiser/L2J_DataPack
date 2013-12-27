@@ -1356,12 +1356,17 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="6125">
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6125" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="4165" levels="17" name="Icy Air">
 		<!-- Cubic skill -->

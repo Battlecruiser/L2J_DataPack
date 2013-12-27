@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.EffectScope;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Formulas;
@@ -54,18 +55,15 @@ public class Dummy implements ISkillHandler
 			}
 			default:
 			{
-				if (skill.hasEffects())
+				for (L2Character target : (L2Character[]) targets)
 				{
-					for (L2Character target : (L2Character[]) targets)
+					if (Formulas.calcBuffDebuffReflection(target, skill))
 					{
-						if (Formulas.calcBuffDebuffReflection(target, skill))
-						{
-							skill.applyEffects(target, activeChar);
-						}
-						else
-						{
-							skill.applyEffects(activeChar, target);
-						}
+						skill.applyEffects(target, activeChar);
+					}
+					else
+					{
+						skill.applyEffects(activeChar, target);
 					}
 				}
 				break;
@@ -73,7 +71,7 @@ public class Dummy implements ISkillHandler
 		}
 		
 		// Self Effect
-		if (skill.hasSelfEffects())
+		if (skill.hasEffects(EffectScope.SELF))
 		{
 			if (activeChar.isAffectedBySkill(skill.getId()))
 			{
