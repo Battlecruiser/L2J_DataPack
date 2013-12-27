@@ -1431,6 +1431,7 @@
 		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="40" />
@@ -1448,7 +1449,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Fear" abnormalTime="20" />
+			<effect name="Fear" />
+			<!-- FIXME: We need an instant effect that will work only vs monsters and fear them with 40% chance for 20 seconds here -->
 		</for>
 	</skill>
 	<skill id="5174" levels="10" name="Poison">
