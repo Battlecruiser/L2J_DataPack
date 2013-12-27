@@ -344,6 +344,7 @@
 	<skill id="21232" levels="1" name="Shiny Lit Platform">
 		<!-- High Five Skill -->
 		<!-- Steps onto the shiny lit platform. -->
+		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -414,6 +415,7 @@
 	<skill id="21237" levels="1" name="7th Anniversary T-shirt: Blessed Protection Ability">
 		<!-- High Five Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -650,6 +652,7 @@
 	<skill id="21258" levels="1" name="Rocking Horse Mount">
 		<!-- High Five Skill -->
 		<!-- Mounts a rocking horse. -->
+		<set name="abnormalTime" val="-1" /> <!-- FIXME: value unconfirmed -->
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
