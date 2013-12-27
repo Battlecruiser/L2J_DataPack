@@ -2245,18 +2245,22 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="40" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="6126">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6126" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="3193" levels="10" name="Item Skill: Medusa">
 		<!-- Confirmed CT2.5 -->

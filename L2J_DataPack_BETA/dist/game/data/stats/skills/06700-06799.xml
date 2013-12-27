@@ -1135,12 +1135,17 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="6779">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6779" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="6777" levels="1" name="Bleeding Gash">
 		<!-- High Five Skill -->

@@ -72,9 +72,11 @@
 			<player mp="10" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="5602" />
 			<effect name="HealPercent" val="100" />
 			<effect name="ManaHealPercent" val="100" />
+			<effect self="1" name="CallSkill">
+				<param skillId="5602" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="704" levels="1" name="Divine Enchanter Water Spirit">
@@ -272,7 +274,9 @@
 				<mul order="0x30" stat="mAtk" val="1.1" />
 				<mul order="0x30" stat="mAtkSpd" val="1.1" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="5602" />
+			<effect self="1" name="CallSkill">
+				<param skillId="5602" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="710" levels="1" name="Divine Summoner Summon Divine Beast">
@@ -387,7 +391,9 @@
 				<basemul order="0x30" stat="rCrit" val="0.2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="5602" />
+			<effect self="1" name="CallSkill">
+				<param skillId="5602" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="715" levels="4" name="Zaken Energy Drain">
@@ -888,8 +894,12 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="DamOverTime" ticks="5" val="351" />
-			<effect name="ChanceSkillTrigger" triggeredId="5248" triggeredLevel="9" chanceType="ON_EXIT" />
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="5248" skillLevel="9" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="737" levels="1" name="Devil Ultimate Defense">
 		<!-- Confirmed CT2.5 -->
@@ -1770,7 +1780,9 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="23298" />
+			<effect name="CallSkill">
+				<param skillId="23298" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="772" levels="1" name="Arrow Rain">
@@ -1796,7 +1808,9 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="23299" />
+			<effect name="CallSkill">
+				<param skillId="23299" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="773" levels="1" name="Ghost Piercing">
@@ -1823,7 +1837,9 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="23300" />
+			<effect name="CallSkill">
+				<param skillId="23300" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="774" levels="1" name="Dread Pool">
@@ -2303,8 +2319,12 @@
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
-			<effect name="ChanceSkillTrigger" triggeredId="6092" chanceType="ON_EXIT" />
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6092" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="792" levels="1" name="Betrayal Mark">
 		<!-- Confirmed CT2.5 -->

@@ -1491,7 +1491,9 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="5602" />
+			<effect self="1" name="CallSkill">
+				<param skillId="5602" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="680" levels="1" name="Divine Knight Hate">
@@ -1646,7 +1648,9 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.2" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="5602" />
+			<effect self="1" name="CallSkill">
+				<param skillId="5602" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="686" levels="1" name="Divine Rogue Stun Shot">
@@ -1794,7 +1798,9 @@
 			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="10" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="5602" />
+			<effect self="1" name="CallSkill">
+				<param skillId="5602" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="692" levels="1" name="Divine Wizard Holy Flare">
@@ -1943,7 +1949,9 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="1.2" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="5602" />
+			<effect self="1" name="CallSkill">
+				<param skillId="5602" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="698" levels="1" name="Divine Healer Major Heal">

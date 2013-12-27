@@ -728,7 +728,7 @@
 		<table name="#effectPoints"> -317 -323 -328 -333 </table>
 		<table name="#magicLvl"> 68 70 72 74 </table>
 		<table name="#mdot"> 16 17 17 17 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 </table>
+		<table name="#calledSkillLevel"> 1 2 3 4 </table>
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="DARK_SEED" />
@@ -754,8 +754,12 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="ManaDamOverTime" ticks="5" val="#mdot" />
-			<effect name="ChanceSkillTrigger" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="5697" skillLevel="#calledSkillLevel" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="836" levels="3" name="Oblivion Trap">
 		<!-- Confirmed CT2.5 -->

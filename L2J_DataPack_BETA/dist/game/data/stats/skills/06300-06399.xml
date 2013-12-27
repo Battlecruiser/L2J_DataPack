@@ -16,7 +16,9 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="6662" />
+			<effect name="CallSkill">
+				<param skillId="6662" skillLevel="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6301" levels="2" name="Cold Mana's Fragment">
