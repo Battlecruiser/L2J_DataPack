@@ -102,15 +102,8 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 			{
 				if (st.isStarted())
 				{
-					if (hasQuestItems(player, CHAPTER_OF_FIRE, CHAPTER_OF_WATER, CHAPTER_OF_WIND, CHAPTER_OF_EARTH))
+					if (exchangeChapters(player, false))
 					{
-						final long waterChapters = getQuestItemsCount(player, CHAPTER_OF_WATER);
-						final long earthChapters = getQuestItemsCount(player, CHAPTER_OF_EARTH);
-						final long windChapters = getQuestItemsCount(player, CHAPTER_OF_WIND);
-						final long fireChapters = getQuestItemsCount(player, CHAPTER_OF_FIRE);
-						final long minCount = Util.min(waterChapters, earthChapters, windChapters, fireChapters);
-						giveAdena(player, minCount * 3600, true);
-						takeItems(player, (int) minCount, CHAPTER_OF_WATER, CHAPTER_OF_EARTH, CHAPTER_OF_WIND, CHAPTER_OF_FIRE);
 						htmltext = "30612-08.html";
 					}
 					else
@@ -124,16 +117,7 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 			{
 				if (st.isStarted())
 				{
-					if (hasQuestItems(player, CHAPTER_OF_FIRE, CHAPTER_OF_WATER, CHAPTER_OF_WIND, CHAPTER_OF_EARTH))
-					{
-						final long waterChapters = getQuestItemsCount(player, CHAPTER_OF_WATER);
-						final long earthChapters = getQuestItemsCount(player, CHAPTER_OF_EARTH);
-						final long windChapters = getQuestItemsCount(player, CHAPTER_OF_WIND);
-						final long fireChapters = getQuestItemsCount(player, CHAPTER_OF_FIRE);
-						final long minCount = Util.min(waterChapters, earthChapters, windChapters, fireChapters);
-						giveAdena(player, minCount * 3600, true);
-					}
-					takeItems(player, -1, CHAPTER_OF_WATER, CHAPTER_OF_EARTH, CHAPTER_OF_WIND, CHAPTER_OF_FIRE);
+					exchangeChapters(player, true);
 					st.exitQuest(true, true);
 					htmltext = event;
 				}
@@ -183,6 +167,22 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 			htmltext = "30612-06.html";
 		}
 		return htmltext;
+	}
+	
+	private final boolean exchangeChapters(L2PcInstance player, boolean takeAllItems)
+	{
+		final long waterChapters = getQuestItemsCount(player, CHAPTER_OF_WATER);
+		final long earthChapters = getQuestItemsCount(player, CHAPTER_OF_EARTH);
+		final long windChapters = getQuestItemsCount(player, CHAPTER_OF_WIND);
+		final long fireChapters = getQuestItemsCount(player, CHAPTER_OF_FIRE);
+		final long minCount = Util.min(waterChapters, earthChapters, windChapters, fireChapters);
+		if (minCount > 0)
+		{
+			giveAdena(player, minCount * 3600, true);
+		}
+		final long countToTake = (takeAllItems ? -1 : minCount);
+		takeItems(player, (int) countToTake, CHAPTER_OF_WATER, CHAPTER_OF_EARTH, CHAPTER_OF_WIND, CHAPTER_OF_FIRE);
+		return (minCount > 0);
 	}
 	
 	public static void main(String args[])
