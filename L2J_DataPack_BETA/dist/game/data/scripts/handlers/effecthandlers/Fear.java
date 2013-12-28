@@ -34,6 +34,7 @@ import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * Fear effect implementation.
@@ -71,26 +72,37 @@ public final class Fear extends AbstractEffect
 	}
 	
 	@Override
+	public int getTicks()
+	{
+		return 5;
+	}
+	
+	@Override
 	public boolean onActionTime(BuffInfo info)
 	{
-		int posX = info.getEffected().getX();
-		int posY = info.getEffected().getY();
+		fearAction(info, false);
+		return false;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		if (info.getEffected().isCastingNow() && info.getEffected().canAbortCast())
+		{
+			info.getEffected().abortCast();
+		}
+		
+		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
+		fearAction(info, true);
+	}
+	
+	private void fearAction(BuffInfo info, boolean start)
+	{
+		double radians = Math.toRadians(start ? Util.calculateAngleFrom(info.getEffector(), info.getEffected()) : Util.convertHeadingToDegree(info.getEffected().getHeading()));
+		
+		int posX = (int) (info.getEffected().getX() + (FEAR_RANGE * Math.cos(radians)));
+		int posY = (int) (info.getEffected().getY() + (FEAR_RANGE * Math.sin(radians)));
 		int posZ = info.getEffected().getZ();
-		
-		int _dX = -1;
-		int _dY = -1;
-		if (info.getEffected().getX() > info.getEffector().getX())
-		{
-			_dX = 1;
-		}
-		
-		if (info.getEffected().getY() > info.getEffector().getY())
-		{
-			_dY = 1;
-		}
-		
-		posX += _dX * FEAR_RANGE;
-		posY += _dY * FEAR_RANGE;
 		
 		if (Config.GEODATA > 0)
 		{
@@ -105,18 +117,5 @@ public final class Fear extends AbstractEffect
 		}
 		
 		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, posZ));
-		return false;
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		if (info.getEffected().isCastingNow() && info.getEffected().canAbortCast())
-		{
-			info.getEffected().abortCast();
-		}
-		
-		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
-		onActionTime(info);
 	}
 }
