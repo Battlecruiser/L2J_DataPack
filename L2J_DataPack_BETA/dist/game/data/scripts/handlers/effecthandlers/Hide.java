@@ -20,13 +20,10 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.network.serverpackets.DeleteObject;
-import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
  * Hide effect implementation.
@@ -58,35 +55,13 @@ public final class Hide extends AbstractEffect
 		if (info.getEffected().isPlayer())
 		{
 			L2PcInstance activeChar = info.getEffected().getActingPlayer();
+			
+			activeChar.setTarget(null);
+			activeChar.abortAttack();
+			activeChar.abortCast();
+			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			activeChar.getAppearance().setInvisible();
 			
-			if ((activeChar.getAI().getNextIntention() != null) && (activeChar.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK))
-			{
-				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			}
-			
-			L2GameServerPacket del = new DeleteObject(activeChar);
-			for (L2Character target : activeChar.getKnownList().getKnownCharacters())
-			{
-				try
-				{
-					if (target.getTarget() == activeChar)
-					{
-						target.setTarget(null);
-						target.abortAttack();
-						target.abortCast();
-						target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-					}
-					
-					if (target.isPlayer())
-					{
-						target.sendPacket(del);
-					}
-				}
-				catch (NullPointerException e)
-				{
-				}
-			}
 		}
 	}
 }
