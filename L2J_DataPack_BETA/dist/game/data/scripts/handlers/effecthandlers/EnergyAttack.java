@@ -21,28 +21,41 @@ package handlers.effecthandlers;
 import com.l2jserver.gameserver.enums.ShotType;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.items.L2Weapon;
+import com.l2jserver.gameserver.model.items.type.L2WeaponType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.stats.BaseStats;
 import com.l2jserver.gameserver.model.stats.Formulas;
-import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.model.stats.Stats;
+import com.l2jserver.util.Rnd;
 
 /**
  * Energy Attack effect implementation.
- * @author Adry_85
+ * @author Nos
  */
 public final class EnergyAttack extends AbstractEffect
 {
+	private final double _power;
+	private final int _criticalChance;
+	private final boolean _ignoreShieldDefence;
+	
 	public EnergyAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		_power = params.getDouble("power", 0);
+		_criticalChance = params.getInt("criticalChance", 0);
+		_ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
 	}
 	
 	@Override
 	public boolean calcSuccess(BuffInfo info)
 	{
+		// TODO: Verify this on retail
 		return !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
@@ -61,46 +74,94 @@ public final class EnergyAttack extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
-		if (activeChar.isAlikeDead())
+		final L2PcInstance attacker = info.getEffector() instanceof L2PcInstance ? (L2PcInstance) info.getEffector() : null;
+		if (attacker == null)
 		{
 			return;
 		}
 		
-		boolean ss = info.getSkill().isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		boolean crit = false;
-		if (info.getSkill().getBaseCritRate() > 0)
-		{
-			crit = Formulas.calcCrit(info.getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
-		}
-		// damage calculation
-		double damage = Formulas.calcPhysDam(activeChar, target, info.getSkill(), shld, false, ss);
+		final L2Character target = info.getEffected();
+		final L2Skill skill = info.getSkill();
 		
-		double modifier = 0;
-		if (activeChar.isPlayer())
+		double attack = attacker.getPAtk(target);
+		int defence = target.getPDef(attacker);
+		
+		if (!_ignoreShieldDefence)
 		{
-			// Charges Formula (each charge increase +25%)
-			modifier = ((activeChar.getActingPlayer().getCharges() * 0.25) + 1);
+			byte shield = Formulas.calcShldUse(attacker, target, skill, true);
+			switch (shield)
+			{
+				case Formulas.SHIELD_DEFENSE_FAILED:
+				{
+					break;
+				}
+				case Formulas.SHIELD_DEFENSE_SUCCEED:
+				{
+					defence += target.getShldDef();
+					break;
+				}
+				case Formulas.SHIELD_DEFENSE_PERFECT_BLOCK:
+				{
+					defence = -1;
+					break;
+				}
+			}
 		}
-		if (crit)
+		
+		double damage = 1;
+		boolean critical = false;
+		
+		if (defence != -1)
 		{
-			damage *= 2;
+			double damageMultiplier = Formulas.calcWeaponTraitBonus(attacker, target) * Formulas.calcAttributeBonus(attacker, target, skill) * Formulas.calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
+			
+			boolean ss = info.getSkill().useSoulShot() && attacker.isChargedShot(ShotType.SOULSHOTS);
+			double ssBoost = ss ? 1.5 : 1.0;
+			
+			double weaponTypeBoost;
+			L2Weapon weapon = attacker.getActiveWeaponItem();
+			if ((weapon != null) && ((weapon.getItemType() == L2WeaponType.BOW) || (weapon.getItemType() == L2WeaponType.CROSSBOW)))
+			{
+				weaponTypeBoost = 70;
+			}
+			else
+			{
+				weaponTypeBoost = 77;
+			}
+			
+			// charge count should be the count before casting the skill but since its reduced before calling effects
+			// we add skill consume charges to current charges
+			double energyChargesBoost = (((attacker.getCharges() + skill.getChargeConsume()) - 1) * 0.2) + 1;
+			
+			attack += _power;
+			attack *= ssBoost;
+			attack *= energyChargesBoost;
+			attack *= weaponTypeBoost;
+			
+			damage = attack / defence;
+			damage *= damageMultiplier;
+			if (target instanceof L2PcInstance)
+			{
+				damage *= attacker.getStat().calcStat(Stats.PVP_PHYS_SKILL_DMG, 1.0);
+				damage *= target.getStat().calcStat(Stats.PVP_PHYS_SKILL_DEF, 1.0);
+				damage *= attacker.getStat().calcStat(Stats.PHYSICAL_SKILL_POWER, 1.0);
+			}
+			
+			critical = (BaseStats.STR.calcBonus(attacker) * _criticalChance) > (Rnd.nextDouble() * 100);
+			if (critical)
+			{
+				damage *= 2;
+			}
 		}
 		
 		if (damage > 0)
 		{
-			double finalDamage = damage * modifier;
-			target.reduceCurrentHp(finalDamage, activeChar, info.getSkill());
-			target.notifyDamageReceived(damage, activeChar, info.getSkill(), crit);
-			activeChar.sendDamageMessage(target, (int) finalDamage, false, crit, false);
+			attacker.sendDamageMessage(target, (int) damage, false, critical, false);
+			target.reduceCurrentHp(damage, attacker, skill);
+			target.notifyDamageReceived(damage, attacker, skill, critical);
+			
 			// Check if damage should be reflected
-			Formulas.calcDamageReflected(activeChar, target, info.getSkill(), crit);
-		}
-		else
-		{
-			activeChar.sendPacket(SystemMessageId.ATTACK_FAILED);
+			Formulas.calcDamageReflected(attacker, target, skill, critical);
 		}
 	}
 }

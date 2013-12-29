@@ -2082,7 +2082,6 @@
 		<table name="#magicLvl"> 60 63 66 69 </table>
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#power"> 1250 1406 1568 1733 </table>
-		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="40" />
 		<set name="chargeConsume" val="2" />
 		<set name="coolTime" val="720" />
@@ -2094,14 +2093,16 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<player Charges="2" />
 		</cond>
 		<for>
-			<effect name="EnergyAttack" />
+			<effect name="EnergyAttack">
+				<param power="#power" />
+				<param criticalChance="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="569" levels="4" name="Attack Storm">
@@ -2112,7 +2113,6 @@
 		<table name="#power"> 625 703 784 867 </table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="150" />
-		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="500" />
 		<set name="chargeConsume" val="3" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -2122,14 +2122,16 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="AREA" />
 		<cond msgId="113" addName="1">
 			<player Charges="3" />
 		</cond>
 		<for>
-			<effect name="EnergyAttack" />
+			<effect name="EnergyAttack">
+				<param power="#power" />
+				<param criticalChance="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="570" levels="4" name="Attack Rage">

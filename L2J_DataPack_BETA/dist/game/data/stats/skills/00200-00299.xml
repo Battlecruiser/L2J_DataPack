@@ -1568,10 +1568,9 @@
 		<table name="#power"> 1948 2042 2138 2236 2337 2439 2544 2651 2760 2870 2982 3095 3210 3325 3442 3559 3676 3794 3911 4029 4146 4262 </table>
 		<table name="#ench1Power"> 4299 4338 4376 4415 4453 4491 4530 4568 4607 4645 4683 4722 4760 4799 4837 4875 4914 4952 4991 5029 5067 5106 5144 5183 5221 5259 5298 5336 5375 5413 </table>
 		<table name="#ench2MpConsume"> 147 145 142 140 137 135 133 130 128 125 123 120 118 115 113 111 108 106 103 101 98 96 94 91 89 86 84 81 79 76 </table>
-		<table name="#enchDuel"> 4336 4410 4485 4559 4634 4708 4783 4857 4932 5006 5081 5155 5230 5304 5379 5453 5527 5602 5676 5751 5825 5900 5974 6049 6123 6198 6272 6347 6347 6496 </table>
+		<table name="#ench7pvpPower"> 4336 4410 4485 4559 4634 4708 4783 4857 4932 5006 5081 5155 5230 5304 5379 5453 5527 5602 5676 5751 5825 5900 5974 6049 6123 6198 6272 6347 6347 6496 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
 		<set name="chargeConsume" val="4" />
 		<set name="coolTime" val="133" />
@@ -1585,11 +1584,9 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
@@ -1605,7 +1602,6 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="magicLvl" val="#enchMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
-		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="Dual Sword" />
@@ -1613,8 +1609,35 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="EnergyAttack" />
+			<effect name="EnergyAttack">
+				<param power="#power" />
+				<param criticalChance="15" />
+				<param ignoreShieldDefence="true" />
+			</effect>
 		</for>
+		<enchant1for>
+			<effect name="EnergyAttack">
+				<param power="#ench1Power" />
+				<param criticalChance="15" />
+				<param ignoreShieldDefence="true" />
+			</effect>
+		</enchant1for>
+		<enchant7for>
+		</enchant7for>
+		<enchant7pvpEffects>
+			<effect name="EnergyAttack">
+				<param power="#ench7pvpPower" />
+				<param criticalChance="15" />
+				<param ignoreShieldDefence="true" />
+			</effect>
+		</enchant7pvpEffects>
+		<enchant7pveEffects>
+			<effect name="EnergyAttack">
+				<param power="4262" />
+				<param criticalChance="15" />
+				<param ignoreShieldDefence="true" />
+			</effect>
+		</enchant7pveEffects>
 	</skill>
 	<skill id="262" levels="37" name="Holy Blessing" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<table name="#amount"> 236 245 254 262 271 281 290 299 308 318 327 337 346 356 365 375 384 393 403 412 421 430 439 448 457 466 474 482 490 498 506 513 520 527 534 540 546 </table>
@@ -2410,10 +2433,9 @@
 		<table name="#power"> 501 535 570 607 646 729 773 820 868 918 971 1025 1081 1140 1200 1262 1327 1393 1461 1531 1603 1677 1753 1830 1908 1988 2070 2153 2237 2322 2408 2494 2581 2669 2757 2846 2934 3022 3109 3196 </table>
 		<table name="#ench1Power"> 3225 3254 3283 3312 3340 3369 3398 3427 3456 3484 3513 3542 3571 3600 3628 3657 3686 3715 3744 3772 3801 3830 3859 3888 3916 3945 3974 4003 4032 4061 </table>
 		<table name="#ench2MpConsume"> 104 103 102 102 101 101 100 99 99 98 97 97 96 95 95 94 93 93 92 91 91 90 90 89 88 88 87 86 86 85 </table>
-		<table name="#enchDuel"> 3251 3307 3363 3419 3475 3531 3587 3642 3698 3754 3810 3866 3922 3978 4034 4089 4145 4201 4257 4313 4369 4425 4480 4536 4592 4648 4704 4760 4816 4872 </table>
+		<table name="#ench7pvpPower"> 3251 3307 3363 3419 3475 3531 3587 3642 3698 3754 3810 3866 3922 3978 4034 4089 4145 4201 4257 4313 4369 4425 4480 4536 4592 4648 4704 4760 4816 4872 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
 		<set name="chargeConsume" val="2" />
 		<set name="coolTime" val="440" />
@@ -2427,11 +2449,9 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
@@ -2447,7 +2467,6 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="magicLvl" val="#enchMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
-		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="Dual Fist" /> <!-- Requires a hand-to-hand weapon -->
@@ -2455,8 +2474,35 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="EnergyAttack" />
+			<effect name="EnergyAttack">
+				<param power="#power" />
+				<param criticalChance="15" />
+				<param ignoreShieldDefence="true" />
+			</effect>
 		</for>
+		<enchant1for>
+			<effect name="EnergyAttack">
+				<param power="#ench1Power" />
+				<param criticalChance="15" />
+				<param ignoreShieldDefence="true" />
+			</effect>
+		</enchant1for>
+		<enchant7for>
+		</enchant7for>
+		<enchant7pvpEffects>
+			<effect name="EnergyAttack">
+				<param power="#ench7pvpPower" />
+				<param criticalChance="15" />
+				<param ignoreShieldDefence="true" />
+			</effect>
+		</enchant7pvpEffects>
+		<enchant7pveEffects>
+			<effect name="EnergyAttack">
+				<param power="3196" />
+				<param criticalChance="15" />
+				<param ignoreShieldDefence="true" />
+			</effect>
+		</enchant7pveEffects>
 	</skill>
 	<skill id="285" levels="27" name="Higher Mana Gain" enchantGroup1="1">
 		<table name="#magicLvl"> 17 20 23 25 28 30 33 35 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 </table>
