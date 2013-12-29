@@ -904,13 +904,20 @@
 	</skill>
 	<skill id="6172" levels="1" name="Presentation - Tyranno">
 		<set name="abnormalLvl" val="1" />
+		<set name="activateRate" val="-1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SIGNAL_A" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1000" />
+		<set name="effectRange" val="400" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<set name="power" val="2320" />
+		<set name="hitTime" val="2500" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="6173" levels="1" name="Presentation - Memorial Service for Repose">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
