@@ -1925,7 +1925,6 @@
 		<set name="mpConsume" val="37" />
 		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
-		<set name="power" val="4500" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
@@ -1935,7 +1934,10 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="EnergyAttack" />
+			<effect name="EnergyAttack">
+				<param power="4500" />
+				<param criticalChance="20" />
+			</effect>
 			<effect name="DamOverTime" ticks="1" val="80" />
 		</for>
 	</skill>
