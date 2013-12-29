@@ -19,31 +19,32 @@
 package instances.MithrilMine;
 
 import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
  * Mithril Mine instance zone.
  * @author Adry_85
  */
-public final class MithrilMine extends Quest
+public final class MithrilMine extends AbstractNpcAI
 {
 	protected class MMWorld extends InstanceWorld
 	{
 		long storeTime = 0;
+		int _count = 0;
 	}
 	
 	private static final int INSTANCEID = 138;
@@ -67,16 +68,12 @@ public final class MithrilMine extends Quest
 		new Location(185920, -184544, -3308, -32544),
 		new Location(185664, -184720, -3308, 27892)
 	};
-	// Misc
-	private int _count = 0;
-	private L2PcInstance _player = null;
 	
 	private MithrilMine()
 	{
-		super(-1, MithrilMine.class.getSimpleName(), "instances");
+		super(MithrilMine.class.getSimpleName(), "instances");
 		addFirstTalkId(KEGOR);
 		addKillId(KEGOR, MITHRIL_MILLIPEDE);
-		addSpawnId(KEGOR);
 		addStartNpc(TARUN, KRUN);
 		addTalkId(TARUN, KRUN, KEGOR);
 	}
@@ -84,6 +81,8 @@ public final class MithrilMine extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
+		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		
 		switch (event)
 		{
 			case "BUFF":
@@ -98,12 +97,11 @@ public final class MithrilMine extends Quest
 			}
 			case "TIMER":
 			{
-				InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
-				if (tmpworld instanceof MMWorld)
+				if (world instanceof MMWorld)
 				{
 					for (Location loc : MOB_SPAWNS)
 					{
-						final L2Attackable spawnedMob = (L2Attackable) addSpawn(MITHRIL_MILLIPEDE, loc, false, 0, false, tmpworld.getInstanceId());
+						final L2Attackable spawnedMob = (L2Attackable) addSpawn(MITHRIL_MILLIPEDE, loc, false, 0, false, world.getInstanceId());
 						spawnedMob.setScriptValue(1);
 						spawnedMob.setIsRunning(true);
 						spawnedMob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc);
@@ -114,17 +112,19 @@ public final class MithrilMine extends Quest
 			}
 			case "FINISH":
 			{
-				if (_count >= 5)
+				for (L2Character knownChar : npc.getKnownList().getKnownCharacters())
 				{
-					npc.setScriptValue(2);
-					npc.setTarget(player);
-					npc.setWalking();
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.I_CAN_FINALLY_TAKE_A_BREATHER_BY_THE_WAY_WHO_ARE_YOU_HMM_I_THINK_I_KNOW_WHO_SENT_YOU));
-					InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-					InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(3000);
-					cancelQuestTimers("FINISH");
+					if ((knownChar != null) && (knownChar.getId() == KEGOR))
+					{
+						final L2Npc kegor = (L2Npc) knownChar;
+						kegor.setScriptValue(2);
+						kegor.setWalking();
+						kegor.setTarget(player);
+						kegor.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
+						broadcastNpcSay(kegor, Say2.NPC_ALL, NpcStringId.I_CAN_FINALLY_TAKE_A_BREATHER_BY_THE_WAY_WHO_ARE_YOU_HMM_I_THINK_I_KNOW_WHO_SENT_YOU);
+					}
 				}
+				InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(3000);
 				break;
 			}
 		}
@@ -159,39 +159,34 @@ public final class MithrilMine extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
+		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final MMWorld _world = ((MMWorld) world);
+		
 		if (npc.getId() == KEGOR)
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.HOW_COULD_I_FALL_IN_A_PLACE_LIKE_THIS));
-			InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.HOW_COULD_I_FALL_IN_A_PLACE_LIKE_THIS);
 			InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(1000);
 		}
 		else
 		{
 			if (npc.isScriptValue(1))
 			{
-				_count++;
+				_world._count++;
 			}
 			
-			if (_count >= 5)
+			if (_world._count >= 5)
 			{
 				final QuestState qs = player.getQuestState(Q10284_AcquisitionOfDivineSword.class.getSimpleName());
 				if ((qs != null) && qs.isMemoState(2))
 				{
-					cancelQuestTimers("BUFF");
+					cancelQuestTimer("BUFF", npc, player);
 					qs.setMemoState(3);
 					qs.setCond(6, true);
+					startQuestTimer("FINISH", 3000, npc, player);
 				}
 			}
 		}
 		return super.onKill(npc, player, isSummon);
-	}
-	
-	@Override
-	public final String onSpawn(L2Npc npc)
-	{
-		npc.setRHandId(15280);
-		startQuestTimer("FINISH", 3000, npc, _player, true);
-		return super.onSpawn(npc);
 	}
 	
 	@Override
@@ -210,7 +205,6 @@ public final class MithrilMine extends Quest
 						qs.giveItems(COLD_RESISTANCE_POTION, 1);
 					}
 					qs.setCond(4, true);
-					_player = talker;
 					enterInstance(talker, "MithrilMine.xml", START_LOC);
 				}
 				break;
