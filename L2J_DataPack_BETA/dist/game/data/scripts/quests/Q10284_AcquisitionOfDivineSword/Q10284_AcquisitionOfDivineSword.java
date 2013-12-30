@@ -75,13 +75,6 @@ public final class Q10284_AcquisitionOfDivineSword extends Quest
 				break;
 			}
 			case "32020-03.html":
-			{
-				if (st.isMemoState(1))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32760-02a.html":
 			case "32760-02b.html":
 			case "32760-03a.html":
