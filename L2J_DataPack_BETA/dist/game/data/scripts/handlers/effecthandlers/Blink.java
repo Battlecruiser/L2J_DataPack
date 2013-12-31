@@ -61,7 +61,7 @@ public final class Blink extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character effected = isSelfEffect() ? info.getEffector() : info.getEffected();
+		final L2Character effected = info.getEffected();
 		final int radius = info.getSkill().getFlyRadius();
 		final double angle = Util.convertHeadingToDegree(effected.getHeading());
 		final double radian = Math.toRadians(angle);
