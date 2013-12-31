@@ -960,9 +960,11 @@
 		<set name="overHit" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect self="1" name="FocusSouls" val="1" />
 			<effect name="PhysicalAttack" />
 		</for>
+		<selfEffects>
+			<effect name="FocusSouls" val="1" />
+		</selfEffects>
 	</skill>
 	<skill id="940" levels="1" name="Fake Attack">
 		<set name="hitTime" val="1000" />
@@ -1958,8 +1960,10 @@
 		<for>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
-			<effect self="1" name="ChanceSkillTrigger" activationChance="30" chanceType="ON_ATTACKED_HIT" triggeredId="6913" />
 		</for>
+		<selfEffects>
+			<effect name="ChanceSkillTrigger" activationChance="30" chanceType="ON_ATTACKED_HIT" triggeredId="6913" />
+		</selfEffects>
 	</skill>
 	<skill id="986" levels="25" name="Deadly Strike">
 		<!-- High Five Skill -->

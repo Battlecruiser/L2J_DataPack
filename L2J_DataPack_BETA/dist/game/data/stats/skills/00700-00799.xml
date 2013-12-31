@@ -74,10 +74,12 @@
 		<for>
 			<effect name="HealPercent" val="100" />
 			<effect name="ManaHealPercent" val="100" />
-			<effect self="1" name="CallSkill">
+		</for>
+		<selfEffects>
+			<effect name="CallSkill">
 				<param skillId="5602" skillLevel="1" />
 			</effect>
-		</for>
+		</selfEffects>
 	</skill>
 	<skill id="704" levels="1" name="Divine Enchanter Water Spirit">
 		<set name="abnormalLvl" val="1" />
@@ -274,10 +276,12 @@
 				<mul order="0x30" stat="mAtk" val="1.1" />
 				<mul order="0x30" stat="mAtkSpd" val="1.1" />
 			</effect>
-			<effect self="1" name="CallSkill">
+		</for>
+		<selfEffects>
+			<effect name="CallSkill">
 				<param skillId="5602" skillLevel="1" />
 			</effect>
-		</for>
+		</selfEffects>
 	</skill>
 	<skill id="710" levels="1" name="Divine Summoner Summon Divine Beast">
 		<set name="hitTime" val="15000" />
@@ -391,10 +395,12 @@
 				<basemul order="0x30" stat="rCrit" val="0.2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 			</effect>
-			<effect self="1" name="CallSkill">
+		</for>
+		<selfEffects>
+			<effect name="CallSkill">
 				<param skillId="5602" skillLevel="1" />
 			</effect>
-		</for>
+		</selfEffects>
 	</skill>
 	<skill id="715" levels="4" name="Zaken Energy Drain">
 		<!-- Confirmed CT2.5 -->

@@ -2154,8 +2154,10 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect self="1" name="FocusEnergy" val="#maxCharges" />
 		</for>
+		<selfEffects>
+			<effect name="FocusEnergy" val="#maxCharges" />
+		</selfEffects>
 	</skill>
 	<skill id="571" levels="4" name="Poison Dust">
 		<!-- Confirmed CT2.5 -->
