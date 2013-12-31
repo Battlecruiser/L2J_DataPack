@@ -716,9 +716,11 @@
 		</for>
 		<enchant2for>
 			<effect name="HpByLevel" val="#ench1Drain" />
-			<effect self="1" name="CpHeal" val="#ench2Bravery" />
 			<effect name="ConsumeBody" />
 		</enchant2for>
+		<enchant2selfEffects>
+			<effect name="CpHeal" val="#ench2Bravery" />
+		</enchant2selfEffects>
 	</skill>
 	<skill id="1154" levels="6" name="Summon Corrupted Man" enchantGroup1="1">
 		<table name="#itemConsumeCount"> 3 3 3 3 3 3 </table>

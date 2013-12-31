@@ -576,14 +576,16 @@
 			<using kind="Dagger,Dual Dagger" />
 		</cond>
 		<for>
-			<effect self="1" name="Buff">
-				<mul order="0x30" stat="blowRate" val="#blowRate" />
-			</effect>
 			<effect name="FatalBlow" />
 			<effect name="Lethal">
 				<param halfLethal="5" />
 			</effect>
 		</for>
+		<selfEffects>
+			<effect name="Buff">
+				<mul order="0x30" stat="blowRate" val="#blowRate" />
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="410" levels="3" name="Mortal Strike" enchantGroup1="2" enchantGroup2="2">
 		<!-- NOTE: This skill increases "Blow Rate" and description in client says "Critical Rate" but is client typo, so please don't change this skill -->

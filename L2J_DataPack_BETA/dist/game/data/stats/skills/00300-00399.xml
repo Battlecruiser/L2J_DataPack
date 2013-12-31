@@ -755,9 +755,6 @@
 			<using kind="Dagger,Dual Dagger" />
 		</cond>
 		<for>
-			<effect self="1" name="Buff">
-				<add order="0x40" stat="runSpd" val="40" />
-			</effect>
 			<effect name="FatalBlow" />
 			<effect name="Bluff">
 				<param chance="80" />
@@ -766,6 +763,11 @@
 				<param halfLethal="5" />
 			</effect>
 		</for>
+		<selfEffects>
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="40" />
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="322" levels="6" name="Shield Fortress" enchantGroup1="1" enchantGroup2="1">
 		<table name="#magicLvl"> 64 66 68 70 72 74 </table>
@@ -1413,8 +1415,10 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect self="1" name="FocusEnergy" val="8" />
 		</for>
+		<selfEffects>
+			<effect name="FocusEnergy" val="8" />
+		</selfEffects>
 	</skill>
 	<skill id="346" levels="1" name="Raging Force">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
@@ -1436,8 +1440,10 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect self="1" name="FocusEnergy" val="8" />
 		</for>
+		<selfEffects>
+			<effect name="FocusEnergy" val="8" />
+		</selfEffects>
 	</skill>
 	<skill id="347" levels="1" name="Earthquake" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
 		<table name="#ench1Power"> 5201 5228 5254 5281 5307 5334 5360 5387 5413 5440 5466 5693 5519 5546 5572 </table>
@@ -2398,23 +2404,27 @@
 			<effect name="TargetMeProbability">
 				<param chance="40" />
 			</effect>
-			<effect self="1" name="ImmobileBuff">
+		</for>
+		<selfEffects>
+			<effect name="ImmobileBuff">
 				<add order="0x40" stat="pDef" val="5400" />
 				<add order="0x40" stat="mDef" val="4050" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
-		</for>
+		</selfEffects>
 		<enchant2for>
 			<effect name="TargetMeProbability">
 				<param chance="40" />
 			</effect>
-			<effect self="1" name="Buff">
+		</enchant2for>
+		<enchant2selfEffects>
+			<effect name="Buff">
 				<add order="0x40" stat="pDef" val="5400" />
 				<add order="0x40" stat="mDef" val="4050" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
 				<mul order="0x30" stat="runSpd" val="#ench2decreasePenalty" />
 			</effect>
-		</enchant2for>
+		</enchant2selfEffects>
 	</skill>
 	<skill id="369" levels="1" name="Evade Shot" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6" enchantGroup8="6">
 		<table name="#ench1Power"> 2168 2179 2190 2201 2212 2223 2234 2245 2256 2267 2278 2289 2300 2311 2322 </table>
@@ -2462,16 +2472,20 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect self="1" name="Buff">
+		</for>
+		<selfEffects>
+			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="6" />
 			</effect>
-		</for>
+		</selfEffects>
 		<enchant2for>
 			<effect name="PhysicalAttack" />
-			<effect self="1" name="Buff">
+		</enchant2for>
+		<enchant2selfEffects>
+			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="#ench2rEvas" />
 			</effect>
-		</enchant2for>
+		</enchant2selfEffects>
 	</skill>
 	<skill id="370" levels="3" name="Clan Body">
 		<!-- Confirmed CT2.5 -->

@@ -1152,9 +1152,11 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect self="1" name="Blink" />
 			<effect name="Stun" />
 		</for>
+		<selfEffects>
+			<effect name="Blink" />
+		</selfEffects>
 	</skill>
 	<skill id="7079" levels="1" name="Test - Party Damage Absorb">
 		<set name="abnormalLvl" val="1" />

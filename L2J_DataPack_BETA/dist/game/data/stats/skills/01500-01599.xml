@@ -1634,8 +1634,10 @@
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect self="1" name="ManaHeal" val="10" /> <!-- FIXME: value unconfirmed -->
 		</for>
+		<selfEffects>
+			<effect name="ManaHeal" val="10" /> <!-- FIXME: value unconfirmed -->
+		</selfEffects>
 	</skill>
 	<skill id="1555" levels="1" name="Aura Cannon">
 		<!-- High Five Skill -->
@@ -1655,8 +1657,10 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect self="1" name="ManaHeal" val="10" /> <!-- FIXME: value unconfirmed -->
 		</for>
+		<selfEffects>
+			<effect name="ManaHeal" val="10" /> <!-- FIXME: value unconfirmed -->
+		</selfEffects>
 	</skill>
 	<skill id="1556" levels="1" name="Arcane Shield">
 		<!-- High Five Skill -->
@@ -1695,7 +1699,6 @@
 		<set name="targetType" val="SERVITOR" />
 		<for>
 			<!-- Note: 0.5 means 50% of owner's patk! -->
-			<effect self="1" name="ServitorShare" /> <!-- This effect is used to cancel pet's effect when player's have been canceled. -->
 			<effect name="ServitorShare">
 				<share order="0x40" stat="pAtk" val="0.5" />
 				<share order="0x40" stat="pDef" val="0.5" />
@@ -1708,6 +1711,9 @@
 				<share order="0x40" stat="mAtkSpd" val="0.03" />
 			</effect>
 		</for>
+		<selfEffects>
+			<effect name="ServitorShare" /> <!-- This effect is used to cancel pet's effect when player's have been canceled. -->
+		</selfEffects>
 	</skill>
 	<skill id="1558" levels="24" name="Dimension Spiral">
 		<!-- High Five Skill -->
@@ -1731,8 +1737,10 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect self="1" name="ChanceSkillTrigger" activationChance="5" chanceType="ON_START" triggeredId="5571" />
 		</for>
+		<selfEffects>
+			<effect name="ChanceSkillTrigger" activationChance="5" chanceType="ON_START" triggeredId="5571" />
+		</selfEffects>
 	</skill>
 	<skill id="1559" levels="3" name="Potential Ability">
 		<!-- High Five Skill -->

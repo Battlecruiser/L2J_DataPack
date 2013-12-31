@@ -1684,10 +1684,12 @@
 		<enchant2 name="flyRadius" val="#ench2Radius" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect self="1" name="Blink" />
 			<effect name="PhysicalSoulAttack" />
 			<effect name="Stun" />
 		</for>
+		<selfEffects>
+			<effect name="Blink" />
+		</selfEffects>
 	</skill>
 	<skill id="1449" levels="1" name="Transfer Soul">
 		<!-- Confirmed CT2.5 -->

@@ -1309,11 +1309,13 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="FatalBlow" />
-			<effect self="1" name="Buff">
+		</for>
+		<selfEffects>
+			<effect name="Buff">
 				<param chance="80" />
 				<add order="0x40" stat="runSpd" val="40" />
 			</effect>
-		</for>
+		</selfEffects>
 	</skill>
 	<skill id="5085" levels="1" name="Anesthesia">
 		<!-- Confirmed CT2.5 -->

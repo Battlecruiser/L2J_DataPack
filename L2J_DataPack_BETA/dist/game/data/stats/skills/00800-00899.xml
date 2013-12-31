@@ -1757,10 +1757,12 @@
 		<set name="simultaneousCast" val="true" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect self="1" name="Blink" />
 			<effect name="PhysicalAttack" />
 			<effect name="Stun" />
 		</for>
+		<selfEffects>
+			<effect name="Blink" />
+		</selfEffects>
 	</skill>
 	<skill id="886" levels="11" name="Air Shock Bomb">
 		<!-- Aurabird Falcon -->

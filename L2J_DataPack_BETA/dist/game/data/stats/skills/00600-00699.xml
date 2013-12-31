@@ -1491,10 +1491,12 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 			</effect>
-			<effect self="1" name="CallSkill">
+		</for>
+		<selfEffects>
+			<effect name="CallSkill">
 				<param skillId="5602" skillLevel="1" />
 			</effect>
-		</for>
+		</selfEffects>
 	</skill>
 	<skill id="680" levels="1" name="Divine Knight Hate">
 		<!-- Confirmed CT2.5 -->
@@ -1648,10 +1650,12 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.2" />
 			</effect>
-			<effect self="1" name="CallSkill">
+		</for>
+		<selfEffects>
+			<effect name="CallSkill">
 				<param skillId="5602" skillLevel="1" />
 			</effect>
-		</for>
+		</selfEffects>
 	</skill>
 	<skill id="686" levels="1" name="Divine Rogue Stun Shot">
 		<set name="abnormalLvl" val="1" />
@@ -1798,10 +1802,12 @@
 			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="10" />
 			</effect>
-			<effect self="1" name="CallSkill">
+		</for>
+		<selfEffects>
+			<effect name="CallSkill">
 				<param skillId="5602" skillLevel="1" />
 			</effect>
-		</for>
+		</selfEffects>
 	</skill>
 	<skill id="692" levels="1" name="Divine Wizard Holy Flare">
 		<set name="abnormalLvl" val="0" />
@@ -1821,10 +1827,12 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect self="1" name="Buff">
+		</for>
+		<selfEffects>
+			<effect name="Buff">
 				<mul order="0x30" stat="pvpMagicalDmg" val="0.5" />
 			</effect>
-		</for>
+		</selfEffects>
 	</skill>
 	<skill id="693" levels="1" name="Divine Wizard Holy Strike">
 		<set name="castRange" val="900" />
@@ -1949,10 +1957,12 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="1.2" />
 			</effect>
-			<effect self="1" name="CallSkill">
+		</for>
+		<selfEffects>
+			<effect name="CallSkill">
 				<param skillId="5602" skillLevel="1" />
 			</effect>
-		</for>
+		</selfEffects>
 	</skill>
 	<skill id="698" levels="1" name="Divine Healer Major Heal">
 		<set name="castRange" val="600" />

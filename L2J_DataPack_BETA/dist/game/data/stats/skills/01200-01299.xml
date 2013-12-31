@@ -853,10 +853,12 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect self="1" name="Buff">
+		</for>
+		<selfEffects>
+			<effect name="Buff">
 				<mul order="0x30" stat="pvpMagicalDmg" val="0.5" />
 			</effect>
-		</for>
+		</selfEffects>
 	</skill>
 	<skill id="1232" levels="3" name="Blazing Skin" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
@@ -986,10 +988,12 @@
 		</enchant3for>
 		<enchant4for>
 			<effect name="HpDrain" val="0.4" />
-			<effect self="1" name="Buff">
+		</enchant4for>
+		<enchant4selfEffects>
+			<effect name="Buff">
 				<add order="0x40" stat="darkPower" val="#enchElementPower" />
 			</effect>
-		</enchant4for>
+		</enchant4selfEffects>
 	</skill>
 	<skill id="1235" levels="28" name="Hydro Blast" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<!-- Confirmed CT2.5 -->
