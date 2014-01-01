@@ -64,7 +64,7 @@ public class NpcBuffersData extends DocumentParser
 					if ("npc".equalsIgnoreCase(d.getNodeName()))
 					{
 						attrs = d.getAttributes();
-						final int npcId = parseInt(attrs, "id");
+						final int npcId = parseInteger(attrs, "id");
 						final NpcBufferData npc = new NpcBufferData(npcId);
 						for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 						{
