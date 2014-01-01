@@ -21,6 +21,7 @@ package quests.Q00416_PathOfTheOrcShaman;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
@@ -279,96 +280,95 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-		if (st != null)
+		if (st == null)
 		{
-			if (npc.getId() == BLACK_LEOPARD)
+			return super.onKill(npc, player, isSummon);
+		}
+		
+		if (npc.getId() == BLACK_LEOPARD)
+		{
+			switch (st.getMemoState())
 			{
-				final int memoState = st.getMemoState();
-				if ((memoState >= 102) && (memoState <= 107))
+				case 102:
 				{
-					final int random = getRandom(100);
-					switch (memoState)
-					{
-						case 102:
-						{
-							st.setMemoState(103);
-							break;
-						}
-						case 103:
-						{
-							st.setMemoState(104);
-							st.setCond(15, true);
-							if (random < 66)
-							{
-								npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.MY_DEAR_FRIEND_OF_S1_WHO_HAS_GONE_ON_AHEAD_OF_ME).addStringParameter(player.getName()));
-							}
-							break;
-						}
-						case 105:
-						{
-							st.setMemoState(106);
-							st.setCond(17, true);
-							if (random < 66)
-							{
-								npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.LISTEN_TO_TEJAKAR_GANDI_YOUNG_OROKA_THE_SPIRIT_OF_THE_SLAIN_LEOPARD_IS_CALLING_YOU_S1).addStringParameter(player.getName()));
-							}
-							break;
-						}
-						case 107:
-						{
-							st.setMemoState(108);
-							st.setCond(19, true);
-							break;
-						}
-					}
+					st.setMemoState(103);
+					break;
 				}
-				return super.onKill(npc, player, isSummon);
+				case 103:
+				{
+					st.setMemoState(104);
+					st.setCond(15, true);
+					if (getRandom(100) < 66)
+					{
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.MY_DEAR_FRIEND_OF_S1_WHO_HAS_GONE_ON_AHEAD_OF_ME).addStringParameter(st.getPlayer().getName()));
+					}
+					break;
+				}
+				case 105:
+				{
+					st.setMemoState(106);
+					st.setCond(17, true);
+					if (getRandom(100) < 66)
+					{
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.LISTEN_TO_TEJAKAR_GANDI_YOUNG_OROKA_THE_SPIRIT_OF_THE_SLAIN_LEOPARD_IS_CALLING_YOU_S1).addStringParameter(st.getPlayer().getName()));
+					}
+					break;
+				}
+				case 107:
+				{
+					st.setMemoState(108);
+					st.setCond(19, true);
+					break;
+				}
 			}
-			
-			final ItemChanceHolder item = MOBS.get(npc.getId());
-			if (item.getCount() == st.getCond())
+			return super.onKill(npc, player, isSummon);
+		}
+		
+		final ItemChanceHolder item = MOBS.get(npc.getId());
+		if (item.getCount() == st.getCond())
+		{
+			if (st.isCond(1) && hasQuestItems(st.getPlayer(), FIRE_CHARM))
 			{
-				if (st.isCond(1) && hasQuestItems(st.getPlayer(), FIRE_CHARM))
+				if (giveItemRandomly(st.getPlayer(), npc, item.getId(), 1, 1, item.getChance(), true) //
+					&& hasQuestItems(st.getPlayer(), FIRST_FIERY_EGG, KASHA_BLADE_SPIDER_HUSK, KASHA_BEAR_PELT))
 				{
-					if (giveItemRandomly(st.getPlayer(), npc, item.getId(), 1, 1, item.getChance(), true) //
-						&& hasQuestItems(st.getPlayer(), FIRST_FIERY_EGG, KASHA_BLADE_SPIDER_HUSK, KASHA_BEAR_PELT))
-					{
-						st.setCond(2, true);
-					}
+					st.setCond(2, true);
 				}
-				else if (st.isCond(6) && hasQuestItems(st.getPlayer(), FLAME_CHARM))
+			}
+			else if (st.isCond(6) && hasQuestItems(st.getPlayer(), FLAME_CHARM))
+			{
+				if (giveItemRandomly(st.getPlayer(), npc, item.getId(), 1, 3, item.getChance(), true))
 				{
-					if (giveItemRandomly(st.getPlayer(), npc, item.getId(), 1, 3, item.getChance(), true))
-					{
-						st.setCond(7);
-					}
+					st.setCond(7);
 				}
-				else if (st.isCond(9) && hasQuestItems(st.getPlayer(), SPIRIT_NET) && !hasQuestItems(st.getPlayer(), BOUND_DURKA_SPIRIT) && (getQuestItemsCount(st.getPlayer(), DURKA_PARASITE) <= 8))
+			}
+			else if (st.isCond(9) && hasQuestItems(st.getPlayer(), SPIRIT_NET) //
+				&& !hasQuestItems(st.getPlayer(), BOUND_DURKA_SPIRIT) //
+				&& (getQuestItemsCount(st.getPlayer(), DURKA_PARASITE) <= 8))
+			{
+				if ((npc.getId() == 20038) || (npc.getId() == 20043))
 				{
-					if ((npc.getId() == 20038) || (npc.getId() == 20043))
+					final int random = getRandom(10);
+					final long itemCount = getQuestItemsCount(st.getPlayer(), DURKA_PARASITE);
+					if ((((itemCount == 5) && (random < 1))) //
+						|| ((itemCount == 6) && (random < 2)) //
+						|| ((itemCount == 7) && (random < 2)) //
+						|| (itemCount >= 8))
 					{
-						final int random = getRandom(10);
-						final long itemCount = getQuestItemsCount(st.getPlayer(), DURKA_PARASITE);
-						if ((((itemCount == 5) && (random < 1))) //
-							|| ((itemCount == 6) && (random < 2)) //
-							|| ((itemCount == 7) && (random < 2)) //
-							|| (itemCount >= 8))
-						{
-							takeItems(player, DURKA_PARASITE, -1);
-							addSpawn(DURKA_SPIRIT, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0, false);
-							st.playSound("ITEMSOUND_QUEST_BEFORE_BATTLE");
-						}
-						else
-						{
-							giveItems(st.getPlayer(), DURKA_PARASITE, 1);
-							st.playSound("ITEMSOUND_QUEST_ITEMGET");
-						}
+						takeItems(player, DURKA_PARASITE, -1);
+						addSpawn(DURKA_SPIRIT, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0, false);
+						playSound(st.getPlayer(), QuestSound.ITEMSOUND_QUEST_BEFORE_BATTLE);
 					}
 					else
 					{
-						giveItems(st.getPlayer(), BOUND_DURKA_SPIRIT, 1);
-						takeItems(st.getPlayer(), -1, DURKA_PARASITE, SPIRIT_NET);
+						giveItems(st.getPlayer(), DURKA_PARASITE, 1);
+						playSound(st.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
+				}
+				else
+				{
+					giveItems(st.getPlayer(), BOUND_DURKA_SPIRIT, 1);
+					takeItems(st.getPlayer(), -1, DURKA_PARASITE, SPIRIT_NET);
 				}
 			}
 		}
