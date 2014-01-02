@@ -22,6 +22,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.InstanceType;
+import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -83,7 +84,7 @@ public class L2PcInstanceAction implements IActionHandler
 		else if (interact)
 		{
 			// Check if this L2PcInstance has a Private Store
-			if (((L2PcInstance) target).getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_NONE)
+			if (((L2PcInstance) target).getPrivateStoreType() != PrivateStoreType.NONE)
 			{
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 			}

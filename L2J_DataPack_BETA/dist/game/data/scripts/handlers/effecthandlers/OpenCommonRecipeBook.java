@@ -19,6 +19,7 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.RecipeController;
+import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
@@ -52,7 +53,7 @@ public final class OpenCommonRecipeBook extends AbstractEffect
 		}
 		
 		L2PcInstance player = info.getEffector().getActingPlayer();
-		if (player.getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_NONE)
+		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
 			player.sendPacket(SystemMessageId.CANNOT_CREATED_WHILE_ENGAGED_IN_TRADING);
 			return;
