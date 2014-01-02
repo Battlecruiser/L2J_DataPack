@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.enums.PlayerAction;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.instancemanager.CoupleManager;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
@@ -240,8 +241,11 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		
 		ptarget.setEngageRequest(true, activeChar.getObjectId());
-		// $s1
-		ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S1.getId()).addString(activeChar.getName() + " is asking to engage you. Do you want to start a new relationship?");
+		ptarget.addAction(PlayerAction.USER_ENGAGE);
+		
+		final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S1);
+		dlg.addTime(15 * 1000);
+		dlg.addString(activeChar.getName() + " is asking to engage you. Do you want to start a new relationship?");
 		ptarget.sendPacket(dlg);
 		return true;
 	}
