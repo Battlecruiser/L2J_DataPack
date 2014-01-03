@@ -95,7 +95,7 @@ public class TarBeetleSpawn extends DocumentParser
 						}
 						
 						int[] bZones = null;
-						String bZonesStr = parseString(attrs, "bZones");
+						String bZonesStr = parseString(attrs, "bZones", "");
 						if (!bZonesStr.isEmpty())
 						{
 							String[] str = bZonesStr.split(";");
