@@ -153,16 +153,18 @@ public final class PrimevalIsle extends AbstractNpcAI
 		if (npc.isInCombat())
 		{
 			final L2Attackable mob = (L2Attackable) npc;
-			final L2PcInstance target = (L2PcInstance) mob.getMostHated();
+			final L2Character target = mob.getMostHated();
 			if (((npc.getCurrentHp() / npc.getMaxHp()) * 100) < 60)
 			{
 				if (skill.getId() == SELFBUFF1.getSkillId())
 				{
 					npc.setScriptValue(3);
-					if ((target != null) && target.isPlayer())
+					if ((target != null))
 					{
 						npc.setTarget(target);
-						attackPlayer(mob, target);
+						mob.setIsRunning(true);
+						mob.addDamageHate(target, 0, 555);
+						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 					}
 				}
 			}
@@ -171,19 +173,23 @@ public final class PrimevalIsle extends AbstractNpcAI
 				if (skill.getId() == SELFBUFF1.getSkillId())
 				{
 					npc.setScriptValue(1);
-					if ((target != null) && target.isPlayer())
+					if ((target != null))
 					{
 						npc.setTarget(target);
-						attackPlayer(mob, target);
+						mob.setIsRunning(true);
+						mob.addDamageHate(target, 0, 555);
+						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 					}
 				}
 				else if (skill.getId() == SELFBUFF2.getSkillId())
 				{
 					npc.setScriptValue(5);
-					if ((target != null) && target.isPlayer())
+					if ((target != null))
 					{
 						npc.setTarget(target);
-						attackPlayer(mob, target);
+						mob.setIsRunning(true);
+						mob.addDamageHate(target, 0, 555);
+						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 					}
 				}
 			}
