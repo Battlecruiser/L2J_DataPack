@@ -1,0 +1,2 @@
+UPDATE character_quests SET name='Q00358_IllegitimateChildOfTheGoddess' WHERE name='358_IllegitimateChildOfAGoddess';
+UPDATE character_quests SET name='Q00359_ForASleeplessDeadman' WHERE name='359_ForSleeplessDeadmen';
