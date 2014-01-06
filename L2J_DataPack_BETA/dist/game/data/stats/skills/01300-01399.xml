@@ -3115,6 +3115,9 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
 			<effect name="Sleep" />
+			<effect name="DefenceTrait">
+				<param SLEEP="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1395" levels="10" name="Erase" enchantGroup1="1">

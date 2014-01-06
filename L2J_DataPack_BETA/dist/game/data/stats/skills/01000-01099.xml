@@ -2037,6 +2037,9 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Sleep" />
+			<effect name="DefenceTrait">
+				<param SLEEP="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1099" levels="15" name="Seal of Slow" enchantGroup1="1" enchantGroup2="1">

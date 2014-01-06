@@ -1725,6 +1725,9 @@
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
 		</for>
 	</skill>
 </list>

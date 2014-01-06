@@ -2186,6 +2186,9 @@
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3191" levels="10" name="Item Skill: Sleep">
@@ -2219,6 +2222,9 @@
 		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" />
+			<effect name="DefenceTrait">
+				<param SLEEP="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3192" levels="10" name="Item Skill: Paralyze">

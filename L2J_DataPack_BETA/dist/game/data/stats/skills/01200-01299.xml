@@ -41,6 +41,9 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1204" levels="2" name="Wind Walk" enchantGroup1="1" enchantGroup2="1">
@@ -177,6 +180,9 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
 			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1209" levels="6" name="Seal of Poison">
