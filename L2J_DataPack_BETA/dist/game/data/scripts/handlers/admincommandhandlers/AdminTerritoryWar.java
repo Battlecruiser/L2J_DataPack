@@ -57,40 +57,60 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 		}
 		else if (command.equalsIgnoreCase("admin_territory_war_time"))
 		{
-			String val = "";
 			if (st.hasMoreTokens())
 			{
-				val = st.nextToken();
-				Calendar newAdminTWDate = Calendar.getInstance();
-				newAdminTWDate.setTimeInMillis(TerritoryWarManager.getInstance().getTWStartTimeInMillis());
-				if (val.equalsIgnoreCase("day"))
+				final Calendar cal = Calendar.getInstance();
+				cal.setTimeInMillis(TerritoryWarManager.getInstance().getTWStartTimeInMillis());
+				
+				final String val = st.nextToken();
+				if ("month".equals(val))
 				{
-					newAdminTWDate.set(Calendar.DAY_OF_WEEK, Integer.parseInt(st.nextToken()));
+					int month = cal.get(Calendar.MONTH) + Integer.parseInt(st.nextToken());
+					if ((cal.getActualMinimum(Calendar.MONTH) > month) || (cal.getActualMaximum(Calendar.MONTH) < month))
+					{
+						activeChar.sendMessage("Unable to change Siege Date - Incorrect month value only " + cal.getActualMinimum(Calendar.MONTH) + "-" + cal.getActualMaximum(Calendar.MONTH) + " is accepted!");
+						return false;
+					}
+					cal.set(Calendar.MONTH, month);
 				}
-				else if (val.equalsIgnoreCase("hour"))
+				else if ("day".equals(val))
 				{
-					newAdminTWDate.set(Calendar.HOUR_OF_DAY, Integer.parseInt(st.nextToken()));
+					int day = Integer.parseInt(st.nextToken());
+					if ((cal.getActualMinimum(Calendar.DAY_OF_YEAR) > day) || (cal.getActualMaximum(Calendar.DAY_OF_YEAR) < day))
+					{
+						activeChar.sendMessage("Unable to change Siege Date - Incorrect day value only " + cal.getActualMinimum(Calendar.DAY_OF_YEAR) + "-" + cal.getActualMaximum(Calendar.DAY_OF_YEAR) + " is accepted!");
+						return false;
+					}
+					cal.set(Calendar.DAY_OF_YEAR, day);
 				}
-				else if (val.equalsIgnoreCase("min"))
+				else if ("hour".equals(val))
 				{
-					newAdminTWDate.set(Calendar.MINUTE, Integer.parseInt(st.nextToken()));
+					int hour = Integer.parseInt(st.nextToken());
+					if ((cal.getActualMinimum(Calendar.HOUR_OF_DAY) > hour) || (cal.getActualMaximum(Calendar.HOUR_OF_DAY) < hour))
+					{
+						activeChar.sendMessage("Unable to change Siege Date - Incorrect hour value only " + cal.getActualMinimum(Calendar.HOUR_OF_DAY) + "-" + cal.getActualMaximum(Calendar.HOUR_OF_DAY) + " is accepted!");
+						return false;
+					}
+					cal.set(Calendar.HOUR_OF_DAY, hour);
+				}
+				else if ("min".equals(val))
+				{
+					int min = Integer.parseInt(st.nextToken());
+					if ((cal.getActualMinimum(Calendar.MINUTE) > min) || (cal.getActualMaximum(Calendar.MINUTE) < min))
+					{
+						activeChar.sendMessage("Unable to change Siege Date - Incorrect minute value only " + cal.getActualMinimum(Calendar.MINUTE) + "-" + cal.getActualMaximum(Calendar.MINUTE) + " is accepted!");
+						return false;
+					}
+					cal.set(Calendar.MINUTE, min);
 				}
 				
-				if (newAdminTWDate.getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
+				if (cal.getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
 				{
 					activeChar.sendMessage("Unable to change TW Date!");
 				}
-				else if (newAdminTWDate.getTimeInMillis() != TerritoryWarManager.getInstance().getTWStartTimeInMillis())
+				else if (cal.getTimeInMillis() != TerritoryWarManager.getInstance().getTWStartTimeInMillis())
 				{
-					Quest twQuest = QuestManager.getInstance().getQuest(TerritoryWarManager.qn);
-					if (twQuest != null)
-					{
-						twQuest.onAdvEvent("setTWDate " + newAdminTWDate.getTimeInMillis(), null, null);
-					}
-					else
-					{
-						activeChar.sendMessage("Missing Territory War Quest!");
-					}
+					TerritoryWarManager.getInstance().setTWStartTimeInMillis(cal.getTimeInMillis());
 				}
 			}
 			showSiegeTimePage(activeChar);
