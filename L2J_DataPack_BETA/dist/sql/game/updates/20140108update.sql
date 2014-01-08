@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00235_MimirsElixir' WHERE name='235_MimirsElixir';
