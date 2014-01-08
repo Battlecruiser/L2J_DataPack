@@ -259,29 +259,57 @@ public class AdminSiege implements IAdminCommandHandler
 					case "admin_setsiegetime":
 						if (st.hasMoreTokens())
 						{
-							val = st.nextToken();
-							final Calendar newAdminSiegeDate = Calendar.getInstance();
-							newAdminSiegeDate.setTimeInMillis(castle.getSiegeDate().getTimeInMillis());
-							if (val.equalsIgnoreCase("day"))
+							final Calendar cal = Calendar.getInstance();
+							cal.setTimeInMillis(castle.getSiegeDate().getTimeInMillis());
+							
+							if ("month".equals(val))
 							{
-								newAdminSiegeDate.set(Calendar.DAY_OF_YEAR, Integer.parseInt(st.nextToken()));
+								int month = cal.get(Calendar.MONTH) + Integer.parseInt(st.nextToken());
+								if ((cal.getActualMinimum(Calendar.MONTH) > month) || (cal.getActualMaximum(Calendar.MONTH) < month))
+								{
+									activeChar.sendMessage("Unable to change Siege Date - Incorrect month value only " + cal.getActualMinimum(Calendar.MONTH) + "-" + cal.getActualMaximum(Calendar.MONTH) + " is accepted!");
+									return false;
+								}
+								cal.set(Calendar.MONTH, month);
 							}
-							else if (val.equalsIgnoreCase("hour"))
+							else if ("day".equals(val))
 							{
-								newAdminSiegeDate.set(Calendar.HOUR_OF_DAY, Integer.parseInt(st.nextToken()));
+								int day = Integer.parseInt(st.nextToken());
+								if ((cal.getActualMinimum(Calendar.DAY_OF_YEAR) > day) || (cal.getActualMaximum(Calendar.DAY_OF_YEAR) < day))
+								{
+									activeChar.sendMessage("Unable to change Siege Date - Incorrect day value only " + cal.getActualMinimum(Calendar.DAY_OF_YEAR) + "-" + cal.getActualMaximum(Calendar.DAY_OF_YEAR) + " is accepted!");
+									return false;
+								}
+								cal.set(Calendar.DAY_OF_YEAR, day);
 							}
-							else if (val.equalsIgnoreCase("min"))
+							else if ("hour".equals(val))
 							{
-								newAdminSiegeDate.set(Calendar.MINUTE, Integer.parseInt(st.nextToken()));
+								int hour = Integer.parseInt(st.nextToken());
+								if ((cal.getActualMinimum(Calendar.HOUR_OF_DAY) > hour) || (cal.getActualMaximum(Calendar.HOUR_OF_DAY) < hour))
+								{
+									activeChar.sendMessage("Unable to change Siege Date - Incorrect hour value only " + cal.getActualMinimum(Calendar.HOUR_OF_DAY) + "-" + cal.getActualMaximum(Calendar.HOUR_OF_DAY) + " is accepted!");
+									return false;
+								}
+								cal.set(Calendar.HOUR_OF_DAY, hour);
+							}
+							else if ("min".equals(val))
+							{
+								int min = Integer.parseInt(st.nextToken());
+								if ((cal.getActualMinimum(Calendar.MINUTE) > min) || (cal.getActualMaximum(Calendar.MINUTE) < min))
+								{
+									activeChar.sendMessage("Unable to change Siege Date - Incorrect minute value only " + cal.getActualMinimum(Calendar.MINUTE) + "-" + cal.getActualMaximum(Calendar.MINUTE) + " is accepted!");
+									return false;
+								}
+								cal.set(Calendar.MINUTE, min);
 							}
 							
-							if (newAdminSiegeDate.getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
+							if (cal.getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
 							{
-								activeChar.sendMessage("Unable to change siege date.");
+								activeChar.sendMessage("Unable to change Siege Date");
 							}
-							else if (newAdminSiegeDate.getTimeInMillis() != castle.getSiegeDate().getTimeInMillis())
+							else if (cal.getTimeInMillis() != castle.getSiegeDate().getTimeInMillis())
 							{
-								castle.getSiegeDate().setTimeInMillis(newAdminSiegeDate.getTimeInMillis());
+								castle.getSiegeDate().setTimeInMillis(cal.getTimeInMillis());
 								castle.getSiege().saveSiegeDate();
 								activeChar.sendMessage("Castle siege time for castle " + castle.getName() + " has been changed.");
 							}
