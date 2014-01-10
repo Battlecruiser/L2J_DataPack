@@ -46,6 +46,6 @@ public class CallSkill extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		info.getEffector().makeTriggerCast(_skill.getSkill(), info.getEffected());
+		info.getEffector().makeTriggerCast(_skill.getSkill(), info.getEffected(), true);
 	}
 }
