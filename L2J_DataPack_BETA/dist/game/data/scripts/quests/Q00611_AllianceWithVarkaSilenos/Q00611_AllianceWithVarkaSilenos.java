@@ -271,7 +271,7 @@ public class Q00611_AllianceWithVarkaSilenos extends Quest
 		{
 			final QuestState st = member.getQuestState(getName());
 			final DropInfo info = MOBS.get(npc.getId());
-			if ((st.getCond() >= info.getMinCond()) && canGetItem(st, info.getItemId()) && (getRandom(1000) < info.getChance()))
+			if ((st.getCond() >= info.getMinCond()) && (st.getCond() < 6) && canGetItem(st, info.getItemId()) && (getRandom(1000) < info.getChance()))
 			{
 				st.giveItems(info.getItemId(), 1);
 			}
