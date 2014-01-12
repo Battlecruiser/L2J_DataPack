@@ -73,7 +73,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 		// Dorian
 			case "31389-02.htm":
 				final QuestState qs = player.getQuestState("23_LidiasHeart");
-				if ((player.getLevel() > 65) && (qs != null) && qs.isCompleted())
+				if ((player.getLevel() >= 65) && (qs != null) && qs.isCompleted())
 				{
 					st.startQuest();
 					st.giveItems(FLOWER_BOUQUET, 1);
