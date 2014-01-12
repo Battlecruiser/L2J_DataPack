@@ -54,16 +54,38 @@
 	<item id="21903" type="EtcItem" name="Refined Red Dragon Blood">
 		<!-- Description: When used, instantly recovers some HP to yourself and to party members. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 5 minutes. -->
 		<set name="icon" val="BranchSys2.icon.refined_red_blood_of_dragon" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
+		<set name="shared_reuse_group" val="20" /> <!-- TODO: Custom. -->
+		<set name="reuse_delay" val="300000" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22298-1" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="12010, 12001" />
+		</cond>
 	</item>
 	<item id="21904" type="EtcItem" name="Refined Blue Dragon Blood">
 		<!-- Description: When used, instantly recovers some MP to yourself and to party members. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 5 minutes. -->
 		<set name="icon" val="BranchSys2.icon.refined_blue_blood_of_dragon" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
+		<set name="shared_reuse_group" val="20" /> <!-- TODO: Custom. -->
+		<set name="reuse_delay" val="300000" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22299-1" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="12010, 12001" />
+		</cond>
 	</item>
 	<item id="21905" type="EtcItem" name="Clear Crystal">
 		<!-- Description: There is nothing inside the clear crystal. Rumors say that this crystal can store the Antharas's energy. -->

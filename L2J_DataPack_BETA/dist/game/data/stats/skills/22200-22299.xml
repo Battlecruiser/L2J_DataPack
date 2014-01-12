@@ -743,17 +743,25 @@
 		</for>
 	</skill>
 	<skill id="22298" levels="1" name="Refined Red Dragon Blood">
-		<!-- none -->
 		<set name="icon" val="BranchSys2.icon.refined_red_blood_of_dragon" />
-		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21903" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="PARTY" />
+		<for>
+			<effect name="Heal" val="1000" /> <!-- TODO: Custom. -->
+		</for>
 	</skill>
 	<skill id="22299" levels="1" name="Refined Blue Dragon Blood">
-		<!-- none -->
 		<set name="icon" val="BranchSys2.icon.refined_blue_blood_of_dragon" />
-		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21904" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="PARTY" />
+		<for>
+			<effect name="ManaHeal" val="1000" /> <!-- TODO: Custom. -->
+		</for>
 	</skill>
 </list>

@@ -62,6 +62,7 @@ public final class Q00905_RefinedDragonBlood extends Quest
 		MONSTERS.put(22846, UNREFINED_BLUE_DRAGON_BLOOD); // Elite Dragon Knight
 		MONSTERS.put(22847, UNREFINED_RED_DRAGON_BLOOD); // Dragon Knight Warrior
 		MONSTERS.put(22848, UNREFINED_RED_DRAGON_BLOOD); // Drake Leader
+		MONSTERS.put(22849, UNREFINED_RED_DRAGON_BLOOD); // Drake Warrior
 		MONSTERS.put(22850, UNREFINED_RED_DRAGON_BLOOD); // Drake Scout
 		MONSTERS.put(22851, UNREFINED_RED_DRAGON_BLOOD); // Drake Mage
 		MONSTERS.put(22852, UNREFINED_BLUE_DRAGON_BLOOD); // Dragon Guard
@@ -70,8 +71,6 @@ public final class Q00905_RefinedDragonBlood extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 83;
 	private static final int DRAGON_BLOOD_COUNT = 10;
-	
-	private boolean _wait = true;
 	
 	private Q00905_RefinedDragonBlood(int questId, String name, String descr)
 	{
@@ -138,6 +137,7 @@ public final class Q00905_RefinedDragonBlood extends Quest
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					st.exitQuest(QuestType.DAILY, true);
 					htmltext = event;
+					break;
 				}
 				case "32864-12.html":
 				{
@@ -145,6 +145,7 @@ public final class Q00905_RefinedDragonBlood extends Quest
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					st.exitQuest(QuestType.DAILY, true);
 					htmltext = event;
+					break;
 				}
 			}
 		}
@@ -186,10 +187,10 @@ public final class Q00905_RefinedDragonBlood extends Quest
 					}
 					case 2:
 					{
-						if (_wait)
+						if (!st.isSet("wait"))
 						{
 							htmltext = "32864-07.html";
-							_wait = false;
+							st.set("wait", 1);
 						}
 						else
 						{
