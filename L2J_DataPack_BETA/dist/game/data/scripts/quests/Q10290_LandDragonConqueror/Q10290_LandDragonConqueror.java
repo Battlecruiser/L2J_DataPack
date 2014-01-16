@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.util.Util;
  * Land Dragon Conqueror (10290)
  * @author malyelfik
  */
-public class Q10290_LandDragonConqueror extends Quest
+public final class Q10290_LandDragonConqueror extends Quest
 {
 	public class RewardCheck implements IL2Procedure<L2PcInstance>
 	{
@@ -61,25 +61,20 @@ public class Q10290_LandDragonConqueror extends Quest
 	
 	// NPC
 	private static final int THEODRIC = 30755;
-	
-	private static final int[] ANTHARAS =
-	{
-		29019, // Old
-		29066, // Weak
-		29067, // Normal
-		29068
-	// Strong
-	};
+	// Monster
+	private static final int ANTHARAS = 29068;
 	// Items
 	private static final int PORTAL_STONE = 3865;
 	private static final int SHABBY_NECKLACE = 15522;
 	private static final int MIRACLE_NECKLACE = 15523;
-	
+	// Reward
 	private static final int ANTHARAS_SLAYER_CIRCLET = 8568;
+	// Misc
+	private static final int MIN_LEVEL = 83;
 	
-	public Q10290_LandDragonConqueror(int questId, String name, String descr)
+	private Q10290_LandDragonConqueror()
 	{
-		super(questId, name, descr);
+		super(10290, Q10290_LandDragonConqueror.class.getSimpleName(), "Land Dragon Conqueror");
 		addStartNpc(THEODRIC);
 		addTalkId(THEODRIC);
 		addKillId(ANTHARAS);
@@ -89,7 +84,7 @@ public class Q10290_LandDragonConqueror extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -100,7 +95,6 @@ public class Q10290_LandDragonConqueror extends Quest
 			st.startQuest();
 			st.giveItems(SHABBY_NECKLACE, 1);
 		}
-		
 		return event;
 	}
 	
@@ -121,26 +115,19 @@ public class Q10290_LandDragonConqueror extends Quest
 		{
 			player.getParty().forEachMember(new RewardCheck(npc));
 		}
-		
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		switch (st.getState())
 		{
 			case State.CREATED:
 			{
-				if (player.getLevel() < 83)
+				if (player.getLevel() < MIN_LEVEL)
 				{
 					htmltext = "30755-00.htm";
 				}
@@ -180,12 +167,11 @@ public class Q10290_LandDragonConqueror extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
 	public static void main(String[] args)
 	{
-		new Q10290_LandDragonConqueror(10290, Q10290_LandDragonConqueror.class.getSimpleName(), "Land Dragon Conqueror");
+		new Q10290_LandDragonConqueror();
 	}
 }

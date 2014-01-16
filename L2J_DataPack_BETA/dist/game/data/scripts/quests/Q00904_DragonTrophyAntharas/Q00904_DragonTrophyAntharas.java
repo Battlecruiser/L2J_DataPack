@@ -31,27 +31,24 @@ import com.l2jserver.gameserver.util.Util;
  * Dragon Trophy - Antharas (904)
  * @author Zoey76
  */
-public class Q00904_DragonTrophyAntharas extends Quest
+public final class Q00904_DragonTrophyAntharas extends Quest
 {
 	// NPC
 	private static final int THEODRIC = 30755;
-	// Monsters
-	private static final int ANTHARAS_OLD = 29019;
-	private static final int ANTHARAS_WEAK = 29066;
-	private static final int ANTHARAS_NORMAL = 29067;
-	private static final int ANTHARAS_STRONG = 29068;
+	// Monster
+	private static final int ANTHARAS = 29068;
 	// Items
 	private static final int MEDAL_OF_GLORY = 21874;
 	private static final int PORTAL_STONE = 3865;
 	// Misc
 	private static final int MIN_LEVEL = 84;
 	
-	private Q00904_DragonTrophyAntharas(int questId, String name, String descr)
+	private Q00904_DragonTrophyAntharas()
 	{
-		super(questId, name, descr);
+		super(904, Q00904_DragonTrophyAntharas.class.getSimpleName(), "Dragon Trophy - Antharas");
 		addStartNpc(THEODRIC);
 		addTalkId(THEODRIC);
-		addKillId(ANTHARAS_OLD, ANTHARAS_WEAK, ANTHARAS_NORMAL, ANTHARAS_STRONG);
+		addKillId(ANTHARAS);
 	}
 	
 	@Override
@@ -67,7 +64,7 @@ public class Q00904_DragonTrophyAntharas extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -105,12 +102,7 @@ public class Q00904_DragonTrophyAntharas extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		switch (st.getState())
 		{
@@ -180,6 +172,6 @@ public class Q00904_DragonTrophyAntharas extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00904_DragonTrophyAntharas(904, Q00904_DragonTrophyAntharas.class.getSimpleName(), "Dragon Trophy - Antharas");
+		new Q00904_DragonTrophyAntharas();
 	}
 }
