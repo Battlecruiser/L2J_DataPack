@@ -129,4 +129,10 @@ INSERT INTO `herb_droplist_groups` VALUES
 (6,8614,1,1,5,3400), -- Herb of Recovery
 (6,8611,1,1,6,103400), -- Herb of Speed
 (6,10657,1,1,6,3300), -- Herb of Doubt
-(6,10655,1,1,7,450000); -- Herb of Vampiric Rage
+(6,10655,1,1,7,450000), -- Herb of Vampiric Rage
+-- Antharas minions - Behemoth and Tarask Dragon
+(7,8952,10,20,1,1000000), -- Greater Herb of Life
+(7,8953,10,20,2,1000000), -- Greater Herb of Mana
+-- Antharas minions - Dragon Bomber
+(8,8952,10,20,1,1000000), -- Greater Herb of Life
+(8,8953,10,20,2,1000000); -- Greater Herb of Mana

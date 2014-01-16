@@ -18,7 +18,6 @@
  */
 package ai.npc.Teleports.GrandBossTeleporters;
 
-import ai.individual.Antharas;
 import ai.individual.Valakas;
 import ai.npc.AbstractNpcAI;
 
@@ -44,8 +43,6 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 	// NPCs
 	private static final int[] NPCs =
 	{
-		13001, // Heart of Warding : Teleport into Lair of Antharas
-		31859, // Teleportation Cubic : Teleport out of Lair of Antharas
 		31384, // Gatekeeper of Fire Dragon : Opening some doors
 		31385, // Heart of Volcano : Teleport into Lair of Valakas
 		31540, // Watcher of Valakas Klein : Teleport into Hall of Flames
@@ -54,11 +51,8 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 		31759, // Teleportation Cubic : Teleport out of Lair of Valakas
 	};
 	// Items
-	private static final int PORTAL_STONE = 3865;
 	private static final int VACUALITE_FLOATING_STONE = 7267;
 	private static final Location ENTER_HALL_OF_FLAMES = new Location(183813, -115157, -3303);
-	private static final Location TELEPORT_INTO_ANTHARAS_LAIR = new Location(179700, 113800, -7709);
-	private static final Location TELEPORT_OUT_OF_ANTHARAS_LAIR = new Location(79800, 151200, -3534);
 	private static final Location TELEPORT_INTO_VALAKAS_LAIR = new Location(204328, -111874, 70);
 	private static final Location TELEPORT_OUT_OF_VALAKAS_LAIR = new Location(150037, -57720, -2976);
 	
@@ -107,56 +101,6 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 		
 		switch (npc.getId())
 		{
-			case 13001:
-			{
-				if (antharasAI() != null)
-				{
-					int status = GrandBossManager.getInstance().getBossStatus(29019);
-					int statusW = GrandBossManager.getInstance().getBossStatus(29066);
-					int statusN = GrandBossManager.getInstance().getBossStatus(29067);
-					int statusS = GrandBossManager.getInstance().getBossStatus(29068);
-					
-					if ((status == 2) || (statusW == 2) || (statusN == 2) || (statusS == 2))
-					{
-						htmltext = "13001-02.htm";
-					}
-					else if ((status == 3) || (statusW == 3) || (statusN == 3) || (statusS == 3))
-					{
-						htmltext = "13001-01.htm";
-					}
-					else if ((status == 0) || (status == 1)) // If entrance to see Antharas is unlocked (he is Dormant or Waiting)
-					{
-						if (st.hasQuestItems(PORTAL_STONE))
-						{
-							L2BossZone zone = GrandBossManager.getInstance().getZone(179700, 113800, -7709);
-							
-							if (zone != null)
-							{
-								zone.allowPlayerEntry(player, 30);
-							}
-							
-							player.teleToLocation(TELEPORT_INTO_ANTHARAS_LAIR.getX() + getRandom(700), TELEPORT_INTO_ANTHARAS_LAIR.getY() + getRandom(2100), TELEPORT_INTO_ANTHARAS_LAIR.getZ());
-							
-							if (status == 0)
-							{
-								L2GrandBossInstance antharas = GrandBossManager.getInstance().getBoss(29019);
-								antharasAI().notifyEvent("waiting", antharas, player);
-							}
-						}
-						else
-						{
-							htmltext = "13001-03.htm";
-						}
-					}
-				}
-				break;
-			}
-			case 31859:
-			{
-				
-				player.teleToLocation(TELEPORT_OUT_OF_ANTHARAS_LAIR.getX() + getRandom(600), TELEPORT_OUT_OF_ANTHARAS_LAIR.getY() + getRandom(1100), TELEPORT_OUT_OF_ANTHARAS_LAIR.getZ());
-				break;
-			}
 			case 31385:
 			{
 				if (valakasAI() != null)
@@ -261,11 +205,6 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 	private Quest valakasAI()
 	{
 		return QuestManager.getInstance().getQuest(Valakas.class.getSimpleName());
-	}
-	
-	private Quest antharasAI()
-	{
-		return QuestManager.getInstance().getQuest(Antharas.class.getSimpleName());
 	}
 	
 	public static void main(String[] args)
