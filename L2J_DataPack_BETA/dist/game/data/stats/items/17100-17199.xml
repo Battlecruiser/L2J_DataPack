@@ -593,7 +593,7 @@
 	<item id="17138" type="EtcItem" name="Freya's Gift">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -815,7 +815,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17158" type="EtcItem" name="Vesper's Mighty Power">
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
@@ -824,7 +824,7 @@
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="17159" type="EtcItem" name="Vesper's Critical Damage">
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
@@ -833,7 +833,7 @@
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="17160" type="EtcItem" name="Invincible Vesper">
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
@@ -844,7 +844,7 @@
 	<item id="17161" type="EtcItem" name="Special Gift of April Fool's Day (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -854,7 +854,7 @@
 	</item>
 	<item id="17162" type="EtcItem" name="Golem Shard Piece">
 		<set name="icon" val="icon.etc_coal_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="crystal" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -868,7 +868,7 @@
 		<set name="icon" val="icon.etc_leaf_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="reuse_delay" val="3000" />
 		<set name="is_tradable" val="false" />

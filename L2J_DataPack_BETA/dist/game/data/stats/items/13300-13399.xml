@@ -26,7 +26,7 @@
 	</item>
 	<item id="13302" type="EtcItem" name="My Teleport Scroll (Event)">
 		<set name="icon" val="icon.bookmark_scroll_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
@@ -107,7 +107,7 @@
 	<item id="13307" type="EtcItem" name="Color Name (Event)">
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="nick_color" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
@@ -122,7 +122,7 @@
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="silver" />
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
@@ -137,7 +137,7 @@
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="silver" />
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
@@ -152,7 +152,7 @@
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -165,7 +165,7 @@
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -178,7 +178,7 @@
 		<set name="icon" val="icon.accessory_monstereye_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -191,7 +191,7 @@
 		<set name="icon" val="icon.accessory_brown_bear_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -204,7 +204,7 @@
 		<set name="icon" val="icon.accessory_fungus_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -217,7 +217,7 @@
 		<set name="icon" val="icon.accessory_skeleton_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -230,7 +230,7 @@
 		<set name="icon" val="icon.accessory_ornithomimus_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -243,7 +243,7 @@
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -256,7 +256,7 @@
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -273,7 +273,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -295,7 +295,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -317,7 +317,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -339,7 +339,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -361,7 +361,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -383,7 +383,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -403,7 +403,7 @@
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -416,7 +416,7 @@
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -429,7 +429,7 @@
 		<set name="icon" val="icon.accessory_monstereye_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -442,7 +442,7 @@
 		<set name="icon" val="icon.accessory_brown_bear_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -455,7 +455,7 @@
 		<set name="icon" val="icon.accessory_fungus_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -468,7 +468,7 @@
 		<set name="icon" val="icon.accessory_skeleton_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -481,7 +481,7 @@
 		<set name="icon" val="icon.accessory_ornithomimus_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -494,7 +494,7 @@
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -507,7 +507,7 @@
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -524,7 +524,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -546,7 +546,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -568,7 +568,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -590,7 +590,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -612,7 +612,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -634,7 +634,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -654,7 +654,7 @@
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="silver" />
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
@@ -668,7 +668,7 @@
 	<item id="13341" type="EtcItem" name="My Teleport Spellbook 1-Book Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -682,7 +682,7 @@
 	<item id="13342" type="EtcItem" name="My Teleport Scroll 30-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -696,7 +696,7 @@
 	<item id="13343" type="EtcItem" name="Feather of Blessing 3-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -710,7 +710,7 @@
 	<item id="13344" type="EtcItem" name="Agathion of Love 30-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -724,7 +724,7 @@
 	<item id="13345" type="EtcItem" name="Halloween Gift Box">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -738,7 +738,7 @@
 	<item id="13346" type="EtcItem" name="Kamaloka Entrance Pass 3-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -752,7 +752,7 @@
 	<item id="13347" type="EtcItem" name="Kat the Cat Hat 30-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -766,7 +766,7 @@
 	<item id="13348" type="EtcItem" name="Feline Queen Hat 30-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -780,7 +780,7 @@
 	<item id="13349" type="EtcItem" name="Monster Eye Hat 30-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -794,7 +794,7 @@
 	<item id="13350" type="EtcItem" name="Brown Bear Hat 30-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -808,7 +808,7 @@
 	<item id="13351" type="EtcItem" name="Fungus Hat 30-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -822,7 +822,7 @@
 	<item id="13352" type="EtcItem" name="Skull Hat 30-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -836,7 +836,7 @@
 	<item id="13353" type="EtcItem" name="Ornithomimus Hat 30-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -850,7 +850,7 @@
 	<item id="13354" type="EtcItem" name="Feline King Hat 30-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -864,7 +864,7 @@
 	<item id="13355" type="EtcItem" name="Kai the Cat Hat 30-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -878,7 +878,7 @@
 	<item id="13356" type="EtcItem" name="OX Stick 30-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -892,7 +892,7 @@
 	<item id="13357" type="EtcItem" name="Rock-Paper-Scissors Stick 30-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -906,7 +906,7 @@
 	<item id="13358" type="EtcItem" name="Purple Maned Horse 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -920,7 +920,7 @@
 	<item id="13359" type="EtcItem" name="Color Name 3-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -934,7 +934,7 @@
 	<item id="13360" type="EtcItem" name="Color Name 1-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -948,7 +948,7 @@
 	<item id="13361" type="EtcItem" name="My Teleport Scroll 10-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -962,7 +962,7 @@
 	<item id="13362" type="EtcItem" name="Kamaloka (Hall of the Abyss) 15-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -976,7 +976,7 @@
 	<item id="13363" type="EtcItem" name="Near Kamaloka 15-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -990,7 +990,7 @@
 	<item id="13364" type="EtcItem" name="Kamaloka (Labyrinth of the Abyss) 15-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1004,7 +1004,7 @@
 	<item id="13365" type="EtcItem" name="Kamaloka (Hall of the Abyss) 5-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1018,7 +1018,7 @@
 	<item id="13366" type="EtcItem" name="Near Kamaloka 5-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1032,7 +1032,7 @@
 	<item id="13367" type="EtcItem" name="Kamaloka (Labyrinth of the Abyss) 5-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1046,7 +1046,7 @@
 	<item id="13368" type="EtcItem" name="Feather of Blessing 1-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1060,7 +1060,7 @@
 	<item id="13369" type="EtcItem" name="Agathion of Love 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1074,7 +1074,7 @@
 	<item id="13370" type="EtcItem" name="Pumpkin Transformation Stick 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1088,7 +1088,7 @@
 	<item id="13371" type="EtcItem" name="Kat the Cat Hat 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1102,7 +1102,7 @@
 	<item id="13372" type="EtcItem" name="Feline Queen Hat 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1116,7 +1116,7 @@
 	<item id="13373" type="EtcItem" name="Monster Eye Hat 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1130,7 +1130,7 @@
 	<item id="13374" type="EtcItem" name="Brown Bear Hat 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1144,7 +1144,7 @@
 	<item id="13375" type="EtcItem" name="Fungus Hat 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1158,7 +1158,7 @@
 	<item id="13376" type="EtcItem" name="Skull Hat 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1172,7 +1172,7 @@
 	<item id="13377" type="EtcItem" name="Ornithomimus Hat 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1186,7 +1186,7 @@
 	<item id="13378" type="EtcItem" name="Feline King Hat 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1200,7 +1200,7 @@
 	<item id="13379" type="EtcItem" name="Kai the Cat Hat 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1214,7 +1214,7 @@
 	<item id="13380" type="EtcItem" name="OX Stick 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1228,7 +1228,7 @@
 	<item id="13381" type="EtcItem" name="Rock-Paper-Scissors Stick 7-Day Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1255,7 +1255,7 @@
 	</item>
 	<item id="13383" type="EtcItem" name="Hunting Helper Exchange Coupon - 5 hours (Event)">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1268,7 +1268,7 @@
 	<item id="13384" type="EtcItem" name="Hunting Helper Exchange Coupon 3-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1282,7 +1282,7 @@
 	<item id="13385" type="EtcItem" name="Hunting Helper Exchange Coupon 1-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1342,7 +1342,7 @@
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="130" />
@@ -1360,7 +1360,7 @@
 		<set name="icon" val="icon.etc_shirts_s_i05" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="s" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="130" />
@@ -1378,7 +1378,7 @@
 		<set name="icon" val="icon.etc_stripe_shirts_a_i04" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="130" />
@@ -1396,7 +1396,7 @@
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="s" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="130" />
@@ -1414,7 +1414,7 @@
 		<set name="icon" val="icon.monkey_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -1426,7 +1426,7 @@
 		<set name="icon" val="icon.event_pig_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />

@@ -3,7 +3,7 @@
 	<item id="17000" type="EtcItem" name="Black Ore Set of Fortune - 90-day limited period">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="reuse_delay" val="3000" />
 		<set name="is_tradable" val="false" />
@@ -17,7 +17,7 @@
 	<item id="17001" type="EtcItem" name="Sealed Set of Fortune - 90-day limited period">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="reuse_delay" val="3000" />
 		<set name="is_tradable" val="false" />
@@ -31,7 +31,7 @@
 	<item id="17002" type="EtcItem" name="Elven Set of Fortune - 90-day limited period">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="reuse_delay" val="3000" />
 		<set name="is_tradable" val="false" />
@@ -45,7 +45,7 @@
 	<item id="17003" type="EtcItem" name="Santa Claus's Gift - Event">
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -57,7 +57,7 @@
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
@@ -71,7 +71,7 @@
 		<set name="icon" val="icon.etc_cp_potion_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="20" />
 		<set name="reuse_delay" val="1" />
@@ -86,7 +86,7 @@
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2240" />
 		<set name="crystal_type" val="s84" />
 		<set name="material" val="bronze" />
@@ -107,7 +107,7 @@
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1680" />
 		<set name="crystal_type" val="s84" />
 		<set name="material" val="bronze" />
@@ -125,7 +125,7 @@
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1680" />
 		<set name="crystal_type" val="s84" />
 		<set name="material" val="bronze" />
@@ -147,7 +147,7 @@
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1400" />
 		<set name="crystal_type" val="s84" />
 		<set name="material" val="scale_of_dragon" />
@@ -167,7 +167,7 @@
 		<set name="icon" val="icon.armor_t94_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="560" />
 		<set name="crystal_type" val="s84" />
 		<set name="material" val="leather" />
@@ -187,7 +187,7 @@
 		<set name="icon" val="icon.armor_t94_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="560" />
 		<set name="crystal_type" val="s84" />
 		<set name="material" val="leather" />
@@ -208,7 +208,7 @@
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1050" />
 		<set name="crystal_type" val="s84" />
 		<set name="material" val="scale_of_dragon" />
@@ -225,7 +225,7 @@
 		<set name="icon" val="icon.armor_t95_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="560" />
 		<set name="crystal_type" val="s84" />
 		<set name="material" val="leather" />
@@ -242,7 +242,7 @@
 		<set name="icon" val="icon.armor_t95_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="560" />
 		<set name="crystal_type" val="s84" />
 		<set name="material" val="leather" />
@@ -260,7 +260,7 @@
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1050" />
 		<set name="crystal_type" val="s84" />
 		<set name="material" val="scale_of_dragon" />
@@ -281,7 +281,7 @@
 		<set name="icon" val="icon.armor_t96_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="560" />
 		<set name="crystal_type" val="s84" />
 		<set name="material" val="leather" />
@@ -301,7 +301,7 @@
 		<set name="icon" val="icon.armor_t96_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="560" />
 		<set name="crystal_type" val="s84" />
 		<set name="material" val="leather" />
@@ -321,7 +321,7 @@
 		<set name="icon" val="icon.etc_cp_potion_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="20" />
 		<set name="price" val="2500" />
@@ -335,7 +335,7 @@
 	<item id="17019" type="EtcItem" name="Mounting Item 3 Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -351,7 +351,7 @@
 	<item id="17020" type="EtcItem" name="Fresh Milk Pack - For Events">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -367,7 +367,7 @@
 	<item id="17021" type="EtcItem" name="Dimensional Experience Pack 30 - For Events">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -383,7 +383,7 @@
 	<item id="17022" type="EtcItem" name="Varka Karm Pack - For Events">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -399,7 +399,7 @@
 	<item id="17023" type="EtcItem" name="Ketra Karm Pack - For Events">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -415,7 +415,7 @@
 	<item id="17024" type="EtcItem" name="Vitality Maintaining Potion Pack - For Events">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -431,7 +431,7 @@
 	<item id="17025" type="EtcItem" name="PC Points (7000 Points) Pack - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -447,7 +447,7 @@
 	<item id="17026" type="EtcItem" name="Admiral's Cap Pack - For Events">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -463,7 +463,7 @@
 	<item id="17027" type="EtcItem" name="Straw Hat - For Events">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -479,7 +479,7 @@
 	<item id="17028" type="EtcItem" name="Phantom Mask Pack - For Events">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -495,7 +495,7 @@
 	<item id="17029" type="EtcItem" name="Black Phantom Mask Pack - For Events">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -522,7 +522,7 @@
 	<item id="17031" type="EtcItem" name="Freya White Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -538,7 +538,7 @@
 	<item id="17032" type="EtcItem" name="Hero's Treasure Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -555,7 +555,7 @@
 		<set name="icon" val="icon.accessory_ice_circlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -1030,7 +1030,7 @@
 	<item id="17066" type="EtcItem" name="Event - Save the White Tiger Event Pack">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1077,7 +1077,7 @@
 	<item id="17069" type="EtcItem" name="Vesper Weapon Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1089,7 +1089,7 @@
 	<item id="17070" type="EtcItem" name="Icarus Weapon Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1101,7 +1101,7 @@
 	<item id="17071" type="EtcItem" name="Dynasty Weapon Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1113,7 +1113,7 @@
 	<item id="17072" type="EtcItem" name="Vesper Armor Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1125,7 +1125,7 @@
 	<item id="17073" type="EtcItem" name="Moirai Armor Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1137,7 +1137,7 @@
 	<item id="17074" type="EtcItem" name="Dynasty Armor Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1149,7 +1149,7 @@
 	<item id="17075" type="EtcItem" name="Soul Crystal - Stage 14 Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1161,7 +1161,7 @@
 	<item id="17076" type="EtcItem" name="Soul Crystal - Stage 15 Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1173,7 +1173,7 @@
 	<item id="17077" type="EtcItem" name="Soul Crystal - Stage 16 Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1185,7 +1185,7 @@
 	<item id="17078" type="EtcItem" name="Potion Box of Mask Type">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1197,7 +1197,7 @@
 	<item id="17079" type="EtcItem" name="Potion Box of Hair Color">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1209,7 +1209,7 @@
 	<item id="17080" type="EtcItem" name="Potion Box of Hair Style">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1221,7 +1221,7 @@
 	<item id="17081" type="EtcItem" name="Golden Apigas Box">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1233,7 +1233,7 @@
 	<item id="17082" type="EtcItem" name="Transformation Sealbook: Anakim Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1249,7 +1249,7 @@
 	<item id="17083" type="EtcItem" name="Bird Nest - For Events">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1265,7 +1265,7 @@
 	<item id="17084" type="EtcItem" name="Shadow Item - Magician Cap Pack - Blessed Escape">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1281,7 +1281,7 @@
 	<item id="17085" type="EtcItem" name="Shadow Item - Magician Cap Pack - Big Head">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -1297,7 +1297,7 @@
 	<item id="17086" type="EtcItem" name="Shadow Item - Magician Cap Pack - Firework">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
