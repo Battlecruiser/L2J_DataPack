@@ -81,6 +81,7 @@ import handlers.admincommandhandlers.AdminGeodata;
 import handlers.admincommandhandlers.AdminGm;
 import handlers.admincommandhandlers.AdminGmChat;
 import handlers.admincommandhandlers.AdminGraciaSeeds;
+import handlers.admincommandhandlers.AdminGrandBoss;
 import handlers.admincommandhandlers.AdminHeal;
 import handlers.admincommandhandlers.AdminHellbound;
 import handlers.admincommandhandlers.AdminHtml;
@@ -359,6 +360,7 @@ public class MasterHandler
 			AdminGm.class,
 			AdminGmChat.class,
 			AdminGraciaSeeds.class,
+			AdminGrandBoss.class,
 			AdminHeal.class,
 			AdminHellbound.class,
 			AdminHtml.class,
