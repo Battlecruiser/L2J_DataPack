@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="700" type="EtcItem" name="_">
 		<set name="icon" val="icon.item_normal05" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -13,7 +13,7 @@
 	</item>
 	<item id="701" type="EtcItem" name="Fungus Juice">
 		<set name="icon" val="icon.item_canuse28" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -24,7 +24,7 @@
 	</item>
 	<item id="702" type="EtcItem" name="Wolf Pelt">
 		<set name="icon" val="icon.etc_leather_brown_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -35,7 +35,7 @@
 	</item>
 	<item id="703" type="EtcItem" name="Giant Spider's Poison Sac">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -46,7 +46,7 @@
 	</item>
 	<item id="704" type="EtcItem" name="Fever Medicine">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -57,7 +57,7 @@
 	</item>
 	<item id="705" type="EtcItem" name="_">
 		<set name="icon" val="icon.item_normal48" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -68,7 +68,7 @@
 	</item>
 	<item id="706" type="EtcItem" name="Basilisk's Claw">
 		<set name="icon" val="icon.item_normal141" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -79,7 +79,7 @@
 	</item>
 	<item id="707" type="EtcItem" name="Spore Sac">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -90,7 +90,7 @@
 	</item>
 	<item id="708" type="EtcItem" name="Sylph Headband">
 		<set name="icon" val="icon.item_system03" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -103,7 +103,7 @@
 		<set name="icon" val="icon.armor_leather_shirt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="400" />
 		<set name="is_tradable" val="false" />
@@ -118,7 +118,7 @@
 		<set name="icon" val="icon.armor_leather_shirt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="400" />
 		<set name="is_tradable" val="false" />
@@ -133,7 +133,7 @@
 		<set name="icon" val="icon.armor_mithril_banded_mail_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="bone" />
 		<set name="weight" val="800" />
 		<set name="is_tradable" val="false" />
@@ -148,7 +148,7 @@
 		<set name="icon" val="icon.armor_dwarven_scale_mail_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1200" />
 		<set name="is_tradable" val="false" />
@@ -163,7 +163,7 @@
 		<set name="icon" val="icon.armor_squires_pants_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="250" />
 		<set name="is_tradable" val="false" />
@@ -178,7 +178,7 @@
 		<set name="icon" val="icon.armor_leather_pants_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="300" />
 		<set name="is_tradable" val="false" />
@@ -193,7 +193,7 @@
 		<set name="icon" val="icon.armor_mithril_banded_gaiters_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="bone" />
 		<set name="weight" val="500" />
 		<set name="is_tradable" val="false" />
@@ -208,7 +208,7 @@
 		<set name="icon" val="icon.armor_dwarven_scale_mail_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="weight" val="800" />
 		<set name="is_tradable" val="false" />
@@ -223,7 +223,7 @@
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
@@ -238,7 +238,7 @@
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
@@ -253,7 +253,7 @@
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
@@ -268,7 +268,7 @@
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="weight" val="200" />
 		<set name="is_tradable" val="false" />
@@ -283,7 +283,7 @@
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
@@ -298,7 +298,7 @@
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
@@ -313,7 +313,7 @@
 		<set name="icon" val="icon.armor_feet99" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="200" />
 		<set name="is_tradable" val="false" />
@@ -328,7 +328,7 @@
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="weight" val="250" />
 		<set name="is_tradable" val="false" />
@@ -343,7 +343,7 @@
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="180" />
 		<set name="price" val="50" />
@@ -357,7 +357,7 @@
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="180" />
 		<set name="price" val="80" />
@@ -374,7 +374,7 @@
 		<set name="icon" val="icon.item_system03" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="180" />
 		<set name="price" val="1000" />
@@ -388,7 +388,7 @@
 		<set name="icon" val="icon.etc_reagent_blue_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="180" />
 		<set name="price" val="2000" />
@@ -405,7 +405,7 @@
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_wp" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="1800000" />
@@ -418,7 +418,7 @@
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_am" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="240000" />
@@ -431,7 +431,7 @@
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_oly_restricted" val="true" />
@@ -441,7 +441,7 @@
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_oly_restricted" val="true" />
@@ -451,7 +451,7 @@
 		<set name="icon" val="icon.etc_lesser_potion_yellow_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="180" />
 		<set name="price" val="500" />
@@ -462,7 +462,7 @@
 		<set name="icon" val="icon.etc_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="20" />
 		<set name="price" val="1200" />
@@ -480,7 +480,7 @@
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="20" />
 		<set name="price" val="2400" />
@@ -526,7 +526,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="bronze" />
 		<set name="weight" val="1300" />
 		<set name="price" val="14200" />
@@ -541,7 +541,7 @@
 	</item>
 	<item id="739" type="EtcItem" name="Broken Sword Handle">
 		<set name="icon" val="icon.weapon_small_sword_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -552,7 +552,7 @@
 	</item>
 	<item id="740" type="EtcItem" name="Broken Blade Bottom">
 		<set name="icon" val="icon.weapon_great_sword_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -563,7 +563,7 @@
 	</item>
 	<item id="741" type="EtcItem" name="Broken Blade Top">
 		<set name="icon" val="icon.etc_sword_body_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -574,7 +574,7 @@
 	</item>
 	<item id="742" type="EtcItem" name="Altran's Note">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -591,7 +591,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1300" />
 		<set name="price" val="25800" />
@@ -612,7 +612,7 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="1800" />
 		<set name="price" val="25800" />
@@ -629,7 +629,7 @@
 	</item>
 	<item id="745" type="EtcItem" name="Cobendell Medicine">
 		<set name="icon" val="icon.item_normal40" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -640,7 +640,7 @@
 	</item>
 	<item id="746" type="EtcItem" name="Alberius's List">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -657,7 +657,7 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="1300" />
 		<set name="price" val="19500" />
@@ -680,7 +680,7 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="1350" />
 		<set name="price" val="3800" />
@@ -706,7 +706,7 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="5" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="wood" />
@@ -726,7 +726,7 @@
 	</item>
 	<item id="750" type="EtcItem" name="Kinship Crystal">
 		<set name="icon" val="icon.item_normal45" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -737,7 +737,7 @@
 	</item>
 	<item id="751" type="EtcItem" name="Cracked Kinship Crystal">
 		<set name="icon" val="icon.item_canuse07" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -748,7 +748,7 @@
 	</item>
 	<item id="752" type="EtcItem" name="Orc Amulet">
 		<set name="icon" val="icon.etc_feather_gold_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -759,7 +759,7 @@
 	</item>
 	<item id="753" type="EtcItem" name="Silverleaf Brooch">
 		<set name="icon" val="icon.item_normal12" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -776,7 +776,7 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="1700" />
 		<set name="price" val="19500" />
@@ -793,7 +793,7 @@
 	</item>
 	<item id="755" type="EtcItem" name="Colleen's Letter">
 		<set name="icon" val="icon.item_normal20" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -804,7 +804,7 @@
 	</item>
 	<item id="756" type="EtcItem" name="Mandragora Root">
 		<set name="icon" val="icon.item_normal17" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -815,7 +815,7 @@
 	</item>
 	<item id="757" type="EtcItem" name="Mandragora Essence">
 		<set name="icon" val="icon.item_canuse28" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -826,7 +826,7 @@
 	</item>
 	<item id="758" type="EtcItem" name="Colleen's Receipt">
 		<set name="icon" val="icon.item_normal50" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -837,7 +837,7 @@
 	</item>
 	<item id="759" type="EtcItem" name="Etched Rune Sword">
 		<set name="icon" val="icon.weapon_1hs21" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -848,7 +848,7 @@
 	</item>
 	<item id="760" type="EtcItem" name="Macabre Sword">
 		<set name="icon" val="icon.weapon_1hs20" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -859,7 +859,7 @@
 	</item>
 	<item id="761" type="EtcItem" name="Thanatos Sword">
 		<set name="icon" val="icon.weapon_2hs02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -870,7 +870,7 @@
 	</item>
 	<item id="762" type="EtcItem" name="Gray Bone Chip">
 		<set name="icon" val="icon.item_normal05" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -881,7 +881,7 @@
 	</item>
 	<item id="763" type="EtcItem" name="Esther's Letter">
 		<set name="icon" val="icon.item_normal20" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -892,7 +892,7 @@
 	</item>
 	<item id="764" type="EtcItem" name="_">
 		<set name="icon" val="icon.item_normal20" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -903,7 +903,7 @@
 	</item>
 	<item id="765" type="EtcItem" name="Conspirator List">
 		<set name="icon" val="icon.item_canuse15" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -914,7 +914,7 @@
 	</item>
 	<item id="766" type="EtcItem" name="Sabrin's Signet">
 		<set name="icon" val="icon.armor_finger02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -925,7 +925,7 @@
 	</item>
 	<item id="767" type="EtcItem" name="Sealed Scroll">
 		<set name="icon" val="icon.item_canuse15" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -936,7 +936,7 @@
 	</item>
 	<item id="768" type="EtcItem" name="Oyen's Key">
 		<set name="icon" val="icon.item_normal26" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -947,7 +947,7 @@
 	</item>
 	<item id="769" type="EtcItem" name="Ricardo's Skull">
 		<set name="icon" val="icon.armor_head15" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -958,7 +958,7 @@
 	</item>
 	<item id="770" type="EtcItem" name="_">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -969,7 +969,7 @@
 	</item>
 	<item id="771" type="EtcItem" name="Saythus's Skull">
 		<set name="icon" val="icon.item_normal05" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -980,7 +980,7 @@
 	</item>
 	<item id="772" type="EtcItem" name="Trayer's Skull">
 		<set name="icon" val="icon.item_normal05" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -991,7 +991,7 @@
 	</item>
 	<item id="773" type="EtcItem" name="Falimar's Skull">
 		<set name="icon" val="icon.item_normal05" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1002,7 +1002,7 @@
 	</item>
 	<item id="774" type="EtcItem" name="Fallen Sword of Honor">
 		<set name="icon" val="icon.weapon_1hs04" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1013,7 +1013,7 @@
 	</item>
 	<item id="775" type="EtcItem" name="Sword of Honor">
 		<set name="icon" val="icon.weapon_1hs05" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1024,7 +1024,7 @@
 	</item>
 	<item id="776" type="EtcItem" name="Nameless Sword">
 		<set name="icon" val="icon.weapon_1hs23" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1035,7 +1035,7 @@
 	</item>
 	<item id="777" type="EtcItem" name="Sword of Black Ice">
 		<set name="icon" val="icon.weapon_1hs11" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1046,7 +1046,7 @@
 	</item>
 	<item id="778" type="EtcItem" name="Arodin's Letter">
 		<set name="icon" val="icon.item_normal20" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1057,7 +1057,7 @@
 	</item>
 	<item id="779" type="EtcItem" name="Sabrin's Ring">
 		<set name="icon" val="icon.armor_finger01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1068,7 +1068,7 @@
 	</item>
 	<item id="780" type="EtcItem" name="_">
 		<set name="icon" val="icon.item_normal20" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1079,7 +1079,7 @@
 	</item>
 	<item id="781" type="EtcItem" name="Madclaw's Necklace">
 		<set name="icon" val="icon.armor_neck02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1090,7 +1090,7 @@
 	</item>
 	<item id="782" type="EtcItem" name="Alex's Letter">
 		<set name="icon" val="icon.item_normal20" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1101,7 +1101,7 @@
 	</item>
 	<item id="783" type="EtcItem" name="Alex's Receipt">
 		<set name="icon" val="icon.item_normal50" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1112,7 +1112,7 @@
 	</item>
 	<item id="784" type="EtcItem" name="Glass Dagger">
 		<set name="icon" val="icon.weapon_ss02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1123,7 +1123,7 @@
 	</item>
 	<item id="785" type="EtcItem" name="Broken Glass Dagger">
 		<set name="icon" val="icon.weapon_ss03" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1134,7 +1134,7 @@
 	</item>
 	<item id="786" type="EtcItem" name="Shadowguard Dagger">
 		<set name="icon" val="icon.weapon_ss04" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1145,7 +1145,7 @@
 	</item>
 	<item id="787" type="EtcItem" name="Coroli's Key">
 		<set name="icon" val="icon.item_normal26" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1156,7 +1156,7 @@
 	</item>
 	<item id="788" type="EtcItem" name="Midnight Onyx Necklace">
 		<set name="icon" val="icon.armor_neck01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1167,7 +1167,7 @@
 	</item>
 	<item id="789" type="EtcItem" name="Song: Moonlight Whisper">
 		<set name="icon" val="icon.item_canuse34" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1178,7 +1178,7 @@
 	</item>
 	<item id="790" type="EtcItem" name="Bloodsteel Kris">
 		<set name="icon" val="icon.weapon_ss09" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1189,7 +1189,7 @@
 	</item>
 	<item id="791" type="EtcItem" name="Karlun's Skull">
 		<set name="icon" val="icon.armor_head15" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1200,7 +1200,7 @@
 	</item>
 	<item id="792" type="EtcItem" name="Karlun's Rib Bone">
 		<set name="icon" val="icon.item_normal05" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1211,7 +1211,7 @@
 	</item>
 	<item id="793" type="EtcItem" name="Karlun's Thigh Bone">
 		<set name="icon" val="icon.item_normal05" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1222,7 +1222,7 @@
 	</item>
 	<item id="794" type="EtcItem" name="Saint's Ash Urn">
 		<set name="icon" val="icon.item_normal40" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1233,7 +1233,7 @@
 	</item>
 	<item id="795" type="EtcItem" name="Mace of Athebaldt">
 		<set name="icon" val="icon.weapon_mace13" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1244,7 +1244,7 @@
 	</item>
 	<item id="796" type="EtcItem" name="Roien's Letter">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1255,7 +1255,7 @@
 	</item>
 	<item id="797" type="EtcItem" name="Manuel's Letter">
 		<set name="icon" val="icon.item_normal06" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1266,7 +1266,7 @@
 	</item>
 	<item id="798" type="EtcItem" name="Varan's Letter">
 		<set name="icon" val="icon.item_normal20" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1277,7 +1277,7 @@
 	</item>
 	<item id="799" type="EtcItem" name="Groot's Letter">
 		<set name="icon" val="icon.item_normal20" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />

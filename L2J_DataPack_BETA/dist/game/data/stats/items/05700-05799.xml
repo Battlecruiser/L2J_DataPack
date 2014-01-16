@@ -54,7 +54,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1464" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="fine_steel" />
@@ -80,7 +80,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1485" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="fine_steel" />
@@ -107,7 +107,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1659" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="fine_steel" />
@@ -129,7 +129,7 @@
 	<item id="5707" type="EtcItem" name="Record of Seven Signs">
 		<set name="icon" val="icon.etc_ssq_scroll_i00" />
 		<set name="default_action" val="show_ssq_status" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="price" val="500" />
 		<set name="handler" val="SevenSignsRecord" />
@@ -137,14 +137,14 @@
 	<item id="5708" type="EtcItem" name="Lord of the Manor's Certificate of Approval">
 		<set name="icon" val="icon.etc_permit_card_i00" />
 		<set name="etcitem_type" val="ticket_of_lord" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 	</item>
 	<item id="5709" type="Armor" name="Sealed Zubei's Gauntlets">
 		<set name="icon" val="icon.armor_t64_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="69" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -160,7 +160,7 @@
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -179,7 +179,7 @@
 		<set name="icon" val="icon.armor_t65_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -195,7 +195,7 @@
 		<set name="icon" val="icon.armor_t56_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -214,7 +214,7 @@
 		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="69" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -230,7 +230,7 @@
 		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -249,7 +249,7 @@
 		<set name="icon" val="icon.armor_t67_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -265,7 +265,7 @@
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -284,7 +284,7 @@
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="107" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="leather" />
@@ -300,7 +300,7 @@
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="83" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="leather" />
@@ -319,7 +319,7 @@
 		<set name="icon" val="icon.armor_t69_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="83" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="leather" />
@@ -335,7 +335,7 @@
 		<set name="icon" val="icon.armor_t70_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="83" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="leather" />
@@ -354,7 +354,7 @@
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="107" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="leather" />
@@ -370,7 +370,7 @@
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="83" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="leather" />
@@ -389,7 +389,7 @@
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="83" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="leather" />
@@ -405,7 +405,7 @@
 		<set name="icon" val="icon.armor_t73_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="83" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="leather" />
@@ -424,7 +424,7 @@
 		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="69" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -440,7 +440,7 @@
 		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -459,7 +459,7 @@
 		<set name="icon" val="icon.armor_t65_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -475,7 +475,7 @@
 		<set name="icon" val="icon.armor_t56_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -494,7 +494,7 @@
 		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="69" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -510,7 +510,7 @@
 		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -529,7 +529,7 @@
 		<set name="icon" val="icon.armor_t67_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -545,7 +545,7 @@
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -564,7 +564,7 @@
 		<set name="icon" val="icon.armor_t68_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="107" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="leather" />
@@ -580,7 +580,7 @@
 		<set name="icon" val="icon.armor_t68_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="83" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="leather" />
@@ -599,7 +599,7 @@
 		<set name="icon" val="icon.armor_t69_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="83" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="leather" />
@@ -615,7 +615,7 @@
 		<set name="icon" val="icon.armor_t70_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="83" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="leather" />
@@ -634,7 +634,7 @@
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="107" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -650,7 +650,7 @@
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="83" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -669,7 +669,7 @@
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="83" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -685,7 +685,7 @@
 		<set name="icon" val="icon.armor_t73_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="83" />
 		<set name="crystal_type" val="b" />
 		<set name="material" val="mithril" />
@@ -704,7 +704,7 @@
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -714,7 +714,7 @@
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -724,7 +724,7 @@
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -734,7 +734,7 @@
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -744,7 +744,7 @@
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -754,7 +754,7 @@
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -764,7 +764,7 @@
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -774,7 +774,7 @@
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -784,7 +784,7 @@
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -794,7 +794,7 @@
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -804,7 +804,7 @@
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -814,7 +814,7 @@
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -824,7 +824,7 @@
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -834,7 +834,7 @@
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -844,7 +844,7 @@
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -854,7 +854,7 @@
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="17700" />
@@ -863,7 +863,7 @@
 	<item id="5757" type="EtcItem" name="Sealed Zubei's Gauntlet Part">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="60" />
 		<set name="price" val="3843" />
@@ -872,7 +872,7 @@
 	<item id="5758" type="EtcItem" name="Sealed Avadon Gloves Part">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="60" />
 		<set name="price" val="3843" />
@@ -881,7 +881,7 @@
 	<item id="5759" type="EtcItem" name="Sealed Blue Wolf Gloves Fabric">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="material" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="60" />
 		<set name="price" val="4455" />
@@ -890,7 +890,7 @@
 	<item id="5760" type="EtcItem" name="Sealed Doom Gloves Part">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="60" />
 		<set name="price" val="4455" />
@@ -899,7 +899,7 @@
 	<item id="5761" type="EtcItem" name="Sealed Zubei's Boots Design">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="60" />
 		<set name="price" val="3843" />
@@ -908,7 +908,7 @@
 	<item id="5762" type="EtcItem" name="Sealed Avadon Boots Design">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="etcitem_type" val="material" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="60" />
 		<set name="price" val="3843" />
@@ -917,7 +917,7 @@
 	<item id="5763" type="EtcItem" name="Sealed Blue Wolf Boots Design">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="etcitem_type" val="material" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="60" />
 		<set name="price" val="4455" />
@@ -926,7 +926,7 @@
 	<item id="5764" type="EtcItem" name="Sealed Doom Boots Part">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="etcitem_type" val="material" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="60" />
 		<set name="price" val="4455" />
@@ -936,7 +936,7 @@
 		<set name="icon" val="icon.armor_t74_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -955,7 +955,7 @@
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -971,7 +971,7 @@
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -990,7 +990,7 @@
 		<set name="icon" val="icon.armor_t77_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -1009,7 +1009,7 @@
 		<set name="icon" val="icon.armor_t78_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -1025,7 +1025,7 @@
 		<set name="icon" val="icon.armor_t79_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -1044,7 +1044,7 @@
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -1063,7 +1063,7 @@
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -1079,7 +1079,7 @@
 		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -1098,7 +1098,7 @@
 		<set name="icon" val="icon.armor_t83_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -1117,7 +1117,7 @@
 		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -1133,7 +1133,7 @@
 		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -1152,7 +1152,7 @@
 		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="crystal" />
@@ -1171,7 +1171,7 @@
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="crystal" />
@@ -1187,7 +1187,7 @@
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="crystal" />
@@ -1206,7 +1206,7 @@
 		<set name="icon" val="icon.armor_t77_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="blood_steel" />
@@ -1225,7 +1225,7 @@
 		<set name="icon" val="icon.armor_t78_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="blood_steel" />
@@ -1241,7 +1241,7 @@
 		<set name="icon" val="icon.armor_t79_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="blood_steel" />
@@ -1260,7 +1260,7 @@
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -1279,7 +1279,7 @@
 		<set name="icon" val="icon.armor_t81_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -1295,7 +1295,7 @@
 		<set name="icon" val="icon.armor_t82_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="leather" />
@@ -1314,7 +1314,7 @@
 		<set name="icon" val="icon.armor_t83_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="blood_steel" />
@@ -1333,7 +1333,7 @@
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="blood_steel" />
@@ -1349,7 +1349,7 @@
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="108" />
 		<set name="crystal_type" val="a" />
 		<set name="material" val="blood_steel" />
@@ -1367,7 +1367,7 @@
 	<item id="5789" type="EtcItem" name="Soulshot: No Grade for Beginners">
 		<set name="icon" val="icon.etc_soulshot_none_for_rookie_i00" />
 		<set name="default_action" val="soulshot" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1380,7 +1380,7 @@
 	<item id="5790" type="EtcItem" name="Spiritshot: No Grade for Beginners">
 		<set name="icon" val="icon.etc_spiritshot_none_for_rookie_i00" />
 		<set name="default_action" val="spiritshot" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1398,7 +1398,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="2180" />
@@ -1424,7 +1424,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="2180" />
@@ -1450,7 +1450,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="c" />
 		<set name="material" val="oriharukon" />
 		<set name="weight" val="1380" />
@@ -1476,7 +1476,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="c" />
 		<set name="material" val="oriharukon" />
 		<set name="weight" val="1380" />
@@ -1502,7 +1502,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="2180" />
@@ -1528,7 +1528,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="2180" />
@@ -1554,7 +1554,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="c" />
 		<set name="material" val="oriharukon" />
 		<set name="weight" val="1380" />
@@ -1580,7 +1580,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="c" />
 		<set name="material" val="oriharukon" />
 		<set name="weight" val="1380" />
@@ -1602,7 +1602,7 @@
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="leather" />
 		<set name="weight" val="1320" />

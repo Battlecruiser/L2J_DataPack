@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="4400" type="EtcItem" name="White Fabric">
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="cloth" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -11,7 +11,7 @@
 	</item>
 	<item id="4401" type="EtcItem" name="Green Dimensional Stone">
 		<set name="icon" val="icon.etc_gem_green_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="10" />
 		<set name="price" val="10000" /> <!-- H5 Price -->
@@ -19,7 +19,7 @@
 	</item>
 	<item id="4402" type="EtcItem" name="Blue Dimensional Stone">
 		<set name="icon" val="icon.etc_gem_blue_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="10" />
 		<set name="price" val="10000" /> <!-- H5 Price -->
@@ -27,7 +27,7 @@
 	</item>
 	<item id="4403" type="EtcItem" name="Red Dimensional Stone">
 		<set name="icon" val="icon.etc_gem_red_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="10" />
 		<set name="price" val="10000" /> <!-- H5 Price -->
@@ -35,7 +35,7 @@
 	</item>
 	<item id="4404" type="EtcItem" name="Green Dimensional Stone - Shard">
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="10" />
 		<set name="price" val="10" />
@@ -43,7 +43,7 @@
 	</item>
 	<item id="4405" type="EtcItem" name="Blue Dimensional Stone - Shard">
 		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="10" />
 		<set name="price" val="10" />
@@ -51,7 +51,7 @@
 	</item>
 	<item id="4406" type="EtcItem" name="Red Dimensional Stone - Shard">
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="10" />
 		<set name="price" val="10" />
@@ -59,14 +59,14 @@
 	</item>
 	<item id="4407" type="EtcItem" name="Bill of Iason Heine">
 		<set name="icon" val="icon.etc_paper_black_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="price" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4408" type="EtcItem" name="Musical Score - Theme of Love">
 		<set name="icon" val="icon.etc_musical_note_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
@@ -74,7 +74,7 @@
 	</item>
 	<item id="4409" type="EtcItem" name="Musical Score - Theme of Battle">
 		<set name="icon" val="icon.etc_musical_note_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
@@ -82,7 +82,7 @@
 	</item>
 	<item id="4410" type="EtcItem" name="Musical Score - Theme of Journey">
 		<set name="icon" val="icon.etc_musical_note_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
@@ -91,7 +91,7 @@
 	<item id="4411" type="EtcItem" name="Echo Crystal - Theme of Journey">
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="reuse_delay" val="20000" />
@@ -102,7 +102,7 @@
 	<item id="4412" type="EtcItem" name="Echo Crystal - Theme of Battle">
 		<set name="icon" val="icon.etc_echo_crystal_i01" />
 		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="reuse_delay" val="24000" />
@@ -113,7 +113,7 @@
 	<item id="4413" type="EtcItem" name="Echo Crystal - Theme of Love">
 		<set name="icon" val="icon.etc_echo_crystal_i02" />
 		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="reuse_delay" val="24000" />
@@ -124,7 +124,7 @@
 	<item id="4414" type="EtcItem" name="Echo Crystal - Theme of Solitude">
 		<set name="icon" val="icon.etc_echo_crystal_i03" />
 		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="reuse_delay" val="20000" />
@@ -135,7 +135,7 @@
 	<item id="4415" type="EtcItem" name="Echo Crystal - Theme of the Feast">
 		<set name="icon" val="icon.etc_echo_crystal_i04" />
 		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="reuse_delay" val="3000" />
@@ -146,7 +146,7 @@
 	<item id="4416" type="EtcItem" name="Echo Crystal - Theme of Celebration">
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="reuse_delay" val="3000" />
@@ -157,7 +157,7 @@
 	<item id="4417" type="EtcItem" name="Echo Crystal - Theme of Comedy">
 		<set name="icon" val="icon.etc_echo_crystal_i01" />
 		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="reuse_delay" val="3000" />
@@ -167,7 +167,7 @@
 	</item>
 	<item id="4418" type="EtcItem" name="Musical Score - Theme of Celebration">
 		<set name="icon" val="icon.etc_musical_note_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
@@ -175,7 +175,7 @@
 	</item>
 	<item id="4419" type="EtcItem" name="Musical Score - Theme of Comedy">
 		<set name="icon" val="icon.etc_musical_note_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
@@ -183,7 +183,7 @@
 	</item>
 	<item id="4420" type="EtcItem" name="Musical Score - Theme of Solitude">
 		<set name="icon" val="icon.etc_musical_note_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
@@ -191,7 +191,7 @@
 	</item>
 	<item id="4421" type="EtcItem" name="Musical Score - Theme of the Feast">
 		<set name="icon" val="icon.etc_musical_note_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
@@ -263,7 +263,7 @@
 	</item>
 	<item id="4426" type="EtcItem" name="Manacles of Penitent">
 		<set name="icon" val="icon.etc_leash_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="steel" />
 		<set name="weight" val="50" />
 		<set name="price" val="22000" />
@@ -273,49 +273,49 @@
 	</item>
 	<item id="4427" type="EtcItem" name="Alligator Leather Belt">
 		<set name="icon" val="icon.etc_prefect_belt_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 		<set name="price" val="100" />
 	</item>
 	<item id="4428" type="EtcItem" name="Blue Alligator Leather Belt">
 		<set name="icon" val="icon.etc_prefect_belt_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 		<set name="price" val="2000" />
 	</item>
 	<item id="4429" type="EtcItem" name="Bejeweled Leather Belt">
 		<set name="icon" val="icon.etc_prefect_belt_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 		<set name="price" val="10000" />
 	</item>
 	<item id="4430" type="EtcItem" name="Alligator Leather Purse">
 		<set name="icon" val="icon.etc_handbag_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 		<set name="price" val="200" />
 	</item>
 	<item id="4431" type="EtcItem" name="Blue Alligator Leather Purse">
 		<set name="icon" val="icon.etc_handbag_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 		<set name="price" val="4000" />
 	</item>
 	<item id="4432" type="EtcItem" name="Bejeweled Purse">
 		<set name="icon" val="icon.etc_handbag_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 		<set name="price" val="20000" />
 	</item>
 	<item id="4433" type="EtcItem" name="Elemental Stone Powder">
 		<set name="icon" val="icon.etc_powder_white_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="10" />
 		<set name="price" val="50" />
@@ -323,7 +323,7 @@
 	</item>
 	<item id="4434" type="EtcItem" name="Elemental Stone Shards">
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="100" />
 		<set name="price" val="500" />
@@ -331,7 +331,7 @@
 	</item>
 	<item id="4435" type="EtcItem" name="Elemental Stone Lump">
 		<set name="icon" val="icon.etc_crystal_green_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="1000" />
 		<set name="price" val="5000" />
@@ -339,7 +339,7 @@
 	</item>
 	<item id="4436" type="EtcItem" name="Bentley's Request">
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -350,7 +350,7 @@
 	</item>
 	<item id="4437" type="EtcItem" name="Carson's Request">
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -362,7 +362,7 @@
 	<item id="4438" type="EtcItem" name="Knuckle Duster Edge">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="60" />
 		<set name="price" val="28044" />
@@ -371,7 +371,7 @@
 	<item id="4439" type="EtcItem" name="Avadon Shield Fragment">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="60" />
 		<set name="price" val="2900" />
@@ -381,7 +381,7 @@
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="57400" />
@@ -393,7 +393,7 @@
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="30" />
 		<set name="price" val="10900" />
@@ -404,7 +404,7 @@
 	<item id="4442" type="EtcItem" name="Lottery Ticket">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="etcitem_type" val="lotto" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="price" val="2" />
@@ -412,7 +412,7 @@
 	<item id="4443" type="EtcItem" name="Monster Race Ticket - Single">
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="etcitem_type" val="race_ticket" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="price" val="10" />
@@ -424,7 +424,7 @@
 	<item id="4444" type="EtcItem" name="Monster Race Ticket - Double">
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="etcitem_type" val="race_ticket" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="price" val="10" />
@@ -436,7 +436,7 @@
 	<item id="4445" type="EtcItem" name="Dye of STR (Str+1 Con-3)">
 		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
@@ -445,7 +445,7 @@
 	<item id="4446" type="EtcItem" name="Dye of STR (Str+1 Dex-3)">
 		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
@@ -454,7 +454,7 @@
 	<item id="4447" type="EtcItem" name="Dye of CON (Con+1 Str-3)">
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
@@ -463,7 +463,7 @@
 	<item id="4448" type="EtcItem" name="Dye of CON (Con+1 Dex-3)">
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
@@ -472,7 +472,7 @@
 	<item id="4449" type="EtcItem" name="Dye of DEX (Dex+1 Str-3)">
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
@@ -481,7 +481,7 @@
 	<item id="4450" type="EtcItem" name="Dye of DEX (Dex+1 Con-3)">
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
@@ -490,7 +490,7 @@
 	<item id="4451" type="EtcItem" name="Dye of INT (Int+1 Men-3)">
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
@@ -499,7 +499,7 @@
 	<item id="4452" type="EtcItem" name="Dye of INT (Int+1 Wit-3)">
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
@@ -508,7 +508,7 @@
 	<item id="4453" type="EtcItem" name="Dye of MEN (Men+1 Int-3)">
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
@@ -517,7 +517,7 @@
 	<item id="4454" type="EtcItem" name="Dye of MEN (Men+1 Wit-3)">
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
@@ -526,7 +526,7 @@
 	<item id="4455" type="EtcItem" name="Dye of WIT (Wit+1 Int-3)">
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
@@ -535,7 +535,7 @@
 	<item id="4456" type="EtcItem" name="Dye of WIT (Wit+1 Men-3)">
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
@@ -544,7 +544,7 @@
 	<item id="4457" type="EtcItem" name="Dye of STR (Str+1 Con-2)">
 		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -553,7 +553,7 @@
 	<item id="4458" type="EtcItem" name="Dye of STR (Str+1 Dex-2)">
 		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -562,7 +562,7 @@
 	<item id="4459" type="EtcItem" name="Dye of CON (Con+1 Str-2)">
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -571,7 +571,7 @@
 	<item id="4460" type="EtcItem" name="Dye of CON (Con+1 Dex-2)">
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -580,7 +580,7 @@
 	<item id="4461" type="EtcItem" name="Dye of DEX (Dex+1 Str-2)">
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -589,7 +589,7 @@
 	<item id="4462" type="EtcItem" name="Dye of DEX (Dex+1 Con-2)">
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -598,7 +598,7 @@
 	<item id="4463" type="EtcItem" name="Dye of INT (Int+1 Men-2)">
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -607,7 +607,7 @@
 	<item id="4464" type="EtcItem" name="Dye of INT (Int+1 Wit-2)">
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -616,7 +616,7 @@
 	<item id="4465" type="EtcItem" name="Dye of MEN (Men+1 Int-2)">
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -625,7 +625,7 @@
 	<item id="4466" type="EtcItem" name="Dye of MEN (Men+1 Wit-2)">
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -634,7 +634,7 @@
 	<item id="4467" type="EtcItem" name="Dye of WIT (Wit+1 Int-2)">
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -643,7 +643,7 @@
 	<item id="4468" type="EtcItem" name="Dye of WIT (Wit+1 Men-2)">
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -652,7 +652,7 @@
 	<item id="4469" type="EtcItem" name="Dye of STR (Str+1 Con-1)">
 		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
@@ -661,7 +661,7 @@
 	<item id="4470" type="EtcItem" name="Dye of STR (Str+1 Dex-1)">
 		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
@@ -670,7 +670,7 @@
 	<item id="4471" type="EtcItem" name="Dye of CON (Con+1 Str-1)">
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
@@ -679,7 +679,7 @@
 	<item id="4472" type="EtcItem" name="Dye of CON (Con+1 Dex-1)">
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
@@ -688,7 +688,7 @@
 	<item id="4473" type="EtcItem" name="Dye of DEX (Dex+1 Str-1)">
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
@@ -697,7 +697,7 @@
 	<item id="4474" type="EtcItem" name="Dye of DEX (Dex+1 Con-1)">
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
@@ -706,7 +706,7 @@
 	<item id="4475" type="EtcItem" name="Dye of INT (Int+1 Men-1)">
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
@@ -715,7 +715,7 @@
 	<item id="4476" type="EtcItem" name="Dye of INT (Int+1 Wit-1)">
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
@@ -724,7 +724,7 @@
 	<item id="4477" type="EtcItem" name="Dye of MEN (Men+1 Int-1)">
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
@@ -733,7 +733,7 @@
 	<item id="4478" type="EtcItem" name="Dye of MEN (Men+1 Wit-1)">
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
@@ -742,7 +742,7 @@
 	<item id="4479" type="EtcItem" name="Dye of WIT (Wit+1 Int-1)">
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
@@ -751,7 +751,7 @@
 	<item id="4480" type="EtcItem" name="Dye of WIT (Wit+1 Men-1)">
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
@@ -760,7 +760,7 @@
 	<item id="4481" type="EtcItem" name="Greater Dye of STR (Str+1 Con-3)">
 		<set name="icon" val="icon.etc_str_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -769,7 +769,7 @@
 	<item id="4482" type="EtcItem" name="Greater Dye of STR (Str+1 Dex-3)">
 		<set name="icon" val="icon.etc_str_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -778,7 +778,7 @@
 	<item id="4483" type="EtcItem" name="Greater Dye of CON(Con+1 Str-3)">
 		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -787,7 +787,7 @@
 	<item id="4484" type="EtcItem" name="Greater Dye of CON(Con+1 Dex-3)">
 		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -796,7 +796,7 @@
 	<item id="4485" type="EtcItem" name="Greater Dye of DEX (Dex+1 Str-3)">
 		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -805,7 +805,7 @@
 	<item id="4486" type="EtcItem" name="Greater Dye of DEX (Dex+1 Con-3)">
 		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -814,7 +814,7 @@
 	<item id="4487" type="EtcItem" name="Greater Dye of INT (Int+1 Men-3)">
 		<set name="icon" val="icon.etc_int_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -823,7 +823,7 @@
 	<item id="4488" type="EtcItem" name="Greater Dye of INT (Int+1 Wit-3)">
 		<set name="icon" val="icon.etc_int_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -832,7 +832,7 @@
 	<item id="4489" type="EtcItem" name="Greater Dye of MEN (Men+1 Int-3)">
 		<set name="icon" val="icon.etc_men_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -841,7 +841,7 @@
 	<item id="4490" type="EtcItem" name="Greater Dye of MEN (Men+1 Wit-3)">
 		<set name="icon" val="icon.etc_men_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -850,7 +850,7 @@
 	<item id="4491" type="EtcItem" name="Greater Dye of WIT (Wit+1 Int-3)">
 		<set name="icon" val="icon.etc_wit_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -859,7 +859,7 @@
 	<item id="4492" type="EtcItem" name="Greater Dye of WIT (Wit+1 Men-3)">
 		<set name="icon" val="icon.etc_wit_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
@@ -868,7 +868,7 @@
 	<item id="4493" type="EtcItem" name="Greater Dye of STR (Str+1 Con-2)">
 		<set name="icon" val="icon.etc_str_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
@@ -877,7 +877,7 @@
 	<item id="4494" type="EtcItem" name="Greater Dye of STR (Str+1 Dex-2)">
 		<set name="icon" val="icon.etc_str_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
@@ -886,7 +886,7 @@
 	<item id="4495" type="EtcItem" name="Greater Dye of CON (Con+1 Str-2)">
 		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
@@ -895,7 +895,7 @@
 	<item id="4496" type="EtcItem" name="Greater Dye of CON (Con+1 Dex-2)">
 		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
@@ -904,7 +904,7 @@
 	<item id="4497" type="EtcItem" name="Greater Dye of DEX (Dex+1 Str-2)">
 		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
@@ -913,7 +913,7 @@
 	<item id="4498" type="EtcItem" name="Greater Dye of DEX (Dex+1 Con-2)">
 		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
@@ -922,7 +922,7 @@
 	<item id="4499" type="EtcItem" name="Greater Dye of INT (Int+1 Men-2)">
 		<set name="icon" val="icon.etc_int_hena_i01" />
 		<set name="etcitem_type" val="dye" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />

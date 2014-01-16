@@ -4,7 +4,7 @@
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 		<set name="price" val="10000" />
@@ -17,7 +17,7 @@
 		<set name="icon" val="icon.etc_unholy_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 		<set name="price" val="10000" />
@@ -30,7 +30,7 @@
 		<set name="icon" val="icon.etc_holy_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 		<set name="price" val="10000" />
@@ -47,7 +47,7 @@
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="915" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="steel" />
@@ -79,7 +79,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
 		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
@@ -108,7 +108,7 @@
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="steel" />
 		<set name="weight" val="500" />
@@ -140,7 +140,7 @@
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="steel" />
 		<set name="weight" val="693" />
@@ -171,7 +171,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="steel" />
 		<set name="weight" val="693" />
@@ -203,7 +203,7 @@
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="c" />
 		<set name="material" val="steel" />
 		<set name="weight" val="467" />
@@ -235,7 +235,7 @@
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="c" />
 		<set name="material" val="steel" />
 		<set name="weight" val="660" />
@@ -266,7 +266,7 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="c" />
 		<set name="material" val="steel" />
 		<set name="weight" val="587" />
@@ -298,7 +298,7 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="c" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="533" />
@@ -320,7 +320,7 @@
 	</item>
 	<item id="10012" type="EtcItem" name="Scorpion Poison Stinger">
 		<set name="icon" val="icon.etc_claw_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="price" val="1000" />
@@ -328,7 +328,7 @@
 	</item>
 	<item id="10013" type="EtcItem" name="Race Stamp">
 		<set name="icon" val="icon.etc_hs_agit_war_joining_certificate_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="is_tradable" val="false" />
@@ -374,7 +374,7 @@
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5000000" />
@@ -393,7 +393,7 @@
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="151" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="steel" />
@@ -414,7 +414,7 @@
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="steel" />
@@ -435,7 +435,7 @@
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="113" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="leather" />
@@ -453,7 +453,7 @@
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="leather" />
@@ -471,7 +471,7 @@
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="113" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="cloth" />
@@ -493,7 +493,7 @@
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="71" />
 		<set name="crystal_type" val="d" />
 		<set name="material" val="cloth" />
@@ -512,7 +512,7 @@
 	</item>
 	<item id="10025" type="EtcItem" name="Battle Manual - Fallen Arrow">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="75" />
@@ -520,7 +520,7 @@
 	</item>
 	<item id="10026" type="EtcItem" name="Battle Manual - Fallen Attack">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="75" />
@@ -528,7 +528,7 @@
 	</item>
 	<item id="10027" type="EtcItem" name="Battle Manual - Detect Trap">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="550" />
@@ -536,7 +536,7 @@
 	</item>
 	<item id="10028" type="EtcItem" name="Battle Manual - Defuse Trap">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="550" />
@@ -544,7 +544,7 @@
 	</item>
 	<item id="10029" type="EtcItem" name="Battle Manual - Dark Strike">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="700" />
@@ -552,7 +552,7 @@
 	</item>
 	<item id="10030" type="EtcItem" name="Battle Manual - Dark Smash">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="2900" />
@@ -560,7 +560,7 @@
 	</item>
 	<item id="10031" type="EtcItem" name="Battle Manual - Double Thrust">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="700" />
@@ -568,7 +568,7 @@
 	</item>
 	<item id="10032" type="EtcItem" name="Battle Manual - Abyssal Blaze">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="700" />
@@ -576,7 +576,7 @@
 	</item>
 	<item id="10033" type="EtcItem" name="Battle Manual - Dark Explosion">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="1150" />
@@ -584,7 +584,7 @@
 	</item>
 	<item id="10034" type="EtcItem" name="Battle Manual - Shift Target">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="3200" />
@@ -592,7 +592,7 @@
 	</item>
 	<item id="10035" type="EtcItem" name="Battle Manual - Change Life Stone">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="2600" />
@@ -600,7 +600,7 @@
 	</item>
 	<item id="10036" type="EtcItem" name="Battle Manual - Spread Wing">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="5000" />
@@ -608,7 +608,7 @@
 	</item>
 	<item id="10037" type="EtcItem" name="Battle Manual - Slashing Blade">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="3850" />
@@ -616,7 +616,7 @@
 	</item>
 	<item id="10038" type="EtcItem" name="Battle Manual - Crushing Pain">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="7000" />
@@ -624,7 +624,7 @@
 	</item>
 	<item id="10039" type="EtcItem" name="Battle Manual - Contagion">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="7950" />
@@ -632,7 +632,7 @@
 	</item>
 	<item id="10040" type="EtcItem" name="Battle Manual - Life to Soul">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="3200" />
@@ -640,7 +640,7 @@
 	</item>
 	<item id="10041" type="EtcItem" name="Battle Manual - Scorn">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="3700" />
@@ -648,7 +648,7 @@
 	</item>
 	<item id="10042" type="EtcItem" name="Battle Manual - Triple Thrust">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="2900" />
@@ -656,7 +656,7 @@
 	</item>
 	<item id="10043" type="EtcItem" name="Battle Manual - Shining Edge">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="4400" />
@@ -664,7 +664,7 @@
 	</item>
 	<item id="10044" type="EtcItem" name="Battle Manual - Checkmate">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="5400" />
@@ -672,7 +672,7 @@
 	</item>
 	<item id="10045" type="EtcItem" name="Battle Manual - Soul of Pain">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="3000" />
@@ -680,7 +680,7 @@
 	</item>
 	<item id="10046" type="EtcItem" name="Battle Manual - Dark Flame">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="4000" />
@@ -688,7 +688,7 @@
 	</item>
 	<item id="10047" type="EtcItem" name="Battle Manual - Annihilation Circle">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="6750" />
@@ -696,7 +696,7 @@
 	</item>
 	<item id="10048" type="EtcItem" name="Battle Manual - Curse of Divinity">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="8700" />
@@ -704,7 +704,7 @@
 	</item>
 	<item id="10049" type="EtcItem" name="Battle Manual - Steal Divinity">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="6000" />
@@ -712,7 +712,7 @@
 	</item>
 	<item id="10050" type="EtcItem" name="Battle Manual - Blink">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="7200" />
@@ -720,7 +720,7 @@
 	</item>
 	<item id="10051" type="EtcItem" name="Battle Manual - Transfer Soul">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="1150" />
@@ -728,7 +728,7 @@
 	</item>
 	<item id="10052" type="EtcItem" name="Battle Manual - Twin Shot">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="2900" />
@@ -736,7 +736,7 @@
 	</item>
 	<item id="10053" type="EtcItem" name="Battle Manual - Rising Shot">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="3850" />
@@ -744,7 +744,7 @@
 	</item>
 	<item id="10054" type="EtcItem" name="Battle Manual - Deadly Roulette">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="8700" />
@@ -752,7 +752,7 @@
 	</item>
 	<item id="10055" type="EtcItem" name="Battle Manual - Temptation">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="5400" />
@@ -760,7 +760,7 @@
 	</item>
 	<item id="10056" type="EtcItem" name="Battle Manual - Create Bio Potion">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="800" />
@@ -768,7 +768,7 @@
 	</item>
 	<item id="10057" type="EtcItem" name="Battle Manual - Create Dark Seed">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="7700" />
@@ -776,7 +776,7 @@
 	</item>
 	<item id="10058" type="EtcItem" name="Battle Manual - Fire Trap">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="1550" />
@@ -784,7 +784,7 @@
 	</item>
 	<item id="10059" type="EtcItem" name="Battle Manual - Poison Trap">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="4800" />
@@ -792,7 +792,7 @@
 	</item>
 	<item id="10060" type="EtcItem" name="Battle Manual - Slow Trap">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="5400" />
@@ -800,7 +800,7 @@
 	</item>
 	<item id="10061" type="EtcItem" name="Battle Manual - Flash Trap">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="6000" />
@@ -808,7 +808,7 @@
 	</item>
 	<item id="10062" type="EtcItem" name="Battle Manual - Binding Trap">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="3200" />
@@ -816,7 +816,7 @@
 	</item>
 	<item id="10063" type="EtcItem" name="Battle Manual - Quiver of Bolts - Grade A">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="8700" />
@@ -824,7 +824,7 @@
 	</item>
 	<item id="10064" type="EtcItem" name="Battle Manual - Quiver of Bolts - Grade S">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="10000" />
@@ -832,7 +832,7 @@
 	</item>
 	<item id="10065" type="EtcItem" name="Battle Manual - Cure Dark Seed">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="8200" />
@@ -840,7 +840,7 @@
 	</item>
 	<item id="10066" type="EtcItem" name="Battle Manual - Decoy">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="3700" />
@@ -848,7 +848,7 @@
 	</item>
 	<item id="10067" type="EtcItem" name="Battle Manual - Chain Lightning">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="10800" />
@@ -856,7 +856,7 @@
 	</item>
 	<item id="10068" type="EtcItem" name="Battle Manual - Enuma Elish">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="30000" />
@@ -864,7 +864,7 @@
 	</item>
 	<item id="10069" type="EtcItem" name="Battle Manual - Leopold">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="30000" />
@@ -872,7 +872,7 @@
 	</item>
 	<item id="10070" type="EtcItem" name="Battle Manual - Change Weapon">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="800" />
@@ -880,7 +880,7 @@
 	</item>
 	<item id="10071" type="EtcItem" name="Battle Manual - Quiver of Bolts - Grade B">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="5400" />
@@ -888,7 +888,7 @@
 	</item>
 	<item id="10072" type="EtcItem" name="Battle Manual - Increase Power">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="250" />
@@ -896,7 +896,7 @@
 	</item>
 	<item id="10073" type="EtcItem" name="Battle Manual - Rapid Attack">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="250" />
@@ -904,7 +904,7 @@
 	</item>
 	<item id="10074" type="EtcItem" name="Battle Manual - Furious Soul">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="1150" />
@@ -912,7 +912,7 @@
 	</item>
 	<item id="10075" type="EtcItem" name="Battle Manual - Sword Shield">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="2600" />
@@ -920,7 +920,7 @@
 	</item>
 	<item id="10076" type="EtcItem" name="Battle Manual - Disarm">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="2600" />
@@ -928,7 +928,7 @@
 	</item>
 	<item id="10077" type="EtcItem" name="Battle Manual - Fast Shot">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="2050" />
@@ -936,7 +936,7 @@
 	</item>
 	<item id="10078" type="EtcItem" name="Battle Manual - Death Mark">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="1150" />
@@ -944,7 +944,7 @@
 	</item>
 	<item id="10079" type="EtcItem" name="Battle Manual - Courage">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="2600" />
@@ -952,7 +952,7 @@
 	</item>
 	<item id="10080" type="EtcItem" name="Battle Manual - Violent Temper">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="4800" />
@@ -960,7 +960,7 @@
 	</item>
 	<item id="10081" type="EtcItem" name="Battle Manual - Soul to Empower">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="3700" />
@@ -968,7 +968,7 @@
 	</item>
 	<item id="10082" type="EtcItem" name="Battle Manual - Darkness Protection">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="6750" />
@@ -976,7 +976,7 @@
 	</item>
 	<item id="10083" type="EtcItem" name="Battle Manual - Dark Weapon">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="4250" />
@@ -984,7 +984,7 @@
 	</item>
 	<item id="10084" type="EtcItem" name="Battle Manual - Pride of Kamael">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="4800" />
@@ -992,7 +992,7 @@
 	</item>
 	<item id="10085" type="EtcItem" name="Battle Manual - Surrender To Unholy">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="1250" />
@@ -1000,7 +1000,7 @@
 	</item>
 	<item id="10086" type="EtcItem" name="Battle Manual - Bleeding Shot">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="3350" />
@@ -1008,7 +1008,7 @@
 	</item>
 	<item id="10087" type="EtcItem" name="Battle Manual - Sharpshooting">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="7200" />
@@ -1016,7 +1016,7 @@
 	</item>
 	<item id="10088" type="EtcItem" name="Battle Manual - Real Target">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="3200" />
@@ -1024,7 +1024,7 @@
 	</item>
 	<item id="10089" type="EtcItem" name="Battle Manual - Imbue Dark Seed">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="7700" />
@@ -1032,7 +1032,7 @@
 	</item>
 	<item id="10090" type="EtcItem" name="Battle Manual - Prahnah">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="30000" />
@@ -1040,7 +1040,7 @@
 	</item>
 	<item id="10091" type="EtcItem" name="Battle Manual - Final Form">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="40000" />
@@ -1048,7 +1048,7 @@
 	</item>
 	<item id="10092" type="EtcItem" name="Battle Manual - Shadow Bind">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="5400" />
@@ -1056,7 +1056,7 @@
 	</item>
 	<item id="10093" type="EtcItem" name="Battle Manual - Voice Bind">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="6750" />
@@ -1064,7 +1064,7 @@
 	</item>
 	<item id="10094" type="EtcItem" name="Battle Manual - Rush">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="2050" />
@@ -1072,7 +1072,7 @@
 	</item>
 	<item id="10095" type="EtcItem" name="Battle Manual - Storm Assault">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="4400" />
@@ -1080,7 +1080,7 @@
 	</item>
 	<item id="10096" type="EtcItem" name="Battle Manual - Wing Assault">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="40000" />
@@ -1088,7 +1088,7 @@
 	</item>
 	<item id="10097" type="EtcItem" name="Battle Manual - Shoulder Charge">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="2900" />
@@ -1096,7 +1096,7 @@
 	</item>
 	<item id="10098" type="EtcItem" name="Battle Manual - Blade Rush">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="6000" />
@@ -1104,7 +1104,7 @@
 	</item>
 	<item id="10099" type="EtcItem" name="Spellbook - Count of Fire">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="30000" />
