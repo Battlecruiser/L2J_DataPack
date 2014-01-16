@@ -291,10 +291,13 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 				giveItemRandomly(st.getPlayer(), npc, SILVER_ICE_CRYSTAL, 1, 0, info.getFirstChance(), true);
 			}
 			
-			final QuestState st2 = st.getPlayer().getQuestState(Q00115_TheOtherSideOfTruth.class.getSimpleName());
-			if ((st.getCond() >= 2) && (st2 != null) && st2.isCompleted())
+			if (info.getSecondChance() > 0)
 			{
-				giveItemRandomly(st.getPlayer(), npc, SILVER_HEMOCYTE, 1, 0, info.getSecondChance(), true);
+				final QuestState st2 = st.getPlayer().getQuestState(Q00115_TheOtherSideOfTruth.class.getSimpleName());
+				if ((st.getCond() >= 2) && (st2 != null) && st2.isCompleted())
+				{
+					giveItemRandomly(st.getPlayer(), npc, SILVER_HEMOCYTE, 1, 0, info.getSecondChance(), true);
+				}
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

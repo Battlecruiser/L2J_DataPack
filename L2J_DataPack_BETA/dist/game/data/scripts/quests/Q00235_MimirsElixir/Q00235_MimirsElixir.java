@@ -233,15 +233,15 @@ public final class Q00235_MimirsElixir extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestItemHolder item = MOBS.get(npc.getId());
 		if (getRandom(5) == 0)
 		{
 			L2PcInstance luckyPlayer = getRandomPartyMember(player, npc);
 			if (luckyPlayer != null)
 			{
-				final QuestState st = luckyPlayer.getQuestState(getName());
+				final QuestItemHolder item = MOBS.get(npc.getId());
 				if (giveItemRandomly(luckyPlayer, npc, item.getId(), item.getCount(), item.getCount(), 1.0, true))
 				{
+					final QuestState st = luckyPlayer.getQuestState(getName());
 					st.setMemoState(item.getChance());
 					st.setCond(item.getChance());
 				}
@@ -259,20 +259,17 @@ public final class Q00235_MimirsElixir extends Quest
 		{
 			if (npc.getId() == LADD)
 			{
-				if (player.getRace() != PcRace.Kamael)
+				if (player.getRace() == PcRace.Kamael)
 				{
-					if (player.getLevel() >= MIN_LEVEL)
-					{
-						htmltext = ((hasQuestItems(player, STAR_OF_DESTINY)) ? "30721-01.htm" : "30721-07.html");
-					}
-					else
-					{
-						htmltext = "30721-08.html";
-					}
+					htmltext = "30721-09.html";
+				}
+				else if (player.getLevel() < MIN_LEVEL)
+				{
+					htmltext = "30721-08.html";
 				}
 				else
 				{
-					htmltext = "30721-09.html";
+					htmltext = ((hasQuestItems(player, STAR_OF_DESTINY)) ? "30721-01.htm" : "30721-07.html");
 				}
 			}
 		}
