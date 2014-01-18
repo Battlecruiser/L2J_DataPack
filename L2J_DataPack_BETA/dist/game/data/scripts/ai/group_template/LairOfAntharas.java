@@ -18,6 +18,8 @@
  */
 package ai.group_template;
 
+import java.util.Arrays;
+
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.SpawnTable;
@@ -27,7 +29,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
+import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 /**
  * Lair of Antharas AI.
@@ -41,6 +43,8 @@ public final class LairOfAntharas extends AbstractNpcAI
 	final private static int DRAGON_KNIGHT2 = 22845;
 	final private static int ELITE_DRAGON_KNIGHT = 22846;
 	
+	final private static int DRAGON_GUARD = 22852;
+	final private static int DRAGON_MAGE = 22853;
 	// Misc
 	final private static int KNIGHT_CHANCE = 30;
 	final private static int KNORIKS_CHANCE = 60;
@@ -49,19 +53,36 @@ public final class LairOfAntharas extends AbstractNpcAI
 	private LairOfAntharas()
 	{
 		super(LairOfAntharas.class.getSimpleName(), "ai/group_template");
-		addKillId(DRAGON_KNIGHT, DRAGON_KNIGHT2);
-		addSpawnId(DRAGON_KNIGHT, DRAGON_KNIGHT2);
+		addKillId(DRAGON_KNIGHT, DRAGON_KNIGHT2, DRAGON_GUARD, DRAGON_MAGE);
+		addSpawnId(DRAGON_KNIGHT, DRAGON_KNIGHT2, DRAGON_GUARD, DRAGON_MAGE);
+		addMoveFinishedId(DRAGON_GUARD, DRAGON_MAGE);
 		addAggroRangeEnterId(KNORIKS);
 		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(DRAGON_KNIGHT))
+		for (int npcId : Arrays.asList(DRAGON_KNIGHT, DRAGON_KNIGHT2, DRAGON_GUARD, DRAGON_MAGE))
 		{
-			onSpawn(spawn.getLastSpawn());
+			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
+			{
+				onSpawn(spawn.getLastSpawn());
+			}
 		}
-		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(DRAGON_KNIGHT2))
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		if (event.equals("CHECK_HOME") && (npc != null) && !npc.isDead())
 		{
-			onSpawn(spawn.getLastSpawn());
+			if ((npc.calculateDistance(npc.getSpawn().getLocation(), false, false) > 10) && !npc.isInCombat())
+			{
+				((L2Attackable) npc).returnHome();
+			}
+			else if ((npc.getHeading() != npc.getSpawn().getHeading()) && !npc.isInCombat())
+			{
+				npc.setHeading(npc.getSpawn().getHeading());
+				npc.broadcastPacket(new ValidateLocation(npc));
+			}
 		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -73,7 +94,7 @@ public final class LairOfAntharas extends AbstractNpcAI
 			{
 				npc.setScriptValue(1);
 			}
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getId(), NpcStringId.WHOS_THERE_IF_YOU_DISTURB_THE_TEMPER_OF_THE_GREAT_LAND_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU), 1000);
+			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.WHOS_THERE_IF_YOU_DISTURB_THE_TEMPER_OF_THE_GREAT_LAND_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU);
 		}
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
@@ -87,9 +108,9 @@ public final class LairOfAntharas extends AbstractNpcAI
 			{
 				if (getRandom(100) > KNIGHT_CHANCE)
 				{
-					final L2Attackable newKnight = (L2Attackable) addSpawn(DRAGON_KNIGHT2, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, true);
+					final L2Attackable newKnight = (L2Attackable) addSpawn(DRAGON_KNIGHT2, npc.getLocation(), false, 0, true);
 					npc.deleteMe();
-					newKnight.broadcastPacket(new NpcSay(newKnight.getObjectId(), Say2.NPC_SHOUT, DRAGON_KNIGHT2, NpcStringId.THOSE_WHO_SET_FOOT_IN_THIS_PLACE_SHALL_NOT_LEAVE_ALIVE));
+					broadcastNpcSay(newKnight, Say2.NPC_SHOUT, NpcStringId.THOSE_WHO_SET_FOOT_IN_THIS_PLACE_SHALL_NOT_LEAVE_ALIVE);
 					attackPlayer(newKnight, killer);
 				}
 				break;
@@ -98,11 +119,17 @@ public final class LairOfAntharas extends AbstractNpcAI
 			{
 				if (getRandom(100) > KNIGHT_CHANCE)
 				{
-					final L2Attackable eliteKnight = (L2Attackable) addSpawn(ELITE_DRAGON_KNIGHT, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, true);
+					final L2Attackable eliteKnight = (L2Attackable) addSpawn(ELITE_DRAGON_KNIGHT, npc.getLocation(), false, 0, true);
 					npc.deleteMe();
-					eliteKnight.broadcastPacket(new NpcSay(eliteKnight.getObjectId(), Say2.NPC_SHOUT, DRAGON_KNIGHT2, NpcStringId.IF_YOU_WISH_TO_SEE_HELL_I_WILL_GRANT_YOU_YOUR_WISH));
+					broadcastNpcSay(eliteKnight, Say2.NPC_SHOUT, NpcStringId.IF_YOU_WISH_TO_SEE_HELL_I_WILL_GRANT_YOU_YOUR_WISH);
 					attackPlayer(eliteKnight, killer);
 				}
+				break;
+			}
+			case DRAGON_GUARD:
+			case DRAGON_MAGE:
+			{
+				cancelQuestTimer("CHECK_HOME", npc, null);
 				break;
 			}
 		}
@@ -112,7 +139,13 @@ public final class LairOfAntharas extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		((L2Attackable) npc).setOnKillDelay(0);
+		final L2Attackable mob = (L2Attackable) npc;
+		mob.setOnKillDelay(0);
+		if ((npc.getId() == DRAGON_GUARD) || (npc.getId() == DRAGON_MAGE))
+		{
+			mob.setIsNoRndWalk(true);
+			startQuestTimer("CHECK_HOME", 10000, npc, null, true);
+		}
 		return super.onSpawn(npc);
 	}
 	
