@@ -812,7 +812,17 @@ INSERT INTO `teleport` VALUES
 ('Hunters (Noble) -> The Heart of Antharas Lair',16005,154396,121235,-3808,1,1,13722),
 ('Gludio -> Isle of Souls Harbor',16006,-73983,51956,-3680,9300,0,57),
 ('Aden -> Isle of Souls Harbor',16007,-73983,51956,-3680,22000,0,57),
-('Aden -> Ivory Tower',16008,85391,16228,-3672,6200,0,57);
+('Aden -> Ivory Tower',16008,85391,16228,-3672,6200,0,57),
+('Photo Snow - Book Castle',16009,-61926,-59504,-1728,0,0,57),
+('Photo Snow - Clock Tower',16010,-61342,-57686,-1388,0,0,57),
+('Photo Snow - House',16011,-57525,-54523,-1576,0,0,57),
+('Photo Snow - Tuba 1',16012,-55355,-56305,-1112,0,0,57),
+('Photo Snow - Tuba 2',16013,-55545,-56310,-1256,0,0,57),
+('Photo Snow - Tuba 3',16014,-55646,-56314,-1296,0,0,57),
+('Photo Snow - Tuba 4',16015,-55748,-56327,-1336,0,0,57),
+('Photo Snow - Parade Tunnel a',16016,-58151,-53110,-1688,0,0,57),
+('Photo Snow - Parade Tunnel b',16017,-55223,-58832,-1680,0,0,57),
+('Photo Snow - Book House',16018,-59075,-59464,-1464,0,0,57);
 
 -- Fortress Teleports
 INSERT INTO `teleport` VALUES
