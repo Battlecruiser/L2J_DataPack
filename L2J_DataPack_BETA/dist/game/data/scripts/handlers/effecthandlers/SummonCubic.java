@@ -114,7 +114,7 @@ public final class SummonCubic extends AbstractEffect
 				final BuffInfo cubicMastery = player.getEffectList().getBuffInfoBySkillId(L2Skill.SKILL_CUBIC_MASTERY);
 				for (AbstractEffect effect : cubicMastery.getEffects())
 				{
-					allowedCubicCount += effect != null ? effect.getValue() : 0;
+					allowedCubicCount = effect != null ? (int) effect.getValue() : 1;
 				}
 			}
 			
