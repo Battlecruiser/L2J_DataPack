@@ -60,7 +60,7 @@ public final class Heal extends AbstractEffect
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
-		if ((target == null) || target.isDead() || target.isDoor())
+		if ((target == null) || target.isDead() || target.isDoor() || target.isInvul())
 		{
 			return;
 		}
