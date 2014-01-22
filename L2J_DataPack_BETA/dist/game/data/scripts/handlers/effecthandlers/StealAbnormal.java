@@ -81,24 +81,8 @@ public final class StealAbnormal extends AbstractEffect
 				final BuffInfo stolen = new BuffInfo(env);
 				stolen.setAbnormalTime(infoToSteal.getTime()); // Copy the remaining time.
 				// To include all the effects, it's required to go through the template rather the buff info.
-				for (AbstractEffect effect : infoToSteal.getSkill().getEffects(EffectScope.GENERAL))
-				{
-					if (effect != null)
-					{
-						if (effect.isInstant())
-						{
-							if (effect.calcSuccess(stolen))
-							{
-								effect.onStart(stolen);
-							}
-						}
-						else if (effect.canStart(stolen))
-						{
-							stolen.addEffect(effect);
-						}
-					}
-				}
-				info.getEffected().getEffectList().remove(infoToSteal);
+				infoToSteal.getSkill().applyEffectScope(EffectScope.GENERAL, stolen, true, true);
+				info.getEffected().getEffectList().remove(true, infoToSteal);
 				info.getEffector().getEffectList().add(stolen);
 			}
 		}
