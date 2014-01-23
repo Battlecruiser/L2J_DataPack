@@ -511,9 +511,16 @@
 	<item id="17268" type="EtcItem" name="Antharas Blood Crystal">
 		<!-- Description: Using the power held within the blood of Antharas, this crystal can revive and fully restore EXP of all dead characters in the Command Channel. Can only be used while inside the Lair of Antharas. Reuse time is 1 hour. -->
 		<set name="icon" val="icon.etc_fire_crystal_1_i00" />
+		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" /> 
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9179-1" />
+		<cond msgId="113" addName="1"> 
+			<player insideZoneId="70050" /> 
+		</cond> 
 	</item>
 	<item id="17269" type="Armor" name="Agathion Seal Bracelet - Antharas">
 		<!-- Description: Bracelet that summons a cute Antharas Agathion. Cannot be exchanged or dropped. -->
