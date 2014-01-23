@@ -1154,12 +1154,23 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9179" levels="1" name="Antharas's Blood Crystal">
-		<!-- none -->
+		<!-- High Five Skill -->
 		<set name="affectLimit" val="50-50" />
 		<set name="effectPoint" val="578" />
-		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="effectRange" val="2000" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17268" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="targetType" val="PC_BODY" />
+		<!-- TODO: revive all dead characters in the Command Channel -->
+		<for>
+			<effect name="Resurrection">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9180" levels="2" name="10,000,000 SP scroll">
 		<!-- High Five Skill -->
