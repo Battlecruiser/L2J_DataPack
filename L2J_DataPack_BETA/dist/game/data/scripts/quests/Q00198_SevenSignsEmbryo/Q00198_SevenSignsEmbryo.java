@@ -180,7 +180,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 			return null;
 		}
 		
-		final QuestState st = getQuestState(player, false);
+		final QuestState st = getQuestState(partyMember, false);
 		if (npc.isInsideRadius(player, 1500, true, false))
 		{
 			st.giveItems(SCULPTURE_OF_DOUBT, 1);

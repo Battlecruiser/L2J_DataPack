@@ -169,13 +169,20 @@ public final class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 				}
 				break;
 			}
-			case "30969-03.html":
+			case "reward":
 			{
 				if (st.isCond(4) && st.hasQuestItems(SHUNAIMANS_CONTRACT))
 				{
-					st.addExpAndSp(52518015, 5817677);
-					st.exitQuest(false, true);
-					htmltext = event;
+					if (player.getLevel() >= MIN_LEVEL)
+					{
+						st.addExpAndSp(52518015, 5817677);
+						st.exitQuest(false, true);
+						htmltext = "30969-03.html";
+					}
+					else
+					{
+						htmltext = "level_check.html";
+					}
 				}
 				break;
 			}

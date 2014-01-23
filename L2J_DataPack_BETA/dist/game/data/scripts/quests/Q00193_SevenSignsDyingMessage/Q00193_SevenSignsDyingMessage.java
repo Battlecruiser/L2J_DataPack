@@ -189,13 +189,20 @@ public final class Q00193_SevenSignsDyingMessage extends Quest
 				startQuestTimer("heal", 30000 - getRandom(20000), npc, player);
 				break;
 			}
-			case "30760-02.html":
+			case "reward":
 			{
 				if (st.isCond(6))
 				{
-					st.addExpAndSp(52518015, 5817677);
-					st.exitQuest(false, true);
-					htmltext = event;
+					if (player.getLevel() >= MIN_LEVEL)
+					{
+						st.addExpAndSp(52518015, 5817677);
+						st.exitQuest(false, true);
+						htmltext = "30760-02.html";
+					}
+					else
+					{
+						htmltext = "level_check.html";
+					}
 				}
 				break;
 			}
