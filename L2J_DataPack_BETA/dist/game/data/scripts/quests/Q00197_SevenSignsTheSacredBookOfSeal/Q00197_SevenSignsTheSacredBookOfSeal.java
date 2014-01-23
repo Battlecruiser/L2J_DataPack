@@ -231,8 +231,8 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			return null;
 		}
 		
-		final QuestState st = getQuestState(player, false);
-		if (npc.isInsideRadius(player, 1500, true, false))
+		final QuestState st = getQuestState(partyMember, false);
+		if (npc.isInsideRadius(partyMember, 1500, true, false))
 		{
 			st.giveItems(SCULPTURE_OF_DOUBT, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
@@ -241,9 +241,7 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 		
 		isBusy = false;
 		cancelQuestTimers("despawn");
-		NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU);
-		ns.addStringParameter(player.getName());
-		npc.broadcastPacket(ns);
+		npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU).addStringParameter(partyMember.getName()));
 		return super.onKill(npc, player, isSummon);
 	}
 	
