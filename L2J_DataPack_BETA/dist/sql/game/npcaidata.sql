@@ -6155,8 +6155,8 @@ INSERT INTO `npcaidata` VALUES
 (29017, 7, 15, 0, 1100, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "orfen_clan", 2700, "null", 0, 0, "fighter"), -- Riba
 (29018, 7, 15, 0, 1500, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "orfen_clan", 2900, "null", 0, 0, "balanced"), -- Riba Iren
 (29019, 7, 15, 0, 4096, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Antharas
-(29020, 7, 15, 0, 1000, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "baium", 300, "null", 0, 0, "balanced"), -- Baium
-(29021, 7, 15, 0, 1000, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 500, 0, "archangel_clan", 300, "baium_clan", 300, 0, "balanced"), -- Archangel
+(29020, 7, 15, 4127, 1000, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "baium_clan", 300, "archangel_clan", 50, 0, "balanced"), -- Baium
+(29021, 7, 15, 0, 1000, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 500, 0, "archangel_clan", 300, "null", 0, 0, "balanced"), -- Archangel
 (29022, 7, 15, 0, 1000, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Zaken
 (29023, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 150, 0, "null", 300, "null", 0, 0, "fighter"), -- Doll Blader
 (29024, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 150, 0, "null", 300, "null", 0, 0, "fighter"), -- Veil Master
