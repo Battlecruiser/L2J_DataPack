@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.quest.State;
  * Seven Signs, Series of Doubt (192)
  * @author Adry_85
  */
-public class Q00192_SevenSignsSeriesOfDoubt extends Quest
+public final class Q00192_SevenSignsSeriesOfDoubt extends Quest
 {
 	// NPCs
 	private static final int HOLLINT = 30191;
@@ -43,9 +43,9 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 79;
 	
-	public Q00192_SevenSignsSeriesOfDoubt(int questId, String name, String descr)
+	private Q00192_SevenSignsSeriesOfDoubt()
 	{
-		super(questId, name, descr);
+		super(192, Q00192_SevenSignsSeriesOfDoubt.class.getSimpleName(), "Seven Signs, Series of Doubt");
 		addStartNpc(CROOP, UNIDENTIFIED_BODY);
 		addTalkId(CROOP, STAN, UNIDENTIFIED_BODY, HECTOR, HOLLINT);
 		registerQuestItems(CROOPS_INTRODUCTION, JACOBS_NECKLACE, CROOPS_LETTER);
@@ -54,7 +54,7 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -173,7 +173,6 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						st.addExpAndSp(52518015, 5817677);
-						st.takeItems(CROOPS_LETTER, -1);
 						st.exitQuest(false, true);
 						htmltext = "30191-03.html";
 					}
@@ -191,13 +190,8 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -318,6 +312,6 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 	
 	public static void main(String args[])
 	{
-		new Q00192_SevenSignsSeriesOfDoubt(192, Q00192_SevenSignsSeriesOfDoubt.class.getSimpleName(), "Seven Signs, Series of Doubt");
+		new Q00192_SevenSignsSeriesOfDoubt();
 	}
 }
