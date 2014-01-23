@@ -181,7 +181,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 		}
 		
 		final QuestState st = getQuestState(partyMember, false);
-		if (npc.isInsideRadius(player, 1500, true, false))
+		if (npc.isInsideRadius(partyMember, 1500, true, false))
 		{
 			st.giveItems(SCULPTURE_OF_DOUBT, 1);
 			st.setCond(2, true);
@@ -190,11 +190,9 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 		isBusy = false;
 		cancelQuestTimers("despawn");
 		cancelQuestTimers("heal");
-		NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU);
-		ns.addStringParameter(player.getName());
-		npc.broadcastPacket(ns);
+		npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU).addStringParameter(partyMember.getName()));
 		npc.deleteMe();
-		player.showQuestMovie(14);
+		partyMember.showQuestMovie(14);
 		return super.onKill(npc, player, isSummon);
 	}
 	
