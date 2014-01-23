@@ -6082,15 +6082,15 @@ INSERT INTO `npcaidata` VALUES
 (27368, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Slayer
 (27369, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Great Magus
 (27370, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Guard Knight
-(27371, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Butcher
-(27372, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Magus
-(27373, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Knight-Errant
-(27374, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Shilen's Evil Thoughts
-(27375, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Shilen's Evil Thoughts
-(27376, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Knight
-(27377, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Slayer
-(27378, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Great Magus
-(27379, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Guard Knight
+(27371, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Butcher
+(27372, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Magus
+(27373, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Knight-Errant
+(27374, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 300, "null", 0, 0, "fighter"), -- Shilen's Evil Thoughts
+(27375, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 300, "null", 0, 0, "fighter"), -- Shilen's Evil Thoughts
+(27376, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Knight
+(27377, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Slayer
+(27378, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Great Magus
+(27379, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Guard Knight
 (27380, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Reckless Sprite of Water
 (27381, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Reckless Sprite of Air
 (27382, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Power of Seal Isolation
@@ -8731,13 +8731,13 @@ INSERT INTO `npcaidata` VALUES
 (32712, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Somulitan
 (32713, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Pathfinder Worker
 (32714, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Asher
-(32715, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Lilith
-(32716, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Lilith's Steward
-(32717, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Lilith's Elite
-(32718, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Anakim
-(32719, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Anakim's Guardian
-(32720, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Anakim's Guard
-(32721, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Anakim's Executor
+(32715, 7, 15, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Lilith
+(32716, 7, 15, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Lilith's Steward
+(32717, 7, 15, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Lilith's Elite
+(32718, 7, 15, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Anakim
+(32719, 7, 15, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Anakim's Guardian
+(32720, 7, 15, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Anakim's Guard
+(32721, 7, 15, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Anakim's Executor
 (32722, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Battle League Helper
 (32723, 7, 15, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), --
 (32724, 7, 15, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), --

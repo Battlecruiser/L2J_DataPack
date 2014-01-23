@@ -37,7 +37,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Seven Signs, Dying Message (193)
  * @author Adry_85
  */
-public class Q00193_SevenSignsDyingMessage extends Quest
+public final class Q00193_SevenSignsDyingMessage extends Quest
 {
 	// NPCs
 	private static final int SHILENS_EVIL_THOUGHTS = 27343;
@@ -55,9 +55,9 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 	// Skill
 	private static SkillHolder NPC_HEAL = new SkillHolder(4065, 8);
 	
-	public Q00193_SevenSignsDyingMessage(int questId, String name, String descr)
+	private Q00193_SevenSignsDyingMessage()
 	{
-		super(questId, name, descr);
+		super(193, Q00193_SevenSignsDyingMessage.class.getSimpleName(), "Seven Signs, Dying Message");
 		addStartNpc(HOLLINT);
 		addTalkId(HOLLINT, CAIN, ERIC, SIR_GUSTAV_ATHEBALDT);
 		addKillId(SHILENS_EVIL_THOUGHTS);
@@ -78,7 +78,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			return super.onAdvEvent(event, npc, player);
 		}
 		
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -212,8 +212,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			return null;
 		}
 		
-		final QuestState st = partyMember.getQuestState(getName());
-		
+		final QuestState st = getQuestState(player, false);
 		if (npc.isInsideRadius(player, 1500, true, false))
 		{
 			st.giveItems(SCULPTURE_OF_DOUBT, 1);
@@ -227,20 +226,14 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 		NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU);
 		ns.addStringParameter(player.getName());
 		npc.broadcastPacket(ns);
-		
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -351,6 +344,6 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 	
 	public static void main(String args[])
 	{
-		new Q00193_SevenSignsDyingMessage(193, Q00193_SevenSignsDyingMessage.class.getSimpleName(), "Seven Signs, Dying Message");
+		new Q00193_SevenSignsDyingMessage();
 	}
 }

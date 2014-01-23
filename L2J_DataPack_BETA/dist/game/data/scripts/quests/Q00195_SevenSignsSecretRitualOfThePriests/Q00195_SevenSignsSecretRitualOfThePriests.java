@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.model.quest.State;
  * Seven Signs, Secret Ritual of the Priests (195)
  * @author Adry_85
  */
-public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
+public final class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 {
 	// NPCs
 	private static final int RAYMOND = 30289;
@@ -52,9 +52,9 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 	// private static SkillHolder TRANSFORM_DISPEL = new SkillHolder(6200, 1);
 	private static SkillHolder TRANSFORMATION = new SkillHolder(6204, 1);
 	
-	public Q00195_SevenSignsSecretRitualOfThePriests(int questId, String name, String descr)
+	private Q00195_SevenSignsSecretRitualOfThePriests()
 	{
-		super(questId, name, descr);
+		super(195, Q00195_SevenSignsSecretRitualOfThePriests.class.getSimpleName(), "Seven Signs, Secret Ritual of the Priests");
 		addFirstTalkId(IDENTITY_CONFIRM_DEVICE, PASSWORD_ENTRY_DEVICE, DARKNESS_OF_DAWN, SHELF);
 		addStartNpc(CLAUDIA_ATHEBALDT);
 		addTalkId(CLAUDIA_ATHEBALDT, JOHN, RAYMOND, IASON_HEINE, LIGHT_OF_DAWN, DARKNESS_OF_DAWN, IDENTITY_CONFIRM_DEVICE, PASSWORD_ENTRY_DEVICE, SHELF);
@@ -64,7 +64,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -186,13 +186,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
+		String htmltext = null;
 		switch (npc.getId())
 		{
 			case IDENTITY_CONFIRM_DEVICE:
@@ -222,13 +216,8 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -247,94 +236,105 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getId() == CLAUDIA_ATHEBALDT)
+				switch (npc.getId())
 				{
-					if (st.isCond(1))
+					case CLAUDIA_ATHEBALDT:
 					{
-						htmltext = "31001-07.html";
-					}
-				}
-				else if (npc.getId() == JOHN)
-				{
-					switch (st.getCond())
-					{
-						case 1:
-						{
-							htmltext = "32576-01.html";
-							break;
-						}
-						case 2:
-						{
-							htmltext = "32576-03.html";
-							break;
-						}
-					}
-				}
-				else if (npc.getId() == RAYMOND)
-				{
-					switch (st.getCond())
-					{
-						case 2:
-						{
-							if (st.hasQuestItems(IDENTITY_CARD) && (player.getTransformationId() != 113))
-							{
-								htmltext = "30289-01.html";
-							}
-							break;
-						}
-						case 3:
-						{
-							if (st.hasQuestItems(IDENTITY_CARD))
-							{
-								htmltext = st.hasQuestItems(SHUNAIMANS_CONTRACT) ? "30289-06.html" : "30289-09.html";
-							}
-							break;
-						}
-						case 4:
-						{
-							htmltext = "30289-12.html";
-							break;
-						}
-					}
-				}
-				else if (npc.getId() == LIGHT_OF_DAWN)
-				{
-					if (st.isCond(3))
-					{
-						if (st.hasQuestItems(IDENTITY_CARD))
+						if (st.isCond(1))
 						{
 							htmltext = "31001-07.html";
 						}
+						break;
 					}
-				}
-				else if (npc.getId() == PASSWORD_ENTRY_DEVICE)
-				{
-					if (st.isCond(3) && st.hasQuestItems(IDENTITY_CARD))
+					case JOHN:
 					{
-						htmltext = "32577-02.html";
-						player.teleToLocation(-78240, 205858, -7856);
+						switch (st.getCond())
+						{
+							case 1:
+							{
+								htmltext = "32576-01.html";
+								break;
+							}
+							case 2:
+							{
+								htmltext = "32576-03.html";
+								break;
+							}
+						}
+						break;
 					}
-				}
-				else if (npc.getId() == SHELF)
-				{
-					if (st.isCond(3) && !st.hasQuestItems(SHUNAIMANS_CONTRACT))
+					case RAYMOND:
 					{
-						st.giveItems(SHUNAIMANS_CONTRACT, 1);
-						htmltext = "32580-02.html";
+						switch (st.getCond())
+						{
+							case 2:
+							{
+								if (st.hasQuestItems(IDENTITY_CARD) && (player.getTransformationId() != 113))
+								{
+									htmltext = "30289-01.html";
+								}
+								break;
+							}
+							case 3:
+							{
+								if (st.hasQuestItems(IDENTITY_CARD))
+								{
+									htmltext = st.hasQuestItems(SHUNAIMANS_CONTRACT) ? "30289-06.html" : "30289-09.html";
+								}
+								break;
+							}
+							case 4:
+							{
+								htmltext = "30289-12.html";
+								break;
+							}
+						}
+						break;
 					}
-				}
-				else if (npc.getId() == DARKNESS_OF_DAWN)
-				{
-					if (st.isCond(3) && !st.hasQuestItems(SHUNAIMANS_CONTRACT))
+					case LIGHT_OF_DAWN:
 					{
-						htmltext = "32579-02.html";
+						if (st.isCond(3))
+						{
+							if (st.hasQuestItems(IDENTITY_CARD))
+							{
+								htmltext = "31001-07.html";
+							}
+						}
+						break;
 					}
-				}
-				else if (npc.getId() == IASON_HEINE)
-				{
-					if (st.isCond(4) && st.hasQuestItems(SHUNAIMANS_CONTRACT))
+					case PASSWORD_ENTRY_DEVICE:
 					{
-						htmltext = "30969-01.html";
+						if (st.isCond(3) && st.hasQuestItems(IDENTITY_CARD))
+						{
+							htmltext = "32577-02.html";
+							player.teleToLocation(-78240, 205858, -7856);
+						}
+						break;
+					}
+					case SHELF:
+					{
+						if (st.isCond(3) && !st.hasQuestItems(SHUNAIMANS_CONTRACT))
+						{
+							st.giveItems(SHUNAIMANS_CONTRACT, 1);
+							htmltext = "32580-02.html";
+						}
+						break;
+					}
+					case DARKNESS_OF_DAWN:
+					{
+						if (st.isCond(3) && !st.hasQuestItems(SHUNAIMANS_CONTRACT))
+						{
+							htmltext = "32579-02.html";
+						}
+						break;
+					}
+					case IASON_HEINE:
+					{
+						if (st.isCond(4) && st.hasQuestItems(SHUNAIMANS_CONTRACT))
+						{
+							htmltext = "30969-01.html";
+						}
+						break;
 					}
 				}
 				break;
@@ -345,6 +345,6 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 	
 	public static void main(String args[])
 	{
-		new Q00195_SevenSignsSecretRitualOfThePriests(195, Q00195_SevenSignsSecretRitualOfThePriests.class.getSimpleName(), "Seven Signs, Secret Ritual of the Priests");
+		new Q00195_SevenSignsSecretRitualOfThePriests();
 	}
 }
