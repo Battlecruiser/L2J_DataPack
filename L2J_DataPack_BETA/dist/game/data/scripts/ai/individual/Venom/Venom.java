@@ -115,8 +115,8 @@ public final class Venom extends AbstractNpcAI
 		_massymore = SpawnTable.getInstance().getFirstSpawn(DUNGEON_KEEPER).getLastSpawn();
 		_venom = SpawnTable.getInstance().getFirstSpawn(VENOM).getLastSpawn();
 		_loc = _venom.getLocation();
-		_venom.disableSkill(VENOM_TELEPORT.getSkill(), 0);
-		_venom.disableSkill(RANGE_TELEPORT.getSkill(), 0);
+		_venom.disableSkill(VENOM_TELEPORT.getSkill(), -1);
+		_venom.disableSkill(RANGE_TELEPORT.getSkill(), -1);
 		_venom.doRevive();
 		((L2Attackable) _venom).setCanReturnToSpawnPoint(false);
 		if (checkStatus() == DEAD)
@@ -234,8 +234,8 @@ public final class Venom extends AbstractNpcAI
 					if ((_venom != null) && !_venom.isDead())
 					{
 						changeLocation(MoveTo.PRISON);
-						_venom.disableSkill(VENOM_TELEPORT.getSkill(), 0);
-						_venom.disableSkill(RANGE_TELEPORT.getSkill(), 0);
+						_venom.disableSkill(VENOM_TELEPORT.getSkill(), -1);
+						_venom.disableSkill(RANGE_TELEPORT.getSkill(), -1);
 					}
 					updateStatus(ALIVE);
 					cancelQuestTimer("tower_check", _venom, null);
