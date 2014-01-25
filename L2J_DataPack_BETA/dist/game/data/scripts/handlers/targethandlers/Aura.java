@@ -42,7 +42,7 @@ public class Aura implements ITargetTypeHandler
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
 		for (L2Character obj : objs)
 		{
-			if (obj.isL2Attackable() || obj.isPlayable())
+			if (obj.isAttackable() || obj.isPlayable())
 			{
 				if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
 				{

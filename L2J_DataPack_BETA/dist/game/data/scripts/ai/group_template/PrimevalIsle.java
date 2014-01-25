@@ -347,7 +347,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 				final L2Playable playable = isSummon ? attacker.getSummon() : attacker;
 				for (L2Character characters : npc.getKnownList().getKnownCharactersInRadius(500))
 				{
-					if ((characters != null) && (characters.isL2Attackable()) && (getRandomBoolean()))
+					if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))
 					{
 						L2Attackable monster = (L2Attackable) characters;
 						attackPlayer(monster, playable);

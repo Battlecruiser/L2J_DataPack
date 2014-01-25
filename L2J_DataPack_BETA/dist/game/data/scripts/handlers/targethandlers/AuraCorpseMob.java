@@ -42,7 +42,7 @@ public class AuraCorpseMob implements ITargetTypeHandler
 		int maxTargets = skill.getAffectLimit();
 		for (L2Character obj : objs)
 		{
-			if (obj.isL2Attackable() && obj.isDead())
+			if (obj.isAttackable() && obj.isDead())
 			{
 				if (onlyFirst)
 				{

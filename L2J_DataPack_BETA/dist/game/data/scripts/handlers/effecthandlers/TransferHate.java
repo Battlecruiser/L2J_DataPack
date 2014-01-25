@@ -64,7 +64,7 @@ public final class TransferHate extends AbstractEffect
 	{
 		for (L2Character obj : info.getEffector().getKnownList().getKnownCharactersInRadius(info.getSkill().getAffectRange()))
 		{
-			if ((obj == null) || !obj.isL2Attackable() || obj.isDead())
+			if ((obj == null) || !obj.isAttackable() || obj.isDead())
 			{
 				continue;
 			}

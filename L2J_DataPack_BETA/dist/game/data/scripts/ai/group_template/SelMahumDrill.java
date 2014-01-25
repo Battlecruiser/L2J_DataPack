@@ -253,7 +253,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 						{
 							broadcastNpcSay(receiver, Say2.NPC_ALL, SOLDIER_FSTRINGS[getRandom(2)]);
 						}
-						if (receiver.isAttackable())
+						if (receiver.canBeAttacked())
 						{
 							((L2Attackable) receiver).clearAggroList();
 						}

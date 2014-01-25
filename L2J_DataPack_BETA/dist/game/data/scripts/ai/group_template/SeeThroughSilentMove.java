@@ -50,7 +50,7 @@ public class SeeThroughSilentMove extends AbstractNpcAI
 			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
 			{
 				final L2Npc npc = spawn.getLastSpawn();
-				if ((npc != null) && npc.isL2Attackable())
+				if ((npc != null) && npc.isAttackable())
 				{
 					((L2Attackable) npc).setSeeThroughSilentMove(true);
 				}
@@ -62,7 +62,7 @@ public class SeeThroughSilentMove extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (npc.isL2Attackable())
+		if (npc.isAttackable())
 		{
 			((L2Attackable) npc).setSeeThroughSilentMove(true);
 		}

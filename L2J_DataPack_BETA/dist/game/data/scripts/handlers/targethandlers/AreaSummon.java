@@ -69,7 +69,7 @@ public class AreaSummon implements ITargetTypeHandler
 				continue;
 			}
 			
-			if (!(obj.isL2Attackable() || obj.isPlayable()))
+			if (!(obj.isAttackable() || obj.isPlayable()))
 			{
 				continue;
 			}

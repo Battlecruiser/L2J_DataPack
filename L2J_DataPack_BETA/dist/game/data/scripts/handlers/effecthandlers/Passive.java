@@ -45,7 +45,7 @@ public final class Passive extends AbstractEffect
 	@Override
 	public boolean canStart(BuffInfo info)
 	{
-		return info.getEffected().isL2Attackable();
+		return info.getEffected().isAttackable();
 	}
 	
 	@Override

@@ -724,7 +724,7 @@ public final class Stage1 extends Quest
 			world.npcList.put(npc, false);
 		}
 		npc.setIsNoRndWalk(true);
-		if (npc.isInstanceType(InstanceType.L2Attackable))
+		if (npc.isInstanceTypes(InstanceType.L2Attackable))
 		{
 			((L2Attackable) npc).setSeeThroughSilentMove(true);
 		}
