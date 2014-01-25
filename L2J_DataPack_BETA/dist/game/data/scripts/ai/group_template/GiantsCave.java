@@ -63,7 +63,7 @@ public final class GiantsCave extends AbstractNpcAI
 			
 			for (L2Character characters : npc.getKnownList().getKnownCharactersInRadius(450))
 			{
-				if ((characters != null) && (characters.isL2Attackable()) && (getRandomBoolean()))
+				if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))
 				{
 					L2Attackable monster = (L2Attackable) characters;
 					attackPlayer(monster, player);

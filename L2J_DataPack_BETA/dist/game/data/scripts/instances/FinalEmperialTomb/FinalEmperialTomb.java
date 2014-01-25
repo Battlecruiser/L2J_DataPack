@@ -805,7 +805,7 @@ public final class FinalEmperialTomb extends Quest
 			world.npcList.add(npc);
 		}
 		npc.setIsNoRndWalk(true);
-		if (npc.isInstanceType(InstanceType.L2Attackable))
+		if (npc.isInstanceTypes(InstanceType.L2Attackable))
 		{
 			((L2Attackable) npc).setSeeThroughSilentMove(true);
 		}

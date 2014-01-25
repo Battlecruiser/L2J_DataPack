@@ -178,7 +178,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (npc.isL2Attackable() && _npcLevelingInfos.containsKey(npc.getId()))
+		if (npc.isAttackable() && _npcLevelingInfos.containsKey(npc.getId()))
 		{
 			levelSoulCrystals((L2Attackable) npc, killer);
 		}
@@ -199,7 +199,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		{
 			return null;
 		}
-		if (!npc.isL2Attackable() || npc.isDead() || !_npcLevelingInfos.containsKey(npc.getId()))
+		if (!npc.isAttackable() || npc.isDead() || !_npcLevelingInfos.containsKey(npc.getId()))
 		{
 			return null;
 		}

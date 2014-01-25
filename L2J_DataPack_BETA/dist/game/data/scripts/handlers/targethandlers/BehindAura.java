@@ -43,7 +43,7 @@ public class BehindAura implements ITargetTypeHandler
 		int maxTargets = skill.getAffectLimit();
 		for (L2Character obj : objs)
 		{
-			if (obj.isL2Attackable() || obj.isPlayable())
+			if (obj.isAttackable() || obj.isPlayable())
 			{
 				
 				if (!obj.isBehind(activeChar))

@@ -48,7 +48,7 @@ public final class Sweeper extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isL2Attackable())
+		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isAttackable())
 		{
 			return;
 		}

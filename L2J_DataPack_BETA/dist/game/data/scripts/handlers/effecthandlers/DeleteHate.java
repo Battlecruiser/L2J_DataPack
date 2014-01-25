@@ -62,7 +62,7 @@ public final class DeleteHate extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (!info.getEffected().isL2Attackable())
+		if (!info.getEffected().isAttackable())
 		{
 			return;
 		}

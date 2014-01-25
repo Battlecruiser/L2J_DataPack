@@ -83,7 +83,7 @@ public final class Confuse extends AbstractEffect
 		// Getting the possible targets
 		for (L2Object obj : info.getEffected().getKnownList().getKnownObjects().values())
 		{
-			if (((info.getEffected().isMonster() && obj.isL2Attackable()) || (obj instanceof L2Character)) && (obj != info.getEffected()))
+			if (((info.getEffected().isMonster() && obj.isAttackable()) || (obj instanceof L2Character)) && (obj != info.getEffected()))
 			{
 				targetList.add((L2Character) obj);
 			}

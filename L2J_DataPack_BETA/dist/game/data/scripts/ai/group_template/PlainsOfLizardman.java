@@ -102,7 +102,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 			npc.doCast(FANTASY_MUSHROOM_SKILL.getSkill());
 			for (L2Character target : npc.getKnownList().getKnownCharactersInRadius(200))
 			{
-				if ((target != null) && target.isL2Attackable())
+				if ((target != null) && target.isAttackable())
 				{
 					final L2Attackable monster = (L2Attackable) target;
 					npc.setTarget(monster);
@@ -142,7 +142,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 					npc.setIsInvul(true);
 					for (L2Character target : npc.getKnownList().getKnownCharactersInRadius(1000))
 					{
-						if ((target != null) && target.isL2Attackable())
+						if ((target != null) && target.isAttackable())
 						{
 							final L2Attackable monster = (L2Attackable) target;
 							if ((monster.getId() == TANTA_MAGICIAN) || (monster.getId() == TANTA_SCOUT))
