@@ -100,12 +100,12 @@ public final class MagicalSoulAttack extends AbstractEffect
 			if (target.getStat().calcStat(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0, target, info.getSkill()) > Rnd.get(100))
 			{
 				activeChar.reduceCurrentHp(damage, target, info.getSkill());
-				activeChar.notifyDamageReceived(damage, target, info.getSkill(), mcrit);
+				activeChar.notifyDamageReceived(damage, target, info.getSkill(), mcrit, false);
 			}
 			else
 			{
 				target.reduceCurrentHp(damage, activeChar, info.getSkill());
-				target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit);
+				target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit, false);
 				activeChar.sendDamageMessage(target, damage, mcrit, false, false);
 			}
 		}

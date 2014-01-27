@@ -99,7 +99,7 @@ public final class HpDrain extends AbstractEffect
 			}
 			activeChar.sendDamageMessage(target, damage, mcrit, false, false);
 			target.reduceCurrentHp(damage, activeChar, info.getSkill());
-			target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit);
+			target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit, false);
 		}
 	}
 }
