@@ -60,9 +60,9 @@ public class TriggerSkillByDamage extends AbstractEffect implements IDamageRecei
 	}
 	
 	@Override
-	public void onDamageReceivedEvent(L2Character attacker, L2Character target, double damage, L2Skill skill, boolean crit)
+	public void onDamageReceivedEvent(L2Character attacker, L2Character target, double damage, L2Skill skill, boolean crit, boolean damageOverTime)
 	{
-		if ((_chance == 0) || (_skill.getSkillLvl() == 0))
+		if (damageOverTime || (_chance == 0) || (_skill.getSkillLvl() == 0))
 		{
 			return;
 		}

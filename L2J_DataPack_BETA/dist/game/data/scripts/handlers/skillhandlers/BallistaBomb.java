@@ -54,7 +54,7 @@ public class BallistaBomb implements ISkillHandler
 			{
 				target.setIsInvul(false);
 				target.reduceCurrentHp(target.getMaxHp() + 1, activeChar, skill);
-				target.notifyDamageReceived(target.getMaxHp() + 1, activeChar, skill, false);
+				target.notifyDamageReceived(target.getMaxHp() + 1, activeChar, skill, false, false);
 			}
 		}
 	}

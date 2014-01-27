@@ -83,7 +83,7 @@ public final class Lethal extends AbstractEffect
 			// for Players CP and HP is set to 1.
 			if (target.isPlayer())
 			{
-				target.notifyDamageReceived(target.getCurrentHp() - 1, info.getEffector(), info.getSkill(), true);
+				target.notifyDamageReceived(target.getCurrentHp() - 1, info.getEffector(), info.getSkill(), true, false);
 				target.setCurrentCp(1);
 				target.setCurrentHp(1);
 				target.sendPacket(SystemMessageId.LETHAL_STRIKE);
@@ -91,7 +91,7 @@ public final class Lethal extends AbstractEffect
 			// for Monsters HP is set to 1.
 			else if (target.isMonster() || target.isSummon())
 			{
-				target.notifyDamageReceived(target.getCurrentHp() - 1, info.getEffector(), info.getSkill(), true);
+				target.notifyDamageReceived(target.getCurrentHp() - 1, info.getEffector(), info.getSkill(), true, false);
 				target.setCurrentHp(1);
 			}
 			activeChar.sendPacket(SystemMessageId.LETHAL_STRIKE_SUCCESSFUL);
@@ -109,7 +109,7 @@ public final class Lethal extends AbstractEffect
 			// for Monsters HP is set to 50%.
 			else if (target.isMonster() || target.isSummon())
 			{
-				target.notifyDamageReceived(target.getCurrentHp() * 0.5, info.getEffector(), info.getSkill(), true);
+				target.notifyDamageReceived(target.getCurrentHp() * 0.5, info.getEffector(), info.getSkill(), true, false);
 				target.setCurrentHp(target.getCurrentHp() * 0.5);
 			}
 			activeChar.sendPacket(SystemMessageId.HALF_KILL);
