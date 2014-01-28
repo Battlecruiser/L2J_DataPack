@@ -190,8 +190,6 @@ public final class PailakaSongOfIceAndFire extends Quest
 		13293,
 		13129
 	};
-	/** Flag for "see creature". */
-	private boolean _seenCreature = false;
 	
 	private PailakaSongOfIceAndFire()
 	{
@@ -534,9 +532,9 @@ public final class PailakaSongOfIceAndFire extends Quest
 	@Override
 	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
 	{
-		if (!_seenCreature && creature.isPlayer())
+		if (npc.isScriptValue(0) && creature.isPlayer())
 		{
-			_seenCreature = true;
+			npc.setScriptValue(1);
 			startQuestTimer("GARGOS_LAUGH", 1000, npc, creature.getActingPlayer());
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
