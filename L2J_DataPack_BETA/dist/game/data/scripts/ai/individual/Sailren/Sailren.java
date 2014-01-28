@@ -120,7 +120,7 @@ public final class Sailren extends AbstractNpcAI
 				}
 				else
 				{
-					takeItems(player, 1, GAZKH);
+					takeItems(player, GAZKH, 1);
 					STATUS = Status.IN_FIGHT;
 					_lastAttack = System.currentTimeMillis();
 					for (L2PcInstance member : player.getParty().getMembers())
