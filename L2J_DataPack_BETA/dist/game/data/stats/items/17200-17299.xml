@@ -201,8 +201,13 @@
 	<item id="17226" type="EtcItem" name="Elcadia's Mark">
 		<!-- Description: Rune mark created by magic for Elcadia's test. -->
 		<set name="icon" val="icon.etc_fire_mantra_i00" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17227" type="EtcItem" name="Elcadia's Token">
 		<!-- Description: Rune token created by magic for Elcadia's test. -->
