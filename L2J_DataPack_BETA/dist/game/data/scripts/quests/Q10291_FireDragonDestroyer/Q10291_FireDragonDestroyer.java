@@ -20,7 +20,7 @@ package quests.Q10291_FireDragonDestroyer;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.interfaces.IL2Procedure;
+import com.l2jserver.gameserver.model.interfaces.IProcedure;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q10291_FireDragonDestroyer extends Quest
 {
-	public class RewardCheck implements IL2Procedure<L2PcInstance>
+	public class RewardCheck implements IProcedure<L2PcInstance, Boolean>
 	{
 		private final L2Npc _npc;
 		
@@ -42,7 +42,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 		}
 		
 		@Override
-		public boolean execute(L2PcInstance member)
+		public Boolean execute(L2PcInstance member)
 		{
 			if (Util.checkIfInRange(8000, _npc, member, false))
 			{
