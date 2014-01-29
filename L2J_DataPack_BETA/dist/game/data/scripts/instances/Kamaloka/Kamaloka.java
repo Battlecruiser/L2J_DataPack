@@ -37,7 +37,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.interfaces.IL2Procedure;
+import com.l2jserver.gameserver.model.interfaces.IProcedure;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -1183,10 +1183,10 @@ public final class Kamaloka extends Quest
 		31340
 	};
 	
-	private static final IL2Procedure<BuffInfo> REMOVE_BUFFS = new IL2Procedure<BuffInfo>()
+	private static final IProcedure<BuffInfo, Boolean> REMOVE_BUFFS = new IProcedure<BuffInfo, Boolean>()
 	{
 		@Override
-		public boolean execute(BuffInfo info)
+		public Boolean execute(BuffInfo info)
 		{
 			if ((info != null) && !info.getSkill().isStayAfterDeath() && (Arrays.binarySearch(BUFFS_WHITELIST, info.getSkill().getId()) < 0))
 			{
