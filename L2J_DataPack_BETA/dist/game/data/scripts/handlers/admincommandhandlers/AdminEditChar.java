@@ -38,12 +38,14 @@ import com.l2jserver.gameserver.datatables.ClassListData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.PageResult;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
+import com.l2jserver.gameserver.model.interfaces.IProcedure;
 import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.communityserver.CommunityServerThread;
@@ -58,6 +60,7 @@ import com.l2jserver.gameserver.network.serverpackets.SetSummonRemainTime;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.gameserver.util.Comparators;
+import com.l2jserver.gameserver.util.HtmlUtil;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.StringUtil;
 
@@ -905,50 +908,43 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	private void listCharacters(L2PcInstance activeChar, int page)
 	{
-		L2PcInstance[] players = L2World.getInstance().getPlayersSortedBy(Comparators.PLAYER_UPTIME_COMPARATOR);
-		int maxCharactersPerPage = 20;
-		int maxPages = players.length / maxCharactersPerPage;
+		final L2PcInstance[] players = L2World.getInstance().getPlayersSortedBy(Comparators.PLAYER_UPTIME_COMPARATOR);
 		
-		if (players.length > (maxCharactersPerPage * maxPages))
+		final NpcHtmlMessage html = new NpcHtmlMessage();
+		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/charlist.htm");
+		
+		final PageResult result = HtmlUtil.createPage(players, page, 20, new IProcedure<Integer, String>()
 		{
-			maxPages++;
+			@Override
+			public String execute(Integer i)
+			{
+				return "<td align=center><a action=\"bypass -h admin_show_characters " + i + "\">Page " + (i + 1) + "</a></td>";
+			}
+		}, new IProcedure<L2PcInstance, String>()
+		{
+			@Override
+			public String execute(L2PcInstance player)
+			{
+				StringBuilder sb = new StringBuilder();
+				sb.append("<tr>");
+				sb.append("<td width=80><a action=\"bypass -h admin_character_info " + player.getName() + "\">" + player.getName() + "</a></td>");
+				sb.append("<td width=110>" + ClassListData.getInstance().getClass(player.getClassId()).getClientCode() + "</td><td width=40>" + player.getLevel() + "</td>");
+				sb.append("</tr>");
+				return sb.toString();
+			}
+		});
+		
+		if (result.getPages() > 0)
+		{
+			html.replace("%pages%", "<table width=280 cellspacing=0><tr>" + result.getPagerTemplate() + "</tr></table>");
+		}
+		else
+		{
+			html.replace("%pages%", "");
 		}
 		
-		// Check if number of users changed
-		if (page > maxPages)
-		{
-			page = maxPages;
-		}
-		
-		int charactersStart = maxCharactersPerPage * page;
-		int charactersEnd = players.length;
-		if ((charactersEnd - charactersStart) > maxCharactersPerPage)
-		{
-			charactersEnd = charactersStart + maxCharactersPerPage;
-		}
-		
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/charlist.htm");
-		
-		final StringBuilder replyMSG = new StringBuilder(1000);
-		
-		for (int x = 0; x < maxPages; x++)
-		{
-			int pagenr = x + 1;
-			StringUtil.append(replyMSG, "<center><a action=\"bypass -h admin_show_characters ", String.valueOf(x), "\">Page ", String.valueOf(pagenr), "</a></center>");
-		}
-		
-		adminReply.replace("%pages%", replyMSG.toString());
-		replyMSG.setLength(0);
-		
-		for (int i = charactersStart; i < charactersEnd; i++)
-		{
-			// Add player info into new Table row
-			StringUtil.append(replyMSG, "<tr><td width=80><a action=\"bypass -h admin_character_info ", players[i].getName(), "\">", players[i].getName(), "</a></td><td width=110>", ClassListData.getInstance().getClass(players[i].getClassId()).getClientCode(), "</td><td width=40>", String.valueOf(players[i].getLevel()), "</td></tr>");
-		}
-		
-		adminReply.replace("%players%", replyMSG.toString());
-		activeChar.sendPacket(adminReply);
+		html.replace("%players%", result.getBodyTemplate().toString());
+		activeChar.sendPacket(html);
 	}
 	
 	private void showCharacterInfo(L2PcInstance activeChar, L2PcInstance player)
