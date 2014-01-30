@@ -115,7 +115,7 @@ elif [ "$CBUSER" == "$CBPASS" ]; then
   echo "You're not too brilliant choosing passwords huh?"
 fi
 #GS
-echo -ne "\nPlease enter MySQL Game Server hostname (default $LSDBHOST): "
+echo -ne "\nPlease enter MySQL Game Server hostname (default localhost): "
 read GSDBHOST
 if [ -z "$GSDBHOST" ]; then
   GSDBHOST="localhost"
@@ -125,7 +125,7 @@ read GSDB
 if [ -z "$GSDB" ]; then
   GSDB="l2jgs"
 fi
-echo -ne "\nPlease enter MySQL Game Server user (default $LSUSER): "
+echo -ne "\nPlease enter MySQL Game Server user (default root): "
 read GSUSER
 if [ -z "$GSUSER" ]; then
   GSUSER="root"
