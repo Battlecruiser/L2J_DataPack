@@ -195,7 +195,7 @@ public final class Q00457_LostAndFound extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = (player.getQuestState(getName()) == null) ? newQuestState(player) : player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		
 		if ((getRandom(100) < CHANCE_SPAWN) && st.isNowAvailable() && (player.getLevel() >= MIN_LV))
 		{
