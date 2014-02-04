@@ -65,7 +65,7 @@ public final class ChameleonRest extends AbstractEffect
 			}
 		}
 		
-		double manaDam = getValue();
+		double manaDam = getValue() * getTicksMultiplier();
 		if (manaDam > info.getEffected().getCurrentMp())
 		{
 			info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
@@ -73,7 +73,7 @@ public final class ChameleonRest extends AbstractEffect
 		}
 		
 		info.getEffected().reduceCurrentMp(manaDam);
-		return false;
+		return info.getSkill().isToggle();
 	}
 	
 	@Override
