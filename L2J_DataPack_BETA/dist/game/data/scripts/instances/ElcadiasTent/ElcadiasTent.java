@@ -19,6 +19,7 @@
 package instances.ElcadiasTent;
 
 import quests.Q10292_SevenSignsGirlOfDoubt.Q10292_SevenSignsGirlOfDoubt;
+import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
@@ -26,7 +27,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
@@ -76,8 +76,9 @@ public final class ElcadiasTent extends Quest
 	{
 		if (npc.getId() == GRUFF_LOOKING_MAN)
 		{
-			final QuestState qs = talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName());
-			if ((qs != null) && qs.isStarted())
+			if (((talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName()) != null) && talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName()).isStarted()) //
+				|| ((talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName()) != null) && talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName()).isCompleted() && (talker.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName()) == null)) //
+				|| ((talker.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName()) != null) && talker.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName()).isStarted()))
 			{
 				enterInstance(talker, "ElcadiasTent.xml", START_LOC);
 			}
