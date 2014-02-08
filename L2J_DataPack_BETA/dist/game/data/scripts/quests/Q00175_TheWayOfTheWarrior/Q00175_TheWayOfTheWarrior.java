@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.variables.PlayerVariables;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -154,16 +153,16 @@ public final class Q00175_TheWayOfTheWarrior extends Quest
 	{
 		if (npc.getId() == MOUNTAIN_WEREWOLF)
 		{
-			final QuestState qs = getRandomPartyMemberState(player, -1, 2, npc);
-			if ((qs != null) && qs.isCond(2) && giveItemRandomly(qs.getPlayer(), npc, WOLF_TAIL.getId(), 1, WOLF_TAIL.getCount(), 0.5, true))
+			final QuestState qs = getRandomPartyMemberState(player, 2, 3, npc);
+			if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, WOLF_TAIL.getId(), 1, WOLF_TAIL.getCount(), 0.5, true))
 			{
 				qs.setCond(3, true);
 			}
 		}
 		else
 		{
-			final QuestState qs = getRandomPartyMemberState(player, -1, 6, npc);
-			if ((qs != null) && qs.isCond(7) && giveItemRandomly(qs.getPlayer(), npc, MUERTOS_CLAW.getId(), 1, MUERTOS_CLAW.getCount(), 1.0, true))
+			final QuestState qs = getRandomPartyMemberState(player, 7, 3, npc);
+			if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, MUERTOS_CLAW.getId(), 1, MUERTOS_CLAW.getCount(), 1.0, true))
 			{
 				qs.setCond(8, true);
 			}
@@ -180,77 +179,72 @@ public final class Q00175_TheWayOfTheWarrior extends Quest
 		{
 			case KEKROPUS:
 			{
-				switch (qs.getState())
+				if (qs.isCreated())
 				{
-					case State.CREATED:
+					if (player.getRace() != PcRace.Kamael)
 					{
-						if (player.getRace() == PcRace.Kamael)
-						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32138-01.htm";
-							}
-							else
-							{
-								htmltext = "32138-03.htm";
-							}
-						}
-						else
-						{
-							htmltext = "32138-04.htm";
-						}
-						break;
+						htmltext = "32138-04.htm";
 					}
-					case State.STARTED:
+					else if (player.getLevel() >= MIN_LEVEL)
 					{
-						switch (qs.getCond())
-						{
-							case 1:
-							case 2:
-							case 3:
-							{
-								htmltext = "32138-06.html";
-								break;
-							}
-							case 4:
-							{
-								qs.setMemoState(4);
-								qs.setCond(5, true);
-								htmltext = "32138-07.html";
-								break;
-							}
-							case 5:
-							{
-								htmltext = "32138-08.html";
-								break;
-							}
-							case 6:
-							{
-								htmltext = "32138-09.html";
-								break;
-							}
-							case 7:
-							{
-								htmltext = "32138-11.html";
-								break;
-							}
-							case 8:
-							{
-								if (hasItem(player, MUERTOS_CLAW))
-								{
-									htmltext = "32138-12.html";
-								}
-								break;
-							}
-						}
-						break;
+						htmltext = "32138-01.htm";
 					}
-					case State.COMPLETED:
+					else
 					{
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
+						htmltext = "32138-03.htm";
 					}
+					break;
 				}
+				else if (qs.isStarted())
+				{
+					switch (qs.getCond())
+					{
+						case 1:
+						case 2:
+						case 3:
+						{
+							htmltext = "32138-06.html";
+							break;
+						}
+						case 4:
+						{
+							qs.setMemoState(4);
+							qs.setCond(5, true);
+							htmltext = "32138-07.html";
+							break;
+						}
+						case 5:
+						{
+							htmltext = "32138-08.html";
+							break;
+						}
+						case 6:
+						{
+							htmltext = "32138-09.html";
+							break;
+						}
+						case 7:
+						{
+							htmltext = "32138-11.html";
+							break;
+						}
+						case 8:
+						{
+							if (hasItem(player, MUERTOS_CLAW))
+							{
+								htmltext = "32138-12.html";
+							}
+							break;
+						}
+					}
+					break;
+				}
+				else if (qs.isCompleted())
+				{
+					htmltext = getAlreadyCompletedMsg(player);
+					break;
+				}
+				
 				break;
 			}
 			case PERWAN:
