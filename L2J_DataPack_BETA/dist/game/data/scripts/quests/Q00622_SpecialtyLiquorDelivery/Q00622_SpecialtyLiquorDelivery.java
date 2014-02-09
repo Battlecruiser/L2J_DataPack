@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Liquor Delivery (622)
+ * Specialty Liquor Delivery (622)
  * @author Janiko
  */
 public final class Q00622_SpecialtyLiquorDelivery extends Quest
@@ -57,7 +57,6 @@ public final class Q00622_SpecialtyLiquorDelivery extends Quest
 	private Q00622_SpecialtyLiquorDelivery()
 	{
 		super(622, Q00622_SpecialtyLiquorDelivery.class.getSimpleName(), "Specialty Liquor Delivery");
-		addStartNpc(JEREMY);
 		addStartNpc(JEREMY);
 		addTalkId(JEREMY, BOELIN, LIETTA);
 		addTalkId(TALKERS);
