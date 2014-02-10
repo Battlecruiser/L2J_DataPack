@@ -23,7 +23,7 @@ import java.util.StringTokenizer;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.SevenSigns;
-import com.l2jserver.gameserver.model.L2Clan;
+import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
@@ -117,7 +117,7 @@ public final class CastleMercenaryManager extends AbstractNpcAI
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		final String htmltext;
-		if (player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClanId() == npc.getCastle().getOwnerId()) && player.hasClanPrivilege(L2Clan.CP_CS_MERCENARIES)))
+		if (player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClanId() == npc.getCastle().getOwnerId()) && player.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES)))
 		{
 			if (npc.getCastle().getSiege().getIsInProgress())
 			{

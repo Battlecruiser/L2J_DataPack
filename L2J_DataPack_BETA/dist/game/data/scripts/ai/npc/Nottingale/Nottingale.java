@@ -25,7 +25,7 @@ import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.instancemanager.AirShipManager;
-import com.l2jserver.gameserver.model.L2Clan;
+import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
@@ -72,7 +72,7 @@ public final class Nottingale extends AbstractNpcAI
 			{
 				if (player.getClan() != null)
 				{
-					if (player.hasClanPrivilege(L2Clan.CP_CL_SUMMON_AIRSHIP) && AirShipManager.getInstance().hasAirShipLicense(player.getClanId()) && !AirShipManager.getInstance().hasAirShip(player.getClanId()))
+					if (player.hasClanPrivilege(ClanPrivilege.CL_SUMMON_AIRSHIP) && AirShipManager.getInstance().hasAirShipLicense(player.getClanId()) && !AirShipManager.getInstance().hasAirShip(player.getClanId()))
 					{
 						htmltext = event;
 					}

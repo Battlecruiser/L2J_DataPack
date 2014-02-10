@@ -22,7 +22,7 @@ import java.util.logging.Level;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.L2Clan;
+import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2ClanHallManagerInstance;
@@ -133,7 +133,7 @@ public class ClanWarehouse implements IBypassHandler
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
-		if (!player.hasClanPrivilege(L2Clan.CP_CL_VIEW_WAREHOUSE))
+		if (!player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE))
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_CLAN_WAREHOUSE);
 			return;

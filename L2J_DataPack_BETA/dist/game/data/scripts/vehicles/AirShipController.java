@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.AirShipManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.L2Clan;
+import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.VehiclePathPoint;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -135,7 +135,7 @@ public abstract class AirShipController extends Quest
 				player.sendPacket(SystemMessageId.ANOTHER_AIRSHIP_ALREADY_SUMMONED);
 				return null;
 			}
-			if (!player.hasClanPrivilege(L2Clan.CP_CL_SUMMON_AIRSHIP))
+			if (!player.hasClanPrivilege(ClanPrivilege.CL_SUMMON_AIRSHIP))
 			{
 				player.sendPacket(SystemMessageId.THE_AIRSHIP_NO_PRIVILEGES);
 				return null;

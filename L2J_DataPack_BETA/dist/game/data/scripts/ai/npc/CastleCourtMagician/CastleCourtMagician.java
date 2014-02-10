@@ -24,7 +24,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
-import com.l2jserver.gameserver.model.L2Clan;
+import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -258,7 +258,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 			}
 			case "squadSkill":
 			{
-				if (player.isClanLeader() || player.hasClanPrivilege(L2Clan.CP_CL_TROOPS_FAME))
+				if (player.isClanLeader() || player.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME))
 				{
 					final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableSubPledgeSkills(player.getClan());
 					final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.SUBPLEDGE);
