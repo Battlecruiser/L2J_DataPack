@@ -61,12 +61,12 @@ public class SetVCmd implements IVoicedCommandHandler
 				}
 				
 				final int n = Integer.parseInt(val);
-				if ((activeChar.getClanPrivileges() <= n) || !activeChar.isClanLeader())
+				if ((activeChar.getClanPrivileges().getBitmask() <= n) || !activeChar.isClanLeader())
 				{
 					return false;
 				}
 				
-				player.setClanPrivileges(n);
+				player.getClanPrivileges().setBitmask(n);
 				activeChar.sendMessage("Your clan privileges have been set to " + n + " by " + activeChar.getName() + ".");
 			}
 			else if (params.startsWith("title"))
