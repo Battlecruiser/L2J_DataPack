@@ -52,6 +52,12 @@ public class OlympiadObservation implements IBypassHandler
 			
 			if (command.startsWith(COMMANDS[0])) // list
 			{
+				if (!Olympiad.getInstance().inCompPeriod())
+				{
+					activeChar.sendPacket(SystemMessageId.THE_OLYMPIAD_GAME_IS_NOT_CURRENTLY_IN_PROGRESS);
+					return false;
+				}
+				
 				activeChar.sendPacket(new ExOlympiadMatchList());
 			}
 			else
