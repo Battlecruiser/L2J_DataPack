@@ -915,7 +915,7 @@
 			<skill id="4439" level="2" /> <!--Greater Resist Hold -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="0.11590000241994858">
@@ -975,7 +975,7 @@
 			<skill id="4439" level="2" /> <!--Greater Resist Hold -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="0.05270000174641609">
@@ -1036,7 +1036,7 @@
 			<skill id="4439" level="2" /> <!--Greater Resist Hold -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="0.019999999552965164">
@@ -1097,7 +1097,7 @@
 			<skill id="4439" level="2" /> <!--Greater Resist Hold -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="0.01080000028014183">
@@ -1158,7 +1158,7 @@
 			<skill id="4439" level="2" /> <!--Greater Resist Hold -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="0.004100000020116568">
@@ -1218,7 +1218,7 @@
 			<skill id="4439" level="2" /> <!--Greater Resist Hold -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="0.006099999882280827">
@@ -1278,7 +1278,7 @@
 			<skill id="4439" level="2" /> <!--Greater Resist Hold -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="0.0017000000225380063">
@@ -1338,7 +1338,7 @@
 			<skill id="4439" level="2" /> <!--Greater Resist Hold -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="0.003000000026077032">
@@ -1450,7 +1450,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai type="CORPSE" />
+		<ai type="CORPSE" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="21" />
@@ -1502,7 +1502,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
-		<ai aggroRange="250" clanHelpRange="4000">
+		<ai aggroRange="250" clanHelpRange="4000" isAggressive="false">
 			<clan_list>
 				<clan>HALLGUARD</clan>
 			</clan_list>
@@ -1556,7 +1556,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="MAGE" aggroRange="250" clanHelpRange="4000">
+		<ai type="MAGE" aggroRange="250" clanHelpRange="4000" isAggressive="false">
 			<clan_list>
 				<clan>HALLGUARD</clan>
 			</clan_list>
@@ -1612,7 +1612,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai aggroRange="250" clanHelpRange="4000">
+		<ai aggroRange="250" clanHelpRange="4000" isAggressive="false">
 			<clan_list>
 				<clan>HALLGUARD</clan>
 			</clan_list>
@@ -1668,7 +1668,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai aggroRange="250" clanHelpRange="4000">
+		<ai aggroRange="250" clanHelpRange="4000" isAggressive="false">
 			<clan_list>
 				<clan>HALLGUARD</clan>
 			</clan_list>
@@ -1722,7 +1722,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai aggroRange="250" clanHelpRange="4000">
+		<ai aggroRange="250" clanHelpRange="4000" isAggressive="false">
 			<clan_list>
 				<clan>HALLGUARD</clan>
 			</clan_list>
@@ -1769,7 +1769,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="700" clanHelpRange="1500">
+		<ai type="BALANCED" aggroRange="700" clanHelpRange="1500" isAggressive="false">
 			<clan_list>
 				<clan>DARKBAND</clan>
 			</clan_list>
@@ -1824,7 +1824,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="700" clanHelpRange="1500">
+		<ai type="BALANCED" aggroRange="700" clanHelpRange="1500" isAggressive="false">
 			<clan_list>
 				<clan>DARKBAND</clan>
 			</clan_list>
@@ -1880,7 +1880,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai aggroRange="700" clanHelpRange="1500">
+		<ai aggroRange="700" clanHelpRange="1500" isAggressive="false">
 			<clan_list>
 				<clan>DARKBAND</clan>
 			</clan_list>
@@ -1934,7 +1934,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="ARCHER" aggroRange="700" clanHelpRange="500" dodge="15">
+		<ai type="ARCHER" aggroRange="700" clanHelpRange="500" dodge="15" isAggressive="false">
 			<clan_list>
 				<clan>DARKBAND</clan>
 			</clan_list>
@@ -1989,7 +1989,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="700" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="700" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>DARKBAND</clan>
 			</clan_list>
@@ -2039,7 +2039,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="700" clanHelpRange="1500">
+		<ai type="BALANCED" aggroRange="700" clanHelpRange="1500" isAggressive="false">
 			<clan_list>
 				<clan>DARKBAND</clan>
 			</clan_list>
@@ -2090,7 +2090,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>DARKBAND</clan>
 			</clan_list>
@@ -2141,7 +2141,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>DARKBAND</clan>
 			</clan_list>
@@ -2187,7 +2187,7 @@
 			<skill id="4416" level="13" /> <!--Fairies -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="100">
@@ -2286,7 +2286,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="53" />
 			<height normal="11.5" />
@@ -3418,7 +3418,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="300" />
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="14" />
 			<height normal="14.5" />
@@ -3469,7 +3469,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="300" />
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="14" />
 			<height normal="14.5" />
@@ -3518,7 +3518,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="300" />
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="14" />
 			<height normal="14.5" />
@@ -3560,7 +3560,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="400">
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -3667,7 +3667,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -3722,7 +3722,7 @@
 			<skill id="4597" level="10" /> <!--Bleed -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -3764,7 +3764,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -3806,7 +3806,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -3847,7 +3847,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -3889,7 +3889,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -3931,7 +3931,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -3973,7 +3973,7 @@
 			<skill id="4416" level="9" /> <!--Demons -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -4015,7 +4015,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>

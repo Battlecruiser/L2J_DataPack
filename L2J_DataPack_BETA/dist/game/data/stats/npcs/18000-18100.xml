@@ -199,7 +199,7 @@
 			<skill id="4416" level="4" /> <!--Animals -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<corpse>
 				<item id="1871" min="1" max="1" chance="0.9797" /> <!-- Charcoal -->
@@ -244,7 +244,7 @@
 			<skill id="4444" level="2" /> <!--Higher Resist Bow/Crossbow Weapons -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="45" />
 			<height normal="72" />
@@ -281,7 +281,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8.5" />
 			<height normal="8.5" />
@@ -496,7 +496,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500">
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>MERCENARY_SIEGE</clan>
@@ -548,7 +548,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="21" />
@@ -593,7 +593,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -643,7 +643,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -703,7 +703,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -761,7 +761,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -819,7 +819,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -871,7 +871,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="16" />
 			<height normal="30" />
@@ -918,7 +918,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -975,7 +975,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -1036,7 +1036,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27.6" />
@@ -1083,7 +1083,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
@@ -1128,7 +1128,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="21.5" />
@@ -1178,7 +1178,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -1238,7 +1238,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -1295,7 +1295,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -1354,7 +1354,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -1406,7 +1406,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="25.3" />
@@ -1453,7 +1453,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -1510,7 +1510,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -1571,7 +1571,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
@@ -1618,7 +1618,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="21.5" />
@@ -1663,7 +1663,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="21.5" />
@@ -1713,7 +1713,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -1773,7 +1773,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -1831,7 +1831,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -1890,7 +1890,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -1942,7 +1942,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="25.3" />
@@ -1989,7 +1989,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -2046,7 +2046,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -2107,7 +2107,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
@@ -2154,7 +2154,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="21.5" />
@@ -2199,7 +2199,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="21.5" />
@@ -2249,7 +2249,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -2309,7 +2309,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -2367,7 +2367,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -2426,7 +2426,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -2478,7 +2478,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="25.3" />
@@ -2525,7 +2525,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -2582,7 +2582,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -2643,7 +2643,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="14" />
 			<height normal="28.8" />
@@ -2690,7 +2690,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
@@ -2735,7 +2735,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -2785,7 +2785,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -2845,7 +2845,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -2903,7 +2903,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -2962,7 +2962,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3014,7 +3014,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="14" />
 			<height normal="32.4" />
@@ -3061,7 +3061,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3118,7 +3118,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3179,7 +3179,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="26.4" />
@@ -3226,7 +3226,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="21" />
@@ -3271,7 +3271,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -3321,7 +3321,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3381,7 +3381,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3439,7 +3439,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3498,7 +3498,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3550,7 +3550,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="16" />
 			<height normal="30" />
@@ -3597,7 +3597,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3654,7 +3654,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3715,7 +3715,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27.6" />
@@ -3762,7 +3762,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
@@ -3807,7 +3807,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="21.5" />
@@ -3857,7 +3857,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3917,7 +3917,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3975,7 +3975,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -4034,7 +4034,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -4086,7 +4086,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="25.3" />
@@ -4133,7 +4133,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -4190,7 +4190,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -4251,7 +4251,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
@@ -4298,7 +4298,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="21.5" />
@@ -4343,7 +4343,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="21.5" />
@@ -4393,7 +4393,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -4453,7 +4453,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -4511,7 +4511,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -4570,7 +4570,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -4622,7 +4622,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="25.3" />
@@ -4669,7 +4669,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -4726,7 +4726,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -4787,7 +4787,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
@@ -4834,7 +4834,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="21.5" />
@@ -4879,7 +4879,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="21.5" />
@@ -4929,7 +4929,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -4989,7 +4989,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5047,7 +5047,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5106,7 +5106,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5158,7 +5158,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="25.3" />
@@ -5205,7 +5205,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5262,7 +5262,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5323,7 +5323,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" />
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="14" />
 			<height normal="28.8" />

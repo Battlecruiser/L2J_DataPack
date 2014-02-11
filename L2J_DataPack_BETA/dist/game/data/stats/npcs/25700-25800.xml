@@ -46,7 +46,7 @@
 			<skill id="6661" level="1" /> <!--Level 85 Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FREYA</clan>
 			</clan_list>
@@ -189,7 +189,7 @@
 			<skill id="6326" level="1" /> <!--Martyr's Happiness -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="22" />
@@ -253,7 +253,7 @@
 			<skill id="6663" level="1" /> <!--Level 76 Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="0.9563999772071838">
@@ -315,7 +315,7 @@
 			<skill id="6602" level="10" /> <!--NPC earth attack -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="18" />
 			<height normal="41.5" />
@@ -357,7 +357,7 @@
 			<skill id="6265" level="1" /> <!--Smoke -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="6" />
 			<height normal="13" />
@@ -408,7 +408,7 @@
 			<skill id="6693" level="9" /> <!--NPC Strike -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="1000">
+		<ai aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -460,7 +460,7 @@
 			<skill id="6693" level="9" /> <!--NPC Strike -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="1000">
+		<ai aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -515,7 +515,7 @@
 			<skill id="6693" level="9" /> <!--NPC Strike -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="1000">
+		<ai aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -568,7 +568,7 @@
 			<skill id="6695" level="8" /> <!--BOSS Spinning Slasher -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="51.6" />
 			<height normal="57" />
@@ -626,7 +626,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="20.002700805664062">
@@ -682,7 +682,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="34" />
 			<height normal="34" />
@@ -731,7 +731,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="19" />
 			<height normal="44" />
@@ -781,7 +781,7 @@
 			<skill id="6658" level="1" /> <!--Level 84 Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="4.49970006942749">
@@ -847,7 +847,7 @@
 			<skill id="6659" level="1" /> <!--Level 84 Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>GRANISKO</clan>
 			</clan_list>
@@ -920,7 +920,7 @@
 			<skill id="5479" level="1" /> <!--Boss Petrification Resistance -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>GRANISKO</clan>
 			</clan_list>
@@ -977,7 +977,7 @@
 			<skill id="6660" level="1" /> <!--Level 84 Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="2.642400026321411">
@@ -1033,7 +1033,7 @@
 			<skill id="5479" level="1" /> <!--Boss Petrification Resistance -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="27.5" />
@@ -1085,7 +1085,7 @@
 			<skill id="6898" level="1" /> <!--84 level Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
@@ -1155,7 +1155,7 @@
 			<skill id="6899" level="1" /> <!--84 level Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
@@ -1227,7 +1227,7 @@
 			<skill id="6915" level="1" /> <!--npc Acumen -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
@@ -1300,7 +1300,7 @@
 			<skill id="6901" level="1" /> <!--84 level Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
@@ -1377,7 +1377,7 @@
 			<skill id="6902" level="1" /> <!--84 level Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
@@ -1452,7 +1452,7 @@
 			<skill id="6903" level="1" /> <!--84 level Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
@@ -1525,7 +1525,7 @@
 			<skill id="6904" level="1" /> <!--84 level Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
@@ -1771,7 +1771,7 @@
 			<skill id="6738" level="1" /> <!--Hold -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />
@@ -1817,7 +1817,7 @@
 			<skill id="6890" level="1" /> <!--Bleed -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />
@@ -1860,7 +1860,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="25" grown="31" />
@@ -1903,7 +1903,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="25" grown="31" />
@@ -1956,7 +1956,7 @@
 			<skill id="6907" level="1" /> <!--85 level Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="17266" min="1" max="1" chance="6.6666" /> <!-- Will of Antharas -->
@@ -2008,7 +2008,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="250" clanHelpRange="300" />
+		<ai aggroRange="250" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="16" />
 			<height normal="24" />
@@ -2054,7 +2054,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="30" />
 			<height normal="16" />

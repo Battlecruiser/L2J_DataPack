@@ -119,7 +119,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 			</clan_list>
@@ -165,7 +165,7 @@
 			<skill id="5479" level="1" /> <!--Boss Petrification Resistance -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="54" />
 			<height normal="77.5" />
@@ -209,7 +209,7 @@
 			<skill id="5479" level="1" /> <!--Boss Petrification Resistance -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="450" clanHelpRange="300" />
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="36" />
 			<height normal="43.5" />
@@ -255,7 +255,7 @@
 			<skill id="5479" level="1" /> <!--Boss Petrification Resistance -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="450" clanHelpRange="300" />
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="34" />
 			<height normal="47" />
@@ -615,7 +615,7 @@
 			<skill id="5043" level="9" /> <!--NPC Super Sonic Blaster -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="34" />
 			<height normal="35" />
@@ -651,7 +651,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="57.10929870605469">
@@ -718,7 +718,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70.39129638671875">
@@ -780,7 +780,7 @@
 		</skill_list>
 		<corpse_time>20</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="450" clanHelpRange="2000">
+		<ai type="MAGE" aggroRange="450" clanHelpRange="2000" isAggressive="false">
 			<clan_list>
 				<clan>BERES</clan>
 			</clan_list>
@@ -864,7 +864,7 @@
 			<skill id="5479" level="1" /> <!--Boss Petrification Resistance -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="450" clanHelpRange="2000">
+		<ai type="MAGE" aggroRange="450" clanHelpRange="2000" isAggressive="false">
 			<clan_list>
 				<clan>BERES</clan>
 			</clan_list>
@@ -1242,7 +1242,7 @@
 			<skill id="5701" level="1" /> <!--Decrease P. Atk -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="59.852901458740234">
@@ -1297,7 +1297,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="38" />
@@ -1344,7 +1344,7 @@
 			<skill id="4780" level="2" /> <!--BOSS Heal -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="34" />
@@ -1399,7 +1399,7 @@
 			<skill id="5701" level="2" /> <!--Decrease P. Atk -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="48.78020095825195">
@@ -1458,7 +1458,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="13" grown="22" />
 			<height normal="35" grown="42.2" />
@@ -1505,7 +1505,7 @@
 			<skill id="4780" level="3" /> <!--BOSS Heal -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="35" />
@@ -1560,7 +1560,7 @@
 			<skill id="5701" level="3" /> <!--Decrease P. Atk -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="58.89780044555664">
@@ -1619,7 +1619,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="23.5" />
 			<height normal="34.7" />
@@ -1665,7 +1665,7 @@
 			<skill id="4780" level="4" /> <!--BOSS Heal -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
@@ -1722,7 +1722,7 @@
 			<skill id="5701" level="4" /> <!--Decrease P. Atk -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="62.18280029296875">
@@ -1785,7 +1785,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
@@ -1831,7 +1831,7 @@
 			<skill id="4780" level="5" /> <!--BOSS Heal -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
@@ -1887,7 +1887,7 @@
 			<skill id="5701" level="5" /> <!--Decrease P. Atk -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="66.69059753417969">
@@ -1943,7 +1943,7 @@
 			<skill id="4416" level="9" /> <!--Demons -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="36" />
 			<height normal="43.5" />
@@ -1989,7 +1989,7 @@
 			<skill id="4780" level="6" /> <!--BOSS Heal -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="36" />
 			<height normal="43.5" />
@@ -2048,7 +2048,7 @@
 			<skill id="5701" level="6" /> <!--Decrease P. Atk -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="56.46730041503906">
@@ -2105,7 +2105,7 @@
 			<skill id="5465" level="1" /> <!--Earth Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="47" />
@@ -2154,7 +2154,7 @@
 			<skill id="5465" level="1" /> <!--Earth Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="38.5" grown="46.5" />
@@ -2211,7 +2211,7 @@
 			<skill id="5701" level="7" /> <!--Decrease P. Atk -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="73.94190216064453">
@@ -2272,7 +2272,7 @@
 			<skill id="5462" level="1" /> <!--Fire Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="42" />
 			<height normal="34.5" />
@@ -2319,7 +2319,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="42" />
 			<height normal="34.5" />
@@ -2363,7 +2363,7 @@
 			<skill id="5916" level="1" /> <!--Cruising Aura -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2457,7 +2457,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2502,7 +2502,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2870,7 +2870,7 @@
 			<skill id="5826" level="1" /> <!--Fire Breath -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>DES_DRAGON</clan>
 			</clan_list>
@@ -2921,7 +2921,7 @@
 			<skill id="6127" level="1" /> <!--Anti-limit -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>DES_DRAGON</clan>
 			</clan_list>
@@ -3388,7 +3388,7 @@
 			<skill id="6127" level="1" /> <!--Anti-limit -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>DES_DRAGON</clan>
 			</clan_list>
@@ -3459,7 +3459,7 @@
 		</skill_list>
 		<corpse_time>300</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="48.80440139770508">
@@ -3522,7 +3522,7 @@
 			<skill id="6644" level="1" /> <!--Ice Queen Freya -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FREYA</clan>
 			</clan_list>
@@ -3565,7 +3565,7 @@
 			<skill id="6644" level="1" /> <!--Ice Queen Freya -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FREYA</clan>
 			</clan_list>
@@ -3609,7 +3609,7 @@
 			<skill id="6644" level="1" /> <!--Ice Queen Freya -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FREYA</clan>
 			</clan_list>
@@ -3707,7 +3707,7 @@
 			<skill id="6644" level="1" /> <!--Ice Queen Freya -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FREYA</clan>
 			</clan_list>
@@ -3804,7 +3804,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="30">
@@ -3910,7 +3910,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="6" />
 			<height normal="12" />
@@ -3951,7 +3951,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="40" />
@@ -3998,7 +3998,7 @@
 			<skill id="5710" level="2" /> <!--Triple Sword -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="37" />
@@ -4038,7 +4038,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -4102,7 +4102,7 @@
 			<skill id="5479" level="1" /> <!--Boss Petrification Resistance -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="100">
@@ -4175,7 +4175,7 @@
 			<skill id="5479" level="1" /> <!--Boss Petrification Resistance -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="36" />
 			<height normal="43.5" />
@@ -4213,7 +4213,7 @@
 			<skill id="5465" level="1" /> <!--Earth Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 			</clan_list>
@@ -4255,7 +4255,7 @@
 			<skill id="5465" level="1" /> <!--Earth Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 			</clan_list>
@@ -4304,7 +4304,7 @@
 			<skill id="6655" level="1" /> <!--Tarsque Carapace -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="100.0">

@@ -2714,7 +2714,7 @@
 			<skill id="4416" level="14" /> <!--Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
@@ -2755,7 +2755,7 @@
 			<skill id="4416" level="14" /> <!--Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
@@ -2796,7 +2796,7 @@
 			<skill id="4416" level="14" /> <!--Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
@@ -2837,7 +2837,7 @@
 			<skill id="4416" level="14" /> <!--Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
@@ -3184,7 +3184,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="14" />
@@ -3221,7 +3221,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="11.5" />
@@ -3295,7 +3295,7 @@
 			<skill id="4416" level="19" /> <!--Others -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="9.5" />

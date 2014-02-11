@@ -36,7 +36,7 @@
 			<skill id="4416" level="7" /> <!--Spirits -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="MAGE" aggroRange="450" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="450" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -109,7 +109,7 @@
 			<skill id="4416" level="7" /> <!--Spirits -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="MAGE" aggroRange="450" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="450" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -192,7 +192,7 @@
 			<skill id="5417" level="1" /> <!--Invincible -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="CORPSE" aggroRange="1000" clanHelpRange="300">
+		<ai type="CORPSE" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -281,7 +281,7 @@
 			<skill id="5462" level="1" /> <!--Fire Attacks -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -383,7 +383,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="700">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="700" isAggressive="false">
 			<clan_list>
 				<clan>HELL</clan>
 			</clan_list>
@@ -485,7 +485,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -583,7 +583,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -682,7 +682,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -777,7 +777,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -890,7 +890,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -1002,7 +1002,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -1101,7 +1101,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -1209,7 +1209,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -1299,7 +1299,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -1388,7 +1388,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -1483,7 +1483,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -1568,7 +1568,7 @@
 			<skill id="5462" level="1" /> <!--Fire Attacks -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -1667,7 +1667,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -1753,7 +1753,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -1847,7 +1847,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -1941,7 +1941,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -2028,7 +2028,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="400">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>HELL</clan>
 			</clan_list>
@@ -2130,7 +2130,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -2213,7 +2213,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -2299,7 +2299,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -2383,7 +2383,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -2472,7 +2472,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -2557,7 +2557,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -2646,7 +2646,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -2742,7 +2742,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -2851,7 +2851,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -2933,7 +2933,7 @@
 			<skill id="5519" level="1" /> <!--Chain Buff - Power Up -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -3018,7 +3018,7 @@
 			<skill id="5520" level="1" /> <!--Chain Buff - Vampiric Shield -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -3105,7 +3105,7 @@
 			<skill id="5521" level="1" /> <!--Chain Buff - Critical Sense -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -3203,7 +3203,7 @@
 			<skill id="5522" level="1" /> <!--Chain Magic - Dark Explosion -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -3284,7 +3284,7 @@
 			<skill id="5523" level="1" /> <!--Chain Magic - Unholy Castle -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -3365,7 +3365,7 @@
 			<skill id="5524" level="1" /> <!--Chain Buff - Resistance to Bow and Magic attacks -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -3447,7 +3447,7 @@
 			<skill id="5525" level="1" /> <!--Chain Buff - Resistance to Melee Attacks -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -3538,7 +3538,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9599" min="4" max="8" chance="88.97" /> <!-- Ancient Tome of the Demon -->
@@ -3630,7 +3630,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9599" min="4" max="12" chance="68.67" /> <!-- Ancient Tome of the Demon -->
@@ -3720,7 +3720,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9599" min="3" max="9" chance="74.82" /> <!-- Ancient Tome of the Demon -->
@@ -3809,7 +3809,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9599" min="2" max="6" chance="66.04" /> <!-- Ancient Tome of the Demon -->
@@ -3883,7 +3883,7 @@
 			<skill id="4582" level="5" /> <!--Poison -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -3961,7 +3961,7 @@
 			<skill id="4582" level="6" /> <!--Poison -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -4038,7 +4038,7 @@
 			<skill id="4606" level="7" /> <!--Poison -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -4114,7 +4114,7 @@
 			<skill id="4606" level="8" /> <!--Poison -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -4194,7 +4194,7 @@
 			<skill id="4606" level="9" /> <!--Poison -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -4306,7 +4306,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9599" min="6" max="20" chance="87.04" /> <!-- Ancient Tome of the Demon -->
@@ -4415,7 +4415,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -4492,7 +4492,7 @@
 			<skill id="4416" level="14" /> <!--Humans -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9599" min="1" max="1" chance="8.64" /> <!-- Ancient Tome of the Demon -->
@@ -4573,7 +4573,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>1.61051</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -4657,7 +4657,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 			</clan_list>
@@ -4759,7 +4759,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_25_NORMAL</enemy_clan>
@@ -4864,7 +4864,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_25_NORMAL</enemy_clan>
@@ -4963,7 +4963,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 			</clan_list>
@@ -5063,7 +5063,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_30_NORMAL</enemy_clan>
@@ -5166,7 +5166,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_30_NORMAL</enemy_clan>
@@ -5264,7 +5264,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 			</clan_list>
@@ -5363,7 +5363,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_35_NORMAL</enemy_clan>
@@ -5464,7 +5464,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_35_NORMAL</enemy_clan>
@@ -5563,7 +5563,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 			</clan_list>
@@ -5661,7 +5661,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_40_NORMAL</enemy_clan>
@@ -5764,7 +5764,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_40_NORMAL</enemy_clan>
@@ -5863,7 +5863,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 			</clan_list>
@@ -5963,7 +5963,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_45_NORMAL</enemy_clan>
@@ -6066,7 +6066,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_45_NORMAL</enemy_clan>
@@ -6165,7 +6165,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 			</clan_list>
@@ -6265,7 +6265,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_50_NORMAL</enemy_clan>
@@ -6368,7 +6368,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_50_NORMAL</enemy_clan>
@@ -6467,7 +6467,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 			</clan_list>
@@ -6567,7 +6567,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_55_NORMAL</enemy_clan>
@@ -6670,7 +6670,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_55_NORMAL</enemy_clan>
@@ -6769,7 +6769,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 			</clan_list>
@@ -6869,7 +6869,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_60_NORMAL</enemy_clan>
@@ -6972,7 +6972,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_60_NORMAL</enemy_clan>
@@ -7071,7 +7071,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 			</clan_list>
@@ -7170,7 +7170,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_65_NORMAL</enemy_clan>
@@ -7272,7 +7272,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_65_NORMAL</enemy_clan>
@@ -7370,7 +7370,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 			</clan_list>
@@ -7469,7 +7469,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_70_NORMAL</enemy_clan>
@@ -7571,7 +7571,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_70_NORMAL</enemy_clan>
@@ -7669,7 +7669,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 			</clan_list>
@@ -7768,7 +7768,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="200">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_75_NORMAL</enemy_clan>
@@ -7872,7 +7872,7 @@
 			<skill id="5719" level="1" /> <!--Kamabion Susceptibility -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RIM</clan>
 				<enemy_clan>RIM_75_NORMAL</enemy_clan>
@@ -7971,7 +7971,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8030,7 +8030,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8093,7 +8093,7 @@
 			<skill id="4613" level="2" /> <!--NPC Clan Heal -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8155,7 +8155,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8214,7 +8214,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8277,7 +8277,7 @@
 			<skill id="4613" level="3" /> <!--NPC Clan Heal -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8338,7 +8338,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8396,7 +8396,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8458,7 +8458,7 @@
 			<skill id="4613" level="4" /> <!--NPC Clan Heal -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8520,7 +8520,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8579,7 +8579,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8641,7 +8641,7 @@
 			<skill id="4613" level="5" /> <!--NPC Clan Heal -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8702,7 +8702,7 @@
 			<skill id="4416" level="3" /> <!--Beasts -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8760,7 +8760,7 @@
 			<skill id="4416" level="3" /> <!--Beasts -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>
@@ -8822,7 +8822,7 @@
 			<skill id="4613" level="6" /> <!--NPC Clan Heal -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>ABYSS</clan>
 			</clan_list>

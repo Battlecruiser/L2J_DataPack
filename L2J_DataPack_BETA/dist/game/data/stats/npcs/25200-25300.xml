@@ -37,7 +37,7 @@
 			<skill id="4416" level="3" /> <!--Beasts -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
@@ -79,7 +79,7 @@
 			<skill id="4724" level="7" /> <!--Stun -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
@@ -131,7 +131,7 @@
 			<skill id="4987" level="1" /> <!--Raid Boss - Level 74 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="56" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
@@ -201,7 +201,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="32" />
 			<height normal="65" />
@@ -239,7 +239,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="36" />
 			<height normal="61" />
@@ -297,7 +297,7 @@
 			<skill id="4988" level="1" /> <!--Raid Boss - Level 76 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="15.331999778747559">
@@ -361,7 +361,7 @@
 			<skill id="4729" level="8" /> <!--BOSS Mortal Blow -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" grown="9" />
 			<height normal="30" grown="36.5" />
@@ -399,7 +399,7 @@
 			<skill id="4416" level="8" /> <!--Angels -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" clanHelpRange="300" />
+		<ai type="MAGE" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="38.5" grown="46.5" />
@@ -450,7 +450,7 @@
 			<skill id="4864" level="1" /> <!--Raid Boss - Level 40 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9816" min="1" max="2" chance="85" /> <!-- Earth Egg -->
@@ -516,7 +516,7 @@
 			<skill id="4416" level="3" /> <!--Beasts -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai clanHelpRange="300" />
+		<ai clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
@@ -557,7 +557,7 @@
 			<skill id="4721" level="3" /> <!--BOSS Strike -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai clanHelpRange="300" />
+		<ai clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
@@ -610,7 +610,7 @@
 			<skill id="4865" level="1" /> <!--Raid Boss - Level 36 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="65.31099700927734">
@@ -671,7 +671,7 @@
 			<skill id="4756" level="5" /> <!--BOSS Power Shot -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai clanHelpRange="300" />
+		<ai clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="30" />
@@ -709,7 +709,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai clanHelpRange="300" />
+		<ai clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="28" />
@@ -761,7 +761,7 @@
 			<skill id="4866" level="1" /> <!--Raid Boss - Level 40 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9817" min="1" max="2" chance="85" /> <!-- Nonliving Nucleus -->
@@ -827,7 +827,7 @@
 			<skill id="4416" level="7" /> <!--Spirits -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai clanHelpRange="300" />
+		<ai clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -868,7 +868,7 @@
 			<skill id="4732" level="3" /> <!--BOSS Mortal Blow -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai clanHelpRange="300" />
+		<ai clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -920,7 +920,7 @@
 			<skill id="4867" level="1" /> <!--Raid Boss - Level 50 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9816" min="1" max="3" chance="85" /> <!-- Earth Egg -->
@@ -986,7 +986,7 @@
 			<skill id="4777" level="4" /> <!--BOSS Spear Attack -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai clanHelpRange="300" />
+		<ai clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="10" grown="12" />
 			<height normal="22" grown="27" />
@@ -1024,7 +1024,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai clanHelpRange="300" />
+		<ai clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
@@ -1077,7 +1077,7 @@
 			<skill id="4868" level="1" /> <!--Raid Boss - Level 73 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="56" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
@@ -1144,7 +1144,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" grown="25" />
 			<height normal="45" grown="52" />
@@ -1187,7 +1187,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />
@@ -1240,7 +1240,7 @@
 			<skill id="4869" level="1" /> <!--Raid Boss - Level 35 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="78.27729797363281">
@@ -1402,7 +1402,7 @@
 			<skill id="4870" level="1" /> <!--Raid Boss - Level 62 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9816" min="3" max="7" chance="79" /> <!-- Earth Egg -->
@@ -1471,7 +1471,7 @@
 			<skill id="4779" level="6" /> <!--BOSS Heal -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" />
+		<ai type="MAGE" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="34" />
@@ -1510,7 +1510,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="38" />
@@ -1562,7 +1562,7 @@
 			<skill id="4871" level="1" /> <!--Raid Boss - Level 75 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="72.00689697265625">
@@ -1641,7 +1641,7 @@
 			<skill id="4872" level="1" /> <!--Raid Boss - Level 57 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9816" min="1" max="4" chance="80" /> <!-- Earth Egg -->
@@ -1705,7 +1705,7 @@
 			<skill id="4741" level="5" /> <!--BOSS Strike -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
@@ -1797,7 +1797,7 @@
 			<skill id="4873" level="1" /> <!--Raid Boss - Level 69 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
@@ -1872,7 +1872,7 @@
 			<skill id="4874" level="1" /> <!--Raid Boss - Level 60 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9815" min="1" max="4" chance="85" /> <!-- Dragon Heart -->
@@ -1949,7 +1949,7 @@
 			<skill id="4875" level="1" /> <!--Raid Boss - Level 72 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="54" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
@@ -2019,7 +2019,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
@@ -2057,7 +2057,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="31" />
@@ -2108,7 +2108,7 @@
 			<skill id="4876" level="1" /> <!--Raid Boss - Level 59 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9815" min="1" max="4" chance="84" /> <!-- Dragon Heart -->
@@ -2264,7 +2264,7 @@
 			<skill id="4877" level="1" /> <!--Raid Boss - Level 55 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9815" min="2" max="6" chance="81" /> <!-- Dragon Heart -->
@@ -2336,7 +2336,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="35" />
@@ -2378,7 +2378,7 @@
 			<skill id="4730" level="5" /> <!--BOSS Mortal Blow -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="32" />
@@ -2430,7 +2430,7 @@
 			<skill id="4878" level="1" /> <!--Raid Boss - Level 75 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="33.0807991027832">
@@ -2504,7 +2504,7 @@
 			<skill id="4879" level="1" /> <!--Raid Boss - Level 78 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="44.33980178833008">
@@ -2563,7 +2563,7 @@
 			<skill id="4725" level="8" /> <!--Stun -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="21" />
 			<height normal="44" />
@@ -2601,7 +2601,7 @@
 			<skill id="4416" level="11" /> <!--Giants -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="21" />
 			<height normal="44" />
@@ -2655,7 +2655,7 @@
 			<skill id="4880" level="1" /> <!--Raid Boss - Level 72 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="54" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
@@ -2731,7 +2731,7 @@
 			<skill id="4881" level="1" /> <!--Raid Boss - Level 75 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="44.15769958496094">
@@ -2789,7 +2789,7 @@
 			<skill id="4416" level="5" /> <!--Plants -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="26" />
@@ -2833,7 +2833,7 @@
 			<skill id="4739" level="7" /> <!--BOSS Strike -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="26" />
@@ -2889,7 +2889,7 @@
 			<skill id="4882" level="1" /> <!--Raid Boss - Level 70 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
@@ -2955,7 +2955,7 @@
 			<skill id="4416" level="9" /> <!--Demons -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="36" />
@@ -3000,7 +3000,7 @@
 			<skill id="4739" level="6" /> <!--BOSS Strike -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="15" grown="25" />
 			<height normal="45" grown="52" />
@@ -3051,7 +3051,7 @@
 			<skill id="4883" level="1" /> <!--Raid Boss - Level 65 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9817" min="3" max="7" chance="80" /> <!-- Nonliving Nucleus -->
@@ -3126,7 +3126,7 @@
 			<skill id="4884" level="1" /> <!--Raid Boss - Level 60 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9814" min="1" max="4" chance="85" /> <!-- Memento Mori -->
@@ -3194,7 +3194,7 @@
 			<skill id="4761" level="6" /> <!--Stun -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" dodge="15" />
+		<ai type="ARCHER" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -3283,7 +3283,7 @@
 			<skill id="4885" level="1" /> <!--Raid Boss - Level 55 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9817" min="2" max="6" chance="80" /> <!-- Nonliving Nucleus -->
@@ -3361,7 +3361,7 @@
 			<skill id="4886" level="1" /> <!--Raid Boss - Level 45 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9817" min="2" max="4" chance="76" /> <!-- Nonliving Nucleus -->
@@ -3439,7 +3439,7 @@
 			<skill id="4760" level="5" /> <!--Stun -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" dodge="15" />
+		<ai type="ARCHER" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="21.5" />
@@ -3527,7 +3527,7 @@
 			<skill id="4887" level="1" /> <!--Raid Boss - Level 67 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="50" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
@@ -3599,7 +3599,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
@@ -3642,7 +3642,7 @@
 			<skill id="4725" level="6" /> <!--Stun -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
@@ -3699,7 +3699,7 @@
 			<skill id="4888" level="1" /> <!--Raid Boss - Level 75 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="33.0807991027832">
@@ -3757,7 +3757,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />
@@ -3802,7 +3802,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
@@ -3853,7 +3853,7 @@
 			<skill id="4889" level="1" /> <!--Raid Boss - Level 70 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
@@ -3918,7 +3918,7 @@
 			<skill id="4774" level="7" /> <!--BOSS Spear Attack -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="10" grown="12" />
 			<height normal="22" grown="27" />
@@ -3955,7 +3955,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="22" />
@@ -4007,7 +4007,7 @@
 			<skill id="4890" level="1" /> <!--Raid Boss - Level 28 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="46.107601165771484">
@@ -4080,7 +4080,7 @@
 			<skill id="4891" level="1" /> <!--Raid Boss - Level 50 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9817" min="2" max="5" chance="77" /> <!-- Nonliving Nucleus -->
@@ -4147,7 +4147,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="20" grown="24" />
@@ -4189,7 +4189,7 @@
 			<skill id="4739" level="4" /> <!--BOSS Strike -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -4244,7 +4244,7 @@
 			<skill id="4892" level="1" /> <!--Raid Boss - Level 75 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="51.29199981689453">
@@ -4319,7 +4319,7 @@
 			<skill id="4893" level="1" /> <!--Raid Boss - Level 50 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9814" min="2" max="5" chance="77" /> <!-- Memento Mori -->
@@ -4390,7 +4390,7 @@
 			<skill id="4779" level="4" /> <!--BOSS Heal -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="20" />
@@ -4429,7 +4429,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="20" grown="24" />
@@ -4482,7 +4482,7 @@
 			<skill id="4894" level="1" /> <!--Raid Boss - Level 55 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="9818" min="2" max="6" chance="80" /> <!-- Angelic Essence -->
@@ -4559,7 +4559,7 @@
 			<skill id="4895" level="1" /> <!--Raid Boss - Level 70 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
@@ -4641,7 +4641,7 @@
 			<skill id="4896" level="1" /> <!--Raid Boss - Level 75 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="69.43990325927734">
@@ -4727,7 +4727,7 @@
 			<skill id="4897" level="1" /> <!--Raid Boss - Level 80 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="57.4994010925293">
@@ -4789,7 +4789,7 @@
 			<skill id="4416" level="9" /> <!--Demons -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" />
+		<ai type="MAGE" isAggressive="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="34" />
@@ -4833,7 +4833,7 @@
 			<skill id="4416" level="9" /> <!--Demons -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
@@ -4885,7 +4885,7 @@
 			<skill id="4898" level="1" /> <!--Raid Boss - Level 80 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="53.45029830932617">
@@ -4954,7 +4954,7 @@
 			<skill id="4416" level="8" /> <!--Angels -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="23" />
 			<height normal="40.5" />
@@ -4992,7 +4992,7 @@
 			<skill id="4416" level="8" /> <!--Angels -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="12" grown="14.4" />
 			<height normal="43" grown="51.6" />
@@ -5029,7 +5029,7 @@
 			<skill id="4416" level="8" /> <!--Angels -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="36" />
@@ -5084,7 +5084,7 @@
 			<skill id="4900" level="1" /> <!--Raid Boss - Level 78 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="54.43199920654297">
@@ -5145,7 +5145,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -5189,7 +5189,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="25" />
 			<height normal="63" />
@@ -5245,7 +5245,7 @@
 			<skill id="4901" level="1" /> <!--Raid Boss - Level 78 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="44.33980178833008">
@@ -5305,7 +5305,7 @@
 			<skill id="4740" level="8" /> <!--BOSS Strike -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="27.5" />
@@ -5342,7 +5342,7 @@
 			<skill id="4416" level="11" /> <!--Giants -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="27.5" />
@@ -5393,7 +5393,7 @@
 			<skill id="4902" level="1" /> <!--Raid Boss - Level 74 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="56" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
@@ -5464,7 +5464,7 @@
 			<skill id="4444" level="2" /> <!--Higher Resist Bow/Crossbow Weapons -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="31" />
@@ -5508,7 +5508,7 @@
 			<skill id="4444" level="2" /> <!--Higher Resist Bow/Crossbow Weapons -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="31" />
@@ -5561,7 +5561,7 @@
 			<skill id="4903" level="1" /> <!--Raid Boss - Level 80 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="22.96579933166504">
