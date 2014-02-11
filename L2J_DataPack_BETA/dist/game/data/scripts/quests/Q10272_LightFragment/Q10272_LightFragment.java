@@ -24,7 +24,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -100,9 +100,9 @@ public class Q10272_LightFragment extends Quest
 			}
 			case "pay":
 			{
-				if (st.getQuestItemsCount(PcInventory.ADENA_ID) >= 10000)
+				if (st.getQuestItemsCount(Inventory.ADENA_ID) >= 10000)
 				{
-					st.takeItems(PcInventory.ADENA_ID, 10000);
+					st.takeItems(Inventory.ADENA_ID, 10000);
 					event = "32566-05.html";
 				}
 				else

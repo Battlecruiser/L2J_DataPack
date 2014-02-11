@@ -193,7 +193,7 @@ public class Quarry extends Quest
 					{
 						if (getRandom(10000) < i[1])
 						{
-							_npc.dropItem((L2PcInstance) _npc.getTarget(), i[0], (int) Config.RATE_DROP_ITEMS);
+							_npc.dropItem((L2PcInstance) _npc.getTarget(), i[0], (int) Config.RATE_QUEST_DROP);
 							break;
 						}
 					}

@@ -21,7 +21,6 @@ package handlers.admincommandhandlers;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.Shutdown;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
@@ -115,10 +114,6 @@ public class AdminShutdown implements IAdminCommandHandler
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/shutdown.htm");
 		adminReply.replace("%count%", String.valueOf(L2World.getInstance().getAllPlayersCount()));
 		adminReply.replace("%used%", String.valueOf(Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()));
-		adminReply.replace("%xp%", String.valueOf(Config.RATE_XP));
-		adminReply.replace("%sp%", String.valueOf(Config.RATE_SP));
-		adminReply.replace("%adena%", String.valueOf(Config.RATE_DROP_ITEMS_ID.get(57)));
-		adminReply.replace("%drop%", String.valueOf(Config.RATE_DROP_ITEMS));
 		adminReply.replace("%time%", String.valueOf(format.format(cal.getTime())));
 		activeChar.sendPacket(adminReply);
 	}

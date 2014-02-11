@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -233,7 +233,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				if (player.getAdena() >= 3000)
 				{
 					st.giveItems(STARSTONE2, 1);
-					st.takeItems(PcInventory.ADENA_ID, 3000);
+					st.takeItems(Inventory.ADENA_ID, 3000);
 					st.unset("talk");
 					st.setCond(26, true);
 				}

@@ -22,7 +22,7 @@ import java.util.List;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -88,7 +88,7 @@ public final class RangeGuard extends AbstractNpcAI
 	{
 		super(RangeGuard.class.getSimpleName(), "ai/group_template");
 		
-		final List<L2NpcTemplate> monsters = NpcTable.getInstance().getAllNpcOfClassType("L2Monster");
+		final List<L2NpcTemplate> monsters = NpcData.getInstance().getAllNpcOfClassType("L2Monster");
 		for (L2NpcTemplate template : monsters)
 		{
 			if (template.hasParameters() && (template.getParameters().getInt("LongRangeGuardRate", -1) > 0))

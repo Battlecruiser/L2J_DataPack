@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2SpecialSiegeGuardAI;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ClanTable;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2ClanMember;
 import com.l2jserver.gameserver.model.L2SiegeClan;
@@ -640,8 +640,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	{
 		try
 		{
-			L2NpcTemplate mahumTemplate = NpcTable.getInstance().getTemplate(data.npc);
-			L2NpcTemplate flagTemplate = NpcTable.getInstance().getTemplate(data.flag);
+			L2NpcTemplate mahumTemplate = NpcData.getInstance().getTemplate(data.npc);
+			L2NpcTemplate flagTemplate = NpcData.getInstance().getTemplate(data.flag);
 			
 			if (flagTemplate == null)
 			{

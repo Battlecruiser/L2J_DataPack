@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -231,7 +231,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 						{
 							st.addExpAndSp(315108090, 34906059);
 							st.giveItems(DAWNS_BRACELET, 1);
-							st.giveItems(PcInventory.ANCIENT_ADENA_ID, 1500000);
+							st.giveItems(Inventory.ANCIENT_ADENA_ID, 1500000);
 							st.exitQuest(false, true);
 							htmltext = "32593-05.html";
 						}

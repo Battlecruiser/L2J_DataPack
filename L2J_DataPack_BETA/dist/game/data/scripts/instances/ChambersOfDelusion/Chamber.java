@@ -572,19 +572,19 @@ public abstract class Chamber extends Quest
 			{
 				if (getRandom(100) < 33)
 				{
-					npc.dropItem(attacker, ENRIA, (int) (3 * Config.RATE_DROP_ITEMS));
+					npc.dropItem(attacker, ENRIA, (int) (3 * Config.RATE_QUEST_DROP));
 				}
 				if (getRandom(100) < 50)
 				{
-					npc.dropItem(attacker, THONS, (int) (4 * Config.RATE_DROP_ITEMS));
+					npc.dropItem(attacker, THONS, (int) (4 * Config.RATE_QUEST_DROP));
 				}
 				if (getRandom(100) < 50)
 				{
-					npc.dropItem(attacker, ASOFE, (int) (4 * Config.RATE_DROP_ITEMS));
+					npc.dropItem(attacker, ASOFE, (int) (4 * Config.RATE_QUEST_DROP));
 				}
 				if (getRandom(100) < 16)
 				{
-					npc.dropItem(attacker, LEONARD, (int) (2 * Config.RATE_DROP_ITEMS));
+					npc.dropItem(attacker, LEONARD, (int) (2 * Config.RATE_QUEST_DROP));
 				}
 				
 				npc.broadcastEvent("SCE_LUCKY", 2000, null);

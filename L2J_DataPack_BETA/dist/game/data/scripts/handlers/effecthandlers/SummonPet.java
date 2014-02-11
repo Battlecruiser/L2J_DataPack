@@ -20,7 +20,7 @@ package handlers.effecthandlers;
 
 import java.util.logging.Level;
 
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.PetDataTable;
 import com.l2jserver.gameserver.model.L2PetData;
 import com.l2jserver.gameserver.model.StatsSet;
@@ -100,7 +100,7 @@ public final class SummonPet extends AbstractEffect
 			return;
 		}
 		
-		final L2NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(petData.getNpcId());
+		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
 		final L2PetInstance pet = L2PetInstance.spawnPet(npcTemplate, player, item);
 		
 		pet.setShowSummonAnimation(true);

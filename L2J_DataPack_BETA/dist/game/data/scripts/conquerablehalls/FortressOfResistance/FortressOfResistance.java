@@ -24,7 +24,7 @@ import java.util.Map.Entry;
 
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ClanTable;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
@@ -65,7 +65,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 		
 		try
 		{
-			_nurka = new L2Spawn(NpcTable.getInstance().getTemplate(BLOODY_LORD_NURKA));
+			_nurka = new L2Spawn(NpcData.getInstance().getTemplate(BLOODY_LORD_NURKA));
 			_nurka.setAmount(1);
 			_nurka.setRespawnDelay(10800);
 //			@formatter:off

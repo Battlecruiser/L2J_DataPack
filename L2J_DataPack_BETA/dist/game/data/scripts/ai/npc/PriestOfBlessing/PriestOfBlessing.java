@@ -23,7 +23,7 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
@@ -116,7 +116,7 @@ public final class PriestOfBlessing extends AbstractNpcAI
 				
 				if (System.currentTimeMillis() > _reuse_time)
 				{
-					takeItems(player, PcInventory.ADENA_ID, PRICE_VOICE);
+					takeItems(player, Inventory.ADENA_ID, PRICE_VOICE);
 					giveItems(player, NEVIT_VOICE, 1);
 					saveGlobalQuestVar(player.getAccountName() + "_voice", Long.toString(System.currentTimeMillis() + (20 * 3600000)));
 				}
@@ -149,7 +149,7 @@ public final class PriestOfBlessing extends AbstractNpcAI
 				{
 					int[] _hg = HOURGLASSES[_index];
 					int _nevit_hourglass = _hg[getRandom(0, _hg.length - 1)];
-					takeItems(player, PcInventory.ADENA_ID, _price_hourglass);
+					takeItems(player, Inventory.ADENA_ID, _price_hourglass);
 					giveItems(player, _nevit_hourglass, 1);
 					saveGlobalQuestVar(player.getAccountName() + "_hg_" + _index, Long.toString(System.currentTimeMillis() + (20 * 3600000)));
 				}

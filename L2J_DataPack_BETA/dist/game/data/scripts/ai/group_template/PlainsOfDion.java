@@ -79,7 +79,7 @@ public final class PlainsOfDion extends AbstractNpcAI
 				broadcastNpcSay(npc, Say2.NPC_ALL, MONSTERS_MSG[i]);
 			}
 			
-			for (L2Character obj : npc.getKnownList().getKnownCharactersInRadius(npc.getFactionRange()))
+			for (L2Character obj : npc.getKnownList().getKnownCharactersInRadius(npc.getTemplate().getClanHelpRange()))
 			{
 				if (obj.isMonster() && Util.contains(DELU_LIZARDMEN, obj.getId()) && !obj.isAttackingNow() && !obj.isDead() && GeoData.getInstance().canSeeTarget(npc, obj))
 				{

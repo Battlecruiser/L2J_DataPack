@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<npc id="50007" displayId="31324" name="Andromeda" usingServerSideName="true" title="L2J Wedding Manager" usingServerSideTitle="true" type="L2WeddingManager">
+		<collision>
+			<radius normal="23" />
+			<height normal="8" />
+		</collision>
+	</npc>
+	<npc id="70010" displayId="31606" name="Catrina" usingServerSideName="true" title="L2J TvT Event Manager" usingServerSideTitle="true" type="L2TvTEventNpc">
+		<collision>
+			<radius normal="15" />
+			<height normal="8" />
+		</collision>
+	</npc>
+	<npc id="900100" displayId="20432" level="1" name="Elpy" type="L2EventMonster">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="40" hpRegen="3" mp="36" mpRegen="1" />
+			<attack physical="8" magical="7" />
+			<defence physical="25" magical="40" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<collision>
+			<radius normal="5" />
+			<height normal="4.5" />
+		</collision>
+	</npc>
+	<npc id="900101" displayId="32365" name="Snow" title="Event Manager">
+		<collision>
+			<radius normal="5" />
+			<height normal="12.5" />
+		</collision>
+	</npc>
+	<npc id="900102" displayId="13098" level="80" name="Event Treasure Chest" type="L2EventChest">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2880" mp="1524" />
+			<defence physical="1499" magical="1035.28" />
+		</stats>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="900103" displayId="32365" name="Start" usingServerSideName="true" title="Event Manager">
+		<collision>
+			<radius normal="5" />
+			<height normal="12.5" />
+		</collision>
+	</npc>
+	<npc id="900104" displayId="32365" name="Finish" usingServerSideName="true" title="Event Manager">
+		<collision>
+			<radius normal="5" />
+			<height normal="12.5" />
+		</collision>
+	</npc>
+	<npc id="1000003" displayId="32226" name="Shiela" usingServerSideName="true" title="L2J NPC Buffer" usingServerSideTitle="true" type="L2NpcBuffer">
+		<collision>
+			<radius normal="22.25" />
+			<height normal="11" />
+		</collision>
+	</npc>
+</list>

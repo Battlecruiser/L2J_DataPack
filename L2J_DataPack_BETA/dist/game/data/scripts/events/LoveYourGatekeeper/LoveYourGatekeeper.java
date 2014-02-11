@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.event.LongTimeEvent;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -86,7 +86,7 @@ public final class LoveYourGatekeeper extends LongTimeEvent
 					}
 					else
 					{
-						st.takeItems(PcInventory.ADENA_ID, PRICE);
+						st.takeItems(Inventory.ADENA_ID, PRICE);
 						st.giveItems(GATEKEEPER_TRANSFORMATION_STICK, 1);
 						st.setState(State.STARTED);
 						st.set("reuse", String.valueOf(System.currentTimeMillis() + (HOURS * 3600000)));

@@ -25,7 +25,7 @@ import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2Object;
@@ -422,7 +422,7 @@ public class FeedableBeasts extends AbstractNpcAI
 				}
 			}
 			
-			L2NpcTemplate template = NpcTable.getInstance().getTemplate(nextNpcId);
+			L2NpcTemplate template = NpcData.getInstance().getTemplate(nextNpcId);
 			L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, food - FOODSKILLDIFF, npc.getX(), npc.getY(), npc.getZ());
 			nextNpc.setRunning();
 			Q00020_BringUpWithLove.checkJewelOfInnocence(player);

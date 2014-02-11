@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.datatables.EnchantItemData;
 import com.l2jserver.gameserver.datatables.EnchantItemGroupsData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.MultisellData;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.datatables.TransformData;
@@ -56,6 +56,8 @@ public class AdminReload implements IAdminCommandHandler
 		"admin_reload"
 	};
 	
+	private static final String RELOAD_USAGE = "Usage: //reload <config|access|npc|quest [quest_id|quest_name]|walker|htm[l] [file|directory]|multisell|buylist|teleport|skill|item|door|effect|handler|enchant>";
+	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
@@ -66,7 +68,7 @@ public class AdminReload implements IAdminCommandHandler
 			if (!st.hasMoreTokens())
 			{
 				AdminHtml.showAdminHtml(activeChar, "reload.htm");
-				activeChar.sendMessage("Usage: //reload <config|access|npc [npc_id]|quest [quest_id|quest_name]|walker|htm[l] [file|directory]|multisell|buylist|teleport|skill|item|door|effect|handler|enchant>");
+				activeChar.sendMessage(RELOAD_USAGE);
 				return true;
 			}
 			
@@ -87,25 +89,8 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				case "npc":
 				{
-					if (st.hasMoreElements())
-					{
-						try
-						{
-							final int npcId = Integer.parseInt(st.nextToken());
-							NpcTable.getInstance().reloadNpc(npcId, true, true, true, true, true, true);
-							AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded NPC ID:" + npcId + ".");
-						}
-						catch (NumberFormatException e)
-						{
-							activeChar.sendMessage("Usage: //reload npc <npc_id>");
-							return false;
-						}
-					}
-					else
-					{
-						NpcTable.getInstance().reloadAllNpc();
-						AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Npcs.");
-					}
+					NpcData.getInstance().load();
+					AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Npcs.");
 					break;
 				}
 				case "quest":
@@ -264,7 +249,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				default:
 				{
-					activeChar.sendMessage("Usage: //reload <config|access|npc [npc_id]|quest [quest_id|quest_name]|walker|htm[l] [file|directory]|multisell|buylist|teleport|skill|item|door|effect|handler>");
+					activeChar.sendMessage(RELOAD_USAGE);
 					return true;
 				}
 			}

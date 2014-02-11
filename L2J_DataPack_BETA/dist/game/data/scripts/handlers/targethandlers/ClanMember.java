@@ -43,7 +43,7 @@ public class ClanMember implements ITargetTypeHandler
 		{
 			// for buff purposes, returns friendly mobs nearby and mob itself
 			final L2Npc npc = (L2Npc) activeChar;
-			if ((npc.getFactionId() == null) || npc.getFactionId().isEmpty())
+			if ((npc.getTemplate().getClans() == null) || npc.getTemplate().getClans().isEmpty())
 			{
 				return new L2Character[]
 				{
@@ -53,7 +53,7 @@ public class ClanMember implements ITargetTypeHandler
 			final Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
 			for (L2Object newTarget : objs)
 			{
-				if (newTarget.isNpc() && npc.getFactionId().equals(((L2Npc) newTarget).getFactionId()))
+				if (newTarget.isNpc() && npc.isInMyClan((L2Npc) newTarget))
 				{
 					if (!Util.checkIfInRange(skill.getCastRange(), activeChar, newTarget, true))
 					{

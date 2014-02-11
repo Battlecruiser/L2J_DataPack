@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
@@ -528,7 +528,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			L2Npc target = (L2Npc) obj;
 			
 			int monsterTemplate = target.getTemplate().getId();
-			L2NpcTemplate template1 = NpcTable.getInstance().getTemplate(monsterTemplate);
+			L2NpcTemplate template1 = NpcData.getInstance().getTemplate(monsterTemplate);
 			if (template1 == null)
 			{
 				activeChar.sendMessage("Incorrect monster template.");
@@ -604,7 +604,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
 			try
 			{
-				L2NpcTemplate template = NpcTable.getInstance().getTemplate(target.getId());
+				L2NpcTemplate template = NpcData.getInstance().getTemplate(target.getId());
 				L2Spawn spawnDat = new L2Spawn(template);
 				if (Config.SAVE_GMSPAWN_ON_CUSTOM)
 				{

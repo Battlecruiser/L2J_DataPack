@@ -346,7 +346,7 @@ public final class PailakaSongOfIceAndFire extends Quest
 				break;
 			case "GARGOS_LAUGH":
 			{
-				Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getTemplate().getIdTemplate(), NpcStringId.OHHOHOH));
+				Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getTemplate().getDisplayId(), NpcStringId.OHHOHOH));
 				break;
 			}
 		}
