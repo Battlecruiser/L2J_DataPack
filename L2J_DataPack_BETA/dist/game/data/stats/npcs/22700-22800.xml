@@ -21,7 +21,7 @@
 		<status undying="false" canBeSown="true" />
 		<shots shotChance="10" spiritChance="10" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="39.5" grown="69" />
@@ -71,7 +71,7 @@
 		</skill_list>
 		<shots shotChance="10" spiritChance="10" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>BARANKAD</clan>
 			</clan_list>
@@ -184,7 +184,7 @@
 		</skill_list>
 		<shots shotChance="10" spiritChance="10" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>BARANKAD</clan>
 			</clan_list>
@@ -295,7 +295,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3263,7 +3263,7 @@
 			<skill id="5465" level="1" /> <!--Earth Attacks -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ROBBER</clan>
 			</clan_list>
@@ -3384,7 +3384,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="500" />
+		<ai aggroRange="300" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3498,7 +3498,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="500" />
+		<ai aggroRange="300" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3600,7 +3600,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="500" />
+		<ai aggroRange="300" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -3708,7 +3708,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="500" />
+		<ai aggroRange="300" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5842,7 +5842,7 @@
 			<skill id="6420" level="1" /> <!--Lizard Strike -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5926,7 +5926,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -6023,7 +6023,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -6111,7 +6111,7 @@
 			<skill id="6424" level="1" /> <!--Double Shot -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" />
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -6307,7 +6307,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="MAGE" aggroRange="300" clanHelpRange="300" />
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -6399,7 +6399,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -6512,7 +6512,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -6628,7 +6628,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -6739,7 +6739,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -6856,7 +6856,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -6989,7 +6989,7 @@
 			<skill id="6337" level="1" /> <!--Red Slash 1 -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="400" />
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -7091,7 +7091,7 @@
 			<skill id="6338" level="1" /> <!--Red Slash 2 -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -7181,7 +7181,7 @@
 			<skill id="6340" level="1" /> <!--Shock -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="400" />
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -7266,7 +7266,7 @@
 			<skill id="6340" level="1" /> <!--Shock -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -7347,7 +7347,7 @@
 			<skill id="6333" level="1" /> <!--Electric Bolt 1 -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="400" />
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -7427,7 +7427,7 @@
 			<skill id="6334" level="1" /> <!--Shock -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -7507,7 +7507,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="400">
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>XEL_PRIVATE</clan>
 			</clan_list>
@@ -7620,7 +7620,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="400">
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>XEL_PRIVATE</clan>
 			</clan_list>
@@ -7757,7 +7757,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="400">
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>XEL_PRIVATE</clan>
 			</clan_list>

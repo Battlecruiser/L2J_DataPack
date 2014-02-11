@@ -60,7 +60,7 @@
 			<skill id="5479" level="1" /> <!--Boss Petrification Resistance -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -149,7 +149,7 @@
 			<skill id="5550" level="11" /> <!--NPC Trigger Stun -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -237,7 +237,7 @@
 			<skill id="5552" level="11" /> <!--NPC Hill Up -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -331,7 +331,7 @@
 			<skill id="5614" level="1" /> <!--Raid Boss - Level 87 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="58.951698303222656">
@@ -378,7 +378,7 @@
 			<skill id="4416" level="4" /> <!--Animals -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -433,7 +433,7 @@
 			<skill id="5765" level="1" /> <!--Naia Sprout -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -488,7 +488,7 @@
 			<skill id="5766" level="1" /> <!--Naia Sprout -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -543,7 +543,7 @@
 			<skill id="5767" level="1" /> <!--Naia Sprout -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -598,7 +598,7 @@
 			<skill id="5768" level="1" /> <!--Naia Sprout -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -671,7 +671,7 @@
 			<skill id="5620" level="9" /> <!--Short-Range Physical Attack Weakness -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -770,7 +770,7 @@
 			<skill id="5620" level="9" /> <!--Short-Range Physical Attack Weakness -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -872,7 +872,7 @@
 			<skill id="5620" level="9" /> <!--Short-Range Physical Attack Weakness -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -965,7 +965,7 @@
 			<skill id="5620" level="9" /> <!--Short-Range Physical Attack Weakness -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -1031,7 +1031,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -1076,7 +1076,7 @@
 			<skill id="5593" level="1" /> <!--Vampiric Mana Burn -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="6" />
 			<height normal="26" />
@@ -1117,7 +1117,7 @@
 			<skill id="5593" level="1" /> <!--Vampiric Mana Burn -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="25.5" />
@@ -1166,7 +1166,7 @@
 			<skill id="4738" level="2" /> <!--BOSS Spinning Slash -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="34" />
@@ -1215,7 +1215,7 @@
 			<skill id="4738" level="3" /> <!--BOSS Spinning Slash -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" grown="24" />
 			<height normal="40" grown="48" />
@@ -1263,7 +1263,7 @@
 			<skill id="4738" level="4" /> <!--BOSS Spinning Slash -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="16" />
 			<height normal="65" />
@@ -1312,7 +1312,7 @@
 			<skill id="4738" level="5" /> <!--BOSS Spinning Slash -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="22" />
 			<height normal="35.3" />
@@ -1360,7 +1360,7 @@
 			<skill id="4738" level="6" /> <!--BOSS Spinning Slash -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="21" />
 			<height normal="35" />
@@ -1411,7 +1411,7 @@
 			<skill id="5462" level="1" /> <!--Fire Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="47" />
@@ -1462,7 +1462,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="21" grown="25" />
 			<height normal="40" grown="48" />
@@ -1536,7 +1536,7 @@
 		</skill_list>
 		<corpse_time>4</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>MASTERRIDER</clan>
 			</clan_list>
@@ -1601,7 +1601,7 @@
 			<skill id="6085" level="1" /> <!--Raid Boss - Level 80 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>LOC</clan>
 			</clan_list>
@@ -1684,7 +1684,7 @@
 			<skill id="6086" level="1" /> <!--Raid Boss - Level 80 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>BANSHEEQUEEN</clan>
 			</clan_list>
@@ -1752,7 +1752,7 @@
 		</skill_list>
 		<corpse_time>5</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>MUTANTDRAKEWING</clan>
 			</clan_list>
@@ -1803,7 +1803,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>LOC</clan>
 			</clan_list>
@@ -1853,7 +1853,7 @@
 		</skill_list>
 		<corpse_time>4</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>LOC</clan>
 			</clan_list>
@@ -1902,7 +1902,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>BANSHEEQUEEN</clan>
 			</clan_list>
@@ -1952,7 +1952,7 @@
 		</skill_list>
 		<corpse_time>5</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>BANSHEEQUEEN</clan>
 			</clan_list>
@@ -2001,7 +2001,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>MUTANTDRAKEWING</clan>
 			</clan_list>
@@ -2051,7 +2051,7 @@
 		</skill_list>
 		<corpse_time>5</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>MUTANTDRAKEWING</clan>
 			</clan_list>
@@ -2104,7 +2104,7 @@
 		</skill_list>
 		<corpse_time>4</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000">
+		<ai type="BALANCED" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>MASTERRIDER</clan>
 			</clan_list>
@@ -2160,7 +2160,7 @@
 			<skill id="5917" level="1" /> <!--Shrouding Aura -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2239,7 +2239,7 @@
 			<skill id="5916" level="1" /> <!--Cruising Aura -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2318,7 +2318,7 @@
 			<skill id="5918" level="8" /> <!--Physical Root Weakness -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2387,7 +2387,7 @@
 			<skill id="5916" level="1" /> <!--Cruising Aura -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2460,7 +2460,7 @@
 			<skill id="5917" level="1" /> <!--Shrouding Aura -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2538,7 +2538,7 @@
 			<skill id="5986" level="1" /> <!--Vampiric Aura -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2613,7 +2613,7 @@
 			<skill id="5913" level="1" /> <!--Putrefaction Cleanse -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2687,7 +2687,7 @@
 			<skill id="5915" level="1" /> <!--Mummifying Aura -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2766,7 +2766,7 @@
 			<skill id="5985" level="1" /> <!--Decaying Aura -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2839,7 +2839,7 @@
 			<skill id="6074" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2910,7 +2910,7 @@
 			<skill id="6075" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -2997,7 +2997,7 @@
 			<skill id="6076" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -3069,7 +3069,7 @@
 			<skill id="6077" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -3144,7 +3144,7 @@
 			<skill id="6078" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -3223,7 +3223,7 @@
 			<skill id="6079" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -3295,7 +3295,7 @@
 			<skill id="6080" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -3372,7 +3372,7 @@
 			<skill id="6081" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -3449,7 +3449,7 @@
 			<skill id="6082" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -3526,7 +3526,7 @@
 			<skill id="6083" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -3614,7 +3614,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RUNE_PAILAKA</clan>
 			</clan_list>
@@ -3690,7 +3690,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RUNE_PAILAKA</clan>
 			</clan_list>
@@ -3763,7 +3763,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RUNE_PAILAKA</clan>
 			</clan_list>
@@ -3826,7 +3826,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RUNE_PAILAKA</clan>
 			</clan_list>
@@ -3881,7 +3881,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RUNE_PAILAKA</clan>
 			</clan_list>
@@ -3931,7 +3931,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RUNE_PAILAKA</clan>
 			</clan_list>
@@ -3993,7 +3993,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RUNE_PAILAKA</clan>
 			</clan_list>
@@ -4067,7 +4067,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RUNE_PAILAKA</clan>
 			</clan_list>
@@ -4142,7 +4142,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RUNE_PAILAKA</clan>
 			</clan_list>
@@ -4205,7 +4205,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RUNE_PAILAKA</clan>
 			</clan_list>
@@ -4260,7 +4260,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RUNE_PAILAKA</clan>
 			</clan_list>
@@ -4310,7 +4310,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RUNE_PAILAKA</clan>
 			</clan_list>
@@ -4364,7 +4364,7 @@
 			<skill id="6062" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false">
 			<skill maxChance="25" />
 			<clan_list>
 				<clan>ACEED</clan>
@@ -4440,7 +4440,7 @@
 			<skill id="6063" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false">
 			<skill maxChance="25" />
 			<clan_list>
 				<clan>ACEED</clan>
@@ -4539,7 +4539,7 @@
 			<skill id="6238" level="1" /> <!--Speed Decrease -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="34" grown="44" />
 			<height normal="40" grown="59.4" />
@@ -4601,7 +4601,7 @@
 			<skill id="6238" level="1" /> <!--Speed Decrease -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="34" grown="44" />
 			<height normal="40" grown="59.4" />
@@ -4663,7 +4663,7 @@
 			<skill id="6238" level="1" /> <!--Speed Decrease -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="34" grown="44" />
 			<height normal="40" grown="59.4" />
@@ -4725,7 +4725,7 @@
 			<skill id="6238" level="1" /> <!--Speed Decrease -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="34" grown="44" />
 			<height normal="40" grown="59.4" />
@@ -4778,7 +4778,7 @@
 			<skill id="6227" level="1" /> <!--Raid Boss - Level 84 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="52.676700592041016">
@@ -4845,7 +4845,7 @@
 			<skill id="5465" level="1" /> <!--Earth Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai clanHelpRange="300" />
+		<ai clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="21" />
@@ -4888,7 +4888,7 @@
 			<skill id="5465" level="1" /> <!--Earth Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai clanHelpRange="300" />
+		<ai clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="22.2" />
@@ -4943,7 +4943,7 @@
 			<skill id="6228" level="1" /> <!--Raid Boss - Level 83 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="47.13029861450195">
@@ -5001,7 +5001,7 @@
 			<skill id="5464" level="1" /> <!--Wind Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="10" grown="12" />
 			<height normal="22" grown="27" />
@@ -5041,7 +5041,7 @@
 			<skill id="5464" level="1" /> <!--Wind Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -5094,7 +5094,7 @@
 			<skill id="6229" level="1" /> <!--Raid Boss - Level 84 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="47.824501037597656">
@@ -5162,7 +5162,7 @@
 			<skill id="5463" level="1" /> <!--Water Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="5" />
 			<height normal="25" />
@@ -5205,7 +5205,7 @@
 			<skill id="5463" level="1" /> <!--Water Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="5" />
 			<height normal="25" />
@@ -5259,7 +5259,7 @@
 			<skill id="6230" level="1" /> <!--Raid Boss - Level 82 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="14851" min="1" max="1" chance="100" /> <!-- Cave Exploration Text 1 Sheet -->
@@ -5344,7 +5344,7 @@
 			<skill id="6231" level="1" /> <!--Raid Boss - Level 82 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="14852" min="1" max="1" chance="100" /> <!-- Cave Exploration Text 2 Sheet -->
@@ -5403,7 +5403,7 @@
 			<skill id="5463" level="1" /> <!--Water Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="16" />
 			<height normal="65" />
@@ -5447,7 +5447,7 @@
 			<skill id="5463" level="1" /> <!--Water Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="16" />
 			<height normal="65" />
@@ -5503,7 +5503,7 @@
 			<skill id="6232" level="1" /> <!--Raid Boss - Level 83 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="14853" min="1" max="1" chance="100" /> <!-- Cave Exploration Text 3 Sheet -->
@@ -5573,7 +5573,7 @@
 			<skill id="5463" level="1" /> <!--Water Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="50" />
 			<height normal="91" />
@@ -5619,7 +5619,7 @@
 			<skill id="5463" level="1" /> <!--Water Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="35" />
@@ -5675,7 +5675,7 @@
 			<skill id="6233" level="1" /> <!--Raid Boss - Level 83 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="47.5718994140625">
@@ -5736,7 +5736,7 @@
 			<skill id="5463" level="1" /> <!--Water Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="32" />
@@ -5776,7 +5776,7 @@
 			<skill id="5463" level="1" /> <!--Water Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="31.5" />
 			<height normal="69" />
@@ -5837,7 +5837,7 @@
 			<skill id="6217" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="60.89360046386719">
@@ -5923,7 +5923,7 @@
 			<skill id="6218" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="60.89360046386719">
@@ -6009,7 +6009,7 @@
 			<skill id="6219" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="60.89360046386719">
@@ -6095,7 +6095,7 @@
 			<skill id="6220" level="1" /> <!--Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="60.89360046386719">
@@ -6181,7 +6181,7 @@
 			<skill id="6221" level="1" /> <!--Raid Boss - Level 82 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="15341" min="1" max="3" chance="100" /> <!-- Guiding Tea Leaves -->
@@ -6268,7 +6268,7 @@
 			<skill id="6222" level="1" /> <!--Raid Boss - Level 84 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="15341" min="2" max="3" chance="100" /> <!-- Guiding Tea Leaves -->
@@ -6348,7 +6348,7 @@
 			<skill id="6652" level="1" /> <!--Level 85 Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="0.8133000135421753">
@@ -6415,7 +6415,7 @@
 			<skill id="6653" level="1" /> <!--Level 85 Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="2.0404000282287598">
@@ -6482,7 +6482,7 @@
 			<skill id="6654" level="1" /> <!--Level 85 Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="1.0255000591278076">
@@ -6553,7 +6553,7 @@
 			<skill id="6661" level="1" /> <!--Level 85 Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FREYA</clan>
 			</clan_list>

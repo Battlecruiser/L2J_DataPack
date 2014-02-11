@@ -52,7 +52,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="400">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>EYE</clan>
 			</clan_list>
@@ -153,7 +153,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="400">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>EYE</clan>
 			</clan_list>
@@ -540,7 +540,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="400">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>EYE</clan>
 			</clan_list>
@@ -1292,7 +1292,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -1512,7 +1512,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -1892,7 +1892,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -2152,7 +2152,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -2512,7 +2512,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -5122,7 +5122,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>KETRA_ORC</clan>
 			</clan_list>
@@ -5304,7 +5304,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>KETRA_ORC</clan>
 			</clan_list>
@@ -5496,7 +5496,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>KETRA_ORC</clan>
 			</clan_list>
@@ -5587,7 +5587,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
 			<clan_list>
 				<clan>KETRA_ORC</clan>
@@ -8152,7 +8152,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>VARKA_SILENOS</clan>
 			</clan_list>
@@ -8331,7 +8331,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>VARKA_SILENOS</clan>
 			</clan_list>
@@ -8517,7 +8517,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>VARKA_SILENOS</clan>
 			</clan_list>
@@ -8606,7 +8606,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>VARKA_SILENOS</clan>
 			</clan_list>
@@ -10473,7 +10473,7 @@
 		<shots shotChance="20" spiritChance="20" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>TOMB</clan>
 			</clan_list>
@@ -10560,7 +10560,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>TOMB</clan>
 			</clan_list>

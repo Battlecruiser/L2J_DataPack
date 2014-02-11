@@ -48,7 +48,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="42.0">
@@ -606,7 +606,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="25">
@@ -845,7 +845,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="100">
@@ -1067,7 +1067,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -1450,7 +1450,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="23.5" />
@@ -1524,7 +1524,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="63" />
 			<height normal="33.5" />

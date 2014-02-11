@@ -1365,7 +1365,7 @@
 			<skill id="4416" level="6" /> <!--Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="19" />
 			<height normal="44" />
@@ -1556,7 +1556,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="70" />
 			<height normal="119" />
@@ -1794,7 +1794,7 @@
 			<skill id="4416" level="1" /> <!--Undead -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="14.4" />
 			<height normal="22" />

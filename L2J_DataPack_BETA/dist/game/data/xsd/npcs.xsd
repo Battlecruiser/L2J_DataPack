@@ -229,6 +229,7 @@
 									<xs:attribute name="clanHelpRange" type="xs:nonNegativeInteger" />
 									<xs:attribute name="dodge" type="xs:nonNegativeInteger" />
 									<xs:attribute name="isChaos" type="xs:boolean" />
+									<xs:attribute name="isAggressive" type="xs:boolean" />
 								</xs:complexType>
 							</xs:element>
 							<xs:element name="drop_lists" minOccurs="0" maxOccurs="1">

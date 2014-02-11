@@ -19,7 +19,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="57" />
 			<height normal="74" />
@@ -44,7 +44,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="57" />
 			<height normal="74" />
@@ -121,7 +121,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>LOC</clan>
 			</clan_list>
@@ -206,7 +206,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>LOC</clan>
 			</clan_list>
@@ -286,7 +286,7 @@
 		</skill_list>
 		<corpse_time>4</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>LOC</clan>
 			</clan_list>
@@ -366,7 +366,7 @@
 		</skill_list>
 		<corpse_time>4</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>LOC</clan>
 			</clan_list>
@@ -449,7 +449,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>BANSHEEQUEEN</clan>
 			</clan_list>
@@ -520,7 +520,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>BANSHEEQUEEN</clan>
 			</clan_list>
@@ -592,7 +592,7 @@
 		</skill_list>
 		<corpse_time>5</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>BANSHEEQUEEN</clan>
 			</clan_list>
@@ -664,7 +664,7 @@
 		</skill_list>
 		<corpse_time>5</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>BANSHEEQUEEN</clan>
 			</clan_list>
@@ -743,7 +743,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>MUTANTDRAKEWING</clan>
 			</clan_list>
@@ -822,7 +822,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>MUTANTDRAKEWING</clan>
 			</clan_list>
@@ -904,7 +904,7 @@
 		</skill_list>
 		<corpse_time>5</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>MUTANTDRAKEWING</clan>
 			</clan_list>
@@ -984,7 +984,7 @@
 		</skill_list>
 		<corpse_time>5</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>MUTANTDRAKEWING</clan>
 			</clan_list>
@@ -1073,7 +1073,7 @@
 		</skill_list>
 		<corpse_time>4</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>MASTERRIDER</clan>
 			</clan_list>
@@ -1156,7 +1156,7 @@
 		</skill_list>
 		<corpse_time>4</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="MAGE" aggroRange="400" clanHelpRange="1000">
+		<ai type="MAGE" aggroRange="400" clanHelpRange="1000" isAggressive="false">
 			<clan_list>
 				<clan>MASTERRIDER</clan>
 			</clan_list>
@@ -1208,7 +1208,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false">
 			<clan_list>
 				<clan>ACEED</clan>
 			</clan_list>
@@ -3932,7 +3932,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4670" shortRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -4039,7 +4039,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4582" shortRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -4149,7 +4149,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4670" shortRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -4255,7 +4255,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4582" shortRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -4467,7 +4467,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4072" shortRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -4573,7 +4573,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4670" shortRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -4682,7 +4682,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4670" shortRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -4791,7 +4791,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5910" shortRangeId="4582" shortRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -4900,7 +4900,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5910" shortRangeId="4582" shortRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -5007,7 +5007,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5094,7 +5094,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5172,7 +5172,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="300" />
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5252,7 +5252,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="300" />
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5336,7 +5336,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5419,7 +5419,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -5494,7 +5494,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="400">
+		<ai aggroRange="450" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>GIANT</clan>
 			</clan_list>
@@ -5570,7 +5570,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="300">
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>GIANT</clan>
 			</clan_list>
@@ -5880,7 +5880,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="300">
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>BEAST</clan>
 			</clan_list>
@@ -5960,7 +5960,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="300">
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>BEAST</clan>
 			</clan_list>
@@ -6044,7 +6044,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="300">
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>BEAST</clan>
 			</clan_list>
@@ -6126,7 +6126,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="300">
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>BEAST</clan>
 			</clan_list>
@@ -6205,7 +6205,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="300">
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>BEAST</clan>
 			</clan_list>
@@ -6280,7 +6280,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="450" clanHelpRange="300">
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>BEAST</clan>
 			</clan_list>
@@ -6441,7 +6441,7 @@
 			<skill id="6146" level="1" /> <!--Forfeiture of Will -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="6145" longRangeId="4254" longRangeChance="30" />
 			<clan_list>
 				<clan>ROBBER</clan>
@@ -6555,7 +6555,7 @@
 			<skill id="6146" level="1" /> <!--Forfeiture of Will -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="6145" longRangeId="4254" longRangeChance="30" />
 			<clan_list>
 				<clan>ROBBER</clan>
@@ -6657,7 +6657,7 @@
 			<skill id="6145" level="1" /> <!--Earthworm's Evil Aura -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="6145" shortRangeId="5082" shortRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -6761,7 +6761,7 @@
 			<skill id="6168" level="9" /> <!--Shock -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="6145" shortRangeId="6168" shortRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -6964,7 +6964,7 @@
 			<skill id="5601" level="11" /> <!--Short-Range Physical Attack Resistance -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill shortRangeId="4643" />
 		</ai>
 		<drop_lists>
@@ -7066,7 +7066,7 @@
 			<skill id="5601" level="11" /> <!--Short-Range Physical Attack Resistance -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="4573" />
 		</ai>
 		<drop_lists>
@@ -7174,7 +7174,7 @@
 			<skill id="5601" level="11" /> <!--Short-Range Physical Attack Resistance -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="4573" />
 		</ai>
 		<drop_lists>
@@ -7279,7 +7279,7 @@
 			<skill id="5601" level="11" /> <!--Short-Range Physical Attack Resistance -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="4573" />
 		</ai>
 		<drop_lists>
@@ -7386,7 +7386,7 @@
 			<skill id="5601" level="11" /> <!--Short-Range Physical Attack Resistance -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="4032" shortRangeId="4034" shortRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -7699,7 +7699,7 @@
 			<skill id="5601" level="11" /> <!--Short-Range Physical Attack Resistance -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill shortRangeId="4582" shortRangeChance="15" longRangeId="4035" longRangeChance="15" />
 		</ai>
 		<drop_lists>
@@ -7803,7 +7803,7 @@
 		</skill_list>
 		<shots shotChance="10" spiritChance="10" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RAGNAORC</clan>
 			</clan_list>
@@ -7916,7 +7916,7 @@
 		</skill_list>
 		<shots shotChance="10" spiritChance="10" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RAGNAORC</clan>
 			</clan_list>
@@ -8281,7 +8281,7 @@
 		</skill_list>
 		<shots shotChance="10" spiritChance="10" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="HEALER" aggroRange="450" clanHelpRange="700">
+		<ai type="HEALER" aggroRange="450" clanHelpRange="700" isAggressive="false">
 			<clan_list>
 				<clan>RAGNAORC</clan>
 			</clan_list>
@@ -8400,7 +8400,7 @@
 		</skill_list>
 		<shots shotChance="10" spiritChance="10" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RAGNAORC</clan>
 			</clan_list>
@@ -8532,7 +8532,7 @@
 		</skill_list>
 		<shots shotChance="10" spiritChance="10" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>RAGNAORC</clan>
 			</clan_list>
@@ -8651,7 +8651,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15">
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="false">
 			<clan_list>
 				<clan>RAGNAORC</clan>
 			</clan_list>

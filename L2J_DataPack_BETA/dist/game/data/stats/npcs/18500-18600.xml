@@ -279,7 +279,7 @@
 			<skill id="5417" level="1" /> <!--Invincible -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="21" />
 			<height normal="53" />
@@ -1843,7 +1843,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="42.0">
@@ -1930,7 +1930,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="9.477100372314453">
@@ -2013,7 +2013,7 @@
 			<skill id="4438" level="5" /> <!--Greater Resist Sleep -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="MAGE" aggroRange="1000" clanHelpRange="300" />
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="11.120499610900879">
@@ -2094,7 +2094,7 @@
 			<skill id="4416" level="3" /> <!--Beasts -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="MAGE" aggroRange="1000" clanHelpRange="300" />
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="21.04170036315918">
@@ -2169,7 +2169,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="5.445099830627441">
@@ -2249,7 +2249,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="13.203300476074219">
@@ -2342,7 +2342,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="13.347100257873535">
@@ -2438,7 +2438,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1700" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1700" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="13.419699668884277">
@@ -2530,7 +2530,7 @@
 			<skill id="4454" level="2" /> <!--Hold Attack Weak Point -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="6.603400230407715">
@@ -2613,7 +2613,7 @@
 			<skill id="4454" level="2" /> <!--Hold Attack Weak Point -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="75.7844009399414">
@@ -2687,7 +2687,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="67.00070190429688">
@@ -2757,7 +2757,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="63.902099609375">
@@ -2816,7 +2816,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
@@ -2867,7 +2867,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="63.902099609375">
@@ -2929,7 +2929,7 @@
 			<skill id="5622" level="1" /> <!--Double Skill Attack -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="72.7499008178711">
@@ -3002,7 +3002,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70.9811019897461">
@@ -3060,7 +3060,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
@@ -3109,7 +3109,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="54.86149978637695">
@@ -3184,7 +3184,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="76.01679992675781">
@@ -3248,7 +3248,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="9" grown="11" />
 			<height normal="24" grown="26.4" />
@@ -3298,7 +3298,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="61.98189926147461">
@@ -3369,7 +3369,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="75.83439636230469">
@@ -3440,7 +3440,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="47.91889953613281">
@@ -3497,7 +3497,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
@@ -3542,7 +3542,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="56.778099060058594">
@@ -3607,7 +3607,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="13" />
@@ -3658,7 +3658,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="55.550498962402344">
@@ -3727,7 +3727,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="67.78279876708984">
@@ -3798,7 +3798,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="54" />
@@ -3849,7 +3849,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="55.36029815673828">
@@ -3919,7 +3919,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="25" />
@@ -3970,7 +3970,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70.26920318603516">
@@ -4045,7 +4045,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="25.8" />
@@ -4092,7 +4092,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="41.243900299072266">
@@ -4157,7 +4157,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />

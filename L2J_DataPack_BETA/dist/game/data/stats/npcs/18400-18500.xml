@@ -2536,7 +2536,7 @@
 			<skill id="5393" level="4" /> <!--NPC MP Burn -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="MAGE" aggroRange="450" clanHelpRange="600">
+		<ai type="MAGE" aggroRange="450" clanHelpRange="600" isAggressive="false">
 			<clan_list>
 				<clan>RUIN</clan>
 			</clan_list>
@@ -2680,7 +2680,7 @@
 			<skill id="5467" level="1" /> <!--Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>TEST</clan>
 			</clan_list>
@@ -3066,7 +3066,7 @@
 			<skill id="4416" level="19" /> <!--Others -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>ORACLE</clan>
 			</clan_list>
@@ -3235,7 +3235,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>7</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" />
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="22.902099609375">
@@ -3289,7 +3289,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
-		<ai type="CORPSE" aggroRange="300" clanHelpRange="300">
+		<ai type="CORPSE" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>NDG</clan>
 			</clan_list>
@@ -3524,7 +3524,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="false">
 			<clan_list>
 				<clan>DARK</clan>
 			</clan_list>
@@ -3616,7 +3616,7 @@
 			<skill id="4416" level="19" /> <!--Others -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="800">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="800" isAggressive="false">
 			<clan_list>
 				<clan>HELL</clan>
 			</clan_list>
@@ -3859,7 +3859,7 @@
 			<skill id="5597" level="1" /> <!--Invalid Skill cancel -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1500" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -3924,7 +3924,7 @@
 			<skill id="4416" level="2" /> <!--Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
@@ -4026,7 +4026,7 @@
 			<skill id="5383" level="5" /> <!--NPC(party) -Magic Single Long Range DD - Earth -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CASTLE</clan>
 			</clan_list>
