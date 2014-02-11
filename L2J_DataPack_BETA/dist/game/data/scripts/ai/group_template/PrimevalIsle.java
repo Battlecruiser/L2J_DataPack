@@ -358,7 +358,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 		else if (Util.contains(TREX, npc.getId()))
 		{
 			final L2Attackable mob = (L2Attackable) npc;
-			final L2PcInstance target = (L2PcInstance) mob.getMostHated();
+			final L2Character target = mob.getMostHated();
 			
 			if (((npc.getCurrentHp() / npc.getMaxHp()) * 100) <= 30)
 			{
@@ -419,7 +419,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 		}
 		else
 		{
-			L2PcInstance target = null;
+			L2Character target = null;
 			final int probPhysicalSpecial1 = npc.getTemplate().getParameters().getInt("ProbPhysicalSpecial1", 0);
 			final int probPhysicalSpecial2 = npc.getTemplate().getParameters().getInt("ProbPhysicalSpecial2", 0);
 			final SkillHolder selfRangeBuff1 = npc.getTemplate().getParameters().getObject("SelfRangeBuff1", SkillHolder.class);
@@ -438,13 +438,14 @@ public final class PrimevalIsle extends AbstractNpcAI
 			if ((((npc.getCurrentHp() / npc.getMaxHp()) * 100) <= 30) && (npc.getVariables().getInt("SELFBUFF_USED") == 0))
 			{
 				final L2Attackable mob = (L2Attackable) npc;
-				target = (L2PcInstance) mob.getMostHated();
+				target = mob.getMostHated();
 				mob.clearAggroList();
 				if (!npc.isSkillDisabled(selfRangeBuff1.getSkillId()))
 				{
 					npc.getVariables().set("SELFBUFF_USED", 1);
 					npc.doCast(selfRangeBuff1.getSkill());
-					attackPlayer(mob, target);
+					npc.setIsRunning(true);
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 				}
 			}
 			
