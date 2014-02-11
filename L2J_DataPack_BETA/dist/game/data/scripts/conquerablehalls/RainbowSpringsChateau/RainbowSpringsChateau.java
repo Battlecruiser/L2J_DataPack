@@ -37,7 +37,7 @@ import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ClanTable;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
@@ -715,7 +715,7 @@ public final class RainbowSpringsChateau extends Quest
 			{
 				try
 				{
-					_gourds[i] = new L2Spawn(NpcTable.getInstance().getTemplate(GOURDS[i]));
+					_gourds[i] = new L2Spawn(NpcData.getInstance().getTemplate(GOURDS[i]));
 					_gourds[i].setX(ARENAS[i].getX() + 150);
 					_gourds[i].setY(ARENAS[i].getY() + 150);
 					_gourds[i].setZ(ARENAS[i].getZ());

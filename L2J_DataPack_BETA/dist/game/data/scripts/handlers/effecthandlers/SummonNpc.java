@@ -18,7 +18,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
@@ -82,7 +82,7 @@ public final class SummonNpc extends AbstractEffect
 			return;
 		}
 		
-		final L2NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(_npcId);
+		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_npcId);
 		if (npcTemplate == null)
 		{
 			_log.warning(SummonNpc.class.getSimpleName() + ": Spawn of the nonexisting NPC ID: " + _npcId + ", skill ID:" + info.getSkill().getId());

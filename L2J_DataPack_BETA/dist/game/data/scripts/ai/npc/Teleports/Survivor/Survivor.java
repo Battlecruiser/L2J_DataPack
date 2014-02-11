@@ -23,7 +23,7 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 
 /**
  * Gracia Survivor teleport AI.<br>
@@ -61,7 +61,7 @@ public final class Survivor extends AbstractNpcAI
 			}
 			else
 			{
-				takeItems(player, PcInventory.ADENA_ID, 150000);
+				takeItems(player, Inventory.ADENA_ID, 150000);
 				player.teleToLocation(TELEPORT);
 				return null;
 			}

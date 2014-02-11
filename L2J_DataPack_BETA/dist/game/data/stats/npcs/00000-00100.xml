@@ -1,1624 +1,1268 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="1" templateId="1" clientName="Not Found" serverName="br_xmas_turkey" level="80" type="warrior">
-		<agro_range>300</agro_range>
-		<clan_help_range>1000</clan_help_range>
-		<collision>
-			<radius normal="25" special="25" />
-			<height normal="35" special="35" />
-		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>4200000000</exp>
-		<speed>
-			<run ground="160" underWater="0" flying="0" />
-			<walk ground="19.5" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="8.47458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="60000" mDef="200000" accuracy="9" evasion="0" />
-		<base_attack type="BLUNT" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_xmas_turkey</ai>
-		</npc_ai>
-		<org hp="680" hp_regen="0" mp="2000" mp_regen="0.9" />
+	<npc id="1" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="680" mp="2000.0" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="60000" magical="200000" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="19.5" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="4" /> <!--Animals -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="2" templateId="2" clientName="Not Found" serverName="br_xmas_invisible_npc" level="80" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="1000" />
 		<collision>
-			<radius normal="0.1" special="0.1" />
-			<height normal="0.1" special="0.1" />
+			<radius normal="25" />
+			<height normal="35" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>4200000000</exp>
-		<speed>
-			<run ground="1" underWater="0" flying="0" />
-			<walk ground="1" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="894.75854" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="611.00409" pDef="341.375" mDef="249.80341" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_xmas_invisible_npc</ai>
-		</npc_ai>
-		<org hp="2880.37628" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+	</npc>
+	<npc id="2" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="4" /> <!--Animals -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="false" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="3" templateId="3" clientName="Not Found" serverName="br_xmas_wannabe_santa2" level="70" type="citizen">
-		<acquire exp="490" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="8" special="8" />
-			<height normal="16.5" special="16.5" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="50" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_xmas_wannabe_santa2</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+	</npc>
+	<npc id="3" level="70" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="18" /> <!--Dwarves -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="4" templateId="4" clientName="Not Found" serverName="br_xmas_santa_escape" level="70" type="citizen">
-		<acquire exp="490" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="8" special="8" />
-			<height normal="24" special="24" />
+			<radius normal="8" />
+			<height normal="16.5" />
 		</collision>
+	</npc>
+	<npc id="4" level="70" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="18" /> <!--Dwarves -->
+		</skill_list>
 		<corpse_time>3</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="50" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_xmas_santa_escape</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<race>DWARF</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
-		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
-		<skill_list>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="5" templateId="5" clientName="Not Found" serverName="br_xmas_santa_gift" level="70" type="citizen">
-		<acquire exp="490" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="8" special="8" />
-			<height normal="24" special="24" />
+			<radius normal="8" />
+			<height normal="24" />
 		</collision>
+	</npc>
+	<npc id="5" level="70" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="18" /> <!--Dwarves -->
+		</skill_list>
 		<corpse_time>3</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="50" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_xmas_santa_gift</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<race>DWARF</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
-		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
-		<skill_list>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="6" templateId="6" clientName="Not Found" serverName="br_xmas_sled" level="70" type="holything">
-		<acquire exp="490" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="0.01" special="0.01" />
-			<height normal="50" special="50" />
+			<radius normal="8" />
+			<height normal="24" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="30" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_xmas_sled</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+	</npc>
+	<npc id="6" level="70" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hit_time>520</hit_time>
+		</stats>
+		<status attackable="false" flying="true" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="19" /> <!--Others -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="true" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="7" templateId="7" clientName="Not Found" serverName="br_birthday_cake_npc" level="70" type="holything">
-		<acquire exp="490" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="0.01" special="0.01" />
-			<height normal="0.01" special="0.01" />
+			<radius normal="0.01" />
+			<height normal="50" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="30" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_birthday_cake_npc</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+	</npc>
+	<npc id="7" level="70" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hit_time>520</hit_time>
+		</stats>
+		<status attackable="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="19" /> <!--Others -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="8" templateId="8" clientName="Not Found" serverName="br_fire_elemental" level="1" type="warrior">
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="16" special="16" />
-			<height normal="22" special="22" />
+			<radius normal="0.01" />
+			<height normal="0.01" />
 		</collision>
-		<corpse_time>12</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>0</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="25" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="8.47458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="40" mDef="30" accuracy="18" evasion="0" />
-		<base_attack type="BLUNT" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_fire_elemental</ai>
-			<ai_param name="life_time " val="70" />
-			<ai_param name="max_hp " val="15" />
-			<ai_param name="dalay_flame " val="12" />
-			<ai_param name="dalay_flame_offset " val="3" />
-			<ai_param name="rate_flame " val="100" />
-			<ai_param name="rate_cold " val="5" />
-			<ai_param name="time_counter " val="3" />
-			<ai_param name="time_critical " val="10" />
-		</npc_ai>
-		<org hp="20000000" hp_regen="0" mp="40" mp_regen="3" />
+	</npc>
+	<npc id="8" level="1" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="life_time" value="70" />
+			<param name="max_hp" value="15" />
+			<param name="dalay_flame" value="12" />
+			<param name="dalay_flame_offset" value="3" />
+			<param name="rate_flame" value="100" />
+			<param name="rate_cold" value="5" />
+			<param name="time_counter" value="3" />
+			<param name="time_critical" value="10" />
+		</parameters>
 		<race>ANIMAL</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="20000000" mp="40.0" mpRegen="3" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="18" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="40" magical="30" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="25" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="4" /> <!--Animals -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="9" templateId="9" clientName="Not Found" serverName="br_fire_elemental_s" level="1" type="warrior">
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
-		<collision>
-			<radius normal="26" special="26" />
-			<height normal="35" special="35" />
-		</collision>
 		<corpse_time>12</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>0</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="45" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="8.47458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="40" mDef="30" accuracy="18" evasion="0" />
-		<base_attack type="BLUNT" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_fire_elemental_s</ai>
-			<ai_param name="life_time " val="70" />
-			<ai_param name="max_hp " val="45" />
-			<ai_param name="dalay_flame " val="12" />
-			<ai_param name="dalay_flame_offset " val="3" />
-			<ai_param name="rate_flame " val="100" />
-			<ai_param name="rate_cold " val="20" />
-			<ai_param name="time_counter " val="3" />
-			<ai_param name="time_critical " val="10" />
-		</npc_ai>
-		<org hp="20000000" hp_regen="0" mp="40" mp_regen="3" />
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="16" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="9" level="1" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="life_time" value="70" />
+			<param name="max_hp" value="45" />
+			<param name="dalay_flame" value="12" />
+			<param name="dalay_flame_offset" value="3" />
+			<param name="rate_flame" value="100" />
+			<param name="rate_cold" value="20" />
+			<param name="time_counter" value="3" />
+			<param name="time_critical" value="10" />
+		</parameters>
 		<race>ANIMAL</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="20000000" mp="40.0" mpRegen="3" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="18" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="40" magical="30" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="4" /> <!--Animals -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="10" templateId="10" clientName="Not Found" serverName="br_archbishop_of_eva" level="85" type="citizen">
-		<acquire exp="723" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<corpse_time>12</corpse_time>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="8" special="8" />
-			<height normal="26.5" special="26.5" />
+			<radius normal="26" />
+			<height normal="35" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="50" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_archbishop_of_eva</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+	</npc>
+	<npc id="10" level="85" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="18" /> <!--Dwarves -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="11" templateId="11" clientName="Not Found" serverName="br_obelisk_of_eva" level="70" type="holything">
-		<acquire exp="490" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="40" special="40" />
-			<height normal="120" special="120" />
+			<radius normal="8" />
+			<height normal="26.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="30" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_obelisk_of_eva</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+	</npc>
+	<npc id="11" level="70" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hit_time>520</hit_time>
+		</stats>
+		<status attackable="false" targetable="false" flying="true" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="19" /> <!--Others -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="true" passableDoor="false" showName="true" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="12" templateId="12" clientName="Not Found" serverName="br_fire_manager" level="80" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="0.1" special="0.1" />
-			<height normal="0.1" special="0.1" />
+			<radius normal="40" />
+			<height normal="120" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>4200000000</exp>
-		<speed>
-			<run ground="1" underWater="0" flying="0" />
-			<walk ground="1" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="894.75854" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="611.00409" pDef="341.375" mDef="249.80341" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_fire_manager</ai>
-		</npc_ai>
-		<org hp="2880.37628" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+	</npc>
+	<npc id="12" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" targetable="false" canMove="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="4" /> <!--Animals -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="false" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="13" templateId="13" clientName="Not Found" serverName="br_friendly_sno_h" level="55" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="9" special="9" />
-			<height normal="16.3" special="16.3" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>70853089</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="4" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="388.11142" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="163.64727" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_friendly_sno_h</ai>
-		</npc_ai>
-		<org hp="1673.05473" hp_regen="6.5" mp="889.8" mp_regen="2.4" />
+	</npc>
+	<npc id="13" level="55" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>FEMALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="223.6362" magical="163.64727" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="4" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="1" /> <!--Bare Hands -->
+			<skill id="4416" level="7" /> <!--Spirits -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="14" templateId="14" clientName="Not Found" serverName="br_friendly_sno_o" level="55" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="9" special="9" />
-			<height normal="16.3" special="16.3" />
+			<radius normal="9" />
+			<height normal="16.3" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>70853089</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="4" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="388.11142" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="163.64727" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_friendly_sno_o</ai>
-		</npc_ai>
-		<org hp="1673.05473" hp_regen="6.5" mp="889.8" mp_regen="2.4" />
+	</npc>
+	<npc id="14" level="55" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>FEMALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="223.6362" magical="163.64727" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="4" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="1" /> <!--Bare Hands -->
+			<skill id="4416" level="7" /> <!--Spirits -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="15" templateId="15" clientName="Not Found" serverName="br_friendly_sno_d" level="55" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="9" special="9" />
-			<height normal="16.3" special="16.3" />
+			<radius normal="9" />
+			<height normal="16.3" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>70853089</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="4" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="388.11142" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="163.64727" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_friendly_sno_d</ai>
-		</npc_ai>
-		<org hp="1673.05473" hp_regen="6.5" mp="889.8" mp_regen="2.4" />
+	</npc>
+	<npc id="15" level="55" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>FEMALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="223.6362" magical="163.64727" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="4" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="1" /> <!--Bare Hands -->
+			<skill id="4416" level="7" /> <!--Spirits -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="16" templateId="16" clientName="Not Found" serverName="br_friendly_sno_k" level="55" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="9" special="9" />
-			<height normal="16.3" special="16.3" />
+			<radius normal="9" />
+			<height normal="16.3" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>70853089</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="4" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="388.11142" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="163.64727" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_friendly_sno_k</ai>
-		</npc_ai>
-		<org hp="1673.05473" hp_regen="6.5" mp="889.8" mp_regen="2.4" />
+	</npc>
+	<npc id="16" level="55" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>FEMALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="223.6362" magical="163.64727" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="4" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="1" /> <!--Bare Hands -->
+			<skill id="4416" level="7" /> <!--Spirits -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="17" templateId="17" clientName="Not Found" serverName="br_friendly_sno_e" level="55" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="9" special="9" />
-			<height normal="16.3" special="16.3" />
+			<radius normal="9" />
+			<height normal="16.3" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>70853089</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="4" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="388.11142" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="163.64727" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_friendly_sno_e</ai>
-		</npc_ai>
-		<org hp="1673.05473" hp_regen="6.5" mp="889.8" mp_regen="2.4" />
+	</npc>
+	<npc id="17" level="55" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>FEMALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="223.6362" magical="163.64727" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="4" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="1" /> <!--Bare Hands -->
+			<skill id="4416" level="7" /> <!--Spirits -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="18" templateId="18" clientName="Not Found" serverName="br_friendly_sno_dw" level="55" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="9" special="9" />
-			<height normal="16.3" special="16.3" />
+			<radius normal="9" />
+			<height normal="16.3" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>70853089</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="4" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="388.11142" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="163.64727" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_friendly_sno_dw</ai>
-		</npc_ai>
-		<org hp="1673.05473" hp_regen="6.5" mp="889.8" mp_regen="2.4" />
+	</npc>
+	<npc id="18" level="55" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>FEMALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="223.6362" magical="163.64727" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="4" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="1" /> <!--Bare Hands -->
+			<skill id="4416" level="7" /> <!--Spirits -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="19" templateId="19" clientName="Not Found" serverName="br_wooldie" level="80" type="warrior">
-		<agro_range>1000</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="10" special="10" />
-			<height normal="16" special="16" />
+			<radius normal="9" />
+			<height normal="16.3" />
 		</collision>
+	</npc>
+	<npc id="19" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="20000000" hpRegen="8.5" mp="40.0" mpRegen="3" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="18" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="40" magical="30" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="25" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status canBeSown="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="1" /> <!--Bare Hands -->
+			<skill id="4416" level="7" /> <!--Spirits -->
+		</skill_list>
 		<corpse_time>12</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>4200000000</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="25" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="8.47458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="40" mDef="30" accuracy="18" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_wooldie</ai>
-		</npc_ai>
-		<org hp="20000000" hp_regen="8.5" mp="40" mp_regen="3" />
-		<race>ELEMENTAL</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
-		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
-		<skill_list>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="20" templateId="20" clientName="Not Found" serverName="br_berdandi" level="80" type="warrior">
-		<agro_range>1000</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" />
 		<collision>
-			<radius normal="10" special="10" />
-			<height normal="14" special="14" />
+			<radius normal="10" />
+			<height normal="16" />
 		</collision>
+	</npc>
+	<npc id="20" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="20000000" hpRegen="8.5" mp="40.0" mpRegen="3" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="18" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="40" magical="30" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status canBeSown="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="1" /> <!--Bare Hands -->
+			<skill id="4416" level="7" /> <!--Spirits -->
+		</skill_list>
 		<corpse_time>12</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>4200000000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="45" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="8.47458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="40" mDef="30" accuracy="18" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_berdandi</ai>
-		</npc_ai>
-		<org hp="20000000" hp_regen="8.5" mp="40" mp_regen="3" />
-		<race>ELEMENTAL</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
-		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
-		<skill_list>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="21" templateId="21" clientName="Not Found" serverName="br_scooldie" level="80" type="warrior">
-		<agro_range>1000</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" />
 		<collision>
-			<radius normal="10" special="10" />
-			<height normal="16" special="16" />
+			<radius normal="10" />
+			<height normal="14" />
 		</collision>
+	</npc>
+	<npc id="21" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="20000000" hpRegen="8.5" mp="40.0" mpRegen="3" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="18" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="40" magical="30" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status canBeSown="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="1" /> <!--Bare Hands -->
+			<skill id="4416" level="7" /> <!--Spirits -->
+		</skill_list>
 		<corpse_time>12</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>4200000000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="45" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="8.47458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="40" mDef="30" accuracy="18" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_scooldie</ai>
-		</npc_ai>
-		<org hp="20000000" hp_regen="8.5" mp="40" mp_regen="3" />
-		<race>ELEMENTAL</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
-		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
-		<skill_list>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="22" templateId="22" clientName="Not Found" serverName="br_lamp" level="70" type="holything">
-		<acquire exp="490" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" />
 		<collision>
-			<radius normal="4.2" special="4.2" />
-			<height normal="5" special="5" />
+			<radius normal="10" />
+			<height normal="16" />
 		</collision>
-		<corpse_time>10</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="30" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_lamp</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+	</npc>
+	<npc id="22" level="70" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hit_time>520</hit_time>
+		</stats>
+		<status attackable="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="19" /> <!--Others -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="23" templateId="23" clientName="Not Found" serverName="br_lamp_a" level="70" type="holything">
-		<acquire exp="490" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
-		<collision>
-			<radius normal="4.2" special="4.2" />
-			<height normal="5" special="5" />
-		</collision>
 		<corpse_time>10</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="30" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_lamp_a</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<race>ETC</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
-		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
-		<skill_list>
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="24" templateId="24" clientName="Not Found" serverName="br_lamp_b" level="70" type="holything">
-		<acquire exp="490" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="4.2" special="4.2" />
-			<height normal="5" special="5" />
+			<radius normal="4.2" />
+			<height normal="5" />
 		</collision>
+	</npc>
+	<npc id="23" level="70" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hit_time>520</hit_time>
+		</stats>
+		<status attackable="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="19" /> <!--Others -->
+		</skill_list>
 		<corpse_time>10</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="30" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_lamp_b</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<race>ETC</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
-		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
-		<skill_list>
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="25" templateId="25" clientName="Not Found" serverName="br_lamp_c" level="70" type="holything">
-		<acquire exp="490" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="4.2" special="4.2" />
-			<height normal="5" special="5" />
+			<radius normal="4.2" />
+			<height normal="5" />
 		</collision>
+	</npc>
+	<npc id="24" level="70" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hit_time>520</hit_time>
+		</stats>
+		<status attackable="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="19" /> <!--Others -->
+		</skill_list>
 		<corpse_time>10</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="30" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_lamp_c</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<race>ETC</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
-		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
-		<skill_list>
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="26" templateId="26" clientName="Not Found" serverName="br_halloween_manager" level="80" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="0.1" special="0.1" />
-			<height normal="0.1" special="0.1" />
+			<radius normal="4.2" />
+			<height normal="5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>4200000000</exp>
-		<speed>
-			<run ground="1" underWater="0" flying="0" />
-			<walk ground="1" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="894.75854" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="611.00409" pDef="341.375" mDef="249.80341" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_halloween_manager</ai>
-		</npc_ai>
-		<org hp="2880.37628" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+	</npc>
+	<npc id="25" level="70" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hit_time>520</hit_time>
+		</stats>
+		<status attackable="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="19" /> <!--Others -->
+		</skill_list>
+		<corpse_time>10</corpse_time>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="4.2" />
+			<height normal="5" />
+		</collision>
+	</npc>
+	<npc id="26" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" targetable="false" canMove="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="4" /> <!--Animals -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="false" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="27" templateId="27" clientName="Not Found" serverName="br_npc_kadomatsu" level="80" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="24.5" special="24.5" />
-			<height normal="14" special="14" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>70853089</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="60" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="8.47458" randDmg="10" crit="1" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="60000" mDef="200000" accuracy="9" evasion="0" />
-		<base_attack type="BLUNT" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_kadomatsu</ai>
-		</npc_ai>
-		<org hp="1673.05473" hp_regen="0" mp="889.8" mp_regen="0.9" />
+	</npc>
+	<npc id="27" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1673.05473" mp="889.8" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="10" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="60000" magical="200000" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="4" /> <!--Animals -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="28" templateId="28" clientName="Not Found" serverName="br_npc_kotatsu" level="80" type="holything">
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="0.01" special="0.01" />
-			<height normal="0.01" special="0.01" />
+			<radius normal="24.5" />
+			<height normal="14" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>4200000000</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="30" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_kotatsu</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+	</npc>
+	<npc id="28" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hit_time>520</hit_time>
+		</stats>
+		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="19" /> <!--Others -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="29" templateId="29" clientName="Not Found" serverName="br_fire_box" level="70" type="holything">
-		<acquire exp="490" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="11" special="11" />
-			<height normal="12.5" special="12.5" />
+			<radius normal="0.01" />
+			<height normal="0.01" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="30" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_fire_box</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+	</npc>
+	<npc id="29" level="70" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hit_time>520</hit_time>
+		</stats>
+		<status attackable="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="19" /> <!--Others -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="30" templateId="30" clientName="Not Found" serverName="br_santa_white_gift" level="70" type="citizen">
-		<acquire exp="490" exp_rate="0.1" sp="10" />
-		<agro_range>1000</agro_range>
-		<clan_help_range>300</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="8" special="8" />
-			<height normal="24" special="24" />
+			<radius normal="11" />
+			<height normal="12.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>429634523</exp>
-		<speed>
-			<run ground="120" underWater="0" flying="0" />
-			<walk ground="50" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_santa_white_gift</ai>
-		</npc_ai>
-		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+	</npc>
+	<npc id="30" level="70" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<acquire expRate="0.1" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="18" /> <!--Dwarves -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="31" templateId="31" clientName="Not Found" serverName="br_xmas2009_invisible" level="80" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="0.1" special="0.1" />
-			<height normal="0.1" special="0.1" />
+			<radius normal="8" />
+			<height normal="24" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>4200000000</exp>
-		<speed>
-			<run ground="1" underWater="0" flying="0" />
-			<walk ground="1" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="894.75854" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="611.00409" pDef="341.375" mDef="249.80341" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_xmas2009_invisible</ai>
-		</npc_ai>
-		<org hp="2880.37628" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+	</npc>
+	<npc id="31" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="4" /> <!--Animals -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="false" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="32" templateId="32" clientName="Not Found" serverName="br_zbike" level="80" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="30" special="30" />
-			<height normal="29" special="29" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>1</ex_crt_effect>
-		<exp>4200000000</exp>
-		<speed>
-			<run ground="1" underWater="0" flying="0" />
-			<walk ground="1" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="894.75854" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="611.00409" pDef="341.375" mDef="249.80341" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_zbike</ai>
-		</npc_ai>
-		<org hp="2880.37628" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+	</npc>
+	<npc id="32" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="4" /> <!--Animals -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="false" canMove="false" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="33" templateId="33" clientName="Not Found" serverName="br_blessed_taiboy" level="80" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="10" special="10" />
-			<height normal="13" special="13" />
+			<radius normal="30" />
+			<height normal="29" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>4200000000</exp>
-		<speed>
-			<run ground="1" underWater="0" flying="0" />
-			<walk ground="1" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="894.75854" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="611.00409" pDef="341.375" mDef="249.80341" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_blessed_taiboy</ai>
-		</npc_ai>
-		<org hp="2880.37628" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+	</npc>
+	<npc id="33" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="14" /> <!--Humans -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-	</npc>
-	<npc id="34" templateId="34" clientName="Not Found" serverName="br_blessed_taigirl" level="80" type="citizen">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="10" special="10" />
-			<height normal="13" special="13" />
+			<radius normal="10" />
+			<height normal="13" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>4200000000</exp>
-		<speed>
-			<run ground="1" underWater="0" flying="0" />
-			<walk ground="1" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="894.75854" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="611.00409" pDef="341.375" mDef="249.80341" accuracy="4.75" evasion="0" />
-		<base_attack type="FIST" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
-		</base_attribute>
-		<npc_ai>
-			<ai>ai_br_blessed_taigirl</ai>
-		</npc_ai>
-		<org hp="2880.37628" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+	</npc>
+	<npc id="34" level="80" type="L2Npc">
+		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
-		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>FEMALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="14" /> <!--Humans -->
 		</skill_list>
-		<shots_count soul="0" spirit="0" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<collision>
+			<radius normal="10" />
+			<height normal="13" />
+		</collision>
 	</npc>
 </list>

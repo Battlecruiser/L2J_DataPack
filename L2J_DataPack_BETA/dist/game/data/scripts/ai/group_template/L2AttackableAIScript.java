@@ -25,7 +25,7 @@ import java.util.List;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.instancemanager.DimensionalRiftManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -199,7 +199,7 @@ public final class L2AttackableAIScript extends Quest
 		// register all mobs here...
 		for (int level = 1; level < 100; level++)
 		{
-			final List<L2NpcTemplate> templates = NpcTable.getInstance().getAllOfLevel(level);
+			final List<L2NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
 			for (L2NpcTemplate t : templates)
 			{
 				try

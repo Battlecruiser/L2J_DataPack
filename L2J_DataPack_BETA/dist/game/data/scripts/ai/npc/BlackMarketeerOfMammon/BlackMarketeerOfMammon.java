@@ -25,7 +25,7 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
@@ -73,8 +73,8 @@ public final class BlackMarketeerOfMammon extends AbstractNpcAI
 						if (player.getAdena() >= 2000000)
 						{
 							qs.setState(State.STARTED);
-							takeItems(player, PcInventory.ADENA_ID, 2000000);
-							giveItems(player, PcInventory.ANCIENT_ADENA_ID, 500000);
+							takeItems(player, Inventory.ADENA_ID, 2000000);
+							giveItems(player, Inventory.ANCIENT_ADENA_ID, 500000);
 							htmltext = "31092-04.html";
 							qs.exitQuest(QuestType.DAILY, false);
 						}

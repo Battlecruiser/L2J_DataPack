@@ -32,7 +32,7 @@ import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.engines.DocumentParser;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2Territory;
@@ -145,7 +145,7 @@ public class TarBeetleSpawn extends DocumentParser
 			Collections.shuffle(zone);
 			int[] loc = getSpawnZoneById(zone.get(0)).getRandomPoint();
 			
-			final L2Spawn spawn = new L2Spawn(NpcTable.getInstance().getTemplate(18804));
+			final L2Spawn spawn = new L2Spawn(NpcData.getInstance().getTemplate(18804));
 			spawn.setHeading(Rnd.get(65535));
 			spawn.setX(loc[0]);
 			spawn.setY(loc[1]);

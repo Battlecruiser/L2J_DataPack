@@ -1,1052 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="14900" templateId="14900" clientName="Magnus the Unicorn" serverName="unicorn_magnus_ep_15" level="85" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
-		<collision>
-			<radius normal="13.5" special="13.5" />
-			<height normal="17" special="17" />
-		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>19827360000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="994.002873333333" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="678.775106666667" pDef="364.40208" mDef="266.653626666667" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>unicorn_magnus_ep_15</ai>
-			<ai_skill name="PhysicalSpecial1" id="5138" level="1" /> <!-- Whiplash -->
-			<ai_skill name="PhysicalSpecial2" id="5139" level="1" /> <!-- Tidal Wave -->
-			<ai_skill name="PhysicalSpecial3" id="7000" level="1" /> <!-- NPC Default -->
-		</npc_ai>
-		<org hp="3066.63525666667" hp_regen="8.5" mp="1870" mp_regen="6" />
+	<npc id="14900" level="85" type="L2Pet" name="Magnus the Unicorn">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5138" level="1" /> <!-- Whiplash -->
+			<skill name="PhysicalSpecial2" id="5139" level="1" /> <!-- Tidal Wave -->
+			<skill name="PhysicalSpecial3" id="7000" level="1" /> <!-- NPC Default -->
+		</parameters>
 		<race>ELEMENTAL</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3066.63525666667" hpRegen="8.5" mp="1870.0" mpRegen="6" />
+			<attack physical="994.002873333333" magical="678.775106666667" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="364.40208" magical="266.653626666667" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="7" /> <!--Spirits -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14901" templateId="14901" clientName="Spectral Lord" serverName="spectral_lord_ep_01" level="81" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="13.5" />
+			<height normal="17" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>6300000000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="901.374828888889" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="615.522157777778" pDef="342.910138666667" mDef="250.926757777778" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_01</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="2892.79354511111" hp_regen="8.5" mp="1687.81333333333" mp_regen="6" />
+	</npc>
+	<npc id="14901" level="81" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2892.79354511111" hpRegen="8.5" mp="1687.81333333333" mpRegen="6" />
+			<attack physical="901.374828888889" magical="615.522157777778" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="342.910138666667" magical="250.926757777778" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14902" templateId="14902" clientName="Spectral Lord" serverName="spectral_lord_ep_02" level="81" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>6300000000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="907.991117777778" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="620.040225555556" pDef="344.445277333333" mDef="252.050105555556" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_02</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="2905.21081022222" hp_regen="8.5" mp="1700.82666666667" mp_regen="6" />
+	</npc>
+	<npc id="14902" level="81" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2905.21081022222" hpRegen="8.5" mp="1700.82666666667" mpRegen="6" />
+			<attack physical="907.991117777778" magical="620.040225555556" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="344.445277333333" magical="252.050105555556" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14903" templateId="14903" clientName="Spectral Lord" serverName="spectral_lord_ep_03" level="81" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>6300000000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="914.607406666667" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="624.558293333333" pDef="345.980416" mDef="253.173453333333" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_03</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="2917.62807533333" hp_regen="8.5" mp="1713.84" mp_regen="6" />
+	</npc>
+	<npc id="14903" level="81" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2917.62807533333" hpRegen="8.5" mp="1713.84" mpRegen="6" />
+			<attack physical="914.607406666667" magical="624.558293333333" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.980416" magical="253.173453333333" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14904" templateId="14904" clientName="Spectral Lord" serverName="spectral_lord_ep_04" level="82" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>8820000000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="921.223695555556" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="629.076361111111" pDef="347.515554666667" mDef="254.296801111111" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_04</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="2930.04534044444" hp_regen="8.5" mp="1726.85333333333" mp_regen="6" />
+	</npc>
+	<npc id="14904" level="82" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2930.04534044444" hpRegen="8.5" mp="1726.85333333333" mpRegen="6" />
+			<attack physical="921.223695555556" magical="629.076361111111" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="347.515554666667" magical="254.296801111111" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14905" templateId="14905" clientName="Spectral Lord" serverName="spectral_lord_ep_05" level="82" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>8820000000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="927.839984444444" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="633.594428888889" pDef="349.050693333333" mDef="255.420148888889" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_05</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="2942.46260555556" hp_regen="8.5" mp="1739.86666666667" mp_regen="6" />
+	</npc>
+	<npc id="14905" level="82" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2942.46260555556" hpRegen="8.5" mp="1739.86666666667" mpRegen="6" />
+			<attack physical="927.839984444444" magical="633.594428888889" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="349.050693333333" magical="255.420148888889" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14906" templateId="14906" clientName="Spectral Lord" serverName="spectral_lord_ep_06" level="82" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>8820000000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="934.456273333333" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="638.112496666667" pDef="350.585832" mDef="256.543496666667" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_06</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="2954.87987066667" hp_regen="8.5" mp="1752.88" mp_regen="6" />
+	</npc>
+	<npc id="14906" level="82" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2954.87987066667" hpRegen="8.5" mp="1752.88" mpRegen="6" />
+			<attack physical="934.456273333333" magical="638.112496666667" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="350.585832" magical="256.543496666667" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14907" templateId="14907" clientName="Spectral Lord" serverName="spectral_lord_ep_07" level="83" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>11844000000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="941.072562222222" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="642.630564444444" pDef="352.120970666667" mDef="257.666844444444" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_07</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="2967.29713577778" hp_regen="8.5" mp="1765.89333333333" mp_regen="6" />
+	</npc>
+	<npc id="14907" level="83" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2967.29713577778" hpRegen="8.5" mp="1765.89333333333" mpRegen="6" />
+			<attack physical="941.072562222222" magical="642.630564444444" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="352.120970666667" magical="257.666844444444" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14908" templateId="14908" clientName="Spectral Lord" serverName="spectral_lord_ep_08" level="83" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>11844000000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="947.688851111111" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="647.148632222222" pDef="353.656109333333" mDef="258.790192222222" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_08</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="2979.71440088889" hp_regen="8.5" mp="1778.90666666667" mp_regen="6" />
+	</npc>
+	<npc id="14908" level="83" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2979.71440088889" hpRegen="8.5" mp="1778.90666666667" mpRegen="6" />
+			<attack physical="947.688851111111" magical="647.148632222222" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.656109333333" magical="258.790192222222" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14909" templateId="14909" clientName="Spectral Lord" serverName="spectral_lord_ep_09" level="83" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>11844000000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="954.30514" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="651.6667" pDef="355.191248" mDef="259.91354" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_09</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="2992.131666" hp_regen="8.5" mp="1791.92" mp_regen="6" />
+	</npc>
+	<npc id="14909" level="83" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2992.131666" hpRegen="8.5" mp="1791.92" mpRegen="6" />
+			<attack physical="954.30514" magical="651.6667" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="355.191248" magical="259.91354" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14910" templateId="14910" clientName="Spectral Lord" serverName="spectral_lord_ep_10" level="84" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>15472800000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="960.921428888889" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="656.184767777778" pDef="356.726386666667" mDef="261.036887777778" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_10</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="3004.54893111111" hp_regen="8.5" mp="1804.93333333333" mp_regen="6" />
+	</npc>
+	<npc id="14910" level="84" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3004.54893111111" hpRegen="8.5" mp="1804.93333333333" mpRegen="6" />
+			<attack physical="960.921428888889" magical="656.184767777778" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="356.726386666667" magical="261.036887777778" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14911" templateId="14911" clientName="Spectral Lord" serverName="spectral_lord_ep_11" level="84" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>15472800000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="967.537717777778" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="660.702835555556" pDef="358.261525333333" mDef="262.160235555556" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_11</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="3016.96619622222" hp_regen="8.5" mp="1817.94666666667" mp_regen="6" />
+	</npc>
+	<npc id="14911" level="84" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3016.96619622222" hpRegen="8.5" mp="1817.94666666667" mpRegen="6" />
+			<attack physical="967.537717777778" magical="660.702835555556" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="358.261525333333" magical="262.160235555556" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14912" templateId="14912" clientName="Spectral Lord" serverName="spectral_lord_ep_12" level="84" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>15472800000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="974.154006666667" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="665.220903333333" pDef="359.796664" mDef="263.283583333333" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_12</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="3029.38346133333" hp_regen="8.5" mp="1830.96" mp_regen="6" />
+	</npc>
+	<npc id="14912" level="84" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3029.38346133333" hpRegen="8.5" mp="1830.96" mpRegen="6" />
+			<attack physical="974.154006666667" magical="665.220903333333" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.796664" magical="263.283583333333" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14913" templateId="14913" clientName="Spectral Lord" serverName="spectral_lord_ep_13" level="85" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>19827360000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="980.770295555556" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="669.738971111111" pDef="361.331802666667" mDef="264.406931111111" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_13</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="3041.80072644444" hp_regen="8.5" mp="1843.97333333333" mp_regen="6" />
+	</npc>
+	<npc id="14913" level="85" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3041.80072644444" hpRegen="8.5" mp="1843.97333333333" mpRegen="6" />
+			<attack physical="980.770295555556" magical="669.738971111111" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.331802666667" magical="264.406931111111" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14914" templateId="14914" clientName="Spectral Lord" serverName="spectral_lord_ep_14" level="85" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>19827360000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="987.386584444444" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="674.257038888889" pDef="362.866941333333" mDef="265.530278888889" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_14</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="3054.21799155555" hp_regen="8.5" mp="1856.98666666667" mp_regen="6" />
+	</npc>
+	<npc id="14914" level="85" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3054.21799155555" hpRegen="8.5" mp="1856.98666666667" mpRegen="6" />
+			<attack physical="987.386584444444" magical="674.257038888889" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="362.866941333333" magical="265.530278888889" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14915" templateId="14915" clientName="Spectral Lord" serverName="spectral_lord_ep_15" level="85" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12.5" special="12.5" />
-			<height normal="33.5" special="33.5" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>19827360000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="160" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="994.002873333333" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="678.775106666667" pDef="364.40208" mDef="266.653626666667" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>spectral_lord_ep_15</ai>
-			<ai_skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
-			<ai_skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
-			<ai_skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
-		</npc_ai>
-		<org hp="3066.63525666667" hp_regen="8.5" mp="1870" mp_regen="6" />
+	</npc>
+	<npc id="14915" level="85" type="L2Pet" name="Spectral Lord">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
 		<race>DEMONIC</race>
-		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3066.63525666667" hpRegen="8.5" mp="1870.0" mpRegen="6" />
+			<attack physical="994.002873333333" magical="678.775106666667" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="364.40208" magical="266.653626666667" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!--HP High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14916" templateId="14916" clientName="Tigress" serverName="pailaka_summon_01" level="61" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="22" special="22" />
-			<height normal="18.4" special="18.4" />
+			<radius normal="12.5" />
+			<height normal="33.5" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>146308200</exp>
-		<speed>
-			<run ground="170" underWater="0" flying="0" />
-			<walk ground="47" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="501.08068" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="342.17315" pDef="252.49346" mDef="184.76376" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>pailaka_summon_01</ai>
-			<ai_skill name="DDMagic" id="5761" level="1" /> <!-- Power Strike -->
-		</npc_ai>
-		<org hp="1985.55926" hp_regen="7.5" mp="1066.8" mp_regen="2.7" />
+	</npc>
+	<npc id="14916" level="61" type="L2Pet" name="Tigress">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="DDMagic" id="5761" level="1" /> <!-- Power Strike -->
+		</parameters>
 		<race>BEAST</race>
-		<s_npc_prop_hp_rate>1.1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
+			<attack physical="501.08068" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.49346" magical="184.76376" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="47" />
+				<run ground="170" />
+			</speed>
+			<hit_time>450</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4408" level="2" /> <!-- HP Medium-High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="7" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="2" /> <!--HP Medium-High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="3" /> <!--Beasts -->
+			<skill id="5038" level="7" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="4" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14917" templateId="14917" clientName="Tigress" serverName="pailaka_summon_02" level="61" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="4" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.1</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="22" special="22" />
-			<height normal="18.4" special="18.4" />
+			<radius normal="22" />
+			<height normal="18.4" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>146308200</exp>
-		<speed>
-			<run ground="170" underWater="0" flying="0" />
-			<walk ground="47" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="501.08068" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="342.17315" pDef="252.49346" mDef="184.76376" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>pailaka_summon_02</ai>
-			<ai_skill name="DDMagic" id="5761" level="2" /> <!-- Power Strike -->
-		</npc_ai>
-		<org hp="1985.55926" hp_regen="7.5" mp="1066.8" mp_regen="2.7" />
+	</npc>
+	<npc id="14917" level="61" type="L2Pet" name="Tigress">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="DDMagic" id="5761" level="2" /> <!-- Power Strike -->
+		</parameters>
 		<race>BEAST</race>
-		<s_npc_prop_hp_rate>1.1</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>MALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
+			<attack physical="501.08068" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.49346" magical="184.76376" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="47" />
+				<run ground="170" />
+			</speed>
+			<hit_time>450</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4408" level="2" /> <!-- HP Medium-High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="7" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="2" /> <!--HP Medium-High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="14" /> <!--Strong P. Def. -->
+			<skill id="4413" level="14" /> <!--Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="3" /> <!--Beasts -->
+			<skill id="5038" level="7" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="4" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
-	</npc>
-	<npc id="14918" templateId="14918" clientName="Imperial Phoenix" serverName="phoenix" level="83" type="summon">
-		<agro_range>0</agro_range>
-		<clan_help_range>0</clan_help_range>
+		<shots soul="4" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.1</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="7" special="7" />
-			<height normal="34" special="34" />
+			<radius normal="22" />
+			<height normal="18.4" />
 		</collision>
-		<corpse_time>7</corpse_time>
-		<ex_crt_effect>0</ex_crt_effect>
-		<exp>11844000000</exp>
-		<speed>
-			<run ground="180" underWater="0" flying="0" />
-			<walk ground="60" underWater="0" flying="0" />
-		</speed>
-		<hit_time factor="0.67" skill_factor="-1" />
-		<base pAtk="1099.42361669366" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="750.763809564873" pDef="353.86144" mDef="258.94045" accuracy="4.75" evasion="0" />
-		<base_attack type="SWORD" range="40" />
-		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
-		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
-		<base_attribute>
-			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			<defend fire="100" water="100" wind="100" earth="100" holy="100" dark="100" unknown="0" />
-		</base_attribute>
-		<npc_ai>
-			<ai>phoenix</ai>
-			<ai_param name="step_skill_target01" val="0" />
-			<ai_param name="step_skill_target02" val="0" />
-			<ai_param name="step_skill_target03" val="1" />
-			<ai_param name="step_skill_target04" val="0" />
-			<ai_param name="step_action01" val="1080" />
-			<ai_param name="step_action02" val="1081" />
-			<ai_param name="step_action03" val="1082" />
-			<ai_param name="step_action04" val="1083" />
-			<ai_skill name="step_skill01" id="6041" level="1" /> <!-- Phoenix Rush -->
-			<ai_skill name="step_skill02" id="6042" level="1" /> <!-- Phoenix Cleanse -->
-			<ai_skill name="step_skill03" id="6043" level="1" /> <!-- Phoenix Flame Feather -->
-			<ai_skill name="step_skill04" id="6044" level="1" /> <!-- Phoenix Flame Beak -->
-		</npc_ai>
-		<org hp="3835.59060587002" hp_regen="8.5" mp="1777.4" mp_regen="3" />
+	</npc>
+	<npc id="14918" level="83" type="L2Pet" name="Imperial Phoenix">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="step_skill01" id="6041" level="1" /> <!-- Phoenix Rush -->
+			<skill name="step_skill02" id="6042" level="1" /> <!-- Phoenix Cleanse -->
+			<skill name="step_skill03" id="6043" level="1" /> <!-- Phoenix Flame Feather -->
+			<skill name="step_skill04" id="6044" level="1" /> <!-- Phoenix Flame Beak -->
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="1" />
+			<param name="step_skill_target04" value="0" />
+			<param name="step_action01" value="1080" />
+			<param name="step_action02" value="1081" />
+			<param name="step_action03" value="1082" />
+			<param name="step_action04" value="1083" />
+		</parameters>
 		<race>ELEMENTAL</race>
-		<s_npc_prop_hp_rate>1.61051</s_npc_prop_hp_rate>
-		<safe_height>100</safe_height>
 		<sex>FEMALE</sex>
-		<shield defence="0" rate="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>670</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="6" /> <!-- HP Very High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4121" level="9" /> <!--Summoned Monster Magic Protection -->
+			<skill id="4408" level="6" /> <!--HP Very High -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!--Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="7" /> <!--Spirits -->
+			<skill id="5038" level="15" /> <!--Summon PVP Penalty -->
 		</skill_list>
-		<shots_count soul="2" spirit="2" />
-		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
-		<custom>
-			<type>L2Pet</type>
-			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
-		</custom>
+		<shots soul="2" spirit="2" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.61051</s_npc_prop_hp_rate>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="7" />
+			<height normal="34" />
+		</collision>
 	</npc>
 </list>

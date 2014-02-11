@@ -128,7 +128,7 @@ public class eventmodRace extends Event
 			return false;
 		}
 		// Check Custom Table - we use custom NPC's
-		if (!Config.CUSTOM_NPC_TABLE)
+		if (!Config.CUSTOM_NPC_DATA)
 		{
 			_log.info(getName() + ": Event can't be started, because custom npc table is disabled!");
 			return false;

@@ -67,7 +67,6 @@ import handlers.admincommandhandlers.AdminDelete;
 import handlers.admincommandhandlers.AdminDisconnect;
 import handlers.admincommandhandlers.AdminDoorControl;
 import handlers.admincommandhandlers.AdminEditChar;
-import handlers.admincommandhandlers.AdminEditNpc;
 import handlers.admincommandhandlers.AdminEffects;
 import handlers.admincommandhandlers.AdminElement;
 import handlers.admincommandhandlers.AdminEnchant;
@@ -140,6 +139,7 @@ import handlers.bypasshandlers.Link;
 import handlers.bypasshandlers.Loto;
 import handlers.bypasshandlers.ManorManager;
 import handlers.bypasshandlers.Multisell;
+import handlers.bypasshandlers.NpcViewMod;
 import handlers.bypasshandlers.Observation;
 import handlers.bypasshandlers.OlympiadManagerLink;
 import handlers.bypasshandlers.OlympiadObservation;
@@ -345,7 +345,6 @@ public class MasterHandler
 			AdminDisconnect.class,
 			AdminDoorControl.class,
 			AdminEditChar.class,
-			AdminEditNpc.class,
 			AdminEffects.class,
 			AdminElement.class,
 			AdminEnchant.class,
@@ -420,6 +419,7 @@ public class MasterHandler
 			Loto.class,
 			ManorManager.class,
 			Multisell.class,
+			NpcViewMod.class,
 			Observation.class,
 			OlympiadObservation.class,
 			OlympiadManagerLink.class,

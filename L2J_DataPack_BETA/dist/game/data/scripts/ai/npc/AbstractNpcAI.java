@@ -111,7 +111,7 @@ public abstract class AbstractNpcAI extends L2Script
 	 */
 	protected void broadcastNpcSay(L2Npc npc, int type, String text)
 	{
-		Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getIdTemplate(), text));
+		Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), text));
 	}
 	
 	/**
@@ -122,7 +122,7 @@ public abstract class AbstractNpcAI extends L2Script
 	 */
 	protected void broadcastNpcSay(L2Npc npc, int type, NpcStringId stringId)
 	{
-		Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getIdTemplate(), stringId));
+		Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), stringId));
 	}
 	
 	/**
@@ -134,7 +134,7 @@ public abstract class AbstractNpcAI extends L2Script
 	 */
 	protected void broadcastNpcSay(L2Npc npc, int type, NpcStringId stringId, String... parameters)
 	{
-		final NpcSay say = new NpcSay(npc.getObjectId(), type, npc.getTemplate().getIdTemplate(), stringId);
+		final NpcSay say = new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), stringId);
 		if (parameters != null)
 		{
 			for (String parameter : parameters)
@@ -154,7 +154,7 @@ public abstract class AbstractNpcAI extends L2Script
 	 */
 	protected void broadcastNpcSay(L2Npc npc, int type, String text, int radius)
 	{
-		Broadcast.toKnownPlayersInRadius(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getIdTemplate(), text), radius);
+		Broadcast.toKnownPlayersInRadius(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), text), radius);
 	}
 	
 	/**
@@ -166,7 +166,7 @@ public abstract class AbstractNpcAI extends L2Script
 	 */
 	protected void broadcastNpcSay(L2Npc npc, int type, NpcStringId stringId, int radius)
 	{
-		Broadcast.toKnownPlayersInRadius(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getIdTemplate(), stringId), radius);
+		Broadcast.toKnownPlayersInRadius(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), stringId), radius);
 	}
 	
 	/**

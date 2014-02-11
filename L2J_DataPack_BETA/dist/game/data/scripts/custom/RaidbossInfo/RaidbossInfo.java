@@ -21,7 +21,7 @@ package custom.RaidbossInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
@@ -64,7 +64,7 @@ public final class RaidbossInfo extends Quest
 		addTalkId(NPC);
 		
 		// Add all Raid Bosses to RAIDS list
-		for (L2NpcTemplate raid : NpcTable.getInstance().getAllNpcOfClassType("L2RaidBoss"))
+		for (L2NpcTemplate raid : NpcData.getInstance().getAllNpcOfClassType("L2RaidBoss"))
 		{
 			RAIDS.add(raid.getId());
 		}

@@ -128,7 +128,7 @@ public class CorpseClan implements ITargetTypeHandler
 		{
 			// for buff purposes, returns friendly mobs nearby and mob itself
 			final L2Npc npc = (L2Npc) activeChar;
-			if ((npc.getFactionId() == null) || npc.getFactionId().isEmpty())
+			if ((npc.getTemplate().getClans() == null) || npc.getTemplate().getClans().isEmpty())
 			{
 				return new L2Object[]
 				{
@@ -142,7 +142,7 @@ public class CorpseClan implements ITargetTypeHandler
 			int maxTargets = skill.getAffectLimit();
 			for (L2Object newTarget : objs)
 			{
-				if ((newTarget.isNpc()) && npc.getFactionId().equals(((L2Npc) newTarget).getFactionId()))
+				if (newTarget.isNpc() && npc.isInMyClan((L2Npc) newTarget))
 				{
 					if (!Util.checkIfInRange(skill.getCastRange(), activeChar, newTarget, true))
 					{

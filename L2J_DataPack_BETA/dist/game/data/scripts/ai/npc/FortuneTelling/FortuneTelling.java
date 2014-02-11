@@ -22,7 +22,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 
 /**
  * Fortune Telling AI.<br>
@@ -53,7 +53,7 @@ public class FortuneTelling extends AbstractNpcAI
 		}
 		else
 		{
-			takeItems(player, PcInventory.ADENA_ID, COST);
+			takeItems(player, Inventory.ADENA_ID, COST);
 			htmltext = getHtm(player.getHtmlPrefix(), "fortune.htm").replace("%fortune%", String.valueOf(getRandom(1800309, 1800695)));
 		}
 		return htmltext;

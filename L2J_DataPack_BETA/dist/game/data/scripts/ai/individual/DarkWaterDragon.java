@@ -25,7 +25,7 @@ import javolution.util.FastSet;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -114,7 +114,7 @@ public final class DarkWaterDragon extends AbstractNpcAI
 				player = ID_MAP.remove(npc.getObjectId());
 				if (player != null)
 				{
-					((L2Attackable) npc).doItemDrop(NpcTable.getInstance().getTemplate(18485), player);
+					((L2Attackable) npc).doItemDrop(NpcData.getInstance().getTemplate(18485), player);
 				}
 				
 				npc.deleteMe();

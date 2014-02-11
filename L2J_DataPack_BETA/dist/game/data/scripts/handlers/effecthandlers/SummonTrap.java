@@ -18,7 +18,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -76,7 +76,7 @@ public final class SummonTrap extends AbstractEffect
 			player.getTrap().unSummon();
 		}
 		
-		final L2NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(_npcId);
+		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_npcId);
 		if (npcTemplate == null)
 		{
 			_log.warning(SummonTrap.class.getSimpleName() + ": Spawn of the non-existing Trap ID: " + _npcId + " in skill ID:" + info.getSkill().getId());

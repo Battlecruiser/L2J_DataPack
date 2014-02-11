@@ -70,7 +70,7 @@ public final class RandomizeHate extends AbstractEffect
 			if ((cha != null) && (cha != effectedMob) && (cha != info.getEffector()))
 			{
 				// Aggro cannot be transfered to a mob of the same faction.
-				if (cha.isAttackable() && (((L2Attackable) cha).getFactionId() != null) && ((L2Attackable) cha).getFactionId().equals(effectedMob.getFactionId()))
+				if (cha.isAttackable() && ((L2Attackable) cha).isInMyClan(effectedMob))
 				{
 					continue;
 				}

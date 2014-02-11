@@ -23,7 +23,7 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
@@ -73,7 +73,7 @@ public class ArenaManager extends AbstractNpcAI
 			{
 				if (player.getAdena() >= CP_COST)
 				{
-					takeItems(player, PcInventory.ADENA_ID, CP_COST);
+					takeItems(player, Inventory.ADENA_ID, CP_COST);
 					startQuestTimer("CPrecovery_delay", 2000, npc, player);
 				}
 				else
@@ -95,7 +95,7 @@ public class ArenaManager extends AbstractNpcAI
 			{
 				if (player.getAdena() >= HP_COST)
 				{
-					takeItems(player, PcInventory.ADENA_ID, HP_COST);
+					takeItems(player, Inventory.ADENA_ID, HP_COST);
 					startQuestTimer("HPrecovery_delay", 2000, npc, player);
 				}
 				else
@@ -117,7 +117,7 @@ public class ArenaManager extends AbstractNpcAI
 			{
 				if (player.getAdena() >= BUFF_COST)
 				{
-					takeItems(player, PcInventory.ADENA_ID, BUFF_COST);
+					takeItems(player, Inventory.ADENA_ID, BUFF_COST);
 					npc.setTarget(player);
 					for (SkillHolder skill : BUFFS)
 					{

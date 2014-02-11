@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -229,27 +229,27 @@ public final class OracleTeleport extends AbstractNpcAI
 			int playerLevel = player.getLevel();
 			if ((playerLevel >= 20) && (playerLevel < 30))
 			{
-				st.takeItems(PcInventory.ADENA_ID, 2000);
+				st.takeItems(Inventory.ADENA_ID, 2000);
 			}
 			else if ((playerLevel >= 30) && (playerLevel < 40))
 			{
-				st.takeItems(PcInventory.ADENA_ID, 4500);
+				st.takeItems(Inventory.ADENA_ID, 4500);
 			}
 			else if ((playerLevel >= 40) && (playerLevel < 50))
 			{
-				st.takeItems(PcInventory.ADENA_ID, 8000);
+				st.takeItems(Inventory.ADENA_ID, 8000);
 			}
 			else if ((playerLevel >= 50) && (playerLevel < 60))
 			{
-				st.takeItems(PcInventory.ADENA_ID, 12500);
+				st.takeItems(Inventory.ADENA_ID, 12500);
 			}
 			else if ((playerLevel >= 60) && (playerLevel < 70))
 			{
-				st.takeItems(PcInventory.ADENA_ID, 18000);
+				st.takeItems(Inventory.ADENA_ID, 18000);
 			}
 			else if (playerLevel >= 70)
 			{
-				st.takeItems(PcInventory.ADENA_ID, 24500);
+				st.takeItems(Inventory.ADENA_ID, 24500);
 			}
 			int i = 0;
 			for (int ziggurat : TELEPORTERS)

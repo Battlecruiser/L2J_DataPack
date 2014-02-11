@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
@@ -108,7 +108,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 						npc.doCast(SKILL.getSkill());
 						for (int i = 0; i < 10; i++)
 						{
-							npc.dropItem(player, PcInventory.ADENA_ID, ADENA2);
+							npc.dropItem(player, Inventory.ADENA_ID, ADENA2);
 						}
 					}
 					else if (getRandom(100000) < CHANCE)
@@ -119,7 +119,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 						npc.doCast(SKILL.getSkill());
 						for (int i = 0; i < 10; i++)
 						{
-							((L2Attackable) npc).dropItem(player, PcInventory.ADENA_ID, ADENA);
+							((L2Attackable) npc).dropItem(player, Inventory.ADENA_ID, ADENA);
 						}
 					}
 					else

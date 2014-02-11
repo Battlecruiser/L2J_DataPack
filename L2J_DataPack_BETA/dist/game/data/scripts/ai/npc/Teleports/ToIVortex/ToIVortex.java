@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 
 /**
  * Tower of Insolence Vortex teleport AI.<br>
@@ -113,7 +113,7 @@ public final class ToIVortex extends AbstractNpcAI
 			{
 				if (player.getAdena() >= 10000)
 				{
-					takeItems(player, PcInventory.ADENA_ID, 10000);
+					takeItems(player, Inventory.ADENA_ID, 10000);
 					giveItems(player, DIMENSION_TRADE.get(event), 1);
 				}
 				else

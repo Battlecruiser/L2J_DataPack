@@ -24,7 +24,7 @@ import java.util.Map.Entry;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.ClanTable;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -42,7 +42,7 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 	private static final int GUSTAV = 35410;
 	private static final int MIKHAIL = 35409;
 	private static final int DIETRICH = 35408;
-	private static final double GUSTAV_TRIGGER_HP = NpcTable.getInstance().getTemplate(GUSTAV).getBaseHpMax() / 12;
+	private static final double GUSTAV_TRIGGER_HP = NpcData.getInstance().getTemplate(GUSTAV).getBaseHpMax() / 12;
 	
 	private static Map<Integer, Integer> _damageToGustav = new HashMap<>();
 	

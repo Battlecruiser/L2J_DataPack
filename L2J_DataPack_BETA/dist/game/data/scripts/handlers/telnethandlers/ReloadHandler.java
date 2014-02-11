@@ -28,7 +28,7 @@ import javax.script.ScriptException;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.MultisellData;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
@@ -75,7 +75,7 @@ public class ReloadHandler implements ITelnetHandler
 				else if (type.equals("npc"))
 				{
 					_print.print("Reloading npc templates... ");
-					NpcTable.getInstance().reloadAllNpc();
+					NpcData.getInstance().load();
 					QuestManager.getInstance().reloadAllQuests();
 					_print.println("done");
 				}
@@ -109,7 +109,7 @@ public class ReloadHandler implements ITelnetHandler
 					RaidBossSpawnManager.getInstance().cleanUp();
 					DayNightSpawnManager.getInstance().cleanUp();
 					L2World.getInstance().deleteVisibleNpcSpawns();
-					NpcTable.getInstance().reloadAllNpc();
+					NpcData.getInstance().load();
 					SpawnTable.getInstance().load();
 					RaidBossSpawnManager.getInstance().load();
 					_print.println("done\n");
