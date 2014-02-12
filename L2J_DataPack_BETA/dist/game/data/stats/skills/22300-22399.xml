@@ -72,12 +72,13 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22312" levels="1" name="Birthday Joy">
+	<skill id="22312" levels="1" name="Joyous Vitality Potion">
 		<!-- "Birthday gift received once a year. For 4 hours, recovers energy when Exp. is acquired through hunting. The buff disappears when the sub-class is changed." -->
 		<!-- Birthday Skill -->
+		<set name="abnormalTime" val="14400" />
 		<set name="canBeDispeled" val="false" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="stayOnSubclassChange" val="false" />
