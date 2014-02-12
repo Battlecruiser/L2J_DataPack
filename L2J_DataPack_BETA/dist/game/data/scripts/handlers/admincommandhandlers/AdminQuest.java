@@ -212,6 +212,7 @@ public class AdminQuest implements IAdminCommandHandler
 					}
 				}
 				msg.replace("%quests%", sb.toString());
+				msg.replace("%objid%", npc.getObjectId());
 				msg.replace("%tmplid%", Integer.toString(npc.getTemplate().getId()));
 				msg.replace("%questName%", "");
 				activeChar.sendPacket(msg);
