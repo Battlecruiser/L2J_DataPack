@@ -178,7 +178,7 @@ public class Q00509_AClansFame extends Quest
 						st.takeItems(REWARD_POINTS.get(raid).get(1), -1);
 						final int rep = REWARD_POINTS.get(raid).get(2);
 						clan.addReputationScore(rep, true);
-						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addNumber(rep));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addInt(rep));
 						clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 					}
 					else

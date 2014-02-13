@@ -185,8 +185,8 @@ public class ItemSkillsTemplate implements IItemHandler
 					{
 						sm.addSkillName(skill);
 					}
-					sm.addNumber(hours);
-					sm.addNumber(minutes);
+					sm.addInt(hours);
+					sm.addInt(minutes);
 				}
 				else if (minutes > 0)
 				{
@@ -199,7 +199,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					{
 						sm.addSkillName(skill);
 					}
-					sm.addNumber(minutes);
+					sm.addInt(minutes);
 				}
 				else
 				{
@@ -213,7 +213,7 @@ public class ItemSkillsTemplate implements IItemHandler
 						sm.addSkillName(skill);
 					}
 				}
-				sm.addNumber(seconds);
+				sm.addInt(seconds);
 				playable.sendPacket(sm);
 			}
 		}

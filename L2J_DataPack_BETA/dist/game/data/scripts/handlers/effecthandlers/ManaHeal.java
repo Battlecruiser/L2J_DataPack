@@ -83,7 +83,7 @@ public final class ManaHeal extends AbstractEffect
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
 		}
-		sm.addNumber((int) amount);
+		sm.addInt((int) amount);
 		target.sendPacket(sm);
 	}
 }

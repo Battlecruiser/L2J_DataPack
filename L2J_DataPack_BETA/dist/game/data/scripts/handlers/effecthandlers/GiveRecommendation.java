@@ -69,7 +69,7 @@ public class GiveRecommendation extends AbstractEffect
 				target.setRecomHave(target.getRecomHave() + recommendationsGiven);
 				
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATIONS);
-				sm.addNumber(recommendationsGiven);
+				sm.addInt(recommendationsGiven);
 				target.sendPacket(sm);
 				target.sendPacket(new UserInfo(target));
 				target.sendPacket(new ExVoteSystemInfo(target));

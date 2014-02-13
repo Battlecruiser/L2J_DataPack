@@ -111,8 +111,8 @@ public final class GiftOfVitality extends LongTimeEvent
 					int minutes = (int) ((remainingTime % 3600) / 60);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
 					sm.addSkillName(23179);
-					sm.addNumber(hours);
-					sm.addNumber(minutes);
+					sm.addInt(hours);
+					sm.addInt(minutes);
 					player.sendPacket(sm);
 					htmltext = "4306-notime.htm";
 				}

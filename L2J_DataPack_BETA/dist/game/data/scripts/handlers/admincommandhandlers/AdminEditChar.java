@@ -1066,7 +1066,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			player.setKarma(newKarma);
 			// Common character information
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_KARMA_HAS_BEEN_CHANGED_TO_S1);
-			sm.addNumber(newKarma);
+			sm.addInt(newKarma);
 			player.sendPacket(sm);
 			// Admin information
 			activeChar.sendMessage("Successfully Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");

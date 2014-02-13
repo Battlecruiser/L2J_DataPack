@@ -96,7 +96,7 @@ public class PlayerHandler implements ITelnetHandler
 					player.sendPacket(iu);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
 					sm.addItemName(itemId);
-					sm.addItemNumber(amount);
+					sm.addLong(amount);
 					player.sendPacket(sm);
 					_print.println("ok");
 					GMAudit.auditGMAction("Telnet Admin", "Give Item", player.getName(), "item: " + itemId + " amount: " + amount);
