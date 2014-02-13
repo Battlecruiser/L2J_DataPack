@@ -123,7 +123,7 @@ public final class ManaHealByLevel extends AbstractEffect
 		{
 			sm.addCharName(info.getEffector());
 		}
-		sm.addNumber((int) amount);
+		sm.addInt((int) amount);
 		target.sendPacket(sm);
 	}
 }

@@ -60,7 +60,7 @@ public class RollingDice implements IItemHandler
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ROLLED_S2);
 		sm.addString(activeChar.getName());
-		sm.addNumber(number);
+		sm.addInt(number);
 		
 		activeChar.sendPacket(sm);
 		if (activeChar.isInsideZone(ZoneId.PEACE))

@@ -64,7 +64,7 @@ public final class HpByLevel extends AbstractEffect
 		info.getEffector().setCurrentHp(absorb);
 		// System message
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
-		sm.addNumber(restored);
+		sm.addInt(restored);
 		info.getEffector().sendPacket(sm);
 	}
 }

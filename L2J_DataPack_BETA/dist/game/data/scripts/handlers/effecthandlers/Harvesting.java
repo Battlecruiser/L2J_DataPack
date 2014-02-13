@@ -142,14 +142,14 @@ public final class Harvesting extends AbstractEffect
 						if (send)
 						{
 							SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
-							smsg.addNumber(total);
+							smsg.addInt(total);
 							smsg.addItemName(cropId);
 							player.sendPacket(smsg);
 							if (player.isInParty())
 							{
 								smsg = SystemMessage.getSystemMessage(SystemMessageId.C1_HARVESTED_S3_S2S);
 								smsg.addString(player.getName());
-								smsg.addNumber(total);
+								smsg.addInt(total);
 								smsg.addItemName(cropId);
 								player.getParty().broadcastToPartyMembers(player, smsg);
 							}

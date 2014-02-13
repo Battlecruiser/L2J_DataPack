@@ -127,8 +127,8 @@ public final class PriestOfBlessing extends AbstractNpcAI
 					int minutes = (int) ((remainingTime % 3600) / 60);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
 					sm.addItemName(NEVIT_VOICE);
-					sm.addNumber(hours);
-					sm.addNumber(minutes);
+					sm.addInt(hours);
+					sm.addInt(minutes);
 					player.sendPacket(sm);
 				}
 				return null;
@@ -160,8 +160,8 @@ public final class PriestOfBlessing extends AbstractNpcAI
 					int minutes = (int) ((remainingTime % 3600) / 60);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
 					sm.addString("Nevit's Hourglass");
-					sm.addNumber(hours);
-					sm.addNumber(minutes);
+					sm.addInt(hours);
+					sm.addInt(minutes);
 					player.sendPacket(sm);
 				}
 				return null;

@@ -69,7 +69,7 @@ public final class CpHeal extends AbstractEffect
 		}
 		
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
-		sm.addNumber((int) amount);
+		sm.addInt((int) amount);
 		target.sendPacket(sm);
 	}
 }

@@ -57,9 +57,9 @@ public class Loc implements IUserCommandHandler
 			sm = SystemMessage.getSystemMessage(region);
 			if (sm.getSystemMessageId().getParamCount() == 3)
 			{
-				sm.addNumber(activeChar.getX());
-				sm.addNumber(activeChar.getY());
-				sm.addNumber(activeChar.getZ());
+				sm.addInt(activeChar.getX());
+				sm.addInt(activeChar.getY());
+				sm.addInt(activeChar.getZ());
 			}
 		}
 		else

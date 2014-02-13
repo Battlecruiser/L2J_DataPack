@@ -91,14 +91,14 @@ public final class MagicalAttackMp extends AbstractEffect
 		{
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_HAS_BEEN_DRAINED_BY_C1);
 			sm.addCharName(activeChar);
-			sm.addNumber((int) mp);
+			sm.addInt((int) mp);
 			target.sendPacket(sm);
 		}
 		
 		if (activeChar.isPlayer())
 		{
 			SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENTS_MP_WAS_REDUCED_BY_S1);
-			sm2.addNumber((int) mp);
+			sm2.addInt((int) mp);
 			activeChar.sendPacket(sm2);
 		}
 	}

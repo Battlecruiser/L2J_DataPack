@@ -125,13 +125,13 @@ public final class Heal extends AbstractEffect
 				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
 					sm.addString(activeChar.getName());
-					sm.addNumber((int) amount);
+					sm.addInt((int) amount);
 					target.sendPacket(sm);
 				}
 				else
 				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
-					sm.addNumber((int) amount);
+					sm.addInt((int) amount);
 					target.sendPacket(sm);
 				}
 			}

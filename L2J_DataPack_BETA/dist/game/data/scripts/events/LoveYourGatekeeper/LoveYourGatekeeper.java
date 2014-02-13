@@ -80,8 +80,8 @@ public final class LoveYourGatekeeper extends LongTimeEvent
 						final int minutes = (int) ((remainingTime % 3600) / 60);
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
 						sm.addItemName(GATEKEEPER_TRANSFORMATION_STICK);
-						sm.addNumber(hours);
-						sm.addNumber(minutes);
+						sm.addInt(hours);
+						sm.addInt(minutes);
 						player.sendPacket(sm);
 					}
 					else
