@@ -20,7 +20,6 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
@@ -57,11 +56,6 @@ public final class TargetMeProbability extends AbstractEffect
 	{
 		if (info.getEffected().isPlayable())
 		{
-			if (info.getEffected() instanceof L2SiegeSummonInstance)
-			{
-				return;
-			}
-			
 			if (info.getEffected().getTarget() != info.getEffector())
 			{
 				L2PcInstance effector = info.getEffector().getActingPlayer();
