@@ -116,7 +116,7 @@ public final class EnergyAttack extends AbstractEffect
 			double damageMultiplier = Formulas.calcWeaponTraitBonus(attacker, target) * Formulas.calcAttributeBonus(attacker, target, skill) * Formulas.calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
 			
 			boolean ss = info.getSkill().useSoulShot() && attacker.isChargedShot(ShotType.SOULSHOTS);
-			double ssBoost = ss ? 1.5 : 1.0;
+			double ssBoost = ss ? 2 : 1.0;
 			
 			double weaponTypeBoost;
 			L2Weapon weapon = attacker.getActiveWeaponItem();
