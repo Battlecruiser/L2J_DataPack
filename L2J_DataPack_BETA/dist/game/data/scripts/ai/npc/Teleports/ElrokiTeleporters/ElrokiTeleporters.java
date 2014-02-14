@@ -25,8 +25,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * Elroki teleport AI.<br>
- * Original Jython script by kerberos_20
+ * Elroki teleport AI.
  * @author Plim
  */
 public final class ElrokiTeleporters extends AbstractNpcAI
@@ -38,34 +37,26 @@ public final class ElrokiTeleporters extends AbstractNpcAI
 	private static final Location TELEPORT_ORAHOCIN = new Location(4990, -1879, -3178);
 	private static final Location TELEPORT_GARIACHIN = new Location(7557, -5513, -3221);
 	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		switch (npc.getId())
-		{
-			case ORAHOCHIN:
-			{
-				if (player.isInCombat())
-				{
-					return "32111-no.htm";
-				}
-				player.teleToLocation(TELEPORT_ORAHOCIN);
-				break;
-			}
-			case GARIACHIN:
-			{
-				player.teleToLocation(TELEPORT_GARIACHIN);
-				break;
-			}
-		}
-		return super.onTalk(npc, player);
-	}
-	
 	private ElrokiTeleporters()
 	{
 		super(ElrokiTeleporters.class.getSimpleName(), "ai/npc/Teleports");
+		addFirstTalkId(ORAHOCHIN, GARIACHIN);
 		addStartNpc(ORAHOCHIN, GARIACHIN);
 		addTalkId(ORAHOCHIN, GARIACHIN);
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance talker)
+	{
+		if (!talker.isInCombat())
+		{
+			talker.teleToLocation((npc.getId() == ORAHOCHIN) ? TELEPORT_ORAHOCIN : TELEPORT_GARIACHIN);
+		}
+		else
+		{
+			return npc.getId() + "-no.html";
+		}
+		return super.onTalk(npc, talker);
 	}
 	
 	public static void main(String[] args)
