@@ -19,8 +19,7 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
@@ -58,13 +57,16 @@ public final class Bluff extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if ((info.getEffected() instanceof L2NpcInstance) || (info.getEffected().isNpc() && (info.getEffected().getId() == 35062)) || (info.getEffected() instanceof L2SiegeSummonInstance))
+		final L2Character effected = info.getEffected();
+		// Headquarters NPC should not rotate
+		if ((effected.getId() == 35062) || effected.isRaid() || effected.isRaidMinion())
 		{
 			return;
 		}
 		
-		info.getEffected().broadcastPacket(new StartRotation(info.getEffected().getObjectId(), info.getEffected().getHeading(), 1, 65535));
-		info.getEffected().broadcastPacket(new StopRotation(info.getEffected().getObjectId(), info.getEffector().getHeading(), 65535));
-		info.getEffected().setHeading(info.getEffector().getHeading());
+		final L2Character effector = info.getEffector();
+		effected.broadcastPacket(new StartRotation(effected.getObjectId(), effected.getHeading(), 1, 65535));
+		effected.broadcastPacket(new StopRotation(effected.getObjectId(), effector.getHeading(), 65535));
+		effected.setHeading(effector.getHeading());
 	}
 }
