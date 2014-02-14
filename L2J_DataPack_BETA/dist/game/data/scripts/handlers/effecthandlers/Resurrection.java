@@ -68,7 +68,7 @@ public final class Resurrection extends AbstractEffect
 		}
 		else
 		{
-			DecayTaskManager.getInstance().cancelDecayTask(target);
+			DecayTaskManager.getInstance().cancel(target);
 			target.doRevive(Formulas.calculateSkillResurrectRestorePercent(_power, activeChar));
 		}
 	}

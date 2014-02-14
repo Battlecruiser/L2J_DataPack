@@ -49,7 +49,7 @@ public class CorpseMob implements ITargetTypeHandler
 			return EMPTY_TARGET_LIST;
 		}
 		
-		if (skill.hasEffectType(L2EffectType.HP_DRAIN) && ((L2Attackable) target).isOldCorpse(activeChar.getActingPlayer(), (Config.DEFAULT_CORPSE_TIME / 2), true))
+		if (skill.hasEffectType(L2EffectType.HP_DRAIN) && ((L2Attackable) target).isOldCorpse(activeChar.getActingPlayer(), Config.CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY, true))
 		{
 			return EMPTY_TARGET_LIST;
 		}
