@@ -32,27 +32,29 @@ public final class CrumaTower extends AbstractNpcAI
 {
 	// NPC
 	private static final int MOZELLA = 30483;
-	// Location
-	private static final Location TELEPORT_LOC = new Location(17724, 114004, -11672);
+	// Locations
+	private static final Location TELEPORT_LOC1 = new Location(17776, 113968, -11671);
+	private static final Location TELEPORT_LOC2 = new Location(17680, 113968, -11671);
 	// Misc
 	private static final int MAX_LEVEL = 55;
-	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (player.getLevel() <= MAX_LEVEL)
-		{
-			player.teleToLocation(TELEPORT_LOC);
-			return null;
-		}
-		return "30483-1.htm";
-	}
 	
 	private CrumaTower()
 	{
 		super(CrumaTower.class.getSimpleName(), "ai/npc/Teleports");
+		addFirstTalkId(MOZELLA);
 		addStartNpc(MOZELLA);
 		addTalkId(MOZELLA);
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance talker)
+	{
+		if (talker.getLevel() <= MAX_LEVEL)
+		{
+			talker.teleToLocation(getRandomBoolean() ? TELEPORT_LOC1 : TELEPORT_LOC2);
+			return null;
+		}
+		return "30483-1.html";
 	}
 	
 	public static void main(String[] args)
