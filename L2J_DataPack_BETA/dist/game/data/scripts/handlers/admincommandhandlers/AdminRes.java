@@ -189,7 +189,7 @@ public class AdminRes implements IAdminCommandHandler
 		}
 		else
 		{
-			DecayTaskManager.getInstance().cancelDecayTask(targetChar);
+			DecayTaskManager.getInstance().cancel(targetChar);
 		}
 		
 		targetChar.doRevive();

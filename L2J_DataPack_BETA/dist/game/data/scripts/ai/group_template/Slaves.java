@@ -90,7 +90,7 @@ public class Slaves extends AbstractNpcAI
 					}
 					
 					slave.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO);
-					DecayTaskManager.getInstance().addDecayTask(slave);
+					DecayTaskManager.getInstance().add(slave);
 				}
 			}
 		}
