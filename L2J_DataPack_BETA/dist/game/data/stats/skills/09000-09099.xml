@@ -883,32 +883,48 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SKILL_IGNORE" />
+		<set name="abnormalRange" val="2000" />
 		<set name="icon" val="icon.skill1418" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1200000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="staticReuse" val="true" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="COMMAND_CHANNEL" />
 		<cond msgId="113" addName="1">
 			<player insideZoneId="90578" />
 		</cond>
+		<for>
+			<effect name="ResistSkill">
+				<param skillId1="6662" />
+				<param skillId2="6274" />
+				<param skillId3="6275" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9058" levels="1" name="Black Freezing Core">
 		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SKILL_IGNORE" />
+		<set name="abnormalRange" val="2000" />
+		<set name="itemConsumeId" val="15470" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="icon" val="icon.skill1418" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1200000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="staticReuse" val="true" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="COMMAND_CHANNEL" />
 		<cond msgId="113" addName="1">
 			<player insideZoneId="90578" />
 		</cond>
+		<for>
+			<effect name="ResistSkill">
+				<param skillId1="6662" />
+				<param skillId2="6274" />
+				<param skillId3="6275" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9059" levels="1" name="Torch Light">
 		<!-- Confirmed CT2.5 -->
