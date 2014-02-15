@@ -225,6 +225,7 @@ import handlers.targethandlers.BehindArea;
 import handlers.targethandlers.BehindAura;
 import handlers.targethandlers.Clan;
 import handlers.targethandlers.ClanMember;
+import handlers.targethandlers.CommandChannel;
 import handlers.targethandlers.CorpseClan;
 import handlers.targethandlers.CorpseMob;
 import handlers.targethandlers.EnemySummon;
@@ -553,6 +554,7 @@ public class MasterHandler
 			BehindAura.class,
 			Clan.class,
 			ClanMember.class,
+			CommandChannel.class,
 			CorpseClan.class,
 			CorpseMob.class,
 			EnemySummon.class,

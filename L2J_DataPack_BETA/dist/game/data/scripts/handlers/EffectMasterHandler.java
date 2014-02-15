@@ -138,6 +138,7 @@ public final class EffectMasterHandler
 		Recovery.class,
 		RefuelAirship.class,
 		Relax.class,
+		ResistSkill.class,
 		Restoration.class,
 		RestorationRandom.class,
 		Resurrection.class,
