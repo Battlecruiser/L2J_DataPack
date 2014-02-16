@@ -409,14 +409,8 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36106" level="80" type="L2FortBallista" name="Ballista" title="Cloud Mountain">
+	<npc id="36106" level="80" type="L2Monster" name="Ballista" title="Cloud Mountain">
 		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="FameValue" value="30" />
-			<param name="Armor" value="60" />
-			<skill name="Bomb" id="2342" level="1" /> <!-- Ballista Bomb -->
-			<param name="NoFnHi" value="1" />
-		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -433,7 +427,6 @@
 		</stats>
 		<status canMove="false" canBeSown="true" />
 		<skill_list>
-			<skill id="2342" level="1" /> <!--Ballista Bomb -->
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="16" /> <!--HP Increase (8x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -2136,14 +2129,8 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36137" level="80" type="L2FortBallista" name="Ballista" title="Tanor Fortress">
+	<npc id="36137" level="80" type="L2Monster" name="Ballista" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="FameValue" value="30" />
-			<param name="Armor" value="60" />
-			<skill name="Bomb" id="2342" level="1" /> <!-- Ballista Bomb -->
-			<param name="NoFnHi" value="1" />
-		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2160,7 +2147,6 @@
 		</stats>
 		<status canMove="false" canBeSown="true" />
 		<skill_list>
-			<skill id="2342" level="1" /> <!--Ballista Bomb -->
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="16" /> <!--HP Increase (8x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -3863,14 +3849,8 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36168" level="80" type="L2FortBallista" name="Ballista" title="Dragonspine Fortress">
+	<npc id="36168" level="80" type="L2Monster" name="Ballista" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="FameValue" value="30" />
-			<param name="Armor" value="60" />
-			<skill name="Bomb" id="2342" level="1" /> <!-- Ballista Bomb -->
-			<param name="NoFnHi" value="1" />
-		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3887,7 +3867,6 @@
 		</stats>
 		<status canMove="false" canBeSown="true" />
 		<skill_list>
-			<skill id="2342" level="1" /> <!--Ballista Bomb -->
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="16" /> <!--HP Increase (8x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
