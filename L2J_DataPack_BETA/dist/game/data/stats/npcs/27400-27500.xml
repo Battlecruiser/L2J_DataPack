@@ -374,13 +374,14 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27415" level="80" type="L2Npc" name="Guide Solina">
+	<npc id="27415" level="80" type="L2Monster" name="Guide Solina">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="2444" mp="2444.0" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
+		<equipment rhand="8212" /> <!-- rhand: Monster Only (Solina Brother Mace) -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="5198" mp="1859.0" />
+			<attack physical="1952" magical="905" attackSpeed="253" range="40" />
+			<defence physical="577" magical="469" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -390,8 +391,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="9" />
+			<height normal="23.4" />
 		</collision>
 	</npc>
 	<npc id="27416" level="80" type="L2Npc" name="Relic Manager Golem">
