@@ -20,24 +20,26 @@ package instances.ElcadiasTent;
 
 import quests.Q10292_SevenSignsGirlOfDoubt.Q10292_SevenSignsGirlOfDoubt;
 import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom;
+import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Elcadia's Tent instance zone.
  * @author Adry_85
  */
-public final class ElcadiasTent extends Quest
+public final class ElcadiasTent extends AbstractNpcAI
 {
 	protected class ETWorld extends InstanceWorld
 	{
-		protected long storeTime = 0;
+		
 	}
 	
 	private static final int INSTANCEID = 158;
@@ -50,25 +52,10 @@ public final class ElcadiasTent extends Quest
 	
 	private ElcadiasTent()
 	{
-		super(-1, ElcadiasTent.class.getSimpleName(), "instances");
+		super(ElcadiasTent.class.getSimpleName(), "instances");
 		addFirstTalkId(GRUFF_LOOKING_MAN, ELCADIA);
 		addStartNpc(GRUFF_LOOKING_MAN, ELCADIA);
 		addTalkId(GRUFF_LOOKING_MAN, ELCADIA);
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = null;
-		if (npc.getId() == ELCADIA)
-		{
-			htmltext = "32784.html";
-		}
-		else
-		{
-			htmltext = "32862.html";
-		}
-		return htmltext;
 	}
 	
 	@Override
@@ -76,9 +63,13 @@ public final class ElcadiasTent extends Quest
 	{
 		if (npc.getId() == GRUFF_LOOKING_MAN)
 		{
-			if (((talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName()) != null) && talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName()).isStarted()) //
-				|| ((talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName()) != null) && talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName()).isCompleted() && (talker.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName()) == null)) //
-				|| ((talker.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName()) != null) && talker.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName()).isStarted()))
+			final QuestState GirlOfDoubt = talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName());
+			final QuestState ForbiddenBook = talker.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName());
+			final QuestState Monastery = talker.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
+			if (((GirlOfDoubt != null) && GirlOfDoubt.isStarted()) //
+				|| ((GirlOfDoubt != null) && GirlOfDoubt.isCompleted() && (ForbiddenBook == null)) //
+				|| ((ForbiddenBook != null) && ForbiddenBook.isStarted()) //
+				|| ((ForbiddenBook != null) && ForbiddenBook.isCompleted() && (Monastery == null)))
 			{
 				enterInstance(talker, "ElcadiasTent.xml", START_LOC);
 			}
@@ -97,33 +88,33 @@ public final class ElcadiasTent extends Quest
 		return super.onTalk(npc, talker);
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, Location loc)
+	private void enterInstance(L2PcInstance player, String template, Location loc)
 	{
-		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		// existing instance
 		if (world != null)
 		{
 			if (!(world instanceof ETWorld))
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-				return 0;
 			}
-			teleportPlayer(player, loc, world.getInstanceId(), false);
-			return 0;
+			else
+			{
+				teleportPlayer(player, loc, world.getInstanceId(), false);
+			}
 		}
-		// New instance
-		world = new ETWorld();
-		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(INSTANCEID);
-		world.setStatus(0);
-		((ETWorld) world).storeTime = System.currentTimeMillis();
-		InstanceManager.getInstance().addWorld(world);
-		_log.info("Elcadia's Tent started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
-		// teleport players
-		teleportPlayer(player, loc, world.getInstanceId(), false);
-		world.addAllowed(player.getObjectId());
-		return world.getInstanceId();
+		else
+		{
+			// New instance.
+			world = new ETWorld();
+			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
+			world.setTemplateId(INSTANCEID);
+			world.setStatus(0);
+			InstanceManager.getInstance().addWorld(world);
+			_log.info("Elcadia's Tent started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+			// Teleport players.
+			teleportPlayer(player, loc, world.getInstanceId(), false);
+			world.addAllowed(player.getObjectId());
+		}
 	}
 	
 	public static void main(String[] args)
