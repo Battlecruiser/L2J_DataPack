@@ -210,43 +210,54 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			case "RIGHT_BOOK1":
 			{
 				qs.set("good1", "1");
-				npc.setScriptValue(1);
 				npc.setDisplayEffect(1);
-				player.showQuestMovie(25);
 				startQuestTimer("SPAWN_MOBS", 22000, npc, player);
 				htmltext = "32821-02.html";
+				if (hasCheckedAllRightBooks(qs))
+				{
+					player.showQuestMovie(25);
+				}
 				break;
 			}
 			case "RIGHT_BOOK2":
 			{
 				qs.set("good2", "1");
-				npc.setScriptValue(1);
 				npc.setDisplayEffect(1);
 				npc.setTarget(player);
 				npc.doCast(VAMPIRIC_RAGE.getSkill());
 				htmltext = "32821-02.html";
+				if (hasCheckedAllRightBooks(qs))
+				{
+					player.showQuestMovie(25);
+				}
 				break;
 			}
 			case "RIGHT_BOOK3":
 			{
 				qs.set("good3", "1");
-				npc.setScriptValue(1);
 				npc.setDisplayEffect(1);
 				final L2Npc jude = addSpawn(JUDE_VAN_ETINA, 85783, -253471, -8320, 65, false, 0, false, player.getInstanceId());
 				jude.setTarget(player);
 				jude.doCast(RESIST_HOLY.getSkill());
 				htmltext = "32821-02.html";
+				if (hasCheckedAllRightBooks(qs))
+				{
+					player.showQuestMovie(25);
+				}
 				break;
 			}
 			case "RIGHT_BOOK4":
 			{
 				qs.set("good4", "1");
-				npc.setScriptValue(1);
 				npc.setDisplayEffect(1);
 				final L2Npc solina = addSpawn(SOLINAS_EVIL_THOUGHTS, 85793, -247581, -8320, 0, false, 0, false, player.getInstanceId());
 				solina.setTarget(player);
 				solina.doCast(RESIST_HOLY.getSkill());
 				htmltext = "32821-02.html";
+				if (hasCheckedAllRightBooks(qs))
+				{
+					player.showQuestMovie(25);
+				}
 				break;
 			}
 			case "DONE1":
@@ -340,7 +351,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					if ((qs.getInt("good1") == 1) && (qs.getInt("good2") == 1) && (qs.getInt("good3") == 1) && (qs.getInt("good4") == 1))
+					if (hasCheckedAllRightBooks(qs))
 					{
 						qs.setCond(3, true);
 						htmltext = "32803-04.html";
@@ -430,6 +441,11 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	public boolean hasCheckedAllRightBooks(QuestState qs)
+	{
+		return ((qs.getInt("good1") == 1) && (qs.getInt("good2") == 1) && (qs.getInt("good3") == 1) && (qs.getInt("good4") == 1));
 	}
 	
 	public static void main(String args[])
