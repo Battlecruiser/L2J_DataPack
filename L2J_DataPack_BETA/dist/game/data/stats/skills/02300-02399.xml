@@ -711,10 +711,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="BALLISTA" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<target npcType="L2FortBallistaInstance" />
+			<target npcId="35685,35723,35754,35792,35823,35854,35892,35923,35961,35999,36030,36068,36106,36137,36168,36206,36244,36282,36313,36351,36389" />
 		</cond>
 	</skill>
 	<skill id="2343" levels="1" name="Gate Key of Kamael">

@@ -409,14 +409,8 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36206" level="80" type="L2FortBallista" name="Ballista" title="Antharas's Fortress">
+	<npc id="36206" level="80" type="L2Monster" name="Ballista" title="Antharas's Fortress">
 		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="FameValue" value="30" />
-			<param name="Armor" value="60" />
-			<skill name="Bomb" id="2342" level="1" /> <!-- Ballista Bomb -->
-			<param name="NoFnHi" value="1" />
-		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -433,7 +427,6 @@
 		</stats>
 		<status canMove="false" canBeSown="true" />
 		<skill_list>
-			<skill id="2342" level="1" /> <!--Ballista Bomb -->
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="16" /> <!--HP Increase (8x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -2518,14 +2511,8 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36244" level="80" type="L2FortBallista" name="Ballista" title="Western Fortress">
+	<npc id="36244" level="80" type="L2Monster" name="Ballista" title="Western Fortress">
 		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="FameValue" value="30" />
-			<param name="Armor" value="60" />
-			<skill name="Bomb" id="2342" level="1" /> <!-- Ballista Bomb -->
-			<param name="NoFnHi" value="1" />
-		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2542,7 +2529,6 @@
 		</stats>
 		<status canMove="false" canBeSown="true" />
 		<skill_list>
-			<skill id="2342" level="1" /> <!--Ballista Bomb -->
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="16" /> <!--HP Increase (8x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -4626,14 +4612,8 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36282" level="80" type="L2FortBallista" name="Ballista" title="Hunter's Fortress">
+	<npc id="36282" level="80" type="L2Monster" name="Ballista" title="Hunter's Fortress">
 		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="FameValue" value="30" />
-			<param name="Armor" value="60" />
-			<skill name="Bomb" id="2342" level="1" /> <!-- Ballista Bomb -->
-			<param name="NoFnHi" value="1" />
-		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4650,7 +4630,6 @@
 		</stats>
 		<status canMove="false" canBeSown="true" />
 		<skill_list>
-			<skill id="2342" level="1" /> <!--Ballista Bomb -->
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="16" /> <!--HP Increase (8x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
