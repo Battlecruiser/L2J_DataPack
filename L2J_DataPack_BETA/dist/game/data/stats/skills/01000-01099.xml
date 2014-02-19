@@ -607,7 +607,7 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="144">
-			<target race_id="1" /> <!-- Undead -->
+			<target npcRace="UNDEAD" />
 		</cond>
 		<for>
 			<effect name="MagicalAttack" />
@@ -635,7 +635,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="144">
-			<target race_id="1" /> <!-- Undead -->
+			<target npcRace="UNDEAD" />
 		</cond>
 		<for>
 			<effect name="MagicalAttack" />
@@ -755,7 +755,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<cond msgId="144">
-			<target race_id="1" /> <!-- Undead -->
+			<target npcRace="UNDEAD" />
 		</cond>
 		<for>
 			<effect name="DeleteHate">
@@ -917,7 +917,7 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="power" val="#ench3Attack" />
 		<cond msgId="144">
-			<target race_id="1" /> <!-- Undead -->
+			<target npcRace="UNDEAD" />
 		</cond>
 		<for>
 			<effect name="Paralyze" />
@@ -1131,7 +1131,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<cond msgId="144">
-			<target race_id="1" /> <!-- Undead -->
+			<target npcRace="UNDEAD" />
 		</cond>
 		<for>
 			<effect name="Passive" />
