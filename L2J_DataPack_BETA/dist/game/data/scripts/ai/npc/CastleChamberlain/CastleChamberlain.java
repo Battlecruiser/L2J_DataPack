@@ -385,7 +385,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 	
 	private final boolean isOwner(final L2PcInstance player, final L2Npc npc)
 	{
-		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || (player.getClanId() == npc.getCastle().getOwnerId());
+		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()));
 	}
 	
 	@Override

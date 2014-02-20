@@ -16,40 +16,46 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.CastleCourtMagician;
+package ai.npc.SupportUnitCaptain;
 
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.network.clientpackets.RequestAcquireSkill;
 
-import handlers.effecthandlers.CallPc;
-
 /**
- * Castle Court Magician AI.
+ * Support Unit Captain AI.
  * @author St3eT
  */
-public final class CastleCourtMagician extends AbstractNpcAI
+public final class SupportUnitCaptain extends AbstractNpcAI
 {
 	// NPCs
-	private static final int[] COURT_MAGICIAN =
+	private static final int[] UNIT_CAPTAIN =
 	{
-		35648, // Gludio
-		35649, // Dion
-		35650, // Giran
-		35651, // Oren
-		35652, // Aden
-		35653, // Innadril
-		35654, // Goddard
-		35655, // Rune
-		35656, // Schuttgard
+		35662, // Shanty Fortress
+		35694, // Southern Fortress
+		35731, // Hive Fortress
+		35763, // Valley Fortress
+		35800, // Ivory Fortress
+		35831, // Narsell Fortress
+		35863, // Bayou Fortress
+		35900, // White Sands Fortress
+		35932, // Borderland Fortress
+		35970, // Swamp Fortress
+		36007, // Archaic Fortress
+		36039, // Floran Fortress
+		36077, // Cloud Mountain
+		36114, // Tanor Fortress
+		36145, // Dragonspine Fortress
+		36177, // Antharas's Fortress
+		36215, // Western Fortress
+		36253, // Hunter's Fortress
+		36290, // Aaru Fortress
+		36322, // Demon Fortress
+		36360, // Monastic Fortress
 	};
-	// Skills
-	private static final int CLAN_GATE = 3632; // Clan Gate
-	private static final SkillHolder DISPLAY_CLAN_GATE = new SkillHolder(5109, 1); // Production - Clan Gate
 	// Items
 	private static final int EPAULETTE = 9912; // Knight's Epaulette
 	private static final int RED_MEDITATION = 9931; // Red Talisman of Meditation
@@ -68,7 +74,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 	private static final int BLUE_DEFENSE2 = 9926; // Blue Talisman of Defense
 	private static final int BLUE_M_DEFENSE = 9927; // Blue Talisman of Magic Defense
 	private static final int RED_LIFE_FORCE = 10518; // Red Talisman - Life Force
-	private static final int BLUE_GREAT_HEAL = 10424; // Blue Talisman - Greater Healing
+	private static final int BLUE_GREAT_HEALING = 10424; // Blue Talisman - Greater Healing
 	private static final int WHITE_FIRE = 10421; // White Talisman - Fire
 	private static final int[] COMMON_TALISMANS =
 	{
@@ -114,31 +120,32 @@ public final class CastleCourtMagician extends AbstractNpcAI
 		10519, // White Talisman - Earth
 		10422, // White Talisman - Light
 		10423, // Blue Talisman - Self-Destruction
-		10419, // White Talisman - Darkness
 	};
 	
-	private CastleCourtMagician()
+	private SupportUnitCaptain()
 	{
-		super(CastleCourtMagician.class.getSimpleName(), "ai/npc");
-		addStartNpc(COURT_MAGICIAN);
-		addTalkId(COURT_MAGICIAN);
-		addFirstTalkId(COURT_MAGICIAN);
+		super(SupportUnitCaptain.class.getSimpleName(), "ai/npc");
+		addStartNpc(UNIT_CAPTAIN);
+		addTalkId(UNIT_CAPTAIN);
+		addFirstTalkId(UNIT_CAPTAIN);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if ((player.getClan() == null) && (player.getClanId() != npc.getCastle().getOwnerId()))
+		
+		final int fortOwner = npc.getFort().getOwnerClan() == null ? 0 : npc.getFort().getOwnerClan().getId();
+		if ((player.getClan() == null) || (player.getClanId() != fortOwner))
 		{
-			return "courtmagician-01.html";
+			return "unitcaptain-04.html";
 		}
 		
 		String htmltext = null;
 		int itemId = 0;
 		switch (event)
 		{
-			case "courtmagician.html":
-			case "courtmagician-03.html":
+			case "unitcaptain.html":
+			case "unitcaptain-01.html":
 			{
 				htmltext = event;
 				break;
@@ -147,7 +154,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 			{
 				if (getQuestItemsCount(player, EPAULETTE) < 10)
 				{
-					htmltext = "courtmagician-06.html";
+					htmltext = "unitcaptain-05.html";
 					break;
 				}
 				
@@ -229,13 +236,13 @@ public final class CastleCourtMagician extends AbstractNpcAI
 					}
 					else
 					{
-						itemId = BLUE_GREAT_HEAL;
+						itemId = BLUE_GREAT_HEALING;
 					}
 				}
 				else
 				{
 					final int chance = getRandom(46);
-					if (chance <= 42)
+					if (chance <= 41)
 					{
 						itemId = COMMON_TALISMANS[chance];
 					}
@@ -246,7 +253,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 				}
 				takeItems(player, EPAULETTE, 10);
 				giveItems(player, itemId, 1);
-				htmltext = "courtmagician-04.html";
+				htmltext = "unitcaptain-02.html";
 				break;
 			}
 			case "squadSkill":
@@ -257,29 +264,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 				}
 				else
 				{
-					htmltext = "courtmagician-05.html";
-				}
-				break;
-			}
-			case "clanTeleport":
-			{
-				if (player.getClanId() == npc.getCastle().getOwnerId())
-				{
-					final L2PcInstance clanLeader = player.getClan().getLeader().getPlayerInstance();
-					
-					if ((clanLeader != null) && clanLeader.isAffectedBySkill(CLAN_GATE))
-					{
-						if (CallPc.checkSummonTargetStatus(clanLeader, player)) // TODO: Custom one, retail dont check it but for sure lets check same conditions like when summon player by skill.
-						{
-							npc.setTarget(player);
-							npc.doCast(DISPLAY_CLAN_GATE.getSkill());
-							player.teleToLocation(clanLeader.getLocation(), true);
-						}
-					}
-					else
-					{
-						htmltext = "courtmagician-02.html";
-					}
+					htmltext = "unitcaptain-03.html";
 				}
 				break;
 			}
@@ -290,11 +275,12 @@ public final class CastleCourtMagician extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId())) ? "courtmagician.html" : "courtmagician-01.html";
+		final int fortOwner = npc.getFort().getOwnerClan() == null ? 0 : npc.getFort().getOwnerClan().getId();
+		return ((player.getClan() != null) && (player.getClanId() == fortOwner)) ? "unitcaptain.html" : "unitcaptain-04.html";
 	}
 	
 	public static void main(String[] args)
 	{
-		new CastleCourtMagician();
+		new SupportUnitCaptain();
 	}
 }
