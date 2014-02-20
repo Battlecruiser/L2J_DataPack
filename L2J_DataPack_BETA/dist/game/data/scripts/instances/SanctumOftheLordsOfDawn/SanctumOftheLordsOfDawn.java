@@ -18,7 +18,13 @@
  */
 package instances.SanctumOftheLordsOfDawn;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import quests.Q00195_SevenSignsSecretRitualOfThePriests.Q00195_SevenSignsSecretRitualOfThePriests;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2World;
@@ -28,7 +34,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -39,12 +44,18 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Sanctum of the Lords of Dawn instance zone.
  * @author Adry_85
  */
-public final class SanctumOftheLordsOfDawn extends Quest
+public final class SanctumOftheLordsOfDawn extends AbstractNpcAI
 {
-	protected class HSWorld extends InstanceWorld
+	protected static final class HSWorld extends InstanceWorld
 	{
 		protected long storeTime = 0;
 		protected int doorst = 0;
+		protected final static Map<Integer, List<L2Npc>> _save_point = new HashMap<>();
+		
+		public static Map<Integer, List<L2Npc>> getMonsters()
+		{
+			return _save_point;
+		}
 	}
 	
 	// Instance
@@ -70,9 +81,17 @@ public final class SanctumOftheLordsOfDawn extends Quest
 	private static final Location ENTER = new Location(-76161, 213401, -7120, 0, 0);
 	private static final Location EXIT = new Location(-12585, 122305, -2989, 0, 0);
 	
+	private static final Location[] SAVE_POINT = new Location[]
+	{
+		new Location(-75775, 213415, -7120),
+		new Location(-74959, 209240, -7472),
+		new Location(-77699, 208905, -7640),
+		new Location(-79939, 205857, -7888),
+	};
+	
 	private SanctumOftheLordsOfDawn()
 	{
-		super(-1, SanctumOftheLordsOfDawn.class.getSimpleName(), "instances");
+		super(SanctumOftheLordsOfDawn.class.getSimpleName(), "instances");
 		addStartNpc(LIGHT_OF_DAWN);
 		addTalkId(LIGHT_OF_DAWN, IDENTITY_CONFIRM_DEVICE, PASSWORD_ENTRY_DEVICE, DARKNESS_OF_DAWN, SHELF);
 		addAggroRangeEnterId(GUARDS_OF_THE_DAWN, GUARDS_OF_THE_DAWN_2, GUARDS_OF_THE_DAWN_3);
@@ -102,55 +121,71 @@ public final class SanctumOftheLordsOfDawn extends Quest
 					case GUARDS_OF_THE_DAWN:
 					{
 						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.INTRUDER_PROTECT_THE_PRIESTS_OF_DAWN));
-						player.teleToLocation(-75987, 213470, -7123);
 						break;
 					}
 					case GUARDS_OF_THE_DAWN_2:
 					{
 						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.HOW_DARE_YOU_INTRUDE_WITH_THAT_TRANSFORMATION_GET_LOST));
-						player.teleToLocation(-75987, 213470, -7123);
 						break;
 					}
 					case GUARDS_OF_THE_DAWN_3:
 					{
 						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.WHO_ARE_YOU_A_NEW_FACE_LIKE_YOU_CANT_APPROACH_THIS_PLACE));
-						player.teleToLocation(-75987, 213470, -7123);
 						break;
 					}
 				}
-				break;
+				
+				OUTTER:
+				for (Entry<Integer, List<L2Npc>> entry : HSWorld._save_point.entrySet())
+				{
+					for (L2Npc monster : entry.getValue())
+					{
+						if (monster.getObjectId() == npc.getObjectId())
+						{
+							player.teleToLocation(SAVE_POINT[entry.getKey()]);
+							break OUTTER;
+						}
+					}
+				}
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, Location loc)
+	private void enterInstance(L2PcInstance player, String template, Location loc)
 	{
-		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		// existing instance
 		if (world != null)
 		{
 			if (!(world instanceof HSWorld))
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-				return 0;
 			}
-			teleportPlayer(player, loc, world.getInstanceId());
-			return world.getInstanceId();
+			else
+			{
+				teleportPlayer(player, loc, world.getInstanceId());
+			}
 		}
-		// New instance
-		world = new HSWorld();
-		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(INSTANCEID);
-		world.setStatus(0);
-		((HSWorld) world).storeTime = System.currentTimeMillis();
-		InstanceManager.getInstance().addWorld(world);
-		_log.info("SevenSign started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
-		// teleport players
-		teleportPlayer(player, loc, world.getInstanceId());
-		world.addAllowed(player.getObjectId());
-		return world.getInstanceId();
+		else
+		{
+			// New instance,
+			world = new HSWorld();
+			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
+			world.setTemplateId(INSTANCEID);
+			world.setStatus(0);
+			((HSWorld) world).storeTime = System.currentTimeMillis();
+			InstanceManager.getInstance().addWorld(world);
+			_log.info("Sanctum of the Lords of Dawn started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+			// Teleport players.
+			teleportPlayer(player, loc, world.getInstanceId());
+			world.addAllowed(player.getObjectId());
+			final Map<Integer, List<L2Npc>> save_point = HSWorld.getMonsters();
+			final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+			save_point.put(0, inst.spawnGroup("save_point1"));
+			save_point.put(1, inst.spawnGroup("save_point2"));
+			save_point.put(2, inst.spawnGroup("save_point3"));
+			save_point.put(3, inst.spawnGroup("save_point4"));
+		}
 	}
 	
 	@Override
