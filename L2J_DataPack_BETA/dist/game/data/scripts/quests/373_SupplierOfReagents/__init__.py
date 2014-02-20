@@ -224,7 +224,7 @@ class Quest (JQuest) :
              if item :
                 chance,qty=TEMPERATURE[temp]
                 if item == MIMIRS_ELIXIR :
-                   mimirs=st.getPlayer().getQuestState("235_MimirsElixir")
+                   mimirs=st.getPlayer().getQuestState("Q00235_MimirsElixir")
                    if mimirs :
                       chance = 100
                       qty = 1
