@@ -76,12 +76,12 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 				else if ("day".equals(val))
 				{
 					int day = Integer.parseInt(st.nextToken());
-					if ((cal.getActualMinimum(Calendar.DAY_OF_YEAR) > day) || (cal.getActualMaximum(Calendar.DAY_OF_YEAR) < day))
+					if ((cal.getActualMinimum(Calendar.DAY_OF_MONTH) > day) || (cal.getActualMaximum(Calendar.DAY_OF_MONTH) < day))
 					{
-						activeChar.sendMessage("Unable to change Siege Date - Incorrect day value only " + cal.getActualMinimum(Calendar.DAY_OF_YEAR) + "-" + cal.getActualMaximum(Calendar.DAY_OF_YEAR) + " is accepted!");
+						activeChar.sendMessage("Unable to change Siege Date - Incorrect day value only " + cal.getActualMinimum(Calendar.DAY_OF_MONTH) + "-" + cal.getActualMaximum(Calendar.DAY_OF_MONTH) + " is accepted!");
 						return false;
 					}
-					cal.set(Calendar.DAY_OF_YEAR, day);
+					cal.set(Calendar.DAY_OF_MONTH, day);
 				}
 				else if ("hour".equals(val))
 				{
