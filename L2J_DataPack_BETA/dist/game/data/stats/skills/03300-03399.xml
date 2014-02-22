@@ -223,13 +223,8 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="CA1" />
 		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="TAKEFORT" /> 
 		<set name="targetType" val="FLAGPOLE" />
-		<cond>
-			<player canCaptureFlag="true" />
-		</cond>
-		<for>
-			<effect name="CaptureFlag" val="0" />
-		</for>
 	</skill>
 	<skill id="3319" levels="1" name="Divine Protection of Ring">
 		<set name="magicLvl" val="86" />
