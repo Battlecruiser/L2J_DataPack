@@ -1756,7 +1756,6 @@
 			<effect name="DamOverTime" ticks="5" val="#dmg" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4183" levels="12" name="Decrease P. Atk.">
@@ -1834,7 +1833,6 @@
 			<effect name="Sleep" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4186" levels="12" name="Hold">
@@ -1859,7 +1857,6 @@
 			<effect name="Root" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4187" levels="12" name="Decrease Speed">
@@ -1912,7 +1909,6 @@
 			<effect name="DamOverTime" ticks="5" val="#damage" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4189" levels="12" name="Paralysis">
@@ -1937,7 +1933,6 @@
 			<effect name="Paralyze" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4190" levels="12" name="Decrease MP">
@@ -1963,7 +1958,6 @@
 			<effect name="ManaDamOverTime" ticks="5" val="#mdot" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4191" levels="12" name="BOSS Wind Strike">
@@ -2117,7 +2111,6 @@
 			<effect name="Root" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4198" levels="12" name="Poison">
@@ -2145,7 +2138,6 @@
 			<effect name="DamOverTime" ticks="5" val="#dmg" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4199" levels="12" name="Decrease P. Atk.">
