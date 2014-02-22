@@ -51,7 +51,6 @@
 			<effect name="Sleep" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4202" levels="12" name="Hold">
@@ -77,7 +76,6 @@
 			<effect name="Root" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4203" levels="12" name="Decrease Speed">
@@ -132,7 +130,6 @@
 			<effect name="DamOverTime" ticks="5" val="#damage" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4205" levels="12" name="Paralysis">
@@ -159,7 +156,6 @@
 			<effect name="Paralyze" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4206" levels="12" name="Decrease MP">
@@ -186,7 +182,6 @@
 			<effect name="ManaDamOverTime" ticks="5" val="#mdot" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4207" levels="12" name="BOSS Power Shot">
@@ -442,7 +437,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="95" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -1189,7 +1183,6 @@
 			<effect name="DamOverTime" ticks="5" val="#dot" />
 		</for>
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
-		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4260" levels="12" name="Steal Blood">
