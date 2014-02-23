@@ -27,14 +27,14 @@
 				<param expMultiplier="0.7" />
 			</effect>
 		</for>
-		<for>
+		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcIds" />
 				<param consumeItemId="1458" consumeItemCount="5" />
 				<param lifeTime="1200" />
 				<param expMultiplier="#ench1expPenalty" />
 			</effect>
-		</for>
+		</enchant1for>
 	</skill>
 	<skill id="302" levels="9" name="Spoil Festival" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<!-- Confirmed CT2.5 -->
