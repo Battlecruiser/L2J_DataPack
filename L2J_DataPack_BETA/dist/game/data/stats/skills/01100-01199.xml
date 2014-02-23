@@ -238,34 +238,35 @@
 		<table name="#hitTime"> 15000 15000 15000 15000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 </table>
 		<table name="#itemConsumeCount"> 1 1 2 2 7 1 1 4 5 6 11 12 2 3 4 4 9 10 </table>
 		<table name="#itemConsumeCountOT"> 0 0 0 0 0 1 1 1 1 1 1 1 2 2 2 2 2 2 </table>
-		<table name="#itemConsumeSteps"> 0 0 0 0 0 14 14 14 14 14 14 14 14 14 14 14 14 14 </table>
 		<table name="#npcIds"> 14111 14112 14113 14114 14115 14116 14117 14118 14119 14120 14121 14122 14123 14124 14125 14126 14127 14128 </table>
-		<table name="#summonTotalLifeTime"> 1200000 1200000 1200000 1200000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 </table>
+		<table name="#summonLifeTime"> 1200 1200 1200 1200 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 </table>
 		<table name="#enchNpcId"> 14129 14130 14131 14132 14133 14134 14135 14136 14137 14138 14139 14140 14141 14142 14143 14144 14145 14146 14147 14148 14149 14150 14151 14152 14153 14154 14155 14156 14157 14158 </table>
 		<set name="hitTime" val="#hitTime" />
-		<set name="inheritElementals" val="true" />
-		<set name="inheritPercent" val="1.00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
 		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeIdOT" val="3031" />
-		<set name="itemConsumeSteps" val="#itemConsumeSteps" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="#summonTotalLifeTime" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="#npcIds" />
-		<enchant1 name="npcId" val="#enchNpcId" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param lifeTime="#summonLifeTime" />
+			</effect>
+		</for>
+		<for>
+			<effect name="Summon">
+				<param npcId="#enchNpcId" />
+				<param consumeItemId="3031" consumeItemCount="2" />
+				<param lifeTime="3600" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1126" levels="34" name="Servitor Recharge" enchantGroup1="2" enchantGroup2="2">
 		<table name="#amount"> 41 44 49 52 57 60 66 70 73 77 81 86 90 94 98 102 104 106 108 110 113 115 116 118 120 122 124 126 128 129 131 133 134 136 </table>
@@ -344,33 +345,34 @@
 		<table name="#hitTime"> 15000 15000 15000 15000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 </table>
 		<table name="#itemConsumeCount"> 1 1 2 2 7 1 1 4 5 6 11 12 2 3 4 4 9 10 </table>
 		<table name="#itemConsumeCountOT"> 0 0 0 0 0 1 1 1 1 1 1 1 2 2 2 2 2 2 </table>
-		<table name="#itemConsumeSteps"> 0 0 0 0 0 14 14 14 14 14 14 14 14 14 14 14 14 14 </table>
 		<table name="#npcIds"> 14479 14480 14481 14482 14483 14484 14485 14486 14487 14488 14489 14490 14491 14492 14493 14494 14495 14496 </table>
-		<table name="#summonTotalLifeTime"> 1200000 1200000 1200000 1200000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 </table>
+		<table name="#summonLifeTime"> 1200 1200 1200 1200 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 </table>
 		<set name="hitTime" val="#hitTime" />
-		<set name="inheritElementals" val="true" />
-		<set name="inheritPercent" val="1.00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
 		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeIdOT" val="3031" />
-		<set name="itemConsumeSteps" val="#itemConsumeSteps" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="#summonTotalLifeTime" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="#npcIds" />
-		<enchant1 name="npcId" val="#enchNpcId" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param lifeTime="#summonLifeTime" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#enchNpcId" />
+				<param consumeItemId="3031" consumeItemCount="2" />
+				<param lifeTime="3600" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="1129" levels="7" name="Summon Reanimated Man" enchantGroup1="1">
 		<table name="#itemConsumeCount"> 11 13 6 9 9 6 9 </table>
@@ -384,29 +386,31 @@
 		<!-- set name="castRange" val="40" / -->
 		<!-- set name="effectRange" val="400" / -->
 		<set name="hitTime" val="15000" />
-		<set name="inheritElementals" val="true" />
-		<set name="inheritPercent" val="1.00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
 		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeIdOT" val="3031" />
-		<set name="itemConsumeSteps" val="#itemConsumeSteps" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="3600000" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="#npcIds" />
-		<enchant1 name="npcId" val="#enchNpcId" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param lifeTime="3600" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#enchNpcId" />
+				<param consumeItemId="3031" consumeItemCount="2" />
+				<param lifeTime="3600" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="1139" levels="2" name="Servitor Magic Shield" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 2 3 </table>
@@ -730,28 +734,31 @@
 		<!-- set name="castRange" val="40" / -->
 		<!-- set name="effectRange" val="400" / -->
 		<set name="hitTime" val="15000" />
-		<set name="inheritElementals" val="true" />
-		<set name="inheritPercent" val="1.00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeSteps" val="0" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="3600000" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="expPenalty" val="0.9" /> <!-- 90 percent of acquired Exp will be consumed. -->
-		<set name="npcId" val="#npcIds" />
-		<enchant1 name="npcId" val="#enchNpcId" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param expMultiplier="0.1" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#enchNpcId" />
+				<param lifeTime="3600" />
+				<param expMultiplier="0.1" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="1155" levels="15" name="Corpse Burst" enchantGroup1="2" enchantGroup2="2">
 		<table name="#effectPoints"> -219 -229 -239 -248 -257 -266 -275 -283 -291 -299 -306 -312 -318 -323 -328 </table>

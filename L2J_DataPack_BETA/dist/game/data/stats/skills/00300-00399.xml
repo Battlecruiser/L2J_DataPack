@@ -5,32 +5,36 @@
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 74 82 88 94 100 </table>
 		<table name="#npcIds"> 14702 14703 14704 14705 14706 </table>
-		<table name="#ench1expPenalty"> 0.28 0.26 0.24 0.22 0.2 0.18 0.16 0.14 0.12 0.1 0.08 0.06 0.04 0.02 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
+		<table name="#ench1expPenalty"> 0.72 0.74 0.76 0.78 0.8 0.82 0.84 0.86 0.88 0.9 0.92 0.94 0.96 0.98 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </table>
 		<table name="#enchNpcIds"> 14707 14708 14709 14710 14711 14712 14713 14714 14715 14716 14717 14718 14719 14720 14721 14722 14723 14724 14725 14726 14727 14728 14729 14730 14731 14732 14733 14734 14735 14736 </table>
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill0301" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeCountOT" val="5" />
 		<set name="itemConsumeId" val="1458" />
-		<set name="itemConsumeIdOT" val="1458" />
-		<set name="itemConsumeSteps" val="4" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="expPenalty" val="0.3" /> <!-- 30 percent of acquired Exp will be consumed. -->
-		<set name="npcId" val="#npcIds" />
-		<enchant1 name="expPenalty" val="#ench1expPenalty" />
-		<enchant1 name="npcId" val="#enchNpcIds" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param consumeItemId="1458" consumeItemCount="5" />
+				<param lifeTime="1200" />
+				<param expMultiplier="0.7" />
+			</effect>
+		</for>
+		<for>
+			<effect name="Summon">
+				<param npcId="#enchNpcIds" />
+				<param consumeItemId="1458" consumeItemCount="5" />
+				<param lifeTime="1200" />
+				<param expMultiplier="#ench1expPenalty" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="302" levels="9" name="Spoil Festival" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<!-- Confirmed CT2.5 -->

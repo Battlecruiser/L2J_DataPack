@@ -1695,25 +1695,30 @@
 		<set name="icon" val="icon.skill0448" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="27" />
-		<set name="itemConsumeCountOT" val="13" />
 		<set name="itemConsumeId" val="1461" />
-		<set name="itemConsumeIdOT" val="2132" />
 		<set name="itemConsumeSteps" val="60" />
 		<set name="magicLvl" val="68" />
 		<set name="mpInitialConsume" val="530" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="1000" />
-		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="14839" />
-		<enchant1 name="npcId" val="#ench1npcId" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="14839" />
+				<param consumeItemId="2132" consumeItemCount="13" />
+				<param lifeTime="1200" />
+			</effect>
+		</for>
+		<for>
+			<effect name="Summon">
+				<param npcId="#ench1npcId" />
+				<param consumeItemId="2132" consumeItemCount="13" />
+				<param lifeTime="1200" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="449" levels="4" name="Summon Attractive Cubic" enchantGroup1="2">
 		<!-- Confirmed CT2.5 -->

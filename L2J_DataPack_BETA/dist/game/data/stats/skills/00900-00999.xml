@@ -313,24 +313,22 @@
 		<set name="icon" val="icon.skill0912" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="2" />
-		<set name="itemConsumeCountOT" val="1" />
 		<set name="itemConsumeId" val="1461" />
-		<set name="itemConsumeIdOT" val="1461" />
-		<set name="itemConsumeSteps" val="4" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="145" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="45000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="3600000" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="14918" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="14918" />
+				<param consumeItemId="1461" consumeItemCount="1" />
+				<param lifeTime="3600" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="913" levels="1" name="Deflect Magic">
 		<set name="abnormalLvl" val="1" />

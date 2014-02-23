@@ -551,20 +551,24 @@
 		<set name="mpInitialConsume" val="530" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="itemConsumeCountOT" val="40" />
-		<set name="itemConsumeIdOT" val="2131" />
-		<set name="itemConsumeSteps" val="60" />
-		<set name="npcId" val="14737" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="1000" />
-		<set name="summonTotalLifeTime" val="1200000" />
-		<enchant1 name="npcId" val="#enchNpcId" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="14737" />
+				<param consumeItemId="2131" consumeItemCount="40" />
+				<param lifeTime="1200" />
+			</effect>
+		</for>
+		<for>
+			<effect name="Summon">
+				<param npcId="#enchNpcId" />
+				<param consumeItemId="2131" consumeItemCount="40" />
+				<param lifeTime="1200" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="15" levels="52" name="Charm">
 		<!-- Confirmed CT2.5 -->
@@ -886,32 +890,36 @@
 		<table name="#magicLvl"> 28 36 43 49 55 60 64 68 72 </table>
 		<table name="#mpConsume"> 49 62 75 88 100 110 119 126 133 </table>
 		<table name="#npcIds"> 14663 14664 14665 14666 14667 14668 14669 14670 14671 </table>
-		<table name="#ench1expPenalty"> 0.14 0.13 0.12 0.11 0.1 0.09 0.08 0.07 0.06 0.05 0.04 0.03 0.02 0.01 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
+		<table name="#ench1expPenalty"> 0.86 0.87 0.88 0.89 0.90 0.91 0.92 0.93 0.94 0.95 0.96 0.97 0.98 0.99 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </table>
 		<table name="#enchNpcId"> 14672 14673 14674 14675 14676 14677 14678 14679 14680 14681 14682 14683 14684 14685 14686 14687 14688 14689 14690 14691 14692 14693 14694 14695 14696 14697 14698 14699 14700 14701 </table>
 		<set name="hitTime" val="15000" />
 		<set name="icon" val="icon.skill0025" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
 		<set name="itemConsumeId" val="#itemConsumeId" />
-		<set name="itemConsumeIdOT" val="#itemConsumeId" />
-		<set name="itemConsumeSteps" val="4" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="expPenalty" val="0.15" /> <!-- 15 percent of earned Exp will be consumed -->
-		<set name="npcId" val="#npcIds" />
-		<enchant1 name="expPenalty" val="#ench1expPenalty" />
-		<enchant1 name="npcId" val="#enchNpcId" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param consumeItemId="#itemConsumeId" consumeItemCount="#itemConsumeCountOT" />
+				<param lifeTime="1200" />
+				<param expMultiplier="0.85" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#enchNpcId" />
+				<param consumeItemId="1459" consumeItemCount="4" />
+				<param lifeTime="1200" />
+				<param expMultiplier="#ench1expPenalty" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="27" levels="14" name="Unlock">
 		<table name="#chance"> 30 50 75 100 100 100 100 100 100 100 100 100 100 100 </table>

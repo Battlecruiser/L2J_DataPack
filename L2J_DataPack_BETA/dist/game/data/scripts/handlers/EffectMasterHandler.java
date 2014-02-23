@@ -154,6 +154,7 @@ public final class EffectMasterHandler
 		StaticDamage.class,
 		StealAbnormal.class,
 		Stun.class,
+		Summon.class,
 		SummonAgathion.class,
 		SummonCubic.class,
 		SummonNpc.class,
