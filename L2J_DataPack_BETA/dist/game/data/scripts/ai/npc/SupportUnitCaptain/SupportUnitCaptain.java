@@ -260,7 +260,7 @@ public final class SupportUnitCaptain extends AbstractNpcAI
 			{
 				if (player.isClanLeader() || player.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME))
 				{
-					RequestAcquireSkill.showSUbUnitSkillList(player);
+					RequestAcquireSkill.showSubUnitSkillList(player);
 				}
 				else
 				{
