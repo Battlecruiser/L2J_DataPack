@@ -1139,6 +1139,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8250" levels="2" name="Summon Tigress">
+		<table name="#npcIds"> 14916 14917 </table>
 		<set name="hitTime" val="15000" />
 		<set name="icon" val="icon.skill0283" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1146,18 +1147,17 @@
 		<set name="mpConsume" val="117" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<table name="#npcIds"> 14916 14917 </table>
 		<set name="magicLvl" val="63" />
-		<set name="npcId" val="#npcIds" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="1200" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8251" levels="1" name="Collection Agathion Release Seal">
 		<!-- Confirmed CT2.5 -->

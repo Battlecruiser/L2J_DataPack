@@ -124,11 +124,8 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20707" />
 		<set name="magicLvl" val="1" />
-		<set name="npcDistance" val="40" />
-		<set name="npcId" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="12000" />
-		<set name="skillType" val="SUMMON" /> <!-- TODO: SUMMON_NPC_NEAR" -->
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player active_skill_id="21120" />
@@ -139,6 +136,12 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SummonNpc">
+				<param npcId="20" />
+				<param randomOffset="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22106" levels="1" name="Belldandy Summon Scroll (Event)">
 		<!-- Confirmed CT2.5 -->
@@ -147,11 +150,8 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20707" />
 		<set name="magicLvl" val="1" />
-		<set name="npcDistance" val="40" />
-		<set name="npcId" val="21" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="12000" />
-		<set name="skillType" val="SUMMON" /> <!-- TODO: SUMMON_NPC_NEAR" -->
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player active_skill_id="21120" />
@@ -162,6 +162,12 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SummonNpc">
+				<param npcId="21" />
+				<param randomOffset="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22107" levels="1" name="Skooldie Summon Scroll (Event)">
 		<!-- Confirmed CT2.5 -->
@@ -170,11 +176,8 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20707" />
 		<set name="magicLvl" val="1" />
-		<set name="npcDistance" val="40" />
-		<set name="npcId" val="19" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="12000" />
-		<set name="skillType" val="SUMMON" /> <!-- TODO: SUMMON_NPC_NEAR" -->
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player active_skill_id="21120" />
@@ -185,6 +188,12 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SummonNpc">
+				<param npcId="19" />
+				<param randomOffset="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22108" levels="1" name="Halloween Toy Box">
 		<!-- Confirmed CT2.5 -->

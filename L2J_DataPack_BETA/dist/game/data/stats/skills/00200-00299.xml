@@ -2396,34 +2396,38 @@
 		<table name="#mpConsume"> 56 70 85 92 98 104 109 </table>
 		<table name="#mpInitialConsume"> 14 18 22 23 25 26 28 </table>
 		<table name="#npcIds"> 14799 14800 14801 14802 14803 14804 14805 </table>
-		<table name="#ench1expPenalty"> 0.14 0.13 0.12 0.11 0.1 0.09 0.08 0.07 0.06 0.05 0.04 0.03 0.02 0.01 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
+		<table name="#ench1expPenalty"> 0.86 0.87 0.88 0.89 0.90 0.91 0.92 0.93 0.94 0.95 0.96 0.97 0.98 0.99 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </table>
 		<table name="#enchNpcIds"> 14806 14807 14808 14809 14810 14811 14812 14813 14814 14815 14816 14817 14818 14819 14820 14821 14822 14823 14824 14825 14826 14827 14828 14829 14830 14831 14832 14833 14834 14835 </table>
 		<set name="hitTime" val="15000" />
 		<set name="icon" val="icon.skill0283" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
 		<set name="itemConsumeId" val="1459" />
-		<set name="itemConsumeIdOT" val="1459" />
-		<set name="itemConsumeSteps" val="4" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="expPenalty" val="0.15" /> <!-- 15 percent of acquired Exp will also be consumed. -->
-		<set name="npcId" val="#npcIds" />
-		<enchant1 name="expPenalty" val="#ench1expPenalty" />
-		<enchant1 name="npcId" val="#enchNpcIds" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param consumeItemId="1459" consumeItemCount="#itemConsumeCountOT" />
+				<param lifeTime="1200" />
+				<param expMultiplier="0.85" />
+			</effect>
+		</for>
+		<for>
+			<effect name="Summon">
+				<param npcId="#enchNpcIds" />
+				<param consumeItemId="1459" consumeItemCount="4" />
+				<param lifeTime="1200" />
+				<param expMultiplier="#ench1expPenalty" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="284" levels="40" name="Hurricane Assault" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<table name="#effectPoints"> -286 -295 -303 -320 -328 -337 -346 -355 -363 -372 -381 -389 -398 -407 -415 -424 -432 -440 -449 -457 -465 -473 -481 -488 -496 -503 -510 -517 -524 -531 -537 -543 -549 -555 -560 -565 -570 -574 -578 -582 </table>
@@ -2895,24 +2899,28 @@
 		<set name="icon" val="icon.skill0299" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="70" />
-		<set name="itemConsumeCountOT" val="20" />
 		<set name="itemConsumeId" val="1460" />
-		<set name="itemConsumeIdOT" val="2132" />
-		<set name="itemConsumeSteps" val="60" />
 		<set name="magicLvl" val="58" />
 		<set name="mpInitialConsume" val="530" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="1000" />
-		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="14768" />
-		<enchant1 name="npcId" val="#enchNpcIds" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="14768" />
+				<param consumeItemId="2132" consumeItemCount="20" />
+				<param lifeTime="1200" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#enchNpcIds" />
+				<param consumeItemId="2132" consumeItemCount="20" />
+				<param lifeTime="1200" />
+			</effect>
+		</enchant1for>
 	</skill>
 </list>

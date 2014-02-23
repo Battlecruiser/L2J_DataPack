@@ -735,32 +735,33 @@
 		<table name="#enchNpcId"> 14265 14266 14267 14268 14269 14270 14271 14272 14273 14274 14275 14276 14277 14278 14279 14280 14281 14282 14283 14284 14285 14286 14287 14288 14289 14290 14291 14292 14293 14294 </table>
 		<set name="icon" val="icon.skill1331" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
 		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeIdOT" val="3031" />
-		<set name="itemConsumeSteps" val="14" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="3600000" />
-		<!-- should be consumed over 4 regular intervals -->
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<!-- H5 hitTime -->
 		<set name="hitTime" val="6000" />
-		<set name="inheritElementals" val="true" />
-		<set name="inheritPercent" val="1.00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="SUMMON" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="#npcIds" />
-		<enchant1 name="npcId" val="#enchNpcId" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param lifeTime="3600" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#enchNpcId" />
+				<param consumeItemId="3031" consumeItemCount="6" />
+				<param lifeTime="3600" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="1332" levels="10" name="Summon Unicorn Seraphim" enchantGroup1="1">
 		<table name="#itemConsumeCount"> 1 1 2 2 4 1 1 4 1 2 </table>
@@ -772,32 +773,33 @@
 		<table name="#enchNpcId"> 14449 14450 14451 14452 14453 14454 14455 14456 14457 14458 14459 14460 14461 14462 14463 14464 14465 14466 14467 14468 14469 14470 14471 14472 14473 14474 14475 14476 14477 14478 </table>
 		<set name="icon" val="icon.skill1332" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
 		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeIdOT" val="3031" />
-		<set name="itemConsumeSteps" val="14" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="3600000" />
-		<!-- should be consumed over 4 regular intervals -->
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<!-- H5 hitTime -->
 		<set name="hitTime" val="6000" />
-		<set name="inheritElementals" val="true" />
-		<set name="inheritPercent" val="1.00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="SUMMON" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="#npcIds" />
-		<enchant1 name="npcId" val="#enchNpcId" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param lifeTime="3600" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#enchNpcId" />
+				<param consumeItemId="3031" consumeItemCount="6" />
+				<param lifeTime="3600" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="1333" levels="10" name="Summon Nightshade" enchantGroup1="1">
 		<table name="#itemConsumeCount"> 1 1 2 2 4 1 1 4 1 2 </table>
@@ -809,32 +811,33 @@
 		<table name="#enchNpcId"> 14633 14634 14635 14636 14637 14638 14639 14640 14641 14642 14643 14644 14645 14646 14647 14648 14649 14650 14651 14652 14653 14654 14655 14656 14657 14658 14659 14660 14661 14662 </table>
 		<set name="icon" val="icon.skill1333" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
 		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeIdOT" val="3031" />
-		<set name="itemConsumeSteps" val="14" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="3600000" />
-		<!-- should be consumed over 4 regular intervals -->
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<!-- H5 hitTime -->
 		<set name="hitTime" val="6000" />
-		<set name="inheritElementals" val="true" />
-		<set name="inheritPercent" val="1.00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="SUMMON" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="#npcIds" />
-		<enchant1 name="npcId" val="#enchNpcId" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param lifeTime="3600" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#enchNpcId" />
+				<param consumeItemId="3031" consumeItemCount="6" />
+				<param lifeTime="3600" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="1334" levels="7" name="Summon Cursed Man" enchantGroup1="1">
 		<table name="#itemConsumeCount"> 3 5 12 1 2 3 4 </table>
@@ -846,33 +849,34 @@
 		<table name="#enchNpcId"> 14081 14082 14083 14084 14085 14086 14087 14088 14089 14090 14091 14092 14093 14094 14095 14096 14097 14098 14099 14100 14101 14102 14103 14104 14105 14106 14107 14108 14109 14110 </table>
 		<set name="icon" val="icon.skill1334" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
 		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeIdOT" val="3031" />
-		<set name="itemConsumeSteps" val="4" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="3600000" />
-		<!-- should be consumed over 4 regular intervals -->
 		<!-- set name="castRange" val="40" / -->
 		<!-- set name="effectRange" val="400" / -->
 		<set name="hitTime" val="15000" />
-		<set name="inheritElementals" val="true" />
-		<set name="inheritPercent" val="1.00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="#npcIds" />
-		<enchant1 name="npcId" val="#enchNpcId" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param lifeTime="3600" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#enchNpcId" />
+				<param consumeItemId="3031" consumeItemCount="2" />
+				<param lifeTime="3600" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="1335" levels="1" name="Balance Life">
 		<!-- Confirmed CT2.5 -->

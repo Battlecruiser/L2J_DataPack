@@ -298,63 +298,60 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="8" />
 		<set name="itemConsumeId" val="1458" />
-		<set name="itemConsumeSteps" val="0" />
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="3" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="20150" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="20150" />
+				<param lifeTime="1200" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="7031" levels="1" name="Summon Skeleton Royal Guard">
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="8" />
 		<set name="itemConsumeId" val="1458" />
-		<set name="itemConsumeSteps" val="0" />
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="3" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="20169" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="20169" />
+				<param lifeTime="1200" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="7032" levels="1" name="Summon Hunter Gargoyle">
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="8" />
 		<set name="itemConsumeId" val="1458" />
-		<set name="itemConsumeSteps" val="0" />
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="3" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="20241" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="20241" />
+				<param lifeTime="1200" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="7033" levels="1" name="not_used">
 		<set name="magicLvl" val="1" />
