@@ -260,13 +260,13 @@
 				<param lifeTime="#summonLifeTime" />
 			</effect>
 		</for>
-		<for>
+		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcId" />
 				<param consumeItemId="3031" consumeItemCount="2" />
 				<param lifeTime="3600" />
 			</effect>
-		</for>
+		</enchant1for>
 	</skill>
 	<skill id="1126" levels="34" name="Servitor Recharge" enchantGroup1="2" enchantGroup2="2">
 		<table name="#amount"> 41 44 49 52 57 60 66 70 73 77 81 86 90 94 98 102 104 106 108 110 113 115 116 118 120 122 124 126 128 129 131 133 134 136 </table>

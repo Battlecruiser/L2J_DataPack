@@ -2420,14 +2420,14 @@
 				<param expMultiplier="0.85" />
 			</effect>
 		</for>
-		<for>
+		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcIds" />
 				<param consumeItemId="1459" consumeItemCount="4" />
 				<param lifeTime="1200" />
 				<param expMultiplier="#ench1expPenalty" />
 			</effect>
-		</for>
+		</enchant1for>
 	</skill>
 	<skill id="284" levels="40" name="Hurricane Assault" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<table name="#effectPoints"> -286 -295 -303 -320 -328 -337 -346 -355 -363 -372 -381 -389 -398 -407 -415 -424 -432 -440 -449 -457 -465 -473 -481 -488 -496 -503 -510 -517 -524 -531 -537 -543 -549 -555 -560 -565 -570 -574 -578 -582 </table>

@@ -331,13 +331,13 @@
 				<param lifeTime="3600" />
 			</effect>
 		</for>
-		<for>
+		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#ench1npcId" />
 				<param consumeItemId="3031" consumeItemCount="11" />
 				<param lifeTime="3600" />
 			</effect>
-		</for>
+		</enchant1for>
 	</skill>
 	<skill id="1409" levels="1" name="Cleanse">
 		<set name="castRange" val="600" />
