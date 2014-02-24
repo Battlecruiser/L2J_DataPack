@@ -1144,11 +1144,12 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="npcId" val="16073" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" />
+			<effect name="SummonAgathion">
+				<param npcId="16073" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8465" levels="1" name="Notifier">

@@ -273,11 +273,12 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="npcId" val="16063" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" />
+			<effect name="SummonAgathion">
+				<param npcId="16063" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8315" levels="1" name="Santa Claus' Blessed Weapon">
@@ -468,11 +469,12 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="npcId" val="16064" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" />
+			<effect name="SummonAgathion">
+				<param npcId="16064" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8328" levels="1" name="Release Seal on Agathion - Oink oink">
@@ -481,11 +483,12 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="npcId" val="16065" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" />
+			<effect name="SummonAgathion">
+				<param npcId="16065" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8329" levels="1" name="Summon Friend">
@@ -509,11 +512,12 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="npcId" val="16066" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" />
+			<effect name="SummonAgathion">
+				<param npcId="16066" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8331" levels="1" name="Blue Talisman - Buff Cancel">
@@ -980,11 +984,12 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="npcId" val="16070" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" />
+			<effect name="SummonAgathion">
+				<param npcId="16070" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8359" levels="1" name="Notifier">

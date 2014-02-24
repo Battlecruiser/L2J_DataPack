@@ -1135,11 +1135,12 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="75" />
-		<set name="npcId" val="16028" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" />
+			<effect name="SummonAgathion">
+				<param npcId="16028" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3269" levels="1" name="Summon Agathion - Rainbow Clan Hall">
@@ -1148,11 +1149,12 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="65" />
-		<set name="npcId" val="16027" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" />
+			<effect name="SummonAgathion">
+				<param npcId="16027" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3270" levels="1" name="Summon Agathion - Beast Farm">
@@ -1161,11 +1163,12 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="65" />
-		<set name="npcId" val="16026" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" />
+			<effect name="SummonAgathion">
+				<param npcId="16026" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3271" levels="1" name="Blue Talisman of Power">
