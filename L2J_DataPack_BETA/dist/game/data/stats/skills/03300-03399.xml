@@ -841,11 +841,12 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="65" />
-		<set name="npcId" val="16029" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" />
+			<effect name="SummonAgathion">
+				<param npcId="16029" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3362" levels="1" name="Traits Strengthen Necklace">

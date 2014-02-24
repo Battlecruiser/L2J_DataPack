@@ -31,9 +31,20 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public final class SummonAgathion extends AbstractEffect
 {
+	private final int _npcId;
+	
 	public SummonAgathion(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		if (hasParameters())
+		{
+			_npcId = params.getInt("npcId", 0);
+		}
+		else
+		{
+			_npcId = 0;
+			_log.warning(getClass().getSimpleName() + ": must have parameters.");
+		}
 	}
 	
 	@Override
@@ -57,7 +68,7 @@ public final class SummonAgathion extends AbstractEffect
 			return;
 		}
 		
-		player.setAgathionId((info.getSkill() == null) ? 0 : info.getSkill().getNpcId());
+		player.setAgathionId(_npcId);
 		player.broadcastUserInfo();
 	}
 }
