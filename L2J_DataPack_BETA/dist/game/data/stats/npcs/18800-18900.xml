@@ -2138,7 +2138,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18850" level="85" type="L2Npc" name="Jinia ">
+	<npc id="18850" level="85" type="L2QuestGuard" name="Jinia ">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6641" level="1" /> <!-- Holy Ball -->
@@ -2169,7 +2169,6 @@
 			<skill id="4414" level="2" /> <!--Standard Type -->
 			<skill id="4415" level="3" /> <!--One-handed Sword -->
 			<skill id="4416" level="14" /> <!--Humans -->
-			<skill id="6288" level="1" /> <!--Jinia's Prayer -->
 			<skill id="6641" level="1" /> <!--Holy Ball -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
@@ -2180,7 +2179,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="18851" level="85" type="L2Npc" name="Kegor">
+	<npc id="18851" level="85" type="L2QuestGuard" name="Kegor">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6643" level="1" /> <!-- Holy Strike -->
@@ -2212,7 +2211,6 @@
 			<skill id="4414" level="2" /> <!--Standard Type -->
 			<skill id="4415" level="3" /> <!--One-handed Sword -->
 			<skill id="4416" level="14" /> <!--Humans -->
-			<skill id="6289" level="1" /> <!--Kegor's Courage -->
 			<skill id="6642" level="1" /> <!--Dash -->
 			<skill id="6643" level="1" /> <!--Holy Strike -->
 		</skill_list>
@@ -2260,7 +2258,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18853" level="85" type="L2Npc" name="Glacier">
+	<npc id="18853" level="85" type="L2Monster" name="Glacier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff" id="6301" level="1" /> <!-- Cold Mana's Fragment -->
@@ -2302,7 +2300,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18854" level="85" type="L2Npc" name="Archer's Breath">
+	<npc id="18854" level="85" type="L2Monster" name="Archer's Breath">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill_Blizzard" id="6299" level="1" /> <!-- Breath of Ice Palace - Ice Storm -->
@@ -2335,8 +2333,6 @@
 			<skill id="4414" level="2" /> <!--Standard Type -->
 			<skill id="4415" level="3" /> <!--One-handed Sword -->
 			<skill id="4416" level="7" /> <!--Spirits -->
-			<skill id="6299" level="1" /> <!--Breath of Ice Palace - Ice Storm -->
-			<skill id="6300" level="1" /> <!--Self-Destruction -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -2345,7 +2341,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="18855" level="85" type="L2Npc" name="Archery Knight">
+	<npc id="18855" level="85" type="L2Monster" name="Archery Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" /> <!-- Power Strike -->
@@ -2399,7 +2395,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="18856" level="85" type="L2Npc" name="Archery Knight">
+	<npc id="18856" level="85" type="L2Monster" name="Archery Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" /> <!-- Power Strike -->
