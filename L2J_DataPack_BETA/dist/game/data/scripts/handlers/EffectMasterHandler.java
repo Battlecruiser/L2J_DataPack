@@ -179,6 +179,8 @@ public final class EffectMasterHandler
 		TransferDamage.class,
 		TransferHate.class,
 		Transformation.class,
+		TrapDetect.class,
+		TrapRemove.class,
 		TriggerSkillByDamage.class,
 		UnsummonAgathion.class,
 		VitalityPointUp.class,

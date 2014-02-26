@@ -373,10 +373,13 @@
 		<set name="magicLvl" val="74" />
 		<set name="mpConsume" val="67" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="78" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DETECT_TRAP" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="TrapDetect">
+				<param power="78" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="624" levels="1" name="Remove Trap">
 		<!-- Confirmed CT2.5 -->
@@ -387,13 +390,14 @@
 		<set name="magicLvl" val="74" />
 		<set name="mpConsume" val="17" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="78" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="REMOVE_TRAP" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcType="L2TrapInstance" />
 		</cond>
+		<effect name="TrapRemove">
+			<param power="78" />
+		</effect>
 	</skill>
 	<skill id="625" levels="1" name="Soul Gathering" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->

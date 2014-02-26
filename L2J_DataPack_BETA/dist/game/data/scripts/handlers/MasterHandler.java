@@ -209,7 +209,6 @@ import handlers.skillhandlers.Detection;
 import handlers.skillhandlers.Dummy;
 import handlers.skillhandlers.NornilsPower;
 import handlers.skillhandlers.Sow;
-import handlers.skillhandlers.Trap;
 import handlers.skillhandlers.Unlock;
 import handlers.targethandlers.Area;
 import handlers.targethandlers.AreaCorpseMob;
@@ -498,7 +497,6 @@ public class MasterHandler
 			Dummy.class,
 			NornilsPower.class,
 			Sow.class,
-			Trap.class,
 			Unlock.class,
 		},
 		{
