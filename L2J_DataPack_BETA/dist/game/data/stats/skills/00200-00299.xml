@@ -1009,10 +1009,10 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="HOLY" />
 		<cond>
-			<player canPossessHolything="true" />
+			<player canTakeCastle="true" />
 		</cond>
 		<for>
-			<effect name="HolythingPossess" />
+			<effect name="TakeCastle" />
 		</for>
 	</skill>
 	<skill id="247" levels="1" name="Build Headquarters">
@@ -1025,8 +1025,13 @@
 		<set name="mpInitialConsume" val="30" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIEGEFLAG" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canCreateBase="true" />
+		</cond>
+		<for>
+			<effect name="HeadquarterCreate" />
+		</for>
 	</skill>
 	<skill id="248" levels="5" name="Crystallize">
 		<table name="#magicLvl"> 20 40 52 60 70 </table>
@@ -2906,7 +2911,10 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+			<and>
+				<player canSummon="true" />
+				<player canSummonSiegeGolem="true" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">

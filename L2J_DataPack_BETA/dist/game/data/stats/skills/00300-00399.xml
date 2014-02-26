@@ -883,7 +883,6 @@
 	<skill id="326" levels="1" name="Build Advanced Headquarters">
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0326" />
-		<set name="isAdvanced" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="300" />
 		<set name="itemConsumeId" val="2131" />
@@ -891,8 +890,15 @@
 		<set name="mpInitialConsume" val="30" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="SIEGEFLAG" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canCreateBase="true" />
+		</cond>
+		<for>
+			<effect name="HeadquarterCreate">
+				<param isAdvanced="true" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="327" levels="1" name="Wyvern Aegis">
 		<set name="abnormalLvl" val="3" />
