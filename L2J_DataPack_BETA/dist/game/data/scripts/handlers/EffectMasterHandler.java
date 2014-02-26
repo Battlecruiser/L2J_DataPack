@@ -76,6 +76,7 @@ public final class EffectMasterHandler
 		DefenceTrait.class,
 		DeleteHate.class,
 		DeleteHateOfMe.class,
+		Detection.class,
 		Disarm.class,
 		DispelAll.class,
 		DispelByCategory.class,

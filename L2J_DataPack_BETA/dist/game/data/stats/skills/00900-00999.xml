@@ -826,8 +826,10 @@
 		<set name="mpConsume" val="67" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="DETECTION" />
-		<set name="targetType" val="SELF" /> <!-- NOTE: Using SELF due AURA is handled by skillType DETECTION -->
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="Detection" />
+		</for>
 	</skill>
 	<skill id="934" levels="1" name="Sigil Mastery">
 		<set name="icon" val="icon.skill0925" />
