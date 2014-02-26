@@ -887,14 +887,22 @@
 		</cond>
 	</skill>
 	<skill id="2353" levels="1" name="Nornil's Power">
+		<set name="affectRange" val="600" />
+		<set name="itemConsumeId" val="9713" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="200" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NORNILS_POWER" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="AURA" />
 		<cond msgId="113" addName="1">
-			<player insideZoneId="2353" />
+			<and>
+				<player instanceId="11" />
+				<player insideZoneId="2353" />
+			</and>
 		</cond>
+		<for>
+			<effect name="DetectHiddenObjects" />
+		</for>
 	</skill>
 	<skill id="2354" levels="1" name="Gate Key of Darkness">
 		<!-- Confirmed CT2.5 -->

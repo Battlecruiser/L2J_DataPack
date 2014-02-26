@@ -25,6 +25,7 @@ import java.util.List;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
@@ -42,8 +43,18 @@ public class Aura implements ITargetTypeHandler
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
 		for (L2Character obj : objs)
 		{
-			if (obj.isAttackable() || obj.isPlayable())
+			if (obj.isDoor() || obj.isAttackable() || obj.isPlayable())
 			{
+				// Stealth door targeting.
+				if (obj.isDoor())
+				{
+					final L2DoorInstance door = (L2DoorInstance) obj;
+					if (!door.getTemplate().isStealth())
+					{
+						continue;
+					}
+				}
+				
 				if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
 				{
 					continue;

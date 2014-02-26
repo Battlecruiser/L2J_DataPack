@@ -206,7 +206,6 @@ import handlers.punishmenthandlers.ChatBanHandler;
 import handlers.punishmenthandlers.JailHandler;
 import handlers.skillhandlers.DeluxeKey;
 import handlers.skillhandlers.Dummy;
-import handlers.skillhandlers.NornilsPower;
 import handlers.skillhandlers.Sow;
 import handlers.skillhandlers.Unlock;
 import handlers.targethandlers.Area;
@@ -493,7 +492,6 @@ public class MasterHandler
 			// Skill Handlers
 			DeluxeKey.class,
 			Dummy.class,
-			NornilsPower.class,
 			Sow.class,
 			Unlock.class,
 		},
