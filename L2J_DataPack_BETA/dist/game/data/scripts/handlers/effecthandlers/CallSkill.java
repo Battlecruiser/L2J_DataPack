@@ -34,7 +34,7 @@ public class CallSkill extends AbstractEffect
 	public CallSkill(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
-		_skill = new SkillHolder(getParameters().getInt("skillId"), getParameters().getInt("skillLevel", 1));
+		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
 	}
 	
 	@Override

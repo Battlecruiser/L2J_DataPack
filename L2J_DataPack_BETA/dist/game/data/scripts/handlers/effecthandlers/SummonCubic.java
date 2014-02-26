@@ -49,13 +49,13 @@ public final class SummonCubic extends AbstractEffect
 	public SummonCubic(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
-		_cubicId = getParameters().getInt("cubicId", -1);
+		_cubicId = params.getInt("cubicId", -1);
 		// Custom AI data.
-		_cubicPower = getParameters().getInt("cubicPower", 0);
-		_cubicDuration = getParameters().getInt("cubicDuration", 0);
-		_cubicDelay = getParameters().getInt("cubicDelay", 0);
-		_cubicMaxCount = getParameters().getInt("cubicMaxCount", -1);
-		_cubicSkillChance = getParameters().getInt("cubicSkillChance", 0);
+		_cubicPower = params.getInt("cubicPower", 0);
+		_cubicDuration = params.getInt("cubicDuration", 0);
+		_cubicDelay = params.getInt("cubicDelay", 0);
+		_cubicMaxCount = params.getInt("cubicMaxCount", -1);
+		_cubicSkillChance = params.getInt("cubicSkillChance", 0);
 	}
 	
 	@Override

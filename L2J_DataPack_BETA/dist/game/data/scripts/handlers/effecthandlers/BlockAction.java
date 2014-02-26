@@ -43,7 +43,7 @@ public final class BlockAction extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		String[] rawActions = getParameters().getString("blockedActions").split(",");
+		String[] rawActions = params.getString("blockedActions").split(",");
 		_blockedActions = new ArrayList<>(rawActions.length);
 		for (String act : rawActions)
 		{

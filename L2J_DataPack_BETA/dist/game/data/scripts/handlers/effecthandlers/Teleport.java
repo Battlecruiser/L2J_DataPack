@@ -36,7 +36,7 @@ public final class Teleport extends AbstractEffect
 	public Teleport(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
-		_loc = new Location(getParameters().getInt("x", 0), getParameters().getInt("y", 0), getParameters().getInt("z", 0));
+		_loc = new Location(params.getInt("x", 0), params.getInt("y", 0), params.getInt("z", 0));
 	}
 	
 	@Override

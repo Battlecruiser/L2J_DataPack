@@ -41,13 +41,13 @@ public final class DefenceTrait extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		if (!hasParameters())
+		if (params == null)
 		{
 			_log.warning(getClass().getSimpleName() + ": must have parameters.");
 			return;
 		}
 		
-		for (Entry<String, Object> param : getParameters().getSet().entrySet())
+		for (Entry<String, Object> param : params.getSet().entrySet())
 		{
 			try
 			{

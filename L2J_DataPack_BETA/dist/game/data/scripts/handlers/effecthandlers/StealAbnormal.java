@@ -43,9 +43,9 @@ public final class StealAbnormal extends AbstractEffect
 	public StealAbnormal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
-		_slot = getParameters().getString("slot", null);
-		_rate = getParameters().getInt("rate", 0);
-		_max = getParameters().getInt("max", 0);
+		_slot = params.getString("slot", null);
+		_rate = params.getInt("rate", 0);
+		_max = params.getInt("max", 0);
 	}
 	
 	@Override
