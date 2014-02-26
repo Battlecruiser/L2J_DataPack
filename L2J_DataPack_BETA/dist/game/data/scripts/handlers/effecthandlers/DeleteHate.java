@@ -38,7 +38,7 @@ public final class DeleteHate extends AbstractEffect
 	public DeleteHate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
-		_chance = hasParameters() ? getParameters().getInt("chance", 100) : 100;
+		_chance = params != null ? params.getInt("chance", 100) : 100;
 	}
 	
 	@Override

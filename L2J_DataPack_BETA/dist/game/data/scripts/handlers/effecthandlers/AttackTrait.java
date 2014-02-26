@@ -41,9 +41,9 @@ public final class AttackTrait extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		if (hasParameters())
+		if (params != null)
 		{
-			for (Entry<String, Object> param : getParameters().getSet().entrySet())
+			for (Entry<String, Object> param : params.getSet().entrySet())
 			{
 				try
 				{

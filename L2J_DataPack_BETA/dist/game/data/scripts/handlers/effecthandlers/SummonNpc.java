@@ -49,11 +49,11 @@ public final class SummonNpc extends AbstractEffect
 	public SummonNpc(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
-		_despawnDelay = getParameters().getInt("despawnDelay", 20000);
-		_npcId = getParameters().getInt("npcId", 0);
-		_npcCount = getParameters().getInt("npcCount", 1);
-		_randomOffset = getParameters().getBoolean("randomOffset", false);
-		_isSummonSpawn = getParameters().getBoolean("isSummonSpawn", false);
+		_despawnDelay = params.getInt("despawnDelay", 20000);
+		_npcId = params.getInt("npcId", 0);
+		_npcCount = params.getInt("npcCount", 1);
+		_randomOffset = params.getBoolean("randomOffset", false);
+		_isSummonSpawn = params.getBoolean("isSummonSpawn", false);
 	}
 	
 	@Override

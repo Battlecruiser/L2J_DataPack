@@ -50,13 +50,13 @@ public class TriggerSkillByDamage extends AbstractEffect implements IDamageRecei
 	public TriggerSkillByDamage(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
-		_minAttackerLevel = getParameters().getInt("minAttackerLevel", 1);
-		_maxAttackerLevel = getParameters().getInt("maxAttackerLevel", 100);
-		_minDamage = getParameters().getInt("minDamage", 1);
-		_chance = getParameters().getInt("chance", 100);
-		_skill = new SkillHolder(getParameters().getInt("skillId"), getParameters().getInt("skillLevel", 1));
-		_targetType = getParameters().getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
-		_attackerType = getParameters().getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
+		_minAttackerLevel = params.getInt("minAttackerLevel", 1);
+		_maxAttackerLevel = params.getInt("maxAttackerLevel", 100);
+		_minDamage = params.getInt("minDamage", 1);
+		_chance = params.getInt("chance", 100);
+		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
+		_targetType = params.getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
+		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
 	}
 	
 	@Override
