@@ -18,22 +18,20 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.instancemanager.CastleManager;
+import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.entity.Castle;
+import com.l2jserver.gameserver.model.entity.Fort;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Holything Possess effect implementation.
+ * Take Fort effect implementation.
  * @author Adry_85
  */
-public final class HolythingPossess extends AbstractEffect
+public final class TakeFort extends AbstractEffect
 {
-	public HolythingPossess(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TakeFort(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}
@@ -52,8 +50,10 @@ public final class HolythingPossess extends AbstractEffect
 			return;
 		}
 		
-		Castle castle = CastleManager.getInstance().getCastle(info.getEffector());
-		castle.engrave(info.getEffector().getActingPlayer().getClan(), info.getEffected());
-		castle.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.OPPONENT_STARTED_ENGRAVING), false);
+		final Fort fort = FortManager.getInstance().getFort(info.getEffector().getActingPlayer());
+		if (fort != null)
+		{
+			fort.endOfSiege(info.getEffector().getActingPlayer().getClan());
+		}
 	}
 }

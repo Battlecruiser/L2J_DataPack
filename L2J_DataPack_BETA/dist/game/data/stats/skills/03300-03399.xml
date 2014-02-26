@@ -223,8 +223,16 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="CA1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="TAKEFORT" /> 
 		<set name="targetType" val="FLAGPOLE" />
+		<cond> 
+			<player canTakeFort="true" /> 
+		</cond>
+		<startEffects>
+			<effect name="TakeFortStart" />
+		</startEffects> 
+		<for>
+			<effect name="TakeFort" /> 
+		</for> 
 	</skill>
 	<skill id="3319" levels="1" name="Divine Protection of Ring">
 		<set name="magicLvl" val="86" />

@@ -211,7 +211,6 @@ import handlers.skillhandlers.Fishing;
 import handlers.skillhandlers.FishingSkill;
 import handlers.skillhandlers.NornilsPower;
 import handlers.skillhandlers.Sow;
-import handlers.skillhandlers.TakeFort;
 import handlers.skillhandlers.Trap;
 import handlers.skillhandlers.Unlock;
 import handlers.targethandlers.Area;
@@ -503,7 +502,6 @@ public class MasterHandler
 			FishingSkill.class,
 			NornilsPower.class,
 			Sow.class,
-			TakeFort.class,
 			Trap.class,
 			Unlock.class,
 		},

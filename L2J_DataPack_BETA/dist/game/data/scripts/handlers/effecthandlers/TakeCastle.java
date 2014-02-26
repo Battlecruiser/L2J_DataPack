@@ -18,48 +18,42 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Grow effect implementation.
+ * Take Castle effect implementation.
+ * @author Adry_85
  */
-public final class Grow extends AbstractEffect
+public final class TakeCastle extends AbstractEffect
 {
-	public Grow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TakeCastle(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean isInstant()
 	{
-		return L2EffectType.BUFF;
-	}
-	
-	@Override
-	public void onExit(BuffInfo info)
-	{
-		if (info.getEffected().isNpc())
-		{
-			L2Npc npc = (L2Npc) info.getEffected();
-			npc.setCollisionHeight(npc.getTemplate().getCollisionHeight());
-			npc.setCollisionRadius(npc.getTemplate().getfCollisionRadius());
-		}
+		return true;
 	}
 	
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (info.getEffected().isNpc())
+		if (!info.getEffector().isPlayer())
 		{
-			L2Npc npc = (L2Npc) info.getEffected();
-			npc.setCollisionHeight(npc.getTemplate().getCollisionHeightGrown());
-			npc.setCollisionRadius(npc.getTemplate().getCollisionRadiusGrown());
+			return;
 		}
+		
+		Castle castle = CastleManager.getInstance().getCastle(info.getEffector());
+		castle.engrave(info.getEffector().getActingPlayer().getClan(), info.getEffected());
+		castle.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.OPPONENT_STARTED_ENGRAVING), false);
 	}
 }

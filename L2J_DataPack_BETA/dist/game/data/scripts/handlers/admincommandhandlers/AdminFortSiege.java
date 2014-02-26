@@ -114,7 +114,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 				}
 				else
 				{
-					fort.setOwner(player.getClan(), false);
+					fort.endOfSiege(player.getClan());
 				}
 			}
 			else if (command.equalsIgnoreCase("admin_removefort"))

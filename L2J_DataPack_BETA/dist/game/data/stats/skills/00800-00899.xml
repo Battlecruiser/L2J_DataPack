@@ -943,8 +943,13 @@
 		<set name="mpInitialConsume" val="30" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="SIEGEFLAG" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canCreateOutpost="true" />
+		</cond>
+		<for>
+			<effect name="OutpostCreate" />
+		</for>
 	</skill>
 	<skill id="845" levels="1" name="Outpost Demolition">
 		<set name="castRange" val="100" />
@@ -959,6 +964,9 @@
 		<cond msgId="109">
 			<target npcId="36590" />
 		</cond>
+		<for>
+			<effect name="OutpostDestroy" />
+		</for>
 	</skill>
 	<skill id="846" levels="1" name="Possess Ward">
 		<!-- Confirmed CT2.5 -->
@@ -990,6 +998,9 @@
 		<cond msgId="109">
 			<target npcId="36590" />
 		</cond>
+		<for>
+			<effect name="TakeTerritoryFlag" />
+		</for>
 	</skill>
 	<skill id="848" levels="1" name="Gludio Territory Benefaction">
 		<!-- Confirmed CT2.5 -->

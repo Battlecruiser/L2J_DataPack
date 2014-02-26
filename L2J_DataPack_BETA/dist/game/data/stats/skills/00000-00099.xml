@@ -553,7 +553,10 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+			<and>
+				<player canSummon="true" />
+				<player canSummonSiegeGolem="true" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">

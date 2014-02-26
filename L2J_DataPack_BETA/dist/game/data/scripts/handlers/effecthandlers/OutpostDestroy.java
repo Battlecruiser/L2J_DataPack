@@ -18,48 +18,48 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
- * Grow effect implementation.
+ * Outpost Destroy effect implementation.
+ * @author UnAfraid
  */
-public final class Grow extends AbstractEffect
+public class OutpostDestroy extends AbstractEffect
 {
-	public Grow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public OutpostDestroy(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean isInstant()
 	{
-		return L2EffectType.BUFF;
-	}
-	
-	@Override
-	public void onExit(BuffInfo info)
-	{
-		if (info.getEffected().isNpc())
-		{
-			L2Npc npc = (L2Npc) info.getEffected();
-			npc.setCollisionHeight(npc.getTemplate().getCollisionHeight());
-			npc.setCollisionRadius(npc.getTemplate().getfCollisionRadius());
-		}
+		return true;
 	}
 	
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (info.getEffected().isNpc())
+		final L2PcInstance player = info.getEffector().getActingPlayer();
+		if ((player.getClan() == null) || (player.getClan().getLeaderId() != player.getObjectId()))
 		{
-			L2Npc npc = (L2Npc) info.getEffected();
-			npc.setCollisionHeight(npc.getTemplate().getCollisionHeightGrown());
-			npc.setCollisionRadius(npc.getTemplate().getCollisionRadiusGrown());
+			return;
+		}
+		
+		if (TerritoryWarManager.getInstance().isTWInProgress())
+		{
+			final L2SiegeFlagInstance flag = TerritoryWarManager.getInstance().getHQForClan(player.getClan());
+			if (flag != null)
+			{
+				flag.deleteMe();
+			}
+			TerritoryWarManager.getInstance().setHQForClan(player.getClan(), null);
 		}
 	}
 }

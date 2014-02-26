@@ -1689,7 +1689,6 @@
 		</for>
 	</skill>
 	<skill id="448" levels="1" name="Summon Swoop Cannon" enchantGroup1="1">
-		<!-- TODO: Needs to be verified "Is enchantable but no stats for the +Power versions" -->
 		<table name="#ench1npcId"> 14840 14841 14842 14843 14844 14845 14846 14847 14848 14849 14850 14851 14852 14853 14854 14855 14856 14857 14858 14859 14860 14861 14862 14863 14864 14865 14866 14867 14868 14869 </table>
 		<set name="hitTime" val="10000" />
 		<set name="icon" val="icon.skill0448" />
@@ -1703,7 +1702,10 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+			<and>
+				<player canSummon="true" />
+				<player canSummonSiegeGolem="true" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
