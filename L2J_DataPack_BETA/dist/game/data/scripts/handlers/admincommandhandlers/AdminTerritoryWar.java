@@ -23,11 +23,9 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.model.TerritoryWard;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -117,27 +115,11 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 		}
 		else if (command.equalsIgnoreCase("admin_territory_war_start"))
 		{
-			Quest twQuest = QuestManager.getInstance().getQuest(TerritoryWarManager.qn);
-			if (twQuest != null)
-			{
-				twQuest.onAdvEvent("setTWDate " + Calendar.getInstance().getTimeInMillis(), null, null);
-			}
-			else
-			{
-				activeChar.sendMessage("Missing Territory War Quest!");
-			}
+			TerritoryWarManager.getInstance().setTWStartTimeInMillis(System.currentTimeMillis());
 		}
 		else if (command.equalsIgnoreCase("admin_territory_war_end"))
 		{
-			Quest twQuest = QuestManager.getInstance().getQuest(TerritoryWarManager.qn);
-			if (twQuest != null)
-			{
-				twQuest.onAdvEvent("setTWDate " + (Calendar.getInstance().getTimeInMillis() - TerritoryWarManager.WARLENGTH), null, null);
-			}
-			else
-			{
-				activeChar.sendMessage("Missing Territory War Quest!");
-			}
+			TerritoryWarManager.getInstance().setTWStartTimeInMillis(System.currentTimeMillis() - TerritoryWarManager.WARLENGTH);
 		}
 		else if (command.equalsIgnoreCase("admin_territory_wards_list"))
 		{
