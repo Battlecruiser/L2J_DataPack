@@ -206,7 +206,6 @@ import handlers.punishmenthandlers.ChatBanHandler;
 import handlers.punishmenthandlers.JailHandler;
 import handlers.skillhandlers.DeluxeKey;
 import handlers.skillhandlers.Dummy;
-import handlers.skillhandlers.Sow;
 import handlers.skillhandlers.Unlock;
 import handlers.targethandlers.Area;
 import handlers.targethandlers.AreaCorpseMob;
@@ -492,7 +491,6 @@ public class MasterHandler
 			// Skill Handlers
 			DeluxeKey.class,
 			Dummy.class,
-			Sow.class,
 			Unlock.class,
 		},
 		{
