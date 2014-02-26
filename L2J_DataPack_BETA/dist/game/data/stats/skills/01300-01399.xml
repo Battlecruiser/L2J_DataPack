@@ -368,12 +368,14 @@
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="FISHING" />
 		<set name="targetType" val="SELF" />
 		<!-- TODO: Missing condition for "op_fishing_cast" -->
 		<cond msgId="113" addName="1">
 			<using kind="Rod" />
 		</cond>
+		<for>
+			<effect name="Fishing" />
+		</for>
 	</skill>
 	<skill id="1313" levels="27" name="Pumping">
 		<!-- Confirmed CT2.5 -->
@@ -383,14 +385,17 @@
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PUMPING" />
 		<set name="targetType" val="SELF" />
 		<!-- TODO: Missing condition for "op_fishing_pumping" -->
 		<cond msgId="113" addName="1">
 			<using kind="Rod" />
 		</cond>
+		<for>
+			<effect name="Pumping">
+				<param power="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1314" levels="27" name="Reeling">
 		<!-- Confirmed CT2.5 -->
@@ -400,23 +405,29 @@
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="REELING" />
 		<set name="targetType" val="SELF" />
 		<!-- TODO: Missing condition for "op_fishing_reeling" -->
 		<cond msgId="113" addName="1">
 			<using kind="Rod" />
 		</cond>
+		<for>
+			<effect name="Reeling">
+				<param power="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1315" levels="27" name="Fishing Expertise">
-		<!-- TODO: Require Support -->
 		<table name="#power"> 0.66 0.9375 1.26 1.55 1.7 1.85 2 2.15 2.3 2.45 2.6 2.75 2.9 3.05 3.2 3.35 3.5 3.65 3.8 3.95 4.1 4.25 4.4 4.55 4.7 4.85 5 </table>
 		<set name="icon" val="icon.skill1315" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="power" val="#power" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<set order="0x08" stat="fishingExpertise" val="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1316" levels="1" name="Fishing Expertise: C Grade">
 		<!-- Confirmed CT2.5 -->

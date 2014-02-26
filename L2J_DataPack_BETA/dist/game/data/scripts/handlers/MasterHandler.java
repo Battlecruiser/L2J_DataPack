@@ -207,8 +207,6 @@ import handlers.punishmenthandlers.JailHandler;
 import handlers.skillhandlers.DeluxeKey;
 import handlers.skillhandlers.Detection;
 import handlers.skillhandlers.Dummy;
-import handlers.skillhandlers.Fishing;
-import handlers.skillhandlers.FishingSkill;
 import handlers.skillhandlers.NornilsPower;
 import handlers.skillhandlers.Sow;
 import handlers.skillhandlers.Trap;
@@ -498,8 +496,6 @@ public class MasterHandler
 			DeluxeKey.class,
 			Detection.class,
 			Dummy.class,
-			Fishing.class,
-			FishingSkill.class,
 			NornilsPower.class,
 			Sow.class,
 			Trap.class,

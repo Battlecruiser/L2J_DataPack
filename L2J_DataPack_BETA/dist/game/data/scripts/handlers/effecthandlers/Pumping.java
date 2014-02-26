@@ -16,60 +16,75 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.skillhandlers;
+package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.datatables.FishingRodsData;
-import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.enums.ShotType;
-import com.l2jserver.gameserver.handler.ISkillHandler;
-import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.fishing.L2Fishing;
 import com.l2jserver.gameserver.model.fishing.L2FishingRod;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.skills.L2SkillType;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 
-public class FishingSkill implements ISkillHandler
+/**
+ * @author UnAfraid
+ */
+public class Pumping extends AbstractEffect
 {
-	private static final L2SkillType[] SKILL_IDS =
+	private final double _power;
+	
+	public Pumping(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		L2SkillType.PUMPING,
-		L2SkillType.REELING
-	};
+		super(attachCond, applyCond, set, params);
+		if ((params == null) || (params.getString("power", null) == null))
+		{
+			throw new IllegalArgumentException(getClass().getSimpleName() + ": effect without power!");
+		}
+		_power = params.getDouble("power");
+	}
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public boolean isInstant()
 	{
+		return true;
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.FISHING;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		super.onStart(info);
+		final L2Character activeChar = info.getEffector();
 		if (!activeChar.isPlayer())
 		{
 			return;
 		}
 		
-		L2PcInstance player = activeChar.getActingPlayer();
-		
-		L2Fishing fish = player.getFishCombat();
+		final L2PcInstance player = activeChar.getActingPlayer();
+		final L2Fishing fish = player.getFishCombat();
 		if (fish == null)
 		{
-			if (skill.getSkillType() == L2SkillType.PUMPING)
-			{
-				// Pumping skill is available only while fishing
-				player.sendPacket(SystemMessageId.CAN_USE_PUMPING_ONLY_WHILE_FISHING);
-			}
-			else if (skill.getSkillType() == L2SkillType.REELING)
-			{
-				// Reeling skill is available only while fishing
-				player.sendPacket(SystemMessageId.CAN_USE_REELING_ONLY_WHILE_FISHING);
-			}
+			// Pumping skill is available only while fishing
+			player.sendPacket(SystemMessageId.CAN_USE_PUMPING_ONLY_WHILE_FISHING);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		L2Weapon weaponItem = player.getActiveWeaponItem();
-		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
+		final L2Weapon weaponItem = player.getActiveWeaponItem();
+		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		if ((weaponInst == null) || (weaponItem == null))
 		{
 			return;
@@ -80,12 +95,11 @@ public class FishingSkill implements ISkillHandler
 		{
 			SS = 2;
 		}
-		L2FishingRod fishingRod = FishingRodsData.getInstance().getFishingRod(weaponItem.getId());
-		double gradeBonus = fishingRod.getFishingRodLevel() * 0.1; // TODO: Check this formula (is guessed)
-		final L2Skill expertiseSkill = SkillTable.getInstance().getInfo(1315, player.getSkillLevel(1315));
-		int dmg = (int) ((fishingRod.getFishingRodDamage() + expertiseSkill.getPower() + skill.getPower()) * gradeBonus * SS);
+		final L2FishingRod fishingRod = FishingRodsData.getInstance().getFishingRod(weaponItem.getId());
+		final double gradeBonus = fishingRod.getFishingRodLevel() * 0.1; // TODO: Check this formula (is guessed)
+		int dmg = (int) ((fishingRod.getFishingRodDamage() + player.calcStat(Stats.FISHING_EXPERTISE, 1, null, null) + _power) * gradeBonus * SS);
 		// Penalty 5% less damage dealt
-		if (player.getSkillLevel(1315) <= (skill.getLevel() - 2)) // 1315 - Fish Expertise
+		if (player.getSkillLevel(1315) <= (info.getSkill().getLevel() - 2)) // 1315 - Fish Expertise
 		{
 			player.sendPacket(SystemMessageId.REELING_PUMPING_3_LEVELS_HIGHER_THAN_FISHING_PENALTY);
 			pen = (int) (dmg * 0.05);
@@ -95,19 +109,7 @@ public class FishingSkill implements ISkillHandler
 		{
 			weaponInst.setChargedShot(ShotType.FISH_SOULSHOTS, false);
 		}
-		if (skill.getSkillType() == L2SkillType.REELING)
-		{
-			fish.useReeling(dmg, pen);
-		}
-		else
-		{
-			fish.usePumping(dmg, pen);
-		}
-	}
-	
-	@Override
-	public L2SkillType[] getSkillIds()
-	{
-		return SKILL_IDS;
+		
+		fish.usePumping(dmg, pen);
 	}
 }
