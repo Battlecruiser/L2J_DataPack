@@ -16,23 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.skillhandlers;
+package handlers.effecthandlers;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
-import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.PcCondOverride;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.items.type.L2EtcItemType;
 import com.l2jserver.gameserver.model.items.type.L2WeaponType;
-import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.skills.L2SkillType;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.model.zone.type.L2FishingZone;
@@ -41,64 +42,36 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
-public final class Fishing implements ISkillHandler
+/**
+ * @author UnAfraid
+ */
+public class Fishing extends AbstractEffect
 {
 	private static final int MIN_BAIT_DISTANCE = 90;
 	private static final int MAX_BAIT_DISTANCE = 250;
 	
-	private static final L2SkillType[] SKILL_IDS =
+	public Fishing(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		L2SkillType.FISHING
-	};
-	
-	/**
-	 * Computes the Z of the bait.
-	 * @param player the player
-	 * @param baitX the bait x
-	 * @param baitY the bait y
-	 * @param fishingZone the fishing zone
-	 * @param waterZone the water zone
-	 * @return the bait z or {@link Integer#MIN_VALUE} when you cannot fish here
-	 */
-	private int computeBaitZ(final L2PcInstance player, final int baitX, final int baitY, final L2FishingZone fishingZone, final L2WaterZone waterZone)
-	{
-		if ((fishingZone == null))
-		{
-			return Integer.MIN_VALUE;
-		}
-		
-		if ((waterZone == null))
-		{
-			return Integer.MIN_VALUE;
-		}
-		
-		// always use water zone, fishing zone high z is high in the air...
-		int baitZ = waterZone.getWaterZ();
-		
-		if (!GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ(), baitX, baitY, baitZ))
-		{
-			return Integer.MIN_VALUE;
-		}
-		
-		if (GeoData.getInstance().hasGeo(baitX, baitY))
-		{
-			if (GeoData.getInstance().getHeight(baitX, baitY, baitZ) > baitZ)
-			{
-				return Integer.MIN_VALUE;
-			}
-			
-			if (GeoData.getInstance().getHeight(baitX, baitY, player.getZ()) > baitZ)
-			{
-				return Integer.MIN_VALUE;
-			}
-		}
-		
-		return baitZ;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public boolean isInstant()
 	{
+		return true;
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.FISHING_START;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		super.onStart(info);
+		final L2Character activeChar = info.getEffector();
 		if (!activeChar.isPlayer())
 		{
 			return;
@@ -252,9 +225,48 @@ public final class Fishing implements ISkillHandler
 		player.startFishing(baitX, baitY, baitZ);
 	}
 	
-	@Override
-	public L2SkillType[] getSkillIds()
+	/**
+	 * Computes the Z of the bait.
+	 * @param player the player
+	 * @param baitX the bait x
+	 * @param baitY the bait y
+	 * @param fishingZone the fishing zone
+	 * @param waterZone the water zone
+	 * @return the bait z or {@link Integer#MIN_VALUE} when you cannot fish here
+	 */
+	private int computeBaitZ(final L2PcInstance player, final int baitX, final int baitY, final L2FishingZone fishingZone, final L2WaterZone waterZone)
 	{
-		return SKILL_IDS;
+		if ((fishingZone == null))
+		{
+			return Integer.MIN_VALUE;
+		}
+		
+		if ((waterZone == null))
+		{
+			return Integer.MIN_VALUE;
+		}
+		
+		// always use water zone, fishing zone high z is high in the air...
+		int baitZ = waterZone.getWaterZ();
+		
+		if (!GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ(), baitX, baitY, baitZ))
+		{
+			return Integer.MIN_VALUE;
+		}
+		
+		if (GeoData.getInstance().hasGeo(baitX, baitY))
+		{
+			if (GeoData.getInstance().getHeight(baitX, baitY, baitZ) > baitZ)
+			{
+				return Integer.MIN_VALUE;
+			}
+			
+			if (GeoData.getInstance().getHeight(baitX, baitY, player.getZ()) > baitZ)
+			{
+				return Integer.MIN_VALUE;
+			}
+		}
+		
+		return baitZ;
 	}
 }
