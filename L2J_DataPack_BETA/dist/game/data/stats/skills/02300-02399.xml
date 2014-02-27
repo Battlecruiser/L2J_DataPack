@@ -9,7 +9,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChangeHairStyle" val="2" />
+			<effect name="ChangeHairStyle">
+				<param value="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2301" levels="1" name="Hair Style Change Potion">
@@ -21,7 +23,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChangeHairStyle" val="3" />
+			<effect name="ChangeHairStyle">
+				<param value="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2302" levels="1" name="Hair Style Change Potion">
@@ -33,7 +37,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChangeHairStyle" val="4" />
+			<effect name="ChangeHairStyle">
+				<param value="4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2303" levels="1" name="Hair Style Change Potion">
@@ -44,12 +50,14 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="ChangeHairStyle" val="5" />
-		</for>
 		<cond msgId="1518">
 			<player sex="1" />
 		</cond>
+		<for>
+			<effect name="ChangeHairStyle">
+				<param value="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2304" levels="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
@@ -59,12 +67,14 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="ChangeHairStyle" val="6" />
-		</for>
 		<cond msgId="1518">
 			<player sex="1" />
 		</cond>
+		<for>
+			<effect name="ChangeHairStyle">
+				<param value="6" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2305" levels="1" name="Primeval Potion">
 		<!-- Confirmed CT2.5 -->
@@ -98,7 +108,9 @@
 			<player levelRange="76;85" />
 		</cond>
 		<for>
-			<effect name="GiveSp" val="#amount" />
+			<effect name="GiveSp">
+				<param sp="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2307" levels="1" name="Remove Petrification Scroll">

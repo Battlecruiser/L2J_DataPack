@@ -30,9 +30,12 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class StaticDamage extends AbstractEffect
 {
+	private final int _power;
+	
 	public StaticDamage(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		_power = params != null ? params.getInt("power", 0) : 0;
 	}
 	
 	@Override
@@ -55,12 +58,12 @@ public final class StaticDamage extends AbstractEffect
 			return;
 		}
 		
-		info.getEffected().reduceCurrentHp(getValue(), info.getEffector(), info.getSkill());
-		info.getEffected().notifyDamageReceived(getValue(), info.getEffector(), info.getSkill(), false, false);
+		info.getEffected().reduceCurrentHp(_power, info.getEffector(), info.getSkill());
+		info.getEffected().notifyDamageReceived(_power, info.getEffector(), info.getSkill(), false, false);
 		
 		if (info.getEffector().isPlayer())
 		{
-			info.getEffector().sendDamageMessage(info.getEffected(), (int) getValue(), false, false, false);
+			info.getEffector().sendDamageMessage(info.getEffected(), _power, false, false, false);
 		}
 	}
 }

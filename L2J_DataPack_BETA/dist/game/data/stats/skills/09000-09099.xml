@@ -550,7 +550,9 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="20000" />
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9039" levels="1" name="Steamed Rice Cake">
@@ -563,7 +565,9 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="20000" />
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9040" levels="1" name="PC Cafe Points">
@@ -1086,7 +1090,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="GiveSp" val="10000" />
+			<effect name="GiveSp">
+				<param sp="10000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9070" levels="1" name="Halloween Pumpkin">
@@ -1328,7 +1334,9 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="20000" />
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9082" levels="1" name="White Christmas Petition">
@@ -1364,7 +1372,9 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="20000" />
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9084" levels="1" name="White Christmas Petition - event">

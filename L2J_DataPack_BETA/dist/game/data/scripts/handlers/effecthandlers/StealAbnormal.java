@@ -36,7 +36,6 @@ import com.l2jserver.gameserver.model.stats.Formulas;
 public final class StealAbnormal extends AbstractEffect
 {
 	private final String _slot;
-	
 	private final int _rate;
 	private final int _max;
 	

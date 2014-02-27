@@ -1011,7 +1011,9 @@
 			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
 		</cond>
 		<for>
-			<effect name="StaticDamage" val="100" />
+			<effect name="StaticDamage">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3261" levels="1" name="Forgiveness">
@@ -1047,7 +1049,9 @@
 			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
 		</cond>
 		<for>
-			<effect name="StaticDamage" val="200" />
+			<effect name="StaticDamage">
+				<param power="200" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3263" levels="1" name="Blessed Resurrection">

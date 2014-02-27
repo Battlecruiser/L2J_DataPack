@@ -1563,7 +1563,9 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="#value" />
+			<effect name="VitalityPointUp">
+				<param value="#value" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2587" levels="1" name="Increase number of teleport slots.">

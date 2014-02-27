@@ -31,9 +31,12 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class RefuelAirship extends AbstractEffect
 {
+	private final int _value;
+	
 	public RefuelAirship(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		_value = params != null ? params.getInt("value", 0) : 0;
 	}
 	
 	@Override
@@ -52,7 +55,7 @@ public final class RefuelAirship extends AbstractEffect
 	public void onStart(BuffInfo info)
 	{
 		final L2AirShipInstance ship = info.getEffector().getActingPlayer().getAirShip();
-		ship.setFuel(ship.getFuel() + (int) getValue());
+		ship.setFuel(ship.getFuel() + _value);
 		ship.updateAbnormalEffect();
 	}
 }

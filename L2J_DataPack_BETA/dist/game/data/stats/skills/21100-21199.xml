@@ -1638,7 +1638,9 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="20000" />
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
 			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="0" />
 			</effect>

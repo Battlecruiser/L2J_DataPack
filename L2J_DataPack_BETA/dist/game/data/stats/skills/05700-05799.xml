@@ -1279,7 +1279,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="VitalityPointUp" val="#value" />
+			<effect name="VitalityPointUp">
+				<param value="#value" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5775" levels="1" name="Great Blessing of Pathfinder">
