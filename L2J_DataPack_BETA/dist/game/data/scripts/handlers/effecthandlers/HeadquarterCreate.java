@@ -40,7 +40,7 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 public class HeadquarterCreate extends AbstractEffect
 {
 	private static final int HQ_NPC_ID = 35062;
-	private static boolean _isAdvanced;
+	private final boolean _isAdvanced;
 	
 	public HeadquarterCreate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

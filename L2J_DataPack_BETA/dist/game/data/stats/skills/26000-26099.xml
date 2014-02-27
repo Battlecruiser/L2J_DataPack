@@ -648,7 +648,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CrystalGradeModify" val="#bonus" />
+			<effect name="CrystalGradeModify">
+				<param grade="#bonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="26049" levels="1" name="Rune of Feather">

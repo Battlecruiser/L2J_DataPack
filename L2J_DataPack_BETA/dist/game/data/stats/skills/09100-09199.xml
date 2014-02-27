@@ -1106,7 +1106,9 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="GiveSp" val="500000" />
+			<effect name="GiveSp">
+				<param sp="500000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9175" levels="1" name="1,000,000 SP scroll">
@@ -1118,7 +1120,9 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="GiveSp" val="1000000" />
+			<effect name="GiveSp">
+				<pamam sp="1000000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9176" levels="1" name="Provided gift of cheers">
@@ -1182,7 +1186,9 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="GiveSp" val="#amount" />
+			<effect name="GiveSp">
+				<param sp="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9181" levels="1" name="Nevit's Hourglass - 4 hour(s)">

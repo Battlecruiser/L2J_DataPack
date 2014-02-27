@@ -30,9 +30,12 @@ import com.l2jserver.gameserver.network.serverpackets.UserInfo;
  */
 public final class VitalityPointUp extends AbstractEffect
 {
+	private final float _value;
+	
 	public VitalityPointUp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		_value = params != null ? params.getFloat("value", 0) : 0;
 	}
 	
 	@Override
@@ -50,7 +53,7 @@ public final class VitalityPointUp extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		info.getEffected().getActingPlayer().updateVitalityPoints((float) getValue(), false, false);
+		info.getEffected().getActingPlayer().updateVitalityPoints(_value, false, false);
 		info.getEffected().getActingPlayer().sendPacket(new UserInfo(info.getEffected().getActingPlayer()));
 	}
 }

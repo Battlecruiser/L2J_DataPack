@@ -30,9 +30,12 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class CrystalGradeModify extends AbstractEffect
 {
+	private final int _grade;
+	
 	public CrystalGradeModify(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		_grade = params != null ? params.getInt("grade", 0) : 0;
 	}
 	
 	@Override
@@ -54,6 +57,6 @@ public final class CrystalGradeModify extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		info.getEffected().getActingPlayer().setExpertisePenaltyBonus((int) getValue());
+		info.getEffected().getActingPlayer().setExpertisePenaltyBonus(_grade);
 	}
 }

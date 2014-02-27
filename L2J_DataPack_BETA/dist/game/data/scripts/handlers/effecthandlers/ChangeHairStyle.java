@@ -30,9 +30,12 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class ChangeHairStyle extends AbstractEffect
 {
+	private final int _value;
+	
 	public ChangeHairStyle(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		_value = params != null ? params.getInt("value", 0) : 0;
 	}
 	
 	@Override
@@ -50,7 +53,7 @@ public final class ChangeHairStyle extends AbstractEffect
 		}
 		
 		final L2PcInstance player = info.getEffector().getActingPlayer();
-		player.getAppearance().setHairStyle((int) getValue());
+		player.getAppearance().setHairStyle(_value);
 		player.broadcastUserInfo();
 	}
 }

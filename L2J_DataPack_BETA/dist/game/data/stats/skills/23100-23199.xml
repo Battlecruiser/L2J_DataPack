@@ -699,7 +699,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="20000" />
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23163" levels="1" name="Turkey's Big Mistake">
@@ -754,7 +756,9 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<!-- TODO: Need new effect i_dispel_by_name. -->
-			<effect name="VitalityPointUp" val="5000" />
+			<effect name="VitalityPointUp">
+				<param value="5000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23167" levels="1" name="Rosy Seduction">
@@ -974,7 +978,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="20000" />
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23181" levels="1" name="Three-headed Dragon Agathion Cute Trick">

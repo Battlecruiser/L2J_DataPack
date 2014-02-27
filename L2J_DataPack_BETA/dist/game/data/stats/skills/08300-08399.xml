@@ -975,7 +975,9 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="StaticDamage" val="10000" />
+			<effect name="StaticDamage">
+				<param power="10000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8358" levels="1" name="Remove the seal of an Agathion - Towbat">

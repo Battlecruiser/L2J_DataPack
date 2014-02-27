@@ -97,7 +97,9 @@
 			<player level="76" />
 		</cond>
 		<for>
-			<effect name="GiveSp" val="#amount" />
+			<effect name="GiveSp">
+				<param sp="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2609" levels="20" name="Escape">
@@ -610,7 +612,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="20000" />
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2646" levels="1" name="Honey Wheat Cake">
@@ -622,7 +626,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="20000" />
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2647" levels="1" name="Energy Star Stone">
@@ -637,7 +643,9 @@
 			<player canRefuelAirship="25" />
 		</cond>
 		<for>
-			<effect name="RefuelAirship" val="25" />
+			<effect name="RefuelAirship">
+				<param value="25" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2648" levels="1" name="High Quality Energy Star Stone">
@@ -652,7 +660,9 @@
 			<player canRefuelAirship="100" />
 		</cond>
 		<for>
-			<effect name="RefuelAirship" val="100" />
+			<effect name="RefuelAirship">
+				<param value="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2649" levels="9" name="Escape - Gludin Village">

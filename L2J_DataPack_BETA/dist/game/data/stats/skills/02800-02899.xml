@@ -1810,7 +1810,9 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="20000" />
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2895" levels="1" name="Special White Day Candy Basket">

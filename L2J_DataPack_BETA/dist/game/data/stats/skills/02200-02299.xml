@@ -1870,7 +1870,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChangeFace" val="1" />
+			<effect name="ChangeFace">
+				<param value="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2293" levels="1" name="Facelifting Potion">
@@ -1882,7 +1884,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChangeFace" val="2" />
+			<effect name="ChangeFace">
+				<param value="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2294" levels="1" name="Dye Potion">
@@ -1906,7 +1910,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChangeHairColor" val="1" />
+			<effect name="ChangeHairColor">
+				<param value="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2296" levels="1" name="Dye Potion">
@@ -1918,7 +1924,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChangeHairColor" val="2" />
+			<effect name="ChangeHairColor">
+				<param value="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2297" levels="1" name="Dye Potion">
@@ -1930,7 +1938,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChangeHairColor" val="3" />
+			<effect name="ChangeHairColor">
+				<param value="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2298" levels="1" name="Hair Style Change Potion">
@@ -1954,7 +1964,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChangeHairStyle" val="1" />
+			<effect name="ChangeHairStyle">
+				<param value="1" />
+			</effect>
 		</for>
 	</skill>
 </list>

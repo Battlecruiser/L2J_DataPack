@@ -29,9 +29,12 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class GiveSp extends AbstractEffect
 {
+	private final int _sp;
+	
 	public GiveSp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		_sp = params != null ? params.getInt("sp", 0) : 0;
 	}
 	
 	@Override
@@ -48,6 +51,6 @@ public final class GiveSp extends AbstractEffect
 			return;
 		}
 		
-		info.getEffector().getActingPlayer().addExpAndSp(0, (int) getValue());
+		info.getEffector().getActingPlayer().addExpAndSp(0, _sp);
 	}
 }

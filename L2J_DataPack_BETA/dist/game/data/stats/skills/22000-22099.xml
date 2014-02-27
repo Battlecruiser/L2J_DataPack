@@ -89,7 +89,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="600" />
+			<effect name="VitalityPointUp">
+				<param value="600" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22006" levels="1" name="Halloween Candy">
@@ -99,7 +101,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="20000" />
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22007" levels="1" name="Good Luck Lucky Bag">
@@ -539,7 +543,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="20000" />
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22029" levels="1" name="Baguette Herb">
@@ -740,7 +746,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CrystalGradeModify" val="#bonus" />
+			<effect name="CrystalGradeModify">
+				<param grade="#bonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22042" levels="1" name="High Grade Potion of Will">
@@ -997,7 +1005,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" val="5000" />
+			<effect name="VitalityPointUp">
+				<param value="5000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22056" levels="1" name="Wind Walk">
