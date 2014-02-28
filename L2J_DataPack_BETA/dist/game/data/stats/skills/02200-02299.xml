@@ -660,11 +660,13 @@
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="DELUXE_KEY_UNLOCK" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="109">
 			<target npcType="L2ChestInstance" />
 		</cond>
+		<for>
+			<effect name="OpenChest" />
+		</for>
 	</skill>
 	<skill id="2230" levels="1" name="Item - Theme Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -768,7 +770,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="19160002,19160003,19160004,19160005,19160006,19160007,19160008,19160009" />
@@ -784,13 +785,16 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="19160010,19160011" />
 		</cond>
+		<for>
+			<effect name="OpenDoor">
+				<param chance="100" isItem="true" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2237" levels="1" name="Key of Darkness">
 		<!-- Confirmed CT2.5 -->
@@ -802,13 +806,16 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="19160012,19160013" />
 		</cond>
+		<for>
+			<effect name="OpenDoor">
+				<param chance="100" isItem="true" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2238" levels="1" name="Room of Splendor Key">
 		<!-- Confirmed CT2.5 -->
@@ -820,13 +827,16 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="23150003,23150004" />
 		</cond>
+		<for>
+			<effect name="OpenDoor">
+				<param chance="100" isItem="true" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2239" levels="1" name="Petrification Scroll">
 		<!-- Confirmed CT2.5 -->

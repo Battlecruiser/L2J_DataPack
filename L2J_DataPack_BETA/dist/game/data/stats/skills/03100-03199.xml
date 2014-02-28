@@ -1312,10 +1312,14 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="UNLOCK" />
 		<set name="targetType" val="UNLOCKABLE" />
+		<for>
+			<effect name="OpenDoor">
+				<param chance="100" />
+			</effect>
+			<effect name="OpenChest" />
+		</for>
 	</skill>
 	<skill id="3156" levels="1" name="Item Skill: Firework">
 		<set name="icon" val="icon.skill3123" />

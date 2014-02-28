@@ -492,11 +492,13 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="DELUXE_KEY_UNLOCK" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="109">
 			<target npcType="L2ChestInstance" />
 		</cond>
+		<for>
+			<effect name="OpenChest" />
+		</for>
 	</skill>
 	<skill id="22272" levels="1" name="Beginner Adventurer's Treasure Sack">
 		<!-- none -->

@@ -779,8 +779,14 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="UNLOCK" />
 		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="UNLOCKABLE" />
+		<cond msgId="109">
+			<target npcType="L2ChestInstance" />
+		</cond>
+		<for>
+			<effect name="OpenChest" />
+		</for>
 	</skill>
 	<skill id="2066" levels="1" name="Item - Theme Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
