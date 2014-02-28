@@ -940,10 +940,14 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#chance" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="UNLOCK" />
 		<set name="targetType" val="UNLOCKABLE" />
+		<for>
+			<effect name="OpenDoor">
+				<param chance="#chance" />
+			</effect>
+			<effect name="OpenChest" />
+		</for>
 	</skill>
 	<skill id="28" levels="49" name="Aggression" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- Confirmed CT2.5 -->

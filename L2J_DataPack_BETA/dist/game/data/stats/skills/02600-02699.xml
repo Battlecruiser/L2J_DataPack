@@ -73,13 +73,16 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="22110100,22110101,22110102,22110103,22110104,22110105" />
 		</cond>
+		<for>
+			<effect name="OpenDoor">
+				<param chance="100" isItem="true" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2608" levels="3" name="Crystal of Fantasy">
 		<!-- Lvl 1: Blue Crystal of Fantasy -->
@@ -392,13 +395,16 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="17240101,17240105,17240109" />
 		</cond>
+		<for>
+			<effect name="OpenDoor">
+				<param chance="100" isItem="true" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2634" levels="1" name="Court Magician's Blessing">
 		<!-- Confirmed CT2.5 -->
@@ -409,13 +415,16 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="17240103,17240107" />
 		</cond>
+		<for>
+			<effect name="OpenDoor">
+				<param chance="100" isItem="true" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2635" levels="1" name="Blessing of Fire">
 		<set name="abnormalLvl" val="1" />

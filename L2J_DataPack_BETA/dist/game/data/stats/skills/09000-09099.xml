@@ -1217,13 +1217,16 @@
 		<set name="itemConsumeId" val="15690" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="23150001,23150002" />
 		</cond>
+		<for>
+			<effect name="OpenDoor">
+				<param chance="100" isItem="true" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9077" levels="1" name="Open Packaged Book">
 		<!-- Confirmed CT2.5 -->
