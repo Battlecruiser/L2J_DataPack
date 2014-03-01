@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * Mana Dam Over Time effect implementation.
+ * Mana Damage Over Time effect implementation.
  */
 public final class ManaDamOverTime extends AbstractEffect
 {

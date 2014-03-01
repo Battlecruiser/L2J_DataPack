@@ -41,6 +41,7 @@ public final class OpenDoor extends AbstractEffect
 	public OpenDoor(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_chance = params != null ? params.getInt("chance", 0) : 0;
 		_isItem = params != null ? params.getBoolean("isItem", false) : false;
 	}

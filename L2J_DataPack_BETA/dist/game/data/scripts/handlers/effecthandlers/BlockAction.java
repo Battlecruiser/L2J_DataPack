@@ -47,11 +47,9 @@ public final class BlockAction extends AbstractEffect
 		_blockedActions = new ArrayList<>(rawActions.length);
 		for (String act : rawActions)
 		{
-			int id = -1;
 			try
 			{
-				id = Integer.parseInt(act);
-				_blockedActions.add(id);
+				_blockedActions.add(Integer.parseInt(act));
 			}
 			catch (Exception e)
 			{

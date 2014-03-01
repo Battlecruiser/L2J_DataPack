@@ -25,15 +25,17 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
+ * Call Skill effect implementation.
  * @author Nos
  */
-public class CallSkill extends AbstractEffect
+public final class CallSkill extends AbstractEffect
 {
 	private final SkillHolder _skill;
 	
 	public CallSkill(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
 	}
 	

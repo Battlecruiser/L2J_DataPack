@@ -30,15 +30,17 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
+ * Resist Skill effect implementaion.
  * @author UnAfraid
  */
-public class ResistSkill extends AbstractEffect
+public final class ResistSkill extends AbstractEffect
 {
 	private final List<SkillHolder> _skills = new ArrayList<>();
 	
 	public ResistSkill(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		if (params != null)
 		{
 			for (int i = 1;; i++)
@@ -61,7 +63,6 @@ public class ResistSkill extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		super.onStart(info);
 		final L2Character effected = info.getEffected();
 		for (SkillHolder holder : _skills)
 		{
@@ -79,7 +80,6 @@ public class ResistSkill extends AbstractEffect
 			info.getEffected().removeInvulAgainst(holder);
 			effected.sendDebugMessage("Removing invul against " + holder.getSkill());
 		}
-		super.onExit(info);
 	}
 	
 	@Override

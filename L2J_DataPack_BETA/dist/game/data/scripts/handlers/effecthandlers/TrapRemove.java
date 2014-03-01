@@ -30,15 +30,17 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
+ * Trap Remove effect implementation.
  * @author UnAfraid
  */
-public class TrapRemove extends AbstractEffect
+public final class TrapRemove extends AbstractEffect
 {
 	private final int _power;
 	
 	public TrapRemove(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		if (params == null)
 		{
 			throw new IllegalArgumentException(getClass().getSimpleName() + ": effect without power!");
@@ -55,8 +57,6 @@ public class TrapRemove extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		super.onStart(info);
-		
 		final L2Character target = info.getEffected();
 		if (!target.isTrap())
 		{

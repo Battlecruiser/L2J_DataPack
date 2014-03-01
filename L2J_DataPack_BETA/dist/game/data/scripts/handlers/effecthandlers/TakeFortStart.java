@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Take Fort Start effect implementation.
  * @author UnAfraid
  */
-public class TakeFortStart extends AbstractEffect
+public final class TakeFortStart extends AbstractEffect
 {
 	public TakeFortStart(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
@@ -49,8 +49,6 @@ public class TakeFortStart extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		super.onStart(info);
-		
 		if (info.getEffector().isPlayer())
 		{
 			final L2PcInstance player = info.getEffector().getActingPlayer();

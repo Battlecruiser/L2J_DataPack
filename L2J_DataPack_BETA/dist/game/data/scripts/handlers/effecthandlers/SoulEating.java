@@ -41,6 +41,7 @@ public final class SoulEating extends AbstractEffect implements IExperienceRecei
 	public SoulEating(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_expNeeded = params.getInt("expNeeded");
 	}
 	

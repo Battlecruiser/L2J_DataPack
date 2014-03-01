@@ -25,9 +25,10 @@ import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
+ * Detect Hidden Objects effect implementation.
  * @author UnAfraid
  */
-public class DetectHiddenObjects extends AbstractEffect
+public final class DetectHiddenObjects extends AbstractEffect
 {
 	public DetectHiddenObjects(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
@@ -43,7 +44,6 @@ public class DetectHiddenObjects extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		super.onStart(info);
 		if (!info.getEffected().isDoor())
 		{
 			return;

@@ -29,15 +29,17 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 
 /**
+ * Give Recommendation effect implementation.
  * @author Nos
  */
-public class GiveRecommendation extends AbstractEffect
+public final class GiveRecommendation extends AbstractEffect
 {
 	private final int _amount;
 	
 	public GiveRecommendation(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_amount = params.getInt("amount", 0);
 		if (_amount == 0)
 		{

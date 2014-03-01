@@ -36,6 +36,7 @@ public final class SummonAgathion extends AbstractEffect
 	public SummonAgathion(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		if (params != null)
 		{
 			_npcId = params.getInt("npcId", 0);

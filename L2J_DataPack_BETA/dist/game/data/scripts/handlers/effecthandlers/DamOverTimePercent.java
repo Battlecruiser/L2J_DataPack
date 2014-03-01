@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * Dam Over Time Percent effect implementation.
+ * Damage Over Time Percent effect implementation.
  * @author Adry_85
  */
 public final class DamOverTimePercent extends AbstractEffect
@@ -36,6 +36,7 @@ public final class DamOverTimePercent extends AbstractEffect
 	public DamOverTimePercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_canKill = (params != null) && params.getBoolean("canKill", false);
 	}
 	

@@ -36,7 +36,7 @@ import com.l2jserver.util.Rnd;
  * Sow effect implementation.
  * @author Adry_85, l3x
  */
-public class Sow extends AbstractEffect
+public final class Sow extends AbstractEffect
 {
 	public Sow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
@@ -102,7 +102,7 @@ public class Sow extends AbstractEffect
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 	}
 	
-	private boolean calcSuccess(L2Character activeChar, L2Character target, int seedId)
+	private static boolean calcSuccess(L2Character activeChar, L2Character target, int seedId)
 	{
 		// TODO: check all the chances
 		int basicSuccess = (ManorData.getInstance().isAlternative(seedId) ? 20 : 90);

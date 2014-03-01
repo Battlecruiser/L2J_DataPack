@@ -50,6 +50,7 @@ public class TriggerSkillByDamage extends AbstractEffect implements IDamageRecei
 	public TriggerSkillByDamage(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_minAttackerLevel = params.getInt("minAttackerLevel", 1);
 		_maxAttackerLevel = params.getInt("maxAttackerLevel", 100);
 		_minDamage = params.getInt("minDamage", 1);
