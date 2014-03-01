@@ -18,6 +18,11 @@
  */
 package quests.SagasScripts;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
@@ -34,8 +39,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.util.L2FastList;
-import com.l2jserver.util.L2FastMap;
 
 /**
  * Saga quests superclass.
@@ -43,7 +46,7 @@ import com.l2jserver.util.L2FastMap;
  */
 public class SagasSuperClass extends Quest
 {
-	private static L2FastList<Quest> _scripts = new L2FastList<>();
+	private static List<Quest> _scripts = new ArrayList<>();
 	public int[] NPC = {};
 	public int[] Items = {};
 	public int[] Mob = {};
@@ -51,7 +54,7 @@ public class SagasSuperClass extends Quest
 	public int[] prevclass = {};
 	public Location[] npcSpawnLocations = {};
 	public String[] Text = {};
-	private static final L2FastMap<L2Npc, Integer> _spawnList = new L2FastMap<>();
+	private static final Map<L2Npc, Integer> _spawnList = new HashMap<>();
 	// @formatter:off
 	private static int[][] QuestClass =
 	{
@@ -562,7 +565,7 @@ public class SagasSuperClass extends Quest
 				L2Party party = player.getParty();
 				if (party != null)
 				{
-					L2FastList<QuestState> PartyQuestMembers = new L2FastList<>();
+					List<QuestState> partyQuestMembers = new ArrayList<>();
 					for (L2PcInstance player1 : party.getMembers())
 					{
 						QuestState st1 = findQuest(player1);
@@ -570,13 +573,13 @@ public class SagasSuperClass extends Quest
 						{
 							if (st1.isCond(15))
 							{
-								PartyQuestMembers.add(st1);
+								partyQuestMembers.add(st1);
 							}
 						}
 					}
-					if (PartyQuestMembers.size() > 0)
+					if (partyQuestMembers.size() > 0)
 					{
-						QuestState st2 = PartyQuestMembers.get(getRandom(PartyQuestMembers.size()));
+						QuestState st2 = partyQuestMembers.get(getRandom(partyQuestMembers.size()));
 						giveHalishaMark(st2);
 					}
 				}
@@ -1002,24 +1005,15 @@ public class SagasSuperClass extends Quest
 	@Override
 	public boolean unload()
 	{
-		// if sub classes aren't loaded, just unload superclass
-		if (_scripts.size() == 0)
+		for (Quest script : _scripts)
 		{
-			return super.unload();
-		}
-		
-		// unload all subclasses
-		for (int index = 0; index < _scripts.size(); index++)
-		{
-			if (_scripts.get(index) == null)
+			if (script == null)
 			{
 				continue;
 			}
-			QuestManager.getInstance().removeQuest(_scripts.get(index));
+			QuestManager.getInstance().removeQuest(script);
 		}
 		_scripts.clear();
-		
-		// now unload superclass
 		return super.unload();
 	}
 	

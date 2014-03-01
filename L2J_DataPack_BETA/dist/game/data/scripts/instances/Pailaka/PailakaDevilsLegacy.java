@@ -18,9 +18,8 @@
  */
 package instances.Pailaka;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -346,13 +345,13 @@ public final class PailakaDevilsLegacy extends Quest
 			// To be sure, reduce again
 			((L2Attackable) npc).reduceHate(player, 9999);
 			// Spawn followers
-			_followerslist = new FastList<>();
+			_followerslist = new ArrayList<>();
 			for (int[] SPAWN : FOLLOWERS_SPAWNS)
 			{
-				L2Npc _follower = addSpawn(FOLLOWERS, SPAWN[0], SPAWN[1], SPAWN[2], SPAWN[3], false, 0, true, player.getInstanceId());
-				if (_follower != null)
+				L2Npc follower = addSpawn(FOLLOWERS, SPAWN[0], SPAWN[1], SPAWN[2], SPAWN[3], false, 0, true, player.getInstanceId());
+				if (follower != null)
 				{
-					_followerslist.add(_follower);
+					_followerslist.add(follower);
 				}
 			}
 			return null;
@@ -545,7 +544,7 @@ public final class PailakaDevilsLegacy extends Quest
 					}
 					break;
 				case LEMATAN:
-					if ((_followerslist != null) && !_followerslist.isEmpty())
+					if (_followerslist != null)
 					{
 						for (L2Npc _follower : _followerslist)
 						{

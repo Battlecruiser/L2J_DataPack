@@ -19,6 +19,8 @@
 package quests.TerritoryWarScripts;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 import quests.Q00147_PathtoBecominganEliteMercenary.Q00147_PathtoBecominganEliteMercenary;
 import quests.Q00148_PathtoBecominganExaltedMercenary.Q00148_PathtoBecominganExaltedMercenary;
@@ -41,7 +43,6 @@ import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.L2FastMap;
 
 /**
  * Territory War quests superclass.
@@ -49,9 +50,9 @@ import com.l2jserver.util.L2FastMap;
  */
 public class TerritoryWarSuperClass extends Quest
 {
-	private static L2FastMap<Integer, TerritoryWarSuperClass> _forTheSakeScripts = new L2FastMap<>();
-	private static L2FastMap<Integer, TerritoryWarSuperClass> _protectTheScripts = new L2FastMap<>();
-	private static L2FastMap<Integer, TerritoryWarSuperClass> _killTheScripts = new L2FastMap<>();
+	private static Map<Integer, TerritoryWarSuperClass> _forTheSakeScripts = new HashMap<>();
+	private static Map<Integer, TerritoryWarSuperClass> _protectTheScripts = new HashMap<>();
+	private static Map<Integer, TerritoryWarSuperClass> _killTheScripts = new HashMap<>();
 	
 	// "For the Sake of the Territory ..." quests variables
 	public int CATAPULT_ID;

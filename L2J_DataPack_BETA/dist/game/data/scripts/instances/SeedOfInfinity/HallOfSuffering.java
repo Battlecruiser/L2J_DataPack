@@ -19,9 +19,8 @@
 package instances.SeedOfInfinity;
 
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Map;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.cache.HtmCache;
@@ -55,7 +54,7 @@ public final class HallOfSuffering extends Quest
 {
 	protected class HSWorld extends InstanceWorld
 	{
-		public Map<L2Npc, Boolean> npcList = new FastMap<>();
+		public Map<L2Npc, Boolean> npcList = new HashMap<>();
 		public L2Npc klodekus = null;
 		public L2Npc klanikus = null;
 		public boolean isBossesAttacked = false;

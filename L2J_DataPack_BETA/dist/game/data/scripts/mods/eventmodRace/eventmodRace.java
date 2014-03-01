@@ -18,10 +18,10 @@
  */
 package mods.eventmodRace;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.Announcements;
@@ -134,8 +134,8 @@ public class eventmodRace extends Event
 			return false;
 		}
 		// Initialize list
-		_npclist = new FastList<>();
-		_players = new FastList<>();
+		_npclist = new ArrayList<>();
+		_players = new CopyOnWriteArrayList<>();
 		// Set Event active
 		_isactive = true;
 		// Spawn Manager
@@ -227,26 +227,20 @@ public class eventmodRace extends Event
 		}
 		// Untransform players
 		// Teleport to event start point
-		if (!_players.isEmpty())
+		for (L2PcInstance player : _players)
 		{
-			for (L2PcInstance player : _players)
+			if ((player != null) && player.isOnline())
 			{
-				if ((player != null) && player.isOnline())
-				{
-					player.untransform();
-					player.teleToLocation(_npc.getX(), _npc.getY(), _npc.getZ(), true);
-				}
+				player.untransform();
+				player.teleToLocation(_npc.getX(), _npc.getY(), _npc.getZ(), true);
 			}
 		}
-		// Despawn Npc's
-		if (!_npclist.isEmpty())
+		// Despawn NPCs
+		for (L2Npc _npc : _npclist)
 		{
-			for (L2Npc _npc : _npclist)
+			if (_npc != null)
 			{
-				if (_npc != null)
-				{
-					_npc.deleteMe();
-				}
+				_npc.deleteMe();
 			}
 		}
 		_npclist.clear();
@@ -378,25 +372,17 @@ public class eventmodRace extends Event
 	
 	private int isRacing(L2PcInstance player)
 	{
-		if (_players.isEmpty())
-		{
-			return 0;
-		}
-		if (_players.contains(player))
-		{
-			return 1;
-		}
-		return 0;
+		return _players.contains(player) ? 1 : 0;
 	}
 	
 	private L2Npc recordSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
 	{
-		L2Npc _tmp = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
-		if (_tmp != null)
+		final L2Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
+		if (npc != null)
 		{
-			_npclist.add(_tmp);
+			_npclist.add(npc);
 		}
-		return _tmp;
+		return npc;
 	}
 	
 	private void transformPlayer(L2PcInstance player)
