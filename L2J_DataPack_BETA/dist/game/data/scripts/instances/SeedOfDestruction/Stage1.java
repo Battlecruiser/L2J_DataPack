@@ -19,6 +19,7 @@
 package instances.SeedOfDestruction;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
@@ -28,9 +29,6 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 
 import javax.xml.parsers.DocumentBuilderFactory;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -81,7 +79,7 @@ public final class Stage1 extends Quest
 {
 	protected class SOD1World extends InstanceWorld
 	{
-		public Map<L2Npc, Boolean> npcList = new FastMap<>();
+		public Map<L2Npc, Boolean> npcList = new HashMap<>();
 		public int deviceSpawnedMobCount = 0;
 		public Lock lock = new ReentrantLock();
 	}
@@ -106,7 +104,7 @@ public final class Stage1 extends Quest
 	
 	private final Map<Integer, L2Territory> _spawnZoneList = new HashMap<>();
 	private final Map<Integer, List<SODSpawn>> _spawnList = new HashMap<>();
-	private final List<Integer> _mustKillMobsId = new FastList<>();
+	private final List<Integer> _mustKillMobsId = new ArrayList<>();
 	
 	// teleports
 	private static final Location ENTER_TELEPORT_1 = new Location(-242759, 219981, -9986);
@@ -293,7 +291,7 @@ public final class Stage1 extends Quest
 								int flag = Integer.parseInt(attrs.getNamedItem("flag").getNodeValue());
 								if (!_spawnList.containsKey(flag))
 								{
-									_spawnList.put(flag, new FastList<SODSpawn>());
+									_spawnList.put(flag, new ArrayList<SODSpawn>());
 								}
 								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())

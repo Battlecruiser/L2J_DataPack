@@ -18,10 +18,9 @@
  */
 package mods.eventmodRabbits;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.Announcements;
@@ -126,7 +125,7 @@ public class eventmodRabbits extends Event
 		}
 		
 		// Initialize list
-		_npclist = new FastList<>();
+		_npclist = new ArrayList<>();
 		
 		// Set Event active
 		_isactive = true;
@@ -185,15 +184,12 @@ public class eventmodRabbits extends Event
 			_eventTask.cancel(true);
 			_eventTask = null;
 		}
-		// Despawn Npc's
-		if (!_npclist.isEmpty())
+		// Despawn NPCs
+		for (L2Npc _npc : _npclist)
 		{
-			for (L2Npc _npc : _npclist)
+			if (_npc != null)
 			{
-				if (_npc != null)
-				{
-					_npc.deleteMe();
-				}
+				_npc.deleteMe();
 			}
 		}
 		_npclist.clear();
