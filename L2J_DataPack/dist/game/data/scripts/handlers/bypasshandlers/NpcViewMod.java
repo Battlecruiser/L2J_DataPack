@@ -24,7 +24,6 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.handler.IBypassHandler;
@@ -323,7 +322,7 @@ public class NpcViewMod implements IBypassHandler
 						sb.append(item.getName());
 						sb.append("</font></td></tr><tr><td width=32></td><td width=259><table width=253 cellpadding=0 cellspacing=0>");
 						sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount:</font></td><td width=205 align=center>");
-						MinMax minMax = getPreciseMinMax(normalized.getChance(), generalDropItem.getMin(npc, activeChar), generalDropItem.getMax(npc, activeChar));
+						MinMax minMax = getPreciseMinMax(normalized.getChance(), generalDropItem.getMin(npc, activeChar), generalDropItem.getMax(npc, activeChar), generalDropItem.isPreciseCalculated());
 						final long min = minMax.min;
 						final long max = minMax.max;
 						if (min == max)
@@ -402,7 +401,7 @@ public class NpcViewMod implements IBypassHandler
 		sb.append("</font></td></tr><tr><td width=32></td><td width=300><table width=295 cellpadding=0 cellspacing=0>");
 		sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount:</font></td>");
 		sb.append("<td width=247 align=center>");
-		MinMax minMax = getPreciseMinMax(dropItem.getModifiedChance(npc, activeChar), dropItem.getMin(npc, activeChar), dropItem.getMax(npc, activeChar));
+		MinMax minMax = getPreciseMinMax(dropItem.getModifiedChance(npc, activeChar), dropItem.getMin(npc, activeChar), dropItem.getMax(npc, activeChar), dropItem.isPreciseCalculated());
 		
 		final long min = minMax.min;
 		final long max = minMax.max;
@@ -436,9 +435,9 @@ public class NpcViewMod implements IBypassHandler
 		
 	}
 	
-	private static MinMax getPreciseMinMax(double chance, long min, long max)
+	private static MinMax getPreciseMinMax(double chance, long min, long max, boolean isPrecise)
 	{
-		if (!Config.PRECISE_DROP_CALCULATION || (chance <= 100))
+		if (!isPrecise || (chance <= 100))
 		{
 			return new MinMax(min, max);
 		}
