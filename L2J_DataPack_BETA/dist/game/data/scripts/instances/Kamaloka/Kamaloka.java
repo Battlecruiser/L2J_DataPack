@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -40,7 +40,7 @@ import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.interfaces.IProcedure;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -1657,7 +1657,7 @@ public final class Kamaloka extends Quest
 						final int skillLvl = FIRST_ROOM[world.index][3];
 						if ((skillId != 0) && (skillLvl != 0))
 						{
-							final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
+							final Skill skill = SkillData.getInstance().getSkill(skillId, skillLvl);
 							if (skill != null)
 							{
 								skill.applyEffects(world.boss, world.boss);
@@ -1698,7 +1698,7 @@ public final class Kamaloka extends Quest
 						final int skillLvl = SECOND_ROOM[world.index][2];
 						if ((skillId != 0) && (skillLvl != 0))
 						{
-							final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
+							final Skill skill = SkillData.getInstance().getSkill(skillId, skillLvl);
 							if (skill != null)
 							{
 								skill.applyEffects(world.boss, world.boss);
@@ -1721,7 +1721,7 @@ public final class Kamaloka extends Quest
 					final int skillLvl = MINIBOSS[world.index][5];
 					if ((skillId != 0) && (skillLvl != 0))
 					{
-						final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
+						final Skill skill = SkillData.getInstance().getSkill(skillId, skillLvl);
 						if (skill != null)
 						{
 							skill.applyEffects(world.boss, world.boss);

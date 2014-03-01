@@ -20,7 +20,7 @@ package instances.NornilsGarden;
 
 import quests.Q00179_IntoTheLargeCavern.Q00179_IntoTheLargeCavern;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.Location;
@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -94,10 +94,10 @@ public final class NornilsGarden extends Quest
 		}
 	};
 	
-	private static final L2Skill skill1 = SkillTable.getInstance().getInfo(4322, 1);
-	private static final L2Skill skill2 = SkillTable.getInstance().getInfo(4327, 1);
-	private static final L2Skill skill3 = SkillTable.getInstance().getInfo(4329, 1);
-	private static final L2Skill skill4 = SkillTable.getInstance().getInfo(4324, 1);
+	private static final Skill skill1 = SkillData.getInstance().getSkill(4322, 1);
+	private static final Skill skill2 = SkillData.getInstance().getSkill(4327, 1);
+	private static final Skill skill3 = SkillData.getInstance().getSkill(4329, 1);
+	private static final Skill skill4 = SkillData.getInstance().getSkill(4324, 1);
 	
 	private static final int _herb_jar = 18478;
 	

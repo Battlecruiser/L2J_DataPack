@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.handler.BypassHandler;
 import com.l2jserver.gameserver.handler.ChatHandler;
 import com.l2jserver.gameserver.handler.ItemHandler;
 import com.l2jserver.gameserver.handler.PunishmentHandler;
-import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.handler.TargetHandler;
 import com.l2jserver.gameserver.handler.TelnetHandler;
 import com.l2jserver.gameserver.handler.UserCommandHandler;
@@ -204,7 +203,6 @@ import handlers.itemhandlers.TeleportBookmark;
 import handlers.punishmenthandlers.BanHandler;
 import handlers.punishmenthandlers.ChatBanHandler;
 import handlers.punishmenthandlers.JailHandler;
-import handlers.skillhandlers.Dummy;
 import handlers.targethandlers.Area;
 import handlers.targethandlers.AreaCorpseMob;
 import handlers.targethandlers.AreaFriendly;
@@ -287,7 +285,6 @@ public class MasterHandler
 		ChatHandler.class,
 		ItemHandler.class,
 		PunishmentHandler.class,
-		SkillHandler.class,
 		UserCommandHandler.class,
 		VoicedCommandHandler.class,
 		TargetHandler.class,
@@ -484,10 +481,6 @@ public class MasterHandler
 			BanHandler.class,
 			ChatBanHandler.class,
 			JailHandler.class,
-		},
-		{
-			// Skill Handlers
-			Dummy.class,
 		},
 		{
 			// User Command Handlers

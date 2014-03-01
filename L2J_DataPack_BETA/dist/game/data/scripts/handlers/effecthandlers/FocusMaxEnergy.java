@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 
 /**
  * Focus Max Energy effect implementation.
@@ -46,8 +46,8 @@ public final class FocusMaxEnergy extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			final L2Skill sonicMastery = info.getEffected().getSkills().get(992);
-			final L2Skill focusMastery = info.getEffected().getSkills().get(993);
+			final Skill sonicMastery = info.getEffected().getSkills().get(992);
+			final Skill focusMastery = info.getEffected().getSkills().get(993);
 			int maxCharge = (sonicMastery != null) ? sonicMastery.getLevel() : (focusMastery != null) ? focusMastery.getLevel() : 0;
 			if (maxCharge != 0)
 			{

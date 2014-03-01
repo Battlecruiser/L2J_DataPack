@@ -22,7 +22,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.util.Util;
@@ -159,12 +159,12 @@ public final class SelMahumSquad extends AbstractNpcAI
 				
 				if (npc.isNoRndWalk()) // i_ai0 == 1
 				{
-					npc.doCast(SkillTable.getInstance().getInfo(6331, 1));
+					npc.doCast(SkillData.getInstance().getSkill(6331, 1));
 					npc.setDisplayEffect(MAHUM_EFFECT_SLEEP);
 				}
 				if (npc.getVariables().getInt("BUSY_STATE") == 1) // Eating - i_ai3 = 1
 				{
-					npc.doCast(SkillTable.getInstance().getInfo(6332, 1));
+					npc.doCast(SkillData.getInstance().getSkill(6332, 1));
 					npc.setDisplayEffect(MAHUM_EFFECT_EAT);
 				}
 				
@@ -201,7 +201,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if ((npc.getId() == CHEF) && (npc.getVariables().getInt("BUSY_STATE") == 0)) // i_ai2 == 0
 		{
@@ -344,11 +344,11 @@ public final class SelMahumSquad extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if ((npc.getId() == STOVE) && (skill.getId() == 9075) && Util.contains(targets, npc))
 		{
-			npc.doCast(SkillTable.getInstance().getInfo(6688, 1));
+			npc.doCast(SkillData.getInstance().getSkill(6688, 1));
 			npc.broadcastEvent("SCE_SOUP_FAILURE", 600, caster);
 		}
 		
@@ -380,7 +380,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
 		if ((skill != null) && (skill.getId() == 6330))
 		{
@@ -395,7 +395,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 		if ((player != null) && !player.isDead() && (npc.getVariables().getInt("INVUL_REMOVE_TIMER_STARTED") != 1) && ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ATTACK) || (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_CAST)))
 		{
 			npc.setTarget(player);
-			npc.doCast(SkillTable.getInstance().getInfo(6330, 1));
+			npc.doCast(SkillData.getInstance().getSkill(6330, 1));
 		}
 		else
 		{

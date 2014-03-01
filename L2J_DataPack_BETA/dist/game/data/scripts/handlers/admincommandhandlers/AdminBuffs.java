@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SkillCoolTime;
@@ -224,8 +224,8 @@ public class AdminBuffs implements IAdminCommandHandler
 	 */
 	public static void switchSkills(L2PcInstance gmchar, boolean toAuraSkills)
 	{
-		final Collection<L2Skill> skills = toAuraSkills ? SkillTreesData.getInstance().getGMSkillTree().values() : SkillTreesData.getInstance().getGMAuraSkillTree().values();
-		for (L2Skill skill : skills)
+		final Collection<Skill> skills = toAuraSkills ? SkillTreesData.getInstance().getGMSkillTree().values() : SkillTreesData.getInstance().getGMAuraSkillTree().values();
+		for (Skill skill : skills)
 		{
 			gmchar.removeSkill(skill, false); // Don't Save GM skills to database
 		}
@@ -269,7 +269,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		{
 			if ((count >= start) && (count < end))
 			{
-				final L2Skill skill = info.getSkill();
+				final Skill skill = info.getSkill();
 				for (AbstractEffect effect : info.getEffects())
 				{
 					StringUtil.append(html, "<tr><td>", (!info.isInUse() ? FONT_RED1 : "") + skill.getName(), " Lv ", String.valueOf(skill.getLevel()), " (", effect.getClass().getSimpleName(), ")" + (!info.isInUse() ? FONT_RED2 : ""), "</td><td>", skill.isToggle() ? "T (" + info.getTickCount(effect) + ")" : skill.isPassive() ? "P" : info.getTime() + "s", "</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ", Integer.toString(target.getObjectId()), " ", String.valueOf(skill.getId()), "\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");

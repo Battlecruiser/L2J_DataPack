@@ -23,10 +23,10 @@ import java.util.Map;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -47,9 +47,9 @@ public final class VarkaSilenosSupport extends AbstractNpcAI
 			_cost = cost;
 		}
 		
-		public L2Skill getSkill()
+		public Skill getSkill()
 		{
-			return SkillTable.getInstance().getInfo(_skill, 1);
+			return SkillData.getInstance().getSkill(_skill, 1);
 		}
 		
 		public int getCost()

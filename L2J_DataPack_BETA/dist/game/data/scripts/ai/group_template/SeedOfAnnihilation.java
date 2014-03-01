@@ -24,7 +24,7 @@ import java.util.Map;
 import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -351,8 +351,8 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 			else
 			{
 				npc.setTarget(player);
-				npc.doCast(SkillTable.getInstance().getInfo(6408, 1));
-				npc.doCast(SkillTable.getInstance().getInfo(6649, 1));
+				npc.doCast(SkillData.getInstance().getSkill(6408, 1));
+				npc.doCast(SkillData.getInstance().getSkill(6649, 1));
 				npc.showChatWindow(player, 1);
 			}
 		}

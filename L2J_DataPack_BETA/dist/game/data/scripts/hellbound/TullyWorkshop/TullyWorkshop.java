@@ -31,7 +31,7 @@ import javolution.util.FastMap;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager.StatusEnum;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
@@ -43,7 +43,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -1353,7 +1353,7 @@ public class TullyWorkshop extends Quest
 					{
 						npc.setTarget(player);
 					}
-					npc.doCast(SkillTable.getInstance().getInfo(5526, 1));
+					npc.doCast(SkillData.getInstance().getSkill(5526, 1));
 				}
 				else
 				{
@@ -1368,7 +1368,7 @@ public class TullyWorkshop extends Quest
 					for (L2PcInstance partyMember : party.getMembers())
 					{
 						npc.setTarget(partyMember);
-						npc.doCast(SkillTable.getInstance().getInfo(5526, 1));
+						npc.doCast(SkillData.getInstance().getSkill(5526, 1));
 					}
 					startQuestTimer("despawn_agent_7", 60000, npc, null);
 				}
@@ -1475,7 +1475,7 @@ public class TullyWorkshop extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final int npcId = npc.getId();
 		if (Arrays.binarySearch(TELEPORTING_MONSTERS, npcId) >= 0)
@@ -1525,7 +1525,7 @@ public class TullyWorkshop extends Quest
 				actor.clearAggroList();
 				actor.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				actor.setTarget(victim);
-				actor.doCast(SkillTable.getInstance().getInfo(4065, 11));
+				actor.doCast(SkillData.getInstance().getSkill(4065, 11));
 				victim.setCurrentHp(victim.getCurrentHp() + (victim.getMaxHp() * 0.03)); // FIXME: not retail, it should be done after spell is finished, but it cannot be tracked now
 			}
 		}
@@ -1749,7 +1749,7 @@ public class TullyWorkshop extends Quest
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
 		final int npcId = npc.getId();
 		final int skillId = skill.getId();

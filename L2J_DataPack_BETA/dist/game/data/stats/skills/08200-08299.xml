@@ -967,7 +967,6 @@
 		<set name="mpConsume" val="74" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8240" levels="3" name="Obliteration Storm">
@@ -985,7 +984,6 @@
 		<set name="mpConsume" val="149" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
 	</skill>
@@ -1000,7 +998,6 @@
 		<set name="magicLvl" val="73" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8242" levels="1" name="Ice Ball">
@@ -1136,7 +1133,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8250" levels="2" name="Summon Tigress">
@@ -1183,7 +1179,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<cond>
 			<player canTransform="true" />
@@ -1198,7 +1193,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<cond>
 			<player canTransform="true" />
@@ -1500,7 +1494,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 	</skill>
@@ -1554,7 +1547,6 @@
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8280" levels="1" name="Blessing of Earth">
@@ -1566,21 +1558,18 @@
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8281" levels="1" name="Inventory Slot Add">
 		<set name="icon" val="icon.skill8281" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8282" levels="1" name="Cloak Slot Add">
 		<set name="icon" val="icon.skill8282" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8283" levels="1" name="Vesper Heavy Armor Set">
@@ -1847,7 +1836,6 @@
 		<set name="icon" val="icon.arcana_sigil_i01" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 </list>

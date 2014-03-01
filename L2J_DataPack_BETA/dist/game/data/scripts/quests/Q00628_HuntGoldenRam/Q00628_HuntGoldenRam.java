@@ -21,7 +21,7 @@ package quests.Q00628_HuntGoldenRam;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
@@ -168,7 +168,7 @@ public final class Q00628_HuntGoldenRam extends Quest
 					{
 						takeItems(player, GOLDEN_RAM_COIN, buffs.getCount());
 						npc.setTarget(player);
-						npc.doCast(SkillTable.getInstance().getInfo(buffs.getId(), buffs.getChance()));
+						npc.doCast(SkillData.getInstance().getSkill(buffs.getId(), buffs.getChance()));
 						htmltext = "31556-03.htm";
 					}
 					else

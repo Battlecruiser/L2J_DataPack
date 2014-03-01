@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.util.Util;
 
@@ -40,7 +40,7 @@ import com.l2jserver.gameserver.util.Util;
 public class Clan implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new ArrayList<>();
 		
@@ -74,7 +74,7 @@ public class Clan implements ITargetTypeHandler
 			final int radius = skill.getAffectRange();
 			final L2Clan clan = player.getClan();
 			
-			if (L2Skill.addSummon(activeChar, player, radius, false))
+			if (Skill.addSummon(activeChar, player, radius, false))
 			{
 				targetList.add(player.getSummon());
 			}
@@ -114,12 +114,12 @@ public class Clan implements ITargetTypeHandler
 						continue;
 					}
 					
-					if (!onlyFirst && L2Skill.addSummon(activeChar, obj, radius, false))
+					if (!onlyFirst && Skill.addSummon(activeChar, obj, radius, false))
 					{
 						targetList.add(obj.getSummon());
 					}
 					
-					if (!L2Skill.addCharacter(activeChar, obj, radius, false))
+					if (!Skill.addCharacter(activeChar, obj, radius, false))
 					{
 						continue;
 					}

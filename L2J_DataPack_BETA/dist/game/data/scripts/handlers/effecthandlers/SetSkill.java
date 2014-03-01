@@ -18,12 +18,12 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 
 /**
  * Set Skill effect implementation.
@@ -55,7 +55,7 @@ public final class SetSkill extends AbstractEffect
 			return;
 		}
 		
-		final L2Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
+		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
 		if (skill == null)
 		{
 			return;

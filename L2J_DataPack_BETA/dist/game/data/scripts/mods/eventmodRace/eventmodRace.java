@@ -26,13 +26,13 @@ import javolution.util.FastList;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Event;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.AbnormalType;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -269,7 +269,7 @@ public class eventmodRace extends Event
 			else
 			{
 				int _number = Integer.valueOf(bypass.substring(5));
-				L2Skill _sk = SkillTable.getInstance().getInfo(_number, 1);
+				Skill _sk = SkillData.getInstance().getSkill(_number, 1);
 				if (_sk != null)
 				{
 					_skill = _number;
@@ -413,7 +413,7 @@ public class eventmodRace extends Event
 		player.getEffectList().stopSkillEffects(true, AbnormalType.SPEED_UP);
 		player.stopSkillEffects(true, 268);
 		player.stopSkillEffects(true, 298); // Rabbit Spirit Totem
-		SkillTable.getInstance().getInfo(_skill, 1).applyEffects(player, player);
+		SkillData.getInstance().getSkill(_skill, 1).applyEffects(player, player);
 	}
 	
 	private void sendMessage(L2PcInstance player, String text)

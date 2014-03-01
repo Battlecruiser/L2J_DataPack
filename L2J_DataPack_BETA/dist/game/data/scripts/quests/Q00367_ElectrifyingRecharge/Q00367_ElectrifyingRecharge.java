@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 
 /**
  * Electrifying Recharge! (367)
@@ -46,7 +46,7 @@ public final class Q00367_ElectrifyingRecharge extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 37;
 	// Skill
-	private static final L2Skill NPC_THUNDER_STORM = new SkillHolder(4072, 4).getSkill();
+	private static final Skill NPC_THUNDER_STORM = new SkillHolder(4072, 4).getSkill();
 	
 	private Q00367_ElectrifyingRecharge()
 	{

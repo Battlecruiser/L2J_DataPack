@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -109,9 +109,9 @@ public final class SummonCubic extends AbstractEffect
 			// Players with no mastery can have only one cubic.
 			int allowedCubicCount = 1;
 			// TODO: Unhardcode skill ID check so effect could work on any skill.
-			if (player.isAffectedBySkill(L2Skill.SKILL_CUBIC_MASTERY))
+			if (player.isAffectedBySkill(Skill.SKILL_CUBIC_MASTERY))
 			{
-				final BuffInfo cubicMastery = player.getEffectList().getBuffInfoBySkillId(L2Skill.SKILL_CUBIC_MASTERY);
+				final BuffInfo cubicMastery = player.getEffectList().getBuffInfoBySkillId(Skill.SKILL_CUBIC_MASTERY);
 				for (AbstractEffect effect : cubicMastery.getEffects())
 				{
 					allowedCubicCount = effect != null ? (int) effect.getValue() : 1;

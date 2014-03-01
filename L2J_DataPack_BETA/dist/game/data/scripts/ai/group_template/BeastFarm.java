@@ -28,7 +28,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2Object;
@@ -38,7 +38,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TamedBeastInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo;
 import com.l2jserver.gameserver.util.Util;
 
@@ -278,10 +278,10 @@ public class BeastFarm extends AbstractNpcAI
 			nextNpc.broadcastPacket(new AbstractNpcInfo.NpcInfo(nextNpc, player));
 			nextNpc.setRunning();
 			
-			SkillTable st = SkillTable.getInstance();
+			SkillData st = SkillData.getInstance();
 			for (SkillHolder sh : beast.getSkills())
 			{
-				nextNpc.addBeastSkill(st.getInfo(sh.getSkillId(), sh.getSkillLvl()));
+				nextNpc.addBeastSkill(st.getSkill(sh.getSkillId(), sh.getSkillLvl()));
 			}
 			
 			Q00020_BringUpWithLove.checkJewelOfInnocence(player);
@@ -303,7 +303,7 @@ public class BeastFarm extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		// this behavior is only run when the target of skill is the passed npc (chest)
 		// i.e. when the player is attempting to open the chest using a skill

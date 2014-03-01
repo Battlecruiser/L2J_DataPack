@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 
 /**
@@ -35,7 +35,7 @@ import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 public class CommandChannel implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		final List<L2Character> targetList = new ArrayList<>();
 		final L2PcInstance player = activeChar.getActingPlayer();
@@ -50,7 +50,7 @@ public class CommandChannel implements ITargetTypeHandler
 		final L2Party party = player.getParty();
 		final boolean hasChannel = (party != null) && party.isInCommandChannel();
 		
-		if (L2Skill.addSummon(activeChar, player, radius, false))
+		if (Skill.addSummon(activeChar, player, radius, false))
 		{
 			targetList.add(player.getSummon());
 		}
@@ -72,7 +72,7 @@ public class CommandChannel implements ITargetTypeHandler
 				continue;
 			}
 			
-			if (L2Skill.addCharacter(activeChar, member, radius, false))
+			if (Skill.addCharacter(activeChar, member, radius, false))
 			{
 				targetList.add(member);
 				if (targetList.size() >= maxTargets)

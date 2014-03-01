@@ -38,7 +38,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ClanTable;
 import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
@@ -56,7 +56,7 @@ import com.l2jserver.gameserver.model.entity.clanhall.SiegeStatus;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
@@ -262,9 +262,9 @@ public final class RainbowSpringsChateau extends Quest
 		"Contact me at L2JForum =)"
 	};
 	
-	private static final L2Skill[] DEBUFFS =
+	private static final Skill[] DEBUFFS =
 	{
-		SkillTable.getInstance().getInfo(0, 1)
+		SkillData.getInstance().getSkill(0, 1)
 	};
 	
 	protected static Map<Integer, Long> _warDecreesCount = new HashMap<>();
@@ -783,7 +783,7 @@ public final class RainbowSpringsChateau extends Quest
 			{
 				if (chr != null)
 				{
-					for (L2Skill sk : DEBUFFS)
+					for (Skill sk : DEBUFFS)
 					{
 						sk.applyEffects(chr, chr);
 					}

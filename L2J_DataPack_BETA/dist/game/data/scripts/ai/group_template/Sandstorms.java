@@ -20,7 +20,7 @@ package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -40,7 +40,7 @@ public class Sandstorms extends AbstractNpcAI
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		npc.setTarget(player);
-		npc.doCast(SkillTable.getInstance().getInfo(5435, 1));
+		npc.doCast(SkillData.getInstance().getSkill(5435, 1));
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	

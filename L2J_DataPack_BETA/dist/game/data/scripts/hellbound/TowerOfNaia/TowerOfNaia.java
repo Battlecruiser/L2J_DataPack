@@ -30,7 +30,7 @@ import javolution.util.FastMap;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Party;
@@ -39,7 +39,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -988,7 +988,7 @@ public class TowerOfNaia extends Quest
 				cancelQuestTimers("spawn_lock");
 				startQuestTimer("spawn_lock", 300000, null, null);
 				npc.setTarget(player);
-				npc.doCast(SkillTable.getInstance().getInfo(5527, 1));
+				npc.doCast(SkillData.getInstance().getSkill(5527, 1));
 			}
 		}
 		else if (event.equalsIgnoreCase("teleport") && (_lock != null))
@@ -1014,7 +1014,7 @@ public class TowerOfNaia extends Quest
 				else
 				{
 					npc.setTarget(player);
-					npc.doCast(SkillTable.getInstance().getInfo(5527, 1));
+					npc.doCast(SkillData.getInstance().getSkill(5527, 1));
 				}
 			}
 			else
@@ -1047,7 +1047,7 @@ public class TowerOfNaia extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if ((_lock != null) && (npc.getObjectId() == _lock.getObjectId()))
 		{

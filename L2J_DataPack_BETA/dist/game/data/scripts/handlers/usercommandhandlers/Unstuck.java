@@ -22,12 +22,12 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.handler.IUserCommandHandler;
 import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
@@ -66,8 +66,8 @@ public class Unstuck implements IUserCommandHandler
 		}
 		activeChar.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 		
-		L2Skill escape = SkillTable.getInstance().getInfo(2099, 1); // 5 minutes escape
-		L2Skill GM_escape = SkillTable.getInstance().getInfo(2100, 1); // 1 second escape
+		Skill escape = SkillData.getInstance().getSkill(2099, 1); // 5 minutes escape
+		Skill GM_escape = SkillData.getInstance().getSkill(2100, 1); // 1 second escape
 		if (activeChar.getAccessLevel().isGm())
 		{
 			if (GM_escape != null)

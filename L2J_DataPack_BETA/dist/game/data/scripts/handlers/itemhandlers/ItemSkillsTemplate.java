@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -78,7 +78,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				continue;
 			}
 			
-			L2Skill itemSkill = skillInfo.getSkill();
+			Skill itemSkill = skillInfo.getSkill();
 			if (itemSkill != null)
 			{
 				if (!itemSkill.checkCondition(playable, playable.getTarget(), false))
@@ -162,7 +162,7 @@ public class ItemSkillsTemplate implements IItemHandler
 	 * @param item the item being used
 	 * @return {@code true} if the the item or skill to check is available, {@code false} otherwise
 	 */
-	private boolean checkReuse(L2Playable playable, L2Skill skill, L2ItemInstance item)
+	private boolean checkReuse(L2Playable playable, Skill skill, L2ItemInstance item)
 	{
 		final long remainingTime = (skill != null) ? playable.getSkillRemainingReuseTime(skill.getReuseHashCode()) : playable.getItemRemainingReuseTime(item.getObjectId());
 		final boolean isAvailable = remainingTime <= 0;
