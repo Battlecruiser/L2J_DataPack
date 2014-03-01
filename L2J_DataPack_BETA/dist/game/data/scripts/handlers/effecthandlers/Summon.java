@@ -32,9 +32,10 @@ import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
+ * Summon effect implementation.
  * @author UnAfraid
  */
-public class Summon extends AbstractEffect
+public final class Summon extends AbstractEffect
 {
 	private final int _npcId;
 	private final float _expMultiplier;
@@ -45,10 +46,12 @@ public class Summon extends AbstractEffect
 	public Summon(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		if (params == null)
 		{
 			throw new IllegalArgumentException("Summon effect without parameters!");
 		}
+		
 		_npcId = params.getInt("npcId");
 		_expMultiplier = params.getFloat("expMultiplier", 1);
 		_consumeItem = new ItemHolder(params.getInt("consumeItemId", 0), params.getInt("consumeItemCount", 1));
@@ -65,8 +68,6 @@ public class Summon extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		super.onStart(info);
-		
 		if (!info.getEffected().isPlayer() || info.getEffected().hasSummon())
 		{
 			return;

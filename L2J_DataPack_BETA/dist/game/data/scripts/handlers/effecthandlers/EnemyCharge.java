@@ -29,6 +29,9 @@ import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
+/**
+ * Enemy Charge effect implementation.
+ */
 public final class EnemyCharge extends AbstractEffect
 {
 	public EnemyCharge(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)

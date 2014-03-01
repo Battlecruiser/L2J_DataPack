@@ -47,6 +47,7 @@ public final class EnergyAttack extends AbstractEffect
 	public EnergyAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_power = params.getDouble("power", 0);
 		_criticalChance = params.getInt("criticalChance", 0);
 		_ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);

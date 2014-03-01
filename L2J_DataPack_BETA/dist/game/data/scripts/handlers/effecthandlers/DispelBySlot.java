@@ -44,6 +44,7 @@ public final class DispelBySlot extends AbstractEffect
 	public DispelBySlot(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_dispel = params.getString("dispel", null);
 		if ((_dispel != null) && !_dispel.isEmpty())
 		{

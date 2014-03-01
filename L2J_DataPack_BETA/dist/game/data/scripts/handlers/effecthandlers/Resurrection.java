@@ -38,6 +38,7 @@ public final class Resurrection extends AbstractEffect
 	public Resurrection(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_power = params != null ? params.getInt("power", 0) : 0;
 	}
 	

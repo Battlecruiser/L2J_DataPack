@@ -40,12 +40,13 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public final class CallPc extends AbstractEffect
 {
-	private static int _itemId;
-	private static int _itemCount;
+	private final int _itemId;
+	private final int _itemCount;
 	
 	public CallPc(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_itemId = params.getInt("itemId", 0);
 		_itemCount = params.getInt("itemCount", 0);
 	}

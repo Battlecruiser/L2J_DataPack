@@ -36,6 +36,7 @@ public final class TargetCancel extends AbstractEffect
 	public TargetCancel(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_chance = params != null ? params.getInt("chance", 100) : 100;
 	}
 	

@@ -44,33 +44,6 @@ public final class Harvesting extends AbstractEffect
 		super(attachCond, applyCond, set, params);
 	}
 	
-	private boolean calcSuccess(L2PcInstance activeChar, L2MonsterInstance target)
-	{
-		int basicSuccess = 100;
-		final int levelPlayer = activeChar.getLevel();
-		final int levelTarget = target.getLevel();
-		
-		int diff = (levelPlayer - levelTarget);
-		if (diff < 0)
-		{
-			diff = -diff;
-		}
-		
-		// apply penalty, target <=> player levels
-		// 5% penalty for each level
-		if (diff > 5)
-		{
-			basicSuccess -= (diff - 5) * 5;
-		}
-		
-		// success rate can't be less than 1%
-		if (basicSuccess < 1)
-		{
-			basicSuccess = 1;
-		}
-		return Rnd.nextInt(99) < basicSuccess;
-	}
-	
 	@Override
 	public boolean isInstant()
 	{
@@ -175,5 +148,32 @@ public final class Harvesting extends AbstractEffect
 				player.sendPacket(SystemMessageId.THE_HARVEST_FAILED_BECAUSE_THE_SEED_WAS_NOT_SOWN);
 			}
 		}
+	}
+	
+	private static boolean calcSuccess(L2PcInstance activeChar, L2MonsterInstance target)
+	{
+		int basicSuccess = 100;
+		final int levelPlayer = activeChar.getLevel();
+		final int levelTarget = target.getLevel();
+		
+		int diff = (levelPlayer - levelTarget);
+		if (diff < 0)
+		{
+			diff = -diff;
+		}
+		
+		// apply penalty, target <=> player levels
+		// 5% penalty for each level
+		if (diff > 5)
+		{
+			basicSuccess -= (diff - 5) * 5;
+		}
+		
+		// success rate can't be less than 1%
+		if (basicSuccess < 1)
+		{
+			basicSuccess = 1;
+		}
+		return Rnd.nextInt(99) < basicSuccess;
 	}
 }

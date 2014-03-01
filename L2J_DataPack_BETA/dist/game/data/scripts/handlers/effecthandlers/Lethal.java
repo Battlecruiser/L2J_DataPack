@@ -40,6 +40,7 @@ public final class Lethal extends AbstractEffect
 	public Lethal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_fullLethal = params.getInt("fullLethal", 0);
 		_halfLethal = params.getInt("halfLethal", 0);
 	}

@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.TraitType;
 
 /**
- * Attack Trait effect implementation
+ * Attack Trait effect implementation.
  * @author Nos
  */
 public final class AttackTrait extends AbstractEffect

@@ -10,7 +10,6 @@ import com.l2jserver.gameserver.model.effects.AbstractEffect;
  */
 public final class ChangeFishingMastery extends AbstractEffect
 {
-	
 	public ChangeFishingMastery(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);

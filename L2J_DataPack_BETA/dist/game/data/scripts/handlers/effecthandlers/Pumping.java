@@ -36,15 +36,17 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 
 /**
+ * Pumping effect implementation.
  * @author UnAfraid
  */
-public class Pumping extends AbstractEffect
+public final class Pumping extends AbstractEffect
 {
 	private final double _power;
 	
 	public Pumping(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		if ((params == null) || (params.getString("power", null) == null))
 		{
 			throw new IllegalArgumentException(getClass().getSimpleName() + ": effect without power!");
@@ -67,7 +69,6 @@ public class Pumping extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		super.onStart(info);
 		final L2Character activeChar = info.getEffector();
 		if (!activeChar.isPlayer())
 		{
