@@ -22,7 +22,6 @@ import java.util.EnumMap;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -31,6 +30,7 @@ import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -76,17 +76,14 @@ public final class DragonValley extends AbstractNpcAI
 		22861, // Hard Scorpion Bones
 		22862, // Drakos Hunter
 	};
-	
 	// Items
 	private static final int GREATER_HERB_OF_MANA = 8604;
 	private static final int SUPERIOR_HERB_OF_MANA = 8605;
-	
 	// Skills
 	private static final SkillHolder SELF_DESTRUCTION = new SkillHolder(6850, 1);
 	private static final SkillHolder MORALE_BOOST1 = new SkillHolder(6885, 1);
 	private static final SkillHolder MORALE_BOOST2 = new SkillHolder(6885, 2);
 	private static final SkillHolder MORALE_BOOST3 = new SkillHolder(6885, 3);
-	
 	// Misc
 	private static final int MIN_DISTANCE = 1500;
 	private static final int MIN_MEMBERS = 3;
@@ -141,6 +138,7 @@ public final class DragonValley extends AbstractNpcAI
 		addKillId(SPOIL_REACT_MONSTER);
 		addSpawnId(EXPLODING_ORC_GHOST);
 		addSpawnId(SPOIL_REACT_MONSTER);
+		addSpellFinishedId(EXPLODING_ORC_GHOST);
 		
 		for (int npcId : SPOIL_REACT_MONSTER)
 		{
@@ -159,12 +157,19 @@ public final class DragonValley extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("SelfDestruction") && (npc != null) && !npc.isDead())
+		if (event.equals("SELF_DESTRUCTION") && (npc != null) && !npc.isDead())
 		{
-			npc.abortAttack();
-			npc.disableCoreAI(true);
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			npc.doCast(SELF_DESTRUCTION.getSkill());
+			final L2Playable playable = npc.getVariables().getObject("playable", L2Playable.class);
+			
+			if ((playable != null) && (npc.calculateDistance(playable, true, false) < 250))
+			{
+				npc.disableCoreAI(true);
+				npc.doCast(SELF_DESTRUCTION.getSkill());
+			}
+			else if (playable != null)
+			{
+				startQuestTimer("SELF_DESTRUCTION", 3000, npc, null);
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -214,13 +219,23 @@ public final class DragonValley extends AbstractNpcAI
 		((L2Attackable) npc).setOnKillDelay(0);
 		if (npc.getId() == EXPLODING_ORC_GHOST)
 		{
-			startQuestTimer("SelfDestruction", 3000, npc, null);
+			startQuestTimer("SELF_DESTRUCTION", 3000, npc, null);
 		}
 		else if (Util.contains(SPAWN_ANIMATION, npc.getId()))
 		{
 			npc.setShowSummonAnimation(true);
 		}
 		return super.onSpawn(npc);
+	}
+	
+	@Override
+	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	{
+		if (skill == SELF_DESTRUCTION.getSkill())
+		{
+			npc.doDie(player);
+		}
+		return super.onSpellFinished(npc, player, skill);
 	}
 	
 	private void manageMoraleBoost(L2PcInstance player, L2Npc npc)
@@ -232,7 +247,7 @@ public final class DragonValley extends AbstractNpcAI
 		{
 			for (L2PcInstance member : player.getParty().getMembers())
 			{
-				if ((member.getLevel() >= MIN_LVL) && (member.getClassId().level() >= CLASS_LVL) && (Util.calculateDistance(npc, member, true, false) < MIN_DISTANCE))
+				if ((member.getLevel() >= MIN_LVL) && (member.getClassId().level() >= CLASS_LVL) && (npc.calculateDistance(member, true, false) < MIN_DISTANCE))
 				{
 					points += CLASS_POINTS.get(member.getClassId());
 				}
@@ -253,7 +268,7 @@ public final class DragonValley extends AbstractNpcAI
 			
 			for (L2PcInstance member : player.getParty().getMembers())
 			{
-				if (Util.calculateDistance(npc, member, true, false) < MIN_DISTANCE)
+				if (npc.calculateDistance(member, true, false) < MIN_DISTANCE)
 				{
 					switch (moraleBoostLv)
 					{
@@ -278,12 +293,13 @@ public final class DragonValley extends AbstractNpcAI
 		{
 			int val = npc.getScriptValue();
 			final L2Playable attacker = isSummon ? player.getSummon() : player;
-			final L2Attackable Ghost1 = (L2Attackable) addSpawn(getRandom(EXPLODING_ORC_GHOST, WRATHFUL_ORC_GHOST), npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
+			final L2Attackable Ghost1 = (L2Attackable) addSpawn(EXPLODING_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
+			Ghost1.getVariables().set("playable", attacker);
 			attackPlayer(Ghost1, attacker);
 			val++;
-			if ((val < 2) && (getRandom(100) < 10))
+			if ((val < 2) && (getRandomBoolean()))
 			{
-				final L2Attackable Ghost2 = (L2Attackable) addSpawn(getRandom(EXPLODING_ORC_GHOST, WRATHFUL_ORC_GHOST), npc.getX(), npc.getY(), npc.getZ() + 20, npc.getHeading(), false, 0, false);
+				final L2Attackable Ghost2 = (L2Attackable) addSpawn(WRATHFUL_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 20, npc.getHeading(), false, 0, false);
 				attackPlayer(Ghost2, attacker);
 				val++;
 			}
