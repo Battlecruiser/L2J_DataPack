@@ -163,6 +163,8 @@ public final class Q00325_GrimCollector extends Quest
 						
 						st.giveAdena(sum, true);
 					}
+					
+					takeItems(player, -1, getRegisteredItemIds());
 				}
 				
 				if (event.equals("30434-06.html"))
