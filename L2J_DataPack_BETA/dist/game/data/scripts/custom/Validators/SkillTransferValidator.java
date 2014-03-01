@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.scripting.scriptengine.events.ProfessionChangeEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.impl.L2Script;
 import com.l2jserver.gameserver.util.Util;
@@ -101,7 +101,7 @@ public final class SkillTransferValidator extends L2Script
 				if (Config.SKILL_CHECK_ENABLE && (!player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM))
 				{
 					long count = PORMANDERS[index].getCount() - player.getInventory().getInventoryItemCount(PORMANDERS[index].getId(), -1, false);
-					for (L2Skill sk : player.getAllSkills())
+					for (Skill sk : player.getAllSkills())
 					{
 						for (L2SkillLearn s : SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values())
 						{

@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
@@ -69,7 +69,7 @@ public class ReloadHandler implements ITelnetHandler
 				else if (type.equals("skill"))
 				{
 					_print.print("Reloading skills... ");
-					SkillTable.getInstance().reload();
+					SkillData.getInstance().reload();
 					_print.println("done");
 				}
 				else if (type.equals("npc"))

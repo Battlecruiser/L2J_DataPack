@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.util.Rnd;
 
@@ -60,7 +60,7 @@ public class TriggerSkillByDamage extends AbstractEffect implements IDamageRecei
 	}
 	
 	@Override
-	public void onDamageReceivedEvent(L2Character attacker, L2Character target, double damage, L2Skill skill, boolean crit, boolean damageOverTime)
+	public void onDamageReceivedEvent(L2Character attacker, L2Character target, double damage, Skill skill, boolean crit, boolean damageOverTime)
 	{
 		if (damageOverTime || (_chance == 0) || (_skill.getSkillLvl() == 0))
 		{
@@ -89,7 +89,7 @@ public class TriggerSkillByDamage extends AbstractEffect implements IDamageRecei
 			return;
 		}
 		
-		final L2Skill triggerSkill = _skill.getSkill();
+		final Skill triggerSkill = _skill.getSkill();
 		final L2Object[] targets = targetHandler.getTargetList(triggerSkill, target, false, attacker);
 		for (L2Object triggerTarget : targets)
 		{

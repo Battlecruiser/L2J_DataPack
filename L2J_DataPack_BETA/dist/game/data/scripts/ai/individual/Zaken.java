@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.MountType;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
@@ -263,13 +263,13 @@ public final class Zaken extends AbstractNpcAI
 				if (sk_4223) // use night face if zaken have day face
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(4224, 1));
+					npc.doCast(SkillData.getInstance().getSkill(4224, 1));
 					_loc.setLocation(npc.getLocation());
 				}
 				if (!sk_4227) // use zaken regeneration
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(4227, 1));
+					npc.doCast(SkillData.getInstance().getSkill(4227, 1));
 				}
 				if ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ATTACK) && (_ai0 == 0))
 				{
@@ -392,7 +392,7 @@ public final class Zaken extends AbstractNpcAI
 							_loc.setY(Ycoords[i2] + getRandom(650));
 							_loc.setZ(Zcoords[i2]);
 							npc.setTarget(npc);
-							npc.doCast(SkillTable.getInstance().getInfo(4222, 1));
+							npc.doCast(SkillData.getInstance().getSkill(4222, 1));
 						}
 					}
 				}
@@ -442,14 +442,14 @@ public final class Zaken extends AbstractNpcAI
 			else if (!sk_4223) // use day face if not night time
 			{
 				npc.setTarget(npc);
-				npc.doCast(SkillTable.getInstance().getInfo(4223, 1));
+				npc.doCast(SkillData.getInstance().getSkill(4223, 1));
 				_quest2 = 3;
 			}
 			
 			if (sk_4227) // when switching to day time, cancel zaken night regen
 			{
 				npc.setTarget(npc);
-				npc.doCast(SkillTable.getInstance().getInfo(4242, 1));
+				npc.doCast(SkillData.getInstance().getSkill(4242, 1));
 			}
 			
 			if (getRandom(40) < 1)
@@ -459,14 +459,14 @@ public final class Zaken extends AbstractNpcAI
 				_loc.setY(Ycoords[i2] + getRandom(650));
 				_loc.setZ(Zcoords[i2]);
 				npc.setTarget(npc);
-				npc.doCast(SkillTable.getInstance().getInfo(4222, 1));
+				npc.doCast(SkillData.getInstance().getSkill(4222, 1));
 			}
 			startQuestTimer("1001", 30000, npc, null, true);
 		}
 		if (event.equalsIgnoreCase("1002"))
 		{
 			_quest0 = 0;
-			npc.doCast(SkillTable.getInstance().getInfo(4222, 1));
+			npc.doCast(SkillData.getInstance().getSkill(4222, 1));
 			_ai0 = 0;
 		}
 		if (event.equalsIgnoreCase("1003"))
@@ -635,7 +635,7 @@ public final class Zaken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
 		if (npc.getId() == ZAKEN)
 		{
@@ -771,7 +771,7 @@ public final class Zaken extends AbstractNpcAI
 				if (!sk_4258)
 				{
 					npc.setTarget(attacker);
-					npc.doCast(SkillTable.getInstance().getInfo(4258, 1));
+					npc.doCast(SkillData.getInstance().getSkill(4258, 1));
 				}
 			}
 			L2Character originalAttacker = isSummon ? attacker.getSummon() : attacker;
@@ -783,22 +783,22 @@ public final class Zaken extends AbstractNpcAI
 				if (i0 < 1)
 				{
 					npc.setTarget(attacker);
-					npc.doCast(SkillTable.getInstance().getInfo(4216, 1));
+					npc.doCast(SkillData.getInstance().getSkill(4216, 1));
 				}
 				else if (i0 < 2)
 				{
 					npc.setTarget(attacker);
-					npc.doCast(SkillTable.getInstance().getInfo(4217, 1));
+					npc.doCast(SkillData.getInstance().getSkill(4217, 1));
 				}
 				else if (i0 < 4)
 				{
 					npc.setTarget(attacker);
-					npc.doCast(SkillTable.getInstance().getInfo(4219, 1));
+					npc.doCast(SkillData.getInstance().getSkill(4219, 1));
 				}
 				else if (i0 < 8)
 				{
 					npc.setTarget(attacker);
-					npc.doCast(SkillTable.getInstance().getInfo(4218, 1));
+					npc.doCast(SkillData.getInstance().getSkill(4218, 1));
 				}
 				else if (i0 < 15)
 				{
@@ -811,7 +811,7 @@ public final class Zaken extends AbstractNpcAI
 						if (attacker != ((L2Attackable) npc).getMostHated())
 						{
 							npc.setTarget(attacker);
-							npc.doCast(SkillTable.getInstance().getInfo(4221, 1));
+							npc.doCast(SkillData.getInstance().getSkill(4221, 1));
 						}
 					}
 				}
@@ -820,7 +820,7 @@ public final class Zaken extends AbstractNpcAI
 					if (attacker == ((L2Attackable) npc).getMostHated())
 					{
 						npc.setTarget(attacker);
-						npc.doCast(SkillTable.getInstance().getInfo(4220, 1));
+						npc.doCast(SkillData.getInstance().getSkill(4220, 1));
 					}
 				}
 			}
@@ -835,7 +835,7 @@ public final class Zaken extends AbstractNpcAI
 				_loc.setY(Ycoords[i2] + getRandom(650));
 				_loc.setZ(Zcoords[i2]);
 				npc.setTarget(npc);
-				npc.doCast(SkillTable.getInstance().getInfo(4222, 1));
+				npc.doCast(SkillData.getInstance().getSkill(4222, 1));
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
@@ -871,7 +871,7 @@ public final class Zaken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		int npcId = npc.getId();
 		if (npcId == ZAKEN)
@@ -886,22 +886,22 @@ public final class Zaken extends AbstractNpcAI
 				if (i0 < 1)
 				{
 					npc.setTarget(caster);
-					npc.doCast(SkillTable.getInstance().getInfo(4216, 1));
+					npc.doCast(SkillData.getInstance().getSkill(4216, 1));
 				}
 				else if (i0 < 2)
 				{
 					npc.setTarget(caster);
-					npc.doCast(SkillTable.getInstance().getInfo(4217, 1));
+					npc.doCast(SkillData.getInstance().getSkill(4217, 1));
 				}
 				else if (i0 < 4)
 				{
 					npc.setTarget(caster);
-					npc.doCast(SkillTable.getInstance().getInfo(4219, 1));
+					npc.doCast(SkillData.getInstance().getSkill(4219, 1));
 				}
 				else if (i0 < 8)
 				{
 					npc.setTarget(caster);
-					npc.doCast(SkillTable.getInstance().getInfo(4218, 1));
+					npc.doCast(SkillData.getInstance().getSkill(4218, 1));
 				}
 				else if (i0 < 15)
 				{
@@ -914,7 +914,7 @@ public final class Zaken extends AbstractNpcAI
 						if (caster != ((L2Attackable) npc).getMostHated())
 						{
 							npc.setTarget(caster);
-							npc.doCast(SkillTable.getInstance().getInfo(4221, 1));
+							npc.doCast(SkillData.getInstance().getSkill(4221, 1));
 						}
 					}
 				}
@@ -923,7 +923,7 @@ public final class Zaken extends AbstractNpcAI
 					if (caster == ((L2Attackable) npc).getMostHated())
 					{
 						npc.setTarget(caster);
-						npc.doCast(SkillTable.getInstance().getInfo(4220, 1));
+						npc.doCast(SkillData.getInstance().getSkill(4220, 1));
 					}
 				}
 			}
@@ -974,22 +974,22 @@ public final class Zaken extends AbstractNpcAI
 					if (i0 < 1)
 					{
 						npc.setTarget(player);
-						npc.doCast(SkillTable.getInstance().getInfo(4216, 1));
+						npc.doCast(SkillData.getInstance().getSkill(4216, 1));
 					}
 					else if (i0 < 2)
 					{
 						npc.setTarget(player);
-						npc.doCast(SkillTable.getInstance().getInfo(4217, 1));
+						npc.doCast(SkillData.getInstance().getSkill(4217, 1));
 					}
 					else if (i0 < 4)
 					{
 						npc.setTarget(player);
-						npc.doCast(SkillTable.getInstance().getInfo(4219, 1));
+						npc.doCast(SkillData.getInstance().getSkill(4219, 1));
 					}
 					else if (i0 < 8)
 					{
 						npc.setTarget(player);
-						npc.doCast(SkillTable.getInstance().getInfo(4218, 1));
+						npc.doCast(SkillData.getInstance().getSkill(4218, 1));
 					}
 					else if (i0 < 15)
 					{
@@ -1002,7 +1002,7 @@ public final class Zaken extends AbstractNpcAI
 							if (player != ((L2Attackable) npc).getMostHated())
 							{
 								npc.setTarget(player);
-								npc.doCast(SkillTable.getInstance().getInfo(4221, 1));
+								npc.doCast(SkillData.getInstance().getSkill(4221, 1));
 							}
 						}
 					}
@@ -1011,7 +1011,7 @@ public final class Zaken extends AbstractNpcAI
 						if (player == ((L2Attackable) npc).getMostHated())
 						{
 							npc.setTarget(player);
-							npc.doCast(SkillTable.getInstance().getInfo(4220, 1));
+							npc.doCast(SkillData.getInstance().getSkill(4220, 1));
 						}
 					}
 				}

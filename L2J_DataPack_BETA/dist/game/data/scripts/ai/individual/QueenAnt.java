@@ -25,7 +25,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.Location;
@@ -37,7 +37,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
@@ -295,19 +295,19 @@ public final class QueenAnt extends AbstractNpcAI
 		
 		if (!Config.RAID_DISABLE_CURSE && ((character.getLevel() - npc.getLevel()) > 8))
 		{
-			L2Skill curse = null;
+			Skill curse = null;
 			if (isMage)
 			{
 				if (!character.isMuted() && (getRandom(4) == 0))
 				{
-					curse = SkillTable.FrequentSkill.RAID_CURSE.getSkill();
+					curse = SkillData.FrequentSkill.RAID_CURSE.getSkill();
 				}
 			}
 			else
 			{
 				if (!character.isParalyzed() && (getRandom(4) == 0))
 				{
-					curse = SkillTable.FrequentSkill.RAID_CURSE2.getSkill();
+					curse = SkillData.FrequentSkill.RAID_CURSE2.getSkill();
 				}
 			}
 			

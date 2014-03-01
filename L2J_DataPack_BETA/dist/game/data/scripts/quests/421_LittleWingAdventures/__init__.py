@@ -7,7 +7,7 @@ from java.sql import PreparedStatement
 from java.sql import ResultSet
 from java.sql import SQLException
 from com.l2jserver import L2DatabaseFactory
-from com.l2jserver.gameserver.datatables import SkillTable
+from com.l2jserver.gameserver.datatables import SkillData
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest import Quest as JQuest
@@ -197,7 +197,7 @@ class Quest (JQuest) :
                      st.playSound("ItemSound.quest_finish")
                   else :
                      npc.setTarget(player)
-                     skill = SkillTable.getInstance().getInfo(4167,1)
+                     skill = SkillData.getInstance().getSkill(4167,1)
                      if skill != None:
                         skill.applyEffects(npc, player)
                      htmltext = "30747-18.htm"
@@ -212,7 +212,7 @@ class Quest (JQuest) :
                      st.playSound("ItemSound.quest_finish")
                   else :
                      npc.setTarget(player)
-                     skill = SkillTable.getInstance().getInfo(4167,1)
+                     skill = SkillData.getInstance().getSkill(4167,1)
                      if skill != None:
                         skill.applyEffects(npc, player)
                      htmltext = "30747-18.htm"
@@ -227,7 +227,7 @@ class Quest (JQuest) :
                      st.playSound("ItemSound.quest_finish")
                   else :
                      npc.setTarget(player)
-                     skill = SkillTable.getInstance().getInfo(4167,1)
+                     skill = SkillData.getInstance().getSkill(4167,1)
                      if skill != None:
                         skill.applyEffects(npc, player)
                      htmltext = "30747-18.htm"

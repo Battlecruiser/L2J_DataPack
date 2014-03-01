@@ -23,7 +23,7 @@ import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.communitybbs.Manager.RegionBBSManager;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.Team;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2ChestInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CharInfo;
 import com.l2jserver.gameserver.network.serverpackets.Earthquake;
@@ -336,7 +336,7 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.stopSkillEffects((val == 0) && sendMessage, 7029);
 				if ((val >= 1) && (val <= 4))
 				{
-					L2Skill gmSpeedSkill = SkillTable.getInstance().getInfo(7029, val);
+					Skill gmSpeedSkill = SkillData.getInstance().getSkill(7029, val);
 					activeChar.doSimultaneousCast(gmSpeedSkill);
 				}
 			}

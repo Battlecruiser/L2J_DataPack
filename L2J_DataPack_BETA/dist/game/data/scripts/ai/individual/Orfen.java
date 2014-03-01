@@ -25,7 +25,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -241,7 +241,7 @@ public final class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (npc.getId() == ORFEN)
 		{
@@ -253,7 +253,7 @@ public final class Orfen extends AbstractNpcAI
 				npc.broadcastPacket(packet);
 				originalCaster.teleToLocation(npc.getLocation());
 				npc.setTarget(originalCaster);
-				npc.doCast(SkillTable.getInstance().getInfo(4064, 1));
+				npc.doCast(SkillData.getInstance().getSkill(4064, 1));
 			}
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
@@ -271,7 +271,7 @@ public final class Orfen extends AbstractNpcAI
 		if ((npcId == RAIKEL_LEOS) && (getRandom(20) == 0))
 		{
 			npc.setTarget(attacker);
-			npc.doCast(SkillTable.getInstance().getInfo(4067, 4));
+			npc.doCast(SkillData.getInstance().getSkill(4067, 4));
 		}
 		else if (npcId == RIBA_IREN)
 		{
@@ -284,7 +284,7 @@ public final class Orfen extends AbstractNpcAI
 			{
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 				npc.setTarget(caller);
-				npc.doCast(SkillTable.getInstance().getInfo(4516, 1));
+				npc.doCast(SkillData.getInstance().getSkill(4516, 1));
 			}
 		}
 		return super.onFactionCall(npc, caller, attacker, isSummon);
@@ -308,7 +308,7 @@ public final class Orfen extends AbstractNpcAI
 				npc.broadcastPacket(packet);
 				attacker.teleToLocation(npc.getLocation());
 				npc.setTarget(attacker);
-				npc.doCast(SkillTable.getInstance().getInfo(4064, 1));
+				npc.doCast(SkillData.getInstance().getSkill(4064, 1));
 			}
 		}
 		else if (npcId == RIBA_IREN)
@@ -316,7 +316,7 @@ public final class Orfen extends AbstractNpcAI
 			if (!npc.isCastingNow() && ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2.0)))
 			{
 				npc.setTarget(attacker);
-				npc.doCast(SkillTable.getInstance().getInfo(4516, 1));
+				npc.doCast(SkillData.getInstance().getSkill(4516, 1));
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);

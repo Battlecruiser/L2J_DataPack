@@ -24,7 +24,7 @@ import javolution.util.FastList;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -38,7 +38,7 @@ import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
@@ -167,8 +167,8 @@ public final class PailakaDevilsLegacy extends Quest
 	};
 	// @formatter:on
 	
-	private static L2Skill boom_skill = SkillTable.getInstance().getInfo(5714, 1);
-	private static L2Skill energy_skill = SkillTable.getInstance().getInfo(5712, 1);
+	private static Skill boom_skill = SkillData.getInstance().getSkill(5714, 1);
+	private static Skill energy_skill = SkillData.getInstance().getSkill(5712, 1);
 	
 	private PailakaDevilsLegacy()
 	{

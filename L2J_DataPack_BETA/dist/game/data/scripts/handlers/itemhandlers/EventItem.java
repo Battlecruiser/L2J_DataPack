@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -74,7 +74,7 @@ public class EventItem implements IItemHandler
 			return false;
 		}
 		
-		final L2Skill sk = item.getEtcItem().getSkills()[0].getSkill();
+		final Skill sk = item.getEtcItem().getSkills()[0].getSkill();
 		if (sk == null)
 		{
 			return false;

@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.olympiad.CompetitionType;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.model.olympiad.OlympiadManager;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExHeroList;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
@@ -251,7 +251,7 @@ public class OlympiadManagerLink implements IBypassHandler
 					return false;
 				}
 				
-				L2Skill skill = npcBuffGroupInfo.getSkill().getSkill();
+				Skill skill = npcBuffGroupInfo.getSkill().getSkill();
 				target.setTarget(activeChar);
 				
 				if (activeChar.olyBuff > 0)

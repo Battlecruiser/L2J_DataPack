@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -49,7 +49,7 @@ public class NpcBufferAI implements Runnable
 			return;
 		}
 		
-		final L2Skill skill = _skillData.getSkill();
+		final Skill skill = _skillData.getSkill();
 		if ((_npc.getSummoner() == null) || !_npc.getSummoner().isPlayer())
 		{
 			return;

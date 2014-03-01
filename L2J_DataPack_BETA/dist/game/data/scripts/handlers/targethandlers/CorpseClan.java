@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.util.Util;
@@ -41,7 +41,7 @@ import com.l2jserver.gameserver.util.Util;
 public class CorpseClan implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Object> targetList = new ArrayList<>();
 		if (activeChar.isPlayable())
@@ -96,7 +96,7 @@ public class CorpseClan implements ITargetTypeHandler
 						continue;
 					}
 					
-					if (!L2Skill.addCharacter(activeChar, obj, radius, true))
+					if (!Skill.addCharacter(activeChar, obj, radius, true))
 					{
 						continue;
 					}

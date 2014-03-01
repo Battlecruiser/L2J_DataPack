@@ -6,7 +6,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.MultisellData;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.L2SkillLearn;
@@ -15,7 +15,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.AcquireSkillType;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.RequestAcquireSkill;
 import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
@@ -58,7 +58,7 @@ public class AvantGarde extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAcquireSkill(L2Npc npc, L2PcInstance player, L2Skill skill, AcquireSkillType type)
+	public String onAcquireSkill(L2Npc npc, L2PcInstance player, Skill skill, AcquireSkillType type)
 	{
 		switch (type)
 		{
@@ -203,7 +203,7 @@ public class AvantGarde extends AbstractNpcAI
 									if (Util.isDigit(skillIdVar))
 									{
 										int skillId = Integer.parseInt(skillIdVar);
-										final L2Skill sk = SkillTable.getInstance().getInfo(skillId, 1);
+										final Skill sk = SkillData.getInstance().getSkill(skillId, 1);
 										if (sk != null)
 										{
 											player.removeSkill(sk);
@@ -294,7 +294,7 @@ public class AvantGarde extends AbstractNpcAI
 		
 		for (L2SkillLearn s : subClassSkills)
 		{
-			if (SkillTable.getInstance().getInfo(s.getSkillId(), s.getSkillLevel()) != null)
+			if (SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()) != null)
 			{
 				count++;
 				asl.addSkill(s.getSkillId(), s.getSkillLevel(), s.getSkillLevel(), 0, 0);
@@ -322,7 +322,7 @@ public class AvantGarde extends AbstractNpcAI
 		
 		for (L2SkillLearn s : skills)
 		{
-			if (SkillTable.getInstance().getInfo(s.getSkillId(), s.getSkillLevel()) != null)
+			if (SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()) != null)
 			{
 				counts++;
 				asl.addSkill(s.getSkillId(), s.getSkillLevel(), s.getSkillLevel(), s.getLevelUpSp(), 0);

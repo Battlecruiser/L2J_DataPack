@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.type.L2WeaponType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.stats.BaseStats;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.model.stats.Stats;
@@ -81,7 +81,7 @@ public final class EnergyAttack extends AbstractEffect
 		}
 		
 		final L2Character target = info.getEffected();
-		final L2Skill skill = info.getSkill();
+		final Skill skill = info.getSkill();
 		
 		double attack = attacker.getPAtk(target);
 		int defence = target.getPDef(attacker);

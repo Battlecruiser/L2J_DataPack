@@ -355,7 +355,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22118" levels="1" name="Warmth of Kotatz">
@@ -525,7 +524,6 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="1538" />
@@ -576,7 +574,6 @@
 		<set name="operateType" val="A1" />
 		<set name="resetQuest" val="128;129;144" />
 		<set name="reuseDelay" val="18000000" />
-		<set name="skillType" val="NOTDONE" /> <!-- TODO: RESET_QUESTS -->
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22130" levels="1" name="Food of Doubt's Effect">
@@ -589,7 +586,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22131" levels="1" name="Red Firework Flames">
@@ -1200,7 +1196,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22166" levels="1" name="Energy Replenish">
@@ -1209,7 +1204,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22167" levels="1" name="April Fools' Day Vesper Weapon Gift">
@@ -1240,7 +1234,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22169" levels="1" name="Soccer Ball of Cheers Release">
@@ -1276,7 +1269,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22171" levels="1" name="Hardin's Blessing">
@@ -1290,7 +1282,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22172" levels="1" name="Sylphide's Wings">
@@ -1303,7 +1294,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22173" levels="1" name="Sylphide's Blessing">
@@ -1316,7 +1306,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22174" levels="1" name="Yibein's Recovery Scroll">
@@ -1327,7 +1316,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22175" levels="1" name="Rune of Life">
@@ -1365,7 +1353,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22178" levels="1" name="Hero's Potion">
@@ -1428,7 +1415,6 @@
 	<skill id="22181" levels="1" name="Refined Cubic - 1 time use">
 		<!-- none -->
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22182" levels="1" name="Birthday Joy">
@@ -1472,31 +1458,26 @@
 	<skill id="22185" levels="1" name="Shiny Lighting">
 		<!-- Lighting shines brightly above the character's head. -->
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22186" levels="1" name="Echo Crystal - Theme of Celebration">
 		<!-- none -->
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22187" levels="1" name="Honeymoon Ticket - Joy of Energy">
 		<!-- State in which the Energy Stage is maintained. -->
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22188" levels="1" name="Summon Big Wedding Cake">
 		<!-- none -->
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22189" levels="1" name="Flower Shower">
 		<!-- none -->
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22190" levels="1" name="Transformation Scroll - Blue Block Checker">
@@ -1519,7 +1500,6 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22192" levels="1" name="Transformation Scroll - Death Blader">
@@ -1528,7 +1508,6 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22193" levels="1" name="Transformation Scroll - Grail Apostle">
@@ -1537,7 +1516,6 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22194" levels="1" name="Transformation Scroll - Unicorn">
@@ -1546,7 +1524,6 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22195" levels="1" name="Transformation Scroll - Lilim Knight">
@@ -1555,7 +1532,6 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22196" levels="1" name="Transformation Scroll - Golem Guardian">
@@ -1564,7 +1540,6 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22197" levels="1" name="Transformation Scroll - Inferno Drake">
@@ -1573,7 +1548,6 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22198" levels="1" name="Transformation Scroll - Dragon Bomber">
@@ -1582,7 +1556,6 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22199" levels="1" name="Transformation Scroll - Heretic">
@@ -1591,7 +1564,6 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 </list>

@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 
 /**
@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 public class Party implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new ArrayList<>();
 		if (onlyFirst)
@@ -51,14 +51,14 @@ public class Party implements ITargetTypeHandler
 		L2PcInstance player = activeChar.getActingPlayer();
 		if (activeChar.isSummon())
 		{
-			if (L2Skill.addCharacter(activeChar, player, radius, false))
+			if (Skill.addCharacter(activeChar, player, radius, false))
 			{
 				targetList.add(player);
 			}
 		}
 		else if (activeChar.isPlayer())
 		{
-			if (L2Skill.addSummon(activeChar, player, radius, false))
+			if (Skill.addSummon(activeChar, player, radius, false))
 			{
 				targetList.add(player.getSummon());
 			}
@@ -74,12 +74,12 @@ public class Party implements ITargetTypeHandler
 					continue;
 				}
 				
-				if (L2Skill.addCharacter(activeChar, partyMember, radius, false))
+				if (Skill.addCharacter(activeChar, partyMember, radius, false))
 				{
 					targetList.add(partyMember);
 				}
 				
-				if (L2Skill.addSummon(activeChar, partyMember, radius, false))
+				if (Skill.addSummon(activeChar, partyMember, radius, false))
 				{
 					targetList.add(partyMember.getSummon());
 				}

@@ -20,7 +20,7 @@ package ai.npc.NpcBuffers;
 
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.AffectObject;
 import com.l2jserver.gameserver.model.skills.targets.AffectScope;
 
@@ -44,7 +44,7 @@ public class NpcBufferSkillData
 		_affectObject = set.getEnum("affectObject", AffectObject.class);
 	}
 	
-	public L2Skill getSkill()
+	public Skill getSkill()
 	{
 		return _skill.getSkill();
 	}

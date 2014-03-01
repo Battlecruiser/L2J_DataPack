@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -107,12 +107,12 @@ public final class SubClassSkills extends Quest
 			return null;
 		}
 		
-		final L2Skill[] certSkills = getCertSkills(player);
+		final Skill[] certSkills = getCertSkills(player);
 		if (player.isSubClassActive())
 		{
 			if (certSkills != null)
 			{
-				for (L2Skill s : certSkills)
+				for (Skill s : certSkills)
 				{
 					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has cert skill on subclass :" + s.getName() + "(" + s.getId() + "/" + s.getLevel() + "), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(), IllegalActionPunishmentType.NONE);
 					
@@ -125,7 +125,7 @@ public final class SubClassSkills extends Quest
 			return null;
 		}
 		
-		L2Skill skill;
+		Skill skill;
 		int[][] cSkills = null; // skillId/skillLvl
 		if (certSkills != null)
 		{
@@ -319,10 +319,10 @@ public final class SubClassSkills extends Quest
 		return null;
 	}
 	
-	private L2Skill[] getCertSkills(L2PcInstance player)
+	private Skill[] getCertSkills(L2PcInstance player)
 	{
-		FastList<L2Skill> tmp = null;
-		for (L2Skill s : player.getAllSkills())
+		FastList<Skill> tmp = null;
+		for (Skill s : player.getAllSkills())
 		{
 			if ((s != null) && (Arrays.binarySearch(_allCertSkillIds, s.getId()) >= 0))
 			{
@@ -339,7 +339,7 @@ public final class SubClassSkills extends Quest
 			return null;
 		}
 		
-		final L2Skill[] result = tmp.toArray(new L2Skill[tmp.size()]);
+		final Skill[] result = tmp.toArray(new Skill[tmp.size()]);
 		FastList.recycle(tmp);
 		return result;
 	}

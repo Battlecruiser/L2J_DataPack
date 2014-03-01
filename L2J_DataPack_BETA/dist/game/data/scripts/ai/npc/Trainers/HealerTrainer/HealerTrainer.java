@@ -24,14 +24,14 @@ import java.util.List;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.AcquireSkillType;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
 
@@ -122,7 +122,7 @@ public final class HealerTrainer extends AbstractNpcAI
 					final Collection<L2SkillLearn> skills = SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values();
 					for (L2SkillLearn s : skills)
 					{
-						final L2Skill sk = player.getKnownSkill(s.getSkillId());
+						final Skill sk = player.getKnownSkill(s.getSkillId());
 						if (sk != null)
 						{
 							player.removeSkill(sk);
@@ -163,7 +163,7 @@ public final class HealerTrainer extends AbstractNpcAI
 		
 		for (L2SkillLearn s : skills)
 		{
-			if (SkillTable.getInstance().getInfo(s.getSkillId(), s.getSkillLevel()) != null)
+			if (SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()) != null)
 			{
 				count++;
 				asl.addSkill(s.getSkillId(), s.getSkillLevel(), s.getSkillLevel(), s.getLevelUpSp(), 0);

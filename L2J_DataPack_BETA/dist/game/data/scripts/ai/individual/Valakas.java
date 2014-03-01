@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.MountType;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.Location;
@@ -38,7 +38,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
@@ -250,25 +250,25 @@ public final class Valakas extends AbstractNpcAI
 				if ((npc.getCurrentHp() < (npc.getMaxHp() / 4)) && (lvl != 4))
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(VALAKAS_REGENERATION, 4));
+					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 4));
 				}
 				// Current HPs are inferior to 50% ; apply lvl 3 of regen skill.
 				else if ((npc.getCurrentHp() < ((npc.getMaxHp() * 2) / 4.0)) && (lvl != 3))
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(VALAKAS_REGENERATION, 3));
+					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 3));
 				}
 				// Current HPs are inferior to 75% ; apply lvl 2 of regen skill.
 				else if ((npc.getCurrentHp() < ((npc.getMaxHp() * 3) / 4.0)) && (lvl != 2))
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(VALAKAS_REGENERATION, 2));
+					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 2));
 				}
 				// Apply lvl 1.
 				else if (lvl != 1)
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(VALAKAS_REGENERATION, 1));
+					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 1));
 				}
 			}
 			// Spawn cinematic, regen_task and choose of skill.
@@ -407,7 +407,7 @@ public final class Valakas extends AbstractNpcAI
 		// Debuff strider-mounted players.
 		if (attacker.getMountType() == MountType.STRIDER)
 		{
-			final L2Skill skill = SkillTable.getInstance().getInfo(4258, 1);
+			final Skill skill = SkillData.getInstance().getSkill(4258, 1);
 			if (!attacker.isAffectedBySkill(4258))
 			{
 				npc.setTarget(attacker);
@@ -492,7 +492,7 @@ public final class Valakas extends AbstractNpcAI
 			return;
 		}
 		
-		final L2Skill skill = getRandomSkill(npc).getSkill();
+		final Skill skill = getRandomSkill(npc).getSkill();
 		
 		// Cast the skill or follow the target.
 		if (Util.checkIfInRange((skill.getCastRange() < 600) ? 600 : skill.getCastRange(), npc, _actualVictim, true))

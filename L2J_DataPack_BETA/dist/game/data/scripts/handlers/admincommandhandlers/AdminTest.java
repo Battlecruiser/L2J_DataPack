@@ -23,12 +23,12 @@ import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 
 /**
@@ -107,7 +107,7 @@ public class AdminTest implements IAdminCommandHandler
 			caster = (L2Character) target;
 		}
 		
-		L2Skill _skill = SkillTable.getInstance().getInfo(id, 1);
+		Skill _skill = SkillData.getInstance().getSkill(id, 1);
 		if (_skill != null)
 		{
 			caster.setTarget(activeChar);

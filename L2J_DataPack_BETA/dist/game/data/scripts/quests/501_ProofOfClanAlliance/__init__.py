@@ -3,7 +3,7 @@
 # v0.1.r0 2005.12.05
 # v1.1.r0 2008.03.27: Update/Rewrite by Emperorc
 import sys
-from com.l2jserver.gameserver.datatables import SkillTable
+from com.l2jserver.gameserver.datatables import SkillData
 from com.l2jserver.gameserver.network.serverpackets import NpcSay 
 from com.l2jserver.gameserver.network.serverpackets import MagicSkillUse
 from com.l2jserver.gameserver.model.quest import State
@@ -113,7 +113,7 @@ class Quest (JQuest) :
            st.set("cond","3")
            st.startQuestTimer("poison_timer",3600000)
            st.addNotifyOfDeath(player)
-           SkillTable.getInstance().getInfo(4082,1).applyEffects(npc,player);
+           SkillData.getInstance().getSkill(4082,1).applyEffects(npc,player);
        elif event == "poison_timer" :
            st.exitQuest(1)
            if DEBUG :
@@ -130,7 +130,7 @@ class Quest (JQuest) :
            deadlist.append(player.getName())
            leaderst.set("dead_list"," ".join(deadlist))
        else :
-           skill = SkillTable.getInstance().getInfo(4083,1)
+           skill = SkillData.getInstance().getSkill(4083,1)
            npc.setTarget(player)
            npc.doCast(skill)
            self.startQuestTimer(player.getName(),4000,npc,player,0)

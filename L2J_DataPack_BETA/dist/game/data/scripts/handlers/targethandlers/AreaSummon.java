@@ -25,7 +25,7 @@ import java.util.List;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.util.Util;
@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.util.Util;
 public class AreaSummon implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new ArrayList<>();
 		target = activeChar.getSummon();
@@ -74,7 +74,7 @@ public class AreaSummon implements ITargetTypeHandler
 				continue;
 			}
 			
-			if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+			if (!Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
 			{
 				continue;
 			}
