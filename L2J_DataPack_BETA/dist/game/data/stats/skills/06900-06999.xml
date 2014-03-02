@@ -63,7 +63,9 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Transformation" val="22" />
+			<effect name="Transformation">
+				<param id="22" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6909" levels="1" name="Charming">

@@ -1326,7 +1326,9 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Transformation" val="303" />
+			<effect name="Transformation">
+				<param id="303" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5262" levels="12" name="NPC - Rise Shot">

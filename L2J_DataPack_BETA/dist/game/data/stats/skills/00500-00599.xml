@@ -1366,7 +1366,8 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Transformation" val="251">
+			<effect name="Transformation">
+				<param id="251" />
 				<mul order="0x30" stat="pAtk" val="2" /> <!-- pAtk +100% -->
 				<mul order="0x30" stat="pDef" val="2" /> <!-- pDef +100% -->
 				<mul order="0x30" stat="mAtk" val="2" /> <!-- mAtk +100% -->
@@ -1441,7 +1442,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="201" />
+			<effect name="Transformation">
+				<param id="201" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="542" levels="1" name="Transform Grail Apostle">
@@ -1466,7 +1469,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="202" />
+			<effect name="Transformation">
+				<param id="202" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="543" levels="1" name="Transform Grail Apostle">
@@ -1491,7 +1496,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="203" />
+			<effect name="Transformation">
+				<param id="203" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="544" levels="1" name="Transform Unicorn">
@@ -1516,7 +1523,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="204" />
+			<effect name="Transformation">
+				<param id="204" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="545" levels="1" name="Transform Unicorn">
@@ -1541,7 +1550,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="205" />
+			<effect name="Transformation">
+				<param id="205" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="546" levels="1" name="Transform Unicorn">
@@ -1566,7 +1577,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="206" />
+			<effect name="Transformation">
+				<param id="206" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="547" levels="1" name="Transform Lilim Knight">
@@ -1591,7 +1604,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="207" />
+			<effect name="Transformation">
+				<param id="207" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="548" levels="1" name="Transform Lilim Knight">
@@ -1616,7 +1631,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="208" />
+			<effect name="Transformation">
+				<param id="208" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="549" levels="1" name="Transform Lilim Knight">
@@ -1641,7 +1658,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="209" />
+			<effect name="Transformation">
+				<param id="209" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="550" levels="1" name="Transform Golem Guardian">
@@ -1666,7 +1685,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="210" />
+			<effect name="Transformation">
+				<param id="210" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="551" levels="1" name="Transform Golem Guardian">
@@ -1691,7 +1712,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="211" />
+			<effect name="Transformation">
+				<param id="211" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="552" levels="1" name="Transform Golem Guardian">
@@ -1716,7 +1739,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="212" />
+			<effect name="Transformation">
+				<param id="212" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="553" levels="1" name="Transform Inferno Drake">
@@ -1741,7 +1766,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="213" />
+			<effect name="Transformation">
+				<param id="213" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="554" levels="1" name="Transform Inferno Drake">
@@ -1766,7 +1793,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="214" />
+			<effect name="Transformation">
+				<param id="214" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="555" levels="1" name="Transform Inferno Drake">
@@ -1791,7 +1820,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="215" />
+			<effect name="Transformation">
+				<param id="215" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="556" levels="1" name="Transform Dragon Bomber">
@@ -1816,7 +1847,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="216" />
+			<effect name="Transformation">
+				<param id="216" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="557" levels="1" name="Transform Dragon Bomber">
@@ -1841,7 +1874,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="217" />
+			<effect name="Transformation">
+				<param id="217" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="558" levels="1" name="Transform Dragon Bomber">
@@ -1866,7 +1901,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="218" />
+			<effect name="Transformation">
+				<param id="218" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="559" levels="4" name="Spear">

@@ -30,9 +30,13 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class Transformation extends AbstractEffect
 {
+	private final int _id;
+	
 	public Transformation(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_id = params != null ? params.getInt("id", 0) : 0;
 	}
 	
 	@Override
@@ -50,6 +54,6 @@ public final class Transformation extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		TransformData.getInstance().transformPlayer((int) getValue(), info.getEffected().getActingPlayer());
+		TransformData.getInstance().transformPlayer(_id, info.getEffected().getActingPlayer());
 	}
 }

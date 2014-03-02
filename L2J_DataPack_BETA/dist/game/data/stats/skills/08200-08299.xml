@@ -1053,7 +1053,8 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="319">
+			<effect name="Transformation">
+				<param id="319" />
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -1089,7 +1090,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="108" />
+			<effect name="Transformation">
+				<param id="108" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8247" levels="1" name="Mount Darkmane Pacer">
@@ -1110,7 +1113,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="106" />
+			<effect name="Transformation">
+				<param id="106" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8248" levels="1" name="Cancel Gatekeeper Transformation">
@@ -1314,7 +1319,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="110" />
+			<effect name="Transformation">
+				<param id="110" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8262" levels="1" name="Tawny Maned Lion Mount">
@@ -1335,7 +1342,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="109" />
+			<effect name="Transformation">
+				<param id="109" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8263" levels="1" name="Transform Snow King">
@@ -1356,7 +1365,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="114" />
+			<effect name="Transformation">
+				<param id="114" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8264" levels="1" name="Transform Scarecrow Jack">
@@ -1377,7 +1388,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="115" />
+			<effect name="Transformation">
+				<param id="115" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8265" levels="1" name="Transform Tin Golem">
@@ -1398,7 +1411,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="116" />
+			<effect name="Transformation">
+				<param id="116" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8266" levels="1" name="Gludio Talisman">
@@ -1515,7 +1530,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="101" />
+			<effect name="Transformation">
+				<param id="101" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8278" levels="1" name="Transform Guard of Dawn">
@@ -1535,7 +1552,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="113" />
+			<effect name="Transformation">
+				<param id="113" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8279" levels="1" name="Blessing of Fire">

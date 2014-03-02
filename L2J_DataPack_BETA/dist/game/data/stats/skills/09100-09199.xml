@@ -873,7 +873,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="306" />
+			<effect name="Transformation">
+				<param id="306" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9160" levels="1" name="Transformation Scroll - Zaken">
@@ -896,7 +898,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="305" />
+			<effect name="Transformation">
+				<param id="305" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9161" levels="1" name="Vesper's Mighty Power">

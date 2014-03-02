@@ -356,7 +356,8 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="20004">
+			<effect name="Transformation">
+				<param id="20004" />
 				<mul order="0x30" stat="runSpd" val="1.5" />
 			</effect>
 		</for>
@@ -665,7 +666,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="20007" />
+			<effect name="Transformation">
+				<param id="20007" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21259" levels="1" name="Release Seal on Agathion - Chorong">

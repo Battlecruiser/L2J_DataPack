@@ -1989,7 +1989,9 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="259" />
+			<effect name="Transformation">
+				<param id="259" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="779" levels="1" name="Summon Smart Cubic">

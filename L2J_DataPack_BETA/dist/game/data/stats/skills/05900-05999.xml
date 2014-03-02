@@ -1125,7 +1125,9 @@
 			<player landingZone="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="8" />
+			<effect name="Transformation">
+				<param id="8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5983" levels="1" name="Aura Bird - Owl">
@@ -1150,7 +1152,9 @@
 			<player landingZone="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="9" />
+			<effect name="Transformation">
+				<param id="9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5984" levels="1" name="Hand of Death">

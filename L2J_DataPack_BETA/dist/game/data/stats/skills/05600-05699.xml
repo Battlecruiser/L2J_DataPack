@@ -932,7 +932,8 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="319">
+			<effect name="Transformation">
+				<param id="319" />
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>

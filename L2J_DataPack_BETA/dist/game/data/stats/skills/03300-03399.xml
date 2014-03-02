@@ -518,7 +518,9 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="102" />
+			<effect name="Transformation">
+				<param id="102" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3336" levels="1" name="Transform Buffalo">
@@ -536,7 +538,9 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="103" />
+			<effect name="Transformation">
+				<param id="103" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="BIG_HEAD,9" />
 			</effect>
@@ -558,7 +562,9 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="104" />
+			<effect name="Transformation">
+				<param id="104" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3338" levels="1" name="Shield Master">
@@ -817,7 +823,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="101" />
+			<effect name="Transformation">
+				<param id="101" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3360" levels="1" name="Cheap Shot">
