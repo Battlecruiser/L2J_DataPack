@@ -41,10 +41,11 @@ public final class TrapRemove extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		if (params == null)
+		if (params.isEmpty())
 		{
 			throw new IllegalArgumentException(getClass().getSimpleName() + ": effect without power!");
 		}
+		
 		_power = params.getInt("power");
 	}
 	

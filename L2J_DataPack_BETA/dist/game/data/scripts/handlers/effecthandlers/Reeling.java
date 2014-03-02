@@ -47,7 +47,7 @@ public final class Reeling extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		if ((params == null) || (params.getString("power", null) == null))
+		if (params.getString("power", null) == null)
 		{
 			throw new IllegalArgumentException(getClass().getSimpleName() + ": effect without power!");
 		}

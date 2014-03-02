@@ -41,19 +41,17 @@ public final class ResistSkill extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		if (params != null)
+		for (int i = 1;; i++)
 		{
-			for (int i = 1;; i++)
+			int skillId = params.getInt("skillId" + i, 0);
+			int skillLvl = params.getInt("skillLvl" + i, 0);
+			if (skillId == 0)
 			{
-				int skillId = params.getInt("skillId" + i, 0);
-				int skillLvl = params.getInt("skillLvl" + i, 0);
-				if (skillId == 0)
-				{
-					break;
-				}
-				_skills.add(new SkillHolder(skillId, skillLvl));
+				break;
 			}
+			_skills.add(new SkillHolder(skillId, skillLvl));
 		}
+		
 		if (_skills.isEmpty())
 		{
 			throw new IllegalArgumentException(getClass().getSimpleName() + ": Without parameters!");

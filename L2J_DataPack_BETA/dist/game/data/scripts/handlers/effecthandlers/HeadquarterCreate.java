@@ -46,7 +46,7 @@ public class HeadquarterCreate extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		_isAdvanced = params != null ? params.getBoolean("isAdvanced", false) : false;
+		_isAdvanced = params.getBoolean("isAdvanced", false);
 	}
 	
 	@Override

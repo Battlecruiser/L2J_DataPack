@@ -39,7 +39,7 @@ public final class Resurrection extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		_power = params != null ? params.getInt("power", 0) : 0;
+		_power = params.getInt("power", 0);
 	}
 	
 	@Override
