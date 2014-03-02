@@ -261,7 +261,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="435" />
+			<effect name="Heal">
+				<param power="435" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="26025" levels="1" name="Powerful Healing Potion">
@@ -275,7 +277,9 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="HealOverTime" ticks="3" val="50" />
+			<effect name="HealOverTime" ticks="3">
+				<param power="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="26026" levels="1" name="High-grade Healing Potion">
@@ -289,7 +293,9 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="HealOverTime" ticks="3" val="24" />
+			<effect name="HealOverTime" ticks="3">
+				<param power="24" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="26027" levels="6" name="Secret medicine of Will">
@@ -323,7 +329,9 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="26029" levels="1" name="Potion of Will">

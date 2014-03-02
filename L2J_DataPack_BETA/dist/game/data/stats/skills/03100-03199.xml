@@ -537,7 +537,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3124" levels="10" name="Item Skill: Blessed Body">
@@ -587,7 +589,9 @@
 			<effect name="Buff">
 				<mul order="0x40" stat="maxHp" val="1.03" />
 			</effect>
-			<effect name="HealPercent" val="3" />
+			<effect name="HealPercent">
+				<param power="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3126" levels="10" name="Item Skill: Prayer">

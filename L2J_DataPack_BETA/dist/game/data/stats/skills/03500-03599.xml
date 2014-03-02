@@ -1531,7 +1531,9 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="HealPercent" val="100" />
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3597" levels="1" name="Special Ability: Infinity Rod">
@@ -1567,7 +1569,9 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="HealPercent" val="100" />
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3599" levels="1" name="Polearm Multi-attack">

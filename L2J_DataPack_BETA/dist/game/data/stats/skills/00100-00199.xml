@@ -683,14 +683,18 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
-			<effect name="HealPercent" val="#amount" />
+			<effect name="HealPercent">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant2for>
 			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 				<add order="0x40" stat="pAtk" val="#ench2pAtk" />
 			</effect>
-			<effect name="HealPercent" val="35" />
+			<effect name="HealPercent">
+				<param power="35" />
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="122" levels="15" name="Hex" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -1351,7 +1355,9 @@
 			<player hp="10" />
 		</cond>
 		<for>
-			<effect name="HealPercent" val="100" />
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="190" levels="37" name="Fatal Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">

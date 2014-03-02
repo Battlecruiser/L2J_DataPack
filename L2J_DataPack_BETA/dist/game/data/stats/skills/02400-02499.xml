@@ -1829,7 +1829,9 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="HealPercent" val="15" />
+			<effect name="HealPercent">
+				<param power="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2486" levels="1" name="Herb of Mana">

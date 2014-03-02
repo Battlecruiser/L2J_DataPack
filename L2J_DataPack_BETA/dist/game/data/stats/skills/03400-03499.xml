@@ -424,7 +424,9 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="HealPercent" val="100" />
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
 			<effect name="ManaHealPercent" val="100" />
 		</for>
 	</skill>
@@ -1257,7 +1259,9 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="100" />
+			<effect name="Heal">
+				<param power="100" />
+			</effect>
 			<effect name="CpHeal" val="100" />
 		</for>
 	</skill>

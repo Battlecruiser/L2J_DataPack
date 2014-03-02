@@ -1670,19 +1670,27 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="mpConsume" val="#ench34MpConsume" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Heal" val="#ench1amount" />
+			<effect name="Heal">
+				<param power="#ench1amount" />
+			</effect>
 		</enchant1for>
 		<enchant3for>
-			<effect name="Heal" val="546" />
+			<effect name="Heal">
+				<param power="546" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="POISON,9" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Heal" val="546" />
+			<effect name="Heal">
+				<param power="546" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="BLEEDING,9" />
 			</effect>

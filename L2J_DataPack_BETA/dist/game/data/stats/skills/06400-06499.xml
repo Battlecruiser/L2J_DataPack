@@ -576,7 +576,9 @@
 			<effect name="DefenceTrait">
 				<param HOLD="100" />
 			</effect>
-			<effect name="HealPercent" val="90" />
+			<effect name="HealPercent">
+				<param power="90" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6429" levels="1" name="Cozy Mucus">
@@ -611,7 +613,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HealPercent" val="30" />
+			<effect name="HealPercent">
+				<param power="30" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6431" levels="1" name="Feral Might">

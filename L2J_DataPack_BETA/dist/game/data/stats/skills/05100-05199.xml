@@ -841,7 +841,9 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5147" levels="10" name="Blessed Body">
@@ -1932,7 +1934,9 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="OWNER_PET" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5196" levels="3" name="Pet Wind Shackle">

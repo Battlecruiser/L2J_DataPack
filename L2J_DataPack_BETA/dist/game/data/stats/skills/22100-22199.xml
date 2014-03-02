@@ -1365,7 +1365,9 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="500" />
+			<effect name="Heal">
+				<param power="500" />
+			</effect>
 			<effect name="ManaHeal" val="200" />
 		</for>
 	</skill>

@@ -1328,7 +1328,9 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2861" levels="6" name="Highest Power Secret Medicine of Mind">
@@ -1379,7 +1381,9 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="HealOverTime" ticks="3" val="100" />
+			<effect name="HealOverTime" ticks="3">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2864" levels="1" name="Highest Power Quick Healing Potion">
@@ -1390,7 +1394,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="870" />
+			<effect name="Heal">
+				<param power="870" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2865" levels="1" name="Agathion's New Year's Gift 1">

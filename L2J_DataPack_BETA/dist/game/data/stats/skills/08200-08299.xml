@@ -937,7 +937,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="540" />
+			<effect name="Heal">
+				<param power="540" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8238" levels="1" name="Shalin Strike">

@@ -313,7 +313,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HealPercent" val="15" />
+			<effect name="HealPercent">
+				<param power="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6626" levels="2" name="Energy of Life's Power">
@@ -327,7 +329,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HealPercent" val="25" />
+			<effect name="HealPercent">
+				<param power="25" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6627" levels="3" name="Energy of Life's Highest Power">
@@ -341,7 +345,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HealPercent" val="100" />
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6628" levels="1" name="Energy of Mana">

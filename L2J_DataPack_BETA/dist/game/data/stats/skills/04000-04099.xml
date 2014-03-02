@@ -252,7 +252,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="10846" />
+			<effect name="Heal">
+				<param power="10846" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4021" levels="1" name="Queen Ant">
@@ -293,7 +295,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="10846" />
+			<effect name="Heal">
+				<param power="10846" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4025" levels="12" name="Master Recharge">
@@ -349,7 +353,9 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="628" />
+			<effect name="Heal">
+				<param power="628" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4028" levels="3" name="NPC Might">
@@ -751,7 +757,9 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="427" />
+			<effect name="Heal">
+				<param power="427" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4045" levels="1" name="Resist Full Magic Attack">
@@ -894,7 +902,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4052" levels="15" name="Poison">
@@ -1135,7 +1145,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4066" levels="12" name="NPC Twister">
@@ -1472,7 +1484,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="628" />
+			<effect name="Heal">
+				<param power="628" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4081" levels="1" name="Pretending to steal">
@@ -1684,7 +1698,9 @@
 				<sub order="0x40" stat="rEvas" val="#rEvas" />
 				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
-			<effect name="HealPercent" val="#maxHpHeal" />
+			<effect name="HealPercent">
+				<param power="#maxHpHeal" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4092" levels="1" name="NPC Puma Spirit Totem">
@@ -1796,7 +1812,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hot" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4098" levels="12" name="Magic Skill Block">

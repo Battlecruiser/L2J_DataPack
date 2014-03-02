@@ -181,7 +181,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="500" />
+			<effect name="Heal">
+				<param power="500" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23215" levels="1" name="Good/Bad of Mind">
@@ -1122,7 +1124,9 @@
 				<add order="0x40" stat="accCombat" val="4" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
-			<effect name="HealPercent" val="20" />
+			<effect name="HealPercent">
+				<param power="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23277" levels="1" name="Master's Blessing - Improve Combat">

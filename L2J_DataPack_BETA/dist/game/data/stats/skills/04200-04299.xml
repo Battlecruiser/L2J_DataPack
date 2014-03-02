@@ -245,7 +245,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4210" levels="12" name="Life Chant">
@@ -268,8 +270,12 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hot" />
-			<effect name="HealPercent" val="3" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hot" />
+			</effect>
+			<effect name="HealPercent">
+				<param power="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4211" levels="12" name="BOSS Might">

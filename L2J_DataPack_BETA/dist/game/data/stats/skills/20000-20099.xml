@@ -85,7 +85,9 @@
 				<mul order="0x30" stat="maxCp" val="1.15" />
 			</effect>
 			<effect name="CpHealPercent" val="15" />
-			<effect name="HealPercent" val="15" />
+			<effect name="HealPercent">
+				<param power="15" />
+			</effect>
 		</for>
 	</skill>
 </list>

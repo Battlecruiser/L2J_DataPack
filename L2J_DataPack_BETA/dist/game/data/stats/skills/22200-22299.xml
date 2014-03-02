@@ -665,7 +665,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PARTY" />
 		<for>
-			<effect name="Heal" val="1000" /> <!-- TODO: Custom. -->
+			<effect name="Heal">
+				<param power="1000" /> <!-- TODO: Custom. -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="22299" levels="1" name="Refined Blue Dragon Blood">

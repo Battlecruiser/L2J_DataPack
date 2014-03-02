@@ -31,9 +31,13 @@ import com.l2jserver.gameserver.network.serverpackets.ExRegenMax;
  */
 public final class HealOverTime extends AbstractEffect
 {
+	private final double _power;
+	
 	public HealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -59,7 +63,7 @@ public final class HealOverTime extends AbstractEffect
 			return false;
 		}
 		
-		hp += getValue() * getTicksMultiplier();
+		hp += _power * getTicksMultiplier();
 		hp = Math.min(hp, maxhp);
 		info.getEffected().setCurrentHp(hp);
 		return info.getSkill().isToggle();
@@ -70,7 +74,7 @@ public final class HealOverTime extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer() && (getTicks() > 0) && (info.getSkill().getAbnormalType() == AbnormalType.HP_RECOVER))
 		{
-			info.getEffected().sendPacket(new ExRegenMax(info.getAbnormalTime(), getTicks(), getValue()));
+			info.getEffected().sendPacket(new ExRegenMax(info.getAbnormalTime(), getTicks(), _power));
 		}
 	}
 }

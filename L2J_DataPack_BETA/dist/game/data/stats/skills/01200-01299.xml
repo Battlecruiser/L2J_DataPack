@@ -281,7 +281,9 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="42" />
+			<effect name="Heal">
+				<param power="42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1217" levels="33" name="Greater Heal" enchantGroup1="2" enchantGroup2="2">
@@ -318,12 +320,20 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hotValue" />
-			<effect name="Heal" val="#amount" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hotValue" />
+			</effect>
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="HealOverTime" ticks="1" val="32" />
-			<effect name="Heal" val="#ench1amount" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="32" />
+			</effect>
+			<effect name="Heal">
+				<param power="#ench1amount" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1218" levels="33" name="Greater Battle Heal" enchantGroup1="2" enchantGroup2="2">
@@ -354,10 +364,14 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Heal" val="#ench1amount" />
+			<effect name="Heal">
+				<param power="#ench1amount" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1219" levels="33" name="Greater Group Heal" enchantGroup1="2" enchantGroup2="2">
@@ -393,12 +407,20 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hotValue" />
-			<effect name="Heal" val="#amount" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hotValue" />
+			</effect>
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="HealOverTime" ticks="1" val="26" />
-			<effect name="Heal" val="#ench1amount" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="26" />
+			</effect>
+			<effect name="Heal">
+				<param power="#ench1amount" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1220" levels="8" name="Blaze">
@@ -773,10 +795,14 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hot" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hot" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="HealOverTime" ticks="1" val="#ench1hot" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#ench1hot" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1230" levels="28" name="Prominence" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
@@ -1855,12 +1881,20 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hot" />
-			<effect name="Heal" val="#amount" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hot" />
+			</effect>
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="HealOverTime" ticks="1" val="#ench1hot" />
-			<effect name="Heal" val="172" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#ench1hot" />
+			</effect>
+			<effect name="Heal">
+				<param power="172" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1257" levels="3" name="Decrease Weight" enchantGroup1="1" enchantGroup2="1">
@@ -1930,10 +1964,14 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="HealPercent" val="#amount" />
+			<effect name="HealPercent">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="HealPercent" val="#ench1power" />
+			<effect name="HealPercent">
+				<param power="#ench1power" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1259" levels="4" name="Resist Shock" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -2390,11 +2428,15 @@
 			<player mp="25" />
 		</cond>
 		<for>
-			<effect name="HealPercent" val="100" />
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 		<enchant2for>
 			<effect name="CpHeal" val="#ench2Bravery" />
-			<effect name="HealPercent" val="100" />
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="1272" levels="13" name="Word of Fear">

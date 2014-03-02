@@ -359,7 +359,9 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
-			<effect name="HealPercent" val="#amount" />
+			<effect name="HealPercent">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1312" levels="1" name="Fishing">
@@ -1499,7 +1501,9 @@
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<sub order="0x40" stat="debuffVuln" val="20" />
 			</effect>
-			<effect name="HealPercent" val="20" />
+			<effect name="HealPercent">
+				<param power="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1350" levels="1" name="Warrior Bane">
@@ -2061,7 +2065,9 @@
 				<add order="0x40" stat="accCombat" val="4" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
-			<effect name="HealPercent" val="20" />
+			<effect name="HealPercent">
+				<param power="20" />
+			</effect>
 		</for>
 		<enchant3for>
 			<effect name="Buff">
@@ -2078,7 +2084,9 @@
 				<add order="0x40" stat="accCombat" val="4" />
 				<mul order="0x30" stat="runSpd" val="#ench3Spd" />
 			</effect>
-			<effect name="HealPercent" val="20" />
+			<effect name="HealPercent">
+				<param power="20" />
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="1364" levels="1" name="Eye of Pa'agrio" enchantGroup1="5" enchantGroup2="5">

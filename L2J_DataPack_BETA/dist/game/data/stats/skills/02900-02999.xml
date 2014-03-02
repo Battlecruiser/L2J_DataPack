@@ -124,7 +124,9 @@
 			<player levelRange="61;75" />
 		</cond>
 		<for>
-			<effect name="Heal" val="1900" />
+			<effect name="Heal">
+				<param power="1900" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2908" levels="5" name="Battlefield Use Secret Medicine of Mind">
