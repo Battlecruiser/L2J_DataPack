@@ -436,7 +436,9 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SERVITOR" />
-		<!-- FIXME: It shouldn't affect all summons, missing condition for target race "construct" -->
+		<cond msgId="144">
+			<target npcRace="CONSTRUCT" />
+		</cond>
 		<for>
 			<effect name="HealPercent">
 				<param power="#amount" />
@@ -464,7 +466,9 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SERVITOR" />
-		<!-- FIXME: It shouldn't affect all summons, missing condition for target race "construct" -->
+		<cond msgId="144">
+			<target npcRace="CONSTRUCT" />
+		</cond>
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
@@ -493,7 +497,9 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SERVITOR" />
-		<!-- FIXME: It shouldn't affect all summons, missing condition for target race "construct" -->
+		<cond msgId="144">
+			<target npcRace="CONSTRUCT" />
+		</cond>
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="#pDef" />
