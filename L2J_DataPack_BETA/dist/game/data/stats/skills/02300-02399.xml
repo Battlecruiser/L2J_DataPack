@@ -1218,7 +1218,9 @@
 			<target npcId="18482" />
 		</cond>
 		<for>
-			<effect name="HealPercent" val="30" />
+			<effect name="HealPercent">
+				<param power="30" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2369" levels="1" name="Water Dragon Scale">
@@ -1731,7 +1733,9 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Heal" val="1900" />
+			<effect name="Heal">
+				<param power="1900" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2396" levels="1" name="Mental Potion">

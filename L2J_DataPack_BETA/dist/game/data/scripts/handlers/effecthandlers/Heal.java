@@ -38,9 +38,13 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public final class Heal extends AbstractEffect
 {
+	private final double _power;
+	
 	public Heal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -65,7 +69,7 @@ public final class Heal extends AbstractEffect
 			return;
 		}
 		
-		double amount = getValue();
+		double amount = _power;
 		double staticShotBonus = 0;
 		int mAtkMul = 1;
 		boolean sps = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);

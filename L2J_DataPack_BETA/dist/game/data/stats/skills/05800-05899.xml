@@ -441,7 +441,9 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect name="HealPercent" val="10" />
+			<effect name="HealPercent">
+				<param power="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5836" levels="1" name="Greater Heal">
@@ -462,8 +464,12 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="270" />
-			<effect name="HealPercent" val="20" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="270" />
+			</effect>
+			<effect name="HealPercent">
+				<param power="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5837" levels="1" name="Double Throwing Javelin">

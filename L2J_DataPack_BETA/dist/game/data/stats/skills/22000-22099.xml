@@ -785,7 +785,9 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="HealPercent" val="50" />
+			<effect name="HealPercent">
+				<param power="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22045" levels="1" name="Omen Beast Transformation Scroll">

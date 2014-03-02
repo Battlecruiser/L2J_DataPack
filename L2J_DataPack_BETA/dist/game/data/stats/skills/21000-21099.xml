@@ -604,7 +604,9 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="HealPercent" val="100" />
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
 			<effect name="ManaHealPercent" val="50" />
 		</for>
 	</skill>
@@ -880,8 +882,12 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="30" />
-			<effect name="Heal" val="444" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="30" />
+			</effect>
+			<effect name="Heal">
+				<param power="444" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21060" levels="1" name="Death Whisper">
@@ -1184,8 +1190,12 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="30" />
-			<effect name="Heal" val="444" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="30" />
+			</effect>
+			<effect name="Heal">
+				<param power="444" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21076" levels="1" name="Resist Unholy">
@@ -1334,8 +1344,12 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="30" />
-			<effect name="Heal" val="444" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="30" />
+			</effect>
+			<effect name="Heal">
+				<param power="444" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21084" levels="1" name="Energy Recovery">

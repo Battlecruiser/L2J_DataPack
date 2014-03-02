@@ -97,10 +97,14 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Heal" val="#ench1amount" />
+			<effect name="Heal">
+				<param power="#ench1amount" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1402" levels="5" name="Major Group Heal" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
@@ -135,19 +139,27 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Heal" val="#ench1amount" />
+			<effect name="Heal">
+				<param power="#ench1amount" />
+			</effect>
 		</enchant1for>
 		<enchant3for>
-			<effect name="Heal" val="#ench34amount" />
+			<effect name="Heal">
+				<param power="#ench34amount" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="#ench3dispelAbnormals" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Heal" val="#ench34amount" />
+			<effect name="Heal">
+				<param power="#ench34amount" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="#ench4dispelAbnormals" />
 			</effect>
@@ -861,7 +873,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="HealPercent" val="100" />
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1427" levels="1" name="Flames of Invincibility">
@@ -3042,10 +3056,14 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hot" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hot" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="HealOverTime" ticks="1" val="#ench1Heal" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#ench1Heal" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1488" levels="3" name="Restoration Impact" enchantGroup1="1">
@@ -3074,13 +3092,17 @@
 			<target active_effect_id="1487" />
 		</cond>
 		<for>
-			<effect name="HealPercent" val="#amount" />
+			<effect name="HealPercent">
+				<param power="#amount" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="LIFE_FORCE_KAMAEL,9" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="HealPercent" val="#ench1amount" />
+			<effect name="HealPercent">
+				<param power="#ench1amount" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="LIFE_FORCE_KAMAEL,9" />
 			</effect>

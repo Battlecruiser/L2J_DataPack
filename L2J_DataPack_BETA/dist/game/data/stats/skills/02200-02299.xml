@@ -918,8 +918,12 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="Heal" val="60" />
-			<effect name="HealPercent" val="17" />
+			<effect name="Heal">
+				<param power="60" />
+			</effect>
+			<effect name="HealPercent">
+				<param power="17" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2245" levels="1" name="Herb of Mana">
@@ -1599,7 +1603,9 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="HealPercent" val="#amount" />
+			<effect name="HealPercent">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2279" levels="3" name="Herb of Mana">
@@ -1788,7 +1794,9 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2288" levels="6" name="Elixir of Mental Strength">

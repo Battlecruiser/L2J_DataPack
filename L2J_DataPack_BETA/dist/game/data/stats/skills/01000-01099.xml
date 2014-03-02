@@ -373,7 +373,9 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="#effectPoints" />
+			<effect name="Heal">
+				<param power="#effectPoints" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1012" levels="3" name="Cure Poison">
@@ -457,7 +459,9 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1016" levels="9" name="Resurrection">
@@ -537,13 +541,17 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="#dispelAbnormals" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Heal" val="#ench1amount" />
+			<effect name="Heal">
+				<param power="#ench1amount" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="POISON,9;BLEEDING,9" />
 			</effect>
@@ -566,7 +574,9 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="PARTY" />
 		<for>
-			<effect name="Heal" val="#effectPoints" />
+			<effect name="Heal">
+				<param power="#effectPoints" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1028" levels="19" name="Might of Heaven" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">

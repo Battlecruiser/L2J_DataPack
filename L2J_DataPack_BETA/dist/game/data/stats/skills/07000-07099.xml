@@ -930,7 +930,9 @@
 				<add order="0x40" stat="accCombat" val="4" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
-			<effect name="HealPercent" val="20" />
+			<effect name="HealPercent">
+				<param power="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="7065" levels="1" name="Test - Charge">

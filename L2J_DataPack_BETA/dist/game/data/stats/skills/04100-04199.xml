@@ -390,7 +390,9 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="689" />
+			<effect name="Heal">
+				<param power="689" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4116" levels="10" name="Resist M.Atk">
@@ -734,7 +736,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="1000" />
+			<effect name="Heal">
+				<param power="1000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4134" levels="1" name="Seal Skill">
@@ -757,7 +761,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="1000000" />
+			<effect name="Heal">
+				<param power="1000000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4136" levels="1" name="Baium's Gift">

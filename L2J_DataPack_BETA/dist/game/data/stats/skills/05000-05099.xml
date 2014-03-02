@@ -174,7 +174,9 @@
 			<effect name="DispelByCategory">
 				<param slot="buff" rate="#activateRate" max="#maxNegated" />
 			</effect>
-			<effect name="HealPercent" val="#healPercent" />
+			<effect name="HealPercent">
+				<param power="#healPercent" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5009" levels="1" name="Frintezza's Ghostly Fighter">
@@ -370,7 +372,9 @@
 			<effect name="Grow">
 				<mul order="0x30" stat="runSpd" val="1.22" />
 			</effect>
-			<effect name="HealPercent" val="20" />
+			<effect name="HealPercent">
+				<param power="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5018" levels="2" name="Frintezza's Daemon Field">
@@ -628,7 +632,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hot" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5041" levels="1" name="Charm of Courage">

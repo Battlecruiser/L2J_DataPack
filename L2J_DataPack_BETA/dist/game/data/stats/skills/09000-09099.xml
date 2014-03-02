@@ -1170,7 +1170,9 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="2300" />
+			<effect name="Heal">
+				<param power="2300" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9075" levels="1" name="Awful Soup">

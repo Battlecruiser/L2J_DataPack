@@ -2018,7 +2018,9 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="946" />
+			<effect name="Heal">
+				<param power="946" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="699" levels="1" name="Divine Healer Battle Heal">
@@ -2034,7 +2036,9 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="826" />
+			<effect name="Heal">
+				<param power="826" />
+			</effect>
 		</for>
 	</skill>
 </list>

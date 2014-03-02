@@ -1331,7 +1331,9 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="46" levels="15" name="Life Scavenge" enchantGroup1="2" enchantGroup2="2">
@@ -1626,19 +1628,27 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Heal" val="#ench1amount" />
+			<effect name="Heal">
+				<param power="#ench1amount" />
+			</effect>
 		</enchant1for>
 		<enchant3for>
-			<effect name="Heal" val="546" />
+			<effect name="Heal">
+				<param power="546" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="POISON,9" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Heal" val="546" />
+			<effect name="Heal">
+				<param power="546" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="BLEEDING,9" />
 			</effect>
@@ -1761,19 +1771,27 @@
 		<enchant4 name="hpConsume" val="#ench34HpConsume" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Heal" val="#ench1amount" />
+			<effect name="Heal">
+				<param power="#ench1amount" />
+			</effect>
 		</enchant1for>
 		<enchant3for>
-			<effect name="Heal" val="1170" />
+			<effect name="Heal">
+				<param power="1170" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="POISON,9" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Heal" val="1170" />
+			<effect name="Heal">
+				<param power="1170" />
+			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="BLEEDING,9" />
 			</effect>

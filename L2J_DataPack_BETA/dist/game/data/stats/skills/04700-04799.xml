@@ -209,8 +209,8 @@
 	<skill id="4707" levels="13" name="Shade Sacrifice">
 		<!-- Confirmed CT2.5 -->
 		<!-- Summon Nightshade Skill -->
+		<table name="#amount"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#effectPoints"> 589 700 789 804 810 816 826 835 844 852 860 867 874 </table>
-		<table name="#heal"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#hpConsume"> 706 840 946 964 972 979 991 1002 1013 1023 1032 1041 1049 </table>
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="castRange" val="600" />
@@ -225,7 +225,9 @@
 		<!-- NOTE: skill description mention party members, but is client typo, it could affect any single target -->
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="#heal" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4708" levels="10" name="Cursed Strike">
@@ -374,7 +376,9 @@
 		<set name="reuseDelay" val="12000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4714" levels="1" name="Twilight Dragon">
@@ -415,7 +419,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="OWNER_PET" />
 		<for>
-			<effect name="Heal" val="#effectPoints" />
+			<effect name="Heal">
+				<param power="#effectPoints" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4718" levels="12" name="Greater Heal Trick">
@@ -435,7 +441,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="OWNER_PET" />
 		<for>
-			<effect name="Heal" val="#effectPoints" />
+			<effect name="Heal">
+				<param power="#effectPoints" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4719" levels="12" name="BOSS Strike">
@@ -1753,7 +1761,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4780" levels="12" name="BOSS Heal">
@@ -1771,7 +1781,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4781" levels="12" name="BOSS Heal">
@@ -1789,7 +1801,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4782" levels="12" name="BOSS Heal">
@@ -1807,7 +1821,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4783" levels="12" name="BOSS Heal">
@@ -1825,7 +1841,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4784" levels="12" name="BOSS Chant of Life">
@@ -1848,7 +1866,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hot" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4785" levels="12" name="BOSS Chant of Life">
@@ -1871,7 +1891,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hot" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4786" levels="12" name="BOSS Chant of Life">
@@ -1894,7 +1916,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hot" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4787" levels="12" name="BOSS Chant of Life">
@@ -1917,7 +1941,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hot" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4788" levels="12" name="BOSS Chant of Life">
@@ -1940,7 +1966,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="#hot" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="#hot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4789" levels="10" name="NPC High Level">

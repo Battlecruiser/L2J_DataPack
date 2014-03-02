@@ -811,7 +811,9 @@
 		<for>
 			<effect name="Invincible" />
 			<effect name="CpHealPercent" val="100" />
-			<effect name="HealPercent" val="100" />
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
 			<effect name="ManaHealPercent" val="100" />
 		</for>
 	</skill>

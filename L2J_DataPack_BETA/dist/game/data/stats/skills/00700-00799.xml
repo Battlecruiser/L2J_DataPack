@@ -16,8 +16,12 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="PARTY" />
 		<for>
-			<effect name="HealOverTime" ticks="1" val="27" />
-			<effect name="Heal" val="400" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="27" />
+			</effect>
+			<effect name="Heal">
+				<param power="400" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="701" levels="1" name="Divine Healer Resurrection">
@@ -72,7 +76,9 @@
 			<player mp="10" />
 		</cond>
 		<for>
-			<effect name="HealPercent" val="100" />
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
 			<effect name="ManaHealPercent" val="100" />
 		</for>
 		<selfEffects>
@@ -353,7 +359,9 @@
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<sub order="0x40" stat="debuffVuln" val="20" />
 			</effect>
-			<effect name="HealPercent" val="20" />
+			<effect name="HealPercent">
+				<param power="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="713" levels="1" name="Divine Summoner Servitor Hill">
@@ -369,7 +377,9 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="SERVITOR" />
 		<for>
-			<effect name="Heal" val="991" />
+			<effect name="Heal">
+				<param power="991" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="714" levels="1" name="Sacrifice Summoner">
@@ -614,7 +624,9 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="PARTY" />
 		<for>
-			<effect name="Heal" val="1340" />
+			<effect name="Heal">
+				<param power="1340" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="724" levels="1" name="Anakim Clans">
@@ -944,7 +956,9 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="739" levels="3" name="Heretic Battle Heal">
@@ -967,7 +981,9 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="740" levels="3" name="Heretic Resurrection">
@@ -2209,8 +2225,12 @@
 				<sub order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="healEffect" val="1.3" />
 			</effect>
-			<effect name="HealOverTime" ticks="5" val="50" />
-			<effect name="HealPercent" val="50" />
+			<effect name="HealOverTime" ticks="5">
+				<param power="50" />
+			</effect>
+			<effect name="HealPercent">
+				<param power="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="788" levels="1" name="Pain of Shilen">

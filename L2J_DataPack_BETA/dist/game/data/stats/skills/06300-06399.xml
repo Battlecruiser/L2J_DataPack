@@ -377,7 +377,9 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="HealPercent" val="15" />
+			<effect name="HealPercent">
+				<param power="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6317" levels="1" name="Sacred Tacit">
@@ -675,7 +677,9 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HealPercent" val="5" />
+			<effect name="HealPercent">
+				<param power="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6331" levels="1" name="Camp Fire Tired">

@@ -602,7 +602,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="HealPercent" val="3" />
+			<effect name="HealPercent">
+				<param power="3" />
+			</effect>
 			<effect name="ManaHealPercent" val="1" />
 		</for>
 	</skill>

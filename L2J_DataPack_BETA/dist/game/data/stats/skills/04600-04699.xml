@@ -373,7 +373,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4614" levels="12" name="NPC Death Bomb">
@@ -1248,7 +1250,7 @@
 		</for>
 	</skill>
 	<skill id="4653" levels="12" name="NPC Corpse Life Drain">
-		<table name="#heal"> 131 201 271 351 451 551 651 691 731 751 771 781 </table>
+		<table name="#amount"> 131 201 271 351 451 551 651 691 731 751 771 781 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<set name="castRange" val="400" />
@@ -1262,7 +1264,9 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="targetType" val="CORPSE" />
 		<for>
-			<effect name="Heal" val="#heal" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 			<effect name="ConsumeBody" />
 		</for>
 	</skill>

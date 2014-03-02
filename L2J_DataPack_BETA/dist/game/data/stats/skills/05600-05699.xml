@@ -52,7 +52,9 @@
 			<effect name="Debuff">
 				<mul order="0x30" stat="maxRecoverableHp" val="0.1" />
 			</effect>
-			<effect name="HealPercent" val="-99" />
+			<effect name="HealPercent">
+				<param power="-99" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5603" levels="1" name="Dagger Mastery">
@@ -1666,7 +1668,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" val="200" />
+			<effect name="Heal">
+				<param power="200" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5693" levels="1" name="PvP Armor - Speed Down">
@@ -1783,7 +1787,9 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5699" levels="7" name="Decrease P. Def">

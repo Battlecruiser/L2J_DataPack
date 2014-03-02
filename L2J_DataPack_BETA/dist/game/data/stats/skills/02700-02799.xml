@@ -2619,7 +2619,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="#amount" />
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2793" levels="2" name="Stone of Mana">
@@ -2650,7 +2652,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="HealPercent" val="#hpHeal" />
+			<effect name="HealPercent">
+				<param power="#hpHeal" />
+			</effect>
 			<effect name="ManaHealPercent" val="#mpHeal" />
 		</for>
 	</skill>

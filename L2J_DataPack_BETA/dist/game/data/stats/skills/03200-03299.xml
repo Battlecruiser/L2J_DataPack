@@ -1230,7 +1230,9 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" val="200" />
+			<effect name="Heal">
+				<param power="200" />
+			</effect>
 			<effect name="CpHeal" val="200" />
 		</for>
 	</skill>

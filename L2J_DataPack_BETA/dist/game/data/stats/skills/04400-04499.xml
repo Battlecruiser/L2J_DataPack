@@ -1206,7 +1206,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HealPercent" val="#amount" />
+			<effect name="HealPercent">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4475" levels="1" name="Perfect Resist Bleeding">
@@ -1428,7 +1430,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HealPercent" val="50" />
+			<effect name="HealPercent">
+				<param power="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4485" levels="1" name="Eating Follower">

@@ -36,7 +36,7 @@ public final class Transformation extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		_id = params != null ? params.getInt("id", 0) : 0;
+		_id = params.getInt("id", 0);
 	}
 	
 	@Override
