@@ -278,7 +278,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="104" />
+			<effect name="Transformation">
+				<param id="104" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3419" levels="1" name="Magic Immunity">

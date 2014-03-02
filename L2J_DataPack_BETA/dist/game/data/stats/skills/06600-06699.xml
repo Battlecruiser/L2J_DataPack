@@ -703,7 +703,9 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="126" />
+			<effect name="Transformation">
+				<param id="126" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6650" levels="1" name="Tacrakahn's Alienation">

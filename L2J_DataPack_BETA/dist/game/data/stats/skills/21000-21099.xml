@@ -733,7 +733,9 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="110" />
+			<effect name="Transformation">
+				<param id="110" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21052" levels="1" name="Bless the Body">

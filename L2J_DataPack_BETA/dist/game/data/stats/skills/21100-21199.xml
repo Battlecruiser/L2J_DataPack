@@ -1218,7 +1218,9 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="20000" />
+			<effect name="Transformation">
+				<param id="20000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21170" levels="1" name="Blessed Soul">
@@ -1255,7 +1257,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="20001" />
+			<effect name="Transformation">
+				<param id="20001" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21172" levels="1" name="Enhanced Authority - CON+1 STR+1">
@@ -1545,7 +1549,8 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="20002">
+			<effect name="Transformation">
+				<param id="20002" />
 				<sub order="0x40" stat="vitalityConsumeRate" val="1" />
 			</effect>
 		</for>
@@ -1570,7 +1575,8 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="20003">
+			<effect name="Transformation">
+				<param id="20003" />
 				<sub order="0x40" stat="vitalityConsumeRate" val="1" />
 			</effect>
 		</for>

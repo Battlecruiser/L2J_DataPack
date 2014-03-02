@@ -1441,7 +1441,9 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Transformation" val="20005" />
+			<effect name="Transformation">
+				<param id="20005" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22184" levels="1" name="Dragon Master Karin Transformation Scroll">
@@ -1452,7 +1454,9 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Transformation" val="20006" />
+			<effect name="Transformation">
+				<param id="20006" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22185" levels="1" name="Shiny Lighting">
@@ -1491,7 +1495,9 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Transformation" val="127" />
+			<effect name="Transformation">
+				<param id="127" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22191" levels="1" name="Transformation Scroll - Onyx Beast">

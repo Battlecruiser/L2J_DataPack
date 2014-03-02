@@ -1852,7 +1852,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="125" />
+			<effect name="Transformation">
+				<param id="125" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2995" levels="1" name="PC room private weapon strengthening order sheet - D grade">

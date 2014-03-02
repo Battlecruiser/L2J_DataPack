@@ -36,7 +36,8 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="111">
+			<effect name="Transformation">
+				<param id="111" />
 				<mul order="0x30" stat="weightLimit" val="11" />
 				<add order="0x40" stat="weightPenalty" val="9000" />
 				<add order="0x40" stat="inventoryLimit" val="8" />
@@ -66,7 +67,8 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="112">
+			<effect name="Transformation">
+				<param id="112" />
 				<mul order="0x30" stat="weightLimit" val="11" />
 				<add order="0x40" stat="weightPenalty" val="9000" />
 				<add order="0x40" stat="inventoryLimit" val="8" />
@@ -96,7 +98,8 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="124">
+			<effect name="Transformation">
+				<param id="124" />
 				<mul order="0x30" stat="weightLimit" val="11" />
 				<add order="0x40" stat="weightPenalty" val="9000" />
 				<add order="0x40" stat="inventoryLimit" val="8" />
@@ -126,7 +129,8 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="113">
+			<effect name="Transformation">
+				<param id="113" />
 				<mul order="0x30" stat="weightLimit" val="11" />
 				<add order="0x40" stat="weightPenalty" val="9000" />
 				<add order="0x40" stat="inventoryLimit" val="8" />

@@ -688,7 +688,9 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="316" />
+			<effect name="Transformation">
+				<param id="316" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1521" levels="1" name="Inquisitor">
@@ -710,7 +712,9 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="317" />
+			<effect name="Transformation">
+				<param id="317" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1522" levels="1" name="Inquisitor">
@@ -732,7 +736,9 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="318" />
+			<effect name="Transformation">
+				<param id="318" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1523" levels="42" name="Divine Punishment">

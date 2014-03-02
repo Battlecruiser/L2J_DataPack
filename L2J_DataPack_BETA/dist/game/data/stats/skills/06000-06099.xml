@@ -308,7 +308,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="121" />
+			<effect name="Transformation">
+				<param id="121" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6036" levels="1" name="Blue Team Transformation">
@@ -328,7 +330,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="122" />
+			<effect name="Transformation">
+				<param id="122" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6037" levels="1" name="Soul Unleash">

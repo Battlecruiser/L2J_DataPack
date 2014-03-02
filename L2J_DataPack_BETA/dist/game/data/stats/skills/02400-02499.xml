@@ -523,7 +523,9 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="105" />
+			<effect name="Transformation">
+				<param id="105" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2429" levels="1" name="Haste Juice">
