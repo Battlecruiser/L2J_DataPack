@@ -35,7 +35,7 @@ public final class GiveSp extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		_sp = params != null ? params.getInt("sp", 0) : 0;
+		_sp = params.getInt("sp", 0);
 	}
 	
 	@Override

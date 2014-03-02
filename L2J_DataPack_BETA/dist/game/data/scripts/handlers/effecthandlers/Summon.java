@@ -47,7 +47,7 @@ public final class Summon extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		if (params == null)
+		if (params.isEmpty())
 		{
 			throw new IllegalArgumentException("Summon effect without parameters!");
 		}

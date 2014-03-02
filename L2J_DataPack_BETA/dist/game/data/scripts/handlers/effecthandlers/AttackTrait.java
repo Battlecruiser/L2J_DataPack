@@ -41,29 +41,15 @@ public final class AttackTrait extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		if (params != null)
+		if (params.isEmpty())
 		{
-			for (Entry<String, Object> param : params.getSet().entrySet())
-			{
-				try
-				{
-					final TraitType traitType = TraitType.valueOf(param.getKey());
-					final float value = (Float.parseFloat((String) param.getValue()) + 100) / 100;
-					_attackTraits.put(traitType, value);
-				}
-				catch (NumberFormatException e)
-				{
-					_log.warning(getClass().getSimpleName() + ": value of " + param.getKey() + " must be float value " + param.getValue() + " found.");
-				}
-				catch (Exception e)
-				{
-					_log.warning(getClass().getSimpleName() + ": value of L2TraitType enum required but found: " + param.getValue());
-				}
-			}
+			_log.warning(getClass().getSimpleName() + ": this effect must have parameters!");
+			return;
 		}
-		else
+		
+		for (Entry<String, Object> param : params.getSet().entrySet())
 		{
-			_log.warning(getClass().getSimpleName() + ": must have parameters.");
+			_attackTraits.put(TraitType.valueOf(param.getKey()), (Float.parseFloat((String) param.getValue()) + 100) / 100);
 		}
 	}
 	

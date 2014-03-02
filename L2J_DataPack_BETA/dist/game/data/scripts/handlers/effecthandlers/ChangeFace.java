@@ -36,7 +36,7 @@ public final class ChangeFace extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		_value = params != null ? params.getInt("value", 0) : 0;
+		_value = params.getInt("value", 0);
 	}
 	
 	@Override

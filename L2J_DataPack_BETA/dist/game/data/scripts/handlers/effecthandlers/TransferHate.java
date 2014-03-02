@@ -39,7 +39,7 @@ public final class TransferHate extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		_chance = params != null ? params.getInt("chance", 100) : 100;
+		_chance = params.getInt("chance", 100);
 	}
 	
 	@Override

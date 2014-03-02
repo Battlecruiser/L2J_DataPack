@@ -40,7 +40,7 @@ public final class BlockBuffSlot extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		String blockBuffSlots = params != null ? params.getString("slot", null) : null;
+		String blockBuffSlots = params.getString("slot", null);
 		if ((blockBuffSlots != null) && !blockBuffSlots.isEmpty())
 		{
 			_blockBuffSlots = new HashSet<>();

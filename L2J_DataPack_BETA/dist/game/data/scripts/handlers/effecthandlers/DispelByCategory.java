@@ -40,6 +40,7 @@ public final class DispelByCategory extends AbstractEffect
 	public DispelByCategory(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
 		_slot = params.getString("slot", null);
 		_rate = params.getInt("rate", 0);
 		_max = params.getInt("max", 0);
