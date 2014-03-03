@@ -478,10 +478,18 @@
 		</for>
 	</skill>
 	<skill id="2530" levels="1" name="Recovery Item for Battlefield Use">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="12819" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DispelBySlot">
+				<param dispel="DEATH_PENALTY,-1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2531" levels="1" name="Adventurer's Scroll of Escape">
 		<set name="hitTime" val="20000" />

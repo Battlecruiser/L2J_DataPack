@@ -104,7 +104,7 @@ public final class DispelBySlot extends AbstractEffect
 				continue;
 			}
 			
-			if ((entry.getKey() == toDispel.getSkill().getAbnormalType()) && (entry.getValue() >= toDispel.getSkill().getAbnormalLvl()))
+			if ((entry.getKey() == toDispel.getSkill().getAbnormalType()) && ((entry.getValue() < 0) || (entry.getValue() >= toDispel.getSkill().getAbnormalLvl())))
 			{
 				effectList.stopSkillEffects(true, entry.getKey());
 			}
