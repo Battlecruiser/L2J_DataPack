@@ -863,46 +863,73 @@
 		<set name="effectRange" val="300" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8379" />
+		<set name="itemConsumeId" val="8030" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<player insideZoneId="2240123" />
+			<and>
+				<player insideZoneId="2240123" />
+				<target npcRace="HUMANOID" />
+			</and>
 		</cond>
 	</skill>
 	<skill id="2241" levels="1" name="Hot Spring Mineral Water">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="100" />
+		<set name="effectRange" val="300" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="8031" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<player insideZoneId="2240123" />
+			<and>
+				<player insideZoneId="2240123" />
+				<target npcRace="HUMANOID" />
+			</and>
 		</cond>
 	</skill>
 	<skill id="2242" levels="1" name="Hot Spring Fountain Water">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="100" />
+		<set name="effectRange" val="300" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="8032" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<player insideZoneId="2240123" />
+			<and>
+				<player insideZoneId="2240123" />
+				<target npcRace="HUMANOID" />
+			</and>
 		</cond>
 	</skill>
 	<skill id="2243" levels="1" name="Hot Spring Sulfur">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="100" />
+		<set name="effectRange" val="300" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="8032" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<player insideZoneId="2240123" />
+			<and>
+				<player insideZoneId="2240123" />
+				<target npcRace="HUMANOID" />
+			</and>
 		</cond>
 	</skill>
 	<skill id="2244" levels="1" name="Herb of Life">
