@@ -25,10 +25,12 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Fort;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.StringUtil;
 
 /**
@@ -88,9 +90,15 @@ public class AdminFortSiege implements IAdminCommandHandler
 				}
 				else
 				{
-					if (fort.getSiege().checkIfCanRegister(player))
+					if (fort.getSiege().addAttacker(player, false) == 4)
 					{
-						fort.getSiege().registerAttacker(player, true);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.REGISTERED_TO_S1_FORTRESS_BATTLE);
+						sm.addString(((L2Npc) target).getFort().getName());
+						player.sendPacket(sm);
+					}
+					else
+					{
+						player.sendMessage("During registering error occurred!");
 					}
 				}
 			}

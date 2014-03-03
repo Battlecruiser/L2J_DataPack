@@ -131,7 +131,6 @@ import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
 import handlers.bypasshandlers.EventEngine;
 import handlers.bypasshandlers.Festival;
-import handlers.bypasshandlers.FortSiege;
 import handlers.bypasshandlers.Freight;
 import handlers.bypasshandlers.ItemAuctionLink;
 import handlers.bypasshandlers.Link;
@@ -400,7 +399,6 @@ public class MasterHandler
 			ClanWarehouse.class,
 			EventEngine.class,
 			Festival.class,
-			FortSiege.class,
 			Freight.class,
 			ItemAuctionLink.class,
 			Link.class,
