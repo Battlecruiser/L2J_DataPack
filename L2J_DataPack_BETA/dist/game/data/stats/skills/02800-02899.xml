@@ -1348,7 +1348,9 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="ManaHeal" val="#amount" />
+			<effect name="ManaHeal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2862" levels="6" name="Highest Power Secret Medicine of Will">
@@ -1366,7 +1368,9 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="CpHeal" val="#amount" />
+			<effect name="CpHeal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2863" levels="1" name="Highest Power Healing Potion">

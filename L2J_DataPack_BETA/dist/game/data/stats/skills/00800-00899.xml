@@ -766,7 +766,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="ManaDamOverTime" ticks="5" val="#mdot" />
+			<effect name="ManaDamOverTime" ticks="5">
+				<param power="#mdot" />
+			</effect>
 		</for>
 		<endEffects>
 			<effect name="CallSkill">

@@ -29,9 +29,13 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class CpHealOverTime extends AbstractEffect
 {
+	private final double _power;
+	
 	public CpHealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -57,7 +61,7 @@ public final class CpHealOverTime extends AbstractEffect
 			return false;
 		}
 		
-		cp += getValue() * getTicksMultiplier();
+		cp += _power * getTicksMultiplier();
 		cp = Math.min(cp, maxcp);
 		info.getEffected().setCurrentCp(cp);
 		return true;

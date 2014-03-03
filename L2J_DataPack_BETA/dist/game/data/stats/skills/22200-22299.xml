@@ -678,7 +678,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PARTY" />
 		<for>
-			<effect name="ManaHeal" val="1000" /> <!-- TODO: Custom. -->
+			<effect name="ManaHeal">
+				<param power="1000" /> <!-- TODO: Custom. -->
+			</effect>
 		</for>
 	</skill>
 </list>

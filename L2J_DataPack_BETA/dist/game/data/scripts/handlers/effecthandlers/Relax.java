@@ -32,9 +32,13 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public final class Relax extends AbstractEffect
 {
+	private final double _power;
+	
 	public Relax(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -74,7 +78,7 @@ public final class Relax extends AbstractEffect
 			}
 		}
 		
-		final double manaDam = getValue() * getTicksMultiplier();
+		final double manaDam = _power * getTicksMultiplier();
 		if (manaDam > info.getEffected().getCurrentMp())
 		{
 			if (info.getSkill().isToggle())

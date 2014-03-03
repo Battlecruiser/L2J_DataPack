@@ -375,7 +375,9 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="FocusEnergy" val="#maxCharges" />
+			<effect name="FocusEnergy">
+				<param charge="#maxCharges" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9" levels="34" name="Sonic Buster" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
@@ -593,7 +595,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="AddHate" val="#power" />
+			<effect name="AddHate">
+				<param power="#power" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="16" levels="24" name="Mortal Blow">
@@ -1283,12 +1287,16 @@
 		</for>
 		<enchant1for>
 			<effect name="Sweeper" />
-			<effect name="HpByLevel" val="#ench1DrainHp" />
+			<effect name="HpByLevel">
+				<param power="#ench1DrainHp" />
+			</effect>
 			<effect name="ConsumeBody" />
 		</enchant1for>
 		<enchant1for>
 			<effect name="Sweeper" />
-			<effect name="ManaHealByLevel" val="#ench2DrainMp" />
+			<effect name="ManaHealByLevel">
+				<param power="#ench2DrainMp" />
+			</effect>
 			<effect name="ConsumeBody" />
 		</enchant1for>
 	</skill>
@@ -1360,11 +1368,15 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
-			<effect name="HpByLevel" val="#drain" />
+			<effect name="HpByLevel">
+				<param power="#drain" />
+			</effect>
 			<effect name="ConsumeBody" />
 		</for>
 		<enchant1for>
-			<effect name="HpByLevel" val="#enchDrain" />
+			<effect name="HpByLevel">
+				<param power="#enchDrain" />
+			</effect>
 			<effect name="ConsumeBody" />
 		</enchant1for>
 	</skill>
@@ -1479,7 +1491,9 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="FocusEnergy" val="#maxCharges" />
+			<effect name="FocusEnergy">
+				<param charge="#maxCharges" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="51" levels="1" name="Lure" enchantGroup1="1">
@@ -1504,7 +1518,9 @@
 		<enchant1 name="mpConsume" val="#ench1mpConsume" />
 		<enchant1 name="reuseDelay" val="2000" />
 		<for>
-			<effect name="AddHate" val="500" />
+			<effect name="AddHate">
+				<param power="500" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="54" levels="49" name="Force Blaster" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
@@ -1662,7 +1678,9 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="FakeDeath" ticks="5" val="10" />
+			<effect name="FakeDeath" ticks="5">
+				<param power="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="61" levels="3" name="Cure Bleeding">
@@ -1832,10 +1850,14 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="HpDrain" val="0.2" />
+			<effect name="HpDrain">
+				<param power="0.2" />
+			</effect>
 		</for>
 		<enchant3for>
-			<effect name="HpDrain" val="#ench3Sap" />
+			<effect name="HpDrain">
+				<param power="#ench3Sap" />
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="72" levels="3" name="Iron Will" enchantGroup1="1" enchantGroup2="1">
@@ -2139,11 +2161,15 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="5" val="#dot" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
 		</for>
 		<enchant1for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="5" val="63" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="63" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="86" levels="3" name="Reflect Damage" enchantGroup1="1" enchantGroup2="1">
@@ -2475,18 +2501,23 @@
 			<using kind="Dagger,Dual Dagger" />
 		</cond>
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dot">
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="HpByLevel" val="#ench2Sap" />
-			<effect name="DamOverTime" ticks="5" val="67">
+			<effect name="HpByLevel">
+				<param power="#ench2Sap" />
+			</effect>
+			<effect name="DamOverTime" ticks="5">
+				<param power="67" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="DamOverTime" ticks="5" val="#ench3dot">
+			<effect name="DamOverTime" ticks="5">
+				<param power="#ench3dot" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant3for>

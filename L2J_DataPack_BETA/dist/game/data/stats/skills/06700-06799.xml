@@ -373,7 +373,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ManaHealByLevel" val="136" />
+			<effect name="ManaHealByLevel">
+				<param power="136" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6729" levels="1" name="Resist Holy of Elcadia">
@@ -525,7 +527,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="200">
+			<effect name="DamOverTime" ticks="1">
+				<param power="200" />
 				<sub order="0x40" stat="darkRes" val="60" />
 			</effect>
 		</for>
@@ -684,7 +687,9 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="200" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="200" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6755" levels="1" name="Death Strike">
@@ -1157,7 +1162,8 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="200">
+			<effect name="DamOverTime" ticks="1">
+				<param power="200" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 			<effect name="Petrification" />

@@ -966,8 +966,12 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="ManaHeal" val="20" />
-			<effect name="ManaHealPercent" val="4" />
+			<effect name="ManaHeal">
+				<param power="20" />
+			</effect>
+			<effect name="ManaHealPercent">
+				<param power="4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2246" levels="1" name="Herb of Power">
@@ -1649,7 +1653,9 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="ManaHealPercent" val="#amount" />
+			<effect name="ManaHealPercent">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2280" levels="1" name="Herb of Power">
@@ -1839,7 +1845,9 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="ManaHeal" val="#amount" />
+			<effect name="ManaHeal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2289" levels="6" name="Elixir of CP">
@@ -1855,7 +1863,9 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="CpHeal" val="#amount" />
+			<effect name="CpHeal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2290" levels="1" name="Coffer of Shadows">

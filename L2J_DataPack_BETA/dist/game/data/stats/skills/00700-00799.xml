@@ -79,7 +79,9 @@
 			<effect name="HealPercent">
 				<param power="100" />
 			</effect>
-			<effect name="ManaHealPercent" val="100" />
+			<effect name="ManaHealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 		<selfEffects>
 			<effect name="CallSkill">
@@ -321,7 +323,8 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="5" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="5">
+				<param power="0.4" />
 				<add order="0x40" stat="transDam" val="50" />
 			</effect>
 		</for>
@@ -435,7 +438,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="HpDrain" val="0.4" />
+			<effect name="HpDrain">
+				<param power="0.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="716" levels="4" name="Zaken Hold">
@@ -910,7 +915,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="351" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="351" />
+			</effect>
 		</for>
 		<endEffects>
 			<effect name="CallSkill">
@@ -1039,7 +1046,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="52" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="52" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="742" levels="3" name="Vale Master Bursting Flame">
@@ -1331,7 +1340,9 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="5" val="134" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="134" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="753" levels="3" name="Doll Blader Throwing Knife">
@@ -1583,7 +1594,9 @@
 			<effect name="DispelByCategory">
 				<param slot="buff" rate="25" max="5" />
 			</effect>
-			<effect name="CpDamPercent" val="90" />
+			<effect name="CpDamPercent">
+				<param power="90" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="763" levels="1" name="Hell Scream">
@@ -1959,7 +1972,9 @@
 				<param power="4500" />
 				<param criticalChance="20" />
 			</effect>
-			<effect name="DamOverTime" ticks="1" val="80" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="777" levels="1" name="Demolition Impact">
@@ -2572,7 +2587,9 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="5" val="69" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="69" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="799" levels="3" name="Master Ability - Defense">

@@ -29,9 +29,13 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class FocusEnergy extends AbstractEffect
 {
+	private final int _charge;
+	
 	public FocusEnergy(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_charge = params.getInt("charge", 0);
 	}
 	
 	@Override
@@ -48,6 +52,6 @@ public final class FocusEnergy extends AbstractEffect
 			return;
 		}
 		
-		info.getEffected().getActingPlayer().increaseCharges(1, (int) getValue());
+		info.getEffected().getActingPlayer().increaseCharges(1, _charge);
 	}
 }

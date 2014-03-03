@@ -30,7 +30,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="#dot" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1101" levels="2" name="Blaze Quake">
@@ -63,7 +65,9 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="#dot" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1102" levels="6" name="Aura Sink">
@@ -97,7 +101,9 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttackMp" />
-			<effect name="ManaDamOverTime" ticks="5" val="#mdot" />
+			<effect name="ManaDamOverTime" ticks="5">
+				<param power="#mdot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1104" levels="14" name="Seal of Winter" enchantGroup1="1" enchantGroup2="1">
@@ -195,7 +201,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="#dot" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1108" levels="4" name="Seal of Flame">
@@ -226,7 +234,9 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="#dot" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1111" levels="18" name="Summon Kat the Cat" enchantGroup1="1">
@@ -295,10 +305,14 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="ManaHealByLevel" val="#amount" />
+			<effect name="ManaHealByLevel">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="ManaHealByLevel" val="#ench1amount" />
+			<effect name="ManaHealByLevel">
+				<param power="#ench1amount" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1127" levels="45" name="Servitor Heal" enchantGroup1="2" enchantGroup2="2">
@@ -648,7 +662,9 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" val="0.4" />
+			<effect name="HpDrain">
+				<param power="0.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1148" levels="13" name="Death Spike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
@@ -717,15 +733,21 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="HpByLevel" val="#drain" />
+			<effect name="HpByLevel">
+				<param power="#drain" />
+			</effect>
 			<effect name="ConsumeBody" />
 		</for>
 		<enchant2for>
-			<effect name="HpByLevel" val="#ench1Drain" />
+			<effect name="HpByLevel">
+				<param power="#ench1Drain" />
+			</effect>
 			<effect name="ConsumeBody" />
 		</enchant2for>
 		<enchant2selfEffects>
-			<effect name="CpHeal" val="#ench2Bravery" />
+			<effect name="CpHeal">
+				<param power="#ench2Bravery" />
+			</effect>
 		</enchant2selfEffects>
 	</skill>
 	<skill id="1154" levels="6" name="Summon Corrupted Man" enchantGroup1="1">
@@ -841,14 +863,22 @@
 		<set name="targetType" val="SELF" />
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
 		<for>
-			<effect name="ManaHeal" val="#amount" />
+			<effect name="ManaHeal">
+				<param power="#amount" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="ManaHeal" val="#ench1amount" />
+			<effect name="ManaHeal">
+				<param power="#ench1amount" />
+			</effect>
 		</enchant1for>
 		<enchant3for>
-			<effect name="CpHeal" val="#ench3Bravery" />
-			<effect name="ManaHeal" val="61" />
+			<effect name="CpHeal">
+				<param power="#ench3Bravery" />
+			</effect>
+			<effect name="ManaHeal">
+				<param power="61" />
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="1159" levels="22" name="Curse Death Link" enchantGroup1="2" enchantGroup2="2">
@@ -1064,10 +1094,14 @@
 		<enchant3 name="activateRate" val="#ench3ActivateRates" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dot" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="5" val="#ench1dot" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#ench1dot" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1168" levels="7" name="Curse: Poison">
@@ -1099,7 +1133,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dot" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1169" levels="14" name="Curse Fear" enchantGroup1="2" enchantGroup2="2">
@@ -1519,7 +1555,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="#dot" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1184" levels="6" name="Ice Bolt">

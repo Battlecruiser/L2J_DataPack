@@ -34,9 +34,13 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public final class ManaHeal extends AbstractEffect
 {
+	private final double _power;
+	
 	public ManaHeal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -60,7 +64,7 @@ public final class ManaHeal extends AbstractEffect
 			return;
 		}
 		
-		double amount = getValue();
+		double amount = _power;
 		
 		if (!info.getSkill().isStatic())
 		{

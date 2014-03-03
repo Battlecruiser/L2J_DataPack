@@ -42,7 +42,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" val="0.2" />
+			<effect name="HpDrain">
+				<param power="0.2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4003" levels="1" name="Golem Body">
@@ -236,7 +238,8 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="30">
+			<effect name="DamOverTime" ticks="3">
+				<param power="30" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -317,7 +320,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ManaHealByLevel" val="#amount" />
+			<effect name="ManaHealByLevel">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4026" levels="1" name="Gludio Flame">
@@ -551,7 +556,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dmg" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4036" levels="12" name="Poison">
@@ -582,7 +589,9 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dmg" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4037" levels="3" name="Decrease P.Atk">
@@ -884,7 +893,9 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" val="0.4" />
+			<effect name="HpDrain">
+				<param power="0.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4051" levels="20" name="Cubic Heal">
@@ -929,7 +940,9 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4053" levels="16" name="Decrease P.Atk">
@@ -1518,8 +1531,8 @@
 		<set name="reuseDelay" val="50" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="20">
-				<param canKill="true" />
+			<effect name="DamOverTime" ticks="3">
+				<param canKill="true" power="30" />
 			</effect>
 			<effect name="Root" />
 		</for>
@@ -1627,7 +1640,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#damage" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#damage" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4089" levels="1" name="NPC Bear Spirit Totem">

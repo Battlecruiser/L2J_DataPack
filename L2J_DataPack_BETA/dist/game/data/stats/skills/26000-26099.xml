@@ -312,7 +312,9 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="CpHeal" val="#amount" />
+			<effect name="CpHeal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="26028" levels="6" name="Secret medicine of Life">
@@ -341,7 +343,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CpHeal" val="50" />
+			<effect name="CpHeal">
+				<param power="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="26030" levels="1" name="Healing medicine for Mana">
@@ -352,7 +356,9 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ManaHeal" val="60" />
+			<effect name="ManaHeal">
+				<param power="60" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="26031" levels="1" name="Wind Walk Scroll">

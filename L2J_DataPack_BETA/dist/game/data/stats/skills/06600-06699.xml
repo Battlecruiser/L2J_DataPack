@@ -361,7 +361,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ManaHealPercent" val="11" />
+			<effect name="ManaHealPercent">
+				<param power="11" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6629" levels="2" name="Energy of Mana's Power">
@@ -375,7 +377,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ManaHealPercent" val="18" />
+			<effect name="ManaHealPercent">
+				<param power="18" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6630" levels="3" name="Energy of Mana's Highest Power">
@@ -389,7 +393,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ManaHealPercent" val="100" />
+			<effect name="ManaHealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6631" levels="1" name="Energy of Power">
@@ -821,7 +827,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Paralyze" />
-			<effect name="DamOverTime" ticks="#ticks" val="115" />
+			<effect name="DamOverTime" ticks="#ticks">
+				<param power="115" />
+			</effect>
 			<effect name="CallSkill">
 				<param skillId="6302" skillLevel="1" />
 			</effect>
@@ -1267,7 +1275,8 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
-			<effect name="DamOverTimePercent" ticks="5" val="0.02">
+			<effect name="DamOverTimePercent" ticks="5">
+				<param power="0.02" />
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 			</effect>
 		</for>
@@ -1379,8 +1388,12 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Paralyze" />
-			<effect name="DamOverTime" ticks="5" val="115" />
-			<effect name="ManaDamOverTime" ticks="5" val="5" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="115" />
+			</effect>
+			<effect name="ManaDamOverTime" ticks="5">
+				<param power="5" />
+			</effect>
 		</for>
 		<endEffects>
 			<effect name="CallSkill">

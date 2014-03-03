@@ -31,9 +31,13 @@ import com.l2jserver.gameserver.model.stats.Formulas;
  */
 public final class CpDamPercent extends AbstractEffect
 {
+	private final double _power;
+	
 	public CpDamPercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -61,7 +65,7 @@ public final class CpDamPercent extends AbstractEffect
 			info.getEffected().stopFakeDeath(true);
 		}
 		
-		int damage = (int) ((info.getEffected().getCurrentCp() * getValue()) / 100);
+		int damage = (int) ((info.getEffected().getCurrentCp() * _power) / 100);
 		// Manage attack or cast break of the target (calculating rate, sending message)
 		if (!info.getEffected().isRaid() && Formulas.calcAtkBreak(info.getEffected(), damage))
 		{

@@ -33,7 +33,9 @@
 			<player level="52" />
 		</cond>
 		<for>
-			<effect name="ManaHeal" val="360" />
+			<effect name="ManaHeal">
+				<param power="360" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2402" levels="1" name="Lesser Battlefield CP Potion">
@@ -48,7 +50,9 @@
 			<player level="52" />
 		</cond>
 		<for>
-			<effect name="CpHeal" val="1000" />
+			<effect name="CpHeal">
+				<param power="1000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2403" levels="1" name="Spring CP Potion">
@@ -60,7 +64,9 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CpHeal" val="1000" />
+			<effect name="CpHeal">
+				<param power="1000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2404" levels="1" name="Might">
@@ -1846,7 +1852,9 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="ManaHealPercent" val="12" />
+			<effect name="ManaHealPercent">
+				<param power="12" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2487" levels="1" name="Item - Special Sound Crystal">
@@ -2042,7 +2050,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="FocusSouls" val="5" />
+			<effect name="FocusSouls">
+				<param charge="5" />
+			</effect>
 		</for>
 	</skill>
 </list>

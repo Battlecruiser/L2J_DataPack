@@ -29,9 +29,13 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public final class MpConsumePerLevel extends AbstractEffect
 {
+	private final double _power;
+	
 	public MpConsumePerLevel(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -42,7 +46,7 @@ public final class MpConsumePerLevel extends AbstractEffect
 			return false;
 		}
 		
-		final double base = getValue() * getTicksMultiplier();
+		final double base = _power * getTicksMultiplier();
 		final double consume = (info.getAbnormalTime() > 0) ? ((info.getEffected().getLevel() - 1) / 7.5) * base * info.getAbnormalTime() : base;
 		if (consume > info.getEffected().getCurrentMp())
 		{

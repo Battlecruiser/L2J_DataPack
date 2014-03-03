@@ -810,11 +810,15 @@
 		</cond>
 		<for>
 			<effect name="Invincible" />
-			<effect name="CpHealPercent" val="100" />
+			<effect name="CpHealPercent">
+				<param power="100" />
+			</effect>
 			<effect name="HealPercent">
 				<param power="100" />
 			</effect>
-			<effect name="ManaHealPercent" val="100" />
+			<effect name="ManaHealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23173" levels="1" name="Phoenix Agathion Special Skill - Oriental Phoenix">

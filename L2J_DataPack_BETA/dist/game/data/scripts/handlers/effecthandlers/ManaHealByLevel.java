@@ -34,9 +34,13 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public final class ManaHealByLevel extends AbstractEffect
 {
+	private final double _power;
+	
 	public ManaHealByLevel(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -60,7 +64,7 @@ public final class ManaHealByLevel extends AbstractEffect
 			return;
 		}
 		
-		double amount = getValue();
+		double amount = _power;
 		
 		// recharged mp influenced by difference between target level and skill level
 		// if target is within 5 levels or lower then skill level there's no penalty.

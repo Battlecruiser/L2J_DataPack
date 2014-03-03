@@ -33,9 +33,13 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public final class ManaHealPercent extends AbstractEffect
 {
+	private final double _power;
+	
 	public ManaHealPercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -60,7 +64,7 @@ public final class ManaHealPercent extends AbstractEffect
 		}
 		
 		double amount = 0;
-		double power = getValue();
+		double power = _power;
 		boolean full = (power == 100.0);
 		
 		amount = full ? target.getMaxMp() : (target.getMaxMp() * power) / 100.0;

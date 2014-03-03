@@ -1414,7 +1414,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CpHeal" val="300" />
+			<effect name="CpHeal">
+				<param power="300" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="9087" levels="1" name="Create Item">

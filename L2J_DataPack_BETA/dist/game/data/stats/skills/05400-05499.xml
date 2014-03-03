@@ -217,7 +217,8 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dot">
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
 				<add order="0x40" stat="mAtk" val="#mAtk" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
@@ -244,7 +245,8 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dot">
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -270,7 +272,8 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dot">
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -356,7 +359,9 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ManaHealByLevel" val="49" />
+			<effect name="ManaHealByLevel">
+				<param power="49" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5430" levels="1" name="Spoil Bomb">
@@ -619,7 +624,9 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="5" val="#dot" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5445" levels="1" name="Awakening">
@@ -718,7 +725,9 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dot" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5451" levels="1" name="Enervation">
@@ -1222,7 +1231,9 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="5" val="71" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5496" levels="1" name="Dark Fireball">
@@ -1269,7 +1280,9 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Stun" />
-			<effect name="DamOverTime" ticks="5" val="52" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="52" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5498" levels="1" name="Self-Destruct">

@@ -241,7 +241,8 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" ticks="5" val="55">
+			<effect name="DamOverTime" ticks="5">
+				<param power="55" />
 				<mul order="0x30" stat="runSpd" val="0.77" />
 			</effect>
 		</for>
@@ -761,11 +762,15 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="CpHeal" val="5000" />
+			<effect name="CpHeal">
+				<param power="5000" />
+			</effect>
 			<effect name="HealPercent">
 				<param power="100" />
 			</effect>
-			<effect name="ManaHealPercent" val="100" />
+			<effect name="ManaHealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5741" levels="1" name="Mental Pot">
@@ -778,7 +783,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ManaHealPercent" val="100" />
+			<effect name="ManaHealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5742" levels="5" name="Area Recharge - Per">

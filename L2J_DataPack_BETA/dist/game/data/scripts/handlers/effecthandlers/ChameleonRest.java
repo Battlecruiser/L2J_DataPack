@@ -32,9 +32,13 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public final class ChameleonRest extends AbstractEffect
 {
+	private final double _power;
+	
 	public ChameleonRest(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -65,7 +69,7 @@ public final class ChameleonRest extends AbstractEffect
 			}
 		}
 		
-		double manaDam = getValue() * getTicksMultiplier();
+		double manaDam = _power * getTicksMultiplier();
 		if (manaDam > info.getEffected().getCurrentMp())
 		{
 			info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);

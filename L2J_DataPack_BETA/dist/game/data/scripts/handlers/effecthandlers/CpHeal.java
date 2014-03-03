@@ -33,9 +33,13 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public final class CpHeal extends AbstractEffect
 {
+	private final double _power;
+	
 	public CpHeal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -59,7 +63,7 @@ public final class CpHeal extends AbstractEffect
 			return;
 		}
 		
-		double amount = getValue();
+		double amount = _power;
 		
 		// Prevents overheal and negative amount
 		amount = Math.max(Math.min(amount, target.getMaxRecoverableCp() - target.getCurrentCp()), 0);

@@ -204,7 +204,9 @@
 			<effect name="Buff">
 				<add order="0x40" stat="maxCp" val="1200" />
 			</effect>
-			<effect name="CpHeal" val="1200" />
+			<effect name="CpHeal">
+				<param power="1200" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8309" levels="1" name="Red Talisman - Territory Convoy">
@@ -226,7 +228,9 @@
 			<effect name="Buff">
 				<add order="0x40" stat="maxCp" val="800" />
 			</effect>
-			<effect name="CpHeal" val="800" />
+			<effect name="CpHeal">
+				<param power="800" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8310" levels="1" name="Arcana Sigil">
@@ -575,7 +579,9 @@
 			<effect name="Buff">
 				<add order="0x40" stat="maxCp" val="1500" />
 			</effect>
-			<effect name="CpHeal" val="1500" />
+			<effect name="CpHeal">
+				<param power="1500" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8334" levels="1" name="Blue Talisman - Lord's Divine Protection">

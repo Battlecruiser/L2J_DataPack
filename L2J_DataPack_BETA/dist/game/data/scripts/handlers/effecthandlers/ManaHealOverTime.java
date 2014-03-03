@@ -28,9 +28,13 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class ManaHealOverTime extends AbstractEffect
 {
+	private final double _power;
+	
 	public ManaHealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -50,7 +54,7 @@ public final class ManaHealOverTime extends AbstractEffect
 			return true;
 		}
 		
-		mp += getValue() * getTicksMultiplier();
+		mp += _power * getTicksMultiplier();
 		mp = Math.min(mp, maxmp);
 		info.getEffected().setCurrentMp(mp);
 		return info.getSkill().isToggle();
