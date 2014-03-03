@@ -1011,7 +1011,7 @@ public class SagasSuperClass extends Quest
 			{
 				continue;
 			}
-			QuestManager.getInstance().removeQuest(script);
+			QuestManager.getInstance().removeScript(script);
 		}
 		_scripts.clear();
 		return super.unload();

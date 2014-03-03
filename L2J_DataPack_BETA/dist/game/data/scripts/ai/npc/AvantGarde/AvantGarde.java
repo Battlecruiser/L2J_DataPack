@@ -22,6 +22,8 @@ import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
+import custom.Validators.SubClassSkills;
+
 /**
  * Avant-Garde AI.<br>
  * Sub-Class Certification system, skill learning and certification canceling.<br>
@@ -167,10 +169,10 @@ public class AvantGarde extends AbstractNpcAI
 				}
 				else
 				{
-					QuestState st = player.getQuestState("SubClassSkills");
+					QuestState st = player.getQuestState(SubClassSkills.class.getSimpleName());
 					if (st == null)
 					{
-						st = QuestManager.getInstance().getQuest("SubClassSkills").newQuestState(player);
+						st = QuestManager.getInstance().getQuest(SubClassSkills.class.getSimpleName()).newQuestState(player);
 					}
 					
 					int activeCertifications = 0;
