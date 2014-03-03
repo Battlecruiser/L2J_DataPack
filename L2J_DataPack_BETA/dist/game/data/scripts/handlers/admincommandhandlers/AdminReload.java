@@ -112,8 +112,8 @@ public class AdminReload implements IAdminCommandHandler
 					}
 					else
 					{
-						QuestManager.getInstance().reloadAllQuests();
-						activeChar.sendMessage("All Quests have been reloaded.");
+						QuestManager.getInstance().reloadAllScripts();
+						activeChar.sendMessage("All scripts have been reloaded.");
 						AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Quests.");
 					}
 					break;
@@ -121,7 +121,7 @@ public class AdminReload implements IAdminCommandHandler
 				case "walker":
 				{
 					WalkingManager.getInstance().load();
-					activeChar.sendMessage("All Walkers have been reloaded");
+					activeChar.sendMessage("All walkers have been reloaded");
 					AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Walkers.");
 					break;
 				}

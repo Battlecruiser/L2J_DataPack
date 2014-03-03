@@ -76,7 +76,7 @@ public class ReloadHandler implements ITelnetHandler
 				{
 					_print.print("Reloading npc templates... ");
 					NpcData.getInstance().load();
-					QuestManager.getInstance().reloadAllQuests();
+					QuestManager.getInstance().reloadAllScripts();
 					_print.println("done");
 				}
 				else if (type.equals("html"))
