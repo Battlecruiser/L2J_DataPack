@@ -956,7 +956,9 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" val="0.2" />
+			<effect name="HpDrain">
+				<param power="0.2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4249" levels="12" name="Decrease Speed">
