@@ -140,7 +140,9 @@
 			<player levelRange="61;75" />
 		</cond>
 		<for>
-			<effect name="ManaHeal" val="360" />
+			<effect name="ManaHeal">
+				<param power="360" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2909" levels="5" name="Battlefield Use Secret Medicine of Will">
@@ -154,7 +156,9 @@
 			<player levelRange="61;75" />
 		</cond>
 		<for>
-			<effect name="CpHeal" val="360" />
+			<effect name="CpHeal">
+				<param power="360" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2910" levels="1" name="Skull Key of Pain">

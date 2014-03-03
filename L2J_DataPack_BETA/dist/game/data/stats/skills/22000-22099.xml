@@ -752,7 +752,9 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CpHeal" val="200" />
+			<effect name="CpHeal">
+				<param power="200" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22043" levels="6" name="Secret medicine of Will">
@@ -769,7 +771,9 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="CpHeal" val="#amount" />
+			<effect name="CpHeal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22044" levels="6" name="Secret medicine of Life">

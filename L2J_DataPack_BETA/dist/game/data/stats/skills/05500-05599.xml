@@ -26,7 +26,9 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="5" val="52" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="52" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5501" levels="1" name="Stuns">
@@ -822,7 +824,9 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="FocusSouls" val="1" />
+			<effect name="FocusSouls">
+				<param charge="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5549" levels="1" name="Physical Short-range Weakness">
@@ -1262,7 +1266,9 @@
 			<effect name="Heal">
 				<param power="418" />
 			</effect>
-			<effect name="ManaHealByLevel" val="73" />
+			<effect name="ManaHealByLevel">
+				<param power="73" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5572" levels="1" name="Warrior Ability - Haste">
@@ -1336,7 +1342,9 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ManaHealByLevel" val="10" />
+			<effect name="ManaHealByLevel">
+				<param power="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5576" levels="1" name="Enchanter Ability - Barrier">
@@ -1718,8 +1726,12 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" val="0.8" />
-			<effect name="ManaDamOverTime" val="182" />
+			<effect name="HpDrain">
+				<param power="0.8" />
+			</effect>
+			<effect name="ManaDamOverTime">
+				<param power="182" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5594" levels="1" name="Poison">
@@ -1771,7 +1783,9 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="200" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="200" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5597" levels="1" name="Invalid Skill cancel">

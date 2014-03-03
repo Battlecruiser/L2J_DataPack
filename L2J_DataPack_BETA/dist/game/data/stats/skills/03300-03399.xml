@@ -422,7 +422,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="HpDrain" val="0.05" />
+			<effect name="HpDrain">
+				<param power="0.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3332" levels="1" name="Orange Talisman - Hot Springs Recovery">

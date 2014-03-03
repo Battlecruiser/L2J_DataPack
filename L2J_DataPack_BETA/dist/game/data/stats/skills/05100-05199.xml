@@ -494,7 +494,9 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 			</effect>
-			<effect name="FocusEnergy" val="7" />
+			<effect name="FocusEnergy">
+				<param charge="7" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5128" levels="1" name="Maximize long-range weapon use">
@@ -724,7 +726,8 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="109">
+			<effect name="DamOverTime" ticks="5">
+				<param power="109" />
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 			</effect>
 		</for>
@@ -904,7 +907,9 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ManaHealByLevel" val="#amount" />
+			<effect name="ManaHealByLevel">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5150" levels="10" name="Blessed Soul">
@@ -964,7 +969,9 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CpHeal" val="#amount" />
+			<effect name="CpHeal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5153" levels="10" name="Cheer">
@@ -1231,7 +1238,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="AddHate" val="#power" />
+			<effect name="AddHate">
+				<param power="#power" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5166" levels="10" name="Slow">
@@ -1475,7 +1484,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dot" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5175" levels="10" name="Bleed">
@@ -1504,7 +1515,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dot" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5176" levels="10" name="Silence">

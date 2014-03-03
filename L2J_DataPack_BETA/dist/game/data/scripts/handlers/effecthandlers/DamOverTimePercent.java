@@ -32,12 +32,14 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 public final class DamOverTimePercent extends AbstractEffect
 {
 	private final boolean _canKill;
+	private final double _power;
 	
 	public DamOverTimePercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		
 		_canKill = params.getBoolean("canKill", false);
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -54,7 +56,7 @@ public final class DamOverTimePercent extends AbstractEffect
 			return false;
 		}
 		
-		double damage = info.getEffected().getCurrentHp() * getValue() * getTicksMultiplier();
+		double damage = info.getEffected().getCurrentHp() * _power * getTicksMultiplier();
 		if (damage >= (info.getEffected().getCurrentHp() - 1))
 		{
 			if (info.getSkill().isToggle())

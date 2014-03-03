@@ -36,7 +36,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="44" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="44" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3006" levels="1" name="Equip Set Items">
@@ -242,7 +244,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3021" levels="6" name="Special Ability: Critical Bleed">
@@ -265,7 +269,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3022" levels="6" name="Special Ability: Critical Drain">
@@ -285,7 +291,9 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" val="#absorbPart" />
+			<effect name="HpDrain">
+				<param power="#absorbPart" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3023" levels="6" name="Special Ability: Critical Damage">
@@ -329,7 +337,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3025" levels="6" name="Special Ability: Critical Anger">
@@ -562,7 +572,9 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" val="#absorbPart" />
+			<effect name="HpDrain">
+				<param power="#absorbPart" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3040" levels="6" name="Special Ability: Critical Poison">
@@ -590,7 +602,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3041" levels="6" name="Special Ability: Critical Poison">
@@ -618,7 +632,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3042" levels="20" name="Special Ability: Critical Damage">
@@ -807,7 +823,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="74" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="74" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3053" levels="2" name="Special Ability: Critical Bleed">
@@ -828,7 +846,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="88">
+			<effect name="DamOverTime" ticks="3">
+				<param power="88" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -851,7 +870,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="256">
+			<effect name="DamOverTime" ticks="3">
+				<param power="256" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -874,7 +894,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="128">
+			<effect name="DamOverTime" ticks="3">
+				<param power="128" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -946,7 +967,9 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" val="0.65" />
+			<effect name="HpDrain">
+				<param power="0.65" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3060" levels="2" name="Special Ability: Critical Drain">
@@ -961,7 +984,9 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" val="0.35" />
+			<effect name="HpDrain">
+				<param power="0.35" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3061" levels="3" name="Special Ability: Critical Poison">
@@ -985,7 +1010,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dot" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3062" levels="2" name="Special Ability: Critical Poison">
@@ -1008,7 +1035,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="224" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="224" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3063" levels="2" name="Special Ability: Back Blow">

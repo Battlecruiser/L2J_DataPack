@@ -197,7 +197,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ManaHeal" val="500" />
+			<effect name="ManaHeal">
+				<param power="500" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23216" levels="1" name="Granny Tiger Agathion Cute Trick">
@@ -1616,7 +1618,9 @@
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="300" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="300" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23299" levels="1" name="Arrow Rain">
@@ -1629,7 +1633,9 @@
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="300" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="300" />
+			</effect>
 		</for>
 	</skill>
 </list>

@@ -1368,7 +1368,9 @@
 			<effect name="Heal">
 				<param power="500" />
 			</effect>
-			<effect name="ManaHeal" val="200" />
+			<effect name="ManaHeal">
+				<param power="200" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22179" levels="1" name="Fortuna of Chaos">

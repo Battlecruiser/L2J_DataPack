@@ -226,7 +226,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="AddHate" val="#power" />
+			<effect name="AddHate">
+				<param power="#power" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3110" levels="10" name="Item Skill: Mana Burn">
@@ -638,7 +640,9 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ManaHealByLevel" val="#amount" />
+			<effect name="ManaHealByLevel">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3128" levels="10" name="Item Skill: Blessed Soul">
@@ -708,7 +712,9 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CpHeal" val="#amount" />
+			<effect name="CpHeal">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3131" levels="10" name="Item Skill: Cheer">
@@ -1205,7 +1211,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="AddHate" val="#power" />
+			<effect name="AddHate">
+				<param power="#power" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3151" levels="10" name="Item Skill: Peace">
@@ -1273,7 +1281,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" val="0.4" />
+			<effect name="HpDrain">
+				<param power="0.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3154" levels="10" name="Item Skill: Mana Burn">
@@ -2371,7 +2381,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dmg" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3196" levels="10" name="Item Skill: Bleed">
@@ -2404,7 +2416,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="#dmg" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dmg" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3197" levels="10" name="Item Skill: Silence">

@@ -428,7 +428,9 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="FocusSouls" val="50" />
+			<effect name="FocusSouls">
+				<param charge="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="626" levels="4" name="Critical Sense" enchantGroup1="1" enchantGroup2="1">
@@ -1774,7 +1776,9 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="5" val="139" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="139" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="689" levels="1" name="Divine Rogue Deadly Blow">

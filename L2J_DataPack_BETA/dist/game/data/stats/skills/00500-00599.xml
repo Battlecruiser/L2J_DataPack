@@ -17,7 +17,8 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="5" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="5">
+				<param power="0.4" />
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pAtkSpd" val="#amount" />
 				<add order="0x40" stat="accCombat" val="#amount2" />
@@ -26,7 +27,8 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="5" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="5">
+				<param power="0.4" />
 				<mul order="0x30" stat="pAtk" val="#ench1Power" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
 				<add order="0x40" stat="accCombat" val="#ench1Power2" />
@@ -35,7 +37,8 @@
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="MpConsumePerLevel" ticks="5" val="#ench2Cost">
+			<effect name="MpConsumePerLevel" ticks="5">
+				<param power="#ench2Cost" />
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
 				<add order="0x40" stat="accCombat" val="4" />
@@ -105,10 +108,14 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="FocusSouls" val="#souls" />
+			<effect name="FocusSouls">
+				<param charge="#souls" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="FocusSouls" val="#ench1souls" />
+			<effect name="FocusSouls">
+				<param charge="#ench1souls" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="503" levels="3" name="Scorn">
@@ -438,11 +445,15 @@
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" />
-			<effect name="DamOverTime" ticks="5" val="#dot" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
 		</for>
 		<enchant3for>
 			<effect name="PhysicalSoulAttack" />
-			<effect name="DamOverTime" ticks="5" val="67" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="67" />
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="510" levels="5" name="Deadly Roulette" enchantGroup1="2" enchantGroup2="2">
@@ -496,7 +507,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="AddHate" val="500" />
+			<effect name="AddHate">
+				<param power="500" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="512" levels="10" name="Create Bio Potion">
@@ -978,7 +991,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dot" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
 		</for>
 		<endEffects>
 			<effect name="CallSkill">
@@ -1300,7 +1315,9 @@
 			<player cp="80" />
 		</cond>
 		<for>
-			<effect name="CpDamPercent" val="100" />
+			<effect name="CpDamPercent">
+				<param power="100" />
+			</effect>
 			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 				<mul order="0x30" stat="regHp" val="1.15" />
@@ -1938,7 +1955,9 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="5" val="123" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="123" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="560" levels="4" name="Power Slash">
@@ -2192,7 +2211,9 @@
 			<effect name="PhysicalAttack" />
 		</for>
 		<selfEffects>
-			<effect name="FocusEnergy" val="#maxCharges" />
+			<effect name="FocusEnergy">
+				<param charge="#maxCharges" />
+			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="571" levels="4" name="Poison Dust">
@@ -2224,7 +2245,9 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="58" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="58" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="572" levels="4" name="Double Slasher">
@@ -2411,7 +2434,9 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="5" val="#dot" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="579" levels="4" name="Fire Armor">
@@ -2531,7 +2556,9 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="5" val="123" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="123" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="583" levels="4" name="Assimilation">
@@ -2640,7 +2667,7 @@
 	</skill>
 	<skill id="588" levels="2" name="Curse of Darkness">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dmg"> 88 101 </table>
+		<table name="#dot"> 88 101 </table>
 		<table name="#magicLvl"> 59 63 </table>
 		<table name="#mpConsume"> 54 58 </table>
 		<set name="abnormalLvl" val="1" />
@@ -2661,7 +2688,9 @@
 		<set name="reuseDelay" val="11000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dmg" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="589" levels="2" name="Darkness Energy Drain">
@@ -2679,7 +2708,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CORPSE_MOB" />
 		<for>
-			<effect name="HpByLevel" val="#drainHp" />
+			<effect name="HpByLevel">
+				<param power="#drainHp" />
+			</effect>
 			<effect name="ConsumeBody" />
 		</for>
 	</skill>

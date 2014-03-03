@@ -10,7 +10,9 @@
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="1" val="300" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="300" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23301" levels="1" name="Dimensional Door A">
@@ -157,7 +159,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="170" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="170" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23320" levels="1" name="Greedy Throat">
@@ -181,7 +185,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="230" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="230" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23321" levels="1" name="Draconic Evolver">

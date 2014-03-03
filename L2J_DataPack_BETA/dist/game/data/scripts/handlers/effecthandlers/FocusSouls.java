@@ -32,9 +32,13 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public final class FocusSouls extends AbstractEffect
 {
+	private final int _charge;
+	
 	public FocusSouls(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_charge = params.getInt("charge", 0);
 	}
 	
 	@Override
@@ -55,7 +59,7 @@ public final class FocusSouls extends AbstractEffect
 		final int maxSouls = (int) target.calcStat(Stats.MAX_SOULS, 0, null, null);
 		if (maxSouls > 0)
 		{
-			int amount = (int) getValue();
+			int amount = _charge;
 			if ((target.getChargedSouls() < maxSouls))
 			{
 				int count = ((target.getChargedSouls() + amount) <= maxSouls) ? amount : (maxSouls - target.getChargedSouls());

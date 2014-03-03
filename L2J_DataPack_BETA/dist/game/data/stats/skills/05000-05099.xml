@@ -27,7 +27,9 @@
 		<set name="power" val="111" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" val="0.8" />
+			<effect name="HpDrain">
+				<param power="0.8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5002" levels="1" name="Giselle - Vampiric Rage">
@@ -271,7 +273,9 @@
 		<set name="power" val="61" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" val="0.8" />
+			<effect name="HpDrain">
+				<param power="0.8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5014" levels="3" name="Frintezza's Daemon Attack">
@@ -410,7 +414,9 @@
 		<set name="power" val="314" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="HpDrain" val="0.8" />
+			<effect name="HpDrain">
+				<param power="0.8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5020" levels="1" name="Forced Action">
@@ -1336,9 +1342,11 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
-		<effect name="DamOverTime" ticks="5" val="12">
-			<param canKill="true" />
-		</effect>
+		<for>
+			<effect name="DamOverTime" ticks="5">
+				<param canKill="true" power="12" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5087" levels="2" name="Berserk">
 		<!-- Confirmed CT2.5 -->

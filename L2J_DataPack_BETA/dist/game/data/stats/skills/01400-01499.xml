@@ -521,7 +521,9 @@
 				<sub order="0x40" stat="debuffVuln" val="10" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
-			<effect name="CpHealPercent" val="20" />
+			<effect name="CpHealPercent">
+				<param power="20" />
+			</effect>
 		</for>
 		<enchant3for>
 			<effect name="Buff">
@@ -539,7 +541,9 @@
 				<sub order="0x40" stat="debuffVuln" val="10" />
 				<mul order="0x30" stat="runSpd" val="#ench3decreasePenalty" />
 			</effect>
-			<effect name="CpHealPercent" val="20" />
+			<effect name="CpHealPercent">
+				<param power="20" />
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="1415" levels="1" name="Pa'agrio's Emblem" enchantGroup1="5" enchantGroup2="5">
@@ -598,13 +602,17 @@
 			<effect name="Buff">
 				<add order="0x40" stat="maxCp" val="800" />
 			</effect>
-			<effect name="CpHeal" val="800" />
+			<effect name="CpHeal">
+				<param power="800" />
+			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
 				<add order="0x40" stat="maxCp" val="#ench1amount" />
 			</effect>
-			<effect name="CpHeal" val="#ench1amount" />
+			<effect name="CpHeal">
+				<param power="#ench1amount" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1417" levels="5" name="Aura Flash" enchantGroup1="2" enchantGroup2="2">
@@ -921,7 +929,9 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="ManaHealByLevel" val="1500" />
+			<effect name="ManaHealByLevel">
+				<param power="1500" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1429" levels="1" name="Gate Chant">
@@ -976,7 +986,9 @@
 			<effect name="Paralyze">
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
-			<effect name="ManaHealOverTime" ticks="5" val="#mhot" />
+			<effect name="ManaHealOverTime" ticks="5">
+				<param power="#mhot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1431" levels="6" name="Fallen Arrow">
@@ -1125,13 +1137,15 @@
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dmg">
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dmg" />
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mDef" val="#amount" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="5" val="#ench1dmg">
+			<effect name="DamOverTime" ticks="5">
+				<param power="#ench1dmg" />
 				<mul order="0x30" stat="pDef" val="0.77" />
 				<mul order="0x30" stat="mDef" val="0.77" />
 			</effect>
@@ -1731,7 +1745,9 @@
 			<target races="Kamael" />
 		</cond>
 		<for>
-			<effect name="FocusSouls" val="1" />
+			<effect name="FocusSouls">
+				<param charge="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1450" levels="1" name="Chain Lightning" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
@@ -1845,10 +1861,14 @@
 		<enchant3 name="elementPower" val="#ench3elementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="173" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="173" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="5" val="#ench1Power" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#ench1Power" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1453" levels="1" name="Ice Vortex Crusher" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -1960,10 +1980,14 @@
 		<enchant3 name="elementPower" val="#ench3elementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="173" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="173" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="5" val="#ench1Power" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#ench1Power" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1456" levels="1" name="Wind Vortex Slug" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -2061,10 +2085,14 @@
 		<enchant3 name="elementPower" val="#ench3elementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="173" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="173" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" ticks="5" val="#ench1Power" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#ench1Power" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1459" levels="1" name="Divine Power" enchantGroup1="5" enchantGroup2="5">
@@ -2726,7 +2754,9 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="reuseDelay" val="#ench3Reuse" />
 		<for>
-			<effect name="ManaHealOverTime" ticks="1" val="200" />
+			<effect name="ManaHealOverTime" ticks="1">
+				<param power="200" />
+			</effect>
 			<effect name="Paralyze">
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
@@ -3260,7 +3290,9 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="HpDrain" val="0.2" />
+			<effect name="HpDrain">
+				<param power="0.2" />
+			</effect>
 			<effect name="Debuff">
 				<mul order="0x30" stat="pAtk" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />

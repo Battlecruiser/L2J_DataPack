@@ -30,9 +30,13 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public final class SilentMove extends AbstractEffect
 {
+	private final double _power;
+	
 	public SilentMove(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -49,7 +53,7 @@ public final class SilentMove extends AbstractEffect
 			return false;
 		}
 		
-		final double manaDam = getValue() * getTicksMultiplier();
+		final double manaDam = _power * getTicksMultiplier();
 		if (manaDam > info.getEffected().getCurrentMp())
 		{
 			info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);

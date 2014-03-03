@@ -360,7 +360,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="ManaHealPercent" val="5" />
+			<effect name="ManaHealPercent">
+				<param power="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4532" levels="1" name="Quest - BOSS Reflect">
@@ -1301,7 +1303,9 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="FatalBlow" />
-			<effect name="DamOverTime" ticks="5" val="#damage" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#damage" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4580" levels="12" name="Decrease P. Atk.">
@@ -1384,7 +1388,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dmg" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dmg" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4583" levels="12" name="Decrease Speed">
@@ -1806,7 +1812,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#damage" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#damage" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4597" levels="12" name="Bleed">
@@ -1834,7 +1842,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#damage" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#damage" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4598" levels="12" name="Bleed">
@@ -1862,7 +1872,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#damage" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#damage" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4599" levels="12" name="Decrease Speed">

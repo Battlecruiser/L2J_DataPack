@@ -30,9 +30,13 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class AddHate extends AbstractEffect
 {
+	private final double _power;
+	
 	public AddHate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -49,7 +53,7 @@ public final class AddHate extends AbstractEffect
 			return;
 		}
 		
-		final double val = getValue();
+		final double val = _power;
 		if (val > 0)
 		{
 			((L2Attackable) info.getEffected()).addDamageHate(info.getEffector(), 0, (int) val);

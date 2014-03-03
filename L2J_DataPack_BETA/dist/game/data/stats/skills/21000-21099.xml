@@ -607,7 +607,9 @@
 			<effect name="HealPercent">
 				<param power="100" />
 			</effect>
-			<effect name="ManaHealPercent" val="50" />
+			<effect name="ManaHealPercent">
+				<param power="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21043" levels="1" name="Agathion Seal Cancel - Red Sumo Wrestler">

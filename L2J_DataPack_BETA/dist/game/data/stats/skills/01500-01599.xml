@@ -171,11 +171,15 @@
 		<set name="targetType" val="PARTY_NOTME" />
 		<for>
 			<effect name="Invincible" />
-			<effect name="CpHeal" val="9000" />
+			<effect name="CpHeal">
+				<param power="9000" />
+			</effect>
 			<effect name="HealPercent">
 				<param power="100" />
 			</effect>
-			<effect name="ManaHealPercent" val="100" />
+			<effect name="ManaHealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1506" levels="1" name="Blessing of Eva">
@@ -198,11 +202,15 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="CpHeal" val="9000" />
+			<effect name="CpHeal">
+				<param power="9000" />
+			</effect>
 			<effect name="HealPercent">
 				<param power="100" />
 			</effect>
-			<effect name="ManaHealPercent" val="100" />
+			<effect name="ManaHealPercent">
+				<param power="100" />
+			</effect>
 			<effect name="DispelByCategory">
 				<param slot="debuff" rate="40" max="10" />
 			</effect>
@@ -258,8 +266,12 @@
 			<effect name="DefenceTrait">
 				<param HOLD="100" />
 			</effect>
-			<effect name="DamOverTime" ticks="1" val="90" />
-			<effect name="ManaDamOverTime" ticks="1" val="30" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="90" />
+			</effect>
+			<effect name="ManaDamOverTime" ticks="1">
+				<param power="30" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1509" levels="1" name="Seal of Limit">
@@ -401,7 +413,8 @@
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
 			<effect name="MagicalSoulAttack" />
-			<effect name="ManaDamOverTime" ticks="5" val="12">
+			<effect name="ManaDamOverTime" ticks="5">
+				<param power="12" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -409,7 +422,8 @@
 		</for>
 		<enchant3for>
 			<effect name="MagicalSoulAttack" />
-			<effect name="ManaDamOverTime" ticks="5" val="12">
+			<effect name="ManaDamOverTime" ticks="5">
+				<param power="12" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -837,7 +851,8 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="5" val="#dot">
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
 				<mul order="0x30" stat="healEffect" val="0.5" />
 			</effect>
 		</for>
@@ -1646,7 +1661,9 @@
 			<effect name="MagicalAttack" />
 		</for>
 		<selfEffects>
-			<effect name="ManaHeal" val="10" /> <!-- FIXME: value unconfirmed -->
+			<effect name="ManaHeal">
+				<param power="10" />  <!-- FIXME: value unconfirmed -->
+			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="1555" levels="1" name="Aura Cannon">
@@ -1669,7 +1686,9 @@
 			<effect name="MagicalAttack" />
 		</for>
 		<selfEffects>
-			<effect name="ManaHeal" val="10" /> <!-- FIXME: value unconfirmed -->
+			<effect name="ManaHeal">
+				<param power="10" />  <!-- FIXME: value unconfirmed -->
+			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="1556" levels="1" name="Arcane Shield">
