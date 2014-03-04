@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.stats.BaseStats;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
@@ -82,15 +81,8 @@ public final class SoulBlow extends AbstractEffect
 			damage *= 1 + (chargedSouls * 0.04);
 		}
 		
-		// Crit rate base crit rate for skill, modified with STR bonus
-		boolean crit = Formulas.calcCrit(info.getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
-		if (crit)
-		{
-			damage *= 2;
-		}
-		
 		target.reduceCurrentHp(damage, activeChar, info.getSkill());
-		target.notifyDamageReceived(damage, activeChar, info.getSkill(), crit, false);
+		target.notifyDamageReceived(damage, activeChar, info.getSkill(), false, false);
 		
 		// Manage attack or cast break of the target (calculating rate, sending message...)
 		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
