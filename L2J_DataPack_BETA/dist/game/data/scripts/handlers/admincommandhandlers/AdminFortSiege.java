@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Fort;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -93,7 +92,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 					if (fort.getSiege().addAttacker(player, false) == 4)
 					{
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.REGISTERED_TO_S1_FORTRESS_BATTLE);
-						sm.addString(((L2Npc) target).getFort().getName());
+						sm.addCastleId(fort.getResidenceId());
 						player.sendPacket(sm);
 					}
 					else
