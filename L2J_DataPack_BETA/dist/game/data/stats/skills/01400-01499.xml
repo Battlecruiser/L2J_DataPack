@@ -1327,7 +1327,6 @@
 		<table name="#power"> 96 99 102 105 108 </table>
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
-		<set name="dependOnTargetBuff" val="true" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1200" />
@@ -1342,7 +1341,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" />
+			<effect name="MagicalAttackByAbnormal" />
 		</for>
 	</skill>
 	<skill id="1440" levels="5" name="Steal Divinity">

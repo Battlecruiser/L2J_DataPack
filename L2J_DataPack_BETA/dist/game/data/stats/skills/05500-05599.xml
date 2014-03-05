@@ -394,7 +394,6 @@
 	<skill id="5522" levels="1" name="Chain Magic - Dark Explosion">
 		<set name="affectRange" val="600" />
 		<set name="castRange" val="500" />
-		<set name="dependOnTargetBuff" val="0.2" /> <!-- NOTE: Divine Inspiration/Dance/Song/Trigger slots are ignored, so using (20 Default Buff Slots / 100) -->
 		<set name="effectPoint" val="-1063" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -406,7 +405,7 @@
 		<set name="power" val="85" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="MagicalAttack" />
+			<effect name="MagicalAttackByAbnormal" />
 		</for>
 	</skill>
 	<skill id="5523" levels="1" name="Chain Magic - Unholy Castle">

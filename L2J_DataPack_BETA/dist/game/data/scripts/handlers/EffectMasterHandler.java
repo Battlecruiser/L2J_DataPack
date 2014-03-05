@@ -113,6 +113,7 @@ public final class EffectMasterHandler
 		Lethal.class,
 		Lucky.class,
 		MagicalAttack.class,
+		MagicalAttackByAbnormal.class,
 		MagicalAttackMp.class,
 		MagicalSoulAttack.class,
 		ManaDamOverTime.class,
