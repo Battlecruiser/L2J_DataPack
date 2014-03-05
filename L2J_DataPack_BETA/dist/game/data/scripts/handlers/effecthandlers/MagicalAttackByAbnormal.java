@@ -30,12 +30,12 @@ import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.util.Rnd;
 
 /**
- * Magical Soul Attack effect implementation.
+ * Magical Attack By Abnormal effect implementation.
  * @author Adry_85
  */
-public final class MagicalSoulAttack extends AbstractEffect
+public final class MagicalAttackByAbnormal extends AbstractEffect
 {
-	public MagicalSoulAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public MagicalAttackByAbnormal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}
@@ -74,12 +74,8 @@ public final class MagicalSoulAttack extends AbstractEffect
 		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
 		int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
 		
-		if ((info.getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
-		{
-			// Souls Formula (each soul increase +4%)
-			int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= info.getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : info.getSkill().getMaxSoulConsumeCount();
-			damage *= 1 + (chargedSouls * 0.04);
-		}
+		// each buff increase +30%
+		damage *= (((target.getBuffCount() * 0.3) + 1.3) / 4);
 		
 		if (damage > 0)
 		{
