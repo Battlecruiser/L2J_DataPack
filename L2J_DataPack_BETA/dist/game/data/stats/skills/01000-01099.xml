@@ -476,6 +476,7 @@
 		<table name="#mpConsume"> 47 70 97 121 144 156 165 182 191 </table>
 		<table name="#mpInitialConsume"> 12 18 25 31 36 39 42 46 48 </table>
 		<table name="#power"> 0 20 30 40 50 55 60 65 70 </table>
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="900" />
@@ -1157,6 +1158,7 @@
 		<table name="#magicLvl"> 40 56 </table>
 		<table name="#mpConsume"> 84 122 </table>
 		<table name="#mpInitialConsume"> 21 31 </table>
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="icon" val="icon.skill1050" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->

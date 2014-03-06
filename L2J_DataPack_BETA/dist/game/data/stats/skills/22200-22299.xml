@@ -3,6 +3,7 @@
 	<skill id="22200" levels="1" name="Transformation Scroll - Veil Master">
 		<!-- Transformed into a Veil Master. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -11,6 +12,7 @@
 	<skill id="22201" levels="1" name="Transformation Scroll - Saber Tooth Tiger">
 		<!-- Transformed into a Saber Tooth Tiger. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -19,6 +21,7 @@
 	<skill id="22202" levels="1" name="Transformation Scroll - Ol Mahum">
 		<!-- Transformed into an Ol Mahum. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -27,6 +30,7 @@
 	<skill id="22203" levels="1" name="Transformation Scroll - Doll Blader">
 		<!-- Transformed into a Doll Blader. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -35,6 +39,7 @@
 	<skill id="22204" levels="1" name="Transformation Scroll - Zaken">
 		<!-- Transformed into Zaken. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -43,6 +48,7 @@
 	<skill id="22205" levels="1" name="Transformation Scroll - Anakim">
 		<!-- Transformed into Anakim. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -51,6 +57,7 @@
 	<skill id="22206" levels="1" name="Transformation Scroll - Venom">
 		<!-- Transformed into Venom. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -59,6 +66,7 @@
 	<skill id="22207" levels="1" name="Transformation Scroll - Gordon">
 		<!-- Transformed into Gordon. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -67,6 +75,7 @@
 	<skill id="22208" levels="1" name="Transformation Scroll - Ranku">
 		<!-- Transformed into Ranku. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -75,6 +84,7 @@
 	<skill id="22209" levels="1" name="Transformation Scroll - Kietch">
 		<!-- Transformed into Kietch. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -83,6 +93,7 @@
 	<skill id="22210" levels="1" name="Transformation Scroll - Duke Devil">
 		<!-- Transformed into Duke Devil. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -90,6 +101,7 @@
 	</skill>
 	<skill id="22211" levels="1" name="Blessed Scroll of Escape">
 		<!-- none -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -116,6 +128,7 @@
 	<skill id="22216" levels="1" name="Transformation Scroll - Anakim">
 		<!-- Transformed into Anakim. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -411,12 +424,14 @@
 	<skill id="22270" levels="1" name="Letter Collector's Gift">
 		<!-- "For 2 hours, increases Atk. Spd. by 15%, Casting Spd. by 15%, and Speed by 20." -->
 		<set name="abnormalTime" val="7200" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_shield_bread_i01" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22271" levels="1" name="Maestro's Key">
 		<!-- High Five Skill -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-8" />
 		<set name="effectRange" val="400" />
@@ -436,16 +451,19 @@
 	</skill>
 	<skill id="22272" levels="1" name="Beginner Adventurer's Treasure Sack">
 		<!-- none -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22273" levels="1" name="Experienced Adventurer's Treasure Sack">
 		<!-- none -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22274" levels="1" name="Great Adventurer's Treasure Sack">
 		<!-- none -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -456,6 +474,7 @@
 	</skill>
 	<skill id="22276" levels="1" name="Rune Jewelry Box - Talisman">
 		<!-- none -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -609,6 +628,7 @@
 		</for>
 	</skill>
 	<skill id="22294" levels="1" name="Totem of Body">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -621,6 +641,7 @@
 		</for>
 	</skill>
 	<skill id="22295" levels="1" name="Totem of Spirit">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -633,6 +654,7 @@
 		</for>
 	</skill>
 	<skill id="22296" levels="1" name="Totem of Bravery">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="despawnDelay" val="1800000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -646,6 +668,7 @@
 		</for>
 	</skill>
 	<skill id="22297" levels="1" name="Totem of Fortitude">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -658,6 +681,7 @@
 		</for>
 	</skill>
 	<skill id="22298" levels="1" name="Refined Red Dragon Blood">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys2.icon.refined_red_blood_of_dragon" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -671,6 +695,7 @@
 		</for>
 	</skill>
 	<skill id="22299" levels="1" name="Refined Blue Dragon Blood">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys2.icon.refined_blue_blood_of_dragon" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />

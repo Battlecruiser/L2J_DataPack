@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Summon Agathion effect implementation.
@@ -60,11 +59,6 @@ public final class SummonAgathion extends AbstractEffect
 		}
 		
 		final L2PcInstance player = info.getEffected().getActingPlayer();
-		if (player.isInOlympiadMode())
-		{
-			player.sendPacket(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
-			return;
-		}
 		
 		player.setAgathionId(_npcId);
 		player.broadcastUserInfo();

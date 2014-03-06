@@ -1155,9 +1155,9 @@
 	<skill id="427" levels="1" name="Spell Force">
 		<!-- Not Used Anymore -->
 		<set name="abnormalVisualEffect" val="NONE" />
-		<set name="effectPoint" val="1" />
 		<set name="castRange" val="400" />
 		<set name="channelingSkillId" val="5105" />
+		<set name="effectPoint" val="1" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="15000" />
@@ -1922,6 +1922,7 @@
 		</for>
 	</skill>
 	<skill id="454" levels="1" name="Symbol of Defense">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0454" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1944,6 +1945,7 @@
 		</for>
 	</skill>
 	<skill id="455" levels="1" name="Symbol of Noise">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0455" />
@@ -1967,6 +1969,7 @@
 		</for>
 	</skill>
 	<skill id="456" levels="1" name="Symbol of Resistance">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0456" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1989,6 +1992,7 @@
 		</for>
 	</skill>
 	<skill id="457" levels="1" name="Symbol of Honor">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0457" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -2011,6 +2015,7 @@
 		</for>
 	</skill>
 	<skill id="458" levels="1" name="Symbol of Energy">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0458" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -2033,6 +2038,7 @@
 		</for>
 	</skill>
 	<skill id="459" levels="1" name="Symbol of the Sniper">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0459" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -2055,6 +2061,7 @@
 		</for>
 	</skill>
 	<skill id="460" levels="1" name="Symbol of the Assassin">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0460" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
