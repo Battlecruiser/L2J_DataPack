@@ -5,6 +5,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BR_EVENT_BUF6" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
@@ -38,6 +39,7 @@
 		<table name="#extractableItems">
 			20590,1,40;9207,1,60
 		</table>
+		<set name="blockedInOlympiad" val="true" />
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -56,6 +58,7 @@
 	</skill>
 	<skill id="22102" levels="1" name="Soul Magic Box">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="coolTime" val="1000" />
 		<set name="hitTime" val="2700" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -78,6 +81,7 @@
 	</skill>
 	<skill id="22103" levels="1" name="Blessed Scroll of Escape (Event)">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -101,6 +105,7 @@
 	</skill>
 	<skill id="22104" levels="1" name="Blessed Scroll of Resurrection (Event)">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
@@ -119,6 +124,7 @@
 	</skill>
 	<skill id="22105" levels="1" name="Uldie Summon Scroll (Event)">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -145,6 +151,7 @@
 	</skill>
 	<skill id="22106" levels="1" name="Belldandy Summon Scroll (Event)">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -171,6 +178,7 @@
 	</skill>
 	<skill id="22107" levels="1" name="Skooldie Summon Scroll (Event)">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -200,6 +208,7 @@
 		<table name="#extractableItems">
 			20712,1,20;20713,1,20;20714,1,20;20715,1,20;20716,1,20
 		</table>
+		<set name="blockedInOlympiad" val="true" />
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -221,6 +230,7 @@
 		<table name="#extractableItems">
 			20718,1,20;20719,1,20;20720,1,20;20721,1,20;20722,1,20
 		</table>
+		<set name="blockedInOlympiad" val="true" />
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -239,6 +249,7 @@
 	</skill>
 	<skill id="22110" levels="1" name="Lucky Sky Lantern Summon">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20728" />
@@ -253,6 +264,7 @@
 	</skill>
 	<skill id="22111" levels="1" name="Ambient Sky Lantern Summon">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20729" />
@@ -267,6 +279,7 @@
 	</skill>
 	<skill id="22112" levels="1" name="Sway Sky Lantern Summon">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20730" />
@@ -281,6 +294,7 @@
 	</skill>
 	<skill id="22113" levels="1" name="Comfort Sky Lantern Summon">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20731" />
@@ -298,6 +312,7 @@
 		<table name="#extractableItems">
 			20364,1,33;20365,1,33;20366,1,34
 		</table>
+		<set name="blockedInOlympiad" val="true" />
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -319,6 +334,7 @@
 		<table name="#extractableItems">
 			20755,1,99.99949;20757,1,0.00051
 		</table>
+		<set name="blockedInOlympiad" val="true" />
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -381,6 +397,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_a_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -399,6 +416,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_b_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -418,6 +436,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_c_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -437,6 +456,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_d_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -462,6 +482,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_e_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -483,6 +504,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_f_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -501,6 +523,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_g_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -531,6 +554,7 @@
 	</skill>
 	<skill id="22127" levels="1" name="Summon Warm Kotatz">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_kotatsu_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -552,6 +576,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BR_EVENT_BUF2" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill1256" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -582,6 +607,7 @@
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.br_rudolf_food_unknown_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -593,6 +619,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_firecracker_red_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -611,6 +638,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_firecracker_gold_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -629,6 +657,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_firecracker_blue_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -647,6 +676,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_firecracker_pink_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -665,6 +695,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_firecracker_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -683,6 +714,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_firecracker_silver_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -728,6 +760,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_g_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -744,6 +777,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_f_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -760,6 +794,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_g_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -776,6 +811,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_c_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -792,6 +828,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_b_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -808,6 +845,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_b_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -824,6 +862,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_a_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -840,6 +879,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_e_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -856,6 +896,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_d_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -872,6 +913,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_g_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -888,6 +930,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_d_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -910,6 +953,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_c_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -926,6 +970,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_e_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -942,6 +987,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_e_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -960,6 +1006,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_a_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -976,6 +1023,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_b_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -992,6 +1040,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SHIELD_PROB_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_c_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1008,6 +1057,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DECREASE_WEIGHT_PENALTY" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_f_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1024,6 +1074,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_d_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1043,6 +1094,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="#icons" />
@@ -1064,6 +1116,7 @@
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="abnormalVisualEffect" val="BR_VESPER1" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
@@ -1087,6 +1140,7 @@
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="abnormalVisualEffect" val="BR_VESPER2" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys2.icon.br_royal_circlet_of_vesper_i00" />
@@ -1111,6 +1165,7 @@
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="abnormalVisualEffect" val="BR_VESPER3" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys2.icon.br_noblesse_oblige_of_vesper_i00" />
@@ -1134,6 +1189,7 @@
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys2.icon.br_fuji_herb_i00" />
@@ -1154,6 +1210,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys2.icon.br_hawk_herb_i00" />
@@ -1175,6 +1232,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys2.icon.br_eggplant_herb_i00" />
@@ -1264,6 +1322,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1277,6 +1336,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1289,6 +1349,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1301,6 +1362,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1310,6 +1372,7 @@
 	</skill>
 	<skill id="22174" levels="1" name="Yibein's Recovery Scroll">
 		<!-- Recovers HP of yourself and friendly nearby targets by 500. -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="800" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1349,6 +1412,7 @@
 		</for>
 	</skill>
 	<skill id="22177" levels="1" name="Warrior's Breath">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1357,6 +1421,7 @@
 	</skill>
 	<skill id="22178" levels="1" name="Hero's Potion">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1378,6 +1443,7 @@
 		<table name="#extractableItems">
 			8618,3,13.999;8619,1,26;8620,3,17;8621,1,0.011;14700,25,4;14701,12,4;21038,6,5;9627,1,5;6622,3,19;21030,4,1.5;21031,4,1.5;21032,8,1;21033,8,1;21037,5,1
 		</table>
+		<set name="blockedInOlympiad" val="true" />
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1494,6 +1560,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="operateType" val="A2" />
@@ -1507,6 +1574,7 @@
 	<skill id="22191" levels="1" name="Transformation Scroll - Onyx Beast">
 		<!-- Transformed into an Onyx Beast. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -1515,6 +1583,7 @@
 	<skill id="22192" levels="1" name="Transformation Scroll - Death Blader">
 		<!-- Transformed into a Death Blader. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -1523,6 +1592,7 @@
 	<skill id="22193" levels="1" name="Transformation Scroll - Grail Apostle">
 		<!-- Transformed into a Grail Apostle. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -1531,6 +1601,7 @@
 	<skill id="22194" levels="1" name="Transformation Scroll - Unicorn">
 		<!-- Transformed into a Unicorn. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -1539,6 +1610,7 @@
 	<skill id="22195" levels="1" name="Transformation Scroll - Lilim Knight">
 		<!-- Transformed into a Lilim Knight. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -1547,6 +1619,7 @@
 	<skill id="22196" levels="1" name="Transformation Scroll - Golem Guardian">
 		<!-- Transformed into a Golem Guardian. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -1555,6 +1628,7 @@
 	<skill id="22197" levels="1" name="Transformation Scroll - Inferno Drake">
 		<!-- Transformed into an Inferno Drake. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -1563,6 +1637,7 @@
 	<skill id="22198" levels="1" name="Transformation Scroll - Dragon Bomber">
 		<!-- Transformed into a Dragon Bomber. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />
@@ -1571,6 +1646,7 @@
 	<skill id="22199" levels="1" name="Transformation Scroll - Heretic">
 		<!-- Transformed into a Heretic. -->
 		<set name="abnormalTime" val="1800" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="operateType" val="P" />

@@ -680,6 +680,7 @@
 	<skill id="1419" levels="1" name="Volcano">
 		<set name="affectLimit" val="15-25" />
 		<set name="affectRange" val="180" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="900" />
 		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-676" />
@@ -709,6 +710,7 @@
 	<skill id="1420" levels="1" name="Cyclone">
 		<set name="affectLimit" val="15-25" />
 		<set name="affectRange" val="180" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="900" />
 		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-676" />
@@ -738,6 +740,7 @@
 	<skill id="1421" levels="1" name="Raging Waves">
 		<set name="affectLimit" val="15-25" />
 		<set name="affectRange" val="180" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="900" />
 		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-676" />
@@ -765,6 +768,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="1422" levels="1" name="Day of Doom">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill1422" />
@@ -790,6 +794,7 @@
 	<skill id="1423" levels="1" name="Gehenna">
 		<set name="affectLimit" val="15-25" />
 		<set name="affectRange" val="180" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="900" />
 		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-676" />
@@ -817,6 +822,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="1424" levels="1" name="Anti-Summoning Field">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill1424" />
@@ -842,6 +848,7 @@
 	</skill>
 	<skill id="1425" levels="1" name="Purification Field">
 		<set name="affectRange" val="180" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1425" />
@@ -866,6 +873,7 @@
 	</skill>
 	<skill id="1426" levels="1" name="Miracle">
 		<set name="affectRange" val="900" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill1426" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -892,6 +900,7 @@
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="affectRange" val="900" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill1427" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -914,6 +923,7 @@
 	</skill>
 	<skill id="1428" levels="1" name="Mass Recharge">
 		<set name="affectRange" val="1000" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill1428" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -970,6 +980,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="FORCE_MEDITATION" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1430" />

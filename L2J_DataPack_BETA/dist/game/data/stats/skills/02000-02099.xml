@@ -1313,6 +1313,7 @@
 		</for>
 	</skill>
 	<skill id="2099" levels="1" name="Escape: 5 minutes">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="300000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />

@@ -68,11 +68,6 @@ public final class SummonPet extends AbstractEffect
 		}
 		
 		final L2PcInstance player = info.getEffector().getActingPlayer();
-		if (player.isInOlympiadMode())
-		{
-			player.sendPacket(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
-			return;
-		}
 		
 		if ((player.hasSummon() || player.isMounted()))
 		{

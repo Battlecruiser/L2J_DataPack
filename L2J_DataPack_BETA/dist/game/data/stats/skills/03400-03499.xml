@@ -99,6 +99,7 @@
 	</skill>
 	<skill id="3408" levels="1" name="Blessed Ring of Escape">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -121,6 +122,7 @@
 	</skill>
 	<skill id="3409" levels="1" name="Blessed Ring of Resurrection">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
@@ -307,6 +309,7 @@
 		</for>
 	</skill>
 	<skill id="3421" levels="1" name="Wolf Mount">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0083" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="1" />
@@ -314,6 +317,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3422" levels="1" name="Wolf Dismount">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0083" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="1" />

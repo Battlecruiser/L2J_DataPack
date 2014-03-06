@@ -1098,6 +1098,7 @@
 		</for>
 	</skill>
 	<skill id="3146" levels="1" name="Item Skill: Recall">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="20000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1122,6 +1123,7 @@
 		</for>
 	</skill>
 	<skill id="3147" levels="1" name="Item Skill: Recall">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1406,6 +1408,7 @@
 		<table name="#mpConsume"> 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 11 11 12 13 13 14 15 16 17 </table>
 		<table name="#power"> 0 20 30 40 50 55 60 65 70 </table>
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="900" />

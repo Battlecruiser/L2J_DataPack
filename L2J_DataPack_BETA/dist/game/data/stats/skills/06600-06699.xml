@@ -704,6 +704,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1403,6 +1404,7 @@
 	</skill>
 	<skill id="6699" levels="1" name="Ball Trapping Gnosian Agathion Cute Trick">
 		<!-- You can see the summoned spirit's cute tricks. -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
