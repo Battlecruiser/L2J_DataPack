@@ -60,7 +60,7 @@ echo (2) Import and configure: This tool has some new available
 echo     options, you choose the values that fit your needs
 echo     using former settings as a base.
 echo.
-echo (3) Ignose stored settings: I'll let you configure me
+echo (3) Ignore stored settings: I'll let you configure me
 echo     with a fresh set of default values as a base.
 echo.
 echo (4) View saved settings: See the contents of the config
@@ -150,7 +150,7 @@ cls
 echo.
 echo 2-Login Server settings
 echo -----------------------
-echo I order to connect to the MySQL Server, you should
+echo In order to connect to the MySQL Server, you should
 echo specify the Login Server DataBase parameters here.
 echo.
 set /P lsuser="MySQL Username (default is '%lsuser%'): "
@@ -162,7 +162,7 @@ cls
 echo.
 echo 3-Community Server settings
 echo ---------------------------
-echo I order to connect to the MySQL Server, you should
+echo In order to connect to the MySQL Server, you should
 echo specify the Community Server DataBase parameters here.
 echo.
 set /P cbuser="MySQL Username (default is '%cbuser%'): "
@@ -174,7 +174,7 @@ cls
 echo.
 echo 4-Game Server settings
 echo ----------------------
-echo I order to connect to the MySQL Server, you should
+echo In order to connect to the MySQL Server, you should
 echo specify the Game Server DataBase parameters here.
 echo.
 set /P gsuser="User (default is '%gsuser%'): "
@@ -258,7 +258,7 @@ echo.
 echo Backup attempt failed! A possible reason for this to
 echo happen, is that your DB doesn't exist yet. I could
 echo try to create %lsdb% for you, or maybe you prefer to
-echo contunue with the Community Server part of this tool.
+echo continue with the Community Server part of this tool.
 echo.
 echo ATTEMPT TO CREATE LOGINSERVER DATABASE:
 echo.
@@ -300,7 +300,7 @@ echo An error occured while trying to create a database for
 echo your login server.
 echo.
 echo Possible reasons:
-echo 1-You provided innacurate info , check user, password, etc.
+echo 1-You provided inaccurate info , check user, password, etc.
 echo 2-User %lsuser% don't have enough privileges for
 echo database creation. Check your MySQL privileges.
 echo 3-Database exists already...?
@@ -463,7 +463,7 @@ echo An error occured while trying to create a database for
 echo your Community Server.
 echo.
 echo Possible reasons:
-echo 1-You provided innacurate info , check user, password, etc.
+echo 1-You provided inaccurate info , check user, password, etc.
 echo 2-User %cbuser% don't have enough privileges for
 echo database creation. Check your MySQL privileges.
 echo 3-Database exists already...?
@@ -627,7 +627,7 @@ echo An error occured while trying to create a database for
 echo your Game Server.
 echo.
 echo Possible reasons:
-echo 1-You provided innacurate info, check username, pass, etc.
+echo 1-You provided inaccurate info, check username, pass, etc.
 echo 2-User %gsuser% don't have enough privileges for
 echo database creation.
 echo 3-Database exists already...?
