@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="22300" levels="1" name="Fantasy Isle Magic">
-		<!-- "Magic obtained from Fantasy Isle. Increases Speed by 30%, and decreases fall damage when falling from a high place." -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="abnormalTime" val="300" />
+		<set name="icon" val="icon.skill22300" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="runSpd" val="1.30" /> <!--Increases Speed by 30% -->
+				<mul order="0x30" stat="fall" val="0.7" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22301" levels="1" name="Party Cake">
 		<!-- none -->

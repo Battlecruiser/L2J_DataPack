@@ -4823,6 +4823,8 @@ INSERT INTO `spawnlist` VALUES
 ("FantasyIsle", 1, 4323, -61155, -57755, -2008, 0, 0, 0, 60, 0, 0, 0),
 -- Fantasy Isle Paddies
 ("FantasyIsle", 1, 32378, -59234, -56897, -2032, 0, 0, 0, 60, 0, 0, 0),
+-- Fantasy Isle Warehouse
+("FantasyIsle", 1, 4315, -59234, -56825, -2039, 0, 0, 65275, 60, 0, 0, 0),
 -- Entrance Manager
 ("unset", 1, 32521, -57712, -61490, -2376, 0, 0, 16384, 60, 0, 0, 0),
 -- Entrance Manager
