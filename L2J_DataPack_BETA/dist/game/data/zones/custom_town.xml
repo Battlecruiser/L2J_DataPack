@@ -608,6 +608,16 @@
 		<node X="-88871" Y="-77664" />
 		<node X="-43060" Y="-43491" />
 	</zone>
+	<zone name="Fantasy Isle Magic Zone" type="EffectZone" shape="Cuboid" minZ="-4324" maxZ="3097">
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="true" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="3000" />
+		<stat name="showDangerIcon" val="false" />
+		<stat name="skillIdLvl" val="22300-1;" />
+		<node X="-88871" Y="-77664" />
+		<node X="-43060" Y="-43491" />
+	</zone>
 	<zone name="Keucereus" id="11040" type="TownZone" shape="Cuboid" minZ="1080" maxZ="3210">
 		<stat name="townId" val="33" />
 		<node X="-187342" Y="238059" />
