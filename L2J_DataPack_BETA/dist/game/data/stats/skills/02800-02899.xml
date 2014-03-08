@@ -1528,6 +1528,7 @@
 		</for>
 	</skill>
 	<skill id="2873" levels="1" name="Might">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -1536,9 +1537,15 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2874" levels="1" name="Wind Walk">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -1547,9 +1554,15 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="30" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2875" levels="1" name="Haste">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -1558,9 +1571,15 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2876" levels="1" name="Vampiric Rage">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
@@ -1569,9 +1588,15 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add order="0x40" stat="absorbDam" val="9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2877" levels="1" name="Berserker Spirit">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
@@ -1580,9 +1605,22 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtk" val="1.16" />
+				<mul order="0x30" stat="pAtk" val="1.08" />
+				<mul order="0x30" stat="mDef" val="0.84" />
+				<mul order="0x30" stat="pDef" val="0.92" />
+				<mul order="0x30" stat="mAtkSpd" val="1.08" />
+				<mul order="0x30" stat="pAtkSpd" val="1.08" />
+				<add order="0x40" stat="runSpd" val="8" />
+				<sub order="0x40" stat="rEvas" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2878" levels="1" name="Empower">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -1591,9 +1629,15 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtk" val="1.75" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2879" levels="1" name="Acumen">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -1602,7 +1646,12 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2880" levels="1" name="Event - Gloomy Milk Cow Summon Scroll">
 		<!-- Confirmed CT2.5 -->
@@ -1689,6 +1738,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2885" levels="1" name="Shield">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -1697,9 +1747,15 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2886" levels="1" name="Focus">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
@@ -1708,9 +1764,15 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="0.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2887" levels="1" name="Death Whisper">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -1719,9 +1781,15 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="48" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="cAtk" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2888" levels="1" name="Guidance">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -1730,9 +1798,15 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="48" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2889" levels="1" name="Clarity">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
@@ -1741,9 +1815,17 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2890" levels="1" name="Wild Magic">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
@@ -1752,9 +1834,15 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add order="0x40" stat="mCritRate" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2891" levels="6" name="Concentration">
+		<!-- Confirmed CT2.5 -->
 		<!-- This skill only has one level, 6. -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="3600" />
@@ -1763,7 +1851,12 @@
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<sub order="0x40" stat="cancel" val="53" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2892" levels="1" name="Event - Extra Entrance Pass">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
