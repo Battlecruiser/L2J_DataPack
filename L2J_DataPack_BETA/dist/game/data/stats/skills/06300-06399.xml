@@ -975,7 +975,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="targetType" val="PARTY" />
+		<set name="targetType" val="TARGET_PARTY" />
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
@@ -1003,7 +1003,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="targetType" val="PARTY" />
+		<set name="targetType" val="TARGET_PARTY" />
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="mAtkSpd" val="#pmAtkSpd" />
@@ -1033,7 +1033,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="targetType" val="PARTY" />
+		<set name="targetType" val="TARGET_PARTY" />
 		<for>
 			<effect name="Buff">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
