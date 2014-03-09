@@ -233,6 +233,7 @@ import handlers.targethandlers.Pet;
 import handlers.targethandlers.Self;
 import handlers.targethandlers.Servitor;
 import handlers.targethandlers.Summon;
+import handlers.targethandlers.TargetParty;
 import handlers.targethandlers.Unlockable;
 import handlers.telnethandlers.ChatsHandler;
 import handlers.telnethandlers.DebugHandler;
@@ -546,6 +547,7 @@ public class MasterHandler
 			Self.class,
 			Servitor.class,
 			Summon.class,
+			TargetParty.class,
 			Unlockable.class,
 		},
 		{
