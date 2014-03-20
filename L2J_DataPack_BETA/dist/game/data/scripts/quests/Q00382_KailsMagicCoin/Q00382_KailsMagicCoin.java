@@ -134,4 +134,9 @@ public final class Q00382_KailsMagicCoin extends Quest
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
+	
+	public static void main(String[] args)
+	{
+		new Q00382_KailsMagicCoin();
+	}
 }
