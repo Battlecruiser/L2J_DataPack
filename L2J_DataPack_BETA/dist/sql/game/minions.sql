@@ -127,6 +127,13 @@ INSERT INTO `minions` VALUES
 (27110,27111,3,5),
 (27113,27111,3,6);
 
+-- Fairy Trees
+INSERT INTO `minions` VALUES
+(27185,27189,3,3),
+(27186,27189,3,3),
+(27187,27189,3,3),
+(27188,27189,3,3);
+
 -- raid bosses
 INSERT INTO `minions` VALUES
 (25001,25002,3,3),
