@@ -53,6 +53,7 @@ public class FairyTrees extends AbstractNpcAI
 	{
 		super(FairyTrees.class.getSimpleName(), "ai/group_template");
 		addKillId(MOBS);
+		addSpawnId(MOBS);
 	}
 	
 	@Override
@@ -73,6 +74,14 @@ public class FairyTrees extends AbstractNpcAI
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public String onSpawn(L2Npc npc)
+	{
+		npc.setIsNoRndWalk(true);
+		npc.setIsImmobilized(true);
+		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
