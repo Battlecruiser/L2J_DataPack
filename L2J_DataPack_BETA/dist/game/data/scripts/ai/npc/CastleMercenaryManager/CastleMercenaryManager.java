@@ -119,7 +119,7 @@ public final class CastleMercenaryManager extends AbstractNpcAI
 		final String htmltext;
 		if (player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClanId() == npc.getCastle().getOwnerId()) && player.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES)))
 		{
-			if (npc.getCastle().getSiege().getIsInProgress())
+			if (npc.getCastle().getSiege().isInProgress())
 			{
 				htmltext = "mercmanager-siege.html";
 			}

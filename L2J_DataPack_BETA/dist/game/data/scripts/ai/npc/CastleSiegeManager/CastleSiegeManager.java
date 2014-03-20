@@ -90,7 +90,7 @@ public final class CastleSiegeManager extends AbstractNpcAI
 		{
 			return true;
 		}
-		else if (npc.getCastle().getSiege().getIsInProgress())
+		else if (npc.getCastle().getSiege().isInProgress())
 		{
 			return true;
 		}

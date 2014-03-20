@@ -56,7 +56,7 @@ public class SiegeStatus implements IUserCommandHandler
 		
 		for (Siege siege : SiegeManager.getInstance().getSieges())
 		{
-			if (!siege.getIsInProgress())
+			if (!siege.isInProgress())
 			{
 				continue;
 			}

@@ -76,7 +76,7 @@ public final class Ballista extends AbstractNpcAI
 	{
 		if ((skill != null) && (caster.getTarget() == npc) && (getRandom(100) < 40) && (skill == BOMB.getSkill()))
 		{
-			if (npc.getFort().getSiege().getIsInProgress())
+			if (npc.getFort().getSiege().isInProgress())
 			{
 				if ((caster.getClan() != null) && (caster.getClan().getLevel() >= MIN_CLAN_LV))
 				{

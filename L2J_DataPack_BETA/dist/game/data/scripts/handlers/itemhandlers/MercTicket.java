@@ -63,7 +63,7 @@ public class MercTicket implements IItemHandler
 			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_POSITION_MERCENARIES);
 			return false;
 		}
-		else if ((castle != null) && castle.getSiege().getIsInProgress())
+		else if ((castle != null) && castle.getSiege().isInProgress())
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 			return false;

@@ -169,7 +169,7 @@ public final class WyvernManager extends AbstractNpcAI
 			case CLAN_HALL:
 			{
 				SiegableHall hall = npc.getConquerableHall();
-				return (hall != null) ? hall.isInSiege() : npc.getCastle().getSiege().getIsInProgress();
+				return (hall != null) ? hall.isInSiege() : npc.getCastle().getSiege().isInProgress();
 			}
 			case FORT:
 			{
