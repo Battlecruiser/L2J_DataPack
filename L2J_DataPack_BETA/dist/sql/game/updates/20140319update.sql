@@ -1,0 +1,11 @@
+UPDATE character_quests SET name='Q00154_SacrificeToTheSea' WHERE name='154_SacrificeToSea';
+UPDATE character_quests SET name='Q00344_1000YearsTheEndOfLamentation' WHERE name='344_1000YearsEndofLamentation';
+UPDATE character_quests SET name='Q00347_GoGetTheCalculator' WHERE name='347_GoGetTheCalculator';
+UPDATE character_quests SET name='Q00380_BringOutTheFlavorOfIngredients' WHERE name='380_BringOutTheFlavorOfIngredients';
+UPDATE character_quests SET name='Q00381_LetsBecomeARoyalMember' WHERE name='381_LetsBecomeARoyalMember';
+UPDATE character_quests SET name='Q00382_KailsMagicCoin' WHERE name='382_KailsMagicCoin';
+UPDATE character_quests SET name='Q00385_YokeOfThePast' WHERE name='385_YokeofthePast';
+UPDATE character_quests SET name='Q00420_LittleWing' WHERE name='420_LittleWings';
+UPDATE character_quests SET name='Q00421_LittleWingsBigAdventure' WHERE name='421_LittleWingAdventures';
+UPDATE character_quests SET name='Q00625_TheFinestIngredientsPart2' WHERE name='625_TheFinestIngredientsPart2';
+UPDATE character_quests SET name='Q00661_MakingTheHarvestGroundsSafe' WHERE name='661_TheHarvestGroundsSafe';
