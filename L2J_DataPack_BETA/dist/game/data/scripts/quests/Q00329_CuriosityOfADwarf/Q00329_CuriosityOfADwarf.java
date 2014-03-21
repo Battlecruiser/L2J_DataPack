@@ -52,9 +52,9 @@ public final class Q00329_CuriosityOfADwarf extends Quest
 		MONSTER_DROPS.put(20085, Arrays.asList(new ItemHolder(GOLEM_HEARTSTONE, 3), new ItemHolder(BROKEN_HEARTSTONE, 58))); // Puncher
 	}
 	
-	private Q00329_CuriosityOfADwarf(int questId, String name, String descr)
+	public Q00329_CuriosityOfADwarf()
 	{
-		super(questId, name, descr);
+		super(329, Q00329_CuriosityOfADwarf.class.getSimpleName(), "Curiosity Of A Dwarf");
 		addStartNpc(TRADER_ROLENTO);
 		addTalkId(TRADER_ROLENTO);
 		addKillId(MONSTER_DROPS.keySet());
@@ -151,10 +151,5 @@ public final class Q00329_CuriosityOfADwarf extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00329_CuriosityOfADwarf(329, Q00329_CuriosityOfADwarf.class.getSimpleName(), "Curiosity Of A Dwarf");
 	}
 }

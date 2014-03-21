@@ -51,9 +51,9 @@ public class Q00174_SupplyCheck extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
-	public Q00174_SupplyCheck(int questId, String name, String descr)
+	public Q00174_SupplyCheck()
 	{
-		super(questId, name, descr);
+		super(174, Q00174_SupplyCheck.class.getSimpleName(), "Supply Check");
 		addStartNpc(MARCELA);
 		addTalkId(MARCELA, BENIS, NIKA);
 		
@@ -169,10 +169,5 @@ public class Q00174_SupplyCheck extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00174_SupplyCheck(174, Q00174_SupplyCheck.class.getSimpleName(), "Supply Check");
 	}
 }

@@ -70,9 +70,9 @@ public class Q00627_HeartInSearchOfPower extends Quest
 	private static final int ENRIA = 4042;
 	private static final int MOLD_HARDENER = 4041;
 	
-	private Q00627_HeartInSearchOfPower(int questId, String name, String descr)
+	public Q00627_HeartInSearchOfPower()
 	{
-		super(questId, name, descr);
+		super(627, Q00627_HeartInSearchOfPower.class.getSimpleName(), "Heart in Search of Power");
 		addStartNpc(MYSTERIOUS_NECROMANCER);
 		addTalkId(MYSTERIOUS_NECROMANCER, ENFEUX);
 		addKillId(MONSTERS.keySet());
@@ -233,10 +233,5 @@ public class Q00627_HeartInSearchOfPower extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00627_HeartInSearchOfPower(627, Q00627_HeartInSearchOfPower.class.getSimpleName(), "Heart in Search of Power");
 	}
 }

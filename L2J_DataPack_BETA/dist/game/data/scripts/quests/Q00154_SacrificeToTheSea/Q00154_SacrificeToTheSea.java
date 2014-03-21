@@ -46,7 +46,7 @@ public final class Q00154_SacrificeToTheSea extends Quest
 	// Misc
 	private static final int MIN_LVL = 2;
 	
-	private Q00154_SacrificeToTheSea()
+	public Q00154_SacrificeToTheSea()
 	{
 		super(154, Q00154_SacrificeToTheSea.class.getSimpleName(), "Sacrifice to the Sea");
 		addStartNpc(ROCKSWELL);
@@ -185,10 +185,5 @@ public final class Q00154_SacrificeToTheSea extends Quest
 			qs.setCond(2);
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00154_SacrificeToTheSea();
 	}
 }

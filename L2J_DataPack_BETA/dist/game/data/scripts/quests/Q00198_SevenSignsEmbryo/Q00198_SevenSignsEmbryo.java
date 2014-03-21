@@ -53,7 +53,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 	// Skill
 	private static SkillHolder NPC_HEAL = new SkillHolder(4065, 8);
 	
-	private Q00198_SevenSignsEmbryo()
+	public Q00198_SevenSignsEmbryo()
 	{
 		super(198, Q00198_SevenSignsEmbryo.class.getSimpleName(), "Seven Signs, Embryo");
 		addFirstTalkId(JAINA);
@@ -269,10 +269,5 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00198_SevenSignsEmbryo();
 	}
 }

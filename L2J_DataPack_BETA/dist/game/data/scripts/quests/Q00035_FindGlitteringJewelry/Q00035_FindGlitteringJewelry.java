@@ -49,9 +49,9 @@ public class Q00035_FindGlitteringJewelry extends Quest
 	private static final int NUGGET_COUNT = 500;
 	private static final int THONS_COUNT = 150;
 	
-	private Q00035_FindGlitteringJewelry(int questId, String name, String descr)
+	public Q00035_FindGlitteringJewelry()
 	{
-		super(questId, name, descr);
+		super(35, Q00035_FindGlitteringJewelry.class.getSimpleName(), "Find Glittering Jewelry");
 		addStartNpc(ELLIE);
 		addTalkId(ELLIE, FELTON);
 		addKillId(ALLIGATOR);
@@ -180,10 +180,5 @@ public class Q00035_FindGlitteringJewelry extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00035_FindGlitteringJewelry(35, Q00035_FindGlitteringJewelry.class.getSimpleName(), "Find Glittering Jewelry");
 	}
 }

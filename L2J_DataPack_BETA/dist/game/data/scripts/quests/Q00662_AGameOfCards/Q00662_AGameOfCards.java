@@ -91,9 +91,9 @@ public final class Q00662_AGameOfCards extends Quest
 		MONSTERS.put(18001, 232); // Blood Queen
 	}
 	
-	private Q00662_AGameOfCards(int questId, String name, String descr)
+	public Q00662_AGameOfCards()
 	{
-		super(questId, name, descr);
+		super(662, Q00662_AGameOfCards.class.getSimpleName(), "A Game of Cards");
 		addStartNpc(KLUMP);
 		addTalkId(KLUMP);
 		addKillId(MONSTERS.keySet());
@@ -823,10 +823,5 @@ public final class Q00662_AGameOfCards extends Quest
 			}
 		}
 		return htmltext.replaceAll(regex, replacement);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00662_AGameOfCards(662, Q00662_AGameOfCards.class.getSimpleName(), "A Game of Cards");
 	}
 }

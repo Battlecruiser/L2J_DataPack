@@ -49,9 +49,9 @@ public class Q00005_MinersFavor extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
-	private Q00005_MinersFavor(int questId, String name, String descr)
+	public Q00005_MinersFavor()
 	{
-		super(questId, name, descr);
+		super(5, Q00005_MinersFavor.class.getSimpleName(), "Miner's Favor");
 		addStartNpc(BOLTER);
 		addTalkId(BOLTER, SHARI, GARITA, REED, BRUNON);
 		registerQuestItems(BOLTERS_LIST, MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER, BOLTERS_SMELLY_SOCKS);
@@ -172,10 +172,5 @@ public class Q00005_MinersFavor extends Quest
 		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		checkProgress(st);
 		return npcId + "-01.html";
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00005_MinersFavor(5, Q00005_MinersFavor.class.getSimpleName(), "Miner's Favor");
 	}
 }

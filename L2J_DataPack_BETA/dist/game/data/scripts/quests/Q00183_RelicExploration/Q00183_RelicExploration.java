@@ -36,9 +36,9 @@ public final class Q00183_RelicExploration extends Quest
 	private static final int MAESTRO_NIKOLA = 30621;
 	private static final int RESEARCHER_LORAIN = 30673;
 	
-	private Q00183_RelicExploration(int questId, String name, String descr)
+	public Q00183_RelicExploration()
 	{
-		super(questId, name, descr);
+		super(183, Q00183_RelicExploration.class.getSimpleName(), "Relic Exploration");
 		addStartNpc(HEAD_BLACKSMITH_KUSTO);
 		addTalkId(HEAD_BLACKSMITH_KUSTO, RESEARCHER_LORAIN, MAESTRO_NIKOLA);
 	}
@@ -168,10 +168,5 @@ public final class Q00183_RelicExploration extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00183_RelicExploration(183, Q00183_RelicExploration.class.getSimpleName(), "Relic Exploration");
 	}
 }

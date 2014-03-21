@@ -47,9 +47,9 @@ public final class Q00637_ThroughOnceMore extends Quest
 	
 	private static final double DROP_CHANCE = 90;
 	
-	public Q00637_ThroughOnceMore(int questId, String name, String descr)
+	public Q00637_ThroughOnceMore()
 	{
-		super(questId, name, descr);
+		super(637, Q00637_ThroughOnceMore.class.getSimpleName(), "Through the Gate Once More");
 		addStartNpc(FLAURON);
 		addTalkId(FLAURON);
 		addKillId(MOBS);
@@ -157,10 +157,5 @@ public final class Q00637_ThroughOnceMore extends Quest
 			return "32010-04.htm";
 		}
 		return getNoQuestMsg(player);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00637_ThroughOnceMore(637, Q00637_ThroughOnceMore.class.getSimpleName(), "Through the Gate Once More");
 	}
 }

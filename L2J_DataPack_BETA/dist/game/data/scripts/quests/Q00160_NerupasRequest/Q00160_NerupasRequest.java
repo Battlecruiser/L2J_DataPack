@@ -45,7 +45,7 @@ public final class Q00160_NerupasRequest extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	private Q00160_NerupasRequest()
+	public Q00160_NerupasRequest()
 	{
 		super(160, Q00160_NerupasRequest.class.getSimpleName(), "Nerupa's Request");
 		addStartNpc(NERUPA);
@@ -176,10 +176,5 @@ public final class Q00160_NerupasRequest extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00160_NerupasRequest();
 	}
 }

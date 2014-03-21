@@ -56,9 +56,9 @@ public final class Q00457_LostAndFound extends Quest
 	private static final int MIN_LV = 82;
 	private static Set<L2Spawn> _escortCheckers;
 	
-	private Q00457_LostAndFound(int id, String name, String descr)
+	public Q00457_LostAndFound()
 	{
-		super(id, name, descr);
+		super(457, Q00457_LostAndFound.class.getSimpleName(), "Lost and Found");
 		addStartNpc(GUMIEL);
 		addFirstTalkId(GUMIEL);
 		addTalkId(GUMIEL);
@@ -241,10 +241,5 @@ public final class Q00457_LostAndFound extends Quest
 	public void broadcastNpcSay(L2Npc npc, L2PcInstance player, NpcStringId stringId, boolean whisper)
 	{
 		((whisper) ? player : npc).sendPacket(new NpcSay(npc.getObjectId(), ((whisper) ? Say2.TELL : Say2.ALL), npc.getId(), stringId));
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00457_LostAndFound(457, Q00457_LostAndFound.class.getSimpleName(), "Lost and Found");
 	}
 }

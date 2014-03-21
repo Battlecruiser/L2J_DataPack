@@ -56,9 +56,9 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 	// Rewards
 	private static final int CHANCE_FOR_HAIR = 20;
 	
-	public Q00242_PossessorOfAPreciousSoul2(int questId, String name, String descr)
+	public Q00242_PossessorOfAPreciousSoul2()
 	{
-		super(questId, name, descr);
+		super(242, Q00242_PossessorOfAPreciousSoul2.class.getSimpleName(), "Possessor Of A Precious Soul 2");
 		addStartNpc(VIRGIL);
 		addTalkId(VIRGIL, KASSANDRA, OGMAR, MYSTERIOUS_KNIGHT, ANGEL_CORPSE, KALIS, MATILD, FALLEN_UNICORN, CORNERSTONE, PURE_UNICORN);
 		addKillId(RESTRAINER_OF_GLORY);
@@ -353,10 +353,5 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00242_PossessorOfAPreciousSoul2(242, Q00242_PossessorOfAPreciousSoul2.class.getSimpleName(), "Possessor Of A Precious Soul 2");
 	}
 }

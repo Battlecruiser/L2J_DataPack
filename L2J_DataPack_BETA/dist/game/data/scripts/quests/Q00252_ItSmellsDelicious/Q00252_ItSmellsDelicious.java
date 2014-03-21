@@ -176,9 +176,4 @@ public class Q00252_ItSmellsDelicious extends Quest
 	{
 		return (getQuestItemsCount(qs.getPlayer(), COOKBOOK_PAGE) >= COOKBOOK_PAGE_MAX_COUNT);
 	}
-	
-	public static void main(String[] args)
-	{
-		new Q00252_ItSmellsDelicious();
-	}
 }

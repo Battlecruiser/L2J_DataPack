@@ -43,7 +43,7 @@ public final class Q00317_CatchTheWind extends Quest
 		20044, // Lirein Elder
 	};
 	
-	private Q00317_CatchTheWind()
+	public Q00317_CatchTheWind()
 	{
 		super(317, Q00317_CatchTheWind.class.getSimpleName(), "Catch The Wind");
 		addStartNpc(RIZRAELL);
@@ -125,10 +125,5 @@ public final class Q00317_CatchTheWind extends Quest
 			htmltext = (hasQuestItems(player, WIND_SHARD) ? "30361-07.html" : "30361-05.html");
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00317_CatchTheWind();
 	}
 }

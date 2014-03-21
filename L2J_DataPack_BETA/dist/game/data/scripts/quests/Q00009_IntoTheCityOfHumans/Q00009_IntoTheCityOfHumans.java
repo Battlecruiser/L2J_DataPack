@@ -41,9 +41,9 @@ public class Q00009_IntoTheCityOfHumans extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	private Q00009_IntoTheCityOfHumans(int questId, String name, String descr)
+	public Q00009_IntoTheCityOfHumans()
 	{
-		super(questId, name, descr);
+		super(9, Q00009_IntoTheCityOfHumans.class.getSimpleName(), "Into the City of Humans");
 		addStartNpc(PETUKAI);
 		addTalkId(PETUKAI, TANAPI, TAMIL);
 	}
@@ -121,10 +121,5 @@ public class Q00009_IntoTheCityOfHumans extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00009_IntoTheCityOfHumans(9, Q00009_IntoTheCityOfHumans.class.getSimpleName(), "Into the City of Humans");
 	}
 }

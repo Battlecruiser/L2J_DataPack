@@ -102,9 +102,9 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		QUEST_MOBS.put(22765, new ItemHolder(15536, 125));
 	}
 	
-	public Q00692_HowtoOpposeEvil(int questId, String name, String descr)
+	public Q00692_HowtoOpposeEvil()
 	{
-		super(questId, name, descr);
+		super(692, Q00692_HowtoOpposeEvil.class.getSimpleName(), "How to Oppose Evil");
 		addStartNpc(DILIOS);
 		addTalkId(DILIOS, KIRKLAN);
 		addKillId(QUEST_MOBS.keySet());
@@ -262,10 +262,5 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		st.takeItems(itemId, count * minCount);
 		st.rewardItems(rewardItemId, rewardCount * count);
 		return true;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00692_HowtoOpposeEvil(692, Q00692_HowtoOpposeEvil.class.getSimpleName(), "How to Oppose Evil");
 	}
 }

@@ -49,9 +49,9 @@ public class Q00003_WillTheSealBeBroken extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 16;
 	
-	private Q00003_WillTheSealBeBroken(int questId, String name, String descr)
+	public Q00003_WillTheSealBeBroken()
 	{
-		super(questId, name, descr);
+		super(3, Q00003_WillTheSealBeBroken.class.getSimpleName(), "Will the Seal be Broken?");
 		addStartNpc(TALLOTH);
 		addTalkId(TALLOTH);
 		addKillId(OMEN_BEAST, TAINTED_ZOMBIE, STINK_ZOMBIE, LESSER_SUCCUBUS, LESSER_SUCCUBUS_TILFO, LESSER_SUCCUBUS_TUREN);
@@ -154,10 +154,5 @@ public class Q00003_WillTheSealBeBroken extends Quest
 				st.setCond(2, true);
 			}
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00003_WillTheSealBeBroken(3, Q00003_WillTheSealBeBroken.class.getSimpleName(), "Will the Seal be Broken?");
 	}
 }

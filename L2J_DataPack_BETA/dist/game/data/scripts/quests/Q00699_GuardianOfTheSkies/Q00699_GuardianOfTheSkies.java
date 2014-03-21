@@ -55,9 +55,9 @@ public class Q00699_GuardianOfTheSkies extends Quest
 	private static final int BONUS = 8335;
 	private static final int BONUS_COUNT = 10;
 	
-	public Q00699_GuardianOfTheSkies(int questId, String name, String descr)
+	public Q00699_GuardianOfTheSkies()
 	{
-		super(questId, name, descr);
+		super(699, Q00699_GuardianOfTheSkies.class.getSimpleName(), "Guardian of the Skies");
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addKillId(VALDSTONE);
@@ -170,10 +170,5 @@ public class Q00699_GuardianOfTheSkies extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00699_GuardianOfTheSkies(699, Q00699_GuardianOfTheSkies.class.getSimpleName(), "Guardian of the Skies");
 	}
 }

@@ -54,9 +54,9 @@ public final class Q00186_ContractExecution extends Quest
 		20582, // Leto Lizardman Overlord
 	};
 	
-	private Q00186_ContractExecution(int questId, String name, String descr)
+	public Q00186_ContractExecution()
 	{
-		super(questId, name, descr);
+		super(186, Q00186_ContractExecution.class.getSimpleName(), "Contract Execution");
 		addStartNpc(RESEARCHER_LORAIN);
 		addTalkId(RESEARCHER_LORAIN, BLUEPRINT_SELLER_LUKA, MAESTRO_NIKOLA);
 		addKillId(MONSTERS);
@@ -217,10 +217,5 @@ public final class Q00186_ContractExecution extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00186_ContractExecution(186, Q00186_ContractExecution.class.getSimpleName(), "Contract Execution");
 	}
 }

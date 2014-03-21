@@ -43,9 +43,9 @@ public final class Q00267_WrathOfVerdure extends Quest
 	// Misc
 	private static final int MIN_LVL = 4;
 	
-	private Q00267_WrathOfVerdure(int questId, String name, String descr)
+	public Q00267_WrathOfVerdure()
 	{
-		super(questId, name, descr);
+		super(267, Q00267_WrathOfVerdure.class.getSimpleName(), "Wrath of Verdure");
 		addStartNpc(TREANT_BREMEC);
 		addTalkId(TREANT_BREMEC);
 		addKillId(GOBLIN_RAIDER);
@@ -131,10 +131,5 @@ public final class Q00267_WrathOfVerdure extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00267_WrathOfVerdure(267, Q00267_WrathOfVerdure.class.getSimpleName(), "Wrath of Verdure");
 	}
 }

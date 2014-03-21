@@ -45,9 +45,9 @@ public final class Q00272_WrathOfAncestors extends Quest
 	// Misc
 	private static final int MIN_LVL = 5;
 	
-	private Q00272_WrathOfAncestors(int questId, String name, String descr)
+	public Q00272_WrathOfAncestors()
 	{
-		super(questId, name, descr);
+		super(272, Q00272_WrathOfAncestors.class.getSimpleName(), "Wrath of Ancestors");
 		addStartNpc(LIVINA);
 		addTalkId(LIVINA);
 		addKillId(MONSTERS);
@@ -121,10 +121,5 @@ public final class Q00272_WrathOfAncestors extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00272_WrathOfAncestors(272, Q00272_WrathOfAncestors.class.getSimpleName(), "Wrath of Ancestors");
 	}
 }

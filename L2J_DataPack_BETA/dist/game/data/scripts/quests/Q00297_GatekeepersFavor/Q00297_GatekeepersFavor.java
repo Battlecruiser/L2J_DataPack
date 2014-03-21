@@ -42,9 +42,9 @@ public class Q00297_GatekeepersFavor extends Quest
 	private static final int MIN_LEVEL = 15;
 	private static final int STARSTONE_COUT = 20;
 	
-	private Q00297_GatekeepersFavor(int questId, String name, String descr)
+	public Q00297_GatekeepersFavor()
 	{
-		super(questId, name, descr);
+		super(297, Q00297_GatekeepersFavor.class.getSimpleName(), "Gatekeeper's Favor");
 		addStartNpc(WIRPHY);
 		addTalkId(WIRPHY);
 		addKillId(WHINSTONE_GOLEM);
@@ -115,10 +115,5 @@ public class Q00297_GatekeepersFavor extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00297_GatekeepersFavor(297, Q00297_GatekeepersFavor.class.getSimpleName(), "Gatekeeper's Favor");
 	}
 }

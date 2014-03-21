@@ -65,7 +65,7 @@ public final class Q00365_DevilsLegacy extends Quest
 		MOBS.put(21630, 0.40); // pirates_zombie_captain_2
 	}
 	
-	private Q00365_DevilsLegacy()
+	public Q00365_DevilsLegacy()
 	{
 		super(365, Q00365_DevilsLegacy.class.getSimpleName(), "Devil's Legacy");
 		addStartNpc(RANDOLF);
@@ -253,10 +253,5 @@ public final class Q00365_DevilsLegacy extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00365_DevilsLegacy();
 	}
 }

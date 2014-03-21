@@ -56,9 +56,9 @@ public class Q00701_ProofOfExistence extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 78;
 	
-	private Q00701_ProofOfExistence(int questId, String name, String descr)
+	public Q00701_ProofOfExistence()
 	{
-		super(questId, name, descr);
+		super(701, Q00701_ProofOfExistence.class.getSimpleName(), "Proof of Existence");
 		addStartNpc(ARTIUS);
 		addTalkId(ARTIUS);
 		addKillId(MOBS.keySet());
@@ -174,10 +174,5 @@ public class Q00701_ProofOfExistence extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00701_ProofOfExistence(701, Q00701_ProofOfExistence.class.getSimpleName(), "Proof of Existence");
 	}
 }

@@ -45,9 +45,9 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 	// Default False to require fishing skill level, any other value to ignore fishing and evaluate char level only.
 	private static final boolean ALT_IGNORE_FISHING = false;
 	
-	public Q00053_LinnaeusSpecialBait(int questId, String name, String descr)
+	public Q00053_LinnaeusSpecialBait()
 	{
-		super(questId, name, descr);
+		super(53, Q00053_LinnaeusSpecialBait.class.getSimpleName(), "Linnaeus Special Bait");
 		addStartNpc(LINNAEUS);
 		addTalkId(LINNAEUS);
 		addKillId(CRIMSON_DRAKE);
@@ -153,10 +153,5 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 			}
 		}
 		return level;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00053_LinnaeusSpecialBait(53, Q00053_LinnaeusSpecialBait.class.getSimpleName(), "Linnaeus Special Bait");
 	}
 }

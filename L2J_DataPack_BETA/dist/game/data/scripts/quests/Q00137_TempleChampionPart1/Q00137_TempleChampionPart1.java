@@ -46,9 +46,9 @@ public class Q00137_TempleChampionPart1 extends Quest
 	private static final int EXECUTOR = 10334;
 	private static final int MISSIONARY = 10339;
 	
-	public Q00137_TempleChampionPart1(int questId, String name, String descr)
+	public Q00137_TempleChampionPart1()
 	{
-		super(questId, name, descr);
+		super(137, Q00137_TempleChampionPart1.class.getSimpleName(), "Temple Champion - 1");
 		addStartNpc(SYLVAIN);
 		addTalkId(SYLVAIN);
 		addKillId(MOBS);
@@ -163,10 +163,5 @@ public class Q00137_TempleChampionPart1 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00137_TempleChampionPart1(137, Q00137_TempleChampionPart1.class.getSimpleName(), "Temple Champion - 1");
 	}
 }

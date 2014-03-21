@@ -42,9 +42,9 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 		32772
 	};
 	
-	public Q00452_FindingtheLostSoldiers(int questId, String name, String descr)
+	public Q00452_FindingtheLostSoldiers()
 	{
-		super(questId, name, descr);
+		super(452, Q00452_FindingtheLostSoldiers.class.getSimpleName(), "Finding the Lost Soldiers");
 		addStartNpc(JAKAN);
 		addTalkId(JAKAN);
 		addTalkId(SOLDIER_CORPSES);
@@ -144,10 +144,5 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00452_FindingtheLostSoldiers(452, Q00452_FindingtheLostSoldiers.class.getSimpleName(), "Finding the Lost Soldiers");
 	}
 }

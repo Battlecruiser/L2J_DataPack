@@ -48,9 +48,9 @@ public class Q00163_LegacyOfThePoet extends Quest
 	// Misc
 	private static final int MIN_LVL = 11;
 	
-	private Q00163_LegacyOfThePoet(int questId, String name, String descr)
+	public Q00163_LegacyOfThePoet()
 	{
-		super(questId, name, descr);
+		super(163, Q00163_LegacyOfThePoet.class.getSimpleName(), "Legacy of the Poet");
 		addStartNpc(STARDEN);
 		addTalkId(STARDEN);
 		addKillId(MONSTERS);
@@ -178,10 +178,5 @@ public class Q00163_LegacyOfThePoet extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00163_LegacyOfThePoet(163, Q00163_LegacyOfThePoet.class.getSimpleName(), "Legacy of the Poet");
 	}
 }

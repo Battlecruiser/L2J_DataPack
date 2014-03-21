@@ -42,9 +42,9 @@ public class Q00172_NewHorizons extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	public Q00172_NewHorizons(int questId, String name, String descr)
+	public Q00172_NewHorizons()
 	{
-		super(questId, name, descr);
+		super(172, Q00172_NewHorizons.class.getSimpleName(), "New Horizons");
 		addStartNpc(ZENYA);
 		addTalkId(ZENYA, RAGARA);
 	}
@@ -110,10 +110,5 @@ public class Q00172_NewHorizons extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00172_NewHorizons(172, Q00172_NewHorizons.class.getSimpleName(), "New Horizons");
 	}
 }

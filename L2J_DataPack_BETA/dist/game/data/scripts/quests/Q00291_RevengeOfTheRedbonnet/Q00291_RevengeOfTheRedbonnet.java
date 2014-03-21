@@ -46,7 +46,7 @@ public final class Q00291_RevengeOfTheRedbonnet extends Quest
 	// Misc
 	private static final int MIN_LVL = 4;
 	
-	private Q00291_RevengeOfTheRedbonnet()
+	public Q00291_RevengeOfTheRedbonnet()
 	{
 		super(291, Q00291_RevengeOfTheRedbonnet.class.getSimpleName(), "Revenge of the Redbonnet");
 		addStartNpc(MARYSE_REDBONNET);
@@ -122,10 +122,5 @@ public final class Q00291_RevengeOfTheRedbonnet extends Quest
 			}
 		}
 		return html;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00291_RevengeOfTheRedbonnet();
 	}
 }

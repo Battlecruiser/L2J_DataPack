@@ -59,7 +59,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 		22806, // Horrifying Jackhammer Golem
 	};
 	
-	private Q10292_SevenSignsGirlOfDoubt()
+	public Q10292_SevenSignsGirlOfDoubt()
 	{
 		super(10292, Q10292_SevenSignsGirlOfDoubt.class.getSimpleName(), "Seven Signs, Girl of Doubt");
 		addStartNpc(WOOD);
@@ -342,10 +342,5 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q10292_SevenSignsGirlOfDoubt();
 	}
 }

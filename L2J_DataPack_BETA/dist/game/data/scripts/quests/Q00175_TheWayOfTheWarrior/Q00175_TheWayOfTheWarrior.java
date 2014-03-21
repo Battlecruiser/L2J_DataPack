@@ -73,7 +73,7 @@ public final class Q00175_TheWayOfTheWarrior extends Quest
 		22246, // Muertos Commander
 	};
 	
-	private Q00175_TheWayOfTheWarrior()
+	public Q00175_TheWayOfTheWarrior()
 	{
 		super(175, Q00175_TheWayOfTheWarrior.class.getSimpleName(), "The Way of the Warrior");
 		addStartNpc(KEKROPUS);
@@ -315,10 +315,5 @@ public final class Q00175_TheWayOfTheWarrior extends Quest
 			vars.set("GUIDE_MISSION", vars.getInt("GUIDE_MISSION") + 100000);
 			player.sendPacket(MESSAGE);
 		}
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00175_TheWayOfTheWarrior();
 	}
 }

@@ -50,7 +50,7 @@ public final class Q00286_FabulousFeathers extends Quest
 	// Misc
 	private static final int MIN_LVL = 17;
 	
-	private Q00286_FabulousFeathers()
+	public Q00286_FabulousFeathers()
 	{
 		super(286, Q00286_FabulousFeathers.class.getSimpleName(), "Fabulous Feathers");
 		addStartNpc(ERINU);
@@ -123,10 +123,5 @@ public final class Q00286_FabulousFeathers extends Quest
 			html = ((qs.isCond(2) && hasItem(player, COMMANDERS_FEATHER)) ? "32164-04.html" : "32164-05.html");
 		}
 		return html;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00286_FabulousFeathers();
 	}
 }

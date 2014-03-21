@@ -61,9 +61,9 @@ public class Q00135_TempleExecutor extends Quest
 	private static final int ITEM_COUNT = 10;
 	private static final int MAX_REWARD_LEVEL = 41;
 	
-	private Q00135_TempleExecutor(int questId, String name, String descr)
+	public Q00135_TempleExecutor()
 	{
-		super(questId, name, descr);
+		super(135, Q00135_TempleExecutor.class.getSimpleName(), "Temple Executor");
 		addStartNpc(SHEGFIELD);
 		addTalkId(SHEGFIELD, ALEX, SONIN, PANO);
 		addKillId(MOBS.keySet());
@@ -318,10 +318,5 @@ public class Q00135_TempleExecutor extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00135_TempleExecutor(135, Q00135_TempleExecutor.class.getSimpleName(), "Temple Executor");
 	}
 }

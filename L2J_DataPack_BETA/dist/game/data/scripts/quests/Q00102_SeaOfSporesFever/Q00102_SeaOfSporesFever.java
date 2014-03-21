@@ -77,9 +77,9 @@ public class Q00102_SeaOfSporesFever extends Quest
 		SENTINELS.put(ALBERIUS, COBENDELLS_MEDICINE1);
 	}
 	
-	public Q00102_SeaOfSporesFever(int questId, String name, String descr)
+	public Q00102_SeaOfSporesFever()
 	{
-		super(questId, name, descr);
+		super(102, Q00102_SeaOfSporesFever.class.getSimpleName(), "Sea of Spores Fever");
 		addStartNpc(ALBERIUS);
 		addTalkId(ALBERIUS, COBENDELL, GARTRANDELL, BERROS, VELTRESS, RAYEN);
 		addKillId(DRYAD, DRYAD_ELDER);
@@ -290,10 +290,5 @@ public class Q00102_SeaOfSporesFever extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00102_SeaOfSporesFever(102, Q00102_SeaOfSporesFever.class.getSimpleName(), "Sea of Spores Fever");
 	}
 }

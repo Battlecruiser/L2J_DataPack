@@ -62,9 +62,9 @@ public class Q00509_AClansFame extends Quest
 		25322
 	};
 	
-	public Q00509_AClansFame(int id, String name, String descr)
+	public Q00509_AClansFame()
 	{
-		super(id, name, descr);
+		super(509, Q00509_AClansFame.class.getSimpleName(), "A Clan's Fame");
 		addStartNpc(VALDIS);
 		addTalkId(VALDIS);
 		addKillId(RAID_BOSS);
@@ -195,10 +195,5 @@ public class Q00509_AClansFame extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00509_AClansFame(509, Q00509_AClansFame.class.getSimpleName(), "A Clan's Fame");
 	}
 }

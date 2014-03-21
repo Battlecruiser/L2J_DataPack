@@ -47,9 +47,9 @@ public class Q00431_WeddingMarch extends Quest
 	private static final int MIN_LEVEL = 38;
 	private static final int CRYSTAL_COUNT = 50;
 	
-	private Q00431_WeddingMarch(int questId, String name, String descr)
+	public Q00431_WeddingMarch()
 	{
-		super(questId, name, descr);
+		super(431, Q00431_WeddingMarch.class.getSimpleName(), "Wedding March");
 		addStartNpc(KANTABILON);
 		addTalkId(KANTABILON);
 		addKillId(MOBS);
@@ -128,10 +128,5 @@ public class Q00431_WeddingMarch extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00431_WeddingMarch(431, Q00431_WeddingMarch.class.getSimpleName(), "Wedding March");
 	}
 }

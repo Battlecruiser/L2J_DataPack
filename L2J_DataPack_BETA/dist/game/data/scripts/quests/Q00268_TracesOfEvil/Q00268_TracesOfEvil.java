@@ -45,9 +45,9 @@ public final class Q00268_TracesOfEvil extends Quest
 	// Misc
 	private static final int MIN_LVL = 15;
 	
-	private Q00268_TracesOfEvil(int questId, String name, String descr)
+	public Q00268_TracesOfEvil()
 	{
-		super(questId, name, descr);
+		super(268, Q00268_TracesOfEvil.class.getSimpleName(), "Traces of Evil");
 		addStartNpc(KUNAI);
 		addTalkId(KUNAI);
 		addKillId(MONSTERS);
@@ -125,10 +125,5 @@ public final class Q00268_TracesOfEvil extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00268_TracesOfEvil(268, Q00268_TracesOfEvil.class.getSimpleName(), "Traces of Evil");
 	}
 }

@@ -52,7 +52,7 @@ public final class Q00294_CovertBusiness extends Quest
 	// Misc
 	private static final int MIN_LVL = 10;
 
-	private Q00294_CovertBusiness()
+	public Q00294_CovertBusiness()
 	{
 		super(294, Q00294_CovertBusiness.class.getSimpleName(), "Covert Business");
 		addStartNpc(KEEF);
@@ -129,10 +129,5 @@ public final class Q00294_CovertBusiness extends Quest
 			}
 		}
 		return html;
-	}
-
-	public static void main(String[] args)
-	{
-		new Q00294_CovertBusiness();
 	}
 }

@@ -93,9 +93,9 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 	
 	private static final int DEINONYCHUS = 22203;
 	
-	public Q00643_RiseAndFallOfTheElrokiTribe(int id, String name, String descr)
+	public Q00643_RiseAndFallOfTheElrokiTribe()
 	{
-		super(id, name, descr);
+		super(643, Q00643_RiseAndFallOfTheElrokiTribe.class.getSimpleName(), "Rise and Fall of the Elroki Tribe");
 		addStartNpc(SINGSING);
 		addTalkId(SINGSING, KARAKAWEI);
 		addKillId(MOBS1);
@@ -268,10 +268,5 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00643_RiseAndFallOfTheElrokiTribe(643, Q00643_RiseAndFallOfTheElrokiTribe.class.getSimpleName(), "Rise and Fall of the Elroki Tribe");
 	}
 }

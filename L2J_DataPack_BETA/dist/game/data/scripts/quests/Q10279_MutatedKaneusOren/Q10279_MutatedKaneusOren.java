@@ -44,9 +44,9 @@ public class Q10279_MutatedKaneusOren extends Quest
 	private static final int TISSUE_KA = 13836;
 	private static final int TISSUE_KM = 13837;
 	
-	public Q10279_MutatedKaneusOren(int questId, String name, String descr)
+	public Q10279_MutatedKaneusOren()
 	{
-		super(questId, name, descr);
+		super(10279, Q10279_MutatedKaneusOren.class.getSimpleName(), "Mutated Kaneus - Oren");
 		addStartNpc(MOUEN);
 		addTalkId(MOUEN, ROVIA);
 		addKillId(KAIM_ABIGORE, KNIGHT_MONTAGNAR);
@@ -168,10 +168,5 @@ public class Q10279_MutatedKaneusOren extends Quest
 			st.giveItems(TISSUE_KM, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10279_MutatedKaneusOren(10279, Q10279_MutatedKaneusOren.class.getSimpleName(), "Mutated Kaneus - Oren");
 	}
 }

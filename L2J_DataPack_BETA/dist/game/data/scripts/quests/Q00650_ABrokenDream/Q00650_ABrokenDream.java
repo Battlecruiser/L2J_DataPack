@@ -52,9 +52,9 @@ public final class Q00650_ABrokenDream extends Quest
 		MONSTER_DROP_CHANCES.put(22028, 515); // Vagabond of the Ruins
 	}
 	
-	private Q00650_ABrokenDream(int questId, String name, String descr)
+	public Q00650_ABrokenDream()
 	{
-		super(questId, name, descr);
+		super(650, Q00650_ABrokenDream.class.getSimpleName(), "A Broken Dream");
 		addStartNpc(GHOST_OF_A_RAILROAD_ENGINEER);
 		addTalkId(GHOST_OF_A_RAILROAD_ENGINEER);
 		addKillId(MONSTER_DROP_CHANCES.keySet());
@@ -172,10 +172,5 @@ public final class Q00650_ABrokenDream extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00650_ABrokenDream(650, Q00650_ABrokenDream.class.getSimpleName(), "A Broken Dream");
 	}
 }

@@ -82,9 +82,9 @@ public final class Q00257_TheGuardIsBusy extends Quest
 		MONSTERS.put(20343, Arrays.asList(new MobDrop(100, 85, WEREWOLF_FANG, 1))); // Werewolf Hunter
 	}
 	
-	private Q00257_TheGuardIsBusy(int questId, String name, String descr)
+	public Q00257_TheGuardIsBusy()
 	{
-		super(questId, name, descr);
+		super(257, Q00257_TheGuardIsBusy.class.getSimpleName(), "The Guard is Busy");
 		addStartNpc(GILBERT);
 		addTalkId(GILBERT);
 		addKillId(MONSTERS.keySet());
@@ -182,10 +182,5 @@ public final class Q00257_TheGuardIsBusy extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00257_TheGuardIsBusy(257, Q00257_TheGuardIsBusy.class.getSimpleName(), "The Guard is Busy");
 	}
 }

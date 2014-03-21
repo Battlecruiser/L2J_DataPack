@@ -44,9 +44,9 @@ public class Q10505_JewelOfValakas extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 83;
 	
-	private Q10505_JewelOfValakas(int questId, String name, String descr)
+	public Q10505_JewelOfValakas()
 	{
-		super(questId, name, descr);
+		super(10505, Q10505_JewelOfValakas.class.getSimpleName(), "Jewel of Valakas");
 		addStartNpc(KLEIN);
 		addTalkId(KLEIN);
 		addKillId(VALAKAS);
@@ -168,10 +168,5 @@ public class Q10505_JewelOfValakas extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10505_JewelOfValakas(10505, Q10505_JewelOfValakas.class.getSimpleName(), "Jewel of Valakas");
 	}
 }

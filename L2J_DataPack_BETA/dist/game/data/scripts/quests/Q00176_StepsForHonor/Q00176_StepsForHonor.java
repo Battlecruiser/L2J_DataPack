@@ -38,9 +38,9 @@ public class Q00176_StepsForHonor extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	
-	private Q00176_StepsForHonor(int questId, String name, String descr)
+	public Q00176_StepsForHonor()
 	{
-		super(questId, name, descr);
+		super(176, Q00176_StepsForHonor.class.getSimpleName(), "Steps for Honor");
 		addStartNpc(RAPIDUS);
 		addTalkId(RAPIDUS);
 	}
@@ -115,10 +115,5 @@ public class Q00176_StepsForHonor extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00176_StepsForHonor(176, Q00176_StepsForHonor.class.getSimpleName(), "Steps for Honor");
 	}
 }

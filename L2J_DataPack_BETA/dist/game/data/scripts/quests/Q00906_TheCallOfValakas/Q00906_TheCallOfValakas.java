@@ -44,9 +44,9 @@ public class Q00906_TheCallOfValakas extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 83;
 	
-	private Q00906_TheCallOfValakas(int questId, String name, String descr)
+	public Q00906_TheCallOfValakas()
 	{
-		super(questId, name, descr);
+		super(906, Q00906_TheCallOfValakas.class.getSimpleName(), "The Call of Valakas");
 		addStartNpc(KLEIN);
 		addTalkId(KLEIN);
 		addKillId(LAVASAURUS_ALPHA);
@@ -176,10 +176,5 @@ public class Q00906_TheCallOfValakas extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00906_TheCallOfValakas(906, Q00906_TheCallOfValakas.class.getSimpleName(), "The Call of Valakas");
 	}
 }

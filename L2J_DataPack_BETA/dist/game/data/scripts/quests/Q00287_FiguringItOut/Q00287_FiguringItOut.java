@@ -87,9 +87,9 @@ public class Q00287_FiguringItOut extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00287_FiguringItOut(int questId, String name, String descr)
+	public Q00287_FiguringItOut()
 	{
-		super(questId, name, descr);
+		super(287, Q00287_FiguringItOut.class.getSimpleName(), "Figuring It Out!");
 		addStartNpc(LAKI);
 		addTalkId(LAKI);
 		addKillId(MONSTERS.keySet());
@@ -200,10 +200,5 @@ public class Q00287_FiguringItOut extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00287_FiguringItOut(287, Q00287_FiguringItOut.class.getSimpleName(), "Figuring It Out!");
 	}
 }

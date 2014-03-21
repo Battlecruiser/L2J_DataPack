@@ -55,7 +55,7 @@ public final class Q00193_SevenSignsDyingMessage extends Quest
 	// Skill
 	private static SkillHolder NPC_HEAL = new SkillHolder(4065, 8);
 	
-	private Q00193_SevenSignsDyingMessage()
+	public Q00193_SevenSignsDyingMessage()
 	{
 		super(193, Q00193_SevenSignsDyingMessage.class.getSimpleName(), "Seven Signs, Dying Message");
 		addStartNpc(HOLLINT);
@@ -345,10 +345,5 @@ public final class Q00193_SevenSignsDyingMessage extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00193_SevenSignsDyingMessage();
 	}
 }

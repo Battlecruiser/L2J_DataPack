@@ -54,7 +54,7 @@ public final class Q00622_SpecialtyLiquorDelivery extends Quest
 	// Talkers
 	private static final List<Integer> TALKERS = Arrays.asList(KUBER, CROCUS, NAFF, PULIN);
 	
-	private Q00622_SpecialtyLiquorDelivery()
+	public Q00622_SpecialtyLiquorDelivery()
 	{
 		super(622, Q00622_SpecialtyLiquorDelivery.class.getSimpleName(), "Specialty Liquor Delivery");
 		addStartNpc(JEREMY);
@@ -275,10 +275,5 @@ public final class Q00622_SpecialtyLiquorDelivery extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00622_SpecialtyLiquorDelivery();
 	}
 }

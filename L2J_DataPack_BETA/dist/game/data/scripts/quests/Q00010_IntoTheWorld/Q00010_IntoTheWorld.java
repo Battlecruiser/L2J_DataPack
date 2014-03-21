@@ -42,9 +42,9 @@ public class Q00010_IntoTheWorld extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	private Q00010_IntoTheWorld(int questId, String name, String descr)
+	public Q00010_IntoTheWorld()
 	{
-		super(questId, name, descr);
+		super(10, Q00010_IntoTheWorld.class.getSimpleName(), "Into the World");
 		addStartNpc(BALANKI);
 		addTalkId(BALANKI, REED, GERALD);
 		registerQuestItems(VERY_EXPENSIVE_NECKLACE);
@@ -160,10 +160,5 @@ public class Q00010_IntoTheWorld extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00010_IntoTheWorld(10, Q00010_IntoTheWorld.class.getSimpleName(), "Into the World");
 	}
 }

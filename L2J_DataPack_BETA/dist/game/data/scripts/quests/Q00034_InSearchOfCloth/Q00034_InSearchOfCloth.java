@@ -53,9 +53,9 @@ public class Q00034_InSearchOfCloth extends Quest
 	private static final int SUEDE_COUNT = 3000;
 	private static final int THREAD_COUNT = 5000;
 	
-	private Q00034_InSearchOfCloth(int questId, String name, String descr)
+	public Q00034_InSearchOfCloth()
 	{
-		super(questId, name, descr);
+		super(34, Q00034_InSearchOfCloth.class.getSimpleName(), "In Search of Cloth");
 		addStartNpc(RADIA);
 		addTalkId(RADIA, RALFORD, VARAN);
 		addKillId(MOBS);
@@ -212,10 +212,5 @@ public class Q00034_InSearchOfCloth extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00034_InSearchOfCloth(34, Q00034_InSearchOfCloth.class.getSimpleName(), "In Search of Cloth");
 	}
 }

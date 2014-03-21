@@ -53,7 +53,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 	private static SkillHolder TRANSFORMATION_KID = new SkillHolder(6202, 1);
 	private static SkillHolder TRANSFORMATION_NATIVE = new SkillHolder(6203, 1);
 	
-	private Q00194_SevenSignsMammonsContract()
+	public Q00194_SevenSignsMammonsContract()
 	{
 		super(194, Q00194_SevenSignsMammonsContract.class.getSimpleName(), "Seven Signs, Mammon's Contract");
 		addStartNpc(SIR_GUSTAV_ATHEBALDT);
@@ -571,10 +571,5 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00194_SevenSignsMammonsContract();
 	}
 }

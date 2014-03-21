@@ -44,9 +44,9 @@ public class Q10277_MutatedKaneusDion extends Quest
 	private static final int TISSUE_CH = 13832;
 	private static final int TISSUE_SF = 13833;
 	
-	public Q10277_MutatedKaneusDion(int questId, String name, String descr)
+	public Q10277_MutatedKaneusDion()
 	{
-		super(questId, name, descr);
+		super(10277, Q10277_MutatedKaneusDion.class.getSimpleName(), "Mutated Kaneus - Dion");
 		addStartNpc(LUKAS);
 		addTalkId(LUKAS, MIRIEN);
 		addKillId(CRIMSON_HATU, SEER_FLOUROS);
@@ -168,10 +168,5 @@ public class Q10277_MutatedKaneusDion extends Quest
 			st.giveItems(TISSUE_SF, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10277_MutatedKaneusDion(10277, Q10277_MutatedKaneusDion.class.getSimpleName(), "Mutated Kaneus - Dion");
 	}
 }

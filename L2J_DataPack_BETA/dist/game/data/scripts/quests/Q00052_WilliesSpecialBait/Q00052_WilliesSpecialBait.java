@@ -40,9 +40,9 @@ public class Q00052_WilliesSpecialBait extends Quest
 	private static final int TARLK_EYE = 7623;
 	private static final int EARTH_FISHING_LURE = 7612;
 	
-	public Q00052_WilliesSpecialBait(int questId, String name, String descr)
+	public Q00052_WilliesSpecialBait()
 	{
-		super(questId, name, descr);
+		super(52, Q00052_WilliesSpecialBait.class.getSimpleName(), "Willie's Special Bait");
 		addStartNpc(WILLIE);
 		addTalkId(WILLIE);
 		addKillId(TARLK_BASILISK);
@@ -126,10 +126,5 @@ public class Q00052_WilliesSpecialBait extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00052_WilliesSpecialBait(52, Q00052_WilliesSpecialBait.class.getSimpleName(), "Willie's Special Bait");
 	}
 }

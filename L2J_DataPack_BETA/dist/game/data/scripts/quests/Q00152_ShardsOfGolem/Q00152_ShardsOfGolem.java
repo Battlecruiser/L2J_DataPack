@@ -45,9 +45,9 @@ public class Q00152_ShardsOfGolem extends Quest
 	// Misc
 	private static final int MIN_LVL = 10;
 	
-	public Q00152_ShardsOfGolem(int questId, String name, String descr)
+	public Q00152_ShardsOfGolem()
 	{
-		super(questId, name, descr);
+		super(152, Q00152_ShardsOfGolem.class.getSimpleName(), "Shards of Golem");
 		addStartNpc(HARRYS);
 		addTalkId(HARRYS, ALTRAN);
 		addKillId(STONE_GOLEM);
@@ -211,10 +211,5 @@ public class Q00152_ShardsOfGolem extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00152_ShardsOfGolem(152, Q00152_ShardsOfGolem.class.getSimpleName(), "Shards of Golem");
 	}
 }

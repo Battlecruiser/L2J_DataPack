@@ -52,9 +52,9 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 		MONSTER_DROP_CHANCES.put(20669, 75); // Taik Orc Supply Leader
 	}
 	
-	private Q00360_PlunderTheirSupplies(int questId, String name, String descr)
+	public Q00360_PlunderTheirSupplies()
 	{
-		super(questId, name, descr);
+		super(360, Q00360_PlunderTheirSupplies.class.getSimpleName(), "Plunder Their Supplies");
 		addStartNpc(COLEMAN);
 		addTalkId(COLEMAN);
 		addKillId(MONSTER_DROP_CHANCES.keySet());
@@ -180,10 +180,5 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00360_PlunderTheirSupplies(360, Q00360_PlunderTheirSupplies.class.getSimpleName(), "Plunder Their Supplies");
 	}
 }

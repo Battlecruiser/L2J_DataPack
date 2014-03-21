@@ -213,7 +213,7 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 	};
 	// @formatter:on
 	
-	private Q00619_RelicsOfTheOldEmpire()
+	public Q00619_RelicsOfTheOldEmpire()
 	{
 		super(619, Q00619_RelicsOfTheOldEmpire.class.getSimpleName(), "Relics of the Old Empire");
 		addStartNpc(GHOST_OF_ADVENTURER);
@@ -322,10 +322,5 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 			htmltext = ((getQuestItemsCount(player, BROKEN_RELIC_PART) >= REQUIRED_RELIC_COUNT) ? "31538-04.html" : "31538-07.html");
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00619_RelicsOfTheOldEmpire();
 	}
 }

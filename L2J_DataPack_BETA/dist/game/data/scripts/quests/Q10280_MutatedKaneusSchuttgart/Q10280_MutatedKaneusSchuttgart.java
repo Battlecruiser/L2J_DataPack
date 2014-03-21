@@ -44,9 +44,9 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 	private static final int TISSUE_VS = 13838;
 	private static final int TISSUE_KB = 13839;
 	
-	public Q10280_MutatedKaneusSchuttgart(int questId, String name, String descr)
+	public Q10280_MutatedKaneusSchuttgart()
 	{
-		super(questId, name, descr);
+		super(10280, Q10280_MutatedKaneusSchuttgart.class.getSimpleName(), "Mutated Kaneus - Schuttgart");
 		addStartNpc(VISHOTSKY);
 		addTalkId(VISHOTSKY, ATRAXIA);
 		addKillId(VENOMOUS_STORACE, KEL_BILETTE);
@@ -168,10 +168,5 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 			st.giveItems(TISSUE_KB, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10280_MutatedKaneusSchuttgart(10280, Q10280_MutatedKaneusSchuttgart.class.getSimpleName(), "Mutated Kaneus - Schuttgart");
 	}
 }

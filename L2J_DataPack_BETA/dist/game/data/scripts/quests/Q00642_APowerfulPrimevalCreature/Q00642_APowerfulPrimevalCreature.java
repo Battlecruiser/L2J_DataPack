@@ -58,9 +58,9 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	
 	private static final int ANCIENT_EGG = 18344;
 	
-	public Q00642_APowerfulPrimevalCreature(int id, String name, String descr)
+	public Q00642_APowerfulPrimevalCreature()
 	{
-		super(id, name, descr);
+		super(642, Q00642_APowerfulPrimevalCreature.class.getSimpleName(), "A Powerful Primeval Creature");
 		addStartNpc(DINN);
 		addTalkId(DINN);
 		addKillId(ANCIENT_EGG);
@@ -158,10 +158,5 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00642_APowerfulPrimevalCreature(642, Q00642_APowerfulPrimevalCreature.class.getSimpleName(), "A Powerful Primeval Creature");
 	}
 }

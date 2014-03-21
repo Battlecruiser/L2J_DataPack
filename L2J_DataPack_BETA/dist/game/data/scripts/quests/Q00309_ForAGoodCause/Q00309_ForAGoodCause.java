@@ -93,9 +93,9 @@ public class Q00309_ForAGoodCause extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00309_ForAGoodCause(int id, String name, String descr)
+	public Q00309_ForAGoodCause()
 	{
-		super(id, name, descr);
+		super(309, Q00309_ForAGoodCause.class.getSimpleName(), "For A Good Cause");
 		addStartNpc(ATRA);
 		addTalkId(ATRA);
 		addKillId(MUCROKIANS.keySet());
@@ -262,10 +262,5 @@ public class Q00309_ForAGoodCause extends Quest
 			htmltext = (talker.getLevel() >= MIN_LEVEL) ? "32647-01.htm" : "32647-00.html";
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00309_ForAGoodCause(309, Q00309_ForAGoodCause.class.getSimpleName(), "For A Good Cause");
 	}
 }

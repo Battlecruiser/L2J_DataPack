@@ -71,9 +71,9 @@ public final class Q00104_SpiritOfMirrors extends Quest
 	// Misc
 	private static final int MIN_LVL = 10;
 	
-	private Q00104_SpiritOfMirrors(int questId, String name, String descr)
+	public Q00104_SpiritOfMirrors()
 	{
-		super(questId, name, descr);
+		super(104, Q00104_SpiritOfMirrors.class.getSimpleName(), "Spirit of Mirrors");
 		addStartNpc(GALLINT);
 		addTalkId(ARNOLD, GALLINT, JOHNSTONE, KENYOS);
 		addKillId(MONSTERS.keySet());
@@ -180,10 +180,5 @@ public final class Q00104_SpiritOfMirrors extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00104_SpiritOfMirrors(104, Q00104_SpiritOfMirrors.class.getSimpleName(), "Spirit of Mirrors");
 	}
 }

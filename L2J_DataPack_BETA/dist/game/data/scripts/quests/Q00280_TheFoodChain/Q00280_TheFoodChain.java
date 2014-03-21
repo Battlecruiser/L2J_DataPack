@@ -71,7 +71,7 @@ public final class Q00280_TheFoodChain extends Quest
 	private static final int MIN_LVL = 3;
 	private static final int TEETH_COUNT = 25;
 	
-	private Q00280_TheFoodChain()
+	public Q00280_TheFoodChain()
 	{
 		super(280, Q00280_TheFoodChain.class.getSimpleName(), "The Food Chain");
 		addStartNpc(BIXON);
@@ -202,10 +202,5 @@ public final class Q00280_TheFoodChain extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00280_TheFoodChain();
 	}
 }

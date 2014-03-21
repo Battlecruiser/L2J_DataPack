@@ -52,9 +52,9 @@ public final class Q00263_OrcSubjugation extends Quest
 		MONSTERS.put(20388, ORC_NECKLACE); // Balor Orc Lieutenant
 	}
 	
-	private Q00263_OrcSubjugation(int questId, String name, String descr)
+	public Q00263_OrcSubjugation()
 	{
-		super(questId, name, descr);
+		super(263, Q00263_OrcSubjugation.class.getSimpleName(), "Orc Subjugation");
 		addStartNpc(KAYLEEN);
 		addTalkId(KAYLEEN);
 		addKillId(MONSTERS.keySet());
@@ -141,10 +141,5 @@ public final class Q00263_OrcSubjugation extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00263_OrcSubjugation(263, Q00263_OrcSubjugation.class.getSimpleName(), "Orc Subjugation");
 	}
 }

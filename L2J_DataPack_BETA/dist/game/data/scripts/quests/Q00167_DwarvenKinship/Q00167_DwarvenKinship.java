@@ -40,9 +40,9 @@ public class Q00167_DwarvenKinship extends Quest
 	// Misc
 	private static final int MIN_LVL = 15;
 	
-	private Q00167_DwarvenKinship(int questId, String name, String descr)
+	public Q00167_DwarvenKinship()
 	{
-		super(questId, name, descr);
+		super(167, Q00167_DwarvenKinship.class.getSimpleName(), "Dwarven Kinship");
 		addStartNpc(CARLON);
 		addTalkId(CARLON, NORMAN, HAPROCK);
 		registerQuestItems(CARLONS_LETTER, NORMANS_LETTER);
@@ -163,10 +163,5 @@ public class Q00167_DwarvenKinship extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00167_DwarvenKinship(167, Q00167_DwarvenKinship.class.getSimpleName(), "Dwarven Kinship");
 	}
 }

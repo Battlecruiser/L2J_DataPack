@@ -46,9 +46,9 @@ public class Q00423_TakeYourBestShot extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00423_TakeYourBestShot(int questId, String name, String descr)
+	public Q00423_TakeYourBestShot()
 	{
-		super(questId, name, descr);
+		super(423, Q00423_TakeYourBestShot.class.getSimpleName(), "Take Your Best Shot!");
 		addStartNpc(JOHNNY, BATRACOS);
 		addTalkId(JOHNNY, BATRACOS);
 		addFirstTalkId(BATRACOS);
@@ -165,10 +165,5 @@ public class Q00423_TakeYourBestShot extends Quest
 				}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00423_TakeYourBestShot(423, Q00423_TakeYourBestShot.class.getSimpleName(), "Take Your Best Shot!");
 	}
 }

@@ -58,9 +58,9 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 		MONSTERS.put(20574, 7); // Elder Tarlk Basilisk
 	}
 	
-	public Q00504_CompetitionForTheBanditStronghold(int questId, String name, String descr)
+	public Q00504_CompetitionForTheBanditStronghold()
 	{
-		super(questId, name, descr);
+		super(504, Q00504_CompetitionForTheBanditStronghold.class.getSimpleName(), "Competition for the Bandit Stronghold");
 		addStartNpc(MESSENGER);
 		addTalkId(MESSENGER);
 		addKillId(MONSTERS.keySet());
@@ -174,10 +174,5 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00504_CompetitionForTheBanditStronghold(504, Q00504_CompetitionForTheBanditStronghold.class.getSimpleName(), "Competition for the Bandit Stronghold");
 	}
 }

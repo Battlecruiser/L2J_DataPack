@@ -50,7 +50,7 @@ public final class Q10286_ReunionWithSirra extends Quest
 	// Location
 	private static final Location EXIT_LOC = new Location(113793, -109342, -845, 0);
 	
-	private Q10286_ReunionWithSirra()
+	public Q10286_ReunionWithSirra()
 	{
 		super(10286, Q10286_ReunionWithSirra.class.getSimpleName(), "Reunion with Sirra");
 		addStartNpc(RAFFORTY);
@@ -256,10 +256,5 @@ public final class Q10286_ReunionWithSirra extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q10286_ReunionWithSirra();
 	}
 }

@@ -51,7 +51,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 	private static final int MIN_LEVEL = 79;
 	private boolean isBusy = false;
 	
-	private Q00196_SevenSignsSealOfTheEmperor()
+	public Q00196_SevenSignsSealOfTheEmperor()
 	{
 		super(196, Q00196_SevenSignsSealOfTheEmperor.class.getSimpleName(), "Seven Signs, Seal of the Emperor");
 		addFirstTalkId(MERCHANT_OF_MAMMON);
@@ -370,10 +370,5 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00196_SevenSignsSealOfTheEmperor();
 	}
 }

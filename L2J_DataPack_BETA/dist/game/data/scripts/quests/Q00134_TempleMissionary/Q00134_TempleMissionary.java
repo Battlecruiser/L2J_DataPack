@@ -62,9 +62,9 @@ public class Q00134_TempleMissionary extends Quest
 	private static final int FRAGMENT_COUNT = 10;
 	private static final int REPORT_COUNT = 3;
 	
-	private Q00134_TempleMissionary(int questId, String name, String descr)
+	public Q00134_TempleMissionary()
 	{
-		super(questId, name, descr);
+		super(134, Q00134_TempleMissionary.class.getSimpleName(), "Temple Missionary");
 		addStartNpc(GLYVKA);
 		addTalkId(GLYVKA, ROUKE);
 		addKillId(CRUMA_MARSHLANDS_TRAITOR);
@@ -252,10 +252,5 @@ public class Q00134_TempleMissionary extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00134_TempleMissionary(134, Q00134_TempleMissionary.class.getSimpleName(), "Temple Missionary");
 	}
 }

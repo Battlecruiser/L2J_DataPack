@@ -77,9 +77,9 @@ public class Q00617_GatherTheFlames extends Quest
 		MOBS.put(22649, 685);
 	}
 	
-	public Q00617_GatherTheFlames(int questId, String name, String descr)
+	public Q00617_GatherTheFlames()
 	{
-		super(questId, name, descr);
+		super(617, Q00617_GatherTheFlames.class.getSimpleName(), "Gather the Flames");
 		addStartNpc(HILDA, VULCAN);
 		addTalkId(ROONEY, HILDA, VULCAN);
 		addKillId(MOBS.keySet());
@@ -213,10 +213,5 @@ public class Q00617_GatherTheFlames extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00617_GatherTheFlames(617, Q00617_GatherTheFlames.class.getSimpleName(), "Gather the Flames");
 	}
 }

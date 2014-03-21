@@ -55,7 +55,7 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 		MOBS2.put(20089, 0.100); // noble_ant
 	}
 	
-	private Q00370_AnElderSowsSeeds()
+	public Q00370_AnElderSowsSeeds()
 	{
 		super(370, Q00370_AnElderSowsSeeds.class.getSimpleName(), "An Elder Sows Seeds");
 		addStartNpc(CASIAN);
@@ -183,10 +183,5 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 		final long countToTake = (takeAllItems ? -1 : minCount);
 		takeItems(player, (int) countToTake, CHAPTER_OF_WATER, CHAPTER_OF_EARTH, CHAPTER_OF_WIND, CHAPTER_OF_FIRE);
 		return (minCount > 0);
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00370_AnElderSowsSeeds();
 	}
 }

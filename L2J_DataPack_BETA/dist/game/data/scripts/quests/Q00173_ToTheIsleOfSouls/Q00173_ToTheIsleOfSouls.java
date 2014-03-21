@@ -43,9 +43,9 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 	private static final int MARK_OF_TRAVELER = 7570;
 	private static final int SCROLL_OF_ESCAPE_KAMAEL_VILLAGE = 9716;
 	
-	public Q00173_ToTheIsleOfSouls(int questId, String name, String descr)
+	public Q00173_ToTheIsleOfSouls()
 	{
-		super(questId, name, descr);
+		super(173, Q00173_ToTheIsleOfSouls.class.getSimpleName(), "To the Isle of Souls");
 		addStartNpc(GALLADUCCI);
 		addTalkId(GALLADUCCI, GENTLER);
 		
@@ -120,10 +120,5 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00173_ToTheIsleOfSouls(173, Q00173_ToTheIsleOfSouls.class.getSimpleName(), "To the Isle of Souls");
 	}
 }

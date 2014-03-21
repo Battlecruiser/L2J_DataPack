@@ -36,9 +36,9 @@ public class Q00015_SweetWhispers extends Quest
 	private static final int HIERARCH = 31517;
 	private static final int M_NECROMANCER = 31518;
 	
-	private Q00015_SweetWhispers(int questId, String name, String descr)
+	public Q00015_SweetWhispers()
 	{
-		super(questId, name, descr);
+		super(15, Q00015_SweetWhispers.class.getSimpleName(), "Sweet Whispers");
 		addStartNpc(VLADIMIR);
 		addTalkId(VLADIMIR, HIERARCH, M_NECROMANCER);
 	}
@@ -127,10 +127,5 @@ public class Q00015_SweetWhispers extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00015_SweetWhispers(15, Q00015_SweetWhispers.class.getSimpleName(), "Sweet Whispers");
 	}
 }

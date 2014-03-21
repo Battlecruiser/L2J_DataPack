@@ -50,7 +50,7 @@ public final class Q00284_MuertosFeather extends Quest
 	// Misc
 	private static final int MIN_LVL = 11;
 	
-	private Q00284_MuertosFeather()
+	public Q00284_MuertosFeather()
 	{
 		super(284, Q00284_MuertosFeather.class.getSimpleName(), "Muertos Feather");
 		addStartNpc(TREVOR);
@@ -130,10 +130,5 @@ public final class Q00284_MuertosFeather extends Quest
 			html = (hasQuestItems(player, MUERTOS_FEATHER) ? "32166-05.html" : "32166-04.html");
 		}
 		return html;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00284_MuertosFeather();
 	}
 }

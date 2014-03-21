@@ -37,9 +37,9 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 	// Item
 	private static final int SOA_ORDERS = 15512;
 	
-	public Q10282_ToTheSeedOfAnnihilation(int questId, String name, String descr)
+	public Q10282_ToTheSeedOfAnnihilation()
 	{
-		super(questId, name, descr);
+		super(10282, Q10282_ToTheSeedOfAnnihilation.class.getSimpleName(), "To the Seed of Annihilation");
 		addStartNpc(KBALDIR);
 		addTalkId(KBALDIR, KLEMIS);
 		registerQuestItems(SOA_ORDERS);
@@ -110,10 +110,5 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10282_ToTheSeedOfAnnihilation(10282, Q10282_ToTheSeedOfAnnihilation.class.getSimpleName(), "To the Seed of Annihilation");
 	}
 }

@@ -63,9 +63,9 @@ public class Q00700_CursedLife extends Quest
 	private static final int SWALLOWED_SKULL_ADENA = 50000;
 	private static final int BONUS = 16670;
 	
-	public Q00700_CursedLife(int questId, String name, String descr)
+	public Q00700_CursedLife()
 	{
-		super(questId, name, descr);
+		super(700, Q00700_CursedLife.class.getSimpleName(), "Cursed Life");
 		addStartNpc(ORBYU);
 		addTalkId(ORBYU);
 		addKillId(ROK);
@@ -266,10 +266,5 @@ public class Q00700_CursedLife extends Quest
 			}
 		}
 		return super.onKill(npc, player, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00700_CursedLife(700, Q00700_CursedLife.class.getSimpleName(), "Cursed Life");
 	}
 }

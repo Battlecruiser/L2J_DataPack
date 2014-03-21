@@ -59,9 +59,9 @@ public class Q00140_ShadowFoxPart2 extends Quest
 	private static final int CRYSTAL_COUNT = 5;
 	private static final int OXYDE_COUNT = 2;
 	
-	private Q00140_ShadowFoxPart2(int questId, String name, String descr)
+	public Q00140_ShadowFoxPart2()
 	{
-		super(questId, name, descr);
+		super(140, Q00140_ShadowFoxPart2.class.getSimpleName(), "Shadow Fox - 2");
 		addStartNpc(KLUCK);
 		addTalkId(KLUCK, XENOVIA);
 		addKillId(MOBS.keySet());
@@ -221,10 +221,5 @@ public class Q00140_ShadowFoxPart2 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00140_ShadowFoxPart2(140, Q00140_ShadowFoxPart2.class.getSimpleName(), "Shadow Fox - 2");
 	}
 }

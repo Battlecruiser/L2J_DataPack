@@ -48,9 +48,9 @@ public class Q00450_GraveRobberRescue extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	
-	public Q00450_GraveRobberRescue(int questId, String name, String descr)
+	public Q00450_GraveRobberRescue()
 	{
-		super(questId, name, descr);
+		super(450, Q00450_GraveRobberRescue.class.getSimpleName(), "Grave Robber Rescue");
 		addStartNpc(KANEMIKA);
 		addTalkId(KANEMIKA, WARRIOR);
 		registerQuestItems(EVIDENCE_OF_MIGRATION);
@@ -171,10 +171,5 @@ public class Q00450_GraveRobberRescue extends Quest
 		}
 		
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00450_GraveRobberRescue(450, Q00450_GraveRobberRescue.class.getSimpleName(), "Grave Robber Rescue");
 	}
 }

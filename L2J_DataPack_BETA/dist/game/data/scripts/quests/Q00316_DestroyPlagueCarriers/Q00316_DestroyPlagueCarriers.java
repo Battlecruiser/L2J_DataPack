@@ -54,7 +54,7 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 		MONSTER_DROPS.put(VAROOL_FOULCLAW, new ItemHolder(VAROOL_FOULCLAW_FANG, 7)); // Varool Foulclaw
 	}
 	
-	private Q00316_DestroyPlagueCarriers()
+	public Q00316_DestroyPlagueCarriers()
 	{
 		super(316, Q00316_DestroyPlagueCarriers.class.getSimpleName(), "Destroy Plague Carriers");
 		addStartNpc(ELLENIA);
@@ -171,10 +171,5 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00316_DestroyPlagueCarriers();
 	}
 }

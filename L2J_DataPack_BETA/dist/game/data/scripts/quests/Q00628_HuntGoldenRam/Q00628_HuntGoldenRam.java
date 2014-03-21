@@ -77,7 +77,7 @@ public final class Q00628_HuntGoldenRam extends Quest
 		BUFFS.put("Haste", new QuestItemHolder(4402, 2, 6));
 	}
 	
-	private Q00628_HuntGoldenRam()
+	public Q00628_HuntGoldenRam()
 	{
 		super(628, Q00628_HuntGoldenRam.class.getSimpleName(), "Hunt of the Golden Ram Mercenary Force");
 		addStartNpc(KAHMAN);
@@ -352,10 +352,5 @@ public final class Q00628_HuntGoldenRam extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00628_HuntGoldenRam();
 	}
 }

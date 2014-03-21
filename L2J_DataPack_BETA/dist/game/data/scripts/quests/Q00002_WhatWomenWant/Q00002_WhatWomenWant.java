@@ -47,9 +47,9 @@ public class Q00002_WhatWomenWant extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
-	private Q00002_WhatWomenWant(int questId, String name, String descr)
+	public Q00002_WhatWomenWant()
 	{
-		super(questId, name, descr);
+		super(2, Q00002_WhatWomenWant.class.getSimpleName(), "What Women Want");
 		addStartNpc(ARUJIEN);
 		addTalkId(ARUJIEN, MIRABEL, HERBIEL, GREENIS);
 		registerQuestItems(ARUJIENS_LETTER1, ARUJIENS_LETTER2, ARUJIENS_LETTER3, POETRY_BOOK, GREENIS_LETTER);
@@ -196,10 +196,5 @@ public class Q00002_WhatWomenWant extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00002_WhatWomenWant(2, Q00002_WhatWomenWant.class.getSimpleName(), "What Women Want");
 	}
 }

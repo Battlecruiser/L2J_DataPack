@@ -151,9 +151,9 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 		200, // cond 5
 	};
 	
-	private Q00605_AllianceWithKetraOrcs(int questId, String name, String descr)
+	public Q00605_AllianceWithKetraOrcs()
 	{
-		super(questId, name, descr);
+		super(605, Q00605_AllianceWithKetraOrcs.class.getSimpleName(), "Alliance with Ketra Orcs");
 		addStartNpc(WAHKAN);
 		addTalkId(WAHKAN);
 		addKillId(MOBS.keySet());
@@ -329,10 +329,5 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00605_AllianceWithKetraOrcs(605, Q00605_AllianceWithKetraOrcs.class.getSimpleName(), "Alliance with Ketra Orcs");
 	}
 }

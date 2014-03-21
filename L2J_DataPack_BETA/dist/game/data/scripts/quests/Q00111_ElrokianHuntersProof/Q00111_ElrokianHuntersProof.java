@@ -77,7 +77,7 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 		MOBS_DROP_CHANCES.put(22226, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.50, 11)); // pachycephalosaurus_ldr2
 	}
 	
-	private Q00111_ElrokianHuntersProof()
+	public Q00111_ElrokianHuntersProof()
 	{
 		super(111, Q00111_ElrokianHuntersProof.class.getSimpleName(), "Elrokian Hunter's Proof");
 		addStartNpc(MARQUEZ);
@@ -475,10 +475,5 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00111_ElrokianHuntersProof();
 	}
 }

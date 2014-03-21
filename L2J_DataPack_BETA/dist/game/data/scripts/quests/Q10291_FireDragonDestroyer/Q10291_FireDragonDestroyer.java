@@ -70,9 +70,9 @@ public class Q10291_FireDragonDestroyer extends Quest
 	
 	private static final int VALAKAS_SLAYER_CIRCLET = 8567;
 	
-	public Q10291_FireDragonDestroyer(int questId, String name, String descr)
+	public Q10291_FireDragonDestroyer()
 	{
-		super(questId, name, descr);
+		super(10291, Q10291_FireDragonDestroyer.class.getSimpleName(), "Fire Dragon Destroyer");
 		addStartNpc(KLEIN);
 		addTalkId(KLEIN);
 		addKillId(VALAKAS);
@@ -174,10 +174,5 @@ public class Q10291_FireDragonDestroyer extends Quest
 		}
 		
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10291_FireDragonDestroyer(10291, Q10291_FireDragonDestroyer.class.getSimpleName(), "Fire Dragon Destroyer");
 	}
 }

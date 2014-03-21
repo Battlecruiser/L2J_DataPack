@@ -55,9 +55,9 @@ public class Q00166_MassOfDarkness extends Quest
 		NPCs.put(TRUDY, GARMIELS_SCRIPTURE);
 	}
 	
-	private Q00166_MassOfDarkness(int questId, String name, String descr)
+	public Q00166_MassOfDarkness()
 	{
-		super(questId, name, descr);
+		super(166, Q00166_MassOfDarkness.class.getSimpleName(), "Mass of Darkness");
 		addStartNpc(UNDRIAS);
 		addTalkId(UNDRIAS, IRIA, DORANKUS, TRUDY);
 		registerQuestItems(UNDRIAS_LETTER, CEREMONIAL_DAGGER, DREVIANT_WINE, GARMIELS_SCRIPTURE);
@@ -145,10 +145,5 @@ public class Q00166_MassOfDarkness extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00166_MassOfDarkness(166, Q00166_MassOfDarkness.class.getSimpleName(), "Mass of Darkness");
 	}
 }

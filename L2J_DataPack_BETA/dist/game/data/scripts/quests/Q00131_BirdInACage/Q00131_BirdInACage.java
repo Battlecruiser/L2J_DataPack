@@ -43,9 +43,9 @@ public class Q00131_BirdInACage extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 78;
 	
-	public Q00131_BirdInACage(int questId, String name, String descr)
+	public Q00131_BirdInACage()
 	{
-		super(questId, name, descr);
+		super(131, Q00131_BirdInACage.class.getSimpleName(), "Bird in a Cage");
 		addStartNpc(KANIS);
 		addTalkId(KANIS, PARME);
 		registerQuestItems(ECHO_CRYSTAL_OF_FREE_THOUGHT, PARMES_LETTER);
@@ -236,10 +236,5 @@ public class Q00131_BirdInACage extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00131_BirdInACage(131, Q00131_BirdInACage.class.getSimpleName(), "Bird in a Cage");
 	}
 }

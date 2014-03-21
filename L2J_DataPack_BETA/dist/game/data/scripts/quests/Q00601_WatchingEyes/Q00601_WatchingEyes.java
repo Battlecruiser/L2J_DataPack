@@ -72,9 +72,9 @@ public class Q00601_WatchingEyes extends Quest
 		}
 	};
 	
-	public Q00601_WatchingEyes(int questId, String name, String descr)
+	public Q00601_WatchingEyes()
 	{
-		super(questId, name, descr);
+		super(601, Q00601_WatchingEyes.class.getSimpleName(), "Watching Eyes");
 		addStartNpc(EYE_OF_ARGOS);
 		addTalkId(EYE_OF_ARGOS);
 		addKillId(MOBS.keySet());
@@ -160,10 +160,5 @@ public class Q00601_WatchingEyes extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00601_WatchingEyes(601, Q00601_WatchingEyes.class.getSimpleName(), "Watching Eyes");
 	}
 }

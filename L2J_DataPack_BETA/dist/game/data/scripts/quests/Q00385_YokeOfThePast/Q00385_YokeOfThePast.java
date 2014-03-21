@@ -97,7 +97,7 @@ public final class Q00385_YokeOfThePast extends Quest
 	// Misc
 	private static final int MIN_LVL = 20;
 	
-	private Q00385_YokeOfThePast()
+	public Q00385_YokeOfThePast()
 	{
 		super(385, Q00385_YokeOfThePast.class.getSimpleName(), "Yoke of the Past");
 		addStartNpc(ZIGGURATS);
@@ -182,10 +182,5 @@ public final class Q00385_YokeOfThePast extends Quest
 			giveItemRandomly(qs.getPlayer(), npc, ANCIENT_SCROLL, 1, 0, MONSTER_CHANCES.get(npc.getId()), true);
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00385_YokeOfThePast();
 	}
 }

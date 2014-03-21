@@ -42,9 +42,9 @@ public class Q00607_ProveYourCourageKetra extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 75;
 	
-	private Q00607_ProveYourCourageKetra(int questId, String name, String descr)
+	public Q00607_ProveYourCourageKetra()
 	{
-		super(questId, name, descr);
+		super(607, Q00607_ProveYourCourageKetra.class.getSimpleName(), "Prove Your Courage! (Ketra)");
 		addStartNpc(KADUN);
 		addTalkId(KADUN);
 		addKillId(SHADITH);
@@ -123,10 +123,5 @@ public class Q00607_ProveYourCourageKetra extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00607_ProveYourCourageKetra(607, Q00607_ProveYourCourageKetra.class.getSimpleName(), "Prove Your Courage! (Ketra)");
 	}
 }

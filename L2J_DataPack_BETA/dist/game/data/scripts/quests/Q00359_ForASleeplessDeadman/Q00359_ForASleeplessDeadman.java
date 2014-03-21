@@ -60,7 +60,7 @@ public final class Q00359_ForASleeplessDeadman extends Quest
 		MOBS.put(21008, 0.503); // doom_archer
 	}
 	
-	private Q00359_ForASleeplessDeadman()
+	public Q00359_ForASleeplessDeadman()
 	{
 		super(359, Q00359_ForASleeplessDeadman.class.getSimpleName(), "For a Sleepless Deadman");
 		addStartNpc(ORVEN);
@@ -148,10 +148,5 @@ public final class Q00359_ForASleeplessDeadman extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00359_ForASleeplessDeadman();
 	}
 }

@@ -42,7 +42,7 @@ public class Q00278_HomeSecurity extends Quest
 	// Misc
 	private static final int SEL_MAHUM_MANE_COUNT = 300;
 	
-	private Q00278_HomeSecurity()
+	public Q00278_HomeSecurity()
 	{
 		super(278, Q00278_HomeSecurity.class.getSimpleName(), "Home Security");
 		addStartNpc(TUNATUN);
@@ -195,10 +195,5 @@ public class Q00278_HomeSecurity extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00278_HomeSecurity();
 	}
 }

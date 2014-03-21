@@ -43,9 +43,9 @@ public final class Q00191_VainConclusion extends Quest
 	private static final int MIN_LEVEL = 42;
 	private static final int MAX_LEVEL_FOR_EXP_SP = 48;
 	
-	private Q00191_VainConclusion(int questId, String name, String descr)
+	public Q00191_VainConclusion()
 	{
-		super(questId, name, descr);
+		super(191, Q00191_VainConclusion.class.getSimpleName(), "Vain Conclusion");
 		addStartNpc(DOROTHY_LOCKSMITH);
 		addTalkId(DOROTHY_LOCKSMITH, HEAD_BLACKSMITH_KUSTO, RESEARCHER_LORAIN, SHEGFIELD);
 		registerQuestItems(REPAIRED_METALLOGRAPH);
@@ -211,10 +211,5 @@ public final class Q00191_VainConclusion extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00191_VainConclusion(191, Q00191_VainConclusion.class.getSimpleName(), "Vain Conclusion");
 	}
 }

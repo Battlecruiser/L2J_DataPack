@@ -50,9 +50,9 @@ public class Q00138_TempleChampionPart2 extends Quest
 	private static final int ANGUS_RECOMMENDATION = 10343;
 	private static final int PUPINAS_RECOMMENDATION = 10344;
 	
-	public Q00138_TempleChampionPart2(int questId, String name, String descr)
+	public Q00138_TempleChampionPart2()
 	{
-		super(questId, name, descr);
+		super(138, Q00138_TempleChampionPart2.class.getSimpleName(), "Temple Champion - 2");
 		addStartNpc(SYLVAIN);
 		addTalkId(SYLVAIN, PUPINA, ANGUS, SLA);
 		addKillId(MOBS);
@@ -242,10 +242,5 @@ public class Q00138_TempleChampionPart2 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00138_TempleChampionPart2(138, Q00138_TempleChampionPart2.class.getSimpleName(), "Temple Champion - 2");
 	}
 }

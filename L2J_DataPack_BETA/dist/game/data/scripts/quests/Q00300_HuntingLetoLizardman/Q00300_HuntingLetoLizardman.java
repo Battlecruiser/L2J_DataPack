@@ -58,9 +58,9 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 		MOBS_SAC.put(20582, 890); // Leto Lizardman Overlord
 	}
 	
-	private Q00300_HuntingLetoLizardman(int questId, String name, String descr)
+	public Q00300_HuntingLetoLizardman()
 	{
-		super(questId, name, descr);
+		super(300, Q00300_HuntingLetoLizardman.class.getSimpleName(), "Hunting Leto Lizardman");
 		addStartNpc(RATH);
 		addTalkId(RATH);
 		addKillId(MOBS_SAC.keySet());
@@ -180,10 +180,5 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00300_HuntingLetoLizardman(300, Q00300_HuntingLetoLizardman.class.getSimpleName(), "Hunting Leto Lizardman");
 	}
 }

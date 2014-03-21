@@ -54,9 +54,9 @@ public final class Q00624_TheFinestIngredientsPart1 extends Quest
 		MONSTER_DROPS.put(21321, SECRET_SPICE); // Hot Springs Atrox
 	}
 	
-	private Q00624_TheFinestIngredientsPart1(int questId, String name, String descr)
+	public Q00624_TheFinestIngredientsPart1()
 	{
-		super(questId, name, descr);
+		super(624, Q00624_TheFinestIngredientsPart1.class.getSimpleName(), "The Finest Ingredients - Part 1");
 		addStartNpc(JEREMY);
 		addTalkId(JEREMY);
 		addKillId(MONSTER_DROPS.keySet());
@@ -161,10 +161,5 @@ public final class Q00624_TheFinestIngredientsPart1 extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00624_TheFinestIngredientsPart1(624, Q00624_TheFinestIngredientsPart1.class.getSimpleName(), "The Finest Ingredients - Part 1");
 	}
 }

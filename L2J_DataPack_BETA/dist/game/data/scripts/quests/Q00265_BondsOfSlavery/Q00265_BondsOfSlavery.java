@@ -51,9 +51,9 @@ public final class Q00265_BondsOfSlavery extends Quest
 		MONSTERS.put(20005, 6); // Imp Elder
 	}
 	
-	private Q00265_BondsOfSlavery(int questId, String name, String descr)
+	public Q00265_BondsOfSlavery()
 	{
-		super(questId, name, descr);
+		super(265, Q00265_BondsOfSlavery.class.getSimpleName(), "Bonds of Slavery");
 		addStartNpc(KRISTIN);
 		addTalkId(KRISTIN);
 		addKillId(MONSTERS.keySet());
@@ -140,10 +140,5 @@ public final class Q00265_BondsOfSlavery extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00265_BondsOfSlavery(265, Q00265_BondsOfSlavery.class.getSimpleName(), "Bonds of Slavery");
 	}
 }

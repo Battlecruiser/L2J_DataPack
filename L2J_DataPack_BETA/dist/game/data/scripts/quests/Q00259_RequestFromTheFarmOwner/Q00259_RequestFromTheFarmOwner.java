@@ -61,9 +61,9 @@ public final class Q00259_RequestFromTheFarmOwner extends Quest
 		CONSUMABLES.put("30405-05c.html", new ItemHolder(2509, 30)); // Spiritshot: No Grade
 	}
 	
-	private Q00259_RequestFromTheFarmOwner(int questId, String name, String descr)
+	public Q00259_RequestFromTheFarmOwner()
 	{
-		super(questId, name, descr);
+		super(259, Q00259_RequestFromTheFarmOwner.class.getSimpleName(), "Request from the Farm Owner");
 		addStartNpc(EDMOND);
 		addTalkId(EDMOND, MARIUS);
 		addKillId(MONSTERS);
@@ -182,10 +182,5 @@ public final class Q00259_RequestFromTheFarmOwner extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00259_RequestFromTheFarmOwner(259, Q00259_RequestFromTheFarmOwner.class.getSimpleName(), "Request from the Farm Owner");
 	}
 }

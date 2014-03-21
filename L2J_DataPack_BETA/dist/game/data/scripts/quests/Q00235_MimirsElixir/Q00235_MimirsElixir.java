@@ -62,7 +62,7 @@ public final class Q00235_MimirsElixir extends Quest
 		MOBS.put(21090, new QuestItemHolder(BLOOD_FIRE, 7, 1)); // bloody_guardian
 	}
 	
-	private Q00235_MimirsElixir()
+	public Q00235_MimirsElixir()
 	{
 		super(235, Q00235_MimirsElixir.class.getSimpleName(), "Mimir's Elixir");
 		addStartNpc(LADD);
@@ -352,10 +352,5 @@ public final class Q00235_MimirsElixir extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00235_MimirsElixir();
 	}
 }

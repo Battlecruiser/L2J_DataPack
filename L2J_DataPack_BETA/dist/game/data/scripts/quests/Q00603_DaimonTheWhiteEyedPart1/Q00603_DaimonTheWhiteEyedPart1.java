@@ -55,7 +55,7 @@ public final class Q00603_DaimonTheWhiteEyedPart1 extends Quest
 	// Misc
 	private static final int MIN_LVL = 73;
 	
-	private Q00603_DaimonTheWhiteEyedPart1()
+	public Q00603_DaimonTheWhiteEyedPart1()
 	{
 		super(603, Q00603_DaimonTheWhiteEyedPart1.class.getSimpleName(), "Daimon the White-Eyed - Part 1");
 		addStartNpc(EYE_OF_ARGOS);
@@ -215,10 +215,5 @@ public final class Q00603_DaimonTheWhiteEyedPart1 extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00603_DaimonTheWhiteEyedPart1();
 	}
 }

@@ -51,9 +51,9 @@ public final class Q00262_TradeWithTheIvoryTower extends Quest
 		MOBS_SAC.put(20400, 4); // Blood Fungus
 	}
 	
-	private Q00262_TradeWithTheIvoryTower(int questId, String name, String descr)
+	public Q00262_TradeWithTheIvoryTower()
 	{
-		super(questId, name, descr);
+		super(262, Q00262_TradeWithTheIvoryTower.class.getSimpleName(), "Trade With The Ivory Tower");
 		addStartNpc(VOLLODOS);
 		addTalkId(VOLLODOS);
 		addKillId(MOBS_SAC.keySet());
@@ -142,10 +142,5 @@ public final class Q00262_TradeWithTheIvoryTower extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00262_TradeWithTheIvoryTower(262, Q00262_TradeWithTheIvoryTower.class.getSimpleName(), "Trade With The Ivory Tower");
 	}
 }

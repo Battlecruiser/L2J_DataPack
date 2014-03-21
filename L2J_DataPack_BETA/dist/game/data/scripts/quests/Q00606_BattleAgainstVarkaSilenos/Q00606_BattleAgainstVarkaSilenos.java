@@ -63,9 +63,9 @@ public class Q00606_BattleAgainstVarkaSilenos extends Quest
 	private static final int MIN_LEVEL = 74;
 	private static final int MANE_COUNT = 100;
 	
-	private Q00606_BattleAgainstVarkaSilenos(int questId, String name, String descr)
+	public Q00606_BattleAgainstVarkaSilenos()
 	{
-		super(questId, name, descr);
+		super(606, Q00606_BattleAgainstVarkaSilenos.class.getSimpleName(), "Battle against Varka Silenos");
 		addStartNpc(KADUN);
 		addTalkId(KADUN);
 		addKillId(MOBS.keySet());
@@ -140,10 +140,5 @@ public class Q00606_BattleAgainstVarkaSilenos extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00606_BattleAgainstVarkaSilenos(606, Q00606_BattleAgainstVarkaSilenos.class.getSimpleName(), "Battle against Varka Silenos");
 	}
 }

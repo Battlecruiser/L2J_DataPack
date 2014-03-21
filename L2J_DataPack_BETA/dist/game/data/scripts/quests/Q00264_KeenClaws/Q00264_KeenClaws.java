@@ -62,7 +62,7 @@ public final class Q00264_KeenClaws extends Quest
 		REWARDS.put(17, Arrays.asList(new ItemHolder(35, 1), new ItemHolder(57, 50)));
 	}
 	
-	private Q00264_KeenClaws()
+	public Q00264_KeenClaws()
 	{
 		super(264, Q00264_KeenClaws.class.getSimpleName(), "Keen Claws");
 		addStartNpc(PAINT);
@@ -161,10 +161,5 @@ public final class Q00264_KeenClaws extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00264_KeenClaws();
 	}
 }

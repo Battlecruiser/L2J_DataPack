@@ -63,7 +63,7 @@ public final class Q00107_MercilessPunishment extends Quest
 	// Misc
 	private static final int MIN_LVL = 10;
 	
-	private Q00107_MercilessPunishment()
+	public Q00107_MercilessPunishment()
 	{
 		super(107, Q00107_MercilessPunishment.class.getSimpleName(), "Merciless Punishment");
 		addStartNpc(URUTU_CHIEF_HATOS);
@@ -282,10 +282,5 @@ public final class Q00107_MercilessPunishment extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00107_MercilessPunishment();
 	}
 }

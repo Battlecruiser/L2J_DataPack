@@ -45,9 +45,9 @@ public final class Q00271_ProofOfValor extends Quest
 	// Misc
 	private static final int MIN_LVL = 4;
 	
-	private Q00271_ProofOfValor(int questId, String name, String descr)
+	public Q00271_ProofOfValor()
 	{
-		super(questId, name, descr);
+		super(271, Q00271_ProofOfValor.class.getSimpleName(), "Proof of Valor");
 		addStartNpc(RUKAIN);
 		addTalkId(RUKAIN);
 		addKillId(KASHA_WOLF);
@@ -135,10 +135,5 @@ public final class Q00271_ProofOfValor extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00271_ProofOfValor(271, Q00271_ProofOfValor.class.getSimpleName(), "Proof of Valor");
 	}
 }

@@ -91,7 +91,7 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 		MONSTERS.put(22098, new DropInfo(0.717, 0.074)); // Frost Yeti
 	}
 	
-	private Q00648_AnIceMerchantsDream()
+	public Q00648_AnIceMerchantsDream()
 	{
 		super(648, Q00648_AnIceMerchantsDream.class.getSimpleName(), "An Ice Merchants Dream");
 		addStartNpc(RAFFORTY);
@@ -373,10 +373,5 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00648_AnIceMerchantsDream();
 	}
 }

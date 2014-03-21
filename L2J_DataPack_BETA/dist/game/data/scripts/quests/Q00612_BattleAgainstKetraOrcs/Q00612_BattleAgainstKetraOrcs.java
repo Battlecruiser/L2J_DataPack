@@ -63,9 +63,9 @@ public class Q00612_BattleAgainstKetraOrcs extends Quest
 	private static final int MIN_LEVEL = 74;
 	private static final int MOLAR_COUNT = 100;
 	
-	private Q00612_BattleAgainstKetraOrcs(int questId, String name, String descr)
+	public Q00612_BattleAgainstKetraOrcs()
 	{
-		super(questId, name, descr);
+		super(612, Q00612_BattleAgainstKetraOrcs.class.getSimpleName(), "Battle against Ketra Orcs");
 		addStartNpc(ASHAS);
 		addTalkId(ASHAS);
 		addKillId(MOBS.keySet());
@@ -140,10 +140,5 @@ public class Q00612_BattleAgainstKetraOrcs extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00612_BattleAgainstKetraOrcs(612, Q00612_BattleAgainstKetraOrcs.class.getSimpleName(), "Battle against Ketra Orcs");
 	}
 }

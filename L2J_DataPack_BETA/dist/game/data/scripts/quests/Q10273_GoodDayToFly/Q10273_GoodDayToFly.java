@@ -48,9 +48,9 @@ public class Q10273_GoodDayToFly extends Quest
 	private static final SkillHolder AURA_BIRD_FALCON = new SkillHolder(5982, 1);
 	private static final SkillHolder AURA_BIRD_OWL = new SkillHolder(5983, 1);
 	
-	public Q10273_GoodDayToFly(int questId, String name, String descr)
+	public Q10273_GoodDayToFly()
 	{
-		super(questId, name, descr);
+		super(10273, Q10273_GoodDayToFly.class.getSimpleName(), "Good Day to Fly");
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addKillId(MOBS);
@@ -165,10 +165,5 @@ public class Q10273_GoodDayToFly extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10273_GoodDayToFly(10273, Q10273_GoodDayToFly.class.getSimpleName(), "Good Day to Fly");
 	}
 }

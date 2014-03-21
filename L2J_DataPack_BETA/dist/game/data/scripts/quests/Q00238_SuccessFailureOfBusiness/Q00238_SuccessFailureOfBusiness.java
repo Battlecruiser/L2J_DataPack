@@ -51,9 +51,9 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 	private static final int CHANCE_FOR_FRAGMENT = 80;
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00238_SuccessFailureOfBusiness(int questId, String name, String descr)
+	public Q00238_SuccessFailureOfBusiness()
 	{
-		super(questId, name, descr);
+		super(238, Q00238_SuccessFailureOfBusiness.class.getSimpleName(), "Success/Failure Of Business");
 		addStartNpc(HELVETICA);
 		addTalkId(HELVETICA);
 		addKillId(BRAZIER_OF_PURITY, EVIL_SPIRITS, GUARDIAN_SPIRITS);
@@ -197,10 +197,5 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00238_SuccessFailureOfBusiness(238, Q00238_SuccessFailureOfBusiness.class.getSimpleName(), "Success/Failure Of Business");
 	}
 }

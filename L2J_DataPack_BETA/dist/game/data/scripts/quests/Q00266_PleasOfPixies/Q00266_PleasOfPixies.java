@@ -63,7 +63,7 @@ public final class Q00266_PleasOfPixies extends Quest
 	// Misc
 	private static final int MIN_LVL = 3;
 	
-	private Q00266_PleasOfPixies()
+	public Q00266_PleasOfPixies()
 	{
 		super(266, Q00266_PleasOfPixies.class.getSimpleName(), "Pleas of Pixies");
 		addStartNpc(PIXY_MURIKA);
@@ -179,10 +179,5 @@ public final class Q00266_PleasOfPixies extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00266_PleasOfPixies();
 	}
 }

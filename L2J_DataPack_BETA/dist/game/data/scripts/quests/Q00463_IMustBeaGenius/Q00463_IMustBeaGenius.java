@@ -104,9 +104,9 @@ public class Q00463_IMustBeaGenius extends Quest
 	// Misc @formatter:on
 	private static final int MIN_LEVEL = 70;
 	
-	public Q00463_IMustBeaGenius(int questId, String name, String descr)
+	public Q00463_IMustBeaGenius()
 	{
-		super(questId, name, descr);
+		super(463, Q00463_IMustBeaGenius.class.getSimpleName(), "I Must Be a Genius");
 		addStartNpc(GUTENHAGEN);
 		addTalkId(GUTENHAGEN);
 		addKillId(MOBS.keySet());
@@ -247,10 +247,5 @@ public class Q00463_IMustBeaGenius extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00463_IMustBeaGenius(463, Q00463_IMustBeaGenius.class.getSimpleName(), "I Must Be a Genius");
 	}
 }

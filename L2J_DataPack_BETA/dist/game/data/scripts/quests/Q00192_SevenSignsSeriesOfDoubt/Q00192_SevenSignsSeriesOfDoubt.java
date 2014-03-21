@@ -43,7 +43,7 @@ public final class Q00192_SevenSignsSeriesOfDoubt extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 79;
 	
-	private Q00192_SevenSignsSeriesOfDoubt()
+	public Q00192_SevenSignsSeriesOfDoubt()
 	{
 		super(192, Q00192_SevenSignsSeriesOfDoubt.class.getSimpleName(), "Seven Signs, Series of Doubt");
 		addStartNpc(CROOP, UNIDENTIFIED_BODY);
@@ -308,10 +308,5 @@ public final class Q00192_SevenSignsSeriesOfDoubt extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00192_SevenSignsSeriesOfDoubt();
 	}
 }

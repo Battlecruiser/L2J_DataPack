@@ -43,9 +43,9 @@ public class Q00158_SeedOfEvil extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 21;
 	
-	private Q00158_SeedOfEvil(int questId, String name, String descr)
+	public Q00158_SeedOfEvil()
 	{
-		super(questId, name, descr);
+		super(158, Q00158_SeedOfEvil.class.getSimpleName(), "Seed of Evil");
 		addStartNpc(BIOTIN);
 		addTalkId(BIOTIN);
 		addAttackId(NERKAS);
@@ -123,10 +123,5 @@ public class Q00158_SeedOfEvil extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00158_SeedOfEvil(158, Q00158_SeedOfEvil.class.getSimpleName(), "Seed of Evil");
 	}
 }

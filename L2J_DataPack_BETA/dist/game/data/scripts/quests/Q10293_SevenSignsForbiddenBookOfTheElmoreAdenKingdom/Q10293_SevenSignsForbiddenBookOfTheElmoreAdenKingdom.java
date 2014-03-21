@@ -47,7 +47,7 @@ public final class Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom extends 
 	// Misc
 	private static final int MIN_LEVEL = 81;
 	
-	private Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom()
+	public Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom()
 	{
 		super(10293, Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName(), "Seven Signs, Forbidden Book of the Elmore-Aden Kingdom");
 		addFirstTalkId(SOPHIA3);
@@ -397,10 +397,5 @@ public final class Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom extends 
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom();
 	}
 }

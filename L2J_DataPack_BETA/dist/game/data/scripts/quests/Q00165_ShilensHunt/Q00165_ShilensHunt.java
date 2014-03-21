@@ -53,9 +53,9 @@ public class Q00165_ShilensHunt extends Quest
 	private static final int MIN_LVL = 3;
 	private static final int REQUIRED_COUNT = 13;
 	
-	private Q00165_ShilensHunt(int questId, String name, String descr)
+	public Q00165_ShilensHunt()
 	{
-		super(questId, name, descr);
+		super(165, Q00165_ShilensHunt.class.getSimpleName(), "Shilen's Hunt");
 		addStartNpc(NELSYA);
 		addTalkId(NELSYA);
 		addKillId(MONSTERS.keySet());
@@ -130,10 +130,5 @@ public class Q00165_ShilensHunt extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00165_ShilensHunt(165, Q00165_ShilensHunt.class.getSimpleName(), "Shilen's Hunt");
 	}
 }

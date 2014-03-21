@@ -72,9 +72,9 @@ public class Q00602_ShadowOfLight extends Quest
 		}
 	};
 	
-	public Q00602_ShadowOfLight(int questId, String name, String descr)
+	public Q00602_ShadowOfLight()
 	{
-		super(questId, name, descr);
+		super(602, Q00602_ShadowOfLight.class.getSimpleName(), "Shadow of Light");
 		addStartNpc(EYE_OF_ARGOS);
 		addTalkId(EYE_OF_ARGOS);
 		addKillId(MOBS);
@@ -167,10 +167,5 @@ public class Q00602_ShadowOfLight extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00602_ShadowOfLight(602, Q00602_ShadowOfLight.class.getSimpleName(), "Shadow of Light");
 	}
 }

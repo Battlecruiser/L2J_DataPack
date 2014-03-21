@@ -41,9 +41,9 @@ public final class Q00190_LostDream extends Quest
 	private static final int MIN_LEVEL = 42;
 	private static final int MAX_LEVEL_FOR_EXP_SP = 48;
 	
-	private Q00190_LostDream(int questId, String name, String descr)
+	public Q00190_LostDream()
 	{
-		super(questId, name, descr);
+		super(190, Q00190_LostDream.class.getSimpleName(), "Lost Dream");
 		addStartNpc(HEAD_BLACKSMITH_KUSTO);
 		addTalkId(HEAD_BLACKSMITH_KUSTO, RESEARCHER_LORAIN, MAESTRO_NIKOLA, JURIS);
 	}
@@ -218,10 +218,5 @@ public final class Q00190_LostDream extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00190_LostDream(190, Q00190_LostDream.class.getSimpleName(), "Lost Dream");
 	}
 }

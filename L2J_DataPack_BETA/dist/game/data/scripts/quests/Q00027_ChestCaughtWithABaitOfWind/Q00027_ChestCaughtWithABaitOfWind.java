@@ -41,9 +41,9 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 	private static final int STRANGE_BLUESPRINT = 7625;
 	private static final int BLACK_PEARL_RING = 880;
 	
-	public Q00027_ChestCaughtWithABaitOfWind(int questId, String name, String descr)
+	public Q00027_ChestCaughtWithABaitOfWind()
 	{
-		super(questId, name, descr);
+		super(27, Q00027_ChestCaughtWithABaitOfWind.class.getSimpleName(), "Chest Caught With A Bait Of Wind");
 		addStartNpc(LANOSCO);
 		addTalkId(LANOSCO, SHALING);
 		registerQuestItems(STRANGE_BLUESPRINT);
@@ -141,10 +141,5 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 				}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00027_ChestCaughtWithABaitOfWind(27, Q00027_ChestCaughtWithABaitOfWind.class.getSimpleName(), "Chest Caught With A Bait Of Wind");
 	}
 }

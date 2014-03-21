@@ -48,9 +48,9 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 	private final static int RESPAWN_DELAY = 3600000; // 1 hour
 	private static L2Npc hekaton;
 	
-	public Q00307_ControlDeviceOfTheGiants(int id, String name, String descr)
+	public Q00307_ControlDeviceOfTheGiants()
 	{
-		super(id, name, descr);
+		super(307, Q00307_ControlDeviceOfTheGiants.class.getSimpleName(), "Control Device of the Giants");
 		addStartNpc(DROPH);
 		addTalkId(DROPH);
 		addKillId(GORGOLOS, LAST_TITAN_UTENUS, GIANT_MARPANAK, HEKATON_PRIME);
@@ -204,10 +204,5 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00307_ControlDeviceOfTheGiants(307, Q00307_ControlDeviceOfTheGiants.class.getSimpleName(), "Control Device of the Giants");
 	}
 }

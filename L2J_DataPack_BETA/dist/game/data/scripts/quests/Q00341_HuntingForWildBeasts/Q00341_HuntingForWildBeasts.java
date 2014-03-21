@@ -52,9 +52,9 @@ public class Q00341_HuntingForWildBeasts extends Quest
 	private static final int ADENA_COUNT = 3710;
 	private static final int REQUIRED_COUNT = 20;
 	
-	public Q00341_HuntingForWildBeasts(int questId, String name, String descr)
+	public Q00341_HuntingForWildBeasts()
 	{
-		super(questId, name, descr);
+		super(341, Q00341_HuntingForWildBeasts.class.getSimpleName(), "Hunting for Wild Beasts");
 		addStartNpc(PANO);
 		addTalkId(PANO);
 		addKillId(MONSTERS.keySet());
@@ -143,10 +143,5 @@ public class Q00341_HuntingForWildBeasts extends Quest
 			}
 		}
 		return super.onKill(npc, player, isPet);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00341_HuntingForWildBeasts(341, Q00341_HuntingForWildBeasts.class.getSimpleName(), "Hunting for Wild Beasts");
 	}
 }
