@@ -142,8 +142,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="7000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="4" />
 			<add order="0x10" stat="mAtk" val="5" />
@@ -160,8 +162,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="3060" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="9" />
@@ -290,8 +294,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2048-1" />
-		<set name="use_condition" val="{{uc_category;{@all_wolf_group;@sin_eater_group;@deinonychus_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="ALL_WOLF_GROUP,SIN_EATER_GROUP,DEINONYCHUS_PET_GROUP" />
+		</cond>
 	</item>
 	<item id="2516" type="Weapon" name="Saber*Saber">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />

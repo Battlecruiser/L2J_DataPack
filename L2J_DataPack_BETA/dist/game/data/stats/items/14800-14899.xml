@@ -332,8 +332,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2916-1" />
-		<set name="use_condition" val="{{uc_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 	</item>
 	<item id="14819" type="EtcItem" name="Guardian's Dragon Bugle">
 		<set name="icon" val="icon.etc_bugle_i00" />

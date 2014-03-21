@@ -9,8 +9,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="283000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="38" />
 			<add order="0x10" stat="pDef" val="43" />
@@ -25,8 +27,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="412500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="41" />
 			<add order="0x10" stat="pDef" val="47" />
@@ -44,8 +48,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="30500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="11" />
 			<add order="0x10" stat="mAtk" val="10" />
@@ -65,8 +71,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="50000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="16" />
 			<add order="0x10" stat="mAtk" val="14" />
@@ -86,8 +94,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="80000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="23" />
 			<add order="0x10" stat="mAtk" val="18" />
@@ -107,8 +117,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="120000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="31" />
 			<add order="0x10" stat="mAtk" val="24" />
@@ -128,8 +140,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="175000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="40" />
 			<add order="0x10" stat="mAtk" val="30" />
@@ -149,8 +163,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="225000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="49" />
 			<add order="0x10" stat="mAtk" val="36" />
@@ -170,8 +186,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="285000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="58" />
 			<add order="0x10" stat="mAtk" val="42" />
@@ -191,8 +209,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="360000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="69" />
 			<add order="0x10" stat="mAtk" val="50" />
@@ -212,8 +232,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="550000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="80" />
 			<add order="0x10" stat="mAtk" val="58" />
@@ -233,8 +255,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="750000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="93" />
 			<add order="0x10" stat="mAtk" val="66" />
@@ -251,8 +275,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="58500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="26" />
 			<add order="0x10" stat="pDef" val="26" />
@@ -267,8 +293,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="86000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="29" />
 			<add order="0x10" stat="pDef" val="29" />
@@ -283,8 +311,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="113000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="31" />
 			<add order="0x10" stat="pDef" val="31" />
@@ -299,8 +329,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="145500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="33" />
 			<add order="0x10" stat="pDef" val="33" />
@@ -315,8 +347,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="186000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="36" />
 			<add order="0x10" stat="pDef" val="36" />
@@ -331,8 +365,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="283000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="38" />
 			<add order="0x10" stat="pDef" val="38" />
@@ -347,8 +383,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="412500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="41" />
 			<add order="0x10" stat="pDef" val="41" />
@@ -366,8 +404,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="100000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="8" />
 			<add order="0x10" stat="mAtk" val="7" />
@@ -387,8 +427,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="155000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="9" />
 			<add order="0x10" stat="mAtk" val="10" />
@@ -408,8 +450,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="210000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="10" />
 			<add order="0x10" stat="mAtk" val="11" />
@@ -429,8 +473,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="285000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="12" />
 			<add order="0x10" stat="mAtk" val="13" />
@@ -450,8 +496,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="380000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="13" />
 			<add order="0x10" stat="mAtk" val="16" />
@@ -471,8 +519,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="550000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="15" />
 			<add order="0x10" stat="mAtk" val="18" />
@@ -492,8 +542,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="800000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="17" />
 			<add order="0x10" stat="mAtk" val="21" />

@@ -961,7 +961,9 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="21159000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="413" />
 			<add order="0x10" stat="mAtk" val="5" />

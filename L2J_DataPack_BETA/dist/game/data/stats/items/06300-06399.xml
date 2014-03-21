@@ -329,8 +329,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2180-1" />
-		<set name="use_condition" val="{{uc_category;{@strider;@wyvern_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER,WYVERN_GROUP" />
+		</cond>
 	</item>
 	<item id="6317" type="EtcItem" name="Mixing Manual">
 		<set name="icon" val="icon.etc_spellbook_red_i00" />

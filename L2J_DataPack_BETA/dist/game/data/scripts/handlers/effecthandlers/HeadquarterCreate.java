@@ -37,7 +37,7 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  * Headquarter Create effect implementation.
  * @author Adry_85
  */
-public class HeadquarterCreate extends AbstractEffect
+public final class HeadquarterCreate extends AbstractEffect
 {
 	private static final int HQ_NPC_ID = 35062;
 	private final boolean _isAdvanced;

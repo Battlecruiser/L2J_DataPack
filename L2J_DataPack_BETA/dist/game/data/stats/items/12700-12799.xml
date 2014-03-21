@@ -480,8 +480,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="938500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@baby_pet_group;@upgrade_baby_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="112" />
 		</for>
@@ -495,8 +497,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="1810000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@baby_pet_group;@upgrade_baby_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="124" />
 		</for>
@@ -510,8 +514,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="3563000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@baby_pet_group;@upgrade_baby_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="136" />
 		</for>
@@ -525,8 +531,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="6281500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@baby_pet_group;@upgrade_baby_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="148" />
 		</for>
@@ -540,8 +548,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="12118000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@baby_pet_group;@upgrade_baby_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="160" />
 		</for>
@@ -555,8 +565,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="24439500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@baby_pet_group;@upgrade_baby_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="171" />
 		</for>
@@ -569,8 +581,10 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="1932" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@item_equip_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ITEM_EQUIP_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="22" />
 		</for>
@@ -583,8 +597,10 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="10091" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@item_equip_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ITEM_EQUIP_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="30" />
 		</for>
@@ -597,8 +613,10 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="31949" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@item_equip_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ITEM_EQUIP_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="40" />
 		</for>
@@ -611,8 +629,10 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="78374" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@item_equip_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ITEM_EQUIP_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="52" />
 		</for>
@@ -625,8 +645,10 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="231417" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@item_equip_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ITEM_EQUIP_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="66" />
 		</for>
@@ -639,8 +661,10 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="828490" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@item_equip_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ITEM_EQUIP_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="80" />
 		</for>
@@ -653,8 +677,10 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="2582800" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@item_equip_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ITEM_EQUIP_PET_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="94" />
 		</for>

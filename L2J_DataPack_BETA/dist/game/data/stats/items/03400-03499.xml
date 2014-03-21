@@ -417,8 +417,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="17000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="7" />
 			<add order="0x10" stat="mAtk" val="8" />
