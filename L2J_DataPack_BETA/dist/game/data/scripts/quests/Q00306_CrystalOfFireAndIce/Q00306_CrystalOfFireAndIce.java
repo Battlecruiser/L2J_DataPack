@@ -55,9 +55,9 @@ public final class Q00306_CrystalOfFireAndIce extends Quest
 		MONSTER_DROPS.put(UNDINE_NOBLE, new ItemHolder(ICE_SHARD, 950)); // Undine Noble
 	}
 	
-	private Q00306_CrystalOfFireAndIce(int questId, String name, String descr)
+	public Q00306_CrystalOfFireAndIce()
 	{
-		super(questId, name, descr);
+		super(306, Q00306_CrystalOfFireAndIce.class.getSimpleName(), "Crystals of Fire and Ice");
 		addStartNpc(KATERINA);
 		addTalkId(KATERINA);
 		addKillId(MONSTER_DROPS.keySet());
@@ -166,10 +166,5 @@ public final class Q00306_CrystalOfFireAndIce extends Quest
 			final ItemHolder item = MONSTER_DROPS.get(npc.getId());
 			giveItemRandomly(player, npc, item.getId(), 1, 0, 1000.0 / item.getCount(), true);
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00306_CrystalOfFireAndIce(306, Q00306_CrystalOfFireAndIce.class.getSimpleName(), "Crystals of Fire and Ice");
 	}
 }

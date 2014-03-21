@@ -50,9 +50,9 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	private static final int TOTEM_OF_COURAGE = 21901;
 	private static final int TOTEM_OF_FORTITUDE = 21902;
 	
-	public Q00901_HowLavasaurusesAreMade(int questId, String name, String descr)
+	public Q00901_HowLavasaurusesAreMade()
 	{
-		super(questId, name, descr);
+		super(901, Q00901_HowLavasaurusesAreMade.class.getSimpleName(), "How Lavasauruses Are Made");
 		addStartNpc(ROONEY);
 		addTalkId(ROONEY);
 		addKillId(LAVASAURUS_NEWBORN, LAVASAURUS_FLEDGIING, LAVASAURUS_ADULT, LAVASAURUS_ELDERLY);
@@ -195,10 +195,5 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	public static boolean gotAllQuestItems(QuestState st)
 	{
 		return (st.getQuestItemsCount(FRAGMENT_STONE) >= 10) && (st.getQuestItemsCount(FRAGMENT_HEAD) >= 10) && (st.getQuestItemsCount(FRAGMENT_BODY) >= 10) && (st.getQuestItemsCount(FRAGMENT_HORN) >= 10);
-	}
-	
-	public static void main(String[] values)
-	{
-		new Q00901_HowLavasaurusesAreMade(901, Q00901_HowLavasaurusesAreMade.class.getSimpleName(), "How Lavasauruses Are Made");
 	}
 }

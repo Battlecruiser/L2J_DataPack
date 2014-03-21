@@ -50,7 +50,7 @@ public final class Q00039_RedEyedInvaders extends Quest
 	// Misc
 	private static final int MIN_LVL = 20;
 	
-	private Q00039_RedEyedInvaders()
+	public Q00039_RedEyedInvaders()
 	{
 		super(39, Q00039_RedEyedInvaders.class.getSimpleName(), "Red-eyed Invaders");
 		addStartNpc(GUARD_BABENCO);
@@ -271,10 +271,5 @@ public final class Q00039_RedEyedInvaders extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00039_RedEyedInvaders();
 	}
 }

@@ -47,7 +47,7 @@ public final class Q00363_SorrowfulSoundOfFlute extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 15;
 	
-	private Q00363_SorrowfulSoundOfFlute()
+	public Q00363_SorrowfulSoundOfFlute()
 	{
 		super(363, Q00363_SorrowfulSoundOfFlute.class.getSimpleName(), "Sorrowful Sound of Flute");
 		addStartNpc(NANARIN);
@@ -360,10 +360,5 @@ public final class Q00363_SorrowfulSoundOfFlute extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00363_SorrowfulSoundOfFlute();
 	}
 }

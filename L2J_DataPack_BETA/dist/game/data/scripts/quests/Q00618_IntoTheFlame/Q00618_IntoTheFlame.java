@@ -57,9 +57,9 @@ public class Q00618_IntoTheFlame extends Quest
 		MONSTERS.put(21292, 710);
 	}
 	
-	public Q00618_IntoTheFlame(int questId, String name, String descr)
+	public Q00618_IntoTheFlame()
 	{
-		super(questId, name, descr);
+		super(618, Q00618_IntoTheFlame.class.getSimpleName(), "Into the Flame");
 		addStartNpc(KLEIN);
 		addTalkId(HILDA, KLEIN);
 		addKillId(MONSTERS.keySet());
@@ -184,10 +184,5 @@ public class Q00618_IntoTheFlame extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00618_IntoTheFlame(618, Q00618_IntoTheFlame.class.getSimpleName(), "Into the Flame");
 	}
 }

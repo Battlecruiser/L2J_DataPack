@@ -62,7 +62,7 @@ public final class Q00644_GraveRobberAnnihilation extends Quest
 		REWARDS.put("ironore", new ItemHolder(1869, 30)); // Iron Ore
 	}
 	
-	private Q00644_GraveRobberAnnihilation()
+	public Q00644_GraveRobberAnnihilation()
 	{
 		super(644, Q00644_GraveRobberAnnihilation.class.getSimpleName(), "Grave Robber Annihilation");
 		addStartNpc(KARUDA);
@@ -162,10 +162,5 @@ public final class Q00644_GraveRobberAnnihilation extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00644_GraveRobberAnnihilation();
 	}
 }

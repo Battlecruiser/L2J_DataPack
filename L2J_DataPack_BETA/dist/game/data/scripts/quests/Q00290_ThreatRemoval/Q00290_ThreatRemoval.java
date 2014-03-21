@@ -63,9 +63,9 @@ public class Q00290_ThreatRemoval extends Quest
 		MOBS_TAG.put(22785, 169); // Sel Mahum Soldier
 	}
 	
-	public Q00290_ThreatRemoval(int id, String name, String descr)
+	public Q00290_ThreatRemoval()
 	{
-		super(id, name, descr);
+		super(290, Q00290_ThreatRemoval.class.getSimpleName(), "Threat Removal");
 		addStartNpc(PINAPS);
 		addTalkId(PINAPS);
 		addKillId(MOBS_TAG.keySet());
@@ -222,10 +222,5 @@ public class Q00290_ThreatRemoval extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00290_ThreatRemoval(290, Q00290_ThreatRemoval.class.getSimpleName(), "Threat Removal");
 	}
 }

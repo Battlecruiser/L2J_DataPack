@@ -53,7 +53,7 @@ public final class Q00038_DragonFangs extends Quest
 	// Misc
 	private static final int MIN_LVL = 19;
 	
-	private Q00038_DragonFangs()
+	public Q00038_DragonFangs()
 	{
 		super(38, Q00038_DragonFangs.class.getSimpleName(), "Dragon Fangs");
 		addStartNpc(GUARD_LUIS);
@@ -319,10 +319,4 @@ public final class Q00038_DragonFangs extends Quest
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
-	
-	public static void main(String[] args)
-	{
-		new Q00038_DragonFangs();
-	}
-	
 }

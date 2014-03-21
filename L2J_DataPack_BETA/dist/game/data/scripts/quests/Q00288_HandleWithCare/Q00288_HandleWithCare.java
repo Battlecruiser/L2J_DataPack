@@ -55,9 +55,9 @@ public class Q00288_HandleWithCare extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00288_HandleWithCare(int questId, String name, String descr)
+	public Q00288_HandleWithCare()
 	{
-		super(questId, name, descr);
+		super(288, Q00288_HandleWithCare.class.getSimpleName(), "Handle With Care");
 		addStartNpc(ANKUMI);
 		addTalkId(ANKUMI);
 		addKillId(SEER_UGOROS);
@@ -216,10 +216,5 @@ public class Q00288_HandleWithCare extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00288_HandleWithCare(288, Q00288_HandleWithCare.class.getSimpleName(), "Handle With Care");
 	}
 }

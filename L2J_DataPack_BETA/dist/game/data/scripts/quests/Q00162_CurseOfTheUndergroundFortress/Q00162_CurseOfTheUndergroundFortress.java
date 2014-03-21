@@ -57,9 +57,9 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 	private static final int MIN_LVL = 12;
 	private static final int REQUIRED_COUNT = 13;
 	
-	private Q00162_CurseOfTheUndergroundFortress(int questId, String name, String descr)
+	public Q00162_CurseOfTheUndergroundFortress()
 	{
-		super(questId, name, descr);
+		super(162, Q00162_CurseOfTheUndergroundFortress.class.getSimpleName(), "Curse of the Underground Fortress");
 		addStartNpc(UNOREN);
 		addTalkId(UNOREN);
 		addKillId(MONSTERS_SKULLS.keySet());
@@ -178,10 +178,5 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00162_CurseOfTheUndergroundFortress(162, Q00162_CurseOfTheUndergroundFortress.class.getSimpleName(), "Curse of the Underground Fortress");
 	}
 }

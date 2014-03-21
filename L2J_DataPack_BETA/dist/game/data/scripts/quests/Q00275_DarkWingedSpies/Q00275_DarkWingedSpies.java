@@ -48,7 +48,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 	private static final int FANG_PRICE = 60;
 	private static final int MAX_BAT_FANG_COUNT = 70;
 	
-	private Q00275_DarkWingedSpies()
+	public Q00275_DarkWingedSpies()
 	{
 		super(275, Q00275_DarkWingedSpies.class.getSimpleName(), "Dark Winged Spies");
 		addStartNpc(NERUGA_CHIEF_TANTUS);
@@ -166,10 +166,5 @@ public final class Q00275_DarkWingedSpies extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00275_DarkWingedSpies();
 	}
 }

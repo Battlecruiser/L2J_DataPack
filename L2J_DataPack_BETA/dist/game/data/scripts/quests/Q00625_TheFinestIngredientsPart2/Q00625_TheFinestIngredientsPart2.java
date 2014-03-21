@@ -58,7 +58,7 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 	// Misc
 	private static final int MIN_LVL = 73;
 	
-	private Q00625_TheFinestIngredientsPart2()
+	public Q00625_TheFinestIngredientsPart2()
 	{
 		super(625, Q00625_TheFinestIngredientsPart2.class.getSimpleName(), "The Finest Ingredients - Part 2");
 		addStartNpc(JEREMY);
@@ -283,10 +283,5 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 	private static boolean isBumbalumpSpawned()
 	{
 		return SpawnTable.getInstance().getFirstSpawn(ICICLE_EMPEROR_BUMBALUMP) != null;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00625_TheFinestIngredientsPart2();
 	}
 }

@@ -61,9 +61,9 @@ public class Q00328_SenseForBusiness extends Quest
 	private static final int BONUS_COUNT = 10;
 	private static final int MIN_LVL = 21;
 	
-	public Q00328_SenseForBusiness(int questId, String name, String descr)
+	public Q00328_SenseForBusiness()
 	{
-		super(questId, name, descr);
+		super(328, Q00328_SenseForBusiness.class.getSimpleName(), "Sense for Business");
 		addStartNpc(SARIEN);
 		addTalkId(SARIEN);
 		addKillId(MONSTER_EYES.keySet());
@@ -163,10 +163,5 @@ public class Q00328_SenseForBusiness extends Quest
 			}
 		}
 		return super.onKill(npc, player, isPet);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00328_SenseForBusiness(328, Q00328_SenseForBusiness.class.getSimpleName(), "Sense for Business");
 	}
 }

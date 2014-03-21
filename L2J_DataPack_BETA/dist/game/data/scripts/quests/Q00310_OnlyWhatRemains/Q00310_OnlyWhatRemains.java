@@ -67,9 +67,9 @@ public class Q00310_OnlyWhatRemains extends Quest
 		MOBS.put(22633, 638);
 	}
 	
-	public Q00310_OnlyWhatRemains(int questId, String name, String descr)
+	public Q00310_OnlyWhatRemains()
 	{
-		super(questId, name, descr);
+		super(310, Q00310_OnlyWhatRemains.class.getSimpleName(), "Only What Remains");
 		addStartNpc(KINTAIJIN);
 		addTalkId(KINTAIJIN);
 		addKillId(MOBS.keySet());
@@ -164,10 +164,5 @@ public class Q00310_OnlyWhatRemains extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00310_OnlyWhatRemains(310, Q00310_OnlyWhatRemains.class.getSimpleName(), "Only What Remains");
 	}
 }

@@ -68,7 +68,7 @@ public final class Q00103_SpiritOfCraftsman extends Quest
 	// Misc
 	private static final int MIN_LVL = 10;
 	
-	private Q00103_SpiritOfCraftsman()
+	public Q00103_SpiritOfCraftsman()
 	{
 		super(103, Q00103_SpiritOfCraftsman.class.getSimpleName(), "Spirit of Craftsman");
 		addStartNpc(BLACKSMITH_KAROYD);
@@ -339,10 +339,5 @@ public final class Q00103_SpiritOfCraftsman extends Quest
 	public boolean checkPartyMember(QuestState qs, L2Npc npc)
 	{
 		return hasQuestItems(qs.getPlayer(), CECKTINONS_VOUCHER_2) && (getQuestItemsCount(qs.getPlayer(), BONE_FRAGMENT) < 10);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00103_SpiritOfCraftsman();
 	}
 }

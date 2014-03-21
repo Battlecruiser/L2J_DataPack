@@ -64,9 +64,9 @@ public class Q00690_JudesRequest extends Quest
 		}
 	};
 	
-	public Q00690_JudesRequest(int questId, String name, String descr)
+	public Q00690_JudesRequest()
 	{
-		super(questId, name, descr);
+		super(690, Q00690_JudesRequest.class.getSimpleName(), "Jude's Request");
 		addStartNpc(JUDE);
 		addTalkId(JUDE);
 		addKillId(LESSER_EVIL, GREATER_EVIL);
@@ -195,10 +195,5 @@ public class Q00690_JudesRequest extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00690_JudesRequest(690, Q00690_JudesRequest.class.getSimpleName(), "Jude's Request");
 	}
 }

@@ -54,9 +54,9 @@ public class Q00401_PathToWarrior extends Quest
 		20043
 	};
 	
-	public Q00401_PathToWarrior(int questId, String name, String descr)
+	public Q00401_PathToWarrior()
 	{
-		super(questId, name, descr);
+		super(401, Q00401_PathToWarrior.class.getSimpleName(), "Path of the Warrior");
 		addStartNpc(AURON);
 		addTalkId(AURON, SIMPLON);
 		addKillId(MONSTERS);
@@ -291,10 +291,5 @@ public class Q00401_PathToWarrior extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00401_PathToWarrior(401, Q00401_PathToWarrior.class.getSimpleName(), "Path of the Warrior");
 	}
 }

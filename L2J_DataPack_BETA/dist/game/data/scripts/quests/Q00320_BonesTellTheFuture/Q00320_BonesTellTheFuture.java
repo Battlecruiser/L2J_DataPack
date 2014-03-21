@@ -46,9 +46,9 @@ public final class Q00320_BonesTellTheFuture extends Quest
 		20518, // Skeleton Hunter Archer
 	};
 	
-	private Q00320_BonesTellTheFuture(int questId, String name, String descr)
+	public Q00320_BonesTellTheFuture()
 	{
-		super(questId, name, descr);
+		super(320, Q00320_BonesTellTheFuture.class.getSimpleName(), "Bones Tell The Future");
 		addStartNpc(TETRACH_KAITAR);
 		addTalkId(TETRACH_KAITAR);
 		addKillId(MONSTERS);
@@ -111,10 +111,5 @@ public final class Q00320_BonesTellTheFuture extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00320_BonesTellTheFuture(320, Q00320_BonesTellTheFuture.class.getSimpleName(), "Bones Tell The Future");
 	}
 }

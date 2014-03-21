@@ -41,9 +41,9 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 	private static final int MIN_LEVEL = 75;
 	private static final int DROP_RATE = 448;
 	
-	public Q00688_DefeatTheElrokianRaiders(int questId, String name, String descr)
+	public Q00688_DefeatTheElrokianRaiders()
 	{
-		super(questId, name, descr);
+		super(688, Q00688_DefeatTheElrokianRaiders.class.getSimpleName(), "Defeat the Elrokian Raiders!");
 		addStartNpc(DINN);
 		addTalkId(DINN);
 		addKillId(ELROKI);
@@ -164,10 +164,5 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00688_DefeatTheElrokianRaiders(688, Q00688_DefeatTheElrokianRaiders.class.getSimpleName(), "Defeat the Elrokian Raiders!");
 	}
 }

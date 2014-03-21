@@ -77,9 +77,9 @@ public class Q00464_Oath extends Quest
 		MOBS.put(22793, 5);
 	}
 	
-	public Q00464_Oath(int questId, String name, String descr)
+	public Q00464_Oath()
 	{
-		super(questId, name, descr);
+		super(464, Q00464_Oath.class.getSimpleName(), "Oath");
 		for (int[] npc : NPC)
 		{
 			addTalkId(npc[0]);
@@ -270,10 +270,5 @@ public class Q00464_Oath extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00464_Oath(464, Q00464_Oath.class.getSimpleName(), "Oath");
 	}
 }

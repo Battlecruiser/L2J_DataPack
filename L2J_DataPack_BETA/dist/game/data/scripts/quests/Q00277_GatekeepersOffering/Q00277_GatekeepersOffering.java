@@ -42,9 +42,9 @@ public class Q00277_GatekeepersOffering extends Quest
 	private static final int MIN_LEVEL = 15;
 	private static final int STARSTONE_COUT = 20;
 	
-	private Q00277_GatekeepersOffering(int questId, String name, String descr)
+	public Q00277_GatekeepersOffering()
 	{
-		super(questId, name, descr);
+		super(277, Q00277_GatekeepersOffering.class.getSimpleName(), "Gatekeeper's Offering");
 		addStartNpc(TAMIL);
 		addTalkId(TAMIL);
 		addKillId(GREYSTONE_GOLEM);
@@ -115,10 +115,5 @@ public class Q00277_GatekeepersOffering extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00277_GatekeepersOffering(277, Q00277_GatekeepersOffering.class.getSimpleName(), "Gatekeeper's Offering");
 	}
 }

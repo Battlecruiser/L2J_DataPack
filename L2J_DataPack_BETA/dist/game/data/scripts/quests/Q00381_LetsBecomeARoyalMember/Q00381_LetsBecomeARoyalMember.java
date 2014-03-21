@@ -47,7 +47,7 @@ public final class Q00381_LetsBecomeARoyalMember extends Quest
 	// Misc
 	private static final int MIN_LVL = 55;
 	
-	private Q00381_LetsBecomeARoyalMember()
+	public Q00381_LetsBecomeARoyalMember()
 	{
 		super(381, Q00381_LetsBecomeARoyalMember.class.getSimpleName(), "Let's Become a Royal Member!");
 		addStartNpc(SORINT);
@@ -187,10 +187,5 @@ public final class Q00381_LetsBecomeARoyalMember extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00381_LetsBecomeARoyalMember();
 	}
 }

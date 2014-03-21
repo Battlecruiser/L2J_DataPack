@@ -42,9 +42,9 @@ public class Q00008_AnAdventureBegins extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	private Q00008_AnAdventureBegins(int questId, String name, String descr)
+	public Q00008_AnAdventureBegins()
 	{
-		super(questId, name, descr);
+		super(8, Q00008_AnAdventureBegins.class.getSimpleName(), "An Adventure Begins");
 		addStartNpc(JASMINE);
 		addTalkId(JASMINE, ROSELYN, HARNE);
 		registerQuestItems(ROSELYNS_NOTE);
@@ -150,10 +150,5 @@ public class Q00008_AnAdventureBegins extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00008_AnAdventureBegins(8, Q00008_AnAdventureBegins.class.getSimpleName(), "An Adventure Begins");
 	}
 }

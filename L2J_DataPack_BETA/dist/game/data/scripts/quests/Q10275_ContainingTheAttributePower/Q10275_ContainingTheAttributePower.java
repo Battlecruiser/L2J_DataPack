@@ -52,9 +52,9 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	private static final SkillHolder BLESSING_OF_FIRE = new SkillHolder(2635, 1);
 	private static final SkillHolder BLESSING_OF_EARTH = new SkillHolder(2636, 1);
 	
-	public Q10275_ContainingTheAttributePower(int questId, String name, String descr)
+	public Q10275_ContainingTheAttributePower()
 	{
-		super(questId, name, descr);
+		super(10275, Q10275_ContainingTheAttributePower.class.getSimpleName(), "Containing the Attribute Power");
 		addStartNpc(HOLLY, WEBER);
 		addTalkId(HOLLY, WEBER, YIN, YANG);
 		addKillId(AIR, WATER);
@@ -286,10 +286,5 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10275_ContainingTheAttributePower(10275, Q10275_ContainingTheAttributePower.class.getSimpleName(), "Containing the Attribute Power");
 	}
 }

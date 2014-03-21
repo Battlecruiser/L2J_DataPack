@@ -74,7 +74,7 @@ public final class Q00633_InTheForgottenVillage extends Quest
 		MOBS_DROP_CHANCES.put(21601, new ItemChanceHolder(RIB_BONE_OF_A_BLACK_MAGUS, 0.677)); // Requiem Behemoth
 	}
 	
-	private Q00633_InTheForgottenVillage()
+	public Q00633_InTheForgottenVillage()
 	{
 		super(633, Q00633_InTheForgottenVillage.class.getSimpleName(), "In The Forgotten Village");
 		addStartNpc(MINA);
@@ -192,10 +192,5 @@ public final class Q00633_InTheForgottenVillage extends Quest
 			htmltext = ((getQuestItemsCount(player, RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT) ? "31388-04.html" : "31388-05.html");
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00633_InTheForgottenVillage();
 	}
 }

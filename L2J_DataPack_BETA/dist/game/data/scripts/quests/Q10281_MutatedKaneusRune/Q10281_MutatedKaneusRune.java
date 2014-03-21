@@ -42,9 +42,9 @@ public class Q10281_MutatedKaneusRune extends Quest
 	// Item
 	private static final int TISSUE_WA = 13840;
 	
-	public Q10281_MutatedKaneusRune(int questId, String name, String descr)
+	public Q10281_MutatedKaneusRune()
 	{
-		super(questId, name, descr);
+		super(10281, Q10281_MutatedKaneusRune.class.getSimpleName(), "Mutated Kaneus - Rune");
 		addStartNpc(MATHIAS);
 		addTalkId(MATHIAS, KAYAN);
 		addKillId(WHITE_ALLOSCE);
@@ -158,10 +158,5 @@ public class Q10281_MutatedKaneusRune extends Quest
 	{
 		st.giveItems(TISSUE_WA, 1);
 		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10281_MutatedKaneusRune(10281, Q10281_MutatedKaneusRune.class.getSimpleName(), "Mutated Kaneus - Rune");
 	}
 }

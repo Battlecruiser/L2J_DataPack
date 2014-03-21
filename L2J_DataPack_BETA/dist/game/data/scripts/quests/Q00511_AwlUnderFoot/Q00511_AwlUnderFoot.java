@@ -151,9 +151,9 @@ public final class Q00511_AwlUnderFoot extends Quest
 	// Skill
 	private static final SkillHolder RAID_CURSE = new SkillHolder(5456, 1);
 	
-	public Q00511_AwlUnderFoot(int questId, String name, String descr)
+	public Q00511_AwlUnderFoot()
 	{
-		super(questId, name, descr);
+		super(511, Q00511_AwlUnderFoot.class.getSimpleName(), "instances");
 		_fortDungeons.put(35666, new FortDungeon(22));
 		_fortDungeons.put(35698, new FortDungeon(23));
 		_fortDungeons.put(35735, new FortDungeon(24));
@@ -479,10 +479,5 @@ public final class Q00511_AwlUnderFoot extends Quest
 	{
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2]);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00511_AwlUnderFoot(511, Q00511_AwlUnderFoot.class.getSimpleName(), "instances");
 	}
 }

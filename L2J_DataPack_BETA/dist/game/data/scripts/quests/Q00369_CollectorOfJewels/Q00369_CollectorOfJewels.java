@@ -52,7 +52,7 @@ public final class Q00369_CollectorOfJewels extends Quest
 		MOBS_DROP_CHANCES.put(20747, new QuestItemHolder(FREEZING_SHARD, 100, 2)); // roxide
 	}
 	
-	private Q00369_CollectorOfJewels()
+	public Q00369_CollectorOfJewels()
 	{
 		super(369, Q00369_CollectorOfJewels.class.getSimpleName(), "Collector of Jewels");
 		addStartNpc(NELL);
@@ -185,10 +185,5 @@ public final class Q00369_CollectorOfJewels extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00369_CollectorOfJewels();
 	}
 }

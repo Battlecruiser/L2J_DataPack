@@ -67,9 +67,9 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		DEINONYCHUS.put(22225, 319);
 	}
 	
-	public Q00125_TheNameOfEvil1(int id, String name, String descr)
+	public Q00125_TheNameOfEvil1()
 	{
-		super(id, name, descr);
+		super(125, Q00125_TheNameOfEvil1.class.getSimpleName(), "The Name of Evil - 1");
 		addStartNpc(MUSHIKA);
 		addTalkId(MUSHIKA, KARAKAWEI, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU);
 		addKillId(ORNITHOMIMUS.keySet());
@@ -494,10 +494,5 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00125_TheNameOfEvil1(125, Q00125_TheNameOfEvil1.class.getSimpleName(), "The Name of Evil - 1");
 	}
 }

@@ -44,7 +44,7 @@ public final class Q00116_BeyondTheHillsOfWinter extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 30;
 	
-	private Q00116_BeyondTheHillsOfWinter()
+	public Q00116_BeyondTheHillsOfWinter()
 	{
 		super(116, Q00116_BeyondTheHillsOfWinter.class.getSimpleName(), "Beyond the Hills of Winter");
 		addStartNpc(FILAUR);
@@ -168,10 +168,5 @@ public final class Q00116_BeyondTheHillsOfWinter extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00116_BeyondTheHillsOfWinter();
 	}
 }

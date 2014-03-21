@@ -43,9 +43,9 @@ public class Q00159_ProtectTheWaterSource extends Quest
 	// Misc
 	private static final int MIN_LVL = 12;
 	
-	public Q00159_ProtectTheWaterSource(int questId, String name, String descr)
+	public Q00159_ProtectTheWaterSource()
 	{
-		super(questId, name, descr);
+		super(159, Q00159_ProtectTheWaterSource.class.getSimpleName(), "Protect the Water Source");
 		addStartNpc(ASTERIOS);
 		addTalkId(ASTERIOS);
 		addKillId(PLAGUE_ZOMBIE);
@@ -171,10 +171,5 @@ public class Q00159_ProtectTheWaterSource extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00159_ProtectTheWaterSource(159, Q00159_ProtectTheWaterSource.class.getSimpleName(), "Protect the Water Source");
 	}
 }

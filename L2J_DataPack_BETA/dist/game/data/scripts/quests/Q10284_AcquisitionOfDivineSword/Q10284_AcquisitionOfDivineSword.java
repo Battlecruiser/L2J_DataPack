@@ -47,7 +47,7 @@ public final class Q10284_AcquisitionOfDivineSword extends Quest
 	// Location
 	private static final Location EXIT_LOC = new Location(113793, -109342, -845, 0);
 	
-	private Q10284_AcquisitionOfDivineSword()
+	public Q10284_AcquisitionOfDivineSword()
 	{
 		super(10284, Q10284_AcquisitionOfDivineSword.class.getSimpleName(), "Acquisition of Divine Sword");
 		addStartNpc(RAFFORTY);
@@ -326,10 +326,5 @@ public final class Q10284_AcquisitionOfDivineSword extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q10284_AcquisitionOfDivineSword();
 	}
 }

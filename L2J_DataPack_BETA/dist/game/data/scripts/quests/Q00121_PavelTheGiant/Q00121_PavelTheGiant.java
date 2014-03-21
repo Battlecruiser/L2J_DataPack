@@ -35,9 +35,9 @@ public class Q00121_PavelTheGiant extends Quest
 	private static final int NEWYEAR = 31961;
 	private static final int YUMI = 32041;
 	
-	public Q00121_PavelTheGiant(int questId, String name, String descr)
+	public Q00121_PavelTheGiant()
 	{
-		super(questId, name, descr);
+		super(121, Q00121_PavelTheGiant.class.getSimpleName(), "Pavel the Giant");
 		addStartNpc(NEWYEAR);
 		addTalkId(NEWYEAR, YUMI);
 	}
@@ -98,10 +98,5 @@ public class Q00121_PavelTheGiant extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00121_PavelTheGiant(121, Q00121_PavelTheGiant.class.getSimpleName(), "Pavel the Giant");
 	}
 }

@@ -119,7 +119,7 @@ public final class Q00420_LittleWing extends Quest
 	// Misc
 	private static final int MIN_LVL = 35;
 	
-	private Q00420_LittleWing()
+	public Q00420_LittleWing()
 	{
 		super(420, Q00420_LittleWing.class.getSimpleName(), "Little Wing");
 		addStartNpc(COOPER);
@@ -882,10 +882,5 @@ public final class Q00420_LittleWing extends Quest
 				break;
 			}
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00420_LittleWing();
 	}
 }

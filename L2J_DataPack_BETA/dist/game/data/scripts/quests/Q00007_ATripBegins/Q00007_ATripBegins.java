@@ -42,9 +42,9 @@ public class Q00007_ATripBegins extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	private Q00007_ATripBegins(int questId, String name, String descr)
+	public Q00007_ATripBegins()
 	{
-		super(questId, name, descr);
+		super(7, Q00007_ATripBegins.class.getSimpleName(), "A Trip Begins");
 		addStartNpc(MIRABEL);
 		addTalkId(MIRABEL, ARIEL, ASTERIOS);
 		registerQuestItems(ARIELS_RECOMMENDATION);
@@ -150,10 +150,5 @@ public class Q00007_ATripBegins extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00007_ATripBegins(7, Q00007_ATripBegins.class.getSimpleName(), "A Trip Begins");
 	}
 }

@@ -72,9 +72,9 @@ public class Q00647_InfluxOfMachines extends Quest
 	private static final int MIN_LEVEL = 70;
 	private static final int FRAGMENT_COUNT = 500;
 	
-	private Q00647_InfluxOfMachines(int questId, String name, String descr)
+	public Q00647_InfluxOfMachines()
 	{
-		super(questId, name, descr);
+		super(647, Q00647_InfluxOfMachines.class.getSimpleName(), "Influx of Machines");
 		addStartNpc(GUTENHAGEN);
 		addTalkId(GUTENHAGEN);
 		addKillId(MOBS.keySet());
@@ -163,10 +163,5 @@ public class Q00647_InfluxOfMachines extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00647_InfluxOfMachines(647, Q00647_InfluxOfMachines.class.getSimpleName(), "Influx of Machines");
 	}
 }

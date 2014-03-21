@@ -44,9 +44,9 @@ public class Q00001_LettersOfLove extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
-	private Q00001_LettersOfLove(int questId, String name, String descr)
+	public Q00001_LettersOfLove()
 	{
-		super(questId, name, descr);
+		super(1, Q00001_LettersOfLove.class.getSimpleName(), "Letters of Love");
 		addStartNpc(DARIN);
 		addTalkId(DARIN, ROXXY, BAULRO);
 		registerQuestItems(DARINS_LETTER, ROXXYS_KERCHIEF, DARINS_RECEIPT, BAULROS_POTION);
@@ -237,10 +237,5 @@ public class Q00001_LettersOfLove extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00001_LettersOfLove(1, Q00001_LettersOfLove.class.getSimpleName(), "Letters of Love");
 	}
 }

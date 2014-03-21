@@ -47,9 +47,9 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 	private static final int ADENA_COUNT2 = 200000;
 	private static final int ADENA_COUNT3 = 300000;
 	
-	private Q00033_MakeAPairOfDressShoes(int questId, String name, String descr)
+	public Q00033_MakeAPairOfDressShoes()
 	{
-		super(questId, name, descr);
+		super(33, Q00033_MakeAPairOfDressShoes.class.getSimpleName(), "Make a Pair of Dress Shoes");
 		addStartNpc(WOODLEY);
 		addTalkId(WOODLEY, IAN, LEIKAR);
 	}
@@ -178,10 +178,5 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00033_MakeAPairOfDressShoes(33, Q00033_MakeAPairOfDressShoes.class.getSimpleName(), "Make a Pair of Dress Shoes");
 	}
 }

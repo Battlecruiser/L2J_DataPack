@@ -73,7 +73,7 @@ public class Q00458_PerfectForm extends Quest
 	};
 	// @formatter:on
 	
-	private Q00458_PerfectForm()
+	public Q00458_PerfectForm()
 	{
 		super(458, Q00458_PerfectForm.class.getSimpleName(), "Perfect Form");
 		addStartNpc(KELLEYIA);
@@ -324,10 +324,5 @@ public class Q00458_PerfectForm extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00458_PerfectForm();
 	}
 }

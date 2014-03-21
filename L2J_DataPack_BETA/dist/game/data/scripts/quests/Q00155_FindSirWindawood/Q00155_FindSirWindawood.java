@@ -39,9 +39,9 @@ public class Q00155_FindSirWindawood extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	private Q00155_FindSirWindawood(int questId, String name, String descr)
+	public Q00155_FindSirWindawood()
 	{
-		super(questId, name, descr);
+		super(155, Q00155_FindSirWindawood.class.getSimpleName(), "Find Sir Windawood");
 		addStartNpc(ABELLOS);
 		addTalkId(ABELLOS, SIR_COLLIN_WINDAWOOD);
 		registerQuestItems(OFFICIAL_LETTER);
@@ -96,10 +96,5 @@ public class Q00155_FindSirWindawood extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00155_FindSirWindawood(155, Q00155_FindSirWindawood.class.getSimpleName(), "Find Sir Windawood");
 	}
 }

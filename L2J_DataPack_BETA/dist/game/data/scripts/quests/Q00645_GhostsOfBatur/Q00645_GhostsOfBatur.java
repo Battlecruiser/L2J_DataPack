@@ -50,9 +50,9 @@ public class Q00645_GhostsOfBatur extends Quest
 		686
 	};
 	
-	private Q00645_GhostsOfBatur(int questId, String name, String descr)
+	public Q00645_GhostsOfBatur()
 	{
-		super(questId, name, descr);
+		super(645, Q00645_GhostsOfBatur.class.getSimpleName(), "Ghosts of Batur");
 		addStartNpc(KARUDA);
 		addTalkId(KARUDA);
 		addKillId(CONTAMINATED_MOREK_WARRIOR, CONTAMINATED_BATUR_WARRIOR, CONTAMINATED_BATUR_COMMANDER);
@@ -155,10 +155,5 @@ public class Q00645_GhostsOfBatur extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00645_GhostsOfBatur(645, Q00645_GhostsOfBatur.class.getSimpleName(), "Ghosts of Batur");
 	}
 }

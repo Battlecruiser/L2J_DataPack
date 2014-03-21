@@ -62,9 +62,9 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 	private static final int CRIMSON_MOSS_CHANCE = 30;
 	private static final int MALRUK_SUCCUBUS_CLAW_CHANCE = 60;
 	
-	public Q00241_PossessorOfAPreciousSoul1(int questId, String name, String descr)
+	public Q00241_PossessorOfAPreciousSoul1()
 	{
-		super(questId, name, descr);
+		super(241, Q00241_PossessorOfAPreciousSoul1.class.getSimpleName(), "Possessor Of A Precious Soul 1");
 		addStartNpc(TALIEN);
 		addTalkId(TALIEN, STEDMIEL, GABRIELLE, GILMORE, KANTABILON, RAHORAKTI, CARADINE, KASSANDRA, VIRGIL, OGMAR);
 		addKillId(BARAHAM, MALRUK_SUCCUBUS_1, MALRUK_SUCCUBUS_TUREN_1, MALRUK_SUCCUBUS_2, MALRUK_SUCCUBUS_TUREN_2, TAIK_ORC_SUPPLY_LEADER);
@@ -444,10 +444,5 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00241_PossessorOfAPreciousSoul1(241, Q00241_PossessorOfAPreciousSoul1.class.getSimpleName(), "Possessor Of A Precious Soul 1");
 	}
 }

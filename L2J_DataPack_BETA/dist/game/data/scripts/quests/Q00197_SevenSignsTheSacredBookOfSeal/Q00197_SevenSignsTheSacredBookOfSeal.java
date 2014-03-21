@@ -52,7 +52,7 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 	private static final int MIN_LEVEL = 79;
 	private boolean isBusy = false;
 	
-	private Q00197_SevenSignsTheSacredBookOfSeal()
+	public Q00197_SevenSignsTheSacredBookOfSeal()
 	{
 		super(197, Q00197_SevenSignsTheSacredBookOfSeal.class.getSimpleName(), "Seven Signs, the Sacred Book of Seal");
 		addStartNpc(WOOD);
@@ -361,10 +361,5 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00197_SevenSignsTheSacredBookOfSeal();
 	}
 }

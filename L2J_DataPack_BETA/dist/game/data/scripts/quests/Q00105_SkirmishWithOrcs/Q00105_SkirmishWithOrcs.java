@@ -77,9 +77,9 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 	// Misc
 	private static final int MIN_LVL = 10;
 	
-	private Q00105_SkirmishWithOrcs(int questId, String name, String descr)
+	public Q00105_SkirmishWithOrcs()
 	{
-		super(questId, name, descr);
+		super(105, Q00105_SkirmishWithOrcs.class.getSimpleName(), "Skirmish with Orcs");
 		addStartNpc(KENDNELL);
 		addTalkId(KENDNELL);
 		addKillId(MONSTER_DROP.keySet());
@@ -216,10 +216,5 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00105_SkirmishWithOrcs(105, Q00105_SkirmishWithOrcs.class.getSimpleName(), "Skirmish with Orcs");
 	}
 }

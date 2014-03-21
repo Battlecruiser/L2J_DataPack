@@ -57,9 +57,9 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	
 	private static L2Attackable golem = null;
 	
-	public Q00114_ResurrectionOfAnOldManager(int questId, String name, String descr)
+	public Q00114_ResurrectionOfAnOldManager()
 	{
-		super(questId, name, descr);
+		super(114, Q00114_ResurrectionOfAnOldManager.class.getSimpleName(), "Resurrection of an Old Manager");
 		addStartNpc(YUMI);
 		addTalkId(YUMI, WENDY, BOX, STONES, NEWYEAR);
 		addKillId(GUARDIAN);
@@ -590,10 +590,5 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		}
 		
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00114_ResurrectionOfAnOldManager(114, Q00114_ResurrectionOfAnOldManager.class.getSimpleName(), "Resurrection of an Old Manager");
 	}
 }

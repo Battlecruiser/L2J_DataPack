@@ -43,9 +43,9 @@ public class Q10501_ZakenEmbroideredSoulCloak extends Quest
 	private static final int MIN_LEVEL = 78;
 	private static final int FRAGMENT_COUNT = 20;
 	
-	private Q10501_ZakenEmbroideredSoulCloak(int questId, String name, String descr)
+	public Q10501_ZakenEmbroideredSoulCloak()
 	{
-		super(questId, name, descr);
+		super(10501, Q10501_ZakenEmbroideredSoulCloak.class.getSimpleName(), "Zaken Embroidered Soul Cloak");
 		addStartNpc(OLF_ADAMS);
 		addTalkId(OLF_ADAMS);
 		addKillId(ZAKEN);
@@ -139,10 +139,5 @@ public class Q10501_ZakenEmbroideredSoulCloak extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10501_ZakenEmbroideredSoulCloak(10501, Q10501_ZakenEmbroideredSoulCloak.class.getSimpleName(), "Zaken Embroidered Soul Cloak");
 	}
 }

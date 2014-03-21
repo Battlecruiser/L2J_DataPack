@@ -42,9 +42,9 @@ public class Q00552_OlympiadVeteran extends Quest
 	private static final int CLASS_BATTLE_CERTIFICATE = 17243;
 	private static final int OLY_CHEST = 17169;
 	
-	public Q00552_OlympiadVeteran(int questId, String name, String descr)
+	public Q00552_OlympiadVeteran()
 	{
-		super(questId, name, descr);
+		super(552, Q00552_OlympiadVeteran.class.getSimpleName(), "Olympiad Veteran");
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
 		registerQuestItems(TEAM_EVENT_CERTIFICATE, CLASS_FREE_BATTLE_CERTIFICATE, CLASS_BATTLE_CERTIFICATE);
@@ -223,10 +223,5 @@ public class Q00552_OlympiadVeteran extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00552_OlympiadVeteran(552, Q00552_OlympiadVeteran.class.getSimpleName(), "Olympiad Veteran");
 	}
 }

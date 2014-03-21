@@ -40,9 +40,9 @@ public final class Q00303_CollectArrowheads extends Quest
 	// Monster
 	private static final int TUNATH_ORC_MARKSMAN = 20361;
 	
-	private Q00303_CollectArrowheads(int questId, String name, String descr)
+	public Q00303_CollectArrowheads()
 	{
-		super(questId, name, descr);
+		super(303, Q00303_CollectArrowheads.class.getSimpleName(), "Collect Arrowheads");
 		addStartNpc(MINIA);
 		addTalkId(MINIA);
 		addKillId(TUNATH_ORC_MARKSMAN);
@@ -121,10 +121,5 @@ public final class Q00303_CollectArrowheads extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00303_CollectArrowheads(303, Q00303_CollectArrowheads.class.getSimpleName(), "Collect Arrowheads");
 	}
 }

@@ -75,7 +75,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 	// Misc
 	private static final int MIN_LVL = 48;
 	
-	private Q00344_1000YearsTheEndOfLamentation()
+	public Q00344_1000YearsTheEndOfLamentation()
 	{
 		super(344, Q00344_1000YearsTheEndOfLamentation.class.getSimpleName(), "1000 years, the End of Lamentation");
 		addStartNpc(GILMORE);
@@ -376,10 +376,5 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 			giveItemRandomly(qs.getPlayer(), npc, ARTICLES, 1, 0, MONSTER_CHANCES.get(npc.getId()), true);
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00344_1000YearsTheEndOfLamentation();
 	}
 }

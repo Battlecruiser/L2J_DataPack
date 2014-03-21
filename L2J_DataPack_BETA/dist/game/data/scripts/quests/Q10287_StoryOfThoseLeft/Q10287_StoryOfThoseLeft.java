@@ -44,7 +44,7 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 	// Location
 	private static final Location EXIT_LOC = new Location(113793, -109342, -845, 0);
 	
-	private Q10287_StoryOfThoseLeft()
+	public Q10287_StoryOfThoseLeft()
 	{
 		super(10287, Q10287_StoryOfThoseLeft.class.getSimpleName(), "Story of Those Left");
 		addStartNpc(RAFFORTY);
@@ -237,10 +237,5 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q10287_StoryOfThoseLeft();
 	}
 }

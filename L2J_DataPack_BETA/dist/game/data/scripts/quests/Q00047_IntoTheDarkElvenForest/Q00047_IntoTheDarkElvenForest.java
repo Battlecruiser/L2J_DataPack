@@ -62,9 +62,9 @@ public final class Q00047_IntoTheDarkElvenForest extends Quest
 		NPC_ITEMS.put(DUSTIN, new ItemHolder(5, GALLADUCCIS_ORDER_3));
 	}
 	
-	private Q00047_IntoTheDarkElvenForest(int questId, String name, String descr)
+	public Q00047_IntoTheDarkElvenForest()
 	{
-		super(questId, name, descr);
+		super(47, Q00047_IntoTheDarkElvenForest.class.getSimpleName(), "Into the Dark Elven Forest");
 		addStartNpc(GALLADUCCI);
 		addTalkId(GALLADUCCI);
 		addTalkId(NPC_ITEMS.keySet());
@@ -299,10 +299,5 @@ public final class Q00047_IntoTheDarkElvenForest extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00047_IntoTheDarkElvenForest(47, Q00047_IntoTheDarkElvenForest.class.getSimpleName(), "Into the Dark Elven Forest");
 	}
 }

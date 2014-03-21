@@ -52,7 +52,7 @@ public final class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 	// private static SkillHolder TRANSFORM_DISPEL = new SkillHolder(6200, 1);
 	private static SkillHolder TRANSFORMATION = new SkillHolder(6204, 1);
 	
-	private Q00195_SevenSignsSecretRitualOfThePriests()
+	public Q00195_SevenSignsSecretRitualOfThePriests()
 	{
 		super(195, Q00195_SevenSignsSecretRitualOfThePriests.class.getSimpleName(), "Seven Signs, Secret Ritual of the Priests");
 		addFirstTalkId(IDENTITY_CONFIRM_DEVICE, PASSWORD_ENTRY_DEVICE, DARKNESS_OF_DAWN, SHELF);
@@ -348,10 +348,5 @@ public final class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00195_SevenSignsSecretRitualOfThePriests();
 	}
 }

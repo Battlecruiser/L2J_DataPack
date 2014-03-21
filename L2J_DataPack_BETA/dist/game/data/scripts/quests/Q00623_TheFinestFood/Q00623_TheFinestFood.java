@@ -181,9 +181,4 @@ public final class Q00623_TheFinestFood extends Quest
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
-	
-	public static void main(String[] args)
-	{
-		new Q00623_TheFinestFood();
-	}
 }

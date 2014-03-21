@@ -64,9 +64,9 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 	private static final int FRAGMENT_COUNT = 30;
 	private boolean isAngelSpawned = false;
 	
-	private Q00142_FallenAngelRequestOfDawn(int questId, String name, String descr)
+	public Q00142_FallenAngelRequestOfDawn()
 	{
-		super(questId, name, descr);
+		super(142, Q00142_FallenAngelRequestOfDawn.class.getSimpleName(), "Fallen Angel - Request of Dawn");
 		addTalkId(NATOOLS, RAYMOND, CASIAN, ROCK);
 		addKillId(MOBS.keySet());
 		addKillId(FALLEN_ANGEL);
@@ -289,10 +289,5 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00142_FallenAngelRequestOfDawn(142, Q00142_FallenAngelRequestOfDawn.class.getSimpleName(), "Fallen Angel - Request of Dawn");
 	}
 }

@@ -38,9 +38,9 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 	// Item
 	private static final int BOX = 7232;
 	
-	private Q00012_SecretMeetingWithVarkaSilenos(int questId, String name, String descr)
+	public Q00012_SecretMeetingWithVarkaSilenos()
 	{
-		super(questId, name, descr);
+		super(12, Q00012_SecretMeetingWithVarkaSilenos.class.getSimpleName(), "Secret Meeting With Varka Silenos");
 		addStartNpc(CADMON);
 		addTalkId(CADMON, HELMUT, NARAN);
 		registerQuestItems(BOX);
@@ -129,10 +129,5 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00012_SecretMeetingWithVarkaSilenos(12, Q00012_SecretMeetingWithVarkaSilenos.class.getSimpleName(), "Secret Meeting With Varka Silenos");
 	}
 }

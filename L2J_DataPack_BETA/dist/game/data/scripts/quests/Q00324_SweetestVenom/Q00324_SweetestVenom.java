@@ -51,9 +51,9 @@ public class Q00324_SweetestVenom extends Quest
 	private static final int REQUIRED_COUNT = 10;
 	private static final int ADENA_COUNT = 5810;
 	
-	public Q00324_SweetestVenom(int questId, String name, String descr)
+	public Q00324_SweetestVenom()
 	{
-		super(questId, name, descr);
+		super(324, Q00324_SweetestVenom.class.getSimpleName(), "Sweetest Venom");
 		addStartNpc(ASTARON);
 		addTalkId(ASTARON);
 		addKillId(MONSTERS.keySet());
@@ -133,10 +133,5 @@ public class Q00324_SweetestVenom extends Quest
 			}
 		}
 		return super.onKill(npc, player, isPet);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00324_SweetestVenom(324, Q00324_SweetestVenom.class.getSimpleName(), "Sweetest Venom");
 	}
 }

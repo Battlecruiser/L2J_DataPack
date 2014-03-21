@@ -62,9 +62,9 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 		NPC_ITEMS.put(DUSTIN, new ItemHolder(5, GALLADUCCIS_ORDER_3));
 	}
 	
-	private Q00048_ToTheImmortalPlateau(int questId, String name, String descr)
+	public Q00048_ToTheImmortalPlateau()
 	{
-		super(questId, name, descr);
+		super(48, Q00048_ToTheImmortalPlateau.class.getSimpleName(), "To The Immortal Plateau");
 		addStartNpc(GALLADUCCI);
 		addTalkId(GALLADUCCI);
 		addTalkId(NPC_ITEMS.keySet());
@@ -299,10 +299,5 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00048_ToTheImmortalPlateau(48, Q00048_ToTheImmortalPlateau.class.getSimpleName(), "To The Immortal Plateau");
 	}
 }

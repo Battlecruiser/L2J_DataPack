@@ -46,9 +46,9 @@ public class Q00170_DangerousSeduction extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 21;
 	
-	public Q00170_DangerousSeduction(int questId, String name, String descr)
+	public Q00170_DangerousSeduction()
 	{
-		super(questId, name, descr);
+		super(170, Q00170_DangerousSeduction.class.getSimpleName(), "Dangerous Seduction");
 		addStartNpc(VELLIOR);
 		addTalkId(VELLIOR);
 		addKillId(MERKENIS);
@@ -119,10 +119,5 @@ public class Q00170_DangerousSeduction extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00170_DangerousSeduction(170, Q00170_DangerousSeduction.class.getSimpleName(), "Dangerous Seduction");
 	}
 }

@@ -47,7 +47,7 @@ public final class Q00364_JovialAccordion extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 15;
 	
-	private Q00364_JovialAccordion()
+	public Q00364_JovialAccordion()
 	{
 		super(364, Q00364_JovialAccordion.class.getSimpleName(), "Jovial Accordion");
 		addStartNpc(BARBADO);
@@ -286,10 +286,5 @@ public final class Q00364_JovialAccordion extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00364_JovialAccordion();
 	}
 }

@@ -56,9 +56,9 @@ public class Q00461_RumbleInTheBase extends Quest
 		MONSTERS.put(18908, 782);
 	}
 	
-	public Q00461_RumbleInTheBase(int questId, String name, String descr)
+	public Q00461_RumbleInTheBase()
 	{
-		super(questId, name, descr);
+		super(461, Q00461_RumbleInTheBase.class.getSimpleName(), "Rumble in the Base");
 		addStartNpc(STAN);
 		addTalkId(STAN);
 		addKillId(MONSTERS.keySet());
@@ -172,10 +172,5 @@ public class Q00461_RumbleInTheBase extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00461_RumbleInTheBase(461, Q00461_RumbleInTheBase.class.getSimpleName(), "Rumble in the Base");
 	}
 }

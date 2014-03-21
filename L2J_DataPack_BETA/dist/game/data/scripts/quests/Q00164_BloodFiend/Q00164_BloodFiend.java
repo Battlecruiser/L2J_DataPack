@@ -43,9 +43,9 @@ public class Q00164_BloodFiend extends Quest
 	// Misc
 	private static final int MIN_LVL = 21;
 	
-	public Q00164_BloodFiend(int questId, String name, String descr)
+	public Q00164_BloodFiend()
 	{
-		super(questId, name, descr);
+		super(164, Q00164_BloodFiend.class.getSimpleName(), "Blood Fiend");
 		addStartNpc(CREAMEES);
 		addTalkId(CREAMEES);
 		addKillId(KIRUNAK);
@@ -114,10 +114,5 @@ public class Q00164_BloodFiend extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00164_BloodFiend(164, Q00164_BloodFiend.class.getSimpleName(), "Blood Fiend");
 	}
 }

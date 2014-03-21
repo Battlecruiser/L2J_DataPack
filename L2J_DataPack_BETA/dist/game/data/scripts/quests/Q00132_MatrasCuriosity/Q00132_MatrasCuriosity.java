@@ -44,9 +44,9 @@ public final class Q00132_MatrasCuriosity extends Quest
 	private static final int BLUEPRINT_RANKU = 9800;
 	private static final int BLUEPRINT_PRINCE = 9801;
 	
-	public Q00132_MatrasCuriosity(int questId, String name, String descr)
+	public Q00132_MatrasCuriosity()
 	{
-		super(questId, name, descr);
+		super(132, Q00132_MatrasCuriosity.class.getSimpleName(), "Matras' Curiosity");
 		addStartNpc(MATRAS);
 		addTalkId(MATRAS);
 		addKillId(RANKU, DEMON_PRINCE);
@@ -180,10 +180,5 @@ public final class Q00132_MatrasCuriosity extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00132_MatrasCuriosity(132, Q00132_MatrasCuriosity.class.getSimpleName(), "Matras' Curiosity");
 	}
 }

@@ -50,9 +50,9 @@ public final class Q00106_ForgottenTruth extends Quest
 	// Misc
 	private static final int MIN_LVL = 10;
 	
-	private Q00106_ForgottenTruth(int questId, String name, String descr)
+	public Q00106_ForgottenTruth()
 	{
-		super(questId, name, descr);
+		super(106, Q00106_ForgottenTruth.class.getSimpleName(), "Forgotten Truth");
 		addStartNpc(THIFIELL);
 		addTalkId(THIFIELL, KARTA);
 		addKillId(TUMRAN_ORC_BRIGAND);
@@ -216,10 +216,5 @@ public final class Q00106_ForgottenTruth extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00106_ForgottenTruth(106, Q00106_ForgottenTruth.class.getSimpleName(), "Forgotten Truth");
 	}
 }

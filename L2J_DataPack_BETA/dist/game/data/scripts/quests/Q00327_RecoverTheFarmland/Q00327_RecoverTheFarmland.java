@@ -97,7 +97,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 		FRAGMENTS_DROP_PROB.put(TUREK_ORK_WARLORD, 26);
 	}
 	
-	private Q00327_RecoverTheFarmland()
+	public Q00327_RecoverTheFarmland()
 	{
 		super(327, Q00327_RecoverTheFarmland.class.getSimpleName(), "Recover the Farmland");
 		addStartNpc(LEIKAN, PIOTUR);
@@ -457,10 +457,5 @@ public final class Q00327_RecoverTheFarmland extends Quest
 		}
 		
 		return html;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00327_RecoverTheFarmland();
 	}
 }

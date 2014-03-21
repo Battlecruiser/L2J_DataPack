@@ -38,9 +38,9 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 	// Item
 	private static final int BOX = 7245;
 	
-	public Q00018_MeetingWithTheGoldenRam(int questId, String name, String descr)
+	public Q00018_MeetingWithTheGoldenRam()
 	{
-		super(questId, name, descr);
+		super(18, Q00018_MeetingWithTheGoldenRam.class.getSimpleName(), "Meeting With The Golden Ram");
 		addStartNpc(DONAL);
 		addTalkId(DONAL, DAISY, ABERCROMBIE);
 		registerQuestItems(BOX);
@@ -122,10 +122,5 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00018_MeetingWithTheGoldenRam(18, Q00018_MeetingWithTheGoldenRam.class.getSimpleName(), "Meeting With The Golden Ram");
 	}
 }

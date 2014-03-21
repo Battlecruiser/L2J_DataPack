@@ -46,9 +46,9 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 75;
 	
-	private Q00610_MagicalPowerOfWaterPart2(int questId, String name, String descr)
+	public Q00610_MagicalPowerOfWaterPart2()
 	{
-		super(questId, name, descr);
+		super(610, Q00610_MagicalPowerOfWaterPart2.class.getSimpleName(), "Magical Power of Water - Part 2");
 		addStartNpc(ASEFA);
 		addTalkId(ASEFA, VARKA_TOTEM);
 		addKillId(ASHUTAR);
@@ -214,10 +214,5 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 		ashutar.broadcastPacket(new NpcSay(ashutar, Say2.NPC_ALL, NpcStringId.THE_MAGICAL_POWER_OF_WATER_COMES_FROM_THE_POWER_OF_STORM_AND_HAIL_IF_YOU_DARE_TO_CONFRONT_IT_ONLY_DEATH_WILL_AWAIT_YOU));
 		startQuestTimer("despawn_ashutar", 1200000, ashutar, null);
 		return "31560-02.html";
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00610_MagicalPowerOfWaterPart2(610, Q00610_MagicalPowerOfWaterPart2.class.getSimpleName(), "Magical Power of Water - Part 2");
 	}
 }

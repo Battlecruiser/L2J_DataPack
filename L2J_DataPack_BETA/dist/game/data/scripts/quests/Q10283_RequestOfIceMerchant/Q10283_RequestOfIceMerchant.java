@@ -44,9 +44,9 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	// Misc
 	private boolean _jiniaOnSpawn = false;
 	
-	public Q10283_RequestOfIceMerchant(int questId, String name, String descr)
+	public Q10283_RequestOfIceMerchant()
 	{
-		super(questId, name, descr);
+		super(10283, Q10283_RequestOfIceMerchant.class.getSimpleName(), "Request of Ice Merchant");
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, KIER, JINIA);
 		addFirstTalkId(JINIA);
@@ -168,10 +168,5 @@ public class Q10283_RequestOfIceMerchant extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10283_RequestOfIceMerchant(10283, Q10283_RequestOfIceMerchant.class.getSimpleName(), "Request of Ice Merchant");
 	}
 }

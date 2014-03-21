@@ -52,9 +52,9 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00270_TheOneWhoEndsSilence(int questId, String name, String descr)
+	public Q00270_TheOneWhoEndsSilence()
 	{
-		super(questId, name, descr);
+		super(270, Q00270_TheOneWhoEndsSilence.class.getSimpleName(), "The One Who Ends Silence");
 		addStartNpc(FAKE_GREYMORE);
 		addTalkId(FAKE_GREYMORE);
 		addKillId(SEEKER_SOLINA, SAVIOR_SOLINA, ASCETIC_SOLINA, DIVINITY_JUDGE, DIVINITY_MANAGER, DIVINITY_SUPERVISOR, DIVINITY_WORSHIPPER, DIVINITY_PROTECTOR, DIVINITY_FIGHTER, DIVINITY_MAGUS);
@@ -451,10 +451,5 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 				qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00270_TheOneWhoEndsSilence(270, Q00270_TheOneWhoEndsSilence.class.getSimpleName(), "The One Who Ends Silence");
 	}
 }

@@ -43,9 +43,9 @@ public class Q00551_OlympiadStarter extends Quest
 	private static final int OLY_CHEST = 17169;
 	private static final int MEDAL_OF_GLORY = 21874;
 	
-	public Q00551_OlympiadStarter(int questId, String name, String descr)
+	public Q00551_OlympiadStarter()
 	{
-		super(questId, name, descr);
+		super(551, Q00551_OlympiadStarter.class.getSimpleName(), "Olympiad Starter");
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
 		registerQuestItems(CERT_3, CERT_5, CERT_10);
@@ -205,10 +205,5 @@ public class Q00551_OlympiadStarter extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00551_OlympiadStarter(551, Q00551_OlympiadStarter.class.getSimpleName(), "Olympiad Starter");
 	}
 }

@@ -47,9 +47,9 @@ public class Q00510_AClansPrestige extends Quest
 		22217
 	};
 	
-	public Q00510_AClansPrestige(int id, String name, String descr)
+	public Q00510_AClansPrestige()
 	{
-		super(id, name, descr);
+		super(510, Q00510_AClansPrestige.class.getSimpleName(), "A Clan's Prestige");
 		addStartNpc(VALDIS);
 		addTalkId(VALDIS);
 		addKillId(MOBS);
@@ -149,10 +149,5 @@ public class Q00510_AClansPrestige extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00510_AClansPrestige(510, Q00510_AClansPrestige.class.getSimpleName(), "A Clan's Prestige");
 	}
 }

@@ -36,9 +36,9 @@ public class Q00110_ToThePrimevalIsle extends Quest
 	// Item
 	private static final int ANCIENT_BOOK = 8777;
 	
-	public Q00110_ToThePrimevalIsle(int id, String name, String descr)
+	public Q00110_ToThePrimevalIsle()
 	{
-		super(id, name, descr);
+		super(110, Q00110_ToThePrimevalIsle.class.getSimpleName(), "To the Primeval Isle");
 		addStartNpc(ANTON);
 		addTalkId(ANTON, MARQUEZ);
 		registerQuestItems(ANCIENT_BOOK);
@@ -103,10 +103,5 @@ public class Q00110_ToThePrimevalIsle extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00110_ToThePrimevalIsle(110, Q00110_ToThePrimevalIsle.class.getSimpleName(), "To the Primeval Isle");
 	}
 }

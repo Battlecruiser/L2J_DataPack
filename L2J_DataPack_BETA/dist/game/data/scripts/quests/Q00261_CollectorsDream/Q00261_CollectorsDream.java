@@ -51,7 +51,7 @@ public final class Q00261_CollectorsDream extends Quest
 	// Message
 	private static final ExShowScreenMessage MESSAGE = new ExShowScreenMessage(NpcStringId.LAST_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
 	
-	private Q00261_CollectorsDream()
+	public Q00261_CollectorsDream()
 	{
 		super(261, Q00261_CollectorsDream.class.getSimpleName(), "Collector's Dream");
 		addStartNpc(ALSHUPES);
@@ -144,10 +144,5 @@ public final class Q00261_CollectorsDream extends Quest
 			vars.set("GUIDE_MISSION", vars.getInt("GUIDE_MISSION") + 10000000);
 			player.sendPacket(MESSAGE);
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00261_CollectorsDream();
 	}
 }

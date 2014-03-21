@@ -42,9 +42,9 @@ public class Q00006_StepIntoTheFuture extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	private Q00006_StepIntoTheFuture(int questId, String name, String descr)
+	public Q00006_StepIntoTheFuture()
 	{
-		super(questId, name, descr);
+		super(6, Q00006_StepIntoTheFuture.class.getSimpleName(), "Step Into the Future");
 		addStartNpc(ROXXY);
 		addTalkId(ROXXY, BAULRO, SIR_COLLIN);
 		registerQuestItems(BAULRO_LETTER);
@@ -150,10 +150,5 @@ public class Q00006_StepIntoTheFuture extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00006_StepIntoTheFuture(6, Q00006_StepIntoTheFuture.class.getSimpleName(), "Step Into the Future");
 	}
 }

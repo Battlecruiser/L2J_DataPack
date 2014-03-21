@@ -72,9 +72,9 @@ public final class Q00905_RefinedDragonBlood extends Quest
 	private static final int MIN_LEVEL = 83;
 	private static final int DRAGON_BLOOD_COUNT = 10;
 	
-	private Q00905_RefinedDragonBlood(int questId, String name, String descr)
+	public Q00905_RefinedDragonBlood()
 	{
-		super(questId, name, descr);
+		super(905, Q00905_RefinedDragonBlood.class.getSimpleName(), "Refined Dragon Blood");
 		addStartNpc(SEPARATED_SOULS);
 		addTalkId(SEPARATED_SOULS);
 		addKillId(MONSTERS.keySet());
@@ -216,10 +216,5 @@ public final class Q00905_RefinedDragonBlood extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00905_RefinedDragonBlood(905, Q00905_RefinedDragonBlood.class.getSimpleName(), "Refined Dragon Blood");
 	}
 }

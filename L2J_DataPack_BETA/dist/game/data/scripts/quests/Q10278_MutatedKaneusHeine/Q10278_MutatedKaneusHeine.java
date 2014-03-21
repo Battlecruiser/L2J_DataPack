@@ -44,9 +44,9 @@ public class Q10278_MutatedKaneusHeine extends Quest
 	private static final int TISSUE_BO = 13834;
 	private static final int TISSUE_WB = 13835;
 	
-	public Q10278_MutatedKaneusHeine(int questId, String name, String descr)
+	public Q10278_MutatedKaneusHeine()
 	{
-		super(questId, name, descr);
+		super(10278, Q10278_MutatedKaneusHeine.class.getSimpleName(), "Mutated Kaneus - Heine");
 		addStartNpc(GOSTA);
 		addTalkId(GOSTA, MINEVIA);
 		addKillId(BLADE_OTIS, WEIRD_BUNEI);
@@ -168,10 +168,5 @@ public class Q10278_MutatedKaneusHeine extends Quest
 			st.giveItems(TISSUE_WB, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10278_MutatedKaneusHeine(10278, Q10278_MutatedKaneusHeine.class.getSimpleName(), "Mutated Kaneus - Heine");
 	}
 }

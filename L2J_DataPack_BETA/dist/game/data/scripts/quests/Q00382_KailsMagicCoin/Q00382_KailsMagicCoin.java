@@ -58,7 +58,7 @@ public final class Q00382_KailsMagicCoin extends Quest
 	// Misc
 	private static final int MIN_LVL = 55;
 	
-	private Q00382_KailsMagicCoin()
+	public Q00382_KailsMagicCoin()
 	{
 		super(382, Q00382_KailsMagicCoin.class.getSimpleName(), "Kail's Magic Coin");
 		addStartNpc(VERGARA);
@@ -133,10 +133,5 @@ public final class Q00382_KailsMagicCoin extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00382_KailsMagicCoin();
 	}
 }

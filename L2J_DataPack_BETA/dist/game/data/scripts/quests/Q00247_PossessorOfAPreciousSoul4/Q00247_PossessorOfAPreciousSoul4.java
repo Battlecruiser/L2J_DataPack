@@ -47,9 +47,9 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 	// Skill
 	private static SkillHolder MIMIRS_ELIXIR = new SkillHolder(4339, 1);
 	
-	public Q00247_PossessorOfAPreciousSoul4(int questId, String name, String descr)
+	public Q00247_PossessorOfAPreciousSoul4()
 	{
-		super(questId, name, descr);
+		super(247, Q00247_PossessorOfAPreciousSoul4.class.getSimpleName(), "Possessor Of A Precious Soul 4");
 		addStartNpc(CARADINE);
 		addTalkId(CARADINE, LADY_OF_LAKE);
 	}
@@ -145,10 +145,5 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00247_PossessorOfAPreciousSoul4(247, Q00247_PossessorOfAPreciousSoul4.class.getSimpleName(), "Possessor Of A Precious Soul 4");
 	}
 }

@@ -38,9 +38,9 @@ public class Q00020_BringUpWithLove extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00020_BringUpWithLove(int questId, String name, String descr)
+	public Q00020_BringUpWithLove()
 	{
-		super(questId, name, descr);
+		super(20, Q00020_BringUpWithLove.class.getSimpleName(), "Bring Up With Love");
 		addStartNpc(TUNATUN);
 		addTalkId(TUNATUN);
 	}
@@ -139,10 +139,5 @@ public class Q00020_BringUpWithLove extends Quest
 			st.giveItems(INNOCENCE_JEWEL, 1);
 			st.setCond(2, true);
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00020_BringUpWithLove(20, Q00020_BringUpWithLove.class.getSimpleName(), "Bring Up With Love");
 	}
 }

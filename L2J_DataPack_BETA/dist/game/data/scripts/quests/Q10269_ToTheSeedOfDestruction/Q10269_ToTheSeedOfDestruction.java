@@ -37,9 +37,9 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 	// Item
 	private static final int INTRODUCTION = 13812;
 	
-	public Q10269_ToTheSeedOfDestruction(int questId, String name, String descr)
+	public Q10269_ToTheSeedOfDestruction()
 	{
-		super(questId, name, descr);
+		super(10269, Q10269_ToTheSeedOfDestruction.class.getSimpleName(), "To the Seed of Destruction");
 		addStartNpc(KEUCEREUS);
 		addTalkId(KEUCEREUS, ALLENOS);
 		registerQuestItems(INTRODUCTION);
@@ -106,10 +106,5 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10269_ToTheSeedOfDestruction(10269, Q10269_ToTheSeedOfDestruction.class.getSimpleName(), "To the Seed of Destruction");
 	}
 }

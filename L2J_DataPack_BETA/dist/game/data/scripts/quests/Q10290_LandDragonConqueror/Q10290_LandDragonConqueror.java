@@ -72,7 +72,7 @@ public final class Q10290_LandDragonConqueror extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 83;
 	
-	private Q10290_LandDragonConqueror()
+	public Q10290_LandDragonConqueror()
 	{
 		super(10290, Q10290_LandDragonConqueror.class.getSimpleName(), "Land Dragon Conqueror");
 		addStartNpc(THEODRIC);
@@ -168,10 +168,5 @@ public final class Q10290_LandDragonConqueror extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10290_LandDragonConqueror();
 	}
 }

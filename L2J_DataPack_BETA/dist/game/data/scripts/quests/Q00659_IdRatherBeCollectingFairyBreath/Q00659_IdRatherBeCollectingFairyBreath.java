@@ -49,7 +49,7 @@ public final class Q00659_IdRatherBeCollectingFairyBreath extends Quest
 		MOBS.put(21026, 0.96); // singing_wind
 	}
 	
-	private Q00659_IdRatherBeCollectingFairyBreath()
+	public Q00659_IdRatherBeCollectingFairyBreath()
 	{
 		super(659, Q00659_IdRatherBeCollectingFairyBreath.class.getSimpleName(), "I'd Rather Be Collecting Fairy Breath");
 		addStartNpc(GALATEA);
@@ -137,10 +137,5 @@ public final class Q00659_IdRatherBeCollectingFairyBreath extends Quest
 			htmltext = (hasQuestItems(player, FAIRY_BREATH) ? "30634-04.html" : "30634-09.html");
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00659_IdRatherBeCollectingFairyBreath();
 	}
 }

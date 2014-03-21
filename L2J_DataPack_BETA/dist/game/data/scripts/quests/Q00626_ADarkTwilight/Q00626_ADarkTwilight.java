@@ -67,9 +67,9 @@ public class Q00626_ADarkTwilight extends Quest
 	private static final int XP_COUNT = 162773;
 	private static final int SP_COUNT = 12500;
 	
-	private Q00626_ADarkTwilight(int questId, String name, String descr)
+	public Q00626_ADarkTwilight()
 	{
-		super(questId, name, descr);
+		super(626, Q00626_ADarkTwilight.class.getSimpleName(), "A Dark Twilight");
 		addStartNpc(HIERARCH);
 		addTalkId(HIERARCH);
 		addKillId(MONSTERS.keySet());
@@ -168,10 +168,5 @@ public class Q00626_ADarkTwilight extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00626_ADarkTwilight(626, Q00626_ADarkTwilight.class.getSimpleName(), "A Dark Twilight");
 	}
 }

@@ -49,9 +49,9 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 	private static final int[] MOBS = { 21557, 21558, 21560, 21563, 21564, 21565, 21566, 21567 };
 	// @formatter:on
 	
-	public Q00024_InhabitantsOfTheForestOfTheDead(int questId, String name, String descr)
+	public Q00024_InhabitantsOfTheForestOfTheDead()
 	{
-		super(questId, name, descr);
+		super(24, Q00024_InhabitantsOfTheForestOfTheDead.class.getSimpleName(), "Inhabitants of the Forest of the Dead");
 		addStartNpc(DORIAN);
 		addTalkId(DORIAN, MYSTERIOUS_WIZARD, TOMBSTONE, LIDIA_MAID);
 		addKillId(MOBS);
@@ -344,10 +344,5 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00024_InhabitantsOfTheForestOfTheDead(24, Q00024_InhabitantsOfTheForestOfTheDead.class.getSimpleName(), "Inhabitants of the Forest of the Dead");
 	}
 }

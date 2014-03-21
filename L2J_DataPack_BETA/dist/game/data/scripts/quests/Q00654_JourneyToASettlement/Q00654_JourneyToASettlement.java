@@ -49,7 +49,7 @@ public final class Q00654_JourneyToASettlement extends Quest
 		MOBS_SKIN.put(21295, 0.893); // Canyon Antelope Slave
 	}
 	
-	private Q00654_JourneyToASettlement()
+	public Q00654_JourneyToASettlement()
 	{
 		super(654, Q00654_JourneyToASettlement.class.getSimpleName(), "Journey to a Settlement");
 		addStartNpc(NAMELESS_SPIRIT);
@@ -134,10 +134,5 @@ public final class Q00654_JourneyToASettlement extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00654_JourneyToASettlement();
 	}
 }

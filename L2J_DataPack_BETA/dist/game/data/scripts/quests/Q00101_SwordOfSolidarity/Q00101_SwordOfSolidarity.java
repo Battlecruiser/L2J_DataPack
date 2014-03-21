@@ -65,9 +65,9 @@ public class Q00101_SwordOfSolidarity extends Quest
 	// Misc
 	private static final int MIN_LVL = 9;
 	
-	private Q00101_SwordOfSolidarity(int questId, String name, String descr)
+	public Q00101_SwordOfSolidarity()
 	{
-		super(questId, name, descr);
+		super(101, Q00101_SwordOfSolidarity.class.getSimpleName(), "Sword of Solidarity");
 		addStartNpc(ROIEN);
 		addKillId(MONSTERS);
 		addTalkId(ROIEN, ALTRAN);
@@ -299,10 +299,5 @@ public class Q00101_SwordOfSolidarity extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00101_SwordOfSolidarity(101, Q00101_SwordOfSolidarity.class.getSimpleName(), "Sword of Solidarity");
 	}
 }

@@ -67,9 +67,9 @@ public class Q00508_AClansReputation extends Quest
 		25524
 	};
 	
-	public Q00508_AClansReputation(int id, String name, String descr)
+	public Q00508_AClansReputation()
 	{
-		super(id, name, descr);
+		super(508, Q00508_AClansReputation.class.getSimpleName(), "A Clan's Reputation");
 		addStartNpc(SIR_ERIC_RODEMAI);
 		addTalkId(SIR_ERIC_RODEMAI);
 		addKillId(RAID_BOSS);
@@ -208,10 +208,5 @@ public class Q00508_AClansReputation extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00508_AClansReputation(508, Q00508_AClansReputation.class.getSimpleName(), "A Clan's Reputation");
 	}
 }

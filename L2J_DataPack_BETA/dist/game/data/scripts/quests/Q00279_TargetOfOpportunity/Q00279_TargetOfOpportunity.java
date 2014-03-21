@@ -57,9 +57,9 @@ public final class Q00279_TargetOfOpportunity extends Quest
 		15516
 	};
 	
-	public Q00279_TargetOfOpportunity(int questId, String name, String descr)
+	public Q00279_TargetOfOpportunity()
 	{
-		super(questId, name, descr);
+		super(279, Q00279_TargetOfOpportunity.class.getSimpleName(), "Target of Opportunity");
 		addStartNpc(JERIAN);
 		addTalkId(JERIAN);
 		addKillId(MONSTERS);
@@ -155,10 +155,5 @@ public final class Q00279_TargetOfOpportunity extends Quest
 			}
 		}
 		return true;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00279_TargetOfOpportunity(279, Q00279_TargetOfOpportunity.class.getSimpleName(), "Target of Opportunity");
 	}
 }

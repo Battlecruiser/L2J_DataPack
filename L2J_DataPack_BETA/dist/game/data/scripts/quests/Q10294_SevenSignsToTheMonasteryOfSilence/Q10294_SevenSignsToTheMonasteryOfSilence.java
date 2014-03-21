@@ -84,7 +84,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 		new SkillHolder(6717, 1), // Berserker Spirit of Elcadia
 	};
 	
-	private Q10294_SevenSignsToTheMonasteryOfSilence()
+	public Q10294_SevenSignsToTheMonasteryOfSilence()
 	{
 		super(10294, Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName(), "Seven Signs, To the Monastery of Silence");
 		addFirstTalkId(ELCADIA_INSTANCE);
@@ -446,10 +446,5 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 	public boolean hasCheckedAllRightBooks(QuestState qs)
 	{
 		return ((qs.getInt("good1") == 1) && (qs.getInt("good2") == 1) && (qs.getInt("good3") == 1) && (qs.getInt("good4") == 1));
-	}
-	
-	public static void main(String args[])
-	{
-		new Q10294_SevenSignsToTheMonasteryOfSilence();
 	}
 }

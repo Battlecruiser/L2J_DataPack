@@ -57,9 +57,9 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 	// Item
 	private static final int STAKATO_FANG = 14879;
 	
-	public Q00240_ImTheOnlyOneYouCanTrust(int questId, String name, String descr)
+	public Q00240_ImTheOnlyOneYouCanTrust()
 	{
-		super(questId, name, descr);
+		super(240, Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName(), "I'm the Only One You Can Trust");
 		addStartNpc(KINTAIJIN);
 		addTalkId(KINTAIJIN);
 		addKillId(MOBS);
@@ -142,10 +142,5 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00240_ImTheOnlyOneYouCanTrust(240, Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName(), "I'm the Only One You Can Trust");
 	}
 }

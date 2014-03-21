@@ -46,9 +46,9 @@ public class Q00319_ScentOfDeath extends Quest
 	private static final int MIN_CHANCE = 7;
 	private static final int REQUIRED_ITEM_COUNT = 5;
 	
-	private Q00319_ScentOfDeath(int questId, String name, String descr)
+	public Q00319_ScentOfDeath()
 	{
-		super(questId, name, descr);
+		super(319, Q00319_ScentOfDeath.class.getSimpleName(), "Scent of Death");
 		addStartNpc(MINALESS);
 		addTalkId(MINALESS);
 		addKillId(MARSH_ZOMBIE, MARSH_ZOMBIE_LORD);
@@ -142,10 +142,5 @@ public class Q00319_ScentOfDeath extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00319_ScentOfDeath(319, Q00319_ScentOfDeath.class.getSimpleName(), "Scent of Death");
 	}
 }

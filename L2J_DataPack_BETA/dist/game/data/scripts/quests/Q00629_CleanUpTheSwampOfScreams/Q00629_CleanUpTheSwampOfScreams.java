@@ -57,7 +57,7 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 		MOBS_DROP_CHANCES.put(21517, 0.999); // needle_stakato_drone_a
 	}
 	
-	private Q00629_CleanUpTheSwampOfScreams()
+	public Q00629_CleanUpTheSwampOfScreams()
 	{
 		super(629, Q00629_CleanUpTheSwampOfScreams.class.getSimpleName(), "Clean Up The Swamp Of Screams");
 		addStartNpc(PIERCE);
@@ -153,10 +153,5 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 			htmltext = ((getQuestItemsCount(player, TALON_OF_STAKATO) >= REQUIRED_TALON_COUNT) ? "31553-04.html" : "31553-05.html");
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00629_CleanUpTheSwampOfScreams();
 	}
 }

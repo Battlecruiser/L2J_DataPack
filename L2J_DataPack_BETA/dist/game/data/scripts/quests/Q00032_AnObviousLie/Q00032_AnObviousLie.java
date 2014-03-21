@@ -55,7 +55,7 @@ public final class Q00032_AnObviousLie extends Quest
 		EARS.put("rabbit", 7683); // Rabbit ears
 	}
 	
-	private Q00032_AnObviousLie()
+	public Q00032_AnObviousLie()
 	{
 		super(32, Q00032_AnObviousLie.class.getSimpleName(), "An Obvious Lie");
 		addStartNpc(MAXIMILIAN);
@@ -293,10 +293,5 @@ public final class Q00032_AnObviousLie extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00032_AnObviousLie();
 	}
 }

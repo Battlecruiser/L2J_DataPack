@@ -38,9 +38,9 @@ public class Q00119_LastImperialPrince extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 74;
 	
-	public Q00119_LastImperialPrince(int id, String name, String descr)
+	public Q00119_LastImperialPrince()
 	{
-		super(id, name, descr);
+		super(119, Q00119_LastImperialPrince.class.getSimpleName(), "Last Imperial Prince");
 		addStartNpc(NAMELESS_SPIRIT);
 		addTalkId(NAMELESS_SPIRIT, DEVORIN);
 	}
@@ -160,10 +160,5 @@ public class Q00119_LastImperialPrince extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00119_LastImperialPrince(119, Q00119_LastImperialPrince.class.getSimpleName(), "Last Imperial Prince");
 	}
 }

@@ -52,9 +52,9 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
-	private Q00004_LongLiveThePaagrioLord(int questId, String name, String descr)
+	public Q00004_LongLiveThePaagrioLord()
 	{
-		super(questId, name, descr);
+		super(4, Q00004_LongLiveThePaagrioLord.class.getSimpleName(), "Long Live the Pa'agrio Lord");
 		addStartNpc(NAKUSIN);
 		addTalkId(NAKUSIN, VARKEES, URUTU, HESTUI, KUNAI, USKA, GROOKIN);
 		registerQuestItems(HONEY_KHANDAR, BEAR_FUR_CLOAK, BLOODY_AXE, ANCESTOR_SKULL, SPIDER_DUST, DEEP_SEA_ORB);
@@ -162,10 +162,5 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 			st.setCond(2, true);
 		}
 		return npcId + "-01.html";
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00004_LongLiveThePaagrioLord(4, Q00004_LongLiveThePaagrioLord.class.getSimpleName(), "Long Live the Pa'agrio Lord");
 	}
 }

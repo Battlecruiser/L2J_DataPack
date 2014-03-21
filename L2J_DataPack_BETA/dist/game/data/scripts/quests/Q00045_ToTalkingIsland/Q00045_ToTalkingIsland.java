@@ -62,9 +62,9 @@ public final class Q00045_ToTalkingIsland extends Quest
 		NPC_ITEMS.put(DUSTIN, new ItemHolder(5, GALLADUCCIS_ORDER_3));
 	}
 	
-	private Q00045_ToTalkingIsland(int questId, String name, String descr)
+	public Q00045_ToTalkingIsland()
 	{
-		super(questId, name, descr);
+		super(45, Q00045_ToTalkingIsland.class.getSimpleName(), "To Talking Island");
 		addStartNpc(GALLADUCCI);
 		addTalkId(GALLADUCCI);
 		addTalkId(NPC_ITEMS.keySet());
@@ -299,10 +299,5 @@ public final class Q00045_ToTalkingIsland extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00045_ToTalkingIsland(45, Q00045_ToTalkingIsland.class.getSimpleName(), "To Talking Island");
 	}
 }

@@ -51,7 +51,7 @@ public final class Q10285_MeetingSirra extends Quest
 	private static final Location EXIT_LOC = new Location(113793, -109342, -845, 0);
 	private static final Location FREYA_LOC = new Location(103045, -124361, -2768, 0);
 	
-	private Q10285_MeetingSirra()
+	public Q10285_MeetingSirra()
 	{
 		super(10285, Q10285_MeetingSirra.class.getSimpleName(), "Meeting Sirra");
 		addStartNpc(RAFFORTY);
@@ -371,10 +371,5 @@ public final class Q10285_MeetingSirra extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q10285_MeetingSirra();
 	}
 }

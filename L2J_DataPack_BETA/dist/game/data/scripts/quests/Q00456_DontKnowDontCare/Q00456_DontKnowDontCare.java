@@ -134,7 +134,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 	private static final int GEMSTONE_S = 2134;
 	private final Map<Integer, Set<Integer>> allowedPlayerMap = new HashMap<>();
 	
-	private Q00456_DontKnowDontCare()
+	public Q00456_DontKnowDontCare()
 	{
 		super(456, Q00456_DontKnowDontCare.class.getSimpleName(), "Don't Know, Don't Care");
 		addStartNpc(SEPARATED_SOUL);
@@ -360,10 +360,5 @@ public final class Q00456_DontKnowDontCare extends Quest
 		packet.addStringParameter(player.getName());
 		packet.addStringParameter(item.getName());
 		npc.broadcastPacket(packet);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00456_DontKnowDontCare();
 	}
 }

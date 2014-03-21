@@ -87,9 +87,9 @@ public final class Q00108_JumbleTumbleDiamondFuss extends Quest
 		GOBLIN_DROP_CHANCES.put(GOBLIN_BRIGAND_LIEUTENANT, 0.6);
 	}
 	
-	private Q00108_JumbleTumbleDiamondFuss(int questId, String name, String descr)
+	public Q00108_JumbleTumbleDiamondFuss()
 	{
-		super(questId, name, descr);
+		super(108, Q00108_JumbleTumbleDiamondFuss.class.getSimpleName(), "Jumble, Tumble, Diamond Fuss");
 		addStartNpc(COLLECTOR_GOUPH);
 		addTalkId(COLLECTOR_GOUPH, TRADER_REEP, CARRIER_TOROCCO, MINER_MARON, BLACKSMITH_BRUNON, WAREHOUSE_KEEPER_MURDOC, WAREHOUSE_KEEPER_AIRY);
 		addKillId(GOBLIN_BRIGAND_LEADER, GOBLIN_BRIGAND_LIEUTENANT, BLADE_BAT);
@@ -564,10 +564,5 @@ public final class Q00108_JumbleTumbleDiamondFuss extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00108_JumbleTumbleDiamondFuss(108, Q00108_JumbleTumbleDiamondFuss.class.getSimpleName(), "Jumble, Tumble, Diamond Fuss");
 	}
 }

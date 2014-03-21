@@ -250,9 +250,4 @@ public class Q00254_LegendaryTales extends Quest
 		int pos = boss.getMask();
 		return ((qs.getInt("raids") & pos) == pos);
 	}
-	
-	public static void main(String[] args)
-	{
-		new Q00254_LegendaryTales();
-	}
 }

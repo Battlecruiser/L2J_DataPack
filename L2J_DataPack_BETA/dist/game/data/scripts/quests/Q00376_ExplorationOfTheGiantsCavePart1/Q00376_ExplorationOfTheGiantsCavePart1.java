@@ -56,7 +56,7 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 		MOBS.put(22677, 0.266); // kranout
 	}
 	
-	private Q00376_ExplorationOfTheGiantsCavePart1()
+	public Q00376_ExplorationOfTheGiantsCavePart1()
 	{
 		super(376, Q00376_ExplorationOfTheGiantsCavePart1.class.getSimpleName(), "Exploration of the Giants' Cave - Part 1");
 		addStartNpc(SOBLING);
@@ -129,10 +129,5 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 			htmltext = (hasQuestItems(player, BOOK1, BOOK2, BOOK3, BOOK4, BOOK5) ? "31147-03.html" : "31147-02a.html");
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00376_ExplorationOfTheGiantsCavePart1();
 	}
 }

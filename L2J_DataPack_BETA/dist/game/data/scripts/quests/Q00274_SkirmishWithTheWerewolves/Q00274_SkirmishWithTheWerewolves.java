@@ -48,9 +48,9 @@ public final class Q00274_SkirmishWithTheWerewolves extends Quest
 	// Misc
 	private static final int MIN_LVL = 9;
 	
-	private Q00274_SkirmishWithTheWerewolves(int questId, String name, String descr)
+	public Q00274_SkirmishWithTheWerewolves()
 	{
-		super(questId, name, descr);
+		super(274, Q00274_SkirmishWithTheWerewolves.class.getSimpleName(), "Skirmish with the Werewolves");
 		addStartNpc(BRUKURSE);
 		addTalkId(BRUKURSE);
 		addKillId(MONSTERS);
@@ -141,10 +141,5 @@ public final class Q00274_SkirmishWithTheWerewolves extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00274_SkirmishWithTheWerewolves(274, Q00274_SkirmishWithTheWerewolves.class.getSimpleName(), "Skirmish with the Werewolves");
 	}
 }

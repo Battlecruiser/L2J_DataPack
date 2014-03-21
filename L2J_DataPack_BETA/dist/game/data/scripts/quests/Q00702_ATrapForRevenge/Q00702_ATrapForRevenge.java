@@ -54,9 +54,9 @@ public class Q00702_ATrapForRevenge extends Quest
 	private static final int VARIANT_DRAKE_WING_HORNS = 13880;
 	private static final int EXTRACTED_RED_STAR_STONE = 14009;
 	
-	public Q00702_ATrapForRevenge(int questId, String name, String descr)
+	public Q00702_ATrapForRevenge()
 	{
-		super(questId, name, descr);
+		super(702, Q00702_ATrapForRevenge.class.getSimpleName(), "A Trap for Revenge");
 		addStartNpc(PLENOS);
 		addTalkId(PLENOS, LEKON, TENIUS);
 		addKillId(MONSTERS);
@@ -412,10 +412,5 @@ public class Q00702_ATrapForRevenge extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00702_ATrapForRevenge(702, Q00702_ATrapForRevenge.class.getSimpleName(), "A Trap for Revenge");
 	}
 }

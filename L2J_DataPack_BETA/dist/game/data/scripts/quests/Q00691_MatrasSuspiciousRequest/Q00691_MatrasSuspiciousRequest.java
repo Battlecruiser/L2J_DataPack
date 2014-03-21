@@ -58,9 +58,9 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 76;
 	
-	private Q00691_MatrasSuspiciousRequest(int questId, String name, String descr)
+	public Q00691_MatrasSuspiciousRequest()
 	{
-		super(questId, name, descr);
+		super(691, Q00691_MatrasSuspiciousRequest.class.getSimpleName(), "Matras' Suspicious Request");
 		addStartNpc(MATRAS);
 		addTalkId(MATRAS);
 		addKillId(REWARD_CHANCES.keySet());
@@ -177,10 +177,5 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00691_MatrasSuspiciousRequest(691, Q00691_MatrasSuspiciousRequest.class.getSimpleName(), "Matras' Suspicious Request");
 	}
 }

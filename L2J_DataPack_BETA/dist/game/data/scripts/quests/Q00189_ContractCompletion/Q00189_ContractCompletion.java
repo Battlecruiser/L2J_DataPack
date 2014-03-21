@@ -43,9 +43,9 @@ public final class Q00189_ContractCompletion extends Quest
 	private static final int MIN_LEVEL = 42;
 	private static final int MAX_LEVEL_FOR_EXP_SP = 48;
 	
-	private Q00189_ContractCompletion(int questId, String name, String descr)
+	public Q00189_ContractCompletion()
 	{
-		super(questId, name, descr);
+		super(189, Q00189_ContractCompletion.class.getSimpleName(), "Contract Completion");
 		addStartNpc(BLUEPRINT_SELLER_LUKA);
 		addTalkId(BLUEPRINT_SELLER_LUKA, HEAD_BLACKSMITH_KUSTO, RESEARCHER_LORAIN, SHEGFIELD);
 		registerQuestItems(SCROLL_OF_DECODING);
@@ -210,10 +210,5 @@ public final class Q00189_ContractCompletion extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00189_ContractCompletion(189, Q00189_ContractCompletion.class.getSimpleName(), "Contract Completion");
 	}
 }

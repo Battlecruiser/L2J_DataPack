@@ -40,9 +40,9 @@ public class Q00161_FruitOfTheMotherTree extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	private Q00161_FruitOfTheMotherTree(int questId, String name, String descr)
+	public Q00161_FruitOfTheMotherTree()
 	{
-		super(questId, name, descr);
+		super(161, Q00161_FruitOfTheMotherTree.class.getSimpleName(), "Fruit of the Mother Tree");
 		addStartNpc(ANDELLIA);
 		addTalkId(ANDELLIA, THALIA);
 		registerQuestItems(ANDELLRIAS_LETTER, MOTHERTREE_FRUIT);
@@ -128,10 +128,5 @@ public class Q00161_FruitOfTheMotherTree extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00161_FruitOfTheMotherTree(161, Q00161_FruitOfTheMotherTree.class.getSimpleName(), "Fruit of the Mother Tree");
 	}
 }

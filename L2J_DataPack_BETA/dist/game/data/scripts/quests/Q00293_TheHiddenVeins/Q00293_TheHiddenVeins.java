@@ -52,9 +52,9 @@ public final class Q00293_TheHiddenVeins extends Quest
 	private static final int MIN_LVL = 6;
 	private static final int REQUIRED_TORN_MAP_FRAGMENT = 4;
 	
-	private Q00293_TheHiddenVeins(int questId, String name, String descr)
+	public Q00293_TheHiddenVeins()
 	{
-		super(questId, name, descr);
+		super(293, Q00293_TheHiddenVeins.class.getSimpleName(), "The Hidden Veins");
 		addStartNpc(FILAUR);
 		addTalkId(FILAUR, CHICHIRIN);
 		addKillId(MONSTERS);
@@ -176,10 +176,5 @@ public final class Q00293_TheHiddenVeins extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00293_TheHiddenVeins(293, Q00293_TheHiddenVeins.class.getSimpleName(), "The Hidden Veins");
 	}
 }

@@ -58,9 +58,9 @@ public final class Q00258_BringWolfPelts extends Quest
 	private static final int MIN_LVL = 3;
 	private static final int WOLF_PELT_COUNT = 40;
 	
-	private Q00258_BringWolfPelts(int questId, String name, String descr)
+	public Q00258_BringWolfPelts()
 	{
-		super(questId, name, descr);
+		super(258, Q00258_BringWolfPelts.class.getSimpleName(), "Bring Wolf Pelts");
 		addStartNpc(LECTOR);
 		addTalkId(LECTOR);
 		addKillId(MONSTERS);
@@ -147,10 +147,5 @@ public final class Q00258_BringWolfPelts extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00258_BringWolfPelts(258, Q00258_BringWolfPelts.class.getSimpleName(), "Bring Wolf Pelts");
 	}
 }

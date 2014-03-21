@@ -52,9 +52,9 @@ public class Q00251_NoSecrets extends Quest
 		22778
 	};
 	
-	public Q00251_NoSecrets(int id, String name, String descr)
+	public Q00251_NoSecrets()
 	{
-		super(id, name, descr);
+		super(251, Q00251_NoSecrets.class.getSimpleName(), "No Secrets");
 		addStartNpc(PINAPS);
 		addTalkId(PINAPS);
 		addKillId(MOBS);
@@ -147,10 +147,5 @@ public class Q00251_NoSecrets extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00251_NoSecrets(251, Q00251_NoSecrets.class.getSimpleName(), "No Secrets");
 	}
 }

@@ -56,9 +56,9 @@ public final class Q00649_ALooterAndARailroadMan extends Quest
 		MONSTERS.put(22026, 1000); // Bandit Captain
 	}
 	
-	private Q00649_ALooterAndARailroadMan(int questId, String name, String descr)
+	public Q00649_ALooterAndARailroadMan()
 	{
-		super(questId, name, descr);
+		super(649, Q00649_ALooterAndARailroadMan.class.getSimpleName(), "A Looter and a Railroad Man");
 		addStartNpc(RAILMAN_OBI);
 		addTalkId(RAILMAN_OBI);
 		addKillId(MONSTERS.keySet());
@@ -142,10 +142,5 @@ public final class Q00649_ALooterAndARailroadMan extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00649_ALooterAndARailroadMan(649, Q00649_ALooterAndARailroadMan.class.getSimpleName(), "A Looter and a Railroad Man");
 	}
 }

@@ -54,7 +54,7 @@ public final class Q00380_BringOutTheFlavorOfIngredients extends Quest
 	// Misc
 	private static final int MIN_LVL = 24;
 	
-	private Q00380_BringOutTheFlavorOfIngredients()
+	public Q00380_BringOutTheFlavorOfIngredients()
 	{
 		super(380, Q00380_BringOutTheFlavorOfIngredients.class.getSimpleName(), "Bring Out the Flavor of Ingredients!");
 		addStartNpc(ROLLAND);
@@ -200,10 +200,5 @@ public final class Q00380_BringOutTheFlavorOfIngredients extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00380_BringOutTheFlavorOfIngredients();
 	}
 }

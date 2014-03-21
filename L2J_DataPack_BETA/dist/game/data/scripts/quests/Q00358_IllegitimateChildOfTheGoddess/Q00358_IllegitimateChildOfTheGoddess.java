@@ -59,7 +59,7 @@ public final class Q00358_IllegitimateChildOfTheGoddess extends Quest
 		MOBS.put(20673, 0.74); // falibati
 	}
 	
-	private Q00358_IllegitimateChildOfTheGoddess()
+	public Q00358_IllegitimateChildOfTheGoddess()
 	{
 		super(358, Q00358_IllegitimateChildOfTheGoddess.class.getSimpleName(), "Illegitimate Child of the Goddess");
 		addStartNpc(OLTRAN);
@@ -130,10 +130,5 @@ public final class Q00358_IllegitimateChildOfTheGoddess extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00358_IllegitimateChildOfTheGoddess();
 	}
 }

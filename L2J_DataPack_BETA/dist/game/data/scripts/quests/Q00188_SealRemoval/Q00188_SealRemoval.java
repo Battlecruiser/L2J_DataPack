@@ -44,9 +44,9 @@ public final class Q00188_SealRemoval extends Quest
 	private static final int MIN_LEVEL = 41;
 	private static final int MAX_LEVEL_FOR_EXP_SP = 47;
 	
-	private Q00188_SealRemoval(int questId, String name, String descr)
+	public Q00188_SealRemoval()
 	{
-		super(questId, name, descr);
+		super(188, Q00188_SealRemoval.class.getSimpleName(), "Seal Removal");
 		addStartNpc(RESEARCHER_LORAIN);
 		addTalkId(RESEARCHER_LORAIN, MAESTRO_NIKOLA, DOROTHY_LOCKSMITH);
 		registerQuestItems(BROKEN_METAL_PIECES);
@@ -179,10 +179,5 @@ public final class Q00188_SealRemoval extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00188_SealRemoval(188, Q00188_SealRemoval.class.getSimpleName(), "Seal Removal");
 	}
 }

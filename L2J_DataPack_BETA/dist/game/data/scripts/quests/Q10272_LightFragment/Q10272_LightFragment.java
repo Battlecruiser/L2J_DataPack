@@ -63,9 +63,9 @@ public class Q10272_LightFragment extends Quest
 	private static final int LIGHT_FRAGMENT = 13855;
 	private static final double DROP_CHANCE = 60;
 	
-	public Q10272_LightFragment(int questId, String name, String descr)
+	public Q10272_LightFragment()
 	{
-		super(questId, name, descr);
+		super(10272, Q10272_LightFragment.class.getSimpleName(), "Light Fragment");
 		addStartNpc(ORBYU);
 		addTalkId(ORBYU, ARTIUS, GINBY, LELRIKIA, LEKON);
 		addKillId(MOBS);
@@ -327,10 +327,5 @@ public class Q10272_LightFragment extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10272_LightFragment(10272, Q10272_LightFragment.class.getSimpleName(), "Light Fragment");
 	}
 }

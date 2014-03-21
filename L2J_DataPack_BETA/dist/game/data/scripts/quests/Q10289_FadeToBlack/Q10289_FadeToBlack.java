@@ -286,9 +286,4 @@ public class Q10289_FadeToBlack extends Quest
 			qs.setCond(isLucky ? 3 : 2, true);
 		}
 	}
-	
-	public static void main(String[] args)
-	{
-		new Q10289_FadeToBlack();
-	}
 }

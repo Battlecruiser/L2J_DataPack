@@ -47,7 +47,7 @@ public final class Q00366_SilverHairedShaman extends Quest
 		MOBS.put(20988, 80); // saitnn_puppet
 	}
 	
-	private Q00366_SilverHairedShaman()
+	public Q00366_SilverHairedShaman()
 	{
 		super(366, Q00366_SilverHairedShaman.class.getSimpleName(), "Silver Haired Shaman");
 		addStartNpc(DIETER);
@@ -134,10 +134,5 @@ public final class Q00366_SilverHairedShaman extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00366_SilverHairedShaman();
 	}
 }

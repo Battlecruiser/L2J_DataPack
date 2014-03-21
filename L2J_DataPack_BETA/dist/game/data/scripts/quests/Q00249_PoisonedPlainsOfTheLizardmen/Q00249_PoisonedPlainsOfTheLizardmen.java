@@ -35,9 +35,9 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 	private static final int MOUEN = 30196;
 	private static final int JOHNNY = 32744;
 	
-	public Q00249_PoisonedPlainsOfTheLizardmen(int questId, String name, String descr)
+	public Q00249_PoisonedPlainsOfTheLizardmen()
 	{
-		super(questId, name, descr);
+		super(249, Q00249_PoisonedPlainsOfTheLizardmen.class.getSimpleName(), "Poisoned Plains of the Lizardmen");
 		addStartNpc(MOUEN);
 		addTalkId(MOUEN, JOHNNY);
 	}
@@ -108,10 +108,5 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00249_PoisonedPlainsOfTheLizardmen(249, Q00249_PoisonedPlainsOfTheLizardmen.class.getSimpleName(), "Poisoned Plains of the Lizardmen");
 	}
 }

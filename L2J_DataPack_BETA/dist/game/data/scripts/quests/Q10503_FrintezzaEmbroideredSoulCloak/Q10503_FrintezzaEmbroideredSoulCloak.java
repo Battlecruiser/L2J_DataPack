@@ -44,9 +44,9 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 	private static final int MIN_LEVEL = 80;
 	private static final int FRAGMENT_COUNT = 20;
 	
-	private Q10503_FrintezzaEmbroideredSoulCloak(int questId, String name, String descr)
+	public Q10503_FrintezzaEmbroideredSoulCloak()
 	{
-		super(questId, name, descr);
+		super(10503, Q10503_FrintezzaEmbroideredSoulCloak.class.getSimpleName(), "Frintezza Embroidered Soul Cloak");
 		addStartNpc(OLF_ADAMS);
 		addTalkId(OLF_ADAMS);
 		addKillId(SCARLET_VAN_HALISHA);
@@ -140,10 +140,5 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10503_FrintezzaEmbroideredSoulCloak(10503, Q10503_FrintezzaEmbroideredSoulCloak.class.getSimpleName(), "Frintezza Embroidered Soul Cloak");
 	}
 }

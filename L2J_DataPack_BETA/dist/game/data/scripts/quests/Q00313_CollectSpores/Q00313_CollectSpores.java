@@ -41,9 +41,9 @@ public final class Q00313_CollectSpores extends Quest
 	// Monster
 	private static final int SPORE_FUNGUS = 20509;
 	
-	private Q00313_CollectSpores(int questId, String name, String descr)
+	public Q00313_CollectSpores()
 	{
-		super(questId, name, descr);
+		super(313, Q00313_CollectSpores.class.getSimpleName(), "Collect Spores");
 		addStartNpc(HERBIEL);
 		addTalkId(HERBIEL);
 		addKillId(SPORE_FUNGUS);
@@ -137,10 +137,5 @@ public final class Q00313_CollectSpores extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00313_CollectSpores(313, Q00313_CollectSpores.class.getSimpleName(), "Collect Spores");
 	}
 }

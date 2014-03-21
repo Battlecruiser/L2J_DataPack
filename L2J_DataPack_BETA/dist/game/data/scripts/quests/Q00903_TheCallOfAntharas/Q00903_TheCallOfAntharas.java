@@ -46,9 +46,9 @@ public class Q00903_TheCallOfAntharas extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 83;
 	
-	private Q00903_TheCallOfAntharas(int questId, String name, String descr)
+	public Q00903_TheCallOfAntharas()
 	{
-		super(questId, name, descr);
+		super(903, Q00903_TheCallOfAntharas.class.getSimpleName(), "The Call of Antharas");
 		addStartNpc(THEODRIC);
 		addTalkId(THEODRIC);
 		addKillId(BEHEMOTH_DRAGON, TARASK_DRAGON);
@@ -195,10 +195,5 @@ public class Q00903_TheCallOfAntharas extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00903_TheCallOfAntharas(903, Q00903_TheCallOfAntharas.class.getSimpleName(), "The Call of Antharas");
 	}
 }

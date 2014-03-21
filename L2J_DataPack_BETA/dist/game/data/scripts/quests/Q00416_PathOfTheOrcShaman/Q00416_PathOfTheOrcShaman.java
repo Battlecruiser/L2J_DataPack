@@ -82,7 +82,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 		MOBS.put(27056, new ItemChanceHolder(DURKA_PARASITE, 1.0, 9)); // durka_spirit
 	}
 	
-	private Q00416_PathOfTheOrcShaman()
+	public Q00416_PathOfTheOrcShaman()
 	{
 		super(416, Q00416_PathOfTheOrcShaman.class.getSimpleName(), "Path of the Orc Shaman");
 		addStartNpc(TATARU_ZU_HESTUI);
@@ -622,10 +622,5 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00416_PathOfTheOrcShaman();
 	}
 }

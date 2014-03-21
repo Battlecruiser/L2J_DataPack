@@ -41,9 +41,9 @@ public class Q00432_BirthdayPartySong extends Quest
 	// Reward
 	private static final int ECHO_CRYSTAL = 7061;
 	
-	public Q00432_BirthdayPartySong(int questId, String name, String descr)
+	public Q00432_BirthdayPartySong()
 	{
-		super(questId, name, descr);
+		super(432, Q00432_BirthdayPartySong.class.getSimpleName(), "Birthday Party Song");
 		addStartNpc(OCTAVIA);
 		addTalkId(OCTAVIA);
 		addKillId(GOLEM);
@@ -123,10 +123,5 @@ public class Q00432_BirthdayPartySong extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00432_BirthdayPartySong(432, Q00432_BirthdayPartySong.class.getSimpleName(), "Birthday Party Song");
 	}
 }

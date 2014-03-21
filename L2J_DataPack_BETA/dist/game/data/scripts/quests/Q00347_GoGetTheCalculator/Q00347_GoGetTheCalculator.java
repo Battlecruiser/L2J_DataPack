@@ -45,7 +45,7 @@ public final class Q00347_GoGetTheCalculator extends Quest
 	// Misc
 	private static final int MIN_LVL = 12;
 	
-	private Q00347_GoGetTheCalculator()
+	public Q00347_GoGetTheCalculator()
 	{
 		super(347, Q00347_GoGetTheCalculator.class.getSimpleName(), "Go Get the Calculator");
 		addStartNpc(BRUNON);
@@ -267,10 +267,5 @@ public final class Q00347_GoGetTheCalculator extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00347_GoGetTheCalculator();
 	}
 }

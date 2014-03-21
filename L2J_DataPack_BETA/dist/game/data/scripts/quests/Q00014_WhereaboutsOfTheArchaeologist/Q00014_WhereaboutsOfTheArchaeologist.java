@@ -37,9 +37,9 @@ public class Q00014_WhereaboutsOfTheArchaeologist extends Quest
 	// Item
 	private static final int LETTER = 7253;
 	
-	private Q00014_WhereaboutsOfTheArchaeologist(int questId, String name, String descr)
+	public Q00014_WhereaboutsOfTheArchaeologist()
 	{
-		super(questId, name, descr);
+		super(14, Q00014_WhereaboutsOfTheArchaeologist.class.getSimpleName(), "Whereabouts of the Archaeologist");
 		addStartNpc(LIESEL);
 		addTalkId(LIESEL, GHOST_OF_ADVENTURER);
 		registerQuestItems(LETTER);
@@ -115,10 +115,5 @@ public class Q00014_WhereaboutsOfTheArchaeologist extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00014_WhereaboutsOfTheArchaeologist(14, Q00014_WhereaboutsOfTheArchaeologist.class.getSimpleName(), "Whereabouts of the Archaeologist");
 	}
 }

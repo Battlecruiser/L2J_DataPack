@@ -151,9 +151,9 @@ public class Q00611_AllianceWithVarkaSilenos extends Quest
 		200, // cond 5
 	};
 	
-	private Q00611_AllianceWithVarkaSilenos(int questId, String name, String descr)
+	public Q00611_AllianceWithVarkaSilenos()
 	{
-		super(questId, name, descr);
+		super(611, Q00611_AllianceWithVarkaSilenos.class.getSimpleName(), "Alliance with Varka Silenos");
 		addStartNpc(NARAN_ASHANUK);
 		addTalkId(NARAN_ASHANUK);
 		addKillId(MOBS.keySet());
@@ -329,10 +329,5 @@ public class Q00611_AllianceWithVarkaSilenos extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00611_AllianceWithVarkaSilenos(611, Q00611_AllianceWithVarkaSilenos.class.getSimpleName(), "Alliance with Varka Silenos");
 	}
 }

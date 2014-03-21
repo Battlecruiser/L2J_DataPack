@@ -41,9 +41,9 @@ public final class Q00187_NikolasHeart extends Quest
 	private static final int MIN_LEVEL = 41;
 	private static final int MIN_LEVEL_FOR_EXP_SP = 47;
 	
-	private Q00187_NikolasHeart(int questId, String name, String descr)
+	public Q00187_NikolasHeart()
 	{
-		super(questId, name, descr);
+		super(187, Q00187_NikolasHeart.class.getSimpleName(), "Nikola's Heart");
 		addStartNpc(RESEARCHER_LORAIN);
 		addTalkId(HEAD_BLACKSMITH_KUSTO, RESEARCHER_LORAIN, MAESTRO_NIKOLA);
 		registerQuestItems(METALLOGRAPH);
@@ -163,10 +163,5 @@ public final class Q00187_NikolasHeart extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00187_NikolasHeart(187, Q00187_NikolasHeart.class.getSimpleName(), "Nikola's Heart");
 	}
 }

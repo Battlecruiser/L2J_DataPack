@@ -54,9 +54,9 @@ public final class Q00269_InventionAmbition extends Quest
 	// Misc
 	private static final int MIN_LVL = 18;
 	
-	private Q00269_InventionAmbition(int questId, String name, String descr)
+	public Q00269_InventionAmbition()
 	{
-		super(questId, name, descr);
+		super(269, Q00269_InventionAmbition.class.getSimpleName(), "Invention Ambition");
 		addStartNpc(INVENTOR_MARU);
 		addTalkId(INVENTOR_MARU);
 		addKillId(MONSTERS.keySet());
@@ -143,10 +143,5 @@ public final class Q00269_InventionAmbition extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00269_InventionAmbition(269, Q00269_InventionAmbition.class.getSimpleName(), "Invention Ambition");
 	}
 }

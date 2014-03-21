@@ -58,7 +58,7 @@ public final class Q00292_BrigandsSweep extends Quest
 	// Misc
 	private static final int MIN_LVL = 5;
 
-	private Q00292_BrigandsSweep()
+	public Q00292_BrigandsSweep()
 	{
 		super(292, Q00292_BrigandsSweep.class.getSimpleName(), "Brigands Sweep");
 		addStartNpc(SPIRON);
@@ -224,10 +224,5 @@ public final class Q00292_BrigandsSweep extends Quest
 			}
 		}
 		return html;
-	}
-
-	public static void main(String[] args)
-	{
-		new Q00292_BrigandsSweep();
 	}
 }

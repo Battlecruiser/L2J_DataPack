@@ -47,7 +47,7 @@ public final class Q00357_WarehouseKeepersAmbition extends Quest
 	// Misc
 	private static final int MIN_LVL = 47;
 
-	private Q00357_WarehouseKeepersAmbition()
+	public Q00357_WarehouseKeepersAmbition()
 	{
 		super(357, Q00357_WarehouseKeepersAmbition.class.getSimpleName(), "Warehouse Keeper's Ambition");
 		addStartNpc(SILVA);
@@ -145,10 +145,5 @@ public final class Q00357_WarehouseKeepersAmbition extends Quest
 			giveItemRandomly(qs.getPlayer(), npc, JADE_CRYSTAL, 1, 0, DROP_DATA.get(npc.getId()), true);
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-
-	public static void main(String[] args)
-	{
-		new Q00357_WarehouseKeepersAmbition();
 	}
 }

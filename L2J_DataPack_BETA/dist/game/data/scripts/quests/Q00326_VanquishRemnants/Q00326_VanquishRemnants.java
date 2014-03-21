@@ -60,9 +60,9 @@ public final class Q00326_VanquishRemnants extends Quest
 	// Misc
 	private static final int MIN_LVL = 21;
 	
-	private Q00326_VanquishRemnants(int questId, String name, String descr)
+	public Q00326_VanquishRemnants()
 	{
-		super(questId, name, descr);
+		super(326, Q00326_VanquishRemnants.class.getSimpleName(), "Vanquish Remnants");
 		addStartNpc(LEOPOLD);
 		addTalkId(LEOPOLD);
 		addKillId(MONSTERS.keySet());
@@ -151,10 +151,5 @@ public final class Q00326_VanquishRemnants extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00326_VanquishRemnants(326, Q00326_VanquishRemnants.class.getSimpleName(), "Vanquish Remnants");
 	}
 }

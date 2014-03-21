@@ -83,9 +83,9 @@ public class Q00615_MagicalPowerOfFirePart1 extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 74;
 	
-	private Q00615_MagicalPowerOfFirePart1(int questId, String name, String descr)
+	public Q00615_MagicalPowerOfFirePart1()
 	{
-		super(questId, name, descr);
+		super(615, Q00615_MagicalPowerOfFirePart1.class.getSimpleName(), "Magical Power of Fire - Part 1");
 		addStartNpc(NARAN);
 		addTalkId(UDAN, NARAN, ASEFA_BOX);
 		addAttackId(KETRA_MOBS);
@@ -217,10 +217,5 @@ public class Q00615_MagicalPowerOfFirePart1 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00615_MagicalPowerOfFirePart1(615, Q00615_MagicalPowerOfFirePart1.class.getSimpleName(), "Magical Power of Fire - Part 1");
 	}
 }

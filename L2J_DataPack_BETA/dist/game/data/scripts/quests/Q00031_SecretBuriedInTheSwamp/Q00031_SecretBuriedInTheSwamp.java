@@ -47,9 +47,9 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 	// Monuments
 	private static final List<Integer> MONUMENTS = Arrays.asList(FORGOTTEN_MONUMENT_1, FORGOTTEN_MONUMENT_2, FORGOTTEN_MONUMENT_3, FORGOTTEN_MONUMENT_4);
 	
-	private Q00031_SecretBuriedInTheSwamp(int questId, String name, String descr)
+	public Q00031_SecretBuriedInTheSwamp()
 	{
-		super(questId, name, descr);
+		super(31, Q00031_SecretBuriedInTheSwamp.class.getSimpleName(), "Secret Buried in the Swamp");
 		addStartNpc(ABERCROMBIE);
 		addTalkId(ABERCROMBIE, CORPSE_OF_DWARF);
 		addTalkId(MONUMENTS);
@@ -217,10 +217,5 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00031_SecretBuriedInTheSwamp(31, Q00031_SecretBuriedInTheSwamp.class.getSimpleName(), "Secret Buried in the Swamp");
 	}
 }

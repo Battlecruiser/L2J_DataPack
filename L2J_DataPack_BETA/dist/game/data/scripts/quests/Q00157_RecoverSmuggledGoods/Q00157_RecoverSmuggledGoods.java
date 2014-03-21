@@ -41,9 +41,9 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 	// Misc
 	private static final int MIN_LVL = 5;
 	
-	public Q00157_RecoverSmuggledGoods(int questId, String name, String descr)
+	public Q00157_RecoverSmuggledGoods()
 	{
-		super(questId, name, descr);
+		super(157, Q00157_RecoverSmuggledGoods.class.getSimpleName(), "Recover Smuggled Goods");
 		addStartNpc(WILFORD);
 		addTalkId(WILFORD);
 		addKillId(GIANT_TOAD);
@@ -130,10 +130,5 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00157_RecoverSmuggledGoods(157, Q00157_RecoverSmuggledGoods.class.getSimpleName(), "Recover Smuggled Goods");
 	}
 }

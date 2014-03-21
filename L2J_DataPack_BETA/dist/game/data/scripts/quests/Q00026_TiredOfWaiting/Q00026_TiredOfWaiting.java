@@ -142,9 +142,4 @@ public final class Q00026_TiredOfWaiting extends Quest
 		}
 		return htmltext;
 	}
-	
-	public static void main(String[] args)
-	{
-		new Q00026_TiredOfWaiting();
-	}
 }

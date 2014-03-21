@@ -63,9 +63,9 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	private static final int CHANCE_FOR_DROP = 30;
 	private static final int CHANCE_FOR_DROP_FRAGMENTS = 60;
 	
-	public Q00246_PossessorOfAPreciousSoul3(int questId, String name, String descr)
+	public Q00246_PossessorOfAPreciousSoul3()
 	{
-		super(questId, name, descr);
+		super(246, Q00246_PossessorOfAPreciousSoul3.class.getSimpleName(), "Possessor Of A Precious Soul 3");
 		addStartNpc(CARADINE);
 		addTalkId(LADD, CARADINE, OSSIAN);
 		addKillId(PILGRIM_OF_SPLENDOR, JUDGE_OF_SPLENDOR, BARAKIEL);
@@ -333,10 +333,5 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00246_PossessorOfAPreciousSoul3(246, Q00246_PossessorOfAPreciousSoul3.class.getSimpleName(), "Possessor Of A Precious Soul 3");
 	}
 }

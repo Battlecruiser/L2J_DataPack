@@ -54,7 +54,7 @@ public final class Q00621_EggDelivery extends Quest
 	// Talkers
 	private static final List<Integer> TALKERS = Arrays.asList(NAFF, CROCUS, KUBER, BOELIN);
 	
-	private Q00621_EggDelivery()
+	public Q00621_EggDelivery()
 	{
 		super(621, Q00621_EggDelivery.class.getSimpleName(), "Egg Delivery");
 		addStartNpc(JEREMY);
@@ -275,10 +275,5 @@ public final class Q00621_EggDelivery extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00621_EggDelivery();
 	}
 }

@@ -50,7 +50,7 @@ public final class Q00661_MakingTheHarvestGroundsSafe extends Quest
 	// Misc
 	private static final int MIN_LVL = 21;
 	
-	private Q00661_MakingTheHarvestGroundsSafe()
+	public Q00661_MakingTheHarvestGroundsSafe()
 	{
 		super(661, Q00661_MakingTheHarvestGroundsSafe.class.getSimpleName(), "Making the Harvest Grounds Safe");
 		addStartNpc(NORMAN);
@@ -153,10 +153,5 @@ public final class Q00661_MakingTheHarvestGroundsSafe extends Quest
 			giveItemRandomly(qs.getPlayer(), npc, item.getId(), item.getCount(), 0, item.getChance(), true);
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00661_MakingTheHarvestGroundsSafe();
 	}
 }

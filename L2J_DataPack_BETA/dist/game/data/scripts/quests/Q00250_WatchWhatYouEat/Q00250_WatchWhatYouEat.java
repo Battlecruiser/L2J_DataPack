@@ -51,9 +51,9 @@ public class Q00250_WatchWhatYouEat extends Quest
 		}
 	};
 	
-	public Q00250_WatchWhatYouEat(int questId, String name, String descr)
+	public Q00250_WatchWhatYouEat()
 	{
-		super(questId, name, descr);
+		super(250, Q00250_WatchWhatYouEat.class.getSimpleName(), "Watch What You Eat");
 		addStartNpc(SALLY);
 		addFirstTalkId(SALLY);
 		addTalkId(SALLY);
@@ -185,10 +185,5 @@ public class Q00250_WatchWhatYouEat extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00250_WatchWhatYouEat(250, Q00250_WatchWhatYouEat.class.getSimpleName(), "Watch What You Eat");
 	}
 }

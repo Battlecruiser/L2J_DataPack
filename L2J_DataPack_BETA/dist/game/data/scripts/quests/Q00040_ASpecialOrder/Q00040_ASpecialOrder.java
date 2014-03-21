@@ -48,9 +48,9 @@ public final class Q00040_ASpecialOrder extends Quest
 	// Misc
 	private static final int MIN_LVL = 40;
 	
-	private Q00040_ASpecialOrder(int questId, String name, String descr)
+	public Q00040_ASpecialOrder()
 	{
-		super(questId, name, descr);
+		super(40, Q00040_ASpecialOrder.class.getSimpleName(), "A Special Order");
 		addStartNpc(HELVETIA);
 		addTalkId(HELVETIA, OFULLE, GESTO);
 		registerQuestItems(BOX_OF_FISH, BOX_OF_SEED);
@@ -260,10 +260,5 @@ public final class Q00040_ASpecialOrder extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00040_ASpecialOrder(40, Q00040_ASpecialOrder.class.getSimpleName(), "A Special Order");
 	}
 }

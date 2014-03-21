@@ -62,9 +62,9 @@ public final class Q00902_ReclaimOurEra extends Quest
 		MONSTER_DROPS.put(25701, ANAIS_SCROLL); // Anais - Master of Splendor
 	}
 	
-	private Q00902_ReclaimOurEra(int questId, String name, String descr)
+	public Q00902_ReclaimOurEra()
 	{
-		super(questId, name, descr);
+		super(902, Q00902_ReclaimOurEra.class.getSimpleName(), "Reclaim Our Era");
 		addStartNpc(MATHIAS);
 		addTalkId(MATHIAS);
 		addKillId(MONSTER_DROPS.keySet());
@@ -242,10 +242,5 @@ public final class Q00902_ReclaimOurEra extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00902_ReclaimOurEra(902, Q00902_ReclaimOurEra.class.getSimpleName(), "Reclaim Our Era");
 	}
 }

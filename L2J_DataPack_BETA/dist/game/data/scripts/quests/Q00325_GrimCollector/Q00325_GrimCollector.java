@@ -70,9 +70,9 @@ public final class Q00325_GrimCollector extends Quest
 		MONSTER_DROPS.put(20515, Arrays.asList(new QuestItemHolder(SKULL, 5), new QuestItemHolder(RIB_BONE, 20), new QuestItemHolder(SPINE, 31), new QuestItemHolder(ARM_BONE, 33), new QuestItemHolder(THIGH_BONE, 69)));
 	}
 	
-	private Q00325_GrimCollector(int questId, String name, String descr)
+	public Q00325_GrimCollector()
 	{
-		super(questId, name, descr);
+		super(325, Q00325_GrimCollector.class.getSimpleName(), "Grim Collector");
 		addStartNpc(GUARD_CURTIZ);
 		addTalkId(GUARD_CURTIZ, VARSAK, SAMED);
 		addKillId(MONSTER_DROPS.keySet());
@@ -281,10 +281,5 @@ public final class Q00325_GrimCollector extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00325_GrimCollector(325, Q00325_GrimCollector.class.getSimpleName(), "Grim Collector");
 	}
 }

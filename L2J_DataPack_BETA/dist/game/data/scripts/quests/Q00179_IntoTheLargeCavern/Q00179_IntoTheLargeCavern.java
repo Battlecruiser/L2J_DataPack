@@ -36,9 +36,9 @@ public class Q00179_IntoTheLargeCavern extends Quest
 	private static final int KEKROPUS = 32138;
 	private static final int MENACING_MACHINE = 32258;
 	
-	public Q00179_IntoTheLargeCavern(int questId, String name, String descr)
+	public Q00179_IntoTheLargeCavern()
 	{
-		super(questId, name, descr);
+		super(179, Q00179_IntoTheLargeCavern.class.getSimpleName(), "Into The Large Cavern");
 		addStartNpc(KEKROPUS);
 		addTalkId(KEKROPUS, MENACING_MACHINE);
 	}
@@ -132,10 +132,5 @@ public class Q00179_IntoTheLargeCavern extends Quest
 			htmltext = "32258-01.html";
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00179_IntoTheLargeCavern(179, Q00179_IntoTheLargeCavern.class.getSimpleName(), "Into The Large Cavern");
 	}
 }

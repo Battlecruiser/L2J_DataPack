@@ -43,9 +43,9 @@ public class Q00907_DragonTrophyValakas extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 84;
 	
-	private Q00907_DragonTrophyValakas(int questId, String name, String descr)
+	public Q00907_DragonTrophyValakas()
 	{
-		super(questId, name, descr);
+		super(907, Q00907_DragonTrophyValakas.class.getSimpleName(), "Dragon Trophy - Valakas");
 		addStartNpc(KLEIN);
 		addTalkId(KLEIN);
 		addKillId(VALAKAS);
@@ -173,10 +173,5 @@ public class Q00907_DragonTrophyValakas extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00907_DragonTrophyValakas(907, Q00907_DragonTrophyValakas.class.getSimpleName(), "Dragon Trophy - Valakas");
 	}
 }

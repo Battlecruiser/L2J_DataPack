@@ -83,7 +83,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 		MOBS_MEAT.put(18900, 0.349); // Full Grown Grendel
 	}
 	
-	private Q00631_DeliciousTopChoiceMeat()
+	public Q00631_DeliciousTopChoiceMeat()
 	{
 		super(631, Q00631_DeliciousTopChoiceMeat.class.getSimpleName(), "Delicious Top Choice Meat");
 		addStartNpc(TUNATUN);
@@ -229,10 +229,5 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00631_DeliciousTopChoiceMeat();
 	}
 }

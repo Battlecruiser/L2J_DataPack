@@ -53,9 +53,9 @@ public final class Q00273_InvadersOfTheHolyLand extends Quest
 	// Misc
 	private static final int MIN_LVL = 6;
 	
-	private Q00273_InvadersOfTheHolyLand(int questId, String name, String descr)
+	public Q00273_InvadersOfTheHolyLand()
 	{
-		super(questId, name, descr);
+		super(273, Q00273_InvadersOfTheHolyLand.class.getSimpleName(), "Invaders of the Holy Land");
 		addStartNpc(VARKEES);
 		addTalkId(VARKEES);
 		addKillId(MONSTERS.keySet());
@@ -146,10 +146,5 @@ public final class Q00273_InvadersOfTheHolyLand extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00273_InvadersOfTheHolyLand(273, Q00273_InvadersOfTheHolyLand.class.getSimpleName(), "Invaders of the Holy Land");
 	}
 }

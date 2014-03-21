@@ -62,9 +62,9 @@ public final class Q00046_OnceMoreInTheArmsOfTheMotherTree extends Quest
 		NPC_ITEMS.put(DUSTIN, new ItemHolder(5, GALLADUCCIS_ORDER_3));
 	}
 	
-	private Q00046_OnceMoreInTheArmsOfTheMotherTree(int questId, String name, String descr)
+	public Q00046_OnceMoreInTheArmsOfTheMotherTree()
 	{
-		super(questId, name, descr);
+		super(46, Q00046_OnceMoreInTheArmsOfTheMotherTree.class.getSimpleName(), "Once More In the Arms of the Mother Tree");
 		addStartNpc(GALLADUCCI);
 		addTalkId(GALLADUCCI);
 		addTalkId(NPC_ITEMS.keySet());
@@ -299,10 +299,5 @@ public final class Q00046_OnceMoreInTheArmsOfTheMotherTree extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00046_OnceMoreInTheArmsOfTheMotherTree(46, Q00046_OnceMoreInTheArmsOfTheMotherTree.class.getSimpleName(), "Once More In the Arms of the Mother Tree");
 	}
 }

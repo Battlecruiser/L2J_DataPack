@@ -41,9 +41,9 @@ public class Q00998_FallenAngelSelect extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 38;
 	
-	private Q00998_FallenAngelSelect(int questId, String name, String descr)
+	public Q00998_FallenAngelSelect()
 	{
-		super(questId, name, descr);
+		super(998, Q00998_FallenAngelSelect.class.getSimpleName(), "Fallen Angel - Select");
 		setIsCustom(true);
 		addStartNpc(NATOOLS);
 		addTalkId(NATOOLS);
@@ -95,10 +95,5 @@ public class Q00998_FallenAngelSelect extends Quest
 			return getNoQuestMsg(player);
 		}
 		return ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "30894-01.html" : "30894-00.html";
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00998_FallenAngelSelect(998, Q00998_FallenAngelSelect.class.getSimpleName(), "Fallen Angel - Select");
 	}
 }

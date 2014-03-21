@@ -75,9 +75,9 @@ public final class Q00281_HeadForTheHills extends Quest
 		MONSTERS.put(22239, 990); // Muertos Guard
 	}
 	
-	private Q00281_HeadForTheHills(int questId, String name, String descr)
+	public Q00281_HeadForTheHills()
 	{
-		super(questId, name, descr);
+		super(281, Q00281_HeadForTheHills.class.getSimpleName(), "Head for the Hills!");
 		addStartNpc(MERCELA);
 		addTalkId(MERCELA);
 		addKillId(MONSTERS.keySet());
@@ -224,10 +224,5 @@ public final class Q00281_HeadForTheHills extends Quest
 			vars.set("GUIDE_MISSION", vars.getInt("GUIDE_MISSION") + 1000);
 			player.sendPacket(MESSAGE);
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00281_HeadForTheHills(281, Q00281_HeadForTheHills.class.getSimpleName(), "Head for the Hills!");
 	}
 }

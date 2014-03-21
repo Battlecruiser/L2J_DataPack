@@ -54,9 +54,9 @@ public class Q00168_DeliverSupplies extends Quest
 		SENTRIES.put(ROSELYN, SENTRY_BLADE2);
 	}
 	
-	private Q00168_DeliverSupplies(int questId, String name, String descr)
+	public Q00168_DeliverSupplies()
 	{
-		super(questId, name, descr);
+		super(168, Q00168_DeliverSupplies.class.getSimpleName(), "Deliver Supplies");
 		addStartNpc(JENNA);
 		addTalkId(JENNA, ROSELYN, KRISTIN, HARANT);
 		registerQuestItems(JENNAS_LETTER, SENTRY_BLADE1, SENTRY_BLADE2, SENTRY_BLADE3, OLD_BRONZE_SWORD);
@@ -183,10 +183,5 @@ public class Q00168_DeliverSupplies extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00168_DeliverSupplies(168, Q00168_DeliverSupplies.class.getSimpleName(), "Deliver Supplies");
 	}
 }

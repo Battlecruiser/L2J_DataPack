@@ -63,9 +63,9 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 		290
 	};
 	
-	public Q00136_MoreThanMeetsTheEye(int questId, String name, String descr)
+	public Q00136_MoreThanMeetsTheEye()
 	{
-		super(questId, name, descr);
+		super(136, Q00136_MoreThanMeetsTheEye.class.getSimpleName(), "More Than Meets the Eye");
 		addStartNpc(HARDIN);
 		addTalkId(HARDIN, ERRICKIN, CLAYTON);
 		addKillId(GHOST1, GHOST2, GHOST3, GLASS_JAGUAR, MIRROR);
@@ -311,10 +311,5 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00136_MoreThanMeetsTheEye(136, Q00136_MoreThanMeetsTheEye.class.getSimpleName(), "More Than Meets the Eye");
 	}
 }

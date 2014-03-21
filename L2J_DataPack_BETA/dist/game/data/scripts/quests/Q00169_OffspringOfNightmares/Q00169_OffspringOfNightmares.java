@@ -45,9 +45,9 @@ public class Q00169_OffspringOfNightmares extends Quest
 	// Misc
 	private static final int MIN_LVL = 15;
 	
-	private Q00169_OffspringOfNightmares(int questId, String name, String descr)
+	public Q00169_OffspringOfNightmares()
 	{
-		super(questId, name, descr);
+		super(169, Q00169_OffspringOfNightmares.class.getSimpleName(), "Offspring of Nightmares");
 		addStartNpc(VLASTY);
 		addTalkId(VLASTY);
 		addKillId(LESSER_DARK_HORROR, DARK_HORROR);
@@ -145,10 +145,5 @@ public class Q00169_OffspringOfNightmares extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00169_OffspringOfNightmares(169, Q00169_OffspringOfNightmares.class.getSimpleName(), "Offspring of Nightmares");
 	}
 }

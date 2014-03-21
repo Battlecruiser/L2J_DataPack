@@ -44,9 +44,9 @@ public class Q00338_AlligatorHunter extends Quest
 	private static final int MIN_LEVEL = 40;
 	private static final int SECOND_CHANCE = 19;
 	
-	public Q00338_AlligatorHunter(int questId, String name, String descr)
+	public Q00338_AlligatorHunter()
 	{
-		super(questId, name, descr);
+		super(338, Q00338_AlligatorHunter.class.getSimpleName(), "Alligator Hunter");
 		addStartNpc(ENVERUN);
 		addTalkId(ENVERUN);
 		addKillId(ALLIGATOR);
@@ -129,10 +129,5 @@ public class Q00338_AlligatorHunter extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00338_AlligatorHunter(338, Q00338_AlligatorHunter.class.getSimpleName(), "Alligator Hunter");
 	}
 }

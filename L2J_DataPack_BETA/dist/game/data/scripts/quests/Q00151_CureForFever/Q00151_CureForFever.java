@@ -49,9 +49,9 @@ public class Q00151_CureForFever extends Quest
 	private static final int MIN_LEVEL = 15;
 	private static final int CHANCE = 0;
 	
-	private Q00151_CureForFever(int questId, String name, String descr)
+	public Q00151_CureForFever()
 	{
-		super(questId, name, descr);
+		super(151, Q00151_CureForFever.class.getSimpleName(), "Cure for Fever");
 		addStartNpc(ELLIAS);
 		addTalkId(ELLIAS, YOHANES);
 		addKillId(MOBS);
@@ -141,10 +141,5 @@ public class Q00151_CureForFever extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00151_CureForFever(151, Q00151_CureForFever.class.getSimpleName(), "Cure for Fever");
 	}
 }

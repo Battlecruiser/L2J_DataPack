@@ -59,9 +59,9 @@ public class Q00312_TakeAdvantageOfTheCrisis extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	
-	private Q00312_TakeAdvantageOfTheCrisis(int questId, String name, String descr)
+	public Q00312_TakeAdvantageOfTheCrisis()
 	{
-		super(questId, name, descr);
+		super(312, Q00312_TakeAdvantageOfTheCrisis.class.getSimpleName(), "Take Advantage of the Crisis!");
 		addStartNpc(FILAUR);
 		addTalkId(FILAUR);
 		addKillId(MOBS.keySet());
@@ -133,10 +133,5 @@ public class Q00312_TakeAdvantageOfTheCrisis extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00312_TakeAdvantageOfTheCrisis(312, Q00312_TakeAdvantageOfTheCrisis.class.getSimpleName(), "Take Advantage of the Crisis!");
 	}
 }

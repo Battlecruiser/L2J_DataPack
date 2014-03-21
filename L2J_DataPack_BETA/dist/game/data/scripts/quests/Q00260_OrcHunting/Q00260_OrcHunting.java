@@ -56,9 +56,9 @@ public final class Q00260_OrcHunting extends Quest
 	// Misc
 	private static final int MIN_LVL = 6;
 	
-	private Q00260_OrcHunting(int questId, String name, String descr)
+	public Q00260_OrcHunting()
 	{
-		super(questId, name, descr);
+		super(260, Q00260_OrcHunting.class.getSimpleName(), "Orc Hunting");
 		addStartNpc(RAYEN);
 		addTalkId(RAYEN);
 		addKillId(MONSTERS.keySet());
@@ -146,10 +146,5 @@ public final class Q00260_OrcHunting extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00260_OrcHunting(260, Q00260_OrcHunting.class.getSimpleName(), "Orc Hunting");
 	}
 }

@@ -43,9 +43,9 @@ public class Q00553_OlympiadUndefeated extends Quest
 	private static final int OLY_CHEST = 17169;
 	private static final int MEDAL_OF_GLORY = 21874;
 	
-	public Q00553_OlympiadUndefeated(int questId, String name, String descr)
+	public Q00553_OlympiadUndefeated()
 	{
-		super(questId, name, descr);
+		super(553, Q00553_OlympiadUndefeated.class.getSimpleName(), "Olympiad Undefeated");
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
 		registerQuestItems(WIN_CONF_2, WIN_CONF_5, WIN_CONF_10);
@@ -188,10 +188,5 @@ public class Q00553_OlympiadUndefeated extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00553_OlympiadUndefeated(553, Q00553_OlympiadUndefeated.class.getSimpleName(), "Olympiad Undefeated");
 	}
 }

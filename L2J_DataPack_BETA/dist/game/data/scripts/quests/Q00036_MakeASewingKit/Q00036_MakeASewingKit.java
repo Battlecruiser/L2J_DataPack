@@ -45,9 +45,9 @@ public class Q00036_MakeASewingKit extends Quest
 	private static final int IRON_COUNT = 5;
 	private static final int COUNT = 10;
 	
-	private Q00036_MakeASewingKit(int questId, String name, String descr)
+	public Q00036_MakeASewingKit()
 	{
-		super(questId, name, descr);
+		super(36, Q00036_MakeASewingKit.class.getSimpleName(), "Make a Sewing Kit");
 		addStartNpc(FERRIS);
 		addTalkId(FERRIS);
 		addKillId(ENCHANTED_IRON_GOLEM);
@@ -154,10 +154,5 @@ public class Q00036_MakeASewingKit extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00036_MakeASewingKit(36, Q00036_MakeASewingKit.class.getSimpleName(), "Make a Sewing Kit");
 	}
 }

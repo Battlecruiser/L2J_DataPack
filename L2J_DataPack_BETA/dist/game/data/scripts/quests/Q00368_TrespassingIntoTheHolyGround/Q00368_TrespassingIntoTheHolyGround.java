@@ -48,7 +48,7 @@ public final class Q00368_TrespassingIntoTheHolyGround extends Quest
 		MOBS.put(20797, 0.93); // blade_stakato_drone
 	}
 	
-	private Q00368_TrespassingIntoTheHolyGround()
+	public Q00368_TrespassingIntoTheHolyGround()
 	{
 		super(368, Q00368_TrespassingIntoTheHolyGround.class.getSimpleName(), "Trespassing into the Holy Ground");
 		addStartNpc(RESTINA);
@@ -147,10 +147,5 @@ public final class Q00368_TrespassingIntoTheHolyGround extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00368_TrespassingIntoTheHolyGround();
 	}
 }
