@@ -163,8 +163,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="4793000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="58" />
 			<add order="0x10" stat="pDef" val="71" />
@@ -182,8 +184,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="30542" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="194" />
 			<add order="0x10" stat="mAtk" val="136" />

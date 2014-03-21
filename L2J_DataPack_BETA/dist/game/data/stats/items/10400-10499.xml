@@ -328,8 +328,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2361-1" />
-		<set name="use_condition" val="{{uc_category;{@upgrade_baby_pet_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="UPGRADE_BABY_PET_GROUP" />
+		</cond>
 	</item>
 	<item id="10426" type="EtcItem" name="Fenrir Necklace">
 		<set name="icon" val="icon.etc_summon_wolf_r_01" />

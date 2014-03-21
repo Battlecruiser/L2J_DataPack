@@ -949,9 +949,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2622-1" />
-		<set name="use_condition" val="{{uc_category;{@warsmith_group}}}" />
 		<cond msgId="113" addName="1">
-			<player instanceId="120" />
+			<and>
+				<player instanceId="120" />
+				<player categoryType="WARSMITH_GROUP" />
+			</and>
 		</cond>
 	</item>
 	<item id="13770" type="Armor" name="Shadow Item - Shield of Yehan Miakesh">

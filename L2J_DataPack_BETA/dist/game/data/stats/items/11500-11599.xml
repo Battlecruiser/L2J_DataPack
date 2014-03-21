@@ -239,7 +239,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="171" />

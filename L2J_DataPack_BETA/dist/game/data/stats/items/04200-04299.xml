@@ -455,8 +455,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="1566000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="50" />
 			<add order="0x10" stat="pDef" val="50" />
@@ -471,8 +473,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="4793000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="58" />
 			<add order="0x10" stat="pDef" val="58" />
@@ -487,8 +491,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="4793000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="58" />
 			<add order="0x10" stat="pDef" val="58" />
@@ -506,8 +512,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="2814000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="24" />
 			<add order="0x10" stat="mAtk" val="32" />
@@ -527,8 +535,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="9536500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="31" />
 			<add order="0x10" stat="mAtk" val="43" />

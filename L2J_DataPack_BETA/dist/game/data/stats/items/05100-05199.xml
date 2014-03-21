@@ -772,8 +772,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2101-1" />
-		<set name="use_condition" val="{{uc_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 	</item>
 	<item id="5169" type="EtcItem" name="Deluxe Food for Strider">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
@@ -786,8 +788,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2102-1" />
-		<set name="use_condition" val="{{uc_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 	</item>
 	<item id="5170" type="Armor" name="Mithril Panzer Coat">
 		<set name="icon" val="icon.etc_pet_armor_i08" />
@@ -798,8 +802,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="412500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="41" />
 			<add order="0x10" stat="pDef" val="41" />
@@ -814,8 +820,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="598500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="44" />
 			<add order="0x10" stat="pDef" val="44" />
@@ -830,8 +838,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="928500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="46" />
 			<add order="0x10" stat="pDef" val="46" />
@@ -846,8 +856,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="1335500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="49" />
 			<add order="0x10" stat="pDef" val="49" />
@@ -862,8 +874,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="2032000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="52" />
 			<add order="0x10" stat="pDef" val="52" />
@@ -878,8 +892,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="2032000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="54" />
 			<add order="0x10" stat="pDef" val="54" />
@@ -897,8 +913,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="800000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="17" />
 			<add order="0x10" stat="mAtk" val="21" />
@@ -918,8 +936,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="1150000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="19" />
 			<add order="0x10" stat="mAtk" val="24" />
@@ -939,8 +959,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="1700000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="21" />
 			<add order="0x10" stat="mAtk" val="27" />
@@ -960,8 +982,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="2450000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="23" />
 			<add order="0x10" stat="mAtk" val="30" />
@@ -981,8 +1005,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="3650000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="25" />
 			<add order="0x10" stat="mAtk" val="34" />
@@ -1002,8 +1028,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="5000000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="STRIDER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="27" />
 			<add order="0x10" stat="mAtk" val="37" />
@@ -1020,8 +1048,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="598500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="44" />
 			<add order="0x10" stat="pDef" val="44" />
@@ -1036,8 +1066,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="928500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="46" />
 			<add order="0x10" stat="pDef" val="46" />
@@ -1052,8 +1084,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="1335500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="49" />
 			<add order="0x10" stat="pDef" val="49" />
@@ -1068,8 +1102,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="2032000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="52" />
 			<add order="0x10" stat="pDef" val="52" />
@@ -1084,8 +1120,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="2784000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="54" />
 			<add order="0x10" stat="pDef" val="54" />
@@ -1103,8 +1141,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="1150000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="19" />
 			<add order="0x10" stat="mAtk" val="24" />
@@ -1124,8 +1164,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="1700000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="21" />
 			<add order="0x10" stat="mAtk" val="27" />
@@ -1145,8 +1187,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="2450000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="23" />
 			<add order="0x10" stat="mAtk" val="30" />
@@ -1166,8 +1210,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="3650000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="25" />
 			<add order="0x10" stat="mAtk" val="34" />
@@ -1187,8 +1233,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="5000000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="27" />
 			<add order="0x10" stat="mAtk" val="37" />

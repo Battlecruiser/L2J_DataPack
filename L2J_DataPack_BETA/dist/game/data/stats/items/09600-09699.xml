@@ -770,8 +770,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="1838000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="233" />
 			<add order="0x10" stat="mAtk" val="5" />
@@ -791,8 +793,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="3404500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="289" />
 			<add order="0x10" stat="mAtk" val="5" />
@@ -812,8 +816,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="6379000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="350" />
 			<add order="0x10" stat="mAtk" val="5" />
@@ -833,8 +839,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="10579500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="413" />
 			<add order="0x10" stat="mAtk" val="5" />
@@ -854,8 +862,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="18876000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="477" />
 			<add order="0x10" stat="mAtk" val="5" />
@@ -875,8 +885,10 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
 		<set name="price" val="34319000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pAtk" val="537" />
 			<add order="0x10" stat="mAtk" val="5" />
@@ -893,8 +905,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="938500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="112" />
@@ -909,8 +923,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="1810000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="124" />
@@ -925,8 +941,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="3563000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="136" />
@@ -941,8 +959,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="6281500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="148" />
@@ -957,8 +977,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="12118000" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="160" />
@@ -973,8 +995,10 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
 		<set name="price" val="24439500" /> <!-- H5 Price -->
-		<set name="equip_condition" val="{{ec_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="171" />
@@ -990,8 +1014,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2361-1" />
-		<set name="use_condition" val="{{uc_category;{@grown_up_wolf_group}}}" />
 		<set name="for_npc" val="true" />
+		<cond msgId="113" addName="1">
+			<player categoryType="GROWN_UP_WOLF_GROUP" />
+		</cond>
 	</item>
 	<item id="9669" type="Armor" name="Native Helmet">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
