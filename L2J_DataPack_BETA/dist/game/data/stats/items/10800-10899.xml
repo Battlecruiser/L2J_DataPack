@@ -82,11 +82,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@shield_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="90, 91, 99, 106" />
+				<player categoryType="SHIELD_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -109,11 +108,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="89, 113, 117, 118" />
+				<player categoryType="WEAPON_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -136,11 +134,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="88, 114" />
+				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -163,11 +160,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="100, 107" />
+				<player categoryType="BARD" />
 			</and>
 		</cond>
 		<for>
@@ -211,7 +207,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+			<player categoryType="DAGGER_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -233,9 +229,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@bow_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="92, 102, 109, 134" />
+			<player categoryType="BOW_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -281,11 +276,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@heal_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="97, 105, 112" />
+				<player categoryType="HEAL_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -309,11 +303,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="98, 115, 116" />
+				<player categoryType="BUFF_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -337,11 +330,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="96, 104, 111" />
+				<player categoryType="SUMMON_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -365,11 +357,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@wizard_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="94, 95, 103, 110" />
+				<player categoryType="WIZARD_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -393,11 +384,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="88, 114" />
+				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -420,9 +410,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
+			<player categoryType="WEAPON_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -444,9 +433,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="98, 115, 116, 136" />
+			<player categoryType="BUFF_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -468,9 +456,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="96, 104, 111" />
+			<player categoryType="SUMMON_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -515,11 +502,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@shield_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="90, 91, 99, 106" />
+				<player categoryType="SHIELD_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -542,11 +528,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="89, 113, 117, 118" />
+				<player categoryType="WEAPON_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -569,11 +554,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="88, 114" />
+				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -596,11 +580,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="100, 107" />
+				<player categoryType="BARD" />
 			</and>
 		</cond>
 		<for>
@@ -644,7 +627,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+			<player categoryType="DAGGER_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -666,9 +649,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@bow_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="92, 102, 109, 134" />
+			<player categoryType="BOW_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -714,11 +696,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@heal_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="97, 105, 112" />
+				<player categoryType="HEAL_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -742,11 +723,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="98, 115, 116" />
+				<player categoryType="BUFF_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -770,11 +750,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="96, 104, 111" />
+				<player categoryType="SUMMON_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -798,11 +777,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@wizard_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="94, 95, 103, 110" />
+				<player categoryType="WIZARD_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -826,9 +804,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="88, 114" />
+			<player categoryType="FORCE_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -850,9 +827,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
+			<player categoryType="WEAPON_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -874,9 +850,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="98, 115, 116, 136" />
+			<player categoryType="BUFF_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -898,9 +873,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="96, 104, 111" />
+			<player categoryType="SUMMON_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />

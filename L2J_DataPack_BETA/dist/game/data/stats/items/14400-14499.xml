@@ -1998,7 +1998,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
-				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+				<player categoryType="DAGGER_MASTER" />
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>
@@ -2515,7 +2515,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
-				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+				<player categoryType="DAGGER_MASTER" />
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>

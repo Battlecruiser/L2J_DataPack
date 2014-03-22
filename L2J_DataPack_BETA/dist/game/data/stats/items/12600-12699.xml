@@ -702,7 +702,7 @@
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+			<player categoryType="DAGGER_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -716,7 +716,9 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="equip_condition" val="{{ec_category;{@bow_master}}}" />
+		<cond msgId="1518">
+			<player categoryType="BOW_MASTER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 		</for>
@@ -729,9 +731,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="FORCE_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -745,9 +749,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<and>
+				<player races="Kamael" />
+				<player categoryType="WEAPON_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -761,7 +767,9 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
+		<cond msgId="1518">
+			<player categoryType="BUFF_MASTER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 		</for>
@@ -774,7 +782,9 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
+		<cond msgId="1518">
+			<player categoryType="SUMMON_MASTER" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 		</for>
@@ -838,9 +848,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
-		<set name="equip_condition" val="{{ec_category;{@shield_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="SHIELD_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
@@ -854,9 +866,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="WEAPON_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
@@ -870,9 +884,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="FORCE_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
@@ -886,9 +902,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
-		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="BARD" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
@@ -947,9 +965,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
-		<set name="equip_condition" val="{{ec_category;{@heal_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="HEAL_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x40" stat="maxMp" val="592" />
@@ -963,9 +983,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="BUFF_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x40" stat="maxMp" val="592" />
@@ -979,9 +1001,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="SUMMON_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x40" stat="maxMp" val="592" />
@@ -995,9 +1019,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
-		<set name="equip_condition" val="{{ec_category;{@wizard_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="WIZARD_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x40" stat="maxMp" val="592" />
@@ -1035,7 +1061,7 @@
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+			<player categoryType="DAGGER_MASTER" />
 		</cond>
 	</item>
 	<item id="12677" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
@@ -1046,7 +1072,9 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
-		<set name="equip_condition" val="{{ec_category;{@bow_master}}}" />
+		<cond msgId="1518">
+			<player categoryType="BOW_MASTER" />
+		</cond>
 	</item>
 	<item id="12678" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -1056,7 +1084,9 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
+		<cond msgId="1518">
+			<player categoryType="FORCE_MASTER" />
+		</cond>
 	</item>
 	<item id="12679" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -1066,7 +1096,9 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
+		<cond msgId="1518">
+			<player categoryType="WEAPON_MASTER" />
+		</cond>
 	</item>
 	<item id="12680" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -1076,7 +1108,9 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
+		<cond msgId="1518">
+			<player categoryType="BUFF_MASTER" />
+		</cond>
 	</item>
 	<item id="12681" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -1086,7 +1120,9 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
+		<cond msgId="1518">
+			<player categoryType="SUMMON_MASTER" />
+		</cond>
 	</item>
 	<item id="12682" type="EtcItem" name="Foundation Dynasty Tunic">
 		<set name="icon" val="icon.armor_t93_u_i00" />
@@ -1112,9 +1148,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
-		<set name="equip_condition" val="{{ec_category;{@heal_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="HEAL_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
@@ -1129,9 +1167,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="BUFF_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
@@ -1146,9 +1186,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="SUMMON_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
@@ -1163,9 +1205,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
-		<set name="equip_condition" val="{{ec_category;{@wizard_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="WIZARD_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
@@ -1192,9 +1236,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
-		<set name="equip_condition" val="{{ec_category;{@shield_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="SHIELD_MASTER" />
+			</and>
 		</cond>
 	</item>
 	<item id="12689" type="EtcItem" name="Foundation Dynasty Platinum Plate">
@@ -1205,9 +1251,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="WEAPON_MASTER" />
+			</and>
 		</cond>
 	</item>
 	<item id="12690" type="EtcItem" name="Foundation Dynasty Platinum Plate">
@@ -1218,9 +1266,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="FORCE_MASTER" />
+			</and>
 		</cond>
 	</item>
 	<item id="12691" type="EtcItem" name="Foundation Dynasty Platinum Plate">
@@ -1231,9 +1281,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
-		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player categoryType="BARD" />
+			</and>
 		</cond>
 	</item>
 	<item id="12692" type="EtcItem" name="Foundation Dynasty Helmet">

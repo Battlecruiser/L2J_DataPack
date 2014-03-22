@@ -1484,11 +1484,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@rogue_cloack}}}" />
 		<cond msgId="2453">
 			<and>
 				<player castle="-1" /> <!-- owns a castle -->
-				<player class_id_restriction="92, 102, 109, 93, 101, 108" /> <!-- Bow Masters and Dagger Masters -->
+				<player categoryType="ROGUE_CLOACK" />
 				<player pledgeClass="5" /> <!-- Baron -->
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player cloakStatus="1" />
@@ -1511,11 +1510,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@mage_cloack}}}" />
 		<cond msgId="2453">
 			<and>
 				<player castle="-1" /> <!-- owns a castle -->
-				<player class_id_restriction="97, 105, 112, 98, 115, 116, 96, 104, 111, 94, 95, 103, 110" /> <!-- Healer, Enchanter, Summoner and Wizard -->
+				<player categoryType="MAGE_CLOACK" />
 				<player pledgeClass="5" /> <!-- Baron -->
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player cloakStatus="1" />

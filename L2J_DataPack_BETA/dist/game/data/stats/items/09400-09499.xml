@@ -9,7 +9,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="46, 113, 55, 117, 57, 118" /> <!-- Weapon Master -->
+				<player categoryType="WEAPON_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -24,7 +24,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="8, 93, 23, 101, 36, 108" /> <!-- Dagger Master -->
+				<player categoryType="DAGGER_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -39,7 +39,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="9, 92, 24, 102, 37, 109" /> <!-- Bow Master -->
+				<player categoryType="BOW_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -54,7 +54,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="12, 94, 13, 95, 27, 103, 40, 110" /> <!-- Wizard -->
+				<player categoryType="WIZARD_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -69,7 +69,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="14, 96, 28, 104, 41, 111" /> <!-- Summoner -->
+				<player categoryType="SUMMON_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -84,7 +84,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="16, 97, 30, 105, 43, 112" /> <!-- Healer -->
+				<player categoryType="HEAL_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -99,7 +99,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="17, 98, 51, 115, 52, 116" /> <!-- Enchanter -->
+				<player categoryType="BUFF_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -114,7 +114,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="127, 131, 128, 132, 129, 133" /> <!-- Kamael Weapon Master -->
+				<player categoryType="WEAPON_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -129,7 +129,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="130, 134" /> <!-- Kamael Bow Master -->
+				<player categoryType="BOW_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -246,11 +246,10 @@
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@shield_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="90, 91, 99, 106" />
+				<player categoryType="SHIELD_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -271,11 +270,10 @@
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="89, 113, 117, 118" />
+				<player categoryType="WEAPON_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -296,11 +294,10 @@
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="88, 114" />
+				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -321,11 +318,10 @@
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="100, 107" />
+				<player categoryType="BARD" />
 			</and>
 		</cond>
 		<for>
@@ -446,7 +442,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+			<player categoryType="DAGGER_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -466,9 +462,8 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@bow_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="92, 102, 109, 134" />
+			<player categoryType="BOW_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -579,11 +574,10 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@heal_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="97, 105, 112" />
+				<player categoryType="HEAL_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -605,11 +599,10 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="98, 115, 116" />
+				<player categoryType="BUFF_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -631,11 +624,10 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="96, 104, 111" />
+				<player categoryType="SUMMON_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -657,11 +649,10 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@wizard_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="94, 95, 103, 110" />
+				<player categoryType="WIZARD_MASTER" />
 			</and>
 		</cond>
 		<for>

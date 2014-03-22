@@ -970,9 +970,11 @@
 		<set name="item_skill" val="8276-1" />
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@shield_master]}" />
 		<cond msgId="1518">
-			<player instanceId="115,116,119,120,121,122" />
+			<and>
+				<player instanceId="115,116,119,120,121,122" />
+				<player categoryType="SHIELD_MASTER" />
+			</and>
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />

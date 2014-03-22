@@ -323,12 +323,6 @@
 		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="200" />
 			<set order="0x08" stat="mAtk" val="6" />
