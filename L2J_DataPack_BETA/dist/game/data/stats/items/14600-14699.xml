@@ -151,11 +151,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@rogue_cloack}}}" />
 		<cond msgId="2453">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="93, 101, 108, 92, 102, 109" /> <!-- Dagger Master and Bow Master -->
+				<player categoryType="ROGUE_CLOACK" />
 				<player cloakStatus="1" />
 			</and>
 		</cond>
@@ -192,11 +191,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@mage_cloack}}}" />
 		<cond msgId="2453">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="97, 105, 112, 98, 115, 116, 96, 104, 111, 94, 95, 103, 110" /> <!-- Healer, Enchanter, Summoner and Wizard -->
+				<player categoryType="MAGE_CLOACK" />
 				<player cloakStatus="1" />
 			</and>
 		</cond>

@@ -3080,7 +3080,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="90, 91, 99, 106" /> <!-- Shield Master -->
+				<player categoryType="SHIELD_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -3095,7 +3095,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="100, 107" /> <!-- Bard -->
+				<player categoryType="BARD2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -3110,7 +3110,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="88, 114" /> <!-- Force Master -->
+				<player categoryType="FORCE_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>

@@ -336,11 +336,10 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="88, 114" />
+				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -361,9 +360,8 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
+			<player categoryType="WEAPON_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -961,9 +959,8 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{ec_category;{@buff_master}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="98, 115, 116, 136" />
+			<player categoryType="BUFF_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -977,10 +974,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{ec_category;{@buff_master2_3}}" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="135, 136" /> <!-- Kamael Enchanter 2nd or 3rd Class -->
+				<player categoryType="BUFF_MASTER2_3" />
 				<player level="40" />
 			</and>
 		</cond>

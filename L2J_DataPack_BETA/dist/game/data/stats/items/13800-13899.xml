@@ -968,7 +968,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
-				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+				<player categoryType="DAGGER_MASTER" />
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>
@@ -1005,7 +1005,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
-				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+				<player categoryType="DAGGER_MASTER" />
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>
@@ -1042,7 +1042,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
-				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+				<player categoryType="DAGGER_MASTER" />
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>
@@ -1182,11 +1182,10 @@
 		<set name="material" val="cloth" />
 		<set name="weight" val="220" />
 		<set name="price" val="28671000" />
-		<set name="equip_condition" val="{{ec_category;{@rogue_cloack}}}" />
 		<cond msgId="2453">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="93, 101, 108, 92, 102, 109" /> <!-- Dagger Master and Bow Master -->
+				<player categoryType="ROGUE_CLOACK" />
 				<player cloakStatus="1" />
 			</and>
 		</cond>
@@ -1204,11 +1203,10 @@
 		<set name="material" val="cloth" />
 		<set name="weight" val="220" />
 		<set name="price" val="28671000" />
-		<set name="equip_condition" val="{{ec_category;{@mage_cloack}}}" />
 		<cond msgId="2453">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="97, 105, 112, 98, 115, 116, 96, 104, 111, 94, 95, 103, 110" /> <!-- Healer, Enchanter, Summoner and Wizard -->
+				<player categoryType="MAGE_CLOACK" />
 				<player cloakStatus="1" />
 			</and>
 		</cond>
