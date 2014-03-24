@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9200" type="Armor" name="Shadow Item - Jester Hat - Firework">
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="wood" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -17,10 +17,10 @@
 	</item>
 	<item id="9201" type="Armor" name="Shadow Item - Wizard Hat - Firework">
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="wood" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -32,10 +32,10 @@
 	</item>
 	<item id="9202" type="Armor" name="Shadow Item - Dapper Cap - Firework">
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="wood" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -47,10 +47,10 @@
 	</item>
 	<item id="9203" type="Armor" name="Shadow Item - Romantic Chapeau - Firework">
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="wood" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -62,10 +62,10 @@
 	</item>
 	<item id="9204" type="Armor" name="Shadow Item - Iron Circlet - Firework">
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="wood" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -77,8 +77,8 @@
 	</item>
 	<item id="9205" type="EtcItem" name="Alchemist's Chest Key">
 		<set name="icon" val="icon.etc_old_key_i02" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -86,10 +86,10 @@
 	</item>
 	<item id="9206" type="EtcItem" name="Greater Healing Potion (Event)">
 		<set name="icon" val="icon.etc_reagent_white_i00" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
@@ -103,10 +103,10 @@
 	</item>
 	<item id="9207" type="EtcItem" name="Quick Healing Potion (Event)">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
@@ -120,10 +120,10 @@
 	</item>
 	<item id="9208" type="Armor" name="Phantom Mask (Event)">
 		<set name="icon" val="icon.accessary_mask_of_chaotic_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="wood" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -131,7 +131,7 @@
 	</item>
 	<item id="9209" type="Weapon" name="Rapier">
 		<set name="icon" val="icon.weapon_rapier_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -139,8 +139,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="582" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="315000" />
 		<set name="change_weaponId" val="123" />
@@ -163,7 +163,7 @@
 	</item>
 	<item id="9210" type="Weapon" name="Talwar">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -171,8 +171,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="582" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="2100" />
 		<set name="price" val="315000" />
 		<set name="change_weaponId" val="5285" />
@@ -194,7 +194,7 @@
 	</item>
 	<item id="9211" type="Weapon" name="Talwar">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -202,8 +202,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="582" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="2100" />
 		<set name="price" val="315000" />
 		<set name="change_weaponId" val="7880" />
@@ -225,7 +225,7 @@
 	</item>
 	<item id="9212" type="Weapon" name="Field Gun">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -233,8 +233,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="582" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1870" />
 		<set name="price" val="315000" />
 		<set name="change_weaponId" val="274" />
@@ -257,7 +257,7 @@
 	</item>
 	<item id="9213" type="Weapon" name="Fleuret">
 		<set name="icon" val="icon.weapon_rapier_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -265,8 +265,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="915" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1500" />
 		<set name="price" val="495500" />
 		<set name="change_weaponId" val="69" />
@@ -289,7 +289,7 @@
 	</item>
 	<item id="9214" type="Weapon" name="Fleuret">
 		<set name="icon" val="icon.weapon_rapier_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -297,8 +297,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="915" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1500" />
 		<set name="price" val="495500" />
 		<set name="change_weaponId" val="125" />
@@ -321,7 +321,7 @@
 	</item>
 	<item id="9215" type="Weapon" name="Fleuret">
 		<set name="icon" val="icon.weapon_rapier_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -329,8 +329,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="915" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1500" />
 		<set name="price" val="495500" />
 		<set name="change_weaponId" val="126" />
@@ -353,7 +353,7 @@
 	</item>
 	<item id="9216" type="Weapon" name="Military Talwar">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -361,8 +361,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="915" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="2080" />
 		<set name="price" val="495500" />
 		<set name="soulshots" val="2" />
@@ -383,7 +383,7 @@
 	</item>
 	<item id="9217" type="Weapon" name="Hand Crossbow">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -391,8 +391,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="915" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1850" />
 		<set name="price" val="495500" />
 		<set name="change_weaponId" val="275" />
@@ -415,7 +415,7 @@
 	</item>
 	<item id="9218" type="Weapon" name="Estoc">
 		<set name="icon" val="icon.weapon_rapier_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -423,8 +423,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1373" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1470" />
 		<set name="price" val="743500" />
 		<set name="change_weaponId" val="127" />
@@ -447,7 +447,7 @@
 	</item>
 	<item id="9219" type="Weapon" name="Estoc">
 		<set name="icon" val="icon.weapon_rapier_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -455,8 +455,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1373" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1470" />
 		<set name="price" val="743500" />
 		<set name="change_weaponId" val="130" />
@@ -479,7 +479,7 @@
 	</item>
 	<item id="9220" type="Weapon" name="Field Sword">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -487,8 +487,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1373" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="2060" />
 		<set name="price" val="743500" />
 		<set name="change_weaponId" val="124" />
@@ -510,7 +510,7 @@
 	</item>
 	<item id="9221" type="Weapon" name="Crossbow">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -518,8 +518,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1373" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1840" />
 		<set name="price" val="743500" />
 		<set name="change_weaponId" val="278" />
@@ -542,7 +542,7 @@
 	</item>
 	<item id="9222" type="Weapon" name="Epee">
 		<set name="icon" val="icon.weapon_rapier_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -550,8 +550,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1983" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1450" />
 		<set name="price" val="1074000" />
 		<set name="change_weaponId" val="129" />
@@ -574,7 +574,7 @@
 	</item>
 	<item id="9223" type="Weapon" name="Katzbalger">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -582,8 +582,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1983" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="2020" />
 		<set name="price" val="1074000" />
 		<set name="change_weaponId" val="7881" />
@@ -605,7 +605,7 @@
 	</item>
 	<item id="9224" type="Weapon" name="Arm Breaker">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -613,8 +613,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1983" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1820" />
 		<set name="price" val="1074000" />
 		<set name="change_weaponId" val="279" />
@@ -637,7 +637,7 @@
 	</item>
 	<item id="9225" type="Weapon" name="Grand Epee">
 		<set name="icon" val="icon.weapon_rapier_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -645,8 +645,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2561" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1440" />
 		<set name="price" val="1387000" />
 		<set name="change_weaponId" val="2499" />
@@ -669,7 +669,7 @@
 	</item>
 	<item id="9226" type="Weapon" name="General's Katzbalger">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -677,8 +677,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2561" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="2010" />
 		<set name="price" val="1387000" />
 		<set name="change_weaponId" val="70" />
@@ -700,7 +700,7 @@
 	</item>
 	<item id="9227" type="Weapon" name="Cranequin">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -708,8 +708,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2561" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1810" />
 		<set name="price" val="1387000" />
 		<set name="change_weaponId" val="280" />
@@ -732,7 +732,7 @@
 	</item>
 	<item id="9228" type="Weapon" name="Soldat Estoc">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -740,8 +740,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="705" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1430" />
 		<set name="price" val="1762900" />
 		<set name="change_weaponId" val="72" />
@@ -764,7 +764,7 @@
 	</item>
 	<item id="9229" type="Weapon" name="Soldat Estoc - Critical Anger">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -772,8 +772,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="705" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1430" />
 		<set name="price" val="1762900" />
 		<set name="change_weaponId" val="4681" />
@@ -799,7 +799,7 @@
 	</item>
 	<item id="9230" type="Weapon" name="Soldat Estoc - Focus">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -807,8 +807,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="705" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1430" />
 		<set name="price" val="1762900" />
 		<set name="change_weaponId" val="4682" />
@@ -832,7 +832,7 @@
 	</item>
 	<item id="9231" type="Weapon" name="Soldat Estoc - Light">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -840,8 +840,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="705" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1430" />
 		<set name="price" val="1762900" />
 		<set name="change_weaponId" val="4683" />
@@ -865,7 +865,7 @@
 	</item>
 	<item id="9232" type="Weapon" name="Schlager">
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -873,8 +873,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="705" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="1762900" />
 		<set name="change_weaponId" val="71" />
@@ -896,7 +896,7 @@
 	</item>
 	<item id="9233" type="Weapon" name="Schlager - Critical Damage">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -904,8 +904,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="705" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="1762900" />
 		<set name="change_weaponId" val="4711" />
@@ -928,7 +928,7 @@
 	</item>
 	<item id="9234" type="Weapon" name="Schlager - Focus">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -936,8 +936,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="705" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="1762900" />
 		<set name="change_weaponId" val="4712" />
@@ -960,7 +960,7 @@
 	</item>
 	<item id="9235" type="Weapon" name="Schlager - Light">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -968,8 +968,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="705" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="1762900" />
 		<set name="change_weaponId" val="4713" />
@@ -992,7 +992,7 @@
 	</item>
 	<item id="9236" type="Weapon" name="Arbalest">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1000,8 +1000,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="705" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1790" />
 		<set name="price" val="1762900" />
 		<set name="change_weaponId" val="281" />
@@ -1024,7 +1024,7 @@
 	</item>
 	<item id="9237" type="Weapon" name="Arbalest - Guidance">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1032,8 +1032,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="705" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1790" />
 		<set name="price" val="1762900" />
 		<set name="change_weaponId" val="4810" />
@@ -1057,7 +1057,7 @@
 	</item>
 	<item id="9238" type="Weapon" name="Arbalest - Evasion">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1065,8 +1065,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="705" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1790" />
 		<set name="price" val="1762900" />
 		<set name="change_weaponId" val="4811" />
@@ -1090,7 +1090,7 @@
 	</item>
 	<item id="9239" type="Weapon" name="Arbalest - Quick Recovery">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1098,8 +1098,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="705" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1790" />
 		<set name="price" val="1762900" />
 		<set name="change_weaponId" val="4812" />
@@ -1122,7 +1122,7 @@
 	</item>
 	<item id="9240" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1130,8 +1130,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="73" />
@@ -1154,7 +1154,7 @@
 	</item>
 	<item id="9241" type="Weapon" name="Chevalier Rapier - Guidance">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1162,8 +1162,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4684" />
@@ -1187,7 +1187,7 @@
 	</item>
 	<item id="9242" type="Weapon" name="Chevalier Rapier - Back Blow">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1195,8 +1195,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4685" />
@@ -1220,7 +1220,7 @@
 	</item>
 	<item id="9243" type="Weapon" name="Chevalier Rapier - Rsk. Evasion">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1228,8 +1228,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4686" />
@@ -1253,7 +1253,7 @@
 	</item>
 	<item id="9244" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1261,8 +1261,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="74" />
@@ -1285,7 +1285,7 @@
 	</item>
 	<item id="9245" type="Weapon" name="Chevalier Rapier - Focus">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1293,8 +1293,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4687" />
@@ -1318,7 +1318,7 @@
 	</item>
 	<item id="9246" type="Weapon" name="Chevalier Rapier - Critical Damage">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1326,8 +1326,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4688" />
@@ -1351,7 +1351,7 @@
 	</item>
 	<item id="9247" type="Weapon" name="Chevalier Rapier - Haste">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1359,8 +1359,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4689" />
@@ -1384,7 +1384,7 @@
 	</item>
 	<item id="9248" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1392,8 +1392,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="131" />
@@ -1416,7 +1416,7 @@
 	</item>
 	<item id="9249" type="Weapon" name="Chevalier Rapier - Critical Damage">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1424,8 +1424,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4690" />
@@ -1449,7 +1449,7 @@
 	</item>
 	<item id="9250" type="Weapon" name="Chevalier Rapier - Critical Poison">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1457,8 +1457,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4691" />
@@ -1483,7 +1483,7 @@
 	</item>
 	<item id="9251" type="Weapon" name="Chevalier Rapier - Haste">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1491,8 +1491,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4692" />
@@ -1516,7 +1516,7 @@
 	</item>
 	<item id="9252" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1524,8 +1524,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="133" />
@@ -1548,7 +1548,7 @@
 	</item>
 	<item id="9253" type="Weapon" name="Chevalier Rapier - Focus">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1556,8 +1556,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4693" />
@@ -1581,7 +1581,7 @@
 	</item>
 	<item id="9254" type="Weapon" name="Chevalier Rapier - Critical Drain">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1589,8 +1589,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4694" />
@@ -1615,7 +1615,7 @@
 	</item>
 	<item id="9255" type="Weapon" name="Chevalier Rapier - Critical Poison">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1623,8 +1623,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4695" />
@@ -1649,7 +1649,7 @@
 	</item>
 	<item id="9256" type="Weapon" name="Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1657,8 +1657,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1770" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="282" />
@@ -1681,7 +1681,7 @@
 	</item>
 	<item id="9257" type="Weapon" name="Ballista - Guidance">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1689,8 +1689,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1770" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4813" />
@@ -1714,7 +1714,7 @@
 	</item>
 	<item id="9258" type="Weapon" name="Ballista - Miser">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1722,8 +1722,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1770" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4814" />
@@ -1747,7 +1747,7 @@
 	</item>
 	<item id="9259" type="Weapon" name="Ballista - Quick Recovery">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1755,8 +1755,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1770" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4815" />
@@ -1779,7 +1779,7 @@
 	</item>
 	<item id="9260" type="Weapon" name="Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1787,8 +1787,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1770" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="285" />
@@ -1811,7 +1811,7 @@
 	</item>
 	<item id="9261" type="Weapon" name="Ballista - Evasion">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1819,8 +1819,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1770" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4816" />
@@ -1844,7 +1844,7 @@
 	</item>
 	<item id="9262" type="Weapon" name="Ballista - Miser">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1852,8 +1852,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1770" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4817" />
@@ -1877,7 +1877,7 @@
 	</item>
 	<item id="9263" type="Weapon" name="Ballista - Cheap Shot">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1885,8 +1885,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="884" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1770" />
 		<set name="price" val="2209700" />
 		<set name="change_weaponId" val="4818" />
@@ -1910,7 +1910,7 @@
 	</item>
 	<item id="9264" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1918,8 +1918,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="75" />
@@ -1942,7 +1942,7 @@
 	</item>
 	<item id="9265" type="Weapon" name="Blinzlasher - Guidance">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1950,8 +1950,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4696" />
@@ -1975,7 +1975,7 @@
 	</item>
 	<item id="9266" type="Weapon" name="Blinzlasher - Focus">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1983,8 +1983,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4697" />
@@ -2008,7 +2008,7 @@
 	</item>
 	<item id="9267" type="Weapon" name="Blinzlasher - Critical Damage">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2016,8 +2016,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4698" />
@@ -2041,7 +2041,7 @@
 	</item>
 	<item id="9268" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2049,8 +2049,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="76" />
@@ -2073,7 +2073,7 @@
 	</item>
 	<item id="9269" type="Weapon" name="Blinzlasher - Focus">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2081,8 +2081,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4699" />
@@ -2106,7 +2106,7 @@
 	</item>
 	<item id="9270" type="Weapon" name="Blinzlasher - Health">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2114,8 +2114,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4700" />
@@ -2139,7 +2139,7 @@
 	</item>
 	<item id="9271" type="Weapon" name="Blinzlasher - Rsk. Haste">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2147,8 +2147,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4701" />
@@ -2172,7 +2172,7 @@
 	</item>
 	<item id="9272" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2180,8 +2180,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="77" />
@@ -2204,7 +2204,7 @@
 	</item>
 	<item id="9273" type="Weapon" name="Blinzlasher - Focus">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2212,8 +2212,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4702" />
@@ -2237,7 +2237,7 @@
 	</item>
 	<item id="9274" type="Weapon" name="Blinzlasher - Critical Damage">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2245,8 +2245,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4703" />
@@ -2270,7 +2270,7 @@
 	</item>
 	<item id="9275" type="Weapon" name="Blinzlasher - Haste">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2278,8 +2278,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4704" />
@@ -2303,7 +2303,7 @@
 	</item>
 	<item id="9276" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2311,8 +2311,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="134" />
@@ -2335,7 +2335,7 @@
 	</item>
 	<item id="9277" type="Weapon" name="Blinzlasher - Health">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2343,8 +2343,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4705" />
@@ -2368,7 +2368,7 @@
 	</item>
 	<item id="9278" type="Weapon" name="Blinzlasher - Focus">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2376,8 +2376,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4706" />
@@ -2401,7 +2401,7 @@
 	</item>
 	<item id="9279" type="Weapon" name="Blinzlasher - Light">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2409,8 +2409,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4707" />
@@ -2434,7 +2434,7 @@
 	</item>
 	<item id="9280" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2442,8 +2442,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="132" />
@@ -2466,7 +2466,7 @@
 	</item>
 	<item id="9281" type="Weapon" name="Blinzlasher - Guidance">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2474,8 +2474,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="6307" />
@@ -2499,7 +2499,7 @@
 	</item>
 	<item id="9282" type="Weapon" name="Blinzlasher - Critical Drain">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2507,8 +2507,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="6308" />
@@ -2533,7 +2533,7 @@
 	</item>
 	<item id="9283" type="Weapon" name="Blinzlasher - Health">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2541,8 +2541,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="6309" />
@@ -2566,7 +2566,7 @@
 	</item>
 	<item id="9284" type="Weapon" name="Immortal Edge">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -2574,8 +2574,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="7882" />
@@ -2597,7 +2597,7 @@
 	</item>
 	<item id="9285" type="Weapon" name="Immortal Edge - Focus">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -2605,8 +2605,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="8102" />
@@ -2629,7 +2629,7 @@
 	</item>
 	<item id="9286" type="Weapon" name="Immortal Edge - Health">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -2637,8 +2637,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="8103" />
@@ -2661,7 +2661,7 @@
 	</item>
 	<item id="9287" type="Weapon" name="Immortal Edge - Critical Drain">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -2669,8 +2669,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="8104" />
@@ -2694,7 +2694,7 @@
 	</item>
 	<item id="9288" type="Weapon" name="Tathlum">
 		<set name="icon" val="icon.weapon_taslam_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -2702,8 +2702,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1760" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="283" />
@@ -2726,7 +2726,7 @@
 	</item>
 	<item id="9289" type="Weapon" name="Tathlum - Guidance">
 		<set name="icon" val="icon.weapon_taslam_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -2734,8 +2734,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1760" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4819" />
@@ -2759,7 +2759,7 @@
 	</item>
 	<item id="9290" type="Weapon" name="Tathlum - Evasion">
 		<set name="icon" val="icon.weapon_taslam_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -2767,8 +2767,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1760" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4820" />
@@ -2792,7 +2792,7 @@
 	</item>
 	<item id="9291" type="Weapon" name="Tathlum - Miser">
 		<set name="icon" val="icon.weapon_taslam_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -2800,8 +2800,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1322" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1760" />
 		<set name="price" val="3304300" />
 		<set name="change_weaponId" val="4821" />
@@ -2825,7 +2825,7 @@
 	</item>
 	<item id="9292" type="Weapon" name="Admiral's Estoc">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2833,8 +2833,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1885" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1380" />
 		<set name="price" val="4713500" />
 		<set name="change_weaponId" val="135" />
@@ -2857,7 +2857,7 @@
 	</item>
 	<item id="9293" type="Weapon" name="Admiral's Estoc - Focus">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2865,8 +2865,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1885" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1380" />
 		<set name="price" val="4713500" />
 		<set name="change_weaponId" val="4708" />
@@ -2890,7 +2890,7 @@
 	</item>
 	<item id="9294" type="Weapon" name="Admiral's Estoc - Critical Damage">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2898,8 +2898,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1885" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1380" />
 		<set name="price" val="4713500" />
 		<set name="change_weaponId" val="4709" />
@@ -2923,7 +2923,7 @@
 	</item>
 	<item id="9295" type="Weapon" name="Admiral's Estoc - Haste">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -2931,8 +2931,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1885" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1380" />
 		<set name="price" val="4713500" />
 		<set name="change_weaponId" val="4710" />
@@ -2956,7 +2956,7 @@
 	</item>
 	<item id="9296" type="Weapon" name="Saber Tooth">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -2964,8 +2964,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1885" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1950" />
 		<set name="price" val="4713500" />
 		<set name="change_weaponId" val="5286" />
@@ -2987,7 +2987,7 @@
 	</item>
 	<item id="9297" type="Weapon" name="Saber Tooth - Focus">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -2995,8 +2995,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1885" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1950" />
 		<set name="price" val="4713500" />
 		<set name="change_weaponId" val="6347" />
@@ -3019,7 +3019,7 @@
 	</item>
 	<item id="9298" type="Weapon" name="Saber Tooth - Critical Damage">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -3027,8 +3027,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1885" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1950" />
 		<set name="price" val="4713500" />
 		<set name="change_weaponId" val="6348" />
@@ -3051,7 +3051,7 @@
 	</item>
 	<item id="9299" type="Weapon" name="Saber Tooth - Haste">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -3059,8 +3059,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1885" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1950" />
 		<set name="price" val="4713500" />
 		<set name="change_weaponId" val="6349" />

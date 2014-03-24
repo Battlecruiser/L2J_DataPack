@@ -4,7 +4,7 @@
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
@@ -13,7 +13,7 @@
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
@@ -22,7 +22,7 @@
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
@@ -31,7 +31,7 @@
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
@@ -40,7 +40,7 @@
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
@@ -49,7 +49,7 @@
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
@@ -58,7 +58,7 @@
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
@@ -67,16 +67,16 @@
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10408" type="EtcItem" name="Old Agathion">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
-		<set name="default_action" val="capsule" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -84,9 +84,9 @@
 	</item>
 	<item id="10409" type="EtcItem" name="A Bottle of Souls">
 		<set name="icon" val="icon.blank_glass_bottle_i00" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
 		<set name="reuse_delay" val="1500" />
@@ -99,9 +99,9 @@
 	</item>
 	<item id="10410" type="EtcItem" name="Full Bottle of Souls - 5 Souls">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -112,9 +112,9 @@
 	</item>
 	<item id="10411" type="EtcItem" name="Full Bottle of Souls - 5 Souls (For Combat)">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -129,9 +129,9 @@
 	</item>
 	<item id="10412" type="EtcItem" name="Full Bottle of Souls - 10 Souls">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -142,13 +142,13 @@
 		<set name="icon" val="icon.etc_armor_soul_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10414" type="EtcItem" name="Agathion Exchange Coupon">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
-		<set name="material" val="paper" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -156,7 +156,7 @@
 	</item>
 	<item id="10415" type="Weapon" name="Icarus Dual Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="dual" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -164,8 +164,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -185,10 +185,10 @@
 	</item>
 	<item id="10416" type="Armor" name="Blue Talisman - Explosion">
 		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="gold" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -200,10 +200,10 @@
 	</item>
 	<item id="10417" type="Armor" name="Blue Talisman - Magic Explosion">
 		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="gold" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -215,10 +215,10 @@
 	</item>
 	<item id="10418" type="Armor" name="White Talisman - Storm">
 		<set name="icon" val="icon.etc_talisman_i06" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="gold" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -230,10 +230,10 @@
 	</item>
 	<item id="10419" type="Armor" name="White Talisman - Darkness">
 		<set name="icon" val="icon.etc_talisman_i06" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="gold" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -245,10 +245,10 @@
 	</item>
 	<item id="10420" type="Armor" name="White Talisman - Water">
 		<set name="icon" val="icon.etc_talisman_i06" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="gold" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -260,10 +260,10 @@
 	</item>
 	<item id="10421" type="Armor" name="White Talisman - Fire">
 		<set name="icon" val="icon.etc_talisman_i06" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="gold" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -275,10 +275,10 @@
 	</item>
 	<item id="10422" type="Armor" name="White Talisman - Light">
 		<set name="icon" val="icon.etc_talisman_i06" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="gold" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -290,10 +290,10 @@
 	</item>
 	<item id="10423" type="Armor" name="Blue Talisman - Self-Destruction">
 		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="gold" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -304,10 +304,10 @@
 	</item>
 	<item id="10424" type="Armor" name="Blue Talisman - Greater Healing">
 		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="gold" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -319,9 +319,9 @@
 	</item>
 	<item id="10425" type="EtcItem" name="Improved Baby Pet Food">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="price" val="1000" /> <!-- H5 Price -->
 		<set name="is_stackable" val="true" />
@@ -335,9 +335,9 @@
 	</item>
 	<item id="10426" type="EtcItem" name="Fenrir Necklace">
 		<set name="icon" val="icon.etc_summon_wolf_r_01" />
-		<set name="default_action" val="skill_maintain" />
+		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="pet_collar" />
-		<set name="material" val="leather" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
@@ -350,7 +350,7 @@
 	<item id="10427" type="EtcItem" name="Tully's Platinum Medal">
 		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="5000" />
 		<set name="is_tradable" val="false" />
@@ -361,7 +361,7 @@
 	<item id="10428" type="EtcItem" name="Tully's Tin Medal">
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="5000" />
 		<set name="is_tradable" val="false" />
@@ -372,7 +372,7 @@
 	<item id="10429" type="EtcItem" name="Tully's Lead Medal">
 		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="5000" />
 		<set name="is_tradable" val="false" />
@@ -383,7 +383,7 @@
 	<item id="10430" type="EtcItem" name="Tully's Zinc Medal">
 		<set name="icon" val="icon.etc_jewel_green_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="5000" />
 		<set name="is_tradable" val="false" />
@@ -394,7 +394,7 @@
 	<item id="10431" type="EtcItem" name="Tully's Copper Medal">
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="5000" />
 		<set name="is_tradable" val="false" />
@@ -405,7 +405,7 @@
 	<item id="10432" type="EtcItem" name="Kertin's Herb of Life">
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
-		<set name="material" val="paper" />
+		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2485-1" />
 		<set name="for_npc" val="true" />
@@ -413,14 +413,14 @@
 	<item id="10433" type="EtcItem" name="Kertin's Herb of Mana">
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
-		<set name="material" val="paper" />
+		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2486-1" />
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="10434" type="Weapon" name="Icarus Sawsword - Focus">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="sword" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
@@ -428,8 +428,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10461" />
@@ -449,7 +449,7 @@
 	</item>
 	<item id="10435" type="Weapon" name="Icarus Sawsword - Health">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="sword" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
@@ -457,8 +457,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10462" />
@@ -478,7 +478,7 @@
 	</item>
 	<item id="10436" type="Weapon" name="Icarus Sawsword - Light">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="sword" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
@@ -486,8 +486,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10463" />
@@ -507,7 +507,7 @@
 	</item>
 	<item id="10437" type="Weapon" name="Icarus Heavy Arms - Focus">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bigsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -515,8 +515,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10464" />
@@ -536,7 +536,7 @@
 	</item>
 	<item id="10438" type="Weapon" name="Icarus Heavy Arms - Health">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bigsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -544,8 +544,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10465" />
@@ -565,7 +565,7 @@
 	</item>
 	<item id="10439" type="Weapon" name="Icarus Heavy Arms - Light">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bigsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -573,8 +573,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10466" />
@@ -594,7 +594,7 @@
 	</item>
 	<item id="10440" type="Weapon" name="Icarus Spirit - Acumen">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="sword" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
@@ -602,8 +602,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -623,7 +623,7 @@
 	</item>
 	<item id="10441" type="Weapon" name="Icarus Spirit - Mana Up">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="sword" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
@@ -631,8 +631,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -652,7 +652,7 @@
 	</item>
 	<item id="10442" type="Weapon" name="Icarus Spirit - Conversion">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="sword" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
@@ -660,8 +660,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -681,7 +681,7 @@
 	</item>
 	<item id="10443" type="Weapon" name="Icarus Spitter - Cheap Shot">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
@@ -689,8 +689,8 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10467" />
@@ -713,7 +713,7 @@
 	</item>
 	<item id="10444" type="Weapon" name="Icarus Spitter - Guidance">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
@@ -721,8 +721,8 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10468" />
@@ -745,7 +745,7 @@
 	</item>
 	<item id="10445" type="Weapon" name="Icarus Spitter - Focus">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
@@ -753,8 +753,8 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10469" />
@@ -777,7 +777,7 @@
 	</item>
 	<item id="10446" type="Weapon" name="Icarus Disperser - Focus">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="dagger" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
@@ -785,8 +785,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -806,7 +806,7 @@
 	</item>
 	<item id="10447" type="Weapon" name="Icarus Disperser - Evasion">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="dagger" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
@@ -814,8 +814,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -835,7 +835,7 @@
 	</item>
 	<item id="10448" type="Weapon" name="Icarus Disperser - Critical Damage">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="dagger" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
@@ -843,8 +843,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -864,7 +864,7 @@
 	</item>
 	<item id="10449" type="Weapon" name="Icarus Trident - Anger">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="pole" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -872,8 +872,8 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="bronze" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -893,7 +893,7 @@
 	</item>
 	<item id="10450" type="Weapon" name="Icarus Trident - Critical Stun">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="pole" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -901,8 +901,8 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="bronze" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -924,7 +924,7 @@
 	</item>
 	<item id="10451" type="Weapon" name="Icarus Trident - Light">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="pole" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -932,8 +932,8 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="bronze" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -953,7 +953,7 @@
 	</item>
 	<item id="10452" type="Weapon" name="Icarus Hammer - Anger">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="blunt" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
@@ -961,8 +961,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -982,7 +982,7 @@
 	</item>
 	<item id="10453" type="Weapon" name="Icarus Hammer - Health">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="blunt" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
@@ -990,8 +990,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -1011,7 +1011,7 @@
 	</item>
 	<item id="10454" type="Weapon" name="Icarus Hammer - Rsk. Focus">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="blunt" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
@@ -1019,8 +1019,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -1040,7 +1040,7 @@
 	</item>
 	<item id="10455" type="Weapon" name="Icarus Hall - Mana Up">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="blunt" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
@@ -1048,8 +1048,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -1070,7 +1070,7 @@
 	</item>
 	<item id="10456" type="Weapon" name="Icarus Hall - Conversion">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="blunt" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
@@ -1078,8 +1078,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -1100,7 +1100,7 @@
 	</item>
 	<item id="10457" type="Weapon" name="Icarus Hall - Acumen">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="blunt" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
@@ -1108,8 +1108,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -1130,7 +1130,7 @@
 	</item>
 	<item id="10458" type="Weapon" name="Icarus Hand - Rsk. Evasion">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="dualfist" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
@@ -1138,8 +1138,8 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -1159,7 +1159,7 @@
 	</item>
 	<item id="10459" type="Weapon" name="Icarus Hand - Focus">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="dualfist" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
@@ -1167,8 +1167,8 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -1188,7 +1188,7 @@
 	</item>
 	<item id="10460" type="Weapon" name="Icarus Hand - Haste">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="dualfist" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
@@ -1196,8 +1196,8 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
@@ -1217,7 +1217,7 @@
 	</item>
 	<item id="10461" type="Weapon" name="Icarus Stinger - Focus">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1225,8 +1225,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10434" />
@@ -1251,7 +1251,7 @@
 	</item>
 	<item id="10462" type="Weapon" name="Icarus Stinger - Health">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1259,8 +1259,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10435" />
@@ -1285,7 +1285,7 @@
 	</item>
 	<item id="10463" type="Weapon" name="Icarus Stinger - Light">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
@@ -1293,8 +1293,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10436" />
@@ -1319,7 +1319,7 @@
 	</item>
 	<item id="10464" type="Weapon" name="Icarus Wingblade - Focus">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -1327,8 +1327,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10437" />
@@ -1352,7 +1352,7 @@
 	</item>
 	<item id="10465" type="Weapon" name="Icarus Wingblade - Health">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -1360,8 +1360,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10438" />
@@ -1385,7 +1385,7 @@
 	</item>
 	<item id="10466" type="Weapon" name="Icarus Wingblade - Light">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
@@ -1393,8 +1393,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10439" />
@@ -1418,7 +1418,7 @@
 	</item>
 	<item id="10467" type="Weapon" name="Icarus Shooter - Cheap Shot">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1426,8 +1426,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10443" />
@@ -1452,7 +1452,7 @@
 	</item>
 	<item id="10468" type="Weapon" name="Icarus Shooter - Guidance">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1460,8 +1460,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10444" />
@@ -1486,7 +1486,7 @@
 	</item>
 	<item id="10469" type="Weapon" name="Icarus Shooter - Focus">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -1494,8 +1494,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4965" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="103439000" />
 		<set name="change_weaponId" val="10445" />
@@ -1520,11 +1520,11 @@
 	</item>
 	<item id="10470" type="Armor" name="Shadow Item - Red Crescent">
 		<set name="icon" val="icon.accessary_red_cresent_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1536,11 +1536,11 @@
 	</item>
 	<item id="10471" type="Armor" name="Shadow Item - Ring of Devotion">
 		<set name="icon" val="icon.accessary_ring_of_devotion_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="gold" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1552,11 +1552,11 @@
 	</item>
 	<item id="10472" type="Armor" name="Shadow Item - Necklace of Devotion">
 		<set name="icon" val="icon.accessary_necklace_of_devotion_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1568,9 +1568,9 @@
 	</item>
 	<item id="10473" type="EtcItem" name="Magic Accessory Set">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="default_action" val="capsule" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="steel" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="20" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1582,14 +1582,14 @@
 	</item>
 	<item id="10474" type="Weapon" name="Shadow Item - Apprentice's Staff">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bigblunt" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="wood" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1070" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1611,14 +1611,14 @@
 	</item>
 	<item id="10475" type="Weapon" name="Shadow Item - Bone Club">
 		<set name="icon" val="icon.weapon_club_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="blunt" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fine_steel" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1639,14 +1639,14 @@
 	</item>
 	<item id="10476" type="Weapon" name="Shadow Item - Shining Knife">
 		<set name="icon" val="icon.weapon_shining_knife_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="dagger" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="mithril" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1120" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1667,14 +1667,14 @@
 	</item>
 	<item id="10477" type="Weapon" name="Shadow Item - Cestus">
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="dualfist" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="steel" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1570" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1695,14 +1695,14 @@
 	</item>
 	<item id="10478" type="Weapon" name="Shadow Item - Forest Bow">
 		<set name="icon" val="icon.weapon_short_bow_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="wood" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1900" />
 		<set name="soulshots" val="7" />
 		<set name="spiritshots" val="2" />
@@ -1725,14 +1725,14 @@
 	</item>
 	<item id="10479" type="Weapon" name="Shadow Item - Long Sword">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="sword" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fine_steel" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1560" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1752,9 +1752,9 @@
 	</item>
 	<item id="10480" type="EtcItem" name="Red Soul Crystal - Stage 15">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="scroll" />
-		<set name="material" val="crystal" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1762,9 +1762,9 @@
 	</item>
 	<item id="10481" type="EtcItem" name="Blue Soul Crystal - Stage 15">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="scroll" />
-		<set name="material" val="crystal" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1772,9 +1772,9 @@
 	</item>
 	<item id="10482" type="EtcItem" name="Green Soul Crystal - Stage 15">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="scroll" />
-		<set name="material" val="crystal" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1783,7 +1783,7 @@
 	<item id="10483" type="EtcItem" name="Life Stone - Level 82">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="34560" />
 		<set name="is_stackable" val="true" />
@@ -1794,7 +1794,7 @@
 	<item id="10484" type="EtcItem" name="Mid-Grade Life Stone - Level 82">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="138240" />
 		<set name="is_stackable" val="true" />
@@ -1805,7 +1805,7 @@
 	<item id="10485" type="EtcItem" name="High-Grade Life Stone - Level 82">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="1382400" />
 		<set name="is_stackable" val="true" />
@@ -1816,7 +1816,7 @@
 	<item id="10486" type="EtcItem" name="Top-Grade Life Stone - Level 82">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="6912000" />
 		<set name="is_stackable" val="true" />
@@ -1826,13 +1826,13 @@
 	</item>
 	<item id="10487" type="Armor" name="Dynasty Jeweled Leather Armor - Force Master">
 		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
@@ -1847,13 +1847,13 @@
 	</item>
 	<item id="10488" type="Armor" name="Dynasty Jeweled Leather Armor - Weapon Master">
 		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
@@ -1868,13 +1868,13 @@
 	</item>
 	<item id="10489" type="Armor" name="Dynasty Jeweled Leather Armor - Enchanter">
 		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
@@ -1889,13 +1889,13 @@
 	</item>
 	<item id="10490" type="Armor" name="Dynasty Jeweled Leather Armor - Summoner">
 		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
@@ -1910,12 +1910,12 @@
 	</item>
 	<item id="10491" type="Armor" name="Silk Shirt - HP">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="27" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="crystal" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="80000" />
 		<set name="enchant_enabled" val="1" />
@@ -1927,12 +1927,12 @@
 	</item>
 	<item id="10492" type="Armor" name="Silk Shirt - MP">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="27" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="crystal" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="80000" />
 		<set name="enchant_enabled" val="1" />
@@ -1944,12 +1944,12 @@
 	</item>
 	<item id="10493" type="Armor" name="Silk Shirt - CP">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="27" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="crystal" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="80000" />
 		<set name="enchant_enabled" val="1" />
@@ -1961,12 +1961,12 @@
 	</item>
 	<item id="10494" type="Armor" name="Thin Leather Shirt - HP">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="29" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="crystal" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="260000" />
 		<set name="enchant_enabled" val="1" />
@@ -1978,12 +1978,12 @@
 	</item>
 	<item id="10495" type="Armor" name="Thin Leather Shirt - MP">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="29" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="crystal" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="260000" />
 		<set name="enchant_enabled" val="1" />
@@ -1995,12 +1995,12 @@
 	</item>
 	<item id="10496" type="Armor" name="Thin Leather Shirt - CP">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="29" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="crystal" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="260000" />
 		<set name="enchant_enabled" val="1" />
@@ -2012,12 +2012,12 @@
 	</item>
 	<item id="10497" type="Armor" name="Scale Shirt - HP">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="39" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="crystal" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="588000" />
 		<set name="enchant_enabled" val="1" />
@@ -2029,12 +2029,12 @@
 	</item>
 	<item id="10498" type="Armor" name="Scale Shirt - MP">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="39" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="crystal" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="588000" />
 		<set name="enchant_enabled" val="1" />
@@ -2046,12 +2046,12 @@
 	</item>
 	<item id="10499" type="Armor" name="Scale Shirt - CP">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="39" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="crystal" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="588000" />
 		<set name="enchant_enabled" val="1" />
