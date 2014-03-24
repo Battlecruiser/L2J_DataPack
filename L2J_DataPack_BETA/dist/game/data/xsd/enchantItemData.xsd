@@ -38,11 +38,11 @@
 						<xs:attribute name="targetGrade">
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
-									<xs:enumeration value="a" />
-									<xs:enumeration value="b" />
-									<xs:enumeration value="c" />
-									<xs:enumeration value="d" />
-									<xs:enumeration value="s" />
+									<xs:enumeration value="A" />
+									<xs:enumeration value="B" />
+									<xs:enumeration value="C" />
+									<xs:enumeration value="D" />
+									<xs:enumeration value="S" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
@@ -64,11 +64,11 @@
 						<xs:attribute name="targetGrade" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
-									<xs:enumeration value="a" />
-									<xs:enumeration value="b" />
-									<xs:enumeration value="c" />
-									<xs:enumeration value="d" />
-									<xs:enumeration value="s" />
+									<xs:enumeration value="A" />
+									<xs:enumeration value="B" />
+									<xs:enumeration value="C" />
+									<xs:enumeration value="D" />
+									<xs:enumeration value="S" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>

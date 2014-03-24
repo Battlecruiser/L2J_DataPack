@@ -6,7 +6,7 @@ from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest import Quest as JQuest
 from com.l2jserver.gameserver.network.serverpackets import SocialAction
-from com.l2jserver.gameserver.model.items.type import L2WeaponType 
+from com.l2jserver.gameserver.model.items.type import WeaponType 
 
 qn = "415_PathToOrcMonk"
 
@@ -236,7 +236,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    # only fists/dual fists or bare hands are allowed
    if player.getActiveWeaponItem() != None :
-      if player.getActiveWeaponItem().getItemType() != L2WeaponType.FIST and player.getActiveWeaponItem().getItemType() != L2WeaponType.DUALFIST: return
+      if player.getActiveWeaponItem().getItemType() != WeaponType.FIST and player.getActiveWeaponItem().getItemType() != WeaponType.DUALFIST: return
    npcId = npc.getId()
    if npcId == 20479 :
         st.set("id","0")

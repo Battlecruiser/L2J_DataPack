@@ -2,11 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14600" type="Armor" name="Schuttgart Dark Resistance Ring">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="gold" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
@@ -22,11 +22,11 @@
 	</item>
 	<item id="14601" type="Armor" name="Ancient Cloak: Kamael exclusive - Kamael Use">
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="cloth" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -43,11 +43,11 @@
 	</item>
 	<item id="14602" type="Armor" name="Ancient Cloak">
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="cloth" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -65,8 +65,8 @@
 	<item id="14603" type="EtcItem" name="Sealed Ancient Cloak">
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="cloth" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -77,10 +77,10 @@
 	</item>
 	<item id="14604" type="Armor" name="Red Talisman - Territory Guardian">
 		<set name="icon" val="icon.etc_talisman_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="gold" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -92,10 +92,10 @@
 	</item>
 	<item id="14605" type="Armor" name="Red Talisman - Territory Guard">
 		<set name="icon" val="icon.etc_talisman_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="gold" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
@@ -107,7 +107,7 @@
 	</item>
 	<item id="14606" type="Weapon" name="Gracian Soldier Two-Handed Sword">
 		<set name="icon" val="icon.weapon_mon_gracia_soldier_sword_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bigsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
@@ -115,8 +115,8 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1373" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2180" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -133,7 +133,7 @@
 	<item id="14607" type="EtcItem" name="Mark of Gracia">
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="cloth" />
+		<set name="material" val="CLOTH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -142,11 +142,11 @@
 	</item>
 	<item id="14608" type="Armor" name="Ancient Cloak: Light Armor exclusive">
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="cloth" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -164,11 +164,11 @@
 	</item>
 	<item id="14609" type="Armor" name="Ancient Cloak">
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="cloth" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -182,11 +182,11 @@
 	</item>
 	<item id="14610" type="Armor" name="Ancient Cloak: Robe exclusive">
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="s80" />
-		<set name="material" val="cloth" />
+		<set name="crystal_type" val="S80" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -204,10 +204,10 @@
 	</item>
 	<item id="14611" type="Armor" name="Rudolph's Nose">
 		<set name="icon" val="icon.Accessory_nose_of_rudolph_mask_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="steel" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -217,7 +217,7 @@
 	<item id="14612" type="EtcItem" name="Christmas Red Sock">
 		<set name="icon" val="icon.xmas_present_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="paper" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -226,10 +226,10 @@
 	</item>
 	<item id="14613" type="Armor" name="Rock-Paper-Scissors Santa Hat">
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="wood" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -238,10 +238,10 @@
 	</item>
 	<item id="14614" type="EtcItem" name="Lineage II Devotee Scroll">
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="reuse_delay" val="3000" />
 		<set name="is_stackable" val="true" />
@@ -252,10 +252,10 @@
 	</item>
 	<item id="14615" type="EtcItem" name="Scroll of Christmas Festival - Mage Type">
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="reuse_delay" val="3000" />
 		<set name="is_stackable" val="true" />
@@ -266,9 +266,9 @@
 	</item>
 	<item id="14616" type="EtcItem" name="Gift from Santa Claus">
 		<set name="icon" val="icon.lucky_bag_box_i00" />
-		<set name="default_action" val="capsule" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -276,10 +276,10 @@
 	</item>
 	<item id="14617" type="Armor" name="Agathion Seal Bracelet - Rudolph">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="silver" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -291,7 +291,7 @@
 	<item id="14618" type="EtcItem" name="Agathion Seal Bracelet - Rudolph">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="paper" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -300,7 +300,7 @@
 	<item id="14619" type="EtcItem" name="Santa Claus' Weapon Exchange Ticket">
 		<set name="icon" val="icon.etc_level_bustup_ticket_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="paper" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -310,7 +310,7 @@
 	<item id="14620" type="EtcItem" name="Santa Claus' Weapon Exchange Ticket">
 		<set name="icon" val="icon.etc_level_bustup_ticket_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="paper" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -319,14 +319,14 @@
 	</item>
 	<item id="14621" type="Weapon" name="Santa Claus' Sirra Blade">
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="sword" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fine_steel" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1300" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -342,14 +342,14 @@
 	</item>
 	<item id="14622" type="Weapon" name="Santa Claus' Sword of Ipos">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bigsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="bone" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="1820" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -365,14 +365,14 @@
 	</item>
 	<item id="14623" type="Weapon" name="Santa Claus' Barakiel Axe">
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="blunt" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="oriharukon" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1550" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -389,14 +389,14 @@
 	</item>
 	<item id="14624" type="Weapon" name="Santa Claus' Behemoth Tuning Fork">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bigblunt" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fine_steel" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1890" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -413,14 +413,14 @@
 	</item>
 	<item id="14625" type="Weapon" name="Santa Claus' Naga Storm">
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="dagger" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="oriharukon" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="930" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -437,14 +437,14 @@
 	</item>
 	<item id="14626" type="Weapon" name="Santa Claus' Tiphon Spear">
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="pole" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="chrysolite" />
+		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1820" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -461,14 +461,14 @@
 	</item>
 	<item id="14627" type="Weapon" name="Santa Claus' Shyeed Bow">
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="oriharukon" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1640" />
 		<set name="mp_consume" val="5" />
 		<set name="reuse_delay" val="820" />
@@ -487,14 +487,14 @@
 	</item>
 	<item id="14628" type="Weapon" name="Santa Claus' Sobekk Hurricane">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="dualfist" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="adamantaite" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1330" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -511,14 +511,14 @@
 	</item>
 	<item id="14629" type="Weapon" name="Santa Claus' Themis Tongue">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="sword" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="adamantaite" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="820" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -535,14 +535,14 @@
 	</item>
 	<item id="14630" type="Weapon" name="Santa Claus' Hand of Cabrio">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="blunt" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fine_steel" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1510" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -560,14 +560,14 @@
 	</item>
 	<item id="14631" type="Weapon" name="Santa Claus' Daimon Crystal">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="bigblunt" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="wood" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="880" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -585,14 +585,14 @@
 	</item>
 	<item id="14632" type="Weapon" name="Santa Claus' Eclair Bijou">
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="steel" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="is_tradable" val="false" />
@@ -613,14 +613,14 @@
 	</item>
 	<item id="14633" type="Weapon" name="Santa Claus' Screaming Vengeance">
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="steel" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1640" />
 		<set name="reuse_delay" val="400" />
 		<set name="is_tradable" val="false" />
@@ -641,14 +641,14 @@
 	</item>
 	<item id="14634" type="Weapon" name="Santa Claus' Durendal">
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="steel" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1820" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -668,9 +668,9 @@
 	</item>
 	<item id="14635" type="EtcItem" name="Low Quality Battle Reward Chest">
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="default_action" val="capsule" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -681,9 +681,9 @@
 	</item>
 	<item id="14636" type="EtcItem" name="Middle Quality Battle Reward Chest">
 		<set name="icon" val="icon.etc_treasure_box_i06" />
-		<set name="default_action" val="capsule" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -694,9 +694,9 @@
 	</item>
 	<item id="14637" type="EtcItem" name="High-Grade Battle Reward Chest">
 		<set name="icon" val="icon.etc_treasure_box_i01" />
-		<set name="default_action" val="capsule" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -707,9 +707,9 @@
 	</item>
 	<item id="14638" type="EtcItem" name="Best Quality Battle Reward Chest">
 		<set name="icon" val="icon.etc_treasure_box_i02" />
-		<set name="default_action" val="capsule" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -720,9 +720,9 @@
 	</item>
 	<item id="14639" type="EtcItem" name="Event - Claymore">
 		<set name="icon" val="icon.weapon_claymore_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -733,9 +733,9 @@
 	</item>
 	<item id="14640" type="EtcItem" name="Event - Bonebreaker">
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -746,9 +746,9 @@
 	</item>
 	<item id="14641" type="EtcItem" name="Event - Atuba Hammer">
 		<set name="icon" val="icon.weapon_atuba_hammer_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -759,9 +759,9 @@
 	</item>
 	<item id="14642" type="EtcItem" name="Event - Ghost Staff">
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -772,9 +772,9 @@
 	</item>
 	<item id="14643" type="EtcItem" name="Event - Staff of Life">
 		<set name="icon" val="icon.weapon_life_stick_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -785,9 +785,9 @@
 	</item>
 	<item id="14644" type="EtcItem" name="Event - Atuba Mace">
 		<set name="icon" val="icon.weapon_atuba_mace_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -798,9 +798,9 @@
 	</item>
 	<item id="14645" type="EtcItem" name="Event - Mithril Dagger">
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -811,9 +811,9 @@
 	</item>
 	<item id="14646" type="EtcItem" name="Event - Scallop Jamadhr">
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -824,9 +824,9 @@
 	</item>
 	<item id="14647" type="EtcItem" name="Event - Light Crossbow">
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -837,9 +837,9 @@
 	</item>
 	<item id="14648" type="EtcItem" name="Event - Glaive">
 		<set name="icon" val="icon.weapon_glaive_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -850,9 +850,9 @@
 	</item>
 	<item id="14649" type="EtcItem" name="Event - Elven Long Sword">
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -863,9 +863,9 @@
 	</item>
 	<item id="14650" type="EtcItem" name="Event - Samurai Longsword">
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -876,9 +876,9 @@
 	</item>
 	<item id="14651" type="EtcItem" name="Event - Deadman's Staff">
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -889,9 +889,9 @@
 	</item>
 	<item id="14652" type="EtcItem" name="Event - Ghoul's Staff">
 		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -902,9 +902,9 @@
 	</item>
 	<item id="14653" type="EtcItem" name="Event - Demon's Staff">
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -915,9 +915,9 @@
 	</item>
 	<item id="14654" type="EtcItem" name="Event - Crystal Dagger">
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -928,9 +928,9 @@
 	</item>
 	<item id="14655" type="EtcItem" name="Event - Great Pata">
 		<set name="icon" val="icon.weapon_great_pata_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -941,9 +941,9 @@
 	</item>
 	<item id="14656" type="EtcItem" name="Event - Eminence Bow">
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -954,9 +954,9 @@
 	</item>
 	<item id="14657" type="EtcItem" name="Event - Orcish Poleaxe">
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -967,9 +967,9 @@
 	</item>
 	<item id="14658" type="EtcItem" name="Event - Yaksa Mace">
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -980,9 +980,9 @@
 	</item>
 	<item id="14659" type="EtcItem" name="Event - Berserker Blade">
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -993,9 +993,9 @@
 	</item>
 	<item id="14660" type="EtcItem" name="Event - Ecliptic Sword">
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1006,9 +1006,9 @@
 	</item>
 	<item id="14661" type="EtcItem" name="Event - Ecliptic Axe">
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1019,9 +1019,9 @@
 	</item>
 	<item id="14662" type="EtcItem" name="Event - Dwarven Hammer">
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1032,9 +1032,9 @@
 	</item>
 	<item id="14663" type="EtcItem" name="Event - Katana*Katana">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1045,11 +1045,11 @@
 	</item>
 	<item id="14664" type="Armor" name="Gludio Protection Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1065,11 +1065,11 @@
 	</item>
 	<item id="14665" type="Armor" name="Dion Protection Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1085,11 +1085,11 @@
 	</item>
 	<item id="14666" type="Armor" name="Giran Protection Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1105,11 +1105,11 @@
 	</item>
 	<item id="14667" type="Armor" name="Oren Protection Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1125,11 +1125,11 @@
 	</item>
 	<item id="14668" type="Armor" name="Aden Protection Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1145,11 +1145,11 @@
 	</item>
 	<item id="14669" type="Armor" name="Innadril Protection Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1165,11 +1165,11 @@
 	</item>
 	<item id="14670" type="Armor" name="Goddard Protection Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1185,11 +1185,11 @@
 	</item>
 	<item id="14671" type="Armor" name="Rune Protection Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1205,11 +1205,11 @@
 	</item>
 	<item id="14672" type="Armor" name="Schuttgart Protection Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1226,20 +1226,20 @@
 	<item id="14673" type="EtcItem" name="Rudolph's Nose">
 		<set name="icon" val="icon.Accessory_nose_of_rudolph_mask_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="paper" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="14674" type="Weapon" name="Santa Claus' Tallum Blade*Damascus">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="dual" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fine_steel" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1890" />
 		<set name="enchant4_skill" val="3045-17" />
 		<set name="is_tradable" val="false" />
@@ -1256,10 +1256,10 @@
 	</item>
 	<item id="14675" type="Armor" name="Agathion Seal Bracelet - Neolithica">
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="silver" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1271,9 +1271,9 @@
 	</item>
 	<item id="14676" type="EtcItem" name="Agathion's New Year's Gift">
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
-		<set name="default_action" val="capsule" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1281,9 +1281,9 @@
 	</item>
 	<item id="14677" type="EtcItem" name="Agathion's New Year's Gift">
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
-		<set name="default_action" val="capsule" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="fish" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1292,37 +1292,37 @@
 	<item id="14678" type="EtcItem" name="Neolithic Crystal - B">
 		<set name="icon" val="icon.etc_warding_orb_blue_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="paper" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14679" type="EtcItem" name="Neolithic Crystal - A">
 		<set name="icon" val="icon.etc_warding_orb_green_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="paper" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14680" type="EtcItem" name="Neolithic Crystal - S">
 		<set name="icon" val="icon.etc_warding_orb_red_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="paper" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14681" type="EtcItem" name="Neolithic Crystal - S80">
 		<set name="icon" val="icon.etc_warding_orb_black_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="paper" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14682" type="EtcItem" name="Greater Elixir of Life (No-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i00" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="1" />
 		<set name="reuse_delay" val="300000" />
@@ -1336,11 +1336,11 @@
 	</item>
 	<item id="14683" type="EtcItem" name="Greater Elixir of Life (D-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i01" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="2" />
 		<set name="reuse_delay" val="300000" />
@@ -1354,11 +1354,11 @@
 	</item>
 	<item id="14684" type="EtcItem" name="Greater Elixir of Life (C-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i02" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="3" />
 		<set name="reuse_delay" val="300000" />
@@ -1372,11 +1372,11 @@
 	</item>
 	<item id="14685" type="EtcItem" name="Greater Elixir of Life (B-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i03" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="4" />
 		<set name="reuse_delay" val="300000" />
@@ -1390,11 +1390,11 @@
 	</item>
 	<item id="14686" type="EtcItem" name="Greater Elixir of Life (A-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i04" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="5" />
 		<set name="reuse_delay" val="300000" />
@@ -1408,11 +1408,11 @@
 	</item>
 	<item id="14687" type="EtcItem" name="Greater Elixir of Life (S-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i05" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="6" />
 		<set name="reuse_delay" val="300000" />
@@ -1426,10 +1426,10 @@
 	</item>
 	<item id="14688" type="EtcItem" name="Greater Elixir of Mental Strength (No-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i00" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="1" />
 		<set name="reuse_delay" val="300000" />
@@ -1443,11 +1443,11 @@
 	</item>
 	<item id="14689" type="EtcItem" name="Greater Elixir of Mental Strength (D-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i01" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="2" />
 		<set name="reuse_delay" val="300000" />
@@ -1461,11 +1461,11 @@
 	</item>
 	<item id="14690" type="EtcItem" name="Greater Elixir of Mental Strength (C-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i02" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="3" />
 		<set name="reuse_delay" val="300000" />
@@ -1479,11 +1479,11 @@
 	</item>
 	<item id="14691" type="EtcItem" name="Greater Elixir of Mental Strength (B-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i03" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="4" />
 		<set name="reuse_delay" val="300000" />
@@ -1497,11 +1497,11 @@
 	</item>
 	<item id="14692" type="EtcItem" name="Greater Elixir of Mental Strength (A-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i04" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="5" />
 		<set name="reuse_delay" val="300000" />
@@ -1515,11 +1515,11 @@
 	</item>
 	<item id="14693" type="EtcItem" name="Greater Elixir of Mental Strength (S-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i05" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="6" />
 		<set name="reuse_delay" val="300000" />
@@ -1533,10 +1533,10 @@
 	</item>
 	<item id="14694" type="EtcItem" name="Greater Elixir of CP (No Grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i00" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="liquid" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="7" />
 		<set name="reuse_delay" val="300000" />
@@ -1547,11 +1547,11 @@
 	</item>
 	<item id="14695" type="EtcItem" name="Greater Elixir of CP (D-Grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i01" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="7" />
 		<set name="reuse_delay" val="300000" />
@@ -1562,11 +1562,11 @@
 	</item>
 	<item id="14696" type="EtcItem" name="Greater Elixir of CP (C-Grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i02" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="7" />
 		<set name="reuse_delay" val="300000" />
@@ -1577,11 +1577,11 @@
 	</item>
 	<item id="14697" type="EtcItem" name="Greater Elixir of CP (B-Grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i03" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="7" />
 		<set name="reuse_delay" val="300000" />
@@ -1592,11 +1592,11 @@
 	</item>
 	<item id="14698" type="EtcItem" name="Greater Elixir of CP (A-Grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i04" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="7" />
 		<set name="reuse_delay" val="300000" />
@@ -1607,11 +1607,11 @@
 	</item>
 	<item id="14699" type="EtcItem" name="Greater Elixir of CP (S-Grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i05" />
-		<set name="default_action" val="skill_reduce" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="elixir" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="liquid" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="shared_reuse_group" val="7" />
 		<set name="reuse_delay" val="300000" />
