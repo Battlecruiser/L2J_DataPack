@@ -680,7 +680,7 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<cond msgId="113" addName="1">
-			<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
+			<using kind="Sword,Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1065,7 +1065,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="AREA" />
 		<cond msgId="113" addName="1">
-			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+			<using kind="Sword,Blunt" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1119,7 +1119,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="SHOCK" />
 		<cond msgId="113" addName="1">
-			<using kind="Blunt,Big Blunt" />
+			<using kind="Blunt" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1191,7 +1191,7 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pAtk" val="#pAtk">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+					<using kind="Sword,Blunt" />
 				</add>
 			</effect>
 			<mul order="0x30" stat="rShld" val="#rShld" />
@@ -1292,13 +1292,13 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="accCombat" val="#accCombat">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword" />
+					<using kind="Sword,Blunt,Dual Sword" />
 				</add>
 				<add order="0x40" stat="rCrit" val="#rCrit">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword" />
+					<using kind="Sword,Blunt,Dual Sword" />
 				</add>
 				<mul order="0x30" stat="cAtk" val="#cAtk">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword" />
+					<using kind="Sword,Blunt,Dual Sword" />
 				</mul>
 			</effect>
 		</for>
@@ -1327,7 +1327,10 @@
 		<set name="reuseDelay" val="7000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Big Sword,Big Blunt" />
+			<and>
+				<using kind="Sword,Blunt" />
+				<using slot="lrhand" />
+			</and>
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -2141,15 +2144,15 @@
 		<set name="triggeredLevel" val="#triggeredLevel" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<!-- TODO: Remove when support for effects using conditions is done -->
 		<cond>
-			<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" />
+			<using kind="Dual Sword,Sword,Blunt" />
 		</cond>
 		<!-- TODO: Require support for effects using conditions -->
 		<!-- <for> -->
 		<!-- <effect name="ChanceSkillTrigger" activationChance="15" chanceType="ON_HIT" triggeredId="6813" triggeredLevel="#triggeredLevel"> -->
-		<!-- <using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" /> -->
+		<!-- <using kind="Dual Sword,Sword,Blunt" /> -->
 		<!-- </effect> -->
 		<!-- <effect name="ChanceSkillTrigger" activationChance="30" chanceType="ON_CRIT" triggeredId="6813" triggeredLevel="#triggeredLevel"> -->
-		<!-- <using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" /> -->
+		<!-- <using kind="Dual Sword,Sword,Blunt" /> -->
 		<!-- </effect> -->
 		<!-- </for> -->
 	</skill>
@@ -2289,7 +2292,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+			<using kind="Sword,Blunt" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />

@@ -94,7 +94,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+			<using kind="Sword,Blunt" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -235,7 +235,7 @@
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" /> <!-- Requires a dualsword, sword or blunt weapon weapon -->
+				<using kind="Dual Sword,Sword,Blunt" /> <!-- Requires a dualsword, sword or blunt weapon weapon -->
 				<player Charges="2" /> <!-- whose 2nd energy stage has been recharged -->
 			</and>
 		</cond>
@@ -323,7 +323,7 @@
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" /> <!-- Requires a sword, blunt weapon or dualsword weapon -->
+				<using kind="Dual Sword,Sword,Blunt" /> <!-- Requires a sword, blunt weapon or dualsword weapon -->
 				<player Charges="2" /> <!-- whose 2nd energy stage has been recharged -->
 			</and>
 		</cond>
@@ -367,7 +367,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" />
+			<using kind="Dual Sword,Sword,Blunt" />
 		</cond>
 		<cond msgId="324">
 			<not>
@@ -427,7 +427,7 @@
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" /> <!-- Requires a sword, blunt weapon or dualsword weapon -->
+				<using kind="Dual Sword,Sword,Blunt" /> <!-- Requires a sword, blunt weapon or dualsword weapon -->
 				<player Charges="2" /> <!-- whose 2nd energy stage has been recharged -->
 			</and>
 		</cond>
@@ -2376,13 +2376,19 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="#swordbluntpole">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
+					<using kind="Sword,Blunt,Pole" />
 				</mul>
 				<mul order="0x30" stat="pAtk" val="#twohands">
-					<using kind="Big Sword,Big Blunt" />
+					<and>
+						<using kind="Sword,Blunt" />
+						<using slot="lrhand" />
+					</and>
 				</mul>
 				<add order="0x40" stat="accCombat" val="#accCombat">
-					<using kind="Big Sword,Big Blunt" />
+					<and>
+						<using kind="Sword,Blunt" />
+						<using slot="lrhand" />
+					</and>
 				</add>
 				<mul order="0x30" stat="pDef" val="0.8" />
 				<sub order="0x40" stat="rEvas" val="3" />
@@ -2392,13 +2398,19 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="#ench1atk">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
+					<using kind="Sword,Blunt,Pole" />
 				</mul>
 				<mul order="0x30" stat="pAtk" val="1.06">
-					<using kind="Big Sword,Big Blunt" />
+					<and>
+						<using kind="Sword,Blunt" />
+						<using slot="lrhand" />
+					</and>
 				</mul>
 				<add order="0x40" stat="accCombat" val="4">
-					<using kind="Big Sword,Big Blunt" />
+					<and>
+						<using kind="Sword,Blunt" />
+						<using slot="lrhand" />
+					</and>
 				</add>
 				<mul order="0x30" stat="pDef" val="0.8" />
 				<sub order="0x40" stat="rEvas" val="3" />
@@ -2408,13 +2420,19 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.29">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
+					<using kind="Sword,Blunt,Pole" />
 				</mul>
 				<mul order="0x30" stat="pAtk" val="#ench2atk">
-					<using kind="Big Sword,Big Blunt" />
+					<and>
+						<using kind="Sword,Blunt" />
+						<using slot="lrhand" />
+					</and>
 				</mul>
 				<add order="0x40" stat="accCombat" val="4">
-					<using kind="Big Sword,Big Blunt" />
+					<and>
+						<using kind="Sword,Blunt" />
+						<using slot="lrhand" />
+					</and>
 				</add>
 				<mul order="0x30" stat="pDef" val="0.8" />
 				<sub order="0x40" stat="rEvas" val="3" />

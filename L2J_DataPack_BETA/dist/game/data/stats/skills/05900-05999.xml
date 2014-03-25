@@ -1211,10 +1211,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Sword,Big Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist,Blunt,Big Blunt,Bow,Crossbow" />
+					<using kind="Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist,Blunt,Bow,Crossbow" />
 				</mul>
 				<basemul order="0x30" stat="rCrit" val="0.2">
-					<using kind="Sword,Big Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist" />
+					<using kind="Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist" />
 				</basemul>
 				<add order="0x40" stat="pAtkRange" val="100">
 					<using kind="Bow,Crossbow" />

@@ -577,8 +577,7 @@
 		<table name="#pAtkBow"> 21.7 41.4 59.2 75 88.8 98.7 </table>
 		<table name="#pAtkCBow"> 13.3 25.4 36.3 46 54.4 60.5 </table>
 		<table name="#pAtkDagger"> 7.4 14 20.1 25.4 30.1 33.4 </table>
-		<table name="#pAtkDBlunt"> 1.8 3.5 5 6.3 7.4 8.3 </table>
-		<table name="#pAtkDSword"> 1.8 3.5 5 6.3 7.4 8.3 </table>
+		<table name="#pAtkDSwordBlunt"> 1.8 3.5 5 6.3 7.4 8.3 </table>
 		<table name="#pAtkDual"> 10.2 19.5 27.9 35.3 41.8 46.5 </table>
 		<table name="#pAtkRapier"> 7.8 15 21.4 27.1 32.1 35.6 </table>
 		<table name="#pAtkSBP"> 8.4 16 22.9 29 34.4 38.2 </table>
@@ -590,7 +589,7 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pAtk" val="#pAtkSBP">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
+					<using kind="Sword,Blunt,Pole" />
 				</add>
 				<add order="0x40" stat="pAtk" val="#pAtkDual">
 					<using kind="Dual Sword,Dual Fist" />
@@ -604,11 +603,11 @@
 				<add order="0x40" stat="pAtk" val="#pAtkCBow">
 					<using kind="Crossbow" />
 				</add>
-				<add order="0x40" stat="pAtk" val="#pAtkDSword">
-					<using kind="Big Sword" />
-				</add>
-				<add order="0x40" stat="pAtk" val="#pAtkDBlunt">
-					<using kind="Big Sword" />
+				<add order="0x40" stat="pAtk" val="#pAtkDSwordBlunt">
+					<and>
+						<using kind="Sword,Blunt" />
+						<using slot="lrhand" />
+					</and>
 				</add>
 				<add order="0x40" stat="pAtk" val="#pAtkRapier">
 					<using kind="Rapier" />
@@ -700,7 +699,7 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pAtk" val="22.9">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
+					<using kind="Sword,Blunt,Pole" />
 				</add>
 				<add order="0x40" stat="pAtk" val="27.9">
 					<using kind="Dual Sword,Dual Fist" />
@@ -715,7 +714,10 @@
 					<using kind="Crossbow" />
 				</add>
 				<add order="0x40" stat="pAtk" val="5">
-					<using kind="Big Sword" />
+					<and>
+						<using kind="Sword" />
+						<using slot="lrhand" />
+					</and>
 				</add>
 				<add order="0x40" stat="pAtk" val="21.4">
 					<using kind="Rapier" />

@@ -173,7 +173,10 @@
 				<param id="312" />
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<add order="0x40" stat="accCombat" val="1">
-					<using kind="Big Sword" />
+					<and>
+						<using kind="Sword" />
+						<using slot="lrhand" />
+					</and>
 				</add>
 			</effect>
 		</for>
@@ -199,7 +202,10 @@
 				<param id="313" />
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08">
-					<using kind="Dual Sword" />
+					<and>
+						<using kind="Sword" />
+						<using slot="lrhand" />
+					</and>
 				</mul>
 			</effect>
 		</for>
@@ -225,7 +231,10 @@
 				<param id="314" />
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<add order="0x40" stat="accCombat" val="1">
-					<using kind="Big Sword" />
+					<and>
+						<using kind="Sword" />
+						<using slot="lrhand" />
+					</and>
 				</add>
 			</effect>
 		</for>
@@ -278,7 +287,10 @@
 		<set name="reuseDelay" val="11000" />
 		<set name="targetType" val="AURA" />
 		<cond msgId="113" addName="1">
-			<using kind="Big Sword,Big Blunt" />
+			<and>
+				<using kind="Sword,Blunt" />
+				<using slot="lrhand" />
+			</and>
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -336,7 +348,10 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Big Sword,Big Blunt" />
+			<and>
+				<using kind="Sword,Blunt" />
+				<using slot="lrhand" />
+			</and>
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -526,10 +541,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Sword,Big Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist" />
+					<using kind="Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist" />
 				</mul>
 				<basemul order="0x30" stat="rCrit" val="0.2">
-					<using kind="Sword,Big Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist" />
+					<using kind="Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist" />
 				</basemul>
 			</effect>
 		</for>
@@ -553,7 +568,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Blunt,Big Blunt" />
+					<using kind="Blunt" />
 				</mul>
 			</effect>
 			<effect name="AttackTrait">
