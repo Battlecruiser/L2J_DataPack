@@ -543,9 +543,9 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Blunt,Big Blunt" />
+					<using kind="Blunt" />
 				</mul>
-				<!-- TODO:? <add order="0x40" stat="stunProf" val="8"> <using kind="Blunt,Big Blunt" /> </add> -->
+				<!-- TODO:? <add order="0x40" stat="stunProf" val="8"> <using kind="Blunt" /> </add> -->
 			</effect>
 		</for>
 	</skill>
@@ -1326,10 +1326,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Sword,Big Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
+					<using kind="Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
 				</mul>
 				<basemul order="0x30" stat="rCrit" val="0.2">
-					<using kind="Sword,Big Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
+					<using kind="Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
 				</basemul>
 			</effect>
 		</for>
@@ -1491,9 +1491,9 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Blunt,Big Blunt" />
+					<using kind="Blunt" />
 				</mul>
-				<!-- TODO:? <add order="0x40" stat="stunProf" val="8"> <using kind="Blunt,Big Blunt" /> </add> -->
+				<!-- TODO:? <add order="0x40" stat="stunProf" val="8"> <using kind="Blunt" /> </add> -->
 			</effect>
 		</for>
 	</skill>

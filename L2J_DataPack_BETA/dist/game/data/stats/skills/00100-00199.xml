@@ -33,7 +33,7 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<cond msgId="113" addName="1">
-			<using kind="Blunt,Big Blunt" />
+			<using kind="Blunt" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1328,19 +1328,22 @@
 				<mul order="0x30" stat="pAtk" val="#swordblunt">
 					<and>
 						<player hp="60" />
-						<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+						<using kind="Sword,Blunt" />
+						<using slot="lrhand" />
 					</and>
 				</mul>
 				<mul order="0x30" stat="pAtk" val="#twohand">
 					<and>
 						<player hp="60" />
-						<using kind="Big Sword,Big Blunt" />
+						<using kind="Sword,Blunt" />
+						<using slot="lrhand" />
 					</and>
 				</mul>
 				<add order="0x40" stat="accCombat" val="#accCombat">
 					<and>
 						<player hp="60" />
-						<using kind="Big Sword,Big Blunt" />
+						<using kind="Sword,Blunt" />
+						<using slot="lrhand" />
 					</and>
 				</add>
 			</effect>
@@ -1406,7 +1409,7 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
-			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+			<using kind="Sword,Blunt" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
