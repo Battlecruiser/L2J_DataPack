@@ -87,7 +87,7 @@
 	<item id="9206" type="EtcItem" name="Greater Healing Potion (Event)">
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -104,7 +104,7 @@
 	<item id="9207" type="EtcItem" name="Quick Healing Potion (Event)">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -132,7 +132,7 @@
 	<item id="9209" type="Weapon" name="Rapier">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -164,7 +164,7 @@
 	<item id="9210" type="Weapon" name="Talwar">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -195,7 +195,7 @@
 	<item id="9211" type="Weapon" name="Talwar">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -226,7 +226,7 @@
 	<item id="9212" type="Weapon" name="Field Gun">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -258,7 +258,7 @@
 	<item id="9213" type="Weapon" name="Fleuret">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -290,7 +290,7 @@
 	<item id="9214" type="Weapon" name="Fleuret">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -322,7 +322,7 @@
 	<item id="9215" type="Weapon" name="Fleuret">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -354,7 +354,7 @@
 	<item id="9216" type="Weapon" name="Military Talwar">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -384,7 +384,7 @@
 	<item id="9217" type="Weapon" name="Hand Crossbow">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -416,7 +416,7 @@
 	<item id="9218" type="Weapon" name="Estoc">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -448,7 +448,7 @@
 	<item id="9219" type="Weapon" name="Estoc">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -480,7 +480,7 @@
 	<item id="9220" type="Weapon" name="Field Sword">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -511,7 +511,7 @@
 	<item id="9221" type="Weapon" name="Crossbow">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -543,7 +543,7 @@
 	<item id="9222" type="Weapon" name="Epee">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -575,7 +575,7 @@
 	<item id="9223" type="Weapon" name="Katzbalger">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -606,7 +606,7 @@
 	<item id="9224" type="Weapon" name="Arm Breaker">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -638,7 +638,7 @@
 	<item id="9225" type="Weapon" name="Grand Epee">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -670,7 +670,7 @@
 	<item id="9226" type="Weapon" name="General's Katzbalger">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -701,7 +701,7 @@
 	<item id="9227" type="Weapon" name="Cranequin">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -733,7 +733,7 @@
 	<item id="9228" type="Weapon" name="Soldat Estoc">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -765,7 +765,7 @@
 	<item id="9229" type="Weapon" name="Soldat Estoc - Critical Anger">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -800,7 +800,7 @@
 	<item id="9230" type="Weapon" name="Soldat Estoc - Focus">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -833,7 +833,7 @@
 	<item id="9231" type="Weapon" name="Soldat Estoc - Light">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -866,7 +866,7 @@
 	<item id="9232" type="Weapon" name="Schlager">
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -897,7 +897,7 @@
 	<item id="9233" type="Weapon" name="Schlager - Critical Damage">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -929,7 +929,7 @@
 	<item id="9234" type="Weapon" name="Schlager - Focus">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -961,7 +961,7 @@
 	<item id="9235" type="Weapon" name="Schlager - Light">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -993,7 +993,7 @@
 	<item id="9236" type="Weapon" name="Arbalest">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1025,7 +1025,7 @@
 	<item id="9237" type="Weapon" name="Arbalest - Guidance">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1058,7 +1058,7 @@
 	<item id="9238" type="Weapon" name="Arbalest - Evasion">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1091,7 +1091,7 @@
 	<item id="9239" type="Weapon" name="Arbalest - Quick Recovery">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1123,7 +1123,7 @@
 	<item id="9240" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1155,7 +1155,7 @@
 	<item id="9241" type="Weapon" name="Chevalier Rapier - Guidance">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1188,7 +1188,7 @@
 	<item id="9242" type="Weapon" name="Chevalier Rapier - Back Blow">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1221,7 +1221,7 @@
 	<item id="9243" type="Weapon" name="Chevalier Rapier - Rsk. Evasion">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1254,7 +1254,7 @@
 	<item id="9244" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1286,7 +1286,7 @@
 	<item id="9245" type="Weapon" name="Chevalier Rapier - Focus">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1319,7 +1319,7 @@
 	<item id="9246" type="Weapon" name="Chevalier Rapier - Critical Damage">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1352,7 +1352,7 @@
 	<item id="9247" type="Weapon" name="Chevalier Rapier - Haste">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1385,7 +1385,7 @@
 	<item id="9248" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1417,7 +1417,7 @@
 	<item id="9249" type="Weapon" name="Chevalier Rapier - Critical Damage">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1450,7 +1450,7 @@
 	<item id="9250" type="Weapon" name="Chevalier Rapier - Critical Poison">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1484,7 +1484,7 @@
 	<item id="9251" type="Weapon" name="Chevalier Rapier - Haste">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1517,7 +1517,7 @@
 	<item id="9252" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1549,7 +1549,7 @@
 	<item id="9253" type="Weapon" name="Chevalier Rapier - Focus">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1582,7 +1582,7 @@
 	<item id="9254" type="Weapon" name="Chevalier Rapier - Critical Drain">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1616,7 +1616,7 @@
 	<item id="9255" type="Weapon" name="Chevalier Rapier - Critical Poison">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1650,7 +1650,7 @@
 	<item id="9256" type="Weapon" name="Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1682,7 +1682,7 @@
 	<item id="9257" type="Weapon" name="Ballista - Guidance">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1715,7 +1715,7 @@
 	<item id="9258" type="Weapon" name="Ballista - Miser">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1748,7 +1748,7 @@
 	<item id="9259" type="Weapon" name="Ballista - Quick Recovery">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1780,7 +1780,7 @@
 	<item id="9260" type="Weapon" name="Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1812,7 +1812,7 @@
 	<item id="9261" type="Weapon" name="Ballista - Evasion">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1845,7 +1845,7 @@
 	<item id="9262" type="Weapon" name="Ballista - Miser">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1878,7 +1878,7 @@
 	<item id="9263" type="Weapon" name="Ballista - Cheap Shot">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1911,7 +1911,7 @@
 	<item id="9264" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1943,7 +1943,7 @@
 	<item id="9265" type="Weapon" name="Blinzlasher - Guidance">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1976,7 +1976,7 @@
 	<item id="9266" type="Weapon" name="Blinzlasher - Focus">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2009,7 +2009,7 @@
 	<item id="9267" type="Weapon" name="Blinzlasher - Critical Damage">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2042,7 +2042,7 @@
 	<item id="9268" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2074,7 +2074,7 @@
 	<item id="9269" type="Weapon" name="Blinzlasher - Focus">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2107,7 +2107,7 @@
 	<item id="9270" type="Weapon" name="Blinzlasher - Health">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2140,7 +2140,7 @@
 	<item id="9271" type="Weapon" name="Blinzlasher - Rsk. Haste">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2173,7 +2173,7 @@
 	<item id="9272" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2205,7 +2205,7 @@
 	<item id="9273" type="Weapon" name="Blinzlasher - Focus">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2238,7 +2238,7 @@
 	<item id="9274" type="Weapon" name="Blinzlasher - Critical Damage">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2271,7 +2271,7 @@
 	<item id="9275" type="Weapon" name="Blinzlasher - Haste">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2304,7 +2304,7 @@
 	<item id="9276" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2336,7 +2336,7 @@
 	<item id="9277" type="Weapon" name="Blinzlasher - Health">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2369,7 +2369,7 @@
 	<item id="9278" type="Weapon" name="Blinzlasher - Focus">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2402,7 +2402,7 @@
 	<item id="9279" type="Weapon" name="Blinzlasher - Light">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2435,7 +2435,7 @@
 	<item id="9280" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2467,7 +2467,7 @@
 	<item id="9281" type="Weapon" name="Blinzlasher - Guidance">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2500,7 +2500,7 @@
 	<item id="9282" type="Weapon" name="Blinzlasher - Critical Drain">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2534,7 +2534,7 @@
 	<item id="9283" type="Weapon" name="Blinzlasher - Health">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2567,7 +2567,7 @@
 	<item id="9284" type="Weapon" name="Immortal Edge">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -2598,7 +2598,7 @@
 	<item id="9285" type="Weapon" name="Immortal Edge - Focus">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -2630,7 +2630,7 @@
 	<item id="9286" type="Weapon" name="Immortal Edge - Health">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -2662,7 +2662,7 @@
 	<item id="9287" type="Weapon" name="Immortal Edge - Critical Drain">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -2695,7 +2695,7 @@
 	<item id="9288" type="Weapon" name="Tathlum">
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -2727,7 +2727,7 @@
 	<item id="9289" type="Weapon" name="Tathlum - Guidance">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -2760,7 +2760,7 @@
 	<item id="9290" type="Weapon" name="Tathlum - Evasion">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -2793,7 +2793,7 @@
 	<item id="9291" type="Weapon" name="Tathlum - Miser">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -2826,7 +2826,7 @@
 	<item id="9292" type="Weapon" name="Admiral's Estoc">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2858,7 +2858,7 @@
 	<item id="9293" type="Weapon" name="Admiral's Estoc - Focus">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2891,7 +2891,7 @@
 	<item id="9294" type="Weapon" name="Admiral's Estoc - Critical Damage">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2924,7 +2924,7 @@
 	<item id="9295" type="Weapon" name="Admiral's Estoc - Haste">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -2957,7 +2957,7 @@
 	<item id="9296" type="Weapon" name="Saber Tooth">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -2988,7 +2988,7 @@
 	<item id="9297" type="Weapon" name="Saber Tooth - Focus">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -3020,7 +3020,7 @@
 	<item id="9298" type="Weapon" name="Saber Tooth - Critical Damage">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -3052,7 +3052,7 @@
 	<item id="9299" type="Weapon" name="Saber Tooth - Haste">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />

@@ -3,7 +3,7 @@
 	<item id="5700" type="EtcItem" name="Seed: Alternative Great Cobol">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="50" />
@@ -14,7 +14,7 @@
 	<item id="5701" type="EtcItem" name="Seed: Alternative Red Codran">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="40" />
@@ -25,7 +25,7 @@
 	<item id="5702" type="EtcItem" name="Seed: Alternative Sea Codran">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="50" />
@@ -36,7 +36,7 @@
 	<item id="5703" type="EtcItem" name="Lucky Charm">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="price" val="100" />
@@ -49,7 +49,7 @@
 	<item id="5704" type="Weapon" name="Keshanberk*Keshanberk">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -75,7 +75,7 @@
 	<item id="5705" type="Weapon" name="Keshanberk*Damascus">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -102,7 +102,7 @@
 	<item id="5706" type="Weapon" name="Damascus*Damascus">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -136,7 +136,7 @@
 	</item>
 	<item id="5708" type="EtcItem" name="Lord of the Manor's Certificate of Approval">
 		<set name="icon" val="icon.etc_permit_card_i00" />
-		<set name="etcitem_type" val="ticket_of_lord" />
+		<set name="etcitem_type" val="TICKET_OF_LORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
@@ -703,7 +703,7 @@
 	<item id="5741" type="EtcItem" name="Recipe: Sealed Zubei's Gauntlets (100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -713,7 +713,7 @@
 	<item id="5742" type="EtcItem" name="Recipe: Sealed Zubei's Gauntlets (60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -723,7 +723,7 @@
 	<item id="5743" type="EtcItem" name="Recipe: Sealed Avadon Gloves (100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -733,7 +733,7 @@
 	<item id="5744" type="EtcItem" name="Recipe: Sealed Avadon Gloves (60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -743,7 +743,7 @@
 	<item id="5745" type="EtcItem" name="Recipe: Sealed Blue Wolf Gloves (100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -753,7 +753,7 @@
 	<item id="5746" type="EtcItem" name="Recipe: Sealed Blue Wolf Gloves (60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -763,7 +763,7 @@
 	<item id="5747" type="EtcItem" name="Recipe: Sealed Doom Gloves (100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -773,7 +773,7 @@
 	<item id="5748" type="EtcItem" name="Recipe: Sealed Doom Gloves (60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -783,7 +783,7 @@
 	<item id="5749" type="EtcItem" name="Recipe: Sealed Zubei's Boots (100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -793,7 +793,7 @@
 	<item id="5750" type="EtcItem" name="Recipe: Sealed Zubei's Boots (60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -803,7 +803,7 @@
 	<item id="5751" type="EtcItem" name="Recipe: Sealed Avadon Boots (100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -813,7 +813,7 @@
 	<item id="5752" type="EtcItem" name="Recipe: Sealed Avadon Boots (60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -823,7 +823,7 @@
 	<item id="5753" type="EtcItem" name="Recipe: Sealed Blue Wolf Boots (100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -833,7 +833,7 @@
 	<item id="5754" type="EtcItem" name="Recipe: Sealed Blue Wolf Boots (60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -843,7 +843,7 @@
 	<item id="5755" type="EtcItem" name="Recipe: Sealed Doom Boots (100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -853,7 +853,7 @@
 	<item id="5756" type="EtcItem" name="Recipe: Sealed Doom Boots (60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -862,7 +862,7 @@
 	</item>
 	<item id="5757" type="EtcItem" name="Sealed Zubei's Gauntlet Part">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -871,7 +871,7 @@
 	</item>
 	<item id="5758" type="EtcItem" name="Sealed Avadon Gloves Part">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -880,7 +880,7 @@
 	</item>
 	<item id="5759" type="EtcItem" name="Sealed Blue Wolf Gloves Fabric">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -889,7 +889,7 @@
 	</item>
 	<item id="5760" type="EtcItem" name="Sealed Doom Gloves Part">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -898,7 +898,7 @@
 	</item>
 	<item id="5761" type="EtcItem" name="Sealed Zubei's Boots Design">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -907,7 +907,7 @@
 	</item>
 	<item id="5762" type="EtcItem" name="Sealed Avadon Boots Design">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -916,7 +916,7 @@
 	</item>
 	<item id="5763" type="EtcItem" name="Sealed Blue Wolf Boots Design">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -925,7 +925,7 @@
 	</item>
 	<item id="5764" type="EtcItem" name="Sealed Doom Boots Part">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -1393,7 +1393,7 @@
 	<item id="5791" type="Weapon" name="Tomb Guard A">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1419,7 +1419,7 @@
 	<item id="5792" type="Weapon" name="Tomb Guard B">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1445,7 +1445,7 @@
 	<item id="5793" type="Weapon" name="Tomb Savant A">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1471,7 +1471,7 @@
 	<item id="5794" type="Weapon" name="Tomb Savant B">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1497,7 +1497,7 @@
 	<item id="5795" type="Weapon" name="Tomb Guard A">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1523,7 +1523,7 @@
 	<item id="5796" type="Weapon" name="Tomb Guard B">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1549,7 +1549,7 @@
 	<item id="5797" type="Weapon" name="Tomb Savant A">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1575,7 +1575,7 @@
 	<item id="5798" type="Weapon" name="Tomb Savant B">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />

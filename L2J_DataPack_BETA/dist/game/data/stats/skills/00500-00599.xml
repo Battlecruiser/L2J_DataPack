@@ -186,7 +186,7 @@
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
-			<using kind="Rapier" />
+			<using kind="RAPIER" />
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" />
@@ -240,7 +240,7 @@
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
-			<using kind="Rapier" />
+			<using kind="RAPIER" />
 		</cond>
 		<for>
 			<effect name="SoulBlow" />
@@ -286,7 +286,7 @@
 		<enchant4 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Rapier" />
+				<using kind="RAPIER" />
 				<target active_effect_id="1435" />
 			</and>
 		</cond>
@@ -339,7 +339,7 @@
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
-			<using kind="Crossbow" />
+			<using kind="CROSSBOW" />
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" />
@@ -391,7 +391,7 @@
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
-			<using kind="Crossbow" />
+			<using kind="CROSSBOW" />
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" />
@@ -441,7 +441,7 @@
 		<enchant3 name="activateRate" val="#ench3ActivateRates" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
-			<using kind="Crossbow" />
+			<using kind="CROSSBOW" />
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" />
@@ -484,7 +484,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Crossbow" />
+				<using kind="CROSSBOW" />
 				<player hp="10" />
 			</and>
 		</cond>
@@ -850,37 +850,37 @@
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
-			<using kind="Crossbow" />
+			<using kind="CROSSBOW" />
 		</cond>
 		<for>
 			<effect name="ImmobileBuff">
 				<add order="0x40" stat="pAtk" val="#pAtk">
-					<using kind="Crossbow" />
+					<using kind="CROSSBOW" />
 				</add>
 				<add order="0x40" stat="accCombat" val="#accCombat">
-					<using kind="Crossbow" />
+					<using kind="CROSSBOW" />
 				</add>
 				<basemul order="0x30" stat="rCrit" val="0.2">
-					<using kind="Crossbow" />
+					<using kind="CROSSBOW" />
 				</basemul>
 				<add order="0x40" stat="pAtkRange" val="#range">
-					<using kind="Crossbow" />
+					<using kind="CROSSBOW" />
 				</add>
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="ImmobileBuff">
 				<add order="0x40" stat="pAtk" val="#ench1Power">
-					<using kind="Crossbow" />
+					<using kind="CROSSBOW" />
 				</add>
 				<add order="0x40" stat="accCombat" val="#ench1Acc">
-					<using kind="Crossbow" />
+					<using kind="CROSSBOW" />
 				</add>
 				<basemul order="0x30" stat="rCrit" val="0.2">
-					<using kind="Crossbow" />
+					<using kind="CROSSBOW" />
 				</basemul>
 				<add order="0x40" stat="pAtkRange" val="200">
-					<using kind="Crossbow" />
+					<using kind="CROSSBOW" />
 				</add>
 			</effect>
 		</enchant1for>
@@ -1198,7 +1198,7 @@
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Sword" />
+			<using kind="DUAL" />
 		</cond>
 		<for>
 			<effect name="Buff">
@@ -1227,7 +1227,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Dagger,Dual Dagger" />
+			<using kind="DAGGER,DUALDAGGER" />
 		</cond>
 		<for>
 			<effect name="Debuff">

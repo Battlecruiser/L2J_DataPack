@@ -4,7 +4,7 @@
 		<!-- Description: Summons a totem that increases MP recovery speed by 15%. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_mind" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -21,7 +21,7 @@
 		<!-- Description: Summons a totem that increases P. Def. by 30%. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_bravery" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -38,7 +38,7 @@
 		<!-- Description: Summons a totem that increases M. Def. by 25% and cancels petrification at a certain cycle. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_fortitude" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -55,7 +55,7 @@
 		<!-- Description: When used, instantly recovers some HP to yourself and to party members. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 5 minutes. -->
 		<set name="icon" val="BranchSys2.icon.refined_red_blood_of_dragon" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -73,7 +73,7 @@
 		<!-- Description: When used, instantly recovers some MP to yourself and to party members. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 5 minutes. -->
 		<set name="icon" val="BranchSys2.icon.refined_blue_blood_of_dragon" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -241,7 +241,7 @@
 		<!-- Description: Sword used by Darion. Bestows a special power upon the wielder. Bestows one of the following functions: Haste, Focus, or Health. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -270,7 +270,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -299,7 +299,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -328,7 +328,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -357,7 +357,7 @@
 		<!-- Description: Sword used by Darion. Bestows a special power upon the wielder. Bestows one of the following functions: Haste, Focus, or Health. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -389,7 +389,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -421,7 +421,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -453,7 +453,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -485,7 +485,7 @@
 		<!-- Description: Masterwork Item than increases the critical rate. Sword used by Darion. Bestows a special power upon the wielder. Bestows one of the following functions: Haste, Focus, or Health. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -514,7 +514,7 @@
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -543,7 +543,7 @@
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -572,7 +572,7 @@
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -601,7 +601,7 @@
 		<!-- Description: Masterwork Item than increases the critical rate. Sword used by Darion. Bestows a special power upon the wielder. Bestows one of the following functions: Haste, Focus, or Health. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -633,7 +633,7 @@
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -665,7 +665,7 @@
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -697,7 +697,7 @@
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -729,7 +729,7 @@
 		<!-- Description: Dagger dualsword used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical by 109. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualdagger" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -766,7 +766,7 @@
 		<!-- Description: Dagger dualsword used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. During an attack, cancels a target's enhanced status by more than 1 at a fixed rate, or decreases a target's shield P. Def. Can be equipped by Dagger masters above level 81. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualdagger" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -806,7 +806,7 @@
 		<!-- Description: Masterwork Item that raises evasion. Dagger dualsword used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualdagger" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -843,7 +843,7 @@
 		<!-- Description: Masterwork Item that raises evasion. Dagger dualsword used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. Increases damage inflicted during PvP, during an attack, cancels a target's enhanced status by more than 1 at a fixed rate, or decreases a target's shield P. Def. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualdagger" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -883,7 +883,7 @@
 		<!-- Description: Blunt weapon used by Tiat. Bestows a special power upon the wielder. Bestows one of the following functions: HP Regeneration, HP Drain, or Health. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -913,7 +913,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -943,7 +943,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -973,7 +973,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Increases HP recovery rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1003,7 +1003,7 @@
 		<!-- Description: Blunt weapon used by Tiat. Bestows a special power upon the wielder. Bestows one of the following functions: HP Regeneration, HP Drain, or Health. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1036,7 +1036,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1069,7 +1069,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1102,7 +1102,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. HP recovery speed is increased. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1135,7 +1135,7 @@
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Bestows one of the following functions: HP Regeneration, HP Drain, or Health. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1165,7 +1165,7 @@
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1195,7 +1195,7 @@
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1225,7 +1225,7 @@
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases HP recovery rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1255,7 +1255,7 @@
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Bestows one of the following functions: HP Regeneration, HP Drain, or Health. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1288,7 +1288,7 @@
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1321,7 +1321,7 @@
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1354,7 +1354,7 @@
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases HP recovery rate. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1387,7 +1387,7 @@
 		<!-- Description: Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, P. Atk. of dual-swords, two-handed swords, two-handed blunt weapons and fist weapons will increase more than that of one-handed swords. When enchanted to 4 or more, increases Critical Damage by 109, and Increases Max HP by 10%. Increases the damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1417,7 +1417,7 @@
 		<!-- Description: Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of a dualsword, two-handed sword, two-handed blunt weapon and fist weapon more significantly than that of a one-handed sword. When enchanted to 4 or more, increases Critical Damage by 109 and Increases Max HP by 10%. Increases damage inflicted during PvP, and has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1450,7 +1450,7 @@
 		<!-- Description: Masterwork Item than increases Max HP. Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, P. Atk. of dual-swords, two-handed swords, two-handed blunt weapons and fist weapons will increase more than that of one-handed swords. When enchanted to 4 or more, increases Critical Damage by 109, and Increases Max HP by 10%. Increases the damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1480,7 +1480,7 @@
 		<!-- Description: Masterwork Item than increases Max HP. Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of a dualsword, two-handed sword, two-handed blunt weapon and fist weapon more significantly than that of a one-handed sword. When enchanted to 4 or more, increases Critical Damage by 109 and Increases Max HP by 10%. Increases damage inflicted during PvP, and has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="crystal_count" val="3597" />
@@ -1510,7 +1510,7 @@
 		<!-- Description: Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Bestows one of the following functions: Focus, Health or Light. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1539,7 +1539,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1568,7 +1568,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1597,7 +1597,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1626,7 +1626,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1658,7 +1658,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1690,7 +1690,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1722,7 +1722,7 @@
 		<!-- Description: Masterwork Item than increases Atk. Spd. Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Bestows one of the following functions: Focus, Health or Light. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1751,7 +1751,7 @@
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1780,7 +1780,7 @@
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1809,7 +1809,7 @@
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1838,7 +1838,7 @@
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1870,7 +1870,7 @@
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1902,7 +1902,7 @@
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1934,7 +1934,7 @@
 		<!-- Description: Magic fan used by Mardil. Bestows a special power upon the wielder. Bestows one of the following functions: M. Atk., Magic Silence or Acumen. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1962,7 +1962,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. When using magic, increases MP Consumption by 15% and increases M. Atk. by 167. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1991,7 +1991,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. Inflicts silence on a target with a 10% chance when using a magic skill. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2022,7 +2022,7 @@
 		<!-- Description: (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2051,7 +2051,7 @@
 		<!-- Description: Masterwork Item that increases heal amount. Magic fan used by Mardil. Bestows a special power upon the wielder. Bestows one of the following functions: M. Atk., Magic Silence or Acumen. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2080,7 +2080,7 @@
 		<!-- Description: Masterwork Item that increases heal amount. (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. When using magic, increases MP Consumption by 15% and increases M. Atk. by 167. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2109,7 +2109,7 @@
 		<!-- Description: Masterwork Item that increases heal amount. (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. Inflicts silence on a target with a 10% chance when using a magic skill. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2140,7 +2140,7 @@
 		<!-- Description: Masterwork Item that increases heal amount. (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2275,7 +2275,7 @@
 		<!-- Description: Hand-to-hand combat weapon that looks like cozy bear paws. Very low P. Atk. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="BranchSys2.icon.br_polar_bear_wp_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="material" val="ADAMANTAITE" />

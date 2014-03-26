@@ -133,7 +133,7 @@
 	<item id="9813" type="Weapon" name="Orc Officer">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -195,7 +195,7 @@
 	<item id="9819" type="Weapon" name="Combat flag">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="flag" />
+		<set name="weapon_type" val="FLAG" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -236,7 +236,7 @@
 	<item id="9821" type="Armor" name="Shadow Item: Clan Oath Armor">
 		<set name="icon" val="icon.armor_t1001_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -306,7 +306,7 @@
 	<item id="9824" type="Armor" name="Shadow Item: Clan Oath Brigandine">
 		<set name="icon" val="icon.armor_t1002_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -358,7 +358,7 @@
 	<item id="9827" type="Armor" name="Shadow Item: Clan Oath Aketon">
 		<set name="icon" val="icon.armor_t1003_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -447,7 +447,7 @@
 	<item id="9831" type="Armor" name="Improved Apella Plate Armor">
 		<set name="icon" val="icon.armor_t1004_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
@@ -511,7 +511,7 @@
 	<item id="9834" type="Armor" name="Improved Apella Brigandine">
 		<set name="icon" val="icon.armor_t1005_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
@@ -566,7 +566,7 @@
 	<item id="9837" type="Armor" name="Improved Apella Doublet">
 		<set name="icon" val="icon.armor_t1006_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
@@ -631,7 +631,7 @@
 	<item id="9840" type="Weapon" name="Shadow Item: Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -662,7 +662,7 @@
 	<item id="9841" type="Weapon" name="Shadow Item: Riter Schlager">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -693,7 +693,7 @@
 	<item id="9842" type="Weapon" name="Shadow Item: Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -725,7 +725,7 @@
 	<item id="9843" type="Weapon" name="Shadow Item: Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -756,7 +756,7 @@
 	<item id="9844" type="Weapon" name="Shadow Item: Immortal Edge">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -787,7 +787,7 @@
 	<item id="9845" type="Weapon" name="Shadow Item: Tathlum">
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -819,7 +819,7 @@
 	<item id="9846" type="Weapon" name="Shadow Item: Military Fleuret">
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -850,7 +850,7 @@
 	<item id="9847" type="Weapon" name="Shadow Item: Innominate Victory">
 		<set name="icon" val="icon.weapon_nameless_victory_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -881,7 +881,7 @@
 	<item id="9848" type="Weapon" name="Shadow Item: Peacemaker">
 		<set name="icon" val="icon.weapon_peace_maker_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -953,7 +953,7 @@
 	<item id="9854" type="Weapon" name="Dynasty Sword - Focus">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -982,7 +982,7 @@
 	<item id="9855" type="Weapon" name="Dynasty Sword - Health">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1011,7 +1011,7 @@
 	<item id="9856" type="Weapon" name="Dynasty Sword - Light">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1040,7 +1040,7 @@
 	<item id="9857" type="Weapon" name="Dynasty Blade - Focus">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1069,7 +1069,7 @@
 	<item id="9858" type="Weapon" name="Dynasty Blade - Health">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1098,7 +1098,7 @@
 	<item id="9859" type="Weapon" name="Dynasty Blade - Light">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1127,7 +1127,7 @@
 	<item id="9860" type="Weapon" name="Dynasty Phantom - Acumen">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1156,7 +1156,7 @@
 	<item id="9861" type="Weapon" name="Dynasty Phantom - Mana Up">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1185,7 +1185,7 @@
 	<item id="9862" type="Weapon" name="Dynasty Phantom - Conversion">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1214,7 +1214,7 @@
 	<item id="9863" type="Weapon" name="Dynasty Bow - Cheap Shot">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1246,7 +1246,7 @@
 	<item id="9864" type="Weapon" name="Dynasty Bow - Guidance">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1278,7 +1278,7 @@
 	<item id="9865" type="Weapon" name="Dynasty Bow - Focus">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1310,7 +1310,7 @@
 	<item id="9866" type="Weapon" name="Dynasty Knife - Focus">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1339,7 +1339,7 @@
 	<item id="9867" type="Weapon" name="Dynasty Knife - Evasion">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1368,7 +1368,7 @@
 	<item id="9868" type="Weapon" name="Dynasty Knife - Critical Damage">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1397,7 +1397,7 @@
 	<item id="9869" type="Weapon" name="Dynasty Halberd - Anger">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1426,7 +1426,7 @@
 	<item id="9870" type="Weapon" name="Dynasty Halberd - Critical Stun">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1457,7 +1457,7 @@
 	<item id="9871" type="Weapon" name="Dynasty Halberd - Light">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1486,7 +1486,7 @@
 	<item id="9872" type="Weapon" name="Dynasty Cudgel - Anger">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1515,7 +1515,7 @@
 	<item id="9873" type="Weapon" name="Dynasty Cudgel - Health">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1544,7 +1544,7 @@
 	<item id="9874" type="Weapon" name="Dynasty Cudgel - Rsk. Focus">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1573,7 +1573,7 @@
 	<item id="9875" type="Weapon" name="Dynasty Mace - Mana Up">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1603,7 +1603,7 @@
 	<item id="9876" type="Weapon" name="Dynasty Mace - Conversion">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1633,7 +1633,7 @@
 	<item id="9877" type="Weapon" name="Dynasty Mace - Acumen">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1663,7 +1663,7 @@
 	<item id="9878" type="Weapon" name="Dynasty Bagh-Nakh - Rsk. Evasion">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1692,7 +1692,7 @@
 	<item id="9879" type="Weapon" name="Dynasty Bagh-Nakh - Focus">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1721,7 +1721,7 @@
 	<item id="9880" type="Weapon" name="Dynasty Bagh-Nakh - Haste">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1761,7 +1761,7 @@
 	<item id="9882" type="EtcItem" name="Great Wolf Necklace">
 		<set name="icon" val="icon.etc_summon_wolf_r_01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 		<set name="price" val="2000000" />
@@ -1902,7 +1902,7 @@
 	<item id="9897" type="EtcItem" name="Scroll of Transformation - Pig">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1914,7 +1914,7 @@
 	<item id="9898" type="EtcItem" name="SP Scroll: Highest Grade">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />

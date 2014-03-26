@@ -70,7 +70,7 @@
 	<item id="17005" type="EtcItem" name="Santa - Potion of Will - Event">
 		<set name="icon" val="icon.etc_cp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="20" />
@@ -84,7 +84,7 @@
 	<item id="17006" type="Armor" name="Sealed Vesper Noble Breastplate">
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2240" />
@@ -105,7 +105,7 @@
 	<item id="17007" type="Armor" name="Sealed Vesper Noble Leather Breastplate">
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1680" />
@@ -123,7 +123,7 @@
 	<item id="17008" type="Armor" name="Sealed Vesper Noble Tunic">
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1680" />
@@ -145,7 +145,7 @@
 	<item id="17009" type="Armor" name="Sealed Vesper Noble Gaiters">
 		<set name="icon" val="icon.armor_t94_l_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1400" />
@@ -206,7 +206,7 @@
 	<item id="17012" type="Armor" name="Sealed Vesper Noble Leather Leggings">
 		<set name="icon" val="icon.armor_t95_l_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1050" />
@@ -258,7 +258,7 @@
 	<item id="17015" type="Armor" name="Sealed Vesper Noble Stockings">
 		<set name="icon" val="icon.armor_t96_l_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1050" />
@@ -320,7 +320,7 @@
 	<item id="17018" type="EtcItem" name="Hot Springs Potion">
 		<set name="icon" val="icon.etc_cp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="20" />
@@ -982,7 +982,7 @@
 	<item id="17062" type="EtcItem" name="Event - Scroll of Summon Baby White Tiger">
 		<set name="icon" val="icon.etc_scroll_of_tiger_a" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_depositable" val="false" />
@@ -994,7 +994,7 @@
 	<item id="17063" type="EtcItem" name="Event - Scroll of Summon Gloomy Baby White Tiger">
 		<set name="icon" val="icon.etc_scroll_of_tiger_a" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_depositable" val="false" />
@@ -1006,7 +1006,7 @@
 	<item id="17064" type="EtcItem" name="Event - Scroll of Summon Baby White Tiger Captain">
 		<set name="icon" val="icon.etc_scroll_of_tiger_b" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_depositable" val="false" />
@@ -1018,7 +1018,7 @@
 	<item id="17065" type="EtcItem" name="Event - Scroll of Summon Gloomy Baby White Tiger Captain">
 		<set name="icon" val="icon.etc_scroll_of_tiger_b" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_depositable" val="false" />
@@ -1045,7 +1045,7 @@
 	<item id="17067" type="EtcItem" name="Event - Cupid's Fatigue Relief Potion">
 		<set name="icon" val="icon.etc_faitgue_relief_of_cupid_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="elixir" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="13" />
 		<set name="reuse_delay" val="2000" />
@@ -1061,7 +1061,7 @@
 	<item id="17068" type="EtcItem" name="Event - Cupid's Powerful Fatigue Relief Potion">
 		<set name="icon" val="icon.etc_nutrients_of_cupid_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="elixir" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="14" />
 		<set name="reuse_delay" val="4000" />
@@ -1313,7 +1313,7 @@
 	<item id="17087" type="EtcItem" name="Twin Coba Seed">
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed" />
+		<set name="etcitem_type" val="SEED" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -1325,7 +1325,7 @@
 	<item id="17088" type="EtcItem" name="Seed: Alternative Twin Coba">
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -1337,7 +1337,7 @@
 	<item id="17089" type="EtcItem" name="Red Coba Seed">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed" />
+		<set name="etcitem_type" val="SEED" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="500" />
@@ -1349,7 +1349,7 @@
 	<item id="17090" type="EtcItem" name="Seed: Alternative Red Coba">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="500" />
@@ -1361,7 +1361,7 @@
 	<item id="17091" type="EtcItem" name="Golden Coba Seed">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed" />
+		<set name="etcitem_type" val="SEED" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="650" />
@@ -1373,7 +1373,7 @@
 	<item id="17092" type="EtcItem" name="Seed: Alternative Golden Coba">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="650" />
@@ -1385,7 +1385,7 @@
 	<item id="17093" type="EtcItem" name="Vitality Maintaining Potion (10 mintues) (Event)">
 		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1399,7 +1399,7 @@
 	<item id="17094" type="EtcItem" name="Nevit's Voice">
 		<set name="icon" val="icon.etc_fish_scale_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1412,7 +1412,7 @@
 	<item id="17095" type="EtcItem" name="Nevit's Hourglass - 1 hour - 1~19">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="16" />
 		<set name="is_tradable" val="false" />
@@ -1429,7 +1429,7 @@
 	<item id="17096" type="EtcItem" name="Nevit's Hourglass - 1.5 hour - 1~19">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="16" />
 		<set name="is_tradable" val="false" />
@@ -1446,7 +1446,7 @@
 	<item id="17097" type="EtcItem" name="Nevit's Hourglass - 2 hour - 1~19">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="16" />
 		<set name="is_tradable" val="false" />
@@ -1463,7 +1463,7 @@
 	<item id="17098" type="EtcItem" name="Nevit's Hourglass - 2.5 hour - 1~19">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="16" />
 		<set name="is_tradable" val="false" />
@@ -1480,7 +1480,7 @@
 	<item id="17099" type="EtcItem" name="Nevit's Hourglass - 3 hour - 1~19">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="16" />
 		<set name="is_tradable" val="false" />

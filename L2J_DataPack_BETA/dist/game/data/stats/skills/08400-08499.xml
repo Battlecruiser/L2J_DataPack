@@ -1092,7 +1092,7 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pDef" val="70">
-					<using kind="Heavy" />
+					<using kind="HEAVY" />
 				</add>
 				<add order="0x40" stat="regMp" val="32">
 					<and>
@@ -1113,10 +1113,10 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="2">
-					<using kind="Light" />
+					<using kind="LIGHT" />
 				</add>
 				<add order="0x40" stat="mDef" val="39">
-					<using kind="Light" />
+					<using kind="LIGHT" />
 				</add>
 			</effect>
 		</for>
@@ -1129,7 +1129,7 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pDef" val="45">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</add>
 				<mul order="0x30" stat="weightLimit" val="1.3" />
 			</effect>

@@ -608,7 +608,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.15">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 				<mul order="0x30" stat="regHp" val="5" />
 			</effect>
@@ -736,10 +736,10 @@
 			<effect name="DamOverTimePercent" ticks="5">
 				<param power="#dot" />
 				<basemul order="0x30" stat="rCrit" val="#rCrit">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</basemul>
 				<mul order="0x30" stat="cAtk" val="#cAtk">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 			</effect>
 		</for>
@@ -763,10 +763,10 @@
 			<effect name="DamOverTimePercent" ticks="5">
 				<param power="0.05" />
 				<basemul order="0x30" stat="rCrit" val="0.9">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</basemul>
 				<mul order="0x30" stat="cAtk" val="1.5">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 			</effect>
 		</for>

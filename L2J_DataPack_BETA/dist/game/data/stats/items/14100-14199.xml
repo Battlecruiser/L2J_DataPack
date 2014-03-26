@@ -79,7 +79,7 @@
 	<item id="14105" type="Armor" name="Sealed Vesper Breastplate">
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2240" />
@@ -100,7 +100,7 @@
 	<item id="14106" type="Armor" name="Sealed Vesper Leather Breastplate">
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1680" />
@@ -118,7 +118,7 @@
 	<item id="14107" type="Armor" name="Sealed Vesper Tunic">
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1680" />
@@ -140,7 +140,7 @@
 	<item id="14108" type="Armor" name="Sealed Vesper Gaiters">
 		<set name="icon" val="icon.armor_t94_l_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1400" />
@@ -222,7 +222,7 @@
 	<item id="14112" type="Armor" name="Sealed Vesper Leather Leggings">
 		<set name="icon" val="icon.armor_t95_l_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1050" />
@@ -274,7 +274,7 @@
 	<item id="14115" type="Armor" name="Sealed Vesper Stockings">
 		<set name="icon" val="icon.armor_t96_l_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1050" />
@@ -336,7 +336,7 @@
 	<item id="14118" type="Weapon" name="Vesper Cutter - Haste">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -365,7 +365,7 @@
 	<item id="14119" type="Weapon" name="Vesper Cutter - Health">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -394,7 +394,7 @@
 	<item id="14120" type="Weapon" name="Vesper Cutter - Focus">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -423,7 +423,7 @@
 	<item id="14121" type="Weapon" name="Vesper Slasher - Haste">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -452,7 +452,7 @@
 	<item id="14122" type="Weapon" name="Vesper Slasher - Health">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -481,7 +481,7 @@
 	<item id="14123" type="Weapon" name="Vesper Slasher - Focus">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -510,7 +510,7 @@
 	<item id="14124" type="Weapon" name="Vesper Buster - Mana Up">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -539,7 +539,7 @@
 	<item id="14125" type="Weapon" name="Vesper Buster - Acumen">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -568,7 +568,7 @@
 	<item id="14126" type="Weapon" name="Vesper Buster - Magic Hold">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -599,7 +599,7 @@
 	<item id="14127" type="Weapon" name="Vesper Shaper - Critical Damage">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -628,7 +628,7 @@
 	<item id="14128" type="Weapon" name="Vesper Shaper - HP Drain">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -657,7 +657,7 @@
 	<item id="14129" type="Weapon" name="Vesper Shaper - Haste">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -686,7 +686,7 @@
 	<item id="14130" type="Weapon" name="Vesper Fighter - Focus">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -715,7 +715,7 @@
 	<item id="14131" type="Weapon" name="Vesper Fighter - Health">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -744,7 +744,7 @@
 	<item id="14132" type="Weapon" name="Vesper Fighter - Critical Stun">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -775,7 +775,7 @@
 	<item id="14133" type="Weapon" name="Vesper Stormer - Health">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -804,7 +804,7 @@
 	<item id="14134" type="Weapon" name="Vesper Stormer - Guidance">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -833,7 +833,7 @@
 	<item id="14135" type="Weapon" name="Vesper Stormer - Haste">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -862,7 +862,7 @@
 	<item id="14136" type="Weapon" name="Vesper Avenger - HP Drain">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -891,7 +891,7 @@
 	<item id="14137" type="Weapon" name="Vesper Avenger - Health">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -920,7 +920,7 @@
 	<item id="14138" type="Weapon" name="Vesper Avenger - HP Regeneration">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -949,7 +949,7 @@
 	<item id="14139" type="Weapon" name="Vesper Retributer - HP Regeneration">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -978,7 +978,7 @@
 	<item id="14140" type="Weapon" name="Vesper Retributer - Health">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1007,7 +1007,7 @@
 	<item id="14141" type="Weapon" name="Vesper Retributer - HP Drain">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1036,7 +1036,7 @@
 	<item id="14142" type="Weapon" name="Vesper Caster - Acumen">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1066,7 +1066,7 @@
 	<item id="14143" type="Weapon" name="Vesper Caster - MP Regeneration">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1096,7 +1096,7 @@
 	<item id="14144" type="Weapon" name="Vesper Caster - Mana Up">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1126,7 +1126,7 @@
 	<item id="14145" type="Weapon" name="Vesper Singer - Empower">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1156,7 +1156,7 @@
 	<item id="14146" type="Weapon" name="Vesper Singer - MP Regeneration">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1186,7 +1186,7 @@
 	<item id="14147" type="Weapon" name="Vesper Singer - Magic Hold">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1218,7 +1218,7 @@
 	<item id="14148" type="Weapon" name="Vesper Thrower - Cheap Shot">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1250,7 +1250,7 @@
 	<item id="14149" type="Weapon" name="Vesper Thrower - Focus">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1282,7 +1282,7 @@
 	<item id="14150" type="Weapon" name="Vesper Thrower - Critical Slow">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1316,7 +1316,7 @@
 	<item id="14151" type="Weapon" name="Vesper Pincer - Haste">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1350,7 +1350,7 @@
 	<item id="14152" type="Weapon" name="Vesper Pincer - Health">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1384,7 +1384,7 @@
 	<item id="14153" type="Weapon" name="Vesper Pincer - Focus">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1418,7 +1418,7 @@
 	<item id="14154" type="Weapon" name="Vesper Shooter - Cheap Shot">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1452,7 +1452,7 @@
 	<item id="14155" type="Weapon" name="Vesper Shooter - Focus">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1486,7 +1486,7 @@
 	<item id="14156" type="Weapon" name="Vesper Shooter - Critical Slow">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1522,7 +1522,7 @@
 	<item id="14157" type="Weapon" name="Vesper Nagan - Haste">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -1555,7 +1555,7 @@
 	<item id="14158" type="Weapon" name="Vesper Nagan - Health">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -1588,7 +1588,7 @@
 	<item id="14159" type="Weapon" name="Vesper Nagan - Focus">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />

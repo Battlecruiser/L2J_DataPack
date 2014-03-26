@@ -3,7 +3,7 @@
 	<item id="14700" type="EtcItem" name="Greater Healing Potion">
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -20,7 +20,7 @@
 	<item id="14701" type="EtcItem" name="Greater Quick Healing Potion">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="180" />
@@ -36,7 +36,7 @@
 	</item>
 	<item id="14702" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Weapon (D-Grade)">
 		<set name="icon" val="icon.ench_wp_stone_i00" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -47,7 +47,7 @@
 	</item>
 	<item id="14703" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Weapon (C-Grade)">
 		<set name="icon" val="icon.ench_wp_stone_i01" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -58,7 +58,7 @@
 	</item>
 	<item id="14704" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Weapon (B-Grade)">
 		<set name="icon" val="icon.ench_wp_stone_i02" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -69,7 +69,7 @@
 	</item>
 	<item id="14705" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Weapon (A-Grade)">
 		<set name="icon" val="icon.ench_wp_stone_i03" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -80,7 +80,7 @@
 	</item>
 	<item id="14706" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Weapon (S-Grade)">
 		<set name="icon" val="icon.ench_wp_stone_i04" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -91,7 +91,7 @@
 	</item>
 	<item id="14707" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Armor (D-Grade)">
 		<set name="icon" val="icon.ench_am_stone_i00" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -102,7 +102,7 @@
 	</item>
 	<item id="14708" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Armor (C-Grade)">
 		<set name="icon" val="icon.ench_am_stone_i01" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -113,7 +113,7 @@
 	</item>
 	<item id="14709" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Armor (B-Grade)">
 		<set name="icon" val="icon.ench_am_stone_i02" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -124,7 +124,7 @@
 	</item>
 	<item id="14710" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Armor (A-Grade)">
 		<set name="icon" val="icon.ench_am_stone_i03" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -135,7 +135,7 @@
 	</item>
 	<item id="14711" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Armor (S-Grade)">
 		<set name="icon" val="icon.ench_am_stone_i04" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -263,7 +263,7 @@
 	<item id="14722" type="EtcItem" name="Event - Cupid's Fatigue Recovery Potion">
 		<set name="icon" val="icon.etc_faitgue_relief_of_cupid_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="elixir" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="13" />
 		<set name="reuse_delay" val="2000" />
@@ -277,7 +277,7 @@
 	<item id="14723" type="EtcItem" name="Event - Cupid's Powerful Fatigue Recovery Potion">
 		<set name="icon" val="icon.etc_nutrients_of_cupid_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="elixir" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="14" />
 		<set name="reuse_delay" val="5000" />
@@ -291,7 +291,7 @@
 	<item id="14724" type="EtcItem" name="Event - Milk Cow Summon Scroll">
 		<set name="icon" val="icon.etc_scroll_of_milkcattle_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
@@ -301,7 +301,7 @@
 	<item id="14725" type="EtcItem" name="Event - Head Milk Cow Summon Scroll">
 		<set name="icon" val="icon.etc_scroll_of_milkcattle_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
@@ -311,7 +311,7 @@
 	<item id="14726" type="EtcItem" name="Event - Gloomy Milk Cow Summon Scroll">
 		<set name="icon" val="icon.etc_scroll_of_milkcattle_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
@@ -321,7 +321,7 @@
 	<item id="14727" type="EtcItem" name="Event - Gloomy Head Milk Cow Summon Scroll">
 		<set name="icon" val="icon.etc_scroll_of_milkcattle_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
@@ -331,7 +331,7 @@
 	<item id="14728" type="EtcItem" name="Event - Orr Cube - 30-day limited period">
 		<set name="icon" val="icon.etc_ore_cube_event_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="elixir" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -417,7 +417,7 @@
 	<item id="14739" type="EtcItem" name="Event - Fresh Milk">
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -445,7 +445,7 @@
 	<item id="14741" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 5 minutes">
 		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -456,7 +456,7 @@
 	<item id="14742" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 10 minutes">
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -469,7 +469,7 @@
 	<item id="14743" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 20 minutes">
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -482,7 +482,7 @@
 	<item id="14744" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 30 minutes">
 		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -498,7 +498,7 @@
 	<item id="14745" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 60 minutes">
 		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -830,7 +830,7 @@
 	<item id="14769" type="EtcItem" name="White Day Candy">
 		<set name="icon" val="icon.etc_whiteday_candy_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -844,7 +844,7 @@
 	<item id="14770" type="EtcItem" name="Solo Escape Petition">
 		<set name="icon" val="icon.etc_candle_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -882,7 +882,7 @@
 	<item id="14773" type="Armor" name="Suit - 14-day limited period">
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -898,7 +898,7 @@
 	<item id="14774" type="Weapon" name="Wild Rose Pig Candy - 14-day limited period">
 		<set name="icon" val="icon.etc_pig_candy_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -973,7 +973,7 @@
 	<item id="14780" type="Weapon" name="Baguette's Bread Sword">
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="DAMASCUS" />
@@ -989,7 +989,7 @@
 	<item id="14781" type="Weapon" name="Baguette's Dagger">
 		<set name="icon" val="icon.weapon_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="attack_range" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -1006,7 +1006,7 @@
 	<item id="14782" type="Weapon" name="Baguette's Two-handed Sword">
 		<set name="icon" val="icon.weapon_two_handed_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="2" />
 		<set name="immediate_effect" val="true" />
@@ -1022,7 +1022,7 @@
 	<item id="14783" type="Weapon" name="Baguette's Mace">
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="attack_range" val="3" />
 		<set name="immediate_effect" val="true" />
@@ -1040,7 +1040,7 @@
 	<item id="14784" type="Weapon" name="Baguette's Two-handed Hammer">
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="4" />
 		<set name="immediate_effect" val="true" />
@@ -1058,7 +1058,7 @@
 	<item id="14785" type="Weapon" name="Baguette's Spear">
 		<set name="icon" val="icon.weapon_short_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="5" />
 		<set name="immediate_effect" val="true" />
@@ -1075,7 +1075,7 @@
 	<item id="14786" type="Weapon" name="Baguette's Bow">
 		<set name="icon" val="icon.weapon_short_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="6" />
 		<set name="immediate_effect" val="true" />
@@ -1094,7 +1094,7 @@
 	<item id="14787" type="Weapon" name="Baguette's Fist">
 		<set name="icon" val="icon.weapon_foxs_nail_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="7" />
 		<set name="immediate_effect" val="true" />
@@ -1112,7 +1112,7 @@
 	<item id="14788" type="Weapon" name="Baguette's Magic Sword">
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="attack_range" val="8" />
 		<set name="immediate_effect" val="true" />
@@ -1130,7 +1130,7 @@
 	<item id="14789" type="Weapon" name="Baguette's Staff">
 		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="attack_range" val="9" />
 		<set name="immediate_effect" val="true" />
@@ -1149,7 +1149,7 @@
 	<item id="14790" type="Weapon" name="Baguette's Two-handed Staff">
 		<set name="icon" val="icon.weapon_willow_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="10" />
 		<set name="immediate_effect" val="true" />
@@ -1193,7 +1193,7 @@
 	<item id="14792" type="Weapon" name="Baguette's Rapier">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="attack_range" val="12" />
 		<set name="immediate_effect" val="true" />
@@ -1214,7 +1214,7 @@
 	<item id="14793" type="Weapon" name="Baguette's Ancient Sword">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="13" />
 		<set name="immediate_effect" val="true" />
@@ -1236,7 +1236,7 @@
 	<item id="14794" type="Weapon" name="Baguette's Crossbow">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="14" />
 		<set name="immediate_effect" val="true" />
@@ -1258,7 +1258,7 @@
 	<item id="14795" type="Weapon" name="Baguette's Dualsword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="15" />
 		<set name="immediate_effect" val="true" />
@@ -1276,7 +1276,7 @@
 	<item id="14796" type="Armor" name="Baguette's Sigil">
 		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="sigil" />
+		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="lhand" />
 		<set name="attack_range" val="16" />
 		<set name="immediate_effect" val="true" />
@@ -1294,7 +1294,7 @@
 	<item id="14797" type="Weapon" name="Baguette's Two-handed Dagger">
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualdagger" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="17" />
 		<set name="immediate_effect" val="true" />

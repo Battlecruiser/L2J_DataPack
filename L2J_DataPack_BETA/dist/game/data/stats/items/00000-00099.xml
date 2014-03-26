@@ -3,7 +3,7 @@
 	<item id="1" type="Weapon" name="Short Sword">
 		<set name="icon" val="icon.weapon_small_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -24,7 +24,7 @@
 	<item id="2" type="Weapon" name="Long Sword">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -45,7 +45,7 @@
 	<item id="3" type="Weapon" name="Broadsword">
 		<set name="icon" val="icon.weapon_broad_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -66,7 +66,7 @@
 	<item id="4" type="Weapon" name="Club">
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -88,7 +88,7 @@
 	<item id="5" type="Weapon" name="Mace">
 		<set name="icon" val="icon.weapon_mace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -110,7 +110,7 @@
 	<item id="6" type="Weapon" name="Apprentice's Wand">
 		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -136,7 +136,7 @@
 	<item id="7" type="Weapon" name="Apprentice's Rod">
 		<set name="icon" val="icon.weapon_apprentices_rod_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -159,7 +159,7 @@
 	<item id="8" type="Weapon" name="Willow Staff">
 		<set name="icon" val="icon.weapon_willow_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -182,7 +182,7 @@
 	<item id="9" type="Weapon" name="Cedar Staff">
 		<set name="icon" val="icon.weapon_cedar_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -205,7 +205,7 @@
 	<item id="10" type="Weapon" name="Dagger">
 		<set name="icon" val="icon.weapon_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -230,7 +230,7 @@
 	<item id="11" type="Weapon" name="Bone Dagger">
 		<set name="icon" val="icon.weapon_bone_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -252,7 +252,7 @@
 	<item id="12" type="Weapon" name="Knife">
 		<set name="icon" val="icon.weapon_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -274,7 +274,7 @@
 	<item id="13" type="Weapon" name="Short Bow">
 		<set name="icon" val="icon.weapon_short_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -298,7 +298,7 @@
 	<item id="14" type="Weapon" name="Bow">
 		<set name="icon" val="icon.weapon_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -322,7 +322,7 @@
 	<item id="15" type="Weapon" name="Short Spear">
 		<set name="icon" val="icon.weapon_short_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -345,7 +345,7 @@
 	<item id="16" type="Weapon" name="Great Spear">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -368,7 +368,7 @@
 	<item id="17" type="EtcItem" name="Wooden Arrow">
 		<set name="icon" val="icon.etc_wooden_quiver_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="arrow" />
+		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -430,7 +430,7 @@
 	<item id="21" type="Armor" name="Shirt">
 		<set name="icon" val="icon.armor_t02_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -443,7 +443,7 @@
 	<item id="22" type="Armor" name="Leather Shirt">
 		<set name="icon" val="icon.armor_t04_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -456,7 +456,7 @@
 	<item id="23" type="Armor" name="Wooden Breastplate">
 		<set name="icon" val="icon.armor_t06_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -469,7 +469,7 @@
 	<item id="24" type="Armor" name="Bone Breastplate">
 		<set name="icon" val="icon.armor_t32_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -482,7 +482,7 @@
 	<item id="25" type="Armor" name="Piece Bone Breastplate">
 		<set name="icon" val="icon.armor_t33_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -498,7 +498,7 @@
 	<item id="26" type="Armor" name="Bronze Breastplate">
 		<set name="icon" val="icon.armor_t34_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -514,7 +514,7 @@
 	<item id="27" type="Armor" name="Hard Leather Shirt">
 		<set name="icon" val="icon.armor_t30_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -527,7 +527,7 @@
 	<item id="28" type="Armor" name="Pants">
 		<set name="icon" val="icon.armor_t02_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -540,7 +540,7 @@
 	<item id="29" type="Armor" name="Leather Pants">
 		<set name="icon" val="icon.armor_t04_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -553,7 +553,7 @@
 	<item id="30" type="Armor" name="Hard Leather Pants">
 		<set name="icon" val="icon.armor_t06_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -566,7 +566,7 @@
 	<item id="31" type="Armor" name="Bone Gaiters">
 		<set name="icon" val="icon.armor_t32_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -579,7 +579,7 @@
 	<item id="32" type="Armor" name="Piece Bone Gaiters">
 		<set name="icon" val="icon.armor_t33_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -595,7 +595,7 @@
 	<item id="33" type="Armor" name="Hard Leather Gaiters">
 		<set name="icon" val="icon.armor_t30_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -608,7 +608,7 @@
 	<item id="34" type="Armor" name="Bronze Gaiters">
 		<set name="icon" val="icon.armor_t34_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -844,7 +844,7 @@
 	<item id="52" type="Weapon" name="Vesper Dual Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -936,7 +936,7 @@
 	<item id="58" type="Armor" name="Mithril Breastplate">
 		<set name="icon" val="icon.armor_t19_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="260" />
@@ -956,7 +956,7 @@
 	<item id="59" type="Armor" name="Mithril Gaiters">
 		<set name="icon" val="icon.armor_t19_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="180" />
@@ -976,7 +976,7 @@
 	<item id="60" type="Armor" name="Composite Armor">
 		<set name="icon" val="icon.armor_t61_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="491" />
@@ -1060,7 +1060,7 @@
 	<item id="65" type="EtcItem" name="Red Potion">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="80" />
@@ -1074,7 +1074,7 @@
 	<item id="66" type="Weapon" name="Gladius">
 		<set name="icon" val="icon.weapon_gladius_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1095,7 +1095,7 @@
 	<item id="67" type="Weapon" name="Orcish Sword">
 		<set name="icon" val="icon.weapon_orcish_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1116,7 +1116,7 @@
 	<item id="68" type="Weapon" name="Falchion">
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1137,7 +1137,7 @@
 	<item id="69" type="Weapon" name="Bastard Sword">
 		<set name="icon" val="icon.weapon_bastard_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1164,7 +1164,7 @@
 	<item id="70" type="Weapon" name="Claymore">
 		<set name="icon" val="icon.weapon_claymore_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1191,7 +1191,7 @@
 	<item id="71" type="Weapon" name="Flamberge">
 		<set name="icon" val="icon.weapon_flamberge_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1218,7 +1218,7 @@
 	<item id="72" type="Weapon" name="Stormbringer">
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1245,7 +1245,7 @@
 	<item id="73" type="Weapon" name="Shamshir">
 		<set name="icon" val="icon.weapon_shamshir_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1272,7 +1272,7 @@
 	<item id="74" type="Weapon" name="Katana">
 		<set name="icon" val="icon.weapon_katana_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1299,7 +1299,7 @@
 	<item id="75" type="Weapon" name="Caliburs">
 		<set name="icon" val="icon.weapon_caliburs_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1326,7 +1326,7 @@
 	<item id="76" type="Weapon" name="Sword of Delusion">
 		<set name="icon" val="icon.weapon_sword_of_delusion_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1353,7 +1353,7 @@
 	<item id="77" type="Weapon" name="Tsurugi">
 		<set name="icon" val="icon.weapon_tsurugi_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1380,7 +1380,7 @@
 	<item id="78" type="Weapon" name="Great Sword">
 		<set name="icon" val="icon.weapon_great_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1407,7 +1407,7 @@
 	<item id="79" type="Weapon" name="Sword of Damascus">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1434,7 +1434,7 @@
 	<item id="80" type="Weapon" name="Tallum Blade">
 		<set name="icon" val="icon.weapon_tallum_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1461,7 +1461,7 @@
 	<item id="81" type="Weapon" name="Dragon Slayer">
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1488,7 +1488,7 @@
 	<item id="82" type="Weapon" name="Gaz Blade">
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1517,7 +1517,7 @@
 	<item id="83" type="Weapon" name="Sword of Magic">
 		<set name="icon" val="icon.weapon_sword_of_magic_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1544,7 +1544,7 @@
 	<item id="84" type="Weapon" name="Homunkulus's Sword">
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1571,7 +1571,7 @@
 	<item id="85" type="Weapon" name="Phantom Sword">
 		<set name="icon" val="icon.weapon_phantom_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1598,7 +1598,7 @@
 	<item id="86" type="Weapon" name="Tomahawk">
 		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1625,7 +1625,7 @@
 	<item id="87" type="Weapon" name="Iron Hammer">
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1647,7 +1647,7 @@
 	<item id="88" type="Weapon" name="Morning Star">
 		<set name="icon" val="icon.weapon_morning_star_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1674,7 +1674,7 @@
 	<item id="89" type="Weapon" name="Big Hammer">
 		<set name="icon" val="icon.weapon_big_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1701,7 +1701,7 @@
 	<item id="90" type="Weapon" name="Goat Head Staff">
 		<set name="icon" val="icon.weapon_goathead_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1729,7 +1729,7 @@
 	<item id="91" type="Weapon" name="Heavy War Axe">
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1756,7 +1756,7 @@
 	<item id="92" type="Weapon" name="Sprite's Staff">
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1784,7 +1784,7 @@
 	<item id="93" type="Weapon" name="Winged Spear">
 		<set name="icon" val="icon.weapon_winged_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1812,7 +1812,7 @@
 	<item id="94" type="Weapon" name="Bec de Corbin">
 		<set name="icon" val="icon.weapon_bech_de_corbin_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1840,7 +1840,7 @@
 	<item id="95" type="Weapon" name="Poleaxe">
 		<set name="icon" val="icon.weapon_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1868,7 +1868,7 @@
 	<item id="96" type="Weapon" name="Scythe">
 		<set name="icon" val="icon.weapon_scythe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1896,7 +1896,7 @@
 	<item id="97" type="Weapon" name="Lance">
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1924,7 +1924,7 @@
 	<item id="98" type="Weapon" name="Halberd">
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1952,7 +1952,7 @@
 	<item id="99" type="Weapon" name="Apprentice's Spellbook">
 		<set name="icon" val="icon.weapon_apprentices_spellbook_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="etc" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />

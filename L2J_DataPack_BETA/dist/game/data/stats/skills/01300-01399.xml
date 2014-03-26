@@ -381,7 +381,7 @@
 		<set name="targetType" val="SELF" />
 		<!-- TODO: Missing condition for "op_fishing_cast" -->
 		<cond msgId="113" addName="1">
-			<using kind="Rod" />
+			<using kind="FISHINGROD" />
 		</cond>
 		<for>
 			<effect name="Fishing" />
@@ -399,7 +399,7 @@
 		<set name="targetType" val="SELF" />
 		<!-- TODO: Missing condition for "op_fishing_pumping" -->
 		<cond msgId="113" addName="1">
-			<using kind="Rod" />
+			<using kind="FISHINGROD" />
 		</cond>
 		<for>
 			<effect name="Pumping">
@@ -419,7 +419,7 @@
 		<set name="targetType" val="SELF" />
 		<!-- TODO: Missing condition for "op_fishing_reeling" -->
 		<cond msgId="113" addName="1">
-			<using kind="Rod" />
+			<using kind="FISHINGROD" />
 		</cond>
 		<for>
 			<effect name="Reeling">

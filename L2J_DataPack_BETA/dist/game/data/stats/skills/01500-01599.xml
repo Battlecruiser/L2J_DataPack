@@ -1783,10 +1783,10 @@
 		<for>
 			<effect name="Buff">
 				<basemul order="0x30" stat="rCrit" val="#rCrit">
-					<using kind="Dagger,Dual Dagger,Light" />
+					<using kind="DAGGER,DUALDAGGER,LIGHT" />
 				</basemul>
 				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd">
-					<using kind="Dagger,Dual Dagger,Light" />
+					<using kind="DAGGER,DUALDAGGER,LIGHT" />
 				</add>
 			</effect>
 		</for>
@@ -1813,7 +1813,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DEATH" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Dagger" />
+			<using kind="DUALDAGGER" />
 		</cond>
 		<for>
 			<effect name="FatalBlow" />

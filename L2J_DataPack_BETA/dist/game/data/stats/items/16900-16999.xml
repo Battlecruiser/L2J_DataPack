@@ -19,7 +19,7 @@
 	<item id="16901" type="Armor" name="Full Plate Armor of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -93,7 +93,7 @@
 	<item id="16905" type="Armor" name="Manticore Skin Shirt of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t42_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -110,7 +110,7 @@
 	<item id="16906" type="Armor" name="Manticore Skin Gaiters of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t42_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -159,7 +159,7 @@
 	<item id="16909" type="Armor" name="Brigandine of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t43_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -179,7 +179,7 @@
 	<item id="16910" type="Armor" name="Brigandine Gaiters of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t43_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -269,7 +269,7 @@
 	<item id="16915" type="Armor" name="Fortune Armor of Nightmare - 90-day limited period">
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
@@ -365,7 +365,7 @@
 	<item id="16920" type="Weapon" name="Sword of Miracles of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -394,7 +394,7 @@
 	<item id="16921" type="Weapon" name="Wizard's Tear of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -423,7 +423,7 @@
 	<item id="16922" type="Weapon" name="Homunkulus's Sword of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -452,7 +452,7 @@
 	<item id="16923" type="Weapon" name="Fortune Staff of Life - 90-day limited period">
 		<set name="icon" val="icon.weapon_life_stick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -481,7 +481,7 @@
 	<item id="16924" type="Weapon" name="Naga Storm of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -510,7 +510,7 @@
 	<item id="16925" type="Weapon" name="Kris of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_kris_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -539,7 +539,7 @@
 	<item id="16926" type="Weapon" name="Dark Screamer of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_dark_screamer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -568,7 +568,7 @@
 	<item id="16927" type="Weapon" name="Mithril Dagger of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -596,7 +596,7 @@
 	<item id="16928" type="Weapon" name="Shyeed's Bow of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -627,7 +627,7 @@
 	<item id="16929" type="Weapon" name="Fortune Bow of Peril - 90-day limited period">
 		<set name="icon" val="icon.weapon_hazard_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -658,7 +658,7 @@
 	<item id="16930" type="Weapon" name="Eminence Bow of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -689,7 +689,7 @@
 	<item id="16931" type="Weapon" name="Light Crossbow of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -719,7 +719,7 @@
 	<item id="16932" type="Weapon" name="Barakiel's Axe of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -748,7 +748,7 @@
 	<item id="16933" type="Weapon" name="Art of Battle Axe of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -777,7 +777,7 @@
 	<item id="16934" type="Weapon" name="Yaksa Mace of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -806,7 +806,7 @@
 	<item id="16935" type="Weapon" name="Bonebreaker of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -834,7 +834,7 @@
 	<item id="16936" type="Weapon" name="Sirra's Blade of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -862,7 +862,7 @@
 	<item id="16937" type="Weapon" name="Fortune Sword of Damascus - 90-day limited period">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -890,7 +890,7 @@
 	<item id="16938" type="Weapon" name="Samurai Longsword of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -918,7 +918,7 @@
 	<item id="16939" type="Weapon" name="Elven Long Sword of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -945,7 +945,7 @@
 	<item id="16940" type="Weapon" name="Fortune Sword of Ipos - 90-day limited period">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -973,7 +973,7 @@
 	<item id="16941" type="Weapon" name="Guardian Sword of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1001,7 +1001,7 @@
 	<item id="16942" type="Weapon" name="Berserker Blade of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1029,7 +1029,7 @@
 	<item id="16943" type="Weapon" name="Claymore of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_claymore_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1056,7 +1056,7 @@
 	<item id="16944" type="Weapon" name="Sobekk's Hurricane of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1085,7 +1085,7 @@
 	<item id="16945" type="Weapon" name="Bellion Cestus of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1114,7 +1114,7 @@
 	<item id="16946" type="Weapon" name="Great Pata of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1143,7 +1143,7 @@
 	<item id="16947" type="Weapon" name="Scallop Jamadhr of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1171,7 +1171,7 @@
 	<item id="16948" type="Weapon" name="Tallum Blade*Damascus of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1199,7 +1199,7 @@
 	<item id="16949" type="Weapon" name="Samurai Long Sword*Samurai Long Sword of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1227,7 +1227,7 @@
 	<item id="16950" type="Weapon" name="Spirit Sword*Raid Sword of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1255,7 +1255,7 @@
 	<item id="16951" type="Weapon" name="Bastard Sword*Elven Sword of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1282,7 +1282,7 @@
 	<item id="16952" type="Weapon" name="Tiphon's Spear of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1311,7 +1311,7 @@
 	<item id="16953" type="Weapon" name="Lance of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_lancia_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1340,7 +1340,7 @@
 	<item id="16954" type="Weapon" name="Orcish Poleaxe of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1369,7 +1369,7 @@
 	<item id="16955" type="Weapon" name="Glaive of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1398,7 +1398,7 @@
 	<item id="16956" type="Weapon" name="Durendal of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -1430,7 +1430,7 @@
 	<item id="16957" type="Weapon" name="Dismantler of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -1462,7 +1462,7 @@
 	<item id="16958" type="Weapon" name="Saber Tooth of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -1494,7 +1494,7 @@
 	<item id="16959" type="Weapon" name="General's Katzbalger of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -1525,7 +1525,7 @@
 	<item id="16960" type="Weapon" name="Eclair Bijou of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1558,7 +1558,7 @@
 	<item id="16961" type="Weapon" name="Colichemarde of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1591,7 +1591,7 @@
 	<item id="16962" type="Weapon" name="Admiral's Estoc of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1624,7 +1624,7 @@
 	<item id="16963" type="Weapon" name="Grand Epee of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1656,7 +1656,7 @@
 	<item id="16964" type="Weapon" name="Screaming Vengeance of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1689,7 +1689,7 @@
 	<item id="16965" type="Weapon" name="Hell Hound of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1722,7 +1722,7 @@
 	<item id="16966" type="Weapon" name="Sharpshooter of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1755,7 +1755,7 @@
 	<item id="16967" type="Weapon" name="Cranequin of Fortune - 90-day limited period">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />

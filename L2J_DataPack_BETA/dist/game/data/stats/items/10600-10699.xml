@@ -103,7 +103,7 @@
 	<item id="10611" type="EtcItem" name="Snow Fenrir Necklace">
 		<set name="icon" val="icon.etc_summon_wolf_r_01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 		<set name="price" val="2000000" />
@@ -393,7 +393,7 @@
 	<item id="10632" type="EtcItem" name="Wondrous Cubic">
 		<set name="icon" val="icon.cube_event_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="elixir" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -530,7 +530,7 @@
 	<item id="10650" type="EtcItem" name="Adventurer's Scroll of Escape">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -647,7 +647,7 @@
 	<item id="10661" type="EtcItem" name="Pet Summon Item - Warrior Use">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="handler" val="ItemSkills" />
@@ -660,7 +660,7 @@
 	<item id="10662" type="EtcItem" name="Pet Summon Item - Wizard Use">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="handler" val="ItemSkills" />
@@ -673,7 +673,7 @@
 	<item id="10663" type="EtcItem" name="Pet Summon Item - Mixing Use">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i02" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="handler" val="ItemSkills" />
@@ -686,7 +686,7 @@
 	<item id="10664" type="EtcItem" name="Pet Summon Item - Warrior Pet">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="handler" val="ItemSkills" />
@@ -699,7 +699,7 @@
 	<item id="10665" type="EtcItem" name="Pet Summon Item - Warrior Pet">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="handler" val="ItemSkills" />
@@ -712,7 +712,7 @@
 	<item id="10666" type="EtcItem" name="Potion of Replenish Vitality">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="80" />
@@ -722,7 +722,7 @@
 	<item id="10667" type="Weapon" name="Sirra's Blade {PvP} - Haste">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -752,7 +752,7 @@
 	<item id="10668" type="Weapon" name="Sirra's Blade {PvP} - Health">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -782,7 +782,7 @@
 	<item id="10669" type="Weapon" name="Sirra's Blade {PvP} - Critical Poison">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -813,7 +813,7 @@
 	<item id="10670" type="Weapon" name="Sword of Ipos {PvP} - Focus">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -843,7 +843,7 @@
 	<item id="10671" type="Weapon" name="Sword of Ipos {PvP} - Haste">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -873,7 +873,7 @@
 	<item id="10672" type="Weapon" name="Sword of Ipos {PvP} - Health">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -903,7 +903,7 @@
 	<item id="10673" type="Weapon" name="Barakiel's Axe {PvP} - Health">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -934,7 +934,7 @@
 	<item id="10674" type="Weapon" name="Barakiel's Axe {PvP} - Haste">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -965,7 +965,7 @@
 	<item id="10675" type="Weapon" name="Barakiel's Axe {PvP} - Focus">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -996,7 +996,7 @@
 	<item id="10676" type="Weapon" name="Behemoth's Tuning Fork {PvP} - Focus">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1027,7 +1027,7 @@
 	<item id="10677" type="Weapon" name="Behemoth's Tuning Fork {PvP} - Health">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1058,7 +1058,7 @@
 	<item id="10678" type="Weapon" name="Behemoth's Tuning Fork {PvP} - Anger">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1089,7 +1089,7 @@
 	<item id="10679" type="Weapon" name="Naga Storm {PvP} - Focus">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1120,7 +1120,7 @@
 	<item id="10680" type="Weapon" name="Naga Storm {PvP} - Critical Damage">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1151,7 +1151,7 @@
 	<item id="10681" type="Weapon" name="Naga Storm {PvP} - Back Blow">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1182,7 +1182,7 @@
 	<item id="10682" type="Weapon" name="Tiphon's Spear {PvP} - Critical Stun">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1214,7 +1214,7 @@
 	<item id="10683" type="Weapon" name="Tiphon's Spear {PvP} - Towering Blow">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1246,7 +1246,7 @@
 	<item id="10684" type="Weapon" name="Tiphon's Spear {PvP} - Wild Blow">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1277,7 +1277,7 @@
 	<item id="10685" type="Weapon" name="Shyeed's Bow {PvP} - Cheap Shot">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1311,7 +1311,7 @@
 	<item id="10686" type="Weapon" name="Shyeed's Bow {PvP} - Focus">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1344,7 +1344,7 @@
 	<item id="10687" type="Weapon" name="Shyeed's Bow {PvP} - Quick Recovery">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1377,7 +1377,7 @@
 	<item id="10688" type="Weapon" name="Sobekk's Hurricane {PvP} - Rsk. Haste">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1408,7 +1408,7 @@
 	<item id="10689" type="Weapon" name="Sobekk's Hurricane {PvP} - Haste">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1439,7 +1439,7 @@
 	<item id="10690" type="Weapon" name="Sobekk's Hurricane {PvP} - Critical Drain">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1471,7 +1471,7 @@
 	<item id="10691" type="Weapon" name="Themis' Tongue {PvP} - Mana Up">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1502,7 +1502,7 @@
 	<item id="10692" type="Weapon" name="Themis' Tongue {PvP} - Mental Shield">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1535,7 +1535,7 @@
 	<item id="10693" type="Weapon" name="Themis' Tongue {PvP} - Magic Focus">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1568,7 +1568,7 @@
 	<item id="10694" type="Weapon" name="Cabrio's Hand {PvP} - Conversion">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1600,7 +1600,7 @@
 	<item id="10695" type="Weapon" name="Cabrio's Hand {PvP} - Mana Up">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1632,7 +1632,7 @@
 	<item id="10696" type="Weapon" name="Cabrio's Hand {PvP} - Magic Silence">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1666,7 +1666,7 @@
 	<item id="10697" type="Weapon" name="Daimon Crystal {PvP} - Mana Up">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1698,7 +1698,7 @@
 	<item id="10698" type="Weapon" name="Daimon Crystal {PvP} - Acumen">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1730,7 +1730,7 @@
 	<item id="10699" type="Weapon" name="Daimon Crystal {PvP} - Mental Shield">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />

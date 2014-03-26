@@ -108,7 +108,7 @@
 	<item id="7610" type="EtcItem" name="Wind Fishing Lure">
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="lure" />
+		<set name="etcitem_type" val="LURE" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -118,7 +118,7 @@
 	<item id="7611" type="EtcItem" name="Icy Air Fishing Lure">
 		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="lure" />
+		<set name="etcitem_type" val="LURE" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -128,7 +128,7 @@
 	<item id="7612" type="EtcItem" name="Earth Fishing Lure">
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="lure" />
+		<set name="etcitem_type" val="LURE" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -138,7 +138,7 @@
 	<item id="7613" type="EtcItem" name="Flaming Fishing Lure">
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="lure" />
+		<set name="etcitem_type" val="LURE" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -785,7 +785,7 @@
 	</item>
 	<item id="7684" type="EtcItem" name="Raccoon Ears Fabric">
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -794,7 +794,7 @@
 	</item>
 	<item id="7685" type="EtcItem" name="Outlaw's Eyepatch Strap">
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -803,7 +803,7 @@
 	</item>
 	<item id="7686" type="EtcItem" name="Maiden's Hairpin Piece">
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -812,7 +812,7 @@
 	</item>
 	<item id="7687" type="EtcItem" name="Rabbit Ears Fabric">
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -821,7 +821,7 @@
 	</item>
 	<item id="7688" type="EtcItem" name="Cat Ears Fabric">
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -831,7 +831,7 @@
 	<item id="7689" type="EtcItem" name="Recipe - Raccoon Ears (100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -843,7 +843,7 @@
 	<item id="7690" type="EtcItem" name="Recipe - Outlaw's Eyepatch (100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -855,7 +855,7 @@
 	<item id="7691" type="EtcItem" name="Recipe - Maiden's Hairpin (100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -867,7 +867,7 @@
 	<item id="7692" type="EtcItem" name="Recipe - Rabbit Ears (100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -879,7 +879,7 @@
 	<item id="7693" type="EtcItem" name="Recipe - Cat Ears (100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -926,7 +926,7 @@
 	</item>
 	<item id="7697" type="EtcItem" name="Piece of Forget-me-not Hairpin">
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -935,7 +935,7 @@
 	</item>
 	<item id="7698" type="EtcItem" name="Piece of Daisy Hairpin">
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -945,7 +945,7 @@
 	<item id="7699" type="EtcItem" name="Recipe: Forget-me-not Hairpin (100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />

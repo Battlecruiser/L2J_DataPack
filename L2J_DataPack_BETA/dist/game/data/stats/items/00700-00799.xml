@@ -342,7 +342,7 @@
 	<item id="725" type="EtcItem" name="Healing Drug">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="180" />
@@ -356,7 +356,7 @@
 	<item id="726" type="EtcItem" name="Mana Drug">
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="180" />
@@ -373,7 +373,7 @@
 	<item id="727" type="EtcItem" name="Healing Potion">
 		<set name="icon" val="icon.item_system03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="180" />
@@ -387,7 +387,7 @@
 	<item id="728" type="EtcItem" name="Mana Potion">
 		<set name="icon" val="icon.etc_reagent_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="180" />
@@ -404,7 +404,7 @@
 	<item id="729" type="EtcItem" name="Scroll: Enchant Weapon (A-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scrl_enchant_wp" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -417,7 +417,7 @@
 	<item id="730" type="EtcItem" name="Scroll: Enchant Armor (A-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scrl_enchant_am" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -430,7 +430,7 @@
 	<item id="731" type="EtcItem" name="Crystal Scroll: Enchant Weapon (A-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -440,7 +440,7 @@
 	<item id="732" type="EtcItem" name="Crystal Scroll: Enchant Armor (A-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -450,7 +450,7 @@
 	<item id="733" type="EtcItem" name="Endeavor Potion">
 		<set name="icon" val="icon.etc_lesser_potion_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="180" />
@@ -461,7 +461,7 @@
 	<item id="734" type="EtcItem" name="Haste Potion">
 		<set name="icon" val="icon.etc_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="20" />
@@ -479,7 +479,7 @@
 	<item id="735" type="EtcItem" name="Alacrity Potion">
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="20" />
@@ -497,7 +497,7 @@
 	<item id="736" type="EtcItem" name="Scroll of Escape">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="400" />
@@ -509,7 +509,7 @@
 	<item id="737" type="EtcItem" name="Scroll of Resurrection">
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="2000" />
@@ -521,7 +521,7 @@
 	<item id="738" type="Weapon" name="Sword of Solidarity">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -586,7 +586,7 @@
 	<item id="743" type="Weapon" name="Sword of Sentinel">
 		<set name="icon" val="icon.weapon_broad_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -607,7 +607,7 @@
 	<item id="744" type="Weapon" name="Staff of Sentinel">
 		<set name="icon" val="icon.weapon_cedar_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -652,7 +652,7 @@
 	<item id="747" type="Weapon" name="Wand of Adept">
 		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -675,7 +675,7 @@
 	<item id="748" type="Weapon" name="Gallint's Oak Wand">
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -701,7 +701,7 @@
 	<item id="749" type="Weapon" name="0">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -771,7 +771,7 @@
 	<item id="754" type="Weapon" name="Red Sunset Staff">
 		<set name="icon" val="icon.weapon_cedar_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />

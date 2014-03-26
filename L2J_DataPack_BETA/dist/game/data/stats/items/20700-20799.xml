@@ -107,7 +107,7 @@
 	<item id="20707" type="EtcItem" name="Wooldy Summon Scroll (Event)">
 		<set name="icon" val="BranchSys.icon.br_scroll_of_wooldie_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_depositable" val="false" />
@@ -119,7 +119,7 @@
 	<item id="20708" type="EtcItem" name="Verdandi Summon Scroll (Event)">
 		<set name="icon" val="BranchSys.icon.br_scroll_of_berdandi_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_depositable" val="false" />
@@ -131,7 +131,7 @@
 	<item id="20709" type="EtcItem" name="Skooldy Summon Scroll (Event)">
 		<set name="icon" val="BranchSys.icon.br_scroll_of_scooldie_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -620,7 +620,7 @@
 	</item>
 	<item id="20741" type="EtcItem" name="Rune of SP 30% (Event) - 1-hour limited period">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
-		<set name="etcitem_type" val="rune" />
+		<set name="etcitem_type" val="RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -635,7 +635,7 @@
 	</item>
 	<item id="20742" type="EtcItem" name="Rune of Experience Points 30% (Event) - 1-hour limited period">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
-		<set name="etcitem_type" val="rune" />
+		<set name="etcitem_type" val="RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -906,7 +906,7 @@
 	<item id="20760" type="EtcItem" name="Rudolph Necklace (Event)">
 		<set name="icon" val="BranchSys.br_rudolf_necklace_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -924,7 +924,7 @@
 	<item id="20761" type="EtcItem" name="Rudolph Necklace">
 		<set name="icon" val="BranchSys.br_rudolf_necklace_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -969,7 +969,7 @@
 	<item id="20764" type="EtcItem" name="Purple Star Candy">
 		<set name="icon" val="BranchSys.br_rudolf_food_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="15" />
@@ -986,7 +986,7 @@
 	<item id="20765" type="EtcItem" name="Blue Star Candy">
 		<set name="icon" val="BranchSys.br_rudolf_food_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="15" />
@@ -1003,7 +1003,7 @@
 	<item id="20766" type="EtcItem" name="Red Star Candy">
 		<set name="icon" val="BranchSys.br_rudolf_food_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="15" />
@@ -1020,7 +1020,7 @@
 	<item id="20767" type="EtcItem" name="Orange Star Candy">
 		<set name="icon" val="BranchSys.br_rudolf_food_orange_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="15" />
@@ -1037,7 +1037,7 @@
 	<item id="20768" type="EtcItem" name="Food of Doubt">
 		<set name="icon" val="BranchSys.br_rudolf_food_unknown_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="15" />
@@ -1353,7 +1353,7 @@
 	<item id="20788" type="EtcItem" name="Flame Box">
 		<set name="icon" val="BranchSys.icon.br_fire_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />

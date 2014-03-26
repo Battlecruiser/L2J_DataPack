@@ -1074,7 +1074,7 @@
 	<item id="20867" type="Weapon" name="Kadomas Transformation Stick - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_kadomatsu_wp_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1099,7 +1099,7 @@
 	<item id="20868" type="EtcItem" name="Kotatz">
 		<set name="icon" val="BranchSys.icon.br_kotatsu_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1540,7 +1540,7 @@
 	<item id="20899" type="EtcItem" name="Mango Dessert">
 		<set name="icon" val="BranchSys.icon.br_thai_desert_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />

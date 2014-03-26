@@ -38,7 +38,7 @@
 	</item>
 	<item id="12703" type="EtcItem" name="Foundation Sealed Dynasty Breastplate">
 		<set name="icon" val="icon.armor_t91_u_i02" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -97,7 +97,7 @@
 	</item>
 	<item id="12707" type="EtcItem" name="Foundation Sealed Dynasty Tunic">
 		<set name="icon" val="icon.armor_t93_u_i02" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -127,7 +127,7 @@
 	</item>
 	<item id="12709" type="EtcItem" name="Foundation Sealed Dynasty Stockings">
 		<set name="icon" val="icon.armor_t93_l_i02" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -474,7 +474,7 @@
 	<item id="12740" type="Armor" name="Baby Pet Scale Armor">
 		<set name="icon" val="icon.etc_pet_armor_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -491,7 +491,7 @@
 	<item id="12741" type="Armor" name="Baby Pet Bronze Armor">
 		<set name="icon" val="icon.etc_pet_armor_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -508,7 +508,7 @@
 	<item id="12742" type="Armor" name="Baby Pet Plate Armor">
 		<set name="icon" val="icon.etc_pet_armor_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -525,7 +525,7 @@
 	<item id="12743" type="Armor" name="Baby Pet Mithril Armor">
 		<set name="icon" val="icon.etc_pet_armor_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -542,7 +542,7 @@
 	<item id="12744" type="Armor" name="Baby Pet Oriharukon Armor">
 		<set name="icon" val="icon.etc_pet_armor_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -559,7 +559,7 @@
 	<item id="12745" type="Armor" name="Baby Pet Orichalcum Armor">
 		<set name="icon" val="icon.etc_pet_armor_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -688,7 +688,7 @@
 	<item id="12753" type="EtcItem" name="Kamael Village Teleportation Scroll">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1128,7 +1128,7 @@
 	<item id="12793" type="Weapon" name="O Stick - 30-day limited period">
 		<set name="icon" val="icon.weapon_o_stick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1150,7 +1150,7 @@
 	<item id="12794" type="Weapon" name="X Stick - 30-day limited period">
 		<set name="icon" val="icon.weapon_x_stick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1172,7 +1172,7 @@
 	<item id="12795" type="Weapon" name="Scissors Stick - 30-day limited period">
 		<set name="icon" val="icon.weapon_scissors_stick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1194,7 +1194,7 @@
 	<item id="12796" type="Weapon" name="Rock Stick - 30-day limited period">
 		<set name="icon" val="icon.weapon_rock_stick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1216,7 +1216,7 @@
 	<item id="12797" type="Weapon" name="Paper Stick - 30-day limited period">
 		<set name="icon" val="icon.weapon_diver_stick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1238,7 +1238,7 @@
 	<item id="12798" type="Weapon" name="Snowman Transformation Stick">
 		<set name="icon" val="icon.etc_snow_man_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1262,7 +1262,7 @@
 	<item id="12799" type="Weapon" name="Scarecrow Transformation Stick">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />

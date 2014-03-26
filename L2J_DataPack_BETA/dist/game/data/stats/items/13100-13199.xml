@@ -3,7 +3,7 @@
 	<item id="13100" type="EtcItem" name="Recipe - Sealed Arcana Sigil (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -15,7 +15,7 @@
 	<item id="13101" type="EtcItem" name="Recipe - Sealed Arcana Sigil (100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -385,7 +385,7 @@
 	<item id="13128" type="EtcItem" name="Phoenix Feather">
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -401,7 +401,7 @@
 	<item id="13129" type="EtcItem" name="Scroll of Escape: Pailaka">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -767,7 +767,7 @@
 	<item id="13151" type="EtcItem" name="Pailaka Vitality Replenishing Potion (100%)">
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -786,7 +786,7 @@
 	<item id="13152" type="EtcItem" name="Pailaka Vitality Replenishing Potion (50%)">
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -805,7 +805,7 @@
 	<item id="13153" type="Weapon" name="Player Commendation - Great Spear - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -833,7 +833,7 @@
 	<item id="13154" type="Weapon" name="Player Commendation - Falchion - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -858,7 +858,7 @@
 	<item id="13155" type="Weapon" name="Player Commendation - Iron Hammer - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -884,7 +884,7 @@
 	<item id="13156" type="Weapon" name="Player Commendation - Voodoo Doll - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="etc" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -910,7 +910,7 @@
 	<item id="13157" type="Weapon" name="Player Commendation - Flanged Mace - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -936,7 +936,7 @@
 	<item id="13158" type="Weapon" name="Player Commendation - Mage's Wand - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -963,7 +963,7 @@
 	<item id="13159" type="Weapon" name="Player Commendation - Sword Breaker - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -989,7 +989,7 @@
 	<item id="13160" type="Weapon" name="Player Commendation - Viper Fang - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1015,7 +1015,7 @@
 	<item id="13161" type="Weapon" name="Player Commendation - Compound Bow - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1043,7 +1043,7 @@
 	<item id="13162" type="Weapon" name="Player Commendation - Crucifix of Blessing - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_crucifix_of_blessing_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="etc" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1069,7 +1069,7 @@
 	<item id="13163" type="Weapon" name="Player Commendation - Bastard*Crimson Sword - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1098,7 +1098,7 @@
 	<item id="13164" type="Weapon" name="Player Commendation - Claymore - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_claymore_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1127,7 +1127,7 @@
 	<item id="13165" type="Weapon" name="Player Commendation - Bonebreaker - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1157,7 +1157,7 @@
 	<item id="13166" type="Weapon" name="Player Commendation - Atuba Hammer - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_atuba_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1188,7 +1188,7 @@
 	<item id="13167" type="Weapon" name="Player Commendation - Ghost's Wand - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1219,7 +1219,7 @@
 	<item id="13168" type="Weapon" name="Player Commendation - Hall of Life - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_life_stick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1250,7 +1250,7 @@
 	<item id="13169" type="Weapon" name="Player Commendation - Atuba Mace - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_atuba_mace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1281,7 +1281,7 @@
 	<item id="13170" type="Weapon" name="Player Commendation - Mithril Dagger - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1311,7 +1311,7 @@
 	<item id="13171" type="Weapon" name="Player Commendation - Scallop Jamadhr - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1341,7 +1341,7 @@
 	<item id="13172" type="Weapon" name="Player Commendation - Crossbow - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1373,7 +1373,7 @@
 	<item id="13173" type="Weapon" name="Player Commendation - Glaive - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1405,7 +1405,7 @@
 	<item id="13174" type="Weapon" name="Player Commendation - Elven Long Sword - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1434,7 +1434,7 @@
 	<item id="13175" type="Weapon" name="Player Commendation - Grand Epee - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1468,7 +1468,7 @@
 	<item id="13176" type="Weapon" name="Player Commendation - General Katzbalger - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -1501,7 +1501,7 @@
 	<item id="13177" type="Weapon" name="Player Commendation - Cranequin - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1535,7 +1535,7 @@
 	<item id="13178" type="Weapon" name="Player Commendation - Samurai Long Sword - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1566,7 +1566,7 @@
 	<item id="13179" type="Weapon" name="Player Commendation - Ghost's Wand - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1600,7 +1600,7 @@
 	<item id="13180" type="Weapon" name="Player Commendation - Ghoul's Wand - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1633,7 +1633,7 @@
 	<item id="13181" type="Weapon" name="Player Commendation - Devil's Wand - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1667,7 +1667,7 @@
 	<item id="13182" type="Weapon" name="Player Commendation - Crystal Dagger - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1699,7 +1699,7 @@
 	<item id="13183" type="Weapon" name="Player Commendation - Great Pata - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1731,7 +1731,7 @@
 	<item id="13184" type="Weapon" name="Player Commendation - Eminence Bow - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1765,7 +1765,7 @@
 	<item id="13185" type="Weapon" name="Player Commendation - Orcish Poleaxe - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1797,7 +1797,7 @@
 	<item id="13186" type="Weapon" name="Player Commendation - Yaksa Mace - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1829,7 +1829,7 @@
 	<item id="13187" type="Weapon" name="Player Commendation - Shamshir*Shamshir - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1860,7 +1860,7 @@
 	<item id="13188" type="Weapon" name="Player Commendation - Admiral's Estoc - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1896,7 +1896,7 @@
 	<item id="13189" type="Weapon" name="Player Commendation - Saber Tooth - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -1931,7 +1931,7 @@
 	<item id="13190" type="Weapon" name="Player Commendation - Sharpshooter - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1967,7 +1967,7 @@
 	<item id="13191" type="Weapon" name="Player Commendation - Ecliptic Sword - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1999,7 +1999,7 @@
 	<item id="13192" type="Weapon" name="Player Commendation - Ecliptic Axe - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -2033,7 +2033,7 @@
 	<item id="13193" type="Weapon" name="Player Commendation - Dwarven Hammer - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -2065,7 +2065,7 @@
 	<item id="13194" type="Weapon" name="Player Commendation - Damascus Sword - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2096,7 +2096,7 @@
 	<item id="13195" type="Weapon" name="Player Commendation - Lance - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -2129,7 +2129,7 @@
 	<item id="13196" type="Weapon" name="Player Commendation - Deadman's Glory - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -2161,7 +2161,7 @@
 	<item id="13197" type="Weapon" name="Player Commendation - Art of Battle Axe - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -2193,7 +2193,7 @@
 	<item id="13198" type="Weapon" name="Player Commendation - Staff of Evil Spirits - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -2227,7 +2227,7 @@
 	<item id="13199" type="Weapon" name="Player Commendation - Devil's Dagger - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />

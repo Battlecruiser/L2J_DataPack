@@ -226,7 +226,7 @@
 	<item id="21015" type="Weapon" name="Balloon Stick of Cheers - Red">
 		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="40" />
@@ -250,7 +250,7 @@
 	<item id="21016" type="Weapon" name="Balloon Stick of Cheers - Orange">
 		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="40" />
@@ -274,7 +274,7 @@
 	<item id="21017" type="Weapon" name="Balloon Stick of Cheers - Yellow">
 		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="40" />
@@ -298,7 +298,7 @@
 	<item id="21018" type="Weapon" name="Balloon Stick of Cheers - Green">
 		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="40" />
@@ -322,7 +322,7 @@
 	<item id="21019" type="Weapon" name="Balloon Stick of Cheers - Blue">
 		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="40" />
@@ -346,7 +346,7 @@
 	<item id="21020" type="Weapon" name="Balloon Stick of Cheers - Indigo Blue">
 		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i05" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="40" />
@@ -370,7 +370,7 @@
 	<item id="21021" type="Weapon" name="Balloon Stick of Cheers - Purple">
 		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i06" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="40" />
@@ -394,7 +394,7 @@
 	<item id="21022" type="Weapon" name="Balloon Stick of Cheers - Black">
 		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="40" />
@@ -418,7 +418,7 @@
 	<item id="21023" type="Weapon" name="Balloon Stick of Cheers - White">
 		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i08" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="40" />
@@ -538,7 +538,7 @@
 	<item id="21030" type="EtcItem" name="Hardin's Divine Protection">
 		<set name="icon" val="BranchSys2.icon.br_protection_hadin_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -558,7 +558,7 @@
 	<item id="21031" type="EtcItem" name="Hardin's Blessing">
 		<set name="icon" val="BranchSys2.icon.br_bless_of hadin_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -578,7 +578,7 @@
 	<item id="21032" type="EtcItem" name="Silpeed's Wing">
 		<set name="icon" val="BranchSys2.icon.br_wing_of_sylphide_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -595,7 +595,7 @@
 	<item id="21033" type="EtcItem" name="Silpeed's Blessing">
 		<set name="icon" val="BranchSys2.icon.br_bless_of_sylphide_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -612,7 +612,7 @@
 	<item id="21034" type="EtcItem" name="Evain's Recovery Scroll">
 		<set name="icon" val="BranchSys2.icon.br_scroll_of_yibein_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="reuse_delay" val="1800000" />
@@ -628,7 +628,7 @@
 		<set name="item_skill" val="22174-1" />
 	</item>
 	<item id="21035" type="EtcItem" name="Good/Bad of Life">
-		<set name="etcitem_type" val="rune" />
+		<set name="etcitem_type" val="RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -643,7 +643,7 @@
 		<set name="item_skill" val="22175-1" />
 	</item>
 	<item id="21036" type="EtcItem" name="Good/Bad of Mind">
-		<set name="etcitem_type" val="rune" />
+		<set name="etcitem_type" val="RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -660,7 +660,7 @@
 	<item id="21037" type="EtcItem" name="Warrior's Breath">
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -679,7 +679,7 @@
 	<item id="21038" type="EtcItem" name="Potion of a Hero">
 		<set name="icon" val="BranchSys2.icon.br_hero_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -699,7 +699,7 @@
 	<item id="21039" type="EtcItem" name="Highest Power Healing Potion">
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -718,7 +718,7 @@
 	<item id="21040" type="EtcItem" name="Highest Power Temporary Healing Potion">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -1432,7 +1432,7 @@
 	</item>
 	<item id="21084" type="EtcItem" name="Rune of Experience Points 30%">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
-		<set name="etcitem_type" val="rune" />
+		<set name="etcitem_type" val="RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1464,7 +1464,7 @@
 	</item>
 	<item id="21086" type="EtcItem" name="Rune of SP 30%">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
-		<set name="etcitem_type" val="rune" />
+		<set name="etcitem_type" val="RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1568,7 +1568,7 @@
 	<item id="21093" type="EtcItem" name="Sweet Fruit Cocktail">
 		<set name="icon" val="BranchSys.icon.br_fruit_cocktail_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -1586,7 +1586,7 @@
 	<item id="21094" type="EtcItem" name="Fresh Fruit Cocktail">
 		<set name="icon" val="BranchSys.icon.br_fruit_cocktail_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />

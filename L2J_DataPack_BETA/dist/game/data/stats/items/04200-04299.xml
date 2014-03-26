@@ -19,7 +19,7 @@
 	<item id="4202" type="Weapon" name="Chrono Cithara">
 		<set name="icon" val="icon.weapon_chrono_cithara_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -139,7 +139,7 @@
 	<item id="4218" type="EtcItem" name="L2 Day - Scroll of Mana Regeneration">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -151,7 +151,7 @@
 	<item id="4219" type="Weapon" name="Dream Sword">
 		<set name="icon" val="icon.weapon_knights_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -177,7 +177,7 @@
 	<item id="4220" type="Weapon" name="Dream Knife">
 		<set name="icon" val="icon.weapon_assassin_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -204,7 +204,7 @@
 	<item id="4221" type="Weapon" name="Ubiquitous Axe">
 		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -271,7 +271,7 @@
 	<item id="4224" type="Armor" name="Dream Armor">
 		<set name="icon" val="icon.armor_blast_plate_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -291,7 +291,7 @@
 	<item id="4225" type="Armor" name="Dream Stockings">
 		<set name="icon" val="icon.armor_mithril_gaiters_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -343,7 +343,7 @@
 	<item id="4228" type="Armor" name="Ubiquitous Armor">
 		<set name="icon" val="icon.armor_compound_scale_mail_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -363,7 +363,7 @@
 	<item id="4229" type="Armor" name="Ubiquitous Stockings">
 		<set name="icon" val="icon.armor_compound_scale_gaiters_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -422,7 +422,7 @@
 	<item id="4233" type="Weapon" name="Knuckle Duster">
 		<set name="icon" val="icon.weapon_knuckle_dust_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -449,7 +449,7 @@
 	<item id="4234" type="Armor" name="Hatchling's Level 65 Armor">
 		<set name="icon" val="icon.etc_pet_armor_i06" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -467,7 +467,7 @@
 	<item id="4235" type="Armor" name="Hatchling's Level 75 Armor">
 		<set name="icon" val="icon.etc_pet_armor_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -485,7 +485,7 @@
 	<item id="4236" type="Armor" name="Gara Item">
 		<set name="icon" val="icon.etc_pet_armor_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -503,7 +503,7 @@
 	<item id="4237" type="Weapon" name="Hatchling's Level 65 Weapon">
 		<set name="icon" val="icon.etc_pet_arms_i04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -526,7 +526,7 @@
 	<item id="4238" type="Weapon" name="Hatchling's Level 75 Weapon">
 		<set name="icon" val="icon.etc_pet_arms_i04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />

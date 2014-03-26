@@ -3,7 +3,7 @@
 	<item id="15300" type="Weapon" name="Transparent Dual (for NPC)">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -30,7 +30,7 @@
 	<item id="15301" type="Weapon" name="Transparent Pole (for NPC)">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -58,7 +58,7 @@
 	<item id="15302" type="Weapon" name="Transparent Bow (for NPC)">
 		<set name="icon" val="icon.weapon_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -88,7 +88,7 @@
 	<item id="15303" type="Weapon" name="Transparent Claw (for NPC)">
 		<set name="icon" val="icon.weapon_foxs_nail_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -117,7 +117,7 @@
 	<item id="15304" type="Weapon" name="Transparent Bowgun (for NPC)">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -149,7 +149,7 @@
 	<item id="15305" type="Weapon" name="Transparent Rapier (for NPC)">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -180,7 +180,7 @@
 	<item id="15306" type="Weapon" name="Transparent Dual Dagger (for NPC)">
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualdagger" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -248,7 +248,7 @@
 	<item id="15310" type="Weapon" name="Sacred Sword of Einhasad">
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -303,7 +303,7 @@
 	<item id="15313" type="Weapon" name="Player Commendation - Forgotten Blade - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -333,7 +333,7 @@
 	<item id="15314" type="Weapon" name="Player Commendation - Basalt Battlehammer - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -364,7 +364,7 @@
 	<item id="15315" type="Weapon" name="Player Commendation - Imperial Staff - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -396,7 +396,7 @@
 	<item id="15316" type="Weapon" name="Player Commendation - Angel Slayer - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -427,7 +427,7 @@
 	<item id="15317" type="Weapon" name="Player Commendation - Dragon Hunter Axe - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -458,7 +458,7 @@
 	<item id="15318" type="Weapon" name="Player Commendation - Saint Spear - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -489,7 +489,7 @@
 	<item id="15319" type="Weapon" name="Player Commendation - Demon Splinter - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -520,7 +520,7 @@
 	<item id="15320" type="Weapon" name="Player Commendation - Heaven's Divider - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -550,7 +550,7 @@
 	<item id="15321" type="Weapon" name="Player Commendation - Arcana Macw - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -582,7 +582,7 @@
 	<item id="15322" type="Weapon" name="Player Commendation - Draconic Bow - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -615,7 +615,7 @@
 	<item id="15323" type="Weapon" name="Player Commendation - Laevateinn - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -650,7 +650,7 @@
 	<item id="15324" type="Weapon" name="Player Commendation - Gram - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -684,7 +684,7 @@
 	<item id="15325" type="Weapon" name="Player Commendation - Sarunga - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -719,7 +719,7 @@
 	<item id="15326" type="Weapon" name="Player Commendation - Tallum Blade *Dark Legion's Edge - Player Recommendation Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -749,7 +749,7 @@
 	<item id="15327" type="EtcItem" name="Seed: Sea Coba">
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed" />
+		<set name="etcitem_type" val="SEED" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="900" />
@@ -760,7 +760,7 @@
 	<item id="15328" type="EtcItem" name="Seed: Sea Coba">
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed" />
+		<set name="etcitem_type" val="SEED" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="900" />
@@ -771,7 +771,7 @@
 	<item id="15329" type="EtcItem" name="Seed: Twin Coba">
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed" />
+		<set name="etcitem_type" val="SEED" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -782,7 +782,7 @@
 	<item id="15330" type="EtcItem" name="Seed: Twin Coba">
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed" />
+		<set name="etcitem_type" val="SEED" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -793,7 +793,7 @@
 	<item id="15331" type="EtcItem" name="Seed: Twin Coba">
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed" />
+		<set name="etcitem_type" val="SEED" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -804,7 +804,7 @@
 	<item id="15332" type="EtcItem" name="Seed: Twin Coba">
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed" />
+		<set name="etcitem_type" val="SEED" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -815,7 +815,7 @@
 	<item id="15333" type="EtcItem" name="Seed: King Coba">
 		<set name="icon" val="icon.etc_great_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed" />
+		<set name="etcitem_type" val="SEED" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1200" />
@@ -826,7 +826,7 @@
 	<item id="15334" type="EtcItem" name="Seed: Alternative Sea Coba">
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="900" />
@@ -837,7 +837,7 @@
 	<item id="15335" type="EtcItem" name="Seed: Alternative Sea Coba">
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="900" />
@@ -848,7 +848,7 @@
 	<item id="15336" type="EtcItem" name="Seed: Alternative Twin Coba">
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -859,7 +859,7 @@
 	<item id="15337" type="EtcItem" name="Seed: Alternative Twin Coba">
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -870,7 +870,7 @@
 	<item id="15338" type="EtcItem" name="Seed: Alternative Twin Coba">
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -881,7 +881,7 @@
 	<item id="15339" type="EtcItem" name="Seed: Alternative Twin Coba">
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -892,7 +892,7 @@
 	<item id="15340" type="EtcItem" name="Seed: Alternative Great Coba">
 		<set name="icon" val="icon.etc_great_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="seed2" />
+		<set name="etcitem_type" val="SEED2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1200" />
@@ -908,7 +908,7 @@
 	<item id="15342" type="Weapon" name="Aqua Elf Transforming Harp - 60-day limited period">
 		<set name="icon" val="icon.harp_of_transform_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -947,7 +947,7 @@
 	<item id="15344" type="Weapon" name="Aqua Elf Transforming Harp (Event) - 60-day limited period">
 		<set name="icon" val="icon.harp_of_transform_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -986,7 +986,7 @@
 	<item id="15346" type="EtcItem" name="Scroll: Enchant Weapon (Grade S) - Exclusive to PC weapons">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scrl_enchant_wp" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1002,7 +1002,7 @@
 	<item id="15347" type="EtcItem" name="Scroll: Enchant Weapon (Grade A) - Exclusive to PC weapons">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scrl_enchant_wp" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1018,7 +1018,7 @@
 	<item id="15348" type="EtcItem" name="Scroll: Enchant Weapon (Grade B) - Exclusive to PC weapons">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scrl_enchant_wp" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1034,7 +1034,7 @@
 	<item id="15349" type="EtcItem" name="Scroll: Enchant Weapon (Grade C) - Exclusive to PC weapons">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scrl_enchant_wp" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1050,7 +1050,7 @@
 	<item id="15350" type="EtcItem" name="Scroll: Enchant Weapon (Grade D) - Exclusive to PC weapons">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scrl_enchant_wp" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1134,7 +1134,7 @@
 	<item id="15356" type="EtcItem" name="Improved Sweet Fruit Cocktail">
 		<set name="icon" val="icon.etc_fruit_cocktail_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -1152,7 +1152,7 @@
 	<item id="15357" type="EtcItem" name="Improved Fresh Fruit Cocktail">
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -1437,7 +1437,7 @@
 	<item id="15379" type="EtcItem" name="Steamed Rice Cake">
 		<set name="icon" val="icon.event_steamed_rice_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="15" />
 		<set name="reuse_delay" val="3600000" />
@@ -1453,7 +1453,7 @@
 	<item id="15380" type="EtcItem" name="Steamed Rice Cake (Event)">
 		<set name="icon" val="icon.event_steamed_rice_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="15" />
 		<set name="reuse_delay" val="3600000" />
@@ -1469,7 +1469,7 @@
 	<item id="15381" type="EtcItem" name="Event - Herdsman's Love Scroll - Event">
 		<set name="icon" val="icon.event_altair_enchant_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scrl_enchant_am" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_depositable" val="false" />
@@ -1481,7 +1481,7 @@
 	<item id="15382" type="EtcItem" name="Event - Vitality Belt Enchant Scroll - Event">
 		<set name="icon" val="icon.event_energy_enchant_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scrl_enchant_am" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_depositable" val="false" />
@@ -1623,7 +1623,7 @@
 	<item id="15393" type="Armor" name="Vitality Belt - 7-day limited period">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1639,7 +1639,7 @@
 	<item id="15394" type="Armor" name="Vitality Belt - 30-day limited period">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1655,7 +1655,7 @@
 	<item id="15395" type="Armor" name="Vitality Belt - 60-day limited period">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1671,7 +1671,7 @@
 	<item id="15396" type="Armor" name="Vitality Belt - 90-day limited period">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1687,7 +1687,7 @@
 	<item id="15397" type="Armor" name="Vitality Belt - Permanent Use">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1702,7 +1702,7 @@
 	<item id="15398" type="Armor" name="Vitality Belt (Event) - 7-day limited period">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1718,7 +1718,7 @@
 	<item id="15399" type="Armor" name="Vitality Belt (Event) - 30-day limited period">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />

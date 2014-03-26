@@ -72,7 +72,7 @@
 	<item id="12304" type="Armor" name="Common Item - Sealed Imperial Crusader Breastplate">
 		<set name="icon" val="icon.armor_t88_u_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="50" />
@@ -90,7 +90,7 @@
 	<item id="12305" type="Armor" name="Common Item - Imperial Crusader Gaiters">
 		<set name="icon" val="icon.armor_t88_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="31" />
@@ -178,7 +178,7 @@
 	<item id="12310" type="Armor" name="Common Item - Imperial Crusader Breastplate">
 		<set name="icon" val="icon.armor_t88_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="50" />
@@ -918,7 +918,7 @@
 	</item>
 	<item id="12362" type="EtcItem" name="Weapon-Type Enhance Backup Stone (D-Grade)">
 		<set name="icon" val="icon.ench_wp_stone_i00" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -932,7 +932,7 @@
 	</item>
 	<item id="12363" type="EtcItem" name="Weapon-Type Enhance Backup Stone (C-Grade)">
 		<set name="icon" val="icon.ench_wp_stone_i01" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -946,7 +946,7 @@
 	</item>
 	<item id="12364" type="EtcItem" name="Weapon-Type Enhance Backup Stone (B-Grade)">
 		<set name="icon" val="icon.ench_wp_stone_i02" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -960,7 +960,7 @@
 	</item>
 	<item id="12365" type="EtcItem" name="Weapon-Type Enhance Backup Stone (A-Grade)">
 		<set name="icon" val="icon.ench_wp_stone_i03" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -974,7 +974,7 @@
 	</item>
 	<item id="12366" type="EtcItem" name="Weapon-Type Enhance Backup Stone (S-Grade)">
 		<set name="icon" val="icon.ench_wp_stone_i04" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -988,7 +988,7 @@
 	</item>
 	<item id="12367" type="EtcItem" name="Armor-Type Enhance Backup Stone (D-Grade)">
 		<set name="icon" val="icon.ench_am_stone_i00" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1002,7 +1002,7 @@
 	</item>
 	<item id="12368" type="EtcItem" name="Armor-Type Enhance Backup Stone (C-Grade)">
 		<set name="icon" val="icon.ench_am_stone_i01" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1016,7 +1016,7 @@
 	</item>
 	<item id="12369" type="EtcItem" name="Armor-Type Enhance Backup Stone (B-Grade)">
 		<set name="icon" val="icon.ench_am_stone_i02" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1030,7 +1030,7 @@
 	</item>
 	<item id="12370" type="EtcItem" name="Armor-Type Enhance Backup Stone (A-Grade)">
 		<set name="icon" val="icon.ench_am_stone_i03" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1044,7 +1044,7 @@
 	</item>
 	<item id="12371" type="EtcItem" name="Armor-Type Enhance Backup Stone (S-Grade)">
 		<set name="icon" val="icon.ench_am_stone_i04" />
-		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1076,7 +1076,7 @@
 	</item>
 	<item id="12374" type="EtcItem" name="Mammon's Varnish Enhancer">
 		<set name="icon" val="icon.etc_mammon_varnish_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -1085,7 +1085,7 @@
 	</item>
 	<item id="12375" type="EtcItem" name="Foundation Great Sword">
 		<set name="icon" val="icon.weapon_great_sword_i00" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="random_damage" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1103,7 +1103,7 @@
 	</item>
 	<item id="12376" type="EtcItem" name="Foundation Great Axe">
 		<set name="icon" val="icon.weapon_great_axe_i00" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="random_damage" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1122,7 +1122,7 @@
 	</item>
 	<item id="12377" type="EtcItem" name="Foundation Innominate Victory">
 		<set name="icon" val="icon.weapon_nameless_victory_i00" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1144,7 +1144,7 @@
 	</item>
 	<item id="12378" type="EtcItem" name="Foundation Dark Elven Long Bow">
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="random_damage" val="5" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1164,7 +1164,7 @@
 	</item>
 	<item id="12379" type="EtcItem" name="Foundation Sword of Valhalla">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i00" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="random_damage" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1182,7 +1182,7 @@
 	</item>
 	<item id="12380" type="EtcItem" name="Foundation Spell Breaker">
 		<set name="icon" val="icon.weapon_spell_breaker_i00" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="random_damage" val="20" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1201,7 +1201,7 @@
 	</item>
 	<item id="12381" type="EtcItem" name="Foundation Arthro Nail">
 		<set name="icon" val="icon.weapon_arthro_nail_i00" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="random_damage" val="5" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1220,7 +1220,7 @@
 	</item>
 	<item id="12382" type="EtcItem" name="Foundation Ice Storm Hammer">
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i00" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="random_damage" val="20" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1239,7 +1239,7 @@
 	</item>
 	<item id="12383" type="EtcItem" name="Foundation Military Fleuret">
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="random_damage" val="40" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1261,7 +1261,7 @@
 	</item>
 	<item id="12384" type="EtcItem" name="Foundation Sprite's Staff">
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="random_damage" val="20" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1280,7 +1280,7 @@
 	</item>
 	<item id="12385" type="EtcItem" name="Foundation Kris">
 		<set name="icon" val="icon.weapon_kris_i00" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="random_damage" val="5" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1299,7 +1299,7 @@
 	</item>
 	<item id="12386" type="EtcItem" name="Foundation Keshanberk">
 		<set name="icon" val="icon.weapon_kshanberk_i00" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="random_damage" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1317,7 +1317,7 @@
 	</item>
 	<item id="12387" type="EtcItem" name="Foundation Peacemaker">
 		<set name="icon" val="icon.weapon_peace_maker_i00" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="random_damage" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1339,7 +1339,7 @@
 	</item>
 	<item id="12388" type="EtcItem" name="Foundation Heavy War Axe">
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="random_damage" val="20" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1358,7 +1358,7 @@
 	</item>
 	<item id="12389" type="EtcItem" name="Foundation Hell Knife">
 		<set name="icon" val="icon.weapon_hell_knife_i00" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="random_damage" val="5" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1377,7 +1377,7 @@
 	</item>
 	<item id="12390" type="EtcItem" name="Foundation Guardian Sword">
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="random_damage" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1395,7 +1395,7 @@
 	</item>
 	<item id="12391" type="EtcItem" name="Foundation Sword of Damascus">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="random_damage" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1413,7 +1413,7 @@
 	</item>
 	<item id="12392" type="EtcItem" name="Foundation Dismantler">
 		<set name="icon" val="icon.weapon_dismantler_i00" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1435,7 +1435,7 @@
 	</item>
 	<item id="12393" type="EtcItem" name="Foundation Lance">
 		<set name="icon" val="icon.weapon_lancia_i00" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="random_damage" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1454,7 +1454,7 @@
 	</item>
 	<item id="12394" type="EtcItem" name="Foundation Bellion Cestus">
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="random_damage" val="5" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1473,7 +1473,7 @@
 	</item>
 	<item id="12395" type="EtcItem" name="Foundation Staff of Evil Spirits">
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="random_damage" val="20" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1492,7 +1492,7 @@
 	</item>
 	<item id="12396" type="EtcItem" name="Foundation Deadman's Glory">
 		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="random_damage" val="20" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1511,7 +1511,7 @@
 	</item>
 	<item id="12397" type="EtcItem" name="Foundation Star Buster">
 		<set name="icon" val="icon.weapon_star_buster_i00" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="random_damage" val="20" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1530,7 +1530,7 @@
 	</item>
 	<item id="12398" type="EtcItem" name="Foundation Art of Battle Axe">
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="random_damage" val="20" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1549,7 +1549,7 @@
 	</item>
 	<item id="12399" type="EtcItem" name="Foundation Demon's Dagger">
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="random_damage" val="5" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />

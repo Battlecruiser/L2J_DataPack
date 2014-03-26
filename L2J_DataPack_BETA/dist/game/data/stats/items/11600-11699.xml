@@ -87,7 +87,7 @@
 	<item id="11605" type="Weapon" name="Common Item - Steel Sword">
 		<set name="icon" val="icon.weapon_iron_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -111,7 +111,7 @@
 	<item id="11606" type="Weapon" name="Common Item - Reinforced Bow">
 		<set name="icon" val="icon.weapon_strengthening_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -138,7 +138,7 @@
 	<item id="11607" type="Weapon" name="Common Item - Rapier">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -167,7 +167,7 @@
 	<item id="11608" type="Weapon" name="Common Item - Bagh-Nakh">
 		<set name="icon" val="icon.weapon_baghnakh_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -191,7 +191,7 @@
 	<item id="11609" type="Weapon" name="Common Item - Proof of Revenge">
 		<set name="icon" val="icon.weapon_proof_of_revenge_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="etc" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -215,7 +215,7 @@
 	<item id="11610" type="Weapon" name="Common Item - Bone Staff">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -240,7 +240,7 @@
 	<item id="11611" type="Weapon" name="Common Item - Priest Sword">
 		<set name="icon" val="icon.weapon_sword_of_priest_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -264,7 +264,7 @@
 	<item id="11612" type="Weapon" name="Common Item - Branch of Life">
 		<set name="icon" val="icon.weapon_branch_of_life_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="etc" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -288,7 +288,7 @@
 	<item id="11613" type="Weapon" name="Common Item - Crafted Dagger">
 		<set name="icon" val="icon.weapon_handiwork_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -312,7 +312,7 @@
 	<item id="11614" type="Weapon" name="Common Item - Saber">
 		<set name="icon" val="icon.weapon_saber_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -336,7 +336,7 @@
 	<item id="11615" type="Weapon" name="Common Item - Scalpel">
 		<set name="icon" val="icon.weapon_scalpel_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -360,7 +360,7 @@
 	<item id="11616" type="Weapon" name="Common Item - Temptation of Abyss">
 		<set name="icon" val="icon.weapon_temptation_of_abyss_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="etc" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -384,7 +384,7 @@
 	<item id="11617" type="Weapon" name="Common Item - Assassin Knife">
 		<set name="icon" val="icon.weapon_assassin_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -408,7 +408,7 @@
 	<item id="11618" type="Weapon" name="Common Item - Work Hammer">
 		<set name="icon" val="icon.weapon_work_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -432,7 +432,7 @@
 	<item id="11619" type="Weapon" name="Common Item - Scroll of Wisdom">
 		<set name="icon" val="icon.weapon_scroll_of_wisdom_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="etc" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -456,7 +456,7 @@
 	<item id="11620" type="Weapon" name="Common Item - Talwar">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -484,7 +484,7 @@
 	<item id="11621" type="Weapon" name="Common Item - Talwar">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -512,7 +512,7 @@
 	<item id="11622" type="Weapon" name="Common Item - Trident">
 		<set name="icon" val="icon.weapon_trident_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -537,7 +537,7 @@
 	<item id="11623" type="Weapon" name="Common Item - Hand Axe">
 		<set name="icon" val="icon.weapon_hand_axe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -561,7 +561,7 @@
 	<item id="11624" type="Weapon" name="Common Item - Field Gun">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -590,7 +590,7 @@
 	<item id="11625" type="Weapon" name="Common Item - Heavy Sword">
 		<set name="icon" val="icon.weapon_heavy_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -614,7 +614,7 @@
 	<item id="11626" type="Weapon" name="Common Item - Heavy Mace">
 		<set name="icon" val="icon.weapon_heavy_mace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -638,7 +638,7 @@
 	<item id="11627" type="Weapon" name="Common Item - Mace of Prayer">
 		<set name="icon" val="icon.weapon_mace_of_prayer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -663,7 +663,7 @@
 	<item id="11628" type="Weapon" name="Common Item - Knight's Sword">
 		<set name="icon" val="icon.weapon_knights_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -687,7 +687,7 @@
 	<item id="11629" type="Weapon" name="Common Item - Dark Elven Bow">
 		<set name="icon" val="icon.weapon_dark_elven_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -714,7 +714,7 @@
 	<item id="11630" type="Weapon" name="Common Item - Doom Hammer">
 		<set name="icon" val="icon.weapon_doom_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -739,7 +739,7 @@
 	<item id="11631" type="Weapon" name="Common Item - Dwarven Trident">
 		<set name="icon" val="icon.weapon_dwarven_trident_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -764,7 +764,7 @@
 	<item id="11632" type="Weapon" name="Common Item - Long Bow">
 		<set name="icon" val="icon.weapon_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -791,7 +791,7 @@
 	<item id="11633" type="Weapon" name="Common Item - Staff of Mana">
 		<set name="icon" val="icon.weapon_staff_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -816,7 +816,7 @@
 	<item id="11634" type="Weapon" name="Common Item - Mystic Staff">
 		<set name="icon" val="icon.weapon_mystic_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -841,7 +841,7 @@
 	<item id="11635" type="Weapon" name="Common Item - Bastard Sword">
 		<set name="icon" val="icon.weapon_bastard_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -865,7 +865,7 @@
 	<item id="11636" type="Weapon" name="Common Item - Spinebone Sword">
 		<set name="icon" val="icon.weapon_spinebone_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -889,7 +889,7 @@
 	<item id="11637" type="Weapon" name="Common Item - Divine Tome">
 		<set name="icon" val="icon.weapon_divine_tome_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="etc" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -913,7 +913,7 @@
 	<item id="11638" type="Weapon" name="Common Item - Mace of Judgment">
 		<set name="icon" val="icon.weapon_mace_of_judgment_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -938,7 +938,7 @@
 	<item id="11639" type="Weapon" name="Common Item - Military Talwar">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -965,7 +965,7 @@
 	<item id="11640" type="Weapon" name="Common Item - Elven Bow">
 		<set name="icon" val="icon.weapon_elven_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -992,7 +992,7 @@
 	<item id="11641" type="Weapon" name="Common Item - Mace of Miracle">
 		<set name="icon" val="icon.weapon_mace_of_miracle_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1017,7 +1017,7 @@
 	<item id="11642" type="Weapon" name="Common Item - Single-Edged Jamadhr">
 		<set name="icon" val="icon.weapon_single-edged_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1041,7 +1041,7 @@
 	<item id="11643" type="Weapon" name="Common Item - Artisan's Sword">
 		<set name="icon" val="icon.weapon_artisans_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1065,7 +1065,7 @@
 	<item id="11644" type="Weapon" name="Common Item - Conjuror's Staff">
 		<set name="icon" val="icon.weapon_conjure_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1090,7 +1090,7 @@
 	<item id="11645" type="Weapon" name="Common Item - Tomahawk">
 		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1114,7 +1114,7 @@
 	<item id="11646" type="Weapon" name="Common Item - Poniard Dagger">
 		<set name="icon" val="icon.weapon_dirk_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1138,7 +1138,7 @@
 	<item id="11647" type="Weapon" name="Common Item - Pike">
 		<set name="icon" val="icon.weapon_pike_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1163,7 +1163,7 @@
 	<item id="11648" type="Weapon" name="Common Item - Fleuret">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1192,7 +1192,7 @@
 	<item id="11649" type="Weapon" name="Common Item - Fleuret">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1221,7 +1221,7 @@
 	<item id="11650" type="Weapon" name="Common Item - Fleuret">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1250,7 +1250,7 @@
 	<item id="11651" type="Weapon" name="Common Item - Fleuret">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1279,7 +1279,7 @@
 	<item id="11652" type="Weapon" name="Common Item - Hand Crossbow">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1308,7 +1308,7 @@
 	<item id="11653" type="Weapon" name="Common Item - Hand Crossbow">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1337,7 +1337,7 @@
 	<item id="11654" type="Weapon" name="Common Item - Hand Crossbow">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1366,7 +1366,7 @@
 	<item id="11655" type="Weapon" name="Common Item - Sword of Magic">
 		<set name="icon" val="icon.weapon_sword_of_magic_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1390,7 +1390,7 @@
 	<item id="11656" type="Weapon" name="Common Item - Sword of Mystic">
 		<set name="icon" val="icon.weapon_sword_of_mystic_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1414,7 +1414,7 @@
 	<item id="11657" type="Weapon" name="Common Item - Sword of Occult">
 		<set name="icon" val="icon.weapon_sword_of_occult_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1438,7 +1438,7 @@
 	<item id="11658" type="Weapon" name="Common Item - Saber*Saber">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1461,7 +1461,7 @@
 	<item id="11659" type="Weapon" name="Common Item - Gastraphetes">
 		<set name="icon" val="icon.weapon_gastraphetes_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1488,7 +1488,7 @@
 	<item id="11660" type="Weapon" name="Common Item - Shilen Knife">
 		<set name="icon" val="icon.weapon_knife_o'_silenus_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1513,7 +1513,7 @@
 	<item id="11661" type="Weapon" name="Common Item - Dwarven Pike">
 		<set name="icon" val="icon.weapon_dwarven_pike_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1538,7 +1538,7 @@
 	<item id="11662" type="Weapon" name="Common Item - Dagger of Mana">
 		<set name="icon" val="icon.weapon_dagger_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1563,7 +1563,7 @@
 	<item id="11663" type="Weapon" name="Common Item - Staff of Magic">
 		<set name="icon" val="icon.weapon_staff_of_magicpower_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1588,7 +1588,7 @@
 	<item id="11664" type="Weapon" name="Common Item - Mystic Knife">
 		<set name="icon" val="icon.weapon_mystic_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1613,7 +1613,7 @@
 	<item id="11665" type="Weapon" name="Common Item - Triple-Edged Jamadhr">
 		<set name="icon" val="icon.weapon_triple-edged_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1637,7 +1637,7 @@
 	<item id="11666" type="Weapon" name="Common Item - Spiked Club">
 		<set name="icon" val="icon.weapon_spike_club_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1661,7 +1661,7 @@
 	<item id="11667" type="Weapon" name="Common Item - Two-Handed Sword">
 		<set name="icon" val="icon.weapon_two_handed_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1685,7 +1685,7 @@
 	<item id="11668" type="Weapon" name="Common Item - Estoc">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1714,7 +1714,7 @@
 	<item id="11669" type="Weapon" name="Common Item - Estoc">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1743,7 +1743,7 @@
 	<item id="11670" type="Weapon" name="Common Item - Elven Sword">
 		<set name="icon" val="icon.weapon_elven_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1767,7 +1767,7 @@
 	<item id="11671" type="Weapon" name="Common Item - War Hammer">
 		<set name="icon" val="icon.weapon_war_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1792,7 +1792,7 @@
 	<item id="11672" type="Weapon" name="Common Item - Conjuror's Knife">
 		<set name="icon" val="icon.weapon_conjure_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1817,7 +1817,7 @@
 	<item id="11673" type="Weapon" name="Common Item - Kukuri">
 		<set name="icon" val="icon.weapon_kukuri_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1841,7 +1841,7 @@
 	<item id="11674" type="Weapon" name="Common Item - Crossbow">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1870,7 +1870,7 @@
 	<item id="11675" type="Weapon" name="Common Item - Crimson Sword">
 		<set name="icon" val="icon.weapon_crimson_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1894,7 +1894,7 @@
 	<item id="11676" type="Weapon" name="Common Item - Tome of Blood">
 		<set name="icon" val="icon.weapon_tome_of_blood_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="etc" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1918,7 +1918,7 @@
 	<item id="11677" type="Weapon" name="Common Item - Field Sword">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -1946,7 +1946,7 @@
 	<item id="11678" type="Weapon" name="Common Item - Sage's Blood">
 		<set name="icon" val="icon.weapon_blood_of_saints_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="etc" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1970,7 +1970,7 @@
 	<item id="11679" type="Weapon" name="Common Item - Saber*Knight's Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1993,7 +1993,7 @@
 	<item id="11680" type="Weapon" name="Common Item - Saber*Bastard Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2016,7 +2016,7 @@
 	<item id="11681" type="Weapon" name="Common Item - Saber*Spinebone Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2039,7 +2039,7 @@
 	<item id="11682" type="Weapon" name="Common Item - Saber*Artisan's Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2062,7 +2062,7 @@
 	<item id="11683" type="Weapon" name="Common Item - Reinforced Long Bow">
 		<set name="icon" val="icon.weapon_strengthening_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -2089,7 +2089,7 @@
 	<item id="11684" type="Weapon" name="Common Item - Knight's Sword*Knight's Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2112,7 +2112,7 @@
 	<item id="11685" type="Weapon" name="Common Item - Maingauche">
 		<set name="icon" val="icon.weapon_maingauche_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -2136,7 +2136,7 @@
 	<item id="11686" type="Weapon" name="Common Item - Morning Star">
 		<set name="icon" val="icon.weapon_morning_star_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -2160,7 +2160,7 @@
 	<item id="11687" type="Weapon" name="Common Item - Bastard Sword*Knight's Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2183,7 +2183,7 @@
 	<item id="11688" type="Weapon" name="Common Item - Bastard Sword*Bastard Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2206,7 +2206,7 @@
 	<item id="11689" type="Weapon" name="Common Item - Bastard Sword*Spinebone Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2229,7 +2229,7 @@
 	<item id="11690" type="Weapon" name="Common Item - Bastard Sword*Artisan's Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2252,7 +2252,7 @@
 	<item id="11691" type="Weapon" name="Common Item - Bich'Hwa">
 		<set name="icon" val="icon.weapon_bichhwa_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -2276,7 +2276,7 @@
 	<item id="11692" type="Weapon" name="Common Item - Priest Mace">
 		<set name="icon" val="icon.weapon_mace_of_priest_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -2301,7 +2301,7 @@
 	<item id="11693" type="Weapon" name="Common Item - Goat Head Staff">
 		<set name="icon" val="icon.weapon_goathead_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -2326,7 +2326,7 @@
 	<item id="11694" type="Weapon" name="Common Item - Saber*Elven Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2349,7 +2349,7 @@
 	<item id="11695" type="Weapon" name="Common Item - Saber*Crimson Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2372,7 +2372,7 @@
 	<item id="11696" type="Weapon" name="Common Item - Sword of Magic Fog">
 		<set name="icon" val="icon.weapon_sword_of_magic_fog_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2396,7 +2396,7 @@
 	<item id="11697" type="Weapon" name="Common Item - Skull Breaker">
 		<set name="icon" val="icon.weapon_skull_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -2420,7 +2420,7 @@
 	<item id="11698" type="Weapon" name="Common Item - Spinebone Sword*Knight's Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -2443,7 +2443,7 @@
 	<item id="11699" type="Weapon" name="Common Item - Spinebone Sword*Spinebone Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />

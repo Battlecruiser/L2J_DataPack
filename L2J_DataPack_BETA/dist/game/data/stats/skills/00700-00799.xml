@@ -1463,20 +1463,20 @@
 		<set name="triggeredId" val="5559" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<!-- TODO: Remove when support for effects using conditions is done -->
 		<cond>
-			<using kind="Sword,Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
+			<using kind="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" />
 		</cond>
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pAtk" val="100">
-					<using kind="Sword,Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
+					<using kind="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" />
 				</add>
 				<mul order="0x30" stat="pAtkSpd" val="1.1">
-					<using kind="Sword,Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
+					<using kind="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" />
 				</mul>
 			</effect>
 			<!-- TODO: Require support for effects using conditions -->
 			<!-- <effect name="ChanceSkillTrigger" activationChance="3" chanceType="ON_HIT" triggeredId="5559"> -->
-			<!-- <using kind="Sword,Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" /> -->
+			<!-- <using kind="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" /> -->
 			<!-- </effect> -->
 		</for>
 	</skill>
@@ -1491,20 +1491,20 @@
 		<set name="triggeredId" val="5559" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<!-- TODO: Remove when support for effects using conditions is done -->
 		<cond>
-			<using kind="Bow,Crossbow" />
+			<using kind="BOW,CROSSBOW" />
 		</cond>
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="accCombat" val="8">
-					<using kind="Crossbow,Bow" />
+					<using kind="CROSSBOW,BOW" />
 				</add>
 				<add order="0x40" stat="pAtkRange" val="50">
-					<using kind="Crossbow,Bow" />
+					<using kind="CROSSBOW,BOW" />
 				</add>
 			</effect>
 			<!-- TODO: Require support for effects using conditions -->
 			<!-- <effect name="ChanceSkillTrigger" activationChance="3" chanceType="ON_HIT" triggeredId="5559"> -->
-			<!-- <using kind="Crossbow,Bow" /> -->
+			<!-- <using kind="CROSSBOW,BOW" /> -->
 			<!-- </effect> -->
 		</for>
 	</skill>
@@ -1580,7 +1580,7 @@
 		<set name="trait" val="DEATH" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Sword,Blunt" />
+				<using kind="SWORD,BLUNT" />
 				<player active_effect_id_lvl="5561,3" />
 			</and>
 		</cond>
@@ -1680,7 +1680,7 @@
 		<enchant2 name="effectPoint" val="#ench2EffectPoints" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Sword" />
+			<using kind="DUAL" />
 		</cond>
 		<for>
 			<effect name="Buff">
@@ -1810,7 +1810,7 @@
 		<set name="reuseDelay" val="75000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
-			<using kind="Bow" />
+			<using kind="BOW" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1838,7 +1838,7 @@
 		<set name="reuseDelay" val="75000" />
 		<set name="targetType" val="AREA" />
 		<cond msgId="113" addName="1">
-			<using kind="Bow" />
+			<using kind="BOW" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1867,7 +1867,7 @@
 		<set name="reuseDelay" val="75000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
-			<using kind="Bow" />
+			<using kind="BOW" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1928,7 +1928,7 @@
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Dual Sword" />
+				<using kind="DUAL" />
 				<player Charges="2" /> <!-- Need to recharge 2nd stage of Sword Energy. -->
 			</and>
 		</cond>
@@ -1963,7 +1963,7 @@
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Dual Fist" />
+				<using kind="DUALFIST" />
 				<player Charges="2" /> <!-- Chi Energy Stage 2 Recharge needed. -->
 			</and>
 		</cond>
@@ -1996,7 +1996,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Sword,Blunt" />
+				<using kind="SWORD,BLUNT" />
 				<using slot="lrhand" />
 			</and>
 		</cond>
@@ -2180,10 +2180,10 @@
 				<add order="0x40" stat="runSpd" val="30" />
 				<mul order="0x30" stat="pAtkSpd" val="1.3" />
 				<add order="0x40" stat="rCrit" val="100">
-					<using kind="Sword" />
+					<using kind="SWORD" />
 				</add>
 				<mul order="0x30" stat="cAtk" val="2">
-					<using kind="Blunt" />
+					<using kind="BLUNT" />
 				</mul>
 				<sub order="0x40" stat="cancelVuln" val="40" />
 				<mul order="0x30" stat="healEffect" val="0.2" />
@@ -2301,10 +2301,10 @@
 				<add order="0x40" stat="runSpd" val="30" />
 				<mul order="0x30" stat="pAtkSpd" val="1.3" />
 				<add order="0x40" stat="rCrit" val="100">
-					<using kind="Sword" />
+					<using kind="SWORD" />
 				</add>
 				<mul order="0x30" stat="cAtk" val="2">
-					<using kind="Blunt" />
+					<using kind="BLUNT" />
 				</mul>
 				<add order="0x40" stat="absorbDam" val="40" /> <!-- Recovers as HP 40% of general close rate physical damage inflicted on the enemy -->
 				<mul order="0x30" stat="healEffect" val="0.2" />
@@ -2332,7 +2332,7 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
-			<using kind="Crossbow" />
+			<using kind="CROSSBOW" />
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" />
@@ -2460,7 +2460,7 @@
 		<enchant8 name="pvpPower" val="#ench8Duel" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Ancient" />
+				<using kind="ANCIENTSWORD" />
 				<target mindistance="200" />
 			</and>
 		</cond>
@@ -2608,13 +2608,13 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pDef" val="#pDefHeavy">
-					<using kind="Heavy" />
+					<using kind="HEAVY" />
 				</add>
 				<add order="0x40" stat="pDef" val="#pDefLight">
-					<using kind="Light" />
+					<using kind="LIGHT" />
 				</add>
 				<add order="0x40" stat="pDef" val="#pDefMagic">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</add>
 			</effect>
 		</for>

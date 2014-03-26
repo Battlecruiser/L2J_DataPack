@@ -513,10 +513,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.2">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 				<add order="0x40" stat="accCombat" val="10">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</add>
 			</effect>
 		</for>

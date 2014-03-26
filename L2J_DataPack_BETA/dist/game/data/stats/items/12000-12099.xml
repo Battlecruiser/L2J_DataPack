@@ -3,7 +3,7 @@
 	<item id="12000" type="Weapon" name="Common Item - Arcana Mace">
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -29,7 +29,7 @@
 	<item id="12001" type="Weapon" name="Common Item - Angel Slayer">
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -54,7 +54,7 @@
 	<item id="12002" type="Weapon" name="Common Item - Imperial Staff">
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -80,7 +80,7 @@
 	<item id="12003" type="Weapon" name="Common Item - Tallum Blade*Dark Legion's Edge">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -105,7 +105,7 @@
 	<item id="12004" type="Weapon" name="Common Item - Forgotten Blade">
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -130,7 +130,7 @@
 	<item id="12005" type="Weapon" name="Common Item - Heaven's Divider">
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -183,7 +183,7 @@
 	<item id="12008" type="Armor" name="Common Item - Ring Mail Breastplate">
 		<set name="icon" val="icon.armor_t12_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="7" />
@@ -215,7 +215,7 @@
 	<item id="12010" type="Armor" name="Common Item - Cursed Tunic">
 		<set name="icon" val="icon.armor_t14_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="5" />
@@ -234,7 +234,7 @@
 	<item id="12011" type="Armor" name="Common Item - Cursed Stockings">
 		<set name="icon" val="icon.armor_t14_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3" />
@@ -253,7 +253,7 @@
 	<item id="12012" type="Armor" name="Common Item - Iron Plate Gaiters">
 		<set name="icon" val="icon.armor_t12_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4" />
@@ -290,7 +290,7 @@
 	<item id="12014" type="Armor" name="Common Item - Puma Skin Gaiters">
 		<set name="icon" val="icon.armor_t09_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3" />
@@ -305,7 +305,7 @@
 	<item id="12015" type="Armor" name="Common Item - Puma Skin Shirt">
 		<set name="icon" val="icon.armor_t09_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="5" />
@@ -334,7 +334,7 @@
 	<item id="12017" type="Armor" name="Common Item - Dark Stockings">
 		<set name="icon" val="icon.armor_t16_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="5" />
@@ -353,7 +353,7 @@
 	<item id="12018" type="Armor" name="Common Item - Mystic's Tunic">
 		<set name="icon" val="icon.armor_t17_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="7" />
@@ -372,7 +372,7 @@
 	<item id="12019" type="Armor" name="Common Item - Mystic's Stockings">
 		<set name="icon" val="icon.armor_t17_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="5" />
@@ -391,7 +391,7 @@
 	<item id="12020" type="Armor" name="Common Item - Lion Skin Gaiters">
 		<set name="icon" val="icon.armor_t18_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="5" />
@@ -406,7 +406,7 @@
 	<item id="12021" type="Armor" name="Common Item - Lion Skin Shirt">
 		<set name="icon" val="icon.armor_t18_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="7" />
@@ -421,7 +421,7 @@
 	<item id="12022" type="Armor" name="Common Item - White Tunic">
 		<set name="icon" val="icon.armor_t16_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="7" />
@@ -440,7 +440,7 @@
 	<item id="12023" type="Armor" name="Common Item - Scale Gaiters">
 		<set name="icon" val="icon.armor_t08_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="6" />
@@ -458,7 +458,7 @@
 	<item id="12024" type="Armor" name="Common Item - Scale Mail">
 		<set name="icon" val="icon.armor_t08_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="10" />
@@ -495,7 +495,7 @@
 	<item id="12026" type="Armor" name="Common Item - Elven Tunic">
 		<set name="icon" val="icon.armor_t11_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="7" />
@@ -514,7 +514,7 @@
 	<item id="12027" type="Armor" name="Common Item - Elven Stockings">
 		<set name="icon" val="icon.armor_t11_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="5" />
@@ -561,7 +561,7 @@
 	<item id="12030" type="Armor" name="Common Item - Dwarven Scale Mail">
 		<set name="icon" val="icon.armor_t15_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="13" />
@@ -579,7 +579,7 @@
 	<item id="12031" type="Armor" name="Common Item - Mithril Breastplate">
 		<set name="icon" val="icon.armor_t19_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="13" />
@@ -597,7 +597,7 @@
 	<item id="12032" type="Armor" name="Common Item - Compound Scale Mail">
 		<set name="icon" val="icon.armor_t20_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="13" />
@@ -629,7 +629,7 @@
 	<item id="12034" type="Armor" name="Common Item - Reinforced Leather Gaiters">
 		<set name="icon" val="icon.armor_t13_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="7" />
@@ -658,7 +658,7 @@
 	<item id="12036" type="Armor" name="Common Item - Reinforced Leather Shirt">
 		<set name="icon" val="icon.armor_t13_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="11" />
@@ -701,7 +701,7 @@
 	<item id="12039" type="Armor" name="Common Item - Dwarven Scale Gaiters">
 		<set name="icon" val="icon.armor_t15_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="9" />
@@ -733,7 +733,7 @@
 	<item id="12041" type="Armor" name="Common Item - Mithril Gaiters">
 		<set name="icon" val="icon.armor_t19_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="9" />
@@ -751,7 +751,7 @@
 	<item id="12042" type="Armor" name="Common Item - Mithril Banded Gaiters">
 		<set name="icon" val="icon.armor_t10_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="7" />
@@ -766,7 +766,7 @@
 	<item id="12043" type="Armor" name="Common Item - Mithril Banded Mail">
 		<set name="icon" val="icon.armor_t10_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="11" />
@@ -781,7 +781,7 @@
 	<item id="12044" type="Armor" name="Common Item - Blast Plate">
 		<set name="icon" val="icon.armor_t40_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="15" />
@@ -827,7 +827,7 @@
 	<item id="12047" type="Armor" name="Common Item - Tunic of Knowledge">
 		<set name="icon" val="icon.armor_t41_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="11" />
@@ -846,7 +846,7 @@
 	<item id="12048" type="Armor" name="Common Item - Stockings of Knowledge">
 		<set name="icon" val="icon.armor_t41_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="7" />
@@ -865,7 +865,7 @@
 	<item id="12049" type="Armor" name="Common Item - Compound Scale Gaiters">
 		<set name="icon" val="icon.armor_t20_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="9" />
@@ -916,7 +916,7 @@
 	<item id="12052" type="Armor" name="Common Item - Manticore Skin Gaiters">
 		<set name="icon" val="icon.armor_t42_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="10" />
@@ -945,7 +945,7 @@
 	<item id="12054" type="Armor" name="Common Item - Manticore Skin Shirt">
 		<set name="icon" val="icon.armor_t42_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="15" />
@@ -974,7 +974,7 @@
 	<item id="12056" type="Armor" name="Common Item - Mithril Scale Gaiters">
 		<set name="icon" val="icon.armor_t40_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="13" />
@@ -992,7 +992,7 @@
 	<item id="12057" type="Armor" name="Common Item - Mithril Tunic">
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="15" />
@@ -1011,7 +1011,7 @@
 	<item id="12058" type="Armor" name="Common Item - Mithril Stockings">
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="10" />
@@ -1030,7 +1030,7 @@
 	<item id="12059" type="Armor" name="Common Item - Brigandine">
 		<set name="icon" val="icon.armor_t43_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="20" />
@@ -1048,7 +1048,7 @@
 	<item id="12060" type="Armor" name="Common Item - Brigandine Gaiters">
 		<set name="icon" val="icon.armor_t43_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="13" />
@@ -1263,7 +1263,7 @@
 	<item id="12074" type="Armor" name="Common Item - Salamander Skin Mail">
 		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="32" />
@@ -1353,7 +1353,7 @@
 	<item id="12080" type="Armor" name="Common Item - Plate Gaiters">
 		<set name="icon" val="icon.armor_t46_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="16" />
@@ -1371,7 +1371,7 @@
 	<item id="12081" type="Armor" name="Common Item - Half Plate Armor">
 		<set name="icon" val="icon.armor_t46_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="26" />
@@ -1403,7 +1403,7 @@
 	<item id="12083" type="Armor" name="Common Item - Sage's Rag">
 		<set name="icon" val="icon.armor_t44_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="32" />
@@ -1422,7 +1422,7 @@
 	<item id="12084" type="Armor" name="Common Item - Reinforced Mithril Gaiters">
 		<set name="icon" val="icon.armor_t47_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3" />
@@ -1451,7 +1451,7 @@
 	<item id="12086" type="Armor" name="Common Item - Reinforced Mithril Shirt">
 		<set name="icon" val="icon.armor_t47_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="5" />
@@ -1569,7 +1569,7 @@
 	<item id="12094" type="Armor" name="Common Item - Chain Gaiters">
 		<set name="icon" val="icon.armor_t48_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4" />
@@ -1587,7 +1587,7 @@
 	<item id="12095" type="Armor" name="Common Item - Chain Mail Shirt">
 		<set name="icon" val="icon.armor_t48_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="7" />
@@ -1652,7 +1652,7 @@
 	<item id="12099" type="Armor" name="Common Item - Karmian Tunic">
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="5" />

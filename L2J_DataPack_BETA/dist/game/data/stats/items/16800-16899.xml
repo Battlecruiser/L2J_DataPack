@@ -63,7 +63,7 @@
 	<item id="16840" type="Armor" name="Vesper Noble Breastplate">
 		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2680" />
@@ -85,7 +85,7 @@
 	<item id="16841" type="Armor" name="Vesper Noble Houberk">
 		<set name="icon" val="icon.armor_t95_u_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2010" />
@@ -104,7 +104,7 @@
 	<item id="16842" type="Armor" name="Vesper Noble Tunic">
 		<set name="icon" val="icon.armor_t96_u_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2010" />
@@ -127,7 +127,7 @@
 	<item id="16843" type="Armor" name="Vesper Noble Gaiter">
 		<set name="icon" val="icon.armor_t94_l_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1675" />
@@ -149,7 +149,7 @@
 	<item id="16844" type="Armor" name="Vesper Noble Leather Legging">
 		<set name="icon" val="icon.armor_t95_l_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1256" />
@@ -168,7 +168,7 @@
 	<item id="16845" type="Armor" name="Vesper Noble Stockings">
 		<set name="icon" val="icon.armor_t96_l_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1256" />
@@ -324,7 +324,7 @@
 	<item id="16853" type="EtcItem" name="Equipment Set Pack - 90-day limited period">
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_tradable" val="false" />
@@ -533,7 +533,7 @@
 	<item id="16866" type="Armor" name="Dark Crystal Robe of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
@@ -630,7 +630,7 @@
 	<item id="16871" type="Armor" name="Avadon Robe of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -727,7 +727,7 @@
 	<item id="16876" type="Armor" name="Karmian Tunic of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -748,7 +748,7 @@
 	<item id="16877" type="Armor" name="Karmian Stockings of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t53_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -801,7 +801,7 @@
 	<item id="16880" type="Armor" name="Mithril Tunic of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -822,7 +822,7 @@
 	<item id="16881" type="Armor" name="Mithril Stockings of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -875,7 +875,7 @@
 	<item id="16884" type="Armor" name="Dark Crystal Leather Armor of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t75_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
@@ -892,7 +892,7 @@
 	<item id="16885" type="Armor" name="Dark Crystal Leggings of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t75_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
@@ -941,7 +941,7 @@
 	<item id="16888" type="Armor" name="Leather Armor of Doom of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1044,7 +1044,7 @@
 	<item id="16894" type="Armor" name="Doom Plate Armor of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -1086,7 +1086,7 @@
 	<item id="16896" type="Armor" name="Plate Leather Armor of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t47_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -1103,7 +1103,7 @@
 	<item id="16897" type="Armor" name="Plate Leather Gaiters of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t47_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />

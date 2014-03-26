@@ -214,7 +214,7 @@
 	<item id="13017" type="EtcItem" name="White Weasel Hunting Helper Necklace">
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -232,7 +232,7 @@
 	<item id="13018" type="EtcItem" name="Fairy Princess Hunting Helper Necklace">
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -250,7 +250,7 @@
 	<item id="13019" type="EtcItem" name="Wild Beast Fighter Hunting Helper Necklace">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -268,7 +268,7 @@
 	<item id="13020" type="EtcItem" name="Fox Shaman Hunting Helper Necklace">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -375,7 +375,7 @@
 	<item id="13027" type="EtcItem" name="Gran Kain's Gift Box - 30-day limited period">
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="elixir" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -413,7 +413,7 @@
 	<item id="13032" type="EtcItem" name="Pailaka Instant Shield">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -433,7 +433,7 @@
 	<item id="13033" type="EtcItem" name="Quick Healing Potion">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -453,7 +453,7 @@
 	<item id="13034" type="Weapon" name="Sprite's Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -481,7 +481,7 @@
 	<item id="13035" type="Weapon" name="Enhanced Sprite's Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -510,7 +510,7 @@
 	<item id="13036" type="Weapon" name="Sword of Ice and Fire">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -585,7 +585,7 @@
 	<item id="13040" type="EtcItem" name="Fire Attribute Enhancer">
 		<set name="icon" val="icon.etc_fire_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -603,7 +603,7 @@
 	<item id="13041" type="EtcItem" name="Water Attribute Enhancer">
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -621,7 +621,7 @@
 	<item id="13042" type="Weapon" name="Ancient Legacy Sword">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -650,7 +650,7 @@
 	<item id="13043" type="Weapon" name="Enhanced Ancient Legacy Sword">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -679,7 +679,7 @@
 	<item id="13044" type="Weapon" name="Complete Ancient Legacy Sword">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -790,7 +790,7 @@
 	<item id="13050" type="Armor" name="Tigress exclusive armor">
 		<set name="icon" val="icon.etc_wolf_r_a_01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -817,7 +817,7 @@
 	<item id="13052" type="Weapon" name="Spear of Silenos">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -848,7 +848,7 @@
 	<item id="13053" type="Weapon" name="Enhanced Spear of Silenos">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -879,7 +879,7 @@
 	<item id="13054" type="Weapon" name="Complete Spear of Silenos">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -968,7 +968,7 @@
 	<item id="13059" type="EtcItem" name="Long-Range Defense Increasing Potion">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -994,7 +994,7 @@
 	<item id="13061" type="Weapon" name="Exclusive to Monsters (Baroness' Employee)">
 		<set name="icon" val="icon.weapon_morning_star_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1021,7 +1021,7 @@
 	<item id="13062" type="Weapon" name="Exclusive to Monsters (Employee's Friend)">
 		<set name="icon" val="icon.weapon_mon_friend_employee_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1111,7 +1111,7 @@
 	<item id="13071" type="EtcItem" name="Red Soul Crystal - Stage 16">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="handler" val="ItemSkills" />
@@ -1120,7 +1120,7 @@
 	<item id="13072" type="EtcItem" name="Blue Soul Crystal - Stage 16">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="handler" val="ItemSkills" />
@@ -1129,7 +1129,7 @@
 	<item id="13073" type="EtcItem" name="Green Soul Crystal - Stage 16">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="handler" val="ItemSkills" />
@@ -1189,7 +1189,7 @@
 	<item id="13078" type="Armor" name="Arcana Sigil">
 		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="sigil" />
+		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="161" />
@@ -1489,7 +1489,7 @@
 	</item>
 	<item id="13099" type="EtcItem" name="Sealed Arcana Sigil Piece">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />

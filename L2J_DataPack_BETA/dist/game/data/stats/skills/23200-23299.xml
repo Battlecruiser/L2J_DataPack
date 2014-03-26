@@ -484,10 +484,10 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="maxMp" val="1.15" />
 				<add order="0x40" stat="regMp" val="1.5">
-					<using kind="Heavy,Light" />
+					<using kind="HEAVY,LIGHT" />
 				</add>
 				<add order="0x40" stat="regMp" val="4">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</add>
 				<mul order="0x30" stat="mDef" val="1.3" />
 				<mul order="0x30" stat="mAtk" val="1.3" />
@@ -543,9 +543,9 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Blunt" />
+					<using kind="BLUNT" />
 				</mul>
-				<!-- TODO:? <add order="0x40" stat="stunProf" val="8"> <using kind="Blunt" /> </add> -->
+				<!-- TODO:? <add order="0x40" stat="stunProf" val="8"> <using kind="BLUNT" /> </add> -->
 			</effect>
 		</for>
 	</skill>
@@ -564,10 +564,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 				<add order="0x40" stat="pAtkRange" val="100">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</add>
 			</effect>
 		</for>
@@ -587,10 +587,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.05">
-					<using kind="Light" />
+					<using kind="LIGHT" />
 				</mul>
 				<add order="0x40" stat="rEvas" val="2">
-					<using kind="Light" />
+					<using kind="LIGHT" />
 				</add>
 			</effect>
 		</for>
@@ -610,10 +610,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.05">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</mul>
 				<add order="0x40" stat="regMp" val="2">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</add>
 			</effect>
 		</for>
@@ -1326,10 +1326,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
+					<using kind="SWORD,DUAL,ANCIENTSWORD,RAPIER,DAGGER,DUALDAGGER,POLE,DUALFIST" />
 				</mul>
 				<basemul order="0x30" stat="rCrit" val="0.2">
-					<using kind="Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
+					<using kind="SWORD,DUAL,ANCIENTSWORD,RAPIER,DAGGER,DUALDAGGER,POLE,DUALFIST" />
 				</basemul>
 			</effect>
 		</for>
@@ -1348,7 +1348,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.1">
-					<using kind="Heavy" />
+					<using kind="HEAVY" />
 				</mul>
 			</effect>
 		</for>
@@ -1434,10 +1434,10 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="maxMp" val="1.15" />
 				<add order="0x40" stat="regMp" val="1.5">
-					<using kind="Heavy,Light" />
+					<using kind="HEAVY,LIGHT" />
 				</add>
 				<add order="0x40" stat="regMp" val="4">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</add>
 				<mul order="0x30" stat="mDef" val="1.3" />
 				<mul order="0x30" stat="mAtk" val="1.3" />
@@ -1491,9 +1491,9 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Blunt" />
+					<using kind="BLUNT" />
 				</mul>
-				<!-- TODO:? <add order="0x40" stat="stunProf" val="8"> <using kind="Blunt" /> </add> -->
+				<!-- TODO:? <add order="0x40" stat="stunProf" val="8"> <using kind="BLUNT" /> </add> -->
 			</effect>
 		</for>
 	</skill>
@@ -1511,10 +1511,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 				<add order="0x40" stat="pAtkRange" val="100">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</add>
 			</effect>
 		</for>
@@ -1533,10 +1533,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.05">
-					<using kind="Light" />
+					<using kind="LIGHT" />
 				</mul>
 				<add order="0x40" stat="rEvas" val="2">
-					<using kind="Light" />
+					<using kind="LIGHT" />
 				</add>
 			</effect>
 		</for>
@@ -1555,10 +1555,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.05">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</mul>
 				<add order="0x40" stat="regMp" val="2">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</add>
 			</effect>
 		</for>

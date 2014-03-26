@@ -261,7 +261,7 @@
 	<item id="6035" type="EtcItem" name="Magic Haste Potion">
 		<set name="icon" val="icon.etc_potion_of_acumen2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="20" />
@@ -276,7 +276,7 @@
 	<item id="6036" type="EtcItem" name="Greater Magic Haste Potion">
 		<set name="icon" val="icon.etc_potion_of_acumen3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="20" />
@@ -294,7 +294,7 @@
 	<item id="6037" type="EtcItem" name="Waking Scroll">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="5" />
 		<set name="price" val="100" />
@@ -305,7 +305,7 @@
 	</item>
 	<item id="6038" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Stationary)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="80000" />
@@ -314,7 +314,7 @@
 	</item>
 	<item id="6039" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Stationary)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
@@ -323,7 +323,7 @@
 	</item>
 	<item id="6040" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Stationary)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
@@ -332,7 +332,7 @@
 	</item>
 	<item id="6041" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Stationary)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -341,7 +341,7 @@
 	</item>
 	<item id="6042" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Stationary)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -350,7 +350,7 @@
 	</item>
 	<item id="6043" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Mobile)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="80000" />
@@ -359,7 +359,7 @@
 	</item>
 	<item id="6044" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Mobile)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
@@ -368,7 +368,7 @@
 	</item>
 	<item id="6045" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Mobile)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
@@ -377,7 +377,7 @@
 	</item>
 	<item id="6046" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Mobile)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -386,7 +386,7 @@
 	</item>
 	<item id="6047" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Mobile)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -395,7 +395,7 @@
 	</item>
 	<item id="6048" type="EtcItem" name="Trash - Trash">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
@@ -403,7 +403,7 @@
 	</item>
 	<item id="6049" type="EtcItem" name="Trash - Trash">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
@@ -411,7 +411,7 @@
 	</item>
 	<item id="6050" type="EtcItem" name="Trash - Trash">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
@@ -419,7 +419,7 @@
 	</item>
 	<item id="6051" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Stationary)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="80000" />
@@ -428,7 +428,7 @@
 	</item>
 	<item id="6052" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Stationary)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
@@ -437,7 +437,7 @@
 	</item>
 	<item id="6053" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Stationary)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
@@ -446,7 +446,7 @@
 	</item>
 	<item id="6054" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Stationary)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -455,7 +455,7 @@
 	</item>
 	<item id="6055" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Stationary)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -464,7 +464,7 @@
 	</item>
 	<item id="6056" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Mobile)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="80000" />
@@ -473,7 +473,7 @@
 	</item>
 	<item id="6057" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Mobile)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
@@ -482,7 +482,7 @@
 	</item>
 	<item id="6058" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Mobile)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
@@ -491,7 +491,7 @@
 	</item>
 	<item id="6059" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Mobile)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -500,7 +500,7 @@
 	</item>
 	<item id="6060" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Mobile)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -509,7 +509,7 @@
 	</item>
 	<item id="6061" type="EtcItem" name="Trash - Trash">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
@@ -517,7 +517,7 @@
 	</item>
 	<item id="6062" type="EtcItem" name="Trash - Trash">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
@@ -525,7 +525,7 @@
 	</item>
 	<item id="6063" type="EtcItem" name="Trash - Trash">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
@@ -533,7 +533,7 @@
 	</item>
 	<item id="6064" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Stationary)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="80000" />
@@ -542,7 +542,7 @@
 	</item>
 	<item id="6065" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Stationary)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
@@ -551,7 +551,7 @@
 	</item>
 	<item id="6066" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Stationary)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
@@ -560,7 +560,7 @@
 	</item>
 	<item id="6067" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Stationary)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -569,7 +569,7 @@
 	</item>
 	<item id="6068" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Stationary)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -578,7 +578,7 @@
 	</item>
 	<item id="6069" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Mobile)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="80000" />
@@ -587,7 +587,7 @@
 	</item>
 	<item id="6070" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Mobile)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
@@ -596,7 +596,7 @@
 	</item>
 	<item id="6071" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Mobile)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
@@ -605,7 +605,7 @@
 	</item>
 	<item id="6072" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Mobile)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -614,7 +614,7 @@
 	</item>
 	<item id="6073" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Mobile)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -623,7 +623,7 @@
 	</item>
 	<item id="6074" type="EtcItem" name="Trash - Trash">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
@@ -631,7 +631,7 @@
 	</item>
 	<item id="6075" type="EtcItem" name="Trash - Trash">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
@@ -639,7 +639,7 @@
 	</item>
 	<item id="6076" type="EtcItem" name="Trash - Trash">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
@@ -647,7 +647,7 @@
 	</item>
 	<item id="6077" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Stationary)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="80000" />
@@ -656,7 +656,7 @@
 	</item>
 	<item id="6078" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Stationary)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
@@ -665,7 +665,7 @@
 	</item>
 	<item id="6079" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Stationary)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
@@ -674,7 +674,7 @@
 	</item>
 	<item id="6080" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Stationary)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -683,7 +683,7 @@
 	</item>
 	<item id="6081" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Stationary)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -692,7 +692,7 @@
 	</item>
 	<item id="6082" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Mobile)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="80000" />
@@ -701,7 +701,7 @@
 	</item>
 	<item id="6083" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Mobile)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
@@ -710,7 +710,7 @@
 	</item>
 	<item id="6084" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Mobile)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
@@ -719,7 +719,7 @@
 	</item>
 	<item id="6085" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Mobile)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -728,7 +728,7 @@
 	</item>
 	<item id="6086" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Mobile)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -737,7 +737,7 @@
 	</item>
 	<item id="6087" type="EtcItem" name="Trash - Trash">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
@@ -745,7 +745,7 @@
 	</item>
 	<item id="6088" type="EtcItem" name="Trash - Trash">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
@@ -753,7 +753,7 @@
 	</item>
 	<item id="6089" type="EtcItem" name="Trash - Trash">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
@@ -761,7 +761,7 @@
 	</item>
 	<item id="6090" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Stationary)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="80000" />
@@ -770,7 +770,7 @@
 	</item>
 	<item id="6091" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Stationary)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
@@ -779,7 +779,7 @@
 	</item>
 	<item id="6092" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Stationary)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
@@ -788,7 +788,7 @@
 	</item>
 	<item id="6093" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Stationary)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -797,7 +797,7 @@
 	</item>
 	<item id="6094" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Stationary)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -806,7 +806,7 @@
 	</item>
 	<item id="6095" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Mobile)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="80000" />
@@ -815,7 +815,7 @@
 	</item>
 	<item id="6096" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Mobile)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
@@ -824,7 +824,7 @@
 	</item>
 	<item id="6097" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Mobile)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
@@ -833,7 +833,7 @@
 	</item>
 	<item id="6098" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Mobile)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
@@ -842,7 +842,7 @@
 	</item>
 	<item id="6099" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Mobile)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
-		<set name="etcitem_type" val="castle_guard" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="250000" />
