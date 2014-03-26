@@ -174,7 +174,7 @@
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<add order="0x40" stat="accCombat" val="1">
 					<and>
-						<using kind="Sword" />
+						<using kind="SWORD" />
 						<using slot="lrhand" />
 					</and>
 				</add>
@@ -203,7 +203,7 @@
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08">
 					<and>
-						<using kind="Sword" />
+						<using kind="SWORD" />
 						<using slot="lrhand" />
 					</and>
 				</mul>
@@ -232,7 +232,7 @@
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<add order="0x40" stat="accCombat" val="1">
 					<and>
-						<using kind="Sword" />
+						<using kind="SWORD" />
 						<using slot="lrhand" />
 					</and>
 				</add>
@@ -260,7 +260,7 @@
 				<param id="315" />
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08">
-					<using kind="Dual Sword" />
+					<using kind="DUAL" />
 				</mul>
 			</effect>
 		</for>
@@ -288,7 +288,7 @@
 		<set name="targetType" val="AURA" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Sword,Blunt" />
+				<using kind="SWORD,BLUNT" />
 				<using slot="lrhand" />
 			</and>
 		</cond>
@@ -318,7 +318,7 @@
 		<set name="reuseDelay" val="11000" />
 		<set name="targetType" val="AURA" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Sword" />
+			<using kind="DUAL" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -349,7 +349,7 @@
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Sword,Blunt" />
+				<using kind="SWORD,BLUNT" />
 				<using slot="lrhand" />
 			</and>
 		</cond>
@@ -380,7 +380,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Sword" />
+			<using kind="DUAL" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -541,10 +541,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist" />
+					<using kind="SWORD,DAGGER,DUALDAGGER,POLE,RAPIER,ANCIENTSWORD,DUAL,DUALFIST" />
 				</mul>
 				<basemul order="0x30" stat="rCrit" val="0.2">
-					<using kind="Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist" />
+					<using kind="SWORD,DAGGER,DUALDAGGER,POLE,RAPIER,ANCIENTSWORD,DUAL,DUALFIST" />
 				</basemul>
 			</effect>
 		</for>
@@ -568,7 +568,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Blunt" />
+					<using kind="BLUNT" />
 				</mul>
 			</effect>
 			<effect name="AttackTrait">
@@ -595,10 +595,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 				<add order="0x40" stat="pAtkRange" val="100">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</add>
 			</effect>
 		</for>
@@ -622,7 +622,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.1">
-					<using kind="Heavy" />
+					<using kind="HEAVY" />
 				</mul>
 			</effect>
 		</for>
@@ -646,10 +646,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.05">
-					<using kind="Light" />
+					<using kind="LIGHT" />
 				</mul>
 				<add order="0x40" stat="rEvas" val="2">
-					<using kind="Light" />
+					<using kind="LIGHT" />
 				</add>
 			</effect>
 		</for>
@@ -673,10 +673,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.05">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</mul>
 				<add order="0x40" stat="regMp" val="2">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</add>
 			</effect>
 		</for>
@@ -1520,7 +1520,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.12">
-					<using kind="Bow" />
+					<using kind="BOW" />
 				</mul>
 			</effect>
 		</for>

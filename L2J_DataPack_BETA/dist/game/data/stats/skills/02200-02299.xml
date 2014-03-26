@@ -744,7 +744,7 @@
 		<set name="trait" val="SHOCK" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Bow" />
+				<using kind="BOW" />
 				<player insideZoneId="2234" />
 			</and>
 		</cond>
@@ -993,10 +993,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.25">
-					<using kind="Fist,Sword,Dagger,Dual Dagger,Dual Fist,Dual Sword,Blunt,Ancient,Rapier,Etc" />
+					<using kind="FIST,SWORD,DAGGER,DUALDAGGER,DUALFIST,DUAL,BLUNT,ANCIENTSWORD,RAPIER,ETC" />
 				</mul>
 				<mul order="0x30" stat="pAtk" val="1.15">
-					<using kind="Bow,Pole,Crossbow" />
+					<using kind="BOW,POLE,CROSSBOW" />
 				</mul>
 			</effect>
 		</for>

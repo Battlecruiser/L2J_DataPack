@@ -19,7 +19,7 @@
 	<item id="9101" type="Armor" name="Shadow Item: Majestic Robe">
 		<set name="icon" val="icon.armor_t85_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
@@ -505,7 +505,7 @@
 	<item id="9136" type="Weapon" name="Sword of Valakas (1-Handed)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -528,7 +528,7 @@
 	<item id="9137" type="Weapon" name="Sword of Valakas (2-Handed)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -567,7 +567,7 @@
 	<item id="9140" type="Weapon" name="Salvation Bow">
 		<set name="icon" val="icon.weapon_krono_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="500" />
@@ -591,7 +591,7 @@
 	<item id="9141" type="Weapon" name="Redemption Bow">
 		<set name="icon" val="icon.weapon_krono_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="500" />
@@ -655,7 +655,7 @@
 	<item id="9146" type="EtcItem" name="Scroll of Guidance (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -670,7 +670,7 @@
 	<item id="9147" type="EtcItem" name="Scroll of Death Whisper (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -685,7 +685,7 @@
 	<item id="9148" type="EtcItem" name="Scroll of Focus (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -700,7 +700,7 @@
 	<item id="9149" type="EtcItem" name="Scroll of Acumen (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -715,7 +715,7 @@
 	<item id="9150" type="EtcItem" name="Scroll of Haste (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -730,7 +730,7 @@
 	<item id="9151" type="EtcItem" name="Scroll of Agility (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -745,7 +745,7 @@
 	<item id="9152" type="EtcItem" name="Scroll of Empower (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -760,7 +760,7 @@
 	<item id="9153" type="EtcItem" name="Scroll of Might (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -775,7 +775,7 @@
 	<item id="9154" type="EtcItem" name="Scroll of Wind Walk (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -790,7 +790,7 @@
 	<item id="9155" type="EtcItem" name="Scroll of Shield (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -805,7 +805,7 @@
 	<item id="9156" type="EtcItem" name="Blessed Scroll of Escape - Event">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -816,7 +816,7 @@
 	<item id="9157" type="EtcItem" name="Blessed Scroll of Resurrection - Event">
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -858,7 +858,7 @@
 	<item id="9162" type="EtcItem" name="Red Philosopher's Stone Transmutation Circle">
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -869,7 +869,7 @@
 	<item id="9163" type="EtcItem" name="Blue Philosopher's Stone Transmutation Circle">
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -880,7 +880,7 @@
 	<item id="9164" type="EtcItem" name="Orange Philosopher's Stone Transmutation Circle">
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -891,7 +891,7 @@
 	<item id="9165" type="EtcItem" name="Black Philosopher's Stone Transmutation Circle">
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -902,7 +902,7 @@
 	<item id="9166" type="EtcItem" name="White Philosopher's Stone Transmutation Circle">
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -913,7 +913,7 @@
 	<item id="9167" type="EtcItem" name="Green Philosopher's Stone Transmutation Circle">
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -923,7 +923,7 @@
 	</item>
 	<item id="9168" type="EtcItem" name="Philosopher's Stone Ore">
 		<set name="icon" val="icon.etc_stone_piece_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -931,7 +931,7 @@
 	</item>
 	<item id="9169" type="EtcItem" name="Philosopher's Stone Conversion Formula">
 		<set name="icon" val="icon.etc_trans_form_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -939,7 +939,7 @@
 	</item>
 	<item id="9170" type="EtcItem" name="Magic Reagents">
 		<set name="icon" val="icon.etc_madicine_bottle_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />

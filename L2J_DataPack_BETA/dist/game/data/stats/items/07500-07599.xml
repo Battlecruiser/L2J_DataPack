@@ -681,7 +681,7 @@
 	<item id="7560" type="Weapon" name="Monster Only (Fishing Rod)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="fishingrod" />
+		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="80" />
@@ -853,7 +853,7 @@
 	<item id="7575" type="Weapon" name="Draconic Bow">
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -884,7 +884,7 @@
 	<item id="7576" type="Weapon" name="Draconic Bow - Cheap Shot">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -917,7 +917,7 @@
 	<item id="7577" type="Weapon" name="Draconic Bow - Focus">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -949,7 +949,7 @@
 	<item id="7578" type="Weapon" name="Draconic Bow - Critical Slow">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -982,7 +982,7 @@
 	</item>
 	<item id="7579" type="EtcItem" name="Draconic Bow Shaft">
 		<set name="icon" val="icon.etc_branch_gold_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -992,7 +992,7 @@
 	<item id="7580" type="EtcItem" name="Recipe: Draconic Bow (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -1004,7 +1004,7 @@
 	<item id="7581" type="EtcItem" name="Recipe: Draconic Bow (100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />

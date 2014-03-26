@@ -511,7 +511,7 @@
 		<enchant4 name="activateRate" val="#ench4ActivateRates" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
-			<using kind="Crossbow" />
+			<using kind="CROSSBOW" />
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" />
@@ -589,31 +589,31 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pAtk" val="#pAtkSBP">
-					<using kind="Sword,Blunt,Pole" />
+					<using kind="SWORD,BLUNT,POLE" />
 				</add>
 				<add order="0x40" stat="pAtk" val="#pAtkDual">
-					<using kind="Dual Sword,Dual Fist" />
+					<using kind="DUAL,DUALFIST" />
 				</add>
 				<add order="0x40" stat="pAtk" val="#pAtkDagger">
-					<using kind="Dagger,Dual Dagger" />
+					<using kind="DAGGER,DUALDAGGER" />
 				</add>
 				<add order="0x40" stat="pAtk" val="#pAtkBow">
-					<using kind="Bow" />
+					<using kind="BOW" />
 				</add>
 				<add order="0x40" stat="pAtk" val="#pAtkCBow">
-					<using kind="Crossbow" />
+					<using kind="CROSSBOW" />
 				</add>
 				<add order="0x40" stat="pAtk" val="#pAtkDSwordBlunt">
 					<and>
-						<using kind="Sword,Blunt" />
+						<using kind="SWORD,BLUNT" />
 						<using slot="lrhand" />
 					</and>
 				</add>
 				<add order="0x40" stat="pAtk" val="#pAtkRapier">
-					<using kind="Rapier" />
+					<using kind="RAPIER" />
 				</add>
 				<add order="0x40" stat="pAtk" val="#pAtkAncient">
-					<using kind="Ancient" />
+					<using kind="ANCIENTSWORD" />
 				</add>
 			</effect>
 		</for>
@@ -632,13 +632,13 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pDef" val="#pDefHeavy">
-					<using kind="Heavy" />
+					<using kind="HEAVY" />
 				</add>
 				<add order="0x40" stat="pDef" val="#pDefLight">
-					<using kind="Light" />
+					<using kind="LIGHT" />
 				</add>
 				<add order="0x40" stat="pDef" val="#pDefRobe">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</add>
 			</effect>
 		</for>
@@ -699,31 +699,31 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pAtk" val="22.9">
-					<using kind="Sword,Blunt,Pole" />
+					<using kind="SWORD,BLUNT,POLE" />
 				</add>
 				<add order="0x40" stat="pAtk" val="27.9">
-					<using kind="Dual Sword,Dual Fist" />
+					<using kind="DUAL,DUALFIST" />
 				</add>
 				<add order="0x40" stat="pAtk" val="20.1">
-					<using kind="Dagger,Dual Dagger" />
+					<using kind="DAGGER,DUALDAGGER" />
 				</add>
 				<add order="0x40" stat="pAtk" val="59.2">
-					<using kind="Bow" />
+					<using kind="BOW" />
 				</add>
 				<add order="0x40" stat="pAtk" val="36.3">
-					<using kind="Crossbow" />
+					<using kind="CROSSBOW" />
 				</add>
 				<add order="0x40" stat="pAtk" val="5">
 					<and>
-						<using kind="Sword" />
+						<using kind="SWORD" />
 						<using slot="lrhand" />
 					</and>
 				</add>
 				<add order="0x40" stat="pAtk" val="21.4">
-					<using kind="Rapier" />
+					<using kind="RAPIER" />
 				</add>
 				<add order="0x40" stat="pAtk" val="24.8">
-					<using kind="Ancient" />
+					<using kind="ANCIENTSWORD" />
 				</add>
 			</effect>
 		</for>
@@ -828,7 +828,7 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pAtkRange" val="100">
-					<using kind="Bow" />
+					<using kind="BOW" />
 				</add>
 			</effect>
 		</for>

@@ -1230,7 +1230,7 @@
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 				<mul order="0x30" stat="pAtk" val="1.08"> <!-- Archery P. Atk. +8% -->
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 				<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
 				<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->

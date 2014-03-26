@@ -493,7 +493,7 @@
 	<item id="15541" type="EtcItem" name="Red Soul Crystal - Stage 17">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
@@ -503,7 +503,7 @@
 	<item id="15542" type="EtcItem" name="Blue Soul Crystal - Stage 17">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
@@ -513,7 +513,7 @@
 	<item id="15543" type="EtcItem" name="Green Soul Crystal - Stage 17">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
@@ -523,7 +523,7 @@
 	<item id="15544" type="Weapon" name="Eternal Core Sword">
 		<set name="icon" val="icon.weapon_incessantcore_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -551,7 +551,7 @@
 	<item id="15545" type="Weapon" name="Mamba Edge">
 		<set name="icon" val="icon.weapon_mambaedge_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -579,7 +579,7 @@
 	<item id="15546" type="Weapon" name="Eversor Mace">
 		<set name="icon" val="icon.weapon_expowder_mace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -607,7 +607,7 @@
 	<item id="15547" type="Weapon" name="Contristo Hammer">
 		<set name="icon" val="icon.weapon_pereztear_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -635,7 +635,7 @@
 	<item id="15548" type="Weapon" name="Lava Saw">
 		<set name="icon" val="icon.weapon_lavamond_saw_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -663,7 +663,7 @@
 	<item id="15549" type="Weapon" name="Jade Claw">
 		<set name="icon" val="icon.weapon_jademice_claw_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -691,7 +691,7 @@
 	<item id="15550" type="Weapon" name="Demitelum">
 		<set name="icon" val="icon.weapon_ghostcleaner_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -720,7 +720,7 @@
 	<item id="15551" type="Weapon" name="Sacredium">
 		<set name="icon" val="icon.weapon_sacredumors_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -749,7 +749,7 @@
 	<item id="15552" type="Weapon" name="Cyclic Cane">
 		<set name="icon" val="icon.weapon_psyskilt_cane_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -778,7 +778,7 @@
 	<item id="15553" type="Weapon" name="Archangel Sword">
 		<set name="icon" val="icon.weapon_archangel_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -806,7 +806,7 @@
 	<item id="15554" type="Weapon" name="Recurve Thorne Bow">
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -837,7 +837,7 @@
 	<item id="15555" type="Weapon" name="Heavenstare Rapier">
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -871,7 +871,7 @@
 	<item id="15556" type="Weapon" name="Pyseal Blade">
 		<set name="icon" val="icon.weapon_pyseal_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -903,7 +903,7 @@
 	<item id="15557" type="Weapon" name="Thorne Crossbow">
 		<set name="icon" val="icon.weapon_thorne_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -936,7 +936,7 @@
 	<item id="15558" type="Weapon" name="Periel Sword">
 		<set name="icon" val="icon.weapon_periwing_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -964,7 +964,7 @@
 	<item id="15559" type="Weapon" name="Skull Edge">
 		<set name="icon" val="icon.weapon_skulledge_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -992,7 +992,7 @@
 	<item id="15560" type="Weapon" name="Vigwik Axe">
 		<set name="icon" val="icon.weapon_vigwik_axe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1020,7 +1020,7 @@
 	<item id="15561" type="Weapon" name="Devilish Maul">
 		<set name="icon" val="icon.weapon_evildeity_maul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1048,7 +1048,7 @@
 	<item id="15562" type="Weapon" name="Feather Eye Blade">
 		<set name="icon" val="icon.weapon_feathereye_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1076,7 +1076,7 @@
 	<item id="15563" type="Weapon" name="Octo Claw">
 		<set name="icon" val="icon.weapon_octoclaw_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1104,7 +1104,7 @@
 	<item id="15564" type="Weapon" name="Doubletop Spear">
 		<set name="icon" val="icon.weapon_doubletopa_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1133,7 +1133,7 @@
 	<item id="15565" type="Weapon" name="Rising Star">
 		<set name="icon" val="icon.weapon_cuticle_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1162,7 +1162,7 @@
 	<item id="15566" type="Weapon" name="Black Visage">
 		<set name="icon" val="icon.weapon_blackvisage_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1191,7 +1191,7 @@
 	<item id="15567" type="Weapon" name="Veniplant Sword">
 		<set name="icon" val="icon.weapon_veniplant_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1219,7 +1219,7 @@
 	<item id="15568" type="Weapon" name="Skull Carnium Bow">
 		<set name="icon" val="icon.weapon_skullgrove_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1250,7 +1250,7 @@
 	<item id="15569" type="Weapon" name="Gemtail Rapier">
 		<set name="icon" val="icon.weapon_gemtail_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1283,7 +1283,7 @@
 	<item id="15570" type="Weapon" name="Finale Blade">
 		<set name="icon" val="icon.weapon_findragon blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -1315,7 +1315,7 @@
 	<item id="15571" type="Weapon" name="Dominion Crossbow">
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1405,7 +1405,7 @@
 	<item id="15575" type="Armor" name="Elegia Breastplate">
 		<set name="icon" val="icon.armor_t97_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3214" />
@@ -1426,7 +1426,7 @@
 	<item id="15576" type="Armor" name="Elegia Leather Breastplate">
 		<set name="icon" val="icon.armor_t98_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2410" />
@@ -1444,7 +1444,7 @@
 	<item id="15577" type="Armor" name="Elegia Tunic">
 		<set name="icon" val="icon.armor_t99_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2410" />
@@ -1466,7 +1466,7 @@
 	<item id="15578" type="Armor" name="Elegia Gaiter">
 		<set name="icon" val="icon.armor_t97_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2009" />
@@ -1487,7 +1487,7 @@
 	<item id="15579" type="Armor" name="Elegia Leather Legging">
 		<set name="icon" val="icon.armor_t98_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1506" />
@@ -1505,7 +1505,7 @@
 	<item id="15580" type="Armor" name="Elegia Stockings">
 		<set name="icon" val="icon.armor_t99_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1506" />
@@ -1662,7 +1662,7 @@
 	<item id="15588" type="Armor" name="Elegia Sigil">
 		<set name="icon" val="icon.weapon_pricklelotus_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="sigil" />
+		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="844" />
@@ -1740,7 +1740,7 @@
 	<item id="15592" type="Armor" name="Vorpal Breastplate">
 		<set name="icon" val="icon.armor_t94_u_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2680" />
@@ -1761,7 +1761,7 @@
 	<item id="15593" type="Armor" name="Vorpal Leather Breastplate">
 		<set name="icon" val="icon.armor_t95_u_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2010" />
@@ -1779,7 +1779,7 @@
 	<item id="15594" type="Armor" name="Vorpal Tunic">
 		<set name="icon" val="icon.armor_t96_u_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2010" />
@@ -1801,7 +1801,7 @@
 	<item id="15595" type="Armor" name="Vorpal Gaiter">
 		<set name="icon" val="icon.armor_t94_l_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1675" />
@@ -1822,7 +1822,7 @@
 	<item id="15596" type="Armor" name="Vorpal Leather Legging">
 		<set name="icon" val="icon.armor_t95_l_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1256" />
@@ -1840,7 +1840,7 @@
 	<item id="15597" type="Armor" name="Vorpal Stockings">
 		<set name="icon" val="icon.armor_t96_l_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1256" />

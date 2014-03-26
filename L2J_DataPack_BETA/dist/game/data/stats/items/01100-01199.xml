@@ -3,7 +3,7 @@
 	<item id="1100" type="Armor" name="Cotton Tunic">
 		<set name="icon" val="icon.armor_t50_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -20,7 +20,7 @@
 	<item id="1101" type="Armor" name="Tunic of Devotion">
 		<set name="icon" val="icon.armor_t55_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -37,7 +37,7 @@
 	<item id="1102" type="Armor" name="Tunic of Magic">
 		<set name="icon" val="icon.armor_t58_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -54,7 +54,7 @@
 	<item id="1103" type="Armor" name="Cotton Stockings">
 		<set name="icon" val="icon.armor_t50_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -71,7 +71,7 @@
 	<item id="1104" type="Armor" name="Stockings of Devotion">
 		<set name="icon" val="icon.armor_t55_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -88,7 +88,7 @@
 	<item id="1105" type="Armor" name="Stockings of Magic">
 		<set name="icon" val="icon.armor_t58_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -538,7 +538,7 @@
 	<item id="1142" type="Weapon" name="Rusted Bronze Sword">
 		<set name="icon" val="icon.weapon_broad_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -593,7 +593,7 @@
 	<item id="1146" type="Armor" name="Squire's Shirt">
 		<set name="icon" val="icon.armor_t01_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -609,7 +609,7 @@
 	<item id="1147" type="Armor" name="Squire's Pants">
 		<set name="icon" val="icon.armor_t01_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -985,7 +985,7 @@
 	<item id="1181" type="Weapon" name="Neti's Bow">
 		<set name="icon" val="icon.weapon_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1011,7 +1011,7 @@
 	<item id="1182" type="Weapon" name="Neti's Dagger">
 		<set name="icon" val="icon.weapon_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />

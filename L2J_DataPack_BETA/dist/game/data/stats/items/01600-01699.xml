@@ -655,7 +655,7 @@
 	<item id="1660" type="Weapon" name="Cursed Maingauche">
 		<set name="icon" val="icon.weapon_maingauche_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -723,7 +723,7 @@
 	<item id="1666" type="EtcItem" name="Recipe: Wooden Arrow">
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="recipe" />
+		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -788,7 +788,7 @@
 	</item>
 	<item id="1674" type="EtcItem" name="Twig of Treant">
 		<set name="icon" val="icon.etc_branch_gold_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -797,7 +797,7 @@
 	</item>
 	<item id="1675" type="EtcItem" name="Beast Blood">
 		<set name="icon" val="icon.etc_reagent_red_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -806,7 +806,7 @@
 	</item>
 	<item id="1676" type="EtcItem" name="Beast Bone">
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -815,7 +815,7 @@
 	</item>
 	<item id="1677" type="EtcItem" name="Hot Oil">
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -824,7 +824,7 @@
 	</item>
 	<item id="1678" type="EtcItem" name="(Not In Use) Thread">
 		<set name="icon" val="icon.etc_skein_white_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -833,7 +833,7 @@
 	</item>
 	<item id="1679" type="EtcItem" name="Bronze">
 		<set name="icon" val="icon.etc_lump_gray_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -842,7 +842,7 @@
 	</item>
 	<item id="1680" type="EtcItem" name="Fur">
 		<set name="icon" val="icon.etc_leather_brown_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -851,7 +851,7 @@
 	</item>
 	<item id="1681" type="EtcItem" name="Elf Stone">
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -860,7 +860,7 @@
 	</item>
 	<item id="1682" type="EtcItem" name="Tear of Holy Spirit">
 		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -869,7 +869,7 @@
 	</item>
 	<item id="1683" type="EtcItem" name="Mithril">
 		<set name="icon" val="icon.etc_squares_silver_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -878,7 +878,7 @@
 	</item>
 	<item id="1684" type="EtcItem" name="Durable Stem">
 		<set name="icon" val="icon.etc_herb_green_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -887,7 +887,7 @@
 	</item>
 	<item id="1685" type="EtcItem" name="Wooden Frame">
 		<set name="icon" val="icon.etc_squares_wood_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -896,7 +896,7 @@
 	</item>
 	<item id="1686" type="EtcItem" name="Bark of Treant">
 		<set name="icon" val="icon.etc_branch_gold_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -905,7 +905,7 @@
 	</item>
 	<item id="1687" type="EtcItem" name="(Not In Use) Coarse Bone Powder">
 		<set name="icon" val="icon.etc_powder_white_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -914,7 +914,7 @@
 	</item>
 	<item id="1688" type="EtcItem" name="Refined Steel">
 		<set name="icon" val="icon.etc_plate_black_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -923,7 +923,7 @@
 	</item>
 	<item id="1689" type="EtcItem" name="(Not In Use) Leather">
 		<set name="icon" val="icon.etc_leather_brown_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -932,7 +932,7 @@
 	</item>
 	<item id="1690" type="EtcItem" name="Bowstring">
 		<set name="icon" val="icon.etc_skein_white_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -941,7 +941,7 @@
 	</item>
 	<item id="1691" type="EtcItem" name="Steel Frame">
 		<set name="icon" val="icon.etc_mold_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -950,7 +950,7 @@
 	</item>
 	<item id="1692" type="EtcItem" name="(Not In Use) Cord">
 		<set name="icon" val="icon.etc_skein_gray_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -959,7 +959,7 @@
 	</item>
 	<item id="1693" type="EtcItem" name="Refined Bronze">
 		<set name="icon" val="icon.etc_plate_blue_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -968,7 +968,7 @@
 	</item>
 	<item id="1694" type="EtcItem" name="Treant Potion">
 		<set name="icon" val="icon.etc_potion_green_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -977,7 +977,7 @@
 	</item>
 	<item id="1695" type="EtcItem" name="Spell Paper">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -986,7 +986,7 @@
 	</item>
 	<item id="1696" type="EtcItem" name="Flaming Oil">
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -995,7 +995,7 @@
 	</item>
 	<item id="1697" type="EtcItem" name="Magic Powder">
 		<set name="icon" val="icon.etc_powder_gray_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -1004,7 +1004,7 @@
 	</item>
 	<item id="1698" type="EtcItem" name="Refined Mithril">
 		<set name="icon" val="icon.etc_plate_white_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -1013,7 +1013,7 @@
 	</item>
 	<item id="1699" type="EtcItem" name="Reinforced Steel">
 		<set name="icon" val="icon.etc_squares_silver_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />

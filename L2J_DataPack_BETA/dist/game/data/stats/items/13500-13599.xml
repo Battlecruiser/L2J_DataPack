@@ -243,7 +243,7 @@
 	<item id="13524" type="Weapon" name="Gracian Soldier One-handed Sword">
 		<set name="icon" val="icon.weapon_mon_gracia_soldier_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -285,7 +285,7 @@
 	<item id="13526" type="Armor" name="Test Belt">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -310,7 +310,7 @@
 	<item id="13528" type="Weapon" name="Test Dual Daggers">
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -333,7 +333,7 @@
 	<item id="13529" type="Armor" name="Test Sigil">
 		<set name="icon" val="icon.shield_arcana_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="sigil" />
+		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -351,7 +351,7 @@
 	<item id="13530" type="Weapon" name="Flag of Gludio">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="flag" />
+		<set name="weapon_type" val="FLAG" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -374,7 +374,7 @@
 	<item id="13531" type="Weapon" name="Flag of Dion">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="flag" />
+		<set name="weapon_type" val="FLAG" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -397,7 +397,7 @@
 	<item id="13532" type="Weapon" name="Flag of Giran">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="flag" />
+		<set name="weapon_type" val="FLAG" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -420,7 +420,7 @@
 	<item id="13533" type="Weapon" name="Flag of Oren">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="flag" />
+		<set name="weapon_type" val="FLAG" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -443,7 +443,7 @@
 	<item id="13534" type="Weapon" name="Flag of Aden">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="flag" />
+		<set name="weapon_type" val="FLAG" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -466,7 +466,7 @@
 	<item id="13535" type="Weapon" name="Flag of Innadril">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="flag" />
+		<set name="weapon_type" val="FLAG" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -489,7 +489,7 @@
 	<item id="13536" type="Weapon" name="Goddard Flag">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="flag" />
+		<set name="weapon_type" val="FLAG" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -512,7 +512,7 @@
 	<item id="13537" type="Weapon" name="Flag of Rune">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="flag" />
+		<set name="weapon_type" val="FLAG" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -535,7 +535,7 @@
 	<item id="13538" type="Weapon" name="Flag of Schuttgart">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="flag" />
+		<set name="weapon_type" val="FLAG" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -558,7 +558,7 @@
 	<item id="13539" type="Weapon" name="Staff of Master Yogi">
 		<set name="icon" val="icon.yogi_stick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -584,7 +584,7 @@
 	<item id="13540" type="EtcItem" name="Master Yogi's Scroll: Enchant Weapon">
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scrl_enchant_wp" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -691,7 +691,7 @@
 	<item id="13548" type="EtcItem" name="Toy Knight Summon Whistle">
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -708,7 +708,7 @@
 	<item id="13549" type="EtcItem" name="Soul Monk Summon Whistle">
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -725,7 +725,7 @@
 	<item id="13550" type="EtcItem" name="Owl Monk Summon Whistle">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -742,7 +742,7 @@
 	<item id="13551" type="EtcItem" name="Turtle Ascetic Summon Whistle">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="pet_collar" />
+		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -795,7 +795,7 @@
 	<item id="13555" type="EtcItem" name="Combined Transformation Scroll">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -805,7 +805,7 @@
 	<item id="13556" type="Weapon" name="Airship Helm">
 		<set name="icon" val="icon.etc_gateleeper_stick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -823,7 +823,7 @@
 	<item id="13557" type="Weapon" name="Airship Cannon">
 		<set name="icon" val="icon.etc_gateleeper_stick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -841,7 +841,7 @@
 	<item id="13558" type="Weapon" name="Airship Cannon Briquet">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -871,7 +871,7 @@
 	<item id="13560" type="Weapon" name="Gludio Ward">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ownthing" />
+		<set name="weapon_type" val="OWNTHING" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -896,7 +896,7 @@
 	<item id="13561" type="Weapon" name="Dion Ward">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ownthing" />
+		<set name="weapon_type" val="OWNTHING" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -921,7 +921,7 @@
 	<item id="13562" type="Weapon" name="Giran Ward">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ownthing" />
+		<set name="weapon_type" val="OWNTHING" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -946,7 +946,7 @@
 	<item id="13563" type="Weapon" name="Oren Ward">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ownthing" />
+		<set name="weapon_type" val="OWNTHING" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -971,7 +971,7 @@
 	<item id="13564" type="Weapon" name="Aden Ward">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ownthing" />
+		<set name="weapon_type" val="OWNTHING" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -996,7 +996,7 @@
 	<item id="13565" type="Weapon" name="Innadril Ward">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ownthing" />
+		<set name="weapon_type" val="OWNTHING" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -1021,7 +1021,7 @@
 	<item id="13566" type="Weapon" name="Goddard Ward">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ownthing" />
+		<set name="weapon_type" val="OWNTHING" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -1046,7 +1046,7 @@
 	<item id="13567" type="Weapon" name="Rune Ward">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ownthing" />
+		<set name="weapon_type" val="OWNTHING" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -1071,7 +1071,7 @@
 	<item id="13568" type="Weapon" name="Schuttgart Ward">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ownthing" />
+		<set name="weapon_type" val="OWNTHING" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -1096,7 +1096,7 @@
 	<item id="13569" type="EtcItem" name="Transformation Scroll: Gludio Human Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1113,7 +1113,7 @@
 	<item id="13570" type="EtcItem" name="Transformation Scroll: Gludio Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1130,7 +1130,7 @@
 	<item id="13571" type="EtcItem" name="Transformation Scroll: Gludio Dark Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1147,7 +1147,7 @@
 	<item id="13572" type="EtcItem" name="Transformation Scroll: Gludio Orc Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1164,7 +1164,7 @@
 	<item id="13573" type="EtcItem" name="Transformation Scroll: Gludio Dwarf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1181,7 +1181,7 @@
 	<item id="13574" type="EtcItem" name="Transformation Scroll: Gludio Kamael Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1198,7 +1198,7 @@
 	<item id="13575" type="EtcItem" name="Transformation Scroll: Gludio Knight Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1215,7 +1215,7 @@
 	<item id="13576" type="EtcItem" name="Transformation Scroll: Gludio Archer Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1232,7 +1232,7 @@
 	<item id="13577" type="EtcItem" name="Transformation Scroll: Gludio Wizard Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1249,7 +1249,7 @@
 	<item id="13578" type="EtcItem" name="Transformation Scroll: Gludio Kamael Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1266,7 +1266,7 @@
 	<item id="13579" type="EtcItem" name="Transformation Scroll: Gludio Knight Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1283,7 +1283,7 @@
 	<item id="13580" type="EtcItem" name="Transformation Scroll: Gludio Commander Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1300,7 +1300,7 @@
 	<item id="13581" type="EtcItem" name="Transformation Scroll: Dion Human Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1317,7 +1317,7 @@
 	<item id="13582" type="EtcItem" name="Transformation Scroll: Dion Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1334,7 +1334,7 @@
 	<item id="13583" type="EtcItem" name="Transformation Scroll: Dion Dark Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1351,7 +1351,7 @@
 	<item id="13584" type="EtcItem" name="Transformation Scroll: Dion Orc Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1368,7 +1368,7 @@
 	<item id="13585" type="EtcItem" name="Transformation Scroll: Dion Dwarf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1385,7 +1385,7 @@
 	<item id="13586" type="EtcItem" name="Transformation Scroll: Dion Kamael Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1402,7 +1402,7 @@
 	<item id="13587" type="EtcItem" name="Transformation Scroll: Dion Knight Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1419,7 +1419,7 @@
 	<item id="13588" type="EtcItem" name="Transformation Scroll: Dion Archer Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1436,7 +1436,7 @@
 	<item id="13589" type="EtcItem" name="Transformation Scroll: Dion Wizard Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1453,7 +1453,7 @@
 	<item id="13590" type="EtcItem" name="Transformation Scroll: Dion Kamael Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1470,7 +1470,7 @@
 	<item id="13591" type="EtcItem" name="Transformation Scroll: Dion Knight Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1487,7 +1487,7 @@
 	<item id="13592" type="EtcItem" name="Transformation Scroll: Dion Commander Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1504,7 +1504,7 @@
 	<item id="13593" type="EtcItem" name="Transformation Scroll: Giran Human Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1521,7 +1521,7 @@
 	<item id="13594" type="EtcItem" name="Transformation Scroll: Giran Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1538,7 +1538,7 @@
 	<item id="13595" type="EtcItem" name="Transformation Scroll: Giran Dark Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1555,7 +1555,7 @@
 	<item id="13596" type="EtcItem" name="Transformation Scroll: Giran Orc Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1572,7 +1572,7 @@
 	<item id="13597" type="EtcItem" name="Transformation Scroll: Giran Dwarf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1589,7 +1589,7 @@
 	<item id="13598" type="EtcItem" name="Transformation Scroll: Giran Kamael Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -1606,7 +1606,7 @@
 	<item id="13599" type="EtcItem" name="Transformation Scroll: Giran Knight Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />

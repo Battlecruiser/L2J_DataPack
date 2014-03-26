@@ -3,7 +3,7 @@
 	<item id="1300" type="Weapon" name="Apprentice's Rod">
 		<set name="icon" val="icon.weapon_apprentices_rod_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -27,7 +27,7 @@
 	<item id="1301" type="Weapon" name="Big Hammer">
 		<set name="icon" val="icon.weapon_big_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -51,7 +51,7 @@
 	<item id="1302" type="Weapon" name="Bec de Corbin">
 		<set name="icon" val="icon.weapon_bech_de_corbin_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -76,7 +76,7 @@
 	<item id="1303" type="Weapon" name="Lance">
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -101,7 +101,7 @@
 	<item id="1304" type="Weapon" name="Conjuror's Staff">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -125,7 +125,7 @@
 	<item id="1305" type="Weapon" name="Knife">
 		<set name="icon" val="icon.weapon_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -149,7 +149,7 @@
 	<item id="1306" type="Weapon" name="Crafted Dagger">
 		<set name="icon" val="icon.weapon_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -173,7 +173,7 @@
 	<item id="1307" type="Weapon" name="Bow">
 		<set name="icon" val="icon.weapon_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="5000" />
@@ -199,7 +199,7 @@
 	<item id="1308" type="Armor" name="Compound Scale Mail">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -217,7 +217,7 @@
 	<item id="1309" type="Armor" name="Mithril Breastplate">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
@@ -235,7 +235,7 @@
 	<item id="1310" type="Armor" name="Tunic of Magic">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -254,7 +254,7 @@
 	<item id="1311" type="Armor" name="Puma Skin Shirt">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -269,7 +269,7 @@
 	<item id="1312" type="Armor" name="White Tunic">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -288,7 +288,7 @@
 	<item id="1313" type="Armor" name="Compound Scale Gaiters">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -306,7 +306,7 @@
 	<item id="1314" type="Armor" name="Mithril Gaiters">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
@@ -324,7 +324,7 @@
 	<item id="1315" type="Armor" name="Stockings of Magic">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -343,7 +343,7 @@
 	<item id="1316" type="Armor" name="Puma Skin Gaiters">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -358,7 +358,7 @@
 	<item id="1317" type="Armor" name="Dark Stockings">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -602,7 +602,7 @@
 	<item id="1333" type="Weapon" name="Brandish">
 		<set name="icon" val="icon.weapon_brandish_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -681,7 +681,7 @@
 	<item id="1341" type="EtcItem" name="Bone Arrow">
 		<set name="icon" val="icon.etc_bone_quiver_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="arrow" />
+		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -694,7 +694,7 @@
 	<item id="1342" type="EtcItem" name="Steel Arrow">
 		<set name="icon" val="icon.etc_fine_steel_quiver_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="arrow" />
+		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -707,7 +707,7 @@
 	<item id="1343" type="EtcItem" name="Silver Arrow">
 		<set name="icon" val="icon.etc_silver_quiver_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="arrow" />
+		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -720,7 +720,7 @@
 	<item id="1344" type="EtcItem" name="Mithril Arrow">
 		<set name="icon" val="icon.etc_mithril_quiver_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="arrow" />
+		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
@@ -733,7 +733,7 @@
 	<item id="1345" type="EtcItem" name="Shining Arrow">
 		<set name="icon" val="icon.etc_shining_quiver_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="arrow" />
+		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
@@ -1042,7 +1042,7 @@
 	<item id="1374" type="EtcItem" name="Greater Haste Potion">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="20" />
@@ -1060,7 +1060,7 @@
 	<item id="1375" type="EtcItem" name="Greater Swift Attack Potion">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="20" />
@@ -1078,7 +1078,7 @@
 	<item id="1376" type="Weapon" name="Guard Spear">
 		<set name="icon" val="icon.weapon_guard_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />

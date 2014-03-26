@@ -3,7 +3,7 @@
 	<item id="13800" type="EtcItem" name="Transformation Scroll: Frog">
 		<set name="icon" val="icon.etc_q_frog_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="elixir" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -15,7 +15,7 @@
 	<item id="13801" type="EtcItem" name="Transformation Scroll: Young Child">
 		<set name="icon" val="icon.weapon_apprentices_rod_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="elixir" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -45,7 +45,7 @@
 	<item id="13803" type="Armor" name="Native's Tunic">
 		<set name="icon" val="icon.armor_t34_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -63,7 +63,7 @@
 	<item id="13804" type="Armor" name="Native's Trousers">
 		<set name="icon" val="icon.armor_t34_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -99,7 +99,7 @@
 	<item id="13806" type="Armor" name="Guards of the Dawn Tunic">
 		<set name="icon" val="icon.armor_t08_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -117,7 +117,7 @@
 	<item id="13807" type="Armor" name="Guards of the Dawn Trousers">
 		<set name="icon" val="icon.armor_t08_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -135,7 +135,7 @@
 	<item id="13808" type="EtcItem" name="Elmoreden Holy Water">
 		<set name="icon" val="icon.etc_holy_water_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="elixir" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -147,7 +147,7 @@
 	<item id="13809" type="EtcItem" name="Court Magician's Magic Staff">
 		<set name="icon" val="icon.weapon_apprentices_rod_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="elixir" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -468,7 +468,7 @@
 	<item id="13842" type="Weapon" name="Tiat Two-Handed Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -492,7 +492,7 @@
 	<item id="13843" type="Weapon" name="Draconic Peltast Weapon">
 		<set name="icon" val="icon.weapon_doomed_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -522,7 +522,7 @@
 	<item id="13844" type="EtcItem" name="Star Stone Extraction Scroll">
 		<set name="icon" val="icon.scroll_of_verification_i06" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -536,7 +536,7 @@
 	<item id="13845" type="Weapon" name="Attribute Master Yin's Sword">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -632,7 +632,7 @@
 	<item id="13853" type="EtcItem" name="Destroyed Darkness Fragment Powder">
 		<set name="icon" val="icon.etc_powder_black_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -648,7 +648,7 @@
 	<item id="13855" type="EtcItem" name="Sacred Light Fragment">
 		<set name="icon" val="icon.etc_piece_holy_light" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -894,7 +894,7 @@
 	<item id="13879" type="EtcItem" name="Bait for Drakes">
 		<set name="icon" val="icon.drake_wing_lure_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -919,7 +919,7 @@
 	<item id="13881" type="Weapon" name="Attribute Master Yang's Sword">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -948,7 +948,7 @@
 	<item id="13882" type="Weapon" name="Dynasty Dual Daggers">
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualdagger" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -984,7 +984,7 @@
 	<item id="13883" type="Weapon" name="Icarus Dual Daggers">
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualdagger" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1020,7 +1020,7 @@
 	<item id="13884" type="Weapon" name="Vesper Dual Daggers">
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualdagger" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1056,7 +1056,7 @@
 	<item id="13885" type="Armor" name="Sealed Arcana Sigil">
 		<set name="icon" val="icon.arcana_sigil_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="sigil" />
+		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="161" />
@@ -1077,7 +1077,7 @@
 	<item id="13886" type="Armor" name="Sealed Dynasty Sigil">
 		<set name="icon" val="icon.armor_dynasty_sigil_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="sigil" />
+		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="307" />
@@ -1098,7 +1098,7 @@
 	<item id="13887" type="Armor" name="Sealed Vesper Sigil">
 		<set name="icon" val="icon.armor_verper_sigil_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="sigil" />
+		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="588" />
@@ -1226,7 +1226,7 @@
 	<item id="13894" type="Armor" name="Cloth Belt">
 		<set name="icon" val="icon.armor_belt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="18" />
@@ -1243,7 +1243,7 @@
 	<item id="13895" type="Armor" name="Leather Belt">
 		<set name="icon" val="icon.armor_belt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="22" />
@@ -1260,7 +1260,7 @@
 	<item id="13896" type="Armor" name="Iron Belt">
 		<set name="icon" val="icon.armor_belt_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="30" />
@@ -1277,7 +1277,7 @@
 	<item id="13897" type="Armor" name="Mithril Belt">
 		<set name="icon" val="icon.armor_belt_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="92" />

@@ -243,7 +243,7 @@
 	<item id="20214" type="EtcItem" name="Chocolate Cookie">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -866,7 +866,7 @@
 	<item id="20255" type="Weapon" name="Baguette Sword - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_sword_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -893,7 +893,7 @@
 	<item id="20256" type="Weapon" name="Baguette Dagger - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_dagger_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -921,7 +921,7 @@
 	<item id="20257" type="Weapon" name="Baguette Dual Sword - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_2h_sword_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -948,7 +948,7 @@
 	<item id="20258" type="Weapon" name="Baguette Mace - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_blunt_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -976,7 +976,7 @@
 	<item id="20259" type="Weapon" name="Baguette Heavy Hammer - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_2h_blunt_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1004,7 +1004,7 @@
 	<item id="20260" type="Weapon" name="Baguette Spear - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_pole_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1032,7 +1032,7 @@
 	<item id="20261" type="Weapon" name="Baguette Bow - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_bow_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1062,7 +1062,7 @@
 	<item id="20262" type="Weapon" name="Baguette Fist - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_dualfist_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1090,7 +1090,7 @@
 	<item id="20263" type="Weapon" name="Baguette Magic Sword - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_mage_sword_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1117,7 +1117,7 @@
 	<item id="20264" type="Weapon" name="Baguette Staff - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_1h_mage_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1145,7 +1145,7 @@
 	<item id="20265" type="Weapon" name="Baguette Great Staff - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_2h_mage_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1197,7 +1197,7 @@
 	<item id="20267" type="Weapon" name="Baguette Rapier - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_rapier_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1229,7 +1229,7 @@
 	<item id="20268" type="Weapon" name="Baguette Ancient Sword - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_ancientsword_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -1260,7 +1260,7 @@
 	<item id="20269" type="Weapon" name="Baguette Crossbow - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_crossbow_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1292,7 +1292,7 @@
 	<item id="20270" type="Weapon" name="Baguette's Dualsword - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_dual_bread_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />

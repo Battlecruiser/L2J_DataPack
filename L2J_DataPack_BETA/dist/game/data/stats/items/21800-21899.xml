@@ -4,7 +4,7 @@
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -21,7 +21,7 @@
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t92_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -94,7 +94,7 @@
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -115,7 +115,7 @@
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t93_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -319,7 +319,7 @@
 		<!-- Description: Increases Magic Casting Spd. by 15%, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="crystal_type" val="S" />
@@ -343,7 +343,7 @@
 		<!-- Description: During Critical, increases P. Atk. by 265, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="crystal_type" val="S" />
@@ -367,7 +367,7 @@
 		<!-- Description: Increases Critical by 88, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="crystal_type" val="S" />
@@ -391,7 +391,7 @@
 		<!-- Description: Increases Maximum HP by 25%, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="crystal_type" val="S" />
@@ -415,7 +415,7 @@
 		<!-- Description: Increases Critical by 84, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="crystal_type" val="S" />
@@ -438,7 +438,7 @@
 		<!-- Description: Increases Critical by 84, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="crystal_type" val="S" />
@@ -461,7 +461,7 @@
 		<!-- Description: Increases Critical by 80, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="crystal_type" val="S" />
@@ -485,7 +485,7 @@
 		<!-- Description: Increases Max HP +15%, Max MP +20%, and Max CP +30%. Increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="crystal_type" val="S" />
@@ -508,7 +508,7 @@
 		<!-- Description: Increases Atk. Spd. by about 7%, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="crystal_type" val="S" />
@@ -532,7 +532,7 @@
 		<!-- Description: Kamael exclusive weapon. Increases Critical by 84, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="crystal_type" val="S" />
@@ -559,7 +559,7 @@
 		<!-- Description: Kamael exclusive weapon. Increases Critical by 84. Increases damage inflicted during PvP. During Critical, party members including yourself will receive increased attack power, magic power, and healing capacity by a fixed rate. But decreased MP consumption per skill during a critical attack. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="crystal_type" val="S" />
@@ -583,7 +583,7 @@
 		<!-- Description: Kamael exclusive weapon. Increases Critical by 88, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="crystal_type" val="S" />
@@ -607,7 +607,7 @@
 		<!-- Description: Increases Magic Casting Spd. by 15%, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="crystal_type" val="S" />
@@ -630,7 +630,7 @@
 		<!-- Description: Increases Critical by 116, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="crystal_type" val="S" />
@@ -654,7 +654,7 @@
 		<!-- Description: Increases Critical by 116, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="crystal_type" val="S" />
@@ -678,7 +678,7 @@
 		<!-- Description: Increases Maximum HP by 25%, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="crystal_type" val="S" />
@@ -702,7 +702,7 @@
 		<!-- Description: Increases Critical by 111, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="crystal_type" val="S" />
@@ -725,7 +725,7 @@
 		<!-- Description: Increases Critical by 111, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="crystal_type" val="S" />
@@ -748,7 +748,7 @@
 		<!-- Description: Increases Critical by 106, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="crystal_type" val="S" />
@@ -772,7 +772,7 @@
 		<!-- Description: Increases Critical by 109, Maximum HP by 10%, and damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dual" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="crystal_type" val="S" />
@@ -795,7 +795,7 @@
 		<!-- Description: During Critical, increases stun effect with 48% rate and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="crystal_type" val="S" />
@@ -819,7 +819,7 @@
 		<!-- Description: Kamael exclusive weapon. Increases Critical by 111, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="crystal_type" val="S" />
@@ -846,7 +846,7 @@
 		<!-- Description: Kamael exclusive weapon. Increases Critical by 111. Increases damage inflicted during PvP. During Critical, party members including yourself will receive increased attack power, magic power, and healing capacity by a fixed rate. But decreased MP consumption per skill during a critical attack. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="crystal_type" val="S" />
@@ -870,7 +870,7 @@
 		<!-- Description: Kamael exclusive weapon. Increases Critical by 116, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="crystal_type" val="S" />
@@ -1479,7 +1479,7 @@
 		<!-- Description: Summons a totem that increases HP recovery speed by 30% and decreases damage from the topography by 80%. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_body" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="potion" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />

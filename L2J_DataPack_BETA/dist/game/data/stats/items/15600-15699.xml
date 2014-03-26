@@ -101,7 +101,7 @@
 	<item id="15605" type="Armor" name="Vorpal Sigil">
 		<set name="icon" val="icon.belleface_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="sigil" />
+		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="704" />
@@ -179,7 +179,7 @@
 	<item id="15609" type="Armor" name="Moirai Breastplate">
 		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
@@ -200,7 +200,7 @@
 	<item id="15610" type="Armor" name="Moirai Leather Breastplate">
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
@@ -218,7 +218,7 @@
 	<item id="15611" type="Armor" name="Moirai Tunic">
 		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
@@ -240,7 +240,7 @@
 	<item id="15612" type="Armor" name="Moirai Gaiter">
 		<set name="icon" val="icon.armor_t100_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1010" />
@@ -261,7 +261,7 @@
 	<item id="15613" type="Armor" name="Moirai Leather Legging">
 		<set name="icon" val="icon.armor_t101_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="758" />
@@ -279,7 +279,7 @@
 	<item id="15614" type="Armor" name="Moirai Stockings">
 		<set name="icon" val="icon.armor_t102_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="758" />
@@ -436,7 +436,7 @@
 	<item id="15622" type="Armor" name="Moirai Sigil">
 		<set name="icon" val="icon.weapon_tysandy_sigil_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="sigil" />
+		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="424" />
@@ -577,7 +577,7 @@
 	</item>
 	<item id="15634" type="EtcItem" name="Vesper Cutter Piece">
 		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -586,7 +586,7 @@
 	</item>
 	<item id="15635" type="EtcItem" name="Vesper Slasher Piece">
 		<set name="icon" val="icon.etc_vesper_slasher_piece_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -595,7 +595,7 @@
 	</item>
 	<item id="15636" type="EtcItem" name="Vesper Buster Piece">
 		<set name="icon" val="icon.etc_vesper_burster_piece_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -604,7 +604,7 @@
 	</item>
 	<item id="15637" type="EtcItem" name="Vesper Shaper Piece">
 		<set name="icon" val="icon.etc_vesper_shaper_piece_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -613,7 +613,7 @@
 	</item>
 	<item id="15638" type="EtcItem" name="Vesper Fighter Piece">
 		<set name="icon" val="icon.etc_vesper_fighter_piece_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -622,7 +622,7 @@
 	</item>
 	<item id="15639" type="EtcItem" name="Vesper Stormer Piece">
 		<set name="icon" val="icon.etc_vesper_stormer_piece_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -631,7 +631,7 @@
 	</item>
 	<item id="15640" type="EtcItem" name="Vesper Avenger Piece">
 		<set name="icon" val="icon.etc_vesper_avenger_piece_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -640,7 +640,7 @@
 	</item>
 	<item id="15641" type="EtcItem" name="Vesper Retributer Piece">
 		<set name="icon" val="icon.etc_vesper_retributer_piece_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -649,7 +649,7 @@
 	</item>
 	<item id="15642" type="EtcItem" name="Vesper Caster Piece">
 		<set name="icon" val="icon.etc_vesper_caster_piece_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -658,7 +658,7 @@
 	</item>
 	<item id="15643" type="EtcItem" name="Vesper Singer Piece">
 		<set name="icon" val="icon.etc_vesper_singer_piece_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -667,7 +667,7 @@
 	</item>
 	<item id="15644" type="EtcItem" name="Vesper Thrower Piece">
 		<set name="icon" val="icon.etc_vesper_thrower_piece_i00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -676,7 +676,7 @@
 	</item>
 	<item id="15645" type="EtcItem" name="Sealed Moirai Helmet Piece">
 		<set name="icon" val="icon.etc_sealed_blluelycan_helmet_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -685,7 +685,7 @@
 	</item>
 	<item id="15646" type="EtcItem" name="Sealed Moirai Leather Helmet Piece">
 		<set name="icon" val="icon.etc_sealed_blluelycan_leather_helmet_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -694,7 +694,7 @@
 	</item>
 	<item id="15647" type="EtcItem" name="Sealed Moirai Circlet Piece">
 		<set name="icon" val="icon.etc_sealed_blluelycan_circlet_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -703,7 +703,7 @@
 	</item>
 	<item id="15648" type="EtcItem" name="Sealed Moirai Breastplate Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_cuirass_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -712,7 +712,7 @@
 	</item>
 	<item id="15649" type="EtcItem" name="Sealed Moirai Leather Breastplate Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_houberk_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -721,7 +721,7 @@
 	</item>
 	<item id="15650" type="EtcItem" name="Sealed Moirai Tunic Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_jaket_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -730,7 +730,7 @@
 	</item>
 	<item id="15651" type="EtcItem" name="Sealed Moirai Gaiter Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_gaiter_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -739,7 +739,7 @@
 	</item>
 	<item id="15652" type="EtcItem" name="Sealed Moirai Leather Legging Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_leather_legging_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -748,7 +748,7 @@
 	</item>
 	<item id="15653" type="EtcItem" name="Sealed Moirai Stockings Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_hose_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -757,7 +757,7 @@
 	</item>
 	<item id="15654" type="EtcItem" name="Sealed Moirai Gauntlet Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_gauntlet_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -766,7 +766,7 @@
 	</item>
 	<item id="15655" type="EtcItem" name="Sealed Moirai Leather Gloves Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_leather_gloves_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -775,7 +775,7 @@
 	</item>
 	<item id="15656" type="EtcItem" name="Sealed Moirai Gloves Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_gloves_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -784,7 +784,7 @@
 	</item>
 	<item id="15657" type="EtcItem" name="Sealed Moirai Boots Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_boots_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -793,7 +793,7 @@
 	</item>
 	<item id="15658" type="EtcItem" name="Sealed Moirai Leather Boots Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_leather_boots_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -802,7 +802,7 @@
 	</item>
 	<item id="15659" type="EtcItem" name="Sealed Moirai Shoes Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_shoes_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -811,7 +811,7 @@
 	</item>
 	<item id="15660" type="EtcItem" name="Sealed Vesper Helmet Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_helmet_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -820,7 +820,7 @@
 	</item>
 	<item id="15661" type="EtcItem" name="Sealed Vesper Leather Helmet Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_leather_helmet_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -829,7 +829,7 @@
 	</item>
 	<item id="15662" type="EtcItem" name="Sealed Vesper Circlet Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_circlet_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -838,7 +838,7 @@
 	</item>
 	<item id="15663" type="EtcItem" name="Sealed Vesper Breastplate Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_cuirass_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -847,7 +847,7 @@
 	</item>
 	<item id="15664" type="EtcItem" name="Sealed Vesper Leather Breastplate Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_houberk_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -856,7 +856,7 @@
 	</item>
 	<item id="15665" type="EtcItem" name="Sealed Vesper Tunic Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_jaket_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -865,7 +865,7 @@
 	</item>
 	<item id="15666" type="EtcItem" name="Sealed Vesper Gaiter Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_gaiter_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -874,7 +874,7 @@
 	</item>
 	<item id="15667" type="EtcItem" name="Sealed Vesper Gauntlet Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_gauntlet_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -883,7 +883,7 @@
 	</item>
 	<item id="15668" type="EtcItem" name="Sealed Vesper Boots Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_boots_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -892,7 +892,7 @@
 	</item>
 	<item id="15669" type="EtcItem" name="Sealed Vesper Verteidiger Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_verteidiger_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -901,7 +901,7 @@
 	</item>
 	<item id="15670" type="EtcItem" name="Sealed Vesper Leather Legging Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_leather_legging_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -910,7 +910,7 @@
 	</item>
 	<item id="15671" type="EtcItem" name="Sealed Vesper Leather Gloves Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_leather_gloves_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -919,7 +919,7 @@
 	</item>
 	<item id="15672" type="EtcItem" name="Sealed Vesper Leather Boots Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_leather_boots_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -928,7 +928,7 @@
 	</item>
 	<item id="15673" type="EtcItem" name="Sealed Vesper Stockings Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_hose_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -937,7 +937,7 @@
 	</item>
 	<item id="15674" type="EtcItem" name="Sealed Vesper Gloves Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_gloves_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -946,7 +946,7 @@
 	</item>
 	<item id="15675" type="EtcItem" name="Sealed Vesper Shoes Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_shoes_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -956,7 +956,7 @@
 	<item id="15676" type="Weapon" name="Triumph Blade">
 		<set name="icon" val="icon.weapon_tysandy_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -983,7 +983,7 @@
 	<item id="15677" type="Weapon" name="Triumph Dagger">
 		<set name="icon" val="icon.weapon_tysandy_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dagger" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1010,7 +1010,7 @@
 	<item id="15678" type="Weapon" name="Triumph Hammer">
 		<set name="icon" val="icon.weapon_tysandy_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1037,7 +1037,7 @@
 	<item id="15679" type="Weapon" name="Triumph Crusher">
 		<set name="icon" val="icon.weapon_tysandy_crusher_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1064,7 +1064,7 @@
 	<item id="15680" type="Weapon" name="Triumph Two Hand Sword">
 		<set name="icon" val="icon.weapon_tysandy_two_hand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1091,7 +1091,7 @@
 	<item id="15681" type="Weapon" name="Triumph Jamadhr">
 		<set name="icon" val="icon.weapon_tysandy_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
@@ -1118,7 +1118,7 @@
 	<item id="15682" type="Weapon" name="Triumph Spear">
 		<set name="icon" val="icon.weapon_tysandy_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -1146,7 +1146,7 @@
 	<item id="15683" type="Weapon" name="Triumph Staff">
 		<set name="icon" val="icon.weapon_tysandy_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1173,7 +1173,7 @@
 	<item id="15684" type="Weapon" name="Triumph Two Hand Staff">
 		<set name="icon" val="icon.weapon_tysandy_twohand_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="blunt" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
@@ -1200,7 +1200,7 @@
 	<item id="15685" type="Weapon" name="Triumph Magic Sword">
 		<set name="icon" val="icon.weapon_tysandy_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -1226,7 +1226,7 @@
 	<item id="15686" type="Weapon" name="Triumph Bow">
 		<set name="icon" val="icon.weapon_tysandy_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="bow" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -1256,7 +1256,7 @@
 	<item id="15687" type="Weapon" name="Triumph Rapier">
 		<set name="icon" val="icon.weapon_tysandy_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="rapier" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
@@ -1291,7 +1291,7 @@
 	<item id="15688" type="Weapon" name="Triumph Ancientsword">
 		<set name="icon" val="icon.weapon_tysandy_ancient_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
@@ -1322,7 +1322,7 @@
 	<item id="15689" type="Weapon" name="Triumph Crossbow">
 		<set name="icon" val="icon.seapon_tysandy_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
@@ -1362,7 +1362,7 @@
 	</item>
 	<item id="15691" type="EtcItem" name="Sealed Vesper Sigil Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_sigil_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -1371,7 +1371,7 @@
 	</item>
 	<item id="15692" type="EtcItem" name="Sealed Moirai Sigil Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_sigil_piece_I00" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -1380,7 +1380,7 @@
 	</item>
 	<item id="15693" type="EtcItem" name="Sealed Moirai Shield Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_shield_piece_I01" />
-		<set name="etcitem_type" val="material" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -1447,7 +1447,7 @@
 	<item id="15697" type="Armor" name="Sealed Moirai Breastplate">
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="heavy" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
@@ -1468,7 +1468,7 @@
 	<item id="15698" type="Armor" name="Sealed Moirai Leather Breastplate">
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="light" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
@@ -1486,7 +1486,7 @@
 	<item id="15699" type="Armor" name="Sealed Moirai Tunic">
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="magic" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />

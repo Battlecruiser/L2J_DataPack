@@ -392,7 +392,7 @@
 		<set name="reuseDelay" val="240000" />
 		<set name="targetType" val="PARTY" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Sword" />
+			<using kind="DUAL" />
 		</cond>
 		<for>
 			<effect name="Buff">
@@ -424,7 +424,7 @@
 		<set name="reuseDelay" val="45000" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<using kind="Shield" />
+			<using kind="SHIELD" />
 		</cond>
 		<for>
 			<effect name="Buff">
@@ -464,7 +464,7 @@
 		<set name="reuseDelay" val="75000" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Fist" />
+			<using kind="DUALFIST" />
 		</cond>
 		<cond msgId="324">
 			<not>
@@ -487,7 +487,7 @@
 		<set name="reuseDelay" val="75000" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Sword" />
+			<using kind="DUAL" />
 		</cond>
 		<cond msgId="324">
 			<not>
@@ -520,7 +520,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Pole" />
+			<using kind="POLE" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -545,7 +545,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Pole" />
+			<using kind="POLE" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -573,7 +573,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="923" levels="1" name="Dual Dagger Mastery">
+	<skill id="923" levels="1" name="DUALDAGGER Mastery">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0923" />
 		<set name="magicLvl" val="81" />
@@ -582,7 +582,7 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pAtk" val="87.5">
-					<using kind="Dual Dagger" />
+					<using kind="DUALDAGGER" />
 				</add>
 				<mul order="0x30" stat="blowRate" val="1.05" />
 			</effect>
@@ -604,7 +604,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Bow" />
+			<using kind="BOW" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -619,10 +619,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="1.05">
-					<using kind="Sigil" />
+					<using kind="SIGIL" />
 				</mul>
 				<mul order="0x30" stat="regMp" val="1.17">
-					<using kind="Sigil" />
+					<using kind="SIGIL" />
 				</mul>
 			</effect>
 		</for>
@@ -636,10 +636,10 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="healEffect" val="30">
-					<using kind="Sigil" />
+					<using kind="SIGIL" />
 				</add>
 				<mul order="0x30" stat="regMp" val="1.17">
-					<using kind="Sigil" />
+					<using kind="SIGIL" />
 				</mul>
 			</effect>
 		</for>
@@ -680,7 +680,7 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<cond msgId="113" addName="1">
-			<using kind="Sword,Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
+			<using kind="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -708,7 +708,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DEATH" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Dagger" />
+			<using kind="DUALDAGGER" />
 		</cond>
 		<for>
 			<effect name="FatalBlow" />
@@ -847,10 +847,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="maxMp" val="1.05">
-					<using kind="Sigil" />
+					<using kind="SIGIL" />
 				</mul>
 				<mul order="0x30" stat="regMp" val="1.17">
-					<using kind="Sigil" />
+					<using kind="SIGIL" />
 				</mul>
 			</effect>
 		</for>
@@ -863,10 +863,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="maxMp" val="1.05">
-					<using kind="Sigil" />
+					<using kind="SIGIL" />
 				</mul>
 				<mul order="0x30" stat="regMp" val="1.17">
-					<using kind="Sigil" />
+					<using kind="SIGIL" />
 				</mul>
 			</effect>
 		</for>
@@ -914,7 +914,7 @@
 				<add order="0x40" stat="mDef" val="#mDef" />
 				<add order="0x40" stat="pAtk" val="#pAtk" />
 				<add order="0x40" stat="pAtkRange" val="200">
-					<using kind="Bow" />
+					<using kind="BOW" />
 				</add>
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<add order="0x40" stat="darkRes" val="50" />
@@ -1065,7 +1065,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="AREA" />
 		<cond msgId="113" addName="1">
-			<using kind="Sword,Blunt" />
+			<using kind="SWORD,BLUNT" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1119,7 +1119,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="SHOCK" />
 		<cond msgId="113" addName="1">
-			<using kind="Blunt" />
+			<using kind="BLUNT" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1191,7 +1191,7 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pAtk" val="#pAtk">
-					<using kind="Sword,Blunt" />
+					<using kind="SWORD,BLUNT" />
 				</add>
 			</effect>
 			<mul order="0x30" stat="rShld" val="#rShld" />
@@ -1292,13 +1292,13 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="accCombat" val="#accCombat">
-					<using kind="Sword,Blunt,Dual Sword" />
+					<using kind="SWORD,BLUNT,DUAL" />
 				</add>
 				<add order="0x40" stat="rCrit" val="#rCrit">
-					<using kind="Sword,Blunt,Dual Sword" />
+					<using kind="SWORD,BLUNT,DUAL" />
 				</add>
 				<mul order="0x30" stat="cAtk" val="#cAtk">
-					<using kind="Sword,Blunt,Dual Sword" />
+					<using kind="SWORD,BLUNT,DUAL" />
 				</mul>
 			</effect>
 		</for>
@@ -1328,7 +1328,7 @@
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="Sword,Blunt" />
+				<using kind="SWORD,BLUNT" />
 				<using slot="lrhand" />
 			</and>
 		</cond>
@@ -1360,7 +1360,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Sword" />
+			<using kind="DUAL" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1605,16 +1605,16 @@
 		<for>
 			<effect name="ImmobileBuff">
 				<add order="0x40" stat="pAtk" val="199">
-					<using kind="Bow" />
+					<using kind="BOW" />
 				</add>
 				<add order="0x40" stat="accCombat" val="6">
-					<using kind="Bow" />
+					<using kind="BOW" />
 				</add>
 				<basemul order="0x30" stat="rCrit" val="0.2">
-					<using kind="Bow" />
+					<using kind="BOW" />
 				</basemul>
 				<add order="0x40" stat="pAtkRange" val="200">
-					<using kind="Bow" />
+					<using kind="BOW" />
 				</add>
 			</effect>
 		</for>
@@ -1955,7 +1955,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Shield" />
+			<using kind="SHIELD" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -2004,7 +2004,7 @@
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<not>
-				<using kind="Fist,Dual Fist,Bow,Crossbow" />
+				<using kind="FIST,DUALFIST,BOW,CROSSBOW" />
 			</not>
 		</cond>
 		<for>
@@ -2029,7 +2029,7 @@
 		<set name="reuseDelay" val="12000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
-			<using kind="Bow,Crossbow" />
+			<using kind="BOW,CROSSBOW" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -2095,7 +2095,7 @@
 		<set name="reuseDelay" val="12000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Bow,Crossbow" />
+			<using kind="BOW,CROSSBOW" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -2121,7 +2121,7 @@
 		<set name="reuseDelay" val="45000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Dagger,Dual Dagger" />
+			<using kind="DAGGER,DUALDAGGER" />
 		</cond>
 		<for>
 			<effect name="Debuff">
@@ -2144,15 +2144,15 @@
 		<set name="triggeredLevel" val="#triggeredLevel" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<!-- TODO: Remove when support for effects using conditions is done -->
 		<cond>
-			<using kind="Dual Sword,Sword,Blunt" />
+			<using kind="DUAL,SWORD,BLUNT" />
 		</cond>
 		<!-- TODO: Require support for effects using conditions -->
 		<!-- <for> -->
 		<!-- <effect name="ChanceSkillTrigger" activationChance="15" chanceType="ON_HIT" triggeredId="6813" triggeredLevel="#triggeredLevel"> -->
-		<!-- <using kind="Dual Sword,Sword,Blunt" /> -->
+		<!-- <using kind="DUAL,SWORD,BLUNT" /> -->
 		<!-- </effect> -->
 		<!-- <effect name="ChanceSkillTrigger" activationChance="30" chanceType="ON_CRIT" triggeredId="6813" triggeredLevel="#triggeredLevel"> -->
-		<!-- <using kind="Dual Sword,Sword,Blunt" /> -->
+		<!-- <using kind="DUAL,SWORD,BLUNT" /> -->
 		<!-- </effect> -->
 		<!-- </for> -->
 	</skill>
@@ -2170,15 +2170,15 @@
 		<set name="triggeredLevel" val="#triggeredLevel" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<!-- TODO: Remove when support for effects using conditions is done -->
 		<cond>
-			<using kind="Dual Fist" />
+			<using kind="DUALFIST" />
 		</cond>
 		<!-- TODO: Require support for effects using conditions -->
 		<!-- <for> -->
 		<!-- <effect name="ChanceSkillTrigger" activationChance="15" chanceType="ON_HIT" triggeredId="6814" triggeredLevel="#triggeredLevel"> -->
-		<!-- <using kind="Dual Fist" /> -->
+		<!-- <using kind="DUALFIST" /> -->
 		<!-- </effect> -->
 		<!-- <effect name="ChanceSkillTrigger" activationChance="30" chanceType="ON_CRIT" triggeredId="6814" triggeredLevel="#triggeredLevel"> -->
-		<!-- <using kind="Dual Fist" /> -->
+		<!-- <using kind="DUALFIST" /> -->
 		<!-- </effect> -->
 		<!-- </for> -->
 	</skill>
@@ -2201,7 +2201,7 @@
 			<and>
 				<target mindistance="200" />
 				<not>
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</not>
 			</and>
 		</cond>
@@ -2240,7 +2240,7 @@
 			<and>
 				<target mindistance="200" />
 				<not>
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</not>
 			</and>
 		</cond>
@@ -2292,7 +2292,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Sword,Blunt" />
+			<using kind="SWORD,BLUNT" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -2320,7 +2320,7 @@
 			<and>
 				<target mindistance="200" />
 				<not>
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</not>
 			</and>
 		</cond>

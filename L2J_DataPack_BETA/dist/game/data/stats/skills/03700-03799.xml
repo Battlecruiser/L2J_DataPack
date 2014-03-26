@@ -850,7 +850,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.0083">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 				<add order="0x40" stat="maxMp" val="40" />
 				<add order="0x40" stat="weightPenalty" val="960" />
@@ -871,7 +871,7 @@
 				<add order="0x40" stat="weightPenalty" val="8159" />
 				<add order="0x40" stat="maxMp" val="340" />
 				<mul order="0x30" stat="pAtk" val="1.0932">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 			</effect>
 			<effect name="DefenceTrait">
@@ -888,7 +888,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.0083">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 				<add order="0x40" stat="maxMp" val="40" />
 				<add order="0x40" stat="weightPenalty" val="960" />
@@ -907,7 +907,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.0125">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 				<add order="0x40" stat="maxMp" val="60" />
 				<add order="0x40" stat="weightPenalty" val="1440" />

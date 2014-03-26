@@ -3,7 +3,7 @@
 	<item id="5800" type="Weapon" name="Nephilim Lord">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -29,7 +29,7 @@
 	<item id="5801" type="Weapon" name="For NPC (Dusk)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -55,7 +55,7 @@
 	<item id="5802" type="Weapon" name="For NPC (Dawn)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="sword" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
@@ -81,7 +81,7 @@
 	<item id="5803" type="EtcItem" name="Lucky Charm (D-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="price" val="330" />
@@ -97,7 +97,7 @@
 	<item id="5804" type="EtcItem" name="Lucky Charm (C-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="price" val="660" />
@@ -113,7 +113,7 @@
 	<item id="5805" type="EtcItem" name="Lucky Charm (B-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="price" val="1300" />
@@ -129,7 +129,7 @@
 	<item id="5806" type="EtcItem" name="Lucky Charm (A-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="price" val="2700" />
@@ -145,7 +145,7 @@
 	<item id="5807" type="EtcItem" name="Lucky Charm (S-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="price" val="5000" />
@@ -234,7 +234,7 @@
 	<item id="5817" type="Weapon" name="Chrono Campana">
 		<set name="icon" val="icon.weapon_chrono_campana_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="pole" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
@@ -253,7 +253,7 @@
 	</item>
 	<item id="5818" type="EtcItem" name="Alternative Dark Coda">
 		<set name="icon" val="icon.etc_coda_i08" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="50" />
@@ -261,7 +261,7 @@
 	</item>
 	<item id="5819" type="EtcItem" name="Alternative Red Coda">
 		<set name="icon" val="icon.etc_coda_i03" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="50" />
@@ -269,7 +269,7 @@
 	</item>
 	<item id="5820" type="EtcItem" name="Alternative Chilly Coda">
 		<set name="icon" val="icon.etc_coda_i00" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="50" />
@@ -277,7 +277,7 @@
 	</item>
 	<item id="5821" type="EtcItem" name="Alternative Blue Coda">
 		<set name="icon" val="icon.etc_coda_i02" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="100" />
@@ -285,7 +285,7 @@
 	</item>
 	<item id="5822" type="EtcItem" name="Alternative Golden Coda">
 		<set name="icon" val="icon.etc_coda_i04" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="200" />
@@ -293,7 +293,7 @@
 	</item>
 	<item id="5823" type="EtcItem" name="Alternative Lute Coda">
 		<set name="icon" val="icon.etc_coda_i06" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="300" />
@@ -301,7 +301,7 @@
 	</item>
 	<item id="5824" type="EtcItem" name="Alternative Desert Coda">
 		<set name="icon" val="icon.etc_coda_i05" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="200" />
@@ -309,7 +309,7 @@
 	</item>
 	<item id="5825" type="EtcItem" name="Alternative Red Cobol">
 		<set name="icon" val="icon.etc_cobol_i03" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="200" />
@@ -317,7 +317,7 @@
 	</item>
 	<item id="5826" type="EtcItem" name="Alternative Chilly Cobol">
 		<set name="icon" val="icon.etc_cobol_i00" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="250" />
@@ -325,7 +325,7 @@
 	</item>
 	<item id="5827" type="EtcItem" name="Alternative Blue Cobol">
 		<set name="icon" val="icon.etc_cobol_i02" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
@@ -333,7 +333,7 @@
 	</item>
 	<item id="5828" type="EtcItem" name="Alternative Thorn Cobol">
 		<set name="icon" val="icon.etc_cobol_i07" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
@@ -341,7 +341,7 @@
 	</item>
 	<item id="5829" type="EtcItem" name="Alternative Golden Cobol">
 		<set name="icon" val="icon.etc_cobol_i04" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
@@ -349,7 +349,7 @@
 	</item>
 	<item id="5830" type="EtcItem" name="Alternative Great Cobol">
 		<set name="icon" val="icon.etc_cobol_i09" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
@@ -357,7 +357,7 @@
 	</item>
 	<item id="5831" type="EtcItem" name="Alternative Red Codran">
 		<set name="icon" val="icon.etc_codran_i03" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="400" />
@@ -365,7 +365,7 @@
 	</item>
 	<item id="5832" type="EtcItem" name="Alternative Sea Codran">
 		<set name="icon" val="icon.etc_codran_i06" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
@@ -373,7 +373,7 @@
 	</item>
 	<item id="5833" type="EtcItem" name="Alternative Chilly Codran">
 		<set name="icon" val="icon.etc_codran_i00" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="400" />
@@ -381,7 +381,7 @@
 	</item>
 	<item id="5834" type="EtcItem" name="Alternative Blue Codran">
 		<set name="icon" val="icon.etc_codran_i02" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
@@ -389,7 +389,7 @@
 	</item>
 	<item id="5835" type="EtcItem" name="Alternative Twin Codran">
 		<set name="icon" val="icon.etc_codran_i07" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
@@ -397,7 +397,7 @@
 	</item>
 	<item id="5836" type="EtcItem" name="Alternative Great Codran">
 		<set name="icon" val="icon.etc_codran_i09" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="750" />
@@ -405,7 +405,7 @@
 	</item>
 	<item id="5837" type="EtcItem" name="Alternative Desert Codran">
 		<set name="icon" val="icon.etc_codran_i05" />
-		<set name="etcitem_type" val="crop" />
+		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="1000" />
@@ -413,7 +413,7 @@
 	</item>
 	<item id="5838" type="EtcItem" name="Mature Alternative Dark Coda">
 		<set name="icon" val="icon.etc_coda_i08" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="50" />
@@ -421,7 +421,7 @@
 	</item>
 	<item id="5839" type="EtcItem" name="Mature Alternative Red Coda">
 		<set name="icon" val="icon.etc_coda_i03" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="50" />
@@ -429,7 +429,7 @@
 	</item>
 	<item id="5840" type="EtcItem" name="Mature Alternative Chilly Coda">
 		<set name="icon" val="icon.etc_coda_i00" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="50" />
@@ -437,7 +437,7 @@
 	</item>
 	<item id="5841" type="EtcItem" name="Mature Alternative Blue Coda">
 		<set name="icon" val="icon.etc_coda_i02" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="100" />
@@ -445,7 +445,7 @@
 	</item>
 	<item id="5842" type="EtcItem" name="Mature Alternative Golden Coda">
 		<set name="icon" val="icon.etc_coda_i04" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="200" />
@@ -453,7 +453,7 @@
 	</item>
 	<item id="5843" type="EtcItem" name="Mature Alternative Lute Coda">
 		<set name="icon" val="icon.etc_coda_i06" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="300" />
@@ -461,7 +461,7 @@
 	</item>
 	<item id="5844" type="EtcItem" name="Mature Alternative Desert Coda">
 		<set name="icon" val="icon.etc_coda_i05" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="200" />
@@ -469,7 +469,7 @@
 	</item>
 	<item id="5845" type="EtcItem" name="Mature Alternative Red Cobol">
 		<set name="icon" val="icon.etc_cobol_i03" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="200" />
@@ -477,7 +477,7 @@
 	</item>
 	<item id="5846" type="EtcItem" name="Mature Alternative Chilly Cobol">
 		<set name="icon" val="icon.etc_cobol_i00" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="250" />
@@ -485,7 +485,7 @@
 	</item>
 	<item id="5847" type="EtcItem" name="Mature Alternative Blue Cobol">
 		<set name="icon" val="icon.etc_cobol_i02" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="500" />
@@ -493,7 +493,7 @@
 	</item>
 	<item id="5848" type="EtcItem" name="Mature Alternative Thorn Cobol">
 		<set name="icon" val="icon.etc_cobol_i07" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="500" />
@@ -501,7 +501,7 @@
 	</item>
 	<item id="5849" type="EtcItem" name="Mature Alternative Golden Cobol">
 		<set name="icon" val="icon.etc_cobol_i04" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="500" />
@@ -509,7 +509,7 @@
 	</item>
 	<item id="5850" type="EtcItem" name="Mature Alternative Great Cobol">
 		<set name="icon" val="icon.etc_cobol_i09" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="500" />
@@ -517,7 +517,7 @@
 	</item>
 	<item id="5851" type="EtcItem" name="Mature Alternative Red Codran">
 		<set name="icon" val="icon.etc_codran_i03" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="400" />
@@ -525,7 +525,7 @@
 	</item>
 	<item id="5852" type="EtcItem" name="Mature Alternative Sea Codran">
 		<set name="icon" val="icon.etc_codran_i06" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="500" />
@@ -533,7 +533,7 @@
 	</item>
 	<item id="5853" type="EtcItem" name="Mature Alternative Chilly Codran">
 		<set name="icon" val="icon.etc_codran_i00" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="400" />
@@ -541,7 +541,7 @@
 	</item>
 	<item id="5854" type="EtcItem" name="Mature Alternative Blue Codran">
 		<set name="icon" val="icon.etc_codran_i02" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="500" />
@@ -549,7 +549,7 @@
 	</item>
 	<item id="5855" type="EtcItem" name="Mature Alternative Twin Codran">
 		<set name="icon" val="icon.etc_codran_i07" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="500" />
@@ -557,7 +557,7 @@
 	</item>
 	<item id="5856" type="EtcItem" name="Mature Alternative Great Codran">
 		<set name="icon" val="icon.etc_codran_i09" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="750" />
@@ -565,7 +565,7 @@
 	</item>
 	<item id="5857" type="EtcItem" name="Mature Alternative Desert Codran">
 		<set name="icon" val="icon.etc_codran_i05" />
-		<set name="etcitem_type" val="maturecrop" />
+		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -574,7 +574,7 @@
 	<item id="5858" type="EtcItem" name="Blessed Scroll of Escape: Clan Hall">
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="100000" />
@@ -589,7 +589,7 @@
 	<item id="5859" type="EtcItem" name="Blessed Scroll of Escape: Castle">
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="80000" />
