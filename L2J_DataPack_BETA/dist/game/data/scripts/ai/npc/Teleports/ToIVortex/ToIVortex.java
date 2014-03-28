@@ -47,22 +47,34 @@ public final class ToIVortex extends AbstractNpcAI
 	private static final int GREEN_DIMENSION_STONE = 4401;
 	private static final int BLUE_DIMENSION_STONE = 4402;
 	private static final int RED_DIMENSION_STONE = 4403;
+	private static final Map<String, Integer> TOI_FLOOR_ITEMS = new HashMap<>();
 	// Locations
 	private static final Map<String, Location> TOI_FLOORS = new HashMap<>();
 	// Misc
 	private static final Map<String, Integer> DIMENSION_TRADE = new HashMap<>();
 	static
 	{
-		TOI_FLOORS.put("1", new Location(114356, 13423, -5096, GREEN_DIMENSION_STONE));
-		TOI_FLOORS.put("2", new Location(114666, 13380, -3608, GREEN_DIMENSION_STONE));
-		TOI_FLOORS.put("3", new Location(111982, 16028, -2120, GREEN_DIMENSION_STONE));
-		TOI_FLOORS.put("4", new Location(114636, 13413, -640, BLUE_DIMENSION_STONE));
-		TOI_FLOORS.put("5", new Location(114152, 19902, 928, BLUE_DIMENSION_STONE));
-		TOI_FLOORS.put("6", new Location(117131, 16044, 1944, BLUE_DIMENSION_STONE));
-		TOI_FLOORS.put("7", new Location(113026, 17687, 2952, RED_DIMENSION_STONE));
-		TOI_FLOORS.put("8", new Location(115571, 13723, 3960, RED_DIMENSION_STONE));
-		TOI_FLOORS.put("9", new Location(114649, 14144, 4976, RED_DIMENSION_STONE));
-		TOI_FLOORS.put("10", new Location(118507, 16605, 5984, RED_DIMENSION_STONE));
+		TOI_FLOORS.put("1", new Location(114356, 13423, -5096));
+		TOI_FLOORS.put("2", new Location(114666, 13380, -3608));
+		TOI_FLOORS.put("3", new Location(111982, 16028, -2120));
+		TOI_FLOORS.put("4", new Location(114636, 13413, -640));
+		TOI_FLOORS.put("5", new Location(114152, 19902, 928));
+		TOI_FLOORS.put("6", new Location(117131, 16044, 1944));
+		TOI_FLOORS.put("7", new Location(113026, 17687, 2952));
+		TOI_FLOORS.put("8", new Location(115571, 13723, 3960));
+		TOI_FLOORS.put("9", new Location(114649, 14144, 4976));
+		TOI_FLOORS.put("10", new Location(118507, 16605, 5984));
+		
+		TOI_FLOOR_ITEMS.put("1", GREEN_DIMENSION_STONE);
+		TOI_FLOOR_ITEMS.put("2", GREEN_DIMENSION_STONE);
+		TOI_FLOOR_ITEMS.put("3", GREEN_DIMENSION_STONE);
+		TOI_FLOOR_ITEMS.put("4", BLUE_DIMENSION_STONE);
+		TOI_FLOOR_ITEMS.put("5", BLUE_DIMENSION_STONE);
+		TOI_FLOOR_ITEMS.put("6", BLUE_DIMENSION_STONE);
+		TOI_FLOOR_ITEMS.put("7", RED_DIMENSION_STONE);
+		TOI_FLOOR_ITEMS.put("8", RED_DIMENSION_STONE);
+		TOI_FLOOR_ITEMS.put("9", RED_DIMENSION_STONE);
+		TOI_FLOOR_ITEMS.put("10", RED_DIMENSION_STONE);
 		
 		DIMENSION_TRADE.put("GREEN", GREEN_DIMENSION_STONE);
 		DIMENSION_TRADE.put("BLUE", BLUE_DIMENSION_STONE);
@@ -95,10 +107,10 @@ public final class ToIVortex extends AbstractNpcAI
 			case "10":
 			{
 				final Location loc = TOI_FLOORS.get(event);
-				if (hasQuestItems(player, loc.getHeading()))
+				final int itemId = TOI_FLOOR_ITEMS.get(event);
+				if (hasQuestItems(player, itemId))
 				{
-					takeItems(player, loc.getHeading(), 1);
-					loc.setHeading(0);
+					takeItems(player, itemId, 1);
 					player.teleToLocation(loc, true);
 				}
 				else
