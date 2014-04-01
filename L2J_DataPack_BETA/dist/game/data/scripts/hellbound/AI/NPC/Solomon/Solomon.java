@@ -16,41 +16,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.voicedcommandhandlers;
+package hellbound.AI.NPC.Solomon;
 
-import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
+import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.quest.Quest;
 
 import hellbound.HellboundEngine;
 
 /**
- * Hellbound voiced command.
+ * Solomon AI.
  * @author DS
  */
-public class Hellbound implements IVoicedCommandHandler
+public final class Solomon extends Quest
 {
-	private static final String[] VOICED_COMMANDS =
-	{
-		"hellbound"
-	};
+	private static final int SOLOMON = 32355;
 	
-	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	public Solomon()
 	{
-		if (HellboundEngine.getInstance().isLocked())
-		{
-			activeChar.sendMessage("Hellbound is currently locked.");
-			return true;
-		}
-		
-		final int maxTrust = HellboundEngine.getInstance().getMaxTrust();
-		activeChar.sendMessage("Hellbound level: " + HellboundEngine.getInstance().getLevel() + " trust: " + HellboundEngine.getInstance().getTrust() + (maxTrust > 0 ? "/" + maxTrust : ""));
-		return true;
+		super(-1, Solomon.class.getSimpleName(), "hellbound/AI/NPC");
+		addFirstTalkId(SOLOMON);
 	}
 	
 	@Override
-	public String[] getVoicedCommandList()
+	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return VOICED_COMMANDS;
+		if (HellboundEngine.getInstance().getLevel() == 5)
+		{
+			return "32355-01.htm";
+		}
+		else if (HellboundEngine.getInstance().getLevel() > 5)
+		{
+			return "32355-01a.htm";
+		}
+		return null;
 	}
 }

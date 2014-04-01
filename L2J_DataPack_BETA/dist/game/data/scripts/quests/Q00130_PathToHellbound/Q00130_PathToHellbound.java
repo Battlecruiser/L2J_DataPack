@@ -18,12 +18,13 @@
  */
 package quests.Q00130_PathToHellbound;
 
-import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+
+import hellbound.HellboundEngine;
 
 /**
  * Path To Hellbound (130)
@@ -139,7 +140,7 @@ public class Q00130_PathToHellbound extends Quest
 			{
 				if (npc.getId() == CASIAN)
 				{
-					if (!HellboundManager.getInstance().isLocked())
+					if (!HellboundEngine.getInstance().isLocked())
 					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30612-01.htm" : "30612-02.html";
 					}
