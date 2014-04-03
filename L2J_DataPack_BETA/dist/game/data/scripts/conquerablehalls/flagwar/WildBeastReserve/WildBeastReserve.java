@@ -33,8 +33,6 @@ public final class WildBeastReserve extends FlagWar
 {
 	static
 	{
-		qn = "WildBeastReserve";
-		
 		ROYAL_FLAG = 35606;
 		FLAG_RED = 35607; // White flag
 		FLAG_YELLOW = 35608; // Red flag
@@ -91,7 +89,7 @@ public final class WildBeastReserve extends FlagWar
 	
 	private WildBeastReserve()
 	{
-		super(-1, qn, "conquerablehalls/flagwar", BEAST_FARM);
+		super(WildBeastReserve.class.getSimpleName(), BEAST_FARM);
 	}
 	
 	@Override

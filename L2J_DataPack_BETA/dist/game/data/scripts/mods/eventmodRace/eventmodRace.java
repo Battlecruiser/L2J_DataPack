@@ -39,7 +39,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 /**
  * @author Gnacik
  */
-public class eventmodRace extends Event
+public final class eventmodRace extends Event
 {
 	// Event NPC's list
 	private List<L2Npc> _npclist;
@@ -101,19 +101,12 @@ public class eventmodRace extends Event
 	};
 	// @formatter:on
 	
-	public static void main(String[] args)
+	private eventmodRace()
 	{
-		new eventmodRace(-1, "eventmodRace", "mods");
-	}
-	
-	public eventmodRace(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
+		super(-1, eventmodRace.class.getSimpleName(), "mods");
 		addStartNpc(_start_npc);
 		addFirstTalkId(_start_npc);
 		addTalkId(_start_npc);
-		
 		addStartNpc(_stop_npc);
 		addFirstTalkId(_stop_npc);
 		addTalkId(_stop_npc);
@@ -427,5 +420,10 @@ public class eventmodRace extends Event
 		player.addItem("eventModRace", _reward[0], _reward[1], _npc, true);
 		Announcements.getInstance().announceToAll(player.getName() + " is a winner!");
 		eventStop();
+	}
+	
+	public static void main(String[] args)
+	{
+		new eventmodRace();
 	}
 }

@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Util;
 
-public class eventmodRabbits extends Event
+public final class eventmodRabbits extends Event
 {
 	// Event NPC's list
 	private List<L2Npc> _npclist;
@@ -77,19 +77,12 @@ public class eventmodRabbits extends Event
 	};
 	// @formatter:on
 	
-	public static void main(String[] args)
+	private eventmodRabbits()
 	{
-		new eventmodRabbits(-1, "eventmodRabbits", "mods");
-	}
-	
-	public eventmodRabbits(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
+		super(-1, eventmodRabbits.class.getSimpleName(), "mods");
 		addStartNpc(_npc_snow);
 		addFirstTalkId(_npc_snow);
 		addTalkId(_npc_snow);
-		
 		addFirstTalkId(_npc_chest);
 		addSkillSeeId(_npc_chest);
 		addSpawnId(_npc_chest);
@@ -299,5 +292,10 @@ public class eventmodRabbits extends Event
 	public boolean eventBypass(L2PcInstance activeChar, String bypass)
 	{
 		return false;
+	}
+	
+	public static void main(String[] args)
+	{
+		new eventmodRabbits();
 	}
 }
