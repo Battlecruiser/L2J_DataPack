@@ -67,9 +67,9 @@ public final class eventmodElpies extends Event
 	private static int CURRENT_ELPY_COUNT = 0;
 	private ScheduledFuture<?> _eventTask = null;
 	
-	public eventmodElpies(int questId, String name, String descr)
+	private eventmodElpies()
 	{
-		super(questId, name, descr);
+		super(-1, eventmodElpies.class.getSimpleName(), "mods");
 		addSpawnId(ELPY);
 		addKillId(ELPY);
 	}
@@ -245,6 +245,6 @@ public final class eventmodElpies extends Event
 	
 	public static void main(String[] args)
 	{
-		new eventmodElpies(-1, "eventmodElpies", "mods/eventmodElpies");
+		new eventmodElpies();
 	}
 }

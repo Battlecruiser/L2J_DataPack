@@ -33,8 +33,6 @@ public final class BanditStronghold extends FlagWar
 {
 	static
 	{
-		qn = "BanditStronghold";
-		
 		ROYAL_FLAG = 35422;
 		FLAG_RED = 35423;
 		FLAG_YELLOW = 35424;
@@ -91,7 +89,7 @@ public final class BanditStronghold extends FlagWar
 	
 	private BanditStronghold()
 	{
-		super(-1, qn, "conquerablehalls/flagwar", BANDIT_STRONGHOLD);
+		super(BanditStronghold.class.getSimpleName(), BANDIT_STRONGHOLD);
 	}
 	
 	@Override

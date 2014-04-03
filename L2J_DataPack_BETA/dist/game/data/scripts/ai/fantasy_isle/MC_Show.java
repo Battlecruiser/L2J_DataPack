@@ -43,33 +43,24 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 public class MC_Show extends AbstractNpcAI
 {
 	private static int MC = 32433;
-	private static int[] singers =
+	// @formatter:off
+	private static int[] SINGERS =
 	{
-		32431,
-		32432
+		32431, 32432
 	};
 	private static int[] CIRCUS =
 	{
-		32442,
-		32443,
-		32444,
-		32445,
-		32446
+		32442, 32443, 32444, 32445, 32446
 	};
 	private static int[] INDIVIDUALS =
 	{
-		32439,
-		32440,
-		32441
+		32439, 32440, 32441
 	};
 	private static int[] SHOWSTUFF =
 	{
-		32424,
-		32425,
-		32426,
-		32427,
-		32428
+		32424, 32425, 32426, 32427, 32428
 	};
+	// @formatter:on
 	private static boolean IS_STARTED = false;
 	private static NpcStringId[] MESSAGES =
 	{
@@ -81,7 +72,7 @@ public class MC_Show extends AbstractNpcAI
 		NpcStringId.NOW_ID_LIKE_TO_INTRODUCE_THE_MOST_BEAUTIFUL_SINGER_IN_ADEN_PLEASE_WELCOMELEYLA_MIRA,
 		NpcStringId.HERE_SHE_COMES,
 		NpcStringId.THANK_YOU_VERY_MUCH_LEYLA,
-		// NpcStringId.1800089 Now we're in for a real treat.
+		NpcStringId.NOW_WERE_IN_FOR_A_REAL_TREAT,
 		NpcStringId.JUST_BACK_FROM_THEIR_WORLD_TOUR_PUT_YOUR_HANDS_TOGETHER_FOR_THE_FANTASY_ISLE_CIRCUS,
 		NpcStringId.COME_ON_EVERYONE,
 		NpcStringId.DID_YOU_LIKE_IT_THAT_WAS_SO_AMAZING,
@@ -194,18 +185,18 @@ public class MC_Show extends AbstractNpcAI
 		talks.put("3", new ShoutInfo(MESSAGES[3], "4", 4000));
 		talks.put("4", new ShoutInfo(MESSAGES[4], "5", 5000));
 		talks.put("5", new ShoutInfo(MESSAGES[5], "6", 3000));
-		talks.put("8", new ShoutInfo(MESSAGES[8], "9", 5000));
-		talks.put("9", new ShoutInfo(MESSAGES[9], "10", 5000));
-		talks.put("12", new ShoutInfo(MESSAGES[11], "13", 5000));
-		talks.put("13", new ShoutInfo(MESSAGES[12], "14", 5000));
-		talks.put("15", new ShoutInfo(MESSAGES[13], "16", 5000));
-		talks.put("16", new ShoutInfo(MESSAGES[14], "17", 5000));
-		talks.put("18", new ShoutInfo(MESSAGES[16], "19", 5000));
-		talks.put("19", new ShoutInfo(MESSAGES[17], "20", 5000));
-		talks.put("21", new ShoutInfo(MESSAGES[18], "22", 5000));
-		talks.put("22", new ShoutInfo(MESSAGES[19], "23", 400));
-		talks.put("25", new ShoutInfo(MESSAGES[20], "26", 5000));
-		talks.put("26", new ShoutInfo(MESSAGES[21], "27", 5400));
+		talks.put("8", new ShoutInfo(MESSAGES[9], "9", 5000));
+		talks.put("9", new ShoutInfo(MESSAGES[10], "10", 5000));
+		talks.put("12", new ShoutInfo(MESSAGES[12], "13", 5000));
+		talks.put("13", new ShoutInfo(MESSAGES[13], "14", 5000));
+		talks.put("15", new ShoutInfo(MESSAGES[14], "16", 5000));
+		talks.put("16", new ShoutInfo(MESSAGES[15], "17", 5000));
+		talks.put("18", new ShoutInfo(MESSAGES[17], "19", 5000));
+		talks.put("19", new ShoutInfo(MESSAGES[18], "20", 5000));
+		talks.put("21", new ShoutInfo(MESSAGES[19], "22", 5000));
+		talks.put("22", new ShoutInfo(MESSAGES[20], "23", 400));
+		talks.put("25", new ShoutInfo(MESSAGES[21], "26", 5000));
+		talks.put("26", new ShoutInfo(MESSAGES[22], "27", 5400));
 		
 		walks.put("npc1_1", new WalkInfo(new Location(-56546, -56384, -2008, 0), "npc1_2", 1200));
 		walks.put("npc1_2", new WalkInfo(new Location(-56597, -56384, -2008, 0), "npc1_3", 1200));
@@ -322,7 +313,7 @@ public class MC_Show extends AbstractNpcAI
 			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 			_log.info("Fantasy Isle: MC show script starting at " + format.format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
 		}
-		// TODO startQuestTimer("Start", 14400000L, null, null, true);
+		// TODO startRepeatingQuestTimer("Start", diff, 14400000, null, null);
 		// missing option to provide different initial delay
 		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new StartMCShow(), diff, 14400000L);
 	}
@@ -389,18 +380,19 @@ public class MC_Show extends AbstractNpcAI
 		}
 		else if ((npc != null) && IS_STARTED)
 		{
+			// TODO switch on event
 			if (event.equalsIgnoreCase("6"))
 			{
 				autoChat(npc, MESSAGES[6], Say2.NPC_SHOUT);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-56511, -56647, -2008, 36863));
 				npc.broadcastPacket(new PlaySound(1, "NS22_F", 0, 0, 0, 0, 0));
-				addSpawn(singers[0], -56344, -56328, -2008, 32768, false, 224000);
-				addSpawn(singers[1], -56552, -56245, -2008, 36863, false, 224000);
-				addSpawn(singers[1], -56546, -56426, -2008, 28672, false, 224000);
-				addSpawn(singers[1], -56570, -56473, -2008, 28672, false, 224000);
-				addSpawn(singers[1], -56594, -56516, -2008, 28672, false, 224000);
-				addSpawn(singers[1], -56580, -56203, -2008, 36863, false, 224000);
-				addSpawn(singers[1], -56606, -56157, -2008, 36863, false, 224000);
+				addSpawn(SINGERS[0], -56344, -56328, -2008, 32768, false, 224000);
+				addSpawn(SINGERS[1], -56552, -56245, -2008, 36863, false, 224000);
+				addSpawn(SINGERS[1], -56546, -56426, -2008, 28672, false, 224000);
+				addSpawn(SINGERS[1], -56570, -56473, -2008, 28672, false, 224000);
+				addSpawn(SINGERS[1], -56594, -56516, -2008, 28672, false, 224000);
+				addSpawn(SINGERS[1], -56580, -56203, -2008, 36863, false, 224000);
+				addSpawn(SINGERS[1], -56606, -56157, -2008, 36863, false, 224000);
 				startQuestTimer("7", 215000, npc, null);
 			}
 			else if (event.equalsIgnoreCase("7"))
@@ -438,7 +430,7 @@ public class MC_Show extends AbstractNpcAI
 				switch (npc.getId())
 				{
 					case 32433:
-						autoChat(npc, MESSAGES[10], Say2.NPC_SHOUT);
+						autoChat(npc, MESSAGES[11], Say2.NPC_SHOUT);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-56698, -56430, -2008, 32768));
 						startQuestTimer("12", 5000, npc, null);
 						break;
@@ -454,7 +446,7 @@ public class MC_Show extends AbstractNpcAI
 			}
 			else if (event.equalsIgnoreCase("17"))
 			{
-				autoChat(npc, MESSAGES[15], Say2.NPC_SHOUT);
+				autoChat(npc, MESSAGES[16], Say2.NPC_SHOUT);
 				startQuestTimer("social1", 2000, addSpawn(INDIVIDUALS[1], -56700, -56340, -2008, 32768, false, 32000), null);
 				startQuestTimer("18", 9000, npc, null);
 			}
@@ -475,7 +467,7 @@ public class MC_Show extends AbstractNpcAI
 			}
 			else if (event.equalsIgnoreCase("28"))
 			{
-				autoChat(npc, MESSAGES[22], Say2.NPC_ALL);
+				autoChat(npc, MESSAGES[23], Say2.NPC_ALL);
 				startQuestTimer("social1", 1, npc, null);
 			}
 			else if (event.equalsIgnoreCase("29"))
