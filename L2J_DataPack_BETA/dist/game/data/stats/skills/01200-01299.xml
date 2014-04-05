@@ -2434,10 +2434,12 @@
 		</enchant3for>
 	</skill>
 	<skill id="1271" levels="1" name="Benediction" enchantGroup1="1" enchantGroup2="1">
-		<table name="#ench1mpConsume"> 171 168 166 162 159 158 154 151 148 146 142 139 136 134 131 128 126 122 119 116 114 110 107 106 102 99 96 94 90 87 </table>
-		<table name="#ench1mpInitialConsume"> 43 42 41 41 40 39 39 38 37 36 36 35 34 33 33 32 31 31 30 29 28 28 27 26 26 25 24 23 23 22 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#ench1mpConsume"> 171 168 165 162 159 157 154 151 148 145 142 139 136 133 131 128 125 122 119 116 113 110 107 105 102 99 96 93 90 87 </table>
+		<table name="#ench1mpInitialConsume"> 43 42 42 41 40 40 39 38 37 37 36 35 34 34 33 32 32 31 30 29 29 28 27 27 26 25 24 24 23 22 </table>
 		<table name="#ench2Bravery"> 23 36 49 62 75 88 101 114 127 140 153 166 179 192 205 218 231 244 257 270 283 296 309 322 335 348 361 374 387 400 </table>
-		<set name="affectRange" val="1000" />
+		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="affectRange" val="2000" />
 		<set name="effectPoint" val="560" />
 		<set name="hitTime" val="7000" />
 		<set name="icon" val="icon.skill1271" />
@@ -2448,8 +2450,10 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="900000" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1mpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1mpInitialConsume" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<player mp="25" />
 		</cond>
