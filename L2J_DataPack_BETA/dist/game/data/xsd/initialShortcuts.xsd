@@ -50,7 +50,7 @@
 						</xs:attribute>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="macros">
+				<xs:element name="macros" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="macro">
