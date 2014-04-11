@@ -1421,6 +1421,7 @@
 		</for>
 	</skill>
 	<skill id="5580" levels="1" name="Divine Beast Bite">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-475" />
@@ -1437,6 +1438,7 @@
 		</for>
 	</skill>
 	<skill id="5581" levels="1" name="Divine Beast Stun Attack">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-1" />
@@ -1444,6 +1446,7 @@
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="76" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
@@ -1457,6 +1460,7 @@
 		</for>
 	</skill>
 	<skill id="5582" levels="1" name="Divine Beast Fire Breath">
+		<!-- Confirmed CT2.5 -->
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="250" />
 		<set name="castRange" val="100" />
@@ -1478,6 +1482,7 @@
 		</for>
 	</skill>
 	<skill id="5583" levels="1" name="Divine Beast Roar">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PA_DOWN" />
@@ -1487,6 +1492,7 @@
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-628" />
 		<set name="hitTime" val="1200" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="80" />
@@ -1500,36 +1506,56 @@
 		</for>
 	</skill>
 	<skill id="5584" levels="1" name="Wolf Howl">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PA_DOWN" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
+		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-628" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.action109" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="55" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="pAtk" val="0.77" />
+				<mul order="0x30" stat="mAtk" val="0.77" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5585" levels="1" name="Strider Roar">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PA_DOWN" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
+		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-628" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.action109" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="55" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="mAtkSpd" val="0.77" />
+				<mul order="0x30" stat="pAtkSpd" val="0.9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5586" levels="3" name="Pet Might">
 		<table name="#abnormalLvls"> 1 2 3 </table>
@@ -1802,11 +1828,12 @@
 		</for>
 	</skill>
 	<skill id="5598" levels="12" name="Flash Resistance">
-		<!-- TODO: Implement me! -->
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#trait_turn_stone"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
-		<set name="magicLvl" val="10" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
 				<param TURN_STONE="#trait_turn_stone" />
@@ -1814,6 +1841,7 @@
 		</for>
 	</skill>
 	<skill id="5599" levels="12" name="Stun Resistance">
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#trait_shock"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
 		<set name="magicLvl" val="#magicLvl" />
