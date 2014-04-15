@@ -56,7 +56,7 @@ public final class Detection extends AbstractEffect
 		final boolean hasClan = player.getClanId() > 0;
 		final boolean hasAlly = player.getAllyId() > 0;
 		
-		if (target.getAppearance().getInvisible())
+		if (target.isInvisible())
 		{
 			if (hasParty && (target.isInParty()) && (player.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId()))
 			{

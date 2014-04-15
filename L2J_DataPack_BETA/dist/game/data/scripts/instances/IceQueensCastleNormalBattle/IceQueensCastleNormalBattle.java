@@ -1301,14 +1301,14 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 		final List<L2PcInstance> players = new ArrayList<>();
 		for (L2PcInstance player : world.playersInside)
 		{
-			if ((player != null) && !player.isDead() && (player.getInstanceId() == world.getInstanceId()) && !player.getAppearance().getInvisible())
+			if ((player != null) && !player.isDead() && (player.getInstanceId() == world.getInstanceId()) && !player.isInvisible())
 			{
 				players.add(player);
 			}
 		}
 		
 		Collections.shuffle(players);
-		final L2PcInstance target = (players.size() > 0) ? players.get(0) : null;
+		final L2PcInstance target = (!players.isEmpty()) ? players.get(0) : null;
 		if (target != null)
 		{
 			mob.addDamageHate(target, 0, 999);
