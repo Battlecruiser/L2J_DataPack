@@ -62,6 +62,7 @@ public class AdminEffects implements IAdminCommandHandler
 	{
 		"admin_invis",
 		"admin_invisible",
+		"admin_setinvis",
 		"admin_vis",
 		"admin_visible",
 		"admin_invis_menu",
@@ -109,16 +110,16 @@ public class AdminEffects implements IAdminCommandHandler
 		
 		if (command.equals("admin_invis_menu"))
 		{
-			if (!activeChar.getAppearance().getInvisible())
+			if (!activeChar.isInvisible())
 			{
-				activeChar.getAppearance().setInvisible();
+				activeChar.setInvisible(true);
 				activeChar.broadcastUserInfo();
 				activeChar.decayMe();
 				activeChar.spawnMe();
 			}
 			else
 			{
-				activeChar.getAppearance().setVisible();
+				activeChar.setInvisible(false);
 				activeChar.broadcastUserInfo();
 			}
 			RegionBBSManager.getInstance().changeCommunityBoard();
@@ -127,16 +128,26 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_invis"))
 		{
-			activeChar.getAppearance().setInvisible();
+			activeChar.setInvisible(false);
 			activeChar.broadcastUserInfo();
 			activeChar.decayMe();
 			activeChar.spawnMe();
 			RegionBBSManager.getInstance().changeCommunityBoard();
 		}
-		
+		else if (command.startsWith("admin_setinvis"))
+		{
+			if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter())
+			{
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				return false;
+			}
+			final L2Character target = (L2Character) activeChar.getTarget();
+			target.setInvisible(!target.isInvisible());
+			activeChar.sendMessage("You've made " + target.getName() + " " + (target.isInvisible() ? "invisible" : "visible") + ".");
+		}
 		else if (command.startsWith("admin_vis"))
 		{
-			activeChar.getAppearance().setVisible();
+			activeChar.setInvisible(false);
 			activeChar.broadcastUserInfo();
 			RegionBBSManager.getInstance().changeCommunityBoard();
 		}

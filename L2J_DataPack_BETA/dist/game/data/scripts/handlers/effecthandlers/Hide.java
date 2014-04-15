@@ -45,7 +45,7 @@ public final class Hide extends AbstractEffect
 			L2PcInstance activeChar = info.getEffected().getActingPlayer();
 			if (!activeChar.inObserverMode())
 			{
-				activeChar.getAppearance().setVisible();
+				activeChar.setInvisible(false);
 			}
 		}
 	}
@@ -56,7 +56,7 @@ public final class Hide extends AbstractEffect
 		if (info.getEffected().isPlayer())
 		{
 			L2PcInstance activeChar = info.getEffected().getActingPlayer();
-			activeChar.getAppearance().setInvisible();
+			activeChar.setInvisible(true);
 			
 			if ((activeChar.getAI().getNextIntention() != null) && (activeChar.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK))
 			{
@@ -65,18 +65,12 @@ public final class Hide extends AbstractEffect
 			
 			for (L2Character target : activeChar.getKnownList().getKnownCharacters())
 			{
-				try
+				if ((target != null) && (target.getTarget() == activeChar))
 				{
-					if (target.getTarget() == activeChar)
-					{
-						target.setTarget(null);
-						target.abortAttack();
-						target.abortCast();
-						target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-					}
-				}
-				catch (NullPointerException e)
-				{
+					target.setTarget(null);
+					target.abortAttack();
+					target.abortCast();
+					target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				}
 			}
 		}
