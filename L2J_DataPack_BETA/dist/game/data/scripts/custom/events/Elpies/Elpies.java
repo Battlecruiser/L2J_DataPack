@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package mods.eventmodElpies;
+package custom.events.Elpies;
 
 import java.util.concurrent.ScheduledFuture;
 
@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2EventMonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Event;
 
-public final class eventmodElpies extends Event
+public final class Elpies extends Event
 {
 	// NPC
 	private static final int ELPY = 900100;
@@ -67,9 +67,9 @@ public final class eventmodElpies extends Event
 	private static int CURRENT_ELPY_COUNT = 0;
 	private ScheduledFuture<?> _eventTask = null;
 	
-	private eventmodElpies()
+	private Elpies()
 	{
-		super(-1, eventmodElpies.class.getSimpleName(), "mods");
+		super(Elpies.class.getSimpleName(), "custom/events");
 		addSpawnId(ELPY);
 		addKillId(ELPY);
 	}
@@ -81,7 +81,7 @@ public final class eventmodElpies extends Event
 	}
 	
 	@Override
-	public boolean eventStart()
+	public boolean eventStart(L2PcInstance eventMaker)
 	{
 		if (EVENT_ACTIVE)
 		{
@@ -92,6 +92,7 @@ public final class eventmodElpies extends Event
 		if (!Config.CUSTOM_NPC_DATA)
 		{
 			_log.info(getName() + ": Event can't be started because custom NPC table is disabled!");
+			eventMaker.sendMessage("Event " + getName() + " can't be started because custom NPC table is disabled!");
 			return false;
 		}
 		
@@ -245,6 +246,6 @@ public final class eventmodElpies extends Event
 	
 	public static void main(String[] args)
 	{
-		new eventmodElpies();
+		new Elpies();
 	}
 }

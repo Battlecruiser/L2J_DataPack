@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package mods.eventmodRace;
+package custom.events.Race;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +39,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 /**
  * @author Gnacik
  */
-public final class eventmodRace extends Event
+public final class Race extends Event
 {
 	// Event NPC's list
 	private List<L2Npc> _npclist;
@@ -101,9 +101,9 @@ public final class eventmodRace extends Event
 	};
 	// @formatter:on
 	
-	private eventmodRace()
+	private Race()
 	{
-		super(-1, eventmodRace.class.getSimpleName(), "mods");
+		super(Race.class.getSimpleName(), "custom/events");
 		addStartNpc(_start_npc);
 		addFirstTalkId(_start_npc);
 		addTalkId(_start_npc);
@@ -113,7 +113,7 @@ public final class eventmodRace extends Event
 	}
 	
 	@Override
-	public boolean eventStart()
+	public boolean eventStart(L2PcInstance eventMaker)
 	{
 		// Don't start event if its active
 		if (_isactive)
@@ -124,6 +124,7 @@ public final class eventmodRace extends Event
 		if (!Config.CUSTOM_NPC_DATA)
 		{
 			_log.info(getName() + ": Event can't be started, because custom npc table is disabled!");
+			eventMaker.sendMessage("Event " + getName() + " can't be started because custom NPC table is disabled!");
 			return false;
 		}
 		// Initialize list
@@ -424,6 +425,6 @@ public final class eventmodRace extends Event
 	
 	public static void main(String[] args)
 	{
-		new eventmodRace();
+		new Race();
 	}
 }
