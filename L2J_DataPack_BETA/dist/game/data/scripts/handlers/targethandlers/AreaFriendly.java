@@ -144,7 +144,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		@Override
 		public int compare(L2Character char1, L2Character char2)
 		{
-			return Integer.compare((int) (char1.getCurrentHp() / char1.getMaxHp()), (int) (char2.getCurrentHp() / char2.getMaxHp()));
+			return Double.compare((char1.getCurrentHp() / char1.getMaxHp()), (char2.getCurrentHp() / char2.getMaxHp()));
 		}
 	}
 	
