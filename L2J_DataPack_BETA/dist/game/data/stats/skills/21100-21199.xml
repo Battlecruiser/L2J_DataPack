@@ -1290,9 +1290,6 @@
 		<cond>
 			<player canTransform="true" />
 		</cond>
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="Transformation">
 				<param id="20001" />
@@ -1604,9 +1601,6 @@
 		<cond>
 			<player canTransform="true" />
 		</cond>
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="Transformation">
 				<param id="20002" />
@@ -1630,9 +1624,6 @@
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
-		</cond>
-		<cond msgId="1509">
-			<player olympiad="false" />
 		</cond>
 		<for>
 			<effect name="Transformation">

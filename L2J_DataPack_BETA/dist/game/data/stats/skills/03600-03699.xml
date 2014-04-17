@@ -668,9 +668,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
