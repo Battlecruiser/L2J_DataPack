@@ -353,11 +353,9 @@
 		<!-- Steps onto the shiny lit platform. -->
 		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="Transformation">
 				<param id="20004" />
@@ -666,11 +664,9 @@
 		<!-- Mounts a rocking horse. -->
 		<set name="abnormalTime" val="-1" /> <!-- FIXME: value unconfirmed -->
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="Transformation">
 				<param id="20007" />

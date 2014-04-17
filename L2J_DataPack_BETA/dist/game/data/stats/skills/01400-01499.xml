@@ -700,9 +700,6 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="GROUND" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<channelingEffects>
 			<effect name="MagicalAttack" />
 		</channelingEffects>
@@ -730,9 +727,6 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="GROUND" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<channelingEffects>
 			<effect name="MagicalAttack" />
 		</channelingEffects>
@@ -760,9 +754,6 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="GROUND" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<channelingEffects>
 			<effect name="MagicalAttack" />
 		</channelingEffects>
@@ -782,9 +773,6 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="GROUND" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="SummonNpc">
 				<param npcId="13028" npcCount="1" />
@@ -814,9 +802,6 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="GROUND" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<channelingEffects>
 			<effect name="MagicalAttack" />
 		</channelingEffects>
@@ -837,9 +822,6 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="GROUND" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="SummonNpc">
 				<param npcId="13030" npcCount="1" />
@@ -862,9 +844,6 @@
 		<set name="reuseDelay" val="1200000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="CLAN" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="DispelByCategory">
 				<param slot="debuff" rate="100" max="10" />
@@ -885,9 +864,6 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="CLAN" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="HealPercent">
 				<param power="100" />
@@ -914,9 +890,6 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="PARTY_CLAN" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="Invincible" />
 		</for>
@@ -935,9 +908,6 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="PARTY" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="ManaHealByLevel">
 				<param power="1500" />
