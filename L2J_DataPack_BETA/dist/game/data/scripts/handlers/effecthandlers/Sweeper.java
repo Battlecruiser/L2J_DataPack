@@ -32,8 +32,6 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class Sweeper extends AbstractEffect
 {
-	private static final int MAX_SWEEPER_TIME = 15000;
-	
 	public Sweeper(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
@@ -56,11 +54,6 @@ public final class Sweeper extends AbstractEffect
 		final L2PcInstance player = info.getEffector().getActingPlayer();
 		final L2Attackable monster = (L2Attackable) info.getEffected();
 		if (!monster.checkSpoilOwner(player, false))
-		{
-			return;
-		}
-		
-		if (monster.isOldCorpse(player, MAX_SWEEPER_TIME, false))
 		{
 			return;
 		}
