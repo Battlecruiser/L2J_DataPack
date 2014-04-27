@@ -19,7 +19,6 @@
 package ai.npc.Trainers.HealerTrainer;
 
 import java.util.Collection;
-import java.util.List;
 
 import ai.npc.AbstractNpcAI;
 
@@ -88,12 +87,32 @@ public final class HealerTrainer extends AbstractNpcAI
 					htmltext = npc.getId() + "-noteach.html";
 					break;
 				}
+				
 				if ((player.getLevel() < MIN_LEVEL) || (player.getClassId().level() < MIN_CLASS_LEVEL))
 				{
 					htmltext = "learn-lowlevel.html";
 					break;
 				}
-				displayTransferSkillList(player);
+				
+				final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.TRANSFER);
+				int count = 0;
+				for (L2SkillLearn skillLearn : SkillTreesData.getInstance().getAvailableTransferSkills(player))
+				{
+					if (SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel()) != null)
+					{
+						count++;
+						asl.addSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel(), skillLearn.getSkillLevel(), skillLearn.getLevelUpSp(), 0);
+					}
+				}
+				
+				if (count > 0)
+				{
+					player.sendPacket(asl);
+				}
+				else
+				{
+					player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
+				}
 				break;
 			}
 			case "SkillTransferCleanse":
@@ -116,17 +135,22 @@ public final class HealerTrainer extends AbstractNpcAI
 					break;
 				}
 				
-				boolean hasSkills = false;
-				if (!hasTransferSkillItems(player))
+				if (hasTransferSkillItems(player))
 				{
+					// Come back when you have used all transfer skill items for this class.
+					htmltext = "cleanse-no_skills.html";
+				}
+				else
+				{
+					boolean hasSkills = false;
 					final Collection<L2SkillLearn> skills = SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values();
-					for (L2SkillLearn s : skills)
+					for (L2SkillLearn skillLearn : skills)
 					{
-						final Skill sk = player.getKnownSkill(s.getSkillId());
-						if (sk != null)
+						final Skill skill = player.getKnownSkill(skillLearn.getSkillId());
+						if (skill != null)
 						{
-							player.removeSkill(sk);
-							for (ItemHolder item : s.getRequiredItems())
+							player.removeSkill(skill);
+							for (ItemHolder item : skillLearn.getRequiredItems())
 							{
 								player.addItem("Cleanse", item.getId(), item.getCount(), npc, true);
 							}
@@ -140,44 +164,10 @@ public final class HealerTrainer extends AbstractNpcAI
 						player.reduceAdena("Cleanse", Config.FEE_DELETE_TRANSFER_SKILLS, npc, true);
 					}
 				}
-				else
-				{
-					// Come back when you have used all transfer skill items for this class.
-					htmltext = "cleanse-no_skills.html";
-				}
 				break;
 			}
 		}
 		return htmltext;
-	}
-	
-	/**
-	 * Display the Transfer Skill List to the player, if there is any skill available.
-	 * @param player the player
-	 */
-	private static void displayTransferSkillList(L2PcInstance player)
-	{
-		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransferSkills(player);
-		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.TRANSFER);
-		int count = 0;
-		
-		for (L2SkillLearn s : skills)
-		{
-			if (SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()) != null)
-			{
-				count++;
-				asl.addSkill(s.getSkillId(), s.getSkillLevel(), s.getSkillLevel(), s.getLevelUpSp(), 0);
-			}
-		}
-		
-		if (count > 0)
-		{
-			player.sendPacket(asl);
-		}
-		else
-		{
-			player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
-		}
 	}
 	
 	/**
@@ -191,16 +181,24 @@ public final class HealerTrainer extends AbstractNpcAI
 		switch (player.getClassId())
 		{
 			case cardinal:
+			{
 				itemId = 15307;
 				break;
+			}
 			case evaSaint:
+			{
 				itemId = 15308;
 				break;
+			}
 			case shillienSaint:
+			{
 				itemId = 15309;
 				break;
+			}
 			default:
+			{
 				itemId = -1;
+			}
 		}
 		return (player.getInventory().getInventoryItemCount(itemId, -1) > 0);
 	}
