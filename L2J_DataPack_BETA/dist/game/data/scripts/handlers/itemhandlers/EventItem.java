@@ -18,8 +18,6 @@
  */
 package handlers.itemhandlers;
 
-import java.util.logging.Logger;
-
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jserver.gameserver.model.ArenaParticipantsHolder;
@@ -33,8 +31,6 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class EventItem implements IItemHandler
 {
-	private static final Logger _log = Logger.getLogger(EventItem.class.getName());
-	
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
