@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ShowXMasSeal;
 
 /**
- * @author devScarlet & mrTJO
+ * @author devScarlet, mrTJO
  */
 public class SpecialXMas implements IItemHandler
 {
