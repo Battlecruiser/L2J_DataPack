@@ -116,11 +116,13 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.broadcastUserInfo();
 				activeChar.decayMe();
 				activeChar.spawnMe();
+				activeChar.sendMessage("You are now invisible.");
 			}
 			else
 			{
 				activeChar.setInvisible(false);
 				activeChar.broadcastUserInfo();
+				activeChar.sendMessage("You are now visible.");
 			}
 			RegionBBSManager.getInstance().changeCommunityBoard();
 			command = "";
@@ -128,11 +130,19 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_invis"))
 		{
-			activeChar.setInvisible(false);
+			activeChar.setInvisible(true);
 			activeChar.broadcastUserInfo();
 			activeChar.decayMe();
 			activeChar.spawnMe();
 			RegionBBSManager.getInstance().changeCommunityBoard();
+			activeChar.sendMessage("You are now invisible.");
+		}
+		else if (command.startsWith("admin_vis"))
+		{
+			activeChar.setInvisible(false);
+			activeChar.broadcastUserInfo();
+			RegionBBSManager.getInstance().changeCommunityBoard();
+			activeChar.sendMessage("You are now visible.");
 		}
 		else if (command.startsWith("admin_setinvis"))
 		{
@@ -144,12 +154,11 @@ public class AdminEffects implements IAdminCommandHandler
 			final L2Character target = (L2Character) activeChar.getTarget();
 			target.setInvisible(!target.isInvisible());
 			activeChar.sendMessage("You've made " + target.getName() + " " + (target.isInvisible() ? "invisible" : "visible") + ".");
-		}
-		else if (command.startsWith("admin_vis"))
-		{
-			activeChar.setInvisible(false);
-			activeChar.broadcastUserInfo();
-			RegionBBSManager.getInstance().changeCommunityBoard();
+			
+			if (target.isPlayer())
+			{
+				((L2PcInstance) target).broadcastUserInfo();
+			}
 		}
 		else if (command.startsWith("admin_earthquake"))
 		{
