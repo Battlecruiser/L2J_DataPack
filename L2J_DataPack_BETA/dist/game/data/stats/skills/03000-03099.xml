@@ -1374,14 +1374,13 @@
 		</endEffects>
 	</skill>
 	<skill id="3080" levels="10" name="Item Skill: Aggression">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -438 -467 -495 -523 -549 -574 -597 -617 -635 -659 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
-		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
@@ -1394,25 +1393,30 @@
 		</for>
 	</skill>
 	<skill id="3081" levels="10" name="Item Skill: Charm">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#power"> -219 -234 -248 -262 -275 -287 -299 -309 -318 -330 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<set name="triggeredId" val="5165" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="AddHate">
+				<param power="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3082" levels="10" name="Item Skill: Mana Burn">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
@@ -1425,125 +1429,162 @@
 		</for>
 	</skill>
 	<skill id="3083" levels="10" name="Item Skill: Slow">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="MEN" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="5166" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3084" levels="10" name="Item Skill: Winter">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="MEN" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="5167" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="pAtkSpd" val="0.77" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3085" levels="10" name="Item Skill: Stun">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="CON" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
-		<set name="triggeredId" val="5168" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Stun" />
+		</for>
 	</skill>
 	<skill id="3086" levels="10" name="Item Skill: Hold">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="MEN" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
-		<set name="triggeredId" val="5169" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3087" levels="10" name="Item Skill: Sleep">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SLEEP" />
 		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="MEN" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SLEEP" />
-		<set name="triggeredId" val="5170" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Sleep" />
+			<effect name="DefenceTrait">
+				<param SLEEP="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3088" levels="10" name="Item Skill: Paralyze">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="MEN" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
-		<set name="triggeredId" val="5171" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="pAtkSpd" val="0.5" />
+				<mul order="0x30" stat="runSpd" val="0.5" />
+				<mul order="0x30" stat="mAtkSpd" val="0.5" />
+			</effect>
+		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6126" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="3089" levels="10" name="Item Skill: Medusa">
 		<!-- Confirmed CT2.5 -->
@@ -1571,120 +1612,142 @@
 		</for>
 	</skill>
 	<skill id="3090" levels="10" name="Item Skill: Fear">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="MEN" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<set name="triggeredId" val="5173" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Fear" />
+		</for>
 	</skill>
 	<skill id="3091" levels="10" name="Item Skill: Poison">
+		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<table name="#dot"> 41 41 50 50 50 58 58 58 63 63 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="CON" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
-		<set name="triggeredId" val="5174" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3092" levels="10" name="Item Skill: Bleed">
+		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<table name="#dot"> 44 44 54 54 54 62 62 62 67 67 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="CON" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
-		<set name="triggeredId" val="5175" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3093" levels="10" name="Item Skill: Silence">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SILENCE" />
 		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="MEN" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<set name="triggeredId" val="5176" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Mute" />
+		</for>
 	</skill>
 	<skill id="3094" levels="10" name="Item Skill: Doom">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="MEN" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<set name="triggeredId" val="5177" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+		</for>
 	</skill>
 	<skill id="3095" levels="10" name="Item Skill: Mana Burn">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="castRange" val="1000" />
 		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
@@ -1697,87 +1760,106 @@
 		</for>
 	</skill>
 	<skill id="3096" levels="10" name="Item Skill: Slow">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="MEN" />
-		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="castRange" val="1000" />
 		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="5166" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3097" levels="10" name="Item Skill: Winter">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="MEN" />
-		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="castRange" val="1000" />
 		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="5167" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="pAtkSpd" val="0.77" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3098" levels="10" name="Item Skill: Stun">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="CON" />
-		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="castRange" val="1000" />
 		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
-		<set name="triggeredId" val="5168" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Stun" />
+		</for>
 	</skill>
 	<skill id="3099" levels="10" name="Item Skill: Hold">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="40" />
-		<set name="activationChance" val="#chance" />
 		<set name="basicProperty" val="MEN" />
-		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="castRange" val="1000" />
 		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="HOLD" />
-		<set name="triggeredId" val="5169" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
+		</for>
 	</skill>
 </list>
