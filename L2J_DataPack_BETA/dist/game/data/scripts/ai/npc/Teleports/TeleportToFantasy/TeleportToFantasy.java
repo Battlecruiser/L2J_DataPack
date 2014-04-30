@@ -26,25 +26,20 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
- * Fantasy Island teleport AI.<br>
- * Original python script by Kerberos.
+ * Fantasy Island teleport AI.
  * @author Plim
  */
 public final class TeleportToFantasy extends AbstractNpcAI
 {
 	// NPC
 	private static final int PADDIES = 32378;
-	// Misc
-	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<>();
 	// Locations
-	private static final Location[] RETURN_LOCS =
+	private static final Location RUNE_TOWNSHIP = new Location(43835, -47749, -792);
+	private static final Location[] RETURN_LOCATIONS =
 	{
 		new Location(-80826, 149775, -3043),
 		new Location(-12672, 122776, -3116),
@@ -59,78 +54,65 @@ public final class TeleportToFantasy extends AbstractNpcAI
 		new Location(87386, -143246, -1293),
 		new Location(12882, 181053, -3560)
 	};
-	
-	private static final Location[] ISLE_LOCS =
+	private static final Location[] ISLE_LOCATIONS =
 	{
 		new Location(-58752, -56898, -2032),
 		new Location(-59716, -57868, -2032),
 		new Location(-60691, -56893, -2032),
 		new Location(-59720, -55921, -2032)
 	};
-	
-	private static final Location RUNE_TOWNSHIP = new Location(43835, -47749, -792);
+	// Misc
+	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<>();
+	static
+	{
+		TELEPORTERS.put(30059, 2); // Trisha
+		TELEPORTERS.put(30080, 3); // Clarissa
+		TELEPORTERS.put(30177, 5); // Valentina
+		TELEPORTERS.put(30233, 7); // Esmeralda
+		TELEPORTERS.put(30256, 1); // Bella
+		TELEPORTERS.put(30320, 0); // Richlin
+		TELEPORTERS.put(30848, 6); // Elisa
+		TELEPORTERS.put(30899, 4); // Flauen
+		TELEPORTERS.put(31320, 8); // Ilyana
+		TELEPORTERS.put(31275, 9); // Tatiana
+		TELEPORTERS.put(31964, 10); // Bilia
+	}
+	// Player Variables
+	private static final String FANTASY_RETURN = "FANTASY_RETURN";
 	
 	private TeleportToFantasy()
 	{
 		super(TeleportToFantasy.class.getSimpleName(), "ai/npc/Teleports");
-		TELEPORTERS.put(30059, 3); // TRISHA
-		TELEPORTERS.put(30080, 4); // CLARISSA
-		TELEPORTERS.put(30177, 6); // VALENTIA
-		TELEPORTERS.put(30233, 8); // ESMERALDA
-		TELEPORTERS.put(30256, 2); // BELLA
-		TELEPORTERS.put(30320, 1); // RICHLIN
-		TELEPORTERS.put(30848, 7); // ELISA
-		TELEPORTERS.put(30899, 5); // FLAUEN
-		TELEPORTERS.put(31320, 9); // ILYANA
-		TELEPORTERS.put(31275, 10); // TATIANA
-		TELEPORTERS.put(31964, 11); // BILIA
-		
-		for (int npcId : TELEPORTERS.keySet())
-		{
-			addStartNpc(npcId);
-			addTalkId(npcId);
-		}
-		
 		addStartNpc(PADDIES);
+		addStartNpc(TELEPORTERS.keySet());
 		addTalkId(PADDIES);
+		addTalkId(TELEPORTERS.keySet());
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		
-		if (st == null)
+		if (npc.getId() == PADDIES)
 		{
-			return null;
-		}
-		
-		if (TELEPORTERS.containsKey(npc.getId()))
-		{
-			int random_id = getRandom(ISLE_LOCS.length);
+			final int returnId = player.getVariables().getInt(FANTASY_RETURN, -1);
 			
-			player.teleToLocation(ISLE_LOCS[random_id], false);
-			st.setState(State.STARTED);
-			st.set("id", String.valueOf(TELEPORTERS.get(npc.getId())));
-		}
-		else if (npc.getId() == PADDIES)
-		{
-			if ((st.getState() == State.STARTED) && (st.getInt("id") > 0))
+			if (returnId != -1)
 			{
-				int return_id = st.getInt("id") - 1;
-				player.teleToLocation(RETURN_LOCS[return_id], false);
-				st.unset("id");
+				player.teleToLocation(RETURN_LOCATIONS[returnId]);
+				player.getVariables().remove(FANTASY_RETURN);
 			}
-			
 			else
 			{
-				player.sendPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_ILL_BE_SENDING_YOU_BACK_TO_RUNE_TOWNSHIP_WHICH_IS_THE_NEAREST_TOWN));
+				broadcastNpcSay(npc, Say2.ALL, NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_ILL_BE_SENDING_YOU_BACK_TO_RUNE_TOWNSHIP_WHICH_IS_THE_NEAREST_TOWN);
 				player.teleToLocation(RUNE_TOWNSHIP);
 			}
-			st.exitQuest(true);
 		}
-		return htmltext;
+		else
+		{
+			player.teleToLocation(ISLE_LOCATIONS[getRandom(ISLE_LOCATIONS.length)]);
+			player.getVariables().set(FANTASY_RETURN, String.valueOf(TELEPORTERS.get(npc.getId())));
+		}
+		return super.onTalk(npc, player);
 	}
 	
 	public static void main(String[] args)
