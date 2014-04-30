@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3200" levels="3" name="Item Skill: Spell Refresh">
+		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
@@ -25,6 +26,7 @@
 		</for>
 	</skill>
 	<skill id="3201" levels="3" name="Item Skill: Music Refresh">
+		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
@@ -49,6 +51,7 @@
 		</for>
 	</skill>
 	<skill id="3202" levels="3" name="Item Skill: Refresh">
+		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
@@ -74,6 +77,7 @@
 		</for>
 	</skill>
 	<skill id="3203" levels="1" name="Item Skill: Mystery Skill">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
@@ -89,6 +93,7 @@
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="3204" levels="3" name="Item Skill: Reflect Damage">
+		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 379 438 495 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
@@ -115,6 +120,7 @@
 		</for>
 	</skill>
 	<skill id="3205" levels="2" name="Item Skill: Party Recall">
+		<!-- Confirmed CT2.5 -->
 		<table name="#hitTime"> 20000 3500 </table>
 		<table name="#magicLvl"> 48 56 </table>
 		<table name="#mpConsume"> 171 244 </table>
@@ -145,6 +151,7 @@
 		</for>
 	</skill>
 	<skill id="3206" levels="10" name="Item Skill: Music">
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
