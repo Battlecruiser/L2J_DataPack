@@ -308,8 +308,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pReuse" val="0.85" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="mAtkSpd" val="0.85" />
 			</effect>
 		</for>
 	</skill>
@@ -478,20 +478,19 @@
 	<skill id="5437" levels="2" name="Dissonance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#avoid"> 50 0 </table>
-		<table name="#def"> 0.6 1 </table>
+		<table name="#def"> 0.4 1 </table>
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="0.95" />
-				<mul order="0x30" stat="mAtk" val="0.95" />
+				<mul order="0x30" stat="pAtk" val="0.05" />
+				<mul order="0x30" stat="mAtk" val="0.05" />
 				<sub order="0x40" stat="accCombat" val="50" />
-				<add order="0x40" stat="runSpd" val="5" />
+				<sub order="0x40" stat="rEvas" val="#avoid" />
 				<mul order="0x30" stat="pDef" val="#def" />
 				<mul order="0x30" stat="mDef" val="#def" />
-				<sub order="0x40" stat="rEvas" val="#avoid" />
 			</effect>
 		</for>
 	</skill>
@@ -1017,13 +1016,12 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5479" levels="1" name="Boss Petrification Resistance">
-		<!-- TODO: Implement me! -->
-		<!-- Resist against Petrification. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill5479" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
 				<param TURN_STONE="10" />
@@ -1148,6 +1146,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5491" levels="1" name="Decrease Bow/Crossbow Atk. Spd.">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1155,7 +1154,10 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="0.5">
-					<using kind="BOW,CROSSBOW" />
+					<using kind="BOW" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="0.79">
+					<using kind="CROSSBOW" />
 				</mul>
 			</effect>
 		</for>
