@@ -46,7 +46,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pReuse" val="0.85" />
+				<mul order="0x30" stat="dReuse" val="0.85" />
 			</effect>
 		</for>
 	</skill>
@@ -73,6 +73,7 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="mReuse" val="0.85" />
 				<mul order="0x30" stat="pReuse" val="0.85" />
+				<mul order="0x30" stat="dReuse" val="0.85" />
 			</effect>
 		</for>
 	</skill>
