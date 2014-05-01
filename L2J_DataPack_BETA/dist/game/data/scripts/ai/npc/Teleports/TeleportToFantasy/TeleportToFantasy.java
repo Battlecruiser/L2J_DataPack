@@ -18,9 +18,9 @@
  */
 package ai.npc.Teleports.TeleportToFantasy;
 
+import java.util.HashMap;
 import java.util.Map;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.Location;
@@ -62,7 +62,7 @@ public final class TeleportToFantasy extends AbstractNpcAI
 		new Location(-59720, -55921, -2032)
 	};
 	// Misc
-	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<>();
+	private static final Map<Integer, Integer> TELEPORTERS = new HashMap<>();
 	static
 	{
 		TELEPORTERS.put(30059, 2); // Trisha
