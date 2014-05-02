@@ -29,9 +29,13 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class EnlargeAbnormalSlot extends AbstractEffect
 {
+	private final int _slots;
+	
 	public EnlargeAbnormalSlot(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_slots = params.getInt("slots", 0);
 	}
 	
 	@Override
@@ -41,8 +45,20 @@ public final class EnlargeAbnormalSlot extends AbstractEffect
 	}
 	
 	@Override
+	public void onStart(BuffInfo info)
+	{
+		info.getEffected().getStat().setMaxBuffCount(info.getEffected().getStat().getMaxBuffCount() + _slots);
+	}
+	
+	@Override
 	public boolean onActionTime(BuffInfo info)
 	{
 		return info.getSkill().isPassive();
+	}
+	
+	@Override
+	public void onExit(BuffInfo info)
+	{
+		info.getEffected().getStat().setMaxBuffCount(Math.max(0, info.getEffected().getStat().getMaxBuffCount() - _slots));
 	}
 }

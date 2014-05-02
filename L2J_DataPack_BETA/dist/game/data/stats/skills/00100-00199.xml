@@ -1026,7 +1026,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CubicMastery" val="#cubicCount" />
+			<effect name="CubicMastery">
+				<param cubicCount="#cubicCount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="144" levels="37" name="Dual Weapon Mastery" enchantGroup1="1" enchantGroup2="1">

@@ -3,7 +3,6 @@ package handlers.effecthandlers;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
@@ -12,9 +11,13 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class CubicMastery extends AbstractEffect
 {
+	private final int _cubicCount;
+	
 	public CubicMastery(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_cubicCount = params.getInt("cubicCount", 0);
 	}
 	
 	@Override
@@ -24,14 +27,29 @@ public final class CubicMastery extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public void onStart(BuffInfo info)
 	{
-		return L2EffectType.CUBIC_MASTERY;
+		final int cubicCount = info.getEffected().getActingPlayer().getStat().getMaxCubicCount() + _cubicCount;
+		info.getEffected().getActingPlayer().getStat().setMaxCubicCount(cubicCount);
 	}
 	
 	@Override
 	public boolean onActionTime(BuffInfo info)
 	{
 		return info.getSkill().isPassive();
+	}
+	
+	@Override
+	public void onExit(BuffInfo info)
+	{
+		final int cubicCount = info.getEffected().getActingPlayer().getStat().getMaxCubicCount() - _cubicCount;
+		if (cubicCount <= 0)
+		{
+			info.getEffected().getActingPlayer().getStat().setMaxCubicCount(0);
+		}
+		else
+		{
+			info.getEffected().getActingPlayer().getStat().setMaxCubicCount(cubicCount);
+		}
 	}
 }
