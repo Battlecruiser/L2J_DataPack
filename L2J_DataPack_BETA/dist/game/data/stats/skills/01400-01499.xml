@@ -238,7 +238,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="EnlargeAbnormalSlot" val="#slots" />
+			<effect name="EnlargeAbnormalSlot">
+				<param slots="#slots" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1406" levels="1" name="Summon Feline King" enchantGroup1="5">
