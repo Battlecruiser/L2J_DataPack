@@ -197,7 +197,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="critDamEvas" val="1.03" />
+				<mul order="0x30" stat="defCritRate" val="0.97" />
 			</effect>
 		</for>
 	</skill>
@@ -209,7 +209,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="critAddVuln" val="100" />
+				<sub order="0x40" stat="defCritDamageAdd" val="100" />
 			</effect>
 		</for>
 	</skill>
@@ -274,7 +274,7 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="2" />
-				<mul order="0x30" stat="critDamEvas" val="1.05" />
+				<mul order="0x30" stat="defCritRate" val="0.95" />
 			</effect>
 		</for>
 	</skill>
