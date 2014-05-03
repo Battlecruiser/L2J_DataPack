@@ -2151,7 +2151,10 @@
 				<add order="0x40" stat="rEvas" val="#rEvas">
 					<using kind="LIGHT" />
 				</add>
-				<mul order="0x30" stat="critDamEvas" val="1.05">
+				<mul order="0x30" stat="defCritRate" val="0.95">
+					<using kind="LIGHT" />
+				</mul>
+				<mul order="0x30" stat="defCritDamage" val="0.95">
 					<using kind="LIGHT" />
 				</mul>
 			</effect>
@@ -2164,7 +2167,10 @@
 				<add order="0x40" stat="rEvas" val="6">
 					<using kind="LIGHT" />
 				</add>
-				<mul order="0x30" stat="critDamEvas" val="1.05">
+				<mul order="0x30" stat="defCritRate" val="0.95">
+					<using kind="LIGHT" />
+				</mul>
+				<mul order="0x30" stat="defCritDamage" val="0.95">
 					<using kind="LIGHT" />
 				</mul>
 			</effect>
@@ -2177,7 +2183,10 @@
 				<add order="0x40" stat="rEvas" val="#ench2rEvas">
 					<using kind="LIGHT" />
 				</add>
-				<mul order="0x30" stat="critDamEvas" val="1.05">
+				<mul order="0x30" stat="defCritRate" val="0.95">
+					<using kind="LIGHT" />
+				</mul>
+				<mul order="0x30" stat="defCritDamage" val="0.95">
 					<using kind="LIGHT" />
 				</mul>
 			</effect>

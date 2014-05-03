@@ -748,7 +748,7 @@
 	</skill>
 	<skill id="5452" levels="3" name="Spite">
 		<!-- Confirmed CT2.5 -->
-		<table name="#critVuln"> 1.4 1.5 1.6 </table>
+		<table name="#defCritDamage"> 1.4 1.5 1.6 </table>
 		<table name="#magicLvl"> 66 70 74 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
@@ -759,7 +759,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="critVuln" val="#critVuln" />
+				<mul order="0x30" stat="defCritDamage" val="#defCritDamage" />
 			</effect>
 		</for>
 	</skill>

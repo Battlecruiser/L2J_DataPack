@@ -114,7 +114,7 @@
 				<mul order="0x30" stat="mDef" val="1.05"> <!-- magic defense power is increased by 5% -->
 					<using kind="HEAVY" />
 				</mul>
-				<sub order="0x40" stat="critAddVuln" val="3"> <!-- critical damage is decreased by 3 -->
+				<sub order="0x40" stat="defCritRateAdd" val="30"> <!-- critical damage is decreased by 3 -->
 					<using kind="HEAVY" />
 				</sub>
 				<add order="0x40" stat="rCrit" val="#rCrit" />
@@ -139,7 +139,7 @@
 				<add order="0x40" stat="rEvas" val="2"> <!-- evasion is increased by 2 -->
 					<using kind="LIGHT" />
 				</add>
-				<sub order="0x40" stat="critAddVuln" val="86"> <!-- critical damage is decreased by 86 -->
+				<sub order="0x40" stat="defCritDamageAdd" val="86"> <!-- critical damage is decreased by 86 -->
 					<using kind="LIGHT" />
 				</sub>
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
@@ -1663,8 +1663,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="critDamEvas" val="1.15" />
-				<mul order="0x30" stat="critVuln" val="0.85" />
+				<mul order="0x30" stat="defCritRate" val="0.85" />
+				<mul order="0x30" stat="defCritDamage" val="0.85" />
 			</effect>
 		</for>
 	</skill>

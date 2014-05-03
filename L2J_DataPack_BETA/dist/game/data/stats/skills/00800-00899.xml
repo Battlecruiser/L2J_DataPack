@@ -63,7 +63,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="critVuln" val="0.95" />
+				<mul order="0x30" stat="defCritDamage" val="0.95" />
 			</effect>
 		</for>
 	</skill>
