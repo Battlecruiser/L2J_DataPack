@@ -27,13 +27,12 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
  * Warrior Fishing Block AI.
  * @author Zoey76
  */
-public class WarriorFishingBlock extends AbstractNpcAI
+public final class WarriorFishingBlock extends AbstractNpcAI
 {
 	// Monsters
 	private static final int[] MONSTERS =
@@ -68,7 +67,7 @@ public class WarriorFishingBlock extends AbstractNpcAI
 	};
 	// Misc
 	private static final int CHANCE_TO_SHOUT_ON_ATTACK = 33;
-	private static final int DESPAWN_TIME = 50000; // 50 seconds
+	private static final int DESPAWN_TIME = 50; // 50 seconds to despawn
 	
 	public WarriorFishingBlock()
 	{
@@ -81,11 +80,34 @@ public class WarriorFishingBlock extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if ((npc != null) && event.equals("DESPAWN"))
+		switch (event)
 		{
-			npc.deleteMe();
+			case "SPAWN":
+			{
+				final L2Object obj = npc.getTarget();
+				if ((obj == null) || !obj.isPlayer())
+				{
+					System.out.println("Deleting fishing monster target is not player.");
+					npc.decayMe();
+					return super.onSpawn(npc);
+				}
+				
+				final L2PcInstance target = obj.getActingPlayer();
+				broadcastNpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_SPAWN[getRandom(NPC_STRINGS_ON_SPAWN.length)], target.getName());
+				((L2Attackable) npc).addDamageHate(target, 0, 2000);
+				npc.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, target);
+				npc.addAttackerToAttackByList(target);
+				
+				startQuestTimer("DESPAWN", DESPAWN_TIME * 1000, npc, target);
+				break;
+			}
+			case "DESPAWN":
+			{
+				npc.decayMe();
+				break;
+			}
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -93,45 +115,24 @@ public class WarriorFishingBlock extends AbstractNpcAI
 	{
 		if (getRandom(100) < CHANCE_TO_SHOUT_ON_ATTACK)
 		{
-			npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_ATTACK[getRandom(NPC_STRINGS_ON_ATTACK.length)]));
+			broadcastNpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_ATTACK[getRandom(NPC_STRINGS_ON_ATTACK.length)]);
 		}
-		return null;
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_KILL[getRandom(NPC_STRINGS_ON_KILL.length)]));
+		broadcastNpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_KILL[getRandom(NPC_STRINGS_ON_KILL.length)]);
 		cancelQuestTimer("DESPAWN", npc, killer);
-		return null;
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if ((npc == null) || !npc.isAttackable())
-		{
-			return null;
-		}
-		
-		final L2Object target = npc.getTarget();
-		if ((target == null) || !target.isPlayer())
-		{
-			npc.deleteMe();
-			return null;
-		}
-		
-		final L2PcInstance player = target.getActingPlayer();
-		final NpcSay say = new NpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_SPAWN[getRandom(NPC_STRINGS_ON_SPAWN.length)]);
-		say.addStringParameter(player.getName());
-		npc.broadcastPacket(say);
-		
-		((L2Attackable) npc).addDamageHate(player, 0, 2000);
-		npc.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, player);
-		npc.addAttackerToAttackByList(player);
-		
-		startQuestTimer("DESPAWN", DESPAWN_TIME, npc, player);
-		return null;
+		startQuestTimer("SPAWN", 2000, npc, null);
+		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
