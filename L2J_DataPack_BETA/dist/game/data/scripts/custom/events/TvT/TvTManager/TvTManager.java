@@ -61,40 +61,40 @@ public final class TvTManager extends AbstractNpcAI
 				final int team2Count = TvTEvent.getTeamsPlayerCounts()[1];
 				if (player.isCursedWeaponEquipped())
 				{
-					htmltext = "CursedWeaponEquipped.htm";
+					htmltext = "CursedWeaponEquipped.html";
 				}
 				else if (OlympiadManager.getInstance().isRegistered(player))
 				{
-					htmltext = "Olympiad.htm";
+					htmltext = "Olympiad.html";
 				}
 				else if (player.getKarma() > 0)
 				{
-					htmltext = "Karma.htm";
+					htmltext = "Karma.html";
 				}
 				else if ((playerLevel < Config.TVT_EVENT_MIN_LVL) || (playerLevel > Config.TVT_EVENT_MAX_LVL))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "Level.htm");
+					htmltext = getHtm(player.getHtmlPrefix(), "Level.html");
 					htmltext = htmltext.replaceAll("%min%", String.valueOf(Config.TVT_EVENT_MIN_LVL));
 					htmltext = htmltext.replaceAll("%max%", String.valueOf(Config.TVT_EVENT_MAX_LVL));
 				}
 				else if ((team1Count == Config.TVT_EVENT_MAX_PLAYERS_IN_TEAMS) && (team2Count == Config.TVT_EVENT_MAX_PLAYERS_IN_TEAMS))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "TeamsFull.htm");
+					htmltext = getHtm(player.getHtmlPrefix(), "TeamsFull.html");
 					htmltext = htmltext.replaceAll("%max%", String.valueOf(Config.TVT_EVENT_MAX_PLAYERS_IN_TEAMS));
 				}
 				else if ((Config.TVT_EVENT_MAX_PARTICIPANTS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddPlayer(AntiFeedManager.TVT_ID, player, Config.TVT_EVENT_MAX_PARTICIPANTS_PER_IP))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "IPRestriction.htm");
+					htmltext = getHtm(player.getHtmlPrefix(), "IPRestriction.html");
 					htmltext = htmltext.replaceAll("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(player, Config.TVT_EVENT_MAX_PARTICIPANTS_PER_IP)));
 				}
 				else if (TvTEvent.needParticipationFee() && !TvTEvent.hasParticipationFee(player))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "ParticipationFee.htm");
+					htmltext = getHtm(player.getHtmlPrefix(), "ParticipationFee.html");
 					htmltext = htmltext.replaceAll("%fee%", TvTEvent.getParticipationFee());
 				}
 				else if (TvTEvent.addParticipant(player))
 				{
-					htmltext = "Registered.htm";
+					htmltext = "Registered.html";
 				}
 				break;
 			}
@@ -105,7 +105,8 @@ public final class TvTManager extends AbstractNpcAI
 				{
 					AntiFeedManager.getInstance().removePlayer(AntiFeedManager.TVT_ID, player);
 				}
-				htmltext = "Unregistered.htm";
+				htmltext = "Unregistered.html";
+				break;
 			}
 		}
 		return htmltext;
@@ -119,7 +120,7 @@ public final class TvTManager extends AbstractNpcAI
 		{
 			final boolean isParticipant = TvTEvent.isPlayerParticipant(player.getObjectId());
 			int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
-			htmltext = getHtm(player.getHtmlPrefix(), (!isParticipant ? "Participation.htm" : "RemoveParticipation.htm"));
+			htmltext = getHtm(player.getHtmlPrefix(), (!isParticipant ? "Participation.html" : "RemoveParticipation.html"));
 			htmltext = htmltext.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 			htmltext = htmltext.replaceAll("%team1name%", Config.TVT_EVENT_TEAM_1_NAME);
 			htmltext = htmltext.replaceAll("%team1playercount%", String.valueOf(teamsPlayerCounts[0]));
@@ -136,7 +137,7 @@ public final class TvTManager extends AbstractNpcAI
 		{
 			int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
 			int[] teamsPointsCounts = TvTEvent.getTeamsPoints();
-			htmltext = getHtm(player.getHtmlPrefix(), "Status.htm");
+			htmltext = getHtm(player.getHtmlPrefix(), "Status.html");
 			htmltext = htmltext.replaceAll("%team1name%", Config.TVT_EVENT_TEAM_1_NAME);
 			htmltext = htmltext.replaceAll("%team1playercount%", String.valueOf(teamsPlayerCounts[0]));
 			htmltext = htmltext.replaceAll("%team1points%", String.valueOf(teamsPointsCounts[0]));
