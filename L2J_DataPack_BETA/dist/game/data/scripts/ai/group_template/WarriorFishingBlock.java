@@ -87,7 +87,6 @@ public final class WarriorFishingBlock extends AbstractNpcAI
 				final L2Object obj = npc.getTarget();
 				if ((obj == null) || !obj.isPlayer())
 				{
-					System.out.println("Deleting fishing monster target is not player.");
 					npc.decayMe();
 					return super.onSpawn(npc);
 				}
