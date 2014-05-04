@@ -88,16 +88,17 @@ public final class WarriorFishingBlock extends AbstractNpcAI
 				if ((obj == null) || !obj.isPlayer())
 				{
 					npc.decayMe();
-					return super.onSpawn(npc);
 				}
-				
-				final L2PcInstance target = obj.getActingPlayer();
-				broadcastNpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_SPAWN[getRandom(NPC_STRINGS_ON_SPAWN.length)], target.getName());
-				((L2Attackable) npc).addDamageHate(target, 0, 2000);
-				npc.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, target);
-				npc.addAttackerToAttackByList(target);
-				
-				startQuestTimer("DESPAWN", DESPAWN_TIME * 1000, npc, target);
+				else
+				{
+					final L2PcInstance target = obj.getActingPlayer();
+					broadcastNpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_SPAWN[getRandom(NPC_STRINGS_ON_SPAWN.length)], target.getName());
+					((L2Attackable) npc).addDamageHate(target, 0, 2000);
+					npc.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, target);
+					npc.addAttackerToAttackByList(target);
+					
+					startQuestTimer("DESPAWN", DESPAWN_TIME * 1000, npc, target);
+				}
 				break;
 			}
 			case "DESPAWN":
