@@ -628,10 +628,15 @@
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="81" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" triggeredId="6059" chanceType="ON_ATTACKED_HIT" activationChance="80" activationMinDamage="300">
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="300" />
+				<param chance="80" />
+				<param skillId="6059" skillLevel="1" /> <!-- Counter Critical -->
+				<param targetType="SELF" />
 				<mul order="0x30" stat="defCritDamage" val="0.7" />
 			</effect>
 		</for>
@@ -1575,7 +1580,12 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="ChanceSkillTrigger" triggeredId="6059" chanceType="ON_ATTACKED_HIT" activationChance="80" activationMinDamage="300">
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="300" />
+				<param chance="80" />
+				<param skillId="6059" skillLevel="1" /> <!-- Counter Critical -->
+				<param targetType="SELF" />
 				<mul order="0x30" stat="defCritDamage" val="0.7" />
 			</effect>
 		</for>

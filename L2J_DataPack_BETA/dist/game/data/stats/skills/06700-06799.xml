@@ -344,7 +344,13 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="60" activationMinDamage="60" chanceType="ON_ATTACKED_HIT" triggeredId="6726" />
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="60" />
+				<param chance="60" />
+				<param skillId="6726" skillLevel="1" /> <!-- Bless the Blood -->
+				<param targetType="SELF" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6726" levels="1" name="Bless the Blood">
