@@ -241,7 +241,6 @@
 	<skill id="6209" levels="4" name="Weapon Grade Penalty">
 		<table name="#cAtk"> 0.9 0.8 0.7 0.6 </table>
 		<table name="#icons"> icon.skill6209_1 icon.skill6209_2 icon.skill6209_3 icon.skill6209_4 </table>
-		<table name="#magicFailureRate"> 2000 4000 6000 8000 </table> <!-- FIXME: values unconfirmed -->
 		<table name="#rCrit"> -0.1 -0.2 -0.3 -0.4 </table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="1" />
@@ -255,7 +254,6 @@
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="pAtk" val="0.9" />
-				<add order="0x40" stat="magicFailureRate" val="#magicFailureRate" />
 			</effect>
 		</for>
 	</skill>

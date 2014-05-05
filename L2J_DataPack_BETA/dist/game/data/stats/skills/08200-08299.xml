@@ -1598,7 +1598,7 @@
 				<add order="0x40" stat="maxHp" val="540" /> <!-- Max HP 540 -->
 				<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
 				<add order="0x40" stat="runSpd" val="5" /> <!-- Increases Speed by 5 -->
-				<mul order="0x30" stat="magicDamVul" val="0.99" /> <!-- Increases M. Def by 1% -->
+				<mul order="0x30" stat="magicSuccRes" val="1.01" /> <!-- Resistance to magic damage by 1% -->
 				<add order="0x10" stat="cloak" val="1" />
 			</effect>
 		</for>
