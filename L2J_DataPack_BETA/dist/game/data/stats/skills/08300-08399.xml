@@ -59,7 +59,7 @@
 				<add order="0x40" stat="maxHp" val="540" /> <!-- Max HP +540 -->
 				<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
 				<add order="0x40" stat="runSpd" val="5" /> <!-- Increases Speed by 5 -->
-				<mul order="0x30" stat="magicDamVul" val="0.99" /> <!-- Increases M. Def by 1% -->
+				<mul order="0x30" stat="magicSuccRes" val="1.01" /> <!-- Resistance to magic damage by 1% -->
 				<add order="0x10" stat="cloak" val="1" />
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -240,7 +240,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="magicDamVul" val="0.98" />
+				<mul order="0x30" stat="magicSuccRes" val="1.02" />
 				<sub order="0x40" stat="cancel" val="13" />
 			</effect>
 		</for>
@@ -252,7 +252,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="magicDamVul" val="0.98" />
+				<mul order="0x30" stat="magicSuccRes" val="1.02" />
 				<add order="0x40" stat="darkRes" val="2" />
 			</effect>
 		</for>
@@ -1469,7 +1469,7 @@
 				<param SHOCK="50" />
 				<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
 				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
-				<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to Damage Magic +2% -->
+				<mul order="0x30" stat="magicSuccRes" val="1.02" /> <!-- Resistance to Damage Magic +2% -->
 				<add order="0x40" stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
 				<add order="0x40" stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
 				<add order="0x40" stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
