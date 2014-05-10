@@ -911,7 +911,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<cond msgId="2453">
-			<player cloakStatus="1" />
+			<player cloakStatus="true" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="25" />
@@ -938,7 +938,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 		<cond msgId="2453">
-			<player cloakStatus="1" />
+			<player cloakStatus="true" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="25" />
@@ -965,7 +965,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<cond msgId="2453">
-			<player cloakStatus="1" />
+			<player cloakStatus="true" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="25" />
@@ -982,7 +982,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<cond msgId="2453">
-			<player cloakStatus="1" />
+			<player cloakStatus="true" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="25" />
@@ -1009,7 +1009,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 		<cond msgId="2453">
-			<player cloakStatus="1" />
+			<player cloakStatus="true" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="25" />

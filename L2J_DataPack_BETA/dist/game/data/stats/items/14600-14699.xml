@@ -34,7 +34,7 @@
 		<cond msgId="2453">
 			<and>
 				<player races="Kamael" />
-				<player cloakStatus="1" />
+				<player cloakStatus="true" />
 			</and>
 		</cond>
 		<for>
@@ -55,7 +55,7 @@
 		<cond msgId="2453">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player cloakStatus="1" />
+				<player cloakStatus="true" />
 			</and>
 		</cond>
 		<for>
@@ -155,7 +155,7 @@
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player categoryType="ROGUE_CLOACK" />
-				<player cloakStatus="1" />
+				<player cloakStatus="true" />
 			</and>
 		</cond>
 		<for>
@@ -174,7 +174,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="2453">
-			<player cloakStatus="1" />
+			<player cloakStatus="true" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="20" />
@@ -195,7 +195,7 @@
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player categoryType="MAGE_CLOACK" />
-				<player cloakStatus="1" />
+				<player cloakStatus="true" />
 			</and>
 		</cond>
 		<for>

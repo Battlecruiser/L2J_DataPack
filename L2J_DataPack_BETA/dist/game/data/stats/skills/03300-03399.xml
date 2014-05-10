@@ -634,11 +634,11 @@
 				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
 				<mul order="0x30" stat="healEffect" val="1.03" /> <!-- Received Increased Heal +3% -->
 				<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="13" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="3349" levels="1" name="Dynasty Breast Plate - Weapon Master">
@@ -654,8 +654,8 @@
 				<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
 				<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
 				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="3350" levels="1" name="Dynasty Breast Plate - Force Master">
@@ -670,8 +670,8 @@
 				<add order="0x40" stat="maxHp" val="492" /> <!-- HP +492 -->
 				<add order="0x40" stat="darkRes" val="8" /> <!-- Resistance to Darkness attacks +8 -->
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="3351" levels="1" name="Dynasty Breast Plate - Bard">
@@ -686,8 +686,8 @@
 				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
 				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" /> <!-- MP consumption is decreased when song and dance skills are used -5% -->
 				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="3352" levels="1" name="Dynasty Leather Armor - Dagger Master">
@@ -702,11 +702,11 @@
 				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
 				<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
 				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param HOLD="13" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="3353" levels="1" name="Dynasty Leather Armor - Bow Master">
@@ -722,8 +722,8 @@
 				<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
 				<add order="0x40" stat="regMp" val="1.72" /> <!-- MP recovery are increased +1.72 -->
 				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="3354" levels="1" name="Dynasty Tunic - Healer">
@@ -739,8 +739,8 @@
 				<add order="0x40" stat="healEffect" val="20" /> <!-- Increase amount of heal +20 -->
 				<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
 				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="3355" levels="1" name="Dynasty Tunic - Enchanter">
@@ -756,8 +756,8 @@
 				<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" /> <!-- Decrease MP consumption -5% -->
 				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="3356" levels="1" name="Dynasty Tunic - Summoner">
@@ -773,8 +773,8 @@
 				<mul order="0x30" stat="pDef" val="1.026" /> <!-- P. Def. +2.6% -->
 				<mul order="0x30" stat="pAtk" val="1.026" /> <!-- Increase P. Atk. +2.6% -->
 				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="3357" levels="1" name="Dynasty Tunic - Wizard">
@@ -789,8 +789,8 @@
 				<mul order="0x30" stat="mAtk" val="1.054" /> <!-- Increase M. Atk +5.4% -->
 				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
 				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="3358" levels="1" name="Flag Equip">

@@ -65,7 +65,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -74,6 +73,7 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8203" levels="1" name="Dynasty Breastplate - PvP Shield Master">
@@ -99,8 +99,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8204" levels="1" name="Dynasty Breastplate - PvP Weapon Master">
@@ -119,7 +119,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -128,6 +127,7 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8205" levels="1" name="Dynasty Breastplate - PvP Force Master">
@@ -145,7 +145,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -154,6 +153,7 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8206" levels="1" name="Dynasty Breastplate - PvP Bard">
@@ -171,7 +171,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -180,6 +179,7 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8207" levels="1" name="Dynasty Leather Armor - PvP">
@@ -197,7 +197,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -206,6 +205,7 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8208" levels="1" name="Dynasty Leather Armor - PvP Dagger Master">
@@ -231,8 +231,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8209" levels="1" name="Dynasty Leather Armor - PvP Bow Master">
@@ -251,7 +251,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -260,6 +259,7 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8210" levels="1" name="Dynasty Tunic - PvP">
@@ -276,7 +276,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -285,6 +284,7 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8211" levels="1" name="Dynasty Tunic - PvP Healer">
@@ -303,7 +303,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -312,6 +311,7 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8212" levels="1" name="Dynasty Tunic - PvP Enchanter">
@@ -330,7 +330,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -339,6 +338,7 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8213" levels="1" name="Dynasty Tunic - PvP Summoner">
@@ -357,7 +357,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -366,6 +365,7 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8214" levels="1" name="Dynasty Tunic - PvP Wizard">
@@ -383,7 +383,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -392,6 +391,7 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8215" levels="1" name="Dynasty Leather Armor - PvP Force Master">
@@ -409,7 +409,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -418,6 +417,7 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8216" levels="1" name="Dynasty Leather Armor - PvP Weapon Master">
@@ -436,7 +436,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -445,6 +444,7 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8217" levels="1" name="Dynasty Leather Armor - PvP Enchanter">
@@ -463,7 +463,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -472,6 +471,7 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8218" levels="1" name="Dynasty Leather Armor - PvP Summoner">
@@ -490,7 +490,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -499,6 +498,7 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8219" levels="1" name="Dynasty Platinum Breastplate - PvP Shield Master">
@@ -524,8 +524,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8220" levels="1" name="Dynasty Platinum Breastplate - PvP Weapon Master">
@@ -544,7 +544,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -553,6 +552,7 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8221" levels="1" name="Dynasty Platinum Breastplate - PvP Bard">
@@ -570,7 +570,6 @@
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -579,6 +578,7 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8222" levels="1" name="Dynasty Platinum Breastplate - PvP Force Master">
@@ -596,7 +596,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -605,6 +604,7 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8223" levels="1" name="Dynasty Jewel Leather Armor - PvP Dagger Master">
@@ -630,8 +630,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8224" levels="1" name="Dynasty Jewel Leather Armor - PvP Bow Master">
@@ -650,7 +650,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -659,6 +658,7 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8225" levels="1" name="Dynasty Jewel Leather Armor - PvP Force Master">
@@ -676,7 +676,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -685,6 +684,7 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8226" levels="1" name="Dynasty Jewel Leather Armor - PvP Weapon Master">
@@ -703,7 +703,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -712,6 +711,7 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8227" levels="1" name="Dynasty Jewel Leather Armor - PvP Summoner">
@@ -730,7 +730,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -739,6 +738,7 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8228" levels="1" name="Dynasty Jewel Leather Armor - PvP Enchanter">
@@ -757,7 +757,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -766,6 +765,7 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8229" levels="1" name="Dynasty Silver Satin Tunic - PvP Healer">
@@ -784,7 +784,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -793,6 +792,7 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8230" levels="1" name="Dynasty Silver Satin Tunic - PvP Enchanter">
@@ -811,7 +811,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -820,6 +819,7 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8231" levels="1" name="Dynasty Silver Satin Tunic - PvP Summoner">
@@ -838,7 +838,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -847,6 +846,7 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8232" levels="1" name="Dynasty Silver Satin Tunic - PvP Wizard">
@@ -864,7 +864,6 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -873,6 +872,7 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8233" levels="1" name="Zubei's Helmet">
@@ -1599,8 +1599,8 @@
 				<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
 				<add order="0x40" stat="runSpd" val="5" /> <!-- Increases Speed by 5 -->
 				<mul order="0x30" stat="magicSuccRes" val="1.01" /> <!-- Resistance to magic damage by 1% -->
-				<add order="0x10" stat="cloak" val="1" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8285" levels="1" name="Vesper Light Armor Set">
@@ -1633,8 +1633,8 @@
 				<add order="0x40" stat="maxMp" val="354" /> <!-- Max MP by 354 -->
 				<add order="0x40" stat="rEvas" val="3" /> <!-- Increases Evasion by 3 -->
 				<add order="0x40" stat="cAtkAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
-				<add order="0x10" stat="cloak" val="1" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8287" levels="1" name="Vesper Robe Set">
@@ -1668,8 +1668,8 @@
 				<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
 				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
-				<add order="0x10" stat="cloak" val="1" />
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8289" levels="3" name="Special Ability Focus">
