@@ -95,14 +95,7 @@
 															</xs:attribute>
 															<xs:attribute name="clanHall" type="xs:normalizedString" />
 															<xs:attribute name="class_id_restriction" type="xs:normalizedString" />
-															<xs:attribute name="cloakStatus">
-																<xs:simpleType>
-																	<xs:restriction base="xs:nonNegativeInteger">
-																		<xs:minInclusive value="0" />
-																		<xs:maxInclusive value="1" />
-																	</xs:restriction>
-																</xs:simpleType>
-															</xs:attribute>
+															<xs:attribute name="cloakStatus" type="xs:boolean" />
 															<xs:attribute name="isHero" type="xs:boolean" />
 															<xs:attribute name="level">
 																<xs:simpleType>
@@ -142,14 +135,7 @@
 												<xs:attribute name="chaotic" type="xs:boolean" />
 												<xs:attribute name="clanHall" type="xs:normalizedString" />
 												<xs:attribute name="class_id_restriction" type="xs:normalizedString" />
-												<xs:attribute name="cloakStatus">
-													<xs:simpleType>
-														<xs:restriction base="xs:nonNegativeInteger">
-															<xs:minInclusive value="0" />
-															<xs:maxInclusive value="1" />
-														</xs:restriction>
-													</xs:simpleType>
-												</xs:attribute>
+												<xs:attribute name="cloakStatus" type="xs:boolean" />
 												<xs:attribute name="flyMounted" type="xs:boolean" />
 												<xs:attribute name="fort" type="xs:integer" fixed="-1" />
 												<xs:attribute name="insideZoneId" type="xs:normalizedString" />
