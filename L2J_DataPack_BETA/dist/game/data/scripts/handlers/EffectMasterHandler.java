@@ -177,6 +177,7 @@ public final class EffectMasterHandler
 		TakeFort.class,
 		TakeFortStart.class,
 		TakeTerritoryFlag.class,
+		TalismanSlot.class,
 		TargetCancel.class,
 		TargetMe.class,
 		TargetMeProbability.class,
