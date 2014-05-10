@@ -21,19 +21,28 @@ package custom.events.TvT.TvTManager;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
+import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 import com.l2jserver.gameserver.instancemanager.AntiFeedManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.olympiad.OlympiadManager;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * TvT Manager AI.
  * @author Zoey76
  */
-public final class TvTManager extends AbstractNpcAI
+public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHandler
 {
 	private static final int MANAGER_ID = 70010;
+	private static final String[] COMMANDS =
+	{
+		"tvt",
+		"tvtjoin",
+		"tvtleave"
+	};
 	
 	public TvTManager()
 	{
@@ -41,6 +50,11 @@ public final class TvTManager extends AbstractNpcAI
 		addFirstTalkId(MANAGER_ID);
 		addTalkId(MANAGER_ID);
 		addStartNpc(MANAGER_ID);
+		
+		if (Config.TVT_ALLOW_VOICED_COMMAND)
+		{
+			VoicedCommandHandler.getInstance().registerHandler(this);
+		}
 	}
 	
 	@Override
@@ -61,15 +75,15 @@ public final class TvTManager extends AbstractNpcAI
 				final int team2Count = TvTEvent.getTeamsPlayerCounts()[1];
 				if (player.isCursedWeaponEquipped())
 				{
-					htmltext = "CursedWeaponEquipped.html";
+					htmltext = getHtm(player.getHtmlPrefix(), "CursedWeaponEquipped.html");
 				}
 				else if (OlympiadManager.getInstance().isRegistered(player))
 				{
-					htmltext = "Olympiad.html";
+					htmltext = getHtm(player.getHtmlPrefix(), "Olympiad.html");
 				}
 				else if (player.getKarma() > 0)
 				{
-					htmltext = "Karma.html";
+					htmltext = getHtm(player.getHtmlPrefix(), "Karma.html");
 				}
 				else if ((playerLevel < Config.TVT_EVENT_MIN_LVL) || (playerLevel > Config.TVT_EVENT_MAX_LVL))
 				{
@@ -94,18 +108,24 @@ public final class TvTManager extends AbstractNpcAI
 				}
 				else if (TvTEvent.addParticipant(player))
 				{
-					htmltext = "Registered.html";
+					htmltext = getHtm(player.getHtmlPrefix(), "Registered.html");
 				}
 				break;
 			}
 			case "remove":
 			{
-				TvTEvent.removeParticipant(player.getObjectId());
-				if (Config.TVT_EVENT_MAX_PARTICIPANTS_PER_IP > 0)
+				if (TvTEvent.removeParticipant(player.getObjectId()))
 				{
-					AntiFeedManager.getInstance().removePlayer(AntiFeedManager.TVT_ID, player);
+					if (Config.TVT_EVENT_MAX_PARTICIPANTS_PER_IP > 0)
+					{
+						AntiFeedManager.getInstance().removePlayer(AntiFeedManager.TVT_ID, player);
+					}
+					htmltext = getHtm(player.getHtmlPrefix(), "Unregistered.html");
 				}
-				htmltext = "Unregistered.html";
+				else
+				{
+					player.sendMessage("You cannot unregister to this event.");
+				}
 				break;
 			}
 		}
@@ -135,17 +155,60 @@ public final class TvTManager extends AbstractNpcAI
 		}
 		else if (TvTEvent.isStarting() || TvTEvent.isStarted())
 		{
-			int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
-			int[] teamsPointsCounts = TvTEvent.getTeamsPoints();
-			htmltext = getHtm(player.getHtmlPrefix(), "Status.html");
-			htmltext = htmltext.replaceAll("%team1name%", Config.TVT_EVENT_TEAM_1_NAME);
-			htmltext = htmltext.replaceAll("%team1playercount%", String.valueOf(teamsPlayerCounts[0]));
-			htmltext = htmltext.replaceAll("%team1points%", String.valueOf(teamsPointsCounts[0]));
-			htmltext = htmltext.replaceAll("%team2name%", Config.TVT_EVENT_TEAM_2_NAME);
-			htmltext = htmltext.replaceAll("%team2playercount%", String.valueOf(teamsPlayerCounts[1]));
-			htmltext = htmltext.replaceAll("%team2points%", String.valueOf(teamsPointsCounts[1]));
+			htmltext = getTvTStatus(player);
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	{
+		switch (command)
+		{
+			case "tvt":
+			{
+				if (TvTEvent.isStarting() || TvTEvent.isStarted())
+				{
+					activeChar.sendPacket(new NpcHtmlMessage(getTvTStatus(activeChar)));
+				}
+				else
+				{
+					activeChar.sendMessage("The event has not started.");
+				}
+				break;
+			}
+			case "tvtjoin":
+			{
+				activeChar.sendPacket(new NpcHtmlMessage(onAdvEvent("join", null, activeChar)));
+				break;
+			}
+			case "tvtleave":
+			{
+				activeChar.sendPacket(new NpcHtmlMessage(onAdvEvent("remove", null, activeChar)));
+				break;
+			}
+		}
+		return false;
+	}
+	
+	private String getTvTStatus(L2PcInstance player)
+	{
+		int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
+		int[] teamsPointsCounts = TvTEvent.getTeamsPoints();
+		String htmltext = getHtm(player.getHtmlPrefix(), "Status.html");
+		htmltext = htmltext.replaceAll("%team1name%", Config.TVT_EVENT_TEAM_1_NAME);
+		htmltext = htmltext.replaceAll("%team1playercount%", String.valueOf(teamsPlayerCounts[0]));
+		htmltext = htmltext.replaceAll("%team1points%", String.valueOf(teamsPointsCounts[0]));
+		htmltext = htmltext.replaceAll("%team2name%", Config.TVT_EVENT_TEAM_2_NAME);
+		htmltext = htmltext.replaceAll("%team2playercount%", String.valueOf(teamsPlayerCounts[1]));
+		htmltext = htmltext.replaceAll("%team2points%", String.valueOf(teamsPointsCounts[1]));
+		return htmltext;
+	}
+	
+	@Override
+	public String[] getVoicedCommandList()
+	{
+		return COMMANDS;
 	}
 	
 	public static void main(String[] args)

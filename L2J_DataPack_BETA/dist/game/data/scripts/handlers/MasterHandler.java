@@ -264,7 +264,6 @@ import handlers.voicedcommandhandlers.ChatAdmin;
 import handlers.voicedcommandhandlers.Debug;
 import handlers.voicedcommandhandlers.Lang;
 import handlers.voicedcommandhandlers.StatsVCmd;
-import handlers.voicedcommandhandlers.TvTVoicedInfo;
 import handlers.voicedcommandhandlers.Wedding;
 
 /**
@@ -506,7 +505,6 @@ public class MasterHandler
 			// SetVCmd.class,
 			(Config.L2JMOD_ALLOW_WEDDING ? Wedding.class : null),
 			(Config.BANKING_SYSTEM_ENABLED ? Banking.class : null),
-			(Config.TVT_ALLOW_VOICED_COMMAND ? TvTVoicedInfo.class : null),
 			(Config.L2JMOD_CHAT_ADMIN ? ChatAdmin.class : null),
 			(Config.L2JMOD_MULTILANG_ENABLE && Config.L2JMOD_MULTILANG_VOICED_ALLOW ? Lang.class : null),
 			(Config.L2JMOD_DEBUG_VOICE_COMMAND ? Debug.class : null),
