@@ -279,66 +279,72 @@
 		</for>
 	</skill>
 	<skill id="3322" levels="1" name="Brass Bracelet">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_rbracelet_c_i00" />
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<set order="0x50" stat="talisman" val="1" />
+			<effect name="TalismanSlot">
+				<param slots="1" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="3323" levels="1" name="Bronze Bracelet">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<set order="0x50" stat="talisman" val="2" />
+			<effect name="TalismanSlot">
+				<param slots="2" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="3324" levels="1" name="Steel Bracelet">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="magicLvl" val="52" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<set order="0x50" stat="talisman" val="3" />
+			<effect name="TalismanSlot">
+				<param slots="3" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="3325" levels="1" name="Mithril Bracelet">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<set order="0x50" stat="talisman" val="4" />
+			<effect name="TalismanSlot">
+				<param slots="4" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="3326" levels="1" name="Jewelry Bracelet">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<set order="0x50" stat="talisman" val="5" />
+			<effect name="TalismanSlot">
+				<param slots="5" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="3327" levels="1" name="Oriharukon Bracelet">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<set order="0x50" stat="talisman" val="6" />
+			<effect name="TalismanSlot">
+				<param slots="6" />
 			</effect>
 		</for>
 	</skill>
