@@ -21,8 +21,8 @@
 				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
 				<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
 				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8401" levels="1" name="Vorpal Leather Armor Set">
@@ -44,8 +44,8 @@
 				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
 				<add order="0x40" stat="cAtkAdd" val="182" /> <!-- Increases Critical Damage by 182 -->
 				<add order="0x40" stat="maxMp" val="360" /> <!-- Increases Max MP by 360 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8402" levels="1" name="Vorpal Robe Set">
@@ -66,8 +66,8 @@
 				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
 				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
 				<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 92 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8403" levels="1" name="Elegia Armor Set">
@@ -90,8 +90,8 @@
 				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
 				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
 				<add order="0x40" stat="absorbDam" val="3" /> <!-- Steal opponent's HP on attack -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8404" levels="1" name="Elegia Leather Armor Set">
@@ -111,8 +111,8 @@
 				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
 				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
 				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8405" levels="1" name="Elegia Robe Set">
@@ -134,8 +134,8 @@
 				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
 				<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 97 -->
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8406" levels="1" name="Moirai Armor Set - PvP">
@@ -164,8 +164,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8407" levels="1" name="Moirai Leather Armor Set - PvP">
@@ -194,8 +194,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8408" levels="1" name="Moirai Robe Set - PvP">
@@ -223,8 +223,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8409" levels="1" name="Vorpal Heavy Armor Set - PvP">
@@ -258,8 +258,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8410" levels="1" name="Vorpal Leather Armor Set - PvP">
@@ -291,8 +291,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8411" levels="1" name="Vorpal Robe Set - PvP">
@@ -323,8 +323,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8412" levels="1" name="Elegia Armor Set - PvP">
@@ -357,8 +357,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8413" levels="1" name="Elegia Leather Armor Set - PvP">
@@ -388,8 +388,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8414" levels="1" name="Elegia Robe Set - PvP">
@@ -421,8 +421,8 @@
 				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8415" levels="5" name="Ring Ability - Drop Rate Up">

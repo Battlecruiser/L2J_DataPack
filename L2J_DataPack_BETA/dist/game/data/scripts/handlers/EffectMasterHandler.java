@@ -83,6 +83,7 @@ public final class EffectMasterHandler
 		DispelByCategory.class,
 		DispelBySlot.class,
 		DispelBySlotProbability.class,
+		EnableCloak.class,
 		EnemyCharge.class,
 		EnergyAttack.class,
 		EnlargeAbnormalSlot.class,
