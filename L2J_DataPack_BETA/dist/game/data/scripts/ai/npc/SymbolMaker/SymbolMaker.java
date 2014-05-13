@@ -76,10 +76,7 @@ public final class SymbolMaker extends AbstractNpcAI
 			}
 			case "Remove":
 			{
-				if (player.hasHennas())
-				{
-					player.sendPacket(new HennaRemoveList(player));
-				}
+				player.sendPacket(new HennaRemoveList(player));
 				break;
 			}
 		}
