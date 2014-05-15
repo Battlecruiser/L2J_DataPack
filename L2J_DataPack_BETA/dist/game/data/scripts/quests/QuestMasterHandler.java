@@ -148,6 +148,7 @@ import quests.Q00195_SevenSignsSecretRitualOfThePriests.Q00195_SevenSignsSecretR
 import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmperor;
 import quests.Q00197_SevenSignsTheSacredBookOfSeal.Q00197_SevenSignsTheSacredBookOfSeal;
 import quests.Q00198_SevenSignsEmbryo.Q00198_SevenSignsEmbryo;
+import quests.Q00212_TrialOfDuty.Q00212_TrialOfDuty;
 import quests.Q00235_MimirsElixir.Q00235_MimirsElixir;
 import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
 import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
@@ -506,6 +507,7 @@ public class QuestMasterHandler
 		Q00196_SevenSignsSealOfTheEmperor.class,
 		Q00197_SevenSignsTheSacredBookOfSeal.class,
 		Q00198_SevenSignsEmbryo.class,
+		Q00212_TrialOfDuty.class,
 		Q00235_MimirsElixir.class,
 		Q00237_WindsOfChange.class,
 		Q00238_SuccessFailureOfBusiness.class,
