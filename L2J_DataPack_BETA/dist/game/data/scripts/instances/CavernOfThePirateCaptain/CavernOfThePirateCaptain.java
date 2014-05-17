@@ -188,7 +188,7 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 		{
 			world = new CavernOfThePirateCaptainWorld();
 			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			world.setTemplateId(is83 ? INSTANCE_ID_83 : INSTANCE_ID_83);
+			world.setTemplateId(is83 ? INSTANCE_ID_83 : INSTANCE_ID_60);
 			world.setStatus(0);
 			InstanceManager.getInstance().addWorld(world);
 			final CavernOfThePirateCaptainWorld curworld = (CavernOfThePirateCaptainWorld) world;
