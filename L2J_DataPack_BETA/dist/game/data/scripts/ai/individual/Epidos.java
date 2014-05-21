@@ -20,6 +20,7 @@ package ai.individual;
 
 import java.util.Arrays;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import ai.npc.AbstractNpcAI;
 
@@ -28,7 +29,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.util.MinionList;
-import com.l2jserver.util.L2FastMap;
 
 /**
  * Manages minion's spawn, idle despawn and Teleportation Cube spawn.
@@ -59,7 +59,7 @@ public final class Epidos extends AbstractNpcAI
 		11
 	};
 	
-	private final Map<Integer, Double> _lastHp = new L2FastMap<>(true);
+	private final Map<Integer, Double> _lastHp = new ConcurrentHashMap<>();
 	
 	private Epidos()
 	{
