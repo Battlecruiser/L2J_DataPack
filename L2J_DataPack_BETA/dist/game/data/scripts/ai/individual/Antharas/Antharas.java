@@ -484,10 +484,7 @@ public final class Antharas extends AbstractNpcAI
 					sandStorm = 2;
 					moveChance = 0;
 					npc.disableCoreAI(false);
-					for (Map.Entry<Integer, Location> entry : INVISIBLE_NPC.entrySet())
-					{
-						addSpawn(entry.getKey(), entry.getValue());
-					}
+					INVISIBLE_NPC.entrySet().forEach(entry -> addSpawn(entry.getKey(), entry.getValue()));
 				}
 				else if (sandStorm == 1)
 				{
