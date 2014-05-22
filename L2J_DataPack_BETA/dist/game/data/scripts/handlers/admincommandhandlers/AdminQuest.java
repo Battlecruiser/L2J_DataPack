@@ -243,11 +243,18 @@ public class AdminQuest implements IAdminCommandHandler
 				msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npc-quests.htm");
 				String events = "", npcs = "", items = "", timers = "";
 				
-				for (QuestEventType type : npc.getTemplate().getEventQuests().keySet())
+				for (Entry<QuestEventType, List<Quest>> entry : npc.getTemplate().getEventQuests().entrySet())
 				{
-					events += ", " + type.toString();
+					if (entry.getValue().contains(quest))
+					{
+						events += ", " + entry.getKey().name();
+					}
 				}
-				events = events.substring(2);
+				
+				if (!npcs.isEmpty())
+				{
+					events = events.substring(2);
+				}
 				
 				if (quest.getQuestInvolvedNpcs().size() < 100)
 				{
