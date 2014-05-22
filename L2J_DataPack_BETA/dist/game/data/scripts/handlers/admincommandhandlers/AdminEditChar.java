@@ -22,7 +22,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -45,7 +44,6 @@ import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
-import com.l2jserver.gameserver.model.interfaces.IProcedure;
 import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.communityserver.CommunityServerThread;
@@ -59,7 +57,6 @@ import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
 import com.l2jserver.gameserver.network.serverpackets.SetSummonRemainTime;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
-import com.l2jserver.gameserver.util.Comparators;
 import com.l2jserver.gameserver.util.HtmlUtil;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.StringUtil;
@@ -908,30 +905,22 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	private void listCharacters(L2PcInstance activeChar, int page)
 	{
-		final L2PcInstance[] players = L2World.getInstance().getPlayersSortedBy(Comparators.PLAYER_UPTIME_COMPARATOR);
+		final L2PcInstance[] players = L2World.getInstance().getPlayersSortedBy(Comparator.comparingLong(L2PcInstance::getUptime));
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/charlist.htm");
 		
-		final PageResult result = HtmlUtil.createPage(players, page, 20, new IProcedure<Integer, String>()
+		final PageResult result = HtmlUtil.createPage(players, page, 20, i ->
 		{
-			@Override
-			public String execute(Integer i)
-			{
-				return "<td align=center><a action=\"bypass -h admin_show_characters " + i + "\">Page " + (i + 1) + "</a></td>";
-			}
-		}, new IProcedure<L2PcInstance, String>()
+			return "<td align=center><a action=\"bypass -h admin_show_characters " + i + "\">Page " + (i + 1) + "</a></td>";
+		}, player ->
 		{
-			@Override
-			public String execute(L2PcInstance player)
-			{
-				StringBuilder sb = new StringBuilder();
-				sb.append("<tr>");
-				sb.append("<td width=80><a action=\"bypass -h admin_character_info " + player.getName() + "\">" + player.getName() + "</a></td>");
-				sb.append("<td width=110>" + ClassListData.getInstance().getClass(player.getClassId()).getClientCode() + "</td><td width=40>" + player.getLevel() + "</td>");
-				sb.append("</tr>");
-				return sb.toString();
-			}
+			StringBuilder sb = new StringBuilder();
+			sb.append("<tr>");
+			sb.append("<td width=80><a action=\"bypass -h admin_character_info " + player.getName() + "\">" + player.getName() + "</a></td>");
+			sb.append("<td width=110>" + ClassListData.getInstance().getClass(player.getClassId()).getClientCode() + "</td><td width=40>" + player.getLevel() + "</td>");
+			sb.append("</tr>");
+			return sb.toString();
 		});
 		
 		if (result.getPages() > 0)
@@ -1118,7 +1107,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		final StringBuilder replyMSG = new StringBuilder(1000);
 		
-		for (L2PcInstance player : L2World.getInstance().getPlayersSortedBy(Comparators.PLAYER_UPTIME_COMPARATOR))
+		for (L2PcInstance player : L2World.getInstance().getPlayersSortedBy(Comparator.comparingLong(L2PcInstance::getUptime)))
 		{ // Add player info into new Table row
 			name = player.getName();
 			if (name.toLowerCase().contains(CharacterToFind.toLowerCase()))
@@ -1185,7 +1174,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		final StringBuilder replyMSG = new StringBuilder(1000);
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/ipfind.htm");
-		for (L2PcInstance player : L2World.getInstance().getPlayersSortedBy(Comparators.PLAYER_UPTIME_COMPARATOR))
+		for (L2PcInstance player : L2World.getInstance().getPlayersSortedBy(Comparator.comparingLong(L2PcInstance::getUptime)))
 		{
 			client = player.getClient();
 			if (client == null)
@@ -1298,7 +1287,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		L2GameClient client;
 		final Map<String, Integer> dualboxIPs = new HashMap<>();
 		
-		for (L2PcInstance player : L2World.getInstance().getPlayersSortedBy(Comparators.PLAYER_UPTIME_COMPARATOR))
+		for (L2PcInstance player : L2World.getInstance().getPlayersSortedBy(Comparator.comparingLong(L2PcInstance::getUptime)))
 		{
 			client = player.getClient();
 			if ((client == null) || client.isDetached())
@@ -1328,15 +1317,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		
 		List<String> keys = new ArrayList<>(dualboxIPs.keySet());
-		Collections.sort(keys, new Comparator<String>()
-		{
-			@Override
-			public int compare(String left, String right)
-			{
-				return dualboxIPs.get(left).compareTo(dualboxIPs.get(right));
-			}
-		});
-		Collections.reverse(keys);
+		keys.sort(Comparator.comparing(s -> dualboxIPs.get(s)).reversed());
 		
 		final StringBuilder results = new StringBuilder();
 		for (String dualboxIP : keys)
@@ -1358,7 +1339,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		L2GameClient client;
 		final Map<IpPack, Integer> dualboxIPs = new HashMap<>();
 		
-		for (L2PcInstance player : L2World.getInstance().getPlayersSortedBy(Comparators.PLAYER_UPTIME_COMPARATOR))
+		for (L2PcInstance player : L2World.getInstance().getPlayersSortedBy(Comparator.comparingLong(L2PcInstance::getUptime)))
 		{
 			client = player.getClient();
 			if ((client == null) || client.isDetached())
@@ -1388,15 +1369,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		
 		List<IpPack> keys = new ArrayList<>(dualboxIPs.keySet());
-		Collections.sort(keys, new Comparator<IpPack>()
-		{
-			@Override
-			public int compare(IpPack left, IpPack right)
-			{
-				return dualboxIPs.get(left).compareTo(dualboxIPs.get(right));
-			}
-		});
-		Collections.reverse(keys);
+		keys.sort(Comparator.comparing(s -> dualboxIPs.get(s)).reversed());
 		
 		final StringBuilder results = new StringBuilder();
 		for (IpPack dualboxIP : keys)
