@@ -41,7 +41,7 @@ import hellbound.AI.OutpostCaptain;
 import hellbound.AI.Ranku;
 import hellbound.AI.Slaves;
 import hellbound.AI.Typhoon;
-import hellbound.AI.NPC.Bernade.Bernarde;
+import hellbound.AI.NPC.Bernarde.Bernarde;
 import hellbound.AI.NPC.Budenka.Budenka;
 import hellbound.AI.NPC.Buron.Buron;
 import hellbound.AI.NPC.Deltuva.Deltuva;
