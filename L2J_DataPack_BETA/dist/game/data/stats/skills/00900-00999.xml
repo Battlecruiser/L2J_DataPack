@@ -2107,16 +2107,18 @@
 	</skill>
 	<skill id="991" levels="1" name="Throwing Dagger">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
+		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="40" />
 		<set name="basicProperty" val="MEN" />
-		<set name="blowChance" val="20" /> <!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-569" />
 		<set name="effectRange" val="800" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill0991" />
 		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="2" /> <!-- FIXME: value unconfirmed -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="82" />
 		<set name="nextActionAttack" val="true" />
@@ -2131,7 +2133,7 @@
 			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.2" />
 			</effect>
-			<effect name="FatalBlow" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="992" levels="8" name="Sonic Mastery">
