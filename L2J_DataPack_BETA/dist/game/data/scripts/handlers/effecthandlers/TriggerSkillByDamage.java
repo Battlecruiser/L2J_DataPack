@@ -37,7 +37,7 @@ import com.l2jserver.util.Rnd;
  * Trigger Skill By Damage effect implementation.
  * @author UnAfraid
  */
-public class TriggerSkillByDamage extends AbstractEffect implements IDamageReceivedEventListener
+public final class TriggerSkillByDamage extends AbstractEffect implements IDamageReceivedEventListener
 {
 	private final int _minAttackerLevel;
 	private final int _maxAttackerLevel;

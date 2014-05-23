@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -43,12 +42,6 @@ public final class Lethal extends AbstractEffect
 		
 		_fullLethal = params.getInt("fullLethal", 0);
 		_halfLethal = params.getInt("halfLethal", 0);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.LETHAL;
 	}
 	
 	@Override

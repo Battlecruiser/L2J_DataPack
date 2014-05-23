@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 
 /**
  * Invincible effect implementation.
@@ -38,11 +37,5 @@ public final class Invincible extends AbstractEffect
 	public int getEffectFlags()
 	{
 		return EffectFlag.INVUL.getMask();
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.INVINCIBLE;
 	}
 }

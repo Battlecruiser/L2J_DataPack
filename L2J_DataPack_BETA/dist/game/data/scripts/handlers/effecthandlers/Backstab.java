@@ -49,7 +49,7 @@ public final class Backstab extends AbstractEffect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.FATAL_BLOW;
+		return L2EffectType.PHYSICAL_ATTACK;
 	}
 	
 	@Override
@@ -70,7 +70,7 @@ public final class Backstab extends AbstractEffect
 		L2Character activeChar = info.getEffector();
 		boolean ss = info.getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 		byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		double damage = (int) Formulas.calcBackstabDamage(activeChar, target, info.getSkill(), shld, ss);
+		double damage = Formulas.calcBackstabDamage(activeChar, target, info.getSkill(), shld, ss);
 		
 		// Crit rate base crit rate for skill, modified with STR bonus
 		if (Formulas.calcCrit(info.getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target))

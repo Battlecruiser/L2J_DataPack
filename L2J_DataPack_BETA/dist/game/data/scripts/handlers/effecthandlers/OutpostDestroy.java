@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  * Outpost Destroy effect implementation.
  * @author UnAfraid
  */
-public class OutpostDestroy extends AbstractEffect
+public final class OutpostDestroy extends AbstractEffect
 {
 	public OutpostDestroy(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

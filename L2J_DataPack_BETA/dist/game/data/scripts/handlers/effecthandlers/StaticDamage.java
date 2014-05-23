@@ -21,7 +21,6 @@ package handlers.effecthandlers;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
@@ -37,12 +36,6 @@ public final class StaticDamage extends AbstractEffect
 		super(attachCond, applyCond, set, params);
 		
 		_power = params.getInt("power", 0);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.STATIC_DAMAGE;
 	}
 	
 	@Override
