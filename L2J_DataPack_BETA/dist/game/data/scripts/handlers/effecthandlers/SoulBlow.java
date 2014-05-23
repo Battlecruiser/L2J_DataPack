@@ -51,7 +51,7 @@ public final class SoulBlow extends AbstractEffect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.FATAL_BLOW;
+		return L2EffectType.PHYSICAL_ATTACK;
 	}
 	
 	@Override
@@ -73,7 +73,7 @@ public final class SoulBlow extends AbstractEffect
 		
 		boolean ss = info.getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 		byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		double damage = (int) Formulas.calcBlowDamage(activeChar, target, info.getSkill(), shld, ss);
+		double damage = Formulas.calcBlowDamage(activeChar, target, info.getSkill(), shld, ss);
 		if ((info.getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 		{
 			// Souls Formula (each soul increase +4%)

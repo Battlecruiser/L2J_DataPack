@@ -63,7 +63,7 @@ public final class EnergyAttack extends AbstractEffect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.ENERGY_ATTACK;
+		return L2EffectType.PHYSICAL_ATTACK;
 	}
 	
 	@Override

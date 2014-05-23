@@ -45,7 +45,7 @@ public final class HealPercent extends AbstractEffect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.HEAL_PERCENT;
+		return L2EffectType.HEAL;
 	}
 	
 	@Override

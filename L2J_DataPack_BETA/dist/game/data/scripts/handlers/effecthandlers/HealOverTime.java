@@ -21,7 +21,6 @@ package handlers.effecthandlers;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExRegenMax;
@@ -38,12 +37,6 @@ public final class HealOverTime extends AbstractEffect
 		super(attachCond, applyCond, set, params);
 		
 		_power = params.getDouble("power", 0);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.HEAL_OVER_TIME;
 	}
 	
 	@Override
