@@ -251,7 +251,7 @@ public class AdminQuest implements IAdminCommandHandler
 					}
 				}
 				
-				if (!npcs.isEmpty())
+				if (!events.isEmpty())
 				{
 					events = events.substring(2);
 				}
@@ -262,6 +262,10 @@ public class AdminQuest implements IAdminCommandHandler
 					{
 						npcs += ", " + npcId;
 					}
+				}
+				
+				if (!npcs.isEmpty())
+				{
 					npcs = npcs.substring(2);
 				}
 				
