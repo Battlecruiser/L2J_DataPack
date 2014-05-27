@@ -23,6 +23,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.logging.Level;
 
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -37,7 +38,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.interfaces.IProcedure;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.Skill;
@@ -1183,19 +1183,6 @@ public final class Kamaloka extends Quest
 		31340
 	};
 	
-	private static final IProcedure<BuffInfo, Boolean> REMOVE_BUFFS = new IProcedure<BuffInfo, Boolean>()
-	{
-		@Override
-		public Boolean execute(BuffInfo info)
-		{
-			if ((info != null) && !info.getSkill().isStayAfterDeath() && (Arrays.binarySearch(BUFFS_WHITELIST, info.getSkill().getId()) < 0))
-			{
-				info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
-			}
-			return true;
-		}
-	};
-	
 	protected class KamaWorld extends InstanceWorld
 	{
 		public int index; // 0-18 index of the kama type in arrays
@@ -1335,11 +1322,20 @@ public final class Kamaloka extends Quest
 	 */
 	private static final void removeBuffs(L2Character ch)
 	{
-		ch.getEffectList().forEach(REMOVE_BUFFS, false);
+		Function<BuffInfo, Boolean> removeBuffs = info ->
+		{
+			if ((info != null) && !info.getSkill().isStayAfterDeath() && (Arrays.binarySearch(BUFFS_WHITELIST, info.getSkill().getId()) < 0))
+			{
+				info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
+			}
+			return true;
+		};
+		
+		ch.getEffectList().forEach(removeBuffs, false);
 		
 		if (ch.hasSummon())
 		{
-			ch.getSummon().getEffectList().forEach(REMOVE_BUFFS, false);
+			ch.getSummon().getEffectList().forEach(removeBuffs, false);
 		}
 	}
 	
