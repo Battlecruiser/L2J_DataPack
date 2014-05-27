@@ -18,9 +18,10 @@
  */
 package quests.Q10291_FireDragonDestroyer;
 
+import java.util.function.Function;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.interfaces.IProcedure;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -32,33 +33,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q10291_FireDragonDestroyer extends Quest
 {
-	public class RewardCheck implements IProcedure<L2PcInstance, Boolean>
-	{
-		private final L2Npc _npc;
-		
-		public RewardCheck(L2Npc npc)
-		{
-			_npc = npc;
-		}
-		
-		@Override
-		public Boolean execute(L2PcInstance member)
-		{
-			if (Util.checkIfInRange(8000, _npc, member, false))
-			{
-				QuestState st = member.getQuestState(getName());
-				
-				if ((st != null) && st.isCond(1) && st.hasQuestItems(POOR_NECKLACE))
-				{
-					st.takeItems(POOR_NECKLACE, -1);
-					st.giveItems(VALOR_NECKLACE, 1);
-					st.setCond(2, true);
-				}
-			}
-			return true;
-		}
-	}
-	
 	// NPC
 	private static final int KLEIN = 31540;
 	// Monster
@@ -105,14 +79,30 @@ public class Q10291_FireDragonDestroyer extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
+		Function<L2PcInstance, Boolean> rewardCheck = p ->
+		{
+			if (Util.checkIfInRange(8000, npc, p, false))
+			{
+				QuestState st = p.getQuestState(getName());
+				
+				if ((st != null) && st.isCond(1) && st.hasQuestItems(POOR_NECKLACE))
+				{
+					st.takeItems(POOR_NECKLACE, -1);
+					st.giveItems(VALOR_NECKLACE, 1);
+					st.setCond(2, true);
+				}
+			}
+			return true;
+		};
+		
 		// Rewards go only to command channel, not to a single party or player.
 		if (player.getParty().isInCommandChannel())
 		{
-			player.getParty().getCommandChannel().forEachMember(new RewardCheck(npc));
+			player.getParty().getCommandChannel().forEachMember(rewardCheck);
 		}
 		else
 		{
-			player.getParty().forEachMember(new RewardCheck(npc));
+			player.getParty().forEachMember(rewardCheck);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
