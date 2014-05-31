@@ -20,6 +20,8 @@ package hellbound.Instances.RankuFloor;
 
 import java.util.Calendar;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
@@ -28,7 +30,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
@@ -37,7 +38,7 @@ import com.l2jserver.gameserver.util.Util;
  * Tower of Infinitum (10th Floor) instance zone.
  * @author GKR
  */
-public final class RankuFloor extends Quest
+public final class RankuFloor extends AbstractNpcAI
 {
 	// NPCs
 	private static final int GK_9 = 32752;
@@ -54,7 +55,7 @@ public final class RankuFloor extends Quest
 	
 	public RankuFloor()
 	{
-		super(-1, RankuFloor.class.getSimpleName(), "hellbound/Instances");
+		super(RankuFloor.class.getSimpleName(), "hellbound/Instances");
 		addStartNpc(GK_9);
 		addStartNpc(CUBE);
 		addTalkId(GK_9);
@@ -139,7 +140,7 @@ public final class RankuFloor extends Quest
 			return false;
 		}
 		
-		if (player.getObjectId() != party.getLeaderObjectId())
+		if (!party.isLeader(player))
 		{
 			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
@@ -188,7 +189,6 @@ public final class RankuFloor extends Quest
 				return false;
 			}
 		}
-		
 		return true;
 	}
 	

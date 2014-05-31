@@ -18,10 +18,11 @@
  */
 package hellbound.AI.NPC.Hude;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 
 import hellbound.HellboundEngine;
 
@@ -29,9 +30,11 @@ import hellbound.HellboundEngine;
  * Hude AI.
  * @author DS
  */
-public final class Hude extends Quest
+public final class Hude extends AbstractNpcAI
 {
+	// NPCs
 	private static final int HUDE = 32298;
+	// Items
 	private static final int BASIC_CERT = 9850;
 	private static final int STANDART_CERT = 9851;
 	private static final int PREMIUM_CERT = 9852;
@@ -43,7 +46,7 @@ public final class Hude extends Quest
 	
 	public Hude()
 	{
-		super(-1, Hude.class.getSimpleName(), "hellbound/AI/NPC");
+		super(Hude.class.getSimpleName(), "hellbound/AI/NPC");
 		addFirstTalkId(HUDE);
 		addStartNpc(HUDE);
 		addTalkId(HUDE);
@@ -52,58 +55,63 @@ public final class Hude extends Quest
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if ("scertif".equalsIgnoreCase(event))
+		switch (event)
 		{
-			if (HellboundEngine.getInstance().getLevel() > 3)
+			case "scertif":
 			{
-				if (hasQuestItems(player, BASIC_CERT) && (getQuestItemsCount(player, MARK_OF_BETRAYAL) >= 30) && (getQuestItemsCount(player, STINGER) >= 60))
+				if (HellboundEngine.getInstance().getLevel() > 3)
 				{
-					takeItems(player, MARK_OF_BETRAYAL, 30);
-					takeItems(player, STINGER, 60);
-					takeItems(player, BASIC_CERT, 1);
-					giveItems(player, STANDART_CERT, 1);
-					return "32298-04a.htm";
+					if (hasQuestItems(player, BASIC_CERT) && (getQuestItemsCount(player, MARK_OF_BETRAYAL) >= 30) && (getQuestItemsCount(player, STINGER) >= 60))
+					{
+						takeItems(player, MARK_OF_BETRAYAL, 30);
+						takeItems(player, STINGER, 60);
+						takeItems(player, BASIC_CERT, 1);
+						giveItems(player, STANDART_CERT, 1);
+						return "32298-04a.htm";
+					}
 				}
+				return "32298-04b.htm";
 			}
-			return "32298-04b.htm";
-		}
-		else if ("pcertif".equalsIgnoreCase(event))
-		{
-			if (HellboundEngine.getInstance().getLevel() > 6)
+			case "pcertif":
 			{
-				if (hasQuestItems(player, STANDART_CERT) && (getQuestItemsCount(player, LIFE_FORCE) >= 56) && (getQuestItemsCount(player, CONTAINED_LIFE_FORCE) >= 14))
+				if (HellboundEngine.getInstance().getLevel() > 6)
 				{
-					takeItems(player, LIFE_FORCE, 56);
-					takeItems(player, CONTAINED_LIFE_FORCE, 14);
-					takeItems(player, STANDART_CERT, 1);
-					giveItems(player, PREMIUM_CERT, 1);
-					giveItems(player, MAP, 1);
-					return "32298-06a.htm";
+					if (hasQuestItems(player, STANDART_CERT) && (getQuestItemsCount(player, LIFE_FORCE) >= 56) && (getQuestItemsCount(player, CONTAINED_LIFE_FORCE) >= 14))
+					{
+						takeItems(player, LIFE_FORCE, 56);
+						takeItems(player, CONTAINED_LIFE_FORCE, 14);
+						takeItems(player, STANDART_CERT, 1);
+						giveItems(player, PREMIUM_CERT, 1);
+						giveItems(player, MAP, 1);
+						return "32298-06a.htm";
+					}
 				}
+				return "32298-06b.htm";
 			}
-			return "32298-06b.htm";
-		}
-		else if ("multisell1".equalsIgnoreCase(event))
-		{
-			if (hasQuestItems(player, STANDART_CERT) || hasQuestItems(player, PREMIUM_CERT))
+			case "multisell1":
 			{
-				MultisellData.getInstance().separateAndSend(322980001, player, npc, false);
+				if (hasQuestItems(player, STANDART_CERT) || hasQuestItems(player, PREMIUM_CERT))
+				{
+					MultisellData.getInstance().separateAndSend(322980001, player, npc, false);
+				}
+				break;
 			}
-		}
-		else if ("multisell2".equalsIgnoreCase(event))
-		{
-			if (hasQuestItems(player, PREMIUM_CERT))
+			case "multisell2":
 			{
-				MultisellData.getInstance().separateAndSend(322980002, player, npc, false);
+				if (hasQuestItems(player, PREMIUM_CERT))
+				{
+					MultisellData.getInstance().separateAndSend(322980002, player, npc, false);
+				}
+				break;
 			}
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
+		String htmltext = null;
 		if (!hasAtLeastOneQuestItem(player, BASIC_CERT, STANDART_CERT, PREMIUM_CERT))
 		{
 			htmltext = "32298-01.htm";

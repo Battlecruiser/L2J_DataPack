@@ -21,31 +21,32 @@ package hellbound.AI.Zones.BaseTower;
 import java.util.Map;
 
 import javolution.util.FastMap;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.quest.Quest;
 
 /**
  * Base Tower.
  * @author GKR
  */
-public final class BaseTower extends Quest
+public final class BaseTower extends AbstractNpcAI
 {
+	// NPCs
 	private static final int GUZEN = 22362;
 	private static final int KENDAL = 32301;
 	private static final int BODY_DESTROYER = 22363;
-	
-	private static final Map<Integer, L2PcInstance> BODY_DESTROYER_TARGET_LIST = new FastMap<>();
-	
+	// Skills
 	private static final SkillHolder DEATH_WORD = new SkillHolder(5256, 1);
+	// Misc
+	private static final Map<Integer, L2PcInstance> BODY_DESTROYER_TARGET_LIST = new FastMap<>();
 	
 	public BaseTower()
 	{
-		super(-1, BaseTower.class.getSimpleName(), "hellbound/AI/Zones");
+		super(BaseTower.class.getSimpleName(), "hellbound/AI/Zones");
 		addKillId(GUZEN);
 		addKillId(BODY_DESTROYER);
 		addFirstTalkId(KENDAL);
@@ -55,7 +56,7 @@ public final class BaseTower extends Quest
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		ClassId classId = player.getClassId();
+		final ClassId classId = player.getClassId();
 		if (classId.equalsOrChildOf(ClassId.hellKnight) || classId.equalsOrChildOf(ClassId.soultaker))
 		{
 			return "32301-02.htm";
@@ -66,11 +67,11 @@ public final class BaseTower extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("close"))
+		if (event.equalsIgnoreCase("CLOSE"))
 		{
 			DoorTable.getInstance().getDoor(20260004).closeMe();
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -91,13 +92,16 @@ public final class BaseTower extends Quest
 		switch (npc.getId())
 		{
 			case GUZEN:
+			{
 				// Should Kendal be despawned before Guzen's spawn? Or it will be crowd of Kendal's
 				addSpawn(KENDAL, npc.getSpawn().getLocation(), false, npc.getSpawn().getRespawnDelay(), false);
 				DoorTable.getInstance().getDoor(20260003).openMe();
 				DoorTable.getInstance().getDoor(20260004).openMe();
-				startQuestTimer("close", 60000, npc, null, false);
+				startQuestTimer("CLOSE", 60000, npc, null, false);
 				break;
+			}
 			case BODY_DESTROYER:
+			{
 				if (BODY_DESTROYER_TARGET_LIST.containsKey(npc.getObjectId()))
 				{
 					final L2PcInstance pl = BODY_DESTROYER_TARGET_LIST.get(npc.getObjectId());
@@ -105,11 +109,11 @@ public final class BaseTower extends Quest
 					{
 						pl.stopSkillEffects(true, DEATH_WORD.getSkillId());
 					}
-					
 					BODY_DESTROYER_TARGET_LIST.remove(npc.getObjectId());
 				}
+				break;
+			}
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 }

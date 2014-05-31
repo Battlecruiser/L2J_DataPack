@@ -32,9 +32,10 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
  */
 public final class Typhoon extends AbstractNpcAI
 {
+	// NPCs
 	private static final int TYPHOON = 25539;
-	
-	private static SkillHolder STORM = new SkillHolder(5434, 1);
+	// Skills
+	private static SkillHolder STORM = new SkillHolder(5434, 1); // Gust
 	
 	public Typhoon()
 	{
@@ -52,12 +53,12 @@ public final class Typhoon extends AbstractNpcAI
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("cast") && (npc != null) && !npc.isDead())
+		if (event.equalsIgnoreCase("CAST") && (npc != null) && !npc.isDead())
 		{
 			npc.doSimultaneousCast(STORM.getSkill());
-			startQuestTimer("cast", 5000, npc, null);
+			startQuestTimer("CAST", 5000, npc, null);
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -72,9 +73,8 @@ public final class Typhoon extends AbstractNpcAI
 	{
 		if (!npc.isTeleporting())
 		{
-			startQuestTimer("cast", 5000, npc, null);
+			startQuestTimer("CAST", 5000, npc, null);
 		}
-		
 		return super.onSpawn(npc);
 	}
 }

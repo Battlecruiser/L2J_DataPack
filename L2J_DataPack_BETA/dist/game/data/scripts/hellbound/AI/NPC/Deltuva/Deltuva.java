@@ -19,26 +19,27 @@
 package hellbound.AI.NPC.Deltuva;
 
 import quests.Q00132_MatrasCuriosity.Q00132_MatrasCuriosity;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
  * Deltuva AI.
  * @author GKR
  */
-public final class Deltuva extends Quest
+public final class Deltuva extends AbstractNpcAI
 {
+	// NPCs
 	private static final int DELTUVA = 32313;
 	// Location
 	private static final Location TELEPORT = new Location(17934, 283189, -9701);
 	
 	public Deltuva()
 	{
-		super(-1, Deltuva.class.getSimpleName(), "hellbound/AI/NPC");
+		super(Deltuva.class.getSimpleName(), "hellbound/AI/NPC");
 		addStartNpc(DELTUVA);
 		addTalkId(DELTUVA);
 	}
@@ -46,19 +47,15 @@ public final class Deltuva extends Quest
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
 		if (event.equalsIgnoreCase("teleport"))
 		{
 			final QuestState hostQuest = player.getQuestState(Q00132_MatrasCuriosity.class.getSimpleName());
 			if ((hostQuest == null) || !hostQuest.isCompleted())
 			{
-				htmltext = "32313-02.htm";
+				return "32313-02.htm";
 			}
-			else
-			{
-				player.teleToLocation(TELEPORT);
-			}
+			player.teleToLocation(TELEPORT);
 		}
-		return htmltext;
+		return super.onAdvEvent(event, npc, player);
 	}
 }

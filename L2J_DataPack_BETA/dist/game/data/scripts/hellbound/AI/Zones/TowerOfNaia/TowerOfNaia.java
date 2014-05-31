@@ -26,6 +26,7 @@ import java.util.Map;
 
 import javolution.util.FastList;
 import javolution.util.FastMap;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -38,13 +39,11 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.MinionList;
 import com.l2jserver.gameserver.util.Util;
 
@@ -52,7 +51,7 @@ import com.l2jserver.gameserver.util.Util;
  * Tower Of Naia.
  * @author GKR
  */
-public final class TowerOfNaia extends Quest
+public final class TowerOfNaia extends AbstractNpcAI
 {
 	// Challenge states
 	private static final int STATE_SPORE_CHALLENGE_IN_PROGRESS = 1;
@@ -116,62 +115,24 @@ public final class TowerOfNaia extends Quest
 		"Wind",
 		"Earth"
 	};
+	//@formatter:off
 	private static final int[][] SPORES_MOVE_POINTS =
 	{
-		{
-			-46080,
-			246368,
-			-14183
-		},
-		{
-			-44816,
-			246368,
-			-14183
-		},
-		{
-			-44224,
-			247440,
-			-14184
-		},
-		{
-			-44896,
-			248464,
-			-14183
-		},
-		{
-			-46064,
-			248544,
-			-14183
-		},
-		{
-			-46720,
-			247424,
-			-14183
-		}
+		{-46080, 246368, -14183},
+		{-44816, 246368, -14183},
+		{-44224, 247440, -14184},
+		{-44896, 248464, -14183},
+		{-46064, 248544, -14183},
+		{-46720, 247424, -14183},
 	};
 	private static final int[][] SPORES_MERGE_POSITION =
 	{
-		{
-			-45488,
-			246768,
-			-14183
-		},
-		{
-			-44767,
-			247419,
-			-14183
-		},
-		{
-			-46207,
-			247417,
-			-14183
-		},
-		{
-			-45462,
-			248174,
-			-14183
-		}
+		{-45488, 246768, -14183},
+		{-44767, 247419, -14183},
+		{-46207, 247417, -14183},
+		{-45462, 248174, -14183},
 	};
+	//@formatter:on
 	private static final NpcStringId[] SPORES_NPCSTRING_ID =
 	{
 		NpcStringId.ITS_S1,
@@ -199,7 +160,6 @@ public final class TowerOfNaia extends Quest
 	private final Map<Integer, Boolean> _activeRooms = new FastMap<>();
 	private final Map<Integer, List<L2Npc>> _spawns = new FastMap<>();
 	private final FastList<L2Npc> _sporeSpawn = new FastList<L2Npc>().shared();
-	
 	static
 	{
 		// Format: entrance_door, exit_door
@@ -276,524 +236,117 @@ public final class TowerOfNaia extends Quest
 		ZONES.put(18503, 200029);
 		ZONES.put(18504, 200030);
 		ZONES.put(18505, 200031);
-		
+		//@formatter:off
 		SPAWNS.put(18494, new int[][]
 		{
-			{
-				22393,
-				-46371,
-				246400,
-				-9120,
-				0
-			},
-			{
-				22394,
-				-46435,
-				245830,
-				-9120,
-				0
-			},
-			{
-				22394,
-				-46536,
-				246275,
-				-9120,
-				0
-			},
-			{
-				22393,
-				-46239,
-				245996,
-				-9120,
-				0
-			},
-			{
-				22394,
-				-46229,
-				246347,
-				-9120,
-				0
-			},
-			{
-				22394,
-				-46019,
-				246198,
-				-9120,
-				0
-			}
+			{22393, -46371, 246400, -9120, 0},
+			{22394, -46435, 245830, -9120, 0},
+			{22394, -46536, 246275, -9120, 0},
+			{22393, -46239, 245996, -9120, 0},
+			{22394, -46229, 246347, -9120, 0},
+			{22394, -46019, 246198, -9120, 0},
 		});
 		SPAWNS.put(18495, new int[][]
 		{
-			{
-				22439,
-				-48146,
-				249597,
-				-9124,
-				-16280
-			},
-			{
-				22439,
-				-48144,
-				248711,
-				-9124,
-				16368
-			},
-			{
-				22439,
-				-48704,
-				249597,
-				-9104,
-				-16380
-			},
-			{
-				22439,
-				-49219,
-				249596,
-				-9104,
-				-16400
-			},
-			{
-				22439,
-				-49715,
-				249601,
-				-9104,
-				-16360
-			},
-			{
-				22439,
-				-49714,
-				248696,
-				-9104,
-				15932
-			},
-			{
-				22439,
-				-49225,
-				248710,
-				-9104,
-				16512
-			},
-			{
-				22439,
-				-48705,
-				248708,
-				-9104,
-				16576
-			}
+			{22439, -48146, 249597, -9124, -16280},
+			{22439, -48144, 248711, -9124, 16368},
+			{22439, -48704, 249597, -9104, -16380},
+			{22439, -49219, 249596, -9104, -16400},
+			{-49715, 249601, -9104, -16360},
+			{22439, -49714, 248696, -9104, 15932},
+			{22439, -49225, 248710, -9104, 16512},
+			{22439, -48705, 248708, -9104, 16576},
 		});
 		SPAWNS.put(18496, new int[][]
 		{
-			{
-				22441,
-				-51176,
-				246055,
-				-9984,
-				0
-			},
-			{
-				22441,
-				-51699,
-				246190,
-				-9984,
-				0
-			},
-			{
-				22442,
-				-52060,
-				245956,
-				-9984,
-				0
-			},
-			{
-				22442,
-				-51565,
-				246433,
-				-9984,
-				0
-			}
+			{22441, -51176, 246055, -9984, 0},
+			{22441, -51699, 246190, -9984, 0},
+			{22442, -52060, 245956, -9984, 0},
+			{22442, -51565, 246433, -9984, 0},
 		});
 		SPAWNS.put(18497, new int[][]
 		{
-			{
-				22440,
-				-49754,
-				243866,
-				-9968,
-				-16328
-			},
-			{
-				22440,
-				-49754,
-				242940,
-				-9968,
-				16336
-			},
-			{
-				22440,
-				-48733,
-				243858,
-				-9968,
-				-16208
-			},
-			{
-				22440,
-				-48745,
-				242936,
-				-9968,
-				16320
-			},
-			{
-				22440,
-				-49264,
-				242946,
-				-9968,
-				16312
-			},
-			{
-				22440,
-				-49268,
-				243869,
-				-9968,
-				-16448
-			},
-			{
-				22440,
-				-48186,
-				242934,
-				-9968,
-				16576
-			},
-			{
-				22440,
-				-48185,
-				243855,
-				-9968,
-				-16448
-			}
+			{22440, -49754, 243866, -9968, -16328},
+			{22440, -49754, 242940, -9968, 16336},
+			{22440, -48733, 243858, -9968, -16208},
+			{22440, -48745, 242936, -9968, 16320},
+			{22440, -49264, 242946, -9968, 16312},
+			{22440, -49268, 243869, -9968, -16448},
+			{22440, -48186, 242934, -9968, 16576},
+			{22440, -48185, 243855, -9968, -16448},
 		});
 		SPAWNS.put(18498, new int[][]
 		{
-			{
-				22411,
-				-46355,
-				246375,
-				-9984,
-				0
-			},
-			{
-				22411,
-				-46167,
-				246160,
-				-9984,
-				0
-			},
-			{
-				22393,
-				-45952,
-				245748,
-				-9984,
-				0
-			},
-			{
-				22394,
-				-46428,
-				246254,
-				-9984,
-				0
-			},
-			{
-				22393,
-				-46490,
-				245871,
-				-9984,
-				0
-			},
-			{
-				22394,
-				-45877,
-				246309,
-				-9984,
-				0
-			}
+			{22411, -46355, 246375, -9984, 0},
+			{22411, -46167, 246160, -9984, 0},
+			{22393, -45952, 245748, -9984, 0},
+			{22394, -46428, 246254, -9984, 0},
+			{22393, -46490, 245871, -9984, 0},
+			{22394, -45877, 246309, -9984, 0},
 		});
 		SPAWNS.put(18499, new int[][]
 		{
-			{
-				22395,
-				-48730,
-				248067,
-				-9984,
-				0
-			},
-			{
-				22395,
-				-49112,
-				248250,
-				-9984,
-				0
-			}
+			{22395, -48730, 248067, -9984, 0},
+			{22395, -49112, 248250, -9984, 0},
 		});
 		SPAWNS.put(18500, new int[][]
 		{
-			{
-				22393,
-				-51954,
-				246475,
-				-10848,
-				0
-			},
-			{
-				22394,
-				-51421,
-				246512,
-				-10848,
-				0
-			},
-			{
-				22394,
-				-51404,
-				245951,
-				-10848,
-				0
-			},
-			{
-				22393,
-				-51913,
-				246206,
-				-10848,
-				0
-			},
-			{
-				22394,
-				-51663,
-				245979,
-				-10848,
-				0
-			},
-			{
-				22394,
-				-51969,
-				245809,
-				-10848,
-				0
-			},
-			{
-				22412,
-				-51259,
-				246357,
-				-10848,
-				0
-			}
+			{22393, -51954, 246475, -10848, 0},
+			{22394, -51421, 246512, -10848, 0},
+			{22394, -51404, 245951, -10848, 0},
+			{22393, -51913, 246206, -10848, 0},
+			{22394, -51663, 245979, -10848, 0},
+			{22394, -51969, 245809, -10848, 0},
+			{22412, -51259, 246357, -10848, 0},
 		});
 		SPAWNS.put(18501, new int[][]
 		{
-			{
-				22395,
-				-48856,
-				243949,
-				-10848,
-				0
-			},
-			{
-				22395,
-				-49144,
-				244190,
-				-10848,
-				0
-			}
+			{22395, -48856, 243949, -10848, 0},
+			{22395, -49144, 244190, -10848, 0},
 		});
 		SPAWNS.put(18502, new int[][]
 		{
-			{
-				22441,
-				-46471,
-				246135,
-				-11704,
-				0
-			},
-			{
-				22441,
-				-46449,
-				245997,
-				-11704,
-				0
-			},
-			{
-				22441,
-				-46235,
-				246187,
-				-11704,
-				0
-			},
-			{
-				22441,
-				-46513,
-				246326,
-				-11704,
-				0
-			},
-			{
-				22441,
-				-45889,
-				246313,
-				-11704,
-				0
-			}
+			{22441, -46471, 246135, -11704, 0},
+			{22441, -46449, 245997, -11704, 0},
+			{22441, -46235, 246187, -11704, 0},
+			{22441, -46513, 246326, -11704, 0},
+			{22441, -45889, 246313, -11704, 0},
 		});
 		SPAWNS.put(18503, new int[][]
 		{
-			{
-				22395,
-				-49067,
-				248050,
-				-11712,
-				0
-			},
-			{
-				22395,
-				-48957,
-				248223,
-				-11712,
-				0
-			}
+			{22395, -49067, 248050, -11712, 0},
+			{22395, -48957, 248223, -11712, 0},
 		});
 		SPAWNS.put(18504, new int[][]
 		{
-			{
-				22413,
-				-51748,
-				246138,
-				-12568,
-				0
-			},
-			{
-				22413,
-				-51279,
-				246200,
-				-12568,
-				0
-			},
-			{
-				22413,
-				-51787,
-				246594,
-				-12568,
-				0
-			},
-			{
-				22413,
-				-51892,
-				246544,
-				-12568,
-				0
-			},
-			{
-				22413,
-				-51500,
-				245781,
-				-12568,
-				0
-			},
-			{
-				22413,
-				-51941,
-				246045,
-				-12568,
-				0
-			}
+			{22413, -51748, 246138, -12568, 0},
+			{22413, -51279, 246200, -12568, 0},
+			{22413, -51787, 246594, -12568, 0},
+			{22413, -51892, 246544, -12568, 0},
+			{22413, -51500, 245781, -12568, 0},
+			{22413, -51941, 246045, -12568, 0},
 		});
 		SPAWNS.put(18505, new int[][]
 		{
-			{
-				18490,
-				-48238,
-				243347,
-				-13376,
-				0
-			},
-			{
-				18490,
-				-48462,
-				244022,
-				-13376,
-				0
-			},
-			{
-				18490,
-				-48050,
-				244045,
-				-13376,
-				0
-			},
-			{
-				18490,
-				-48229,
-				243823,
-				-13376,
-				0
-			},
-			{
-				18490,
-				-47871,
-				243208,
-				-13376,
-				0
-			},
-			{
-				18490,
-				-48255,
-				243528,
-				-13376,
-				0
-			},
-			{
-				18490,
-				-48461,
-				243780,
-				-13376,
-				0
-			},
-			{
-				18490,
-				-47983,
-				243197,
-				-13376,
-				0
-			},
-			{
-				18490,
-				-47841,
-				243819,
-				-13376,
-				0
-			},
-			{
-				18490,
-				-48646,
-				243764,
-				-13376,
-				0
-			},
-			{
-				18490,
-				-47806,
-				243850,
-				-13376,
-				0
-			},
-			{
-				18490,
-				-48456,
-				243447,
-				-13376,
-				0
-			}
+			{18490, -48238, 243347, -13376, 0},
+			{18490, -48462, 244022, -13376, 0},
+			{18490, -48050, 244045, -13376, 0},
+			{18490, -48229, 243823, -13376, 0},
+			{18490, -47871, 243208, -13376, 0},
+			{18490, -48255, 243528, -13376, 0},
+			{18490, -48461, 243780, -13376, 0},
+			{18490, -47983, 243197, -13376, 0},
+			{18490, -47841, 243819, -13376, 0},
+			{18490, -48646, 243764, -13376, 0},
+			{18490, -47806, 243850, -13376, 0},
+			{18490, -48456, 243447, -13376, 0},
 		});
+		//@formatter:on
 	}
 	
 	public TowerOfNaia()
 	{
-		super(-1, TowerOfNaia.class.getSimpleName(), "hellbound/AI/Zones");
+		super(TowerOfNaia.class.getSimpleName(), "hellbound/AI/Zones");
 		addFirstTalkId(CONTROLLER);
 		addStartNpc(CONTROLLER);
 		addStartNpc(DWARVEN_GHOST);
@@ -838,7 +391,7 @@ public final class TowerOfNaia extends Quest
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		
 		if (npcId == CONTROLLER)
 		{
@@ -861,8 +414,7 @@ public final class TowerOfNaia extends Quest
 				return "manager.htm";
 			}
 		}
-		
-		return null;
+		return super.onFirstTalk(npc, player);
 	}
 	
 	@Override
@@ -941,7 +493,7 @@ public final class TowerOfNaia extends Quest
 			return null;
 		}
 		
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		
 		if (event.equalsIgnoreCase("despawn_spore") && !npc.isDead() && (_challengeState == STATE_SPORE_CHALLENGE_IN_PROGRESS))
 		{
@@ -1038,7 +590,6 @@ public final class TowerOfNaia extends Quest
 				player.sendPacket(SystemMessageId.CAN_OPERATE_MACHINE_WHEN_IN_PARTY);
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -1061,12 +612,10 @@ public final class TowerOfNaia extends Quest
 					MinionList.spawnMinion(_lock, 18493);
 					MinionList.spawnMinion(_lock, 18493);
 				}
-				
-				_controller.broadcastPacket(new NpcSay(_controller.getObjectId(), Say2.NPC_ALL, _controller.getId(), NpcStringId.EMERGENCY_EMERGENCY_THE_OUTER_WALL_IS_WEAKENING_RAPIDLY));
+				broadcastNpcSay(_controller, Say2.NPC_ALL, NpcStringId.EMERGENCY_EMERGENCY_THE_OUTER_WALL_IS_WEAKENING_RAPIDLY);
 				_counter -= 10;
 			}
 		}
-		
 		return super.onAttack(npc, attacker, damage, isSummon, skill);
 	}
 	
@@ -1167,9 +716,7 @@ public final class TowerOfNaia extends Quest
 						{
 							if ((spore != null) && !spore.isDead() && (spore.getId() == npcId))
 							{
-								NpcSay ns = new NpcSay(spore.getObjectId(), Say2.NPC_ALL, spore.getId(), SPORES_NPCSTRING_ID[getRandom(4)]);
-								ns.addStringParameter(el);
-								spore.broadcastPacket(ns);
+								broadcastNpcSay(spore, Say2.NPC_ALL, SPORES_NPCSTRING_ID[getRandom(4)], el);
 							}
 						}
 					}
@@ -1184,7 +731,6 @@ public final class TowerOfNaia extends Quest
 							spawnRandomSpore();
 						}
 					}
-					
 					else
 					// index value was reached
 					{
@@ -1212,7 +758,7 @@ public final class TowerOfNaia extends Quest
 	@Override
 	public final String onSpawn(L2Npc npc)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		
 		if ((npcId == MUTATED_ELPY) && !npc.isTeleporting())
 		{
@@ -1328,14 +874,7 @@ public final class TowerOfNaia extends Quest
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false);
-				}
-			}, respawnTime - System.currentTimeMillis());
+			ThreadPoolManager.getInstance().scheduleGeneral(() -> addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false), respawnTime - System.currentTimeMillis());
 		}
 	}
 	
@@ -1346,7 +885,7 @@ public final class TowerOfNaia extends Quest
 	
 	private L2Npc spawnOppositeSpore(int srcSporeId)
 	{
-		int idx = Arrays.binarySearch(ELEMENTS, srcSporeId);
+		final int idx = Arrays.binarySearch(ELEMENTS, srcSporeId);
 		return idx >= 0 ? addSpawn(OPPOSITE_ELEMENTS[idx], -45474, 247450, -13994, 49152, false, 0, false) : null;
 	}
 	

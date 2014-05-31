@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.MinionList;
 
 /**
@@ -38,10 +37,11 @@ import com.l2jserver.gameserver.util.MinionList;
  */
 public final class Ranku extends AbstractNpcAI
 {
+	// NPCs
 	private static final int RANKU = 25542;
 	private static final int MINION = 32305;
 	private static final int MINION_2 = 25543;
-	
+	// Misc
 	private static final Set<Integer> MY_TRACKING_SET = new FastSet<Integer>().shared();
 	
 	public Ranku()
@@ -60,14 +60,14 @@ public final class Ranku extends AbstractNpcAI
 			{
 				if ((minion != null) && !minion.isDead() && MY_TRACKING_SET.contains(minion.getObjectId()))
 				{
-					L2PcInstance[] players = minion.getKnownList().getKnownPlayers().values().toArray(new L2PcInstance[minion.getKnownList().getKnownPlayers().size()]);
-					L2PcInstance killer = players[getRandom(players.length)];
+					final L2PcInstance[] players = minion.getKnownList().getKnownPlayers().values().toArray(new L2PcInstance[minion.getKnownList().getKnownPlayers().size()]);
+					final L2PcInstance killer = players[getRandom(players.length)];
 					minion.reduceCurrentHp(minion.getMaxHp() / 100, killer, null);
 				}
 			}
 			startQuestTimer("checkup", 1000, npc, null);
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -79,7 +79,7 @@ public final class Ranku extends AbstractNpcAI
 			{
 				if ((minion != null) && !minion.isDead() && !MY_TRACKING_SET.contains(minion.getObjectId()))
 				{
-					minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.NPC_ALL, minion.getId(), NpcStringId.DONT_KILL_ME_PLEASE_SOMETHINGS_STRANGLING_ME));
+					broadcastNpcSay(minion, Say2.NPC_ALL, NpcStringId.DONT_KILL_ME_PLEASE_SOMETHINGS_STRANGLING_ME);
 					startQuestTimer("checkup", 1000, npc, null);
 					MY_TRACKING_SET.add(minion.getObjectId());
 				}

@@ -21,6 +21,7 @@ package hellbound.AI.Zones.AnomicFoundry;
 import java.util.Map;
 
 import javolution.util.FastMap;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
@@ -30,11 +31,9 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 import hellbound.HellboundEngine;
 
@@ -42,57 +41,26 @@ import hellbound.HellboundEngine;
  * Anomic Foundry.
  * @author GKR
  */
-public final class AnomicFoundry extends Quest
+public final class AnomicFoundry extends AbstractNpcAI
 {
+	// NPCs
 	private static int LABORER = 22396;
 	private static int FOREMAN = 22397;
 	private static int LESSER_EVIL = 22398;
 	private static int GREATER_EVIL = 22399;
-	
+	// Misc
+	private final Map<Integer, Integer> _atkIndex = new FastMap<>();
 	// npcId, x, y, z, heading, max count
+	//@formatter:off
 	private static int[][] SPAWNS =
 	{
-		{
-			LESSER_EVIL,
-			27883,
-			248613,
-			-3209,
-			-13248,
-			5
-		},
-		{
-			LESSER_EVIL,
-			26142,
-			246442,
-			-3216,
-			7064,
-			5
-		},
-		{
-			LESSER_EVIL,
-			27335,
-			246217,
-			-3668,
-			-7992,
-			5
-		},
-		{
-			LESSER_EVIL,
-			28486,
-			245913,
-			-3698,
-			0,
-			10
-		},
-		{
-			GREATER_EVIL,
-			28684,
-			244118,
-			-3700,
-			-22560,
-			10
-		}
+		{LESSER_EVIL, 27883, 248613, -3209, -13248, 5},
+		{LESSER_EVIL, 26142, 246442, -3216, 7064, 5},
+		{LESSER_EVIL, 27335, 246217, -3668, -7992, 5},
+		{LESSER_EVIL, 28486, 245913, -3698, 0, 10},
+		{GREATER_EVIL, 28684, 244118, -3700, -22560, 10},
 	};
+	//@formatter:on
 	
 	private int respawnTime = 60000;
 	private final int respawnMin = 20000;
@@ -106,11 +74,10 @@ public final class AnomicFoundry extends Quest
 		0,
 		0
 	};
-	private final Map<Integer, Integer> _atkIndex = new FastMap<>();
 	
 	public AnomicFoundry()
 	{
-		super(-1, AnomicFoundry.class.getSimpleName(), "hellbound/AI/Zones");
+		super(AnomicFoundry.class.getSimpleName(), "hellbound/AI/Zones");
 		addAggroRangeEnterId(LABORER);
 		addAttackId(LABORER);
 		addKillId(LABORER);
@@ -119,7 +86,6 @@ public final class AnomicFoundry extends Quest
 		addSpawnId(LABORER);
 		addSpawnId(LESSER_EVIL);
 		addSpawnId(GREATER_EVIL);
-		
 		startQuestTimer("make_spawn_1", respawnTime, null, null);
 	}
 	
@@ -157,8 +123,7 @@ public final class AnomicFoundry extends Quest
 		{
 			respawnTime = 60000;
 		}
-		
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -180,7 +145,7 @@ public final class AnomicFoundry extends Quest
 		int atkIndex = _atkIndex.containsKey(npc.getObjectId()) ? _atkIndex.get(npc.getObjectId()) : 0;
 		if (atkIndex == 0)
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.ENEMY_INVASION_HURRY_UP));
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.ENEMY_INVASION_HURRY_UP);
 			cancelQuestTimer("return_laborer", npc, null);
 			startQuestTimer("return_laborer", 60000, npc, null);
 			
@@ -206,7 +171,6 @@ public final class AnomicFoundry extends Quest
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location((npc.getX() + getRandom(-800, 800)), (npc.getY() + getRandom(-800, 800)), npc.getZ(), npc.getHeading()));
 			}
 		}
-		
 		return super.onAttack(npc, attacker, damage, isSummon, skill);
 	}
 	
@@ -222,7 +186,7 @@ public final class AnomicFoundry extends Quest
 		{
 			if (getRandom(10000) < 8000)
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.PROCESS_SHOULDNT_BE_DELAYED_BECAUSE_OF_ME));
+				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.PROCESS_SHOULDNT_BE_DELAYED_BECAUSE_OF_ME);
 				if (respawnTime < respawnMax)
 				{
 					respawnTime += 10000;
@@ -274,7 +238,6 @@ public final class AnomicFoundry extends Quest
 				npc.scheduleDespawn(100);
 			}
 		}
-		
 		return super.onSpawn(npc);
 	}
 	

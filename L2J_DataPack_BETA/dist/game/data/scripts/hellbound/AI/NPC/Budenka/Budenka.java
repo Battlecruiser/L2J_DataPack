@@ -18,14 +18,15 @@
  */
 package hellbound.AI.NPC.Budenka;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 
 /**
  * Budenka AI.
  */
-public final class Budenka extends Quest
+public final class Budenka extends AbstractNpcAI
 {
 	private static final int BUDENKA = 32294;
 	private static final int STANDART_CERT = 9851;
@@ -33,24 +34,22 @@ public final class Budenka extends Quest
 	
 	public Budenka()
 	{
-		super(-1, Budenka.class.getSimpleName(), "hellbound/AI/NPC");
+		super(Budenka.class.getSimpleName(), "hellbound/AI/NPC");
 		addFirstTalkId(BUDENKA);
 	}
 	
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.getInventory().getInventoryItemCount(PREMIUM_CERT, -1, false) > 0)
+		if (hasAtLeastOneQuestItem(player, PREMIUM_CERT))
 		{
 			return "32294-premium.htm";
 		}
-		
-		if (player.getInventory().getInventoryItemCount(STANDART_CERT, -1, false) > 0)
+		else if (hasAtLeastOneQuestItem(player, STANDART_CERT))
 		{
 			return "32294-standart.htm";
 		}
-		
 		npc.showChatWindow(player);
-		return null;
+		return super.onFirstTalk(npc, player);
 	}
 }

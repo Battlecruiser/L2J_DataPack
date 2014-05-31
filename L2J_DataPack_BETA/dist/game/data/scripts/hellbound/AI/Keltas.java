@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
  * Manages Darion's Enforcer's and Darion's Executioner spawn/despawn
@@ -38,14 +37,11 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  */
 public final class Keltas extends AbstractNpcAI
 {
+	// NPCs
 	private static final int KELTAS = 22341;
 	private static final int ENFORCER = 22342;
 	private static final int EXECUTIONER = 22343;
-	
-	private L2MonsterInstance _spawnedKeltas = null;
-	
-	private final List<L2Spawn> _spawnedMonsters;
-	
+	// Locations
 	private static final Location[] ENFORCER_SPAWN_POINTS =
 	{
 		new Location(-24540, 251404, -3320),
@@ -75,7 +71,6 @@ public final class Keltas extends AbstractNpcAI
 		new Location(-25376, 252368, -3257),
 		new Location(-25376, 252208, -3257)
 	};
-	
 	private static final Location[] EXECUTIONER_SPAWN_POINTS =
 	{
 		new Location(-24419, 251395, -3340),
@@ -104,6 +99,9 @@ public final class Keltas extends AbstractNpcAI
 		new Location(-28580, 251071, -3527),
 		new Location(-28492, 250704, -3523)
 	};
+	// Misc
+	private L2MonsterInstance _spawnedKeltas = null;
+	private final List<L2Spawn> _spawnedMonsters;
 	
 	public Keltas()
 	{
@@ -161,13 +159,13 @@ public final class Keltas extends AbstractNpcAI
 		{
 			if ((_spawnedKeltas != null) && !_spawnedKeltas.isDead())
 			{
-				_spawnedKeltas.broadcastPacket(new NpcSay(_spawnedKeltas.getObjectId(), Say2.NPC_SHOUT, _spawnedKeltas.getId(), NpcStringId.THAT_IS_IT_FOR_TODAYLETS_RETREAT_EVERYONE_PULL_BACK));
+				broadcastNpcSay(_spawnedKeltas, Say2.NPC_SHOUT, NpcStringId.THAT_IS_IT_FOR_TODAYLETS_RETREAT_EVERYONE_PULL_BACK);
 				_spawnedKeltas.deleteMe();
 				_spawnedKeltas.getSpawn().decreaseCount(_spawnedKeltas);
 				despawnMinions();
 			}
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -175,7 +173,6 @@ public final class Keltas extends AbstractNpcAI
 	{
 		cancelQuestTimers("despawn");
 		despawnMinions();
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 	
@@ -185,7 +182,7 @@ public final class Keltas extends AbstractNpcAI
 		if (!npc.isTeleporting())
 		{
 			_spawnedKeltas = (L2MonsterInstance) npc;
-			npc.broadcastPacket(new NpcSay(_spawnedKeltas.getObjectId(), Say2.NPC_SHOUT, _spawnedKeltas.getId(), NpcStringId.GUYS_SHOW_THEM_OUR_POWER));
+			broadcastNpcSay(_spawnedKeltas, Say2.NPC_SHOUT, NpcStringId.GUYS_SHOW_THEM_OUR_POWER);
 			spawnMinions();
 			startQuestTimer("despawn", 1800000, null, null);
 		}

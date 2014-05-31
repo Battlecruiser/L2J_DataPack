@@ -20,6 +20,8 @@ package hellbound.Instances.DemonPrinceFloor;
 
 import java.util.Calendar;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
@@ -28,7 +30,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
@@ -37,7 +38,7 @@ import com.l2jserver.gameserver.util.Util;
  * Demon Prince Floor instance zone.
  * @author GKR
  */
-public final class DemonPrinceFloor extends Quest
+public final class DemonPrinceFloor extends AbstractNpcAI
 {
 	// NPCs
 	private static final int GK_4 = 32748;
@@ -54,7 +55,7 @@ public final class DemonPrinceFloor extends Quest
 	
 	public DemonPrinceFloor()
 	{
-		super(-1, DemonPrinceFloor.class.getSimpleName(), "hellbound/Instances");
+		super(DemonPrinceFloor.class.getSimpleName(), "hellbound/Instances");
 		addStartNpc(GK_4);
 		addStartNpc(CUBE);
 		addTalkId(GK_4);
@@ -90,7 +91,7 @@ public final class DemonPrinceFloor extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		int instanceId = npc.getInstanceId();
+		final int instanceId = npc.getInstanceId();
 		if (instanceId > 0)
 		{
 			Instance inst = InstanceManager.getInstance().getInstance(instanceId);
@@ -109,7 +110,6 @@ public final class DemonPrinceFloor extends Quest
 			{
 				setReenterTime(world);
 			}
-			
 			addSpawn(CUBE, -22144, 278744, -8239, 0, false, 0, false, instanceId);
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -121,7 +121,7 @@ public final class DemonPrinceFloor extends Quest
 		{
 			return "gk-noparty.htm";
 		}
-		else if (player.getParty().getLeaderObjectId() != player.getObjectId())
+		else if (!player.getParty().isLeader(player))
 		{
 			return "gk-noleader.htm";
 		}
@@ -131,14 +131,14 @@ public final class DemonPrinceFloor extends Quest
 	
 	private boolean checkTeleport(L2PcInstance player)
 	{
-		L2Party party = player.getParty();
+		final L2Party party = player.getParty();
 		
 		if (party == null)
 		{
 			return false;
 		}
 		
-		if (player.getObjectId() != party.getLeaderObjectId())
+		if (!party.isLeader(player))
 		{
 			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
@@ -187,7 +187,6 @@ public final class DemonPrinceFloor extends Quest
 				return false;
 			}
 		}
-		
 		return true;
 	}
 	
