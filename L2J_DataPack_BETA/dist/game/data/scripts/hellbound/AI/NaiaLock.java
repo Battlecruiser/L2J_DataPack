@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class NaiaLock extends AbstractNpcAI
 {
+	// NPCs
 	private static final int LOCK = 18491;
 	
 	public NaiaLock()

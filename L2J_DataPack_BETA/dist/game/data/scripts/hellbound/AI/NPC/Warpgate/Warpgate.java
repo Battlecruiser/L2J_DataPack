@@ -23,7 +23,6 @@ import quests.Q00133_ThatsBloodyHot.Q00133_ThatsBloodyHot;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -40,10 +39,7 @@ import hellbound.HellboundEngine;
  */
 public final class Warpgate extends AbstractNpcAI
 {
-	// Misc
-	private static final int MAP = 9994;
-	private static final int ZONE = 40101;
-	// Teleports
+	// NPCs
 	private static final int[] WARPGATES =
 	{
 		32314,
@@ -56,6 +52,9 @@ public final class Warpgate extends AbstractNpcAI
 	// Locations
 	private static final Location HELLBOUND = new Location(-11272, 236464, -3248);
 	protected static final Location REMOVE_LOC = new Location(-16555, 209375, -3670);
+	// Misc
+	private static final int MAP = 9994;
+	private static final int ZONE = 40101;
 	
 	public Warpgate()
 	{
@@ -64,6 +63,16 @@ public final class Warpgate extends AbstractNpcAI
 		addFirstTalkId(WARPGATES);
 		addTalkId(WARPGATES);
 		addEnterZoneId(ZONE);
+	}
+	
+	@Override
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		if (event.equals("TELEPORT"))
+		{
+			player.teleToLocation(REMOVE_LOC, true);
+		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -86,13 +95,13 @@ public final class Warpgate extends AbstractNpcAI
 		{
 			return "warpgate-no.htm";
 		}
-		
 		player.teleToLocation(HELLBOUND, true);
+		
 		if (HellboundEngine.getInstance().isLocked())
 		{
 			HellboundEngine.getInstance().setLevel(1);
 		}
-		return null;
+		return super.onTalk(npc, player);
 	}
 	
 	@Override
@@ -102,7 +111,7 @@ public final class Warpgate extends AbstractNpcAI
 		{
 			if (!canEnter(character.getActingPlayer()) && !character.canOverrideCond(PcCondOverride.ZONE_CONDITIONS))
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new Teleport(character), 1000);
+				startQuestTimer("TELEPORT", 1000, null, (L2PcInstance) character);
 			}
 			else if (!character.getActingPlayer().isMinimapAllowed())
 			{
@@ -112,30 +121,7 @@ public final class Warpgate extends AbstractNpcAI
 				}
 			}
 		}
-		return null;
-	}
-	
-	private static final class Teleport implements Runnable
-	{
-		private final L2Character _char;
-		
-		public Teleport(L2Character c)
-		{
-			_char = c;
-		}
-		
-		@Override
-		public void run()
-		{
-			try
-			{
-				_char.teleToLocation(REMOVE_LOC, true);
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
+		return super.onEnterZone(character, zone);
 	}
 	
 	private static boolean canEnter(L2PcInstance player)

@@ -18,9 +18,10 @@
  */
 package hellbound.AI.NPC.Jude;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 
 import hellbound.HellboundEngine;
 
@@ -28,15 +29,16 @@ import hellbound.HellboundEngine;
  * Jude AI.
  * @author DS
  */
-public final class Jude extends Quest
+public final class Jude extends AbstractNpcAI
 {
+	// NPCs
 	private static final int JUDE = 32356;
 	private static final int NATIVE_TREASURE = 9684;
 	private static final int RING_OF_WIND_MASTERY = 9677;
 	
 	public Jude()
 	{
-		super(-1, Jude.class.getSimpleName(), "hellbound/AI/NPC");
+		super(Jude.class.getSimpleName(), "hellbound/AI/NPC");
 		addFirstTalkId(JUDE);
 		addStartNpc(JUDE);
 		addTalkId(JUDE);
@@ -58,17 +60,12 @@ public final class Jude extends Quest
 			}
 			return "32356-02a.htm";
 		}
-		return event;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.getQuestState(getName()) == null)
-		{
-			newQuestState(player);
-		}
-		
 		switch (HellboundEngine.getInstance().getLevel())
 		{
 			case 0:

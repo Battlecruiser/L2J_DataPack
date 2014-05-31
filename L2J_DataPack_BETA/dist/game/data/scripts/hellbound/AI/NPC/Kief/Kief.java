@@ -18,9 +18,10 @@
  */
 package hellbound.AI.NPC.Kief;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 
 import hellbound.HellboundEngine;
 
@@ -28,19 +29,21 @@ import hellbound.HellboundEngine;
  * Kief AI.
  * @author DS
  */
-public final class Kief extends Quest
+public final class Kief extends AbstractNpcAI
 {
+	// NPCs
 	private static final int KIEF = 32354;
-	private static final int BOTTLE = 9672;
-	private static final int DARION_BADGE = 9674;
-	private static final int DIM_LIFE_FORCE = 9680;
-	private static final int LIFE_FORCE = 9681;
-	private static final int CONTAINED_LIFE_FORCE = 9682;
-	private static final int STINGER = 10012;
+	// Items
+	private static final int BOTTLE = 9672; // Magic Bottle
+	private static final int DARION_BADGE = 9674; // Darion's Badge
+	private static final int DIM_LIFE_FORCE = 9680; // Dim Life Force
+	private static final int LIFE_FORCE = 9681; // Life Force
+	private static final int CONTAINED_LIFE_FORCE = 9682; // Contained Life Force
+	private static final int STINGER = 10012; // Scorpion Poison Stinger
 	
 	public Kief()
 	{
-		super(-1, Kief.class.getSimpleName(), "hellbound/AI/NPC");
+		super(Kief.class.getSimpleName(), "hellbound/AI/NPC");
 		addFirstTalkId(KIEF);
 		addStartNpc(KIEF);
 		addTalkId(KIEF);
@@ -49,84 +52,107 @@ public final class Kief extends Quest
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if ("Badges".equalsIgnoreCase(event))
+		String htmltext = null;
+		switch (event)
 		{
-			switch (HellboundEngine.getInstance().getLevel())
+			case "Badges":
 			{
-				case 2:
-				case 3:
-					if (hasQuestItems(player, DARION_BADGE))
+				switch (HellboundEngine.getInstance().getLevel())
+				{
+					case 2:
+					case 3:
 					{
-						HellboundEngine.getInstance().updateTrust((int) getQuestItemsCount(player, DARION_BADGE) * 10, true);
-						takeItems(player, DARION_BADGE, -1);
-						return "32354-10.htm";
+						if (hasQuestItems(player, DARION_BADGE))
+						{
+							HellboundEngine.getInstance().updateTrust((int) getQuestItemsCount(player, DARION_BADGE) * 10, true);
+							takeItems(player, DARION_BADGE, -1);
+							return "32354-10.htm";
+						}
+						break;
 					}
-			}
-			return "32354-10a.htm";
-		}
-		else if ("Bottle".equalsIgnoreCase(event))
-		{
-			if (HellboundEngine.getInstance().getLevel() >= 7)
-			{
-				if (getQuestItemsCount(player, STINGER) >= 20)
-				{
-					takeItems(player, STINGER, 20);
-					giveItems(player, BOTTLE, 1);
-					return "32354-11h.htm";
+					default:
+					{
+						htmltext = "32354-10a.htm";
+						break;
+					}
 				}
-				return "32354-11i.htm";
+				break;
 			}
-		}
-		else if ("dlf".equalsIgnoreCase(event))
-		{
-			if (HellboundEngine.getInstance().getLevel() == 7)
+			case "Bottle":
 			{
-				if (hasQuestItems(player, DIM_LIFE_FORCE))
+				if (HellboundEngine.getInstance().getLevel() >= 7)
 				{
-					HellboundEngine.getInstance().updateTrust((int) getQuestItemsCount(player, DIM_LIFE_FORCE) * 20, true);
-					takeItems(player, DIM_LIFE_FORCE, -1);
-					return "32354-11a.htm";
+					if (getQuestItemsCount(player, STINGER) >= 20)
+					{
+						takeItems(player, STINGER, 20);
+						giveItems(player, BOTTLE, 1);
+						htmltext = "32354-11h.htm";
+					}
+					else
+					{
+						htmltext = "32354-11i.htm";
+					}
 				}
-				return "32354-11b.htm";
+				break;
 			}
-		}
-		else if ("lf".equalsIgnoreCase(event))
-		{
-			if (HellboundEngine.getInstance().getLevel() == 7)
+			case "dlf":
 			{
-				if (hasQuestItems(player, LIFE_FORCE))
+				if (HellboundEngine.getInstance().getLevel() == 7)
 				{
-					HellboundEngine.getInstance().updateTrust((int) getQuestItemsCount(player, LIFE_FORCE) * 80, true);
-					takeItems(player, LIFE_FORCE, -1);
-					return "32354-11c.htm";
+					if (hasQuestItems(player, DIM_LIFE_FORCE))
+					{
+						HellboundEngine.getInstance().updateTrust((int) getQuestItemsCount(player, DIM_LIFE_FORCE) * 20, true);
+						takeItems(player, DIM_LIFE_FORCE, -1);
+						htmltext = "32354-11a.htm";
+					}
+					else
+					{
+						htmltext = "32354-11b.htm";
+					}
 				}
-				return "32354-11d.htm";
+				break;
 			}
-		}
-		else if ("clf".equalsIgnoreCase(event))
-		{
-			if (HellboundEngine.getInstance().getLevel() == 7)
+			case "lf":
 			{
-				if (hasQuestItems(player, CONTAINED_LIFE_FORCE))
+				if (HellboundEngine.getInstance().getLevel() == 7)
 				{
-					HellboundEngine.getInstance().updateTrust((int) getQuestItemsCount(player, CONTAINED_LIFE_FORCE) * 200, true);
-					takeItems(player, CONTAINED_LIFE_FORCE, -1);
-					return "32354-11e.htm";
+					if (hasQuestItems(player, LIFE_FORCE))
+					{
+						HellboundEngine.getInstance().updateTrust((int) getQuestItemsCount(player, LIFE_FORCE) * 80, true);
+						takeItems(player, LIFE_FORCE, -1);
+						htmltext = "32354-11c.htm";
+					}
+					else
+					{
+						htmltext = "32354-11d.htm";
+					}
 				}
-				return "32354-11f.htm";
+				break;
+			}
+			case "clf":
+			{
+				if (HellboundEngine.getInstance().getLevel() == 7)
+				{
+					if (hasQuestItems(player, CONTAINED_LIFE_FORCE))
+					{
+						HellboundEngine.getInstance().updateTrust((int) getQuestItemsCount(player, CONTAINED_LIFE_FORCE) * 200, true);
+						takeItems(player, CONTAINED_LIFE_FORCE, -1);
+						htmltext = "32354-11e.htm";
+					}
+					else
+					{
+						htmltext = "32354-11f.htm";
+					}
+				}
+				break;
 			}
 		}
-		return event;
+		return htmltext;
 	}
 	
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.getQuestState(getName()) == null)
-		{
-			newQuestState(player);
-		}
-		
 		switch (HellboundEngine.getInstance().getLevel())
 		{
 			case 1:

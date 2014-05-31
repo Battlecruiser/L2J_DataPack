@@ -18,40 +18,41 @@
  */
 package hellbound.AI.NPC.Natives;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 import hellbound.HellboundEngine;
 
 /**
- * Natives AI.<br>
- * This class manages Natives' behavior up to 9 level of Hellbound. 10 level are handled in Urban Area.
+ * Natives AI.
  * @author DS, GKR
  */
-public final class Natives extends Quest
+public final class Natives extends AbstractNpcAI
 {
+	// NPCs
 	private static final int NATIVE = 32362;
 	private static final int INSURGENT = 32363;
 	private static final int TRAITOR = 32364;
 	private static final int INCASTLE = 32357;
-	private static final int MARK_OF_BETRAYAL = 9676;
-	private static final int BADGES = 9674;
-	
+	// Items
+	private static final int MARK_OF_BETRAYAL = 9676; // Mark of Betrayal
+	private static final int BADGES = 9674; // Darion's Badge
+	// Misc
 	private static final int[] DOORS =
 	{
 		19250003,
-		19250004
+		19250004,
 	};
 	
 	public Natives()
 	{
-		super(-1, Natives.class.getSimpleName(), "hellbound/AI/NPC");
+		super(Natives.class.getSimpleName(), "hellbound/AI/NPC");
 		addFirstTalkId(NATIVE);
 		addFirstTalkId(INSURGENT);
 		addFirstTalkId(INCASTLE);
@@ -65,17 +66,22 @@ public final class Natives extends Quest
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
+		String htmltext = null;
 		final int hellboundLevel = HellboundEngine.getInstance().getLevel();
 		switch (npc.getId())
 		{
 			case NATIVE:
+			{
 				htmltext = hellboundLevel > 5 ? "32362-01.htm" : "32362.htm";
 				break;
+			}
 			case INSURGENT:
+			{
 				htmltext = hellboundLevel > 5 ? "32363-01.htm" : "32363.htm";
 				break;
+			}
 			case INCASTLE:
+			{
 				if (hellboundLevel < 9)
 				{
 					htmltext = "32357-01a.htm";
@@ -89,6 +95,7 @@ public final class Natives extends Quest
 					htmltext = "32357-01b.htm";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -104,7 +111,7 @@ public final class Natives extends Quest
 				if (getQuestItemsCount(player, MARK_OF_BETRAYAL) >= 10)
 				{
 					takeItems(player, MARK_OF_BETRAYAL, 10);
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.ALRIGHT_NOW_LEODAS_IS_YOURS));
+					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.ALRIGHT_NOW_LEODAS_IS_YOURS);
 					HellboundEngine.getInstance().updateTrust(-50, true);
 					
 					for (int doorId : DOORS)
@@ -142,7 +149,7 @@ public final class Natives extends Quest
 		}
 		else if ((npc.getId() == NATIVE) && event.equalsIgnoreCase("hungry_death"))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.HUN_HUNGRY));
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.HUN_HUNGRY);
 			npc.doDie(null);
 		}
 		else if (npc.getId() == INCASTLE)
@@ -179,7 +186,6 @@ public final class Natives extends Quest
 		{
 			startQuestTimer("hungry_death", 600000, npc, null);
 		}
-		
 		return super.onSpawn(npc);
 	}
 }

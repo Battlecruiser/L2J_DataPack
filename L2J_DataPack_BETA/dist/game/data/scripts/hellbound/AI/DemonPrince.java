@@ -34,15 +34,16 @@ import com.l2jserver.gameserver.model.skills.Skill;
  */
 public final class DemonPrince extends AbstractNpcAI
 {
+	// NPCs
 	private static final int DEMON_PRINCE = 25540;
 	private static final int FIEND = 25541;
-	
+	// Skills
 	private static final SkillHolder UD = new SkillHolder(5044, 2);
 	private static final SkillHolder[] AOE =
 	{
 		new SkillHolder(5376, 4),
 		new SkillHolder(5376, 5),
-		new SkillHolder(5376, 6)
+		new SkillHolder(5376, 6),
 	};
 	
 	private static final Map<Integer, Boolean> ATTACK_STATE = new FastMap<>();
@@ -62,7 +63,7 @@ public final class DemonPrince extends AbstractNpcAI
 		{
 			npc.doCast(AOE[getRandom(AOE.length)].getSkill());
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -112,10 +113,10 @@ public final class DemonPrince extends AbstractNpcAI
 	{
 		if ((master != null) && !master.isDead())
 		{
-			int instanceId = master.getInstanceId();
-			int x = master.getX();
-			int y = master.getY();
-			int z = master.getZ();
+			final int instanceId = master.getInstanceId();
+			final int x = master.getX();
+			final int y = master.getY();
+			final int z = master.getZ();
 			addSpawn(FIEND, x + 200, y, z, 0, false, 0, false, instanceId);
 			addSpawn(FIEND, x - 200, y, z, 0, false, 0, false, instanceId);
 			addSpawn(FIEND, x - 100, y - 140, z, 0, false, 0, false, instanceId);
