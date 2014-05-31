@@ -19,6 +19,7 @@
 package instances.IceQueensCastle;
 
 import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
@@ -29,31 +30,27 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
  * Ice Queen's Castle instance zone.
  * @author Adry_85
  */
-public final class IceQueensCastle extends Quest
+public final class IceQueensCastle extends AbstractNpcAI
 {
 	protected class IQCWorld extends InstanceWorld
 	{
-		long storeTime = 0;
+		L2PcInstance player = null;
 	}
 	
-	private static final int INSTANCEID = 137;
 	// NPCs
 	private static final int FREYA = 18847;
 	private static final int BATTALION_LEADER = 18848;
 	private static final int LEGIONNAIRE = 18849;
-	private static final int INVISIBLE_NPC = 18919;
 	private static final int MERCENARY_ARCHER = 18926;
 	private static final int ARCHERY_KNIGHT = 22767;
 	private static final int JINIA = 32781;
@@ -63,12 +60,14 @@ public final class IceQueensCastle extends Quest
 	private static final Location FREYA_LOC = new Location(114730, -114805, -11200, 50, 0);
 	// Skill
 	private static SkillHolder ETHERNAL_BLIZZARD = new SkillHolder(6276, 1);
-	// Door
+	// Misc
+	private static final int INSTANCEID = 137;
 	private static final int ICE_QUEEN_DOOR = 23140101;
+	private static final int MIN_LV = 82;
 	
 	private IceQueensCastle()
 	{
-		super(-1, IceQueensCastle.class.getSimpleName(), "instances");
+		super(IceQueensCastle.class.getSimpleName(), "instances");
 		addStartNpc(JINIA);
 		addTalkId(JINIA);
 		addSeeCreatureId(BATTALION_LEADER, LEGIONNAIRE, MERCENARY_ARCHER);
@@ -105,7 +104,7 @@ public final class IceQueensCastle extends Quest
 			}
 			case "TIMER_BLIZZARD":
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.I_CAN_NO_LONGER_STAND_BY));
+				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.I_CAN_NO_LONGER_STAND_BY);
 				npc.stopMove(null);
 				npc.setTarget(player);
 				npc.doCast(ETHERNAL_BLIZZARD.getSkill());
@@ -155,9 +154,7 @@ public final class IceQueensCastle extends Quest
 					startQuestTimer("ATTACK_KNIGHT", 5000, npc, null);
 				}
 			}
-			NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU);
-			ns.addStringParameter(creature.getName());
-			npc.broadcastPacket(ns);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU, creature.getName());
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
 	}
@@ -173,9 +170,16 @@ public final class IceQueensCastle extends Quest
 	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
-		if (skill == ETHERNAL_BLIZZARD.getSkill())
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		
+		if ((tmpworld != null) && (tmpworld instanceof IQCWorld))
 		{
-			startQuestTimer("TIMER_SCENE_21", 1000, npc, player);
+			final IQCWorld world = (IQCWorld) tmpworld;
+			
+			if ((skill == ETHERNAL_BLIZZARD.getSkill()) && (world.player != null))
+			{
+				startQuestTimer("TIMER_SCENE_21", 1000, npc, world.player);
+			}
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
@@ -183,39 +187,48 @@ public final class IceQueensCastle extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		enterInstance(talker, "IceQueensCastle.xml", START_LOC);
+		enterInstance(talker, "IceQueensCastle.xml");
 		return super.onTalk(npc, talker);
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, Location loc)
+	private void enterInstance(L2PcInstance player, String template)
 	{
-		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		// existing instance
+		
 		if (world != null)
 		{
-			if (!(world instanceof IQCWorld))
+			if (world instanceof IQCWorld)
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-				return 0;
+				teleportPlayer(player, START_LOC, world.getInstanceId(), false);
+				return;
 			}
-			teleportPlayer(player, loc, world.getInstanceId(), false);
-			return 0;
+			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+			return;
 		}
-		// New instance
-		world = new IQCWorld();
-		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(INSTANCEID);
-		world.setStatus(0);
-		((IQCWorld) world).storeTime = System.currentTimeMillis();
-		InstanceManager.getInstance().addWorld(world);
-		_log.info("Ice Queen's Castle started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
-		// teleport players
-		teleportPlayer(player, loc, world.getInstanceId(), false);
-		world.addAllowed(player.getObjectId());
-		openDoor(ICE_QUEEN_DOOR, world.getInstanceId());
-		addSpawn(INVISIBLE_NPC, 114394, -112383, -11200, 0, false, 0, false, INSTANCEID);
-		return world.getInstanceId();
+		
+		if (checkConditions(player))
+		{
+			world = new IQCWorld();
+			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
+			world.setTemplateId(INSTANCEID);
+			world.setStatus(0);
+			InstanceManager.getInstance().addWorld(world);
+			_log.info("Ice Queen's Castle started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+			teleportPlayer(player, START_LOC, world.getInstanceId(), false);
+			world.addAllowed(player.getObjectId());
+			((IQCWorld) world).player = player;
+			openDoor(ICE_QUEEN_DOOR, world.getInstanceId());
+		}
+	}
+	
+	private boolean checkConditions(L2PcInstance player)
+	{
+		if (player.getLevel() < MIN_LV)
+		{
+			player.sendPacket(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+			return false;
+		}
+		return true;
 	}
 	
 	public static void main(String[] args)
