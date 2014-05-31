@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
@@ -188,8 +189,11 @@ public final class PailakaSongOfIceAndFire extends Quest
 	{
 		13294,
 		13293,
-		13129
+		736
 	};
+	
+	// Skills
+	private static SkillHolder VITALITY_REPLENISHING = new SkillHolder(5774, 1);
 	
 	private PailakaSongOfIceAndFire()
 	{
@@ -336,7 +340,8 @@ public final class PailakaSongOfIceAndFire extends Quest
 				
 				if (inst.containsPlayer(player.getObjectId()))
 				{
-					player.setVitalityPoints(20000, true);
+					npc.setTarget(player);
+					npc.doCast(VITALITY_REPLENISHING.getSkill());
 					addExpAndSp(player, 810000, 50000);
 					for (int id : REWARDS)
 					{

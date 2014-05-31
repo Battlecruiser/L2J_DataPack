@@ -92,6 +92,7 @@ import quests.Q00122_OminousNews.Q00122_OminousNews;
 import quests.Q00124_MeetingTheElroki.Q00124_MeetingTheElroki;
 import quests.Q00125_TheNameOfEvil1.Q00125_TheNameOfEvil1;
 import quests.Q00126_TheNameOfEvil2.Q00126_TheNameOfEvil2;
+import quests.Q00129_PailakaDevilsLegacy.Q00129_PailakaDevilsLegacy;
 import quests.Q00131_BirdInACage.Q00131_BirdInACage;
 import quests.Q00132_MatrasCuriosity.Q00132_MatrasCuriosity;
 import quests.Q00134_TempleMissionary.Q00134_TempleMissionary;
@@ -451,6 +452,7 @@ public class QuestMasterHandler
 		Q00124_MeetingTheElroki.class,
 		Q00125_TheNameOfEvil1.class,
 		Q00126_TheNameOfEvil2.class,
+		Q00129_PailakaDevilsLegacy.class,
 		Q00131_BirdInACage.class,
 		Q00132_MatrasCuriosity.class,
 		Q00134_TempleMissionary.class,
