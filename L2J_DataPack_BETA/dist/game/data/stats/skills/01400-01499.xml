@@ -1493,7 +1493,7 @@
 		<enchant4 name="abnormalTime" val="#ench4AbnormalTimes" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
-			<target races="Kamael" />
+			<target races="KAMAEL" />
 		</cond>
 		<for>
 			<effect name="Buff">
@@ -1724,7 +1724,7 @@
 			<player souls="1" />
 		</cond>
 		<cond msgId="113" addName="1">
-			<target races="Kamael" />
+			<target races="KAMAEL" />
 		</cond>
 		<for>
 			<effect name="FocusSouls">

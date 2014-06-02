@@ -105,7 +105,7 @@ public class Q00008_AnAdventureBegins extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = ((player.getRace() == PcRace.DarkElf) && (player.getLevel() >= MIN_LEVEL)) ? "30134-02.htm" : "30134-01.html";
+						htmltext = ((player.getRace() == PcRace.DARK_ELF) && (player.getLevel() >= MIN_LEVEL)) ? "30134-02.htm" : "30134-01.html";
 						break;
 					case State.STARTED:
 						if (st.isCond(1))

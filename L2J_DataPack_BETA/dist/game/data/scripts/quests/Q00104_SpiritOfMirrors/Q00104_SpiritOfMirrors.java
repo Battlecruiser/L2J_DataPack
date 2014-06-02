@@ -128,7 +128,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 					{
 						case State.CREATED:
 						{
-							htmltext = (player.getRace() == PcRace.Human) ? (player.getLevel() >= MIN_LVL) ? "30017-03.htm" : "30017-02.htm" : "30017-01.htm";
+							htmltext = (player.getRace() == PcRace.HUMAN) ? (player.getLevel() >= MIN_LVL) ? "30017-03.htm" : "30017-02.htm" : "30017-01.htm";
 							break;
 						}
 						case State.STARTED:

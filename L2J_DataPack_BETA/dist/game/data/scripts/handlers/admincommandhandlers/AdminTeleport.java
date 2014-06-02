@@ -308,22 +308,22 @@ public class AdminTeleport implements IAdminCommandHandler
 		String regionName;
 		switch (player.getRace())
 		{
-			case Elf:
+			case ELF:
 				regionName = "elf_town";
 				break;
-			case DarkElf:
+			case DARK_ELF:
 				regionName = "darkelf_town";
 				break;
-			case Orc:
+			case ORC:
 				regionName = "orc_town";
 				break;
-			case Dwarf:
+			case DWARF:
 				regionName = "dwarf_town";
 				break;
-			case Kamael:
+			case KAMAEL:
 				regionName = "kamael_town";
 				break;
-			case Human:
+			case HUMAN:
 			default:
 				regionName = "talking_island_town";
 		}

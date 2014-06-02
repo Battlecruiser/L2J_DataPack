@@ -124,7 +124,7 @@ public final class Q00260_OrcHunting extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == PcRace.Elf) ? (player.getLevel() >= MIN_LVL) ? "30221-03.htm" : "30221-02.html" : "30221-01.html";
+				htmltext = (player.getRace() == PcRace.ELF) ? (player.getLevel() >= MIN_LVL) ? "30221-03.htm" : "30221-02.html" : "30221-01.html";
 				break;
 			}
 			case State.STARTED:

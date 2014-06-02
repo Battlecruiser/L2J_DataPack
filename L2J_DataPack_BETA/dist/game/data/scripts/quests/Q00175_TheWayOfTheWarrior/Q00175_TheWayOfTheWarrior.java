@@ -181,7 +181,7 @@ public final class Q00175_TheWayOfTheWarrior extends Quest
 			{
 				if (qs.isCreated())
 				{
-					if (player.getRace() != PcRace.Kamael)
+					if (player.getRace() != PcRace.KAMAEL)
 					{
 						htmltext = "32138-04.htm";
 					}

@@ -57,7 +57,7 @@ public final class Q00292_BrigandsSweep extends Quest
 	}
 	// Misc
 	private static final int MIN_LVL = 5;
-
+	
 	public Q00292_BrigandsSweep()
 	{
 		super(292, Q00292_BrigandsSweep.class.getSimpleName(), "Brigands Sweep");
@@ -66,7 +66,7 @@ public final class Q00292_BrigandsSweep extends Quest
 		addKillId(MOB_ITEM_DROP.keySet());
 		registerQuestItems(GOBLIN_NECKLACE, GOBLIN_PENDANT, GOBLIN_LORD_PENDANT, SUSPICIOUS_MEMO, SUSPICIOUS_CONTRACT);
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -76,7 +76,7 @@ public final class Q00292_BrigandsSweep extends Quest
 		{
 			return html;
 		}
-
+		
 		switch (event)
 		{
 			case "30532-03.htm":
@@ -108,7 +108,7 @@ public final class Q00292_BrigandsSweep extends Quest
 		}
 		return html;
 	}
-
+	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
@@ -141,7 +141,7 @@ public final class Q00292_BrigandsSweep extends Quest
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
-
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
@@ -155,7 +155,7 @@ public final class Q00292_BrigandsSweep extends Quest
 				{
 					case State.CREATED:
 					{
-						html = (talker.getRace() == PcRace.Dwarf) ? (talker.getLevel() >= MIN_LVL) ? "30532-02.htm" : "30532-01.htm" : "30532-00.htm";
+						html = (talker.getRace() == PcRace.DWARF) ? (talker.getLevel() >= MIN_LVL) ? "30532-02.htm" : "30532-01.htm" : "30532-00.htm";
 						break;
 					}
 					case State.STARTED:

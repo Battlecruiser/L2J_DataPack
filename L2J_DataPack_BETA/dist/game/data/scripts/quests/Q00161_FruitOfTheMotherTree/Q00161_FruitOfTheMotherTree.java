@@ -90,7 +90,7 @@ public class Q00161_FruitOfTheMotherTree extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = (player.getRace() == PcRace.Elf) ? (player.getLevel() >= MIN_LEVEL) ? "30362-03.htm" : "30362-02.htm" : "30362-01.htm";
+						htmltext = (player.getRace() == PcRace.ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30362-03.htm" : "30362-02.htm" : "30362-01.htm";
 						break;
 					case State.STARTED:
 						if (st.isCond(1))

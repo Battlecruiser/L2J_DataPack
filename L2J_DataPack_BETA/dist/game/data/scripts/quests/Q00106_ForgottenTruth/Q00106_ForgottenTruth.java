@@ -130,7 +130,7 @@ public final class Q00106_ForgottenTruth extends Quest
 				{
 					case State.CREATED:
 					{
-						if (talker.getRace() == PcRace.DarkElf)
+						if (talker.getRace() == PcRace.DARK_ELF)
 						{
 							htmltext = talker.getLevel() >= MIN_LVL ? "30358-03.htm" : "30358-02.htm";
 						}

@@ -92,7 +92,7 @@ public class Q00172_NewHorizons extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = (player.getRace() == PcRace.Kamael) ? (player.getLevel() >= MIN_LEVEL) ? "32140-01.htm" : "32140-02.htm" : "32140-03.htm";
+						htmltext = (player.getRace() == PcRace.KAMAEL) ? (player.getLevel() >= MIN_LEVEL) ? "32140-01.htm" : "32140-02.htm" : "32140-03.htm";
 						break;
 					case State.STARTED:
 						htmltext = "32140-05.html";

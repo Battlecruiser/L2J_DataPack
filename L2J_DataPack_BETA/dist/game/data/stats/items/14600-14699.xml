@@ -33,7 +33,7 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="2453">
 			<and>
-				<player races="Kamael" />
+				<player races="KAMAEL" />
 				<player cloakStatus="true" />
 			</and>
 		</cond>
@@ -54,7 +54,7 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="2453">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player cloakStatus="true" />
 			</and>
 		</cond>
@@ -153,7 +153,7 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="2453">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="ROGUE_CLOACK" />
 				<player cloakStatus="true" />
 			</and>
@@ -193,7 +193,7 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="2453">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="MAGE_CLOACK" />
 				<player cloakStatus="true" />
 			</and>
@@ -601,7 +601,7 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="46" />
@@ -629,7 +629,7 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="56" />
@@ -656,7 +656,7 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="65" />

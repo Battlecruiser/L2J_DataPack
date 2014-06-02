@@ -140,7 +140,7 @@ public final class Q00107_MercilessPunishment extends Quest
 				{
 					case State.CREATED:
 					{
-						if (talker.getRace() != PcRace.Orc)
+						if (talker.getRace() != PcRace.ORC)
 						{
 							htmltext = "30568-01.htm";
 						}

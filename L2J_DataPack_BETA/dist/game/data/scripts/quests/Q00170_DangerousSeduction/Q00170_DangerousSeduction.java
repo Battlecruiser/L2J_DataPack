@@ -99,7 +99,7 @@ public class Q00170_DangerousSeduction extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				htmltext = (player.getRace() == PcRace.DarkElf) ? (player.getLevel() >= MIN_LEVEL) ? "30305-01.htm" : "30305-02.htm" : "30305-03.htm";
+				htmltext = (player.getRace() == PcRace.DARK_ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30305-01.htm" : "30305-02.htm" : "30305-03.htm";
 				break;
 			case State.STARTED:
 				if (st.isCond(1))

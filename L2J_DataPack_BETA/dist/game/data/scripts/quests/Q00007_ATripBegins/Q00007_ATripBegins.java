@@ -105,7 +105,7 @@ public class Q00007_ATripBegins extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = ((player.getRace() == PcRace.Elf) && (player.getLevel() >= MIN_LEVEL)) ? "30146-01.htm" : "30146-02.html";
+						htmltext = ((player.getRace() == PcRace.ELF) && (player.getLevel() >= MIN_LEVEL)) ? "30146-01.htm" : "30146-02.html";
 						break;
 					case State.STARTED:
 						if (st.isCond(1))

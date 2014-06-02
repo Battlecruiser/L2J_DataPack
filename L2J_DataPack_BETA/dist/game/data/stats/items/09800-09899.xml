@@ -249,7 +249,7 @@
 		<set name="equip_condition" val="{{ec_academy;1}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 			</and>
 		</cond>
@@ -272,7 +272,7 @@
 		<set name="equip_condition" val="{{ec_academy;1}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 			</and>
 		</cond>
@@ -295,7 +295,7 @@
 		<set name="equip_condition" val="{{ec_academy;1}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 			</and>
 		</cond>
@@ -371,7 +371,7 @@
 		<set name="equip_condition" val="{{ec_academy;1}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 			</and>
 		</cond>
@@ -395,7 +395,7 @@
 		<set name="equip_condition" val="{{ec_academy;1}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 			</and>
 		</cond>
@@ -418,7 +418,7 @@
 		<set name="equip_condition" val="{{ec_academy;1}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 			</and>
 		</cond>
@@ -457,7 +457,7 @@
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="5" /> <!-- Baron -->
 			</and>
 		</cond>
@@ -478,7 +478,7 @@
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="5" /> <!-- Baron -->
 			</and>
 		</cond>
@@ -499,7 +499,7 @@
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="5" /> <!-- Baron -->
 			</and>
 		</cond>
@@ -576,7 +576,7 @@
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="5" /> <!-- Baron -->
 			</and>
 		</cond>
@@ -598,7 +598,7 @@
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="5" /> <!-- Baron -->
 			</and>
 		</cond>
@@ -619,7 +619,7 @@
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="5" /> <!-- Baron -->
 			</and>
 		</cond>
@@ -647,7 +647,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="300" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="111" />
@@ -678,7 +678,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="300" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="132" />
@@ -710,7 +710,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="300" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="155" />
@@ -741,7 +741,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="300" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="126" />
@@ -772,7 +772,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="300" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="151" />
@@ -804,7 +804,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="300" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="176" />
@@ -835,7 +835,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="300" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="159" />
@@ -866,7 +866,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="300" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="190" />
@@ -898,7 +898,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="300" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="221" />

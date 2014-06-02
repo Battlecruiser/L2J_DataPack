@@ -379,7 +379,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3650-1;3564-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="359" />
@@ -414,7 +414,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3650-1;3013-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="359" />
@@ -449,7 +449,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3650-1;8289-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="359" />
@@ -484,7 +484,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3360-1;3552-3;3655-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="444" />
@@ -519,7 +519,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3655-1;8289-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="444" />
@@ -555,7 +555,7 @@
 		<set name="oncrit_skill" val="3574-2" />
 		<set name="item_skill" val="3552-3;3655-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="444" />
@@ -589,7 +589,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3653-1;3564-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="429" />
@@ -623,7 +623,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3653-1;3013-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="429" />
@@ -657,7 +657,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3653-1;3566-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="429" />
@@ -685,7 +685,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="250" />
@@ -728,7 +728,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="125" />
@@ -752,7 +752,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="250" />
@@ -795,7 +795,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="125" />
@@ -1916,7 +1916,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="334" />
@@ -1949,7 +1949,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="281" />
@@ -1982,7 +1982,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="334" />
@@ -2016,7 +2016,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="392" />
@@ -2063,7 +2063,7 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
@@ -2086,7 +2086,7 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
@@ -2109,7 +2109,7 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
@@ -2194,7 +2194,7 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
@@ -2218,7 +2218,7 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
@@ -2241,7 +2241,7 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>

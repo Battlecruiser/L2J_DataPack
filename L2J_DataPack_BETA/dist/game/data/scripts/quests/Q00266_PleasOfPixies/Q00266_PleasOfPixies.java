@@ -119,7 +119,7 @@ public final class Q00266_PleasOfPixies extends Quest
 		{
 			case State.CREATED:
 			{
-				if (player.getRace() != PcRace.Elf)
+				if (player.getRace() != PcRace.ELF)
 				{
 					htmltext = "31852-01.htm";
 				}

@@ -142,7 +142,7 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 		
 		if (qs.isCreated())
 		{
-			if (player.getRace() != PcRace.Elf)
+			if (player.getRace() != PcRace.ELF)
 			{
 				htmltext = "30155-00.htm";
 			}

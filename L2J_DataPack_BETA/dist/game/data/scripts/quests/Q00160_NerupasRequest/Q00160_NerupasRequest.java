@@ -82,7 +82,7 @@ public final class Q00160_NerupasRequest extends Quest
 			{
 				if (npc.getId() == NERUPA)
 				{
-					if (player.getRace() != PcRace.Elf)
+					if (player.getRace() != PcRace.ELF)
 					{
 						htmltext = "30370-01.htm";
 					}

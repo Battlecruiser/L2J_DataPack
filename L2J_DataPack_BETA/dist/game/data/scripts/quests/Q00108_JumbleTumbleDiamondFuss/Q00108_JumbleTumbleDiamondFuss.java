@@ -160,7 +160,7 @@ public final class Q00108_JumbleTumbleDiamondFuss extends Quest
 				{
 					case State.CREATED:
 					{
-						if (talker.getRace() != PcRace.Dwarf)
+						if (talker.getRace() != PcRace.DWARF)
 						{
 							htmltext = "30523-01.htm";
 						}

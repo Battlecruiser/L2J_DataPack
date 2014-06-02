@@ -102,7 +102,7 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 				{
 					case State.CREATED:
 						final QuestState qs = player.getQuestState(Q00172_NewHorizons.class.getSimpleName());
-						htmltext = ((qs != null) && qs.isCompleted() && (player.getRace() == PcRace.Kamael) && st.hasQuestItems(MARK_OF_TRAVELER)) ? "30097-01.htm" : "30097-02.htm";
+						htmltext = ((qs != null) && qs.isCompleted() && (player.getRace() == PcRace.KAMAEL) && st.hasQuestItems(MARK_OF_TRAVELER)) ? "30097-01.htm" : "30097-02.htm";
 						break;
 					case State.STARTED:
 						htmltext = (st.isCond(1)) ? "30097-04.html" : "30097-05.html";

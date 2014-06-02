@@ -142,7 +142,7 @@ public final class Q00276_TotemOfTheHestui extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == PcRace.Orc) ? (player.getLevel() >= MIN_LVL) ? "30571-02.htm" : "30571-01.htm" : "30571-00.htm";
+				htmltext = (player.getRace() == PcRace.ORC) ? (player.getLevel() >= MIN_LVL) ? "30571-02.htm" : "30571-01.htm" : "30571-00.htm";
 				break;
 			}
 			case State.STARTED:

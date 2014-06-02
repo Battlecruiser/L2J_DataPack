@@ -26,12 +26,12 @@
 									<xs:attribute name="race" use="required">
 										<xs:simpleType>
 											<xs:restriction base="xs:token">
-												<xs:enumeration value="DarkElf" />
-												<xs:enumeration value="Dwarf" />
-												<xs:enumeration value="Elf" />
-												<xs:enumeration value="Human" />
-												<xs:enumeration value="Kamael" />
-												<xs:enumeration value="Orc" />
+												<xs:enumeration value="DARK_ELF" />
+												<xs:enumeration value="DWARF" />
+												<xs:enumeration value="ELF" />
+												<xs:enumeration value="HUMAN" />
+												<xs:enumeration value="KAMAEL" />
+												<xs:enumeration value="ORC" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>

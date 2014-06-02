@@ -120,7 +120,7 @@ public final class Q00103_SpiritOfCraftsman extends Quest
 				{
 					case State.CREATED:
 					{
-						if (talker.getRace() != PcRace.DarkElf)
+						if (talker.getRace() != PcRace.DARK_ELF)
 						{
 							htmltext = "30307-01.htm";
 						}

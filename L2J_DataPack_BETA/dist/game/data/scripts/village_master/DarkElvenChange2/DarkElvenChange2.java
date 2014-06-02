@@ -96,7 +96,7 @@ public final class DarkElvenChange2 extends Quest
 		{
 			int i = Integer.valueOf(event);
 			final ClassId cid = player.getClassId();
-			if ((cid.getRace() == PcRace.DarkElf) && (cid.getId() == CLASSES[i][1]))
+			if ((cid.getRace() == PcRace.DARK_ELF) && (cid.getId() == CLASSES[i][1]))
 			{
 				int suffix;
 				final boolean item1 = st.hasQuestItems(CLASSES[i][6]);
@@ -146,7 +146,7 @@ public final class DarkElvenChange2 extends Quest
 		}
 		
 		final ClassId cid = player.getClassId();
-		if (cid.getRace() == PcRace.DarkElf)
+		if (cid.getRace() == PcRace.DARK_ELF)
 		{
 			switch (cid)
 			{

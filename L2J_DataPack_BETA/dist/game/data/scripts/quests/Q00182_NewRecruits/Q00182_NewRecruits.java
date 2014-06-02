@@ -93,7 +93,7 @@ public class Q00182_NewRecruits extends Quest
 			{
 				case State.CREATED:
 					final int level = player.getLevel();
-					if (player.getRace() == PcRace.Kamael)
+					if (player.getRace() == PcRace.KAMAEL)
 					{
 						htmltext = "32138-00.html";
 					}

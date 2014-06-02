@@ -151,7 +151,7 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() != PcRace.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30147-02.htm" : "30147-01.htm" : "30147-00.htm";
+					htmltext = (player.getRace() != PcRace.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30147-02.htm" : "30147-01.htm" : "30147-00.htm";
 					break;
 				}
 				case State.STARTED:

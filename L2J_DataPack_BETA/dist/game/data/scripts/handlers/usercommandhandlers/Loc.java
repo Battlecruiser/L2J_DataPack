@@ -44,7 +44,7 @@ public class Loc implements IUserCommandHandler
 		L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
 		if (zone != null)
 		{
-			region = MapRegionManager.getInstance().getRestartRegion(activeChar, zone.getAllRespawnPoints().get(PcRace.Human)).getLocId();
+			region = MapRegionManager.getInstance().getRestartRegion(activeChar, zone.getAllRespawnPoints().get(PcRace.HUMAN)).getLocId();
 		}
 		else
 		{

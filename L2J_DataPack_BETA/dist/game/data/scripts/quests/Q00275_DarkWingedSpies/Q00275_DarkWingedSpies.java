@@ -138,7 +138,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (talker.getRace() == PcRace.Orc) ? (talker.getLevel() >= MIN_LVL) ? "30567-02.htm" : "30567-01.htm" : "30567-00.htm";
+				htmltext = (talker.getRace() == PcRace.ORC) ? (talker.getLevel() >= MIN_LVL) ? "30567-02.htm" : "30567-01.htm" : "30567-00.htm";
 				break;
 			}
 			case State.STARTED:

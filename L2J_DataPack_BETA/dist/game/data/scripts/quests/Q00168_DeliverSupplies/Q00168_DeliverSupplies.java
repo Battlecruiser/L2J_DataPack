@@ -90,7 +90,7 @@ public class Q00168_DeliverSupplies extends Quest
 					{
 						case State.CREATED:
 						{
-							htmltext = (player.getRace() == PcRace.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30349-02.htm" : "30349-01.htm" : "30349-00.htm";
+							htmltext = (player.getRace() == PcRace.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30349-02.htm" : "30349-01.htm" : "30349-00.htm";
 							break;
 						}
 						case State.STARTED:

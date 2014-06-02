@@ -91,7 +91,7 @@ public class Q00166_MassOfDarkness extends Quest
 					{
 						case State.CREATED:
 						{
-							htmltext = (player.getRace() == PcRace.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30130-02.htm" : "30130-01.htm" : "30130-00.htm";
+							htmltext = (player.getRace() == PcRace.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30130-02.htm" : "30130-01.htm" : "30130-00.htm";
 							break;
 						}
 						case State.STARTED:

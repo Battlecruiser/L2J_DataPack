@@ -106,7 +106,7 @@ public final class Q00267_WrathOfVerdure extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() == PcRace.Elf) ? (player.getLevel() >= MIN_LVL) ? "31853-03.htm" : "31853-02.htm" : "31853-01.htm";
+					htmltext = (player.getRace() == PcRace.ELF) ? (player.getLevel() >= MIN_LVL) ? "31853-03.htm" : "31853-02.htm" : "31853-01.htm";
 					break;
 				}
 				case State.STARTED:
