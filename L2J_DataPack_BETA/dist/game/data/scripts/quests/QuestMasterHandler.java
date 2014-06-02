@@ -200,6 +200,7 @@ import quests.Q00291_RevengeOfTheRedbonnet.Q00291_RevengeOfTheRedbonnet;
 import quests.Q00292_BrigandsSweep.Q00292_BrigandsSweep;
 import quests.Q00293_TheHiddenVeins.Q00293_TheHiddenVeins;
 import quests.Q00294_CovertBusiness.Q00294_CovertBusiness;
+import quests.Q00295_DreamingOfTheSkies.Q00295_DreamingOfTheSkies;
 import quests.Q00297_GatekeepersFavor.Q00297_GatekeepersFavor;
 import quests.Q00300_HuntingLetoLizardman.Q00300_HuntingLetoLizardman;
 import quests.Q00303_CollectArrowheads.Q00303_CollectArrowheads;
@@ -560,6 +561,7 @@ public class QuestMasterHandler
 		Q00292_BrigandsSweep.class,
 		Q00293_TheHiddenVeins.class,
 		Q00294_CovertBusiness.class,
+		Q00295_DreamingOfTheSkies.class,
 		Q00297_GatekeepersFavor.class,
 		Q00300_HuntingLetoLizardman.class,
 		Q00303_CollectArrowheads.class,
