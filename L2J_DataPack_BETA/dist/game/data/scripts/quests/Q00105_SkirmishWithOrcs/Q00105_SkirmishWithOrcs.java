@@ -167,7 +167,7 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 		{
 			case State.CREATED:
 			{
-				if (talker.getRace() == PcRace.Elf)
+				if (talker.getRace() == PcRace.ELF)
 				{
 					htmltext = (talker.getLevel() >= MIN_LVL) ? "30218-03.htm" : "30218-02.htm";
 				}

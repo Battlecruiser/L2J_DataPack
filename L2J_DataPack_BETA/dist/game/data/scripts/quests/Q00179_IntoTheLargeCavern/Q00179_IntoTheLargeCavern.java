@@ -94,7 +94,7 @@ public class Q00179_IntoTheLargeCavern extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
-					if (player.getRace() != PcRace.Kamael)
+					if (player.getRace() != PcRace.KAMAEL)
 					{
 						htmltext = "32138-00b.html";
 					}

@@ -160,7 +160,7 @@ public final class TerritoryManagers extends AbstractNpcAI
 					// Complete the sub-class related quest.
 					// Complete quest Seeds of Chaos (236) for Kamael characters.
 					// Complete quest Mimir's Elixir (235) for other races characters.
-					final Quest q = QuestManager.getInstance().getQuest((player.getRace() == PcRace.Kamael) ? 236 : 235);
+					final Quest q = QuestManager.getInstance().getQuest((player.getRace() == PcRace.KAMAEL) ? 236 : 235);
 					if (q != null)
 					{
 						QuestState qs = player.getQuestState(q.getName());

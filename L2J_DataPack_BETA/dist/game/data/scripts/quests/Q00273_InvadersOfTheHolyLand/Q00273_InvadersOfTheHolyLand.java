@@ -123,7 +123,7 @@ public final class Q00273_InvadersOfTheHolyLand extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() == PcRace.Orc) ? (player.getLevel() >= MIN_LVL) ? "30566-03.htm" : "30566-02.htm" : "30566-01.htm";
+					htmltext = (player.getRace() == PcRace.ORC) ? (player.getLevel() >= MIN_LVL) ? "30566-03.htm" : "30566-02.htm" : "30566-01.htm";
 					break;
 				}
 				case State.STARTED:

@@ -119,7 +119,7 @@ public final class Q00265_BondsOfSlavery extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == PcRace.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30357-03.htm" : "30357-02.html" : "30357-01.html";
+				htmltext = (player.getRace() == PcRace.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30357-03.htm" : "30357-02.html" : "30357-01.html";
 				break;
 			}
 			case State.STARTED:

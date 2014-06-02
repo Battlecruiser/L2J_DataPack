@@ -259,7 +259,7 @@ public final class Q00235_MimirsElixir extends Quest
 		{
 			if (npc.getId() == LADD)
 			{
-				if (player.getRace() == PcRace.Kamael)
+				if (player.getRace() == PcRace.KAMAEL)
 				{
 					htmltext = "30721-09.html";
 				}

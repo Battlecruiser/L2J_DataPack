@@ -133,7 +133,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 					{
 						case State.CREATED:
 						{
-							htmltext = player.getRace() == PcRace.Elf ? player.getLevel() >= MIN_LVL ? "30284-07.htm" : "30284-08.htm" : "30284-00.htm";
+							htmltext = player.getRace() == PcRace.ELF ? player.getLevel() >= MIN_LVL ? "30284-07.htm" : "30284-08.htm" : "30284-00.htm";
 							break;
 						}
 						case State.STARTED:

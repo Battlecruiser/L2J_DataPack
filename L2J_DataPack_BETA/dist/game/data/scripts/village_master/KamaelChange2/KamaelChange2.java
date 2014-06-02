@@ -290,7 +290,7 @@ public final class KamaelChange2 extends AbstractNpcAI
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		if (player.getRace() != PcRace.Kamael)
+		if (player.getRace() != PcRace.KAMAEL)
 		{
 			htmltext = "32145-01.htm"; // master_all_kamael002a
 		}

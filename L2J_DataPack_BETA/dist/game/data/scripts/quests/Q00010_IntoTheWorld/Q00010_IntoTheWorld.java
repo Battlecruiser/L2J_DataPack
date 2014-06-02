@@ -108,7 +108,7 @@ public class Q00010_IntoTheWorld extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = ((player.getLevel() >= MIN_LEVEL) && (player.getRace() == PcRace.Dwarf)) ? "30533-01.htm" : "30533-02.html";
+						htmltext = ((player.getLevel() >= MIN_LEVEL) && (player.getRace() == PcRace.DWARF)) ? "30533-01.htm" : "30533-02.html";
 						break;
 					case State.STARTED:
 						if (st.isCond(1))
