@@ -25,7 +25,6 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
@@ -87,7 +86,9 @@ public final class QueenAnt extends AbstractNpcAI
 	private QueenAnt()
 	{
 		super(QueenAnt.class.getSimpleName(), "ai/individual");
-		registerMobs(MOBS, QuestEventType.ON_SPAWN, QuestEventType.ON_KILL, QuestEventType.ON_AGGRO_RANGE_ENTER);
+		addSpawnId(MOBS);
+		addKillId(MOBS);
+		addAggroRangeEnterId(MOBS);
 		addFactionCallId(NURSE);
 		
 		_zone = GrandBossManager.getInstance().getZone(QUEEN_X, QUEEN_Y, QUEEN_Z);

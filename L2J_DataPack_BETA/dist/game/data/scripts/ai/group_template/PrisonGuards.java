@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
@@ -145,9 +144,9 @@ public final class PrisonGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public boolean onNpcHate(L2Attackable mob, L2Playable playable)
+	public boolean onNpcHate(L2Attackable mob, L2PcInstance player, boolean isSummon)
 	{
-		return playable.isAffectedBySkill(TIMER);
+		return player.isAffectedBySkill(TIMER);
 	}
 	
 	@Override

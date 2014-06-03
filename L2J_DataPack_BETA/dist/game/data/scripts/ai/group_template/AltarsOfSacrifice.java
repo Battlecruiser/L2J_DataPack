@@ -20,6 +20,8 @@ package ai.group_template;
 
 import java.util.logging.Level;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -27,13 +29,12 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.interfaces.ILocational;
-import com.l2jserver.gameserver.scripting.scriptengine.impl.L2Script;
 import com.l2jserver.util.Rnd;
 
 /**
  * @author FBIagent, janiko, FinalDestination, lion
  */
-public final class AltarsOfSacrifice extends L2Script
+public final class AltarsOfSacrifice extends AbstractNpcAI
 {
 	private final class Altar
 	{

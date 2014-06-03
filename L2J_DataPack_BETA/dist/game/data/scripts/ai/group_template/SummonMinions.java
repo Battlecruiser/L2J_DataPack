@@ -30,7 +30,6 @@ import javolution.util.FastSet;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -104,7 +103,8 @@ public class SummonMinions extends AbstractNpcAI
 	private SummonMinions()
 	{
 		super(SummonMinions.class.getSimpleName(), "ai/group_template");
-		registerMobs(MINIONS.keySet(), QuestEventType.ON_ATTACK, QuestEventType.ON_KILL);
+		addAttackId(MINIONS.keySet());
+		addKillId(MINIONS.keySet());
 	}
 	
 	@Override

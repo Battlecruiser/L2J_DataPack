@@ -85,6 +85,7 @@ public class Q00464_Oath extends Quest
 			addTalkId(npc[0]);
 		}
 		addKillId(MOBS.keySet());
+		addItemTalkId(STRONGBOX);
 		registerQuestItems(BOOK, BOOK2);
 	}
 	
@@ -165,11 +166,7 @@ public class Q00464_Oath extends Quest
 	public String onItemTalk(L2ItemInstance item, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
+		final QuestState st = getQuestState(player, true);
 		
 		boolean startQuest = false;
 		switch (st.getState())

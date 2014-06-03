@@ -21,23 +21,22 @@ package ai.npc;
 import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
-import com.l2jserver.gameserver.scripting.scriptengine.impl.L2Script;
 import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * Abstract NPC AI class for datapack based AIs.
  * @author UnAfraid, Zoey76
  */
-public abstract class AbstractNpcAI extends L2Script
+public abstract class AbstractNpcAI extends Quest
 {
 	public Logger _log = Logger.getLogger(getClass().getSimpleName());
 	
@@ -77,30 +76,6 @@ public abstract class AbstractNpcAI extends L2Script
 		addSkillSeeId(mobs);
 		addAggroRangeEnterId(mobs);
 		addFactionCallId(mobs);
-	}
-	
-	/**
-	 * This is used to register all monsters contained in mobs for a particular script event types defined in types.
-	 * @param mobs
-	 * @param types
-	 */
-	public void registerMobs(int[] mobs, QuestEventType... types)
-	{
-		for (QuestEventType type : types)
-		{
-			addEventId(type, mobs);
-		}
-	}
-	
-	public void registerMobs(Iterable<Integer> mobs, QuestEventType... types)
-	{
-		for (int id : mobs)
-		{
-			for (QuestEventType type : types)
-			{
-				addEventId(type, id);
-			}
-		}
 	}
 	
 	/**

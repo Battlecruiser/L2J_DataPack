@@ -18,6 +18,8 @@
  */
 package features.SkillTransfer;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ClassListData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
@@ -25,17 +27,16 @@ import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.scripting.scriptengine.events.ProfessionChangeEvent;
-import com.l2jserver.gameserver.scripting.scriptengine.impl.L2Script;
 import com.l2jserver.gameserver.util.Util;
 
 /**
  * Skill Transfer feature.
  * @author Zoey76
  */
-public final class SkillTransfer extends L2Script
+public final class SkillTransfer extends AbstractNpcAI
 {
 	private static final String HOLY_POMANDER = "HOLY_POMANDER_";
 	private static final ItemHolder[] PORMANDERS =
@@ -50,15 +51,14 @@ public final class SkillTransfer extends L2Script
 	
 	private SkillTransfer()
 	{
-		super(-1, SkillTransfer.class.getSimpleName(), "features");
-		addProfessionChangeNotify(null);
+		super(SkillTransfer.class.getSimpleName(), "features");
+		setPlayerProfessionChangeId(this::onProfessionChange);
 		setOnEnterWorld(Config.SKILL_CHECK_ENABLE);
 	}
 	
-	@Override
-	public void onProfessionChange(ProfessionChangeEvent event)
+	public void onProfessionChange(OnPlayerProfessionChange event)
 	{
-		final L2PcInstance player = event.getPlayer();
+		final L2PcInstance player = event.getActiveChar();
 		final int index = getTransferClassIndex(player);
 		if (index < 0)
 		{

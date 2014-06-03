@@ -18,19 +18,18 @@
  */
 package handlers.actionhandlers;
 
-import java.util.List;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.InstanceType;
-import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.L2Event;
-import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.events.EventDispatcher;
+import com.l2jserver.gameserver.model.events.EventType;
+import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.MoveToPawn;
 import com.l2jserver.util.Rnd;
@@ -119,15 +118,13 @@ public class L2NpcAction implements IActionHandler
 					}
 					else
 					{
-						List<Quest> qlsa = npc.getTemplate().getEventQuests(QuestEventType.QUEST_START);
-						List<Quest> qlst = npc.getTemplate().getEventQuests(QuestEventType.ON_FIRST_TALK);
-						if ((qlsa != null) && !qlsa.isEmpty())
+						if (npc.hasListener(EventType.ON_NPC_QUEST_START))
 						{
 							activeChar.setLastQuestNpcObject(target.getObjectId());
 						}
-						if ((qlst != null) && (qlst.size() == 1))
+						if (npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 						{
-							qlst.get(0).notifyFirstTalk(npc, activeChar);
+							EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, activeChar), npc);
 						}
 						else
 						{

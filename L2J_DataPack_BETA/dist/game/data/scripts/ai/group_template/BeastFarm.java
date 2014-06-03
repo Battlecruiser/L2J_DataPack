@@ -29,7 +29,6 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -115,7 +114,8 @@ public class BeastFarm extends AbstractNpcAI
 	private BeastFarm()
 	{
 		super(BeastFarm.class.getSimpleName(), "ai/group_template");
-		registerMobs(FEEDABLE_BEASTS, QuestEventType.ON_KILL, QuestEventType.ON_SKILL_SEE);
+		addSkillSeeId(FEEDABLE_BEASTS);
+		addKillId(FEEDABLE_BEASTS);
 		
 		GrowthCapableMob temp;
 		

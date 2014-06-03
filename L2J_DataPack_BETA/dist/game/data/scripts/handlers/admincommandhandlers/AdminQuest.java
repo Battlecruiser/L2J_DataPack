@@ -21,16 +21,17 @@ package handlers.admincommandhandlers;
 import java.io.File;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import javax.script.ScriptException;
 
-import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.events.EventType;
+import com.l2jserver.gameserver.model.events.ListenerRegisterType;
+import com.l2jserver.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestTimer;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -199,16 +200,25 @@ public class AdminQuest implements IAdminCommandHandler
 				msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npc-quests.htm");
 				StringBuilder sb = new StringBuilder();
 				Set<String> questset = new HashSet<>();
-				for (Entry<QuestEventType, List<Quest>> quests : npc.getTemplate().getEventQuests().entrySet())
+				for (EventType type : EventType.values())
 				{
-					for (Quest quest : quests.getValue())
+					for (AbstractEventListener listener : npc.getListeners(type))
 					{
-						if (questset.contains(quest.getName()))
+						if (listener.getOwner() instanceof Quest)
 						{
-							continue;
+							final Quest quest = (Quest) listener.getOwner();
+							if (questset.contains(quest.getName()))
+							{
+								continue;
+							}
+							questset.add(quest.getName());
+							if (quest.getListeners().size() > 20)
+							{
+								sb.append("<tr><td colspan=\"4\">" + quest.getName() + " - " + quest.getListeners().size() + " listeners.</td></tr>");
+								continue;
+							}
+							sb.append("<tr><td colspan=\"4\"><font color=\"LEVEL\"><a action=\"bypass -h admin_quest_info " + quest.getName() + "\">" + quest.getName() + "</a></font></td></tr>");
 						}
-						questset.add(quest.getName());
-						sb.append("<tr><td colspan=\"4\"><font color=\"LEVEL\"><a action=\"bypass -h admin_quest_info " + quest.getName() + "\">" + quest.getName() + "</a></font></td></tr>");
 					}
 				}
 				msg.replace("%quests%", sb.toString());
@@ -237,31 +247,34 @@ public class AdminQuest implements IAdminCommandHandler
 				{
 					return false;
 				}
+				if (quest.getListeners().size() > 20)
+				{
+					return false;
+				}
 				L2Npc npc = L2Npc.class.cast(activeChar.getTarget());
 				StringBuilder sb = new StringBuilder();
 				final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
 				msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npc-quests.htm");
 				String events = "", npcs = "", items = "", timers = "";
 				
-				for (Entry<QuestEventType, List<Quest>> entry : npc.getTemplate().getEventQuests().entrySet())
+				for (EventType type : EventType.values())
 				{
-					if (entry.getValue().contains(quest))
+					for (AbstractEventListener listener : npc.getListeners(type))
 					{
-						events += ", " + entry.getKey().name();
+						if (listener.getOwner() == quest)
+						{
+							events += ", " + type.name();
+							for (int npcId : quest.getRegisteredIds(ListenerRegisterType.NPC))
+							{
+								npcs += ", " + npcId;
+							}
+						}
 					}
 				}
 				
 				if (!events.isEmpty())
 				{
 					events = events.substring(2);
-				}
-				
-				if (quest.getQuestInvolvedNpcs().size() < 100)
-				{
-					for (int npcId : quest.getQuestInvolvedNpcs())
-					{
-						npcs += ", " + npcId;
-					}
 				}
 				
 				if (!npcs.isEmpty())

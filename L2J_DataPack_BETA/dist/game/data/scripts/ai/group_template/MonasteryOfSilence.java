@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -209,9 +208,9 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 	}
 	
 	@Override
-	public boolean onNpcHate(L2Attackable mob, L2Playable playable)
+	public boolean onNpcHate(L2Attackable mob, L2PcInstance player, boolean isSummon)
 	{
-		return playable.getActiveWeaponInstance() != null;
+		return player.getActiveWeaponInstance() != null;
 	}
 	
 	@Override

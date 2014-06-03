@@ -27,7 +27,6 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -60,7 +59,9 @@ public final class DarkWaterDragon extends AbstractNpcAI
 			DETRACTOR1,
 			DETRACTOR2
 		};
-		registerMobs(mobs, QuestEventType.ON_KILL, QuestEventType.ON_SPAWN, QuestEventType.ON_ATTACK);
+		addKillId(mobs);
+		addAttackId(mobs);
+		addSpawnId(mobs);
 		MY_TRACKING_SET.clear();
 		SECOND_SPAWN.clear();
 	}
