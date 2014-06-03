@@ -26,7 +26,6 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -174,7 +173,8 @@ public class FeedableBeasts extends AbstractNpcAI
 	private FeedableBeasts()
 	{
 		super(FeedableBeasts.class.getSimpleName(), "ai/group_template");
-		registerMobs(FEEDABLE_BEASTS, QuestEventType.ON_KILL, QuestEventType.ON_SKILL_SEE);
+		addKillId(FEEDABLE_BEASTS);
+		addSkillSeeId(FEEDABLE_BEASTS);
 		
 		// TODO: no grendels?
 		GrowthCapableMob temp;

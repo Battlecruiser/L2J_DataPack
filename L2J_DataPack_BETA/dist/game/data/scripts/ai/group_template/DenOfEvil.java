@@ -22,7 +22,6 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -100,7 +99,8 @@ public class DenOfEvil extends AbstractNpcAI
 	private DenOfEvil()
 	{
 		super(DenOfEvil.class.getSimpleName(), "ai/group_template");
-		registerMobs(EYE_IDS, QuestEventType.ON_KILL, QuestEventType.ON_SPAWN);
+		addKillId(EYE_IDS);
+		addSpawnId(EYE_IDS);
 		spawnEyes();
 	}
 	

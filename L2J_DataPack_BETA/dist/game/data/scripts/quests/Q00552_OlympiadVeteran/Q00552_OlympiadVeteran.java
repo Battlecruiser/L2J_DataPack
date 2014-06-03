@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.CompetitionType;
+import com.l2jserver.gameserver.model.olympiad.Participant;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -48,7 +49,7 @@ public class Q00552_OlympiadVeteran extends Quest
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
 		registerQuestItems(TEAM_EVENT_CERTIFICATE, CLASS_FREE_BATTLE_CERTIFICATE, CLASS_BATTLE_CERTIFICATE);
-		setOlympiadUse(true);
+		addOlympiadMatchFinishId();
 	}
 	
 	@Override
@@ -83,57 +84,17 @@ public class Q00552_OlympiadVeteran extends Quest
 	}
 	
 	@Override
-	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
-	{
-		if (loser != null)
-		{
-			final QuestState st = loser.getQuestState(getName());
-			if ((st != null) && st.isStarted())
-			{
-				int matches;
-				switch (type)
-				{
-					case CLASSED:
-					{
-						matches = st.getInt("classed") + 1;
-						st.set("classed", String.valueOf(matches));
-						if (matches == 5)
-						{
-							st.giveItems(CLASS_BATTLE_CERTIFICATE, 1);
-						}
-						break;
-					}
-					case NON_CLASSED:
-					{
-						matches = st.getInt("nonclassed") + 1;
-						st.set("nonclassed", String.valueOf(matches));
-						if (matches == 5)
-						{
-							st.giveItems(CLASS_FREE_BATTLE_CERTIFICATE, 1);
-						}
-						break;
-					}
-					case TEAMS:
-					{
-						matches = st.getInt("teams") + 1;
-						st.set("teams", String.valueOf(matches));
-						if (matches == 5)
-						{
-							st.giveItems(TEAM_EVENT_CERTIFICATE, 1);
-						}
-						break;
-					}
-				}
-			}
-		}
-	}
-	
-	@Override
-	public void onOlympiadWin(L2PcInstance winner, CompetitionType type)
+	public void onOlympiadMatchFinish(Participant winner, Participant looser, CompetitionType type)
 	{
 		if (winner != null)
 		{
-			final QuestState st = winner.getQuestState(getName());
+			final L2PcInstance player = winner.getPlayer();
+			if (player == null)
+			{
+				return;
+			}
+			
+			final QuestState st = player.getQuestState(getName());
 			if ((st != null) && st.isStarted())
 			{
 				int matches;
@@ -164,6 +125,53 @@ public class Q00552_OlympiadVeteran extends Quest
 						matches = st.getInt("teams") + 1;
 						st.set("teams", String.valueOf(matches));
 						if ((matches == 5) && !st.hasQuestItems(TEAM_EVENT_CERTIFICATE))
+						{
+							st.giveItems(TEAM_EVENT_CERTIFICATE, 1);
+						}
+						break;
+					}
+				}
+			}
+		}
+		
+		if (looser != null)
+		{
+			final L2PcInstance player = looser.getPlayer();
+			if (player == null)
+			{
+				return;
+			}
+			final QuestState st = player.getQuestState(getName());
+			if ((st != null) && st.isStarted())
+			{
+				int matches;
+				switch (type)
+				{
+					case CLASSED:
+					{
+						matches = st.getInt("classed") + 1;
+						st.set("classed", String.valueOf(matches));
+						if (matches == 5)
+						{
+							st.giveItems(CLASS_BATTLE_CERTIFICATE, 1);
+						}
+						break;
+					}
+					case NON_CLASSED:
+					{
+						matches = st.getInt("nonclassed") + 1;
+						st.set("nonclassed", String.valueOf(matches));
+						if (matches == 5)
+						{
+							st.giveItems(CLASS_FREE_BATTLE_CERTIFICATE, 1);
+						}
+						break;
+					}
+					case TEAMS:
+					{
+						matches = st.getInt("teams") + 1;
+						st.set("teams", String.valueOf(matches));
+						if (matches == 5)
 						{
 							st.giveItems(TEAM_EVENT_CERTIFICATE, 1);
 						}

@@ -24,9 +24,12 @@ import com.l2jserver.gameserver.handler.TargetHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.events.listeners.IDamageReceivedEventListener;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.events.EventType;
+import com.l2jserver.gameserver.model.events.impl.character.OnCreatureDamage;
+import com.l2jserver.gameserver.model.events.listeners.AbstractEventListener;
+import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.Skill;
@@ -37,7 +40,7 @@ import com.l2jserver.util.Rnd;
  * Trigger Skill By Damage effect implementation.
  * @author UnAfraid
  */
-public final class TriggerSkillByDamage extends AbstractEffect implements IDamageReceivedEventListener
+public final class TriggerSkillByDamage extends AbstractEffect
 {
 	private final int _minAttackerLevel;
 	private final int _maxAttackerLevel;
@@ -60,10 +63,9 @@ public final class TriggerSkillByDamage extends AbstractEffect implements IDamag
 		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
 	}
 	
-	@Override
-	public void onDamageReceivedEvent(L2Character attacker, L2Character target, double damage, Skill skill, boolean crit, boolean damageOverTime)
+	public void onDamageReceivedEvent(OnCreatureDamage event)
 	{
-		if (damageOverTime || (_chance == 0) || (_skill.getSkillLvl() == 0))
+		if (event.isDamageOverTime() || (_chance == 0) || (_skill.getSkillLvl() == 0))
 		{
 			return;
 		}
@@ -75,23 +77,23 @@ public final class TriggerSkillByDamage extends AbstractEffect implements IDamag
 			return;
 		}
 		
-		if (attacker == target)
+		if (event.getAttacker() == event.getTarget())
 		{
 			return;
 		}
 		
-		if ((attacker.getLevel() < _minAttackerLevel) || (attacker.getLevel() > _maxAttackerLevel))
+		if ((event.getAttacker().getLevel() < _minAttackerLevel) || (event.getAttacker().getLevel() > _maxAttackerLevel))
 		{
 			return;
 		}
 		
-		if ((damage < _minDamage) || (Rnd.get(100) > _chance) || !attacker.getInstanceType().isType(_attackerType))
+		if ((event.getDamage() < _minDamage) || (Rnd.get(100) > _chance) || !event.getAttacker().getInstanceType().isType(_attackerType))
 		{
 			return;
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
-		final L2Object[] targets = targetHandler.getTargetList(triggerSkill, target, false, attacker);
+		final L2Object[] targets = targetHandler.getTargetList(triggerSkill, event.getTarget(), false, event.getAttacker());
 		for (L2Object triggerTarget : targets)
 		{
 			if ((triggerTarget == null) || !triggerTarget.isCharacter())
@@ -102,7 +104,7 @@ public final class TriggerSkillByDamage extends AbstractEffect implements IDamag
 			final L2Character targetChar = (L2Character) triggerTarget;
 			if (!targetChar.isInvul())
 			{
-				target.makeTriggerCast(triggerSkill, targetChar);
+				event.getTarget().makeTriggerCast(triggerSkill, targetChar);
 			}
 		}
 	}
@@ -110,12 +112,18 @@ public final class TriggerSkillByDamage extends AbstractEffect implements IDamag
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		info.getEffected().getEvents().unregisterListener(this);
+		for (AbstractEventListener listener : info.getEffected().getListeners(EventType.ON_CREATURE_DAMAGE))
+		{
+			if (listener.getOwner() == this)
+			{
+				listener.unregisterMe();
+			}
+		}
 	}
 	
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		info.getEffected().getEvents().registerListener(this);
+		info.getEffected().addListener(new ConsumerEventListener(info.getEffected(), EventType.ON_CREATURE_DAMAGE, (OnCreatureDamage event) -> onDamageReceivedEvent(event), this));
 	}
 }

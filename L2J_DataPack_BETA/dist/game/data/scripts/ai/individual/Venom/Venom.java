@@ -32,12 +32,13 @@ import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeFinish;
+import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.scripting.scriptengine.events.SiegeEvent;
 
 /**
  * Venom AI on Rune Castle.
@@ -110,7 +111,8 @@ public final class Venom extends AbstractNpcAI
 		addAttackId(VENOM);
 		addKillId(VENOM);
 		addAggroRangeEnterId(VENOM);
-		addSiegeNotify();
+		setCastleSiegeStartId(this::onSiegeStart, CASTLE);
+		setCastleSiegeFinishId(this::onSiegeFinish, CASTLE);
 		
 		_massymore = SpawnTable.getInstance().getFirstSpawn(DUNGEON_KEEPER).getLastSpawn();
 		_venom = SpawnTable.getInstance().getFirstSpawn(VENOM).getLastSpawn();
@@ -204,46 +206,32 @@ public final class Venom extends AbstractNpcAI
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
-	@Override
-	public boolean onSiegeEvent(SiegeEvent event)
+	public void onSiegeStart(OnCastleSiegeStart event)
 	{
-		if (event.getSiege().getCastle().getResidenceId() == CASTLE)
+		_aggroMode = true;
+		_prisonIsOpen = false;
+		if ((_venom != null) && !_venom.isDead())
 		{
-			if (event.getSiege().getCastle().getIsTimeRegistrationOver() && !event.getSiege().getAttackerClans().isEmpty())
-			{
-				_prisonIsOpen = true;
-				changeLocation(MoveTo.PRISON);
-			}
-			
-			switch (event.getStage())
-			{
-				case START:
-					_aggroMode = true;
-					_prisonIsOpen = false;
-					if ((_venom != null) && !_venom.isDead())
-					{
-						_venom.setCurrentHp(_venom.getMaxHp());
-						_venom.setCurrentMp(_venom.getMaxMp());
-						_venom.enableSkill(VENOM_TELEPORT.getSkill());
-						_venom.enableSkill(RANGE_TELEPORT.getSkill());
-						startQuestTimer("tower_check", 30000, _venom, null, true);
-					}
-					break;
-				case END:
-					_aggroMode = false;
-					if ((_venom != null) && !_venom.isDead())
-					{
-						changeLocation(MoveTo.PRISON);
-						_venom.disableSkill(VENOM_TELEPORT.getSkill(), -1);
-						_venom.disableSkill(RANGE_TELEPORT.getSkill(), -1);
-					}
-					updateStatus(ALIVE);
-					cancelQuestTimer("tower_check", _venom, null);
-					cancelQuestTimer("raid_check", _venom, null);
-					break;
-			}
+			_venom.setCurrentHp(_venom.getMaxHp());
+			_venom.setCurrentMp(_venom.getMaxMp());
+			_venom.enableSkill(VENOM_TELEPORT.getSkill());
+			_venom.enableSkill(RANGE_TELEPORT.getSkill());
+			startQuestTimer("tower_check", 30000, _venom, null, true);
 		}
-		return true;
+	}
+	
+	public void onSiegeFinish(OnCastleSiegeFinish event)
+	{
+		_aggroMode = false;
+		if ((_venom != null) && !_venom.isDead())
+		{
+			changeLocation(MoveTo.PRISON);
+			_venom.disableSkill(VENOM_TELEPORT.getSkill(), -1);
+			_venom.disableSkill(RANGE_TELEPORT.getSkill(), -1);
+		}
+		updateStatus(ALIVE);
+		cancelQuestTimer("tower_check", _venom, null);
+		cancelQuestTimer("raid_check", _venom, null);
 	}
 	
 	@Override

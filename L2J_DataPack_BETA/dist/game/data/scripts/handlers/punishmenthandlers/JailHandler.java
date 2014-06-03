@@ -26,6 +26,10 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.tasks.player.TeleportTask;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
+import com.l2jserver.gameserver.model.events.EventDispatcher;
+import com.l2jserver.gameserver.model.events.EventType;
+import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jserver.gameserver.model.olympiad.OlympiadManager;
 import com.l2jserver.gameserver.model.punishment.PunishmentTask;
 import com.l2jserver.gameserver.model.punishment.PunishmentType;
@@ -33,17 +37,22 @@ import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.model.zone.type.L2JailZone;
 import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.scripting.scriptengine.listeners.player.PlayerSpawnListener;
 
 /**
  * This class handles jail punishment.
  * @author UnAfraid
  */
-public class JailHandler extends PlayerSpawnListener implements IPunishmentHandler
+public class JailHandler implements IPunishmentHandler
 {
-	@Override
-	public void onPlayerLogin(L2PcInstance activeChar)
+	public JailHandler()
 	{
+		// Register global listener
+		EventDispatcher.getInstance().addListener(new ConsumerEventListener(EventDispatcher.getInstance(), EventType.ON_PLAYER_LOGIN, (OnPlayerLogin event) -> onPlayerLogin(event), this));
+	}
+	
+	public void onPlayerLogin(OnPlayerLogin event)
+	{
+		final L2PcInstance activeChar = event.getActiveChar();
 		if (activeChar.isJailed() && !activeChar.isInsideZone(ZoneId.JAIL))
 		{
 			applyToPlayer(null, activeChar);
