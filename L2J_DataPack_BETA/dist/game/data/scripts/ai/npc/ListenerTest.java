@@ -21,10 +21,16 @@ package ai.npc;
 import java.util.logging.Level;
 
 import com.l2jserver.gameserver.model.events.EventType;
+import com.l2jserver.gameserver.model.events.ListenerRegisterType;
+import com.l2jserver.gameserver.model.events.annotations.Item;
 import com.l2jserver.gameserver.model.events.annotations.Npc;
 import com.l2jserver.gameserver.model.events.annotations.RegisterEvent;
+import com.l2jserver.gameserver.model.events.annotations.RegisterType;
+import com.l2jserver.gameserver.model.events.annotations.Residence;
 import com.l2jserver.gameserver.model.events.impl.character.OnCreatureKill;
 import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAttackableAttack;
+import com.l2jserver.gameserver.model.events.impl.item.OnItemCreate;
+import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
 
 /**
  * An example usage of Listeners.
@@ -62,16 +68,41 @@ public class ListenerTest extends AbstractNpcAI
 		_log.log(Level.INFO, getClass().getSimpleName() + ": " + event.getClass().getSimpleName() + " invoked attacker: " + event.getAttacker() + " target: " + event.getTarget() + " damage: " + event.getDamage() + " skill: " + event.getSkill());
 	}
 	
+	@RegisterEvent(EventType.ON_CREATURE_KILL)
+	@RegisterType(ListenerRegisterType.NPC)
+	@Npc(20432)
+	@Npc(22228)
 	/**
 	 * This method will be invoked as soon as L2Attackable (Rabbits 20432 and 22228) are being killed by L2PcInstance (a player)
 	 * @param event
 	 */
-	@RegisterEvent(EventType.ON_CREATURE_KILL)
-	@Npc(20432)
-	@Npc(22228)
 	public void onCreatureKill(OnCreatureKill event)
 	{
 		_log.log(Level.INFO, getClass().getSimpleName() + ": " + event.getClass().getSimpleName() + " invoked attacker: " + event.getAttacker() + " target: " + event.getTarget());
+	}
+	
+	//@formatter:off
+	@RegisterEvent(EventType.ON_CASTLE_SIEGE_START)
+	@RegisterType(ListenerRegisterType.CASTLE)
+	@Residence({1, 2, 3})
+	@Residence({4, 5, 6})
+	@Residence({7, 8, 9})
+	//@formatter:on
+	/**
+	 * This method will be invoked as soon as Siege of castle ids 1-9 starts
+	 * @param event
+	 */
+	public void onSiegeStart(OnCastleSiegeStart event)
+	{
+		_log.log(Level.INFO, getClass().getSimpleName() + ": The siege of " + event.getSiege().getCastle().getName() + " (" + event.getSiege().getCastle().getResidenceId() + ") has started!");
+	}
+	
+	@RegisterEvent(EventType.ON_ITEM_CREATE)
+	@RegisterType(ListenerRegisterType.ITEM)
+	@Item(5575)
+	public void onItemCreate(OnItemCreate event)
+	{
+		_log.log(Level.INFO, getClass().getSimpleName() + ": Item [" + event.getItem() + "] has been created actor: " + event.getActiveChar() + " process: " + event.getProcess() + " reference: " + event.getReference());
 	}
 	
 	public static void main(String[] args)
