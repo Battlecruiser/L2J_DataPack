@@ -81,16 +81,18 @@ public class ListenerTest extends AbstractNpcAI
 	 * This method will be invoked as soon as Siege of castle ids 1-9 starts
 	 * @param event
 	 */
-	//@formatter:off
 	@RegisterEvent(EventType.ON_CASTLE_SIEGE_START)
 	@RegisterType(ListenerRegisterType.CASTLE)
 	@Range(from = 1, to = 9)
-	//@formatter:on
 	public void onSiegeStart(OnCastleSiegeStart event)
 	{
 		_log.log(Level.INFO, getClass().getSimpleName() + ": The siege of " + event.getSiege().getCastle().getName() + " (" + event.getSiege().getCastle().getResidenceId() + ") has started!");
 	}
 	
+	/**
+	 * This method will be invoked as soon as Ancient Adena (5575) item is created on player's inventory (As new item!).
+	 * @param event
+	 */
 	@RegisterEvent(EventType.ON_ITEM_CREATE)
 	@RegisterType(ListenerRegisterType.ITEM)
 	@Id(5575)
@@ -99,6 +101,10 @@ public class ListenerTest extends AbstractNpcAI
 		_log.log(Level.INFO, getClass().getSimpleName() + ": Item [" + event.getItem() + "] has been created actor: " + event.getActiveChar() + " process: " + event.getProcess() + " reference: " + event.getReference());
 	}
 	
+	/**
+	 * This method will be invoked as soon as creature from level range between 1 and 10 dies.
+	 * @param event
+	 */
 	@RegisterEvent(EventType.ON_CREATURE_KILL)
 	@RegisterType(ListenerRegisterType.NPC)
 	@NpcLevelRange(from = 1, to = 10)
