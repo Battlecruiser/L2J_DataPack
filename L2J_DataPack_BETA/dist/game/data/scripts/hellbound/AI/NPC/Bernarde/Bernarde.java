@@ -70,16 +70,11 @@ public final class Bernarde extends AbstractNpcAI
 			}
 			case "Treasure":
 			{
-				if (HellboundEngine.getInstance().getLevel() == 3)
+				if ((HellboundEngine.getInstance().getLevel() == 3) && hasQuestItems(player, TREASURE))
 				{
-					if (player.getInventory().getInventoryItemCount(TREASURE, -1, false) > 0)
-					{
-						if (player.destroyItemByItemId("Quest", TREASURE, player.getInventory().getInventoryItemCount(TREASURE, -1, false), npc, true))
-						{
-							HellboundEngine.getInstance().updateTrust((int) (player.getInventory().getInventoryItemCount(TREASURE, -1, false) * 1000), true);
-							return "32300-02d.htm";
-						}
-					}
+					HellboundEngine.getInstance().updateTrust((int) (getQuestItemsCount(player, TREASURE) * 1000), true);
+					takeItems(player, TREASURE, -1);
+					return "32300-02d.htm";
 				}
 				event = "32300-02e.htm";
 				break;
