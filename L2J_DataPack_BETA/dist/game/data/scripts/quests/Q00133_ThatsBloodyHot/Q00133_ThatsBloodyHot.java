@@ -136,6 +136,7 @@ public class Q00133_ThatsBloodyHot extends Quest
 					}
 					else
 					{
+						HellboundEngine.getInstance().setLevel(1);
 						st.giveAdena(254247, true);
 						st.addExpAndSp(325881, 32524);
 						st.exitQuest(false, true);
