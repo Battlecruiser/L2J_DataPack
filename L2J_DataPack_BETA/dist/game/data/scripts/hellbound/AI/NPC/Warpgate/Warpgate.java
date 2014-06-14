@@ -47,13 +47,14 @@ public final class Warpgate extends AbstractNpcAI
 		32316,
 		32317,
 		32318,
-		32319
+		32319,
 	};
 	// Locations
-	private static final Location HELLBOUND = new Location(-11272, 236464, -3248);
-	protected static final Location REMOVE_LOC = new Location(-16555, 209375, -3670);
-	// Misc
+	private static final Location ENTER_LOC = new Location(-11272, 236464, -3248);
+	private static final Location REMOVE_LOC = new Location(-16555, 209375, -3670);
+	// Item
 	private static final int MAP = 9994;
+	// Misc
 	private static final int ZONE = 40101;
 	
 	public Warpgate()
@@ -68,7 +69,18 @@ public final class Warpgate extends AbstractNpcAI
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("TELEPORT"))
+		if (event.equals("enter"))
+		{
+			if (canEnter(player))
+			{
+				player.teleToLocation(ENTER_LOC, true);
+			}
+			else
+			{
+				return "Warpgate-03.html";
+			}
+		}
+		else if (event.equals("TELEPORT"))
 		{
 			player.teleToLocation(REMOVE_LOC, true);
 		}
@@ -78,30 +90,7 @@ public final class Warpgate extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (!canEnter(player))
-		{
-			if (HellboundEngine.getInstance().isLocked())
-			{
-				return "warpgate-locked.htm";
-			}
-		}
-		return npc.getId() + ".htm";
-	}
-	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (!canEnter(player))
-		{
-			return "warpgate-no.htm";
-		}
-		player.teleToLocation(HELLBOUND, true);
-		
-		if (HellboundEngine.getInstance().isLocked())
-		{
-			HellboundEngine.getInstance().setLevel(1);
-		}
-		return super.onTalk(npc, player);
+		return HellboundEngine.getInstance().isLocked() ? "Warpgate-01.html" : "Warpgate-02.html";
 	}
 	
 	@Override
@@ -109,16 +98,15 @@ public final class Warpgate extends AbstractNpcAI
 	{
 		if (character.isPlayer())
 		{
-			if (!canEnter(character.getActingPlayer()) && !character.canOverrideCond(PcCondOverride.ZONE_CONDITIONS))
+			final L2PcInstance player = character.getActingPlayer();
+			
+			if (!canEnter(player) && !player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isOnEvent())
 			{
-				startQuestTimer("TELEPORT", 1000, null, (L2PcInstance) character);
+				startQuestTimer("TELEPORT", 1000, null, player);
 			}
-			else if (!character.getActingPlayer().isMinimapAllowed())
+			else if (!player.isMinimapAllowed() && hasAtLeastOneQuestItem(player, MAP))
 			{
-				if (character.getInventory().getItemByItemId(MAP) != null)
-				{
-					character.getActingPlayer().setMinimapAllowed(true);
-				}
+				player.setMinimapAllowed(true);
 			}
 		}
 		return super.onEnterZone(character, zone);
@@ -136,16 +124,9 @@ public final class Warpgate extends AbstractNpcAI
 			return true;
 		}
 		
-		QuestState st;
-		if (!HellboundEngine.getInstance().isLocked())
-		{
-			st = player.getQuestState(Q00130_PathToHellbound.class.getSimpleName());
-			if ((st != null) && st.isCompleted())
-			{
-				return true;
-			}
-		}
-		st = player.getQuestState(Q00133_ThatsBloodyHot.class.getSimpleName());
-		return ((st != null) && st.isCompleted());
+		final QuestState path_to_hellbound_st = player.getQuestState(Q00130_PathToHellbound.class.getSimpleName());
+		final QuestState thats_bloody_hot_st = player.getQuestState(Q00133_ThatsBloodyHot.class.getSimpleName());
+		
+		return (((path_to_hellbound_st != null) && path_to_hellbound_st.isCompleted()) || ((thats_bloody_hot_st != null) && thats_bloody_hot_st.isCompleted()));
 	}
 }
