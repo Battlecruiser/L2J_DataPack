@@ -104,6 +104,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 			case "32497-04.htm":
 			{
 				htmltext = event;
+				break;
 			}
 			case "32497-03.htm":
 			{
