@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.model.TerritoryWard;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -109,6 +110,7 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 				else if (cal.getTimeInMillis() != TerritoryWarManager.getInstance().getTWStartTimeInMillis())
 				{
 					TerritoryWarManager.getInstance().setTWStartTimeInMillis(cal.getTimeInMillis());
+					GlobalVariablesManager.getInstance().set(TerritoryWarManager.GLOBAL_VARIABLE, cal.getTimeInMillis());
 				}
 			}
 			showSiegeTimePage(activeChar);
