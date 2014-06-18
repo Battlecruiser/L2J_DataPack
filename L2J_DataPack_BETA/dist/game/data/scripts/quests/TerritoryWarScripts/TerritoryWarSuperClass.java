@@ -79,7 +79,7 @@ public class TerritoryWarSuperClass extends Quest
 			// Calculate next TW date
 			final Calendar cal = Calendar.getInstance();
 			
-			final long nextSiegeDate = GlobalVariablesManager.getInstance().getLong("nextTWStartDate", 0);
+			final long nextSiegeDate = GlobalVariablesManager.getInstance().getLong(TerritoryWarManager.GLOBAL_VARIABLE, 0);
 			if (nextSiegeDate > System.currentTimeMillis())
 			{
 				cal.setTimeInMillis(nextSiegeDate);
@@ -101,6 +101,7 @@ public class TerritoryWarSuperClass extends Quest
 				{
 					cal.add(Calendar.WEEK_OF_YEAR, 2);
 				}
+				GlobalVariablesManager.getInstance().set(TerritoryWarManager.GLOBAL_VARIABLE, cal.getTimeInMillis());
 			}
 			TerritoryWarManager.getInstance().setTWStartTimeInMillis(cal.getTimeInMillis());
 			_log.info(getClass().getSimpleName() + ": Siege date: " + cal.getTime());
