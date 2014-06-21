@@ -37,11 +37,11 @@ public final class DivineBeast extends AbstractNpcAI
 	private DivineBeast()
 	{
 		super(DivineBeast.class.getSimpleName(), "ai");
-		addSummonId(DIVINE_BEAST);
+		addSummonSpawnId(DIVINE_BEAST);
 	}
 	
 	@Override
-	public void onSummon(L2Summon summon)
+	public void onSummonSpawn(L2Summon summon)
 	{
 		startQuestTimer("VALIDATE_TRANSFORMATION", CHECK_TIME, null, summon.getActingPlayer(), true);
 	}

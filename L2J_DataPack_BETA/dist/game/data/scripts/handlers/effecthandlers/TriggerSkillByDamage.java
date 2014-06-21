@@ -27,8 +27,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.events.EventType;
-import com.l2jserver.gameserver.model.events.impl.character.OnCreatureDamage;
-import com.l2jserver.gameserver.model.events.listeners.AbstractEventListener;
+import com.l2jserver.gameserver.model.events.impl.character.OnCreatureDamageReceived;
 import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
@@ -63,7 +62,7 @@ public final class TriggerSkillByDamage extends AbstractEffect
 		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
 	}
 	
-	public void onDamageReceivedEvent(OnCreatureDamage event)
+	public void onDamageReceivedEvent(OnCreatureDamageReceived event)
 	{
 		if (event.isDamageOverTime() || (_chance == 0) || (_skill.getSkillLvl() == 0))
 		{
@@ -112,18 +111,12 @@ public final class TriggerSkillByDamage extends AbstractEffect
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		for (AbstractEventListener listener : info.getEffected().getListeners(EventType.ON_CREATURE_DAMAGE))
-		{
-			if (listener.getOwner() == this)
-			{
-				listener.unregisterMe();
-			}
-		}
+		info.getEffected().removeListenerIf(EventType.ON_CREATURE_DAMAGE_RECEIVED, listener -> listener.getOwner() == this);
 	}
 	
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		info.getEffected().addListener(new ConsumerEventListener(info.getEffected(), EventType.ON_CREATURE_DAMAGE, (OnCreatureDamage event) -> onDamageReceivedEvent(event), this));
+		info.getEffected().addListener(new ConsumerEventListener(info.getEffected(), EventType.ON_CREATURE_DAMAGE_RECEIVED, (OnCreatureDamageReceived event) -> onDamageReceivedEvent(event), this));
 	}
 }
