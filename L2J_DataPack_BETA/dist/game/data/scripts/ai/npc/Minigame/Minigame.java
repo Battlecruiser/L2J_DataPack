@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.impl.character.OnCreatureSkillUse;
-import com.l2jserver.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.network.NpcStringId;
@@ -293,13 +292,7 @@ public final class Minigame extends AbstractNpcAI
 								broadcastNpcSay(room.getManager(), Say2.NPC_ALL, NpcStringId.AH_IVE_FAILED_GOING_FURTHER_WILL_BE_DIFFICULT);
 								room.burnThemAll();
 								startQuestTimer("off", 2000, room.getManager(), null);
-								for (AbstractEventListener listener : room.getParticipant().getListeners(EventType.ON_CREATURE_SKILL_USE))
-								{
-									if (listener.getOwner() == room)
-									{
-										listener.unregisterMe();
-									}
-								}
+								room.getParticipant().removeListenerIf(EventType.ON_CREATURE_SKILL_USE, listener -> listener.getOwner() == room);
 								startQuestTimer("end", 4000, room.getManager(), null);
 							}
 							else if (room.getAttemptNumber() < MAX_ATTEMPTS)

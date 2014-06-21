@@ -25,9 +25,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.events.EventType;
-import com.l2jserver.gameserver.model.events.impl.character.playable.OnPlayableExpChanged;
 import com.l2jserver.gameserver.model.events.listeners.AbstractEventListener;
-import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -52,13 +50,7 @@ public final class SoulEating extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			for (AbstractEventListener listener : info.getEffected().getListeners(EventType.ON_PLAYABLE_EXP_CHANGED))
-			{
-				if (listener.getOwner() == this)
-				{
-					listener.unregisterMe();
-				}
-			}
+			info.getEffected().getListeners(EventType.ON_PLAYABLE_EXP_CHANGED).stream().filter(listener -> listener.getOwner() == this).forEach(AbstractEventListener::unregisterMe);
 		}
 	}
 	
@@ -90,7 +82,7 @@ public final class SoulEating extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			info.getEffected().addListener(new ConsumerEventListener(info.getEffected(), EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getActiveChar(), (event.getNewExp() - event.getOldExp())), this));
+			info.getEffected().removeListenerIf(EventType.ON_PLAYABLE_EXP_CHANGED, listener -> listener.getOwner() == this);
 		}
 	}
 }
