@@ -22,6 +22,8 @@ import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 
 import java.util.List;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -35,7 +37,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2RiftInvaderInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Util;
 
@@ -43,11 +44,33 @@ import com.l2jserver.gameserver.util.Util;
  * Overarching Superclass for all mob AI.
  * @author Fulminus
  */
-public final class L2AttackableAIScript extends Quest
+public final class L2AttackableAIScript extends AbstractNpcAI
 {
-	private L2AttackableAIScript(int questId, String name, String descr)
+	private L2AttackableAIScript()
 	{
-		super(questId, name, descr);
+		super(L2AttackableAIScript.class.getSimpleName(), "ai");
+		final List<L2NpcTemplate> templates = NpcData.getInstance().getTemplates(npc -> (npc.getLevel() >= 1) && (npc.getLevel() < 100));
+		
+		// register all mobs here...
+		for (L2NpcTemplate t : templates)
+		{
+			try
+			{
+				if (L2Attackable.class.isAssignableFrom(Class.forName("com.l2jserver.gameserver.model.actor.instance." + t.getType() + "Instance")))
+				{
+					addAttackId(t.getId());
+					addKillId(t.getId());
+					addSkillSeeId(t.getId());
+					addSpawnId(t.getId());
+					addFactionCallId(t.getId());
+					addAggroRangeEnterId(t.getId());
+				}
+			}
+			catch (ClassNotFoundException ex)
+			{
+				_log.info("Class not found " + t.getType() + "Instance");
+			}
+		}
 	}
 	
 	@Override
@@ -194,30 +217,6 @@ public final class L2AttackableAIScript extends Quest
 	
 	public static void main(String[] args)
 	{
-		L2AttackableAIScript ai = new L2AttackableAIScript(-1, L2AttackableAIScript.class.getSimpleName(), "ai");
-		// register all mobs here...
-		for (int level = 1; level < 100; level++)
-		{
-			final List<L2NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
-			for (L2NpcTemplate t : templates)
-			{
-				try
-				{
-					if (L2Attackable.class.isAssignableFrom(Class.forName("com.l2jserver.gameserver.model.actor.instance." + t.getType() + "Instance")))
-					{
-						ai.addAttackId(t.getId());
-						ai.addKillId(t.getId());
-						ai.addSkillSeeId(t.getId());
-						ai.addSpawnId(t.getId());
-						ai.addFactionCallId(t.getId());
-						ai.addAggroRangeEnterId(t.getId());
-					}
-				}
-				catch (ClassNotFoundException ex)
-				{
-					_log.info("Class not found " + t.getType() + "Instance");
-				}
-			}
-		}
+		new L2AttackableAIScript();
 	}
 }
