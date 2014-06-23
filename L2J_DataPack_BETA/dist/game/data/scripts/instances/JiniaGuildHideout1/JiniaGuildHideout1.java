@@ -44,7 +44,7 @@ public final class JiniaGuildHideout1 extends Quest
 	// NPC
 	private static final int RAFFORTY = 32020;
 	// Location
-	private static final Location START_LOC = new Location(-23530, -8963, -5413, 0, 0);
+	private static final Location START_LOC = new Location(-23530, -8963, -5413);
 	
 	private JiniaGuildHideout1()
 	{
@@ -59,13 +59,13 @@ public final class JiniaGuildHideout1 extends Quest
 		final QuestState qs = talker.getQuestState(Q10284_AcquisitionOfDivineSword.class.getSimpleName());
 		if ((qs != null) && qs.isCond(1))
 		{
-			enterInstance(talker, "JiniaGuildHideout1.xml", START_LOC);
+			enterInstance(talker, "JiniaGuildHideout1.xml");
 			qs.setCond(2, true);
 		}
 		return super.onTalk(npc, talker);
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, Location loc)
+	protected void enterInstance(L2PcInstance player, String template)
 	{
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -75,10 +75,10 @@ public final class JiniaGuildHideout1 extends Quest
 			if (!(world instanceof JGH1World))
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-				return 0;
+				return;
 			}
-			teleportPlayer(player, loc, world.getInstanceId(), false);
-			return 0;
+			teleportPlayer(player, START_LOC, world.getInstanceId(), false);
+			return;
 		}
 		// New instance
 		world = new JGH1World();
@@ -89,9 +89,8 @@ public final class JiniaGuildHideout1 extends Quest
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("Jinia Guild Hideout started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 		// teleport players
-		teleportPlayer(player, loc, world.getInstanceId(), false);
+		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 		world.addAllowed(player.getObjectId());
-		return world.getInstanceId();
 	}
 	
 	public static void main(String[] args)

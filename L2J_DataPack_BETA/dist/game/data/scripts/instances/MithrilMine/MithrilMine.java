@@ -47,7 +47,7 @@ public final class MithrilMine extends AbstractNpcAI
 		int _count = 0;
 	}
 	
-	private static final int INSTANCEID = 138;
+	private static final int TEMPLATE_ID = 138;
 	// NPCs
 	private static final int KEGOR = 18846;
 	private static final int MITHRIL_MILLIPEDE = 22766;
@@ -245,7 +245,7 @@ public final class MithrilMine extends AbstractNpcAI
 		// New instance
 		world = new MMWorld();
 		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(INSTANCEID);
+		world.setTemplateId(TEMPLATE_ID);
 		world.setStatus(0);
 		((MMWorld) world).storeTime = System.currentTimeMillis();
 		InstanceManager.getInstance().addWorld(world);

@@ -162,7 +162,7 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 	private static final int RESET_MIN = 30;
 	private static final int RESET_DAY_1 = 4; // Wednesday
 	private static final int RESET_DAY_2 = 7; // Saturday
-	private static final int INSTANCEID = 139; // Ice Queen's Castle
+	private static final int TEMPLATE_ID = 139; // Ice Queen's Castle
 	private static final int DOOR_ID = 23140101;
 	
 	private IceQueensCastleNormalBattle()
@@ -689,7 +689,7 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		
-		if ((tmpworld != null) && (tmpworld instanceof IQCNBWorld))
+		if (tmpworld instanceof IQCNBWorld)
 		{
 			final IQCNBWorld world = (IQCNBWorld) tmpworld;
 			
@@ -717,7 +717,7 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		
-		if ((tmpworld != null) && (tmpworld instanceof IQCNBWorld))
+		if (tmpworld instanceof IQCNBWorld)
 		{
 			final IQCNBWorld world = (IQCNBWorld) tmpworld;
 			switch (npc.getId())
@@ -1014,7 +1014,7 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		
-		if ((tmpworld != null) && (tmpworld instanceof IQCNBWorld))
+		if (tmpworld instanceof IQCNBWorld)
 		{
 			final IQCNBWorld world = (IQCNBWorld) tmpworld;
 			
@@ -1062,7 +1062,7 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		
-		if ((tmpworld != null) && (tmpworld instanceof IQCNBWorld))
+		if (tmpworld instanceof IQCNBWorld)
 		{
 			final IQCNBWorld world = (IQCNBWorld) tmpworld;
 			switch (npc.getId())
@@ -1102,9 +1102,9 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 									reenter.add(Calendar.DAY_OF_MONTH, 1);
 								}
 							}
-							InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCEID, reenter.getTimeInMillis());
+							InstanceManager.getInstance().setInstanceTime(player.getObjectId(), TEMPLATE_ID, reenter.getTimeInMillis());
 							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
-							sm.addInstanceName(INSTANCEID);
+							sm.addInstanceName(TEMPLATE_ID);
 							player.sendPacket(sm);
 						}
 					}
@@ -1201,7 +1201,7 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 		{
 			world = new IQCNBWorld();
 			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			world.setTemplateId(INSTANCEID);
+			world.setTemplateId(TEMPLATE_ID);
 			world.setStatus(0);
 			InstanceManager.getInstance().addWorld(world);
 			_log.info("Ice Queen Castle started (Normal Battle)" + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
@@ -1285,7 +1285,7 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 				party.broadcastPacket(sm);
 				return false;
 			}
-			else if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), INSTANCEID))
+			else if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), TEMPLATE_ID))
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
 				sm.addPcName(channelMember);

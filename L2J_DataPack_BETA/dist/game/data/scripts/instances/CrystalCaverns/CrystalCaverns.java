@@ -127,7 +127,7 @@ public final class CrystalCaverns extends Quest
 		}
 	}
 	
-	private static final int INSTANCEID = 10; // this is the client number
+	private static final int TEMPLATE_ID = 10;
 	private static final boolean debug = false;
 	
 	// Items
@@ -1517,7 +1517,7 @@ public final class CrystalCaverns extends Quest
 				party.broadcastPacket(sm);
 				return false;
 			}
-			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
+			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
 			if (System.currentTimeMillis() < reentertime)
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
@@ -1680,7 +1680,7 @@ public final class CrystalCaverns extends Quest
 		int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		world = new CCWorld(System.currentTimeMillis() + 5400000);
 		world.setInstanceId(instanceId);
-		world.setTemplateId(INSTANCEID);
+		world.setTemplateId(TEMPLATE_ID);
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("Crystal Caverns started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		runOracle((CCWorld) world);
@@ -1689,7 +1689,7 @@ public final class CrystalCaverns extends Quest
 		{
 			// this can happen only if debug is true
 			player.sendMessage("Welcome to Crystal Caverns.");
-			InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCEID, ((System.currentTimeMillis() + INSTANCEPENALTY)));
+			InstanceManager.getInstance().setInstanceTime(player.getObjectId(), TEMPLATE_ID, ((System.currentTimeMillis() + INSTANCEPENALTY)));
 			teleportPlayer(player, loc, world.getInstanceId());
 			world.isAllowed(player.getObjectId());
 		}
@@ -1698,7 +1698,7 @@ public final class CrystalCaverns extends Quest
 			for (L2PcInstance partyMember : party.getMembers())
 			{
 				partyMember.sendMessage("Welcome to Crystal Caverns.");
-				InstanceManager.getInstance().setInstanceTime(partyMember.getObjectId(), INSTANCEID, ((System.currentTimeMillis() + INSTANCEPENALTY)));
+				InstanceManager.getInstance().setInstanceTime(partyMember.getObjectId(), TEMPLATE_ID, ((System.currentTimeMillis() + INSTANCEPENALTY)));
 				teleportPlayer(partyMember, loc, world.getInstanceId());
 				world.addAllowed(partyMember.getObjectId());
 			}

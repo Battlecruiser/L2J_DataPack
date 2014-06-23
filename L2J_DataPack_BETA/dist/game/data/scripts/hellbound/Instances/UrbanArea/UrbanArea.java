@@ -56,7 +56,7 @@ public final class UrbanArea extends AbstractNpcAI
 		public boolean isAmaskariDead = false;
 	}
 	
-	private static final int INSTANCEID = 2;
+	private static final int TEMPLATE_ID = 2;
 	
 	private static final NpcStringId[] NPCSTRING_ID =
 	{
@@ -385,44 +385,43 @@ public final class UrbanArea extends AbstractNpcAI
 		return true;
 	}
 	
-	private int enterInstance(L2PcInstance player, String template)
+	private void enterInstance(L2PcInstance player, String template)
 	{
-		int instanceId = 0;
-		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		// existing instance
+		
 		if (world != null)
 		{
-			if (!(world instanceof UrbanAreaWorld))
+			if (world instanceof UrbanAreaWorld)
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-				return 0;
+				teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
+				return;
 			}
-			teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
-			return world.getInstanceId();
+			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+			return;
 		}
 		
 		if (!checkTeleport(player))
 		{
-			return 0;
+			return;
 		}
 		
-		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		world = new UrbanAreaWorld();
-		world.setInstanceId(instanceId);
-		world.setTemplateId(INSTANCEID);
+		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
+		world.setTemplateId(TEMPLATE_ID);
+		world.addAllowed(player.getObjectId());
 		world.setStatus(0);
 		InstanceManager.getInstance().addWorld(world);
-		_log.info("Hellbound Town started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
+		
+		_log.info("Hellbound Town started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 		
 		for (L2PcInstance partyMember : player.getParty().getMembers())
 		{
-			teleportPlayer(partyMember, ENTRY_POINT, instanceId);
+			teleportPlayer(partyMember, ENTRY_POINT, world.getInstanceId());
 			world.addAllowed(partyMember.getObjectId());
 		}
 		
-		((UrbanAreaWorld) world).spawnedAmaskari = (L2MonsterInstance) addSpawn(AMASKARI, AMASKARI_SPAWN_POINT, false, 0, false, instanceId);
-		return instanceId;
+		((UrbanAreaWorld) world).spawnedAmaskari = (L2MonsterInstance) addSpawn(AMASKARI, AMASKARI_SPAWN_POINT, false, 0, false, world.getInstanceId());
 	}
 	
 	private static class CallAmaskari implements Runnable

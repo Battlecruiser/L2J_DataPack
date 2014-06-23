@@ -38,7 +38,7 @@ public final class HideoutOfTheDawn extends Quest
 		long storeTime = 0;
 	}
 	
-	private static final int INSTANCEID = 113;
+	private static final int TEMPLATE_ID = 113;
 	// NPCs
 	private static final int WOOD = 32593;
 	private static final int JAINA = 32617;
@@ -94,7 +94,7 @@ public final class HideoutOfTheDawn extends Quest
 		// New instance
 		world = new HotDWorld();
 		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(INSTANCEID);
+		world.setTemplateId(TEMPLATE_ID);
 		world.setStatus(0);
 		((HotDWorld) world).storeTime = System.currentTimeMillis();
 		InstanceManager.getInstance().addWorld(world);

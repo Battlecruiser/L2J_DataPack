@@ -40,6 +40,11 @@ import com.l2jserver.gameserver.util.Util;
  */
 public final class DemonPrinceFloor extends AbstractNpcAI
 {
+	protected class DPFWorld extends InstanceWorld
+	{
+		
+	}
+	
 	// NPCs
 	private static final int GK_4 = 32748;
 	private static final int CUBE = 32375;
@@ -47,7 +52,7 @@ public final class DemonPrinceFloor extends AbstractNpcAI
 	// Item
 	private static final int SEAL_BREAKER_5 = 15515;
 	// Misc
-	private static final int INSTANCEID = 142; // this is the client number
+	private static final int TEMPLATE_ID = 142;
 	private static final int RESET_HOUR = 6;
 	private static final int RESET_MIN = 30;
 	private static final Location ENTRY_POINT = new Location(-22208, 277056, -8239);
@@ -79,7 +84,7 @@ public final class DemonPrinceFloor extends AbstractNpcAI
 		else if (npc.getId() == CUBE)
 		{
 			InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if ((world != null) && (world.getInstanceId() == INSTANCEID))
+			if (world instanceof DPFWorld)
 			{
 				world.removeAllowed(player.getObjectId());
 				teleportPlayer(player, EXIT_POINT, 0);
@@ -106,7 +111,7 @@ public final class DemonPrinceFloor extends AbstractNpcAI
 			
 			inst.setEmptyDestroyTime(0);
 			
-			if ((world != null) && (world.getInstanceId() == INSTANCEID))
+			if (world instanceof DPFWorld)
 			{
 				setReenterTime(world);
 			}
@@ -170,7 +175,7 @@ public final class DemonPrinceFloor extends AbstractNpcAI
 				return false;
 			}
 			
-			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
+			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
 			if (System.currentTimeMillis() < reentertime)
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
@@ -190,48 +195,47 @@ public final class DemonPrinceFloor extends AbstractNpcAI
 		return true;
 	}
 	
-	private int enterInstance(L2PcInstance player, String template)
+	private void enterInstance(L2PcInstance player, String template)
 	{
-		int instanceId = 0;
-		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		// existing instance
+		
 		if (world != null)
 		{
-			if ((world.getInstanceId() != INSTANCEID))
+			if (world instanceof DPFWorld)
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-				return 0;
+				teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
+				return;
 			}
-			teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
-			return world.getInstanceId();
+			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+			return;
 		}
 		
 		if (!checkTeleport(player))
 		{
-			return 0;
+			return;
 		}
 		
-		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-		world = new InstanceWorld();
-		world.setInstanceId(instanceId);
-		world.setTemplateId(INSTANCEID);
+		world = new DPFWorld();
+		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
+		world.setTemplateId(TEMPLATE_ID);
+		world.addAllowed(player.getObjectId());
 		world.setStatus(0);
 		InstanceManager.getInstance().addWorld(world);
-		_log.info("Tower of Infinitum - Demon Prince floor started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
+		
+		_log.info("Tower of Infinitum - Demon Prince floor started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 		
 		for (L2PcInstance partyMember : player.getParty().getMembers())
 		{
-			teleportPlayer(partyMember, ENTRY_POINT, instanceId);
+			teleportPlayer(partyMember, ENTRY_POINT, world.getInstanceId());
 			partyMember.destroyItemByItemId("Quest", SEAL_BREAKER_5, 1, null, true);
 			world.addAllowed(partyMember.getObjectId());
 		}
-		return instanceId;
 	}
 	
 	public void setReenterTime(InstanceWorld world)
 	{
-		if (world.getInstanceId() == INSTANCEID)
+		if (world instanceof DPFWorld)
 		{
 			// Reenter time should be cleared every Wed and Sat at 6:30 AM, so we set next suitable
 			Calendar reenter;

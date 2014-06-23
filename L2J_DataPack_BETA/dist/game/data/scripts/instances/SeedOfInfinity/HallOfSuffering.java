@@ -65,7 +65,7 @@ public final class HallOfSuffering extends Quest
 		public boolean isRewarded = false;
 	}
 	
-	private static final int INSTANCEID = 115; // this is the client number
+	private static final int TEMPLATE_ID = 115;
 	private static final boolean debug = false;
 	
 	// NPCs
@@ -449,7 +449,7 @@ public final class HallOfSuffering extends Quest
 				party.broadcastPacket(sm);
 				return false;
 			}
-			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
+			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
 			if (System.currentTimeMillis() < reentertime)
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
@@ -469,7 +469,6 @@ public final class HallOfSuffering extends Quest
 	
 	protected int enterInstance(L2PcInstance player, String template, int[] coords)
 	{
-		int instanceId = 0;
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		// existing instance
@@ -489,10 +488,10 @@ public final class HallOfSuffering extends Quest
 			return 0;
 		}
 		L2Party party = player.getParty();
-		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		final int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		world = new HSWorld();
 		world.setInstanceId(instanceId);
-		world.setTemplateId(INSTANCEID);
+		world.setTemplateId(TEMPLATE_ID);
 		world.setStatus(0);
 		((HSWorld) world).startTime = System.currentTimeMillis();
 		((HSWorld) world).ptLeaderName = player.getName();

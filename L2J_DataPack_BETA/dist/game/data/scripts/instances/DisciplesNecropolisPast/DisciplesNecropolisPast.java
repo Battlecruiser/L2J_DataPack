@@ -54,7 +54,7 @@ public final class DisciplesNecropolisPast extends Quest
 	}
 	
 	// Instance
-	private static final int INSTANCEID = 112;
+	private static final int TEMPLATE_ID = 112;
 	// NPCs
 	private static final int SEAL_DEVICE = 27384;
 	private static final int PROMISE_OF_MAMMON = 32585;
@@ -196,7 +196,7 @@ public final class DisciplesNecropolisPast extends Quest
 		// New instance
 		world = new DNPWorld();
 		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(INSTANCEID);
+		world.setTemplateId(TEMPLATE_ID);
 		world.setStatus(0);
 		((DNPWorld) world).storeTime = System.currentTimeMillis();
 		InstanceManager.getInstance().addWorld(world);

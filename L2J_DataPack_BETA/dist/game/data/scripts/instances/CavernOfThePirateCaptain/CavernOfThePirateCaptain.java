@@ -129,8 +129,8 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 	private static final int PLAYERS_60_MAX = 27;
 	private static final int PLAYERS_83_MIN = 9;
 	private static final int PLAYERS_83_MAX = 27;
-	private static final int INSTANCE_ID_60 = 133;
-	private static final int INSTANCE_ID_83 = 135;
+	private static final int TEMPLATE_ID_60 = 133;
+	private static final int TEMPLATE_ID_83 = 135;
 	private static final int HOURS = 6;
 	private static final int MINUTES = 30;
 	private static final int DAY_A = Calendar.MONDAY;
@@ -188,7 +188,7 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 		{
 			world = new CavernOfThePirateCaptainWorld();
 			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			world.setTemplateId(is83 ? INSTANCE_ID_83 : INSTANCE_ID_60);
+			world.setTemplateId(is83 ? TEMPLATE_ID_83 : TEMPLATE_ID_60);
 			world.setStatus(0);
 			InstanceManager.getInstance().addWorld(world);
 			final CavernOfThePirateCaptainWorld curworld = (CavernOfThePirateCaptainWorld) world;
@@ -276,7 +276,7 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 				return false;
 			}
 			
-			final Long reentertime = InstanceManager.getInstance().getInstanceTime(groupMembers.getObjectId(), (is83 ? INSTANCE_ID_83 : INSTANCE_ID_60));
+			final Long reentertime = InstanceManager.getInstance().getInstanceTime(groupMembers.getObjectId(), (is83 ? TEMPLATE_ID_83 : TEMPLATE_ID_60));
 			if (System.currentTimeMillis() < reentertime)
 			{
 				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_MAY_NOT_REENTER_YET, true);

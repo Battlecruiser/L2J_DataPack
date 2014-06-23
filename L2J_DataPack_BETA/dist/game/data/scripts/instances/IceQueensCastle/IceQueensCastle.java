@@ -61,7 +61,7 @@ public final class IceQueensCastle extends AbstractNpcAI
 	// Skill
 	private static SkillHolder ETHERNAL_BLIZZARD = new SkillHolder(6276, 1);
 	// Misc
-	private static final int INSTANCEID = 137;
+	private static final int TEMPLATE_ID = 137;
 	private static final int ICE_QUEEN_DOOR = 23140101;
 	private static final int MIN_LV = 82;
 	
@@ -210,7 +210,7 @@ public final class IceQueensCastle extends AbstractNpcAI
 		{
 			world = new IQCWorld();
 			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			world.setTemplateId(INSTANCEID);
+			world.setTemplateId(TEMPLATE_ID);
 			world.setStatus(0);
 			InstanceManager.getInstance().addWorld(world);
 			_log.info("Ice Queen's Castle started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());

@@ -56,7 +56,7 @@ public final class PailakaSongOfIceAndFire extends AbstractNpcAI
 	// Location
 	private static final Location TELEPORT = new Location(-52875, 188232, -4696);
 	// Misc
-	private static final int INSTANCE_ID = 43;
+	private static final int TEMPLATE_ID = 43;
 	private static final int ZONE = 20108;
 	
 	private PailakaSongOfIceAndFire()
@@ -87,7 +87,7 @@ public final class PailakaSongOfIceAndFire extends AbstractNpcAI
 		}
 		world = new PSoIWorld();
 		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(INSTANCE_ID);
+		world.setTemplateId(TEMPLATE_ID);
 		InstanceManager.getInstance().addWorld(world);
 		world.addAllowed(player.getObjectId());
 		teleportPlayer(player, TELEPORT, world.getInstanceId());
@@ -192,7 +192,7 @@ public final class PailakaSongOfIceAndFire extends AbstractNpcAI
 		if ((character.isPlayer()) && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(character.getInstanceId());
-			if ((world != null) && (world.getTemplateId() == INSTANCE_ID))
+			if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))
 			{
 				startQuestTimer("TELEPORT", 1000, null, (L2PcInstance) character);
 			}

@@ -41,7 +41,7 @@ public final class LibraryOfSages extends AbstractNpcAI
 		protected long storeTime = 0;
 	}
 	
-	private static final int INSTANCEID = 156;
+	private static final int TEMPLATE_ID = 156;
 	// NPCs
 	private static final int SOPHIA1 = 32596;
 	private static final int PILE_OF_BOOKS1 = 32809;
@@ -53,9 +53,9 @@ public final class LibraryOfSages extends AbstractNpcAI
 	private static final int SOPHIA3 = 32863;
 	private static final int ELCADIA_INSTANCE = 32785;
 	// Locations
-	private static final Location START_LOC = new Location(37063, -49813, -1128, 0, INSTANCEID);
+	private static final Location START_LOC = new Location(37063, -49813, -1128);
 	private static final Location EXIT_LOC = new Location(37063, -49813, -1128, 0, 0);
-	private static final Location LIBRARY_LOC = new Location(37355, -50065, -1127, 0, INSTANCEID);
+	private static final Location LIBRARY_LOC = new Location(37355, -50065, -1127);
 	// NpcString
 	private static final NpcStringId[] ELCADIA_DIALOGS =
 	{
@@ -87,8 +87,8 @@ public final class LibraryOfSages extends AbstractNpcAI
 		{
 			case "TELEPORT2":
 			{
-				player.teleToLocation(LIBRARY_LOC);
-				world.elcadia.teleToLocation(LIBRARY_LOC);
+				teleportPlayer(player, LIBRARY_LOC, world.getInstanceId());
+				world.elcadia.teleToLocation(LIBRARY_LOC.getX(), LIBRARY_LOC.getY(), LIBRARY_LOC.getZ(), 0, world.getInstanceId());
 				break;
 			}
 			case "EXIT":
@@ -109,8 +109,8 @@ public final class LibraryOfSages extends AbstractNpcAI
 			case "ENTER":
 			{
 				cancelQuestTimer("FOLLOW", npc, player);
-				player.teleToLocation(START_LOC);
-				world.elcadia.teleToLocation(START_LOC);
+				teleportPlayer(player, START_LOC, world.getInstanceId());
+				world.elcadia.teleToLocation(START_LOC.getX(), START_LOC.getY(), START_LOC.getZ(), 0, world.getInstanceId());
 				break;
 			}
 		}
@@ -120,11 +120,11 @@ public final class LibraryOfSages extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		enterInstance(talker, "LibraryOfSages.xml", START_LOC);
+		enterInstance(talker, "LibraryOfSages.xml");
 		return super.onTalk(npc, talker);
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, Location loc)
+	protected int enterInstance(L2PcInstance player, String template)
 	{
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -136,20 +136,20 @@ public final class LibraryOfSages extends AbstractNpcAI
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			teleportPlayer(player, loc, world.getInstanceId(), false);
+			teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 			spawnNPC(player, (LoSWorld) world);
 			return 0;
 		}
 		// New instance
 		world = new LoSWorld();
 		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(INSTANCEID);
+		world.setTemplateId(TEMPLATE_ID);
 		world.setStatus(0);
 		((LoSWorld) world).storeTime = System.currentTimeMillis();
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("Library of Sages started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 		// teleport players
-		teleportPlayer(player, loc, world.getInstanceId(), false);
+		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 		world.addAllowed(player.getObjectId());
 		spawnNPC(player, (LoSWorld) world);
 		return world.getInstanceId();

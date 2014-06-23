@@ -85,7 +85,7 @@ public final class PailakaDevilsLegacy extends AbstractNpcAI
 		new Location(85139, -208630, -3339, 31777),
 	};
 	// Misc
-	private static final int INSTANCE_ID = 44;
+	private static final int TEMPLATE_ID = 44;
 	private static final int ZONE = 20109;
 	
 	private PailakaDevilsLegacy()
@@ -286,7 +286,7 @@ public final class PailakaDevilsLegacy extends AbstractNpcAI
 		if ((character.isPlayer()) && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(character.getInstanceId());
-			if ((world != null) && (world.getTemplateId() == INSTANCE_ID))
+			if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))
 			{
 				startQuestTimer("TELEPORT", 1000, ((DIWorld) world)._lematanNpc, (L2PcInstance) character);
 			}
@@ -320,7 +320,7 @@ public final class PailakaDevilsLegacy extends AbstractNpcAI
 		}
 		world = new DIWorld();
 		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(INSTANCE_ID);
+		world.setTemplateId(TEMPLATE_ID);
 		InstanceManager.getInstance().addWorld(world);
 		world.addAllowed(player.getObjectId());
 		teleportPlayer(player, TELEPORT, world.getInstanceId());
