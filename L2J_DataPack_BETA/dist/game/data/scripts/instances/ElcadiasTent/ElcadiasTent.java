@@ -42,7 +42,7 @@ public final class ElcadiasTent extends AbstractNpcAI
 		
 	}
 	
-	private static final int INSTANCEID = 158;
+	private static final int TEMPLATE_ID = 158;
 	// NPCs
 	private static final int ELCADIA = 32784;
 	private static final int GRUFF_LOOKING_MAN = 32862;
@@ -107,7 +107,7 @@ public final class ElcadiasTent extends AbstractNpcAI
 			// New instance.
 			world = new ETWorld();
 			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			world.setTemplateId(INSTANCEID);
+			world.setTemplateId(TEMPLATE_ID);
 			world.setStatus(0);
 			InstanceManager.getInstance().addWorld(world);
 			_log.info("Elcadia's Tent started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());

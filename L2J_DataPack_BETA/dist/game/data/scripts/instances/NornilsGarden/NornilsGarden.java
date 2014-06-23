@@ -55,7 +55,7 @@ public final class NornilsGarden extends Quest
 		public boolean spawned_4 = false;
 	}
 	
-	private static final int INSTANCE_ID = 11;
+	private static final int TEMPLATE_ID = 11;
 	
 	private static final int DURATION_TIME = 70;
 	private static final int EMPTY_DESTROY_TIME = 5;
@@ -269,7 +269,7 @@ public final class NornilsGarden extends Quest
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
-			if (!(world instanceof NornilsWorld) || (world.getTemplateId() != INSTANCE_ID))
+			if (!(world instanceof NornilsWorld) || (world.getTemplateId() != TEMPLATE_ID))
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return null;
@@ -300,14 +300,14 @@ public final class NornilsGarden extends Quest
 		final int instanceId = InstanceManager.getInstance().createDynamicInstance("NornilsGarden.xml");
 		final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
 		
-		inst.setName(InstanceManager.getInstance().getInstanceIdName(INSTANCE_ID));
+		inst.setName(InstanceManager.getInstance().getInstanceIdName(TEMPLATE_ID));
 		inst.setSpawnLoc(new Location(player));
 		inst.setAllowSummon(false);
 		inst.setDuration(DURATION_TIME * 60000);
 		inst.setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
 		world = new NornilsWorld();
 		world.setInstanceId(instanceId);
-		world.setTemplateId(INSTANCE_ID);
+		world.setTemplateId(TEMPLATE_ID);
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("Nornils Garden: started, Instance: " + instanceId + " created by player: " + player.getName());
 		

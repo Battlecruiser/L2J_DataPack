@@ -40,7 +40,7 @@ public final class JiniaGuildHideout3 extends Quest
 		long storeTime = 0;
 	}
 	
-	private static final int INSTANCEID = 145;
+	private static final int TEMPLATE_ID = 145;
 	// NPC
 	private static final int RAFFORTY = 32020;
 	// Location
@@ -83,7 +83,7 @@ public final class JiniaGuildHideout3 extends Quest
 		// New instance
 		world = new JGH2World();
 		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(INSTANCEID);
+		world.setTemplateId(TEMPLATE_ID);
 		world.setStatus(0);
 		((JGH2World) world).storeTime = System.currentTimeMillis();
 		InstanceManager.getInstance().addWorld(world);

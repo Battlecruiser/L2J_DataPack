@@ -43,7 +43,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public final class DarkCloudMansion extends Quest
 {
-	private static final int INSTANCEID = 9;
+	private static final int TEMPLATE_ID = 9;
 	
 	private static boolean debug = false;
 	private static boolean noRndWalk = true;
@@ -525,32 +525,29 @@ public final class DarkCloudMansion extends Quest
 		return true;
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, Location loc)
+	protected void enterInstance(L2PcInstance player, String template, Location loc)
 	{
-		int instanceId = 0;
-		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		// existing instance
 		if (world != null)
 		{
 			if (!(world instanceof DMCWorld))
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-				return 0;
+				return;
 			}
 			teleportPlayer(player, loc, world.getInstanceId());
-			return instanceId;
+			return;
 		}
-		// New instance
+		
 		if (!checkConditions(player))
 		{
-			return 0;
+			return;
 		}
 		L2Party party = player.getParty();
-		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		final int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		world = new DMCWorld();
 		world.setInstanceId(instanceId);
-		world.setTemplateId(INSTANCEID);
+		world.setTemplateId(TEMPLATE_ID);
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("DarkCloudMansion: started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		runStartRoom((DMCWorld) world);
@@ -572,8 +569,6 @@ public final class DarkCloudMansion extends Quest
 				teleportPlayer(partyMember, loc, instanceId);
 			}
 		}
-		
-		return instanceId;
 	}
 	
 	protected void runStartRoom(DMCWorld world)

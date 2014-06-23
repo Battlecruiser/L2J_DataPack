@@ -42,7 +42,7 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 		protected L2Npc elcadia = null;
 	}
 	
-	private static final int INSTANCEID = 151;
+	private static final int TEMPLATE_ID = 151;
 	// NPCs
 	private static final int ELCADIA_INSTANCE = 32787;
 	private static final int ERIS_EVIL_THOUGHTS = 32792;
@@ -57,14 +57,14 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 	private static final int TELEPORT_CONTROL_DEVICE3 = 32819;
 	private static final int TELEPORT_CONTROL_DEVICE4 = 32820;
 	// Locations
-	private static final Location START_LOC = new Location(120710, -86971, -3392, 0, INSTANCEID);
+	private static final Location START_LOC = new Location(120710, -86971, -3392);
 	private static final Location EXIT_LOC = new Location(115983, -87351, -3397, 0, 0);
-	private static final Location CENTRAL_ROOM_LOC = new Location(85794, -249788, -8320, 0, INSTANCEID);
-	private static final Location SOUTH_WATCHERS_ROOM_LOC = new Location(85798, -246566, -8320, 0, INSTANCEID);
-	private static final Location WEST_WATCHERS_ROOM_LOC = new Location(82531, -249405, -8320, 0, INSTANCEID);
-	private static final Location EAST_WATCHERS_ROOM_LOC = new Location(88665, -249784, -8320, 0, INSTANCEID);
-	private static final Location NORTH_WATCHERS_ROOM_LOC = new Location(85792, -252336, -8320, 0, INSTANCEID);
-	private static final Location BACK_LOC = new Location(120710, -86971, -3392, 0, INSTANCEID);
+	private static final Location CENTRAL_ROOM_LOC = new Location(85794, -249788, -8320);
+	private static final Location SOUTH_WATCHERS_ROOM_LOC = new Location(85798, -246566, -8320);
+	private static final Location WEST_WATCHERS_ROOM_LOC = new Location(82531, -249405, -8320);
+	private static final Location EAST_WATCHERS_ROOM_LOC = new Location(88665, -249784, -8320);
+	private static final Location NORTH_WATCHERS_ROOM_LOC = new Location(85792, -252336, -8320);
+	private static final Location BACK_LOC = new Location(120710, -86971, -3392);
 	// NpcString
 	private static final NpcStringId[] ELCADIA_DIALOGS =
 	{
@@ -88,7 +88,7 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 		addTalkId(ODD_GLOBE, ERIS_EVIL_THOUGHTS, RELIC_GUARDIAN, RELIC_WATCHER1, RELIC_WATCHER2, RELIC_WATCHER3, RELIC_WATCHER4, TELEPORT_CONTROL_DEVICE1, TELEPORT_CONTROL_DEVICE2, TELEPORT_CONTROL_DEVICE3, TELEPORT_CONTROL_DEVICE4, ERIS_EVIL_THOUGHTS);
 	}
 	
-	private void enterInstance(L2PcInstance player, String template, Location loc)
+	private void enterInstance(L2PcInstance player, String template)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -100,7 +100,7 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 			else
 			{
 				// Teleport player.
-				teleportPlayer(player, loc, world.getInstanceId(), false);
+				teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 				spawnNPC(player, (MoSWorld) world);
 				removeBuffs(player);
 			}
@@ -110,12 +110,12 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 			// New instance.
 			world = new MoSWorld();
 			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			world.setTemplateId(INSTANCEID);
+			world.setTemplateId(TEMPLATE_ID);
 			world.setStatus(0);
 			InstanceManager.getInstance().addWorld(world);
 			_log.info("Monastery of Silence started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			// Teleport players.
-			teleportPlayer(player, loc, world.getInstanceId(), false);
+			teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 			spawnNPC(player, (MoSWorld) world);
 			removeBuffs(player);
 			world.addAllowed(player.getObjectId());
@@ -136,15 +136,15 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 		{
 			case "TELE2":
 			{
-				player.teleToLocation(CENTRAL_ROOM_LOC);
-				world.elcadia.teleToLocation(CENTRAL_ROOM_LOC);
+				teleportPlayer(player, CENTRAL_ROOM_LOC, world.getInstanceId());
+				world.elcadia.teleToLocation(CENTRAL_ROOM_LOC.getX(), CENTRAL_ROOM_LOC.getY(), CENTRAL_ROOM_LOC.getZ(), 0, world.getInstanceId());
 				startQuestTimer("START_MOVIE", 2000, npc, player);
 				break;
 			}
 			case "EXIT":
 			{
 				cancelQuestTimer("FOLLOW", npc, player);
-				player.teleToLocation(EXIT_LOC);
+				teleportPlayer(player, EXIT_LOC, 0);
 				world.elcadia.deleteMe();
 				break;
 			}
@@ -155,38 +155,38 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 			}
 			case "BACK":
 			{
-				player.teleToLocation(BACK_LOC);
-				world.elcadia.teleToLocation(BACK_LOC);
+				teleportPlayer(player, BACK_LOC, world.getInstanceId());
+				world.elcadia.teleToLocation(BACK_LOC.getX(), BACK_LOC.getY(), BACK_LOC.getZ(), 0, world.getInstanceId());
 				break;
 			}
 			case "EAST":
 			{
-				player.teleToLocation(EAST_WATCHERS_ROOM_LOC);
-				world.elcadia.teleToLocation(EAST_WATCHERS_ROOM_LOC);
+				teleportPlayer(player, EAST_WATCHERS_ROOM_LOC, world.getInstanceId());
+				world.elcadia.teleToLocation(EAST_WATCHERS_ROOM_LOC.getX(), EAST_WATCHERS_ROOM_LOC.getY(), EAST_WATCHERS_ROOM_LOC.getZ(), 0, world.getInstanceId());
 				break;
 			}
 			case "WEST":
 			{
-				player.teleToLocation(WEST_WATCHERS_ROOM_LOC);
-				world.elcadia.teleToLocation(WEST_WATCHERS_ROOM_LOC);
+				teleportPlayer(player, WEST_WATCHERS_ROOM_LOC, world.getInstanceId());
+				world.elcadia.teleToLocation(WEST_WATCHERS_ROOM_LOC.getX(), WEST_WATCHERS_ROOM_LOC.getY(), WEST_WATCHERS_ROOM_LOC.getZ(), 0, world.getInstanceId());
 				break;
 			}
 			case "NORTH":
 			{
-				player.teleToLocation(NORTH_WATCHERS_ROOM_LOC);
-				world.elcadia.teleToLocation(NORTH_WATCHERS_ROOM_LOC);
+				teleportPlayer(player, NORTH_WATCHERS_ROOM_LOC, world.getInstanceId());
+				world.elcadia.teleToLocation(NORTH_WATCHERS_ROOM_LOC.getX(), NORTH_WATCHERS_ROOM_LOC.getY(), NORTH_WATCHERS_ROOM_LOC.getZ(), 0, world.getInstanceId());
 				break;
 			}
 			case "SOUTH":
 			{
-				player.teleToLocation(SOUTH_WATCHERS_ROOM_LOC);
-				world.elcadia.teleToLocation(SOUTH_WATCHERS_ROOM_LOC);
+				teleportPlayer(player, SOUTH_WATCHERS_ROOM_LOC, world.getInstanceId());
+				world.elcadia.teleToLocation(SOUTH_WATCHERS_ROOM_LOC.getX(), SOUTH_WATCHERS_ROOM_LOC.getY(), SOUTH_WATCHERS_ROOM_LOC.getZ(), 0, world.getInstanceId());
 				break;
 			}
 			case "CENTER":
 			{
-				player.teleToLocation(CENTRAL_ROOM_LOC);
-				world.elcadia.teleToLocation(CENTRAL_ROOM_LOC);
+				teleportPlayer(player, CENTRAL_ROOM_LOC, world.getInstanceId());
+				world.elcadia.teleToLocation(CENTRAL_ROOM_LOC.getX(), CENTRAL_ROOM_LOC.getY(), CENTRAL_ROOM_LOC.getZ(), 0, world.getInstanceId());
 				break;
 			}
 			case "FOLLOW":
@@ -215,7 +215,7 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 	{
 		if (npc.getId() == ODD_GLOBE)
 		{
-			enterInstance(talker, "MonasteryOfSilence.xml", START_LOC);
+			enterInstance(talker, "MonasteryOfSilence.xml");
 		}
 		return super.onTalk(npc, talker);
 	}

@@ -71,36 +71,23 @@ public final class Kamaloka extends Quest
 	 * If true shaman in the first room will have same npcId as other mobs, making radar useless Default: true (but not retail like)
 	 */
 	private static final boolean STEALTH_SHAMAN = true;
-	
-	/*
-	 * Hardcoded instance ids for kamaloka
-	 */
+	// Template IDs for Kamaloka
 	// @formatter:off
-	// TODO optimize instance data, this can be compressed to look much more readable
-	private static final int[] INSTANCE_IDS =
+	private static final int[] TEMPLATE_IDS =
 	{
 		57, 58, 73, 60, 61, 74, 63, 64, 75, 66, 67, 76, 69, 70, 77, 72, 78, 79, 134
 	};
-	
-	/*
-	 * Level of the kamaloka
-	 */
+	// Level of the Kamaloka
 	private static final int[] LEVEL =
 	{
 		23, 26, 29, 33, 36, 39, 43, 46, 49, 53, 56, 59, 63, 66, 69, 73, 78, 81, 83
 	};
-	
-	/*
-	 * Duration of the instance, minutes
-	 */
+	// Duration of the instance, minutes
 	private static final int[] DURATION =
 	{
 		30, 30, 45, 30, 30, 45, 30, 30, 45, 30, 30, 45, 30, 30, 45, 30, 45, 45, 45
 	};
-	
-	/*
-	 * Maximum party size for the instance
-	 */
+	// Maximum party size for the instance
 	private static final int[] MAX_PARTY_SIZE =
 	{
 		6, 6, 9, 6, 6, 9, 6, 6, 9, 6, 6, 9, 6, 6, 9, 6, 9, 9, 9
@@ -116,9 +103,7 @@ public final class Kamaloka extends Quest
 		4322, 4323, 4324, 4325, 4326, 4327, 4328, 4329, 4330, 4331, 5632, 5637, 5950
 	};
 	// @formatter:on
-	/*
-	 * Teleport points into instances x, y, z
-	 */
+	// Teleport points into instances x, y, z
 	private static final Location[] TELEPORTS =
 	{
 		new Location(-88429, -220629, -7903),
@@ -142,9 +127,7 @@ public final class Kamaloka extends Quest
 		new Location(22003, -174886, -10900),
 	};
 	
-	/*
-	 * Respawn delay for the mobs in the first room, seconds Default: 25
-	 */
+	// Respawn delay for the mobs in the first room, seconds Default: 25
 	private static final int FIRST_ROOM_RESPAWN_DELAY = 25;
 	
 	/**
@@ -1268,7 +1251,7 @@ public final class Kamaloka extends Quest
 		// get level of the instance
 		final int level = LEVEL[index];
 		// and client name
-		final String instanceName = InstanceManager.getInstance().getInstanceIdName(INSTANCE_IDS[index]);
+		final String instanceName = InstanceManager.getInstance().getInstanceIdName(TEMPLATE_IDS[index]);
 		
 		Map<Integer, Long> instanceTimes;
 		// for each party member
@@ -1349,7 +1332,7 @@ public final class Kamaloka extends Quest
 		int templateId;
 		try
 		{
-			templateId = INSTANCE_IDS[index];
+			templateId = TEMPLATE_IDS[index];
 		}
 		catch (ArrayIndexOutOfBoundsException e)
 		{

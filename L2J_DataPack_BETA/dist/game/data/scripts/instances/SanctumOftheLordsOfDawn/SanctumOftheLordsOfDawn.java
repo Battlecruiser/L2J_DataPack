@@ -59,7 +59,7 @@ public final class SanctumOftheLordsOfDawn extends AbstractNpcAI
 	}
 	
 	// Instance
-	private static final int INSTANCEID = 111;
+	private static final int TEMPLATE_ID = 111;
 	// NPCs
 	private static final int GUARDS_OF_THE_DAWN = 18834;
 	private static final int GUARDS_OF_THE_DAWN_2 = 18835;
@@ -171,7 +171,7 @@ public final class SanctumOftheLordsOfDawn extends AbstractNpcAI
 			// New instance,
 			world = new HSWorld();
 			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			world.setTemplateId(INSTANCEID);
+			world.setTemplateId(TEMPLATE_ID);
 			world.setStatus(0);
 			((HSWorld) world).storeTime = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);

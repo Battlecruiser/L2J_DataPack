@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -33,10 +32,12 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public final class SecretArea extends Quest
 {
-	private static final int INSTANCE_ID = 117;
-	// TODO Unharcode htmls.
-	private static final String _ENTER = "<html><head><body>Soldier Ginby:<br>Hurry! Come back before anybody sees you!</body></html>";
-	private static final String _EXIT = "<html><head><body>Shilen Priest Lelrikia:<br>Doomed creature, either you obey the power of Shilen or you fight.Regardless of your decision, the shadow of death will not simply fade away...</body></html>";
+	protected class SAWorld extends InstanceWorld
+	{
+		
+	}
+	
+	private static final int TEMPLATE_ID = 117;
 	private static final int GINBY = 32566;
 	private static final int LELRIKIA = 32567;
 	private static final int ENTER = 0;
@@ -58,31 +59,25 @@ public final class SecretArea extends Quest
 	protected void enterInstance(L2PcInstance player)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+		
 		if (world != null)
 		{
-			if (world.getInstanceId() != INSTANCE_ID)
-			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-				return;
-			}
-			Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-			if (inst != null)
+			if (world instanceof SAWorld)
 			{
 				teleportPlayer(player, TELEPORTS[ENTER], world.getInstanceId());
+				return;
 			}
+			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+			return;
 		}
-		else
-		{
-			final int instanceId = InstanceManager.getInstance().createDynamicInstance("SecretArea.xml");
-			world = new InstanceWorld();
-			world.setInstanceId(INSTANCE_ID);
-			world.setTemplateId(instanceId);
-			world.setStatus(0);
-			InstanceManager.getInstance().addWorld(world);
-			
-			world.addAllowed(player.getObjectId());
-			teleportPlayer(player, TELEPORTS[ENTER], instanceId);
-		}
+		
+		world = new SAWorld();
+		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance("SecretArea.xml"));
+		world.setTemplateId(TEMPLATE_ID);
+		world.addAllowed(player.getObjectId());
+		world.setStatus(0);
+		InstanceManager.getInstance().addWorld(world);
+		teleportPlayer(player, TELEPORTS[ENTER], world.getInstanceId());
 	}
 	
 	@Override
@@ -92,12 +87,12 @@ public final class SecretArea extends Quest
 		if ((npc.getId() == GINBY) && event.equalsIgnoreCase("enter"))
 		{
 			enterInstance(player);
-			return _ENTER;
+			return "32566-01.html";
 		}
 		else if ((npc.getId() == LELRIKIA) && event.equalsIgnoreCase("exit"))
 		{
 			teleportPlayer(player, TELEPORTS[EXIT], 0);
-			return _EXIT;
+			return "32567-01.html";
 		}
 		return htmltext;
 	}

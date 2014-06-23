@@ -142,7 +142,7 @@ public final class FinalEmperialTomb extends Quest
 		}
 	}
 	
-	private static final int INSTANCEID = 136; // this is the client number
+	private static final int TEMPLATE_ID = 136; // this is the client number
 	private static final int MIN_PLAYERS = 36;
 	private static final int MAX_PLAYERS = 45;
 	private static final boolean debug = false;
@@ -583,7 +583,7 @@ public final class FinalEmperialTomb extends Quest
 				party.broadcastPacket(sm);
 				return false;
 			}
-			Long reentertime = InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), INSTANCEID);
+			Long reentertime = InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), TEMPLATE_ID);
 			if (System.currentTimeMillis() < reentertime)
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
@@ -597,7 +597,6 @@ public final class FinalEmperialTomb extends Quest
 	
 	protected int enterInstance(L2PcInstance player, String template, Location loc)
 	{
-		int instanceId = 0;
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		// existing instance
@@ -621,11 +620,11 @@ public final class FinalEmperialTomb extends Quest
 		{
 			return 0;
 		}
-		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		final int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		// Instance ins = InstanceManager.getInstance().getInstance(instanceId);
 		// ins.setSpawnLoc(new int[]{player.getX(),player.getY(),player.getZ()});
 		world = new FETWorld();
-		world.setTemplateId(INSTANCEID);
+		world.setTemplateId(TEMPLATE_ID);
 		world.setInstanceId(instanceId);
 		world.setStatus(0);
 		InstanceManager.getInstance().addWorld(world);
@@ -1430,13 +1429,13 @@ public final class FinalEmperialTomb extends Quest
 		}
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
-		sm.addInstanceName(INSTANCEID);
+		sm.addInstanceName(TEMPLATE_ID);
 		
 		// set instance reenter time for all allowed players
 		for (int objectId : world.getAllowed())
 		{
 			L2PcInstance player = L2World.getInstance().getPlayer(objectId);
-			InstanceManager.getInstance().setInstanceTime(objectId, INSTANCEID, reenter.getTimeInMillis());
+			InstanceManager.getInstance().setInstanceTime(objectId, TEMPLATE_ID, reenter.getTimeInMillis());
 			if ((player != null) && player.isOnline())
 			{
 				player.sendPacket(sm);
