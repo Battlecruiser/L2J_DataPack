@@ -43,7 +43,7 @@
 	<!-- Macro presets -->
 	<macros>
 		<!-- Macro example with multiple commands. -->
-		<macro macroId="10000" icon="1" name="Macro name" description="This is a test." acronym="HI!"> <!-- Macro ID must be over 1000, use higher values to avoid conflicts with already existing macros. -->
+		<macro macroId="10000" icon="1" name="Macro name" description="This is a test." acronym="HI!" enabled="false"> <!-- Macro ID must be over 1000, use higher values to avoid conflicts with already existing macros. -->
 			<command type="SKILL" skillId="1177" skillLvl="1" /> <!-- To define a skill always include skill ID and level. -->
 			<command type="DELAY" delay="5" /> <!-- To define a delay always define the time in seconds. -->
 			<command type="TEXT">/loc</command> <!-- To define a command, just include the string as if it was typed in-game. -->
