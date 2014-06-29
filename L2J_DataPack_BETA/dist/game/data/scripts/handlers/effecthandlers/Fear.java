@@ -56,7 +56,7 @@ public final class Fear extends AbstractEffect
 		{
 			return false;
 		}
-		return !info.getEffected().isAfraid();
+		return true;
 	}
 	
 	@Override
