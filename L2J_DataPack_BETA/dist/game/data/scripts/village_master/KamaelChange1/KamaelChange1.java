@@ -22,7 +22,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.CategoryData;
 import com.l2jserver.gameserver.enums.CategoryType;
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
@@ -167,7 +167,7 @@ public final class KamaelChange1 extends AbstractNpcAI
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		if (player.getRace() != PcRace.KAMAEL)
+		if (player.getRace() != Race.KAMAEL)
 		{
 			htmltext = "32191-01.htm"; // master_all_kamael002a
 		}

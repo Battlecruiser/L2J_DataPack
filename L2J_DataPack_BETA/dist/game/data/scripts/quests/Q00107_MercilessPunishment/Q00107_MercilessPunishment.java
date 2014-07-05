@@ -20,7 +20,7 @@ package quests.Q00107_MercilessPunishment;
 
 import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -140,7 +140,7 @@ public final class Q00107_MercilessPunishment extends Quest
 				{
 					case State.CREATED:
 					{
-						if (talker.getRace() != PcRace.ORC)
+						if (talker.getRace() != Race.ORC)
 						{
 							htmltext = "30568-01.htm";
 						}

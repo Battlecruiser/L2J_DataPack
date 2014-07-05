@@ -23,7 +23,7 @@ import java.util.Map;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2VillageMasterFighterInstance;
@@ -36,25 +36,25 @@ import com.l2jserver.gameserver.model.actor.instance.L2VillageMasterPriestInstan
  */
 public final class FirstClassTransferTalk extends AbstractNpcAI
 {
-	private static final Map<Integer, PcRace> MASTERS = new HashMap<>();
+	private static final Map<Integer, Race> MASTERS = new HashMap<>();
 	static
 	{
-		MASTERS.put(30026, PcRace.HUMAN); // Blitz, TI Fighter Guild Head Master
-		MASTERS.put(30031, PcRace.HUMAN); // Biotin, TI Einhasad Temple High Priest
-		MASTERS.put(30154, PcRace.ELF); // Asterios, Elven Village Tetrarch
-		MASTERS.put(30358, PcRace.DARK_ELF); // Thifiell, Dark Elf Village Tetrarch
-		MASTERS.put(30565, PcRace.ORC); // Kakai, Orc Village Flame Lord
-		MASTERS.put(30520, PcRace.DWARF); // Reed, Dwarven Village Warehouse Chief
-		MASTERS.put(30525, PcRace.DWARF); // Bronk, Dwarven Village Head Blacksmith
+		MASTERS.put(30026, Race.HUMAN); // Blitz, TI Fighter Guild Head Master
+		MASTERS.put(30031, Race.HUMAN); // Biotin, TI Einhasad Temple High Priest
+		MASTERS.put(30154, Race.ELF); // Asterios, Elven Village Tetrarch
+		MASTERS.put(30358, Race.DARK_ELF); // Thifiell, Dark Elf Village Tetrarch
+		MASTERS.put(30565, Race.ORC); // Kakai, Orc Village Flame Lord
+		MASTERS.put(30520, Race.DWARF); // Reed, Dwarven Village Warehouse Chief
+		MASTERS.put(30525, Race.DWARF); // Bronk, Dwarven Village Head Blacksmith
 		// Kamael Village NPCs
-		MASTERS.put(32171, PcRace.DWARF); // Hoffa, Warehouse Chief
-		MASTERS.put(32158, PcRace.DWARF); // Fisler, Dwarf Guild Warehouse Chief
-		MASTERS.put(32157, PcRace.DWARF); // Moka, Dwarf Guild Head Blacksmith
-		MASTERS.put(32160, PcRace.DARK_ELF); // Devon, Dark Elf Guild Grand Magister
-		MASTERS.put(32147, PcRace.ELF); // Rivian, Elf Guild Grand Master
-		MASTERS.put(32150, PcRace.ORC); // Took, Orc Guild High Prefect
-		MASTERS.put(32153, PcRace.HUMAN); // Prana, Human Guild High Priest
-		MASTERS.put(32154, PcRace.HUMAN); // Aldenia, Human Guild Grand Master
+		MASTERS.put(32171, Race.DWARF); // Hoffa, Warehouse Chief
+		MASTERS.put(32158, Race.DWARF); // Fisler, Dwarf Guild Warehouse Chief
+		MASTERS.put(32157, Race.DWARF); // Moka, Dwarf Guild Head Blacksmith
+		MASTERS.put(32160, Race.DARK_ELF); // Devon, Dark Elf Guild Grand Magister
+		MASTERS.put(32147, Race.ELF); // Rivian, Elf Guild Grand Master
+		MASTERS.put(32150, Race.ORC); // Took, Orc Guild High Prefect
+		MASTERS.put(32153, Race.HUMAN); // Prana, Human Guild High Priest
+		MASTERS.put(32154, Race.HUMAN); // Aldenia, Human Guild Grand Master
 	}
 	
 	private FirstClassTransferTalk()

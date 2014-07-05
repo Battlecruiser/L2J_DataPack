@@ -21,7 +21,7 @@ package quests.Q00292_BrigandsSweep;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -155,7 +155,7 @@ public final class Q00292_BrigandsSweep extends Quest
 				{
 					case State.CREATED:
 					{
-						html = (talker.getRace() == PcRace.DWARF) ? (talker.getLevel() >= MIN_LVL) ? "30532-02.htm" : "30532-01.htm" : "30532-00.htm";
+						html = (talker.getRace() == Race.DWARF) ? (talker.getLevel() >= MIN_LVL) ? "30532-02.htm" : "30532-01.htm" : "30532-00.htm";
 						break;
 					}
 					case State.STARTED:

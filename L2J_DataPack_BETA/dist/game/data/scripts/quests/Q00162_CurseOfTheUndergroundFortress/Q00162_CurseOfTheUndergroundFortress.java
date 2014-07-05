@@ -21,7 +21,7 @@ package quests.Q00162_CurseOfTheUndergroundFortress;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -151,7 +151,7 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() != PcRace.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30147-02.htm" : "30147-01.htm" : "30147-00.htm";
+					htmltext = (player.getRace() != Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30147-02.htm" : "30147-01.htm" : "30147-00.htm";
 					break;
 				}
 				case State.STARTED:

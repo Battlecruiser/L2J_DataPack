@@ -20,7 +20,7 @@ package quests.Q00106_ForgottenTruth;
 
 import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -130,7 +130,7 @@ public final class Q00106_ForgottenTruth extends Quest
 				{
 					case State.CREATED:
 					{
-						if (talker.getRace() == PcRace.DARK_ELF)
+						if (talker.getRace() == Race.DARK_ELF)
 						{
 							htmltext = talker.getLevel() >= MIN_LVL ? "30358-03.htm" : "30358-02.htm";
 						}

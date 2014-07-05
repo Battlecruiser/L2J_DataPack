@@ -20,7 +20,7 @@ package quests.Q00103_SpiritOfCraftsman;
 
 import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -117,7 +117,7 @@ public final class Q00103_SpiritOfCraftsman extends Quest
 			{
 				if (qs.isCreated())
 				{
-					if (talker.getRace() != PcRace.DARK_ELF)
+					if (talker.getRace() != Race.DARK_ELF)
 					{
 						htmltext = "30307-01.htm";
 					}
