@@ -10931,7 +10931,7 @@ INSERT INTO `spawnlist` VALUES
 -- Tahoo
 ("gludio08_npc1921_031", 1, 32875, -15162, 124616, -3112, 0, 0, 29865, 60, 0, 0, 0),
 -- Gludio Holy Artifact
-("GludioArtefact1", 1, 35063, -18120, 107984, -2483, 0, 0, 16384, 60, 0, 0, 0),
+("GludioArtefact1", 1, 35063, -18113, 107972, -2480, 0, 0, 16384, 60, 0, 0, 0),
 -- Mass Gatekeeper
 ("gludio_mass_teleporter", 1, 35095, -16532, 109387, -1784, 0, 0, 32768, 60, 0, 0, 0),
 -- Outer Doorman
@@ -14016,7 +14016,7 @@ INSERT INTO `spawnlist` VALUES
 ("unset", 1, 4328, 27875, -49312, -1317, 0, 0, 52676, 0, 0, 0, 0),
 ("unset", 1, 4328, 28150, -49302, -1320, 0, 0, 6133, 0, 0, 0, 0),
 -- Gods' Altar
-("RuneArtefact1", 1, 35469, 9132, -49153, 1094, 0, 0, 6133, 60, 0, 0, 0),
+("RuneArtefact1", 1, 35469, 9132, -49152, 1088, 0, 0, 0, 60, 0, 0, 0),
 -- Mass Gatekeeper
 ("rune_mass_gatekeeper", 1, 35502, 11127, -49148, 3843, 0, 0, 18512, 60, 0, 0, 0),
 -- Outer Doorman
@@ -17052,7 +17052,7 @@ INSERT INTO `spawnlist` VALUES
 -- Desian
 ("dion09_npc2022_034", 1, 32876, 19626, 143091, -3024, 0, 0, 13000, 60, 0, 0, 0),
 -- Dion Holy Artifact
-("DionArtefact1", 1, 35105, 22081, 161771, -2677, 0, 0, 49017, 60, 0, 0, 0),
+("DionArtefact1", 1, 35105, 22073, 161778, -2672, 0, 0, 49152, 60, 0, 0, 0),
 -- Mass Gatekeeper
 ("dion_mass_teleporter", 1, 35137, 20492, 160363, -1978, 0, 0, 0, 60, 0, 0, 0),
 -- Outer Doorman
@@ -23405,9 +23405,9 @@ INSERT INTO `spawnlist` VALUES
 -- Prouse
 ("Town of Schuttgart", 1, 32882, 88254, -139601, -1528, 0, 0, 44098, 60, 0, 0, 0),
 -- Altar of Wind
-("SchuttgartArtefact2", 1, 35514, 78446, -154524, 227, 0, 0, 0, 60, 0, 0, 0),
+("SchuttgartArtefact2", 1, 35514, 78442, -154520, 224, 0, 0, 0, 60, 0, 0, 0),
 -- Altar of Earth
-("SchuttgartArtefact1", 1, 35515, 76668, -154520, 226, 0, 0, 0, 60, 0, 0, 0),
+("SchuttgartArtefact1", 1, 35515, 76674, -154520, 224, 0, 0, 32768, 60, 0, 0, 0),
 -- Gatekeeper
 ("schuttgart_chmberlain_etc", 1, 35544, 78735, -153060, 1018, 0, 0, 2556, 60, 0, 0, 0),
 ("schuttgart_chmberlain_etc", 1, 35544, 78752, -153229, 1050, 0, 0, 53375, 60, 0, 0, 0),
@@ -26805,7 +26805,7 @@ INSERT INTO `spawnlist` VALUES
 -- Drawin
 ("oren17_npc2219_010", 1, 32879, 83754, 55548, -1512, 0, 0, 37322, 60, 0, 0, 0),
 -- Oren Holy Artifact
-("OrenArtefact1", 1, 35189, 84014, 37184, -2277, 0, 0, 16384, 60, 0, 0, 0),
+("OrenArtefact1", 1, 35189, 84026, 37191, -2272, 0, 0, 32768, 60, 0, 0, 0),
 -- Mass Gatekeeper
 ("oren_mass_teleporter", 1, 35221, 82611, 38772, -1578, 0, 0, 49152, 60, 0, 0, 0),
 -- Outer Doorman
@@ -34985,7 +34985,7 @@ INSERT INTO `spawnlist` VALUES
 -- Dimensional Gate Keeper
 ("ssq10_npc2322_03", 1, 31503, 118387, 132477, -4824, 0, 0, 16000, 60, 0, 0, 0),
 -- Giran Holy Artifact
-("GiranArtefact1", 1, 35147, 117939, 145090, -2550, 0, 0, 32768, 60, 0, 0, 0),
+("GiranArtefact1", 1, 35147, 117950, 145096, -2544, 0, 0, 32768, 60, 0, 0, 0),
 -- Mass Gatekeeper
 ("giran_mass_teleporter", 1, 35179, 116535, 146677, -1851, 0, 0, 49152, 60, 0, 0, 0),
 -- Outer Doorman
@@ -35816,7 +35816,7 @@ INSERT INTO `spawnlist` VALUES
 -- [23_25]
 
 -- Innadril Holy Artifact
-("InnadrilArtefact1", 1, 35279, 116031, 250555, -798, 0, 0, 49200, 60, 0, 0, 0),
+("InnadrilArtefact1", 1, 35279, 116024, 250557, -798, 0, 0, -16384, 60, 0, 0, 0),
 -- Mass Gatekeeper
 ("innadrile_m_teleporter", 1, 35311, 114443, 249142, -74, 0, 0, 0, 60, 0, 0, 0),
 -- Outer Doorman
@@ -37885,9 +37885,9 @@ INSERT INTO `spawnlist` VALUES
 -- Denver
 ("godard02_npc2416_12", 1, 32881, 146731, -58940, -2968, 0, 0, 25615, 60, 0, 0, 0),
 -- Altar of Fire
-("GoddardArtefact1", 1, 35322, 146601, -50441, -1505, 0, 0, 32768, 60, 0, 0, 0),
+("GoddardArtefact1", 1, 35322, 146601, -50441, -1496, 0, 0, 32768, 60, 0, 0, 0),
 -- Altar of Water
-("GoddardArtefact2", 1, 35323, 148353, -50457, -1505, 0, 0, 0, 60, 0, 0, 0),
+("GoddardArtefact2", 1, 35323, 148353, -50457, -1496, 0, 0, 0, 60, 0, 0, 0),
 -- Mass Gatekeeper
 ("godard03_npc2416_07", 1, 35355, 147456, -46448, -963, 0, 0, 49000, 60, 0, 0, 0),
 -- Outer Doorman
@@ -39094,7 +39094,7 @@ INSERT INTO `spawnlist` VALUES
 -- Dolphren
 ("aden13_npc2418_45", 1, 32880, 150915, 28398, -2248, 0, 0, 33000, 60, 0, 0, 0),
 -- Aden Holy Artifact
-("AdenArtefact1", 1, 35233, 147465, 1537, -373, 0, 0, 16384, 60, 0, 0, 0),
+("AdenArtefact1", 1, 35233, 147463, 1529, -368, 0, 0, 16384, 60, 0, 0, 0),
 -- Mass Gatekeeper
 ("aden_mass_teleporter", 1, 35266, 147457, 4609, -2789, 0, 0, 0, 60, 0, 0, 0),
 -- Outer Doorman
