@@ -19,7 +19,7 @@
 package quests.Q00275_DarkWingedSpies;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -138,7 +138,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (talker.getRace() == PcRace.ORC) ? (talker.getLevel() >= MIN_LVL) ? "30567-02.htm" : "30567-01.htm" : "30567-00.htm";
+				htmltext = (talker.getRace() == Race.ORC) ? (talker.getLevel() >= MIN_LVL) ? "30567-02.htm" : "30567-01.htm" : "30567-00.htm";
 				break;
 			}
 			case State.STARTED:

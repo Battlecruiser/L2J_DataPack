@@ -23,7 +23,7 @@ import java.util.List;
 
 import quests.Q00261_CollectorsDream.Q00261_CollectorsDream;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -142,7 +142,7 @@ public final class Q00276_TotemOfTheHestui extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == PcRace.ORC) ? (player.getLevel() >= MIN_LVL) ? "30571-02.htm" : "30571-01.htm" : "30571-00.htm";
+				htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LVL) ? "30571-02.htm" : "30571-01.htm" : "30571-00.htm";
 				break;
 			}
 			case State.STARTED:

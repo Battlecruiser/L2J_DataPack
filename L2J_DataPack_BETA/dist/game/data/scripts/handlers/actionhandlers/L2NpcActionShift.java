@@ -67,6 +67,7 @@ public class L2NpcActionShift implements IActionHandler
 			
 			html.replace("%objid%", String.valueOf(target.getObjectId()));
 			html.replace("%class%", target.getClass().getSimpleName());
+			html.replace("%race%", ((L2Npc) target).getTemplate().getRace().toString());
 			html.replace("%id%", String.valueOf(((L2Npc) target).getTemplate().getId()));
 			html.replace("%lvl%", String.valueOf(((L2Npc) target).getTemplate().getLevel()));
 			html.replace("%name%", String.valueOf(((L2Npc) target).getTemplate().getName()));

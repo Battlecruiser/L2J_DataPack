@@ -20,7 +20,7 @@ package quests.Q00173_ToTheIsleOfSouls;
 
 import quests.Q00172_NewHorizons.Q00172_NewHorizons;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -102,7 +102,7 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 				{
 					case State.CREATED:
 						final QuestState qs = player.getQuestState(Q00172_NewHorizons.class.getSimpleName());
-						htmltext = ((qs != null) && qs.isCompleted() && (player.getRace() == PcRace.KAMAEL) && st.hasQuestItems(MARK_OF_TRAVELER)) ? "30097-01.htm" : "30097-02.htm";
+						htmltext = ((qs != null) && qs.isCompleted() && (player.getRace() == Race.KAMAEL) && st.hasQuestItems(MARK_OF_TRAVELER)) ? "30097-01.htm" : "30097-02.htm";
 						break;
 					case State.STARTED:
 						htmltext = (st.isCond(1)) ? "30097-04.html" : "30097-05.html";

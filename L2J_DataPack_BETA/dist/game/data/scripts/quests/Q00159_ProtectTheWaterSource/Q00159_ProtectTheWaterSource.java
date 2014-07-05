@@ -18,7 +18,7 @@
  */
 package quests.Q00159_ProtectTheWaterSource;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -115,7 +115,7 @@ public class Q00159_ProtectTheWaterSource extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() == PcRace.ELF) ? (player.getLevel() >= MIN_LVL ? "30154-03.htm" : "30154-02.htm") : "30154-01.htm";
+					htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LVL ? "30154-03.htm" : "30154-02.htm") : "30154-01.htm";
 					break;
 				}
 				case State.STARTED:

@@ -1463,8 +1463,8 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<cond msgId="144">
-			<target npcRace="UNDEAD" />
+		<cond msgId="113" addName="1">
+			<target race="UNDEAD" />
 		</cond>
 		<for>
 			<effect name="MagicalAttack" />
@@ -2574,7 +2574,7 @@
 		<enchant3 name="power" val="#ench3Attack" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="144">
-			<target npcRace="UNDEAD" />
+			<target race="UNDEAD" />
 		</cond>
 		<for>
 			<effect name="Debuff">

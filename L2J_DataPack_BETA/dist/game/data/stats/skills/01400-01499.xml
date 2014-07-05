@@ -38,8 +38,8 @@
 		<enchant4 name="element" val="4" /> <!-- Holy -->
 		<enchant4 name="elementPower" val="#ench4HolyAttack" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
-		<cond msgId="144">
-			<target npcRace="UNDEAD" />
+		<cond msgId="113" addName="1">
+			<target race="UNDEAD" />
 		</cond>
 		<for>
 			<effect name="Fear" abnormalTime="20" />
@@ -1492,8 +1492,8 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="abnormalTime" val="#ench4AbnormalTimes" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
-		<cond msgId="113" addName="1">
-			<target races="KAMAEL" />
+		<cond msgId="109">
+			<target race="KAMAEL" />
 		</cond>
 		<for>
 			<effect name="Buff">
@@ -1723,8 +1723,8 @@
 		<cond msgId="2195">
 			<player souls="1" />
 		</cond>
-		<cond msgId="113" addName="1">
-			<target races="KAMAEL" />
+		<cond msgId="109">
+			<target race="KAMAEL" />
 		</cond>
 		<for>
 			<effect name="FocusSouls">

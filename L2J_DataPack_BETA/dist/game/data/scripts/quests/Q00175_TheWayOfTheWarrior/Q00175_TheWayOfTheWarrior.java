@@ -18,7 +18,7 @@
  */
 package quests.Q00175_TheWayOfTheWarrior;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -181,7 +181,7 @@ public final class Q00175_TheWayOfTheWarrior extends Quest
 			{
 				if (qs.isCreated())
 				{
-					if (player.getRace() != PcRace.KAMAEL)
+					if (player.getRace() != Race.KAMAEL)
 					{
 						htmltext = "32138-04.htm";
 					}

@@ -18,7 +18,7 @@
  */
 package quests.Q00267_WrathOfVerdure;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -106,7 +106,7 @@ public final class Q00267_WrathOfVerdure extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() == PcRace.ELF) ? (player.getLevel() >= MIN_LVL) ? "31853-03.htm" : "31853-02.htm" : "31853-01.htm";
+					htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LVL) ? "31853-03.htm" : "31853-02.htm" : "31853-01.htm";
 					break;
 				}
 				case State.STARTED:

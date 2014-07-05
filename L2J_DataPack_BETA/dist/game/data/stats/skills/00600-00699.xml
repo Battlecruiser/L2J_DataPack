@@ -1870,7 +1870,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="144">
-			<target npcRace="UNDEAD" />
+			<target race="UNDEAD" />
 		</cond>
 		<for>
 			<effect name="MagicalAttack" />

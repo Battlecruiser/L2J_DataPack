@@ -451,8 +451,8 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SERVITOR" />
-		<cond msgId="144">
-			<target npcRace="CONSTRUCT" />
+		<cond msgId="109">
+			<target race="CONSTRUCT" />
 		</cond>
 		<for>
 			<effect name="HealPercent">
@@ -481,8 +481,8 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SERVITOR" />
-		<cond msgId="144">
-			<target npcRace="CONSTRUCT" />
+		<cond msgId="109">
+			<target race="CONSTRUCT" />
 		</cond>
 		<for>
 			<effect name="Buff">
@@ -512,8 +512,8 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SERVITOR" />
-		<cond msgId="144">
-			<target npcRace="CONSTRUCT" />
+		<cond msgId="109">
+			<target race="CONSTRUCT" />
 		</cond>
 		<for>
 			<effect name="Buff">

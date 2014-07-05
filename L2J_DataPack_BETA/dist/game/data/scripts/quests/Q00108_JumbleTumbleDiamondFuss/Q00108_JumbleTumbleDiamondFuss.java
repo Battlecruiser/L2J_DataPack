@@ -23,7 +23,7 @@ import java.util.Map;
 
 import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -160,7 +160,7 @@ public final class Q00108_JumbleTumbleDiamondFuss extends Quest
 				{
 					case State.CREATED:
 					{
-						if (talker.getRace() != PcRace.DWARF)
+						if (talker.getRace() != Race.DWARF)
 						{
 							htmltext = "30523-01.htm";
 						}

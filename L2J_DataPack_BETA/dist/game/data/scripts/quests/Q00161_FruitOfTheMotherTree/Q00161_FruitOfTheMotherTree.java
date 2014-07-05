@@ -18,7 +18,7 @@
  */
 package quests.Q00161_FruitOfTheMotherTree;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -90,7 +90,7 @@ public class Q00161_FruitOfTheMotherTree extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = (player.getRace() == PcRace.ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30362-03.htm" : "30362-02.htm" : "30362-01.htm";
+						htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30362-03.htm" : "30362-02.htm" : "30362-01.htm";
 						break;
 					case State.STARTED:
 						if (st.isCond(1))

@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.l2jserver.gameserver.enums.PcRace;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -119,7 +119,7 @@ public final class Q00266_PleasOfPixies extends Quest
 		{
 			case State.CREATED:
 			{
-				if (player.getRace() != PcRace.ELF)
+				if (player.getRace() != Race.ELF)
 				{
 					htmltext = "31852-01.htm";
 				}

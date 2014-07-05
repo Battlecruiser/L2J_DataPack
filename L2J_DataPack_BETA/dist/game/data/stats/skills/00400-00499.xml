@@ -335,8 +335,8 @@
 		<enchant4 name="element" val="4" /> <!-- Holy -->
 		<enchant4 name="elementPower" val="#ench4HolyAttack" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
-		<cond msgId="144">
-			<target npcRace="UNDEAD" />
+		<cond msgId="113" addName="1">
+			<target race="UNDEAD" />
 		</cond>
 		<for>
 			<effect name="Fear" abnormalTime="20" />
@@ -1809,8 +1809,8 @@
 		<enchant4 name="element" val="5" /> <!-- Dark -->
 		<enchant4 name="elementPower" val="#ench4DarkAttack" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
-		<cond msgId="144">
-			<target npcRace="DIVINE" />
+		<cond msgId="113" addName="1">
+			<target race="DIVINE" />
 		</cond>
 		<for>
 			<effect name="Fear" abnormalTime="20" />
