@@ -114,23 +114,11 @@ public final class SummonPet extends AbstractEffect
 			pet.storeMe();
 		}
 		
+		item.setEnchantLevel(pet.getLevel());
 		player.setPet(pet);
-		
 		pet.spawnMe(player.getX() + 50, player.getY() + 100, player.getZ());
 		pet.startFeed();
-		item.setEnchantLevel(pet.getLevel());
-		
-		if (pet.getCurrentFed() <= 0)
-		{
-			pet.unSummon(player);
-		}
-		else
-		{
-			pet.startFeed();
-		}
-		
 		pet.setFollowStatus(true);
-		
 		pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
 		pet.broadcastStatusUpdate();
 	}
