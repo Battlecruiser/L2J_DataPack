@@ -69,13 +69,6 @@ public final class CpDamPercent extends AbstractEffect
 		if (damage > 0)
 		{
 			info.getEffected().setCurrentCp(info.getEffected().getCurrentCp() - damage);
-			if (info.getEffected() != info.getEffector())
-			{
-				info.getEffector().sendDamageMessage(info.getEffected(), damage, false, false, false);
-				info.getEffected().notifyDamageReceived(damage, info.getEffector(), info.getSkill(), false, false);
-			}
 		}
-		// Check if damage should be reflected
-		Formulas.calcDamageReflected(info.getEffector(), info.getEffected(), info.getSkill(), false);
 	}
 }
