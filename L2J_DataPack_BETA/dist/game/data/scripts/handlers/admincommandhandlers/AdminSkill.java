@@ -18,7 +18,7 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.List;
+import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -75,6 +75,7 @@ public class AdminSkill implements IAdminCommandHandler
 		"admin_reset_skills",
 		"admin_give_all_skills",
 		"admin_give_all_skills_fs",
+		"admin_give_clan_skills",
 		"admin_give_all_clan_skills",
 		"admin_remove_all_skills",
 		"admin_add_clan_skill",
@@ -157,9 +158,13 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			adminGiveAllSkills(activeChar, true);
 		}
+		else if (command.equals("admin_give_clan_skills"))
+		{
+			adminGiveClanSkills(activeChar, false);
+		}
 		else if (command.equals("admin_give_all_clan_skills"))
 		{
-			adminGiveAllClanSkills(activeChar);
+			adminGiveClanSkills(activeChar, true);
 		}
 		else if (command.equals("admin_remove_all_skills"))
 		{
@@ -227,8 +232,9 @@ public class AdminSkill implements IAdminCommandHandler
 	 * This function will give all the skills that the target's clan can learn at it's level.<br>
 	 * If the target is not the clan leader, a system message will be sent to the Game Master.
 	 * @param activeChar the active char, probably a Game Master.
+	 * @param includeSquad if Squad skills is included
 	 */
-	private void adminGiveAllClanSkills(L2PcInstance activeChar)
+	private void adminGiveClanSkills(L2PcInstance activeChar, boolean includeSquad)
 	{
 		final L2Object target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -239,6 +245,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		final L2PcInstance player = target.getActingPlayer();
 		final L2Clan clan = player.getClan();
+		
 		if (clan == null)
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_MUST_BE_IN_CLAN);
@@ -247,16 +254,15 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		if (!player.isClanLeader())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.TARGET_MUST_BE_IN_CLAN);
-			sm.addPcName(player);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
+			sm.addString(player.getName());
 			activeChar.sendPacket(sm);
 		}
 		
-		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailablePledgeSkills(clan);
-		SkillData st = SkillData.getInstance();
-		for (L2SkillLearn s : skills)
+		final Map<Integer, L2SkillLearn> skills = SkillTreesData.getInstance().getMaxPledgeSkills(clan, includeSquad);
+		for (L2SkillLearn s : skills.values())
 		{
-			clan.addNewSkill(st.getSkill(s.getSkillId(), s.getSkillLevel()));
+			clan.addNewSkill(SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()));
 		}
 		
 		// Notify target and active char
