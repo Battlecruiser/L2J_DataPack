@@ -19,15 +19,15 @@
 package handlers.admincommandhandlers;
 
 import java.io.File;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 import javax.script.ScriptException;
 
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
-import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.ListenerRegisterType;
@@ -189,139 +189,143 @@ public class AdminQuest implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Get a target first.");
 			}
-			else if (!activeChar.getTarget().isNpc())
+			else if (!activeChar.getTarget().isCharacter())
 			{
 				activeChar.sendMessage("Invalid Target.");
 			}
 			else
 			{
-				L2Npc npc = L2Npc.class.cast(activeChar.getTarget());
-				final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
-				msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npc-quests.htm");
-				StringBuilder sb = new StringBuilder();
-				Set<String> questset = new HashSet<>();
+				final L2Character character = (L2Character) activeChar.getTarget();
+				final StringBuilder sb = new StringBuilder();
+				final Set<String> questNames = new TreeSet<>();
 				for (EventType type : EventType.values())
 				{
-					for (AbstractEventListener listener : npc.getListeners(type))
+					for (AbstractEventListener listener : character.getListeners(type))
 					{
 						if (listener.getOwner() instanceof Quest)
 						{
 							final Quest quest = (Quest) listener.getOwner();
-							if (questset.contains(quest.getName()))
+							if (questNames.contains(quest.getName()))
 							{
-								continue;
-							}
-							questset.add(quest.getName());
-							if (quest.getListeners().size() > 20)
-							{
-								sb.append("<tr><td colspan=\"4\">" + quest.getName() + " - " + quest.getListeners().size() + " listeners.</td></tr>");
 								continue;
 							}
 							sb.append("<tr><td colspan=\"4\"><font color=\"LEVEL\"><a action=\"bypass -h admin_quest_info " + quest.getName() + "\">" + quest.getName() + "</a></font></td></tr>");
+							questNames.add(quest.getName());
 						}
 					}
 				}
+				
+				final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
+				msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npc-quests.htm");
 				msg.replace("%quests%", sb.toString());
-				msg.replace("%objid%", npc.getObjectId());
-				msg.replace("%tmplid%", Integer.toString(npc.getTemplate().getId()));
+				msg.replace("%objid%", character.getObjectId());
 				msg.replace("%questName%", "");
 				activeChar.sendPacket(msg);
-				questset.clear();
 			}
 		}
 		else if (command.startsWith("admin_quest_info "))
 		{
-			if (activeChar.getTarget() == null)
+			final String questName = command.substring("admin_quest_info ".length());
+			final Quest quest = QuestManager.getInstance().getQuest(questName);
+			String events = "", npcs = "", items = "", timers = "";
+			int counter = 0;
+			if (quest == null)
 			{
-				activeChar.sendMessage("Get a target first.");
+				activeChar.sendMessage("Couldn't find quest or script with name " + questName + " !");
+				return false;
 			}
-			else if (!activeChar.getTarget().isNpc())
+			
+			final Set<EventType> listenerTypes = new TreeSet<>();
+			for (AbstractEventListener listener : quest.getListeners())
 			{
-				activeChar.sendMessage("Invalid Target.");
+				if (!listenerTypes.contains(listener.getType()))
+				{
+					events += ", " + listener.getType().name();
+					listenerTypes.add(listener.getType());
+					counter++;
+				}
+				if (counter > 10)
+				{
+					counter = 0;
+					break;
+				}
 			}
-			else
+			
+			final Set<Integer> npcIds = new TreeSet<>(quest.getRegisteredIds(ListenerRegisterType.NPC));
+			for (int npcId : npcIds)
 			{
-				String questName = command.substring("admin_quest_info ".length());
-				Quest quest = QuestManager.getInstance().getQuest(questName);
-				if (quest == null)
+				npcs += ", " + npcId;
+				counter++;
+				if (counter > 50)
 				{
-					return false;
+					counter = 0;
+					break;
 				}
-				if (quest.getListeners().size() > 20)
+			}
+			
+			if (!events.isEmpty())
+			{
+				events = listenerTypes.size() + ": " + events.substring(2);
+			}
+			
+			if (!npcs.isEmpty())
+			{
+				npcs = npcIds.size() + ": " + npcs.substring(2);
+			}
+			
+			if (quest.getRegisteredItemIds() != null)
+			{
+				for (int itemId : quest.getRegisteredItemIds())
 				{
-					return false;
-				}
-				L2Npc npc = L2Npc.class.cast(activeChar.getTarget());
-				StringBuilder sb = new StringBuilder();
-				final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
-				msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npc-quests.htm");
-				String events = "", npcs = "", items = "", timers = "";
-				
-				for (EventType type : EventType.values())
-				{
-					for (AbstractEventListener listener : npc.getListeners(type))
+					items += ", " + itemId;
+					counter++;
+					if (counter > 20)
 					{
-						if (listener.getOwner() == quest)
-						{
-							events += ", " + type.name();
-							for (int npcId : quest.getRegisteredIds(ListenerRegisterType.NPC))
-							{
-								npcs += ", " + npcId;
-							}
-						}
+						counter = 0;
+						break;
 					}
 				}
-				
-				if (!events.isEmpty())
-				{
-					events = events.substring(2);
-				}
-				
-				if (!npcs.isEmpty())
-				{
-					npcs = npcs.substring(2);
-				}
-				
-				if (quest.getRegisteredItemIds() != null)
-				{
-					for (int itemId : quest.getRegisteredItemIds())
-					{
-						items += ", " + itemId;
-					}
-					items = items.substring(2);
-				}
-				
-				for (List<QuestTimer> list : quest.getQuestTimers().values())
-				{
-					for (QuestTimer timer : list)
-					{
-						timers += "<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">" + timer.getName() + ":</font> <font color=00FF00>Active: " + timer.getIsActive() + " Repeatable: " + timer.getIsRepeating() + " Player: " + timer.getPlayer() + " Npc: " + timer.getNpc() + "</font></td></tr></table></td></tr>";
-					}
-				}
-				
-				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">ID:</font> <font color=00FF00>" + quest.getId() + "</font></td></tr></table></td></tr>");
-				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Name:</font> <font color=00FF00>" + quest.getName() + "</font></td></tr></table></td></tr>");
-				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Descr:</font> <font color=00FF00>" + quest.getDescr() + "</font></td></tr></table></td></tr>");
-				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Path:</font> <font color=00FF00>" + quest.getClass().getName().substring(0, quest.getClass().getName().lastIndexOf('.')).replaceAll("\\.", "/") + "</font></td></tr></table></td></tr>");
-				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Events:</font> <font color=00FF00>" + events + "</font></td></tr></table></td></tr>");
-				if (!npcs.isEmpty())
-				{
-					sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">NPCs:</font> <font color=00FF00>" + npcs + "</font></td></tr></table></td></tr>");
-				}
-				if (!items.isEmpty())
-				{
-					sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Items:</font> <font color=00FF00>" + items + "</font></td></tr></table></td></tr>");
-				}
-				if (!timers.isEmpty())
-				{
-					sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Timers:</font> <font color=00FF00></font></td></tr></table></td></tr>");
-					sb.append(timers);
-				}
-				msg.replace("%quests%", sb.toString());
-				msg.replace("%tmplid%", Integer.toString(npc.getId()));
-				msg.replace("%questName%", "<table><tr><td width=\"50\" align=\"left\"><a action=\"bypass -h admin_script_load " + quest.getName() + "\">Reload</a></td> <td width=\"150\"  align=\"center\"><a action=\"bypass -h admin_quest_info " + quest.getName() + "\">" + quest.getName() + "</a></td> <td width=\"50\" align=\"right\"><a action=\"bypass -h admin_script_unload " + quest.getName() + "\">Unload</a></tr></td></table>");
-				activeChar.sendPacket(msg);
+				items = quest.getRegisteredItemIds().length + ":" + items.substring(2);
 			}
+			
+			for (List<QuestTimer> list : quest.getQuestTimers().values())
+			{
+				for (QuestTimer timer : list)
+				{
+					timers += "<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">" + timer.getName() + ":</font> <font color=00FF00>Active: " + timer.getIsActive() + " Repeatable: " + timer.getIsRepeating() + " Player: " + timer.getPlayer() + " Npc: " + timer.getNpc() + "</font></td></tr></table></td></tr>";
+					counter++;
+					if (counter > 10)
+					{
+						break;
+					}
+				}
+			}
+			
+			final StringBuilder sb = new StringBuilder();
+			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">ID:</font> <font color=00FF00>" + quest.getId() + "</font></td></tr></table></td></tr>");
+			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Name:</font> <font color=00FF00>" + quest.getName() + "</font></td></tr></table></td></tr>");
+			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Descr:</font> <font color=00FF00>" + quest.getDescr() + "</font></td></tr></table></td></tr>");
+			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Path:</font> <font color=00FF00>" + quest.getClass().getName().substring(0, quest.getClass().getName().lastIndexOf('.')).replaceAll("\\.", "/") + "</font></td></tr></table></td></tr>");
+			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Events:</font> <font color=00FF00>" + events + "</font></td></tr></table></td></tr>");
+			if (!npcs.isEmpty())
+			{
+				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">NPCs:</font> <font color=00FF00>" + npcs + "</font></td></tr></table></td></tr>");
+			}
+			if (!items.isEmpty())
+			{
+				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Items:</font> <font color=00FF00>" + items + "</font></td></tr></table></td></tr>");
+			}
+			if (!timers.isEmpty())
+			{
+				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Timers:</font> <font color=00FF00></font></td></tr></table></td></tr>");
+				sb.append(timers);
+			}
+			
+			final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
+			msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npc-quests.htm");
+			msg.replace("%quests%", sb.toString());
+			msg.replace("%questName%", "<table><tr><td width=\"50\" align=\"left\"><a action=\"bypass -h admin_script_load " + quest.getName() + "\">Reload</a></td> <td width=\"150\"  align=\"center\"><a action=\"bypass -h admin_quest_info " + quest.getName() + "\">" + quest.getName() + "</a></td> <td width=\"50\" align=\"right\"><a action=\"bypass -h admin_script_unload " + quest.getName() + "\">Unload</a></tr></td></table>");
+			activeChar.sendPacket(msg);
 		}
 		return true;
 	}
