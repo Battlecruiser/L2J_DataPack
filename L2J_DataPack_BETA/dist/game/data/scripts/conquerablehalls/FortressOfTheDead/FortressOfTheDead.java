@@ -46,7 +46,7 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 	
 	public FortressOfTheDead()
 	{
-		super(-1, FortressOfTheDead.class.getSimpleName(), "conquerablehalls", FORTRESS_OF_DEAD);
+		super(FortressOfTheDead.class.getSimpleName(), "conquerablehalls", FORTRESS_OF_DEAD);
 		addKillId(LIDIA);
 		addKillId(ALFRED);
 		addKillId(GISELLE);

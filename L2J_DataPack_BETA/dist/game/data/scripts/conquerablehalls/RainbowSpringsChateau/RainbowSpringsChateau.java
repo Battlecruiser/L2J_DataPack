@@ -29,7 +29,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
@@ -38,7 +37,6 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ClanTable;
 import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
@@ -51,11 +49,11 @@ import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegeStatus;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
@@ -65,10 +63,8 @@ import com.l2jserver.gameserver.util.Util;
  * Rainbow Springs Chateau clan hall siege script.
  * @author BiggBoss
  */
-public final class RainbowSpringsChateau extends Quest
+public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 {
-	private static final Logger _log = Logger.getLogger(RainbowSpringsChateau.class.getName());
-	
 	protected static class SetFinalAttackers implements Runnable
 	{
 		@Override
@@ -149,6 +145,14 @@ public final class RainbowSpringsChateau extends Quest
 			spawnGourds();
 			_siegeEnd = ThreadPoolManager.getInstance().scheduleGeneral(new SiegeEnd(null), _rainbow.getSiegeLenght() - 120000);
 		}
+	}
+	
+	public static L2Clan _winner;
+	
+	@Override
+	public L2Clan getWinner()
+	{
+		return _winner;
 	}
 	
 	private static class SiegeEnd implements Runnable
@@ -250,22 +254,12 @@ public final class RainbowSpringsChateau extends Quest
 	
 	private static final String[] _textPassages =
 	{
-		"Text Passage 1",
-		"Passage Text 2",
-		"Im getting out of ideas",
-		"But i can write few more",
-		"Are five sentences",
-		"enough for this f*** siege?",
-		"i think ill add few more",
-		"like this one",
-		"Please, if you know the true passages",
-		"Contact me at L2JForum =)"
+		"Fight for Rainbow Springs!",
+		"Are you a match for the Yetti?",
+		"Did somebody order a knuckle sandwich?"
 	};
 	
-	private static final Skill[] DEBUFFS =
-	{
-		SkillData.getInstance().getSkill(0, 1)
-	};
+	private static final Skill[] DEBUFFS = {};
 	
 	protected static Map<Integer, Long> _warDecreesCount = new HashMap<>();
 	protected static List<L2Clan> _acceptedClans = new ArrayList<>(4);
@@ -276,9 +270,9 @@ public final class RainbowSpringsChateau extends Quest
 	protected static ScheduledFuture<?> _nextSiege, _siegeEnd;
 	private static String _registrationEnds;
 	
-	private RainbowSpringsChateau()
+	public RainbowSpringsChateau()
 	{
-		super(-1, RainbowSpringsChateau.class.getSimpleName(), "conquerablehalls");
+		super(RainbowSpringsChateau.class.getSimpleName(), "conquerablehalls", RAINBOW_SPRINGS);
 		
 		addFirstTalkId(MESSENGER);
 		addTalkId(MESSENGER);
@@ -686,7 +680,7 @@ public final class RainbowSpringsChateau extends Quest
 		return null;
 	}
 	
-	private static void portToArena(L2PcInstance leader, int arena)
+	private void portToArena(L2PcInstance leader, int arena)
 	{
 		if ((arena < 0) || (arena > 3))
 		{
@@ -867,7 +861,8 @@ public final class RainbowSpringsChateau extends Quest
 		}
 	}
 	
-	private static void loadAttackers()
+	@Override
+	public void loadAttackers()
 	{
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
@@ -898,7 +893,7 @@ public final class RainbowSpringsChateau extends Quest
 		int hour = c.get(Calendar.HOUR);
 		int mins = c.get(Calendar.MINUTE);
 		
-		_registrationEnds = year + "-" + month + "-" + day + " " + hour + ":" + mins;
+		_registrationEnds = year + "-" + month + "-" + day + " " + hour + (mins < 10 ? ":0" : ":") + mins;
 	}
 	
 	public static void launchSiege()
@@ -907,7 +902,8 @@ public final class RainbowSpringsChateau extends Quest
 		ThreadPoolManager.getInstance().executeGeneral(new SiegeStart());
 	}
 	
-	public static void endSiege()
+	@Override
+	public void endSiege()
 	{
 		if (_siegeEnd != null)
 		{
