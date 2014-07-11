@@ -541,27 +541,55 @@
 	</skill>
 	<skill id="5130" levels="1" name="Volcano">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="affectRange" val="300" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="300" />
 		<set name="targetType" val="ONE" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />		
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="5131" levels="1" name="Tsunami">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="affectRange" val="300" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="300" />
 		<set name="targetType" val="ONE" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />		
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="5132" levels="1" name="Cyclone">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="affectRange" val="300" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="300" />
 		<set name="targetType" val="ONE" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />		
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="5133" levels="1" name="Gehenna">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="affectRange" val="300" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="300" />
 		<set name="targetType" val="ONE" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />		
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="5134" levels="1" name="Anti-Summoning Field">
 		<!-- TODO: Update to H5! -->

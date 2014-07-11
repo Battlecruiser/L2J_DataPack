@@ -18,9 +18,7 @@
  */
 package ai.npc.NpcBuffers;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -49,31 +47,33 @@ public class NpcBufferAI implements Runnable
 			return;
 		}
 		
-		final Skill skill = _skillData.getSkill();
 		if ((_npc.getSummoner() == null) || !_npc.getSummoner().isPlayer())
 		{
 			return;
 		}
+		
+		final Skill skill = _skillData.getSkill();
 		final L2PcInstance player = _npc.getSummoner().getActingPlayer();
+		
 		switch (_skillData.getAffectScope())
 		{
 			case PARTY:
 			{
-				if (!player.isInParty())
+				if (player.isInParty())
 				{
-					if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, _npc, player, true))
+					for (L2PcInstance member : player.getParty().getMembers())
 					{
-						skill.applyEffects(player, player);
+						if (Util.checkIfInRange(skill.getAffectRange(), _npc, member, true))
+						{
+							skill.applyEffects(player, member);
+						}
 					}
 				}
 				else
 				{
-					for (L2PcInstance member : player.getParty().getMembers())
+					if (Util.checkIfInRange(skill.getAffectRange(), _npc, player, true))
 					{
-						if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, _npc, member, true))
-						{
-							skill.applyEffects(player, member);
-						}
+						skill.applyEffects(player, player);
 					}
 				}
 				break;
@@ -113,36 +113,28 @@ public class NpcBufferAI implements Runnable
 		if (target.isPlayable())
 		{
 			final L2PcInstance targetPlayer = target.getActingPlayer();
-			if (targetPlayer == null)
-			{
-				return false;
-			}
 			
-			if (player.isInParty())
-			{
-				final L2Party party = player.getParty();
-				
-				// Same party.
-				if (party.containsPlayer(targetPlayer))
-				{
-					return true;
-				}
-				
-				// Same command channel.
-				if (party.isInCommandChannel() && party.getCommandChannel().containsPlayer(targetPlayer))
-				{
-					return true;
-				}
-			}
-			
-			// Same clan.
-			if ((player.getClanId() > 0) && (player.getClanId() == target.getClanId()))
+			if (player == targetPlayer)
 			{
 				return true;
 			}
 			
-			// Same ally.
-			if ((player.getAllyId() > 0) && (player.getAllyId() == target.getAllyId()))
+			if (player.isInParty() && targetPlayer.isInParty() && (player.getParty() == targetPlayer.getParty()))
+			{
+				return true;
+			}
+			
+			if (player.getParty().isInCommandChannel() && (player.getParty().getCommandChannel() == target.getParty().getCommandChannel()))
+			{
+				return true;
+			}
+			
+			if ((player.getClanId() > 0) && (player.getClanId() == targetPlayer.getClanId()))
+			{
+				return true;
+			}
+			
+			if ((player.getAllyId() > 0) && (player.getAllyId() == targetPlayer.getAllyId()))
 			{
 				return true;
 			}
