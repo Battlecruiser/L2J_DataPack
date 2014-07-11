@@ -99,7 +99,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	
 	public FlagWar(String name, int hallId)
 	{
-		super(-1, name, "conquerablehalls/flagwar", hallId);
+		super(name, "conquerablehalls/flagwar", hallId);
 		addStartNpc(MESSENGER);
 		addFirstTalkId(MESSENGER);
 		addTalkId(MESSENGER);
@@ -406,23 +406,19 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 							doUnSpawns(data);
 						}
 						
-						ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
+						ThreadPoolManager.getInstance().scheduleGeneral(() ->
 						{
-							@Override
-							public void run()
+							for (int doorId : INNER_DOORS_TO_OPEN)
 							{
-								for (int doorId : INNER_DOORS_TO_OPEN)
-								{
-									_hall.openCloseDoor(doorId, false);
-								}
-								
-								for (Entry<Integer, ClanData> e : _data.entrySet())
-								{
-									doSpawns(e.getKey(), e.getValue());
-								}
-								
-								_hall.getSiegeZone().setIsActive(true);
+								_hall.openCloseDoor(doorId, false);
 							}
+							
+							for (Entry<Integer, ClanData> e : _data.entrySet())
+							{
+								doSpawns(e.getKey(), e.getValue());
+							}
+							
+							_hall.getSiegeZone().setIsActive(true);
 						}, 300000);
 					}
 				}

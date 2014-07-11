@@ -48,7 +48,7 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 	
 	private DevastatedCastle()
 	{
-		super(-1, DevastatedCastle.class.getSimpleName(), "conquerablehalls", DEVASTATED_CASTLE);
+		super(DevastatedCastle.class.getSimpleName(), "conquerablehalls", DEVASTATED_CASTLE);
 		addKillId(GUSTAV);
 		addSpawnId(MIKHAIL);
 		addSpawnId(DIETRICH);
