@@ -18,25 +18,47 @@
  */
 package handlers.targethandlers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 
 /**
- * @author UnAfraid
+ * @author St3eT
  */
 public class Ground implements ITargetTypeHandler
 {
-	
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		return new L2Character[]
+		final List<L2Character> targetList = new ArrayList<>();
+		final L2PcInstance player = (L2PcInstance) activeChar;
+		final int maxTargets = skill.getAffectLimit();
+		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
+		
+		for (L2Character character : activeChar.getKnownList().getKnownCharacters())
 		{
-			activeChar
-		};
+			if ((character != null) && character.isInsideRadius(player.getCurrentSkillWorldPosition(), skill.getAffectRange(), false, false))
+			{
+				if (!Skill.checkForAreaOffensiveSkills(activeChar, character, skill, srcInArena))
+				{
+					continue;
+				}
+				
+				if ((maxTargets > 0) && (targetList.size() >= maxTargets))
+				{
+					break;
+				}
+				targetList.add(character);
+			}
+		}
+		return targetList.isEmpty() ? EMPTY_TARGET_LIST : targetList.toArray(new L2Character[targetList.size()]);
 	}
 	
 	@Override
