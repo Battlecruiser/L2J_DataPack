@@ -269,7 +269,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 					
 					if ((clanLeader != null) && clanLeader.isAffectedBySkill(CLAN_GATE))
 					{
-						if (CallPc.checkSummonTargetStatus(clanLeader, player)) // TODO: Custom one, retail dont check it but for sure lets check same conditions like when summon player by skill.
+						if (CallPc.checkSummonTargetStatus(player, clanLeader)) // TODO: Custom one, retail dont check it but for sure lets check same conditions like when summon player by skill.
 						{
 							npc.setTarget(player);
 							npc.doCast(DISPLAY_CLAN_GATE.getSkill());
