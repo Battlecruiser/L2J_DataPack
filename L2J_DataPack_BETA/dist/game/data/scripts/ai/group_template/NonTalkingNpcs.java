@@ -52,6 +52,7 @@ public final class NonTalkingNpcs extends AbstractNpcAI
 		32715, 32716, 32717, // Lilith's group
 		32718, 32719, 32720, 32721, // Anakim's group
 		18839, // Wild Maguen
+		18915, // Divine Furnace
 	};
 	// @formatter:on
 	
