@@ -544,7 +544,7 @@ public final class Beleth extends AbstractNpcAI
 				{
 					npc.setTarget(player);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
-					int speed = npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed();
+					double speed = npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed();
 					int time = (int) (((distance2 - 890) / speed) * 1000);
 					ThreadPoolManager.getInstance().scheduleGeneral(new Cast(FIREBALL, npc), time);
 					
