@@ -21,7 +21,6 @@ package handlers.itemhandlers;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -71,7 +70,6 @@ public class ItemSkillsTemplate implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
 		for (SkillHolder skillInfo : skills)
 		{
 			if (skillInfo == null)
@@ -124,11 +122,6 @@ public class ItemSkillsTemplate implements IItemHandler
 				if (itemSkill.isSimultaneousCast() || ((item.getItem().hasImmediateEffect() || item.getItem().hasExImmediateEffect()) && itemSkill.isStatic()))
 				{
 					playable.doSimultaneousCast(itemSkill);
-					// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
-					if (!playable.isSummon() && activeChar.hasSummon())
-					{
-						activeChar.getSummon().doSimultaneousCast(itemSkill);
-					}
 				}
 				else
 				{
