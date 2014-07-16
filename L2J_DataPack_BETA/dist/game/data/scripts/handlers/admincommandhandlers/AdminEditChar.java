@@ -54,7 +54,6 @@ import com.l2jserver.gameserver.network.serverpackets.GMViewItemList;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowAll;
 import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
-import com.l2jserver.gameserver.network.serverpackets.SetSummonRemainTime;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.gameserver.util.HtmlUtil;
@@ -545,7 +544,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				L2PetInstance targetPet = (L2PetInstance) target;
 				targetPet.setCurrentFed(targetPet.getMaxFed());
-				targetPet.sendPacket(new SetSummonRemainTime(targetPet.getMaxFed(), targetPet.getCurrentFed()));
+				targetPet.broadcastStatusUpdate();
 			}
 			else
 			{
