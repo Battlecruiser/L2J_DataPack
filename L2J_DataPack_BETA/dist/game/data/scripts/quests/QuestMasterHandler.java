@@ -252,6 +252,7 @@ import quests.Q00381_LetsBecomeARoyalMember.Q00381_LetsBecomeARoyalMember;
 import quests.Q00382_KailsMagicCoin.Q00382_KailsMagicCoin;
 import quests.Q00385_YokeOfThePast.Q00385_YokeOfThePast;
 import quests.Q00401_PathToWarrior.Q00401_PathToWarrior;
+import quests.Q00407_PathOfTheElvenScout.Q00407_PathOfTheElvenScout;
 import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
 import quests.Q00420_LittleWing.Q00420_LittleWing;
 import quests.Q00421_LittleWingsBigAdventure.Q00421_LittleWingsBigAdventure;
@@ -618,6 +619,7 @@ public class QuestMasterHandler
 		Q00382_KailsMagicCoin.class,
 		Q00385_YokeOfThePast.class,
 		Q00401_PathToWarrior.class,
+		Q00407_PathOfTheElvenScout.class,
 		Q00416_PathOfTheOrcShaman.class,
 		Q00420_LittleWing.class,
 		Q00421_LittleWingsBigAdventure.class,
