@@ -218,8 +218,8 @@
 										<xs:element name="clan_list" minOccurs="0" maxOccurs="1">
 											<xs:complexType>
 												<xs:choice minOccurs="1" maxOccurs="unbounded">
-													<xs:element name="clan" />
-													<xs:element name="enemy_clan" />
+													<xs:element name="clan" type="xs:token" />
+													<xs:element name="ignore_npc_id" type="xs:nonNegativeInteger" />
 												</xs:choice>
 											</xs:complexType>
 										</xs:element>
