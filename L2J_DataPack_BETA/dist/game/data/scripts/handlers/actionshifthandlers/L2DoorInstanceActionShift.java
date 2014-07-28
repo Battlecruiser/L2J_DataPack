@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.actionhandlers;
+package handlers.actionshifthandlers;
 
 import com.l2jserver.gameserver.enums.InstanceType;
-import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.handler.IActionShiftHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.StaticObject;
 
-public class L2DoorInstanceActionShift implements IActionHandler
+public class L2DoorInstanceActionShift implements IActionShiftHandler
 {
 	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)

@@ -25,7 +25,7 @@
 	<property name="build.dist.game" location="${build.dist}/game" />
 	<property name="build.dist.login" location="${build.dist}/login" />
 
-	<target name="init" depends="checkRequirements,getChangelogDateVersion" description="Create the output directories.">
+	<target name="init" depends="checkRequirements,getDateAndVersion" description="Create the output directories.">
 		<mkdir dir="${build}" />
 	</target>
 
@@ -33,7 +33,6 @@
 		<sync todir="${build.dist}" includeemptydirs="true">
 			<fileset dir="dist" />
 		</sync>
-		<concat destfile="${build.dist.doc}/L2J_DataPack_CHANGELOG.txt">${l2j.changelog}</concat>
 		<concat destfile="${build.dist.game}/config/l2jdp-version.properties">version=${l2j.version}${line.separator}builddate=${build.tstamp}</concat>
 	</target>
 
@@ -51,11 +50,7 @@
 		</fail>
 	</target>
 
-	<target name="getChangelogDateVersion" description="Get Changelog, Date, Version.">
-		<exec dir="${basedir}" executable="svn" outputproperty="l2j.changelog">
-			<arg value="log" />
-			<arg value="--stop-on-copy" />
-		</exec>
+	<target name="getDateAndVersion" description="Get Date and Version.">
 		<tstamp>
 			<format property="build.tstamp" pattern="dd/MM/yyyy HH:mm" />
 		</tstamp>

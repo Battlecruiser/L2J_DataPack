@@ -4346,12 +4346,12 @@
 		<ai aggroRange="1000" clanHelpRange="300">
 			<clan_list>
 				<clan>CAVE_SERVANT</clan>
-				<enemy_clan>CAVE_SERVANT</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_WARRIOR</enemy_clan>
-				<enemy_clan>H_CAVE_SERVANT_WARRIOR</enemy_clan>
+				<ignore_npc_id>20236</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20237</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20238</ignore_npc_id> <!-- Cave Servant Warrior -->
+				<ignore_npc_id>20272</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20273</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20274</ignore_npc_id> <!-- Cave Servant Warrior -->
 			</clan_list>
 		</ai>
 		<drop_lists>
@@ -4445,14 +4445,14 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>CAVE_SERVANT</clan>
-				<enemy_clan>CAVE_SERVANT</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_CAPTAIN</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_WARRIOR</enemy_clan>
-				<enemy_clan>H_CAVE_SERVANT_CAPTAIN</enemy_clan>
-				<enemy_clan>H_CAVE_SERVANT_WARRIOR</enemy_clan>
+				<ignore_npc_id>20236</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20237</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20238</ignore_npc_id> <!-- Cave Servant Warrior -->
+				<ignore_npc_id>20239</ignore_npc_id> <!-- Cave Servant Captain -->
+				<ignore_npc_id>20272</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20273</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20274</ignore_npc_id> <!-- Cave Servant Warrior -->
+				<ignore_npc_id>20275</ignore_npc_id> <!-- Cave Servant Captain -->
 			</clan_list>
 		</ai>
 		<drop_lists>
@@ -5014,16 +5014,16 @@
 		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CAVE_SERVANT</clan>
-				<enemy_clan>CAVE_SERVANT</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_CAPTAIN</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_WARRIOR</enemy_clan>
-				<enemy_clan>H_CAVE_SERVANT_CAPTAIN</enemy_clan>
-				<enemy_clan>H_CAVE_SERVANT_WARRIOR</enemy_clan>
-				<enemy_clan>ROYAL_CAVE_SERVANT</enemy_clan>
-				<enemy_clan>ROYAL_CAVE_SERVANT_HOLD</enemy_clan>
+				<ignore_npc_id>20236</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20237</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20238</ignore_npc_id> <!-- Cave Servant Warrior -->
+				<ignore_npc_id>20239</ignore_npc_id> <!-- Cave Servant Captain -->
+				<ignore_npc_id>20240</ignore_npc_id> <!-- Royal Cave Servant -->
+				<ignore_npc_id>20272</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20273</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20274</ignore_npc_id> <!-- Cave Servant Warrior -->
+				<ignore_npc_id>20275</ignore_npc_id> <!-- Cave Servant Captain -->
+				<ignore_npc_id>20276</ignore_npc_id> <!-- Royal Cave Servant -->
 			</clan_list>
 		</ai>
 		<drop_lists>
@@ -7208,12 +7208,12 @@
 		<ai aggroRange="1000" clanHelpRange="300">
 			<clan_list>
 				<clan>CAVE_SERVANT</clan>
-				<enemy_clan>CAVE_SERVANT</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_WARRIOR</enemy_clan>
-				<enemy_clan>H_CAVE_SERVANT_WARRIOR</enemy_clan>
+				<ignore_npc_id>20236</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20237</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20238</ignore_npc_id> <!-- Cave Servant Warrior -->
+				<ignore_npc_id>20272</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20273</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20274</ignore_npc_id> <!-- Cave Servant Warrior -->
 			</clan_list>
 		</ai>
 		<collision>
@@ -7271,14 +7271,14 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CAVE_SERVANT</clan>
-				<enemy_clan>CAVE_SERVANT</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_CAPTAIN</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_WARRIOR</enemy_clan>
-				<enemy_clan>H_CAVE_SERVANT_CAPTAIN</enemy_clan>
-				<enemy_clan>H_CAVE_SERVANT_WARRIOR</enemy_clan>
+				<ignore_npc_id>20236</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20237</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20238</ignore_npc_id> <!-- Cave Servant Warrior -->
+				<ignore_npc_id>20239</ignore_npc_id> <!-- Cave Servant Captain -->
+				<ignore_npc_id>20272</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20273</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20274</ignore_npc_id> <!-- Cave Servant Warrior -->
+				<ignore_npc_id>20275</ignore_npc_id> <!-- Cave Servant Captain -->
 			</clan_list>
 		</ai>
 		<collision>
@@ -7334,16 +7334,16 @@
 		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CAVE_SERVANT</clan>
-				<enemy_clan>CAVE_SERVANT</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_CAPTAIN</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_WARRIOR</enemy_clan>
-				<enemy_clan>H_CAVE_SERVANT_CAPTAIN</enemy_clan>
-				<enemy_clan>H_CAVE_SERVANT_WARRIOR</enemy_clan>
-				<enemy_clan>ROYAL_CAVE_SERVANT</enemy_clan>
-				<enemy_clan>ROYAL_CAVE_SERVANT_HOLD</enemy_clan>
+				<ignore_npc_id>20236</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20237</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20238</ignore_npc_id> <!-- Cave Servant Warrior -->
+				<ignore_npc_id>20239</ignore_npc_id> <!-- Cave Servant Captain -->
+				<ignore_npc_id>20240</ignore_npc_id> <!-- Royal Cave Servant -->
+				<ignore_npc_id>20272</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20273</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20274</ignore_npc_id> <!-- Cave Servant Warrior -->
+				<ignore_npc_id>20275</ignore_npc_id> <!-- Cave Servant Captain -->
+				<ignore_npc_id>20276</ignore_npc_id> <!-- Royal Cave Servant -->
 			</clan_list>
 		</ai>
 		<collision>
@@ -7813,18 +7813,18 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300">
 			<clan_list>
-				<enemy_clan>CAVE_KEEPER</enemy_clan>
-				<enemy_clan>CAVE_KEEPER_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_ARCHER_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_CAPTAIN</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_HOLD</enemy_clan>
-				<enemy_clan>CAVE_SERVANT_WARRIOR</enemy_clan>
-				<enemy_clan>H_CAVE_SERVANT_CAPTAIN</enemy_clan>
-				<enemy_clan>H_CAVE_SERVANT_WARRIOR</enemy_clan>
-				<enemy_clan>ROYAL_CAVE_SERVANT</enemy_clan>
-				<enemy_clan>ROYAL_CAVE_SERVANT_HOLD</enemy_clan>
+				<ignore_npc_id>20236</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20237</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20238</ignore_npc_id> <!-- Cave Servant Warrior -->
+				<ignore_npc_id>20239</ignore_npc_id> <!-- Cave Servant Captain -->
+				<ignore_npc_id>20240</ignore_npc_id> <!-- Royal Cave Servant -->
+				<ignore_npc_id>20246</ignore_npc_id> <!-- Cave Keeper -->
+				<ignore_npc_id>20272</ignore_npc_id> <!-- Cave Servant -->
+				<ignore_npc_id>20273</ignore_npc_id> <!-- Cave Servant Archer -->
+				<ignore_npc_id>20274</ignore_npc_id> <!-- Cave Servant Warrior -->
+				<ignore_npc_id>20275</ignore_npc_id> <!-- Cave Servant Captain -->
+				<ignore_npc_id>20276</ignore_npc_id> <!-- Royal Cave Servant -->
+				<ignore_npc_id>20277</ignore_npc_id> <!-- Cave Keeper -->
 			</clan_list>
 		</ai>
 		<collision>
