@@ -16,7 +16,7 @@
 				<run ground="160" />
 			</speed>
 		</stats>
-		<status canBeSown="true" />
+		<status />
 		<skill_list>
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -52,7 +52,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" canMove="false" canBeSown="true" />
+		<status attackable="false" canMove="false" />
 		<skill_list>
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -88,7 +88,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -125,7 +125,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -163,7 +163,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -202,7 +202,7 @@
 			</speed>
 			<hit_time>520</hit_time>
 		</stats>
-		<status attackable="false" flying="true" canBeSown="true" />
+		<status attackable="false" flying="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -240,7 +240,7 @@
 			</speed>
 			<hit_time>520</hit_time>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -286,7 +286,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" />
 		<skill_list>
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -333,7 +333,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" />
 		<skill_list>
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -371,7 +371,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -409,7 +409,7 @@
 			</speed>
 			<hit_time>520</hit_time>
 		</stats>
-		<status attackable="false" targetable="false" flying="true" canBeSown="true" />
+		<status attackable="false" targetable="false" flying="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -445,7 +445,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" canMove="false" canBeSown="true" />
+		<status attackable="false" canMove="false" />
 		<skill_list>
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -480,7 +480,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" targetable="false" canMove="false" canBeSown="true" />
+		<status attackable="false" targetable="false" canMove="false" />
 		<skill_list>
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -515,7 +515,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -550,7 +550,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -585,7 +585,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -620,7 +620,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -655,7 +655,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -690,7 +690,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
@@ -727,7 +727,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status canBeSown="true" />
+		<status />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
@@ -765,7 +765,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status canBeSown="true" />
+		<status />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
@@ -803,7 +803,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status canBeSown="true" />
+		<status />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
@@ -843,7 +843,7 @@
 			</speed>
 			<hit_time>520</hit_time>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -882,7 +882,7 @@
 			</speed>
 			<hit_time>520</hit_time>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -921,7 +921,7 @@
 			</speed>
 			<hit_time>520</hit_time>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -960,7 +960,7 @@
 			</speed>
 			<hit_time>520</hit_time>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
@@ -998,7 +998,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" targetable="false" canMove="false" canBeSown="true" />
+		<status attackable="false" targetable="false" canMove="false" />
 		<skill_list>
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -1033,7 +1033,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
@@ -1071,7 +1071,7 @@
 			</speed>
 			<hit_time>520</hit_time>
 		</stats>
-		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
+		<status attackable="false" targetable="false" showName="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -1109,7 +1109,7 @@
 			</speed>
 			<hit_time>520</hit_time>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -1146,7 +1146,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
@@ -1183,7 +1183,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" canMove="false" canBeSown="true" />
+		<status attackable="false" canMove="false" />
 		<skill_list>
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -1218,7 +1218,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" canMove="false" canBeSown="true" />
+		<status attackable="false" canMove="false" />
 		<skill_list>
 			<skill id="4390" level="1" /> <!--NPC Abnormal Immunity -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -1253,7 +1253,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1287,7 +1287,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1360,7 +1360,7 @@
 				<run ground="160" />
 			</speed>
 		</stats>
-		<status canMove="false" />
+		<status canMove="false" canBeSown="true" />
 		<collision>
 			<radius normal="25.5" />
 			<height normal="27" />
@@ -1402,7 +1402,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status targetable="false" canMove="false" />
+		<status targetable="false" canMove="false" canBeSown="true" />
 		<collision>
 			<radius normal="0.01" />
 			<height normal="0.01" />
@@ -1492,7 +1492,7 @@
 				<run ground="160" />
 			</speed>
 		</stats>
-		<status targetable="false" canMove="false" />
+		<status targetable="false" canMove="false" canBeSown="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="20" />
@@ -1513,7 +1513,7 @@
 				<run ground="160" />
 			</speed>
 		</stats>
-		<status targetable="false" canMove="false" />
+		<status targetable="false" canMove="false" canBeSown="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="20" />
@@ -1534,7 +1534,7 @@
 				<run ground="160" />
 			</speed>
 		</stats>
-		<status targetable="false" canMove="false" />
+		<status targetable="false" canMove="false" canBeSown="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="20" />
@@ -1555,7 +1555,7 @@
 				<run ground="160" />
 			</speed>
 		</stats>
-		<status targetable="false" canMove="false" />
+		<status targetable="false" canMove="false" canBeSown="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="20" />
@@ -1576,7 +1576,7 @@
 				<run ground="160" />
 			</speed>
 		</stats>
-		<status canMove="false" />
+		<status canMove="false" canBeSown="true" />
 		<collision>
 			<radius normal="0.01" />
 			<height normal="5.5" />
