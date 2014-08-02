@@ -26,7 +26,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4028" level="2" /> <!--NPC Might -->
 			<skill id="4071" level="3" /> <!--Resist Bow/Crossbow Weapons -->
@@ -113,7 +113,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4074" level="1" /> <!--NPC Haste -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -160,7 +160,7 @@
 			</speed>
 			<hit_time>480</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4074" level="1" /> <!--NPC Haste -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -207,7 +207,7 @@
 			</speed>
 			<hit_time>480</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4028" level="2" /> <!--NPC Might -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -253,7 +253,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4028" level="2" /> <!--NPC Might -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -342,7 +342,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4028" level="3" /> <!--NPC Might -->
 			<skill id="4071" level="3" /> <!--Resist Bow/Crossbow Weapons -->
@@ -467,7 +467,7 @@
 				<run ground="150" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4071" level="3" /> <!--Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="2" /> <!--NPC Haste -->
@@ -585,7 +585,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="9" /> <!--Resist M. Atk. -->
@@ -641,7 +641,7 @@
 				<run ground="150" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4276" level="5" /> <!--Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
@@ -743,7 +743,7 @@
 				<run ground="66" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4276" level="5" /> <!--Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="11" /> <!--HP Increase (3x) -->
@@ -832,7 +832,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1011,7 +1011,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" targetable="false" showName="false" />
+		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1053,7 +1053,7 @@
 			</speed>
 			<hit_time>640</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="8" /> <!--HP Increase (1/4x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1135,7 +1135,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" targetable="false" showName="false" />
+		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -1171,7 +1171,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" targetable="false" showName="false" noSleepMode="true" />
+		<status attackable="false" targetable="false" showName="false" noSleepMode="true" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -1208,7 +1208,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" targetable="false" showName="false" />
+		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1245,7 +1245,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1283,7 +1283,7 @@
 			</speed>
 			<hit_time>480</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1321,7 +1321,7 @@
 			</speed>
 			<hit_time>480</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1359,7 +1359,7 @@
 			</speed>
 			<hit_time>480</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1396,7 +1396,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1435,7 +1435,7 @@
 				<run ground="160" />
 			</speed>
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4032" level="9" /> <!--NPC Strike -->
 			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
@@ -1476,7 +1476,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" targetable="false" showName="false" />
+		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1511,7 +1511,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" targetable="false" showName="false" />
+		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1551,7 +1551,7 @@
 			</speed>
 			<hit_time>100</hit_time>
 		</stats>
-		<status attackable="false" targetable="false" />
+		<status attackable="false" targetable="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -1589,7 +1589,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" targetable="false" showName="false" />
+		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1624,7 +1624,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" targetable="false" showName="false" />
+		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1660,7 +1660,7 @@
 			</speed>
 			<hit_time>460</hit_time>
 		</stats>
-		<status attackable="false" targetable="false" showName="false" />
+		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1695,7 +1695,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" showName="false" />
+		<status attackable="false" showName="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1730,7 +1730,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1772,7 +1772,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" targetable="false" showName="false" />
+		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -1808,7 +1808,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" targetable="false" showName="false" />
+		<status attackable="false" targetable="false" showName="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
