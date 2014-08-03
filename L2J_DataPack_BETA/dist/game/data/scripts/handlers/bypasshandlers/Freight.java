@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.PcFreight;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.PackageToList;
 import com.l2jserver.gameserver.network.serverpackets.WareHouseWithdrawalList;
@@ -53,6 +54,13 @@ public class Freight implements IBypassHandler
 				if (freight.getSize() > 0)
 				{
 					activeChar.setActiveWarehouse(freight);
+					for (L2ItemInstance i : activeChar.getActiveWarehouse().getItems())
+					{
+						if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
+						{
+							activeChar.getActiveWarehouse().destroyItem("L2ItemInstance", i, activeChar, null);
+						}
+					}
 					activeChar.sendPacket(new WareHouseWithdrawalList(activeChar, WareHouseWithdrawalList.FREIGHT));
 				}
 				else
