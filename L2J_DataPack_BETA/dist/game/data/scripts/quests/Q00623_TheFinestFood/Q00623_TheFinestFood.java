@@ -114,7 +114,7 @@ public final class Q00623_TheFinestFood extends Quest
 							giveAdena(player, 73000, true);
 							addExpAndSp(player, 230000, 18200);
 						}
-						qs.exitQuest(false, true);
+						qs.exitQuest(true, true);
 						htmltext = event;
 					}
 					else
