@@ -389,7 +389,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				AdminHtml.showAdminHtml(activeChar, "charclasses.htm");
+				AdminHtml.showAdminHtml(activeChar, "setclass/human_fighter.htm");
 			}
 			catch (NumberFormatException e)
 			{
