@@ -21,6 +21,7 @@ package ai.npc.ForgeOfTheGods;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
@@ -81,45 +82,51 @@ public final class Rooney extends AbstractNpcAI
 	private Rooney()
 	{
 		super(Rooney.class.getSimpleName(), "ai/npc");
-		final L2Npc npc = addSpawn(ROONEY, LOCATIONS[getRandom(LOCATIONS.length)], false, 0);
-		startQuestTimer("checkArea", 1000, npc, null, true);
+		addSeeCreatureId(ROONEY);
+		addSpawn(ROONEY, LOCATIONS[getRandom(LOCATIONS.length)], false, 0);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		switch (event)
+		if (event.equals("teleport") && !npc.isDecayed())
 		{
-			case "checkArea":
-				if (!npc.getKnownList().getKnownPlayersInRadius(300).isEmpty())
-				{
-					cancelQuestTimers("checkArea");
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WELCOME);
-					startQuestTimer("say1", 60000, npc, null);
-				}
-				break;
-			case "say1":
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.HURRY_HURRY);
-				startQuestTimer("say2", 60000, npc, null);
-				break;
-			case "say2":
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.I_AM_NOT_THAT_TYPE_OF_PERSON_WHO_STAYS_IN_ONE_PLACE_FOR_A_LONG_TIME);
-				startQuestTimer("say3", 60000, npc, null);
-				break;
-			case "say3":
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.ITS_HARD_FOR_ME_TO_KEEP_STANDING_LIKE_THIS);
-				startQuestTimer("say4", 60000, npc, null);
-				break;
-			case "say4":
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WHY_DONT_I_GO_THAT_WAY_THIS_TIME);
-				startQuestTimer("teleport", 60000, npc, null);
-				break;
-			case "teleport":
-				npc.teleToLocation(LOCATIONS[getRandom(LOCATIONS.length)], false);
-				startQuestTimer("checkArea", 1000, npc, null, true);
-				break;
+			final int aiVal = npc.getScriptValue();
+			switch (aiVal)
+			{
+				case 1:
+					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.HURRY_HURRY);
+					break;
+				case 2:
+					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.I_AM_NOT_THAT_TYPE_OF_PERSON_WHO_STAYS_IN_ONE_PLACE_FOR_A_LONG_TIME);
+					break;
+				case 3:
+					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.ITS_HARD_FOR_ME_TO_KEEP_STANDING_LIKE_THIS);
+					break;
+				case 4:
+					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WHY_DONT_I_GO_THAT_WAY_THIS_TIME);
+					break;
+				default:
+					npc.teleToLocation(LOCATIONS[getRandom(LOCATIONS.length)], false);
+					npc.setScriptValue(0);
+					return null;
+			}
+			npc.setScriptValue(aiVal + 1);
+			startQuestTimer("teleport", 60000, npc, null);
 		}
 		return null;
+	}
+	
+	@Override
+	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	{
+		if (creature.isPlayer() && npc.isScriptValue(0))
+		{
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WELCOME);
+			startQuestTimer("teleport", 60000, npc, null);
+			npc.setScriptValue(1);
+		}
+		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public static void main(String[] args)

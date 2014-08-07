@@ -21,8 +21,7 @@ package ai.npc.Dorian;
 import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheForestOfTheDead;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
@@ -44,46 +43,25 @@ public final class Dorian extends AbstractNpcAI
 	private Dorian()
 	{
 		super(Dorian.class.getSimpleName(), "ai/npc");
-		addSpawnId(DORIAN);
-		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(DORIAN))
-		{
-			startQuestTimer("checkArea", 3000, spawn.getLastSpawn(), null, true);
-		}
+		addSeeCreatureId(DORIAN);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
 	{
-		if (event.equals("checkArea"))
+		if (creature.isPlayer())
 		{
-			if (npc.isDecayed())
+			final L2PcInstance pl = creature.getActingPlayer();
+			final QuestState qs = pl.getQuestState(Q00024_InhabitantsOfTheForestOfTheDead.class.getSimpleName());
+			if ((qs != null) && qs.isCond(3))
 			{
-				cancelQuestTimers("checkArea");
-			}
-			else
-			{
-				for (L2PcInstance pl : npc.getKnownList().getKnownPlayersInRadius(300))
-				{
-					final QuestState qs = pl.getQuestState(Q00024_InhabitantsOfTheForestOfTheDead.class.getSimpleName());
-					if ((qs != null) && qs.isCond(3))
-					{
-						qs.takeItems(SILVER_CROSS, -1);
-						qs.giveItems(BROKEN_SILVER_CROSS, 1);
-						qs.setCond(4, true);
-						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THAT_SIGN);
-					}
-				}
+				takeItems(pl, SILVER_CROSS, -1);
+				giveItems(pl, BROKEN_SILVER_CROSS, 1);
+				qs.setCond(4, true);
+				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THAT_SIGN);
 			}
 		}
-		return null;
-	}
-	
-	@Override
-	public String onSpawn(L2Npc npc)
-	{
-		startQuestTimer("checkArea", 3000, npc, null, true);
-		return null;
+		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public static void main(String[] args)
