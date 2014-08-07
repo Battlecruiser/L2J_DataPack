@@ -50,25 +50,23 @@ public final class TarBeetle extends AbstractNpcAI
 		super(TarBeetle.class.getSimpleName(), "ai/npc");
 		addAggroRangeEnterId(TAR_BEETLE);
 		addSpellFinishedId(TAR_BEETLE);
-		spawn.startTasks();
 	}
 	
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if ((spawn.getBeetle(npc).getScriptValue() > 0) && canCastSkill(npc))
+		if (npc.getScriptValue() > 0)
 		{
-			int level = 0;
 			final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(TAR_SPITE);
-			if (info != null)
-			{
-				level = info.getSkill().getAbnormalLvl();
-			}
+			final int level = (info != null) ? info.getSkill().getAbnormalLvl() : 0;
 			if (level < 3)
 			{
-				
-				npc.setTarget(player);
-				npc.doCast(SKILLS[level].getSkill());
+				final Skill skill = SKILLS[level].getSkill();
+				if (!npc.isSkillDisabled(skill))
+				{
+					npc.setTarget(player);
+					npc.doCast(skill);
+				}
 			}
 		}
 		return super.onAggroRangeEnter(npc, player, isSummon);
@@ -79,29 +77,24 @@ public final class TarBeetle extends AbstractNpcAI
 	{
 		if ((skill != null) && (skill.getId() == TAR_SPITE))
 		{
-			int val = spawn.getBeetle(npc).getScriptValue() - 1;
+			final int val = npc.getScriptValue() - 1;
 			if ((val <= 0) || (SKILLS[0].getSkill().getMpConsume() > npc.getCurrentMp()))
 			{
 				spawn.removeBeetle(npc);
 			}
 			else
 			{
-				spawn.getBeetle(npc).isScriptValue(val);
+				npc.setScriptValue(val);
 			}
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
-	private boolean canCastSkill(L2Npc npc)
+	@Override
+	public boolean unload()
 	{
-		for (SkillHolder holder : SKILLS)
-		{
-			if (npc.isSkillDisabled(holder.getSkill()))
-			{
-				return false;
-			}
-		}
-		return true;
+		spawn.unload();
+		return super.unload();
 	}
 	
 	public static void main(String[] args)

@@ -18,10 +18,14 @@
  */
 package ai.group_template;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
 
 /**
  * Isle of Prayer AI.
@@ -35,120 +39,41 @@ public final class IsleOfPrayer extends AbstractNpcAI
 	private static final int BLUE_SEED_OF_EVIL_SHARD = 9595;
 	private static final int RED_SEED_OF_EVIL_SHARD = 9596;
 	// Monsters
-	private static final int ISLAND_GUARDIAN = 22257;
-	private static final int WHITE_SAND_MIRAGE = 22258;
-	private static final int MUDDY_CORAL = 22259;
-	private static final int KLEOPORA = 22260;
-	private static final int SEYCHELLES = 22261;
-	private static final int NAIAD = 22262;
-	private static final int SONNERATIA = 22263;
-	private static final int CASTALIA = 22264;
-	private static final int CHRYSOCOLLA = 22265;
-	private static final int PYTHIA = 22266;
-	private static final int DARK_WATER_DRAGON = 22267;
-	private static final int SHADE1 = 22268;
-	private static final int SHADE2 = 22269;
-	private static final int WATER_DRAGON_DETRACTOR1 = 22270;
-	private static final int WATER_DRAGON_DETRACTOR2 = 22271;
+	private static final Map<Integer, ItemChanceHolder> MONSTERS = new HashMap<>();
+	static
+	{
+		MONSTERS.put(22257, new ItemChanceHolder(YELLOW_SEED_OF_EVIL_SHARD, 2087)); // Island Guardian
+		MONSTERS.put(22258, new ItemChanceHolder(YELLOW_SEED_OF_EVIL_SHARD, 2147)); // White Sand Mirage
+		MONSTERS.put(22259, new ItemChanceHolder(YELLOW_SEED_OF_EVIL_SHARD, 2642)); // Muddy Coral
+		MONSTERS.put(22260, new ItemChanceHolder(YELLOW_SEED_OF_EVIL_SHARD, 2292)); // Kleopora
+		MONSTERS.put(22261, new ItemChanceHolder(GREEN_SEED_OF_EVIL_SHARD, 1171)); // Seychelles
+		MONSTERS.put(22262, new ItemChanceHolder(GREEN_SEED_OF_EVIL_SHARD, 1173)); // Naiad
+		MONSTERS.put(22263, new ItemChanceHolder(GREEN_SEED_OF_EVIL_SHARD, 1403)); // Sonneratia
+		MONSTERS.put(22264, new ItemChanceHolder(GREEN_SEED_OF_EVIL_SHARD, 1207)); // Castalia
+		MONSTERS.put(22265, new ItemChanceHolder(RED_SEED_OF_EVIL_SHARD, 575)); // Chrysocolla
+		MONSTERS.put(22266, new ItemChanceHolder(RED_SEED_OF_EVIL_SHARD, 493)); // Pythia
+		MONSTERS.put(22267, new ItemChanceHolder(RED_SEED_OF_EVIL_SHARD, 770)); // Dark Water Dragon
+		MONSTERS.put(22268, new ItemChanceHolder(BLUE_SEED_OF_EVIL_SHARD, 987)); // Shade
+		MONSTERS.put(22269, new ItemChanceHolder(BLUE_SEED_OF_EVIL_SHARD, 995)); // Shade
+		MONSTERS.put(22270, new ItemChanceHolder(BLUE_SEED_OF_EVIL_SHARD, 1008)); // Water Dragon Detractor
+		MONSTERS.put(22271, new ItemChanceHolder(BLUE_SEED_OF_EVIL_SHARD, 1008)); // Water Dragon Detractor
+	}
 	
 	private IsleOfPrayer()
 	{
 		super(IsleOfPrayer.class.getSimpleName(), "ai/group_template");
-		addKillId(ISLAND_GUARDIAN, WHITE_SAND_MIRAGE, MUDDY_CORAL, KLEOPORA, SEYCHELLES, NAIAD, SONNERATIA, CASTALIA, CHRYSOCOLLA, PYTHIA, DARK_WATER_DRAGON, SHADE1, SHADE2, WATER_DRAGON_DETRACTOR1, WATER_DRAGON_DETRACTOR2);
+		addKillId(MONSTERS.keySet());
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		switch (npc.getId())
+		final ItemChanceHolder holder = MONSTERS.get(npc.getId());
+		if (getRandom(10000) <= holder.getChance())
 		{
-			case ISLAND_GUARDIAN:
-			{
-				doDrop(killer, npc, YELLOW_SEED_OF_EVIL_SHARD, 2087);
-				break;
-			}
-			case WHITE_SAND_MIRAGE:
-			{
-				doDrop(killer, npc, YELLOW_SEED_OF_EVIL_SHARD, 2147);
-				break;
-			}
-			case MUDDY_CORAL:
-			{
-				doDrop(killer, npc, YELLOW_SEED_OF_EVIL_SHARD, 2642);
-				break;
-			}
-			case KLEOPORA:
-			{
-				doDrop(killer, npc, YELLOW_SEED_OF_EVIL_SHARD, 2292);
-				break;
-			}
-			case SEYCHELLES:
-			{
-				doDrop(killer, npc, GREEN_SEED_OF_EVIL_SHARD, 1171);
-				break;
-			}
-			case NAIAD:
-			{
-				doDrop(killer, npc, GREEN_SEED_OF_EVIL_SHARD, 1173);
-				break;
-			}
-			case SONNERATIA:
-			{
-				doDrop(killer, npc, GREEN_SEED_OF_EVIL_SHARD, 1403);
-				break;
-			}
-			case CASTALIA:
-			{
-				doDrop(killer, npc, GREEN_SEED_OF_EVIL_SHARD, 1207);
-				break;
-			}
-			case CHRYSOCOLLA:
-			{
-				doDrop(killer, npc, RED_SEED_OF_EVIL_SHARD, 575);
-				break;
-			}
-			case PYTHIA:
-			{
-				doDrop(killer, npc, RED_SEED_OF_EVIL_SHARD, 493);
-				break;
-			}
-			case DARK_WATER_DRAGON:
-			{
-				doDrop(killer, npc, RED_SEED_OF_EVIL_SHARD, 770);
-				break;
-			}
-			case SHADE1:
-			{
-				doDrop(killer, npc, BLUE_SEED_OF_EVIL_SHARD, 987);
-				break;
-			}
-			case SHADE2:
-			{
-				doDrop(killer, npc, BLUE_SEED_OF_EVIL_SHARD, 995);
-				break;
-			}
-			case WATER_DRAGON_DETRACTOR1:
-			case WATER_DRAGON_DETRACTOR2:
-			{
-				doDrop(killer, npc, BLUE_SEED_OF_EVIL_SHARD, 1008);
-				break;
-			}
+			npc.dropItem(killer, holder);
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	/**
-	 * @param killer the player that kills the NPC
-	 * @param npc the killed NPC that will drop
-	 * @param itemId the item Id to drop
-	 * @param chance the chance of this NPC to drop the item
-	 */
-	private static final void doDrop(L2PcInstance killer, L2Npc npc, int itemId, int chance)
-	{
-		if (getRandom(1000) <= chance)
-		{
-			npc.dropItem(killer, itemId, 1);
-		}
 	}
 	
 	public static void main(String[] args)

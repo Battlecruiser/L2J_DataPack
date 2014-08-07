@@ -19,13 +19,10 @@
 package ai.npc.ForgeOfTheGods;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
+import java.util.concurrent.ScheduledFuture;
 
-import javolution.util.FastMap;
+import javolution.util.FastList;
 
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -45,14 +42,9 @@ import com.l2jserver.util.Rnd;
  */
 public class TarBeetleSpawn extends DocumentParser
 {
-	private static final Map<Integer, SpawnZone> _spawnZoneList = new HashMap<>();
-	private static final Map<Integer, L2Npc> _spawnList = new FastMap<>();
-	
-	public static List<Integer> lowerZones = new ArrayList<>();
-	public static List<Integer> upperZones = new ArrayList<>();
-	
-	public static int lowerNpcCount = 0;
-	public static int upperNpcCount = 0;
+	private final List<SpawnZone> zones = new ArrayList<>();
+	private ScheduledFuture<?> spawnTask;
+	private ScheduledFuture<?> shotTask;
 	
 	public TarBeetleSpawn()
 	{
@@ -62,139 +54,101 @@ public class TarBeetleSpawn extends DocumentParser
 	@Override
 	public void load()
 	{
-		_spawnZoneList.clear();
-		_spawnList.clear();
 		parseDatapackFile("data/spawnZones/tar_beetle.xml");
-		_log.info(TarBeetleSpawn.class.getSimpleName() + ": Loaded " + _spawnZoneList.size() + " spawn zones.");
+		if (!zones.isEmpty())
+		{
+			spawnTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() -> zones.forEach(SpawnZone::refreshSpawn), 1000, 60000);
+			shotTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() -> zones.forEach(SpawnZone::refreshShots), 300000, 300000);
+		}
 	}
 	
 	@Override
 	protected void parseDocument()
 	{
-		final Node n = getCurrentDocument().getFirstChild();
-		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+		int i = 0;
+		for (Node d = getCurrentDocument().getFirstChild(); d != null; d = d.getNextSibling())
 		{
-			if (d.getNodeName().equals("spawnZones"))
+			if (d.getNodeName().equals("list"))
 			{
 				for (Node r = d.getFirstChild(); r != null; r = r.getNextSibling())
 				{
-					if (r.getNodeName().equals("zone"))
+					if (r.getNodeName().equals("spawnZone"))
 					{
 						NamedNodeMap attrs = r.getAttributes();
-						int id = parseInteger(attrs, "id");
-						int minZ = parseInteger(attrs, "minZ");
-						int maxZ = parseInteger(attrs, "maxZ");
-						String type = parseString(attrs, "type");
-						if (type.equals("upper"))
+						final int npcCount = parseInteger(attrs, "maxNpcCount");
+						final SpawnZone sp = new SpawnZone(npcCount, i);
+						for (Node b = r.getFirstChild(); b != null; b = b.getNextSibling())
 						{
-							upperZones.add(id);
-						}
-						else if (type.equals("lower"))
-						{
-							lowerZones.add(id);
-						}
-						
-						int[] bZones = null;
-						String bZonesStr = parseString(attrs, "bZones", "");
-						if (!bZonesStr.isEmpty())
-						{
-							String[] str = bZonesStr.split(";");
-							bZones = new int[str.length];
-							for (int i = 0; i < str.length; i++)
+							if (b.getNodeName().equals("zone"))
 							{
-								bZones[i] = Integer.parseInt(str[i]);
+								attrs = b.getAttributes();
+								final int minZ = parseInteger(attrs, "minZ");
+								final int maxZ = parseInteger(attrs, "maxZ");
+								final Zone zone = new Zone();
+								for (Node c = b.getFirstChild(); c != null; c = c.getNextSibling())
+								{
+									attrs = c.getAttributes();
+									if (c.getNodeName().equals("point"))
+									{
+										final int x = parseInteger(attrs, "x");
+										final int y = parseInteger(attrs, "y");
+										zone.add(x, y, minZ, maxZ, 0);
+									}
+									else if (c.getNodeName().equals("bannedZone"))
+									{
+										final Zone bannedZone = new Zone();
+										final int bMinZ = parseInteger(attrs, "minZ");
+										final int bMaxZ = parseInteger(attrs, "maxZ");
+										for (Node f = c.getFirstChild(); f != null; f = f.getNextSibling())
+										{
+											if (f.getNodeName().equals("point"))
+											{
+												attrs = f.getAttributes();
+												int x = parseInteger(attrs, "x");
+												int y = parseInteger(attrs, "y");
+												bannedZone.add(x, y, bMinZ, bMaxZ, 0);
+											}
+										}
+										zone.addBannedZone(bannedZone);
+									}
+								}
+								sp.addZone(zone);
 							}
 						}
-						
-						SpawnZone zone = new SpawnZone(id, bZones);
-						for (Node c = r.getFirstChild(); c != null; c = c.getNextSibling())
-						{
-							if (c.getNodeName().equals("point"))
-							{
-								attrs = c.getAttributes();
-								int x = parseInteger(attrs, "x");
-								int y = parseInteger(attrs, "y");
-								zone.add(x, y, minZ, maxZ, 0);
-							}
-						}
-						_spawnZoneList.put(id, zone);
+						zones.add(i++, sp);
 					}
 				}
 			}
 		}
 	}
 	
-	public void removeBeetle(L2Npc npc)
+	public final void unload()
 	{
+		if (spawnTask != null)
+		{
+			spawnTask.cancel(false);
+		}
+		if (shotTask != null)
+		{
+			shotTask.cancel(false);
+		}
+		zones.forEach(SpawnZone::unload);
+		zones.clear();
+	}
+	
+	public final void removeBeetle(L2Npc npc)
+	{
+		zones.get(npc.getVariables().getInt("zoneIndex", 0)).removeSpawn(npc);
 		npc.deleteMe();
-		_spawnList.remove(npc.getObjectId());
-		if (npc.getSpawn().getZ() < -5000)
-		{
-			lowerNpcCount--;
-		}
-		else
-		{
-			upperNpcCount--;
-		}
 	}
 	
-	public void spawn(List<Integer> zone)
+	private final class Zone extends L2Territory
 	{
-		try
-		{
-			Collections.shuffle(zone);
-			int[] loc = getSpawnZoneById(zone.get(0)).getRandomPoint();
-			
-			final L2Spawn spawn = new L2Spawn(NpcData.getInstance().getTemplate(18804));
-			spawn.setHeading(Rnd.get(65535));
-			spawn.setX(loc[0]);
-			spawn.setY(loc[1]);
-			spawn.setZ(GeoData.getInstance().getSpawnHeight(loc[0], loc[1], loc[2], loc[3]));
-			
-			final L2Npc npc = spawn.doSpawn();
-			npc.setIsNoRndWalk(true);
-			npc.setIsImmobilized(true);
-			npc.setIsInvul(true);
-			npc.disableCoreAI(true);
-			npc.setScriptValue(5);
-			
-			_spawnList.put(npc.getObjectId(), npc);
-		}
-		catch (Exception e)
-		{
-			_log.warning(TarBeetleSpawn.class.getSimpleName() + ": Could not spawn npc! Error: " + e.getMessage());
-		}
-	}
-	
-	public void startTasks()
-	{
-		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new SpawnTask(), 1000, 60000);
-		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new NumShotTask(), 300000, 300000);
-	}
-	
-	public SpawnZone getSpawnZoneById(int id)
-	{
-		return _spawnZoneList.get(id);
-	}
-	
-	public L2Npc getBeetle(L2Npc npc)
-	{
-		return _spawnList.get(npc.getObjectId());
-	}
-	
-	public static Map<Integer, L2Npc> getSpawnList()
-	{
-		return _spawnList;
-	}
-	
-	private class SpawnZone extends L2Territory
-	{
-		private final int[] _bZones;
+		private List<Zone> _bannedZones;
 		
-		public SpawnZone(int terr, int[] bZones)
+		public Zone()
 		{
-			super(terr);
-			_bZones = bZones;
+			super(1);
 		}
 		
 		@Override
@@ -208,13 +162,22 @@ public class TarBeetleSpawn extends DocumentParser
 			return loc;
 		}
 		
-		private boolean isInsideBannedZone(int[] loc)
+		public final void addBannedZone(Zone bZone)
 		{
-			if (_bZones != null)
+			if (_bannedZones == null)
 			{
-				for (int i : _bZones)
+				_bannedZones = new ArrayList<>();
+			}
+			_bannedZones.add(bZone);
+		}
+		
+		private final boolean isInsideBannedZone(int[] loc)
+		{
+			if (_bannedZones != null)
+			{
+				for (Zone z : _bannedZones)
 				{
-					if (getSpawnZoneById(i).isInside(loc[0], loc[1]))
+					if (z.isInside(loc[0], loc[1]))
 					{
 						return true;
 					}
@@ -224,51 +187,81 @@ public class TarBeetleSpawn extends DocumentParser
 		}
 	}
 	
-	public class SpawnTask implements Runnable
+	private final class SpawnZone
 	{
-		@Override
-		public void run()
+		private final List<Zone> _zones = new ArrayList<>();
+		private final List<L2Npc> _spawn = new FastList<>();
+		private final int _maxNpcCount;
+		private final int _index;
+		
+		public SpawnZone(int maxNpcCount, int index)
 		{
-			while (lowerNpcCount < 4)
+			_maxNpcCount = maxNpcCount;
+			_index = index;
+		}
+		
+		public final void addZone(Zone zone)
+		{
+			_zones.add(zone);
+		}
+		
+		public final void removeSpawn(L2Npc obj)
+		{
+			_spawn.remove(obj);
+		}
+		
+		public final void unload()
+		{
+			_spawn.forEach(L2Npc::deleteMe);
+			_spawn.clear();
+			_zones.clear();
+		}
+		
+		public final void refreshSpawn()
+		{
+			try
 			{
-				spawn(lowerZones);
-				lowerNpcCount++;
+				while (_spawn.size() < _maxNpcCount)
+				{
+					final int[] loc = _zones.get(Rnd.get(_zones.size())).getRandomPoint();
+					final L2Spawn spawn = new L2Spawn(NpcData.getInstance().getTemplate(18804));
+					spawn.setHeading(Rnd.get(65535));
+					spawn.setX(loc[0]);
+					spawn.setY(loc[1]);
+					spawn.setZ(GeoData.getInstance().getSpawnHeight(loc[0], loc[1], loc[2], loc[3]));
+					
+					final L2Npc npc = spawn.doSpawn();
+					npc.setIsNoRndWalk(true);
+					npc.setIsImmobilized(true);
+					npc.setIsInvul(true);
+					npc.disableCoreAI(true);
+					npc.setScriptValue(5);
+					npc.getVariables().set("zoneIndex", _index);
+					_spawn.add(npc);
+				}
 			}
-			
-			while (upperNpcCount < 12)
+			catch (Exception e)
 			{
-				spawn(upperZones);
-				upperNpcCount++;
+				e.printStackTrace();
 			}
 		}
-	}
-	
-	public class NumShotTask implements Runnable
-	{
-		@Override
-		public void run()
+		
+		public final void refreshShots()
 		{
-			Iterator<L2Npc> iterator = getSpawnList().values().iterator();
-			while (iterator.hasNext())
+			if (_spawn.size() > 0)
 			{
-				L2Npc npc = iterator.next();
-				int val = npc.getScriptValue();
-				if (val == 5)
+				for (L2Npc npc : _spawn)
 				{
-					npc.deleteMe();
-					iterator.remove();
-					if (npc.getSpawn().getZ() < -5000)
+					final int val = npc.getScriptValue();
+					if (val == 5)
 					{
-						lowerNpcCount--;
+						npc.deleteMe();
+						_spawn.remove(npc);
 					}
 					else
 					{
-						upperNpcCount--;
+						npc.setScriptValue(val + 1);
 					}
-				}
-				else
-				{
-					npc.setScriptValue(val + 1);
 				}
 			}
 		}
