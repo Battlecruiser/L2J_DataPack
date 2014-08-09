@@ -18,6 +18,8 @@
  */
 package village_master.KamaelChange1;
 
+import quests.Q00062_PathOfTheTrooper.Q00062_PathOfTheTrooper;
+import quests.Q00063_PathOfTheWarder.Q00063_PathOfTheWarder;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.CategoryData;
@@ -103,7 +105,7 @@ public final class KamaelChange1 extends AbstractNpcAI
 			}
 			else if ((classId == 125) && (player.getClassId() == ClassId.maleSoldier))
 			{
-				QuestState qs = player.getQuestState("Q00062_PathOfTheTrooper");
+				QuestState qs = player.getQuestState(Q00062_PathOfTheTrooper.class.getSimpleName());
 				if (player.getLevel() < 20)
 				{
 					if ((qs != null) && qs.isCompleted())
@@ -132,7 +134,7 @@ public final class KamaelChange1 extends AbstractNpcAI
 			}
 			else if ((classId == 126) && (player.getClassId() == ClassId.femaleSoldier))
 			{
-				QuestState qs = player.getQuestState("Q00063_PathOfTheWarder");
+				QuestState qs = player.getQuestState(Q00063_PathOfTheWarder.class.getSimpleName());
 				if (player.getLevel() < 20)
 				{
 					if ((qs != null) && qs.isCompleted())
