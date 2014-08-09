@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.util.Rnd;
@@ -55,6 +56,12 @@ public final class SummonNpc extends AbstractEffect
 		_npcCount = params.getInt("npcCount", 1);
 		_randomOffset = params.getBoolean("randomOffset", false);
 		_isSummonSpawn = params.getBoolean("isSummonSpawn", false);
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.SUMMON_NPC;
 	}
 	
 	@Override
