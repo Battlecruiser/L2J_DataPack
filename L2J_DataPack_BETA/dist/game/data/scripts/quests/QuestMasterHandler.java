@@ -71,6 +71,7 @@ import quests.Q00051_OFullesSpecialBait.Q00051_OFullesSpecialBait;
 import quests.Q00052_WilliesSpecialBait.Q00052_WilliesSpecialBait;
 import quests.Q00053_LinnaeusSpecialBait.Q00053_LinnaeusSpecialBait;
 import quests.Q00062_PathOfTheTrooper.Q00062_PathOfTheTrooper;
+import quests.Q00063_PathOfTheWarder.Q00063_PathOfTheWarder;
 import quests.Q00101_SwordOfSolidarity.Q00101_SwordOfSolidarity;
 import quests.Q00102_SeaOfSporesFever.Q00102_SeaOfSporesFever;
 import quests.Q00103_SpiritOfCraftsman.Q00103_SpiritOfCraftsman;
@@ -443,6 +444,7 @@ public class QuestMasterHandler
 		Q00052_WilliesSpecialBait.class,
 		Q00053_LinnaeusSpecialBait.class,
 		Q00062_PathOfTheTrooper.class,
+		Q00063_PathOfTheWarder.class,
 		Q00101_SwordOfSolidarity.class,
 		Q00102_SeaOfSporesFever.class,
 		Q00103_SpiritOfCraftsman.class,
