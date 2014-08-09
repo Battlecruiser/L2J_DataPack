@@ -76,19 +76,24 @@ public final class Unsummon extends AbstractEffect
 	public void onStart(BuffInfo info)
 	{
 		final L2Summon summon = info.getEffected().getSummon();
-		if (summon.isPhoenixBlessed() || summon.isNoblesseBlessed())
-		{
-			summon.stopEffects(L2EffectType.NOBLESSE_BLESSING);
-		}
-		else
-		{
-			summon.stopAllEffectsExceptThoseThatLastThroughDeath();
-		}
 		
-		summon.abortAttack();
-		summon.abortCast();
-		final L2PcInstance summonOwner = info.getEffected().getActingPlayer();
-		summon.unSummon(summonOwner);
-		summonOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED);
+		if (summon != null)
+		{
+			final L2PcInstance summonOwner = summon.getOwner();
+			
+			if (summon.isPhoenixBlessed() || summon.isNoblesseBlessed())
+			{
+				summon.stopEffects(L2EffectType.NOBLESSE_BLESSING);
+			}
+			else
+			{
+				summon.stopAllEffectsExceptThoseThatLastThroughDeath();
+			}
+			
+			summon.abortAttack();
+			summon.abortCast();
+			summon.unSummon(summonOwner);
+			summonOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED);
+		}
 	}
 }
