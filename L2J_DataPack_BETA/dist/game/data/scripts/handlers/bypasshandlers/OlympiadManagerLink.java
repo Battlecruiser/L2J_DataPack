@@ -43,6 +43,7 @@ import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author DS
@@ -60,6 +61,20 @@ public class OlympiadManagerLink implements IBypassHandler
 	private static final String FEWER_THAN = "Fewer than " + String.valueOf(Config.ALT_OLY_REG_DISPLAY);
 	private static final String MORE_THAN = "More than " + String.valueOf(Config.ALT_OLY_REG_DISPLAY);
 	private static final int GATE_PASS = Config.ALT_OLY_COMP_RITEM;
+	
+	private static final int[] BUFFS =
+	{
+		4357, // Haste Lv2
+		4342, // Wind Walk Lv2
+		4356, // Empower Lv3
+		4355, // Acumen Lv3
+		4351, // Concentration Lv6
+		4345, // Might Lv3
+		4358, // Guidance Lv3
+		4359, // Focus Lv3
+		4360, // Death Whisper Lv3
+		4352, // Berserker Spirit Lv2
+	};
 	
 	@Override
 	public final boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
@@ -227,7 +242,8 @@ public class OlympiadManagerLink implements IBypassHandler
 			}
 			else if (command.toLowerCase().startsWith("olybuff"))
 			{
-				if (activeChar.getOlympiadBuffCount() <= 0)
+				int buffCount = activeChar.getOlympiadBuffCount();
+				if (buffCount <= 0)
 				{
 					return false;
 				}
@@ -235,29 +251,28 @@ public class OlympiadManagerLink implements IBypassHandler
 				final NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
 				String[] params = command.split(" ");
 				
-				if (params[1] == null)
+				if (!Util.isDigit(params[1]))
 				{
-					_log.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " has no buffGroup set in the bypass for the buff selected.");
+					_log.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " has invalid buffGroup set in the bypass for the buff selected: " + params[1]);
 					return false;
 				}
-				int buffGroup = Integer.parseInt(params[1]);
 				
-				NpcBufferData npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(target.getId(), buffGroup);
-				
+				final NpcBufferData npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(target.getId(), BUFFS[Integer.parseInt(params[1])]);
 				if (npcBuffGroupInfo == null)
 				{
-					_log.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " Location: " + target.getX() + ", " + target.getY() + ", " + target.getZ() + " Player: " + activeChar.getName() + " has tried to use skill group (" + buffGroup + ") not assigned to the NPC Buffer!");
+					_log.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " Location: " + target.getX() + ", " + target.getY() + ", " + target.getZ() + " Player: " + activeChar.getName() + " has tried to use skill group (" + params[1] + ") not assigned to the NPC Buffer!");
 					return false;
 				}
 				
-				Skill skill = npcBuffGroupInfo.getSkill().getSkill();
-				target.setTarget(activeChar);
-				
-				if (activeChar.getOlympiadBuffCount() > 0)
+				if (buffCount > 0)
 				{
+					final Skill skill = npcBuffGroupInfo.getSkill().getSkill();
 					if (skill != null)
 					{
-						activeChar.setOlympiadBuffCount(activeChar.getOlympiadBuffCount() - 1);
+						target.setTarget(activeChar);
+						
+						activeChar.setOlympiadBuffCount(--buffCount);
+						
 						target.broadcastPacket(new MagicSkillUse(target, activeChar, skill.getId(), skill.getLevel(), 0, 0));
 						skill.applyEffects(activeChar, activeChar);
 						final L2Summon summon = activeChar.getSummon();
@@ -269,9 +284,9 @@ public class OlympiadManagerLink implements IBypassHandler
 					}
 				}
 				
-				if (activeChar.getOlympiadBuffCount() > 0)
+				if (buffCount > 0)
 				{
-					html.setFile(activeChar.getHtmlPrefix(), activeChar.getOlympiadBuffCount() == 5 ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm");
+					html.setFile(activeChar.getHtmlPrefix(), buffCount == Config.ALT_OLY_MAX_BUFFS ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm");
 					html.replace("%objectId%", String.valueOf(target.getObjectId()));
 					activeChar.sendPacket(html);
 				}
