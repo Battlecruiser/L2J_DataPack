@@ -103,7 +103,7 @@ public final class KamaelChange1 extends AbstractNpcAI
 			}
 			else if ((classId == 125) && (player.getClassId() == ClassId.maleSoldier))
 			{
-				QuestState qs = player.getQuestState("62_PathoftheTrooper");
+				QuestState qs = player.getQuestState("Q00062_PathOfTheTrooper");
 				if (player.getLevel() < 20)
 				{
 					if ((qs != null) && qs.isCompleted())
@@ -132,7 +132,7 @@ public final class KamaelChange1 extends AbstractNpcAI
 			}
 			else if ((classId == 126) && (player.getClassId() == ClassId.femaleSoldier))
 			{
-				QuestState qs = player.getQuestState("63_PathoftheWarder");
+				QuestState qs = player.getQuestState("Q00063_PathOfTheWarder");
 				if (player.getLevel() < 20)
 				{
 					if ((qs != null) && qs.isCompleted())
