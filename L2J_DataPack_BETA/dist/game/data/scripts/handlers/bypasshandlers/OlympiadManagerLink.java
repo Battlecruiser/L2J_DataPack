@@ -227,7 +227,7 @@ public class OlympiadManagerLink implements IBypassHandler
 			}
 			else if (command.toLowerCase().startsWith("olybuff"))
 			{
-				if (activeChar.olyBuff <= 0)
+				if (activeChar.getOlympiadBuffCount() <= 0)
 				{
 					return false;
 				}
@@ -253,11 +253,11 @@ public class OlympiadManagerLink implements IBypassHandler
 				Skill skill = npcBuffGroupInfo.getSkill().getSkill();
 				target.setTarget(activeChar);
 				
-				if (activeChar.olyBuff > 0)
+				if (activeChar.getOlympiadBuffCount() > 0)
 				{
 					if (skill != null)
 					{
-						activeChar.olyBuff--;
+						activeChar.setOlympiadBuffCount(activeChar.getOlympiadBuffCount() - 1);
 						target.broadcastPacket(new MagicSkillUse(target, activeChar, skill.getId(), skill.getLevel(), 0, 0));
 						skill.applyEffects(activeChar, activeChar);
 						final L2Summon summon = activeChar.getSummon();
@@ -269,9 +269,9 @@ public class OlympiadManagerLink implements IBypassHandler
 					}
 				}
 				
-				if (activeChar.olyBuff > 0)
+				if (activeChar.getOlympiadBuffCount() > 0)
 				{
-					html.setFile(activeChar.getHtmlPrefix(), activeChar.olyBuff == 5 ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm");
+					html.setFile(activeChar.getHtmlPrefix(), activeChar.getOlympiadBuffCount() == 5 ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm");
 					html.replace("%objectId%", String.valueOf(target.getObjectId()));
 					activeChar.sendPacket(html);
 				}
