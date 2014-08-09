@@ -70,6 +70,7 @@ import quests.Q00050_LanoscosSpecialBait.Q00050_LanoscosSpecialBait;
 import quests.Q00051_OFullesSpecialBait.Q00051_OFullesSpecialBait;
 import quests.Q00052_WilliesSpecialBait.Q00052_WilliesSpecialBait;
 import quests.Q00053_LinnaeusSpecialBait.Q00053_LinnaeusSpecialBait;
+import quests.Q00062_PathOfTheTrooper.Q00062_PathOfTheTrooper;
 import quests.Q00101_SwordOfSolidarity.Q00101_SwordOfSolidarity;
 import quests.Q00102_SeaOfSporesFever.Q00102_SeaOfSporesFever;
 import quests.Q00103_SpiritOfCraftsman.Q00103_SpiritOfCraftsman;
@@ -252,6 +253,10 @@ import quests.Q00381_LetsBecomeARoyalMember.Q00381_LetsBecomeARoyalMember;
 import quests.Q00382_KailsMagicCoin.Q00382_KailsMagicCoin;
 import quests.Q00385_YokeOfThePast.Q00385_YokeOfThePast;
 import quests.Q00401_PathToWarrior.Q00401_PathToWarrior;
+import quests.Q00402_PathOfTheHumanKnight.Q00402_PathOfTheHumanKnight;
+import quests.Q00403_PathOfTheRogue.Q00403_PathOfTheRogue;
+import quests.Q00404_PathOfTheHumanWizard.Q00404_PathOfTheHumanWizard;
+import quests.Q00405_PathOfTheCleric.Q00405_PathOfTheCleric;
 import quests.Q00407_PathOfTheElvenScout.Q00407_PathOfTheElvenScout;
 import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
 import quests.Q00420_LittleWing.Q00420_LittleWing;
@@ -437,6 +442,7 @@ public class QuestMasterHandler
 		Q00051_OFullesSpecialBait.class,
 		Q00052_WilliesSpecialBait.class,
 		Q00053_LinnaeusSpecialBait.class,
+		Q00062_PathOfTheTrooper.class,
 		Q00101_SwordOfSolidarity.class,
 		Q00102_SeaOfSporesFever.class,
 		Q00103_SpiritOfCraftsman.class,
@@ -619,6 +625,10 @@ public class QuestMasterHandler
 		Q00382_KailsMagicCoin.class,
 		Q00385_YokeOfThePast.class,
 		Q00401_PathToWarrior.class,
+		Q00402_PathOfTheHumanKnight.class,
+		Q00403_PathOfTheRogue.class,
+		Q00404_PathOfTheHumanWizard.class,
+		Q00405_PathOfTheCleric.class,
 		Q00407_PathOfTheElvenScout.class,
 		Q00416_PathOfTheOrcShaman.class,
 		Q00420_LittleWing.class,
