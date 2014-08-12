@@ -257,7 +257,14 @@ public class OlympiadManagerLink implements IBypassHandler
 					return false;
 				}
 				
-				final NpcBufferData npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(target.getId(), BUFFS[Integer.parseInt(params[1])]);
+				final int index = Integer.parseInt(params[1]);
+				if ((index < 0) || (index > BUFFS.length))
+				{
+					_log.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " has invalid index sent in the bypass: " + index);
+					return false;
+				}
+				
+				final NpcBufferData npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(target.getId(), BUFFS[index]);
 				if (npcBuffGroupInfo == null)
 				{
 					_log.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " Location: " + target.getX() + ", " + target.getY() + ", " + target.getZ() + " Player: " + activeChar.getName() + " has tried to use skill group (" + params[1] + ") not assigned to the NPC Buffer!");
