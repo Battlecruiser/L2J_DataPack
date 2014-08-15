@@ -312,6 +312,7 @@ import quests.Q00627_HeartInSearchOfPower.Q00627_HeartInSearchOfPower;
 import quests.Q00628_HuntGoldenRam.Q00628_HuntGoldenRam;
 import quests.Q00629_CleanUpTheSwampOfScreams.Q00629_CleanUpTheSwampOfScreams;
 import quests.Q00631_DeliciousTopChoiceMeat.Q00631_DeliciousTopChoiceMeat;
+import quests.Q00632_NecromancersRequest.Q00632_NecromancersRequest;
 import quests.Q00633_InTheForgottenVillage.Q00633_InTheForgottenVillage;
 import quests.Q00634_InSearchOfFragmentsOfDimension.Q00634_InSearchOfFragmentsOfDimension;
 import quests.Q00635_IntoTheDimensionalRift.Q00635_IntoTheDimensionalRift;
@@ -685,6 +686,7 @@ public class QuestMasterHandler
 		Q00628_HuntGoldenRam.class,
 		Q00629_CleanUpTheSwampOfScreams.class,
 		Q00631_DeliciousTopChoiceMeat.class,
+		Q00632_NecromancersRequest.class,
 		Q00633_InTheForgottenVillage.class,
 		Q00634_InSearchOfFragmentsOfDimension.class,
 		Q00635_IntoTheDimensionalRift.class,

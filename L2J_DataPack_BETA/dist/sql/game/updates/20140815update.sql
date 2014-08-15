@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='632_NecromancersRequest' WHERE name='Q00632_NecromancersRequest';
