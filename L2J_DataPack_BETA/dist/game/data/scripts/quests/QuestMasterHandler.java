@@ -335,6 +335,7 @@ import quests.Q00652_AnAgedExAdventurer.Q00652_AnAgedExAdventurer;
 import quests.Q00653_WildMaiden.Q00653_WildMaiden;
 import quests.Q00654_JourneyToASettlement.Q00654_JourneyToASettlement;
 import quests.Q00659_IdRatherBeCollectingFairyBreath.Q00659_IdRatherBeCollectingFairyBreath;
+import quests.Q00660_AidingTheFloranVillage.Q00660_AidingTheFloranVillage;
 import quests.Q00661_MakingTheHarvestGroundsSafe.Q00661_MakingTheHarvestGroundsSafe;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00688_DefeatTheElrokianRaiders.Q00688_DefeatTheElrokianRaiders;
@@ -709,6 +710,7 @@ public class QuestMasterHandler
 		Q00653_WildMaiden.class,
 		Q00654_JourneyToASettlement.class,
 		Q00659_IdRatherBeCollectingFairyBreath.class,
+		Q00660_AidingTheFloranVillage.class,
 		Q00661_MakingTheHarvestGroundsSafe.class,
 		Q00662_AGameOfCards.class,
 		Q00688_DefeatTheElrokianRaiders.class,
