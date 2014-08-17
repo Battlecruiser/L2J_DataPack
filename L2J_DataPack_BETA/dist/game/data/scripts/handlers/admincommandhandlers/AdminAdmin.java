@@ -27,6 +27,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Hero;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -58,8 +59,8 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_set",
 		"admin_set_mod",
 		"admin_saveolymp",
-		"admin_manualhero",
 		"admin_sethero",
+		"admin_givehero",
 		"admin_endolympiad",
 		"admin_setconfig",
 		"admin_config_server",
@@ -120,7 +121,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			activeChar.sendMessage("Heroes formed.");
 		}
-		else if (command.startsWith("admin_manualhero") || command.startsWith("admin_sethero"))
+		else if (command.startsWith("admin_sethero"))
 		{
 			if (activeChar.getTarget() == null)
 			{
@@ -131,6 +132,22 @@ public class AdminAdmin implements IAdminCommandHandler
 			final L2PcInstance target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
 			target.setHero(!target.isHero());
 			target.broadcastUserInfo();
+		}
+		else if (command.startsWith("admin_givehero"))
+		{
+			if (activeChar.getTarget() == null)
+			{
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				return false;
+			}
+			
+			final L2PcInstance target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
+			if (Hero.getInstance().isClaimed(target.getObjectId()))
+			{
+				activeChar.sendMessage("This player has already claimed the hero status.");
+				return false;
+			}
+			Hero.getInstance().claimHero(target);
 		}
 		else if (command.startsWith("admin_diet"))
 		{
