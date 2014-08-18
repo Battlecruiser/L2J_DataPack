@@ -14,12 +14,12 @@
 				<xs:element name="staticData" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
 						<xs:sequence maxOccurs="1" minOccurs="1">
-							<xs:element type="xs:integer" name="baseINT" minOccurs="1" maxOccurs="1" />
-							<xs:element type="xs:integer" name="baseSTR" minOccurs="1" maxOccurs="1" />
-							<xs:element type="xs:integer" name="baseCON" minOccurs="1" maxOccurs="1" />
-							<xs:element type="xs:integer" name="baseMEN" minOccurs="1" maxOccurs="1" />
-							<xs:element type="xs:integer" name="baseDEX" minOccurs="1" maxOccurs="1" />
-							<xs:element type="xs:integer" name="baseWIT" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseINT" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseSTR" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseCON" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseMEN" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseDEX" minOccurs="1" maxOccurs="1" />
+							<xs:element type="xs:nonNegativeInteger" name="baseWIT" minOccurs="1" maxOccurs="1" />
 							<xs:element name="creationPoints" minOccurs="1" maxOccurs="1">
 								<xs:complexType>
 									<xs:sequence maxOccurs="1" minOccurs="0">
@@ -35,7 +35,13 @@
 							</xs:element>
 							<xs:element type="xs:positiveInteger" name="basePAtk" minOccurs="1" maxOccurs="1" />
 							<xs:element type="xs:positiveInteger" name="baseCritRate" minOccurs="1" maxOccurs="1" />
-							<xs:element type="xs:string" name="baseAtkType" minOccurs="1" maxOccurs="1" />
+							<xs:element name="baseAtkType" minOccurs="1" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="FIST" />
+								</xs:restriction>
+							</xs:simpleType>
+							</xs:element>
 							<xs:element type="xs:positiveInteger" name="basePAtkSpd" minOccurs="1" maxOccurs="1" />
 							<xs:element name="basePDef" minOccurs="1" maxOccurs="1">
 								<xs:complexType>
