@@ -101,7 +101,10 @@ public class DenOfEvil extends AbstractNpcAI
 		super(DenOfEvil.class.getSimpleName(), "ai/group_template");
 		addKillId(EYE_IDS);
 		addSpawnId(EYE_IDS);
-		spawnEyes();
+		for (Location loc : EYE_SPAWNS)
+		{
+			addSpawn(EYE_IDS[getRandom(EYE_IDS.length)], loc, false, 0);
+		}
 	}
 	
 	private int getSkillIdByNpcId(int npcId)
@@ -151,14 +154,6 @@ public class DenOfEvil extends AbstractNpcAI
 		int skillLevel = zone.getSkillLevel(skillId);
 		zone.addSkill(skillId, skillLevel - 1);
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	private void spawnEyes()
-	{
-		for (Location loc : EYE_SPAWNS)
-		{
-			addSpawn(EYE_IDS[getRandom(EYE_IDS.length)], loc, false, 0);
-		}
 	}
 	
 	private class RespawnNewEye implements Runnable
