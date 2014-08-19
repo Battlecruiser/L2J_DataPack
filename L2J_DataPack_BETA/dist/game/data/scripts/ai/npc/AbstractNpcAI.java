@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
@@ -38,7 +39,7 @@ import com.l2jserver.gameserver.util.Broadcast;
  */
 public abstract class AbstractNpcAI extends Quest
 {
-	public Logger _log = Logger.getLogger(getClass().getSimpleName());
+	public final Logger _log = Logger.getLogger(getClass().getSimpleName());
 	
 	public AbstractNpcAI(String name, String descr)
 	{
@@ -172,8 +173,39 @@ public abstract class AbstractNpcAI extends Quest
 	 */
 	protected void attackPlayer(L2Attackable npc, L2Playable playable)
 	{
+		attackPlayer(npc, playable, 999);
+	}
+	
+	/**
+	 * Monster is running and attacking the target.
+	 * @param npc the NPC that performs the attack
+	 * @param target the target of the attack
+	 * @param desire the desire to perform the attack
+	 */
+	protected void attackPlayer(L2Npc npc, L2Playable target, int desire)
+	{
+		if (npc instanceof L2Attackable)
+		{
+			((L2Attackable) npc).addDamageHate(target, 0, desire);
+		}
 		npc.setIsRunning(true);
-		npc.addDamageHate(playable, 0, 999);
-		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, playable);
+		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+	}
+	
+	/**
+	 * Monster cast an skill to the character.
+	 * @param npc the NPC whom cast the skill
+	 * @param target the skill target
+	 * @param skill the skill to cast
+	 * @param desire the desire to cast the skill
+	 */
+	protected void castSkill(L2Npc npc, L2Character target, SkillHolder skill, int desire)
+	{
+		if (npc instanceof L2Attackable)
+		{
+			((L2Attackable) npc).addDamageHate(target, 0, desire);
+		}
+		npc.setTarget(target);
+		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill.getSkill(), target);
 	}
 }

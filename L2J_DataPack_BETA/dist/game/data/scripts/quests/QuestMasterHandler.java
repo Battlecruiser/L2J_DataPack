@@ -215,6 +215,7 @@ import quests.Q00307_ControlDeviceOfTheGiants.Q00307_ControlDeviceOfTheGiants;
 import quests.Q00308_ReedFieldMaintenance.Q00308_ReedFieldMaintenance;
 import quests.Q00309_ForAGoodCause.Q00309_ForAGoodCause;
 import quests.Q00310_OnlyWhatRemains.Q00310_OnlyWhatRemains;
+import quests.Q00311_ExpulsionOfEvilSpirits.Q00311_ExpulsionOfEvilSpirits;
 import quests.Q00312_TakeAdvantageOfTheCrisis.Q00312_TakeAdvantageOfTheCrisis;
 import quests.Q00313_CollectSpores.Q00313_CollectSpores;
 import quests.Q00316_DestroyPlagueCarriers.Q00316_DestroyPlagueCarriers;
@@ -590,6 +591,7 @@ public class QuestMasterHandler
 		Q00308_ReedFieldMaintenance.class,
 		Q00309_ForAGoodCause.class,
 		Q00310_OnlyWhatRemains.class,
+		Q00311_ExpulsionOfEvilSpirits.class,
 		Q00312_TakeAdvantageOfTheCrisis.class,
 		Q00313_CollectSpores.class,
 		Q00316_DestroyPlagueCarriers.class,
