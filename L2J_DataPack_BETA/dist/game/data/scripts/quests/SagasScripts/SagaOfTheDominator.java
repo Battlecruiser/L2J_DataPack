@@ -75,7 +75,7 @@ public class SagaOfTheDominator extends SagasSuperClass
 		};
 		npcSpawnLocations = new Location[]
 		{
-			new Location(164650, -74121, -2871),
+			new Location(162898, -76492, -3096),
 			new Location(47429, -56923, -2383),
 			new Location(47391, -56929, -2370)
 		};
