@@ -254,7 +254,7 @@ import quests.Q00380_BringOutTheFlavorOfIngredients.Q00380_BringOutTheFlavorOfIn
 import quests.Q00381_LetsBecomeARoyalMember.Q00381_LetsBecomeARoyalMember;
 import quests.Q00382_KailsMagicCoin.Q00382_KailsMagicCoin;
 import quests.Q00385_YokeOfThePast.Q00385_YokeOfThePast;
-import quests.Q00401_PathToWarrior.Q00401_PathToWarrior;
+import quests.Q00401_PathOfTheWarrior.Q00401_PathOfTheWarrior;
 import quests.Q00402_PathOfTheHumanKnight.Q00402_PathOfTheHumanKnight;
 import quests.Q00403_PathOfTheRogue.Q00403_PathOfTheRogue;
 import quests.Q00404_PathOfTheHumanWizard.Q00404_PathOfTheHumanWizard;
@@ -630,7 +630,7 @@ public class QuestMasterHandler
 		Q00381_LetsBecomeARoyalMember.class,
 		Q00382_KailsMagicCoin.class,
 		Q00385_YokeOfThePast.class,
-		Q00401_PathToWarrior.class,
+		Q00401_PathOfTheWarrior.class,
 		Q00402_PathOfTheHumanKnight.class,
 		Q00403_PathOfTheRogue.class,
 		Q00404_PathOfTheHumanWizard.class,
