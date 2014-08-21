@@ -259,6 +259,7 @@ import quests.Q00402_PathOfTheHumanKnight.Q00402_PathOfTheHumanKnight;
 import quests.Q00403_PathOfTheRogue.Q00403_PathOfTheRogue;
 import quests.Q00404_PathOfTheHumanWizard.Q00404_PathOfTheHumanWizard;
 import quests.Q00405_PathOfTheCleric.Q00405_PathOfTheCleric;
+import quests.Q00406_PathOfTheElvenKnight.Q00406_PathOfTheElvenKnight;
 import quests.Q00407_PathOfTheElvenScout.Q00407_PathOfTheElvenScout;
 import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
 import quests.Q00420_LittleWing.Q00420_LittleWing;
@@ -635,6 +636,7 @@ public class QuestMasterHandler
 		Q00403_PathOfTheRogue.class,
 		Q00404_PathOfTheHumanWizard.class,
 		Q00405_PathOfTheCleric.class,
+		Q00406_PathOfTheElvenKnight.class,
 		Q00407_PathOfTheElvenScout.class,
 		Q00416_PathOfTheOrcShaman.class,
 		Q00420_LittleWing.class,
