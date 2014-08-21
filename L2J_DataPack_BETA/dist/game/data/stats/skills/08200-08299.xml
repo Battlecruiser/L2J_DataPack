@@ -925,6 +925,7 @@
 		</for>
 	</skill>
 	<skill id="8237" levels="1" name="Shalin Heal">
+		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="743" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill1401" />
@@ -943,6 +944,7 @@
 		</for>
 	</skill>
 	<skill id="8238" levels="1" name="Shalin Strike">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-650" />
 		<set name="effectRange" val="400" />
@@ -959,6 +961,7 @@
 		</for>
 	</skill>
 	<skill id="8239" levels="1" name="Critical Up">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SEED_OF_CRITICAL" />
@@ -969,14 +972,25 @@
 		<set name="mpConsume" val="74" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="0.3" />
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+			</effect>
+			<effect name="ChanceSkillTrigger" activationChance="100" chanceType="ON_HIT" triggeredId="5760" triggeredLevel="1" />
+		</for>
 	</skill>
 	<skill id="8240" levels="3" name="Obliteration Storm">
+		<!-- Confirmed CT2.5 -->
+		<table name="#abnormalLvl"> 4 6 8 </table>
+		<table name="#power"> 9132 12784 16436 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
+		<set name="affectRange" val="300" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-1300" />
 		<set name="hitTime" val="2500" />
@@ -985,57 +999,82 @@
 		<set name="magicLvl" val="73" />
 		<set name="mpConsume" val="149" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="20000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
+		<cond msgId="113" addName="1">
+			<player checkAbnormal="SEED_OF_CRITICAL,#abnormalLvl" />
+		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
+		</for>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<param dispel="SEED_OF_CRITICAL,9" />
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="8241" levels="1" name="Critical Up">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
+		<set name="castRange" val="400" />
 		<set name="effectPoint" val="495" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1077" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="73" />
+		<set name="mpConsume" val="38" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="0.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8242" levels="1" name="Ice Ball">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="1400" />
-		<set name="element" val="3" /> <!-- Earth -->
+		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3100" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="magicLvl" val="61" />
 		<set name="mpConsume" val="61" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
+		<set name="power" val="1230" />
 		<set name="reuseDelay" val="20000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="8243" levels="1" name="Chill Strike">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
-		<set name="element" val="3" /> <!-- Earth -->
+		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="850" />
 		<set name="icon" val="icon.skill0105" />
 		<set name="magicLvl" val="61" />
 		<set name="mpConsume" val="61" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
+		<set name="power" val="1845" />
 		<set name="reuseDelay" val="120000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="8244" levels="1" name="Transform Gatekeeper">
@@ -1129,11 +1168,17 @@
 		</for>
 	</skill>
 	<skill id="8249" levels="1" name="Cancel Critical Hit">
+		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="10" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DispelBySlot">
+				<param dispel="SEED_OF_CRITICAL,10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8250" levels="2" name="Summon Tigress">
 		<table name="#npcIds"> 14916 14917 </table>
