@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.tasks.player.TeleportTask;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
-import com.l2jserver.gameserver.model.events.EventDispatcher;
+import com.l2jserver.gameserver.model.events.Containers;
 import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
@@ -47,7 +47,7 @@ public class JailHandler implements IPunishmentHandler
 	public JailHandler()
 	{
 		// Register global listener
-		EventDispatcher.getInstance().addListener(new ConsumerEventListener(EventDispatcher.getInstance(), EventType.ON_PLAYER_LOGIN, (OnPlayerLogin event) -> onPlayerLogin(event), this));
+		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_LOGIN, (OnPlayerLogin event) -> onPlayerLogin(event), this));
 	}
 	
 	public void onPlayerLogin(OnPlayerLogin event)
