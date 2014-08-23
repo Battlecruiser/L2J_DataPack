@@ -261,6 +261,12 @@ import quests.Q00404_PathOfTheHumanWizard.Q00404_PathOfTheHumanWizard;
 import quests.Q00405_PathOfTheCleric.Q00405_PathOfTheCleric;
 import quests.Q00406_PathOfTheElvenKnight.Q00406_PathOfTheElvenKnight;
 import quests.Q00407_PathOfTheElvenScout.Q00407_PathOfTheElvenScout;
+import quests.Q00408_PathOfTheElvenWizard.Q00408_PathOfTheElvenWizard;
+import quests.Q00409_PathOfTheElvenOracle.Q00409_PathOfTheElvenOracle;
+import quests.Q00410_PathOfThePalusKnight.Q00410_PathOfThePalusKnight;
+import quests.Q00411_PathOfTheAssassin.Q00411_PathOfTheAssassin;
+import quests.Q00412_PathOfTheDarkWizard.Q00412_PathOfTheDarkWizard;
+import quests.Q00413_PathOfTheShillienOracle.Q00413_PathOfTheShillienOracle;
 import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
 import quests.Q00420_LittleWing.Q00420_LittleWing;
 import quests.Q00421_LittleWingsBigAdventure.Q00421_LittleWingsBigAdventure;
@@ -638,6 +644,12 @@ public class QuestMasterHandler
 		Q00405_PathOfTheCleric.class,
 		Q00406_PathOfTheElvenKnight.class,
 		Q00407_PathOfTheElvenScout.class,
+		Q00408_PathOfTheElvenWizard.class,
+		Q00409_PathOfTheElvenOracle.class,
+		Q00410_PathOfThePalusKnight.class,
+		Q00411_PathOfTheAssassin.class,
+		Q00412_PathOfTheDarkWizard.class,
+		Q00413_PathOfTheShillienOracle.class,
 		Q00416_PathOfTheOrcShaman.class,
 		Q00420_LittleWing.class,
 		Q00421_LittleWingsBigAdventure.class,
