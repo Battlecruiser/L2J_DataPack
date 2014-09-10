@@ -89,7 +89,7 @@ public class NpcBufferAI implements Runnable
 					{
 						case FRIEND:
 						{
-							if (isFriendly(player, target) && target.isDead())
+							if (isFriendly(player, target) && !target.isDead())
 							{
 								skill.applyEffects(target, target);
 							}
@@ -97,7 +97,7 @@ public class NpcBufferAI implements Runnable
 						}
 						case NOT_FRIEND:
 						{
-							if (isEnemy(player, target) && target.isDead())
+							if (isEnemy(player, target) && !target.isDead())
 							{
 								// Update PvP status
 								if (target.isPlayable())
