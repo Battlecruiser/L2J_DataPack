@@ -41,7 +41,7 @@ import com.l2jserver.util.Rnd;
  */
 public final class SummonNpc extends AbstractEffect
 {
-	private final int _despawnDelay;
+	private int _despawnDelay;
 	private final int _npcId;
 	private final int _npcCount;
 	private final boolean _randomOffset;
@@ -134,6 +134,7 @@ public final class SummonNpc extends AbstractEffect
 				effectPoint.setIsInvul(true);
 				effectPoint.setSummoner(player);
 				effectPoint.spawnMe(x, y, z);
+				_despawnDelay = NpcData.getInstance().getTemplate(_npcId).getParameters().getInt("despawn_time") * 1000;
 				if (_despawnDelay > 0)
 				{
 					effectPoint.scheduleDespawn(_despawnDelay);
