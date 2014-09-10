@@ -83,6 +83,9 @@
 		<table name="#amount"> 50000 100000 200000 </table>
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<table name="#itemConsumeId"> 13386 13387 13388 </table>
+		<set name="itemConsumeId" val="#itemConsumeId" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
@@ -157,6 +160,8 @@
 	<skill id="2615" levels="1" name="Destroyed Darkness Fragment Powder">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="13853" /> <!-- Destroyed Darkness Fragment Powder -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
@@ -289,6 +294,8 @@
 		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
 		<set name="icon" val="icon.etc_beetle_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="13776" /> <!-- Structure Scarab -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
@@ -641,6 +648,9 @@
 		<table name="#coordZ"> -3040 -2696 -3400 -3544 -1488 -2008 -2728 -792 -1319 </table>
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<table name="#itemConsumeId"> 13731 13732 13733 13736 13734 13735 13737 13738 13739 </table>
+		<set name="itemConsumeId" val="#itemConsumeId" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1118,8 +1128,8 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="14205" /> <!-- Forgotten Scroll - Spirit of the Unicorn -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="14205" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1186,6 +1196,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13569" /> <!-- Transformation Scroll: Gludio Human Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1214,6 +1226,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13570" /> <!-- Transformation Scroll: Gludio Elf Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1242,6 +1256,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13571" /> <!-- Transformation Scroll: Gludio Dark Elf Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1270,6 +1286,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13572" /> <!-- Transformation Scroll: Gludio Orc Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1298,6 +1316,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13573" /> <!-- Transformation Scroll: Gludio Dwarf Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1326,6 +1346,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13574" /> <!-- Transformation Scroll: Gludio Kamael Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1354,6 +1376,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13575" /> <!-- Transformation Scroll: Gludio Knight Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1382,6 +1406,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13576" /> <!-- Transformation Scroll: Gludio Archer Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1410,6 +1436,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13577" /> <!-- Transformation Scroll: Gludio Wizard Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1438,6 +1466,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13578" /> <!-- Transformation Scroll: Gludio Kamael Captain Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1466,6 +1496,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13579" /> <!-- Transformation Scroll: Gludio Knight Captain Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1494,6 +1526,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13580" /> <!-- Transformation Scroll: Gludio Commander Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1522,6 +1556,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13581" /> <!-- Transformation Scroll: Dion Human Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1550,6 +1586,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13582" /> <!-- Transformation Scroll: Dion Elf Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1578,6 +1616,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13583" /> <!-- Transformation Scroll: Dion Dark Elf Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1606,6 +1646,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13584" /> <!-- Transformation Scroll: Dion Orc Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1634,6 +1676,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13585" /> <!-- Transformation Scroll: Dion Dwarf Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1662,6 +1706,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13586" /> <!-- Transformation Scroll: Dion Kamael Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1690,6 +1736,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13587" /> <!-- Transformation Scroll: Dion Knight Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1718,6 +1766,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13588" /> <!-- Transformation Scroll: Dion Archer Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1746,6 +1796,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13589" /> <!-- Transformation Scroll: Dion Wizard Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1774,6 +1826,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13590" /> <!-- Transformation Scroll: Dion Kamael Captain Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1802,6 +1856,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13591" /> <!-- Transformation Scroll: Dion Knight Captain Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1830,6 +1886,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13592" /> <!-- Transformation Scroll: Dion Commander Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1858,6 +1916,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13593" /> <!-- Transformation Scroll: Giran Human Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1886,6 +1946,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13594" /> <!-- Transformation Scroll: Giran Elf Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1914,6 +1976,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13595" /> <!-- Transformation Scroll: Giran Dark Elf Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1942,6 +2006,8 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="13596" /> <!-- Transformation Scroll: Giran Orc Mercenary -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
