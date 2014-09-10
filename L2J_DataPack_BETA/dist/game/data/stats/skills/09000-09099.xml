@@ -918,6 +918,8 @@
 	</skill>
 	<skill id="9061" levels="1" name="Uldie Summon Scroll">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="15431" /> <!-- Event - Uldie Summon Scroll -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -925,6 +927,8 @@
 	</skill>
 	<skill id="9062" levels="1" name="Belldandy Summon Scroll">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="15432" /> <!-- Event - Belldandy Summon Scroll -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -932,6 +936,8 @@
 	</skill>
 	<skill id="9063" levels="1" name="Skooldie Summon Scroll">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="15433" /> <!-- Event - Skooldie Summon Scroll -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -1043,6 +1049,8 @@
 	<skill id="9069" levels="1" name="10,000 SP scroll">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="15439" /> <!-- 10,000 SP scroll -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
@@ -1583,8 +1591,8 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="17062" /> <!-- Event - Scroll of Summon Baby White Tiger -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="17062" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1598,8 +1606,8 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="17064" /> <!-- Event - Scroll of Summon Baby White Tiger Captain -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="17064" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1613,8 +1621,8 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="17063" /> <!-- Event - Scroll of Summon Gloomy Baby White Tiger -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="17063" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1628,8 +1636,8 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="17065" /> <!-- Event - Scroll of Summon Gloomy Baby White Tiger Captain -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="17065" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />

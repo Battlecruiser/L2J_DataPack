@@ -652,6 +652,8 @@
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.etc_blesscharm_ward_val_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="6652" /> <!-- Scroll: Protection of Valakas -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
@@ -670,6 +672,8 @@
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.etc_blesscharm_slay_val_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="6655" /> <!-- Scroll: Slay Valakas -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
@@ -684,6 +688,8 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="6654" /> <!-- Scroll: Flames of Valakas -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -810,8 +816,8 @@
 		<set name="effectRange" val="1100" />
 		<set name="icon" val="icon.ect_piece_of_paper_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="8379" /> <!-- Petrification Scroll -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8379" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="PARTY" />
@@ -1747,6 +1753,9 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<table name="#itemConsumeId"> 8594 8595 8596 8597 8598 8599 </table>
+		<set name="itemConsumeId" val="#itemConsumeId" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />

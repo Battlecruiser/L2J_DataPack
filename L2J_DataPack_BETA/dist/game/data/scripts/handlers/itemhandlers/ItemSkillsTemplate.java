@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.items.type.ActionType;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
@@ -78,6 +77,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			}
 			
 			Skill itemSkill = skillInfo.getSkill();
+			
 			if (itemSkill != null)
 			{
 				if (!itemSkill.checkCondition(playable, playable.getTarget(), false))
@@ -99,16 +99,6 @@ public class ItemSkillsTemplate implements IItemHandler
 				if (!item.isPotion() && !item.isElixir() && !item.isScroll() && playable.isCastingNow())
 				{
 					return false;
-				}
-				
-				final boolean isCapsuleItem = (item.getItem().getDefaultAction() == ActionType.CAPSULE) || (item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE);
-				if (isCapsuleItem || ((itemSkill.getItemConsumeId() == 0) && (item.isPotion() || item.isElixir() || item.isScroll() || itemSkill.isSimultaneousCast())))
-				{
-					if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
-					{
-						playable.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
-						return false;
-					}
 				}
 				
 				// Send message to the master.
@@ -138,7 +128,49 @@ public class ItemSkillsTemplate implements IItemHandler
 				}
 			}
 		}
+		
+		if (checkConsume(item))
+		{
+			if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
+			{
+				playable.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+				return false;
+			}
+		}
+		
 		return true;
+	}
+	
+	/**
+	 * @param item the item being used
+	 * @return {@code true} check if item use consume item, {@code false} otherwise
+	 */
+	private boolean checkConsume(L2ItemInstance item)
+	{
+		
+		switch (item.getItem().getDefaultAction())
+		{
+			case CAPSULE:
+			{
+				return true;
+			}
+			case SKILL_REDUCE:
+			{
+				if (item.isPotion())
+				{
+					return true;
+				}
+				else if (item.isElixir())
+				{
+					if (item.getItem().hasImmediateEffect())
+					{
+						return true;
+					}
+				}
+				break;
+			}
+		}
+		return false;
 	}
 	
 	/**

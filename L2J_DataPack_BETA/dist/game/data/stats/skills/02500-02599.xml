@@ -354,6 +354,8 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="12753" /> <!-- Kamael Village Teleportation Scroll -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -470,8 +472,8 @@
 	<skill id="2530" levels="1" name="Recovery Item for Battlefield Use">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="12819" /> <!-- Recovery Spellbook for Combat Use -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="12819" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -484,6 +486,8 @@
 	<skill id="2531" levels="1" name="Adventurer's Scroll of Escape">
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="10650" /> <!-- Adventurer's Scroll of Escape -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1571,6 +1575,8 @@
 	<skill id="2594" levels="1" name="Pailaka Scroll of Escape">
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="13129" /> <!-- Scroll of Escape: Pailaka -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1591,6 +1597,8 @@
 	<skill id="2595" levels="1" name="Gran Kain's Blessed Scroll of Escape">
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="13258" /> <!-- Gran Kain's Blessed Scroll of Escape -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1614,8 +1622,8 @@
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="13259" /> <!-- Gran Kain's Blessed Scroll of Resurrection -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="13259" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
