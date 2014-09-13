@@ -11,6 +11,8 @@
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="BranchSys.icon.br_ghost_incense_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20603" /> <!-- Soul Scent (Event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A3" />
 		<set name="reuseDelay" val="5000" />
@@ -81,8 +83,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20583" /> <!-- Blessed Scroll of Escape (event) -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20583" /> <!-- Blessed Scroll of Escape (event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -108,8 +110,8 @@
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20584" /> <!-- Blessed Scroll of Resurrection (event) -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20584" /> <!-- Blessed Scroll of Resurrection (event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
@@ -124,8 +126,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20707" /> <!-- Wooldy Summon Scroll (Event) -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20707" /> <!-- Wooldy Summon Scroll (Event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="12000" />
@@ -151,8 +153,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20708" /> <!-- Verdandi Summon Scroll (Event) -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20708" /> <!-- Verdandi Summon Scroll (Event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="12000" />
@@ -178,8 +180,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20709" /> <!-- Skooldy Summon Scroll (Event) -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20709" /> <!-- Skooldy Summon Scroll (Event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="12000" />
@@ -247,7 +249,7 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20728" />
+		<set name="itemConsumeId" val="20728" /> <!-- Lucky Sky Lantern Summon Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -262,7 +264,7 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20729" />
+		<set name="itemConsumeId" val="20729" /> <!-- Ambience Sky Lantern Summon Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -277,7 +279,7 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20730" />
+		<set name="itemConsumeId" val="20730" /> <!-- Sway Sky Lantern Summon Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -292,7 +294,7 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20731" />
+		<set name="itemConsumeId" val="20731" /> <!-- Comfort Sky Lantern Summon Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -331,6 +333,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20758" /> <!-- Santa's Weapon Exchange Coupon Box -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -348,8 +352,8 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="BranchSys.icon.br_fire_box_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20788" /> <!-- Flame Box -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20788" /> <!-- Flame Box -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -393,6 +397,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_a_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20876" /> <!-- Love for All Seasons -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -411,6 +417,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_b_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20877" /> <!-- Happy New Year -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -430,6 +438,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_c_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20878" /> <!-- Female Aniruddha -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -449,6 +459,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_d_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20879" /> <!-- Kung Hei Fat Choy -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -474,6 +486,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_e_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20880" /> <!-- Chinese Feast -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -495,6 +509,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_f_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20881" /> <!-- Hwa Gei Bu Gwi -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -513,6 +529,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_g_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20882" /> <!-- Fire Stamp -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -530,6 +548,8 @@
 		<set name="effectRange" val="500" />
 		<set name="icon" val="BranchSys.br_baby_food_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20769" /> <!-- Rudolph Baby Food -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
@@ -542,6 +562,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_kotatsu_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20868" /> <!-- Kotatz -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
@@ -578,6 +600,8 @@
 		<!-- TODO: Implement. -->
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20896" /> <!-- Red Dimensional Stone -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="resetQuest" val="128;129;144" />
@@ -605,6 +629,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_firecracker_red_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20870" /> <!-- Red Firework -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -623,6 +649,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_firecracker_gold_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20871" /> <!-- Gold Firework -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -641,6 +669,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_firecracker_blue_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20872" /> <!-- Blue Firework -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -659,6 +689,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_firecracker_pink_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20873" /> <!-- Pink Firework -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -677,6 +709,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_firecracker_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20874" /> <!-- White Firework -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -695,6 +729,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys.icon.br_firecracker_silver_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20875" /> <!-- Silver Firework -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -722,7 +758,7 @@
 		<set name="icon" val="BranchSys.icon.br_thai_desert_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20899" />
+		<set name="itemConsumeId" val="20899" /> <!-- Mango Dessert -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1229,6 +1265,8 @@
 		<!-- 5000 Soul Avatar Energy is replenished. -->
 		<set name="icon" val="icon.skill0788" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20954" /> <!-- Small Placid -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="NONE" />
@@ -1237,6 +1275,8 @@
 		<!-- 10000 Soul Avatar Energy is replenished. -->
 		<set name="icon" val="icon.skill0788" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20955" /> <!-- Medium Placid -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="NONE" />
@@ -1266,6 +1306,8 @@
 		<!-- Replenishes an Agathion's energy by 2500 -->
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20992" /> <!-- Thirst of Victory Quenching Drink -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="NONE" />
@@ -1278,6 +1320,8 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20993" /> <!-- Soccer Ball of Cheers -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1300,6 +1344,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21030" /> <!-- Hardin's Divine Protection -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
@@ -1314,6 +1360,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21031" /> <!-- Hardin's Blessing -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
@@ -1327,8 +1375,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="21032" /> <!-- Silpeed's Wing -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21032" /> <!-- Silpeed's Wing -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
@@ -1342,8 +1390,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="21033" /> <!-- Silpeed's Blessing -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21033" /> <!-- Silpeed's Blessing -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
@@ -1355,8 +1403,8 @@
 		<set name="effectPoint" val="800" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="21034" /> <!-- Evain's Recovery Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21034" /> <!-- Evain's Recovery Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
@@ -1396,6 +1444,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21037" /> <!-- Warrior's Breath -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="NONE" />
@@ -1405,6 +1455,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21038" /> <!-- Potion of a Hero -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="60000" />
@@ -1427,6 +1479,8 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21041" /> <!-- Fortuna of Chaos -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />

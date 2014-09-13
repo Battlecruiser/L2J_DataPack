@@ -69,6 +69,8 @@ public class ItemSkillsTemplate implements IItemHandler
 			return false;
 		}
 		
+		boolean hasConsumeSkill = false;
+		
 		for (SkillHolder skillInfo : skills)
 		{
 			if (skillInfo == null)
@@ -80,6 +82,11 @@ public class ItemSkillsTemplate implements IItemHandler
 			
 			if (itemSkill != null)
 			{
+				if (itemSkill.getItemConsumeId() > 0)
+				{
+					hasConsumeSkill = true;
+				}
+				
 				if (!itemSkill.checkCondition(playable, playable.getTarget(), false))
 				{
 					return false;
@@ -129,7 +136,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			}
 		}
 		
-		if (checkConsume(item))
+		if (checkConsume(item, hasConsumeSkill))
 		{
 			if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
 			{
@@ -143,31 +150,21 @@ public class ItemSkillsTemplate implements IItemHandler
 	
 	/**
 	 * @param item the item being used
+	 * @param hasConsumeSkill
 	 * @return {@code true} check if item use consume item, {@code false} otherwise
 	 */
-	private boolean checkConsume(L2ItemInstance item)
+	private boolean checkConsume(L2ItemInstance item, boolean hasConsumeSkill)
 	{
 		
 		switch (item.getItem().getDefaultAction())
 		{
 			case CAPSULE:
-			{
-				return true;
-			}
 			case SKILL_REDUCE:
 			{
-				if (item.isPotion())
+				if (!hasConsumeSkill && item.getItem().hasImmediateEffect())
 				{
 					return true;
 				}
-				else if (item.isElixir())
-				{
-					if (item.getItem().hasImmediateEffect())
-					{
-						return true;
-					}
-				}
-				break;
 			}
 		}
 		return false;

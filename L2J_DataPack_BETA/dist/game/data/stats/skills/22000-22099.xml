@@ -390,18 +390,24 @@
 	</skill>
 	<skill id="22019" levels="1" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20026" /> <!-- Extra Entrance Pass - Kamaloka (Hall of the Abyss) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22020" levels="1" name="Extra Entrance Pass - Near Kamaloka">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20027" /> <!-- Extra Entrance Pass - Near Kamaloka -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22021" levels="1" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20028" /> <!-- Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="NONE" />
@@ -413,6 +419,8 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20198" /> <!-- Decadent Valentine Cake -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -802,8 +810,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20364" /> <!-- Transformation Scroll: Omen Beast -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20364" /> <!-- Transformation Scroll: Omen Beast -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -823,8 +831,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20365" /> <!-- Transformation Scroll: Death Blader -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20365" /> <!-- Transformation Scroll: Death Blader -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -844,8 +852,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20366" /> <!-- Transformation Scroll: Grail Apostle -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20366" /> <!-- Transformation Scroll: Grail Apostle -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -865,8 +873,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20367" /> <!-- Transformation Scroll: Unicorn -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20367" /> <!-- Transformation Scroll: Unicorn -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -886,8 +894,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20368" /> <!-- Transformation Scroll: Lilim Knight -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20368" /> <!-- Transformation Scroll: Lilim Knight -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -907,8 +915,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20369" /> <!-- Transformation Scroll: Golem Guardian -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20369" /> <!-- Transformation Scroll: Golem Guardian -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -928,8 +936,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20370" /> <!-- Transformation Scroll: Inferno Drake -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20370" /> <!-- Transformation Scroll: Inferno Drake -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -949,8 +957,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20371" /> <!-- Transformation Scroll: Dragon Bomber -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20371" /> <!-- Transformation Scroll: Dragon Bomber -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -968,9 +976,12 @@
 		<table name="#coordX"> -84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 </table>
 		<table name="#coordY"> 244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 </table>
 		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 </table>
+		<table name="#itemConsumeId"> 20372 20373 20374 20375 20376 20377 20378 20379 20380 20381 20382 20383 20384 20385 20386 20387 20388 20389 20390 </table>
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1353,8 +1364,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20523" /> <!-- Resist Aqua Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20523" /> <!-- Resist Aqua Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
@@ -1368,8 +1379,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20524" /> <!-- Resist Wind Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20524" /> <!-- Resist Wind Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
@@ -1383,8 +1394,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20525" /> <!-- Resist Fire Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20525" /> <!-- Resist Fire Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
@@ -1398,8 +1409,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20526" /> <!-- Resist Holy Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20526" /> <!-- Resist Holy Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
@@ -1413,8 +1424,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20527" /> <!-- Resist Unholy Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20527" /> <!-- Resist Unholy Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
@@ -1428,8 +1439,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20528" /> <!-- Mental Shield Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20528" /> <!-- Mental Shield Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1450,8 +1461,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20529" /> <!-- Focus Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20529" /> <!-- Focus Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1470,8 +1481,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20530" /> <!-- Concentration Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20530" /> <!-- Concentration Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1490,8 +1501,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20531" /> <!-- Bless Shield Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20531" /> <!-- Bless Shield Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1510,8 +1521,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20532" /> <!-- Agility Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20532" /> <!-- Agility Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1530,8 +1541,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20533" /> <!-- Regeneration Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20533" /> <!-- Regeneration Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1550,8 +1561,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20534" /> <!-- Advanced Block Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20534" /> <!-- Advanced Block Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1644,8 +1655,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20585" /> <!-- Seed of Fire (event) -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20585" /> <!-- Seed of Fire (event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1660,8 +1671,8 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="20586" /> <!-- Explosive Seed of Fire (Event) -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20586" /> <!-- Explosive Seed of Fire (Event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1743,7 +1754,7 @@
 		<set name="icon" val="BranchSys.icon.br_ghost_silverpaper_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20602" />
+		<set name="itemConsumeId" val="20602" /> <!-- Soul Silver Foil (Event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A3" />
 		<set name="reuseDelay" val="5000" />
