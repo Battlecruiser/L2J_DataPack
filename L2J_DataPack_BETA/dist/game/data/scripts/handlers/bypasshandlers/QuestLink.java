@@ -19,6 +19,7 @@
 package handlers.bypasshandlers;
 
 import java.util.List;
+import java.util.logging.Level;
 
 import javolution.util.FastList;
 
@@ -250,13 +251,18 @@ public class QuestLink implements IBypassHandler
 		// By limiting them there, we are allowed to create custom quests at higher IDs without interfering
 		if (awaits != null)
 		{
-			for (QuestState x : awaits)
+			for (QuestState state : awaits)
 			{
-				if (!options.contains(x.getQuest()))
+				if (state.getQuest() == null)
 				{
-					if ((x.getQuest().getId() > 0) && (x.getQuest().getId() < 20000))
+					_log.log(Level.WARNING, player + " Requested incorrect quest state for non existing quest: " + state.getQuestName());
+					continue;
+				}
+				if (!options.contains(state.getQuest()))
+				{
+					if ((state.getQuest().getId() > 0) && (state.getQuest().getId() < 20000))
 					{
-						options.add(x.getQuest());
+						options.add(state.getQuest());
 					}
 				}
 			}
