@@ -33,6 +33,8 @@
 		<!-- Summer Squash Event Skill -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="6389" /> <!-- Squash Seed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -48,6 +50,8 @@
 		<!-- Summer Squash Event Skill -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="6390" /> <!-- Large Squash Seed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -65,6 +69,8 @@
 		<set name="effectPoint" val="-150" />
 		<set name="effectRange" val="300" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="6391" /> <!-- Nectar -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
@@ -142,8 +148,8 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="736" /> <!-- Scroll of Escape -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="736" /> <!-- Scroll of Escape -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -167,8 +173,8 @@
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="737" /> <!-- Scroll of Resurrection -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="737" /> <!-- Scroll of Resurrection -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
@@ -226,12 +232,16 @@
 	</skill>
 	<skill id="2023" levels="1" name="Star Shard">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="6403" /> <!-- Star Shard -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2024" levels="1" name="Firework">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="6406" /> <!-- Firework -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
@@ -239,6 +249,8 @@
 	</skill>
 	<skill id="2025" levels="1" name="Large Firework">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="6407" /> <!-- Large Firework -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
@@ -349,11 +361,11 @@
 	</skill>
 	<skill id="2036" levels="2" name="Blessed Scroll of Escape">
 		<!-- Confirmed CT2.5 -->
+		<table name="#itemConsumeId"> 1538 3958 </table>
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<table name="#itemConsumeId"> 1538 3958 </table>
-		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -408,8 +420,8 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="1829" /> <!-- Scroll of Escape: Clan Hall -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="1829" /> <!-- Scroll of Escape: Clan Hall -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -431,8 +443,8 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="1830" /> <!-- Scroll of Escape: Castle -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="1830" /> <!-- Scroll of Escape: Castle -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -524,8 +536,8 @@
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="3936" /> <!-- Blessed Scroll of Resurrection -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3936" /> <!-- Blessed Scroll of Resurrection -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
@@ -542,8 +554,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="3926" /> <!-- L2Day - Guidance Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3926" /> <!-- L2Day - Guidance Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -560,8 +572,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="3927" /> <!-- L2Day - Death Whisper Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3927" /> <!-- L2Day - Death Whisper Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -578,8 +590,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="3928" /> <!-- L2Day - Focus Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3928" /> <!-- L2Day - Focus Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -596,8 +608,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="3929" /> <!-- L2Day - Greater Acumen Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3929" /> <!-- L2Day - Greater Acumen Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -614,8 +626,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="3930" /> <!-- L2Day - Haste Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3930" /> <!-- L2Day - Haste Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -632,8 +644,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="3931" /> <!-- L2Day - Agility Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3931" /> <!-- L2Day - Agility Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -650,8 +662,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="3932" /> <!-- L2Day - Mystic Empower Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3932" /> <!-- L2Day - Mystic Empower Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -668,8 +680,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="3933" /> <!-- L2Day - Might Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3933" /> <!-- L2Day - Might Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -686,8 +698,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="3934" /> <!-- L2Day - Windwalk Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3934" /> <!-- L2Day - Windwalk Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -704,8 +716,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="3935" /> <!-- L2Day - Shield Scroll -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3935" /> <!-- L2Day - Shield Scroll -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -739,8 +751,8 @@
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="3959" /> <!-- Blessed Scroll of Resurrection -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3959" /> <!-- Blessed Scroll of Resurrection -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
@@ -765,8 +777,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeId" val="4218" /> <!-- L2 Day - Scroll of Mana Regeneration -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="4218" /> <!-- L2 Day - Scroll of Mana Regeneration -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
