@@ -93,36 +93,6 @@ public class PcBody implements ITargetTypeHandler
 							condGood = false;
 							activeChar.sendMessage("You may not resurrect participants in a festival.");
 						}
-						if (targetPlayer.isReviveRequested())
-						{
-							if (targetPlayer.isRevivingPet())
-							{
-								player.sendPacket(SystemMessageId.MASTER_CANNOT_RES); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
-							}
-							else
-							{
-								player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
-							}
-							condGood = false;
-						}
-					}
-					else if (targetPet != null)
-					{
-						if (targetPet.getOwner() != player)
-						{
-							if (targetPet.getOwner().isReviveRequested())
-							{
-								if (targetPet.getOwner().isRevivingPet())
-								{
-									player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
-								}
-								else
-								{
-									player.sendPacket(SystemMessageId.CANNOT_RES_PET2); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
-								}
-								condGood = false;
-							}
-						}
 					}
 				}
 				

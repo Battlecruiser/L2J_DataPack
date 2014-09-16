@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -81,17 +80,10 @@ public final class Unsummon extends AbstractEffect
 		{
 			final L2PcInstance summonOwner = summon.getOwner();
 			
-			if (summon.isPhoenixBlessed() || summon.isNoblesseBlessed())
-			{
-				summon.stopEffects(L2EffectType.NOBLESSE_BLESSING);
-			}
-			else
-			{
-				summon.stopAllEffectsExceptThoseThatLastThroughDeath();
-			}
-			
 			summon.abortAttack();
 			summon.abortCast();
+			summon.stopAllEffects();
+			
 			summon.unSummon(summonOwner);
 			summonOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED);
 		}
