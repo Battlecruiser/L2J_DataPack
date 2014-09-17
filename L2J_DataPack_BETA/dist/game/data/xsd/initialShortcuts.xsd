@@ -53,7 +53,7 @@
 				<xs:element name="macros" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="macro">
+							<xs:element name="macro" maxOccurs="48">
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element name="command" maxOccurs="12" minOccurs="1">
