@@ -1297,8 +1297,8 @@
 				<mul stat="pvpPhysDef" val="1.05" />
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
-				<add order="0x10" stat="MEN" val="2" /> <!-- MEN + 1 -->
-				<sub order="0x10" stat="INT" val="2" /> <!-- INT - 1 -->
+				<add order="0x10" stat="MEN" val="1" /> <!-- MEN + 1 -->
+				<sub order="0x10" stat="INT" val="1" /> <!-- INT - 1 -->
 			</effect>
 		</for>
 	</skill>
@@ -1324,6 +1324,7 @@
 				<mul stat="pvpPhysDef" val="1.05" />
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
+
 			</effect>
 		</for>
 	</skill>
