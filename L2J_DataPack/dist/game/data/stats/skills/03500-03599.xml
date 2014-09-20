@@ -88,6 +88,8 @@
 		<for>
 			<effect name="Buff">
 				<add stat="runSpd" val="7" /> <!-- Speed +7 -->
+				<add order="0x10" stat="WIT" val="1" /> <!-- WIT + 1 -->
+				<sub order="0x10" stat="INT" val="1" /> <!-- INT - 1 -->
 			</effect>
 		</for>
 	</skill>
