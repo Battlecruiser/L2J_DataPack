@@ -131,6 +131,12 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add order="0x10" stat="STR" val="4" /> <!-- STR + 4 -->
+				<sub order="0x10" stat="CON" val="1" /> <!-- CON - 1 -->
+			</effect>
+		</for>
 	</skill>
 	<skill id="3512" levels="1" name="Composite Heavy Armor Set">
 		<set name="icon" val="icon.armor_t61_ul_i00" />
@@ -151,6 +157,8 @@
 		<for>
 			<effect name="Buff">
 				<sub stat="maxHp" val="269.65" /> <!-- HP -269.65 -->
+				<add order="0x10" stat="INT" val="4" /> <!-- INT + 4 -->
+				<sub order="0x10" stat="WIT" val="1" /> <!-- WIT - 1 -->
 			</effect>
 		</for>
 	</skill>
@@ -196,6 +204,8 @@
 			<effect name="Buff">
 				<mul stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
 				<add stat="maxMp" val="170.62" /> <!-- MP +170.62 -->
+				<add order="0x10" stat="WIT" val="1" /> <!-- WIT + 1 -->
+				<sub order="0x10" stat="INT" val="1" /> <!-- INT - 1 -->
 			</effect>
 		</for>
 	</skill>
