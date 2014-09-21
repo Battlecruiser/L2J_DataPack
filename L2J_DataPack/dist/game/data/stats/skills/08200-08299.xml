@@ -1745,6 +1745,8 @@
 				<mul stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 				<mul stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
 				<add stat="maxHp" val="531" /> <!-- Max HP by 531 -->
+				<add order="0x10" stat="STR" val="2" /> <!-- STR + 2 -->
+				<sub order="0x10" stat="DEX" val="2" /> <!-- DEX - 2 -->
 			</effect>
 		</for>
 	</skill>
@@ -1764,6 +1766,8 @@
 				<add stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
 				<add stat="runSpd" val="5" /> <!-- Increases Speed by 5 -->
 				<mul stat="magicSuccRes" val="1.01" /> <!-- Resistance to magic damage by 1% -->
+				<add order="0x10" stat="STR" val="2" /> <!-- STR + 2 -->
+				<sub order="0x10" stat="DEX" val="2" /> <!-- DEX - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -1780,6 +1784,9 @@
 				<mul stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
 				<mul stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5% -->
 				<add stat="maxMp" val="347" /> <!-- Max MP by 347 -->
+				<add order="0x10" stat="STR" val="1" /> <!-- STR + 1 -->
+				<add order="0x10" stat="DEX" val="1" /> <!-- DEX + 1 -->
+				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 		</for>
 	</skill>
@@ -1798,6 +1805,9 @@
 				<add stat="maxMp" val="354" /> <!-- Max MP by 354 -->
 				<add stat="rEvas" val="3" /> <!-- Increases Evasion by 3 -->
 				<add stat="cAtkAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
+				<add order="0x10" stat="STR" val="1" /> <!-- STR + 1 -->
+				<add order="0x10" stat="DEX" val="1" /> <!-- DEX + 1 -->
+				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -1815,6 +1825,9 @@
 				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
 				<mul stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
 				<sub stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
+				<add order="0x10" stat="WIT" val="1" /> <!-- WIT + 1 -->
+				<add order="0x10" stat="INT" val="1" /> <!-- INT + 1 -->
+				<sub order="0x10" stat="MEN" val="2" /> <!-- MEN - 2 -->
 			</effect>
 		</for>
 	</skill>
@@ -1833,6 +1846,9 @@
 				<sub stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
 				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
 				<mul stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
+				<add order="0x10" stat="WIT" val="1" /> <!-- WIT + 1 -->
+				<add order="0x10" stat="INT" val="1" /> <!-- INT + 1 -->
+				<sub order="0x10" stat="MEN" val="2" /> <!-- MEN - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
