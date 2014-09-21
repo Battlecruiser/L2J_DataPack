@@ -164,6 +164,8 @@
 				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<add order="0x10" stat="STR" val="2" /> <!-- STR + 2 -->
+				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -194,6 +196,8 @@
 				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<add order="0x10" stat="DEX" val="2" /> <!-- DEX + 2 -->
+				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -223,6 +227,8 @@
 				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<add order="0x10" stat="WIT" val="2" /> <!-- WIT + 2 -->
+				<sub order="0x10" stat="MEN" val="2" /> <!-- MEN - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
