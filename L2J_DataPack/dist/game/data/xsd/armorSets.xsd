@@ -11,7 +11,7 @@
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="bonus_item" maxOccurs="2" minOccurs="0">
+							<xs:element name="bonus_item" maxOccurs="unbounded" minOccurs="0">
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
@@ -23,13 +23,13 @@
 									<xs:attribute name="level" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="bonus_skill" minOccurs="0">
+							<xs:element name="bonus_skill" minOccurs="0" maxOccurs="unbounded" >
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="level" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="enchant_skill" maxOccurs="1" minOccurs="0">
+							<xs:element name="enchant_skill" maxOccurs="unbounded" minOccurs="0">
 								<xs:complexType>
 									<xs:attribute name="enchantLevel" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
