@@ -653,6 +653,8 @@
 				<add stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
 				<mul stat="healEffect" val="1.03" /> <!-- Received Increased Heal +3% -->
 				<add stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
+				<add order="0x10" stat="CON" val="2" /> <!-- CON + 2 -->
+				<sub order="0x10" stat="STR" val="2" /> <!-- STR - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="13" />
@@ -673,6 +675,8 @@
 				<add stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
 				<add stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
 				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add order="0x10" stat="STR" val="2" /> <!-- STR + 2 -->
+				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -689,6 +693,9 @@
 				<add stat="maxHp" val="492" /> <!-- HP +492 -->
 				<add stat="darkRes" val="8" /> <!-- Resistance to Darkness attacks +8 -->
 				<mul stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
+				<add order="0x10" stat="STR" val="1" /> <!-- STR + 1 -->
+				<add order="0x10" stat="DEX" val="1" /> <!-- DEX + 1 -->
+				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -705,6 +712,8 @@
 				<add stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
 				<mul stat="DanceMpConsumeRate" val="0.95" /> <!-- MP consumption is decreased when song and dance skills are used -5% -->
 				<add stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<add order="0x10" stat="STR" val="2" /> <!-- STR + 2 -->
+				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -721,6 +730,8 @@
 				<add stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
 				<mul stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
 				<add stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<add order="0x10" stat="DEX" val="2" /> <!-- DEX + 2 -->
+				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param HOLD="13" />
@@ -741,6 +752,8 @@
 				<mul stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
 				<add stat="regMp" val="1.72" /> <!-- MP recovery are increased +1.72 -->
 				<add stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<add order="0x10" stat="DEX" val="2" /> <!-- DEX + 2 -->
+				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -758,6 +771,8 @@
 				<add stat="healEffect" val="20" /> <!-- Increase amount of heal +20 -->
 				<sub stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
 				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add order="0x10" stat="MEN" val="2" /> <!-- MEN + 2 -->
+				<sub order="0x10" stat="INT" val="2" /> <!-- INT - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -775,6 +790,8 @@
 				<sub stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
 				<mul stat="MagicalMpConsumeRate" val="0.95" /> <!-- Decrease MP consumption -5% -->
 				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add order="0x10" stat="MEN" val="2" /> <!-- MEN + 2 -->
+				<sub order="0x10" stat="INT" val="2" /> <!-- INT - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -792,6 +809,8 @@
 				<mul stat="pDef" val="1.026" /> <!-- P. Def. +2.6% -->
 				<mul stat="pAtk" val="1.026" /> <!-- Increase P. Atk. +2.6% -->
 				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add order="0x10" stat="MEN" val="2" /> <!-- MEN + 2 -->
+				<sub order="0x10" stat="INT" val="2" /> <!-- INT - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -808,6 +827,9 @@
 				<mul stat="mAtk" val="1.054" /> <!-- Increase M. Atk +5.4% -->
 				<add stat="maxMp" val="321" /> <!-- Max MP +321 -->
 				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add order="0x10" stat="INT" val="1" /> <!-- INT + 1 -->
+				<add order="0x10" stat="WIT" val="1" /> <!-- WIT + 1 -->
+				<sub order="0x10" stat="MEN" val="2" /> <!-- MEN - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
