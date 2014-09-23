@@ -336,7 +336,7 @@
 																	<xs:attribute type="xs:byte" name="cubicSkillChance" use="optional" />
 																	<xs:attribute type="xs:string" name="cubicPower" use="optional" />
 																	<xs:attribute type="xs:string" name="npcId" use="optional" />
-																	<xs:attribute type="xs:string" name="consumeItemId" use="optional"  />
+																	<xs:attribute type="xs:string" name="consumeItemId" use="optional" />
 																	<xs:attribute type="xs:string" name="consumeItemCount" use="optional" />
 																	<xs:attribute type="xs:string" name="lifeTime" use="optional" />
 																	<xs:attribute type="xs:string" name="dispel" use="optional" />
@@ -1738,6 +1738,54 @@
 													</xs:element>
 												</xs:sequence>
 												<xs:attribute type="xs:string" name="name" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="pvpEffects">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="effect" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType mixed="true">
+												<xs:sequence>
+													<xs:element name="mul" minOccurs="0">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:string" name="order" />
+																	<xs:attribute type="xs:string" name="stat" />
+																	<xs:attribute type="xs:float" name="val" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute type="xs:string" name="name" use="optional" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="pveEffects">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="effect" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType mixed="true">
+												<xs:sequence>
+													<xs:element name="mul" minOccurs="0">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:string" name="order" />
+																	<xs:attribute type="xs:string" name="stat" />
+																	<xs:attribute type="xs:float" name="val" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute type="xs:string" name="name" use="optional" />
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>
