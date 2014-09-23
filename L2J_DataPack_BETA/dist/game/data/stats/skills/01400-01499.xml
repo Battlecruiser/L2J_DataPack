@@ -2306,10 +2306,18 @@
 	</skill>
 	<skill id="1467" levels="1" name="Meteor">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
+		<set name="abnormalType" val="METEOR" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="CON" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="trait" val="BLEED" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="600" />
-		<set name="channelingTickInterval" val="1" />
 		<set name="effectPoint" val="-679" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -2319,21 +2327,31 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="81" />
 		<set name="mpInitialConsume" val="72" />
-		<set name="mpPerChanneling" val="72" />
-		<set name="operateType" val="CA1" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="117" />
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="AREA" />
-		<channelingEffects>
+		<for>
 			<effect name="MagicalAttack" />
-		</channelingEffects>
+			<effect name="DamOverTime" ticks="3">
+				<param power="111" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1468" levels="1" name="Star Fall">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
+		<set name="abnormalType" val="METEOR" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="CON" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="trait" val="BLEED" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="600" />
-		<set name="channelingTickInterval" val="1" />
 		<set name="effectPoint" val="-679" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
@@ -2341,14 +2359,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="81" />
 		<set name="mpInitialConsume" val="72" />
-		<set name="mpPerChanneling" val="72" />
-		<set name="operateType" val="CA1" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="117" />
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="AREA" />
-		<channelingEffects>
+		<for>
 			<effect name="MagicalAttack" />
-		</channelingEffects>
+			<effect name="DamOverTime" ticks="3">
+				<param power="111" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1469" levels="1" name="Leopold" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
