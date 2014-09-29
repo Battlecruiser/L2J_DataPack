@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,7 +21,7 @@ package quests.Q10283_RequestOfIceMerchant;
 import quests.Q00115_TheOtherSideOfTruth.Q00115_TheOtherSideOfTruth;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -40,13 +40,13 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	private static final int KIER = 32022;
 	private static final int JINIA = 32760;
 	// Location
-	private static final L2CharPosition MOVE_TO_END = new L2CharPosition(104457, -107010, -3698, 0);
+	private static final Location MOVE_TO_END = new Location(104457, -107010, -3698, 0);
 	// Misc
 	private boolean _jiniaOnSpawn = false;
 	
-	public Q10283_RequestOfIceMerchant(int questId, String name, String descr)
+	public Q10283_RequestOfIceMerchant()
 	{
-		super(questId, name, descr);
+		super(10283, Q10283_RequestOfIceMerchant.class.getSimpleName(), "Request of Ice Merchant");
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, KIER, JINIA);
 		addFirstTalkId(JINIA);
@@ -62,7 +62,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == RAFFORTY)
+		if (npc.getId() == RAFFORTY)
 		{
 			if (event.equalsIgnoreCase("32020-03.htm"))
 			{
@@ -73,7 +73,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 				st.setCond(2, true);
 			}
 		}
-		else if ((npc.getNpcId() == KIER) && event.equalsIgnoreCase("spawn"))
+		else if ((npc.getId() == KIER) && event.equalsIgnoreCase("spawn"))
 		{
 			if (_jiniaOnSpawn)
 			{
@@ -92,7 +92,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			_jiniaOnSpawn = false;
 			return null;
 		}
-		else if ((npc.getNpcId() == JINIA) && event.equalsIgnoreCase("32760-04.html"))
+		else if ((npc.getId() == JINIA) && event.equalsIgnoreCase("32760-04.html"))
 		{
 			st.giveAdena(190000, true);
 			st.addExpAndSp(627000, 50300);
@@ -113,7 +113,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		}
 		
 		final QuestState st = player.getQuestState(getName());
-		if ((npc.getNpcId() == JINIA) && (st != null) && (st.isCond(2)))
+		if ((st != null) && st.isCond(2))
 		{
 			return "32760-01.html";
 		}
@@ -130,7 +130,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case RAFFORTY:
 				switch (st.getState())
@@ -168,10 +168,5 @@ public class Q10283_RequestOfIceMerchant extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10283_RequestOfIceMerchant(10283, Q10283_RequestOfIceMerchant.class.getSimpleName(), "Request of Ice Merchant");
 	}
 }

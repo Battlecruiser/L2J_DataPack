@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -46,7 +46,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 	{
 		if (command.equals("admin_itemcreate"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
+			AdminHtml.showAdminHtml(activeChar, "itemcreation.htm");
 		}
 		else if (command.startsWith("admin_create_item"))
 		{
@@ -77,7 +77,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Specify a valid number.");
 			}
-			AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
+			AdminHtml.showAdminHtml(activeChar, "itemcreation.htm");
 		}
 		else if (command.startsWith("admin_create_coin"))
 		{
@@ -111,7 +111,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Specify a valid number.");
 			}
-			AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
+			AdminHtml.showAdminHtml(activeChar, "itemcreation.htm");
 		}
 		else if (command.startsWith("admin_give_item_target"))
 		{
@@ -153,7 +153,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Specify a valid number.");
 			}
-			AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
+			AdminHtml.showAdminHtml(activeChar, "itemcreation.htm");
 		}
 		else if (command.startsWith("admin_give_item_to_all"))
 		{
@@ -186,7 +186,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				activeChar.sendMessage("This item does not stack - Creation aborted.");
 				return false;
 			}
-			for (L2PcInstance onlinePlayer : L2World.getInstance().getAllPlayersArray())
+			for (L2PcInstance onlinePlayer : L2World.getInstance().getPlayers())
 			{
 				if ((activeChar != onlinePlayer) && onlinePlayer.isOnline() && ((onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached()))
 				{

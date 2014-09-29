@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -41,7 +41,7 @@ public class RollingDice implements IItemHandler
 		}
 		
 		L2PcInstance activeChar = playable.getActingPlayer();
-		int itemId = item.getItemId();
+		int itemId = item.getId();
 		
 		if (activeChar.isInOlympiadMode())
 		{
@@ -60,7 +60,7 @@ public class RollingDice implements IItemHandler
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ROLLED_S2);
 		sm.addString(activeChar.getName());
-		sm.addNumber(number);
+		sm.addInt(number);
 		
 		activeChar.sendPacket(sm);
 		if (activeChar.isInsideZone(ZoneId.PEACE))

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,7 +18,7 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.MobGroup;
@@ -144,7 +144,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 	private void showMainPage(L2PcInstance activeChar, String command)
 	{
 		String filename = "mobgroup.htm";
-		AdminHelpPage.showHelpPage(activeChar, filename);
+		AdminHtml.showAdminHtml(activeChar, filename);
 	}
 	
 	private void returnToChar(String command, L2PcInstance activeChar)
@@ -279,7 +279,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		L2NpcTemplate template = NpcTable.getInstance().getTemplate(templateId);
+		L2NpcTemplate template = NpcData.getInstance().getTemplate(templateId);
 		
 		if (template == null)
 		{
@@ -619,7 +619,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		
 		for (MobGroup mobGroup : mobGroupList)
 		{
-			activeChar.sendMessage(mobGroup.getGroupId() + ": " + mobGroup.getActiveMobCount() + " alive out of " + mobGroup.getMaxMobCount() + " of NPC ID " + mobGroup.getTemplate().getNpcId() + " (" + mobGroup.getStatus() + ")");
+			activeChar.sendMessage(mobGroup.getGroupId() + ": " + mobGroup.getActiveMobCount() + " alive out of " + mobGroup.getMaxMobCount() + " of NPC ID " + mobGroup.getTemplate().getId() + " (" + mobGroup.getStatus() + ")");
 		}
 		
 		activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);

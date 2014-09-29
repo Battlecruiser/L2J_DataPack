@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00132_MatrasCuriosity;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -43,9 +44,9 @@ public final class Q00132_MatrasCuriosity extends Quest
 	private static final int BLUEPRINT_RANKU = 9800;
 	private static final int BLUEPRINT_PRINCE = 9801;
 	
-	public Q00132_MatrasCuriosity(int questId, String name, String descr)
+	public Q00132_MatrasCuriosity()
 	{
-		super(questId, name, descr);
+		super(132, Q00132_MatrasCuriosity.class.getSimpleName(), "Matras' Curiosity");
 		addStartNpc(MATRAS);
 		addTalkId(MATRAS);
 		addKillId(RANKU, DEMON_PRINCE);
@@ -95,7 +96,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		L2PcInstance pl = null;
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case DEMON_PRINCE:
 				pl = getRandomPartyMember(player, "rewarded_prince", "1");
@@ -179,10 +180,5 @@ public final class Q00132_MatrasCuriosity extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00132_MatrasCuriosity(132, Q00132_MatrasCuriosity.class.getSimpleName(), "Matras' Curiosity");
 	}
 }

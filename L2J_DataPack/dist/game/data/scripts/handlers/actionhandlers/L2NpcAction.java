@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,23 +18,20 @@
  */
 package handlers.actionhandlers;
 
-import java.util.List;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.L2Event;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.Quest.QuestEventType;
+import com.l2jserver.gameserver.model.events.EventDispatcher;
+import com.l2jserver.gameserver.model.events.EventType;
+import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
+import com.l2jserver.gameserver.network.serverpackets.MoveToPawn;
 import com.l2jserver.util.Rnd;
 
 public class L2NpcAction implements IActionHandler
@@ -77,28 +74,10 @@ public class L2NpcAction implements IActionHandler
 			if (target.isAutoAttackable(activeChar))
 			{
 				((L2Npc) target).getAI(); // wake up ai
-				// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
-				// The activeChar.getLevel() - getLevel() permit to display the correct color in the select window
-				MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character) target).getLevel());
-				activeChar.sendPacket(my);
-				// Send a Server->Client packet StatusUpdate of the L2Npc to the L2PcInstance to update its HP bar
-				StatusUpdate su = new StatusUpdate(target);
-				su.addAttribute(StatusUpdate.CUR_HP, (int) ((L2Character) target).getCurrentHp());
-				su.addAttribute(StatusUpdate.MAX_HP, ((L2Character) target).getMaxHp());
-				activeChar.sendPacket(su);
 			}
-			else
-			{
-				// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
-				MyTargetSelected my = new MyTargetSelected(target.getObjectId(), 0);
-				activeChar.sendPacket(my);
-			}
-			// Send a Server->Client packet ValidateLocation to correct the L2Npc position and heading on the client
-			activeChar.sendPacket(new ValidateLocation((L2Character) target));
 		}
 		else if (interact)
 		{
-			activeChar.sendPacket(new ValidateLocation((L2Character) target));
 			// Check if the activeChar is attackable (without a forced attack) and isn't dead
 			if (target.isAutoAttackable(activeChar) && !((L2Character) target).isAlikeDead())
 			{
@@ -125,7 +104,9 @@ public class L2NpcAction implements IActionHandler
 				}
 				else
 				{
-					L2Npc npc = (L2Npc) target;
+					final L2Npc npc = (L2Npc) target;
+					// Turn NPC to the player.
+					activeChar.sendPacket(new MoveToPawn(activeChar, npc, 100));
 					if (npc.hasRandomAnimation())
 					{
 						npc.onRandomAnimation(Rnd.get(8));
@@ -137,15 +118,13 @@ public class L2NpcAction implements IActionHandler
 					}
 					else
 					{
-						List<Quest> qlsa = npc.getTemplate().getEventQuests(QuestEventType.QUEST_START);
-						List<Quest> qlst = npc.getTemplate().getEventQuests(QuestEventType.ON_FIRST_TALK);
-						if ((qlsa != null) && !qlsa.isEmpty())
+						if (npc.hasListener(EventType.ON_NPC_QUEST_START))
 						{
 							activeChar.setLastQuestNpcObject(target.getObjectId());
 						}
-						if ((qlst != null) && (qlst.size() == 1))
+						if (npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 						{
-							qlst.get(0).notifyFirstTalk(npc, activeChar);
+							EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, activeChar), npc);
 						}
 						else
 						{

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00618_IntoTheFlame;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -56,9 +57,9 @@ public class Q00618_IntoTheFlame extends Quest
 		MONSTERS.put(21292, 710);
 	}
 	
-	public Q00618_IntoTheFlame(int questId, String name, String descr)
+	public Q00618_IntoTheFlame()
 	{
-		super(questId, name, descr);
+		super(618, Q00618_IntoTheFlame.class.getSimpleName(), "Into the Flame");
 		addStartNpc(KLEIN);
 		addTalkId(HILDA, KLEIN);
 		addKillId(MONSTERS.keySet());
@@ -123,7 +124,7 @@ public class Q00618_IntoTheFlame extends Quest
 		if (member != null)
 		{
 			final QuestState qs = member.getQuestState(getName());
-			if ((qs.getQuestItemsCount(VACUALITE_ORE) < REQUIRED_COUNT) && (getRandom(1000) < MONSTERS.get(npc.getNpcId())))
+			if ((qs.getQuestItemsCount(VACUALITE_ORE) < REQUIRED_COUNT) && (getRandom(1000) < MONSTERS.get(npc.getId())))
 			{
 				qs.giveItems(VACUALITE_ORE, 1);
 				if (qs.getQuestItemsCount(VACUALITE_ORE) >= REQUIRED_COUNT)
@@ -148,7 +149,7 @@ public class Q00618_IntoTheFlame extends Quest
 		{
 			return htmltext;
 		}
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case KLEIN:
 			{
@@ -183,10 +184,5 @@ public class Q00618_IntoTheFlame extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00618_IntoTheFlame(618, Q00618_IntoTheFlame.class.getSimpleName(), "Into the Flame");
 	}
 }

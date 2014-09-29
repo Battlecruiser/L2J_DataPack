@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,28 +22,27 @@ import java.util.Calendar;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Black Marketeer of Mammon - Exchange Adena for AA.
  * @author Adry_85
  */
-public class BlackMarketeerOfMammon extends AbstractNpcAI
+public final class BlackMarketeerOfMammon extends AbstractNpcAI
 {
 	// NPC
 	private static final int BLACK_MARKETEER = 31092;
 	// Misc
 	private static final int MIN_LEVEL = 60;
 	
-	private BlackMarketeerOfMammon(String name, String descr)
+	private BlackMarketeerOfMammon()
 	{
-		super(name, descr);
-		
+		super(BlackMarketeerOfMammon.class.getSimpleName(), "ai/npc");
 		addStartNpc(BLACK_MARKETEER);
 		addTalkId(BLACK_MARKETEER);
 	}
@@ -74,8 +73,8 @@ public class BlackMarketeerOfMammon extends AbstractNpcAI
 						if (player.getAdena() >= 2000000)
 						{
 							qs.setState(State.STARTED);
-							takeItems(player, PcInventory.ADENA_ID, 2000000);
-							giveItems(player, PcInventory.ANCIENT_ADENA_ID, 500000);
+							takeItems(player, Inventory.ADENA_ID, 2000000);
+							giveItems(player, Inventory.ANCIENT_ADENA_ID, 500000);
 							htmltext = "31092-04.html";
 							qs.exitQuest(QuestType.DAILY, false);
 						}
@@ -116,6 +115,6 @@ public class BlackMarketeerOfMammon extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new BlackMarketeerOfMammon(BlackMarketeerOfMammon.class.getSimpleName(), "ai/npc");
+		new BlackMarketeerOfMammon();
 	}
 }

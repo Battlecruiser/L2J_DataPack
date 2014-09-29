@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,37 +18,31 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
- * Lucky effect.
+ * Lucky effect implementation.
  * @author Zoey76
  */
-public class Lucky extends L2Effect
+public final class Lucky extends AbstractEffect
 {
-	public Lucky(Env env, EffectTemplate template)
+	public Lucky(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean canStart(BuffInfo info)
 	{
-		return (getEffector() != null) && (getEffected() != null) && getEffected().isPlayer();
+		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayer();
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onActionTime(BuffInfo info)
 	{
-		return true;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.LUCKY;
+		return info.getSkill().isPassive();
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -228,7 +228,7 @@ public class AdminEnchant implements IAdminCommandHandler
 	
 	private void showMainPage(L2PcInstance activeChar)
 	{
-		AdminHelpPage.showHelpPage(activeChar, "enchant.htm");
+		AdminHtml.showAdminHtml(activeChar, "enchant.htm");
 	}
 	
 	@Override

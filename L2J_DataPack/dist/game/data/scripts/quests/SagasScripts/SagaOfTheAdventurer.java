@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Adventurer (79)
  * @author Emperorc
  */
 public class SagaOfTheAdventurer extends SagasSuperClass
 {
-	public static String qn1 = "79_SagaOfTheAdventurer";
-	public static int qnu = 79;
-	public static String qna = "Saga of the Adventurer";
-	
 	public SagaOfTheAdventurer()
 	{
-		super(qnu, qn1, qna);
+		super(79, "79_SagaOfTheAdventurer", "Saga of the Adventurer");
 		NPC = new int[]
 		{
 			31603,
@@ -67,7 +65,6 @@ public class SagaOfTheAdventurer extends SagasSuperClass
 			27228,
 			27302
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			93
@@ -76,23 +73,11 @@ public class SagaOfTheAdventurer extends SagasSuperClass
 		{
 			0x08
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			119518,
-			181205,
-			181215
-		};
-		Y = new int[]
-		{
-			-28658,
-			36676,
-			36676
-		};
-		Z = new int[]
-		{
-			-3811,
-			-4816,
-			-4812
+			new Location(119518, -28658, -3811),
+			new Location(181205, 36676, -4816),
+			new Location(181215, 36676, -4812)
 		};
 		Text = new String[]
 		{

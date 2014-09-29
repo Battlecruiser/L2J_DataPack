@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00288_HandleWithCare;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -54,9 +55,9 @@ public class Q00288_HandleWithCare extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00288_HandleWithCare(int questId, String name, String descr)
+	public Q00288_HandleWithCare()
 	{
-		super(questId, name, descr);
+		super(288, Q00288_HandleWithCare.class.getSimpleName(), "Handle With Care");
 		addStartNpc(ANKUMI);
 		addTalkId(ANKUMI);
 		addKillId(SEER_UGOROS);
@@ -215,10 +216,5 @@ public class Q00288_HandleWithCare extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00288_HandleWithCare(288, Q00288_HandleWithCare.class.getSimpleName(), "Handle With Care");
 	}
 }

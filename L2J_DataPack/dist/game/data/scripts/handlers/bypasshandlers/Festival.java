@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -197,7 +197,7 @@ public class Festival implements IBypassHandler
 					
 					final boolean isHighestScore = SevenSignsFestival.getInstance().setFinalScore(activeChar, npc.getFestivalOracle(), npc.getFestivalType(), offeringScore);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CONTRIB_SCORE_INCREASED_S1);
-					sm.addItemNumber(offeringScore);
+					sm.addLong(offeringScore);
 					activeChar.sendPacket(sm);
 					
 					if (isHighestScore)
@@ -216,14 +216,14 @@ public class Festival implements IBypassHandler
 					final StatsSet duskData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DUSK, npc.getFestivalType());
 					final StatsSet overallData = SevenSignsFestival.getInstance().getOverallHighestScoreData(npc.getFestivalType());
 					
-					final int dawnScore = dawnData.getInteger("score");
-					final int duskScore = duskData.getInteger("score");
+					final int dawnScore = dawnData.getInt("score");
+					final int duskScore = duskData.getInt("score");
 					int overallScore = 0;
 					
 					// If no data is returned, assume there is no record, or all scores are 0.
 					if (overallData != null)
 					{
-						overallScore = overallData.getInteger("score");
+						overallScore = overallData.getInt("score");
 					}
 					
 					StringUtil.append(strBuffer, SevenSignsFestival.getFestivalName(npc.getFestivalType()), " festival.<br>");
@@ -267,7 +267,7 @@ public class Festival implements IBypassHandler
 					
 					StringUtil.append(strBuffer, "<a action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Chat 0\">Go back.</a></body></html>");
 					
-					NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+					final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 					html.setHtml(strBuffer.toString());
 					activeChar.sendPacket(html);
 					break;

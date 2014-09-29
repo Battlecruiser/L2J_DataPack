@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="Jinia Guild Hideout" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<activityTime val="5" />
+	<allowSummon val="false" />
+	<emptyDestroyTime val="5" />
+	<spawnPoint spawnX="113793" spawnY="-109342" spawnZ="-845" />
+	<spawnlist>
+		<group name="general">
+			<!-- Jinia -->
+			<spawn npcId="32760" x="-24040" y="-8969" z="-5360" heading="64974" respawn="0" />
+			<!-- Battalion Leader -->
+			<spawn npcId="32777" x="-23993" y="-9069" z="-5384" heading="2912" respawn="0" />
+			<!-- Legionnaire -->
+			<spawn npcId="32778" x="-23993" y="-8845" z="-5384" heading="58968" respawn="0" />
+		</group>
+	</spawnlist>
+</instance>

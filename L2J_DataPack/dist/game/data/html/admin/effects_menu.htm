@@ -9,7 +9,7 @@
 <tr>
 <td>QuickBox:</td>
 <td><edit var="qbox" width=120 height=15></td>
-<td><button value="Help" action="bypass -h admin_help help/effects_menu.htm" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Help" action="bypass -h admin_html help/effects_menu.htm" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>
 <br>
@@ -31,9 +31,12 @@ Character Based:<br1>
 <td><br></td>
 </tr>
 <tr>
-<td><button value="Abnormal" action="bypass -h admin_abnormal_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Abnormal" action="bypass -h admin_ave_abnormal $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Special" action="bypass -h admin_ave_special $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Event" action="bypass -h admin_ave_event $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
 <td><button value="Social" action="bypass -h admin_social_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Special" action="bypass -h admin_special_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><button value="Effect" action="bypass -h admin_effect_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 <tr>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package events.HeavyMedal;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.event.LongTimeEvent;
@@ -27,7 +28,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  * Heavy Medals event AI.
  * @author Gnacik
  */
-public class HeavyMedal extends LongTimeEvent
+public final class HeavyMedal extends LongTimeEvent
 {
 	private final static int CAT_ROY = 31228;
 	private final static int CAT_WINNIE = 31229;
@@ -50,9 +51,9 @@ public class HeavyMedal extends LongTimeEvent
 		6402
 	};
 	
-	public HeavyMedal(String name, String descr)
+	private HeavyMedal()
 	{
-		super(name, descr);
+		super(HeavyMedal.class.getSimpleName(), "events");
 		addStartNpc(CAT_ROY);
 		addStartNpc(CAT_WINNIE);
 		addTalkId(CAT_ROY);
@@ -106,7 +107,7 @@ public class HeavyMedal extends LongTimeEvent
 		}
 		else if (event.equalsIgnoreCase("talk"))
 		{
-			htmltext = String.valueOf(npc.getNpcId()) + "-lvl-" + String.valueOf(level) + ".htm";
+			htmltext = String.valueOf(npc.getId()) + "-lvl-" + String.valueOf(level) + ".htm";
 		}
 		return htmltext;
 	}
@@ -118,7 +119,7 @@ public class HeavyMedal extends LongTimeEvent
 		{
 			newQuestState(player);
 		}
-		return npc.getNpcId() + ".htm";
+		return npc.getId() + ".htm";
 	}
 	
 	public int checkLevel(QuestState st)
@@ -145,6 +146,6 @@ public class HeavyMedal extends LongTimeEvent
 	
 	public static void main(String[] args)
 	{
-		new HeavyMedal(HeavyMedal.class.getSimpleName(), "events");
+		new HeavyMedal();
 	}
 }

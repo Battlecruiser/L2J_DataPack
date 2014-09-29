@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q10505_JewelOfValakas;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -43,9 +44,9 @@ public class Q10505_JewelOfValakas extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 83;
 	
-	private Q10505_JewelOfValakas(int questId, String name, String descr)
+	public Q10505_JewelOfValakas()
 	{
-		super(questId, name, descr);
+		super(10505, Q10505_JewelOfValakas.class.getSimpleName(), "Jewel of Valakas");
 		addStartNpc(KLEIN);
 		addTalkId(KLEIN);
 		addKillId(VALAKAS);
@@ -167,10 +168,5 @@ public class Q10505_JewelOfValakas extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10505_JewelOfValakas(10505, Q10505_JewelOfValakas.class.getSimpleName(), "Jewel of Valakas");
 	}
 }

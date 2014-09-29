@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -65,17 +65,17 @@ public class OlympiadStat implements IUserCommandHandler
 		}
 		
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CURRENT_RECORD_FOR_THIS_OLYMPIAD_SESSION_IS_S1_MATCHES_S2_WINS_S3_DEFEATS_YOU_HAVE_EARNED_S4_OLYMPIAD_POINTS);
-		sm.addNumber(Olympiad.getInstance().getCompetitionDone(nobleObjId));
-		sm.addNumber(Olympiad.getInstance().getCompetitionWon(nobleObjId));
-		sm.addNumber(Olympiad.getInstance().getCompetitionLost(nobleObjId));
-		sm.addNumber(Olympiad.getInstance().getNoblePoints(nobleObjId));
+		sm.addInt(Olympiad.getInstance().getCompetitionDone(nobleObjId));
+		sm.addInt(Olympiad.getInstance().getCompetitionWon(nobleObjId));
+		sm.addInt(Olympiad.getInstance().getCompetitionLost(nobleObjId));
+		sm.addInt(Olympiad.getInstance().getNoblePoints(nobleObjId));
 		activeChar.sendPacket(sm);
 		
 		final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_S1_MATCHES_REMAINING_THAT_YOU_CAN_PARTECIPATE_IN_THIS_WEEK_S2_CLASSED_S3_NON_CLASSED_S4_TEAM);
-		sm2.addNumber(Olympiad.getInstance().getRemainingWeeklyMatches(nobleObjId));
-		sm2.addNumber(Olympiad.getInstance().getRemainingWeeklyMatchesClassed(nobleObjId));
-		sm2.addNumber(Olympiad.getInstance().getRemainingWeeklyMatchesNonClassed(nobleObjId));
-		sm2.addNumber(Olympiad.getInstance().getRemainingWeeklyMatchesTeam(nobleObjId));
+		sm2.addInt(Olympiad.getInstance().getRemainingWeeklyMatches(nobleObjId));
+		sm2.addInt(Olympiad.getInstance().getRemainingWeeklyMatchesClassed(nobleObjId));
+		sm2.addInt(Olympiad.getInstance().getRemainingWeeklyMatchesNonClassed(nobleObjId));
+		sm2.addInt(Olympiad.getInstance().getRemainingWeeklyMatchesTeam(nobleObjId));
 		activeChar.sendPacket(sm2);
 		return true;
 	}

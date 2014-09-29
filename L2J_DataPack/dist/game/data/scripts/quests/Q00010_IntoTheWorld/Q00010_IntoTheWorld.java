@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,9 @@
  */
 package quests.Q00010_IntoTheWorld;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -42,9 +42,9 @@ public class Q00010_IntoTheWorld extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	private Q00010_IntoTheWorld(int questId, String name, String descr)
+	public Q00010_IntoTheWorld()
 	{
-		super(questId, name, descr);
+		super(10, Q00010_IntoTheWorld.class.getSimpleName(), "Into the World");
 		addStartNpc(BALANKI);
 		addTalkId(BALANKI, REED, GERALD);
 		registerQuestItems(VERY_EXPENSIVE_NECKLACE);
@@ -102,13 +102,13 @@ public class Q00010_IntoTheWorld extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case BALANKI:
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = ((player.getLevel() >= MIN_LEVEL) && (player.getRace() == Race.Dwarf)) ? "30533-01.htm" : "30533-02.html";
+						htmltext = ((player.getLevel() >= MIN_LEVEL) && (player.getRace() == Race.DWARF)) ? "30533-01.htm" : "30533-02.html";
 						break;
 					case State.STARTED:
 						if (st.isCond(1))
@@ -160,10 +160,5 @@ public class Q00010_IntoTheWorld extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00010_IntoTheWorld(10, Q00010_IntoTheWorld.class.getSimpleName(), "Into the World");
 	}
 }

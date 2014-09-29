@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of Eva's Saint (87)
  * @author Emperorc
  */
 public class SagaOfEvasSaint extends SagasSuperClass
 {
-	public static String qn1 = "87_SagaOfEvasSaint";
-	public static int qnu = 87;
-	public static String qna = "Saga of Eva's Saint";
-	
 	public SagaOfEvasSaint()
 	{
-		super(qnu, qn1, qna);
+		super(87, "87_SagaOfEvasSaint", "Saga of Eva's Saint");
 		NPC = new int[]
 		{
 			30191,
@@ -67,7 +65,6 @@ public class SagaOfEvasSaint extends SagasSuperClass
 			27236,
 			27276
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			105
@@ -76,23 +73,11 @@ public class SagaOfEvasSaint extends SagasSuperClass
 		{
 			0x1e
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			164650,
-			46087,
-			46066
-		};
-		Y = new int[]
-		{
-			-74121,
-			-36372,
-			-36396
-		};
-		Z = new int[]
-		{
-			-2871,
-			-1685,
-			-1685
+			new Location(164650, -74121, -2871),
+			new Location(46087, -36372, -1685),
+			new Location(46066, -36396, -1685)
 		};
 		Text = new String[]
 		{

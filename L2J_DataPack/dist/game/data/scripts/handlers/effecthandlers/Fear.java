@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,34 +20,49 @@ package handlers.effecthandlers;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
+import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2DefenderInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2FortCommanderInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.util.Util;
 
 /**
- * Implementation of the Fear Effect
+ * Fear effect implementation.
  * @author littlecrow
  */
-public class Fear extends L2Effect
+public final class Fear extends AbstractEffect
 {
 	public static final int FEAR_RANGE = 500;
 	
-	private int _dX = -1;
-	private int _dY = -1;
-	
-	public Fear(Env env, EffectTemplate template)
+	public Fear(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+	}
+	
+	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		if ((info.getEffected() instanceof L2NpcInstance) || (info.getEffected() instanceof L2DefenderInstance) || (info.getEffected() instanceof L2FortCommanderInstance) || (info.getEffected() instanceof L2SiegeFlagInstance) || (info.getEffected() instanceof L2ServitorInstance))
+		{
+			return false;
+		}
+		return true;
+	}
+	
+	@Override
+	public int getEffectFlags()
+	{
+		return EffectFlag.FEAR.getMask();
 	}
 	
 	@Override
@@ -57,80 +72,50 @@ public class Fear extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public int getTicks()
 	{
-		if ((getEffected() instanceof L2NpcInstance) || (getEffected() instanceof L2DefenderInstance) || (getEffected() instanceof L2FortCommanderInstance) || (getEffected() instanceof L2SiegeFlagInstance) || (getEffected() instanceof L2SiegeSummonInstance))
-		{
-			return false;
-		}
-		
-		if (!getEffected().isAfraid())
-		{
-			if (getEffected().isCastingNow() && getEffected().canAbortCast())
-			{
-				getEffected().abortCast();
-			}
-			
-			if (getEffected().getX() > getEffector().getX())
-			{
-				_dX = 1;
-			}
-			if (getEffected().getY() > getEffector().getY())
-			{
-				_dY = 1;
-			}
-			
-			getEffected().startFear();
-			onActionTime();
-			return true;
-		}
+		return 5;
+	}
+	
+	@Override
+	public boolean onActionTime(BuffInfo info)
+	{
+		fearAction(info, false);
 		return false;
 	}
 	
 	@Override
-	public void onExit()
+	public void onStart(BuffInfo info)
 	{
-		getEffected().stopFear(false);
+		if (info.getEffected().isCastingNow() && info.getEffected().canAbortCast())
+		{
+			info.getEffected().abortCast();
+		}
+		
+		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
+		fearAction(info, true);
 	}
 	
-	@Override
-	public boolean onActionTime()
+	private void fearAction(BuffInfo info, boolean start)
 	{
-		int posX = getEffected().getX();
-		int posY = getEffected().getY();
-		int posZ = getEffected().getZ();
+		double radians = Math.toRadians(start ? Util.calculateAngleFrom(info.getEffector(), info.getEffected()) : Util.convertHeadingToDegree(info.getEffected().getHeading()));
 		
-		if (getEffected().getX() > getEffector().getX())
-		{
-			_dX = 1;
-		}
-		if (getEffected().getY() > getEffector().getY())
-		{
-			_dY = 1;
-		}
-		
-		posX += _dX * FEAR_RANGE;
-		posY += _dY * FEAR_RANGE;
+		int posX = (int) (info.getEffected().getX() + (FEAR_RANGE * Math.cos(radians)));
+		int posY = (int) (info.getEffected().getY() + (FEAR_RANGE * Math.sin(radians)));
+		int posZ = info.getEffected().getZ();
 		
 		if (Config.GEODATA > 0)
 		{
-			Location destiny = GeoData.getInstance().moveCheck(getEffected().getX(), getEffected().getY(), getEffected().getZ(), posX, posY, posZ, getEffected().getInstanceId());
+			Location destiny = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), posX, posY, posZ, info.getEffected().getInstanceId());
 			posX = destiny.getX();
 			posY = destiny.getY();
 		}
 		
-		if (!getEffected().isPet())
+		if (!info.getEffected().isPet())
 		{
-			getEffected().setRunning();
+			info.getEffected().setRunning();
 		}
 		
-		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(posX, posY, posZ, 0));
-		return true;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.FEAR.getMask();
+		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, posZ));
 	}
 }

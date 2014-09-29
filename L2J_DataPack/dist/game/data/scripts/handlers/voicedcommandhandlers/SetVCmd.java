@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -47,7 +47,7 @@ public class SetVCmd implements IVoicedCommandHandler
 			}
 			
 			final L2PcInstance player = activeChar.getTarget().getActingPlayer();
-			if ((activeChar.getClan() == null) || (player.getClan() == null) || (activeChar.getClan().getClanId() != player.getClan().getClanId()))
+			if ((activeChar.getClan() == null) || (player.getClan() == null) || (activeChar.getClan().getId() != player.getClan().getId()))
 			{
 				return false;
 			}
@@ -61,17 +61,17 @@ public class SetVCmd implements IVoicedCommandHandler
 				}
 				
 				final int n = Integer.parseInt(val);
-				if (!((activeChar.getClanPrivileges() > n) || activeChar.isClanLeader()))
+				if ((activeChar.getClanPrivileges().getBitmask() <= n) || !activeChar.isClanLeader())
 				{
 					return false;
 				}
 				
-				player.setClanPrivileges(n);
+				player.getClanPrivileges().setBitmask(n);
 				activeChar.sendMessage("Your clan privileges have been set to " + n + " by " + activeChar.getName() + ".");
 			}
 			else if (params.startsWith("title"))
 			{
-				
+				// TODO why is this empty?
 			}
 		}
 		return true;

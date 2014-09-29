@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,7 +25,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -47,7 +47,7 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
  * Orfen's AI
  * @author Emperorc
  */
-public class Orfen extends AbstractNpcAI
+public final class Orfen extends AbstractNpcAI
 {
 	private static final Location[] POS =
 	{
@@ -78,9 +78,9 @@ public class Orfen extends AbstractNpcAI
 	private static final byte ALIVE = 0;
 	private static final byte DEAD = 1;
 	
-	private Orfen(String name, String descr)
+	private Orfen()
 	{
-		super(name, descr);
+		super(Orfen.class.getSimpleName(), "ai/individual");
 		int[] mobs =
 		{
 			ORFEN,
@@ -126,12 +126,12 @@ public class Orfen extends AbstractNpcAI
 		}
 		else
 		{
-			int loc_x = info.getInteger("loc_x");
-			int loc_y = info.getInteger("loc_y");
-			int loc_z = info.getInteger("loc_z");
-			int heading = info.getInteger("heading");
-			int hp = info.getInteger("currentHP");
-			int mp = info.getInteger("currentMP");
+			int loc_x = info.getInt("loc_x");
+			int loc_y = info.getInt("loc_y");
+			int loc_z = info.getInt("loc_z");
+			int heading = info.getInt("heading");
+			int hp = info.getInt("currentHP");
+			int mp = info.getInt("currentMP");
 			L2GrandBossInstance orfen = (L2GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 			orfen.setCurrentHpMp(hp, mp);
 			spawnBoss(orfen);
@@ -213,7 +213,7 @@ public class Orfen extends AbstractNpcAI
 				L2Attackable mob = _Minions.get(i);
 				if (!npc.isInsideRadius(mob, 3000, false, false))
 				{
-					mob.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
+					mob.teleToLocation(npc.getLocation());
 					((L2Attackable) npc).clearAggroList();
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 				}
@@ -241,19 +241,19 @@ public class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if (npc.getNpcId() == ORFEN)
+		if (npc.getId() == ORFEN)
 		{
 			L2Character originalCaster = isSummon ? caster.getSummon() : caster;
-			if ((skill.getAggroPoints() > 0) && (getRandom(5) == 0) && npc.isInsideRadius(originalCaster, 1000, false, false))
+			if ((skill.getEffectPoint() > 0) && (getRandom(5) == 0) && npc.isInsideRadius(originalCaster, 1000, false, false))
 			{
-				NpcSay packet = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), TEXT[getRandom(4)]);
+				NpcSay packet = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), TEXT[getRandom(4)]);
 				packet.addStringParameter(caster.getName().toString());
 				npc.broadcastPacket(packet);
-				originalCaster.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
+				originalCaster.teleToLocation(npc.getLocation());
 				npc.setTarget(originalCaster);
-				npc.doCast(SkillTable.getInstance().getInfo(4064, 1));
+				npc.doCast(SkillData.getInstance().getSkill(4064, 1));
 			}
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
@@ -266,12 +266,12 @@ public class Orfen extends AbstractNpcAI
 		{
 			return super.onFactionCall(npc, caller, attacker, isSummon);
 		}
-		int npcId = npc.getNpcId();
-		int callerId = caller.getNpcId();
+		int npcId = npc.getId();
+		int callerId = caller.getId();
 		if ((npcId == RAIKEL_LEOS) && (getRandom(20) == 0))
 		{
 			npc.setTarget(attacker);
-			npc.doCast(SkillTable.getInstance().getInfo(4067, 4));
+			npc.doCast(SkillData.getInstance().getSkill(4067, 4));
 		}
 		else if (npcId == RIBA_IREN)
 		{
@@ -284,7 +284,7 @@ public class Orfen extends AbstractNpcAI
 			{
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 				npc.setTarget(caller);
-				npc.doCast(SkillTable.getInstance().getInfo(4516, 1));
+				npc.doCast(SkillData.getInstance().getSkill(4516, 1));
 			}
 		}
 		return super.onFactionCall(npc, caller, attacker, isSummon);
@@ -293,7 +293,7 @@ public class Orfen extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (npcId == ORFEN)
 		{
 			if (!_IsTeleported && ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2)))
@@ -306,9 +306,9 @@ public class Orfen extends AbstractNpcAI
 				NpcSay packet = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npcId, TEXT[getRandom(3)]);
 				packet.addStringParameter(attacker.getName().toString());
 				npc.broadcastPacket(packet);
-				attacker.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
+				attacker.teleToLocation(npc.getLocation());
 				npc.setTarget(attacker);
-				npc.doCast(SkillTable.getInstance().getInfo(4064, 1));
+				npc.doCast(SkillData.getInstance().getSkill(4064, 1));
 			}
 		}
 		else if (npcId == RIBA_IREN)
@@ -316,7 +316,7 @@ public class Orfen extends AbstractNpcAI
 			if (!npc.isCastingNow() && ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2.0)))
 			{
 				npc.setTarget(attacker);
-				npc.doCast(SkillTable.getInstance().getInfo(4516, 1));
+				npc.doCast(SkillData.getInstance().getSkill(4516, 1));
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
@@ -325,7 +325,7 @@ public class Orfen extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (npc.getNpcId() == ORFEN)
+		if (npc.getId() == ORFEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 			GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
@@ -342,7 +342,7 @@ public class Orfen extends AbstractNpcAI
 			startQuestTimer("despawn_minions", 20000, null, null);
 			cancelQuestTimers("spawn_minion");
 		}
-		else if ((GrandBossManager.getInstance().getBossStatus(ORFEN) == ALIVE) && (npc.getNpcId() == RAIKEL_LEOS))
+		else if ((GrandBossManager.getInstance().getBossStatus(ORFEN) == ALIVE) && (npc.getId() == RAIKEL_LEOS))
 		{
 			_Minions.remove(npc);
 			startQuestTimer("spawn_minion", 360000, npc, null);
@@ -352,6 +352,6 @@ public class Orfen extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Orfen(Orfen.class.getSimpleName(), "ai");
+		new Orfen();
 	}
 }

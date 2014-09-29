@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -101,7 +101,7 @@ public class AdminExpSp implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/expsp.htm");
 		adminReply.replace("%name%", player.getName());
 		adminReply.replace("%level%", String.valueOf(player.getLevel()));

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -31,8 +31,8 @@ import java.util.StringTokenizer;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.datatables.TransformData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.L2Event;
@@ -122,7 +122,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				String eventName = command.substring(16);
 				try
 				{
-					NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+					final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 					
 					DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream(Config.DATAPACK_ROOT + "/data/events/" + eventName)));
 					BufferedReader inbr = new BufferedReader(new InputStreamReader(in));
@@ -227,7 +227,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				activeChar.sendPacket(_snd);
 				activeChar.broadcastPacket(_snd);
 				
-				NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+				final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 				
 				final String replyMSG = StringUtil.concat("<html><title>[ L2J EVENT ENGINE ]</title><body><br>", "<center>The event <font color=\"LEVEL\">", L2Event._eventName, "</font> has been announced, now you can type //event_panel to see the event panel control</center><br>", "</body></html>");
 				adminReply.setHtml(replyMSG);
@@ -253,7 +253,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 					for (L2PcInstance player : L2Event._teams.get(teamId))
 					{
 						player.setTitle(L2Event._teamNames.get(teamId));
-						player.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), true);
+						player.teleToLocation(activeChar.getLocation(), true);
 						player.setInstanceId(activeChar.getInstanceId());
 					}
 				}
@@ -271,8 +271,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 							continue;
 						}
 						
-						player.getEventStatus().eventSitForced = !player.getEventStatus().eventSitForced;
-						if (player.getEventStatus().eventSitForced)
+						player.getEventStatus().setSitForced(!player.getEventStatus().isSitForced());
+						if (player.getEventStatus().isSitForced())
 						{
 							player.sitDown();
 						}
@@ -326,7 +326,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				for (L2PcInstance player : L2Event._teams.get(teamId))
 				{
 					player.getPoly().setPolyInfo("npc", polyIds[Rnd.get(polyIds.length)]);
-					player.teleToLocation(player.getX(), player.getY(), player.getZ(), true);
+					player.teleToLocation(player.getLocation(), true);
 					CharInfo info1 = new CharInfo(player);
 					player.broadcastPacket(info1);
 					UserInfo info2 = new UserInfo(player);
@@ -366,7 +366,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				for (L2PcInstance player : L2Event._teams.get(teamId))
 				{
 					int transId = transIds[Rnd.get(transIds.length)];
-					if (!TransformationManager.getInstance().transformPlayer(transId, player))
+					if (!TransformData.getInstance().transformPlayer(transId, player))
 					{
 						AdminTable.getInstance().broadcastMessageToGMs("EventEngine: Unknow transformation id: " + transId);
 					}
@@ -477,7 +477,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 	
 	public void showMainPage(L2PcInstance activeChar)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		
 		final String replyMSG = StringUtil.concat("<html><title>[ L2J EVENT ENGINE ]</title><body>" + "<br><center><button value=\"Create NEW event \" action=\"bypass -h admin_event_new\" width=150 height=32 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" + "<center><br><font color=LEVEL>Stored Events:</font><br></center>", showStoredEvents(), "</body></html>");
 		adminReply.setHtml(replyMSG);
@@ -486,7 +486,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 	
 	public void showNewEventPage(L2PcInstance activeChar)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		
 		final StringBuilder replyMSG = StringUtil.startAppend(500, "<html><title>[ L2J EVENT ENGINE ]</title><body><br><br><center><font color=LEVEL>Event name:</font><br>");
 		
@@ -527,7 +527,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 	
 	public void showEventParameters(L2PcInstance activeChar, int teamnumbers)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append("<html><body><title>[ L2J EVENT ENGINE ]</title><br><center> Current event: <font color=\"LEVEL\">");
@@ -565,7 +565,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 	private void showEventControl(L2PcInstance activeChar)
 	{
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		StringBuilder sb = new StringBuilder();
 		sb.append("<html><title>[ L2J EVENT ENGINE ]</title><body><br><center>Current event: <font color=\"LEVEL\">");
 		sb.append(L2Event._eventName);
@@ -593,7 +593,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 			}
 			else if (type.equalsIgnoreCase("kills") && (player.getEventStatus() != null))
 			{
-				num = n * player.getEventStatus().kills.size();
+				num = n * player.getEventStatus().getKills().size();
 			}
 			else
 			{
@@ -602,7 +602,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 			
 			player.addItem("Event", id, num, activeChar, true);
 			
-			NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+			final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 			adminReply.setHtml("<html><body> CONGRATULATIONS! You should have been rewarded. </body></html>");
 			player.sendPacket(adminReply);
 		}

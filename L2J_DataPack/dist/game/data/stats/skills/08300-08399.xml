@@ -1,314 +1,504 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="8300" levels="1" name="Dynasty Sigil">
+		<set name="icon" val="icon.dynasty_sigil_i01" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxMp" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8301" levels="1" name="Vesper Heavy Armor Set for Adults">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
-			<add order="0x40" stat="maxHp" val="531" /> <!-- Max HP +531 -->
-			<sub order="0x40" stat="rootVuln" val="70" /> <!-- resistance to hold by 70% -->
-			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- resistance to sleep by 70% -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="50" />
+				<param chance="10" />
+				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
+				<param targetType="ONE" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param HOLD="70" />
+				<param SLEEP="70" />
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
+				<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
+				<add order="0x40" stat="maxHp" val="531" /> <!-- Max HP +531 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8302" levels="1" name="Vesper Noble Heavy Armor Set for Adults">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
-			<add order="0x40" stat="maxHp" val="540" /> <!-- Max HP +540 -->
-			<sub order="0x40" stat="rootVuln" val="70" /> <!-- resistance to hold by 70% -->
-			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- resistance to sleep by 70% -->
-			<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
-			<add order="0x40" stat="runSpd" val="5" /> <!-- Increases Speed by 5 -->
-			<mul order="0x30" stat="magicDamVul" val="0.99" /> <!-- Increases M. Def by 1% -->
-			<add order="0x10" stat="cloak" val="1" />
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="50" />
+				<param chance="10" />
+				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
+				<param targetType="ONE" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param HOLD="70" />
+				<param SLEEP="70" />
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
+				<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
+				<add order="0x40" stat="maxHp" val="540" /> <!-- Max HP +540 -->
+				<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
+				<add order="0x40" stat="runSpd" val="5" /> <!-- Increases Speed by 5 -->
+				<mul order="0x30" stat="magicSuccRes" val="1.01" /> <!-- Resistance to magic damage by 1% -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8303" levels="1" name="Vesper Light Armor Set for Adults">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
-			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5% -->
-			<add order="0x40" stat="maxMp" val="347" /> <!-- Max MP by 347 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
+				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5% -->
+				<add order="0x40" stat="maxMp" val="347" /> <!-- Max MP by 347 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			</effect>
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="50" />
+				<param chance="25" />
+				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
+				<param targetType="ONE" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8304" levels="1" name="Vesper Noble Light Armor Set for Adults">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="icon" val="icon.armor_t95_u_i01" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
-			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5.57% -->
-			<add order="0x40" stat="maxMp" val="354" /> <!-- Max MP by 354 -->
-			<add order="0x40" stat="rEvas" val="3" /> <!-- Increases Evasion by 3 -->
-			<add order="0x40" stat="cAtkAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
-			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Increases Resistance to Paralysis by 50% -->
-			<add order="0x10" stat="cloak" val="1" />
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
+				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5.57% -->
+				<add order="0x40" stat="maxMp" val="354" /> <!-- Max MP by 354 -->
+				<add order="0x40" stat="rEvas" val="3" /> <!-- Increases Evasion by 3 -->
+				<add order="0x40" stat="cAtkAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			</effect>
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="50" />
+				<param chance="25" />
+				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
+				<param targetType="ONE" />
+			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8305" levels="1" name="Vesper Robe Set for Adults">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
-			<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- resistance to Stun Attacks by 50% -->
-			<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="50" />
+				<param chance="25" />
+				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
+				<param targetType="SELF" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SHOCK="50" />
+				<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
+				<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
+				<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8306" levels="1" name="Vesper Noble Robe Set for Adults">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="icon" val="icon.armor_t96_u_i01" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
-			<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- resistance to Stun Attacks by 50% -->
-			<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
-			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
-			<add order="0x10" stat="cloak" val="1" />
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="50" />
+				<param chance="25" />
+				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
+				<param targetType="SELF" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SHOCK="50" />
+				<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
+				<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
+				<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
+				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8307" levels="1" name="Boing Hammer's Effect of Doubt">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="33" activationMinDamage="1" chanceType="ON_HIT" triggeredId="21007" />
+			<effect name="ChanceSkillTrigger" activationChance="33" activationMinDamage="1" chanceType="ON_HIT" triggeredId="21007" />
 		</for>
 	</skill>
 	<skill id="8308" levels="1" name="Red Talisman - Guardian of the Territory">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="talisman" />
-		<set name="aggroPoints" val="532" />
+		<set name="abnormalType" val="TALISMAN" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff">
 				<add order="0x40" stat="maxCp" val="1200" />
 			</effect>
-			<effect name="CpHeal" noicon="1" val="1200" />
+			<effect name="CpHeal">
+				<param power="1200" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8309" levels="1" name="Red Talisman - Territory Convoy">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="talisman" />
-		<set name="aggroPoints" val="532" />
+		<set name="abnormalType" val="TALISMAN" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff">
 				<add order="0x40" stat="maxCp" val="800" />
 			</effect>
-			<effect name="CpHeal" noicon="1" val="800" />
+			<effect name="CpHeal">
+				<param power="800" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8310" levels="1" name="Arcana Sigil">
+		<set name="icon" val="icon.arcana_sigil_i00" />
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="magicDamVul" val="0.98" />
-			<sub order="0x40" stat="cancel" val="13" />
+			<effect name="Buff">
+				<mul order="0x30" stat="magicSuccRes" val="1.02" />
+				<sub order="0x40" stat="cancel" val="13" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8311" levels="1" name="Dynasty Sigil">
-		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<mul order="0x30" stat="magicDamVul" val="0.98" />
-			<add order="0x40" stat="darkRes" val="2" />
-		</for>
-	</skill>
-	<skill id="8312" levels="2" name="Special Ability Cheap Shot">
-		<table name="#MpConsumeRate"> 0.96 0.92 </table>
+		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
+			<effect name="Buff">
+				<mul order="0x30" stat="magicSuccRes" val="1.02" />
+				<add order="0x40" stat="darkRes" val="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="8312" levels="2" name="Special Ability Cheap Shot">
+		<table name="#magicLvl"> 80 84 </table>
+		<table name="#MpConsumeRate"> 0.96 0.92 </table>
+		<set name="icon" val="icon.skill0198" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8314" levels="1" name="Release Seal on Agathion - Saerom">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="npcId" val="16063" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion">
+				<param npcId="16063" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8315" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="magicLvl" val="10" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="1;19" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8316" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="magicLvl" val="20" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="20;39" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.9" />
+				<add order="0x40" stat="pAtk" val="150" />
+				<mul order="0x30" stat="mAtk" val="3" />
+				<add order="0x40" stat="mAtk" val="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8317" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="magicLvl" val="30" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="40;51" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="3" />
+				<add order="0x40" stat="pAtk" val="300" />
+				<mul order="0x30" stat="mAtk" val="5" />
+				<add order="0x40" stat="mAtk" val="200" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8318" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="magicLvl" val="40" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="52;60" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="4" />
+				<add order="0x40" stat="pAtk" val="400" />
+				<mul order="0x30" stat="mAtk" val="7" />
+				<add order="0x40" stat="mAtk" val="300" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8319" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="magicLvl" val="50" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="61;74" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="5" />
+				<add order="0x40" stat="pAtk" val="450" />
+				<mul order="0x30" stat="mAtk" val="9" />
+				<add order="0x40" stat="mAtk" val="450" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8320" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="magicLvl" val="60" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="75;79" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="6" />
+				<add order="0x40" stat="pAtk" val="500" />
+				<mul order="0x30" stat="mAtk" val="11" />
+				<add order="0x40" stat="mAtk" val="500" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8321" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="80;81" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="6" />
+				<add order="0x40" stat="pAtk" val="650" />
+				<mul order="0x30" stat="mAtk" val="13" />
+				<add order="0x40" stat="mAtk" val="1000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8322" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="82;85" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="6" />
+				<add order="0x40" stat="pAtk" val="750" />
+				<mul order="0x30" stat="mAtk" val="13" />
+				<add order="0x40" stat="mAtk" val="1000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8323" levels="1" name="Notifier">
+		<set name="icon" val="icon.skill5239" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8324" levels="1" name="Warrior's Shirt">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxCp" val="672" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxCp" val="672" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8325" levels="1" name="Wild Rose Pig Candy">
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="big_head" />
+		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
+		<set name="activateRate" val="0" />
+		<set name="icon" val="icon.etc_pig_candy_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="8326" levels="1" name="Wild Rose Pig Candy">
+		<set name="icon" val="icon.etc_pig_candy_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8327" levels="1" name="Release Seal on Agathion - Juju">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="npcId" val="16064" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion">
+				<param npcId="16064" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8328" levels="1" name="Release Seal on Agathion - Oink oink">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="npcId" val="16065" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion">
+				<param npcId="16065" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8329" levels="1" name="Summon Friend">
+		<set name="effectPoint" val="1000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<cond msgId="113" addName="1">
 			<not>
@@ -319,90 +509,98 @@
 	<skill id="8330" levels="1" name="Release Seal on Agathion - Dawn">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="npcId" val="16066" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion">
+				<param npcId="16066" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8331" levels="1" name="Blue Talisman - Buff Cancel">
 		<!-- Confirmed CT2.5 -->
 		<set name="affectLimit" val="5-5" />
 		<set name="affectRange" val="150" />
+		<set name="effectPoint" val="-532" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
-		<set name="maxNegated" val="5" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="360000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+			<effect name="DispelByCategory">
+				<param slot="buff" rate="25" max="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8332" levels="1" name="Blue Talisman - Buff Steal">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-532" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
-		<set name="maxNegated" val="3" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="25" /> <!-- Base Land Rate -->
-		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="STEAL_BUFF" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="StealAbnormal">
+				<param slot="buff" rate="25" max="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8333" levels="1" name="Red Talisman - Territory Guard">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="talisman" />
-		<set name="aggroPoints" val="532" />
+		<set name="abnormalType" val="TALISMAN" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff">
 				<add order="0x40" stat="maxCp" val="1500" />
 			</effect>
-			<effect name="CpHeal" noicon="1" val="1500" />
+			<effect name="CpHeal">
+				<param power="1500" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8334" levels="1" name="Blue Talisman - Lord's Divine Protection">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="talisman" />
-		<set name="aggroPoints" val="532" />
+		<set name="abnormalType" val="TALISMAN" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff">
 				<mul order="0x30" stat="pvpMagicalDef" val="1.75" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.75" />
 			</effect>
@@ -412,19 +610,19 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="talisman" />
-		<set name="aggroPoints" val="532" />
+		<set name="abnormalType" val="TALISMAN" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff">
 				<add order="0x40" stat="earthRes" val="15" />
 				<add order="0x40" stat="waterRes" val="15" />
 				<add order="0x40" stat="windRes" val="15" />
@@ -437,227 +635,331 @@
 	<skill id="8336" levels="1" name="Guardian's Strider Mount">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
+		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 	</skill>
 	<skill id="8337" levels="1" name="Weight Up">
 		<!-- Increases the weight limit by 5000. -->
+		<set name="icon" val="icon.skill3238" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="weightPenalty" val="5000" />
+			<effect name="Buff">
+				<add order="0x40" stat="weightPenalty" val="5000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8338" levels="4" name="Low-grade Magic Rune Clip Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#hp"> 0.4 1 1.4 2 </table>
 		<table name="#hpsit"> 0.3 0.75 1.05 1.5 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="regHp" val="#hp" />
-			<add order="0x40" stat="regHp" val="#hpsit">
-				<player resting="true" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="regHp" val="#hp" />
+				<add order="0x40" stat="regHp" val="#hpsit">
+					<player resting="true" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="8339" levels="4" name="Low-grade Magic Rune Clip Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#hp"> 0.78 1.95 2.73 3.9 </table>
 		<table name="#hpsit"> 0.6 1.5 2.1 3 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="regHp" val="#hp" />
-			<add order="0x40" stat="regHp" val="#hpsit">
-				<player resting="true" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="regHp" val="#hp" />
+				<add order="0x40" stat="regHp" val="#hpsit">
+					<player resting="true" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="8340" levels="4" name="Low-grade Magic Rune Clip Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mp"> 0.14 0.35 0.49 0.7 </table>
 		<table name="#mpsit"> 0.16 0.4 0.56 0.8 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="regMp" val="#mp" />
-			<add order="0x40" stat="regMp" val="#mpsit">
-				<player resting="true" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="regMp" val="#mp" />
+				<add order="0x40" stat="regMp" val="#mpsit">
+					<player resting="true" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="8341" levels="4" name="Low-grade Magic Rune Clip Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 0.3 0.75 1.05 1.5 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="regMp" val="#amount" />
-			<add order="0x40" stat="regMp" val="#amount">
-				<player resting="true" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="regMp" val="#amount" />
+				<add order="0x40" stat="regMp" val="#amount">
+					<player resting="true" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="8342" levels="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8343" levels="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8344" levels="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
-			<mul order="0x30" stat="pvpMagicalDef" val="#pvp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
+				<mul order="0x30" stat="pvpMagicalDef" val="#pvp" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="#pvp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8345" levels="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8346" levels="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8347" levels="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.012 1.03 1.042 1.06 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
-			<mul order="0x30" stat="pvpMagicalDef" val="#pvp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
+				<mul order="0x30" stat="pvpMagicalDef" val="#pvp" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="#pvp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8348" levels="2" name="Royal Guard Earring - Gludio">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="stunProf" val="15" />
-			<sub order="0x40" stat="bleedVuln" val="15" />
-			<mul order="0x30" stat="maxCp" val="#maxCp" />
+			<effect name="AttackTrait">
+				<param SHOCK="15" />
+				<mul order="0x30" stat="maxCp" val="#maxCp" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param BLEED="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8349" levels="2" name="Royal Guard Earring - Dion">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rootProf" val="15" />
-			<sub order="0x40" stat="poisonVuln" val="15" />
-			<mul order="0x30" stat="maxCp" val="#maxCp" />
+			<effect name="AttackTrait">
+				<param HOLD="15" />
+				<mul order="0x30" stat="maxCp" val="#maxCp" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param POISON="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8350" levels="2" name="Royal Guard Earring - Giran">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="bleedProf" val="15" />
-			<sub order="0x40" stat="paralyzeVuln" val="15" />
-			<mul order="0x30" stat="maxCp" val="#maxCp" />
+			<effect name="AttackTrait">
+				<param BLEED="15" />
+				<mul order="0x30" stat="maxCp" val="#maxCp" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param PARALYZE="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8351" levels="2" name="Royal Guard Earring - Oren">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="paralyzeProf" val="15" />
-			<sub order="0x40" stat="rootVuln" val="15" />
-			<mul order="0x30" stat="maxCp" val="#maxCp" />
+			<effect name="AttackTrait">
+				<param PARALYZE="15" />
+				<mul order="0x30" stat="maxCp" val="#maxCp" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param HOLD="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8352" levels="2" name="Royal Guard Earring - Aden">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="derangementProf" val="15" />
-			<sub order="0x40" stat="stunVuln" val="15" />
-			<mul order="0x30" stat="maxCp" val="#maxCp" />
+			<effect name="AttackTrait">
+				<param DERANGEMENT="15" />
+				<mul order="0x30" stat="maxCp" val="#maxCp" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SHOCK="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8353" levels="2" name="Royal Guard Earring - Innadril">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="sleepProf" val="15" />
-			<sub order="0x40" stat="stunVuln" val="15" />
-			<mul order="0x30" stat="maxCp" val="#maxCp" />
+			<effect name="AttackTrait">
+				<param SLEEP="15" />
+				<mul order="0x30" stat="maxCp" val="#maxCp" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SHOCK="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8354" levels="2" name="Royal Guard Earring - Goddard">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="stunProf" val="15" />
-			<sub order="0x40" stat="sleepVuln" val="15" />
-			<mul order="0x30" stat="maxCp" val="#maxCp" />
+			<effect name="AttackTrait">
+				<param SHOCK="15" />
+				<mul order="0x30" stat="maxCp" val="#maxCp" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SLEEP="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8355" levels="2" name="Royal Guard Earring - Rune">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="poisonProf" val="15" />
-			<sub order="0x40" stat="rootVuln" val="15" />
-			<mul order="0x30" stat="maxCp" val="#maxCp" />
+			<effect name="AttackTrait">
+				<param POISON="15" />
+				<mul order="0x30" stat="maxCp" val="#maxCp" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param HOLD="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8356" levels="2" name="Royal Guard Earring - Schuttgart">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rootProf" val="15" />
-			<sub order="0x40" stat="derangementVuln" val="15" />
-			<mul order="0x30" stat="maxCp" val="#maxCp" />
+			<effect name="AttackTrait">
+				<param HOLD="15" />
+				<mul order="0x30" stat="maxCp" val="#maxCp" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param DERANGEMENT="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8357" levels="1" name="Einhasad's Strike">
@@ -666,402 +968,553 @@
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="200" />
 		<set name="coolTime" val="700" />
+		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
 		<set name="fanRange" val="0,0,300,900" />
 		<set name="hitTime" val="1300" />
+		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="10000" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="PDAM" />
-		<set name="staticDamage" val="true" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="StaticDamage">
+				<param power="10000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8358" levels="1" name="Remove the seal of an Agathion - Towbat">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="npcId" val="16070" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion">
+				<param npcId="16070" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8359" levels="1" name="Notifier">
+		<set name="icon" val="icon.skill5239" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8360" levels="1" name="Energy Maintenance Effect">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="vp_keep" />
-		<set name="aggroPoints" val="100" />
+		<set name="abnormalType" val="VP_KEEP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
+		<set name="effectPoint" val="100" />
+		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="82800000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="vp_keep" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="8361" levels="1" name="Sixth Anniversary Party Earring">
+		<!-- TODO: Implement me! -->
 		<!-- Increases resistance to shock/mind attack by 20% and shock/mind attack bonus by 20%. Recovers 4% of the damage to the enemy as your HP. Excludes damage caused by skills and long-range attack. -->
+		<set name="icon" val="icon.event_six_party_earing_i00" />
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<for>
+			<effect name="AttackTrait">
+				<param SHOCK="20" />
+				<param DERANGEMENT="20" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SHOCK="20" />
+				<param DERANGEMENT="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8362" levels="1" name="Beast Training - Release">
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
-		<set name="hitTime" val="500" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1200" />
+		<set name="icon" val="icon.skill8362" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="BEAST_RELEASE" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="8363" levels="1" name="Beast Training - Accompany">
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
-		<set name="hitTime" val="500" />
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="1000" />
+		<set name="icon" val="icon.skill8363" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="BEAST_ACCOMPANY" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="8364" levels="1" name="Beast Training - Use Special Ability">
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
-		<set name="hitTime" val="500" />
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="1000" />
+		<set name="icon" val="icon.skill8364" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="BEAST_SKILL" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="8365" levels="1" name="Dynasty Tunic">
+		<set name="icon" val="icon.armor_t93_ue_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8366" levels="1" name="Dynasty Jewel Leather Armor">
+		<set name="icon" val="icon.armor_t91_uw_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8367" levels="1" name="Dynasty Jewel Leather Mail">
+		<set name="icon" val="icon.armor_t91_uf_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8368" levels="1" name="Dynasty Jewel Leather Mail">
+		<set name="icon" val="icon.armor_t93_ue_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8369" levels="1" name="Halloween Pumpkin Card">
+		<set name="effectPoint" val="-100" />
+		<set name="icon" val="icon.ev_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8370" levels="1" name="Rotten Pumpkin Card">
+		<set name="effectPoint" val="-100" />
+		<set name="icon" val="icon.ev_rotten_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8371" levels="1" name="Transform Halloween Pumpkin">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
+		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 	</skill>
 	<skill id="8372" levels="1" name="Super Strong Giant's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, P. Atk. by 5%, and earth tolerance by 5. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="signal_d" />
+		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="1" />
+		<set name="icon" val="icon.ev_frankenstein_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8373" levels="1" name="Silent Scream's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Critical rate by 5%, and wind tolerance by 5. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="signal_d" />
+		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="1" />
+		<set name="icon" val="icon.ev_scream_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8374" levels="1" name="Wrathful Spirit's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, moving speed by 5%, and fire tolerance by 5. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="signal_d" />
+		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="1" />
+		<set name="icon" val="icon.ev_doccabi_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8375" levels="1" name="Unrotten Corpse's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, skill's MP consumption by 5%, and darkness tolerance by 5. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="signal_d" />
+		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="1" />
+		<set name="icon" val="icon.ev_mummy_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8376" levels="1" name="Planet X235 Alien Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, damage magic's Prominent Damage occurrence by 2, and water tolerance by 5. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="signal_d" />
+		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="1" />
+		<set name="icon" val="icon.ev_alien_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8377" levels="1" name="Golden Jack O'Lantern Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 20%, moving speed by 10%, and resistance to debuffs by 10%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="signal_d" />
+		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="1" />
+		<set name="icon" val="icon.ev_golden_jack0_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="82800000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8378" levels="1" name="Beast Training - Release All">
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
-		<set name="hitTime" val="500" />
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="1000" />
+		<set name="icon" val="icon.skill8378" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="BEAST_RELEASE_ALL" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="8379" levels="2" name="Royal Guard Ring - Gludio">
 		<table name="#earthRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="#earthRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthRes" val="#earthRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8380" levels="2" name="Royal Guard Ring - Dion">
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
 		<table name="#waterRes"> 12 15 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="#waterRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterRes" val="#waterRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8381" levels="2" name="Royal Guard Ring - Giran">
 		<table name="#fireRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="#fireRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="fireRes" val="#fireRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8382" levels="2" name="Royal Guard Ring - Oren">
 		<table name="#earthRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="#earthRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthRes" val="#earthRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8383" levels="2" name="Royal Guard Ring - Aden">
 		<table name="#holyRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="#holyRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyRes" val="#holyRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8384" levels="2" name="Royal Guard Ring - Innadril">
 		<table name="#holyRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="#holyRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyRes" val="#holyRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8385" levels="2" name="Royal Guard Ring - Goddard">
 		<table name="#darkRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="#darkRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="#darkRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8386" levels="2" name="Royal Guard Ring - Rune">
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
 		<table name="#windRes"> 12 15 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="#windRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="windRes" val="#windRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8387" levels="2" name="Royal Guard Ring - Schuttgart">
 		<table name="#darkRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="#darkRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="#darkRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8388" levels="2" name="Royal Guard Necklace - Gludio">
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
 		<table name="#waterRes"> 26 30 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="#waterRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterRes" val="#waterRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8389" levels="2" name="Royal Guard Necklace - Dion">
 		<table name="#holyRes"> 26 30 </table>
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="#holyRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyRes" val="#holyRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8390" levels="2" name="Royal Guard Necklace - Giran">
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
 		<table name="#windRes"> 26 30 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="#windRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="windRes" val="#windRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8391" levels="2" name="Royal Guard Necklace - Oren">
 		<table name="#darkRes"> 26 30 </table>
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="#darkRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="#darkRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8392" levels="2" name="Royal Guard Necklace - Aden">
 		<table name="#earthRes"> 26 30 </table>
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="#earthRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthRes" val="#earthRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8393" levels="2" name="Royal Guard Necklace - Innadril">
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
 		<table name="#waterRes"> 26 30 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="#waterRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterRes" val="#waterRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8394" levels="2" name="Royal Guard Necklace - Goddard">
 		<table name="#fireRes"> 26 30 </table>
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="#fireRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="fireRes" val="#fireRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8395" levels="2" name="Royal Guard Necklace - Rune">
 		<table name="#fireRes"> 26 30 </table>
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="#fireRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="fireRes" val="#fireRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8396" levels="2" name="Royal Guard Necklace - Schuttgart">
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
 		<table name="#windRes"> 26 30 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="#windRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="windRes" val="#windRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8397" levels="1" name="Moirai Armor Set">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="magicLvl" val="82" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
-			<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to Damage Magic +2% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Resistance to Stun Atk. +50% -->
-			<add order="0x40" stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
-			<add order="0x40" stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
-			<add order="0x40" stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
-			<add order="0x40" stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait">
+				<param SHOCK="50" />
+				<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
+				<mul order="0x30" stat="magicSuccRes" val="1.02" /> <!-- Resistance to Damage Magic +2% -->
+				<add order="0x40" stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
+				<add order="0x40" stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
+				<add order="0x40" stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
+				<add order="0x40" stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
+			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8398" levels="1" name="Moirai Leather Armor Set">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="magicLvl" val="82" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
-			<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-			<sub order="0x40" stat="rootVuln" val="50" /> <!-- Resistance to hold attacks +50% -->
-			<add order="0x40" stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
-			<add order="0x40" stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
-			<add order="0x40" stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
-			<add order="0x40" stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait">
+				<param HOLD="50" />
+				<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
+				<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
+				<add order="0x40" stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
+				<add order="0x40" stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
+				<add order="0x40" stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
+				<add order="0x40" stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
+			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="8399" levels="1" name="Moirai Robe Set">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="magicLvl" val="82" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Power +8.11% -->
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
-			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Resistance to Paralyze Atk. +50% -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- resistance to earth attributes +5 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait">
+				<param PARALYZE="50" />
+				<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Power +8.11% -->
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- resistance to earth attributes +5 -->
+			</effect>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 </list>

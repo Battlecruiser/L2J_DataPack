@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,18 +23,16 @@ import java.util.Map;
 
 import quests.Q00119_LastImperialPrince.Q00119_LastImperialPrince;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Journey to a Settlement (654)
  * @author Adry_85
  */
-public class Q00654_JourneyToASettlement extends Quest
+public final class Q00654_JourneyToASettlement extends Quest
 {
 	// NPC
 	private static final int NAMELESS_SPIRIT = 31453;
@@ -44,17 +42,16 @@ public class Q00654_JourneyToASettlement extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 74;
 	
-	private static final Map<Integer, Integer> MOBS_SKIN = new HashMap<>();
-	
+	private static final Map<Integer, Double> MOBS_SKIN = new HashMap<>();
 	static
 	{
-		MOBS_SKIN.put(21294, 840); // Canyon Antelope
-		MOBS_SKIN.put(21295, 893); // Canyon Antelope Slave
+		MOBS_SKIN.put(21294, 0.840); // Canyon Antelope
+		MOBS_SKIN.put(21295, 0.893); // Canyon Antelope Slave
 	}
 	
-	public Q00654_JourneyToASettlement(int id, String name, String descr)
+	public Q00654_JourneyToASettlement()
 	{
-		super(id, name, descr);
+		super(654, Q00654_JourneyToASettlement.class.getSimpleName(), "Journey to a Settlement");
 		addStartNpc(NAMELESS_SPIRIT);
 		addTalkId(NAMELESS_SPIRIT);
 		addKillId(MOBS_SKIN.keySet());
@@ -64,7 +61,7 @@ public class Q00654_JourneyToASettlement extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -73,25 +70,27 @@ public class Q00654_JourneyToASettlement extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "31453-02.html":
+			case "31453-02.htm":
 			{
 				st.startQuest();
+				st.setMemoState(1);
 				htmltext = event;
 				break;
 			}
 			case "31453-03.html":
 			{
-				if (st.isCond(1))
+				if (st.isMemoState(1))
 				{
+					st.setMemoState(2);
 					st.setCond(2, true);
 					htmltext = event;
 				}
 			}
 			case "31453-07.html":
 			{
-				if (st.isCond(3) && st.hasQuestItems(ANTELOPE_SKIN))
+				if (st.isMemoState(2) && st.hasQuestItems(ANTELOPE_SKIN))
 				{
-					st.giveItems(FRINTEZZAS_SCROLL, 1);
+					giveItems(player, FRINTEZZAS_SCROLL, 1);
 					st.exitQuest(true, true);
 					htmltext = event;
 				}
@@ -103,20 +102,10 @@ public class Q00654_JourneyToASettlement extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, 2);
-		if (partyMember == null)
+		final QuestState st = getRandomPartyMemberState(player, 2, 3, npc);
+		if ((st != null) && giveItemRandomly(st.getPlayer(), npc, ANTELOPE_SKIN, 1, 1, MOBS_SKIN.get(npc.getId()), true))
 		{
-			return super.onKill(npc, player, isSummon);
-		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getNpcId();
-		float chance = (MOBS_SKIN.get(npcId) * Config.RATE_QUEST_DROP);
-		if (getRandom(1000) < chance)
-		{
-			st.rewardItems(ANTELOPE_SKIN, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			st.setCond(3, true);
+			st.setCond(3);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -124,39 +113,26 @@ public class Q00654_JourneyToASettlement extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (st.isCreated())
 		{
-			return htmltext;
+			st = player.getQuestState(Q00119_LastImperialPrince.class.getSimpleName());
+			htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "31453-01.htm" : "31453-04.htm";
 		}
-		
-		switch (st.getState())
+		else if (st.isStarted())
 		{
-			case State.CREATED:
+			if (st.isMemoState(1))
 			{
-				st = player.getQuestState(Q00119_LastImperialPrince.class.getSimpleName());
-				htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "31453-01.htm" : "31453-04.html";
-				break;
+				st.setMemoState(2);
+				st.setCond(2, true);
+				htmltext = "31453-03.html";
 			}
-			case State.STARTED:
+			else if (st.isMemoState(2))
 			{
-				if (st.isCond(2))
-				{
-					htmltext = "31453-05.html";
-				}
-				else if (st.isCond(3))
-				{
-					htmltext = "31453-06.html";
-				}
-				break;
+				htmltext = (hasQuestItems(player, ANTELOPE_SKIN) ? "31453-06.html" : "31453-05.html");
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00654_JourneyToASettlement(654, Q00654_JourneyToASettlement.class.getSimpleName(), "Journey to a Settlement");
 	}
 }

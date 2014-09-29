@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13100" type="EtcItem" name="Recipe - Sealed Arcana Sigil (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="price" val="75200" />
 		<set name="recipe_id" val="911" />
@@ -14,10 +14,10 @@
 	</item>
 	<item id="13101" type="EtcItem" name="Recipe - Sealed Arcana Sigil (100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="price" val="75200" />
 		<set name="recipe_id" val="912" />
@@ -26,13 +26,13 @@
 	</item>
 	<item id="13102" type="EtcItem" name="Chaotic Sealed Arcana Sigil">
 		<set name="icon" val="icon.arcana_sigil_i01" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="bone" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="1170" />
 		<set name="price" val="3355000" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -41,9 +41,9 @@
 	</item>
 	<item id="13103" type="EtcItem" name="My Teleport Spellbook 1-Book Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -55,9 +55,9 @@
 	</item>
 	<item id="13104" type="EtcItem" name="My Teleport Scroll 30-Sheet Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -69,9 +69,9 @@
 	</item>
 	<item id="13105" type="EtcItem" name="Kamaloka Entrance Pass 3-Sheet Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -83,9 +83,9 @@
 	</item>
 	<item id="13106" type="EtcItem" name="Feather of Blessing 3-Sheet Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -97,9 +97,9 @@
 	</item>
 	<item id="13107" type="EtcItem" name="Agathion of Love 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -111,9 +111,9 @@
 	</item>
 	<item id="13108" type="EtcItem" name="Pumpkin Transformation Stick 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -125,9 +125,9 @@
 	</item>
 	<item id="13109" type="EtcItem" name="Kamaloka Entrance Pass 3-Sheet Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -139,9 +139,9 @@
 	</item>
 	<item id="13110" type="EtcItem" name="Kat the Cat Hat 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -153,9 +153,9 @@
 	</item>
 	<item id="13111" type="EtcItem" name="Feline Queen Hat 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -167,9 +167,9 @@
 	</item>
 	<item id="13112" type="EtcItem" name="Monster Eye Hat 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -181,9 +181,9 @@
 	</item>
 	<item id="13113" type="EtcItem" name="Brown Bear Hat 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -195,9 +195,9 @@
 	</item>
 	<item id="13114" type="EtcItem" name="Fungus Hat 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -209,9 +209,9 @@
 	</item>
 	<item id="13115" type="EtcItem" name="Skull Hat 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -223,9 +223,9 @@
 	</item>
 	<item id="13116" type="EtcItem" name="Ornithomimus Hat 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -237,9 +237,9 @@
 	</item>
 	<item id="13117" type="EtcItem" name="Feline King Hat 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -251,9 +251,9 @@
 	</item>
 	<item id="13118" type="EtcItem" name="Kai the Cat Hat 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -265,9 +265,9 @@
 	</item>
 	<item id="13119" type="EtcItem" name="OX Stick 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -279,9 +279,9 @@
 	</item>
 	<item id="13120" type="EtcItem" name="Rock-Paper-Scissors Stick 30-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -293,9 +293,9 @@
 	</item>
 	<item id="13121" type="EtcItem" name="Purple-Maned Horse 7-Day Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -307,9 +307,9 @@
 	</item>
 	<item id="13122" type="EtcItem" name="Color Name 3-Sheet Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -321,16 +321,16 @@
 	</item>
 	<item id="13123" type="EtcItem" name="My Teleport Spellbook Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13124" type="EtcItem" name="Color Name 1-Sheet Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -342,9 +342,9 @@
 	</item>
 	<item id="13125" type="EtcItem" name="My Teleport Scroll 10-Sheet Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -356,9 +356,9 @@
 	</item>
 	<item id="13126" type="EtcItem" name="Dimensional Experience Pack - used for events">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -371,8 +371,8 @@
 	</item>
 	<item id="13127" type="EtcItem" name="Promotional Parcel 2">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -384,9 +384,9 @@
 	</item>
 	<item id="13128" type="EtcItem" name="Phoenix Feather">
 		<set name="icon" val="icon.etc_feather_gold_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="scroll" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -395,14 +395,15 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="allow_self_resurrection" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2013-1" />
 	</item>
 	<item id="13129" type="EtcItem" name="Scroll of Escape: Pailaka">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="scroll" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -417,9 +418,9 @@
 	</item>
 	<item id="13130" type="EtcItem" name="Temple Book of Secrets">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="default_action" val="show_html" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -430,9 +431,9 @@
 	</item>
 	<item id="13131" type="EtcItem" name="Temple Book of Secrets">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="default_action" val="show_html" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -443,9 +444,9 @@
 	</item>
 	<item id="13132" type="EtcItem" name="Temple Book of Secrets">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="default_action" val="show_html" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -456,9 +457,9 @@
 	</item>
 	<item id="13133" type="EtcItem" name="Temple Book of Secrets">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="default_action" val="show_html" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -469,9 +470,9 @@
 	</item>
 	<item id="13134" type="EtcItem" name="Temple Book of Secrets">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="default_action" val="show_html" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -482,9 +483,9 @@
 	</item>
 	<item id="13135" type="EtcItem" name="Temple Book of Secrets">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="default_action" val="show_html" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -495,9 +496,9 @@
 	</item>
 	<item id="13136" type="EtcItem" name="Temple Book of Secrets">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
-		<set name="default_action" val="show_html" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -508,18 +509,18 @@
 	</item>
 	<item id="13137" type="Armor" name="Vesper Helmet">
 		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -528,12 +529,12 @@
 	</item>
 	<item id="13138" type="Armor" name="Vesper Leather Helmet">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
@@ -545,18 +546,18 @@
 	</item>
 	<item id="13139" type="Armor" name="Vesper Circlet">
 		<set name="icon" val="icon.armor_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -565,18 +566,18 @@
 	</item>
 	<item id="13140" type="Armor" name="Vesper Noble Helmet">
 		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -585,12 +586,12 @@
 	</item>
 	<item id="13141" type="Armor" name="Vesper Noble Leather Helmet">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
@@ -602,18 +603,18 @@
 	</item>
 	<item id="13142" type="Armor" name="Vesper Noble Circlet">
 		<set name="icon" val="icon.armor_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -622,18 +623,18 @@
 	</item>
 	<item id="13143" type="Armor" name="Sealed Vesper Helmet">
 		<set name="icon" val="icon.armor_helmet_i02" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -642,12 +643,12 @@
 	</item>
 	<item id="13144" type="Armor" name="Sealed Vesper Leather Helmet">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
@@ -659,18 +660,18 @@
 	</item>
 	<item id="13145" type="Armor" name="Sealed Vesper Circlet">
 		<set name="icon" val="icon.armor_circlet_i02" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -679,18 +680,18 @@
 	</item>
 	<item id="13146" type="Armor" name="Sealed Vesper Noble Helmet">
 		<set name="icon" val="icon.armor_helmet_i02" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -699,18 +700,18 @@
 	</item>
 	<item id="13147" type="Armor" name="Sealed Vesper Noble Leather Helmet">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -719,18 +720,18 @@
 	</item>
 	<item id="13148" type="Armor" name="Sealed Vesper Noble Circlet">
 		<set name="icon" val="icon.armor_circlet_i02" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -739,8 +740,8 @@
 	</item>
 	<item id="13149" type="EtcItem" name="Pailaka Final Key">
 		<set name="icon" val="icon.etc_key_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -751,8 +752,8 @@
 	</item>
 	<item id="13150" type="EtcItem" name="Pailaka All-Purpose Key">
 		<set name="icon" val="icon.etc_key_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="material" val="steel" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -766,10 +767,10 @@
 	</item>
 	<item id="13151" type="EtcItem" name="Pailaka Vitality Replenishing Potion (100%)">
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_tradable" val="false" />
@@ -785,10 +786,10 @@
 	</item>
 	<item id="13152" type="EtcItem" name="Pailaka Vitality Replenishing Potion (50%)">
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_tradable" val="false" />
@@ -804,14 +805,14 @@
 	</item>
 	<item id="13153" type="Weapon" name="Player Commendation - Great Spear - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="bronze" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="2120" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -832,14 +833,14 @@
 	</item>
 	<item id="13154" type="Weapon" name="Player Commendation - Falchion - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_falchion_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="bronze" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="1530" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -857,14 +858,14 @@
 	</item>
 	<item id="13155" type="Weapon" name="Player Commendation - Iron Hammer - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -883,14 +884,14 @@
 	</item>
 	<item id="13156" type="Weapon" name="Player Commendation - Voodoo Doll - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="etc" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="630" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -909,14 +910,14 @@
 	</item>
 	<item id="13157" type="Weapon" name="Player Commendation - Flanged Mace - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -935,14 +936,14 @@
 	</item>
 	<item id="13158" type="Weapon" name="Player Commendation - Mage's Wand - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1050" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -962,14 +963,14 @@
 	</item>
 	<item id="13159" type="Weapon" name="Player Commendation - Sword Breaker - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1110" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -988,14 +989,14 @@
 	</item>
 	<item id="13160" type="Weapon" name="Player Commendation - Viper Fang - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1560" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1014,14 +1015,14 @@
 	</item>
 	<item id="13161" type="Weapon" name="Player Commendation - Compound Bow - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1880" />
 		<set name="soulshots" val="7" />
 		<set name="spiritshots" val="2" />
@@ -1042,14 +1043,14 @@
 	</item>
 	<item id="13162" type="Weapon" name="Player Commendation - Crucifix of Blessing - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_crucifix_of_blessing_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="etc" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="620" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
@@ -1068,15 +1069,15 @@
 	</item>
 	<item id="13163" type="Weapon" name="Player Commendation - Bastard*Crimson Sword - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2470" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1097,15 +1098,15 @@
 	</item>
 	<item id="13164" type="Weapon" name="Player Commendation - Claymore - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_claymore_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2090" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1126,15 +1127,15 @@
 	</item>
 	<item id="13165" type="Weapon" name="Player Commendation - Bonebreaker - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1720" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1156,15 +1157,15 @@
 	</item>
 	<item id="13166" type="Weapon" name="Player Commendation - Atuba Hammer - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_atuba_hammer_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1010" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1187,15 +1188,15 @@
 	</item>
 	<item id="13167" type="Weapon" name="Player Commendation - Ghost's Wand - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1000" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1218,15 +1219,15 @@
 	</item>
 	<item id="13168" type="Weapon" name="Player Commendation - Hall of Life - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_life_stick_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1180" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1249,15 +1250,15 @@
 	</item>
 	<item id="13169" type="Weapon" name="Player Commendation - Atuba Mace - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_atuba_mace_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1010" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1280,15 +1281,15 @@
 	</item>
 	<item id="13170" type="Weapon" name="Player Commendation - Mithril Dagger - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="mithril" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1060" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1310,15 +1311,15 @@
 	</item>
 	<item id="13171" type="Weapon" name="Player Commendation - Scallop Jamadhr - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1340,15 +1341,15 @@
 	</item>
 	<item id="13172" type="Weapon" name="Player Commendation - Crossbow - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1810" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
@@ -1372,15 +1373,15 @@
 	</item>
 	<item id="13173" type="Weapon" name="Player Commendation - Glaive - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_glaive_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2050" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1404,15 +1405,15 @@
 	</item>
 	<item id="13174" type="Weapon" name="Player Commendation - Elven Long Sword - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1440" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1433,15 +1434,15 @@
 	</item>
 	<item id="13175" type="Weapon" name="Player Commendation - Grand Epee - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_rapier_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1440" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1453,7 +1454,7 @@
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="83" />
@@ -1467,15 +1468,15 @@
 	</item>
 	<item id="13176" type="Weapon" name="Player Commendation - General Katzbalger - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1486,7 +1487,7 @@
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="100" />
@@ -1500,15 +1501,15 @@
 	</item>
 	<item id="13177" type="Weapon" name="Player Commendation - Cranequin - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1810" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
@@ -1520,7 +1521,7 @@
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="117" />
@@ -1534,15 +1535,15 @@
 	</item>
 	<item id="13178" type="Weapon" name="Player Commendation - Samurai Long Sword - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="oriharukon" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1565,15 +1566,15 @@
 	</item>
 	<item id="13179" type="Weapon" name="Player Commendation - Ghost's Wand - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="bone" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="1010" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1599,15 +1600,15 @@
 	</item>
 	<item id="13180" type="Weapon" name="Player Commendation - Ghoul's Wand - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="bone" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="1000" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1632,15 +1633,15 @@
 	</item>
 	<item id="13181" type="Weapon" name="Player Commendation - Devil's Wand - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="990" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1666,15 +1667,15 @@
 	</item>
 	<item id="13182" type="Weapon" name="Player Commendation - Crystal Dagger - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="crystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1000" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1698,15 +1699,15 @@
 	</item>
 	<item id="13183" type="Weapon" name="Player Commendation - Great Pata - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_great_pata_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;90" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="chrysolite" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1460" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1730,15 +1731,15 @@
 	</item>
 	<item id="13184" type="Weapon" name="Player Commendation - Eminence Bow - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="chrysolite" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1720" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
@@ -1764,15 +1765,15 @@
 	</item>
 	<item id="13185" type="Weapon" name="Player Commendation - Orcish Poleaxe - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;180" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="blood_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1950" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1796,15 +1797,15 @@
 	</item>
 	<item id="13186" type="Weapon" name="Player Commendation - Yaksa Mace - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1640" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1828,15 +1829,15 @@
 	</item>
 	<item id="13187" type="Weapon" name="Player Commendation - Shamshir*Shamshir - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2330" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1859,15 +1860,15 @@
 	</item>
 	<item id="13188" type="Weapon" name="Player Commendation - Admiral's Estoc - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1380" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1881,7 +1882,7 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="141" />
@@ -1895,15 +1896,15 @@
 	</item>
 	<item id="13189" type="Weapon" name="Player Commendation - Saber Tooth - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1950" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1916,7 +1917,7 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="169" />
@@ -1930,15 +1931,15 @@
 	</item>
 	<item id="13190" type="Weapon" name="Player Commendation - Sharpshooter - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_taslam_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
@@ -1952,7 +1953,7 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="198" />
@@ -1966,15 +1967,15 @@
 	</item>
 	<item id="13191" type="Weapon" name="Player Commendation - Ecliptic Sword - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="oriharukon" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1998,15 +1999,15 @@
 	</item>
 	<item id="13192" type="Weapon" name="Player Commendation - Ecliptic Axe - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1640" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -2032,15 +2033,15 @@
 	</item>
 	<item id="13193" type="Weapon" name="Player Commendation - Dwarven Hammer - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -2064,15 +2065,15 @@
 	</item>
 	<item id="13194" type="Weapon" name="Player Commendation - Damascus Sword - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="damascus" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1350" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2095,15 +2096,15 @@
 	</item>
 	<item id="13195" type="Weapon" name="Player Commendation - Lance - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_lancia_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="blood_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1920" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2128,15 +2129,15 @@
 	</item>
 	<item id="13196" type="Weapon" name="Player Commendation - Deadman's Glory - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="bone" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="1600" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2160,15 +2161,15 @@
 	</item>
 	<item id="13197" type="Weapon" name="Player Commendation - Art of Battle Axe - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="chrysolite" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1570" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2192,15 +2193,15 @@
 	</item>
 	<item id="13198" type="Weapon" name="Player Commendation - Staff of Evil Spirits - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="930" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2226,15 +2227,15 @@
 	</item>
 	<item id="13199" type="Weapon" name="Player Commendation - Devil's Dagger - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="blood_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="970" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00617_GatherTheFlames;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -76,9 +77,9 @@ public class Q00617_GatherTheFlames extends Quest
 		MOBS.put(22649, 685);
 	}
 	
-	public Q00617_GatherTheFlames(int questId, String name, String descr)
+	public Q00617_GatherTheFlames()
 	{
-		super(questId, name, descr);
+		super(617, Q00617_GatherTheFlames.class.getSimpleName(), "Gather the Flames");
 		addStartNpc(HILDA, VULCAN);
 		addTalkId(ROONEY, HILDA, VULCAN);
 		addKillId(MOBS.keySet());
@@ -160,7 +161,7 @@ public class Q00617_GatherTheFlames extends Quest
 		
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		if (getRandom(1000) < MOBS.get(npc.getNpcId()))
+		if (getRandom(1000) < MOBS.get(npc.getId()))
 		{
 			st.giveItems(TORCH, 2);
 		}
@@ -182,7 +183,7 @@ public class Q00617_GatherTheFlames extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ROONEY:
 				if (st.isStarted())
@@ -212,10 +213,5 @@ public class Q00617_GatherTheFlames extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00617_GatherTheFlames(617, Q00617_GatherTheFlames.class.getSimpleName(), "Gather the Flames");
 	}
 }

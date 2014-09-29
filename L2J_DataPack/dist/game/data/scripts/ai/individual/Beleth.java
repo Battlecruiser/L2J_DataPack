@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -43,11 +43,12 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.DoorStatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jserver.gameserver.network.serverpackets.StaticObject;
@@ -57,7 +58,7 @@ import com.l2jserver.gameserver.util.Util;
  * Beleth's AI.
  * @author Treat
  */
-public class Beleth extends AbstractNpcAI
+public final class Beleth extends AbstractNpcAI
 {
 	protected static L2Npc CAMERA;
 	protected static L2Npc CAMERA2;
@@ -79,9 +80,11 @@ public class Beleth extends AbstractNpcAI
 	private static SkillHolder HORN_OF_RISING = new SkillHolder(5497, 1);
 	private static SkillHolder LIGHTENING = new SkillHolder(5499, 1);
 	
-	private Beleth(String name, String descr)
+	protected static final Location BELETH_SPAWN = new Location(16323, 213059, -9357, 49152);
+	
+	private Beleth()
 	{
-		super(name, descr);
+		super(Beleth.class.getSimpleName(), "ai/individual");
 		ZONE = ZoneManager.getInstance().getZoneById(12018);
 		addEnterZoneId(12018);
 		registerMobs(29118, 29119);
@@ -113,7 +116,7 @@ public class Beleth extends AbstractNpcAI
 	{
 		try
 		{
-			L2NpcTemplate template = NpcTable.getInstance().getTemplate(npcId);
+			L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
 			if (template != null)
 			{
 				L2Spawn spawn = new L2Spawn(template);
@@ -196,24 +199,25 @@ public class Beleth extends AbstractNpcAI
 						CAMERA2 = spawn(29121, new Location(16323, 210741, -9357, 0, instanceId));
 						CAMERA3 = spawn(29122, new Location(16323, 213170, -9357, 0, instanceId));
 						CAMERA4 = spawn(29123, new Location(16323, 214917, -9356, 0, instanceId));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 75, -25, 0, 2500, 0, 0, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 75, -25, 0, 2500, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new PlaySound(1, "BS07_A", 1, CAMERA.getObjectId(), CAMERA.getX(), CAMERA.getY(), CAMERA.getZ()));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 75, -25, 0, 2500, 0, 0, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 75, -25, 0, 2500, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(2), 300);
 						break;
 					case 2:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 1800, -45, -45, 5000, 5000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 1800, -45, -45, 5000, 5000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(3), 4900);
 						break;
 					case 3:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 2500, -120, -45, 5000, 5000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 2500, -120, -45, 5000, 5000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(4), 4900);
 						break;
 					case 4:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA2.getObjectId(), 2200, 130, 0, 0, 1500, -20, 15, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA2, 2200, 130, 0, 0, 1500, -20, 15, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(5), 1400);
 						break;
 					case 5:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA2.getObjectId(), 2300, 100, 0, 2000, 4500, 0, 10, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA2, 2300, 100, 0, 2000, 4500, 0, 10, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(6), 2500);
 						break;
 					case 6:
@@ -224,17 +228,17 @@ public class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(7), 1700);
 						break;
 					case 7:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA4.getObjectId(), 1500, 210, 0, 0, 1500, 0, 0, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA4.getObjectId(), 900, 255, 0, 5000, 6500, 0, 10, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA4, 1500, 210, 0, 0, 1500, 0, 0, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA4, 900, 255, 0, 5000, 6500, 0, 10, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(8), 6000);
 						break;
 					case 8:
 						spawn(29125, new Location(16323, 214917, -9356, 0, instanceId));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA4.getObjectId(), 900, 255, 0, 0, 1500, 0, 10, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA4, 900, 255, 0, 0, 1500, 0, 10, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(9), 1000);
 						break;
 					case 9:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA4.getObjectId(), 1000, 255, 0, 7000, 17000, 0, 25, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA4, 1000, 255, 0, 7000, 17000, 0, 25, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(10), 3000);
 						break;
 					case 10:
@@ -255,24 +259,24 @@ public class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(12), 6800);
 						break;
 					case 12:
-						ZONE.broadcastPacket(new SpecialCamera(BELETH.getObjectId(), 0, 270, -5, 0, 4000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(BELETH, 0, 270, -5, 0, 4000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(13), 3500);
 						break;
 					case 13:
-						ZONE.broadcastPacket(new SpecialCamera(BELETH.getObjectId(), 800, 270, 10, 3000, 6000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(BELETH, 800, 270, 10, 3000, 6000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(14), 5000);
 						break;
 					case 14:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 100, 270, 15, 0, 5000, 0, 0, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 100, 270, 15, 0, 5000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 100, 270, 15, 0, 5000, 0, 0, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 100, 270, 15, 0, 5000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(15), 100);
 						break;
 					case 15:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 100, 270, 15, 3000, 6000, 0, 5, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 100, 270, 15, 3000, 6000, 0, 5, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(16), 1400);
 						break;
 					case 16:
-						BELETH.teleToLocation(16323, 213059, -9357, 49152, false);
+						BELETH.teleToLocation(BELETH_SPAWN);
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(17), 200);
 						break;
 					case 17:
@@ -280,11 +284,11 @@ public class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(18), 2000);
 						break;
 					case 18:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 700, 270, 20, 1500, 8000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 700, 270, 20, 1500, 8000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(19), 6900);
 						break;
 					case 19:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 40, 260, 0, 0, 4000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 40, 260, 0, 0, 4000, 0, 0, 1, 0, 0));
 						for (L2Npc blth : MINIONS)
 						{
 							blth.spawnMe();
@@ -292,11 +296,11 @@ public class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(20), 3000);
 						break;
 					case 20:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 40, 280, 0, 0, 4000, 5, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 40, 280, 0, 0, 4000, 5, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(21), 3000);
 						break;
 					case 21:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA3.getObjectId(), 5, 250, 5, 0, 13000, 20, 15, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA3, 5, 250, 5, 0, 13000, 20, 15, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(22), 1000);
 						break;
 					case 22:
@@ -335,23 +339,24 @@ public class Beleth extends AbstractNpcAI
 					case 27:
 						BELETH.doDie(null);
 						CAMERA = spawn(29122, new Location(16323, 213170, -9357, 0, instanceId));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 290, 25, 0, 10000, 0, 0, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 290, 25, 0, 10000, 0, 0, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 110, 25, 4000, 10000, 0, 0, 1, 0));
+						CAMERA.broadcastPacket(new PlaySound(1, "BS07_D", 1, CAMERA.getObjectId(), CAMERA.getX(), CAMERA.getY(), CAMERA.getZ()));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 290, 25, 0, 10000, 0, 0, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 290, 25, 0, 10000, 0, 0, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 110, 25, 4000, 10000, 0, 0, 1, 0, 0));
 						ZONE.broadcastPacket(new SocialAction(BELETH.getObjectId(), 5));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(28), 4000);
 						break;
 					case 28:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 295, 25, 4000, 5000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 295, 25, 4000, 5000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(29), 4500);
 						break;
 					case 29:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 295, 10, 4000, 11000, 0, 25, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 400, 295, 10, 4000, 11000, 0, 25, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(30), 9000);
 						break;
 					case 30:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 250, 90, 25, 0, 1000, 0, 0, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 250, 90, 25, 0, 10000, 0, 0, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 250, 90, 25, 0, 1000, 0, 0, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA, 250, 90, 25, 0, 10000, 0, 0, 1, 0, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(31), 2000);
 						break;
 					case 31:
@@ -361,8 +366,8 @@ public class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(32), 3500);
 						break;
 					case 32:
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA2.getObjectId(), 800, 180, 0, 0, 4000, 0, 10, 1, 0));
-						ZONE.broadcastPacket(new SpecialCamera(CAMERA2.getObjectId(), 800, 180, 0, 0, 4000, 0, 10, 1, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA2, 800, 180, 0, 0, 4000, 0, 10, 1, 0, 0));
+						ZONE.broadcastPacket(new SpecialCamera(CAMERA2, 800, 180, 0, 0, 4000, 0, 10, 1, 0, 0));
 						L2DoorInstance door2 = DoorTable.getInstance().getDoor(20240002);
 						door2.openMe();
 						ZONE.broadcastPacket(new StaticObject(door2, false));
@@ -407,7 +412,7 @@ public class Beleth extends AbstractNpcAI
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		if ((npc.getNpcId() == 29118) && (killer != null))
+		if ((npc.getId() == 29118) && (killer != null))
 		{
 			setBelethKiller(1, killer);
 			GrandBossManager.getInstance().setBossStatus(29118, 3);
@@ -432,7 +437,7 @@ public class Beleth extends AbstractNpcAI
 			spawn(32470, new Location(12470, 215607, -9381, 49152));
 			ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(27), 1000);
 		}
-		else if (npc.getNpcId() == 29119)
+		else if (npc.getId() == 29119)
 		{
 			if (npc.getObjectId() == ALLOW_OBJECT_ID)
 			{
@@ -463,9 +468,9 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, L2PcInstance player, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if ((npc != null) && !npc.isDead() && ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119)) && !npc.isCastingNow() && skill.hasEffectType(L2EffectType.HEAL) && (getRandom(100) < 80))
+		if ((npc != null) && !npc.isDead() && ((npc.getId() == 29118) || (npc.getId() == 29119)) && !npc.isCastingNow() && skill.hasEffectType(L2EffectType.HEAL) && (getRandom(100) < 80))
 		{
 			npc.setTarget(player);
 			npc.doCast(HORN_OF_RISING.getSkill());
@@ -481,7 +486,7 @@ public class Beleth extends AbstractNpcAI
 			return super.onAttack(npc, attacker, damage, isSummon);
 		}
 		
-		if ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119))
+		if ((npc.getId() == 29118) || (npc.getId() == 29119))
 		{
 			if ((npc.getObjectId() == ALLOW_OBJECT_ID) && !ATTACKED)
 			{
@@ -497,7 +502,7 @@ public class Beleth extends AbstractNpcAI
 			{
 				return null;
 			}
-			final double distance = Math.sqrt(npc.getPlanDistanceSq(attacker.getX(), attacker.getY()));
+			final double distance = npc.calculateDistance(attacker, false, false);
 			if ((distance > 500) || (getRandom(100) < 80))
 			{
 				for (L2Npc beleth : MINIONS)
@@ -528,18 +533,18 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
-		if ((npc != null) && !npc.isDead() && ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119)) && !npc.isCastingNow())
+		if ((npc != null) && !npc.isDead() && ((npc.getId() == 29118) || (npc.getId() == 29119)) && !npc.isCastingNow())
 		{
 			if ((player != null) && !player.isDead())
 			{
-				final double distance2 = Math.sqrt(npc.getPlanDistanceSq(player.getX(), player.getY()));
+				final double distance2 = npc.calculateDistance(player, false, false);
 				if ((distance2 > 890) && !npc.isMovementDisabled())
 				{
 					npc.setTarget(player);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
-					int speed = npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed();
+					double speed = npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed();
 					int time = (int) (((distance2 - 890) / speed) * 1000);
 					ThreadPoolManager.getInstance().scheduleGeneral(new Cast(FIREBALL, npc), time);
 					
@@ -573,7 +578,7 @@ public class Beleth extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if ((npc != null) && !npc.isDead() && ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119)) && !npc.isCastingNow() && !MOVIE)
+		if ((npc != null) && !npc.isDead() && ((npc.getId() == 29118) || (npc.getId() == 29119)) && !npc.isCastingNow() && !MOVIE)
 		{
 			if (getRandom(100) < 40)
 			{
@@ -592,14 +597,14 @@ public class Beleth extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119))
+		if ((npc.getId() == 29118) || (npc.getId() == 29119))
 		{
 			npc.setRunning();
 			if (!MOVIE && !npc.getKnownList().getKnownPlayersInRadius(300).isEmpty() && (getRandom(100) < 60))
 			{
 				npc.doCast(BLEED.getSkill());
 			}
-			if (npc.getNpcId() == 29118)
+			if (npc.getId() == 29118)
 			{
 				npc.getSpawn().setRespawnDelay(0);// setOnKillDelay
 			}
@@ -772,6 +777,6 @@ public class Beleth extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Beleth(Beleth.class.getSimpleName(), "ai");
+		new Beleth();
 	}
 }

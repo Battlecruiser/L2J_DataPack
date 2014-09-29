@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00250_WatchWhatYouEat;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -50,9 +51,9 @@ public class Q00250_WatchWhatYouEat extends Quest
 		}
 	};
 	
-	public Q00250_WatchWhatYouEat(int questId, String name, String descr)
+	public Q00250_WatchWhatYouEat()
 	{
-		super(questId, name, descr);
+		super(250, Q00250_WatchWhatYouEat.class.getSimpleName(), "Watch What You Eat");
 		addStartNpc(SALLY);
 		addFirstTalkId(SALLY);
 		addTalkId(SALLY);
@@ -74,7 +75,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == SALLY)
+		if (npc.getId() == SALLY)
 		{
 			if (event.equalsIgnoreCase("32743-03.htm"))
 			{
@@ -103,7 +104,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 			newQuestState(player);
 		}
 		
-		if (npc.getNpcId() == SALLY)
+		if (npc.getId() == SALLY)
 		{
 			return "32743-20.html";
 		}
@@ -123,7 +124,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 		{
 			for (int[] mob : MOBS)
 			{
-				if (npc.getNpcId() == mob[0])
+				if (npc.getId() == mob[0])
 				{
 					if (!st.hasQuestItems(mob[1]))
 					{
@@ -150,7 +151,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == SALLY)
+		if (npc.getId() == SALLY)
 		{
 			switch (st.getState())
 			{
@@ -184,10 +185,5 @@ public class Q00250_WatchWhatYouEat extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00250_WatchWhatYouEat(250, Q00250_WatchWhatYouEat.class.getSimpleName(), "Watch What You Eat");
 	}
 }

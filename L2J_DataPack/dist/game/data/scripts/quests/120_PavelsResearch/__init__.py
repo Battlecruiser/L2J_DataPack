@@ -4,7 +4,7 @@
 import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 from com.l2jserver.gameserver.network.serverpackets import MagicSkillUse
 
 qn = "120_PavelsResearch"
@@ -216,7 +216,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return htmltext
     state = st.getState()
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     cond = st.getInt("cond")
     if state == State.COMPLETED :
        htmltext = Quest.getAlreadyCompletedMsg(player)

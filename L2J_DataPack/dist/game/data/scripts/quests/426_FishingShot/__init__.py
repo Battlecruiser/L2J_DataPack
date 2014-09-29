@@ -3,7 +3,7 @@ import sys
 from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "426_FishingShot"
 
@@ -82,7 +82,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    cond=st.getInt("cond")
    if cond==0 :
      htmltext = "01.htm"
@@ -96,7 +96,7 @@ class Quest (JQuest) :
    partyMember = self.getRandomPartyMemberState(player, State.STARTED)
    if not partyMember : return 
    st = partyMember.getQuestState(qn)
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    drop = 0
    chance = 0
    if npcId in MOBS1.keys() :

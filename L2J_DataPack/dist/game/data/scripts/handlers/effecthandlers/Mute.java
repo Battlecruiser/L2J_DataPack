@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,17 +18,28 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.ai.CtrlEvent;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
-public class Mute extends L2Effect
+/**
+ * Mute effect implementation.
+ */
+public final class Mute extends AbstractEffect
 {
-	public Mute(Env env, EffectTemplate template)
+	public Mute(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+	}
+	
+	@Override
+	public int getEffectFlags()
+	{
+		return EffectFlag.MUTED.getMask();
 	}
 	
 	@Override
@@ -38,27 +49,9 @@ public class Mute extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public void onStart(BuffInfo info)
 	{
-		getEffected().startMuted();
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().stopMuted(false);
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.MUTED.getMask();
+		info.getEffected().abortCast();
+		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_MUTED);
 	}
 }

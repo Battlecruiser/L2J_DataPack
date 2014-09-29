@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,44 +18,48 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
+ * Mana Heal effect implementation.
  * @author UnAfraid
  */
-public class ManaHeal extends L2Effect
+public final class ManaHeal extends AbstractEffect
 {
-	public ManaHeal(Env env, EffectTemplate template)
+	private final double _power;
+	
+	public ManaHeal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean isInstant()
 	{
-		return L2EffectType.MANAHEAL;
+		return true;
 	}
 	
 	@Override
-	public boolean onStart()
+	public void onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
-		if ((target == null) || target.isDead() || target.isDoor())
+		L2Character target = info.getEffected();
+		if ((target == null) || target.isDead() || target.isDoor() || target.isInvul())
 		{
-			return false;
+			return;
 		}
 		
-		double amount = calc();
+		double amount = _power;
 		
-		if (!getSkill().isStatic())
+		if (!info.getSkill().isStatic())
 		{
 			amount = target.calcStat(Stats.MANA_CHARGE, amount, null, null);
 		}
@@ -65,28 +69,18 @@ public class ManaHeal extends L2Effect
 		if (amount != 0)
 		{
 			target.setCurrentMp(amount + target.getCurrentMp());
-			StatusUpdate su = new StatusUpdate(target);
-			su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
-			target.sendPacket(su);
 		}
 		SystemMessage sm;
-		if (getEffector().getObjectId() != target.getObjectId())
+		if (info.getEffector().getObjectId() != target.getObjectId())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
-			sm.addCharName(getEffector());
+			sm.addCharName(info.getEffector());
 		}
 		else
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
 		}
-		sm.addNumber((int) amount);
+		sm.addInt((int) amount);
 		target.sendPacket(sm);
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -164,7 +164,7 @@ public class AdminManor implements IAdminCommandHandler
 	
 	private void showMainPage(L2PcInstance activeChar)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		final List<Castle> castles = CastleManager.getInstance().getCastles();
 		final StringBuilder replyMSG = StringUtil.startAppend(1000 + (castles.size() * 50), "<html><body>" + "<center><table width=270><tr>" + "<td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>" + "<td width=180><center>Manor Info</center></td>" + "<td width=45><button value=\"Back\" action=\"bypass -h admin_admin2\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>" + "</tr></table><font color=\"LEVEL\"> [Manor System] </font></center><br>" + "<table width=\"100%\"><tr><td>" + "Disabled: ", CastleManorManager.getInstance().isDisabled() ? "yes" : "no", "</td><td>" + "Under Maintenance: ", CastleManorManager.getInstance().isUnderMaintenance() ? "yes" : "no", "</td></tr><tr><td>" + "Time to refresh: ", formatTime(CastleManorManager.getInstance().getMillisToManorRefresh()), "</td><td>" + "Time to approve: ", formatTime(CastleManorManager.getInstance().getMillisToNextPeriodApprove()), "</td></tr>" + "</table>" + "<center><table><tr><td>" + "<button value=\"Set Next\" action=\"bypass -h admin_manor_setnext\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td>" + "<button value=\"Approve Next\" action=\"bypass -h admin_manor_approve\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr><tr><td>" + "<button value=\"", CastleManorManager.getInstance().isUnderMaintenance() ? "Set normal" : "Set mainteance", "\" action=\"bypass -h admin_manor_setmaintenance\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td>" + "<button value=\"", CastleManorManager.getInstance().isDisabled() ? "Enable" : "Disable", "\" action=\"bypass -h admin_manor_disable\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr><tr><td>" + "<button value=\"Refresh\" action=\"bypass -h admin_manor\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td>" + "<button value=\"Back\" action=\"bypass -h admin_admin\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>" + "</table></center>" + "<br><center>Castle Information:<table width=\"100%\">" + "<tr><td></td><td>Current Period</td><td>Next Period</td></tr>");
 		

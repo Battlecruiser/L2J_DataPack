@@ -2,13 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10800" type="Armor" name="Draconic Leather Armor {PvP}">
 		<set name="icon" val="icon.armor_t89_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="748" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="4950" />
 		<set name="price" val="15577000" />
 		<set name="enchant_enabled" val="1" />
@@ -22,13 +22,13 @@
 	</item>
 	<item id="10801" type="Armor" name="Major Arcana Robe {PvP}">
 		<set name="icon" val="icon.armor_t90_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="748" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="cloth" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="2300" />
 		<set name="price" val="15577000" />
 		<set name="enchant_enabled" val="1" />
@@ -36,7 +36,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="166" />
@@ -46,13 +46,13 @@
 	</item>
 	<item id="10802" type="Armor" name="Dynasty Breastplate {PvP}">
 		<set name="icon" val="icon.armor_t91_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="enchant_enabled" val="1" />
@@ -60,7 +60,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
@@ -69,24 +69,23 @@
 	</item>
 	<item id="10803" type="Armor" name="Dynasty Breastplate {PvP} - Shield Master">
 		<set name="icon" val="icon.armor_t91_uk_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@shield_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="90, 91, 99, 106" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="SHIELD_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -96,24 +95,23 @@
 	</item>
 	<item id="10804" type="Armor" name="Dynasty Breastplate {PvP} - Weapon Master">
 		<set name="icon" val="icon.armor_t91_uw_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="89, 113, 117, 118" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="WEAPON_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -123,24 +121,23 @@
 	</item>
 	<item id="10805" type="Armor" name="Dynasty Breastplate {PvP} - Force Master">
 		<set name="icon" val="icon.armor_t91_uf_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="88, 114" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -150,24 +147,23 @@
 	</item>
 	<item id="10806" type="Armor" name="Dynasty Breastplate {PvP} - Bard">
 		<set name="icon" val="icon.armor_t91_uke_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="100, 107" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="BARD" />
 			</and>
 		</cond>
 		<for>
@@ -177,13 +173,13 @@
 	</item>
 	<item id="10807" type="Armor" name="Dynasty Leather Armor {PvP}">
 		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="enchant_enabled" val="1" />
@@ -197,13 +193,13 @@
 	</item>
 	<item id="10808" type="Armor" name="Dynasty Leather Armor {PvP} - Dagger Master">
 		<set name="icon" val="icon.armor_t92_ud_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="enchant_enabled" val="1" />
@@ -211,7 +207,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+			<player categoryType="DAGGER_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -220,22 +216,21 @@
 	</item>
 	<item id="10809" type="Armor" name="Dynasty Leather Armor {PvP} - Bow Master">
 		<set name="icon" val="icon.armor_t92_ub_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@bow_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="92, 102, 109, 134" />
+			<player categoryType="BOW_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -244,13 +239,13 @@
 	</item>
 	<item id="10810" type="Armor" name="Dynasty Tunic {PvP}">
 		<set name="icon" val="icon.armor_t93_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="enchant_enabled" val="1" />
@@ -258,7 +253,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
@@ -268,24 +263,23 @@
 	</item>
 	<item id="10811" type="Armor" name="Dynasty Tunic {PvP} - Healer">
 		<set name="icon" val="icon.armor_t93_uh_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@heal_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="97, 105, 112" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="HEAL_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -296,24 +290,23 @@
 	</item>
 	<item id="10812" type="Armor" name="Dynasty Tunic {PvP} - Enchanter">
 		<set name="icon" val="icon.armor_t93_ue_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="98, 115, 116" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="BUFF_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -324,24 +317,23 @@
 	</item>
 	<item id="10813" type="Armor" name="Dynasty Tunic {PvP} - Summoner">
 		<set name="icon" val="icon.armor_t93_us_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="96, 104, 111" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="SUMMON_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -352,24 +344,23 @@
 	</item>
 	<item id="10814" type="Armor" name="Dynasty Tunic {PvP} - Wizard">
 		<set name="icon" val="icon.armor_t93_uw_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@wizard_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="94, 95, 103, 110" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="WIZARD_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -380,24 +371,23 @@
 	</item>
 	<item id="10815" type="Armor" name="Dynasty Leather Armor {PvP} - Force Master">
 		<set name="icon" val="icon.armor_t92_ud_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="88, 114" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -407,22 +397,21 @@
 	</item>
 	<item id="10816" type="Armor" name="Dynasty Leather Armor {PvP} - Weapon Master">
 		<set name="icon" val="icon.armor_t92_ub_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
+			<player categoryType="WEAPON_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -431,22 +420,21 @@
 	</item>
 	<item id="10817" type="Armor" name="Dynasty Leather Armor {PvP} - Enchanter">
 		<set name="icon" val="icon.armor_t92_ud_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="98, 115, 116, 136" />
+			<player categoryType="BUFF_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -455,22 +443,21 @@
 	</item>
 	<item id="10818" type="Armor" name="Dynasty Leather Armor {PvP} - Summoner">
 		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="96, 104, 111" />
+			<player categoryType="SUMMON_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -479,13 +466,13 @@
 	</item>
 	<item id="10819" type="Armor" name="Dynasty Platinum Breastplate {PvP}">
 		<set name="icon" val="icon.armor_t91_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
 		<set name="enchant_enabled" val="1" />
@@ -493,7 +480,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
@@ -502,24 +489,23 @@
 	</item>
 	<item id="10820" type="Armor" name="Dynasty Platinum Breastplate {PvP} - Shield Master">
 		<set name="icon" val="icon.armor_t91_uk_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@shield_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="90, 91, 99, 106" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="SHIELD_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -529,24 +515,23 @@
 	</item>
 	<item id="10821" type="Armor" name="Dynasty Platinum Breastplate {PvP} - Weapon Master">
 		<set name="icon" val="icon.armor_t91_uw_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="89, 113, 117, 118" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="WEAPON_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -556,24 +541,23 @@
 	</item>
 	<item id="10822" type="Armor" name="Dynasty Platinum Breastplate {PvP} - Force Master">
 		<set name="icon" val="icon.armor_t91_uf_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="88, 114" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -583,24 +567,23 @@
 	</item>
 	<item id="10823" type="Armor" name="Dynasty Platinum Breastplate {PvP} - Bard">
 		<set name="icon" val="icon.armor_t91_uke_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="100, 107" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="BARD" />
 			</and>
 		</cond>
 		<for>
@@ -610,13 +593,13 @@
 	</item>
 	<item id="10824" type="Armor" name="Dynasty Jewel Leather Armor {PvP}">
 		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="enchant_enabled" val="1" />
@@ -630,13 +613,13 @@
 	</item>
 	<item id="10825" type="Armor" name="Dynasty Jewel Leather Armor {PvP} - Dagger Master">
 		<set name="icon" val="icon.armor_t92_ud_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="enchant_enabled" val="1" />
@@ -644,7 +627,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+			<player categoryType="DAGGER_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -653,22 +636,21 @@
 	</item>
 	<item id="10826" type="Armor" name="Dynasty Jewel Leather Armor {PvP} - Bow Master">
 		<set name="icon" val="icon.armor_t92_ub_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@bow_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="92, 102, 109, 134" />
+			<player categoryType="BOW_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -677,13 +659,13 @@
 	</item>
 	<item id="10827" type="Armor" name="Dynasty Silver Satin Tunic {PvP}">
 		<set name="icon" val="icon.armor_t93_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
 		<set name="enchant_enabled" val="1" />
@@ -691,7 +673,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
@@ -701,24 +683,23 @@
 	</item>
 	<item id="10828" type="Armor" name="Dynasty Silver Satin Tunic {PvP} - Healer">
 		<set name="icon" val="icon.armor_t93_uh_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@heal_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="97, 105, 112" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="HEAL_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -729,24 +710,23 @@
 	</item>
 	<item id="10829" type="Armor" name="Dynasty Silver Satin Tunic {PvP} - Enchanter">
 		<set name="icon" val="icon.armor_t93_ue_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="98, 115, 116" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="BUFF_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -757,24 +737,23 @@
 	</item>
 	<item id="10830" type="Armor" name="Dynasty Silver Satin Tunic {PvP} - Summoner">
 		<set name="icon" val="icon.armor_t93_us_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="96, 104, 111" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="SUMMON_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -785,24 +764,23 @@
 	</item>
 	<item id="10831" type="Armor" name="Dynasty Silver Satin Tunic {PvP} - Wizard">
 		<set name="icon" val="icon.armor_t93_uw_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@wizard_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="94, 95, 103, 110" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="WIZARD_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -813,22 +791,21 @@
 	</item>
 	<item id="10832" type="Armor" name="Dynasty Jewel Leather Armor {PvP} - Force Master">
 		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="88, 114" />
+			<player categoryType="FORCE_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -837,22 +814,21 @@
 	</item>
 	<item id="10833" type="Armor" name="Dynasty Jewel Leather Armor {PvP} - Weapon Master">
 		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
+			<player categoryType="WEAPON_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -861,22 +837,21 @@
 	</item>
 	<item id="10834" type="Armor" name="Dynasty Jewel Leather Armor {PvP} - Enchanter">
 		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="98, 115, 116, 136" />
+			<player categoryType="BUFF_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -885,22 +860,21 @@
 	</item>
 	<item id="10835" type="Armor" name="Dynasty Jewel Leather Armor {PvP} - Summoner">
 		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="96, 104, 111" />
+			<player categoryType="SUMMON_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -909,9 +883,9 @@
 	</item>
 	<item id="10836" type="EtcItem" name="Pathfinder Supplies (Level 2)">
 		<set name="icon" val="icon.etc_treasure_box_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -923,9 +897,9 @@
 	</item>
 	<item id="10837" type="EtcItem" name="Pathfinder Supplies (Level 4)">
 		<set name="icon" val="icon.etc_treasure_box_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -937,9 +911,9 @@
 	</item>
 	<item id="10838" type="EtcItem" name="Pathfinder Supplies (Level 5)">
 		<set name="icon" val="icon.etc_treasure_box_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -951,9 +925,9 @@
 	</item>
 	<item id="10839" type="EtcItem" name="Pathfinder Supplies (Level 6)">
 		<set name="icon" val="icon.etc_treasure_box_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -965,9 +939,9 @@
 	</item>
 	<item id="10840" type="EtcItem" name="Pathfinder Supplies (Level 7)">
 		<set name="icon" val="icon.etc_treasure_box_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -979,9 +953,9 @@
 	</item>
 	<item id="10841" type="EtcItem" name="Pathfinder Supplies (Level 8)">
 		<set name="icon" val="icon.etc_treasure_box_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -993,9 +967,9 @@
 	</item>
 	<item id="10842" type="EtcItem" name="Pathfinder Supplies (Level 11)">
 		<set name="icon" val="icon.etc_treasure_box_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1007,9 +981,9 @@
 	</item>
 	<item id="10843" type="EtcItem" name="Pathfinder Supplies (Level 12)">
 		<set name="icon" val="icon.etc_treasure_box_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1021,9 +995,9 @@
 	</item>
 	<item id="10844" type="EtcItem" name="Pathfinder Supplies (Level 13)">
 		<set name="icon" val="icon.etc_treasure_box_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1035,9 +1009,9 @@
 	</item>
 	<item id="10845" type="EtcItem" name="Pathfinder Supplies (Level 14)">
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1049,9 +1023,9 @@
 	</item>
 	<item id="10846" type="EtcItem" name="Pathfinder Supplies (Level 15)">
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1063,9 +1037,9 @@
 	</item>
 	<item id="10847" type="EtcItem" name="Pathfinder Supplies (Level 18)">
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1077,9 +1051,9 @@
 	</item>
 	<item id="10848" type="EtcItem" name="Pathfinder Supplies (Level 19)">
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1091,9 +1065,9 @@
 	</item>
 	<item id="10849" type="EtcItem" name="Pathfinder Supplies (Level 20)">
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1105,9 +1079,9 @@
 	</item>
 	<item id="10850" type="EtcItem" name="Pathfinder Supplies (Level 21)">
 		<set name="icon" val="icon.etc_treasure_box_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1119,9 +1093,9 @@
 	</item>
 	<item id="10851" type="EtcItem" name="Pathfinder Supplies (Level 22)">
 		<set name="icon" val="icon.etc_treasure_box_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1133,9 +1107,9 @@
 	</item>
 	<item id="10852" type="EtcItem" name="Pathfinder Supplies (Level 25)">
 		<set name="icon" val="icon.etc_treasure_box_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1147,9 +1121,9 @@
 	</item>
 	<item id="10853" type="EtcItem" name="Pathfinder Supplies (Level 26)">
 		<set name="icon" val="icon.etc_treasure_box_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1161,9 +1135,9 @@
 	</item>
 	<item id="10854" type="EtcItem" name="Pathfinder Supplies (Level 27)">
 		<set name="icon" val="icon.etc_treasure_box_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1175,9 +1149,9 @@
 	</item>
 	<item id="10855" type="EtcItem" name="Pathfinder Supplies (Level 28)">
 		<set name="icon" val="icon.etc_treasure_box_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1189,9 +1163,9 @@
 	</item>
 	<item id="10856" type="EtcItem" name="Pathfinder Supplies (Level 29)">
 		<set name="icon" val="icon.etc_treasure_box_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1203,9 +1177,9 @@
 	</item>
 	<item id="10857" type="EtcItem" name="Pathfinder Supplies (Level 32)">
 		<set name="icon" val="icon.etc_treasure_box_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1217,9 +1191,9 @@
 	</item>
 	<item id="10858" type="EtcItem" name="Pathfinder Supplies (Level 33)">
 		<set name="icon" val="icon.etc_treasure_box_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1231,9 +1205,9 @@
 	</item>
 	<item id="10859" type="EtcItem" name="Pathfinder Supplies (Level 34)">
 		<set name="icon" val="icon.etc_treasure_box_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1245,9 +1219,9 @@
 	</item>
 	<item id="10860" type="EtcItem" name="Pathfinder Supplies (Level 35)">
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1259,9 +1233,9 @@
 	</item>
 	<item id="10861" type="EtcItem" name="Pathfinder Supplies (Level 36)">
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1273,9 +1247,9 @@
 	</item>
 	<item id="10862" type="EtcItem" name="Pathfinder Supplies (Level 38)">
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1287,9 +1261,9 @@
 	</item>
 	<item id="10863" type="EtcItem" name="Pathfinder Supplies (Level 39)">
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1301,9 +1275,9 @@
 	</item>
 	<item id="10864" type="EtcItem" name="Pathfinder Supplies (Level 40)">
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1315,9 +1289,9 @@
 	</item>
 	<item id="10865" type="EtcItem" name="Pathfinder Supplies (Level 41)">
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1329,8 +1303,8 @@
 	</item>
 	<item id="10866" type="EtcItem" name="Energy Ore">
 		<set name="icon" val="icon.etc_crystal_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1340,8 +1314,8 @@
 	</item>
 	<item id="10867" type="EtcItem" name="Bloody Cloth Fragment">
 		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1351,8 +1325,8 @@
 	</item>
 	<item id="10868" type="EtcItem" name="Helvetia's Antidote">
 		<set name="icon" val="icon.etc_potion_yellow_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1362,8 +1336,8 @@
 	</item>
 	<item id="10869" type="EtcItem" name="Contaminated Kasha Spider Venom">
 		<set name="icon" val="icon.etc_potion_yellow_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1373,16 +1347,16 @@
 	</item>
 	<item id="10870" type="Weapon" name="Great Sword - Lightning">
 		<set name="icon" val="icon.weapon_great_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1930" />
 		<set name="price" val="6680500" />
 		<set name="change_weaponId" val="10882" />
@@ -1401,16 +1375,16 @@
 	</item>
 	<item id="10871" type="Weapon" name="Great Sword - Lightning - Health">
 		<set name="icon" val="icon.weapon_great_sword_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1930" />
 		<set name="price" val="6680500" />
 		<set name="change_weaponId" val="10883" />
@@ -1429,16 +1403,16 @@
 	</item>
 	<item id="10872" type="Weapon" name="Great Sword - Lightning - Critical Damage">
 		<set name="icon" val="icon.weapon_great_sword_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1930" />
 		<set name="price" val="6680500" />
 		<set name="change_weaponId" val="10884" />
@@ -1457,16 +1431,16 @@
 	</item>
 	<item id="10873" type="Weapon" name="Great Sword - Lightning - Focus">
 		<set name="icon" val="icon.weapon_great_sword_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1930" />
 		<set name="price" val="6680500" />
 		<set name="change_weaponId" val="10885" />
@@ -1485,16 +1459,16 @@
 	</item>
 	<item id="10874" type="Weapon" name="Great Axe - Thunder">
 		<set name="icon" val="icon.weapon_great_axe_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="damascus" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1940" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -1513,16 +1487,16 @@
 	</item>
 	<item id="10875" type="Weapon" name="Great Axe - Thunder - Anger">
 		<set name="icon" val="icon.weapon_great_axe_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="damascus" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1940" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -1541,16 +1515,16 @@
 	</item>
 	<item id="10876" type="Weapon" name="Great Axe - Thunder - Critical Stun">
 		<set name="icon" val="icon.weapon_great_axe_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="damascus" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1940" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -1571,16 +1545,16 @@
 	</item>
 	<item id="10877" type="Weapon" name="Great Axe - Thunder - Light">
 		<set name="icon" val="icon.weapon_great_axe_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="damascus" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1940" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -1599,16 +1573,16 @@
 	</item>
 	<item id="10878" type="Weapon" name="Sword of Limit*Sword of Limit - Destruction">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2140" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -1627,16 +1601,16 @@
 	</item>
 	<item id="10879" type="Weapon" name="Sword of Limit*Sword of Delusion - Destruction">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2140" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -1655,16 +1629,16 @@
 	</item>
 	<item id="10880" type="Weapon" name="Sword of Limit*Sword of Nightmare - Destruction">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2130" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -1683,16 +1657,16 @@
 	</item>
 	<item id="10881" type="Weapon" name="Sword of Limit*Tsurugi - Destruction">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2120" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -1711,16 +1685,16 @@
 	</item>
 	<item id="10882" type="Weapon" name="Innominate Victory - Lightning">
 		<set name="icon" val="icon.weapon_nameless_victory_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1930" />
 		<set name="price" val="6680500" />
 		<set name="change_weaponId" val="10870" />
@@ -1729,7 +1703,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3851-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="190" />
@@ -1743,16 +1717,16 @@
 	</item>
 	<item id="10883" type="Weapon" name="Innominate Victory - Lightning - Health">
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1930" />
 		<set name="price" val="6680500" />
 		<set name="change_weaponId" val="10871" />
@@ -1761,7 +1735,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3851-1;3013-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="190" />
@@ -1775,16 +1749,16 @@
 	</item>
 	<item id="10884" type="Weapon" name="Innominate Victory - Lightning - Critical Damage">
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1930" />
 		<set name="price" val="6680500" />
 		<set name="change_weaponId" val="10872" />
@@ -1793,7 +1767,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3851-1;3023-5" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="190" />
@@ -1807,16 +1781,16 @@
 	</item>
 	<item id="10885" type="Weapon" name="Innominate Victory - Lightning - Focus">
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1930" />
 		<set name="price" val="6680500" />
 		<set name="change_weaponId" val="10873" />
@@ -1825,7 +1799,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3851-1;3010-5" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="190" />
@@ -1839,16 +1813,16 @@
 	</item>
 	<item id="10886" type="Weapon" name="Dark Elven Long Bow - Concentration">
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="oriharukon" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1720" />
 		<set name="price" val="6680500" />
 		<set name="change_weaponId" val="10934" />
@@ -1870,16 +1844,16 @@
 	</item>
 	<item id="10887" type="Weapon" name="Dark Elven Long Bow - Concentration - Evasion">
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="oriharukon" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1720" />
 		<set name="price" val="6680500" />
 		<set name="change_weaponId" val="10935" />
@@ -1901,16 +1875,16 @@
 	</item>
 	<item id="10888" type="Weapon" name="Dark Elven Long Bow - Concentration - Critical Bleed">
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="oriharukon" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1720" />
 		<set name="price" val="6680500" />
 		<set name="change_weaponId" val="10936" />
@@ -1934,16 +1908,16 @@
 	</item>
 	<item id="10889" type="Weapon" name="Dark Elven Long Bow - Concentration - Miser">
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="oriharukon" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1720" />
 		<set name="price" val="6680500" />
 		<set name="change_weaponId" val="10937" />
@@ -1966,16 +1940,16 @@
 	</item>
 	<item id="10890" type="Weapon" name="Sword of Delusion*Sword of Delusion - Destruction">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2150" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -1994,16 +1968,16 @@
 	</item>
 	<item id="10891" type="Weapon" name="Sword of Delusion*Sword of Nightmare - Destruction">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2130" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -2022,16 +1996,16 @@
 	</item>
 	<item id="10892" type="Weapon" name="Sword of Delusion*Tsurugi - Destruction">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2140" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -2050,16 +2024,16 @@
 	</item>
 	<item id="10893" type="Weapon" name="Sword of Valhalla - Nature">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="oriharukon" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="900" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -2078,16 +2052,16 @@
 	</item>
 	<item id="10894" type="Weapon" name="Sword of Valhalla - Nature - Acumen">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="oriharukon" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="900" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -2106,16 +2080,16 @@
 	</item>
 	<item id="10895" type="Weapon" name="Sword of Valhalla - Nature - Magic Weakness">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="oriharukon" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="900" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -2136,16 +2110,16 @@
 	</item>
 	<item id="10896" type="Weapon" name="Sword of Valhalla - Nature - Magic Regeneration">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="oriharukon" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="900" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -2166,16 +2140,16 @@
 	</item>
 	<item id="10897" type="Weapon" name="Stormbringer*Samurai Long Sword - Destruction">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2150" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -2194,16 +2168,16 @@
 	</item>
 	<item id="10898" type="Weapon" name="Spell Breaker - Hail">
 		<set name="icon" val="icon.weapon_spell_breaker_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1620" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
@@ -2223,16 +2197,16 @@
 	</item>
 	<item id="10899" type="Weapon" name="Spell Breaker - Hail - Acumen">
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="891" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1620" />
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />

@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00160_NerupasRequest' WHERE name='160_NerupasFavor';

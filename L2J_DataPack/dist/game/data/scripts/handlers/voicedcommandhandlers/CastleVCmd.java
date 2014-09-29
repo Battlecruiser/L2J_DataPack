@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -69,7 +69,7 @@ public class CastleVCmd implements IVoicedCommandHandler
 					return false;
 				}
 				
-				if (castle.getSiege().getIsInProgress())
+				if (castle.getSiege().isInProgress())
 				{
 					activeChar.sendPacket(SystemMessageId.GATES_NOT_OPENED_CLOSED_DURING_SIEGE);
 					return false;
@@ -105,7 +105,7 @@ public class CastleVCmd implements IVoicedCommandHandler
 					return false;
 				}
 				
-				if (castle2.getSiege().getIsInProgress())
+				if (castle2.getSiege().isInProgress())
 				{
 					activeChar.sendPacket(SystemMessageId.GATES_NOT_OPENED_CLOSED_DURING_SIEGE);
 					return false;

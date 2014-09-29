@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,20 +18,28 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ChangeWaitType;
+import com.l2jserver.gameserver.network.serverpackets.Revive;
 
 /**
+ * Fake Death effect implementation.
  * @author mkizub
  */
-public class FakeDeath extends L2Effect
+public final class FakeDeath extends AbstractEffect
 {
-	public FakeDeath(Env env, EffectTemplate template)
+	private final double _power;
+	
+	public FakeDeath(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -41,38 +49,44 @@ public class FakeDeath extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onActionTime(BuffInfo info)
 	{
-		getEffected().startFakeDeath();
-		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().stopFakeDeath(false);
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		double manaDam = calc();
-		
-		if (manaDam > getEffected().getCurrentMp())
+		final double manaDam = _power * getTicksMultiplier();
+		if (manaDam > info.getEffected().getCurrentMp())
 		{
-			if (getSkill().isToggle())
+			if (info.getSkill().isToggle())
 			{
-				getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+				info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 				return false;
 			}
 		}
 		
-		getEffected().reduceCurrentMp(manaDam);
-		return true;
+		info.getEffected().reduceCurrentMp(manaDam);
+		
+		return info.getSkill().isToggle();
+	}
+	
+	@Override
+	public void onExit(BuffInfo info)
+	{
+		if (info.getEffected().isPlayer())
+		{
+			info.getEffected().getActingPlayer().setIsFakeDeath(false);
+			info.getEffected().getActingPlayer().setRecentFakeDeath(true);
+		}
+		
+		info.getEffected().broadcastPacket(new ChangeWaitType(info.getEffected(), ChangeWaitType.WT_STOP_FAKEDEATH));
+		info.getEffected().broadcastPacket(new Revive(info.getEffected()));
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		info.getEffected().startFakeDeath();
 	}
 }

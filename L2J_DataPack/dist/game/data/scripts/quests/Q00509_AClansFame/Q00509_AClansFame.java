@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,6 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -61,9 +62,9 @@ public class Q00509_AClansFame extends Quest
 		25322
 	};
 	
-	public Q00509_AClansFame(int id, String name, String descr)
+	public Q00509_AClansFame()
 	{
-		super(id, name, descr);
+		super(509, Q00509_AClansFame.class.getSimpleName(), "A Clan's Fame");
 		addStartNpc(VALDIS);
 		addTalkId(VALDIS);
 		addKillId(RAID_BOSS);
@@ -133,7 +134,7 @@ public class Q00509_AClansFame extends Quest
 			int raid = st.getInt("raid");
 			if (REWARD_POINTS.containsKey(raid))
 			{
-				if ((npc.getNpcId() == REWARD_POINTS.get(raid).get(0)) && !st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
+				if ((npc.getId() == REWARD_POINTS.get(raid).get(0)) && !st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
 				{
 					st.rewardItems(REWARD_POINTS.get(raid).get(1), 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -177,7 +178,7 @@ public class Q00509_AClansFame extends Quest
 						st.takeItems(REWARD_POINTS.get(raid).get(1), -1);
 						final int rep = REWARD_POINTS.get(raid).get(2);
 						clan.addReputationScore(rep, true);
-						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addNumber(rep));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addInt(rep));
 						clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 					}
 					else
@@ -194,10 +195,5 @@ public class Q00509_AClansFame extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00509_AClansFame(509, Q00509_AClansFame.class.getSimpleName(), "A Clan's Fame");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.MultiSell;
+import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.datatables.NpcBufferTable;
 import com.l2jserver.gameserver.datatables.NpcBufferTable.NpcBufferData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
@@ -32,18 +32,19 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2OlympiadManagerInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Hero;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.olympiad.CompetitionType;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.model.olympiad.OlympiadManager;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExHeroList;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.util.L2FastList;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author DS
@@ -61,6 +62,20 @@ public class OlympiadManagerLink implements IBypassHandler
 	private static final String FEWER_THAN = "Fewer than " + String.valueOf(Config.ALT_OLY_REG_DISPLAY);
 	private static final String MORE_THAN = "More than " + String.valueOf(Config.ALT_OLY_REG_DISPLAY);
 	private static final int GATE_PASS = Config.ALT_OLY_COMP_RITEM;
+	
+	private static final int[] BUFFS =
+	{
+		4357, // Haste Lv2
+		4342, // Wind Walk Lv2
+		4356, // Empower Lv3
+		4355, // Acumen Lv3
+		4351, // Concentration Lv6
+		4345, // Might Lv3
+		4358, // Guidance Lv3
+		4359, // Focus Lv3
+		4360, // Death Whisper Lv3
+		4352, // Berserker Spirit Lv2
+	};
 	
 	@Override
 	public final boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
@@ -109,15 +124,11 @@ public class OlympiadManagerLink implements IBypassHandler
 					case 0: // H5 match selection
 						if (!OlympiadManager.getInstance().isRegistered(activeChar))
 						{
-							final int olympiad_round = 0; // TODO : implement me
-							final int olympiad_week = 0; // TODO: implement me
-							final int olympiad_participant = 0; // TODO: implement me
-							
 							html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_desc2a.htm");
 							html.replace("%objectId%", String.valueOf(target.getObjectId()));
-							html.replace("%olympiad_round%", String.valueOf(olympiad_round));
-							html.replace("%olympiad_week%", String.valueOf(olympiad_week));
-							html.replace("%olympiad_participant%", String.valueOf(olympiad_participant));
+							html.replace("%olympiad_period%", String.valueOf(Olympiad.getInstance().getPeriod()));
+							html.replace("%olympiad_cycle%", String.valueOf(Olympiad.getInstance().getCurrentCycle()));
+							html.replace("%olympiad_opponent%", String.valueOf(OlympiadManager.getInstance().getCountOpponents()));
 							activeChar.sendPacket(html);
 						}
 						else
@@ -190,10 +201,10 @@ public class OlympiadManagerLink implements IBypassHandler
 						}
 						break;
 					case 7: // Equipment Rewards
-						MultiSell.getInstance().separateAndSend(102, activeChar, (L2Npc) target, false);
+						MultisellData.getInstance().separateAndSend(102, activeChar, (L2Npc) target, false);
 						break;
 					case 8: // Misc. Rewards
-						MultiSell.getInstance().separateAndSend(103, activeChar, (L2Npc) target, false);
+						MultisellData.getInstance().separateAndSend(103, activeChar, (L2Npc) target, false);
 						break;
 					case 9: // Your Grand Olympiad Score from the previous period is %points% point(s) | TODO: cleanup (not used anymore)
 						int point = Olympiad.getInstance().getLastNobleOlympiadPoints(activeChar.getObjectId());
@@ -213,7 +224,7 @@ public class OlympiadManagerLink implements IBypassHandler
 							activeChar.sendPacket(iu);
 							
 							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S2_S1_S);
-							sm.addItemNumber(passes);
+							sm.addLong(passes);
 							sm.addItemName(item);
 							activeChar.sendPacket(sm);
 						}
@@ -228,51 +239,58 @@ public class OlympiadManagerLink implements IBypassHandler
 			}
 			else if (command.toLowerCase().startsWith("olybuff"))
 			{
-				if (activeChar.olyBuff <= 0)
+				int buffCount = activeChar.getOlympiadBuffCount();
+				if (buffCount <= 0)
 				{
 					return false;
 				}
 				
-				NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
+				final NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
 				String[] params = command.split(" ");
 				
-				if (params[1] == null)
+				if (!Util.isDigit(params[1]))
 				{
-					_log.warning("Olympiad Buffer Warning: npcId = " + ((L2Npc) target).getNpcId() + " has no buffGroup set in the bypass for the buff selected.");
+					_log.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " has invalid buffGroup set in the bypass for the buff selected: " + params[1]);
 					return false;
 				}
-				int buffGroup = Integer.parseInt(params[1]);
 				
-				NpcBufferData npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(((L2Npc) target).getNpcId(), buffGroup);
+				final int index = Integer.parseInt(params[1]);
+				if ((index < 0) || (index > BUFFS.length))
+				{
+					_log.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " has invalid index sent in the bypass: " + index);
+					return false;
+				}
 				
+				final NpcBufferData npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(target.getId(), BUFFS[index]);
 				if (npcBuffGroupInfo == null)
 				{
-					_log.warning("Olympiad Buffer Warning: npcId = " + ((L2Npc) target).getNpcId() + " Location: " + target.getX() + ", " + target.getY() + ", " + target.getZ() + " Player: " + activeChar.getName() + " has tried to use skill group (" + buffGroup + ") not assigned to the NPC Buffer!");
+					_log.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " Location: " + target.getX() + ", " + target.getY() + ", " + target.getZ() + " Player: " + activeChar.getName() + " has tried to use skill group (" + params[1] + ") not assigned to the NPC Buffer!");
 					return false;
 				}
 				
-				L2Skill skill = npcBuffGroupInfo.getSkill().getSkill();
-				target.setTarget(activeChar);
-				
-				if (activeChar.olyBuff > 0)
+				if (buffCount > 0)
 				{
+					final Skill skill = npcBuffGroupInfo.getSkill().getSkill();
 					if (skill != null)
 					{
-						activeChar.olyBuff--;
+						target.setTarget(activeChar);
+						
+						activeChar.setOlympiadBuffCount(--buffCount);
+						
 						target.broadcastPacket(new MagicSkillUse(target, activeChar, skill.getId(), skill.getLevel(), 0, 0));
-						skill.getEffects(activeChar, activeChar);
-						L2Summon summon = activeChar.getSummon();
+						skill.applyEffects(activeChar, activeChar);
+						final L2Summon summon = activeChar.getSummon();
 						if (summon != null)
 						{
 							target.broadcastPacket(new MagicSkillUse(target, summon, skill.getId(), skill.getLevel(), 0, 0));
-							skill.getEffects(summon, summon);
+							skill.applyEffects(summon, summon);
 						}
 					}
 				}
 				
-				if (activeChar.olyBuff > 0)
+				if (buffCount > 0)
 				{
-					html.setFile(activeChar.getHtmlPrefix(), activeChar.olyBuff == 5 ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm");
+					html.setFile(activeChar.getHtmlPrefix(), buffCount == Config.ALT_OLY_MAX_BUFFS ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm");
 					html.replace("%objectId%", String.valueOf(target.getObjectId()));
 					activeChar.sendPacket(html);
 				}
@@ -288,7 +306,7 @@ public class OlympiadManagerLink implements IBypassHandler
 			{
 				int val = Integer.parseInt(command.substring(9, 10));
 				
-				NpcHtmlMessage reply = new NpcHtmlMessage(target.getObjectId());
+				final NpcHtmlMessage reply = new NpcHtmlMessage(target.getObjectId());
 				
 				switch (val)
 				{
@@ -297,7 +315,7 @@ public class OlympiadManagerLink implements IBypassHandler
 						int classId = Integer.parseInt(command.substring(11));
 						if (((classId >= 88) && (classId <= 118)) || ((classId >= 131) && (classId <= 134)) || (classId == 136))
 						{
-							L2FastList<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
+							List<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
 							reply.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "olympiad_ranking.htm");
 							
 							int index = 1;
@@ -323,6 +341,18 @@ public class OlympiadManagerLink implements IBypassHandler
 						break;
 					case 4: // hero list
 						activeChar.sendPacket(new ExHeroList());
+						break;
+					case 5: // Hero Certification
+						if (!Hero.getInstance().isClaimed(activeChar.getObjectId()))
+						{
+							Hero.getInstance().claimHero(activeChar);
+							reply.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "hero_receive.htm");
+						}
+						else
+						{
+							reply.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "hero_notreceive.htm");
+						}
+						activeChar.sendPacket(reply);
 						break;
 					default:
 						_log.warning("Olympiad System: Couldnt send packet for request " + val);

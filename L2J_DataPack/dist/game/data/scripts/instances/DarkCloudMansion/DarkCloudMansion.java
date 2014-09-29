@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -41,10 +41,9 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 /**
  * Dark Cloud Mansion instance zone.
  */
-public class DarkCloudMansion extends Quest
+public final class DarkCloudMansion extends Quest
 {
-	private static String qn = "DarkCloudMansion";
-	private static final int INSTANCEID = 9;
+	private static final int TEMPLATE_ID = 9;
 	
 	private static boolean debug = false;
 	private static boolean noRndWalk = true;
@@ -444,10 +443,9 @@ public class DarkCloudMansion extends Quest
 		}
 	};
 	
-	public DarkCloudMansion(int questId, String name, String descr)
+	private DarkCloudMansion()
 	{
-		super(questId, name, descr);
-		
+		super(-1, DarkCloudMansion.class.getSimpleName(), "instances");
 		addFirstTalkId(BSM);
 		addFirstTalkId(SOTruth);
 		addStartNpc(YIYEN);
@@ -527,32 +525,29 @@ public class DarkCloudMansion extends Quest
 		return true;
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, Location loc)
+	protected void enterInstance(L2PcInstance player, String template, Location loc)
 	{
-		int instanceId = 0;
-		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		// existing instance
 		if (world != null)
 		{
 			if (!(world instanceof DMCWorld))
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-				return 0;
+				return;
 			}
 			teleportPlayer(player, loc, world.getInstanceId());
-			return instanceId;
+			return;
 		}
-		// New instance
+		
 		if (!checkConditions(player))
 		{
-			return 0;
+			return;
 		}
 		L2Party party = player.getParty();
-		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		final int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		world = new DMCWorld();
 		world.setInstanceId(instanceId);
-		world.setTemplateId(INSTANCEID);
+		world.setTemplateId(TEMPLATE_ID);
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("DarkCloudMansion: started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		runStartRoom((DMCWorld) world);
@@ -566,7 +561,7 @@ public class DarkCloudMansion extends Quest
 		{
 			for (L2PcInstance partyMember : party.getMembers())
 			{
-				if (partyMember.getQuestState(qn) == null)
+				if (partyMember.getQuestState(getName()) == null)
 				{
 					newQuestState(partyMember);
 				}
@@ -574,8 +569,6 @@ public class DarkCloudMansion extends Quest
 				teleportPlayer(partyMember, loc, instanceId);
 			}
 		}
-		
-		return instanceId;
 	}
 	
 	protected void runStartRoom(DMCWorld world)
@@ -989,11 +982,11 @@ public class DarkCloudMansion extends Quest
 			FifthRoom.npcList.add(thisnpc);
 			if ((temp[idx] == 1) && (getRandom(100) < 95))
 			{
-				thisnpc.npc.broadcastPacket(new NpcSay(thisnpc.npc.getObjectId(), 0, thisnpc.npc.getNpcId(), _spawnChat[getRandom(_spawnChat.length)]));
+				thisnpc.npc.broadcastPacket(new NpcSay(thisnpc.npc.getObjectId(), 0, thisnpc.npc.getId(), _spawnChat[getRandom(_spawnChat.length)]));
 			}
 			else if ((temp[idx] != 1) && (getRandom(100) < 67))
 			{
-				thisnpc.npc.broadcastPacket(new NpcSay(thisnpc.npc.getObjectId(), 0, thisnpc.npc.getNpcId(), _spawnChat[getRandom(_spawnChat.length)]));
+				thisnpc.npc.broadcastPacket(new NpcSay(thisnpc.npc.getObjectId(), 0, thisnpc.npc.getId(), _spawnChat[getRandom(_spawnChat.length)]));
 			}
 			idx++;
 		}
@@ -1083,14 +1076,14 @@ public class DarkCloudMansion extends Quest
 					mob.count = 1;
 					if (mob.status == 1)
 					{
-						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), Say2.NPC_ALL, mob.npc.getNpcId(), _successChat[getRandom(_successChat.length)]));
+						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), Say2.NPC_ALL, mob.npc.getId(), _successChat[getRandom(_successChat.length)]));
 						FifthRoom.founded += 1;
 						startQuestTimer("decayMe", 1500, npc, player);
 					}
 					else
 					{
 						FifthRoom.reset = 1;
-						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), Say2.NPC_ALL, mob.npc.getNpcId(), _faildChat[getRandom(_faildChat.length)]));
+						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), Say2.NPC_ALL, mob.npc.getId(), _faildChat[getRandom(_faildChat.length)]));
 						startQuestTimer("decayChatBelethSamples", 4000, npc, player);
 						startQuestTimer("decayBelethSamples", 4500, npc, player);
 					}
@@ -1257,7 +1250,7 @@ public class DarkCloudMansion extends Quest
 				{
 					if (mob.status == 1)
 					{
-						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), Say2.NPC_ALL, mob.npc.getNpcId(), _decayChat[getRandom(_decayChat.length)]));
+						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), Say2.NPC_ALL, mob.npc.getId(), _decayChat[getRandom(_decayChat.length)]));
 					}
 				}
 			}
@@ -1352,7 +1345,7 @@ public class DarkCloudMansion extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon, Skill skill)
 	{
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		DMCWorld world;
@@ -1412,10 +1405,10 @@ public class DarkCloudMansion extends Quest
 				}
 			}
 			
-			if ((npc.getNpcId() == SOTruth) && (world.getStatus() == 10))
+			if ((npc.getId() == SOTruth) && (world.getStatus() == 10))
 			{
 				npc.showChatWindow(player);
-				QuestState st = player.getQuestState(qn);
+				QuestState st = player.getQuestState(getName());
 				if (st == null)
 				{
 					st = newQuestState(player);
@@ -1434,7 +1427,7 @@ public class DarkCloudMansion extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (npcId == YIYEN)
 		{
 			enterInstance(player, "DarkCloudMansion.xml", new Location(146534, 180464, -6117));
@@ -1477,6 +1470,6 @@ public class DarkCloudMansion extends Quest
 	
 	public static void main(String[] args)
 	{
-		new DarkCloudMansion(-1, "DarkCloudMansion", qn);
+		new DarkCloudMansion();
 	}
 }

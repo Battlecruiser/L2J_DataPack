@@ -5,7 +5,7 @@ from java.lang import System
 from com.l2jserver import Config 
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest import State
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 from com.l2jserver.gameserver.network.serverpackets import NpcSay
 from com.l2jserver.util import Rnd
 
@@ -25,7 +25,7 @@ def AutoChat(npc,text) :
     chars = npc.getKnownList().getKnownPlayers().values().toArray() 
     if chars != None: 
        for pc in chars : 
-          sm = NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text) 
+          sm = NpcSay(npc.getObjectId(), 0, npc.getId(), text) 
           pc.sendPacket(sm) 
 
 class Quest (JQuest) : 
@@ -92,7 +92,7 @@ class Quest (JQuest) :
    htmltext = Quest.getNoQuestMsg(player) 
    st = player.getQuestState(qn) 
    if st : 
-     npcId = npc.getNpcId() 
+     npcId = npc.getId() 
      id = st.getState() 
      cond = st.getInt("cond") 
      if cond == 0 : 
@@ -120,7 +120,7 @@ class Quest (JQuest) :
      return htmltext 
 
  def onKill(self,npc,player,isPet):
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      if npcId == DAIMON :
         respawnMinDelay = 43200000  * int(Config.RAID_MIN_RESPAWN_MULTIPLIER)
         respawnMaxDelay = 129600000 * int(Config.RAID_MAX_RESPAWN_MULTIPLIER)

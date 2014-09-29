@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,11 +18,12 @@
  */
 package quests.Q00901_HowLavasaurusesAreMade;
 
+import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
@@ -49,9 +50,9 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	private static final int TOTEM_OF_COURAGE = 21901;
 	private static final int TOTEM_OF_FORTITUDE = 21902;
 	
-	public Q00901_HowLavasaurusesAreMade(int questId, String name, String descr)
+	public Q00901_HowLavasaurusesAreMade()
 	{
-		super(questId, name, descr);
+		super(901, Q00901_HowLavasaurusesAreMade.class.getSimpleName(), "How Lavasauruses Are Made");
 		addStartNpc(ROONEY);
 		addTalkId(ROONEY);
 		addKillId(LAVASAURUS_NEWBORN, LAVASAURUS_FLEDGIING, LAVASAURUS_ADULT, LAVASAURUS_ELDERLY);
@@ -108,7 +109,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case LAVASAURUS_NEWBORN:
 					giveQuestItems(st, FRAGMENT_STONE);
@@ -194,10 +195,5 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	public static boolean gotAllQuestItems(QuestState st)
 	{
 		return (st.getQuestItemsCount(FRAGMENT_STONE) >= 10) && (st.getQuestItemsCount(FRAGMENT_HEAD) >= 10) && (st.getQuestItemsCount(FRAGMENT_BODY) >= 10) && (st.getQuestItemsCount(FRAGMENT_HORN) >= 10);
-	}
-	
-	public static void main(String[] values)
-	{
-		new Q00901_HowLavasaurusesAreMade(901, Q00901_HowLavasaurusesAreMade.class.getSimpleName(), "How Lavasauruses Are Made");
 	}
 }

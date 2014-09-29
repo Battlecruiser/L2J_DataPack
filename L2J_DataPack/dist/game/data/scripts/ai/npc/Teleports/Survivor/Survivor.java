@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,21 +20,31 @@ package ai.npc.Teleports.Survivor;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 
 /**
  * Gracia Survivor teleport AI.<br>
  * Original Jython script by Kerberos.
  * @author Plim
  */
-public class Survivor extends AbstractNpcAI
+public final class Survivor extends AbstractNpcAI
 {
 	// NPC
 	private static final int SURVIVOR = 32632;
 	// Misc
 	private static final int MIN_LEVEL = 75;
+	// Location
+	private static final Location TELEPORT = new Location(-149406, 255247, -80);
+	
+	private Survivor()
+	{
+		super(Survivor.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(SURVIVOR);
+		addTalkId(SURVIVOR);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -51,8 +61,8 @@ public class Survivor extends AbstractNpcAI
 			}
 			else
 			{
-				takeItems(player, PcInventory.ADENA_ID, 150000);
-				player.teleToLocation(-149406, 255247, -80);
+				takeItems(player, Inventory.ADENA_ID, 150000);
+				player.teleToLocation(TELEPORT);
 				return null;
 			}
 		}
@@ -65,15 +75,8 @@ public class Survivor extends AbstractNpcAI
 		return "32632-1.htm";
 	}
 	
-	private Survivor(String name, String descr)
-	{
-		super(name, descr);
-		addStartNpc(SURVIVOR);
-		addTalkId(SURVIVOR);
-	}
-	
 	public static void main(String[] args)
 	{
-		new Survivor(Survivor.class.getSimpleName(), "ai/npc/Teleports");
+		new Survivor();
 	}
 }

@@ -2,7 +2,7 @@
 import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "123_TheLeaderAndTheFollower"
 
@@ -78,7 +78,7 @@ class Quest (JQuest) :
    return htmltext 
 
  def onTalk (self,npc,player):
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
@@ -171,7 +171,7 @@ class Quest (JQuest) :
     if not sponsor:
       st.exitQuest(1)
       return
-    item,chance,max,cond,check = DROPLIST[npc.getNpcId()]
+    item,chance,max,cond,check = DROPLIST[npc.getId()]
     count,enabled=st.getQuestItemsCount(item),True
     if check :
        enabled=False

@@ -4,10 +4,10 @@
 #
 
 import sys
-from com.l2jserver.gameserver.model.quest        			import State
-from com.l2jserver.gameserver.model.quest        			import QuestState
-from com.l2jserver.gameserver.model.quest.jython 			import QuestJython as JQuest
-from com.l2jserver.gameserver.network.serverpackets      	import NpcSay
+from com.l2jserver.gameserver.model.quest import State
+from com.l2jserver.gameserver.model.quest import QuestState
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
+from com.l2jserver.gameserver.network.serverpackets import NpcSay
 
 qn = "334_TheWishingPotion"
 
@@ -69,7 +69,7 @@ def check_ingredients(st,required) :
     return 1
 
 def autochat(npc,text) :
-    if npc: npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),text))
+    if npc: npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getId(),text))
     return
 
 class Quest (JQuest) :
@@ -230,7 +230,7 @@ class Quest (JQuest) :
    htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    cond = st.getInt("cond")
    id = st.getState()
    if npcId != ALCHEMIST_MATILD and id == State.CREATED : return htmltext
@@ -282,7 +282,7 @@ class Quest (JQuest) :
    id = st.getState()
    if id == State.CREATED: return
    if id != State.STARTED: st.setState(State.STARTED)
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    cond = st.getInt("cond")
    if npcId == SECRET_KEEPER_TREE and cond == 1 and not st.getQuestItemsCount(SECRET_BOOK):
       st.set("cond","2")

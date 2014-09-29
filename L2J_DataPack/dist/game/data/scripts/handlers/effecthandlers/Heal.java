@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,28 +18,33 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.ShotType;
+import com.l2jserver.gameserver.enums.ShotType;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.items.type.CrystalType;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
+ * Heal effect implementation.
  * @author UnAfraid
  */
-public class Heal extends L2Effect
+public final class Heal extends AbstractEffect
 {
-	public Heal(Env env, EffectTemplate template)
+	private final double _power;
+	
+	public Heal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -49,30 +54,36 @@ public class Heal extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		L2Character target = getEffected();
-		L2Character activeChar = getEffector();
-		if ((target == null) || target.isDead() || target.isDoor())
+		return true;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		L2Character target = info.getEffected();
+		L2Character activeChar = info.getEffector();
+		if ((target == null) || target.isDead() || target.isDoor() || target.isInvul())
 		{
-			return false;
+			return;
 		}
 		
-		double amount = calc();
+		double amount = _power;
 		double staticShotBonus = 0;
 		int mAtkMul = 1;
-		boolean sps = getSkill().isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		boolean bss = getSkill().isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		boolean sps = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
 		if (((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass())) || activeChar.isSummon())
 		{
-			staticShotBonus = getSkill().getMpConsume(); // static bonus for spiritshots
+			staticShotBonus = info.getSkill().getMpConsume(); // static bonus for spiritshots
 			mAtkMul = bss ? 4 : 2;
 			staticShotBonus *= bss ? 2.4 : 1.0;
 		}
 		else if ((sps || bss) && activeChar.isNpc())
 		{
-			staticShotBonus = 2.4 * getSkill().getMpConsume(); // always blessed spiritshots
+			staticShotBonus = 2.4 * info.getSkill().getMpConsume(); // always blessed spiritshots
 			mAtkMul = 4;
 		}
 		else
@@ -82,18 +93,18 @@ public class Heal extends L2Effect
 			final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 			if (weaponInst != null)
 			{
-				mAtkMul = weaponInst.getItem().getItemGrade() == L2Item.CRYSTAL_S84 ? 4 : weaponInst.getItem().getItemGrade() == L2Item.CRYSTAL_S80 ? 2 : 1;
+				mAtkMul = weaponInst.getItem().getItemGrade() == CrystalType.S84 ? 4 : weaponInst.getItem().getItemGrade() == CrystalType.S80 ? 2 : 1;
 			}
 			// shot dynamic bonus
 			mAtkMul = bss ? mAtkMul * 4 : mAtkMul + 1;
 		}
 		
-		if (!getSkill().isStatic())
+		if (!info.getSkill().isStatic())
 		{
 			amount += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
 			amount = target.calcStat(Stats.HEAL_EFFECT, amount, null, null);
 			// Heal critic, since CT2.3 Gracia Final
-			if (getSkill().isMagic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill())))
+			if (info.getSkill().isMagic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill())))
 			{
 				amount *= 3;
 			}
@@ -104,14 +115,11 @@ public class Heal extends L2Effect
 		if (amount != 0)
 		{
 			target.setCurrentHp(amount + target.getCurrentHp());
-			StatusUpdate su = new StatusUpdate(target);
-			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
-			target.sendPacket(su);
 		}
 		
 		if (target.isPlayer())
 		{
-			if (getSkill().getId() == 4051)
+			if (info.getSkill().getId() == 4051)
 			{
 				target.sendPacket(SystemMessageId.REJUVENATING_HP);
 			}
@@ -121,24 +129,16 @@ public class Heal extends L2Effect
 				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
 					sm.addString(activeChar.getName());
-					sm.addNumber((int) amount);
+					sm.addInt((int) amount);
 					target.sendPacket(sm);
 				}
 				else
 				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
-					sm.addNumber((int) amount);
+					sm.addInt((int) amount);
 					target.sendPacket(sm);
 				}
 			}
 		}
-		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

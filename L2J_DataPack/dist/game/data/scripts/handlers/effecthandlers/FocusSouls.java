@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,62 +18,57 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * Focus Souls effect.
+ * Focus Souls effect implementation.
  * @author nBd, Adry_85
  */
-public class FocusSouls extends L2Effect
+public final class FocusSouls extends AbstractEffect
 {
-	public FocusSouls(Env env, EffectTemplate template)
+	private final int _charge;
+	
+	public FocusSouls(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_charge = params.getInt("charge", 0);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean isInstant()
 	{
-		return L2EffectType.FOCUS_SOULS;
+		return true;
 	}
 	
 	@Override
-	public boolean onStart()
+	public void onStart(BuffInfo info)
 	{
-		if (!getEffected().isPlayer() || getEffected().isAlikeDead())
+		if (!info.getEffected().isPlayer() || info.getEffected().isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
-		L2PcInstance target = getEffected().getActingPlayer();
-		final L2Skill soulmastery = target.getSkills().get(467);
-		
-		if ((soulmastery != null))
+		final L2PcInstance target = info.getEffected().getActingPlayer();
+		final int maxSouls = (int) target.calcStat(Stats.MAX_SOULS, 0, null, null);
+		if (maxSouls > 0)
 		{
-			int amount = (int) calc();
-			if ((target.getChargedSouls() < soulmastery.getNumSouls()))
+			int amount = _charge;
+			if ((target.getChargedSouls() < maxSouls))
 			{
-				int count = ((target.getChargedSouls() + amount) <= soulmastery.getNumSouls()) ? amount : (soulmastery.getNumSouls() - target.getChargedSouls());
+				int count = ((target.getChargedSouls() + amount) <= maxSouls) ? amount : (maxSouls - target.getChargedSouls());
 				target.increaseSouls(count);
 			}
 			else
 			{
 				target.sendPacket(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
-				return false;
 			}
 		}
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

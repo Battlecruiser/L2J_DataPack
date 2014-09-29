@@ -5,7 +5,7 @@ import sys
 from com.l2jserver.gameserver.model.actor import L2Attackable
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "230_TestOfSummoner"
 
@@ -198,12 +198,12 @@ class Quest (JQuest) :
       st = player.getQuestState(qn)
       if not st : return htmltext
 
-      npcId = npc.getNpcId()
+      npcId = npc.getId()
       id = st.getState()
       if npcId != NPC[1] and id != State.STARTED : return htmltext
       
       id = st.getState()
-      npcId = npc.getNpcId()
+      npcId = npc.getId()
       Lara, Galatea, Almors, Camoniell, Belthus, Basilla, Celestiel, Brynthea = NPC
       if id == State.CREATED and npcId == Galatea:    # start part, Galatea
          for var in STATS:
@@ -287,7 +287,7 @@ class Quest (JQuest) :
 
    def onDeath(self,killer,deadPerson,st) :               # if players summon dies, the crystal of defeat is given to the player and set stat to lose
       if not isinstance(killer, L2Attackable): return
-      npcId = killer.getNpcId()
+      npcId = killer.getId()
 ##      if (deadPerson == st.getPlayer() or deadPerson = st.getPlayer().getSummon()) and npcId in DROPLIST_SUMMON.keys() :
       if npcId in DROPLIST_SUMMON.keys() :
          st.getPlayer().removeNotifyQuestOfDeath(st)
@@ -300,7 +300,7 @@ class Quest (JQuest) :
 
    # on the first attack, the stat is in battle... anytime gives crystal and set stat
    def onAttack (self, npc, player,damage,isPet,skill):
-      npcId = npc.getNpcId()
+      npcId = npc.getId()
       st = player.getQuestState(qn)
       if npcId in DROPLIST_SUMMON.keys() :
          var,start,progress,foul,defeat,victory = DROPLIST_SUMMON[npcId]
@@ -329,7 +329,7 @@ class Quest (JQuest) :
       return
 
    def onKill(self,npc,player,isPet):
-      npcId = npc.getNpcId() 
+      npcId = npc.getId() 
       st = player.getQuestState(qn)
       # this part is just for laras parts.  It is only available to players who are doing the quest
       if npcId in DROPLIST_LARA.keys() :

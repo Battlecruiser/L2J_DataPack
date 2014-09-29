@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `custom_npc_buffer` (
-  `npc_id` int(6) NOT NULL,
+  `npc_id` mediumint(7) NOT NULL,
   `skill_id` int(6) NOT NULL,
   `skill_level` int(6) NOT NULL DEFAULT '1',
   `skill_fee_id` int(6) NOT NULL DEFAULT '0',

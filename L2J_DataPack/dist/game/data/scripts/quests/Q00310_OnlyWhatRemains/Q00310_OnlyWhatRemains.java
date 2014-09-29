@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,6 +23,7 @@ import java.util.Map;
 
 import quests.Q00240_ImTheOnlyOneYouCanTrust.Q00240_ImTheOnlyOneYouCanTrust;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -66,9 +67,9 @@ public class Q00310_OnlyWhatRemains extends Quest
 		MOBS.put(22633, 638);
 	}
 	
-	public Q00310_OnlyWhatRemains(int questId, String name, String descr)
+	public Q00310_OnlyWhatRemains()
 	{
-		super(questId, name, descr);
+		super(310, Q00310_OnlyWhatRemains.class.getSimpleName(), "Only What Remains");
 		addStartNpc(KINTAIJIN);
 		addTalkId(KINTAIJIN);
 		addKillId(MOBS.keySet());
@@ -119,7 +120,7 @@ public class Q00310_OnlyWhatRemains extends Quest
 		
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		if (getRandom(1000) < MOBS.get(npc.getNpcId()))
+		if (getRandom(1000) < MOBS.get(npc.getId()))
 		{
 			st.giveItems(DIRTY_BEAD, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -163,10 +164,5 @@ public class Q00310_OnlyWhatRemains extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00310_OnlyWhatRemains(310, Q00310_OnlyWhatRemains.class.getSimpleName(), "Only What Remains");
 	}
 }

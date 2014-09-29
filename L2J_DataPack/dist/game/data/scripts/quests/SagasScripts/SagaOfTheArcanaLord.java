@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Arcana Lord (91)
  * @author Emperorc
  */
 public class SagaOfTheArcanaLord extends SagasSuperClass
 {
-	public static String qn1 = "91_SagaOfTheArcanaLord";
-	public static int qnu = 91;
-	public static String qna = "Saga of the Arcana Lord";
-	
 	public SagaOfTheArcanaLord()
 	{
-		super(qnu, qn1, qna);
+		super(91, "91_SagaOfTheArcanaLord", "Saga of the Arcana Lord");
 		NPC = new int[]
 		{
 			31605,
@@ -67,7 +65,6 @@ public class SagaOfTheArcanaLord extends SagasSuperClass
 			27240,
 			27310
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			96
@@ -76,23 +73,11 @@ public class SagaOfTheArcanaLord extends SagasSuperClass
 		{
 			0x0e
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			119518,
-			181215,
-			181227
-		};
-		Y = new int[]
-		{
-			-28658,
-			36676,
-			36703
-		};
-		Z = new int[]
-		{
-			-3811,
-			-4812,
-			-4816
+			new Location(119518, -28658, -3811),
+			new Location(181215, 36676, -4812),
+			new Location(181227, 36703, -4816)
 		};
 		Text = new String[]
 		{

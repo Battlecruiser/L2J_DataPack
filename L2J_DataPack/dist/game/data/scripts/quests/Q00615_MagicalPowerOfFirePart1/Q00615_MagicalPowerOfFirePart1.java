@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -83,9 +83,9 @@ public class Q00615_MagicalPowerOfFirePart1 extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 74;
 	
-	private Q00615_MagicalPowerOfFirePart1(int questId, String name, String descr)
+	public Q00615_MagicalPowerOfFirePart1()
 	{
-		super(questId, name, descr);
+		super(615, Q00615_MagicalPowerOfFirePart1.class.getSimpleName(), "Magical Power of Fire - Part 1");
 		addStartNpc(NARAN);
 		addTalkId(UDAN, NARAN, ASEFA_BOX);
 		addAttackId(KETRA_MOBS);
@@ -162,7 +162,7 @@ public class Q00615_MagicalPowerOfFirePart1 extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case NARAN:
 				switch (st.getState())
@@ -217,10 +217,5 @@ public class Q00615_MagicalPowerOfFirePart1 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00615_MagicalPowerOfFirePart1(615, Q00615_MagicalPowerOfFirePart1.class.getSimpleName(), "Magical Power of Fire - Part 1");
 	}
 }

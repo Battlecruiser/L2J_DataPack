@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,11 +21,12 @@ package quests.Q00455_WingsOfSand;
 import java.util.Arrays;
 import java.util.List;
 
+import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
@@ -62,9 +63,9 @@ public class Q00455_WingsOfSand extends Quest
 	private static final int MIN_LEVEL = 80;
 	private static final int CHANCE = 350;
 	
-	private Q00455_WingsOfSand(int questId, String name, String descr)
+	public Q00455_WingsOfSand()
 	{
-		super(questId, name, descr);
+		super(455, Q00455_WingsOfSand.class.getSimpleName(), "Wings of Sand");
 		addStartNpc(SEPARATED_SOULS);
 		addTalkId(SEPARATED_SOULS);
 		addKillId(EMERALD_HORN, DUST_RIDER, BLEEDING_FLY, BLACK_DAGGER_WING, SHADOW_SUMMONER, SPIKE_SLASHER, MUSCLE_BOMBER);
@@ -243,10 +244,5 @@ public class Q00455_WingsOfSand extends Quest
 			}
 		}
 		st.exitQuest(QuestType.DAILY, true);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00455_WingsOfSand(455, Q00455_WingsOfSand.class.getSimpleName(), "Wings of Sand");
 	}
 }

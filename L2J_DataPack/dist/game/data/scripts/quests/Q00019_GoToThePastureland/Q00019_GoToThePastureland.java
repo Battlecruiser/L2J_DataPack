@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -38,9 +38,9 @@ public class Q00019_GoToThePastureland extends Quest
 	private static final int VEAL = 15532;
 	private static final int YOUNG_WILD_BEAST_MEAT = 7547;
 	
-	public Q00019_GoToThePastureland(int questId, String name, String descr)
+	public Q00019_GoToThePastureland()
 	{
-		super(questId, name, descr);
+		super(19, Q00019_GoToThePastureland.class.getSimpleName(), "Go to the Pastureland");
 		addStartNpc(VLADIMIR);
 		addTalkId(VLADIMIR, TUNATUN);
 		registerQuestItems(VEAL, YOUNG_WILD_BEAST_MEAT);
@@ -96,7 +96,7 @@ public class Q00019_GoToThePastureland extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == VLADIMIR)
+		if (npc.getId() == VLADIMIR)
 		{
 			switch (st.getState())
 			{
@@ -118,15 +118,10 @@ public class Q00019_GoToThePastureland extends Quest
 					break;
 			}
 		}
-		else if ((npc.getNpcId() == TUNATUN) && (st.isCond(1)))
+		else if ((npc.getId() == TUNATUN) && (st.isCond(1)))
 		{
 			htmltext = "31537-01.html";
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00019_GoToThePastureland(19, Q00019_GoToThePastureland.class.getSimpleName(), "Go to the Pastureland");
 	}
 }

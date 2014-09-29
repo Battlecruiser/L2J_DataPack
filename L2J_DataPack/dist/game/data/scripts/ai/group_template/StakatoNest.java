@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,13 +23,13 @@ import java.util.List;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.gameserver.util.Util;
@@ -95,7 +95,7 @@ public class StakatoNest extends AbstractNpcAI
 	{
 		L2MonsterInstance mob = (L2MonsterInstance) npc;
 		
-		if ((mob.getNpcId() == STAKATO_LEADER) && (getRandom(1000) < 100) && (mob.getCurrentHp() < (mob.getMaxHp() * 0.3)))
+		if ((mob.getId() == STAKATO_LEADER) && (getRandom(1000) < 100) && (mob.getCurrentHp() < (mob.getMaxHp() * 0.3)))
 		{
 			L2MonsterInstance _follower = checkMinion(npc);
 			
@@ -108,7 +108,7 @@ public class StakatoNest extends AbstractNpcAI
 					mob.abortAttack();
 					mob.abortCast();
 					mob.setHeading(Util.calculateHeadingFrom(mob, _follower));
-					mob.doCast(SkillTable.getInstance().getInfo(4484, 1));
+					mob.doCast(SkillData.getInstance().getSkill(4484, 1));
 					mob.setCurrentHp(mob.getCurrentHp() + _hp);
 					_follower.doDie(_follower);
 					_follower.deleteMe();
@@ -122,7 +122,7 @@ public class StakatoNest extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		L2MonsterInstance monster;
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case STAKATO_NURSE:
 				monster = checkMinion(npc);
@@ -181,9 +181,9 @@ public class StakatoNest extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if (Util.contains(COCOONS, npc.getNpcId()) && Util.contains(targets, npc) && (skill.getId() == GROWTH_ACCELERATOR))
+		if (Util.contains(COCOONS, npc.getId()) && Util.contains(targets, npc) && (skill.getId() == GROWTH_ACCELERATOR))
 		{
 			npc.doDie(caster);
 			L2Npc spawned = addSpawn(STAKATO_CHIEF, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, caster), false, 0, true);

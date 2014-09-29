@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,10 @@
  */
 package quests.Q00163_LegacyOfThePoet;
 
+import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -47,9 +48,9 @@ public class Q00163_LegacyOfThePoet extends Quest
 	// Misc
 	private static final int MIN_LVL = 11;
 	
-	private Q00163_LegacyOfThePoet(int questId, String name, String descr)
+	public Q00163_LegacyOfThePoet()
 	{
-		super(questId, name, descr);
+		super(163, Q00163_LegacyOfThePoet.class.getSimpleName(), "Legacy of the Poet");
 		addStartNpc(STARDEN);
 		addTalkId(STARDEN);
 		addKillId(MONSTERS);
@@ -151,7 +152,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() != Race.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30220-02.htm" : "30220-01.htm" : "30220-00.htm";
+					htmltext = (player.getRace() != Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30220-02.htm" : "30220-01.htm" : "30220-00.htm";
 					break;
 				}
 				case State.STARTED:
@@ -177,10 +178,5 @@ public class Q00163_LegacyOfThePoet extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00163_LegacyOfThePoet(163, Q00163_LegacyOfThePoet.class.getSimpleName(), "Legacy of the Poet");
 	}
 }

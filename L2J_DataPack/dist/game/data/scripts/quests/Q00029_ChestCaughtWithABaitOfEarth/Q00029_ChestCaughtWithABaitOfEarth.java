@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -41,9 +41,9 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 	private static final int SMALL_GLASS_BOX = 7627;
 	private static final int PLATED_LEATHER_GLOVES = 2455;
 	
-	public Q00029_ChestCaughtWithABaitOfEarth(int questId, String name, String descr)
+	public Q00029_ChestCaughtWithABaitOfEarth()
 	{
-		super(questId, name, descr);
+		super(29, Q00029_ChestCaughtWithABaitOfEarth.class.getSimpleName(), "Chest Caught With A Bait Of Earth");
 		addStartNpc(WILLIE);
 		addTalkId(WILLIE, ANABEL);
 		registerQuestItems(SMALL_GLASS_BOX);
@@ -96,7 +96,7 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -141,10 +141,5 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00029_ChestCaughtWithABaitOfEarth(29, Q00029_ChestCaughtWithABaitOfEarth.class.getSimpleName(), "Chest Caught With A Bait Of Earth");
 	}
 }

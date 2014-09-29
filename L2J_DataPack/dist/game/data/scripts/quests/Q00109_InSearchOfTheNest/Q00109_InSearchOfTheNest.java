@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -37,9 +37,9 @@ public class Q00109_InSearchOfTheNest extends Quest
 	// Items
 	private static final int SCOUTS_NOTE = 14858;
 	
-	private Q00109_InSearchOfTheNest(int id, String name, String descr)
+	public Q00109_InSearchOfTheNest()
 	{
-		super(id, name, descr);
+		super(109, Q00109_InSearchOfTheNest.class.getSimpleName(), "In Search of the Nest");
 		addStartNpc(PIERCE);
 		addTalkId(PIERCE, SCOUTS_CORPSE, KAHMAN);
 		registerQuestItems(SCOUTS_NOTE);
@@ -86,7 +86,7 @@ public class Q00109_InSearchOfTheNest extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case PIERCE:
 				switch (st.getState())
@@ -134,10 +134,5 @@ public class Q00109_InSearchOfTheNest extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00109_InSearchOfTheNest(109, Q00109_InSearchOfTheNest.class.getSimpleName(), "In Search of the Nest");
 	}
 }

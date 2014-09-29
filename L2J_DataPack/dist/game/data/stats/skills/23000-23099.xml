@@ -2,7 +2,9 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23000" levels="1" name="Majo Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -11,7 +13,9 @@
 	</skill>
 	<skill id="23001" levels="1" name="Gold Majo Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -20,7 +24,9 @@
 	</skill>
 	<skill id="23002" levels="1" name="Black Majo Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -29,7 +35,9 @@
 	</skill>
 	<skill id="23003" levels="1" name="Plaipitak Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -39,100 +47,138 @@
 	<skill id="23004" levels="1" name="Majo Agathion Special Skill - Mysterious Power">
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="big_head" />
+		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1501" />
 		</cond>
-		<for>
-			<effect name="BigHead" abnormalTime="120" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
-		</for>
 	</skill>
 	<skill id="23005" levels="1" name="Gold Majo Agathion Special Skill - Power of Blessed Resurrection">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="RESURRECT" />
-		<set name="targetType" val="CORPSE_PLAYER" />
+		<set name="targetType" val="PC_BODY" />
 		<cond msgId="2292">
 			<player agathionId="1502" />
 		</cond>
+		<for>
+			<effect name="Resurrection">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23006" levels="1" name="Black Majo Agathion Special Skill - Power of Blessed Return">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="1503" />
 		</cond>
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23007" levels="1" name="Plaipitak Agathion Special Skill - Mysterious Power">
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="big_head" />
+		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1504" />
 		</cond>
-		<for>
-			<effect name="BigHead" abnormalTime="120" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
-		</for>
 	</skill>
 	<skill id="23008" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Return">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="1504" />
 		</cond>
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23009" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Resurrection">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="RESURRECT" />
-		<set name="targetType" val="CORPSE_PLAYER" />
+		<set name="targetType" val="PC_BODY" />
 		<cond msgId="2292">
 			<player agathionId="1504" />
 		</cond>
+		<for>
+			<effect name="Resurrection">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23010" levels="1" name="Baby Panda Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -141,7 +187,9 @@
 	</skill>
 	<skill id="23011" levels="1" name="Bamboo Panda Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -150,7 +198,9 @@
 	</skill>
 	<skill id="23012" levels="1" name="Sexy Panda Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -160,66 +210,87 @@
 	<skill id="23013" levels="1" name="Baby Panda Agathion Special Skill - Mysterious Power">
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="big_head" />
+		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1505" />
 		</cond>
-		<for>
-			<effect name="BigHead" abnormalTime="120" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
-		</for>
 	</skill>
 	<skill id="23014" levels="1" name="Bamboo Panda Agathion Special Skill - Power of Blessed Resurrection">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="RESURRECT" />
-		<set name="targetType" val="CORPSE_PLAYER" />
+		<set name="targetType" val="PC_BODY" />
 		<cond msgId="2292">
 			<player agathionId="1506" />
 		</cond>
+		<for>
+			<effect name="Resurrection">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23015" levels="1" name="Sexy Panda Agathion Special Skill - Power of Blessed Return">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="1507" />
 		</cond>
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23016" levels="1" name="Rudolph Agathion Special Skill - Ability of Energy">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="vp_up" />
+		<set name="abnormalType" val="VP_UP" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="16033" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="vp_up" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -227,13 +298,15 @@
 	<skill id="23017" levels="1" name="Holiday Festival">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="maxCp" val="1.4" />
@@ -251,14 +324,16 @@
 	<skill id="23018" levels="1" name="Thomas D. Turkey's Mistake">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="coolTime" val="500" />
+		<set name="icon" val="BranchSys.icon.br_turkey_buff_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="br_event_buf1">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="maxCp" val="1.4" />
@@ -274,25 +349,28 @@
 		</for>
 	</skill>
 	<skill id="23019" levels="3" name="Scissors">
+		<table name="#icons"> BranchSys.icon.br_xmas_gawi_i00 BranchSys.icon.br_xmas_bawi_i00 BranchSys.icon.br_xmas_bo_i00 </table>
 		<table name="#magicLvl"> 1 2 3 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="br_event_buf2" />
+		<set name="abnormalType" val="BR_EVENT_BUF2" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="canBeDispeled" val="false" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="550" />
+		<set name="icon" val="#icons" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ImmobileBuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="br_event_buf2" />
+			<effect name="ImmobileBuff" />
 		</for>
 	</skill>
 	<skill id="23020" levels="1" name="Challenge the Turkey">
 		<set name="affectRange" val="500" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="8000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -302,6 +380,7 @@
 	</skill>
 	<skill id="23021" levels="3" name="Turkey's Attack Scissors">
 		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -309,49 +388,58 @@
 	</skill>
 	<skill id="23022" levels="10" name="First Win">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<table name="#icons"> BranchSys.icon.br_xmas_pcwin1_i00 BranchSys.icon.br_xmas_pcwin2_i00 BranchSys.icon.br_xmas_pcwin3_i00 BranchSys.icon.br_xmas_pcwin4_i00 BranchSys.icon.br_xmas_pcwin5_i00 BranchSys.icon.br_xmas_pcwin6_i00 BranchSys.icon.br_xmas_pcwin7_i00 BranchSys.icon.br_xmas_pcwin8_i00 BranchSys.icon.br_xmas_pcwin9_i00 BranchSys.icon.br_xmas_pcwin10_i00 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="br_event_buf3" />
+		<set name="abnormalType" val="BR_EVENT_BUF3" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="canBeDispeled" val="false" />
+		<set name="icon" val="#icons" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="br_event_buf3" />
+			<effect name="Buff" />
 		</for>
 	</skill>
 	<skill id="23023" levels="1" name="Reset Consecutive Wins">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23024" levels="1" name="Agathion of Love Special Skill - Energy Recovery Ability">
 		<!-- Recovers energy when acquiring Exp. for 20 minutes. Reuse Delay 12 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="vp_up" />
+		<set name="abnormalType" val="VP_UP" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="16049" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="26" abnormalType="vp_up" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="23025" levels="1" name="Charming Cupid Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -360,7 +448,9 @@
 	</skill>
 	<skill id="23026" levels="1" name="Naughty Cupid Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -369,7 +459,9 @@
 	</skill>
 	<skill id="23027" levels="1" name="White Maneki Neko Agathion Cute Trick I">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -378,7 +470,9 @@
 	</skill>
 	<skill id="23028" levels="1" name="Black Maneki Neko Agathion Cute Trick I">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -387,7 +481,9 @@
 	</skill>
 	<skill id="23029" levels="1" name="Brown Maneki Neko Agathion Cute Trick I">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -395,59 +491,81 @@
 		</cond>
 	</skill>
 	<skill id="23030" levels="1" name="White Maneki Neko Agathion Special Skill - Blessed Resurrection Ability">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="RESURRECT" />
-		<set name="targetType" val="CORPSE_PLAYER" />
+		<set name="targetType" val="PC_BODY" />
 		<cond msgId="2292">
 			<player agathionId="1510" />
 		</cond>
+		<for>
+			<effect name="Resurrection">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23031" levels="1" name="Black Maneki Neko Agathion Special Skill - Ability of Blessed Return">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="1511" />
 		</cond>
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23032" levels="1" name="Brown Maneki Neko Agathion Special Skill - Ability of Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="vp_up" />
+		<set name="abnormalType" val="VP_UP" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1512" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="vp_up" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="23033" levels="1" name="One-Eyed Bat Drove Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -458,19 +576,22 @@
 		<!-- Increases resistance to darkness type attacks by 30% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="armor_unholy" />
+		<set name="abnormalType" val="ARMOR_UNHOLY" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1513" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="vp_up">
+			<effect name="Buff">
 				<add order="0x40" stat="darkRes" val="30" />
 			</effect>
 		</for>
@@ -479,26 +600,31 @@
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="vp_up" />
+		<set name="abnormalType" val="VP_UP" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1513" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="vp_up" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="23036" levels="1" name="Pegasus Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -509,42 +635,57 @@
 		<!-- Increases moving speed by 33 for 5 minutes. Reuse Delay 4 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="speed_up" />
+		<set name="abnormalType" val="SPEED_UP" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1514" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="speed_up">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="23038" levels="1" name="Pegasus Agathion Special Skill - Blessed Return Ability">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="1514" />
 		</cond>
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23039" levels="1" name="Yellow-Robed Tojigong Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -553,7 +694,9 @@
 	</skill>
 	<skill id="23040" levels="1" name="Blue-Robed Tojigong Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -562,7 +705,9 @@
 	</skill>
 	<skill id="23041" levels="1" name="Green-Robed Tojigong Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -573,41 +718,49 @@
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="life_force_others" />
+		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1515" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="26" abnormalType="life_force_others">
+			<effect name="Buff">
 				<mul order="0x30" stat="regHp" val="1.3" />
 			</effect>
-			<effect name="Heal" noicon="1" val="444" />
+			<effect name="Heal">
+				<param power="444" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23043" levels="1" name="Blue-robed Tojigong Agathion Special Skill - Ability of Reflect Damage">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="dmg_shield" />
+		<set name="abnormalType" val="DMG_SHIELD" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1516" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="dmg_shield">
+			<effect name="Buff">
 				<add order="0x40" stat="reflectDam" val="20" />
 			</effect>
 		</for>
@@ -616,26 +769,31 @@
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="mp_regen_up" />
+		<set name="abnormalType" val="MP_REGEN_UP" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1517" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="mp_regen_up">
+			<effect name="Buff">
 				<mul order="0x30" stat="regMp" val="1.03" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="23045" levels="1" name="Bugbear Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -644,7 +802,9 @@
 	</skill>
 	<skill id="23046" levels="1" name="White Maneki Neko Agathion Cute Trick II">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -653,7 +813,9 @@
 	</skill>
 	<skill id="23047" levels="1" name="Black Maneki Neko Agathion Cute Trick II">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -662,7 +824,9 @@
 	</skill>
 	<skill id="23048" levels="1" name="Brown Maneki Neko Agathion Cute Trick II">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -671,7 +835,9 @@
 	</skill>
 	<skill id="23049" levels="1" name="Red Sumo Wrestler Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -680,7 +846,9 @@
 	</skill>
 	<skill id="23050" levels="1" name="Blue Sumo Wrestler Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -689,7 +857,9 @@
 	</skill>
 	<skill id="23051" levels="1" name="Great Sumo Match Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -698,7 +868,9 @@
 	</skill>
 	<skill id="23052" levels="1" name="Button-Eyed Bear Doll Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -707,7 +879,9 @@
 	</skill>
 	<skill id="23053" levels="1" name="God of Fortune Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -716,7 +890,9 @@
 	</skill>
 	<skill id="23054" levels="1" name="Dryad Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -725,7 +901,9 @@
 	</skill>
 	<skill id="23055" levels="1" name="Wonboso Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -734,7 +912,9 @@
 	</skill>
 	<skill id="23056" levels="1" name="Daewoonso Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -745,18 +925,20 @@
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="critical_dmg_up" />
+		<set name="abnormalType" val="CRITICAL_DMG_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="1519" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="critical_dmg_up">
+			<effect name="Buff">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -765,18 +947,20 @@
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="magic_critical_up" />
+		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="1520" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="magic_critical_up">
+			<effect name="Buff">
 				<add order="0x40" stat="mCritRate" val="2" />
 			</effect>
 		</for>
@@ -785,22 +969,26 @@
 		<!-- A mysterious power that no one knows. Use with caution! Reuse Delay 1 hour -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="big_head" />
+		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1521" />
 		</cond>
-		<for>
-			<effect name="BigHead" abnormalTime="120" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
-		</for>
 	</skill>
 	<skill id="23060" levels="1" name="Great Sumo Match Agathion Special Skill - Ability of Firework">
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
@@ -809,52 +997,72 @@
 		</cond>
 	</skill>
 	<skill id="23061" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Return">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="1522" />
 		</cond>
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23062" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Resurrection">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="RESURRECT" />
-		<set name="targetType" val="CORPSE_PLAYER" />
+		<set name="targetType" val="PC_BODY" />
 		<cond msgId="2292">
 			<player agathionId="1522" />
 		</cond>
+		<for>
+			<effect name="Resurrection">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23063" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="vp_up" />
+		<set name="abnormalType" val="VP_UP" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1522" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="vp_up" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -863,19 +1071,22 @@
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="vp_up" />
+		<set name="abnormalType" val="VP_UP" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1523" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="vp_up" abnormalVisualEffect="vitality">
+			<effect name="Buff">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -884,18 +1095,20 @@
 		<!-- Increases moving speed by 20 for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="big_head" />
+		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="1525" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="speed_up">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -905,9 +1118,11 @@
 		<table name="#extractableItems">
 			57,2009,99;57,20090,0.99;57,200900,0.099;57,2009000,0.0099
 		</table>
+		<set name="blockedInOlympiad" val="true" />
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
@@ -921,12 +1136,14 @@
 			<player agathionId="1526" />
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="23067" levels="1" name="Pomona Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -934,102 +1151,132 @@
 		</cond>
 	</skill>
 	<skill id="23068" levels="1" name="Pomona Agathion Special Skill - Mental Shield Ability">
-		<!-- Increases resistance to hold/sleep/abnormal mental attacks by 50 for 10 minutes. Reuse Delay 1 hours -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="resist_derangement" />
-		<set name="hitTime" val="3000" />
+		<set name="abnormalType" val="RESIST_DERANGEMENT" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="1527" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="26" abnormalType="resist_derangement">
-				<sub order="0x40" stat="rootVuln" val="50" />
-				<sub order="0x40" stat="sleepVuln" val="50" />
-				<sub order="0x40" stat="derangementVuln" val="50" />
+			<effect name="DefenceTrait">
+				<param HOLD="50" />
+				<param SLEEP="50" />
+				<param DERANGEMENT="50" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="23069" levels="1" name="Threatening Roar">
-		<!-- Decreases moving speed and Atk. Spd. by 80% for 10 seconds. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="speed_down" />
+		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="7000" />
+		<set name="icon" val="icon.skill1289" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<!-- TODO: Add new operate condition check_abnormal -->
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="pAtkSpd" val="0.2" />
+				<mul order="0x30" stat="runSpd" val="0.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23070" levels="1" name="Red Flame">
 		<!-- Cannot damage the spirit for 10 seconds. Exclusive use for the Reckless Spirit of Fire. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="-100" />
+		<set name="icon" val="icon.skill0211" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23071" levels="1" name="Blue Flame">
 		<!-- Cannot damage the spirit for 8 seconds. Exclusive use for the Spirit of Fire. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="-100" />
+		<set name="icon" val="icon.skill0213" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23072" levels="1" name="Eva's Wrath">
 		<!-- You are endowed with the spirit of Eva's Wrath for the next 70 seconds. This allows you to do damage to a Spirit of Fire. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="70" />
-		<set name="abnormalType" val="br_event_buf2" />
+		<set name="abnormalType" val="BR_EVENT_BUF2" />
+		<set name="abnormalVisualEffect" val="BR_POWER_OF_EVA" />
 		<set name="affectRange" val="600" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="500" />
+		<set name="icon" val="BranchSys.icon.br_power_of_eva_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Buff" abnormalTime="70" val="0" abnormalLvl="1" abnormalType="br_event_buf2" event="evaswrath" />
+			<effect name="Buff" />
 		</for>
 	</skill>
 	<skill id="23073" levels="1" name="Switch Mode">
 		<!-- State to switch the spirit's mode. Switches to counter-attack mode or deadly mode. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
-		<set name="abnormalType" val="br_event_buf3" />
+		<set name="abnormalType" val="BR_EVENT_BUF3" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill1528" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23074" levels="1" name="Icy Air Explosion">
 		<!-- For 4 seconds, damage inflicted on the spirit doubles. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="4" />
-		<set name="abnormalType" val="br_event_buf3" />
+		<set name="abnormalType" val="BR_EVENT_BUF3" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill0279" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23075" levels="1" name="Flame Shock">
 		<!-- Loses the target. -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23076" levels="1" name="Weaver Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -1040,11 +1287,17 @@
 		<!-- For 20 minutes, receives help from the Golden Calf. Increases party members' Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. Reuse delay 5 minutes. Consumes 1 Girl's Soul Ore during skill use. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="br_event_buf5" />
+		<set name="abnormalType" val="BR_EVENT_BUF5" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="486" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20597" /> <!-- Girl's Soul Ore -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
@@ -1055,11 +1308,17 @@
 		<!-- For 20 minutes, through the magic of the mysterious flute sound, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. Reuse delay 5 minutes. Consumes 1 Girl's Soul Ore during skill use. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="br_event_buf5" />
+		<set name="abnormalType" val="BR_EVENT_BUF5" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="486" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20597" /> <!-- Girl's Soul Ore -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
@@ -1068,7 +1327,9 @@
 	</skill>
 	<skill id="23079" levels="1" name="Chon-chon Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -1079,11 +1340,13 @@
 		<!-- For five minutes, the Great Spirit increases critical attack damage by 20%, P.Atk. by 10% and moving speed by 20%. Decreases the MP consumption of skills by 5%. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<cond msgId="2292">
 			<player agathionId="1529" />
@@ -1091,7 +1354,9 @@
 	</skill>
 	<skill id="23081" levels="1" name="Tang-tang Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -1102,11 +1367,13 @@
 		<!-- For five minutes, the Great Spirit increases the casting speed by 20%, M.Atk. by 20%, M.Def. by 20% . Increases the probability of critical hits with magic attacks by 2% -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<cond msgId="2292">
 			<player agathionId="1530" />
@@ -1114,7 +1381,9 @@
 	</skill>
 	<skill id="23083" levels="1" name="Dancing Kid Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -1125,11 +1394,13 @@
 		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20% and moving speed by 20% -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<cond msgId="2292">
 			<player agathionId="1531" />
@@ -1137,7 +1408,9 @@
 	</skill>
 	<skill id="23085" levels="1" name="Monkey King Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -1148,11 +1421,13 @@
 		<!-- For five minutes, the Great Spirit increases the casting speed by 20%, M.Atk. by 20%, M.Def. by 20% . Increases the probability of critical magic attacks by 2% -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<cond msgId="2292">
 			<player agathionId="1532" />
@@ -1160,7 +1435,9 @@
 	</skill>
 	<skill id="23087" levels="1" name="Utanka Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -1171,11 +1448,13 @@
 		<!-- For five minutes, the Great Spirit increases critical attack damage by 20%, P.Atk. by 10% and P.Def. by 20%. Bestows the ability to recover HP equal to 5% of the melee damage -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<cond msgId="2292">
 			<player agathionId="1533" />
@@ -1183,7 +1462,9 @@
 	</skill>
 	<skill id="23089" levels="1" name="Bonus B Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -1194,11 +1475,13 @@
 		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20% and moving speed by 20% -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<cond msgId="2292">
 			<player agathionId="1534" />
@@ -1208,61 +1491,81 @@
 		<!-- By trick of Halloween Children, increase max HP/MP/CP by 40% for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="big_head" />
+		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="abnormalVisualEffect" val="BIG_HEAD" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="23092" levels="1" name="Jack O'Lantern Card">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="coolTime" val="500" />
+		<set name="icon" val="BranchSys.icon.br_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23093" levels="1" name="Rotten Jack O'Lantern Card">
+		<set name="blockedInOlympiad" val="true" />
 		<set name="coolTime" val="500" />
+		<set name="icon" val="BranchSys.icon.br_rotten_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23094" levels="1" name="Jack O'Lantern Card - Confirm Skill">
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="-1" />
+		<set name="icon" val="BranchSys.icon.br_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23095" levels="1" name="Rotten Jack O'Lantern Card - Confirm Skill">
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="-1" />
+		<set name="icon" val="BranchSys.icon.br_rotten_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23096" levels="1" name="Halloween Defeat">
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23097" levels="1" name="First Consecutive Win">
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23098" levels="1" name="2nd Consecutive Win">
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23099" levels="1" name="Third Consecutive Win">
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 </list>

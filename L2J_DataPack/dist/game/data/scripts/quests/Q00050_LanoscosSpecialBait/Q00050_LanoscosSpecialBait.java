@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,6 +19,7 @@
 package quests.Q00050_LanoscosSpecialBait;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -39,9 +40,9 @@ public class Q00050_LanoscosSpecialBait extends Quest
 	private static final int ESSENCE_OF_WIND = 7621;
 	private static final int WIND_FISHING_LURE = 7610;
 	
-	public Q00050_LanoscosSpecialBait(int questId, String name, String descr)
+	public Q00050_LanoscosSpecialBait()
 	{
-		super(questId, name, descr);
+		super(50, Q00050_LanoscosSpecialBait.class.getSimpleName(), "Lanosco's Special Bait");
 		addStartNpc(LANOSCO);
 		addTalkId(LANOSCO);
 		addKillId(SINGING_WIND);
@@ -129,10 +130,5 @@ public class Q00050_LanoscosSpecialBait extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00050_LanoscosSpecialBait(50, Q00050_LanoscosSpecialBait.class.getSimpleName(), "Lanosco's Special Bait");
 	}
 }

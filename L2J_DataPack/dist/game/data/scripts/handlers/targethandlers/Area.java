@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,7 +25,7 @@ import java.util.List;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -37,13 +37,13 @@ import com.l2jserver.gameserver.util.Util;
 public class Area implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new ArrayList<>();
-		if ((target == null) || (((target == activeChar) || target.isAlikeDead()) && (skill.getCastRange() >= 0)) || (!(target.isL2Attackable() || target.isPlayable())))
+		if ((target == null) || (((target == activeChar) || target.isAlikeDead()) && (skill.getCastRange() >= 0)) || (!(target.isAttackable() || target.isPlayable())))
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		final L2Character origin;
@@ -51,9 +51,9 @@ public class Area implements ITargetTypeHandler
 		
 		if (skill.getCastRange() >= 0)
 		{
-			if (!L2Skill.checkForAreaOffensiveSkills(activeChar, target, skill, srcInArena))
+			if (!Skill.checkForAreaOffensiveSkills(activeChar, target, skill, srcInArena))
 			{
-				return _emptyTargetList;
+				return EMPTY_TARGET_LIST;
 			}
 			
 			if (onlyFirst)
@@ -76,7 +76,7 @@ public class Area implements ITargetTypeHandler
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharacters();
 		for (L2Character obj : objs)
 		{
-			if (!(obj.isL2Attackable() || obj.isPlayable()))
+			if (!(obj.isAttackable() || obj.isPlayable()))
 			{
 				continue;
 			}
@@ -88,12 +88,12 @@ public class Area implements ITargetTypeHandler
 			
 			if (Util.checkIfInRange(skill.getAffectRange(), origin, obj, true))
 			{
-				if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+				if (!Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
 				{
 					continue;
 				}
 				
-				if (targetList.size() >= maxTargets)
+				if ((maxTargets > 0) && (targetList.size() >= maxTargets))
 				{
 					break;
 				}
@@ -104,7 +104,7 @@ public class Area implements ITargetTypeHandler
 		
 		if (targetList.isEmpty())
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		return targetList.toArray(new L2Character[targetList.size()]);

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -167,7 +167,7 @@ public class AdminLogin implements IAdminCommandHandler
 	 */
 	private void showMainPage(L2PcInstance activeChar)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(1);
+		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/login.htm");
 		html.replace("%server_name%", LoginServerThread.getInstance().getServerName());
 		html.replace("%status%", LoginServerThread.getInstance().getStatusString());

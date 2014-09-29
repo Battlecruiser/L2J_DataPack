@@ -2,8 +2,8 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6400" type="EtcItem" name="Badge of Hyena">
 		<set name="icon" val="icon.etc_paper_red_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="crystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -13,8 +13,8 @@
 	</item>
 	<item id="6401" type="EtcItem" name="Badge of Fox">
 		<set name="icon" val="icon.etc_paper_red_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="crystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -24,8 +24,8 @@
 	</item>
 	<item id="6402" type="EtcItem" name="Badge of Wolf">
 		<set name="icon" val="icon.etc_paper_red_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="crystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -35,8 +35,8 @@
 	</item>
 	<item id="6403" type="EtcItem" name="Star Shard">
 		<set name="icon" val="icon.etc_fairy_fire_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="material" val="steel" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -44,48 +44,48 @@
 	</item>
 	<item id="6404" type="EtcItem" name="Gunpowder">
 		<set name="icon" val="icon.etc_powder_black_i00" />
-		<set name="material" val="steel" />
+		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6405" type="EtcItem" name="Magnesium">
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
-		<set name="material" val="steel" />
+		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6406" type="EtcItem" name="Firework">
 		<set name="icon" val="icon.etc_small_ultra_bomb_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2024-1" />
 	</item>
 	<item id="6407" type="EtcItem" name="Large Firework">
 		<set name="icon" val="icon.etc_ultra_bomb_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2025-1" />
 	</item>
 	<item id="6408" type="Armor" name="Formal Wear">
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="alldress" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="cloth" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="1000" />
 		<set name="price" val="5000000" />
 	</item>
 	<item id="6409" type="EtcItem" name="2006 Battle Tournament - CP Potion">
 		<set name="icon" val="icon.etc_cp_potion_i01" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="500" />
 		<set name="reuse_delay" val="1000" />
 		<set name="is_stackable" val="true" />
@@ -95,10 +95,10 @@
 	</item>
 	<item id="6410" type="EtcItem" name="2006 Battle Tournament - Quick Healing Potion">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="180" />
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
@@ -109,9 +109,9 @@
 	</item>
 	<item id="6411" type="EtcItem" name="Small Nimble Green Fish">
 		<set name="icon" val="icon.etc_tuna_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="138" />
 		<set name="is_stackable" val="true" />
@@ -121,9 +121,9 @@
 	</item>
 	<item id="6412" type="EtcItem" name="Small Ugly Green Fish">
 		<set name="icon" val="icon.etc_angler_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="141" />
 		<set name="is_stackable" val="true" />
@@ -133,9 +133,9 @@
 	</item>
 	<item id="6413" type="EtcItem" name="Small Pudgy Green Fish">
 		<set name="icon" val="icon.etc_bream_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="153" />
 		<set name="is_stackable" val="true" />
@@ -145,9 +145,9 @@
 	</item>
 	<item id="6414" type="EtcItem" name="Nimble Green Fish">
 		<set name="icon" val="icon.etc_tuna_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="167" />
 		<set name="is_stackable" val="true" />
@@ -157,9 +157,9 @@
 	</item>
 	<item id="6415" type="EtcItem" name="Ugly Green Fish">
 		<set name="icon" val="icon.etc_angler_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="187" />
 		<set name="is_stackable" val="true" />
@@ -169,9 +169,9 @@
 	</item>
 	<item id="6416" type="EtcItem" name="Pudgy Green Fish">
 		<set name="icon" val="icon.etc_bream_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="208" />
 		<set name="is_stackable" val="true" />
@@ -181,9 +181,9 @@
 	</item>
 	<item id="6417" type="EtcItem" name="Large Nimble Green Fish">
 		<set name="icon" val="icon.etc_tuna_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="225" />
 		<set name="is_stackable" val="true" />
@@ -193,9 +193,9 @@
 	</item>
 	<item id="6418" type="EtcItem" name="Large Ugly Green Fish">
 		<set name="icon" val="icon.etc_angler_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="248" />
 		<set name="is_stackable" val="true" />
@@ -205,9 +205,9 @@
 	</item>
 	<item id="6419" type="EtcItem" name="Large Pudgy Green Fish">
 		<set name="icon" val="icon.etc_bream_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="265" />
 		<set name="is_stackable" val="true" />
@@ -217,9 +217,9 @@
 	</item>
 	<item id="6420" type="EtcItem" name="Small Jade Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="285" />
 		<set name="is_stackable" val="true" />
@@ -229,9 +229,9 @@
 	</item>
 	<item id="6421" type="EtcItem" name="Small Jade Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="295" />
 		<set name="is_stackable" val="true" />
@@ -241,9 +241,9 @@
 	</item>
 	<item id="6422" type="EtcItem" name="Small Jade Fat Fish">
 		<set name="icon" val="icon.etc_bream_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="310" />
 		<set name="is_stackable" val="true" />
@@ -253,9 +253,9 @@
 	</item>
 	<item id="6423" type="EtcItem" name="Jade Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="325" />
 		<set name="is_stackable" val="true" />
@@ -265,9 +265,9 @@
 	</item>
 	<item id="6424" type="EtcItem" name="Jade Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="340" />
 		<set name="is_stackable" val="true" />
@@ -277,9 +277,9 @@
 	</item>
 	<item id="6425" type="EtcItem" name="Jade Fat Fish">
 		<set name="icon" val="icon.etc_bream_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="355" />
 		<set name="is_stackable" val="true" />
@@ -289,9 +289,9 @@
 	</item>
 	<item id="6426" type="EtcItem" name="Big Jade Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="365" />
 		<set name="is_stackable" val="true" />
@@ -301,9 +301,9 @@
 	</item>
 	<item id="6427" type="EtcItem" name="Big Jade Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="375" />
 		<set name="is_stackable" val="true" />
@@ -313,9 +313,9 @@
 	</item>
 	<item id="6428" type="EtcItem" name="Big Jade Fat Fish">
 		<set name="icon" val="icon.etc_bream_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="385" />
 		<set name="is_stackable" val="true" />
@@ -325,9 +325,9 @@
 	</item>
 	<item id="6429" type="EtcItem" name="Small Blue Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i01" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="395" />
 		<set name="is_stackable" val="true" />
@@ -337,9 +337,9 @@
 	</item>
 	<item id="6430" type="EtcItem" name="Small Blue Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i01" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
@@ -349,9 +349,9 @@
 	</item>
 	<item id="6431" type="EtcItem" name="Small Blue Fat Fish">
 		<set name="icon" val="icon.etc_bream_i01" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="410" />
 		<set name="is_stackable" val="true" />
@@ -361,9 +361,9 @@
 	</item>
 	<item id="6432" type="EtcItem" name="Blue Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i01" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="415" />
 		<set name="is_stackable" val="true" />
@@ -373,9 +373,9 @@
 	</item>
 	<item id="6433" type="EtcItem" name="Blue Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i01" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="418" />
 		<set name="is_stackable" val="true" />
@@ -385,9 +385,9 @@
 	</item>
 	<item id="6434" type="EtcItem" name="Blue Fat Fish">
 		<set name="icon" val="icon.etc_bream_i01" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="420" />
 		<set name="is_stackable" val="true" />
@@ -397,9 +397,9 @@
 	</item>
 	<item id="6435" type="EtcItem" name="Big Blue Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i01" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="425" />
 		<set name="is_stackable" val="true" />
@@ -409,9 +409,9 @@
 	</item>
 	<item id="6436" type="EtcItem" name="Big Blue Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i01" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="431" />
 		<set name="is_stackable" val="true" />
@@ -421,9 +421,9 @@
 	</item>
 	<item id="6437" type="EtcItem" name="Big Blue Fat Fish">
 		<set name="icon" val="icon.etc_bream_i01" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="435" />
 		<set name="is_stackable" val="true" />
@@ -433,9 +433,9 @@
 	</item>
 	<item id="6438" type="EtcItem" name="Small Yellow Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="442" />
 		<set name="is_stackable" val="true" />
@@ -445,9 +445,9 @@
 	</item>
 	<item id="6439" type="EtcItem" name="Small Yellow Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="447" />
 		<set name="is_stackable" val="true" />
@@ -457,9 +457,9 @@
 	</item>
 	<item id="6440" type="EtcItem" name="Small Yellow Fat Fish">
 		<set name="icon" val="icon.etc_bream_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="452" />
 		<set name="is_stackable" val="true" />
@@ -469,9 +469,9 @@
 	</item>
 	<item id="6441" type="EtcItem" name="Yellow Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="540" />
 		<set name="is_stackable" val="true" />
@@ -481,9 +481,9 @@
 	</item>
 	<item id="6442" type="EtcItem" name="Yellow Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="553" />
 		<set name="is_stackable" val="true" />
@@ -493,9 +493,9 @@
 	</item>
 	<item id="6443" type="EtcItem" name="Yellow Fat Fish">
 		<set name="icon" val="icon.etc_bream_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="568" />
 		<set name="is_stackable" val="true" />
@@ -505,9 +505,9 @@
 	</item>
 	<item id="6444" type="EtcItem" name="Big Yellow Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="580" />
 		<set name="is_stackable" val="true" />
@@ -517,9 +517,9 @@
 	</item>
 	<item id="6445" type="EtcItem" name="Big Yellow Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="594" />
 		<set name="is_stackable" val="true" />
@@ -529,9 +529,9 @@
 	</item>
 	<item id="6446" type="EtcItem" name="Big Yellow Fat Fish">
 		<set name="icon" val="icon.etc_bream_i02" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="608" />
 		<set name="is_stackable" val="true" />
@@ -541,9 +541,9 @@
 	</item>
 	<item id="6447" type="EtcItem" name="Small Orange Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i08" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="622" />
 		<set name="is_stackable" val="true" />
@@ -553,9 +553,9 @@
 	</item>
 	<item id="6448" type="EtcItem" name="Small Orange Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i08" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="635" />
 		<set name="is_stackable" val="true" />
@@ -565,9 +565,9 @@
 	</item>
 	<item id="6449" type="EtcItem" name="Small Orange Fat Fish">
 		<set name="icon" val="icon.etc_bream_i08" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="649" />
 		<set name="is_stackable" val="true" />
@@ -577,9 +577,9 @@
 	</item>
 	<item id="6450" type="EtcItem" name="Orange Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i08" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="663" />
 		<set name="is_stackable" val="true" />
@@ -589,9 +589,9 @@
 	</item>
 	<item id="6451" type="EtcItem" name="Orange Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i08" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="776" />
 		<set name="is_stackable" val="true" />
@@ -601,9 +601,9 @@
 	</item>
 	<item id="6452" type="EtcItem" name="Orange Fat Fish">
 		<set name="icon" val="icon.etc_bream_i08" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="792" />
 		<set name="is_stackable" val="true" />
@@ -613,9 +613,9 @@
 	</item>
 	<item id="6453" type="EtcItem" name="Big Orange Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i08" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="816" />
 		<set name="is_stackable" val="true" />
@@ -625,9 +625,9 @@
 	</item>
 	<item id="6454" type="EtcItem" name="Big Orange Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i08" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="840" />
 		<set name="is_stackable" val="true" />
@@ -637,9 +637,9 @@
 	</item>
 	<item id="6455" type="EtcItem" name="Big Orange Fat Fish">
 		<set name="icon" val="icon.etc_bream_i08" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="858" />
 		<set name="is_stackable" val="true" />
@@ -649,9 +649,9 @@
 	</item>
 	<item id="6456" type="EtcItem" name="Small Purple Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="875" />
 		<set name="is_stackable" val="true" />
@@ -661,9 +661,9 @@
 	</item>
 	<item id="6457" type="EtcItem" name="Small Purple Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="893" />
 		<set name="is_stackable" val="true" />
@@ -673,9 +673,9 @@
 	</item>
 	<item id="6458" type="EtcItem" name="Small Purple Fat Fish">
 		<set name="icon" val="icon.etc_bream_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="910" />
 		<set name="is_stackable" val="true" />
@@ -685,9 +685,9 @@
 	</item>
 	<item id="6459" type="EtcItem" name="Purple Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="930" />
 		<set name="is_stackable" val="true" />
@@ -697,9 +697,9 @@
 	</item>
 	<item id="6460" type="EtcItem" name="Purple Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="948" />
 		<set name="is_stackable" val="true" />
@@ -709,9 +709,9 @@
 	</item>
 	<item id="6461" type="EtcItem" name="Purple Fat Fish">
 		<set name="icon" val="icon.etc_bream_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1090" />
 		<set name="is_stackable" val="true" />
@@ -721,9 +721,9 @@
 	</item>
 	<item id="6462" type="EtcItem" name="Big Purple Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1111" />
 		<set name="is_stackable" val="true" />
@@ -733,9 +733,9 @@
 	</item>
 	<item id="6463" type="EtcItem" name="Big Purple Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1133" />
 		<set name="is_stackable" val="true" />
@@ -745,9 +745,9 @@
 	</item>
 	<item id="6464" type="EtcItem" name="Big Purple Fat Fish">
 		<set name="icon" val="icon.etc_bream_i04" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1157" />
 		<set name="is_stackable" val="true" />
@@ -757,9 +757,9 @@
 	</item>
 	<item id="6465" type="EtcItem" name="Small Red Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1277" />
 		<set name="is_stackable" val="true" />
@@ -769,9 +769,9 @@
 	</item>
 	<item id="6466" type="EtcItem" name="Small Red Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1301" />
 		<set name="is_stackable" val="true" />
@@ -781,9 +781,9 @@
 	</item>
 	<item id="6467" type="EtcItem" name="Small Red Fat Fish">
 		<set name="icon" val="icon.etc_bream_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1326" />
 		<set name="is_stackable" val="true" />
@@ -793,9 +793,9 @@
 	</item>
 	<item id="6468" type="EtcItem" name="Red Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1351" />
 		<set name="is_stackable" val="true" />
@@ -805,9 +805,9 @@
 	</item>
 	<item id="6469" type="EtcItem" name="Red Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1376" />
 		<set name="is_stackable" val="true" />
@@ -817,9 +817,9 @@
 	</item>
 	<item id="6470" type="EtcItem" name="Red Fat Fish">
 		<set name="icon" val="icon.etc_bream_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1402" />
 		<set name="is_stackable" val="true" />
@@ -829,9 +829,9 @@
 	</item>
 	<item id="6471" type="EtcItem" name="Big Red Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1577" />
 		<set name="is_stackable" val="true" />
@@ -841,9 +841,9 @@
 	</item>
 	<item id="6472" type="EtcItem" name="Big Red Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1608" />
 		<set name="is_stackable" val="true" />
@@ -853,9 +853,9 @@
 	</item>
 	<item id="6473" type="EtcItem" name="Big Red Fat Fish">
 		<set name="icon" val="icon.etc_bream_i03" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1715" />
 		<set name="is_stackable" val="true" />
@@ -865,9 +865,9 @@
 	</item>
 	<item id="6474" type="EtcItem" name="Small White Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i00" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1747" />
 		<set name="is_stackable" val="true" />
@@ -877,9 +877,9 @@
 	</item>
 	<item id="6475" type="EtcItem" name="Small White Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i00" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1781" />
 		<set name="is_stackable" val="true" />
@@ -889,9 +889,9 @@
 	</item>
 	<item id="6476" type="EtcItem" name="Small White Fat Fish">
 		<set name="icon" val="icon.etc_bream_i00" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1814" />
 		<set name="is_stackable" val="true" />
@@ -901,9 +901,9 @@
 	</item>
 	<item id="6477" type="EtcItem" name="White Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i00" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1849" />
 		<set name="is_stackable" val="true" />
@@ -913,9 +913,9 @@
 	</item>
 	<item id="6478" type="EtcItem" name="White Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i00" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1887" />
 		<set name="is_stackable" val="true" />
@@ -925,9 +925,9 @@
 	</item>
 	<item id="6479" type="EtcItem" name="White Fat Fish">
 		<set name="icon" val="icon.etc_bream_i00" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1923" />
 		<set name="is_stackable" val="true" />
@@ -937,9 +937,9 @@
 	</item>
 	<item id="6480" type="EtcItem" name="Big White Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i00" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="1961" />
 		<set name="is_stackable" val="true" />
@@ -949,9 +949,9 @@
 	</item>
 	<item id="6481" type="EtcItem" name="Big White Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i00" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="2000" />
 		<set name="is_stackable" val="true" />
@@ -961,9 +961,9 @@
 	</item>
 	<item id="6482" type="EtcItem" name="Big White Fat Fish">
 		<set name="icon" val="icon.etc_bream_i00" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="2039" />
 		<set name="is_stackable" val="true" />
@@ -973,9 +973,9 @@
 	</item>
 	<item id="6483" type="EtcItem" name="Small Black Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="2081" />
 		<set name="is_stackable" val="true" />
@@ -985,9 +985,9 @@
 	</item>
 	<item id="6484" type="EtcItem" name="Small Black Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="2123" />
 		<set name="is_stackable" val="true" />
@@ -997,9 +997,9 @@
 	</item>
 	<item id="6485" type="EtcItem" name="Small Black Fat Fish">
 		<set name="icon" val="icon.etc_bream_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="2166" />
 		<set name="is_stackable" val="true" />
@@ -1009,9 +1009,9 @@
 	</item>
 	<item id="6486" type="EtcItem" name="Black Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="2309" />
 		<set name="is_stackable" val="true" />
@@ -1021,9 +1021,9 @@
 	</item>
 	<item id="6487" type="EtcItem" name="Black Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="2357" />
 		<set name="is_stackable" val="true" />
@@ -1033,9 +1033,9 @@
 	</item>
 	<item id="6488" type="EtcItem" name="Black Fat Fish">
 		<set name="icon" val="icon.etc_bream_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="2403" />
 		<set name="is_stackable" val="true" />
@@ -1045,9 +1045,9 @@
 	</item>
 	<item id="6489" type="EtcItem" name="Big Black Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="2452" />
 		<set name="is_stackable" val="true" />
@@ -1057,9 +1057,9 @@
 	</item>
 	<item id="6490" type="EtcItem" name="Big Black Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="2502" />
 		<set name="is_stackable" val="true" />
@@ -1069,9 +1069,9 @@
 	</item>
 	<item id="6491" type="EtcItem" name="Big Black Fat Fish">
 		<set name="icon" val="icon.etc_bream_i05" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="2552" />
 		<set name="is_stackable" val="true" />
@@ -1081,9 +1081,9 @@
 	</item>
 	<item id="6492" type="EtcItem" name="Small Green Treasure Chest">
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="153" />
 		<set name="is_stackable" val="true" />
@@ -1093,9 +1093,9 @@
 	</item>
 	<item id="6493" type="EtcItem" name="Green Treasure Chest">
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="208" />
 		<set name="is_stackable" val="true" />
@@ -1105,9 +1105,9 @@
 	</item>
 	<item id="6494" type="EtcItem" name="Big Green Treasure Chest">
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="265" />
 		<set name="is_stackable" val="true" />
@@ -1117,9 +1117,9 @@
 	</item>
 	<item id="6495" type="EtcItem" name="Small Jade Treasure Chest">
 		<set name="icon" val="icon.etc_treasure_box_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="285" />
 		<set name="is_stackable" val="true" />
@@ -1129,9 +1129,9 @@
 	</item>
 	<item id="6496" type="EtcItem" name="Jade Treasure Chest">
 		<set name="icon" val="icon.etc_treasure_box_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="315" />
 		<set name="is_stackable" val="true" />
@@ -1141,9 +1141,9 @@
 	</item>
 	<item id="6497" type="EtcItem" name="Big Jade Treasure Chest">
 		<set name="icon" val="icon.etc_treasure_box_i06" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="345" />
 		<set name="is_stackable" val="true" />
@@ -1153,9 +1153,9 @@
 	</item>
 	<item id="6498" type="EtcItem" name="Small Blue Treasure Chest">
 		<set name="icon" val="icon.etc_treasure_box_i01" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="395" />
 		<set name="is_stackable" val="true" />
@@ -1165,9 +1165,9 @@
 	</item>
 	<item id="6499" type="EtcItem" name="Blue Treasure Chest">
 		<set name="icon" val="icon.etc_treasure_box_i01" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="price" val="419" />
 		<set name="is_stackable" val="true" />

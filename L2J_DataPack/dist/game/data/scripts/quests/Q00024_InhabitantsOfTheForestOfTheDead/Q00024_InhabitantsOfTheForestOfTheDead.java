@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00024_InhabitantsOfTheForestOfTheDead;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -48,9 +49,9 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 	private static final int[] MOBS = { 21557, 21558, 21560, 21563, 21564, 21565, 21566, 21567 };
 	// @formatter:on
 	
-	public Q00024_InhabitantsOfTheForestOfTheDead(int questId, String name, String descr)
+	public Q00024_InhabitantsOfTheForestOfTheDead()
 	{
-		super(questId, name, descr);
+		super(24, Q00024_InhabitantsOfTheForestOfTheDead.class.getSimpleName(), "Inhabitants of the Forest of the Dead");
 		addStartNpc(DORIAN);
 		addTalkId(DORIAN, MYSTERIOUS_WIZARD, TOMBSTONE, LIDIA_MAID);
 		addKillId(MOBS);
@@ -72,7 +73,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 		// Dorian
 			case "31389-02.htm":
 				final QuestState qs = player.getQuestState("23_LidiasHeart");
-				if ((player.getLevel() > 65) && (qs != null) && qs.isCompleted())
+				if ((player.getLevel() >= 65) && (qs != null) && qs.isCompleted())
 				{
 					st.startQuest();
 					st.giveItems(FLOWER_BOUQUET, 1);
@@ -226,7 +227,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case DORIAN:
 				switch (st.getState())
@@ -343,10 +344,5 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00024_InhabitantsOfTheForestOfTheDead(24, Q00024_InhabitantsOfTheForestOfTheDead.class.getSimpleName(), "Inhabitants of the Forest of the Dead");
 	}
 }

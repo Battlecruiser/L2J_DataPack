@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00005_MinersFavor;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -48,9 +49,9 @@ public class Q00005_MinersFavor extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
-	private Q00005_MinersFavor(int questId, String name, String descr)
+	public Q00005_MinersFavor()
 	{
-		super(questId, name, descr);
+		super(5, Q00005_MinersFavor.class.getSimpleName(), "Miner's Favor");
 		addStartNpc(BOLTER);
 		addTalkId(BOLTER, SHARI, GARITA, REED, BRUNON);
 		registerQuestItems(BOLTERS_LIST, MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER, BOLTERS_SMELLY_SOCKS);
@@ -101,7 +102,7 @@ public class Q00005_MinersFavor extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case BOLTER:
 				switch (st.getState())
@@ -137,13 +138,13 @@ public class Q00005_MinersFavor extends Quest
 				}
 				break;
 			case REED:
-				htmltext = giveItem(st, npc.getNpcId(), REDSTONE_BEER);
+				htmltext = giveItem(st, npc.getId(), REDSTONE_BEER);
 				break;
 			case SHARI:
-				htmltext = giveItem(st, npc.getNpcId(), BOOMBOOM_POWDER);
+				htmltext = giveItem(st, npc.getId(), BOOMBOOM_POWDER);
 				break;
 			case GARITA:
-				htmltext = giveItem(st, npc.getNpcId(), MINING_BOOTS);
+				htmltext = giveItem(st, npc.getId(), MINING_BOOTS);
 				break;
 		}
 		return htmltext;
@@ -171,10 +172,5 @@ public class Q00005_MinersFavor extends Quest
 		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		checkProgress(st);
 		return npcId + "-01.html";
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00005_MinersFavor(5, Q00005_MinersFavor.class.getSimpleName(), "Miner's Favor");
 	}
 }

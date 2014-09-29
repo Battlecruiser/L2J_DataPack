@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,9 @@
  */
 package quests.Q00170_DangerousSeduction;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -46,9 +46,9 @@ public class Q00170_DangerousSeduction extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 21;
 	
-	public Q00170_DangerousSeduction(int questId, String name, String descr)
+	public Q00170_DangerousSeduction()
 	{
-		super(questId, name, descr);
+		super(170, Q00170_DangerousSeduction.class.getSimpleName(), "Dangerous Seduction");
 		addStartNpc(VELLIOR);
 		addTalkId(VELLIOR);
 		addKillId(MERKENIS);
@@ -81,7 +81,7 @@ public class Q00170_DangerousSeduction extends Quest
 		{
 			st.setCond(2, true);
 			st.giveItems(NIGHTMARE_CRYSTAL, 1);
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.SEND_MY_SOUL_TO_LICH_KING_ICARUS));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.SEND_MY_SOUL_TO_LICH_KING_ICARUS));
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -99,7 +99,7 @@ public class Q00170_DangerousSeduction extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				htmltext = (player.getRace() == Race.DarkElf) ? (player.getLevel() >= MIN_LEVEL) ? "30305-01.htm" : "30305-02.htm" : "30305-03.htm";
+				htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30305-01.htm" : "30305-02.htm" : "30305-03.htm";
 				break;
 			case State.STARTED:
 				if (st.isCond(1))
@@ -119,10 +119,5 @@ public class Q00170_DangerousSeduction extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00170_DangerousSeduction(170, Q00170_DangerousSeduction.class.getSimpleName(), "Dangerous Seduction");
 	}
 }

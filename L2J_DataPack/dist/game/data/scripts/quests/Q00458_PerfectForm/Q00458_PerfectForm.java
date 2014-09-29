@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,12 +18,13 @@
  */
 package quests.Q00458_PerfectForm;
 
+import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.ExQuestNpcLogList;
 
@@ -72,7 +73,7 @@ public class Q00458_PerfectForm extends Quest
 	};
 	// @formatter:on
 	
-	private Q00458_PerfectForm()
+	public Q00458_PerfectForm()
 	{
 		super(458, Q00458_PerfectForm.class.getSimpleName(), "Perfect Form");
 		addStartNpc(KELLEYIA);
@@ -219,7 +220,7 @@ public class Q00458_PerfectForm extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			int npcId = npc.getNpcId();
+			int npcId = npc.getId();
 			if ((npcId == KOOKABURRAS[0]) || (npcId == COUGARS[0]) || (npcId == BUFFALOS[0]) || (npcId == GRENDELS[0]))
 			{
 				npcId++;
@@ -268,7 +269,7 @@ public class Q00458_PerfectForm extends Quest
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
-				final ExQuestNpcLogList log = new ExQuestNpcLogList(getQuestIntId());
+				final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 				log.addNpc(18879, st.getInt("18879"));
 				log.addNpc(18886, st.getInt("18886"));
 				log.addNpc(18893, st.getInt("18893"));
@@ -323,10 +324,5 @@ public class Q00458_PerfectForm extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00458_PerfectForm();
 	}
 }

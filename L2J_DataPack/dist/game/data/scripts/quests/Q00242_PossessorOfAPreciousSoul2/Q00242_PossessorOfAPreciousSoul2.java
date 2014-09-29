@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,7 +20,8 @@ package quests.Q00242_PossessorOfAPreciousSoul2;
 
 import quests.Q00241_PossessorOfAPreciousSoul1.Q00241_PossessorOfAPreciousSoul1;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -55,9 +56,9 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 	// Rewards
 	private static final int CHANCE_FOR_HAIR = 20;
 	
-	public Q00242_PossessorOfAPreciousSoul2(int questId, String name, String descr)
+	public Q00242_PossessorOfAPreciousSoul2()
 	{
-		super(questId, name, descr);
+		super(242, Q00242_PossessorOfAPreciousSoul2.class.getSimpleName(), "Possessor Of A Precious Soul 2");
 		addStartNpc(VIRGIL);
 		addTalkId(VIRGIL, KASSANDRA, OGMAR, MYSTERIOUS_KNIGHT, ANGEL_CORPSE, KALIS, MATILD, FALLEN_UNICORN, CORNERSTONE, PURE_UNICORN);
 		addKillId(RESTRAINER_OF_GLORY);
@@ -173,7 +174,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 			return "no_sub.html";
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case VIRGIL:
 				switch (st.getState())
@@ -318,7 +319,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 						}
 						st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						npc.setTarget(player);
-						npc.doCast(SkillTable.getInstance().getInfo(4546, 1));
+						npc.doCast(SkillData.getInstance().getSkill(4546, 1));
 					}
 					else
 					{
@@ -352,10 +353,5 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00242_PossessorOfAPreciousSoul2(242, Q00242_PossessorOfAPreciousSoul2.class.getSimpleName(), "Possessor Of A Precious Soul 2");
 	}
 }

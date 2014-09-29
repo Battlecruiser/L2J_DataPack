@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -79,7 +79,7 @@ public class ManorManager implements IBypassHandler
 			final int castleId;
 			if (state < 0)
 			{
-				castleId = castle.getCastleId(); // info for current manor
+				castleId = castle.getResidenceId(); // info for current manor
 			}
 			else
 			{
@@ -89,7 +89,7 @@ public class ManorManager implements IBypassHandler
 			switch (ask)
 			{
 				case 1: // Seed purchase
-					if (castleId != castle.getCastleId())
+					if (castleId != castle.getResidenceId())
 					{
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.HERE_YOU_CAN_BUY_ONLY_SEEDS_OF_S1_MANOR);
 						sm.addString(manager.getCastle().getName());
@@ -127,7 +127,7 @@ public class ManorManager implements IBypassHandler
 					activeChar.sendPacket(new ExShowManorDefaultInfo());
 					break;
 				case 6: // Buy harvester
-					((L2MerchantInstance) manager).showBuyWindow(activeChar, 300000 + manager.getNpcId());
+					((L2MerchantInstance) manager).showBuyWindow(activeChar, 300000 + manager.getId());
 					break;
 				case 9: // Edit sales (Crop sales)
 					activeChar.sendPacket(new ExShowProcureCropDetail(state));

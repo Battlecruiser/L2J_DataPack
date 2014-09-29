@@ -29,9 +29,9 @@ public final class Q00639_GuardiansOfTheHolyGrail extends Quest
 	// NPC
 	private static final int DOMINIC = 31350;
 	
-	private Q00639_GuardiansOfTheHolyGrail(int questId, String name, String descr)
+	public Q00639_GuardiansOfTheHolyGrail()
 	{
-		super(questId, name, descr);
+		super(639, Q00639_GuardiansOfTheHolyGrail.class.getSimpleName(), "Guardians of the Holy Grail");
 		addStartNpc(DOMINIC);
 		addTalkId(DOMINIC);
 	}
@@ -45,10 +45,5 @@ public final class Q00639_GuardiansOfTheHolyGrail extends Quest
 			st.exitQuest(true);
 		}
 		return "31350-01.html";
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00639_GuardiansOfTheHolyGrail(639, Q00639_GuardiansOfTheHolyGrail.class.getSimpleName(), "Guardians of the Holy Grail");
 	}
 }

@@ -26,6 +26,8 @@
 				<xs:element name="showTimer" minOccurs="0" maxOccurs="1">
 					<xs:complexType>
 						<xs:attribute name="val" type="xs:boolean" use="required" />
+						<xs:attribute name="increase" type="xs:boolean" use="optional" />
+						<xs:attribute name="text" type="xs:normalizedString" use="optional" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="spawnPoint" minOccurs="0" maxOccurs="1">

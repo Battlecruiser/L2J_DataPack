@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,42 +18,53 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
+ * Heal Percent effect implementation.
  * @author UnAfraid
  */
-public class HealPercent extends L2Effect
+public final class HealPercent extends AbstractEffect
 {
-	public HealPercent(Env env, EffectTemplate template)
+	private final int _power;
+	
+	public HealPercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getInt("power", 0);
 	}
 	
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.HEAL_PERCENT;
+		return L2EffectType.HEAL;
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		L2Character target = getEffected();
+		return true;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		L2Character target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor())
 		{
-			return false;
+			return;
 		}
 		
 		double amount = 0;
-		double power = calc();
+		double power = _power;
 		boolean full = (power == 100.0);
 		
 		amount = full ? target.getMaxHp() : (target.getMaxHp() * power) / 100.0;
@@ -62,28 +73,18 @@ public class HealPercent extends L2Effect
 		if (amount != 0)
 		{
 			target.setCurrentHp(amount + target.getCurrentHp());
-			StatusUpdate su = new StatusUpdate(target);
-			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
-			target.sendPacket(su);
 		}
 		SystemMessage sm;
-		if (getEffector().getObjectId() != target.getObjectId())
+		if (info.getEffector().getObjectId() != target.getObjectId())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
-			sm.addCharName(getEffector());
+			sm.addCharName(info.getEffector());
 		}
 		else
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
 		}
-		sm.addNumber((int) amount);
+		sm.addInt((int) amount);
 		target.sendPacket(sm);
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

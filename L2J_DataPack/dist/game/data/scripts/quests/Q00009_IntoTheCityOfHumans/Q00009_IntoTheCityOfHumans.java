@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,9 @@
  */
 package quests.Q00009_IntoTheCityOfHumans;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -41,9 +41,9 @@ public class Q00009_IntoTheCityOfHumans extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	private Q00009_IntoTheCityOfHumans(int questId, String name, String descr)
+	public Q00009_IntoTheCityOfHumans()
 	{
-		super(questId, name, descr);
+		super(9, Q00009_IntoTheCityOfHumans.class.getSimpleName(), "Into the City of Humans");
 		addStartNpc(PETUKAI);
 		addTalkId(PETUKAI, TANAPI, TAMIL);
 	}
@@ -88,13 +88,13 @@ public class Q00009_IntoTheCityOfHumans extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case PETUKAI:
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = (player.getLevel() >= MIN_LEVEL) ? (player.getRace() == Race.Orc) ? "30583-01.htm" : "30583-02.html" : "30583-03.html";
+						htmltext = (player.getLevel() >= MIN_LEVEL) ? (player.getRace() == Race.ORC) ? "30583-01.htm" : "30583-02.html" : "30583-03.html";
 						break;
 					case State.STARTED:
 						if (st.isCond(1))
@@ -121,10 +121,5 @@ public class Q00009_IntoTheCityOfHumans extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00009_IntoTheCityOfHumans(9, Q00009_IntoTheCityOfHumans.class.getSimpleName(), "Into the City of Humans");
 	}
 }

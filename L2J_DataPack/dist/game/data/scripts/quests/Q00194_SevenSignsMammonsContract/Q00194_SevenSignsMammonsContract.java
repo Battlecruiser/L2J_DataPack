@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,6 +20,7 @@ package quests.Q00194_SevenSignsMammonsContract;
 
 import quests.Q00193_SevenSignsDyingMessage.Q00193_SevenSignsDyingMessage;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -31,7 +32,7 @@ import com.l2jserver.gameserver.model.quest.State;
  * Seven Signs, Mammon's Contract (194)
  * @author Adry_85
  */
-public class Q00194_SevenSignsMammonsContract extends Quest
+public final class Q00194_SevenSignsMammonsContract extends Quest
 {
 	// NPCs
 	private static final int SIR_GUSTAV_ATHEBALDT = 30760;
@@ -52,9 +53,9 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 	private static SkillHolder TRANSFORMATION_KID = new SkillHolder(6202, 1);
 	private static SkillHolder TRANSFORMATION_NATIVE = new SkillHolder(6203, 1);
 	
-	public Q00194_SevenSignsMammonsContract(int questId, String name, String descr)
+	public Q00194_SevenSignsMammonsContract()
 	{
-		super(questId, name, descr);
+		super(194, Q00194_SevenSignsMammonsContract.class.getSimpleName(), "Seven Signs, Mammon's Contract");
 		addStartNpc(SIR_GUSTAV_ATHEBALDT);
 		addTalkId(SIR_GUSTAV_ATHEBALDT, COLIN, FROG, TESS, KUTA, CLAUDIA_ATHEBALDT);
 		registerQuestItems(ATHEBALDTS_INTRODUCTION, NATIVES_GLOVE, FROG_KINGS_BEAD, GRANDA_TESS_CANDY_POUCH);
@@ -63,7 +64,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -345,13 +346,8 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -361,7 +357,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case State.CREATED:
 			{
-				if (npc.getNpcId() == SIR_GUSTAV_ATHEBALDT)
+				if (npc.getId() == SIR_GUSTAV_ATHEBALDT)
 				{
 					st = player.getQuestState(Q00193_SevenSignsDyingMessage.class.getSimpleName());
 					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && st.isCompleted()) ? "30760-01.htm" : "30760-05.html";
@@ -370,7 +366,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case SIR_GUSTAV_ATHEBALDT:
 					{
@@ -575,10 +571,5 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00194_SevenSignsMammonsContract(194, Q00194_SevenSignsMammonsContract.class.getSimpleName(), "Seven Signs, Mammon's Contract");
 	}
 }

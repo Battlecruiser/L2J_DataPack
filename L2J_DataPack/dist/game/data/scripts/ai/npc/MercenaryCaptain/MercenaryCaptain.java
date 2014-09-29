@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -24,7 +24,7 @@ import java.util.StringTokenizer;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.MultiSell;
+import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager.Territory;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager.TerritoryNPCSpawn;
@@ -39,7 +39,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
  * Mercenary Captain AI.
  * @author malyelfik
  */
-public class MercenaryCaptain extends AbstractNpcAI
+public final class MercenaryCaptain extends AbstractNpcAI
 {
 	// NPCs
 	private static final Map<Integer, Integer> NPCS = new HashMap<>();
@@ -67,9 +67,9 @@ public class MercenaryCaptain extends AbstractNpcAI
 	private static final int MIN_LEVEL = 40;
 	private static final int CLASS_LEVEL = 2;
 	
-	private MercenaryCaptain(String name, String descr)
+	private MercenaryCaptain()
 	{
-		super(name, descr);
+		super(MercenaryCaptain.class.getSimpleName(), "ai/npc");
 		for (int id : NPCS.keySet())
 		{
 			addStartNpc(id);
@@ -81,7 +81,7 @@ public class MercenaryCaptain extends AbstractNpcAI
 		{
 			for (TerritoryNPCSpawn spawn : terr.getSpawnList())
 			{
-				if (NPCS.keySet().contains(spawn.getNpcId()))
+				if (NPCS.keySet().contains(spawn.getId()))
 				{
 					startQuestTimer("say", DELAY, spawn.getNpc(), null, true);
 				}
@@ -114,14 +114,14 @@ public class MercenaryCaptain extends AbstractNpcAI
 				}
 				case "territory":
 				{
-					player.sendPacket(new ExShowDominionRegistry(npc.getCastle().getCastleId(), player));
+					player.sendPacket(new ExShowDominionRegistry(npc.getCastle().getResidenceId(), player));
 					break;
 				}
 				case "strider":
 				{
 					final String type = st.nextToken();
 					final int price = (type.equals("3")) ? TerritoryWarManager.MINTWBADGEFORBIGSTRIDER : TerritoryWarManager.MINTWBADGEFORSTRIDERS;
-					final int badgeId = NPCS.get(npc.getNpcId());
+					final int badgeId = NPCS.get(npc.getId());
 					if (getQuestItemsCount(player, badgeId) < price)
 					{
 						return "36481-07.html";
@@ -169,8 +169,8 @@ public class MercenaryCaptain extends AbstractNpcAI
 					}
 					else
 					{
-						final int listId = 676 + npc.getCastle().getCastleId();
-						MultiSell.getInstance().separateAndSend(listId, player, npc, false);
+						final int listId = 676 + npc.getCastle().getResidenceId();
+						MultisellData.getInstance().separateAndSend(listId, player, npc, false);
 					}
 					break;
 				}
@@ -182,8 +182,8 @@ public class MercenaryCaptain extends AbstractNpcAI
 					}
 					else
 					{
-						final int listId = 685 + npc.getCastle().getCastleId();
-						MultiSell.getInstance().separateAndSend(listId, player, npc, false);
+						final int listId = 685 + npc.getCastle().getResidenceId();
+						MultisellData.getInstance().separateAndSend(listId, player, npc, false);
 					}
 					break;
 				}
@@ -217,17 +217,17 @@ public class MercenaryCaptain extends AbstractNpcAI
 		}
 		else if (npc.isMyLord(player))
 		{
-			htmltext = (npc.getCastle().getSiege().getIsInProgress() || TerritoryWarManager.getInstance().isTWInProgress()) ? "36481-05.html" : "36481-04.html";
+			htmltext = (npc.getCastle().getSiege().isInProgress() || TerritoryWarManager.getInstance().isTWInProgress()) ? "36481-05.html" : "36481-04.html";
 		}
 		else
 		{
-			htmltext = (npc.getCastle().getSiege().getIsInProgress() || TerritoryWarManager.getInstance().isTWInProgress()) ? "36481-06.html" : npc.getNpcId() + "-01.html";
+			htmltext = (npc.getCastle().getSiege().isInProgress() || TerritoryWarManager.getInstance().isTWInProgress()) ? "36481-06.html" : npc.getId() + "-01.html";
 		}
 		return htmltext;
 	}
 	
 	public static void main(String[] args)
 	{
-		new MercenaryCaptain(MercenaryCaptain.class.getSimpleName(), "ai/npc");
+		new MercenaryCaptain();
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,6 +19,7 @@
 package quests.Q00690_JudesRequest;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -63,9 +64,9 @@ public class Q00690_JudesRequest extends Quest
 		}
 	};
 	
-	public Q00690_JudesRequest(int questId, String name, String descr)
+	public Q00690_JudesRequest()
 	{
-		super(questId, name, descr);
+		super(690, Q00690_JudesRequest.class.getSimpleName(), "Jude's Request");
 		addStartNpc(JUDE);
 		addTalkId(JUDE);
 		addKillId(LESSER_EVIL, GREATER_EVIL);
@@ -132,7 +133,7 @@ public class Q00690_JudesRequest extends Quest
 		}
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		int chance = 0;
 		if (npcId == LESSER_EVIL)
 		{
@@ -194,10 +195,5 @@ public class Q00690_JudesRequest extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00690_JudesRequest(690, Q00690_JudesRequest.class.getSimpleName(), "Jude's Request");
 	}
 }

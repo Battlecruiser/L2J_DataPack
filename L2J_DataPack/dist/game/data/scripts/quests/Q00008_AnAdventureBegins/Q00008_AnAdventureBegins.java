@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,9 @@
  */
 package quests.Q00008_AnAdventureBegins;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -42,9 +42,9 @@ public class Q00008_AnAdventureBegins extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	private Q00008_AnAdventureBegins(int questId, String name, String descr)
+	public Q00008_AnAdventureBegins()
 	{
-		super(questId, name, descr);
+		super(8, Q00008_AnAdventureBegins.class.getSimpleName(), "An Adventure Begins");
 		addStartNpc(JASMINE);
 		addTalkId(JASMINE, ROSELYN, HARNE);
 		registerQuestItems(ROSELYNS_NOTE);
@@ -99,13 +99,13 @@ public class Q00008_AnAdventureBegins extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case JASMINE:
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = ((player.getRace() == Race.DarkElf) && (player.getLevel() >= MIN_LEVEL)) ? "30134-02.htm" : "30134-01.html";
+						htmltext = ((player.getRace() == Race.DARK_ELF) && (player.getLevel() >= MIN_LEVEL)) ? "30134-02.htm" : "30134-01.html";
 						break;
 					case State.STARTED:
 						if (st.isCond(1))
@@ -150,10 +150,5 @@ public class Q00008_AnAdventureBegins extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00008_AnAdventureBegins(8, Q00008_AnAdventureBegins.class.getSimpleName(), "An Adventure Begins");
 	}
 }

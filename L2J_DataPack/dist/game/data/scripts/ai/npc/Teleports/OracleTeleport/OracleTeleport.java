@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,10 +20,11 @@ package ai.npc.Teleports.OracleTeleport;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -33,130 +34,40 @@ import com.l2jserver.gameserver.util.Util;
  * Oracle teleport AI.
  * @author Charus
  */
-public class OracleTeleport extends AbstractNpcAI
+public final class OracleTeleport extends AbstractNpcAI
 {
+	// @formatter:off
 	private final static int[] TOWN_DAWN =
 	{
-		31078,
-		31079,
-		31080,
-		31081,
-		31083,
-		31084,
-		31082,
-		31692,
-		31694,
-		31997,
-		31168
+		31078, 31079, 31080, 31081, 31083, 31084, 31082, 31692, 31694, 31997, 31168
 	};
 	
 	private final static int[] TOWN_DUSK =
 	{
-		31085,
-		31086,
-		31087,
-		31088,
-		31090,
-		31091,
-		31089,
-		31693,
-		31695,
-		31998,
-		31169
+		31085, 31086, 31087, 31088, 31090, 31091, 31089, 31693, 31695, 31998, 31169
 	};
 	
 	private final static int[] TEMPLE_PRIEST =
 	{
-		31127,
-		31128,
-		31129,
-		31130,
-		31131,
-		31137,
-		31138,
-		31139,
-		31140,
-		31141
+		31127, 31128, 31129, 31130, 31131, 31137, 31138, 31139, 31140, 31141
 	};
 	
 	private final static int[] RIFT_POSTERS =
 	{
-		31488,
-		31489,
-		31490,
-		31491,
-		31492,
-		31493
+		31488, 31489, 31490, 31491, 31492, 31493
 	};
 	
 	private final static int[] TELEPORTERS =
 	{
-		31078,
-		31079,
-		31080,
-		31081,
-		31082,
-		31083,
-		31084,
-		31692,
-		31694,
-		31997,
-		31168,
-		31085,
-		31086,
-		31087,
-		31088,
-		31089,
-		31090,
-		31091,
-		31693,
-		31695,
-		31998,
-		31169,
-		31494,
-		31495,
-		31496,
-		31497,
-		31498,
-		31499,
-		31500,
-		31501,
-		31502,
-		31503,
-		31504,
-		31505,
-		31506,
-		31507,
-		31095,
-		31096,
-		31097,
-		31098,
-		31099,
-		31100,
-		31101,
-		31102,
-		31103,
-		31104,
-		31105,
-		31106,
-		31107,
-		31108,
-		31109,
-		31110,
-		31114,
-		31115,
-		31116,
-		31117,
-		31118,
-		31119,
-		31120,
-		31121,
-		31122,
-		31123,
-		31124,
-		31125
+		31078, 31079, 31080, 31081, 31082, 31083, 31084, 31692, 31694, 31997,
+		31168, 31085, 31086, 31087, 31088, 31089, 31090, 31091, 31693, 31695,
+		31998, 31169, 31494, 31495, 31496, 31497, 31498, 31499, 31500, 31501,
+		31502, 31503, 31504, 31505, 31506, 31507, 31095, 31096, 31097, 31098,
+		31099, 31100, 31101, 31102, 31103, 31104, 31105, 31106, 31107, 31108,
+		31109, 31110, 31114, 31115, 31116, 31117, 31118, 31119, 31120, 31121,
+		31122, 31123, 31124, 31125
 	};
-	
+	// @formatter:on
 	private final static Location[] RETURN_LOCS =
 	{
 		new Location(-80555, 150337, -3040),
@@ -225,9 +136,12 @@ public class OracleTeleport extends AbstractNpcAI
 		new Location(12837, -248483, -9579)
 	};
 	
-	private OracleTeleport(String name, String descr)
+	// Item
+	private static final int DIMENSIONAL_FRAGMENT = 7079;
+	
+	private OracleTeleport()
 	{
-		super(name, descr);
+		super(OracleTeleport.class.getSimpleName(), "ai/npc/Teleports");
 		addStartNpc(RIFT_POSTERS);
 		addStartNpc(TELEPORTERS);
 		addStartNpc(TEMPLE_PRIEST);
@@ -240,29 +154,24 @@ public class OracleTeleport extends AbstractNpcAI
 		addTalkId(TOWN_DUSK);
 	}
 	
-	// Item
-	private static final int DIMENSIONAL_FRAGMENT = 7079;
-	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (event.equalsIgnoreCase("Return"))
 		{
 			if (Util.contains(TEMPLE_PRIEST, npcId) && (st.getState() == State.STARTED))
 			{
-				Location loc = RETURN_LOCS[st.getInt("id")];
-				player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
+				player.teleToLocation(RETURN_LOCS[st.getInt("id")]);
 				player.setIsIn7sDungeon(false);
 				st.exitQuest(true);
 			}
 			else if (Util.contains(RIFT_POSTERS, npcId) && (st.getState() == State.STARTED))
 			{
-				Location loc = RETURN_LOCS[st.getInt("id")];
-				player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
+				player.teleToLocation(RETURN_LOCS[st.getInt("id")]);
 				htmltext = "rift_back.htm";
 				st.exitQuest(true);
 			}
@@ -272,12 +181,12 @@ public class OracleTeleport extends AbstractNpcAI
 			int id = st.getInt("id");
 			if (Util.contains(TOWN_DAWN, id))
 			{
-				player.teleToLocation(-80157, 111344, -4901);
+				player.teleToLocation(new Location(-80157, 111344, -4901));
 				player.setIsIn7sDungeon(true);
 			}
 			else if (Util.contains(TOWN_DUSK, id))
 			{
-				player.teleToLocation(-81261, 86531, -5157);
+				player.teleToLocation(new Location(-81261, 86531, -5157));
 				player.setIsIn7sDungeon(true);
 			}
 			else
@@ -288,7 +197,7 @@ public class OracleTeleport extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("Dimensional"))
 		{
 			htmltext = "oracle.htm";
-			player.teleToLocation(-114755, -179466, -6752);
+			player.teleToLocation(new Location(-114755, -179466, -6752));
 		}
 		else if (event.equalsIgnoreCase("5.htm"))
 		{
@@ -308,7 +217,7 @@ public class OracleTeleport extends AbstractNpcAI
 			}
 			st.set("id", Integer.toString(i));
 			st.setState(State.STARTED);
-			player.teleToLocation(-114755, -179466, -6752);
+			player.teleToLocation(new Location(-114755, -179466, -6752));
 		}
 		else if (event.equalsIgnoreCase("6.htm"))
 		{
@@ -320,27 +229,27 @@ public class OracleTeleport extends AbstractNpcAI
 			int playerLevel = player.getLevel();
 			if ((playerLevel >= 20) && (playerLevel < 30))
 			{
-				st.takeItems(PcInventory.ADENA_ID, 2000);
+				st.takeItems(Inventory.ADENA_ID, 2000);
 			}
 			else if ((playerLevel >= 30) && (playerLevel < 40))
 			{
-				st.takeItems(PcInventory.ADENA_ID, 4500);
+				st.takeItems(Inventory.ADENA_ID, 4500);
 			}
 			else if ((playerLevel >= 40) && (playerLevel < 50))
 			{
-				st.takeItems(PcInventory.ADENA_ID, 8000);
+				st.takeItems(Inventory.ADENA_ID, 8000);
 			}
 			else if ((playerLevel >= 50) && (playerLevel < 60))
 			{
-				st.takeItems(PcInventory.ADENA_ID, 12500);
+				st.takeItems(Inventory.ADENA_ID, 12500);
 			}
 			else if ((playerLevel >= 60) && (playerLevel < 70))
 			{
-				st.takeItems(PcInventory.ADENA_ID, 18000);
+				st.takeItems(Inventory.ADENA_ID, 18000);
 			}
 			else if (playerLevel >= 70)
 			{
-				st.takeItems(PcInventory.ADENA_ID, 24500);
+				st.takeItems(Inventory.ADENA_ID, 24500);
 			}
 			int i = 0;
 			for (int ziggurat : TELEPORTERS)
@@ -355,7 +264,7 @@ public class OracleTeleport extends AbstractNpcAI
 			st.setState(State.STARTED);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
 			htmltext = "ziggurat_rift.htm";
-			player.teleToLocation(-114755, -179466, -6752);
+			player.teleToLocation(new Location(-114755, -179466, -6752));
 		}
 		return htmltext;
 	}
@@ -366,7 +275,7 @@ public class OracleTeleport extends AbstractNpcAI
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (Util.contains(TOWN_DAWN, npcId))
 		{
 			st.setState(State.STARTED);
@@ -381,7 +290,7 @@ public class OracleTeleport extends AbstractNpcAI
 			}
 			st.set("id", Integer.toString(i));
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
-			player.teleToLocation(-80157, 111344, -4901);
+			player.teleToLocation(new Location(-80157, 111344, -4901));
 			player.setIsIn7sDungeon(true);
 		}
 		if (Util.contains(TOWN_DUSK, npcId))
@@ -398,7 +307,7 @@ public class OracleTeleport extends AbstractNpcAI
 			}
 			st.set("id", Integer.toString(i));
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
-			player.teleToLocation(-81261, 86531, -5157);
+			player.teleToLocation(new Location(-81261, 86531, -5157));
 			player.setIsIn7sDungeon(true);
 		}
 		else if ((npcId >= 31494) && (npcId <= 31507))
@@ -481,6 +390,6 @@ public class OracleTeleport extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new OracleTeleport(OracleTeleport.class.getSimpleName(), "ai/npc/Teleports");
+		new OracleTeleport();
 	}
 }

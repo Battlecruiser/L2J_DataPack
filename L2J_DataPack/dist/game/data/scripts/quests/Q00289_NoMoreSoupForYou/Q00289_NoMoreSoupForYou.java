@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,6 +20,7 @@ package quests.Q00289_NoMoreSoupForYou;
 
 import quests.Q00252_ItSmellsDelicious.Q00252_ItSmellsDelicious;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -157,9 +158,9 @@ public class Q00289_NoMoreSoupForYou extends Quest
 		}
 	};
 	
-	public Q00289_NoMoreSoupForYou(int id, String name, String descr)
+	public Q00289_NoMoreSoupForYou()
 	{
-		super(id, name, descr);
+		super(289, Q00289_NoMoreSoupForYou.class.getSimpleName(), "No More Soup For You");
 		addStartNpc(STAN);
 		addTalkId(STAN);
 		addKillId(MOBS);
@@ -177,7 +178,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 		int b = getRandom(18);
 		int c = getRandom(7);
 		
-		if (npc.getNpcId() == STAN)
+		if (npc.getId() == STAN)
 		{
 			if (event.equalsIgnoreCase("30200-03.htm"))
 			{
@@ -219,7 +220,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		QuestState st = player.getQuestState(getName());
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if ((st == null) || (st.getState() != State.STARTED))
 		{
 			return null;
@@ -242,7 +243,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == STAN)
+		if (npc.getId() == STAN)
 		{
 			switch (st.getState())
 			{
@@ -259,10 +260,5 @@ public class Q00289_NoMoreSoupForYou extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00289_NoMoreSoupForYou(289, Q00289_NoMoreSoupForYou.class.getSimpleName(), "No More Soup For You");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,72 +18,56 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.serverpackets.ExRegMax;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.AbnormalType;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.network.serverpackets.ExRegenMax;
 
-public class HealOverTime extends L2Effect
+/**
+ * Heal Over Time effect implementation.
+ */
+public final class HealOverTime extends AbstractEffect
 {
-	public HealOverTime(Env env, EffectTemplate template)
-	{
-		super(env, template);
-	}
+	private final double _power;
 	
-	// Special constructor to steal this effect
-	public HealOverTime(Env env, L2Effect effect)
+	public HealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, effect);
-	}
-	
-	@Override
-	protected boolean effectCanBeStolen()
-	{
-		return true;
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onActionTime(BuffInfo info)
 	{
-		return L2EffectType.HEAL_OVER_TIME;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		if (getEffected().isPlayer())
-		{
-			getEffected().sendPacket(new ExRegMax(calc(), getTotalCount() * getAbnormalTime(), getAbnormalTime()));
-		}
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead() || getEffected().isDoor())
+		if (info.getEffected().isDead() || info.getEffected().isDoor())
 		{
 			return false;
 		}
 		
-		double hp = getEffected().getCurrentHp();
-		double maxhp = getEffected().getMaxRecoverableHp();
+		double hp = info.getEffected().getCurrentHp();
+		double maxhp = info.getEffected().getMaxRecoverableHp();
 		
 		// Not needed to set the HP and send update packet if player is already at max HP
 		if (hp >= maxhp)
 		{
-			return true;
+			return false;
 		}
 		
-		hp += calc();
+		hp += _power * getTicksMultiplier();
 		hp = Math.min(hp, maxhp);
-		
-		getEffected().setCurrentHp(hp);
-		StatusUpdate suhp = new StatusUpdate(getEffected());
-		suhp.addAttribute(StatusUpdate.CUR_HP, (int) hp);
-		getEffected().sendPacket(suhp);
-		return true;
+		info.getEffected().setCurrentHp(hp);
+		return info.getSkill().isToggle();
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		if (info.getEffected().isPlayer() && (getTicks() > 0) && (info.getSkill().getAbnormalType() == AbnormalType.HP_RECOVER))
+		{
+			info.getEffected().sendPacket(new ExRegenMax(info.getAbnormalTime(), getTicks(), _power));
+		}
 	}
 }

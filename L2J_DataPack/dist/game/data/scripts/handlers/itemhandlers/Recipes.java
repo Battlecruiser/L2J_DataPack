@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -48,7 +48,7 @@ public class Recipes implements IItemHandler
 			return false;
 		}
 		
-		final L2RecipeList rp = RecipeData.getInstance().getRecipeByItemId(item.getItemId());
+		final L2RecipeList rp = RecipeData.getInstance().getRecipeByItemId(item.getId());
 		if (rp == null)
 		{
 			return false;
@@ -91,7 +91,7 @@ public class Recipes implements IItemHandler
 		if (recipeLimit)
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
-			sm.addNumber(rp.isDwarvenRecipe() ? activeChar.getDwarfRecipeLimit() : activeChar.getCommonRecipeLimit());
+			sm.addInt(rp.isDwarvenRecipe() ? activeChar.getDwarfRecipeLimit() : activeChar.getCommonRecipeLimit());
 			activeChar.sendPacket(sm);
 			return false;
 		}

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,56 +19,35 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
+ * Clan Gate effect implementation.
  * @author ZaKaX
  */
-public class ClanGate extends L2Effect
+public final class ClanGate extends AbstractEffect
 {
-	public ClanGate(Env env, EffectTemplate template)
+	public ClanGate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public boolean onStart()
+	public void onStart(BuffInfo info)
 	{
-		getEffected().startAbnormalEffect(AbnormalEffect.MAGIC_CIRCLE);
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			L2Clan clan = getEffected().getActingPlayer().getClan();
+			final L2Clan clan = info.getEffected().getActingPlayer().getClan();
 			if (clan != null)
 			{
 				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL);
-				clan.broadcastToOtherOnlineMembers(msg, getEffected().getActingPlayer());
+				clan.broadcastToOtherOnlineMembers(msg, info.getEffected().getActingPlayer());
 			}
 		}
-		
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().stopAbnormalEffect(AbnormalEffect.MAGIC_CIRCLE);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.CLAN_GATE;
 	}
 }

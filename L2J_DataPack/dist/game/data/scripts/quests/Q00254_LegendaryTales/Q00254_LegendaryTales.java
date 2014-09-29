@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00254_LegendaryTales;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -225,7 +226,7 @@ public class Q00254_LegendaryTales extends Quest
 		if ((st != null) && st.isCond(1))
 		{
 			int raids = st.getInt("raids");
-			Bosses boss = Bosses.valueOf(npc.getNpcId());
+			Bosses boss = Bosses.valueOf(npc.getId());
 			
 			if (!checkMask(st, boss))
 			{
@@ -248,10 +249,5 @@ public class Q00254_LegendaryTales extends Quest
 	{
 		int pos = boss.getMask();
 		return ((qs.getInt("raids") & pos) == pos);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00254_LegendaryTales();
 	}
 }

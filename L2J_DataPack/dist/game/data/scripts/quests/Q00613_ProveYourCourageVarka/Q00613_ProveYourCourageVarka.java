@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -42,9 +42,9 @@ public class Q00613_ProveYourCourageVarka extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 75;
 	
-	private Q00613_ProveYourCourageVarka(int questId, String name, String descr)
+	public Q00613_ProveYourCourageVarka()
 	{
-		super(questId, name, descr);
+		super(613, Q00613_ProveYourCourageVarka.class.getSimpleName(), "Prove Your Courage! (Varka)");
 		addStartNpc(ASHAS);
 		addTalkId(ASHAS);
 		addKillId(HEKATON);
@@ -123,10 +123,5 @@ public class Q00613_ProveYourCourageVarka extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00613_ProveYourCourageVarka(613, Q00613_ProveYourCourageVarka.class.getSimpleName(), "Prove Your Courage! (Varka)");
 	}
 }

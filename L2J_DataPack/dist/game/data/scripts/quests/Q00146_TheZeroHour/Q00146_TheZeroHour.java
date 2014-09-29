@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -39,9 +39,9 @@ public class Q00146_TheZeroHour extends Quest
 	private static final int KAHMANS_SUPPLY_BOX = 14849;
 	private static final int FANG = 14859;
 	
-	public Q00146_TheZeroHour(int questId, String name, String descr)
+	public Q00146_TheZeroHour()
 	{
-		super(questId, name, descr);
+		super(146, Q00146_TheZeroHour.class.getSimpleName(), "The Zero Hour");
 		addStartNpc(KAHMAN);
 		addTalkId(KAHMAN);
 		addKillId(QUEEN_SHYEED);
@@ -128,10 +128,5 @@ public class Q00146_TheZeroHour extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00146_TheZeroHour(146, Q00146_TheZeroHour.class.getSimpleName(), "The Zero Hour");
 	}
 }

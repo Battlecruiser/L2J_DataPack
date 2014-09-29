@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00115_TheOtherSideOfTruth;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -46,9 +47,9 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 53;
 	
-	public Q00115_TheOtherSideOfTruth(int id, String name, String descr)
+	public Q00115_TheOtherSideOfTruth()
 	{
-		super(id, name, descr);
+		super(115, Q00115_TheOtherSideOfTruth.class.getSimpleName(), "The Other Side of Truth");
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, MISA, KIER, ICE_SCULPTURE1, ICE_SCULPTURE2, ICE_SCULPTURE3, ICE_SCULPTURE4);
 		registerQuestItems(MISAS_LETTER, RAFFORTYS_LETTER, PIECE_OF_TABLET, REPORT_PIECE);
@@ -208,7 +209,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case "32021-02.html":
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case ICE_SCULPTURE1:
 					{
@@ -275,7 +276,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case "32021-03.html":
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case ICE_SCULPTURE1:
 					{
@@ -338,7 +339,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case "32021-06.html":
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case ICE_SCULPTURE1:
 					{
@@ -397,7 +398,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 		{
 			case State.COMPLETED:
 			{
-				if (npc.getNpcId() == RAFFORTY)
+				if (npc.getId() == RAFFORTY)
 				{
 					htmltext = getAlreadyCompletedMsg(player);
 				}
@@ -410,7 +411,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case RAFFORTY:
 					{
@@ -777,10 +778,5 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00115_TheOtherSideOfTruth(115, Q00115_TheOtherSideOfTruth.class.getSimpleName(), "The Other Side of Truth");
 	}
 }

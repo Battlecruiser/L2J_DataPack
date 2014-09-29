@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,10 @@
  */
 package quests.Q00003_WillTheSealBeBroken;
 
+import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -48,9 +49,9 @@ public class Q00003_WillTheSealBeBroken extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 16;
 	
-	private Q00003_WillTheSealBeBroken(int questId, String name, String descr)
+	public Q00003_WillTheSealBeBroken()
 	{
-		super(questId, name, descr);
+		super(3, Q00003_WillTheSealBeBroken.class.getSimpleName(), "Will the Seal be Broken?");
 		addStartNpc(TALLOTH);
 		addTalkId(TALLOTH);
 		addKillId(OMEN_BEAST, TAINTED_ZOMBIE, STINK_ZOMBIE, LESSER_SUCCUBUS, LESSER_SUCCUBUS_TILFO, LESSER_SUCCUBUS_TUREN);
@@ -90,7 +91,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState st = member.getQuestState(getName());
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case OMEN_BEAST:
 				giveItem(st, OMEN_BEAST_EYE, getRegisteredItemIds());
@@ -121,7 +122,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				htmltext = (player.getRace() != Race.DarkElf) ? "30141-00.htm" : (player.getLevel() >= MIN_LEVEL) ? "30141-02.htm" : "30141-01.html";
+				htmltext = (player.getRace() != Race.DARK_ELF) ? "30141-00.htm" : (player.getLevel() >= MIN_LEVEL) ? "30141-02.htm" : "30141-01.html";
 				break;
 			case State.STARTED:
 				if (st.isCond(1))
@@ -153,10 +154,5 @@ public class Q00003_WillTheSealBeBroken extends Quest
 				st.setCond(2, true);
 			}
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00003_WillTheSealBeBroken(3, Q00003_WillTheSealBeBroken.class.getSimpleName(), "Will the Seal be Broken?");
 	}
 }

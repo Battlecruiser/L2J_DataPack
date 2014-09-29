@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ShowXMasSeal;
 
 /**
- * @author devScarlet & mrTJO
+ * @author devScarlet, mrTJO
  */
 public class SpecialXMas implements IItemHandler
 {
@@ -38,7 +38,7 @@ public class SpecialXMas implements IItemHandler
 			return false;
 		}
 		
-		playable.broadcastPacket(new ShowXMasSeal(item.getItemId()));
+		playable.broadcastPacket(new ShowXMasSeal(item.getId()));
 		return true;
 	}
 }

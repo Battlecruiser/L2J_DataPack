@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00036_MakeASewingKit;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -44,9 +45,9 @@ public class Q00036_MakeASewingKit extends Quest
 	private static final int IRON_COUNT = 5;
 	private static final int COUNT = 10;
 	
-	private Q00036_MakeASewingKit(int questId, String name, String descr)
+	public Q00036_MakeASewingKit()
 	{
-		super(questId, name, descr);
+		super(36, Q00036_MakeASewingKit.class.getSimpleName(), "Make a Sewing Kit");
 		addStartNpc(FERRIS);
 		addTalkId(FERRIS);
 		addKillId(ENCHANTED_IRON_GOLEM);
@@ -153,10 +154,5 @@ public class Q00036_MakeASewingKit extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00036_MakeASewingKit(36, Q00036_MakeASewingKit.class.getSimpleName(), "Make a Sewing Kit");
 	}
 }

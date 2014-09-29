@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,75 +18,96 @@
  */
 package handlers.effecthandlers;
 
+import java.util.Collections;
+import java.util.EnumMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import com.l2jserver.gameserver.model.CharEffectList;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.AbnormalType;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
- * @author Gnacik
+ * Dispel By Slot effect implementation.
+ * @author Gnacik, Zoey76, Adry_85
  */
-public class DispelBySlot extends L2Effect
+public final class DispelBySlot extends AbstractEffect
 {
-	public DispelBySlot(Env env, EffectTemplate template)
+	private final String _dispel;
+	private final Map<AbnormalType, Short> _dispelAbnormals;
+	
+	public DispelBySlot(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_dispel = params.getString("dispel", null);
+		if ((_dispel != null) && !_dispel.isEmpty())
+		{
+			_dispelAbnormals = new EnumMap<>(AbnormalType.class);
+			for (String ngtStack : _dispel.split(";"))
+			{
+				String[] ngt = ngtStack.split(",");
+				_dispelAbnormals.put(AbnormalType.getAbnormalType(ngt[0]), Short.parseShort(ngt[1]));
+			}
+		}
+		else
+		{
+			_dispelAbnormals = Collections.<AbnormalType, Short> emptyMap();
+		}
 	}
 	
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.NEGATE;
+		return L2EffectType.DISPEL_BY_SLOT;
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		L2Character target = getEffected();
-		if ((target == null) || target.isDead())
-		{
-			return false;
-		}
-		
-		String stackType = getAbnormalType();
-		float stackOrder = getAbnormalLvl();
-		int skillCast = getSkill().getId();
-		
-		// If order is 0 don't remove effect
-		if (stackOrder == 0)
-		{
-			return true;
-		}
-		
-		final L2Effect[] effects = target.getAllEffects();
-		
-		for (L2Effect e : effects)
-		{
-			if (!e.getSkill().canBeDispeled())
-			{
-				continue;
-			}
-			
-			// Fist check for stacktype
-			if (stackType.equalsIgnoreCase(e.getAbnormalType()) && (e.getSkill().getId() != skillCast))
-			{
-				if (stackOrder == -1)
-				{
-					e.exit();
-				}
-				else if (stackOrder >= e.getAbnormalLvl())
-				{
-					e.exit();
-				}
-			}
-		}
 		return true;
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public void onStart(BuffInfo info)
 	{
-		return false;
+		if (_dispelAbnormals.isEmpty())
+		{
+			return;
+		}
+		
+		final L2Character effected = info.getEffected();
+		final CharEffectList effectList = effected.getEffectList();
+		// There is no need to iterate over all buffs,
+		// Just iterate once over all slots to dispel and get the buff with that abnormal if exists,
+		// Operation of O(n) for the amount of slots to dispel (which is usually small) and O(1) to get the buff.
+		for (Entry<AbnormalType, Short> entry : _dispelAbnormals.entrySet())
+		{
+			// Dispel transformations (buff and by GM)
+			if ((entry.getKey() == AbnormalType.TRANSFORM))
+			{
+				if (effected.isTransformed() || (effected.isPlayer() || (entry.getValue() == effected.getActingPlayer().getTransformationId()) || (entry.getValue() < 0)))
+				{
+					info.getEffected().stopTransformation(true);
+					continue;
+				}
+			}
+			
+			final BuffInfo toDispel = effectList.getBuffInfoByAbnormalType(entry.getKey());
+			if (toDispel == null)
+			{
+				continue;
+			}
+			
+			if ((entry.getKey() == toDispel.getSkill().getAbnormalType()) && ((entry.getValue() < 0) || (entry.getValue() >= toDispel.getSkill().getAbnormalLvl())))
+			{
+				effectList.stopSkillEffects(true, entry.getKey());
+			}
+		}
 	}
 }

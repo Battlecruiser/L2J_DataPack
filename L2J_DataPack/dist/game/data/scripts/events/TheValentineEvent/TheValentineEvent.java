@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package events.TheValentineEvent;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.event.LongTimeEvent;
@@ -28,16 +29,16 @@ import com.l2jserver.gameserver.model.quest.State;
  * The Valentine Event event AI.
  * @author Gnacik
  */
-public class TheValentineEvent extends LongTimeEvent
+public final class TheValentineEvent extends LongTimeEvent
 {
 	// NPC
 	private static final int NPC = 4301;
 	// Item
 	private static final int RECIPE = 20191;
 	
-	public TheValentineEvent(String name, String descr)
+	private TheValentineEvent()
 	{
-		super(name, descr);
+		super(TheValentineEvent.class.getSimpleName(), "events");
 		addStartNpc(NPC);
 		addFirstTalkId(NPC);
 		addTalkId(NPC);
@@ -76,11 +77,11 @@ public class TheValentineEvent extends LongTimeEvent
 		{
 			newQuestState(player);
 		}
-		return npc.getNpcId() + ".htm";
+		return npc.getId() + ".htm";
 	}
 	
 	public static void main(String[] args)
 	{
-		new TheValentineEvent(TheValentineEvent.class.getSimpleName(), "events");
+		new TheValentineEvent();
 	}
 }

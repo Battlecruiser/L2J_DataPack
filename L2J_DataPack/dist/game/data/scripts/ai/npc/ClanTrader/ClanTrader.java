@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,7 +21,7 @@ package ai.npc.ClanTrader;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.model.L2Clan;
+import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Clan Trader AI.
  * @author St3eT
  */
-public class ClanTrader extends AbstractNpcAI
+public final class ClanTrader extends AbstractNpcAI
 {
 	// Npc
 	private static final int[] CLAN_TRADER =
@@ -47,9 +47,9 @@ public class ClanTrader extends AbstractNpcAI
 	private static final int KNIGHTS_EPAULETTE = 9912; // Knight's Epaulette
 	private static final int KNIGHTS_EPAULETTE_COUNT = 100; // Knight's Epaulette Count
 	
-	private ClanTrader(String name, String descr)
+	private ClanTrader()
 	{
-		super(name, descr);
+		super(ClanTrader.class.getSimpleName(), "ai/npc");
 		addStartNpc(CLAN_TRADER);
 		addTalkId(CLAN_TRADER);
 		addFirstTalkId(CLAN_TRADER);
@@ -63,11 +63,11 @@ public class ClanTrader extends AbstractNpcAI
 			player.getClan().addReputationScore(count, true);
 			
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_ADDED_S1S_POINTS_TO_REPUTATION_SCORE);
-			sm.addNumber(count);
+			sm.addInt(count);
 			player.sendPacket(sm);
-			return npc.getNpcId() + "-04.html";
+			return npc.getId() + "-04.html";
 		}
-		return npc.getNpcId() + "-03.html";
+		return npc.getId() + "-03.html";
 	}
 	
 	@Override
@@ -86,7 +86,7 @@ public class ClanTrader extends AbstractNpcAI
 			}
 			case "repinfo":
 			{
-				htmltext = (player.getClan().getLevel() > 4) ? npc.getNpcId() + "-02.html" : npc.getNpcId() + "-05.html";
+				htmltext = (player.getClan().getLevel() > 4) ? npc.getId() + "-02.html" : npc.getId() + "-05.html";
 				break;
 			}
 			case "exchange-ba":
@@ -111,15 +111,15 @@ public class ClanTrader extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.isClanLeader() || ((player.getClanPrivileges() & L2Clan.CP_CL_TROOPS_FAME) == L2Clan.CP_CL_TROOPS_FAME))
+		if (player.isClanLeader() || player.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME))
 		{
-			return npc.getNpcId() + ".html";
+			return npc.getId() + ".html";
 		}
-		return npc.getNpcId() + "-01.html";
+		return npc.getId() + "-01.html";
 	}
 	
 	public static void main(String[] args)
 	{
-		new ClanTrader(ClanTrader.class.getSimpleName(), "ai/npc");
+		new ClanTrader();
 	}
 }

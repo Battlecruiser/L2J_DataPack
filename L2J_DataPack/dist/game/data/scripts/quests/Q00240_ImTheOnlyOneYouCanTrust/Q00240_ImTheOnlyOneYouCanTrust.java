@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00240_ImTheOnlyOneYouCanTrust;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -56,9 +57,9 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 	// Item
 	private static final int STAKATO_FANG = 14879;
 	
-	public Q00240_ImTheOnlyOneYouCanTrust(int questId, String name, String descr)
+	public Q00240_ImTheOnlyOneYouCanTrust()
 	{
-		super(questId, name, descr);
+		super(240, Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName(), "I'm the Only One You Can Trust");
 		addStartNpc(KINTAIJIN);
 		addTalkId(KINTAIJIN);
 		addKillId(MOBS);
@@ -141,10 +142,5 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00240_ImTheOnlyOneYouCanTrust(240, Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName(), "I'm the Only One You Can Trust");
 	}
 }

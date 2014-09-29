@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -30,13 +30,13 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Gordon AI
  * @author TOFIZ, malyelfik
  */
-public class Gordon extends AbstractNpcAI
+public final class Gordon extends AbstractNpcAI
 {
 	private static final int GORDON = 29095;
 	
-	private Gordon(String name, String descr)
+	private Gordon()
 	{
-		super(name, descr);
+		super(Gordon.class.getSimpleName(), "ai/individual");
 		addSpawnId(GORDON);
 		addSeeCreatureId(GORDON);
 		
@@ -66,6 +66,6 @@ public class Gordon extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Gordon(Gordon.class.getSimpleName(), "ai");
+		new Gordon();
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -36,9 +36,9 @@ public class Q00015_SweetWhispers extends Quest
 	private static final int HIERARCH = 31517;
 	private static final int M_NECROMANCER = 31518;
 	
-	private Q00015_SweetWhispers(int questId, String name, String descr)
+	public Q00015_SweetWhispers()
 	{
-		super(questId, name, descr);
+		super(15, Q00015_SweetWhispers.class.getSimpleName(), "Sweet Whispers");
 		addStartNpc(VLADIMIR);
 		addTalkId(VLADIMIR, HIERARCH, M_NECROMANCER);
 	}
@@ -85,7 +85,7 @@ public class Q00015_SweetWhispers extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -127,10 +127,5 @@ public class Q00015_SweetWhispers extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00015_SweetWhispers(15, Q00015_SweetWhispers.class.getSimpleName(), "Sweet Whispers");
 	}
 }

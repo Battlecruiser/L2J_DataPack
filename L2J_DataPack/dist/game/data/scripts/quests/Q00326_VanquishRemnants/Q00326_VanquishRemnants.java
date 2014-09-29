@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00326_VanquishRemnants;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -59,9 +60,9 @@ public final class Q00326_VanquishRemnants extends Quest
 	// Misc
 	private static final int MIN_LVL = 21;
 	
-	private Q00326_VanquishRemnants(int questId, String name, String descr)
+	public Q00326_VanquishRemnants()
 	{
-		super(questId, name, descr);
+		super(326, Q00326_VanquishRemnants.class.getSimpleName(), "Vanquish Remnants");
 		addStartNpc(LEOPOLD);
 		addTalkId(LEOPOLD);
 		addKillId(MONSTERS.keySet());
@@ -103,9 +104,9 @@ public final class Q00326_VanquishRemnants extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && st.isStarted() && (getRandom(100) < MONSTERS.get(npc.getNpcId())[0]))
+		if ((st != null) && st.isStarted() && (getRandom(100) < MONSTERS.get(npc.getId())[0]))
 		{
-			st.giveItems(MONSTERS.get(npc.getNpcId())[1], 1);
+			st.giveItems(MONSTERS.get(npc.getId())[1], 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -150,10 +151,5 @@ public final class Q00326_VanquishRemnants extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00326_VanquishRemnants(326, Q00326_VanquishRemnants.class.getSimpleName(), "Vanquish Remnants");
 	}
 }

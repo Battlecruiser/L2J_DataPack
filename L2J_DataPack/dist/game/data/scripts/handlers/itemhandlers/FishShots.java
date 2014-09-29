@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,16 +20,16 @@ package handlers.itemhandlers;
 
 import java.util.logging.Level;
 
+import com.l2jserver.gameserver.enums.ShotType;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.items.type.L2ActionType;
-import com.l2jserver.gameserver.model.items.type.L2WeaponType;
+import com.l2jserver.gameserver.model.items.type.ActionType;
+import com.l2jserver.gameserver.model.items.type.WeaponType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
@@ -52,7 +52,7 @@ public class FishShots implements IItemHandler
 		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
 		
-		if ((weaponInst == null) || (weaponItem.getItemType() != L2WeaponType.FISHINGROD))
+		if ((weaponInst == null) || (weaponItem.getItemType() != WeaponType.FISHINGROD))
 		{
 			return false;
 		}
@@ -71,7 +71,7 @@ public class FishShots implements IItemHandler
 			return false;
 		}
 		
-		boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == L2ActionType.fishingshot) && (weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus());
+		boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus());
 		
 		if (!gradeCheck)
 		{

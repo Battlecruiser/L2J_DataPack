@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,12 +18,13 @@
  */
 package quests.Q00551_OlympiadStarter;
 
+import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.CompetitionType;
+import com.l2jserver.gameserver.model.olympiad.Participant;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
@@ -43,13 +44,13 @@ public class Q00551_OlympiadStarter extends Quest
 	private static final int OLY_CHEST = 17169;
 	private static final int MEDAL_OF_GLORY = 21874;
 	
-	public Q00551_OlympiadStarter(int questId, String name, String descr)
+	public Q00551_OlympiadStarter()
 	{
-		super(questId, name, descr);
+		super(551, Q00551_OlympiadStarter.class.getSimpleName(), "Olympiad Starter");
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
 		registerQuestItems(CERT_3, CERT_5, CERT_10);
-		setOlympiadUse(true);
+		addOlympiadMatchFinishId();
 	}
 	
 	@Override
@@ -122,11 +123,52 @@ public class Q00551_OlympiadStarter extends Quest
 	}
 	
 	@Override
-	public void onOlympiadWin(L2PcInstance winner, CompetitionType type)
+	public void onOlympiadMatchFinish(Participant winner, Participant looser, CompetitionType type)
 	{
 		if (winner != null)
 		{
-			final QuestState st = winner.getQuestState(getName());
+			final L2PcInstance player = winner.getPlayer();
+			if (player == null)
+			{
+				return;
+			}
+			final QuestState st = player.getQuestState(getName());
+			if ((st != null) && st.isStarted())
+			{
+				final int matches = st.getInt("matches") + 1;
+				switch (matches)
+				{
+					case 3:
+						if (!st.hasQuestItems(CERT_3))
+						{
+							st.giveItems(CERT_3, 1);
+						}
+						break;
+					case 5:
+						if (!st.hasQuestItems(CERT_5))
+						{
+							st.giveItems(CERT_5, 1);
+						}
+						break;
+					case 10:
+						if (!st.hasQuestItems(CERT_10))
+						{
+							st.giveItems(CERT_10, 1);
+						}
+						break;
+				}
+				st.set("matches", String.valueOf(matches));
+			}
+		}
+		
+		if (looser != null)
+		{
+			final L2PcInstance player = looser.getPlayer();
+			if (player == null)
+			{
+				return;
+			}
+			final QuestState st = player.getQuestState(getName());
 			if ((st != null) && st.isStarted())
 			{
 				final int matches = st.getInt("matches") + 1;
@@ -205,10 +247,5 @@ public class Q00551_OlympiadStarter extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00551_OlympiadStarter(551, Q00551_OlympiadStarter.class.getSimpleName(), "Olympiad Starter");
 	}
 }

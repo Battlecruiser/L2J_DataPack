@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q10273_GoodDayToFly;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -47,9 +48,9 @@ public class Q10273_GoodDayToFly extends Quest
 	private static final SkillHolder AURA_BIRD_FALCON = new SkillHolder(5982, 1);
 	private static final SkillHolder AURA_BIRD_OWL = new SkillHolder(5983, 1);
 	
-	public Q10273_GoodDayToFly(int questId, String name, String descr)
+	public Q10273_GoodDayToFly()
 	{
-		super(questId, name, descr);
+		super(10273, Q10273_GoodDayToFly.class.getSimpleName(), "Good Day to Fly");
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addKillId(MOBS);
@@ -72,20 +73,20 @@ public class Q10273_GoodDayToFly extends Quest
 				break;
 			case "32557-09.html":
 				st.set("transform", "1");
-				AURA_BIRD_FALCON.getSkill().getEffects(player, player);
+				AURA_BIRD_FALCON.getSkill().applyEffects(player, player);
 				break;
 			case "32557-10.html":
 				st.set("transform", "2");
-				AURA_BIRD_OWL.getSkill().getEffects(player, player);
+				AURA_BIRD_OWL.getSkill().applyEffects(player, player);
 				break;
 			case "32557-13.html":
 				switch (st.getInt("transform"))
 				{
 					case 1:
-						AURA_BIRD_FALCON.getSkill().getEffects(player, player);
+						AURA_BIRD_FALCON.getSkill().applyEffects(player, player);
 						break;
 					case 2:
-						AURA_BIRD_OWL.getSkill().getEffects(player, player);
+						AURA_BIRD_OWL.getSkill().applyEffects(player, player);
 						break;
 				}
 				break;
@@ -164,10 +165,5 @@ public class Q10273_GoodDayToFly extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10273_GoodDayToFly(10273, Q10273_GoodDayToFly.class.getSimpleName(), "Good Day to Fly");
 	}
 }

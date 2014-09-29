@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,7 +25,7 @@ import java.util.List;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 
 /**
@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 public class AuraCorpseMob implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new ArrayList<>();
 		// Go through the L2Character _knownList
@@ -42,7 +42,7 @@ public class AuraCorpseMob implements ITargetTypeHandler
 		int maxTargets = skill.getAffectLimit();
 		for (L2Character obj : objs)
 		{
-			if (obj.isL2Attackable() && obj.isDead())
+			if (obj.isAttackable() && obj.isDead())
 			{
 				if (onlyFirst)
 				{
@@ -52,7 +52,7 @@ public class AuraCorpseMob implements ITargetTypeHandler
 					};
 				}
 				
-				if (targetList.size() >= maxTargets)
+				if ((maxTargets > 0) && (targetList.size() >= maxTargets))
 				{
 					break;
 				}

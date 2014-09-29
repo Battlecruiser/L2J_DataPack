@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,9 @@
  */
 package quests.Q00172_NewHorizons;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -42,9 +42,9 @@ public class Q00172_NewHorizons extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	public Q00172_NewHorizons(int questId, String name, String descr)
+	public Q00172_NewHorizons()
 	{
-		super(questId, name, descr);
+		super(172, Q00172_NewHorizons.class.getSimpleName(), "New Horizons");
 		addStartNpc(ZENYA);
 		addTalkId(ZENYA, RAGARA);
 	}
@@ -86,13 +86,13 @@ public class Q00172_NewHorizons extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ZENYA:
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = (player.getRace() == Race.Kamael) ? (player.getLevel() >= MIN_LEVEL) ? "32140-01.htm" : "32140-02.htm" : "32140-03.htm";
+						htmltext = (player.getRace() == Race.KAMAEL) ? (player.getLevel() >= MIN_LEVEL) ? "32140-01.htm" : "32140-02.htm" : "32140-03.htm";
 						break;
 					case State.STARTED:
 						htmltext = "32140-05.html";
@@ -110,10 +110,5 @@ public class Q00172_NewHorizons extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00172_NewHorizons(172, Q00172_NewHorizons.class.getSimpleName(), "New Horizons");
 	}
 }

@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
 	<!-- Boss Zones -->
-	<zone name="Zaken Boss" id="12000" type="BossZone" shape="NPoly" minZ="-4815" maxZ="-315">
-		<stat name="default_enabled" val="false" />
-		<stat name="InvadeTime" val="1800000" />
-		<node X="50797" Y="213515" />
-		<node X="57617" Y="213510" />
-		<node X="57669" Y="221683" />
-		<node X="50773" Y="221632" />
-	</zone>
-	<zone name="Antharas Boss" id="12001" type="BossZone" shape="NPoly" minZ="-8380" maxZ="-4880">
-		<stat name="InvadeTime" val="1800000" />
-		<node X="173469" Y="110431" />
-		<node X="188081" Y="110284" />
-		<node X="188132" Y="119249" />
-		<node X="173386" Y="119391" />
-	</zone>
-	<zone name="Baium Boss" id="12002" type="BossZone" shape="NPoly" minZ="10061" maxZ="11061">
-		<stat name="InvadeTime" val="1800000" />
-		<node X="111022" Y="16177" />
-		<node X="114510" Y="12623" />
-		<node X="118142" Y="15790" />
-		<node X="114773" Y="19589" />
-	</zone>
 	<zone name="Anakim and Lilith Boss" id="12003" type="BossZone" shape="NPoly" minZ="-5504" maxZ="-5104">
 		<stat name="default_enabled" val="false" />
 		<stat name="InvadeTime" val="1800000" />
@@ -116,19 +94,6 @@
 		<stat name="InvadeTime" val="1800000" />
 		<node X="-18176" Y="-54972" />
 		<node X="-14614" Y="-51620" />
-	</zone>
-	<zone id="12015" name="Freya Boss" type="BossZone" shape="NPoly" minZ="-4000" maxZ="-500"> <!-- Not Verified -->
-		<stat name="oustX" val="115844" />
-		<stat name="oustY" val="-125602" />
-		<stat name="oustZ" val="-3352" />
-		<node X="101744" Y="-130016" />
-		<node X="111376" Y="-130096" />
-		<node X="114416" Y="-126128" />
-		<node X="115246" Y="-125857" />
-		<node X="115209" Y="-125669" />
-		<node X="113920" Y="-125669" />
-		<node X="102400" Y="-121920" />
-		<node X="99456" Y="-126208" />
 	</zone>
 	<!-- Beleth's Chamber -->
 	<zone name="Beleth's Chamber" id="12018" type="BossZone" shape="NPoly" minZ="-10412" maxZ="-5112">

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,32 +18,20 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Block Resurrection effect implementation.
  * @author UnAfraid
  */
-public class BlockResurrection extends L2Effect
+public final class BlockResurrection extends AbstractEffect
 {
-	public BlockResurrection(Env env, EffectTemplate template)
+	public BlockResurrection(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.BLOCK_RESURRECTION;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00241_PossessorOfAPreciousSoul1;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -61,9 +62,9 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 	private static final int CRIMSON_MOSS_CHANCE = 30;
 	private static final int MALRUK_SUCCUBUS_CLAW_CHANCE = 60;
 	
-	public Q00241_PossessorOfAPreciousSoul1(int questId, String name, String descr)
+	public Q00241_PossessorOfAPreciousSoul1()
 	{
-		super(questId, name, descr);
+		super(241, Q00241_PossessorOfAPreciousSoul1.class.getSimpleName(), "Possessor Of A Precious Soul 1");
 		addStartNpc(TALIEN);
 		addTalkId(TALIEN, STEDMIEL, GABRIELLE, GILMORE, KANTABILON, RAHORAKTI, CARADINE, KASSANDRA, VIRGIL, OGMAR);
 		addKillId(BARAHAM, MALRUK_SUCCUBUS_1, MALRUK_SUCCUBUS_TUREN_1, MALRUK_SUCCUBUS_2, MALRUK_SUCCUBUS_TUREN_2, TAIK_ORC_SUPPLY_LEADER);
@@ -198,7 +199,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 	{
 		final L2PcInstance partyMember;
 		final QuestState st;
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case BARAHAM:
 				partyMember = getRandomPartyMember(player, 3);
@@ -272,7 +273,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 		}
 		
 		String htmltext = getNoQuestMsg(player);
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case TALIEN:
 				switch (st.getState())
@@ -443,10 +444,5 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00241_PossessorOfAPreciousSoul1(241, Q00241_PossessorOfAPreciousSoul1.class.getSimpleName(), "Possessor Of A Precious Soul 1");
 	}
 }

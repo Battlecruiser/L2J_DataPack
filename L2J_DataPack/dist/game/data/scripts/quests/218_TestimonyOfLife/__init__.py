@@ -5,7 +5,7 @@
 import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "218_TestimonyOfLife"
 
@@ -43,7 +43,7 @@ TALINS_AMETHYST_ID = 3170
 TALINS_PERIDOT_ID = 3171
 TALINS_SPEAR_ID = 3026
 
-class Quest(JQuest):
+class Quest (JQuest):
 	def __init__(self,id,name,descr):
 		JQuest.__init__(self,id,name,descr)
 		self.questItemIds = [CAMOMILE_CHARM_ID, CARDIENS_LETTER_ID, WATER_OF_LIFE_ID, MOONFLOWER_CHARM_ID, HIERARCHS_LETTER_ID, STARDUST_ID,
@@ -145,7 +145,7 @@ class Quest(JQuest):
 		htmltext = Quest.getNoQuestMsg(player)
 		st = player.getQuestState(qn)
 		if not st: return htmltext
-		npcId = npc.getNpcId()
+		npcId = npc.getId()
 		id = st.getState()
 		if npcId != 30460 and id!=State.STARTED: return htmltext
 		if npcId == 30460:
@@ -307,7 +307,7 @@ class Quest(JQuest):
 		st = player.getQuestState(qn)
 		if not st : return
 		if st.getState() != State.STARTED : return
-		npcId = npc.getNpcId()
+		npcId = npc.getId()
 		if npcId == 20550:
 			if st.hasQuestItems(PUSHKINS_LIST_ID) and st.getQuestItemsCount(PURE_MITHRIL_ORE_ID)<10:
 				if self.getRandom(100)<50:

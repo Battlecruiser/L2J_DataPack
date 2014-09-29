@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,32 +19,47 @@
 package handlers.targethandlers;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 
 /**
+ * Aura target handler.
  * @author UnAfraid
  */
 public class Aura implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
+		final List<L2Character> targetList = new ArrayList<>();
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
-		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
-		for (L2Character obj : objs)
+		for (L2Character obj : activeChar.getKnownList().getKnownCharactersInRadius(skill.getAffectRange()))
 		{
-			if (obj.isL2Attackable() || obj.isPlayable())
+			if (obj.isDoor() || obj.isAttackable() || obj.isPlayable())
 			{
-				if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+				// Stealth door targeting.
+				if (obj.isDoor())
+				{
+					final L2DoorInstance door = (L2DoorInstance) obj;
+					if (!door.getTemplate().isStealth())
+					{
+						continue;
+					}
+				}
+				
+				if (!Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+				{
+					continue;
+				}
+				
+				if (activeChar.isPlayable() && obj.isAttackable() && !skill.isBad())
 				{
 					continue;
 				}

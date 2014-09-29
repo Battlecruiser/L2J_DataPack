@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,10 @@
  */
 package quests.Q00169_OffspringOfNightmares;
 
+import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -44,9 +45,9 @@ public class Q00169_OffspringOfNightmares extends Quest
 	// Misc
 	private static final int MIN_LVL = 15;
 	
-	private Q00169_OffspringOfNightmares(int questId, String name, String descr)
+	public Q00169_OffspringOfNightmares()
 	{
-		super(questId, name, descr);
+		super(169, Q00169_OffspringOfNightmares.class.getSimpleName(), "Offspring of Nightmares");
 		addStartNpc(VLASTY);
 		addTalkId(VLASTY);
 		addKillId(LESSER_DARK_HORROR, DARK_HORROR);
@@ -117,7 +118,7 @@ public class Q00169_OffspringOfNightmares extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() == Race.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30145-02.htm" : "30145-01.htm" : "30145-00.htm";
+					htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30145-02.htm" : "30145-01.htm" : "30145-00.htm";
 					break;
 				}
 				case State.STARTED:
@@ -144,10 +145,5 @@ public class Q00169_OffspringOfNightmares extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00169_OffspringOfNightmares(169, Q00169_OffspringOfNightmares.class.getSimpleName(), "Offspring of Nightmares");
 	}
 }

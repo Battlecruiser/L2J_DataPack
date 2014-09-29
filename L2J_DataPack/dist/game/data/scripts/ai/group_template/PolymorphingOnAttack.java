@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -82,7 +82,7 @@ public class PolymorphingOnAttack extends AbstractNpcAI
 	private PolymorphingOnAttack()
 	{
 		super(PolymorphingOnAttack.class.getSimpleName(), "ai/group_template");
-		registerMobs(MOBSPAWNS.keySet(), QuestEventType.ON_ATTACK);
+		addAttackId(MOBSPAWNS.keySet());
 	}
 	
 	@Override
@@ -90,7 +90,7 @@ public class PolymorphingOnAttack extends AbstractNpcAI
 	{
 		if (npc.isVisible() && !npc.isDead())
 		{
-			final List<Integer> tmp = MOBSPAWNS.get(npc.getNpcId());
+			final List<Integer> tmp = MOBSPAWNS.get(npc.getId());
 			if (tmp != null)
 			{
 				if ((npc.getCurrentHp() <= ((npc.getMaxHp() * tmp.get(1)) / 100.0)) && (getRandom(100) < tmp.get(2)))

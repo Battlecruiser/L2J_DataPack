@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,46 +18,43 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
- * Change Face effect.
+ * Change Face effect implementation.
  * @author Zoey76
  */
-public class ChangeFace extends L2Effect
+public final class ChangeFace extends AbstractEffect
 {
-	public ChangeFace(Env env, EffectTemplate template)
+	private final int _value;
+	
+	public ChangeFace(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_value = params.getInt("value", 0);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isPlayer() || getEffected().isAlikeDead())
-		{
-			return false;
-		}
-		
-		final L2PcInstance player = getEffector().getActingPlayer();
-		player.getAppearance().setFace((int) calc());
-		player.broadcastUserInfo();
 		return true;
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public void onStart(BuffInfo info)
 	{
-		return false;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.BUFF;
+		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead())
+		{
+			return;
+		}
+		
+		final L2PcInstance player = info.getEffector().getActingPlayer();
+		player.getAppearance().setFace(_value);
+		player.broadcastUserInfo();
 	}
 }

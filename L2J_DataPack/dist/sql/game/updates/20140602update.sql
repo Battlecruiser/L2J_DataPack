@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00295_DreamingOfTheSkies' WHERE name='295_DreamsOfFlight';

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,61 +18,45 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
-public class CpHealOverTime extends L2Effect
+/**
+ * Cp Heal Over Time effect implementation.
+ */
+public final class CpHealOverTime extends AbstractEffect
 {
-	public CpHealOverTime(Env env, EffectTemplate template)
-	{
-		super(env, template);
-	}
+	private final double _power;
 	
-	// Special constructor to steal this effect
-	public CpHealOverTime(Env env, L2Effect effect)
+	public CpHealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, effect);
-	}
-	
-	@Override
-	protected boolean effectCanBeStolen()
-	{
-		return true;
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onActionTime(BuffInfo info)
 	{
-		return L2EffectType.CPHEAL_OVER_TIME;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		double cp = getEffected().getCurrentCp();
-		double maxcp = getEffected().getMaxRecoverableCp();
+		double cp = info.getEffected().getCurrentCp();
+		double maxcp = info.getEffected().getMaxRecoverableCp();
 		
 		// Not needed to set the CP and send update packet if player is already at max CP
 		if (cp >= maxcp)
 		{
-			return true;
+			return false;
 		}
 		
-		cp += calc();
+		cp += _power * getTicksMultiplier();
 		cp = Math.min(cp, maxcp);
-		
-		getEffected().setCurrentCp(cp);
-		StatusUpdate sump = new StatusUpdate(getEffected());
-		sump.addAttribute(StatusUpdate.CUR_CP, (int) cp);
-		getEffected().sendPacket(sump);
+		info.getEffected().setCurrentCp(cp);
 		return true;
 	}
 }

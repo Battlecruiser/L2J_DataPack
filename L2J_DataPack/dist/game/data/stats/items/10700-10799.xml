@@ -2,16 +2,16 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10700" type="Weapon" name="Eclair Bijou {PvP} - Haste">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2157" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
@@ -23,7 +23,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3650-1;3552-1;3068-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="228" />
@@ -37,16 +37,16 @@
 	</item>
 	<item id="10701" type="Weapon" name="Eclair Bijou {PvP} - Health">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2157" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
@@ -58,7 +58,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3650-1;3552-1;3013-5" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="228" />
@@ -72,16 +72,16 @@
 	</item>
 	<item id="10702" type="Weapon" name="Eclair Bijou {PvP} - Critical Poison">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2157" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
@@ -94,7 +94,7 @@
 		<set name="oncrit_skill" val="3061-3" />
 		<set name="item_skill" val="3650-1;3552-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="228" />
@@ -108,16 +108,16 @@
 	</item>
 	<item id="10703" type="Weapon" name="Durendal {PvP} - Focus">
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2157" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1820" />
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
@@ -128,7 +128,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3653-1;3552-1;3050-2" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="272" />
@@ -142,16 +142,16 @@
 	</item>
 	<item id="10704" type="Weapon" name="Durendal {PvP} - Haste">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2157" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1820" />
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
@@ -162,7 +162,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3653-1;3552-1;3068-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="272" />
@@ -176,16 +176,16 @@
 	</item>
 	<item id="10705" type="Weapon" name="Durendal {PvP} - Health">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2157" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1820" />
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
@@ -196,7 +196,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3653-1;3552-1;3013-5" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="272" />
@@ -210,16 +210,16 @@
 	</item>
 	<item id="10706" type="Weapon" name="Screaming Vengeance {PvP} - Cheap Shot">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2157" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1640" />
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
@@ -231,7 +231,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-3;3360-1;3655-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="318" />
@@ -245,16 +245,16 @@
 	</item>
 	<item id="10707" type="Weapon" name="Screaming Vengeance {PvP} - Focus">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2157" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1640" />
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
@@ -266,7 +266,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3655-1;3552-1;3050-2" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="318" />
@@ -280,16 +280,16 @@
 	</item>
 	<item id="10708" type="Weapon" name="Screaming Vengeance {PvP} - Quick Recovery">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2157" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1640" />
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
@@ -301,7 +301,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3655-1;3552-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="318" />
@@ -315,16 +315,16 @@
 	</item>
 	<item id="10709" type="Weapon" name="Tallum Blade*Damascus {PvP}">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2157" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1890" />
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
@@ -346,16 +346,16 @@
 	</item>
 	<item id="10710" type="Weapon" name="Forgotten Blade {PvP} - Haste">
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -376,16 +376,16 @@
 	</item>
 	<item id="10711" type="Weapon" name="Forgotten Blade {PvP} - Health">
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -406,16 +406,16 @@
 	</item>
 	<item id="10712" type="Weapon" name="Forgotten Blade {PvP} - Focus">
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -436,16 +436,16 @@
 	</item>
 	<item id="10713" type="Weapon" name="Heavens Divider {PvP} - Haste">
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1380" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -466,16 +466,16 @@
 	</item>
 	<item id="10714" type="Weapon" name="Heavens Divider {PvP} - Health">
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1380" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -496,16 +496,16 @@
 	</item>
 	<item id="10715" type="Weapon" name="Heavens Divider {PvP} - Focus">
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1380" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -526,16 +526,16 @@
 	</item>
 	<item id="10716" type="Weapon" name="Basalt Battlehammer {PvP} - HP Drain">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1570" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -557,16 +557,16 @@
 	</item>
 	<item id="10717" type="Weapon" name="Basalt Battlehammer {PvP} - Health">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1570" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -588,16 +588,16 @@
 	</item>
 	<item id="10718" type="Weapon" name="Basalt Battlehammer {PvP} - HP Regeneration">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1570" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -619,16 +619,16 @@
 	</item>
 	<item id="10719" type="Weapon" name="Dragon Hunter Axe {PvP} - HP Regeneration">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1820" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -650,16 +650,16 @@
 	</item>
 	<item id="10720" type="Weapon" name="Dragon Hunter Axe {PvP} - Health">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1820" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -681,16 +681,16 @@
 	</item>
 	<item id="10721" type="Weapon" name="Dragon Hunter Axe {PvP} - HP Drain">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1820" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -712,16 +712,16 @@
 	</item>
 	<item id="10722" type="Weapon" name="Angel Slayer {PvP} - Critical Damage">
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="950" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -743,16 +743,16 @@
 	</item>
 	<item id="10723" type="Weapon" name="Angel Slayer {PvP} - HP Drain">
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="950" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -774,16 +774,16 @@
 	</item>
 	<item id="10724" type="Weapon" name="Angel Slayer {PvP} - Haste">
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="950" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -805,16 +805,16 @@
 	</item>
 	<item id="10725" type="Weapon" name="Saint Spear {PvP} - Health">
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1800" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -836,16 +836,16 @@
 	</item>
 	<item id="10726" type="Weapon" name="Saint Spear {PvP} - Guidance">
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1800" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -867,16 +867,16 @@
 	</item>
 	<item id="10727" type="Weapon" name="Saint Spear {PvP} - Haste">
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1800" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -898,16 +898,16 @@
 	</item>
 	<item id="10728" type="Weapon" name="Demon Splinter {PvP} - Focus">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1350" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -929,16 +929,16 @@
 	</item>
 	<item id="10729" type="Weapon" name="Demon Splinter {PvP} - Health">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1350" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -960,16 +960,16 @@
 	</item>
 	<item id="10730" type="Weapon" name="Demon Splinter {PvP} - Critical Stun">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1350" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -992,16 +992,16 @@
 	</item>
 	<item id="10731" type="Weapon" name="Arcana Mace {PvP} - Acumen">
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1024,16 +1024,16 @@
 	</item>
 	<item id="10732" type="Weapon" name="Arcana Mace {PvP} - MP Regeneration">
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1056,16 +1056,16 @@
 	</item>
 	<item id="10733" type="Weapon" name="Arcana Mace {PvP} - Mana Up">
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1088,16 +1088,16 @@
 	</item>
 	<item id="10734" type="Weapon" name="Imperial Staff {PvP} - Empower">
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="910" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1120,16 +1120,16 @@
 	</item>
 	<item id="10735" type="Weapon" name="Imperial Staff {PvP} - MP Regeneration">
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="910" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1152,16 +1152,16 @@
 	</item>
 	<item id="10736" type="Weapon" name="Imperial Staff {PvP} - Magic Hold">
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="910" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1186,16 +1186,16 @@
 	</item>
 	<item id="10737" type="Weapon" name="Draconic Bow {PvP} - Cheap Shot">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1650" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1220,16 +1220,16 @@
 	</item>
 	<item id="10738" type="Weapon" name="Draconic Bow {PvP} - Focus">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1650" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1253,16 +1253,16 @@
 	</item>
 	<item id="10739" type="Weapon" name="Draconic Bow {PvP} - Critical Slow">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1650" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1287,16 +1287,16 @@
 	</item>
 	<item id="10740" type="Weapon" name="Laevateinn {PvP} - Haste">
 		<set name="icon" val="icon.weapon_leavatein_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1308,7 +1308,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3650-1;3552-1;3564-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="255" />
@@ -1322,16 +1322,16 @@
 	</item>
 	<item id="10741" type="Weapon" name="Laevateinn {PvP} - Health">
 		<set name="icon" val="icon.weapon_leavatein_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1343,7 +1343,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3650-1;3552-1;3013-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="255" />
@@ -1357,16 +1357,16 @@
 	</item>
 	<item id="10742" type="Weapon" name="Laevateinn {PvP} - Focus">
 		<set name="icon" val="icon.weapon_leavatein_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1378,7 +1378,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3650-1;3552-1;3566-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="255" />
@@ -1392,16 +1392,16 @@
 	</item>
 	<item id="10743" type="Weapon" name="Gram {PvP} - Haste">
 		<set name="icon" val="icon.weapon_gram_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1412,7 +1412,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3653-1;3552-1;3564-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />
@@ -1426,16 +1426,16 @@
 	</item>
 	<item id="10744" type="Weapon" name="Gram {PvP} - Health">
 		<set name="icon" val="icon.weapon_gram_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1446,7 +1446,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3653-1;3552-1;3013-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />
@@ -1460,16 +1460,16 @@
 	</item>
 	<item id="10745" type="Weapon" name="Gram {PvP} - Focus">
 		<set name="icon" val="icon.weapon_gram_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1480,7 +1480,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3653-1;3552-1;3566-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />
@@ -1494,16 +1494,16 @@
 	</item>
 	<item id="10746" type="Weapon" name="Sarunga {PvP} - Cheap Shot">
 		<set name="icon" val="icon.weapon_sarnga_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1600" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1515,7 +1515,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-3;3360-1;3655-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="356" />
@@ -1529,16 +1529,16 @@
 	</item>
 	<item id="10747" type="Weapon" name="Sarunga {PvP} - Focus">
 		<set name="icon" val="icon.weapon_sarnga_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1600" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1550,7 +1550,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3655-1;3552-1;3567-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="356" />
@@ -1564,16 +1564,16 @@
 	</item>
 	<item id="10748" type="Weapon" name="Sarunga {PvP} - Critical Slow">
 		<set name="icon" val="icon.weapon_sarnga_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1600" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1586,7 +1586,7 @@
 		<set name="oncrit_skill" val="3574-1" />
 		<set name="item_skill" val="3655-1;3552-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="356" />
@@ -1600,16 +1600,16 @@
 	</item>
 	<item id="10749" type="Weapon" name="Tallum Blade*Dark Legion's Edge {PvP}">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2052" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="adamantaite" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="2080" />
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
@@ -1631,16 +1631,16 @@
 	</item>
 	<item id="10750" type="Weapon" name="Dynasty Sword {PvP} - Focus">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1661,16 +1661,16 @@
 	</item>
 	<item id="10751" type="Weapon" name="Dynasty Sword {PvP} - Health">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1691,16 +1691,16 @@
 	</item>
 	<item id="10752" type="Weapon" name="Dynasty Sword {PvP} - Light">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1721,16 +1721,16 @@
 	</item>
 	<item id="10753" type="Weapon" name="Dynasty Blade {PvP} - Focus">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1751,16 +1751,16 @@
 	</item>
 	<item id="10754" type="Weapon" name="Dynasty Blade {PvP} - Health">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1781,16 +1781,16 @@
 	</item>
 	<item id="10755" type="Weapon" name="Dynasty Blade {PvP} - Light">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1811,16 +1811,16 @@
 	</item>
 	<item id="10756" type="Weapon" name="Dynasty Cudgel {PvP} - Anger">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1842,16 +1842,16 @@
 	</item>
 	<item id="10757" type="Weapon" name="Dynasty Cudgel {PvP} - Health">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1873,16 +1873,16 @@
 	</item>
 	<item id="10758" type="Weapon" name="Dynasty Cudgel {PvP} - Rsk. Focus">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1904,16 +1904,16 @@
 	</item>
 	<item id="10759" type="Weapon" name="Dynasty Crusher {PvP} - Anger">
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1935,16 +1935,16 @@
 	</item>
 	<item id="10760" type="Weapon" name="Dynasty Crusher {PvP} - Health">
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1966,16 +1966,16 @@
 	</item>
 	<item id="10761" type="Weapon" name="Dynasty Crusher {PvP} - Rsk. Focus">
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1997,16 +1997,16 @@
 	</item>
 	<item id="10762" type="Weapon" name="Dynasty Knife {PvP} - Focus">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2028,16 +2028,16 @@
 	</item>
 	<item id="10763" type="Weapon" name="Dynasty Knife {PvP} - Evasion">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2059,16 +2059,16 @@
 	</item>
 	<item id="10764" type="Weapon" name="Dynasty Knife {PvP} - Critical Damage">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2090,16 +2090,16 @@
 	</item>
 	<item id="10765" type="Weapon" name="Dynasty Halberd {PvP} - Anger">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="bronze" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2121,16 +2121,16 @@
 	</item>
 	<item id="10766" type="Weapon" name="Dynasty Halberd {PvP} - Critical Stun">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="bronze" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2154,16 +2154,16 @@
 	</item>
 	<item id="10767" type="Weapon" name="Dynasty Halberd {PvP} - Light">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="bronze" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2185,16 +2185,16 @@
 	</item>
 	<item id="10768" type="Weapon" name="Dynasty Bagh-Nakh {PvP} - Rsk. Evasion">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2216,16 +2216,16 @@
 	</item>
 	<item id="10769" type="Weapon" name="Dynasty Bagh-Nakh {PvP} - Focus">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2247,16 +2247,16 @@
 	</item>
 	<item id="10770" type="Weapon" name="Dynasty Bagh-Nakh {PvP} - Haste">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2278,16 +2278,16 @@
 	</item>
 	<item id="10771" type="Weapon" name="Dynasty Phantom {PvP} - Acumen">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2309,16 +2309,16 @@
 	</item>
 	<item id="10772" type="Weapon" name="Dynasty Phantom {PvP} - Mana Up">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2340,16 +2340,16 @@
 	</item>
 	<item id="10773" type="Weapon" name="Dynasty Phantom {PvP} - Conversion">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2371,16 +2371,16 @@
 	</item>
 	<item id="10774" type="Weapon" name="Dynasty Mace {PvP} - Mana Up">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2403,16 +2403,16 @@
 	</item>
 	<item id="10775" type="Weapon" name="Dynasty Mace {PvP} - Conversion">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2435,16 +2435,16 @@
 	</item>
 	<item id="10776" type="Weapon" name="Dynasty Mace {PvP} - Acumen">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2467,16 +2467,16 @@
 	</item>
 	<item id="10777" type="Weapon" name="Dynasty Staff {PvP} - Mana Up">
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2499,16 +2499,16 @@
 	</item>
 	<item id="10778" type="Weapon" name="Dynasty Staff {PvP} - Conversion">
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2531,16 +2531,16 @@
 	</item>
 	<item id="10779" type="Weapon" name="Dynasty Staff {PvP} - Acumen">
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2563,16 +2563,16 @@
 	</item>
 	<item id="10780" type="Weapon" name="Dynasty Bow {PvP} - Cheap Shot">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2596,16 +2596,16 @@
 	</item>
 	<item id="10781" type="Weapon" name="Dynasty Bow {PvP} - Guidance">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2629,16 +2629,16 @@
 	</item>
 	<item id="10782" type="Weapon" name="Dynasty Bow {PvP} - Focus">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2662,16 +2662,16 @@
 	</item>
 	<item id="10783" type="Weapon" name="Dynasty Rapier {PvP} - Focus">
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2683,7 +2683,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3650-1;3552-1;3566-2" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="302" />
@@ -2697,16 +2697,16 @@
 	</item>
 	<item id="10784" type="Weapon" name="Dynasty Rapier {PvP} - Health">
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2718,7 +2718,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3650-1;3552-1;3013-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="302" />
@@ -2732,16 +2732,16 @@
 	</item>
 	<item id="10785" type="Weapon" name="Dynasty Rapier {PvP} - Light">
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2753,7 +2753,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3650-1;3552-3;3498-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="302" />
@@ -2767,16 +2767,16 @@
 	</item>
 	<item id="10786" type="Weapon" name="Dynasty Ancient Sword {PvP} - Focus">
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2787,7 +2787,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3653-1;3552-1;3566-2" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="361" />
@@ -2801,16 +2801,16 @@
 	</item>
 	<item id="10787" type="Weapon" name="Dynasty Ancient Sword {PvP} - Health">
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2821,7 +2821,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3653-1;3552-1;3013-3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="361" />
@@ -2835,16 +2835,16 @@
 	</item>
 	<item id="10788" type="Weapon" name="Dynasty Ancient Sword {PvP} - Light">
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2855,7 +2855,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-3;3498-1;3653-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="361" />
@@ -2869,16 +2869,16 @@
 	</item>
 	<item id="10789" type="Weapon" name="Dynasty Crossbow {PvP} - Cheap Shot">
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2890,7 +2890,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-3;3360-1;3655-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="401" />
@@ -2904,16 +2904,16 @@
 	</item>
 	<item id="10790" type="Weapon" name="Dynasty Crossbow {PvP} - Guidance">
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2925,7 +2925,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3655-1;3552-1;3573-2" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="401" />
@@ -2939,16 +2939,16 @@
 	</item>
 	<item id="10791" type="Weapon" name="Dynasty Crossbow {PvP} - Focus">
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -2960,7 +2960,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3655-1;3552-1;3567-2" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="401" />
@@ -2974,16 +2974,16 @@
 	</item>
 	<item id="10792" type="Weapon" name="Dynasty Dual Sword {PvP}">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -3005,13 +3005,13 @@
 	</item>
 	<item id="10793" type="Armor" name="Armor of Nightmare {PvP}">
 		<set name="icon" val="icon.armor_t80_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="704" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="blood_steel" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="9580" />
 		<set name="price" val="8804000" />
 		<set name="enchant_enabled" val="1" />
@@ -3019,7 +3019,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="293" />
@@ -3028,13 +3028,13 @@
 	</item>
 	<item id="10794" type="Armor" name="Majestic Plate Armor {PvP}">
 		<set name="icon" val="icon.armor_t83_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="704" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="9200" />
 		<set name="price" val="8804000" />
 		<set name="enchant_enabled" val="1" />
@@ -3042,7 +3042,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="293" />
@@ -3051,13 +3051,13 @@
 	</item>
 	<item id="10795" type="Armor" name="Leather Armor of Nightmare {PvP}">
 		<set name="icon" val="icon.armor_t81_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="528" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="5300" />
 		<set name="price" val="6603000" />
 		<set name="enchant_enabled" val="1" />
@@ -3071,13 +3071,13 @@
 	</item>
 	<item id="10796" type="Armor" name="Majestic Leather Armor {PvP}">
 		<set name="icon" val="icon.armor_t84_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="528" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="5350" />
 		<set name="price" val="6603000" />
 		<set name="enchant_enabled" val="1" />
@@ -3091,13 +3091,13 @@
 	</item>
 	<item id="10797" type="Armor" name="Robe of Nightmare {PvP}">
 		<set name="icon" val="icon.armor_t82_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="528" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="2300" />
 		<set name="price" val="6603000" />
 		<set name="enchant_enabled" val="1" />
@@ -3105,7 +3105,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="147" />
@@ -3115,13 +3115,13 @@
 	</item>
 	<item id="10798" type="Armor" name="Majestic Robe {PvP}">
 		<set name="icon" val="icon.armor_t85_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="528" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="2330" />
 		<set name="price" val="6603000" />
 		<set name="enchant_enabled" val="1" />
@@ -3136,13 +3136,13 @@
 	</item>
 	<item id="10799" type="Armor" name="Imperial Crusader Breastplate {PvP}">
 		<set name="icon" val="icon.armor_t88_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="613" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7620" />
 		<set name="price" val="12781000" />
 		<set name="enchant_enabled" val="1" />
@@ -3150,7 +3150,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="205" />

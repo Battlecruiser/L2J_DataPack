@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,13 +19,15 @@
 package quests.TerritoryWarScripts;
 
 import java.util.Calendar;
-import java.util.StringTokenizer;
+import java.util.HashMap;
+import java.util.Map;
 
 import quests.Q00147_PathtoBecominganEliteMercenary.Q00147_PathtoBecominganEliteMercenary;
 import quests.Q00148_PathtoBecominganExaltedMercenary.Q00148_PathtoBecominganExaltedMercenary;
 import quests.Q00176_StepsForHonor.Q00176_StepsForHonor;
 
-import com.l2jserver.gameserver.SevenSigns;
+import com.l2jserver.gameserver.instancemanager.CastleManager;
+import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager.TerritoryNPCSpawn;
 import com.l2jserver.gameserver.model.L2Object;
@@ -37,11 +39,10 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.L2FastMap;
 
 /**
  * Territory War quests superclass.
@@ -49,11 +50,9 @@ import com.l2jserver.util.L2FastMap;
  */
 public class TerritoryWarSuperClass extends Quest
 {
-	private static L2FastMap<Integer, TerritoryWarSuperClass> _forTheSakeScripts = new L2FastMap<>();
-	private static L2FastMap<Integer, TerritoryWarSuperClass> _protectTheScripts = new L2FastMap<>();
-	private static L2FastMap<Integer, TerritoryWarSuperClass> _killTheScripts = new L2FastMap<>();
-	
-	public static String qn = "TerritoryWarSuperClass";
+	private static Map<Integer, TerritoryWarSuperClass> _forTheSakeScripts = new HashMap<>();
+	private static Map<Integer, TerritoryWarSuperClass> _protectTheScripts = new HashMap<>();
+	private static Map<Integer, TerritoryWarSuperClass> _killTheScripts = new HashMap<>();
 	
 	// "For the Sake of the Territory ..." quests variables
 	public int CATAPULT_ID;
@@ -78,45 +77,34 @@ public class TerritoryWarSuperClass extends Quest
 			addSkillSeeId(36590);
 			
 			// Calculate next TW date
-			Calendar startTWDate = Calendar.getInstance();
-			if (loadGlobalQuestVar("nextTWStartDate").equalsIgnoreCase(""))
+			final Calendar cal = Calendar.getInstance();
+			
+			final long nextSiegeDate = GlobalVariablesManager.getInstance().getLong(TerritoryWarManager.GLOBAL_VARIABLE, 0);
+			if (nextSiegeDate > System.currentTimeMillis())
 			{
-				startTWDate.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-				startTWDate.set(Calendar.HOUR_OF_DAY, 20);
-				startTWDate.set(Calendar.MINUTE, 0);
-				startTWDate.set(Calendar.SECOND, 0);
-				if (startTWDate.getTimeInMillis() < System.currentTimeMillis())
-				{
-					startTWDate.add(Calendar.DAY_OF_MONTH, 7);
-				}
-				if (!SevenSigns.getInstance().isDateInSealValidPeriod(startTWDate))
-				{
-					startTWDate.add(Calendar.DAY_OF_MONTH, 7);
-				}
-				saveGlobalQuestVar("nextTWStartDate", String.valueOf(startTWDate.getTimeInMillis()));
+				cal.setTimeInMillis(nextSiegeDate);
 			}
 			else
 			{
-				startTWDate.setTimeInMillis(Long.parseLong(loadGlobalQuestVar("nextTWStartDate")));
-				if ((startTWDate.getTimeInMillis() < System.currentTimeMillis()) && SevenSigns.getInstance().isSealValidationPeriod() && (SevenSigns.getInstance().getMilliToPeriodChange() > 172800000))
+				// Let's check if territory war date was in the past
+				if (cal.before(Calendar.getInstance()))
 				{
-					startTWDate.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-					startTWDate.set(Calendar.HOUR_OF_DAY, 20);
-					startTWDate.set(Calendar.MINUTE, 0);
-					startTWDate.set(Calendar.SECOND, 0);
-					if (startTWDate.getTimeInMillis() < System.currentTimeMillis())
-					{
-						startTWDate.add(Calendar.DAY_OF_MONTH, 7);
-					}
-					if (!SevenSigns.getInstance().isDateInSealValidPeriod(startTWDate))
-					{
-						startTWDate.add(Calendar.DAY_OF_MONTH, 7);
-					}
-					saveGlobalQuestVar("nextTWStartDate", String.valueOf(startTWDate.getTimeInMillis()));
+					cal.setTimeInMillis(System.currentTimeMillis());
 				}
+				
+				boolean hasOwnedCastle = CastleManager.getInstance().hasOwnedCastle();
+				cal.set(Calendar.DAY_OF_WEEK, hasOwnedCastle ? Calendar.SATURDAY : Calendar.SUNDAY);
+				cal.set(Calendar.HOUR_OF_DAY, hasOwnedCastle ? 20 : 22);
+				cal.set(Calendar.MINUTE, 0);
+				cal.set(Calendar.SECOND, 0);
+				if (cal.before(Calendar.getInstance()))
+				{
+					cal.add(Calendar.WEEK_OF_YEAR, 2);
+				}
+				GlobalVariablesManager.getInstance().set(TerritoryWarManager.GLOBAL_VARIABLE, cal.getTimeInMillis());
 			}
-			TerritoryWarManager.getInstance().setTWStartTimeInMillis(startTWDate.getTimeInMillis());
-			_log.info("Next TerritoryWarTime: " + startTWDate.getTime());
+			TerritoryWarManager.getInstance().setTWStartTimeInMillis(cal.getTimeInMillis());
+			_log.info(getClass().getSimpleName() + ": Siege date: " + cal.getTime());
 		}
 	}
 	
@@ -199,52 +187,14 @@ public class TerritoryWarSuperClass extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if ((npc != null) || (player != null))
-		{
-			return null;
-		}
-		StringTokenizer st = new StringTokenizer(event, " ");
-		event = st.nextToken(); // Get actual command
-		if (event.equalsIgnoreCase("setNextTWDate"))
-		{
-			Calendar startTWDate = Calendar.getInstance();
-			startTWDate.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-			startTWDate.set(Calendar.HOUR_OF_DAY, 20);
-			startTWDate.set(Calendar.MINUTE, 0);
-			startTWDate.set(Calendar.SECOND, 0);
-			if (startTWDate.getTimeInMillis() < System.currentTimeMillis())
-			{
-				startTWDate.add(Calendar.DAY_OF_MONTH, 7);
-			}
-			if (!SevenSigns.getInstance().isDateInSealValidPeriod(startTWDate))
-			{
-				startTWDate.add(Calendar.DAY_OF_MONTH, 7);
-			}
-			saveGlobalQuestVar("nextTWStartDate", String.valueOf(startTWDate.getTimeInMillis()));
-			TerritoryWarManager.getInstance().setTWStartTimeInMillis(startTWDate.getTimeInMillis());
-			_log.info("Next TerritoryWarTime: " + startTWDate.getTime());
-		}
-		else if (event.equalsIgnoreCase("setTWDate") && st.hasMoreTokens())
-		{
-			Calendar startTWDate = Calendar.getInstance();
-			startTWDate.setTimeInMillis(Long.parseLong(st.nextToken()));
-			saveGlobalQuestVar("nextTWStartDate", String.valueOf(startTWDate.getTimeInMillis()));
-			TerritoryWarManager.getInstance().setTWStartTimeInMillis(startTWDate.getTimeInMillis());
-		}
-		return null;
-	}
-	
-	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
-		if ((npc.getCurrentHp() == npc.getMaxHp()) && Util.contains(NPC_IDS, npc.getNpcId()))
+		if ((npc.getCurrentHp() == npc.getMaxHp()) && Util.contains(NPC_IDS, npc.getId()))
 		{
-			int territoryId = getTerritoryIdForThisNPCId(npc.getNpcId());
+			int territoryId = getTerritoryIdForThisNPCId(npc.getId());
 			if ((territoryId >= 81) && (territoryId <= 89))
 			{
-				for (L2PcInstance pl : L2World.getInstance().getAllPlayersArray())
+				for (L2PcInstance pl : L2World.getInstance().getPlayers())
 				{
 					if (pl.getSiegeSide() == territoryId)
 					{
@@ -255,8 +205,8 @@ public class TerritoryWarSuperClass extends Quest
 						}
 						if (!st.isStarted())
 						{
-							st.setCond(1);
 							st.setState(State.STARTED, false);
+							st.setCond(1);
 						}
 					}
 				}
@@ -344,14 +294,14 @@ public class TerritoryWarSuperClass extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		TerritoryWarManager manager = TerritoryWarManager.getInstance();
-		if (npc.getNpcId() == CATAPULT_ID)
+		if (npc.getId() == CATAPULT_ID)
 		{
 			manager.territoryCatapultDestroyed(TERRITORY_ID - 80);
 			manager.giveTWPoint(killer, TERRITORY_ID, 4);
 			manager.announceToParticipants(new ExShowScreenMessage(npcString[0], 2, 10000), 135000, 13500);
 			handleBecomeMercenaryQuest(killer, true);
 		}
-		else if (Util.contains(LEADER_IDS, npc.getNpcId()))
+		else if (Util.contains(LEADER_IDS, npc.getId()))
 		{
 			manager.giveTWPoint(killer, TERRITORY_ID, 3);
 		}
@@ -364,7 +314,7 @@ public class TerritoryWarSuperClass extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (Util.contains(targets, npc))
 		{
@@ -392,7 +342,7 @@ public class TerritoryWarSuperClass extends Quest
 				{
 					for (TerritoryNPCSpawn wardSpawn : TerritoryWarManager.getInstance().getTerritory(ward.getOwnerCastleId()).getOwnedWard())
 					{
-						if (wardSpawn.getNpcId() == ward.getTerritoryId())
+						if (wardSpawn.getId() == ward.getTerritoryId())
 						{
 							wardSpawn.setNPC(wardSpawn.getNpc().getSpawn().doSpawn());
 							ward.unSpawnMe();
@@ -431,7 +381,7 @@ public class TerritoryWarSuperClass extends Quest
 	{
 		super.setOnEnterWorld(val);
 		
-		for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
+		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{
 			if (player.getSiegeSide() > 0)
 			{
@@ -467,14 +417,12 @@ public class TerritoryWarSuperClass extends Quest
 				}
 				else
 				{
-					st.setState(State.COMPLETED, false);
 					st.exitQuest(false);
 					for (Quest q : _protectTheScripts.values())
 					{
 						st = player.getQuestState(q.getName());
 						if (st != null)
 						{
-							st.setState(State.COMPLETED, false);
 							st.exitQuest(false);
 						}
 					}
@@ -506,48 +454,26 @@ public class TerritoryWarSuperClass extends Quest
 		
 		if ((st != null) && st.isStarted())
 		{
+			final int cond = st.getCond();
 			if (catapult)
 			{
-				if (st.isCond(1) || st.isCond(2))
+				if ((cond == 1) || (cond == 2))
 				{
-					int count = st.getInt("catapult");
-					count++;
+					final int count = st.getInt("catapult") + 1;
 					st.set("catapult", String.valueOf(count));
 					if (count >= catapultCount)
 					{
-						if (st.isCond(1))
-						{
-							st.setCond(3);
-						}
-						else
-						{
-							st.setCond(4);
-						}
+						st.setCond((cond == 1) ? 3 : 4);
 					}
 				}
 			}
-			else
+			else if ((cond == 1) || (cond == 3))
 			{
-				if (st.isCond(1) || st.isCond(3))
+				final int kills = st.getInt("kills") + 1;
+				st.set("kills", Integer.toString(kills));
+				if (kills >= enemyCount)
 				{
-					// Get
-					int _kills = st.getInt("kills");
-					// Increase
-					_kills++;
-					// Save
-					st.set("kills", String.valueOf(_kills));
-					// Check
-					if (_kills >= enemyCount)
-					{
-						if (st.isCond(1))
-						{
-							st.setCond(2);
-						}
-						else
-						{
-							st.setCond(4);
-						}
-					}
+					st.setCond((cond == 1) ? 2 : 4);
 				}
 			}
 		}
@@ -555,22 +481,14 @@ public class TerritoryWarSuperClass extends Quest
 	
 	private static void handleStepsForHonor(L2PcInstance player)
 	{
-		int kills = 0;
-		int cond = 0;
-		// Additional Handle for Quest
 		final QuestState _sfh = player.getQuestState(Q00176_StepsForHonor.class.getSimpleName());
 		if ((_sfh != null) && _sfh.isStarted())
 		{
-			cond = _sfh.getCond();
+			final int cond = _sfh.getCond();
 			if ((cond == 1) || (cond == 3) || (cond == 5) || (cond == 7))
 			{
-				// Get kills
-				kills = _sfh.getInt("kills");
-				// Increase
-				kills++;
-				// Save
-				_sfh.set("kills", String.valueOf(kills));
-				// Check
+				final int kills = _sfh.getInt("kills") + 1;
+				_sfh.set("kills", kills);
 				if ((cond == 1) && (kills >= 9))
 				{
 					_sfh.setCond(2);
@@ -598,61 +516,61 @@ public class TerritoryWarSuperClass extends Quest
 	public static void main(String[] args)
 	{
 		// initialize superclass
-		new TerritoryWarSuperClass(-1, qn, "Territory_War");
+		new TerritoryWarSuperClass(-1, TerritoryWarSuperClass.class.getSimpleName(), "Territory War Superclass");
 		
 		// initialize subclasses
 		// "For The Sake" quests
-		TerritoryWarSuperClass gludio = new TheTerritoryGludio();
+		TerritoryWarSuperClass gludio = new Q00717_ForTheSakeOfTheTerritoryGludio();
 		_forTheSakeScripts.put(gludio.TERRITORY_ID, gludio);
-		TerritoryWarSuperClass dion = new TheTerritoryDion();
+		TerritoryWarSuperClass dion = new Q00718_ForTheSakeOfTheTerritoryDion();
 		_forTheSakeScripts.put(dion.TERRITORY_ID, dion);
-		TerritoryWarSuperClass giran = new TheTerritoryGiran();
+		TerritoryWarSuperClass giran = new Q00719_ForTheSakeOfTheTerritoryGiran();
 		_forTheSakeScripts.put(giran.TERRITORY_ID, giran);
-		TerritoryWarSuperClass oren = new TheTerritoryOren();
+		TerritoryWarSuperClass oren = new Q00720_ForTheSakeOfTheTerritoryOren();
 		_forTheSakeScripts.put(oren.TERRITORY_ID, oren);
-		TerritoryWarSuperClass aden = new TheTerritoryAden();
+		TerritoryWarSuperClass aden = new Q00721_ForTheSakeOfTheTerritoryAden();
 		_forTheSakeScripts.put(aden.TERRITORY_ID, aden);
-		TerritoryWarSuperClass innadril = new TheTerritoryInnadril();
+		TerritoryWarSuperClass innadril = new Q00722_ForTheSakeOfTheTerritoryInnadril();
 		_forTheSakeScripts.put(innadril.TERRITORY_ID, innadril);
-		TerritoryWarSuperClass goddard = new TheTerritoryGoddard();
+		TerritoryWarSuperClass goddard = new Q00723_ForTheSakeOfTheTerritoryGoddard();
 		_forTheSakeScripts.put(goddard.TERRITORY_ID, goddard);
-		TerritoryWarSuperClass rune = new TheTerritoryRune();
+		TerritoryWarSuperClass rune = new Q00724_ForTheSakeOfTheTerritoryRune();
 		_forTheSakeScripts.put(rune.TERRITORY_ID, rune);
-		TerritoryWarSuperClass schuttgart = new TheTerritorySchuttgart();
+		TerritoryWarSuperClass schuttgart = new Q00725_ForTheSakeOfTheTerritorySchuttgart();
 		_forTheSakeScripts.put(schuttgart.TERRITORY_ID, schuttgart);
 		// "Protect the" quests
-		TerritoryWarSuperClass catapult = new ProtectTheCatapult();
-		_protectTheScripts.put(catapult.getQuestIntId(), catapult);
-		TerritoryWarSuperClass military = new ProtectTheMilitary();
-		_protectTheScripts.put(military.getQuestIntId(), military);
-		TerritoryWarSuperClass religious = new ProtectTheReligious();
-		_protectTheScripts.put(religious.getQuestIntId(), religious);
-		TerritoryWarSuperClass supplies = new ProtectTheSupplies();
-		_protectTheScripts.put(supplies.getQuestIntId(), supplies);
-		TerritoryWarSuperClass economic = new ProtectTheEconomic();
-		_protectTheScripts.put(economic.getQuestIntId(), economic);
-		// "Kill the" quests
-		TerritoryWarSuperClass knights = new KillTheKnights();
+		TerritoryWarSuperClass catapult = new Q00729_ProtectTheTerritoryCatapult();
+		_protectTheScripts.put(catapult.getId(), catapult);
+		TerritoryWarSuperClass supplies = new Q00730_ProtectTheSuppliesSafe();
+		_protectTheScripts.put(supplies.getId(), supplies);
+		TerritoryWarSuperClass military = new Q00731_ProtectTheMilitaryAssociationLeader();
+		_protectTheScripts.put(military.getId(), military);
+		TerritoryWarSuperClass religious = new Q00732_ProtectTheReligiousAssociationLeader();
+		_protectTheScripts.put(religious.getId(), religious);
+		TerritoryWarSuperClass economic = new Q00733_ProtectTheEconomicAssociationLeader();
+		_protectTheScripts.put(economic.getId(), economic);
+		// "Kill" quests
+		TerritoryWarSuperClass knights = new Q00734_PierceThroughAShield();
 		for (int i : knights.CLASS_IDS)
 		{
 			_killTheScripts.put(i, knights);
 		}
-		TerritoryWarSuperClass warriors = new KillTheWarriors();
+		TerritoryWarSuperClass warriors = new Q00735_MakeSpearsDull();
 		for (int i : warriors.CLASS_IDS)
 		{
 			_killTheScripts.put(i, warriors);
 		}
-		TerritoryWarSuperClass wizards = new KillTheWizards();
+		TerritoryWarSuperClass wizards = new Q00736_WeakenTheMagic();
 		for (int i : wizards.CLASS_IDS)
 		{
 			_killTheScripts.put(i, wizards);
 		}
-		TerritoryWarSuperClass priests = new KillThePriests();
+		TerritoryWarSuperClass priests = new Q00737_DenyBlessings();
 		for (int i : priests.CLASS_IDS)
 		{
 			_killTheScripts.put(i, priests);
 		}
-		TerritoryWarSuperClass keys = new KillTheKeyTargets();
+		TerritoryWarSuperClass keys = new Q00738_DestroyKeyTargets();
 		for (int i : keys.CLASS_IDS)
 		{
 			_killTheScripts.put(i, keys);

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -259,29 +259,59 @@ public class AdminSiege implements IAdminCommandHandler
 					case "admin_setsiegetime":
 						if (st.hasMoreTokens())
 						{
+							final Calendar cal = Calendar.getInstance();
+							cal.setTimeInMillis(castle.getSiegeDate().getTimeInMillis());
+							
 							val = st.nextToken();
-							final Calendar newAdminSiegeDate = Calendar.getInstance();
-							newAdminSiegeDate.setTimeInMillis(castle.getSiegeDate().getTimeInMillis());
-							if (val.equalsIgnoreCase("day"))
+							
+							if ("month".equals(val))
 							{
-								newAdminSiegeDate.set(Calendar.DAY_OF_YEAR, Integer.parseInt(st.nextToken()));
+								int month = cal.get(Calendar.MONTH) + Integer.parseInt(st.nextToken());
+								if ((cal.getActualMinimum(Calendar.MONTH) > month) || (cal.getActualMaximum(Calendar.MONTH) < month))
+								{
+									activeChar.sendMessage("Unable to change Siege Date - Incorrect month value only " + cal.getActualMinimum(Calendar.MONTH) + "-" + cal.getActualMaximum(Calendar.MONTH) + " is accepted!");
+									return false;
+								}
+								cal.set(Calendar.MONTH, month);
 							}
-							else if (val.equalsIgnoreCase("hour"))
+							else if ("day".equals(val))
 							{
-								newAdminSiegeDate.set(Calendar.HOUR_OF_DAY, Integer.parseInt(st.nextToken()));
+								int day = Integer.parseInt(st.nextToken());
+								if ((cal.getActualMinimum(Calendar.DAY_OF_MONTH) > day) || (cal.getActualMaximum(Calendar.DAY_OF_MONTH) < day))
+								{
+									activeChar.sendMessage("Unable to change Siege Date - Incorrect day value only " + cal.getActualMinimum(Calendar.DAY_OF_MONTH) + "-" + cal.getActualMaximum(Calendar.DAY_OF_MONTH) + " is accepted!");
+									return false;
+								}
+								cal.set(Calendar.DAY_OF_MONTH, day);
 							}
-							else if (val.equalsIgnoreCase("min"))
+							else if ("hour".equals(val))
 							{
-								newAdminSiegeDate.set(Calendar.MINUTE, Integer.parseInt(st.nextToken()));
+								int hour = Integer.parseInt(st.nextToken());
+								if ((cal.getActualMinimum(Calendar.HOUR_OF_DAY) > hour) || (cal.getActualMaximum(Calendar.HOUR_OF_DAY) < hour))
+								{
+									activeChar.sendMessage("Unable to change Siege Date - Incorrect hour value only " + cal.getActualMinimum(Calendar.HOUR_OF_DAY) + "-" + cal.getActualMaximum(Calendar.HOUR_OF_DAY) + " is accepted!");
+									return false;
+								}
+								cal.set(Calendar.HOUR_OF_DAY, hour);
+							}
+							else if ("min".equals(val))
+							{
+								int min = Integer.parseInt(st.nextToken());
+								if ((cal.getActualMinimum(Calendar.MINUTE) > min) || (cal.getActualMaximum(Calendar.MINUTE) < min))
+								{
+									activeChar.sendMessage("Unable to change Siege Date - Incorrect minute value only " + cal.getActualMinimum(Calendar.MINUTE) + "-" + cal.getActualMaximum(Calendar.MINUTE) + " is accepted!");
+									return false;
+								}
+								cal.set(Calendar.MINUTE, min);
 							}
 							
-							if (newAdminSiegeDate.getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
+							if (cal.getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
 							{
-								activeChar.sendMessage("Unable to change siege date.");
+								activeChar.sendMessage("Unable to change Siege Date");
 							}
-							else if (newAdminSiegeDate.getTimeInMillis() != castle.getSiegeDate().getTimeInMillis())
+							else if (cal.getTimeInMillis() != castle.getSiegeDate().getTimeInMillis())
 							{
-								castle.getSiegeDate().setTimeInMillis(newAdminSiegeDate.getTimeInMillis());
+								castle.getSiegeDate().setTimeInMillis(cal.getTimeInMillis());
 								castle.getSiege().saveSiegeDate();
 								activeChar.sendMessage("Castle siege time for castle " + castle.getName() + " has been changed.");
 							}
@@ -314,7 +344,7 @@ public class AdminSiege implements IAdminCommandHandler
 	private void showCastleSelectPage(L2PcInstance activeChar)
 	{
 		int i = 0;
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/castles.htm");
 		final StringBuilder cList = new StringBuilder(500);
 		for (Castle castle : CastleManager.getInstance().getCastles())
@@ -390,7 +420,7 @@ public class AdminSiege implements IAdminCommandHandler
 	 */
 	private void showSiegePage(L2PcInstance activeChar, String castleName)
 	{
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/castle.htm");
 		adminReply.replace("%castleName%", castleName);
 		activeChar.sendPacket(adminReply);
@@ -403,7 +433,7 @@ public class AdminSiege implements IAdminCommandHandler
 	 */
 	private void showSiegeTimePage(L2PcInstance activeChar, Castle castle)
 	{
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/castlesiegetime.htm");
 		adminReply.replace("%castleName%", castle.getName());
 		adminReply.replace("%time%", castle.getSiegeDate().getTime().toString());
@@ -449,7 +479,7 @@ public class AdminSiege implements IAdminCommandHandler
 	 */
 	private void showClanHallPage(L2PcInstance activeChar, ClanHall clanhall)
 	{
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/clanhall.htm");
 		adminReply.replace("%clanhallName%", clanhall.getName());
 		adminReply.replace("%clanhallId%", String.valueOf(clanhall.getId()));
@@ -465,7 +495,7 @@ public class AdminSiege implements IAdminCommandHandler
 	 */
 	private void showSiegableHallPage(L2PcInstance activeChar, SiegableHall hall)
 	{
-		final NpcHtmlMessage msg = new NpcHtmlMessage(5);
+		final NpcHtmlMessage msg = new NpcHtmlMessage();
 		msg.setFile(null, "data/html/admin/siegablehall.htm");
 		msg.replace("%clanhallId%", String.valueOf(hall.getId()));
 		msg.replace("%clanhallName%", hall.getName());

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,13 +20,13 @@ package handlers.effecthandlers;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
@@ -34,29 +34,35 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.Rnd;
 
 /**
- * Harvesting effect.
+ * Harvesting effect implementation.
  * @author l3x, Zoey76
  */
-public class Harvesting extends L2Effect
+public final class Harvesting extends AbstractEffect
 {
-	public Harvesting(Env env, EffectTemplate template)
+	public Harvesting(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isNpc() || !getEffected().isDead())
+		return true;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isNpc() || !info.getEffected().isDead())
 		{
-			return false;
+			return;
 		}
 		
-		final L2PcInstance player = getEffector().getActingPlayer();
-		final L2Object[] targets = getSkill().getTargetList(player, false, getEffected());
+		final L2PcInstance player = info.getEffector().getActingPlayer();
+		final L2Object[] targets = info.getSkill().getTargetList(player, false, info.getEffected());
 		if ((targets == null) || (targets.length == 0))
 		{
-			return false;
+			return;
 		}
 		
 		L2MonsterInstance monster;
@@ -109,14 +115,14 @@ public class Harvesting extends L2Effect
 						if (send)
 						{
 							SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
-							smsg.addNumber(total);
+							smsg.addInt(total);
 							smsg.addItemName(cropId);
 							player.sendPacket(smsg);
 							if (player.isInParty())
 							{
 								smsg = SystemMessage.getSystemMessage(SystemMessageId.C1_HARVESTED_S3_S2S);
 								smsg.addString(player.getName());
-								smsg.addNumber(total);
+								smsg.addInt(total);
 								smsg.addItemName(cropId);
 								player.getParty().broadcastToPartyMembers(player, smsg);
 							}
@@ -129,7 +135,6 @@ public class Harvesting extends L2Effect
 							{
 								player.sendPacket(new ItemList(player, false));
 							}
-							return true;
 						}
 					}
 				}
@@ -143,15 +148,9 @@ public class Harvesting extends L2Effect
 				player.sendPacket(SystemMessageId.THE_HARVEST_FAILED_BECAUSE_THE_SEED_WAS_NOT_SOWN);
 			}
 		}
-		return false;
 	}
 	
-	/**
-	 * @param activeChar
-	 * @param target
-	 * @return
-	 */
-	private boolean calcSuccess(L2PcInstance activeChar, L2MonsterInstance target)
+	private static boolean calcSuccess(L2PcInstance activeChar, L2MonsterInstance target)
 	{
 		int basicSuccess = 100;
 		final int levelPlayer = activeChar.getLevel();
@@ -176,17 +175,5 @@ public class Harvesting extends L2Effect
 			basicSuccess = 1;
 		}
 		return Rnd.nextInt(99) < basicSuccess;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.HARVESTING;
 	}
 }

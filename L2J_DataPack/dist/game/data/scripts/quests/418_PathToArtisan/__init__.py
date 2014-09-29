@@ -4,7 +4,7 @@
 import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 from com.l2jserver.gameserver.network.serverpackets      import SocialAction
 
 qn = "418_PathToArtisan"
@@ -140,7 +140,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30527 and id != State.STARTED : return htmltext
 
@@ -177,7 +177,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return 
    if st.getState() != State.STARTED : return
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 20389 :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(SILVERYS_RING) == 1 and st.getQuestItemsCount(RATMAN_TOOTH)<10 :

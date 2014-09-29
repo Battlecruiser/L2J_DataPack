@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -51,9 +51,9 @@ public class Q00174_SupplyCheck extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
-	public Q00174_SupplyCheck(int questId, String name, String descr)
+	public Q00174_SupplyCheck()
 	{
-		super(questId, name, descr);
+		super(174, Q00174_SupplyCheck.class.getSimpleName(), "Supply Check");
 		addStartNpc(MARCELA);
 		addTalkId(MARCELA, BENIS, NIKA);
 		
@@ -87,7 +87,7 @@ public class Q00174_SupplyCheck extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case MARCELA:
 				switch (st.getState())
@@ -169,10 +169,5 @@ public class Q00174_SupplyCheck extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00174_SupplyCheck(174, Q00174_SupplyCheck.class.getSimpleName(), "Supply Check");
 	}
 }

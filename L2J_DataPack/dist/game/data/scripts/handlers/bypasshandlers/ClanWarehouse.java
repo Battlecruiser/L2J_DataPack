@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,12 +22,13 @@ import java.util.logging.Level;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.L2Clan;
+import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2ClanHallManagerInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2WarehouseInstance;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -76,7 +77,7 @@ public class ClanWarehouse implements IBypassHandler
 			{
 				if (Config.L2JMOD_ENABLE_WAREHOUSESORTING_CLAN)
 				{
-					NpcHtmlMessage msg = new NpcHtmlMessage(((L2Npc) target).getObjectId());
+					final NpcHtmlMessage msg = new NpcHtmlMessage(((L2Npc) target).getObjectId());
 					msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/WhSortedC.htm");
 					msg.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
 					activeChar.sendPacket(msg);
@@ -109,7 +110,7 @@ public class ClanWarehouse implements IBypassHandler
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				activeChar.setActiveWarehouse(activeChar.getClan().getWarehouse());
-				activeChar.tempInventoryDisable();
+				activeChar.setInventoryBlockingStatus(true);
 				
 				if (Config.DEBUG)
 				{
@@ -133,7 +134,7 @@ public class ClanWarehouse implements IBypassHandler
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
-		if ((player.getClanPrivileges() & L2Clan.CP_CL_VIEW_WAREHOUSE) != L2Clan.CP_CL_VIEW_WAREHOUSE)
+		if (!player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE))
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_CLAN_WAREHOUSE);
 			return;
@@ -147,6 +148,13 @@ public class ClanWarehouse implements IBypassHandler
 			return;
 		}
 		
+		for (L2ItemInstance i : player.getActiveWarehouse().getItems())
+		{
+			if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
+			{
+				player.getActiveWarehouse().destroyItem("L2ItemInstance", i, player, null);
+			}
+		}
 		if (itemtype != null)
 		{
 			player.sendPacket(new SortedWareHouseWithdrawalList(player, WareHouseWithdrawalList.CLAN, itemtype, sortorder));

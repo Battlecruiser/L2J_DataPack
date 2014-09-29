@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,7 +23,7 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.util.Util;
  * Priest Of Blessing AI.
  * @author Gnacik
  */
-public class PriestOfBlessing extends AbstractNpcAI
+public final class PriestOfBlessing extends AbstractNpcAI
 {
 	// NPC
 	private static final int PRIEST = 32783;
@@ -86,7 +86,7 @@ public class PriestOfBlessing extends AbstractNpcAI
 		new Location(116972, 77255, -2688, 41951)
 	};
 	
-	public PriestOfBlessing()
+	private PriestOfBlessing()
 	{
 		super(PriestOfBlessing.class.getSimpleName(), "ai/npc");
 		addStartNpc(PRIEST);
@@ -116,7 +116,7 @@ public class PriestOfBlessing extends AbstractNpcAI
 				
 				if (System.currentTimeMillis() > _reuse_time)
 				{
-					takeItems(player, PcInventory.ADENA_ID, PRICE_VOICE);
+					takeItems(player, Inventory.ADENA_ID, PRICE_VOICE);
 					giveItems(player, NEVIT_VOICE, 1);
 					saveGlobalQuestVar(player.getAccountName() + "_voice", Long.toString(System.currentTimeMillis() + (20 * 3600000)));
 				}
@@ -127,8 +127,8 @@ public class PriestOfBlessing extends AbstractNpcAI
 					int minutes = (int) ((remainingTime % 3600) / 60);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
 					sm.addItemName(NEVIT_VOICE);
-					sm.addNumber(hours);
-					sm.addNumber(minutes);
+					sm.addInt(hours);
+					sm.addInt(minutes);
 					player.sendPacket(sm);
 				}
 				return null;
@@ -149,7 +149,7 @@ public class PriestOfBlessing extends AbstractNpcAI
 				{
 					int[] _hg = HOURGLASSES[_index];
 					int _nevit_hourglass = _hg[getRandom(0, _hg.length - 1)];
-					takeItems(player, PcInventory.ADENA_ID, _price_hourglass);
+					takeItems(player, Inventory.ADENA_ID, _price_hourglass);
 					giveItems(player, _nevit_hourglass, 1);
 					saveGlobalQuestVar(player.getAccountName() + "_hg_" + _index, Long.toString(System.currentTimeMillis() + (20 * 3600000)));
 				}
@@ -160,8 +160,8 @@ public class PriestOfBlessing extends AbstractNpcAI
 					int minutes = (int) ((remainingTime % 3600) / 60);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
 					sm.addString("Nevit's Hourglass");
-					sm.addNumber(hours);
-					sm.addNumber(minutes);
+					sm.addInt(hours);
+					sm.addInt(minutes);
 					player.sendPacket(sm);
 				}
 				return null;

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00338_AlligatorHunter;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -43,9 +44,9 @@ public class Q00338_AlligatorHunter extends Quest
 	private static final int MIN_LEVEL = 40;
 	private static final int SECOND_CHANCE = 19;
 	
-	public Q00338_AlligatorHunter(int questId, String name, String descr)
+	public Q00338_AlligatorHunter()
 	{
-		super(questId, name, descr);
+		super(338, Q00338_AlligatorHunter.class.getSimpleName(), "Alligator Hunter");
 		addStartNpc(ENVERUN);
 		addTalkId(ENVERUN);
 		addKillId(ALLIGATOR);
@@ -128,10 +129,5 @@ public class Q00338_AlligatorHunter extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00338_AlligatorHunter(338, Q00338_AlligatorHunter.class.getSimpleName(), "Alligator Hunter");
 	}
 }

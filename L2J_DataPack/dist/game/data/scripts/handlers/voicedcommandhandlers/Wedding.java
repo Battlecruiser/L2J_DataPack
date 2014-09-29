@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -30,27 +30,28 @@ import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
+import com.l2jserver.gameserver.enums.PlayerAction;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.instancemanager.CoupleManager;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
 import com.l2jserver.gameserver.model.entity.L2Event;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.ZoneId;
-import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Broadcast;
 
 /**
+ * Wedding voiced commands handler.
  * @author evill33t
  */
 public class Wedding implements IVoicedCommandHandler
@@ -149,7 +150,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You are already engaged.");
 			if (Config.L2JMOD_WEDDING_PUNISH_INFIDELITY)
 			{
-				activeChar.startAbnormalEffect(AbnormalEffect.BIG_HEAD); // give player a Big Head
+				activeChar.startAbnormalVisualEffect(true, AbnormalVisualEffect.BIG_HEAD); // give player a Big Head
 				// lets recycle the sevensigns debuffs
 				int skillId;
 				
@@ -169,13 +170,10 @@ public class Wedding implements IVoicedCommandHandler
 					skillId = 4361;
 				}
 				
-				final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
-				if (activeChar.getFirstEffect(skill) == null)
+				final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
+				if (!activeChar.isAffectedBySkill(skillId))
 				{
-					skill.getEffects(activeChar, activeChar);
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
-					sm.addSkillName(skill);
-					activeChar.sendPacket(sm);
+					skill.applyEffects(activeChar, activeChar);
 				}
 			}
 			return false;
@@ -242,8 +240,10 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		
 		ptarget.setEngageRequest(true, activeChar.getObjectId());
-		// $s1
-		ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S1.getId()).addString(activeChar.getName() + " is asking to engage you. Do you want to start a new relationship?");
+		ptarget.addAction(PlayerAction.USER_ENGAGE);
+		
+		final ConfirmDlg dlg = new ConfirmDlg(activeChar.getName() + " is asking to engage you. Do you want to start a new relationship?");
+		dlg.addTime(15 * 1000);
 		ptarget.sendPacket(dlg);
 		return true;
 	}
@@ -287,7 +287,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (activeChar.isInJail())
+		if (activeChar.isJailed())
 		{
 			activeChar.sendMessage("You are in Jail!");
 			return false;
@@ -317,7 +317,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if ((SiegeManager.getInstance().getSiege(activeChar) != null) && SiegeManager.getInstance().getSiege(activeChar).getIsInProgress())
+		if ((SiegeManager.getInstance().getSiege(activeChar) != null) && SiegeManager.getInstance().getSiege(activeChar).isInProgress())
 		{
 			activeChar.sendMessage("You are in a siege, you cannot go to your partner.");
 			return false;
@@ -361,7 +361,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (partner.isInJail())
+		if (partner.isJailed())
 		{
 			activeChar.sendMessage("Your partner is in Jail.");
 			return false;
@@ -415,7 +415,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if ((SiegeManager.getInstance().getSiege(partner) != null) && SiegeManager.getInstance().getSiege(partner).getIsInProgress())
+		if ((SiegeManager.getInstance().getSiege(partner) != null) && SiegeManager.getInstance().getSiege(partner).isInProgress())
 		{
 			activeChar.sendMessage("Your partner is in a siege, you cannot go to your partner.");
 			return false;
@@ -472,7 +472,7 @@ public class Wedding implements IVoicedCommandHandler
 		activeChar.sendPacket(sg);
 		// End SoE Animation section
 		
-		final EscapeFinalizer ef = new EscapeFinalizer(activeChar, partner.getX(), partner.getY(), partner.getZ(), partner.isIn7sDungeon());
+		final EscapeFinalizer ef = new EscapeFinalizer(activeChar, partner.getLocation(), partner.isIn7sDungeon());
 		// continue execution later
 		activeChar.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(ef, teleportTimer));
 		activeChar.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (teleportTimer / GameTimeController.MILLIS_IN_TICK));
@@ -483,17 +483,13 @@ public class Wedding implements IVoicedCommandHandler
 	static class EscapeFinalizer implements Runnable
 	{
 		private final L2PcInstance _activeChar;
-		private final int _partnerx;
-		private final int _partnery;
-		private final int _partnerz;
+		private final Location _partnerLoc;
 		private final boolean _to7sDungeon;
 		
-		EscapeFinalizer(L2PcInstance activeChar, int x, int y, int z, boolean to7sDungeon)
+		EscapeFinalizer(L2PcInstance activeChar, Location loc, boolean to7sDungeon)
 		{
 			_activeChar = activeChar;
-			_partnerx = x;
-			_partnery = y;
-			_partnerz = z;
+			_partnerLoc = loc;
 			_to7sDungeon = to7sDungeon;
 		}
 		
@@ -505,7 +501,7 @@ public class Wedding implements IVoicedCommandHandler
 				return;
 			}
 			
-			if ((SiegeManager.getInstance().getSiege(_partnerx, _partnery, _partnerz) != null) && SiegeManager.getInstance().getSiege(_partnerx, _partnery, _partnerz).getIsInProgress())
+			if ((SiegeManager.getInstance().getSiege(_partnerLoc) != null) && SiegeManager.getInstance().getSiege(_partnerLoc).isInProgress())
 			{
 				_activeChar.sendMessage("Your partner is in siege, you can't go to your partner.");
 				return;
@@ -517,7 +513,7 @@ public class Wedding implements IVoicedCommandHandler
 			
 			try
 			{
-				_activeChar.teleToLocation(_partnerx, _partnery, _partnerz);
+				_activeChar.teleToLocation(_partnerLoc);
 			}
 			catch (Exception e)
 			{

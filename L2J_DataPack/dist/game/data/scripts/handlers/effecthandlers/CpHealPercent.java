@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,42 +18,46 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
+ * Cp Heal Percent effect implementation.
  * @author UnAfraid
  */
-public class CpHealPercent extends L2Effect
+public final class CpHealPercent extends AbstractEffect
 {
-	public CpHealPercent(Env env, EffectTemplate template)
+	private final double _power;
+	
+	public CpHealPercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean isInstant()
 	{
-		return L2EffectType.CPHEAL_PERCENT;
+		return true;
 	}
 	
 	@Override
-	public boolean onStart()
+	public void onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
+		final L2Character target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor())
 		{
-			return false;
+			return;
 		}
 		
 		double amount = 0;
-		double power = calc();
+		double power = _power;
 		boolean full = (power == 100.0);
 		
 		amount = full ? target.getMaxCp() : (target.getMaxCp() * power) / 100.0;
@@ -62,19 +66,10 @@ public class CpHealPercent extends L2Effect
 		if (amount != 0)
 		{
 			target.setCurrentCp(amount + target.getCurrentCp());
-			StatusUpdate su = new StatusUpdate(target);
-			su.addAttribute(StatusUpdate.CUR_CP, (int) target.getCurrentCp());
-			target.sendPacket(su);
 		}
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
-		sm.addNumber((int) amount);
+		
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
+		sm.addInt((int) amount);
 		target.sendPacket(sm);
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

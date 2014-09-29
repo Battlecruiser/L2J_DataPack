@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -30,8 +30,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
-import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.skills.L2SkillType;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.util.Util;
@@ -42,42 +41,33 @@ import com.l2jserver.gameserver.util.Util;
 public class CorpseClan implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
+		List<L2Object> targetList = new ArrayList<>();
 		if (activeChar.isPlayable())
 		{
 			final L2PcInstance player = activeChar.getActingPlayer();
-			
 			if (player == null)
 			{
-				return _emptyTargetList;
+				return EMPTY_TARGET_LIST;
 			}
 			
 			if (player.isInOlympiadMode())
 			{
-				return new L2Character[]
+				return new L2Object[]
 				{
 					player
 				};
 			}
 			
-			final int radius = skill.getAffectRange();
 			final L2Clan clan = player.getClan();
-			
-			if (L2Skill.addSummon(activeChar, player, radius, true))
-			{
-				targetList.add(player.getSummon());
-			}
-			
 			if (clan != null)
 			{
-				L2PcInstance obj;
-				int maxTargets = skill.getAffectLimit();
+				final int radius = skill.getAffectRange();
+				final int maxTargets = skill.getAffectLimit();
 				for (L2ClanMember member : clan.getMembers())
 				{
-					obj = member.getPlayerInstance();
-					
+					final L2PcInstance obj = member.getPlayerInstance();
 					if ((obj == null) || (obj == player))
 					{
 						continue;
@@ -106,34 +96,26 @@ public class CorpseClan implements ITargetTypeHandler
 						continue;
 					}
 					
-					if (!onlyFirst && L2Skill.addSummon(activeChar, obj, radius, true))
-					{
-						targetList.add(obj.getSummon());
-					}
-					
-					if (!L2Skill.addCharacter(activeChar, obj, radius, true))
+					if (!Skill.addCharacter(activeChar, obj, radius, true))
 					{
 						continue;
 					}
 					
-					if (skill.getSkillType() == L2SkillType.RESURRECT)
+					// check target is not in a active siege zone
+					if (obj.isInsideZone(ZoneId.SIEGE) && !obj.isInSiege())
 					{
-						// check target is not in a active siege zone
-						if (obj.isInsideZone(ZoneId.SIEGE) && !obj.isInSiege())
-						{
-							continue;
-						}
+						continue;
 					}
 					
 					if (onlyFirst)
 					{
-						return new L2Character[]
+						return new L2Object[]
 						{
 							obj
 						};
 					}
 					
-					if (targetList.size() >= maxTargets)
+					if ((maxTargets > 0) && (targetList.size() >= maxTargets))
 					{
 						break;
 					}
@@ -146,9 +128,9 @@ public class CorpseClan implements ITargetTypeHandler
 		{
 			// for buff purposes, returns friendly mobs nearby and mob itself
 			final L2Npc npc = (L2Npc) activeChar;
-			if ((npc.getFactionId() == null) || npc.getFactionId().isEmpty())
+			if ((npc.getTemplate().getClans() == null) || npc.getTemplate().getClans().isEmpty())
 			{
-				return new L2Character[]
+				return new L2Object[]
 				{
 					activeChar
 				};
@@ -160,7 +142,7 @@ public class CorpseClan implements ITargetTypeHandler
 			int maxTargets = skill.getAffectLimit();
 			for (L2Object newTarget : objs)
 			{
-				if ((newTarget.isNpc()) && npc.getFactionId().equals(((L2Npc) newTarget).getFactionId()))
+				if (newTarget.isNpc() && npc.isInMyClan((L2Npc) newTarget))
 				{
 					if (!Util.checkIfInRange(skill.getCastRange(), activeChar, newTarget, true))
 					{
@@ -172,12 +154,12 @@ public class CorpseClan implements ITargetTypeHandler
 						break;
 					}
 					
-					targetList.add((L2Npc) newTarget);
+					targetList.add(newTarget);
 				}
 			}
 		}
 		
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.toArray(new L2Object[targetList.size()]);
 	}
 	
 	@Override

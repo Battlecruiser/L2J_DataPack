@@ -3,7 +3,7 @@
 import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "217_TestimonyOfTrust"
 
@@ -100,7 +100,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30191 and id != State.STARTED : return htmltext
 
@@ -271,7 +271,7 @@ class Quest (JQuest) :
    if not st : return
    if st.getState() != State.STARTED : return
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    cond = st.getInt("cond")
    if cond == 2 and npcId in [ 20013, 20019, 20036, 20044 ] :          # Condition 2 kill the Luel of Zephy and Aktea of the Woods
      if npcId in [ 20036,20044 ] and st.getQuestItemsCount(BREATH_OF_WINDS_ID) == 0 :

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00042_HelpTheUncle;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -43,9 +44,9 @@ public class Q00042_HelpTheUncle extends Quest
 	private static final int MAP = 7549;
 	private static final int PET_TICKET = 7583;
 	
-	public Q00042_HelpTheUncle(int questId, String name, String descr)
+	public Q00042_HelpTheUncle()
 	{
-		super(questId, name, descr);
+		super(42, Q00042_HelpTheUncle.class.getSimpleName(), "Help The Uncle!");
 		addStartNpc(WATERS);
 		addTalkId(WATERS, SOPHYA);
 		addKillId(MONSTER_EYE_DESTROYER, MONSTER_EYE_GAZER);
@@ -139,7 +140,7 @@ public class Q00042_HelpTheUncle extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case WATERS:
 				switch (st.getState())
@@ -188,10 +189,5 @@ public class Q00042_HelpTheUncle extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00042_HelpTheUncle(42, Q00042_HelpTheUncle.class.getSimpleName(), "Help The Uncle!");
 	}
 }

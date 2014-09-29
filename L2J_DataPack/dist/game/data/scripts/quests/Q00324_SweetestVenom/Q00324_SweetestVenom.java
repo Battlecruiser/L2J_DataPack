@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00324_SweetestVenom;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -50,9 +51,9 @@ public class Q00324_SweetestVenom extends Quest
 	private static final int REQUIRED_COUNT = 10;
 	private static final int ADENA_COUNT = 5810;
 	
-	public Q00324_SweetestVenom(int questId, String name, String descr)
+	public Q00324_SweetestVenom()
 	{
-		super(questId, name, descr);
+		super(324, Q00324_SweetestVenom.class.getSimpleName(), "Sweetest Venom");
 		addStartNpc(ASTARON);
 		addTalkId(ASTARON);
 		addKillId(MONSTERS.keySet());
@@ -117,7 +118,7 @@ public class Q00324_SweetestVenom extends Quest
 			long sacs = st.getQuestItemsCount(VENOM_SAC);
 			if (sacs < REQUIRED_COUNT)
 			{
-				if (getRandom(100) < MONSTERS.get(npc.getNpcId()))
+				if (getRandom(100) < MONSTERS.get(npc.getId()))
 				{
 					st.giveItems(VENOM_SAC, 1);
 					if ((++sacs) < REQUIRED_COUNT)
@@ -132,10 +133,5 @@ public class Q00324_SweetestVenom extends Quest
 			}
 		}
 		return super.onKill(npc, player, isPet);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00324_SweetestVenom(324, Q00324_SweetestVenom.class.getSimpleName(), "Sweetest Venom");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,74 +18,49 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
- * Summon Agathion effect.
+ * Summon Agathion effect implementation.
  * @author Zoey76
  */
-public class SummonAgathion extends L2Effect
+public final class SummonAgathion extends AbstractEffect
 {
-	public SummonAgathion(Env env, EffectTemplate template)
+	private final int _npcId;
+	
+	public SummonAgathion(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		if (params.isEmpty())
+		{
+			_log.warning(getClass().getSimpleName() + ": must have parameters.");
+		}
+		
+		_npcId = params.getInt("npcId", 0);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isPlayer() || getEffected().isAlikeDead())
+		return true;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		if ((info.getEffected() == null) || !info.getEffected().isPlayer())
 		{
-			return false;
+			return;
 		}
 		
-		final L2PcInstance player = getEffector().getActingPlayer();
-		if (player.isInOlympiadMode())
-		{
-			player.sendPacket(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
-			return false;
-		}
+		final L2PcInstance player = info.getEffected().getActingPlayer();
 		
-		setAgathionId(player);
+		player.setAgathionId(_npcId);
 		player.broadcastUserInfo();
-		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		super.onExit();
-		final L2PcInstance player = getEffector().getActingPlayer();
-		if (player != null)
-		{
-			player.setAgathionId(0);
-			player.broadcastUserInfo();
-		}
-	}
-	
-	/**
-	 * Set the player's agathion Id.
-	 * @param player the player to set the agathion Id.
-	 */
-	protected void setAgathionId(L2PcInstance player)
-	{
-		player.setAgathionId((getSkill() == null) ? 0 : getSkill().getNpcId());
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return true;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.SUMMON_AGATHION;
 	}
 }

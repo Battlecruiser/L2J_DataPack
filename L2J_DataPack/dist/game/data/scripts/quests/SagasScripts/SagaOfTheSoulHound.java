@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Soul Hound (68)
  * @author Emperorc
  */
 public class SagaOfTheSoulHound extends SagasSuperClass
 {
-	public static String qn1 = "68_SagaOfTheSoulHound";
-	public static int qnu = 68;
-	public static String qna = "Saga of the Soul Hound";
-	
 	public SagaOfTheSoulHound()
 	{
-		super(qnu, qn1, qna);
+		super(68, "68_SagaOfTheSoulHound", "Saga of the Soul Hound");
 		NPC = new int[]
 		{
 			32138,
@@ -67,7 +65,6 @@ public class SagaOfTheSoulHound extends SagasSuperClass
 			27329,
 			27328
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			132,
@@ -78,23 +75,11 @@ public class SagaOfTheSoulHound extends SagasSuperClass
 			0x80,
 			0x81
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			161719,
-			46087,
-			46066
-		};
-		Y = new int[]
-		{
-			-92823,
-			-36372,
-			-36396
-		};
-		Z = new int[]
-		{
-			-1893,
-			-1685,
-			-1685
+			new Location(161719, -92823, -1893),
+			new Location(46087, -36372, -1685),
+			new Location(46066, -36396, -1685)
 		};
 		Text = new String[]
 		{

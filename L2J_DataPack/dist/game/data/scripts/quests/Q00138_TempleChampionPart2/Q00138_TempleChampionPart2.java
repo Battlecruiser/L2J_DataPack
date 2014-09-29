@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,6 +20,7 @@ package quests.Q00138_TempleChampionPart2;
 
 import quests.Q00137_TempleChampionPart1.Q00137_TempleChampionPart1;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -49,9 +50,9 @@ public class Q00138_TempleChampionPart2 extends Quest
 	private static final int ANGUS_RECOMMENDATION = 10343;
 	private static final int PUPINAS_RECOMMENDATION = 10344;
 	
-	public Q00138_TempleChampionPart2(int questId, String name, String descr)
+	public Q00138_TempleChampionPart2()
 	{
-		super(questId, name, descr);
+		super(138, Q00138_TempleChampionPart2.class.getSimpleName(), "Temple Champion - 2");
 		addStartNpc(SYLVAIN);
 		addTalkId(SYLVAIN, PUPINA, ANGUS, SLA);
 		addKillId(MOBS);
@@ -143,7 +144,7 @@ public class Q00138_TempleChampionPart2 extends Quest
 		{
 			return htmltext;
 		}
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case SYLVAIN:
 				switch (st.getCond())
@@ -241,10 +242,5 @@ public class Q00138_TempleChampionPart2 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00138_TempleChampionPart2(138, Q00138_TempleChampionPart2.class.getSimpleName(), "Temple Champion - 2");
 	}
 }

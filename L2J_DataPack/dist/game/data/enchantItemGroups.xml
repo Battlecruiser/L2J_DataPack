@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/enchantItemGroups.xsd">
+	<!-- General armor enchant group. -->
+	<enchantRateGroup name="ARMOR_GROUP">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3" chance="66.67" />
+		<current enchant="4" chance="33.34" />
+		<current enchant="5" chance="25" />
+		<current enchant="6" chance="20" />
+		<current enchant="7" chance="16.67" />
+		<current enchant="8" chance="14.29" />
+		<current enchant="9" chance="12.5" />
+		<current enchant="10" chance="11.12" />
+		<current enchant="11" chance="10.0" />
+		<current enchant="12" chance="9.10" />
+		<current enchant="13" chance="8.34" />
+		<current enchant="14" chance="7.70" />
+		<current enchant="15" chance="7.15" />
+		<current enchant="16" chance="6.67" />
+		<current enchant="17" chance="6.25" />
+		<current enchant="18" chance="5.89" />
+		<current enchant="19" chance="5.56" />
+		<current enchant="20-65535" chance="0" />
+	</enchantRateGroup>
+
+	<!-- General full armor enchant group. -->
+	<enchantRateGroup name="FULL_ARMOR_GROUP">
+		<current enchant="0-3" chance="100" />
+		<current enchant="4" chance="66.67" />
+		<current enchant="5" chance="33.34" />
+		<current enchant="6" chance="25" />
+		<current enchant="7" chance="20" />
+		<current enchant="8" chance="16.67" />
+		<current enchant="9" chance="14.29" />
+		<current enchant="10" chance="12.5" />
+		<current enchant="11" chance="11.12" />
+		<current enchant="12" chance="10.0" />
+		<current enchant="13" chance="9.10" />
+		<current enchant="14" chance="8.34" />
+		<current enchant="15" chance="7.70" />
+		<current enchant="16" chance="7.15" />
+		<current enchant="17" chance="6.67" />
+		<current enchant="18" chance="6.25" />
+		<current enchant="19" chance="5.89" />
+		<current enchant="20-65535" chance="0" />
+	</enchantRateGroup>
+
+	<!-- General fighter weapon enchant group. -->
+	<enchantRateGroup name="FIGHTER_WEAPON_GROUP">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3-14" chance="70" />
+		<current enchant="15-65535" chance="35" />
+	</enchantRateGroup>
+
+	<!-- General mage weapon enchant group. -->
+	<enchantRateGroup name="MAGE_WEAPON_GROUP">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3-14" chance="40" />
+		<current enchant="15-65535" chance="20" />
+	</enchantRateGroup>
+
+	<!-- Default scrolls enchanting route line. -->
+	<enchantScrollGroup id="0">
+		<!-- Bind armor group to all item slots except full armor. -->
+		<enchantRate group="ARMOR_GROUP">
+			<item slot="lhand" /> <!-- Left hand: Shields, Sigils -->
+			<item slot="head" /> <!-- Head: Helmet -->
+			<item slot="chest" /> <!-- Chest: Armor upper body. -->
+			<item slot="legs" /> <!-- Legs: Armor lower body. -->
+			<item slot="feet" /> <!-- Feet: Boots -->
+			<item slot="gloves" /> <!-- Gloves: Gloves -->
+			<item slot="neck" /> <!-- Neck: Necklaces -->
+			<item slot="rear;lear" /> <!-- Right ear, Left ear: Earrings -->
+			<item slot="rfinger;lfinger" /> <!-- Right finger, Left finger: Rings -->
+			<item slot="belt" /> <!-- Belt: Belts -->
+			<item slot="shirt" /> <!-- Shirt: Shirts -->
+		</enchantRate>
+		<!-- Bind only full armor group to to full armor slot items. -->
+		<enchantRate group="FULL_ARMOR_GROUP">
+			<item slot="fullarmor" /> <!-- Full Armor: Full armor pants are included. -->
+		</enchantRate>
+		<!-- Bind only fighter weapon group to all fighter weapons. -->
+		<enchantRate group="FIGHTER_WEAPON_GROUP">
+			<item slot="rhand" magicWeapon="false" /> <!-- Right hand: Weapons, Non magic weapon -->
+			<item slot="lrhand" magicWeapon="false" /> <!-- Two hands: Weapons, Non magic weapon -->
+		</enchantRate>
+		<!-- Bind only mage weapon group to all magic weapons. -->
+		<enchantRate group="MAGE_WEAPON_GROUP">
+			<item slot="rhand" magicWeapon="true" /> <!-- Right hand: Weapons, Magic weapon -->
+			<item slot="lrhand" magicWeapon="true" /> <!-- Two hands: Weapons, Magic weapon -->
+		</enchantRate>
+	</enchantScrollGroup>
+</list>

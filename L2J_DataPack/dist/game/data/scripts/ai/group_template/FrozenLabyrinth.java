@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,7 +23,7 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 
 /**
  * Frozen Labyrinth AI.
@@ -44,11 +44,11 @@ public final class FrozenLabyrinth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if (npc.isScriptValue(0) && (skill != null) && !skill.isMagic())
 		{
-			final int spawnId = (npc.getNpcId() == PRONGHORN) ? PRONGHORN_SPIRIT : LOST_BUFFALO;
+			final int spawnId = (npc.getId() == PRONGHORN) ? PRONGHORN_SPIRIT : LOST_BUFFALO;
 			int diff = 0;
 			for (int i = 0; i < 6; i++)
 			{

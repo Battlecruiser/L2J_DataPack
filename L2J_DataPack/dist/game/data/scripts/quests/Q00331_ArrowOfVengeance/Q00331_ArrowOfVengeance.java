@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00331_ArrowOfVengeance;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -55,9 +56,9 @@ public class Q00331_ArrowOfVengeance extends Quest
 	private static final int BONUS = 3100;
 	private static final int BONUS_COUNT = 10;
 	
-	public Q00331_ArrowOfVengeance(int questId, String name, String descr)
+	public Q00331_ArrowOfVengeance()
 	{
-		super(questId, name, descr);
+		super(331, Q00331_ArrowOfVengeance.class.getSimpleName(), "Arrow for Vengeance");
 		addStartNpc(BELTON);
 		addTalkId(BELTON);
 		addKillId(MONSTERS.keySet());
@@ -137,9 +138,9 @@ public class Q00331_ArrowOfVengeance extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if (st != null)
 		{
-			if (getRandom(100) < MONSTERS.get(npc.getNpcId()))
+			if (getRandom(100) < MONSTERS.get(npc.getId()))
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case 20145:
 					{
@@ -161,10 +162,5 @@ public class Q00331_ArrowOfVengeance extends Quest
 			}
 		}
 		return super.onKill(npc, player, isPet);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00331_ArrowOfVengeance(331, Q00331_ArrowOfVengeance.class.getSimpleName(), "Arrow for Vengeance");
 	}
 }

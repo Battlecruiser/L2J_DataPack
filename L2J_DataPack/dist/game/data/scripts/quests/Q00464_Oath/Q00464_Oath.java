@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,13 +21,12 @@ package quests.Q00464_Oath;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
@@ -78,14 +77,15 @@ public class Q00464_Oath extends Quest
 		MOBS.put(22793, 5);
 	}
 	
-	public Q00464_Oath(int questId, String name, String descr)
+	public Q00464_Oath()
 	{
-		super(questId, name, descr);
+		super(464, Q00464_Oath.class.getSimpleName(), "Oath");
 		for (int[] npc : NPC)
 		{
 			addTalkId(npc[0]);
 		}
 		addKillId(MOBS.keySet());
+		addItemTalkId(STRONGBOX);
 		registerQuestItems(BOOK, BOOK2);
 	}
 	
@@ -150,7 +150,7 @@ public class Q00464_Oath extends Quest
 				st.addExpAndSp(NPC[i][1], NPC[i][2]);
 				st.giveAdena(NPC[i][3], true);
 				st.exitQuest(QuestType.DAILY, true);
-				htmltext = npc.getNpcId() + "-02.html";
+				htmltext = npc.getId() + "-02.html";
 				break;
 			case "32596-02.html":
 			case "32596-03.html":
@@ -166,11 +166,7 @@ public class Q00464_Oath extends Quest
 	public String onItemTalk(L2ItemInstance item, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
+		final QuestState st = getQuestState(player, true);
 		
 		boolean startQuest = false;
 		switch (st.getState())
@@ -214,9 +210,9 @@ public class Q00464_Oath extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (getRandom(1000) < MOBS.get(npc.getNpcId()))
+		if (getRandom(1000) < MOBS.get(npc.getId()))
 		{
-			((L2MonsterInstance) npc).dropItem(killer, STRONGBOX, 1);
+			npc.dropItem(killer, STRONGBOX, 1);
 		}
 		
 		return super.onKill(npc, killer, isSummon);
@@ -230,7 +226,7 @@ public class Q00464_Oath extends Quest
 		
 		if ((st != null) && st.isStarted())
 		{
-			int npcId = npc.getNpcId();
+			int npcId = npc.getId();
 			
 			if (npcId == NPC[0][0])
 			{
@@ -271,10 +267,5 @@ public class Q00464_Oath extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00464_Oath(464, Q00464_Oath.class.getSimpleName(), "Oath");
 	}
 }

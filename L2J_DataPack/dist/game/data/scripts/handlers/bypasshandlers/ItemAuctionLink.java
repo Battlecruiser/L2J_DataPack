@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -27,7 +27,6 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.instancemanager.ItemAuctionManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemauction.ItemAuction;
 import com.l2jserver.gameserver.model.itemauction.ItemAuctionInstance;
@@ -57,7 +56,7 @@ public class ItemAuctionLink implements IBypassHandler
 			return true;
 		}
 		
-		final ItemAuctionInstance au = ItemAuctionManager.getInstance().getManagerInstance(((L2Npc) target).getNpcId());
+		final ItemAuctionInstance au = ItemAuctionManager.getInstance().getManagerInstance(target.getId());
 		if (au == null)
 		{
 			return false;

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -101,9 +102,9 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		QUEST_MOBS.put(22765, new ItemHolder(15536, 125));
 	}
 	
-	public Q00692_HowtoOpposeEvil(int questId, String name, String descr)
+	public Q00692_HowtoOpposeEvil()
 	{
-		super(questId, name, descr);
+		super(692, Q00692_HowtoOpposeEvil.class.getSimpleName(), "How to Oppose Evil");
 		addStartNpc(DILIOS);
 		addTalkId(DILIOS, KIRKLAN);
 		addKillId(QUEST_MOBS.keySet());
@@ -179,7 +180,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 			return null;
 		}
 		final QuestState st = partyMember.getQuestState(getName());
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		if ((st != null) && QUEST_MOBS.containsKey(npcId))
 		{
 			int chance = (int) (QUEST_MOBS.get(npcId).getCount() * Config.RATE_QUEST_DROP);
@@ -214,7 +215,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		}
 		else
 		{
-			if (npc.getNpcId() == DILIOS)
+			if (npc.getId() == DILIOS)
 			{
 				if (st.isCond(1) && st.hasQuestItems(LEKONS_CERTIFICATE))
 				{
@@ -261,10 +262,5 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		st.takeItems(itemId, count * minCount);
 		st.rewardItems(rewardItemId, rewardCount * count);
 		return true;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00692_HowtoOpposeEvil(692, Q00692_HowtoOpposeEvil.class.getSimpleName(), "How to Oppose Evil");
 	}
 }

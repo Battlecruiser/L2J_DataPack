@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='407_PathToElvenScout' WHERE name='Q00407_PathOfTheElvenScout';

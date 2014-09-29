@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -52,14 +52,11 @@ public class ChatShout implements IChatHandler
 			return;
 		}
 		
-		CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-		
-		L2PcInstance[] pls = L2World.getInstance().getAllPlayersArray();
-		
+		final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 		if (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("on") || (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("gm") && activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)))
 		{
 			int region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
-			for (L2PcInstance player : pls)
+			for (L2PcInstance player : L2World.getInstance().getPlayers())
 			{
 				if ((region == MapRegionManager.getInstance().getMapRegionLocId(player)) && !BlockList.isBlocked(player, activeChar) && (player.getInstanceId() == activeChar.getInstanceId()))
 				{
@@ -75,7 +72,7 @@ public class ChatShout implements IChatHandler
 				return;
 			}
 			
-			for (L2PcInstance player : pls)
+			for (L2PcInstance player : L2World.getInstance().getPlayers())
 			{
 				if (!BlockList.isBlocked(player, activeChar))
 				{

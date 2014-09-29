@@ -2,19 +2,19 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="16837" type="Armor" name="Vesper Noble Helmet">
 		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8481-1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -23,12 +23,12 @@
 	</item>
 	<item id="16838" type="Armor" name="Vesper Noble Leather Helmet">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
@@ -41,19 +41,19 @@
 	</item>
 	<item id="16839" type="Armor" name="Vesper Noble Circlet">
 		<set name="icon" val="icon.armor_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="840" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8489-1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -62,20 +62,20 @@
 	</item>
 	<item id="16840" type="Armor" name="Vesper Noble Breastplate">
 		<set name="icon" val="icon.armor_t94_u_i01" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2680" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bronze" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="55840000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8436-1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="250" />
@@ -84,13 +84,13 @@
 	</item>
 	<item id="16841" type="Armor" name="Vesper Noble Houberk">
 		<set name="icon" val="icon.armor_t95_u_i01" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2010" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bronze" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="41880000" />
 		<set name="element_enabled" val="true" />
@@ -103,20 +103,20 @@
 	</item>
 	<item id="16842" type="Armor" name="Vesper Noble Tunic">
 		<set name="icon" val="icon.armor_t96_u_i01" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2010" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="bronze" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="41880000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8447-1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="125" />
@@ -126,20 +126,20 @@
 	</item>
 	<item id="16843" type="Armor" name="Vesper Noble Gaiter">
 		<set name="icon" val="icon.armor_t94_l_i01" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1675" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="34900000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8482-1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="156" />
@@ -148,13 +148,13 @@
 	</item>
 	<item id="16844" type="Armor" name="Vesper Noble Leather Legging">
 		<set name="icon" val="icon.armor_t95_l_i01" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1256" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="26175000" />
 		<set name="element_enabled" val="true" />
@@ -167,20 +167,20 @@
 	</item>
 	<item id="16845" type="Armor" name="Vesper Noble Stockings">
 		<set name="icon" val="icon.armor_t96_l_i01" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1256" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="26175000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8490-1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="78" />
@@ -190,19 +190,19 @@
 	</item>
 	<item id="16846" type="Armor" name="Vesper Noble Gauntlet">
 		<set name="icon" val="icon.armor_t94_g_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="670" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8483-1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -211,12 +211,12 @@
 	</item>
 	<item id="16847" type="Armor" name="Vesper Noble Leather Gloves">
 		<set name="icon" val="icon.armor_t95_g_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="670" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="true" />
@@ -229,19 +229,19 @@
 	</item>
 	<item id="16848" type="Armor" name="Vesper Noble Gloves">
 		<set name="icon" val="icon.armor_t96_g_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="670" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8491-1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -250,19 +250,19 @@
 	</item>
 	<item id="16849" type="Armor" name="Vesper Noble Boots">
 		<set name="icon" val="icon.armor_t94_b_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="670" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8484-1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -271,12 +271,12 @@
 	</item>
 	<item id="16850" type="Armor" name="Vesper Noble Leather Boots">
 		<set name="icon" val="icon.armor_t95_b_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="670" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="true" />
@@ -289,19 +289,19 @@
 	</item>
 	<item id="16851" type="Armor" name="Vesper Noble Shoes">
 		<set name="icon" val="icon.armor_t96_b_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="670" />
-		<set name="crystal_type" val="s84" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8492-1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -310,9 +310,9 @@
 	</item>
 	<item id="16852" type="EtcItem" name="Hero's Treasure Chest - 90-day limited period">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -323,9 +323,9 @@
 	</item>
 	<item id="16853" type="EtcItem" name="Equipment Set Pack - 90-day limited period">
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="scroll" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -337,11 +337,11 @@
 	</item>
 	<item id="16854" type="Armor" name="Majestic Earring of Fortune - 90-day limited period">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -354,11 +354,11 @@
 	</item>
 	<item id="16855" type="Armor" name="Majestic Necklace of Fortune - 90-day limited period">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -371,11 +371,11 @@
 	</item>
 	<item id="16856" type="Armor" name="Majestic Ring of Fortune - 90-day limited period">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="gold" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -388,11 +388,11 @@
 	</item>
 	<item id="16857" type="Armor" name="Fortune Earring of Black Ore - 90-day limited period">
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -404,11 +404,11 @@
 	</item>
 	<item id="16858" type="Armor" name="Fortune Necklace of Black Ore - 90-day limited period">
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -420,11 +420,11 @@
 	</item>
 	<item id="16859" type="Armor" name="Fortune Ring of Black Ore - 90-day limited period">
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="gold" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -436,11 +436,11 @@
 	</item>
 	<item id="16860" type="Armor" name="Fortune Earring of Seal - 90-day limited period">
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -452,11 +452,11 @@
 	</item>
 	<item id="16861" type="Armor" name="Fortune Necklace of Seal - 90-day limited period">
 		<set name="icon" val="icon.accessary_necklace_of_binding_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="adamantaite" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -468,11 +468,11 @@
 	</item>
 	<item id="16862" type="Armor" name="Fortune Ring of Seal - 90-day limited period">
 		<set name="icon" val="icon.accessary_ring_of_binding_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="gold" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -484,11 +484,11 @@
 	</item>
 	<item id="16863" type="Armor" name="Elven Earring of Fortune - 90-day limited period">
 		<set name="icon" val="icon.accessary_elven_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -500,11 +500,11 @@
 	</item>
 	<item id="16864" type="Armor" name="Elven Earring of Fortune - 90-day limited period">
 		<set name="icon" val="icon.accessary_elven_necklace_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -516,11 +516,11 @@
 	</item>
 	<item id="16865" type="Armor" name="Elven Ring of Fortune - 90-day limited period">
 		<set name="icon" val="icon.accessary_elven_ring_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="gold" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -532,19 +532,19 @@
 	</item>
 	<item id="16866" type="Armor" name="Dark Crystal Robe of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t76_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="2450" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="139" />
@@ -553,11 +553,11 @@
 	</item>
 	<item id="16867" type="Armor" name="Dark Crystal Helmet of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="crystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="570" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -569,18 +569,18 @@
 	</item>
 	<item id="16868" type="Armor" name="Dark Crystal Gloves of Fortune - Robe - 90-day limited period">
 		<set name="icon" val="icon.armor_t76_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
@@ -588,18 +588,18 @@
 	</item>
 	<item id="16869" type="Armor" name="Dark Crystal Boots of Fortune - Robe - 90-day limited period">
 		<set name="icon" val="icon.armor_t76_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="crystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1110" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
@@ -607,11 +607,11 @@
 	</item>
 	<item id="16870" type="Armor" name="Dark Crystal Shield of Fortune - 90-day limited period">
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="crystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1190" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -619,7 +619,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -629,19 +629,19 @@
 	</item>
 	<item id="16871" type="Armor" name="Avadon Robe of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t59_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="2540" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="127" />
@@ -650,11 +650,11 @@
 	</item>
 	<item id="16872" type="Armor" name="Avadon Circlet of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="590" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -666,18 +666,18 @@
 	</item>
 	<item id="16873" type="Armor" name="Avadon Gloves of Fortune - Robe - 90-day limited period">
 		<set name="icon" val="icon.armor_t59_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="mithril" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="590" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="41" />
@@ -685,18 +685,18 @@
 	</item>
 	<item id="16874" type="Armor" name="Avadon Boots of Fortune - Robe - 90-day limited period">
 		<set name="icon" val="icon.armor_t59_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="mithril" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1180" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="41" />
@@ -704,11 +704,11 @@
 	</item>
 	<item id="16875" type="Armor" name="Avadon Shield of Fortune - 90-day limited period">
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="damascus" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1210" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -716,7 +716,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -726,19 +726,19 @@
 	</item>
 	<item id="16876" type="Armor" name="Karmian Tunic of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t53_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="cloth" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="1980" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="60" />
@@ -747,19 +747,19 @@
 	</item>
 	<item id="16877" type="Armor" name="Karmian Stockings of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t53_l_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="cloth" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="970" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="37" />
@@ -768,11 +768,11 @@
 	</item>
 	<item id="16878" type="Armor" name="Karmian Gloves of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t53_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="620" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -784,11 +784,11 @@
 	</item>
 	<item id="16879" type="Armor" name="Karmian Boots of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t53_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1230" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -800,19 +800,19 @@
 	</item>
 	<item id="16880" type="Armor" name="Mithril Tunic of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t51_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="mithril" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="2010" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="52" />
@@ -821,19 +821,19 @@
 	</item>
 	<item id="16881" type="Armor" name="Mithril Stockings of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t51_l_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="mithril" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="980" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="32" />
@@ -842,11 +842,11 @@
 	</item>
 	<item id="16882" type="Armor" name="Elven Mithril Gloves of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t51_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="640" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -858,11 +858,11 @@
 	</item>
 	<item id="16883" type="Armor" name="Elven Mithril Boots of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t51_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1250" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -874,12 +874,12 @@
 	</item>
 	<item id="16884" type="Armor" name="Dark Crystal Leather Armor of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t75_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="4300" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -891,12 +891,12 @@
 	</item>
 	<item id="16885" type="Armor" name="Dark Crystal Leggings of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t75_l_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1480" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -908,11 +908,11 @@
 	</item>
 	<item id="16886" type="Armor" name="Dark Crystal Gloves of Fortune - Light Armor - 90-day limited period">
 		<set name="icon" val="icon.armor_t75_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -924,11 +924,11 @@
 	</item>
 	<item id="16887" type="Armor" name="Dark Crystal Boots of Fortune - Light Armor - 90-day limited period">
 		<set name="icon" val="icon.armor_t75_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="a" />
-		<set name="material" val="crystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1110" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -940,12 +940,12 @@
 	</item>
 	<item id="16888" type="Armor" name="Leather Armor of Doom of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t72_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="5500" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -957,11 +957,11 @@
 	</item>
 	<item id="16889" type="Armor" name="Doom Helmet of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -973,18 +973,18 @@
 	</item>
 	<item id="16890" type="Armor" name="Doom Gloves of Fortune - Heavy Armor - 90-day limited period">
 		<set name="icon" val="icon.armor_t71_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="44" />
@@ -992,11 +992,11 @@
 	</item>
 	<item id="16891" type="Armor" name="Doom Gloves of Fortune - Light Armor - 90-day limited period">
 		<set name="icon" val="icon.armor_t72_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1008,18 +1008,18 @@
 	</item>
 	<item id="16892" type="Armor" name="Doom Boots of Fortune - Heavy Armor - 90-day limited period">
 		<set name="icon" val="icon.armor_t71_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="mithril" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1130" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="44" />
@@ -1027,11 +1027,11 @@
 	</item>
 	<item id="16893" type="Armor" name="Doom Boots of Fortune - Light Armor - 90-day limited period">
 		<set name="icon" val="icon.armor_t72_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="mithril" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1130" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1043,19 +1043,19 @@
 	</item>
 	<item id="16894" type="Armor" name="Doom Plate Armor of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t71_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="9980" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="270" />
@@ -1063,11 +1063,11 @@
 	</item>
 	<item id="16895" type="Armor" name="Doom Shield of Fortune - 90-day limited period">
 		<set name="icon" val="icon.shield_doom_shield_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="b" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1200" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1075,7 +1075,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="time" val="129600" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1085,12 +1085,12 @@
 	</item>
 	<item id="16896" type="Armor" name="Plate Leather Armor of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t47_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="4450" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1102,12 +1102,12 @@
 	</item>
 	<item id="16897" type="Armor" name="Plate Leather Gaiters of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t47_l_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1560" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1119,11 +1119,11 @@
 	</item>
 	<item id="16898" type="Armor" name="Plate Leather Boots of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t47_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1135,11 +1135,11 @@
 	</item>
 	<item id="16899" type="Armor" name="Plate Leather Gloves of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t47_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="610" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />

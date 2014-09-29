@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,6 +23,7 @@ import java.util.Map;
 
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -62,9 +63,9 @@ public class Q00700_CursedLife extends Quest
 	private static final int SWALLOWED_SKULL_ADENA = 50000;
 	private static final int BONUS = 16670;
 	
-	public Q00700_CursedLife(int questId, String name, String descr)
+	public Q00700_CursedLife()
 	{
-		super(questId, name, descr);
+		super(700, Q00700_CursedLife.class.getSimpleName(), "Cursed Life");
 		addStartNpc(ORBYU);
 		addTalkId(ORBYU);
 		addKillId(ROK);
@@ -153,7 +154,7 @@ public class Q00700_CursedLife extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if (st != null)
 		{
-			if (npc.getNpcId() == ROK)
+			if (npc.getId() == ROK)
 			{
 				int amount = 0, chance = getRandom(1000);
 				if (chance < 700)
@@ -245,7 +246,7 @@ public class Q00700_CursedLife extends Quest
 			}
 			else
 			{
-				Integer[] chances = MONSTERS.get(npc.getNpcId());
+				Integer[] chances = MONSTERS.get(npc.getId());
 				int chance = getRandom(1000);
 				if (chance < chances[0])
 				{
@@ -265,10 +266,5 @@ public class Q00700_CursedLife extends Quest
 			}
 		}
 		return super.onKill(npc, player, isSummon);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00700_CursedLife(700, Q00700_CursedLife.class.getSimpleName(), "Cursed Life");
 	}
 }

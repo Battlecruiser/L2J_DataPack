@@ -49,6 +49,7 @@
 												<xs:enumeration value="isAttackWeapon" />
 												<xs:enumeration value="isForceEquip" />
 												<xs:enumeration value="item_skill" />
+												<xs:enumeration value="allow_self_resurrection" />
 												<xs:enumeration value="material" />
 												<xs:enumeration value="mp_consume" />
 												<xs:enumeration value="oncrit_chance" />
@@ -95,14 +96,7 @@
 															</xs:attribute>
 															<xs:attribute name="clanHall" type="xs:normalizedString" />
 															<xs:attribute name="class_id_restriction" type="xs:normalizedString" />
-															<xs:attribute name="cloakStatus">
-																<xs:simpleType>
-																	<xs:restriction base="xs:nonNegativeInteger">
-																		<xs:minInclusive value="0" />
-																		<xs:maxInclusive value="1" />
-																	</xs:restriction>
-																</xs:simpleType>
-															</xs:attribute>
+															<xs:attribute name="cloakStatus" type="xs:boolean" />
 															<xs:attribute name="isHero" type="xs:boolean" />
 															<xs:attribute name="level">
 																<xs:simpleType>
@@ -122,6 +116,8 @@
 															</xs:attribute>
 															<xs:attribute name="races" type="xs:token" />
 															<xs:attribute name="subclass" type="xs:boolean" />
+															<xs:attribute name="instanceId" type="xs:normalizedString" />
+															<xs:attribute name="categoryType" type="xs:normalizedString" />
 														</xs:complexType>
 													</xs:element>
 												</xs:choice>
@@ -140,14 +136,7 @@
 												<xs:attribute name="chaotic" type="xs:boolean" />
 												<xs:attribute name="clanHall" type="xs:normalizedString" />
 												<xs:attribute name="class_id_restriction" type="xs:normalizedString" />
-												<xs:attribute name="cloakStatus">
-													<xs:simpleType>
-														<xs:restriction base="xs:nonNegativeInteger">
-															<xs:minInclusive value="0" />
-															<xs:maxInclusive value="1" />
-														</xs:restriction>
-													</xs:simpleType>
-												</xs:attribute>
+												<xs:attribute name="cloakStatus" type="xs:boolean" />
 												<xs:attribute name="flyMounted" type="xs:boolean" />
 												<xs:attribute name="fort" type="xs:integer" fixed="-1" />
 												<xs:attribute name="insideZoneId" type="xs:normalizedString" />
@@ -182,11 +171,13 @@
 												</xs:attribute>
 												<xs:attribute name="SiegeZone" type="xs:positiveInteger" fixed="126" />
 												<xs:attribute name="vehicleMounted" type="xs:boolean" />
+												<xs:attribute name="categoryType" type="xs:normalizedString" />
 											</xs:complexType>
 										</xs:element>
 										<xs:element name="target" maxOccurs="unbounded" minOccurs="1">
 											<xs:complexType>
 												<xs:attribute name="levelRange" type="xs:token" />
+												<xs:attribute name="categoryType" type="xs:normalizedString" />
 											</xs:complexType>
 										</xs:element>
 									</xs:choice>

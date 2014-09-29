@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,23 +18,28 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
+ * Mana Heal Percent effect implementation.
  * @author UnAfraid
  */
-public class ManaHealPercent extends L2Effect
+public final class ManaHealPercent extends AbstractEffect
 {
-	public ManaHealPercent(Env env, EffectTemplate template)
+	private final double _power;
+	
+	public ManaHealPercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -44,16 +49,22 @@ public class ManaHealPercent extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		L2Character target = getEffected();
+		return true;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		L2Character target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor())
 		{
-			return false;
+			return;
 		}
 		
 		double amount = 0;
-		double power = calc();
+		double power = _power;
 		boolean full = (power == 100.0);
 		
 		amount = full ? target.getMaxMp() : (target.getMaxMp() * power) / 100.0;
@@ -62,28 +73,18 @@ public class ManaHealPercent extends L2Effect
 		if (amount != 0)
 		{
 			target.setCurrentMp(amount + target.getCurrentMp());
-			StatusUpdate su = new StatusUpdate(target);
-			su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
-			target.sendPacket(su);
 		}
 		SystemMessage sm;
-		if (getEffector().getObjectId() != target.getObjectId())
+		if (info.getEffector().getObjectId() != target.getObjectId())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
-			sm.addCharName(getEffector());
+			sm.addCharName(info.getEffector());
 		}
 		else
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
 		}
-		sm.addNumber((int) amount);
+		sm.addInt((int) amount);
 		target.sendPacket(sm);
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

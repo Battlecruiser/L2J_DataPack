@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Fort;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.StringUtil;
 
 /**
@@ -88,9 +89,15 @@ public class AdminFortSiege implements IAdminCommandHandler
 				}
 				else
 				{
-					if (fort.getSiege().checkIfCanRegister(player))
+					if (fort.getSiege().addAttacker(player, false) == 4)
 					{
-						fort.getSiege().registerAttacker(player, true);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.REGISTERED_TO_S1_FORTRESS_BATTLE);
+						sm.addCastleId(fort.getResidenceId());
+						player.sendPacket(sm);
+					}
+					else
+					{
+						player.sendMessage("During registering error occurred!");
 					}
 				}
 			}
@@ -114,7 +121,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 				}
 				else
 				{
-					fort.setOwner(player.getClan(), false);
+					fort.endOfSiege(player.getClan());
 				}
 			}
 			else if (command.equalsIgnoreCase("admin_removefort"))
@@ -146,7 +153,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 	private void showFortSelectPage(L2PcInstance activeChar)
 	{
 		int i = 0;
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/forts.htm");
 		
 		final List<Fort> forts = FortManager.getInstance().getForts();
@@ -156,7 +163,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		{
 			if (fort != null)
 			{
-				StringUtil.append(cList, "<td fixwidth=90><a action=\"bypass -h admin_fortsiege ", String.valueOf(fort.getFortId()), "\">", fort.getName(), " id: ", String.valueOf(fort.getFortId()), "</a></td>");
+				StringUtil.append(cList, "<td fixwidth=90><a action=\"bypass -h admin_fortsiege ", String.valueOf(fort.getResidenceId()), "\">", fort.getName(), " id: ", String.valueOf(fort.getResidenceId()), "</a></td>");
 				i++;
 			}
 			
@@ -173,10 +180,10 @@ public class AdminFortSiege implements IAdminCommandHandler
 	
 	private void showFortSiegePage(L2PcInstance activeChar, Fort fort)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/fort.htm");
 		adminReply.replace("%fortName%", fort.getName());
-		adminReply.replace("%fortId%", String.valueOf(fort.getFortId()));
+		adminReply.replace("%fortId%", String.valueOf(fort.getResidenceId()));
 		activeChar.sendPacket(adminReply);
 	}
 	

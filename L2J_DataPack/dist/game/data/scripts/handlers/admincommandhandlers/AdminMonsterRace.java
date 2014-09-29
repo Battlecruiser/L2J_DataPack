@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -99,7 +99,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		{
 			state++;
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.MONSRACE_RACE_START);
-			sm.addNumber(0);
+			sm.addInt(0);
 			activeChar.sendPacket(sm);
 			PlaySound SRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
 			activeChar.sendPacket(SRace);

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,12 +19,11 @@
 package handlers.actionhandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.instancemanager.MercTicketManager;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
 public class L2ItemInstanceAction implements IActionHandler
 {
@@ -33,7 +32,7 @@ public class L2ItemInstanceAction implements IActionHandler
 	{
 		// this causes the validate position handler to do the pickup if the location is reached.
 		// mercenary tickets can only be picked up by the castle owner.
-		final int castleId = MercTicketManager.getInstance().getTicketCastleId(((L2ItemInstance) target).getItemId());
+		final int castleId = MercTicketManager.getInstance().getTicketCastleId(target.getId());
 		
 		if ((castleId > 0) && (!activeChar.isCastleLord(castleId) || activeChar.isInParty()))
 		{

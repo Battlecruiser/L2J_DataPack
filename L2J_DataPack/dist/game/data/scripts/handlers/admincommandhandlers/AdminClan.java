@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -70,7 +70,7 @@ public class AdminClan implements IAdminCommandHandler
 					return false;
 				}
 				
-				final NpcHtmlMessage html = new NpcHtmlMessage(0, 5);
+				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 				html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/claninfo.htm"));
 				html.replace("%clan_name%", clan.getName());
 				html.replace("%clan_leader%", clan.getLeaderName());
@@ -117,7 +117,7 @@ public class AdminClan implements IAdminCommandHandler
 			}
 			case "admin_clan_show_pending":
 			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(0, 5);
+				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 				html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/clanchanges.htm"));
 				StringBuilder sb = new StringBuilder();
 				for (L2Clan clan : ClanTable.getInstance().getClans())
@@ -127,7 +127,7 @@ public class AdminClan implements IAdminCommandHandler
 						sb.append("<tr>");
 						sb.append("<td>" + clan.getName() + "</td>");
 						sb.append("<td>" + clan.getNewLeaderName() + "</td>");
-						sb.append("<td><a action=\"bypass -h admin_clan_force_pending " + clan.getClanId() + "\">Force</a></td>");
+						sb.append("<td><a action=\"bypass -h admin_clan_force_pending " + clan.getId() + "\">Force</a></td>");
 						sb.append("</tr>");
 					}
 				}

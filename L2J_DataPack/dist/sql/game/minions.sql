@@ -11,6 +11,8 @@ INSERT INTO `minions` VALUES
 -- Naia Failan
 (18484,22422,4,4),
 (18491,18493,1,1),
+-- Sel Mahum Chef
+(18908,22779,2,2),
 (20117,20118,1,3),
 (20376,20377,1,2),
 (20398,20399,1,2),
@@ -124,6 +126,13 @@ INSERT INTO `minions` VALUES
 (27036,27037,2,3),
 (27110,27111,3,5),
 (27113,27111,3,6);
+
+-- Fairy Trees
+INSERT INTO `minions` VALUES
+(27185,27189,3,3),
+(27186,27189,3,3),
+(27187,27189,3,3),
+(27188,27189,3,3);
 
 -- raid bosses
 INSERT INTO `minions` VALUES
@@ -598,3 +607,70 @@ INSERT INTO `minions` VALUES
 (22827,22828,1,8),
 -- Hard Noxious Scorpion
 (22861,22826,1,4);
+
+-- Lord of Destruction raid bosses
+INSERT INTO `minions` VALUES
+-- Greyclaw Kutus
+(25735,25736,3,3), -- Kutus' Guard
+(25735,25737,1,1), -- Kutus' Pawn
+-- Lead Tracker Sharuk
+(25738,25739,2,2), -- Sharuk's Minion
+(25738,25740,3,3), -- Sharuk's Marksman
+-- Sukar Wererat Chief
+(25741,25742,2,2), -- Sukar Wererat Guard
+(25741,25743,1,1), -- Sukar Wererat Priest
+-- Ikuntai
+(25744,25745,2,2), -- Ikuntai's Servitor
+(25744,25746,2,2), -- Ikuntai's Pawn
+-- Zombie Lord Crowl
+(25747,25748,3,3), -- Evil Spirit Archer
+(25747,25749,2,2), -- Evil Spirit Warrior
+-- Zombie Lord Ferkel
+(25750,25751,2,2), -- Ferkel's Warrior
+(25750,25752,1,1), -- Ferkel's Priest
+-- Fire Lord Shadar
+(25754,25755,1,1), -- Sword of Shadar
+(25754,25756,4,4), -- Whip of Shadar
+-- Soul Collector Acheron
+(25757,25758,3,3), -- Soul Slasher
+(25757,25759,1,1), -- Soul Strainer
+-- Lord Ishka
+(25760,25761,1,1), -- Ishka's Elite Officer
+(25760,25762,2,2), -- Ishka's Elite Soldier
+-- Demon Kuri
+(25763,25764,2,2), -- Kuri's Wife
+(25763,25765,2,2), -- Devil Blader of Chaos
+-- Carnage Lord Gato
+(25767,25768,3,3), -- Gato's Marksman
+(25767,25769,2,2), -- Gato's Champion
+-- Ketra Commander Atis
+(25770,25771,3,3), -- Ketra Marksman
+(25770,25772,2,2), -- Ketra Raider
+-- Beacon of Blue Sky
+(25773,25774,3,3), -- Beacon's Shooter
+(25773,25775,2,2), -- Beacon's Warrior
+-- Earth Protector Panathen
+(25776,25777,1,1), -- Panathen's Knight
+(25776,25778,4,4), -- Panathen's Protectors
+-- Betrayer of Urutu Freki
+(25779,25780,2,2), -- Freki's Vampire Bat
+(25779,25781,1,1), -- Freki's Wild Bear
+-- Nellis' Vengeful Spirit
+(25782,25783,3,3), -- Nellis' Follower
+-- Rayito the Looter
+(25784,25785,1,1), -- Rayito's Henchman
+(25784,25786,3,3), -- Rayito's Henchman
+-- Ketra's Hero Hekaton
+(25787,25788,3,3), -- Scout of Hekaton
+(25787,25789,2,2), -- Servant of Hekaton
+-- Varka's Hero Shadith
+(25790,25791,1,1), -- Shadith's Royal Guard Captain
+(25790,25792,4,4), -- Shadith's Sentinel
+-- Kernon
+(25794,25795,1,1), -- Taliadon
+(25794,25796,4,4), -- Vemsk
+-- Meanas Anor
+(25797,25798,3,3), -- Wyvern of Marsh
+(25797,25799,1,1), -- Succubus of Marsh
+-- Mammon Collector Talos
+(25800,25801,3,3); -- Talos' Cohort

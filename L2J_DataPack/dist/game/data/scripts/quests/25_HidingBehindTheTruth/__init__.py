@@ -6,9 +6,9 @@ import sys
 import time
 
 from com.l2jserver.gameserver.ai import CtrlIntention
-from com.l2jserver.gameserver.model.quest			import State
-from com.l2jserver.gameserver.model.quest			import QuestState
-from com.l2jserver.gameserver.model.quest.jython		import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import State
+from com.l2jserver.gameserver.model.quest import QuestState
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 from com.l2jserver.gameserver.network.serverpackets import NpcSay
 
 qn = "25_HidingBehindTheTruth"
@@ -69,7 +69,7 @@ class Quest (JQuest) :
                st.set("step","1")
                triol = st.addSpawn(Triol,59712,-47568,-2712,0,0,300000,1)
                time.sleep(1)
-               triol.broadcastPacket(NpcSay(triol.getObjectId(), 0, triol.getNpcId(), "That box was sealed by my master. Don't touch it!"))
+               triol.broadcastPacket(NpcSay(triol.getObjectId(), 0, triol.getId(), "That box was sealed by my master. Don't touch it!"))
                triol.setRunning()
                triol.addDamageHate(player,0,999)
                triol.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
@@ -128,7 +128,7 @@ class Quest (JQuest) :
         htmltext = Quest.getNoQuestMsg(player)
         st = player.getQuestState(qn)
         if not st : return htmltext
-        npcId = npc.getNpcId()
+        npcId = npc.getId()
         id = st.getState()
         cond = st.getInt("cond")
         if id == State.COMPLETED:
@@ -234,7 +234,7 @@ class Quest (JQuest) :
         if st.getInt("cond") == 7:
             st.playSound("ItemSound.quest_itemget")
             st.set("cond","8")
-            npc.broadcastPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "You've ended my immortal life! You've protected by the feudal lord, aren't you?"))
+            npc.broadcastPacket(NpcSay(npc.getObjectId(), 0, npc.getId(), "You've ended my immortal life! You've protected by the feudal lord, aren't you?"))
             st.giveItems(TotemDoll,1)
             st.set("step","2")
         return

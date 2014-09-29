@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00134_TempleMissionary;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -61,9 +62,9 @@ public class Q00134_TempleMissionary extends Quest
 	private static final int FRAGMENT_COUNT = 10;
 	private static final int REPORT_COUNT = 3;
 	
-	private Q00134_TempleMissionary(int questId, String name, String descr)
+	public Q00134_TempleMissionary()
 	{
-		super(questId, name, descr);
+		super(134, Q00134_TempleMissionary.class.getSimpleName(), "Temple Missionary");
 		addStartNpc(GLYVKA);
 		addTalkId(GLYVKA, ROUKE);
 		addKillId(CRUMA_MARSHLANDS_TRAITOR);
@@ -126,7 +127,7 @@ public class Q00134_TempleMissionary extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState st = member.getQuestState(getName());
-		if (npc.getNpcId() == CRUMA_MARSHLANDS_TRAITOR)
+		if (npc.getId() == CRUMA_MARSHLANDS_TRAITOR)
 		{
 			st.giveItems(GIANTS_TECHNOLOGY_REPORT, 1);
 			if (st.getQuestItemsCount(GIANTS_TECHNOLOGY_REPORT) >= REPORT_COUNT)
@@ -148,7 +149,7 @@ public class Q00134_TempleMissionary extends Quest
 					addSpawn(CRUMA_MARSHLANDS_TRAITOR, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 60000);
 				}
 			}
-			else if (getRandom(100) < MOBS.get(npc.getNpcId()))
+			else if (getRandom(100) < MOBS.get(npc.getId()))
 			{
 				st.giveItems(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -167,7 +168,7 @@ public class Q00134_TempleMissionary extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case GLYVKA:
 				switch (st.getState())
@@ -251,10 +252,5 @@ public class Q00134_TempleMissionary extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00134_TempleMissionary(134, Q00134_TempleMissionary.class.getSimpleName(), "Temple Missionary");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -77,7 +77,7 @@ public class AdminMammon implements IAdminCommandHandler
 					activeChar.sendMessage("Blacksmith of Mammon: " + x1 + " " + y1 + " " + z1);
 					if (teleportIndex == 1)
 					{
-						activeChar.teleToLocation(x1, y1, z1, true);
+						activeChar.teleToLocation(blackInst[0].getLocation(), true);
 					}
 				}
 			}
@@ -95,7 +95,7 @@ public class AdminMammon implements IAdminCommandHandler
 					activeChar.sendMessage("Merchant of Mammon: " + x2 + " " + y2 + " " + z2);
 					if (teleportIndex == 2)
 					{
-						activeChar.teleToLocation(x2, y2, z2, true);
+						activeChar.teleToLocation(merchInst[0].getLocation(), true);
 					}
 				}
 			}

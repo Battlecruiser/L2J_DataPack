@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q10501_ZakenEmbroideredSoulCloak;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -42,9 +43,9 @@ public class Q10501_ZakenEmbroideredSoulCloak extends Quest
 	private static final int MIN_LEVEL = 78;
 	private static final int FRAGMENT_COUNT = 20;
 	
-	private Q10501_ZakenEmbroideredSoulCloak(int questId, String name, String descr)
+	public Q10501_ZakenEmbroideredSoulCloak()
 	{
-		super(questId, name, descr);
+		super(10501, Q10501_ZakenEmbroideredSoulCloak.class.getSimpleName(), "Zaken Embroidered Soul Cloak");
 		addStartNpc(OLF_ADAMS);
 		addTalkId(OLF_ADAMS);
 		addKillId(ZAKEN);
@@ -138,10 +139,5 @@ public class Q10501_ZakenEmbroideredSoulCloak extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10501_ZakenEmbroideredSoulCloak(10501, Q10501_ZakenEmbroideredSoulCloak.class.getSimpleName(), "Zaken Embroidered Soul Cloak");
 	}
 }

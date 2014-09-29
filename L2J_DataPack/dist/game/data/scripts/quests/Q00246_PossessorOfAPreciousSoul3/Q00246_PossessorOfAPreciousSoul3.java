@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,6 +20,7 @@ package quests.Q00246_PossessorOfAPreciousSoul3;
 
 import quests.Q00242_PossessorOfAPreciousSoul2.Q00242_PossessorOfAPreciousSoul2;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -62,9 +63,9 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	private static final int CHANCE_FOR_DROP = 30;
 	private static final int CHANCE_FOR_DROP_FRAGMENTS = 60;
 	
-	public Q00246_PossessorOfAPreciousSoul3(int questId, String name, String descr)
+	public Q00246_PossessorOfAPreciousSoul3()
 	{
-		super(questId, name, descr);
+		super(246, Q00246_PossessorOfAPreciousSoul3.class.getSimpleName(), "Possessor Of A Precious Soul 3");
 		addStartNpc(CARADINE);
 		addTalkId(LADD, CARADINE, OSSIAN);
 		addKillId(PILGRIM_OF_SPLENDOR, JUDGE_OF_SPLENDOR, BARAKIEL);
@@ -141,7 +142,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	{
 		final L2PcInstance partyMember;
 		final QuestState st;
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case PILGRIM_OF_SPLENDOR:
 				partyMember = getRandomPartyMember(player, "awaitsWaterbinder", "1");
@@ -229,7 +230,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					return super.onKill(npc, player, isSummon);
 				}
 				
-				if (Util.contains(MOBS, npc.getNpcId()) && (st.getQuestItemsCount(FRAGMENTS) < 100) && (st.isCond(4)))
+				if (Util.contains(MOBS, npc.getId()) && (st.getQuestItemsCount(FRAGMENTS) < 100) && (st.isCond(4)))
 				{
 					if (getRandom(100) < CHANCE_FOR_DROP_FRAGMENTS)
 					{
@@ -263,7 +264,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 			return "no_sub.html";
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case CARADINE:
 				switch (st.getState())
@@ -332,10 +333,5 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00246_PossessorOfAPreciousSoul3(246, Q00246_PossessorOfAPreciousSoul3.class.getSimpleName(), "Possessor Of A Precious Soul 3");
 	}
 }

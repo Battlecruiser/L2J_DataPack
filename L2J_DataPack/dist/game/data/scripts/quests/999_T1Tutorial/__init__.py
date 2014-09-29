@@ -5,7 +5,7 @@
 import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 from com.l2jserver.gameserver.network.serverpackets import PlaySound
 from com.l2jserver import Config
 
@@ -147,7 +147,7 @@ class Quest (JQuest) :
       st = self.newQuestState(player)
    htmltext = ""
    Ex = qs.getInt("Ex")
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    step=st.getInt("step")
    onlyone=st.getInt("onlyone")
    level=player.getLevel()
@@ -223,7 +223,7 @@ class Quest (JQuest) :
         elif step==3 :
           htmltext = htmlfiles[2]
    elif st.getState() == State.COMPLETED and npcTyp == 0:
-     htmltext = str(npc.getNpcId())+"-04.htm"
+     htmltext = str(npc.getId())+"-04.htm"
    if htmltext == None or htmltext == "":
      npc.showChatWindow(player)
    return htmltext
@@ -242,7 +242,7 @@ class Quest (JQuest) :
          st.showQuestionMark(3)
          qs.set("Ex","2")
       if Ex in [0,1,2] and st.getQuestItemsCount(6353) < 1 :
-         st.dropItem(npc,player,6353,1)
+         npc.dropItem(player, 6353, 1)
          st.playSound("ItemSound.quest_tutorial")
    return
 

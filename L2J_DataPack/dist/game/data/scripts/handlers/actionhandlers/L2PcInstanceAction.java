@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,16 +21,15 @@ package handlers.actionhandlers;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.InstanceType;
+import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
-import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 public class L2PcInstanceAction implements IActionHandler
 {
@@ -81,23 +80,11 @@ public class L2PcInstanceAction implements IActionHandler
 		{
 			// Set the target of the activeChar
 			activeChar.setTarget(target);
-			
-			// Send a Server->Client packet MyTargetSelected to the activeChar
-			// The color to display in the select window is White
-			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), 0));
-			if (activeChar != target)
-			{
-				activeChar.sendPacket(new ValidateLocation((L2Character) target));
-			}
 		}
 		else if (interact)
 		{
-			if (activeChar != target)
-			{
-				activeChar.sendPacket(new ValidateLocation((L2Character) target));
-			}
 			// Check if this L2PcInstance has a Private Store
-			if (((L2PcInstance) target).getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_NONE)
+			if (((L2PcInstance) target).getPrivateStoreType() != PrivateStoreType.NONE)
 			{
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 			}

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -48,9 +48,9 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 	private static final int ORDINARY_CERTIFICATE = 13766;
 	private static final int ELITE_CERTIFICATE = 13767;
 	
-	public Q00147_PathtoBecominganEliteMercenary(int questId, String name, String descr)
+	public Q00147_PathtoBecominganEliteMercenary()
 	{
-		super(questId, name, descr);
+		super(147, Q00147_PathtoBecominganEliteMercenary.class.getSimpleName(), "Path to Becoming an Elite Mercenary");
 		addStartNpc(MERC);
 		addTalkId(MERC);
 	}
@@ -121,10 +121,5 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00147_PathtoBecominganEliteMercenary(147, Q00147_PathtoBecominganEliteMercenary.class.getSimpleName(), "Path to Becoming an Elite Mercenary");
 	}
 }

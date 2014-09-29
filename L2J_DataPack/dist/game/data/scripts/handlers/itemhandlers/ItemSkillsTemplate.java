@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,12 +21,10 @@ package handlers.itemhandlers;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.items.type.L2EtcItemType;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -71,9 +69,8 @@ public class ItemSkillsTemplate implements IItemHandler
 			return false;
 		}
 		
-		int skillId;
-		int skillLvl;
-		final L2PcInstance activeChar = playable.getActingPlayer();
+		boolean hasConsumeSkill = false;
+		
 		for (SkillHolder skillInfo : skills)
 		{
 			if (skillInfo == null)
@@ -81,9 +78,15 @@ public class ItemSkillsTemplate implements IItemHandler
 				continue;
 			}
 			
-			L2Skill itemSkill = skillInfo.getSkill();
+			Skill itemSkill = skillInfo.getSkill();
+			
 			if (itemSkill != null)
 			{
+				if (itemSkill.getItemConsumeId() > 0)
+				{
+					hasConsumeSkill = true;
+				}
+				
 				if (!itemSkill.checkCondition(playable, playable.getTarget(), false))
 				{
 					return false;
@@ -100,18 +103,9 @@ public class ItemSkillsTemplate implements IItemHandler
 					return false;
 				}
 				
-				if (!item.isPotion() && !item.isElixir() && playable.isCastingNow())
+				if (!item.isPotion() && !item.isElixir() && !item.isScroll() && playable.isCastingNow())
 				{
 					return false;
-				}
-				
-				if ((itemSkill.getItemConsumeId() == 0) && (itemSkill.getItemConsume() > 0) && (item.isPotion() || item.isElixir() || itemSkill.isSimultaneousCast()))
-				{
-					if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), playable, false))
-					{
-						playable.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
-						return false;
-					}
 				}
 				
 				// Send message to the master.
@@ -121,46 +115,10 @@ public class ItemSkillsTemplate implements IItemHandler
 					sm.addSkillName(itemSkill);
 					playable.sendPacket(sm);
 				}
-				else
-				{
-					skillId = skillInfo.getSkillId();
-					skillLvl = skillInfo.getSkillLvl();
-					// Short buff icon for healing potions.
-					switch (skillId)
-					{
-						case 2031:
-						case 2032:
-						case 2037:
-						case 26025:
-						case 26026:
-							final int buffId = activeChar.getShortBuffTaskSkillId();
-							if ((skillId == 2037) || (skillId == 26025))
-							{
-								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration() / 1000);
-							}
-							else if (((skillId == 2032) || (skillId == 26026)) && (buffId != 2037) && (buffId != 26025))
-							{
-								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration() / 1000);
-							}
-							else
-							{
-								if ((buffId != 2037) && (buffId != 26025) && (buffId != 2032) && (buffId != 26026))
-								{
-									activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration() / 1000);
-								}
-							}
-							break;
-					}
-				}
 				
-				if (item.isPotion() || item.isElixir() || (item.getItemType() == L2EtcItemType.HERB) || itemSkill.isSimultaneousCast())
+				if (itemSkill.isSimultaneousCast() || ((item.getItem().hasImmediateEffect() || item.getItem().hasExImmediateEffect()) && itemSkill.isStatic()))
 				{
 					playable.doSimultaneousCast(itemSkill);
-					// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
-					if (!playable.isSummon() && activeChar.hasSummon())
-					{
-						activeChar.getSummon().doSimultaneousCast(itemSkill);
-					}
 				}
 				else
 				{
@@ -168,16 +126,6 @@ public class ItemSkillsTemplate implements IItemHandler
 					if (!playable.useMagic(itemSkill, forceUse, false))
 					{
 						return false;
-					}
-					
-					// Consume.
-					if ((itemSkill.getItemConsumeId() == 0) && (itemSkill.getItemConsume() > 0))
-					{
-						if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
-						{
-							playable.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
-							return false;
-						}
 					}
 				}
 				
@@ -187,7 +135,39 @@ public class ItemSkillsTemplate implements IItemHandler
 				}
 			}
 		}
+		
+		if (checkConsume(item, hasConsumeSkill))
+		{
+			if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
+			{
+				playable.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+				return false;
+			}
+		}
+		
 		return true;
+	}
+	
+	/**
+	 * @param item the item being used
+	 * @param hasConsumeSkill
+	 * @return {@code true} check if item use consume item, {@code false} otherwise
+	 */
+	private boolean checkConsume(L2ItemInstance item, boolean hasConsumeSkill)
+	{
+		
+		switch (item.getItem().getDefaultAction())
+		{
+			case CAPSULE:
+			case SKILL_REDUCE:
+			{
+				if (!hasConsumeSkill && item.getItem().hasImmediateEffect())
+				{
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 	
 	/**
@@ -196,7 +176,7 @@ public class ItemSkillsTemplate implements IItemHandler
 	 * @param item the item being used
 	 * @return {@code true} if the the item or skill to check is available, {@code false} otherwise
 	 */
-	private boolean checkReuse(L2Playable playable, L2Skill skill, L2ItemInstance item)
+	private boolean checkReuse(L2Playable playable, Skill skill, L2ItemInstance item)
 	{
 		final long remainingTime = (skill != null) ? playable.getSkillRemainingReuseTime(skill.getReuseHashCode()) : playable.getItemRemainingReuseTime(item.getObjectId());
 		final boolean isAvailable = remainingTime <= 0;
@@ -219,8 +199,8 @@ public class ItemSkillsTemplate implements IItemHandler
 					{
 						sm.addSkillName(skill);
 					}
-					sm.addNumber(hours);
-					sm.addNumber(minutes);
+					sm.addInt(hours);
+					sm.addInt(minutes);
 				}
 				else if (minutes > 0)
 				{
@@ -233,7 +213,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					{
 						sm.addSkillName(skill);
 					}
-					sm.addNumber(minutes);
+					sm.addInt(minutes);
 				}
 				else
 				{
@@ -247,7 +227,7 @@ public class ItemSkillsTemplate implements IItemHandler
 						sm.addSkillName(skill);
 					}
 				}
-				sm.addNumber(seconds);
+				sm.addInt(seconds);
 				playable.sendPacket(sm);
 			}
 		}

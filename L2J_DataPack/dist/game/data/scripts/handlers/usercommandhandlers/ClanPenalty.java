@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -73,7 +73,7 @@ public class ClanPenalty implements IUserCommandHandler
 		
 		htmlContent.append("</tr></table><img src=\"L2UI.SquareWhite\" width=270 height=1></center></body></html>");
 		
-		final NpcHtmlMessage penaltyHtml = new NpcHtmlMessage(0);
+		final NpcHtmlMessage penaltyHtml = new NpcHtmlMessage();
 		penaltyHtml.setHtml(htmlContent.toString());
 		activeChar.sendPacket(penaltyHtml);
 		

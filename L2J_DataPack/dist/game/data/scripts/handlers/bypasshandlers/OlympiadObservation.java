@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -52,6 +52,12 @@ public class OlympiadObservation implements IBypassHandler
 			
 			if (command.startsWith(COMMANDS[0])) // list
 			{
+				if (!Olympiad.getInstance().inCompPeriod())
+				{
+					activeChar.sendPacket(SystemMessageId.THE_OLYMPIAD_GAME_IS_NOT_CURRENTLY_IN_PROGRESS);
+					return false;
+				}
+				
 				activeChar.sendPacket(new ExOlympiadMatchList());
 			}
 			else
@@ -88,7 +94,7 @@ public class OlympiadObservation implements IBypassHandler
 				final OlympiadGameTask nextArena = OlympiadGameManager.getInstance().getOlympiadTask(arenaId);
 				if (nextArena != null)
 				{
-					activeChar.enterOlympiadObserverMode(nextArena.getZone().getSpawns().get(0), arenaId);
+					activeChar.enterOlympiadObserverMode(nextArena.getZone().getSpectatorSpawns().get(0), arenaId);
 					activeChar.setInstanceId(OlympiadGameManager.getInstance().getOlympiadTask(arenaId).getZone().getInstanceId());
 				}
 			}

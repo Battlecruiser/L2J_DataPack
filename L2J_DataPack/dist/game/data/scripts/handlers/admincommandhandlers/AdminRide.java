@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,8 +18,8 @@
  */
 package handlers.admincommandhandlers;
 
+import com.l2jserver.gameserver.datatables.TransformData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
@@ -82,7 +82,7 @@ public class AdminRide implements IAdminCommandHandler
 				}
 				else
 				{
-					TransformationManager.getInstance().transformPlayer(PURPLE_MANED_HORSE_TRANSFORMATION_ID, player);
+					TransformData.getInstance().transformPlayer(PURPLE_MANED_HORSE_TRANSFORMATION_ID, player);
 				}
 				
 				return true;
@@ -95,7 +95,7 @@ public class AdminRide implements IAdminCommandHandler
 				}
 				else
 				{
-					TransformationManager.getInstance().transformPlayer(JET_BIKE_TRANSFORMATION_ID, player);
+					TransformData.getInstance().transformPlayer(JET_BIKE_TRANSFORMATION_ID, player);
 				}
 				
 				return true;

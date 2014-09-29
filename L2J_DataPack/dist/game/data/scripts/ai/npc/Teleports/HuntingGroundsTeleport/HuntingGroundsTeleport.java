@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.util.Util;
  * Hunting Grounds teleport AI.
  * @author Charus
  */
-public class HuntingGroundsTeleport extends AbstractNpcAI
+public final class HuntingGroundsTeleport extends AbstractNpcAI
 {
 	// NPCs
 	// @formatter:off
@@ -62,12 +62,12 @@ public class HuntingGroundsTeleport extends AbstractNpcAI
 		
 		if (playerCabal == SevenSigns.CABAL_NULL)
 		{
-			return Util.contains(DAWN_NPCS, npc.getNpcId()) ? "dawn_tele-no.htm" : "dusk_tele-no.htm";
+			return Util.contains(DAWN_NPCS, npc.getId()) ? "dawn_tele-no.htm" : "dusk_tele-no.htm";
 		}
 		
 		String htmltext = "";
 		final boolean check = ss.isSealValidationPeriod() && (playerCabal == ss.getSealOwner(SevenSigns.SEAL_GNOSIS)) && (ss.getPlayerSeal(player.getObjectId()) == SevenSigns.SEAL_GNOSIS);
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case 31078:
 			case 31085:

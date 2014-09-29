@@ -73,6 +73,12 @@
 																</xs:simpleType>
 															</xs:attribute>
 															<xs:attribute name="val" type="xs:token" use="required" />
+															<xs:attribute name="walk" type="xs:positiveInteger" />
+															<xs:attribute name="run" type="xs:positiveInteger" />
+															<xs:attribute name="slowSwim" type="xs:positiveInteger" />
+															<xs:attribute name="fastSwim" type="xs:positiveInteger" />
+															<xs:attribute name="slowFly" type="xs:positiveInteger" />
+															<xs:attribute name="fastFly" type="xs:positiveInteger" />
 														</xs:complexType>
 													</xs:element>
 												</xs:sequence>

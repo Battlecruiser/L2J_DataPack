@@ -234,8 +234,6 @@ INSERT INTO `teleport` VALUES
 ('Aden(hall) -> out)',415,147723,7916,-475,0,0,57),
 ('Aden(hall) -> in)',416,148580,4578,-408,0,0,57),
 ('Aden(hall) -> outofcastle)',417,147582,8753,-496,0,0,57),
-('Disciples Necropolis -> Anakim (DUSK)',450,185065,-12612,-5104,0,0,57),
-('Disciples Necropolis -> Lilith (DAWN)',451,185060,-9622,-5104,0,0,57),
 ('Anakim/Lilith -> Disciples Necropolis',452,183225,-11911,-4897,0,0,57),
 ('TI -> DE Village',1005,9709,15566,-4568,24000,0,57),
 ('TI -> Dwarven Village',1006,115120,-178224,-880,46000,0,57),
@@ -798,7 +796,6 @@ INSERT INTO `teleport` VALUES
 ('Oren -> Sel Mahum Training Grounds (South Gate)',15001,79414,71496,-3448,3700,0,57),
 ('Oren -> Sel Mahum Training Grounds (Center)',15002,87448,61460,-3664,1800,0,57),
 ('Schuttgart -> Mithril Mines',15003,171946,-173352,3440,5300,0,57),
-('Entrance SOA -> Enter the Seed of Annihilation',15004,-180218,185923,-10576,0,0,57),
 ('Enter the Seed of Annihilation -> Entrance SOA',15005,-178262,153430,2472,0,0,57),
 ('Seed of Infinity Dock',15006,-212843,209695,4280,150000,0,57), -- retail
 ('Seed of Destruction Dock',15007,-248535,250273,4336,150000,0,57), -- retail
@@ -814,7 +811,17 @@ INSERT INTO `teleport` VALUES
 ('Hunters (Noble) -> The Heart of Antharas Lair',16005,154396,121235,-3808,1,1,13722),
 ('Gludio -> Isle of Souls Harbor',16006,-73983,51956,-3680,9300,0,57),
 ('Aden -> Isle of Souls Harbor',16007,-73983,51956,-3680,22000,0,57),
-('Aden -> Ivory Tower',16008,85391,16228,-3672,6200,0,57);
+('Aden -> Ivory Tower',16008,85391,16228,-3672,6200,0,57),
+('Photo Snow - Book Castle',16009,-61926,-59504,-1728,0,0,57),
+('Photo Snow - Clock Tower',16010,-61342,-57686,-1388,0,0,57),
+('Photo Snow - House',16011,-57525,-54523,-1576,0,0,57),
+('Photo Snow - Tuba 1',16012,-55355,-56305,-1112,0,0,57),
+('Photo Snow - Tuba 2',16013,-55545,-56310,-1256,0,0,57),
+('Photo Snow - Tuba 3',16014,-55646,-56314,-1296,0,0,57),
+('Photo Snow - Tuba 4',16015,-55748,-56327,-1336,0,0,57),
+('Photo Snow - Parade Tunnel a',16016,-58151,-53110,-1688,0,0,57),
+('Photo Snow - Parade Tunnel b',16017,-55223,-58832,-1680,0,0,57),
+('Photo Snow - Book House',16018,-59075,-59464,-1464,0,0,57);
 
 -- Fortress Teleports
 INSERT INTO `teleport` VALUES

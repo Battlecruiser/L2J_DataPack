@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00034_InSearchOfCloth;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -52,9 +53,9 @@ public class Q00034_InSearchOfCloth extends Quest
 	private static final int SUEDE_COUNT = 3000;
 	private static final int THREAD_COUNT = 5000;
 	
-	private Q00034_InSearchOfCloth(int questId, String name, String descr)
+	public Q00034_InSearchOfCloth()
 	{
-		super(questId, name, descr);
+		super(34, Q00034_InSearchOfCloth.class.getSimpleName(), "In Search of Cloth");
 		addStartNpc(RADIA);
 		addTalkId(RADIA, RALFORD, VARAN);
 		addKillId(MOBS);
@@ -145,7 +146,7 @@ public class Q00034_InSearchOfCloth extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case RADIA:
 				switch (st.getState())
@@ -211,10 +212,5 @@ public class Q00034_InSearchOfCloth extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00034_InSearchOfCloth(34, Q00034_InSearchOfCloth.class.getSimpleName(), "In Search of Cloth");
 	}
 }

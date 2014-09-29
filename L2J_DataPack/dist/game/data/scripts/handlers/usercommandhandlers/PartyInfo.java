@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -47,22 +47,22 @@ public class PartyInfo implements IUserCommandHandler
 		if (activeChar.isInParty())
 		{
 			final L2Party party = activeChar.getParty();
-			switch (party.getLootDistribution())
+			switch (party.getDistributionType())
 			{
-				case L2Party.ITEM_LOOTER:
+				case FINDERS_KEEPERS:
 					activeChar.sendPacket(SystemMessageId.LOOTING_FINDERS_KEEPERS);
 					break;
-				case L2Party.ITEM_ORDER:
-					activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN);
-					break;
-				case L2Party.ITEM_ORDER_SPOIL:
-					activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN_INCLUDE_SPOIL);
-					break;
-				case L2Party.ITEM_RANDOM:
+				case RANDOM:
 					activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM);
 					break;
-				case L2Party.ITEM_RANDOM_SPOIL:
+				case RANDOM_INCLUDING_SPOIL:
 					activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM_INCLUDE_SPOIL);
+					break;
+				case BY_TURN:
+					activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN);
+					break;
+				case BY_TURN_INCLUDING_SPOIL:
+					activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN_INCLUDE_SPOIL);
 					break;
 			}
 			

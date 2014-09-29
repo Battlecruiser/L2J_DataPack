@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -41,7 +41,7 @@ public class Lang implements IVoicedCommandHandler
 			return false;
 		}
 		
-		final NpcHtmlMessage msg = new NpcHtmlMessage(1);
+		final NpcHtmlMessage msg = new NpcHtmlMessage();
 		if (params == null)
 		{
 			final StringBuilder html = StringUtil.startAppend(100);

@@ -3,12 +3,12 @@
 # v0.1.r0 2005.12.05
 # v1.1.r0 2008.03.27: Update/Rewrite by Emperorc
 import sys
-from com.l2jserver.gameserver.datatables         			import SkillTable
-from com.l2jserver.gameserver.network.serverpackets      	import NpcSay 
-from com.l2jserver.gameserver.network.serverpackets      	import MagicSkillUse
-from com.l2jserver.gameserver.model.quest        			import State
-from com.l2jserver.gameserver.model.quest        			import QuestState
-from com.l2jserver.gameserver.model.quest.jython 			import QuestJython as JQuest
+from com.l2jserver.gameserver.datatables import SkillData
+from com.l2jserver.gameserver.network.serverpackets import NpcSay 
+from com.l2jserver.gameserver.network.serverpackets import MagicSkillUse
+from com.l2jserver.gameserver.model.quest import State
+from com.l2jserver.gameserver.model.quest import QuestState
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn="501_ProofOfClanAlliance"
 
@@ -68,13 +68,6 @@ def leader(player) :
            leaderst = leader.getQuestState(qn)
     return leaderst
 
-def isEffected(player,skillId) :
-    bool = 0
-    effect = player.getFirstEffect(skillId)
-    if effect :
-        bool = 1
-    return bool
-        
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr) :
@@ -120,7 +113,7 @@ class Quest (JQuest) :
            st.set("cond","3")
            st.startQuestTimer("poison_timer",3600000)
            st.addNotifyOfDeath(player)
-           SkillTable.getInstance().getInfo(4082,1).getEffects(npc,player);
+           SkillData.getInstance().getSkill(4082,1).applyEffects(npc,player);
        elif event == "poison_timer" :
            st.exitQuest(1)
            if DEBUG :
@@ -137,7 +130,7 @@ class Quest (JQuest) :
            deadlist.append(player.getName())
            leaderst.set("dead_list"," ".join(deadlist))
        else :
-           skill = SkillTable.getInstance().getInfo(4083,1)
+           skill = SkillData.getInstance().getSkill(4083,1)
            npc.setTarget(player)
            npc.doCast(skill)
            self.startQuestTimer(player.getName(),4000,npc,player,0)
@@ -177,7 +170,7 @@ class Quest (JQuest) :
    htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    clan = player.getClan()
    part = st.getInt("part")
@@ -221,10 +214,10 @@ class Quest (JQuest) :
                htmltext = "01"
            elif part == 2 and symbol < 3 :
                htmltext = "05"
-           elif symbol >= 3 and not isEffected(player,4082) :
+           elif symbol >= 3 and not player.isAffectedBySkill(4082) :
                htmltext = "06"
            elif part == 5 and st.getQuestItemsCount(HERB_OF_HARIT) and st.getQuestItemsCount(HERB_OF_VANOR) and \
-                st.getQuestItemsCount(HERB_OF_OEL_MAHUM) and st.getQuestItemsCount(BLOOD_OF_EVA) and isEffected(player,4082):
+                st.getQuestItemsCount(HERB_OF_OEL_MAHUM) and st.getQuestItemsCount(BLOOD_OF_EVA) and player.isAffectedBySkill(4082):
                htmltext = "08"
                st.giveItems(VOUCHER_OF_FAITH,1)
                st.giveItems(POTION_OF_RECOVERY,1)
@@ -235,7 +228,7 @@ class Quest (JQuest) :
                timer = st.getQuestTimer("poison_timer")
                if timer != None : timer.cancel()
            elif part == 3 or part == 4 or part == 5 :
-               if not isEffected(player,4082) :
+               if not player.isAffectedBySkill(4082) :
                    htmltext = "09"
                    st.set("part","1")
                    st.takeItems(ANTIDOTE_RECIPE,-1)
@@ -302,13 +295,13 @@ class Quest (JQuest) :
              return "Need to start quest!"
          return
      part = leaderst.getInt("part")
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      if npcId in CHESTS and part == 4 :
          wins = leaderst.getInt("chest_wins")
          if (self.chests - wins) == 12 or (wins < 4 and not self.getRandom(4)) :
              wins += 1
              leaderst.set("chest_wins",str(wins))
-             npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"###### BINGO! ######"))
+             npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getId(),"###### BINGO! ######"))
          self.chests += 1
      elif npcId in MOBS.keys() :
          st = player.getQuestState(qn)

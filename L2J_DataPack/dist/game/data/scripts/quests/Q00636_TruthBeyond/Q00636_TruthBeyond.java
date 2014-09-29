@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -40,9 +40,9 @@ public final class Q00636_TruthBeyond extends Quest
 	private static final int FADED_MARK = 8065;
 	private static final int MARK = 8067;
 	
-	public Q00636_TruthBeyond(int questId, String name, String descr)
+	public Q00636_TruthBeyond()
 	{
-		super(questId, name, descr);
+		super(636, Q00636_TruthBeyond.class.getSimpleName(), "The Truth Beyond the Gate");
 		addStartNpc(ELIYAH);
 		addTalkId(ELIYAH, FLAURON);
 		addEnterZoneId(ZONE);
@@ -92,7 +92,7 @@ public final class Q00636_TruthBeyond extends Quest
 			return getNoQuestMsg(player);
 		}
 		
-		if (npc.getNpcId() == ELIYAH)
+		if (npc.getId() == ELIYAH)
 		{
 			if (st.hasQuestItems(VISITOR_MARK) || st.hasQuestItems(FADED_MARK) || st.hasQuestItems(MARK))
 			{
@@ -124,10 +124,5 @@ public final class Q00636_TruthBeyond extends Quest
 			return "32010-03.htm";
 		}
 		return getNoQuestMsg(player);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00636_TruthBeyond(636, Q00636_TruthBeyond.class.getSimpleName(), "The Truth Beyond the Gate");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -46,9 +46,9 @@ public class Q00423_TakeYourBestShot extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00423_TakeYourBestShot(int questId, String name, String descr)
+	public Q00423_TakeYourBestShot()
 	{
-		super(questId, name, descr);
+		super(423, Q00423_TakeYourBestShot.class.getSimpleName(), "Take Your Best Shot!");
 		addStartNpc(JOHNNY, BATRACOS);
 		addTalkId(JOHNNY, BATRACOS);
 		addFirstTalkId(BATRACOS);
@@ -88,7 +88,7 @@ public class Q00423_TakeYourBestShot extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.isInsideRadius(96782, 85918, 100, true))
+		if (npc.isInsideRadius(96782, 85918, 0, 100, false, true))
 		{
 			return "32740-ugoros.html";
 		}
@@ -116,7 +116,7 @@ public class Q00423_TakeYourBestShot extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case JOHNNY:
 				switch (st.getState())
@@ -165,10 +165,5 @@ public class Q00423_TakeYourBestShot extends Quest
 				}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00423_TakeYourBestShot(423, Q00423_TakeYourBestShot.class.getSimpleName(), "Take Your Best Shot!");
 	}
 }

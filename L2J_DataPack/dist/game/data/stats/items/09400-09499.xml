@@ -2,14 +2,14 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9400" type="Armor" name="Weapon Master Circlet">
 		<set name="icon" val="icon.accessary_weapon_master_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="46, 113, 55, 117, 57, 118" /> <!-- Weapon Master -->
+				<player categoryType="WEAPON_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -17,14 +17,14 @@
 	</item>
 	<item id="9401" type="Armor" name="Dagger Master Circlet">
 		<set name="icon" val="icon.accessary_dagger_master_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="8, 93, 23, 101, 36, 108" /> <!-- Dagger Master -->
+				<player categoryType="DAGGER_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -32,14 +32,14 @@
 	</item>
 	<item id="9402" type="Armor" name="Bow Master Circlet">
 		<set name="icon" val="icon.accessary_bow_master_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="9, 92, 24, 102, 37, 109" /> <!-- Bow Master -->
+				<player categoryType="BOW_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -47,14 +47,14 @@
 	</item>
 	<item id="9403" type="Armor" name="Wizard Circlet">
 		<set name="icon" val="icon.accessary_wizard_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="12, 94, 13, 95, 27, 103, 40, 110" /> <!-- Wizard -->
+				<player categoryType="WIZARD_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -62,14 +62,14 @@
 	</item>
 	<item id="9404" type="Armor" name="Summoner Circlet">
 		<set name="icon" val="icon.accessary_summoner_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="14, 96, 28, 104, 41, 111" /> <!-- Summoner -->
+				<player categoryType="SUMMON_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -77,14 +77,14 @@
 	</item>
 	<item id="9405" type="Armor" name="Healer Circlet">
 		<set name="icon" val="icon.accessary_healer_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="16, 97, 30, 105, 43, 112" /> <!-- Healer -->
+				<player categoryType="HEAL_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -92,14 +92,14 @@
 	</item>
 	<item id="9406" type="Armor" name="Enchanter Circlet">
 		<set name="icon" val="icon.accessary_enchanter_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="17, 98, 51, 115, 52, 116" /> <!-- Enchanter -->
+				<player categoryType="BUFF_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -107,14 +107,14 @@
 	</item>
 	<item id="9407" type="Armor" name="Weapon Master Circlet (Kamael only)">
 		<set name="icon" val="icon.accessary_weapon_master_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="127, 131, 128, 132, 129, 133" /> <!-- Kamael Weapon Master -->
+				<player categoryType="WEAPON_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -122,14 +122,14 @@
 	</item>
 	<item id="9408" type="Armor" name="Bow Master Circlet (Kamael only)">
 		<set name="icon" val="icon.accessary_bow_master_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="130, 134" /> <!-- Kamael Bow Master -->
+				<player categoryType="BOW_MASTER2_3" />
 				<player subclass="false" />
 				<player level="40" />
 			</and>
@@ -137,10 +137,10 @@
 	</item>
 	<item id="9409" type="Armor" name="Black Phantom Mask (Event)">
 		<set name="icon" val="icon.accessory_high_phantom_mask_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -148,85 +148,85 @@
 	</item>
 	<item id="9410" type="Armor" name="Human Veteran's Circlet">
 		<set name="icon" val="icon.accessary_human_high_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
-			<player races="Human" />
+			<player races="HUMAN" />
 		</cond>
 	</item>
 	<item id="9411" type="Armor" name="Elven Veteran's Circlet">
 		<set name="icon" val="icon.accessary_elf_high_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
-			<player races="Elf" />
+			<player races="ELF" />
 		</cond>
 	</item>
 	<item id="9412" type="Armor" name="Dark Elven Veteran's Circlet">
 		<set name="icon" val="icon.accessary_darkelf_high_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
-			<player races="DarkElf" />
+			<player races="DARK_ELF" />
 		</cond>
 	</item>
 	<item id="9413" type="Armor" name="Orcish Veteran's Circlet">
 		<set name="icon" val="icon.accessary_orc_high_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
-			<player races="Orc" />
+			<player races="ORC" />
 		</cond>
 	</item>
 	<item id="9414" type="Armor" name="Dwarf Veteran's Circlet">
 		<set name="icon" val="icon.accessary_dwarf_high_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
-			<player races="Dwarf" />
+			<player races="DWARF" />
 		</cond>
 	</item>
 	<item id="9415" type="Armor" name="Kamaelic Veteran's Circlet">
 		<set name="icon" val="icon.accessary_kamael_high_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 	</item>
 	<item id="9416" type="Armor" name="Dynasty Breast Plate">
 		<set name="icon" val="icon.armor_t91_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
@@ -235,22 +235,21 @@
 	</item>
 	<item id="9417" type="Armor" name="Dynasty Breast Plate - Shield Master">
 		<set name="icon" val="icon.armor_t91_uk_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@shield_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="90, 91, 99, 106" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="SHIELD_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -260,22 +259,21 @@
 	</item>
 	<item id="9418" type="Armor" name="Dynasty Breast Plate - Weapon Master">
 		<set name="icon" val="icon.armor_t91_uw_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="89, 113, 117, 118" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="WEAPON_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -285,22 +283,21 @@
 	</item>
 	<item id="9419" type="Armor" name="Dynasty Breast Plate - Force Master">
 		<set name="icon" val="icon.armor_t91_uf_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="88, 114" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -310,22 +307,21 @@
 	</item>
 	<item id="9420" type="Armor" name="Dynasty Breast Plate - Bard">
 		<set name="icon" val="icon.armor_t91_uke_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="100, 107" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="BARD" />
 			</and>
 		</cond>
 		<for>
@@ -335,19 +331,19 @@
 	</item>
 	<item id="9421" type="Armor" name="Dynasty Gaiters">
 		<set name="icon" val="icon.armor_t91_l_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="731" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3210" />
 		<set name="price" val="15248000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="141" />
@@ -356,18 +352,18 @@
 	</item>
 	<item id="9422" type="Armor" name="Dynasty Helmet">
 		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="92" />
@@ -376,18 +372,18 @@
 	</item>
 	<item id="9423" type="Armor" name="Dynasty Gauntlet - Heavy Armor">
 		<set name="icon" val="icon.armor_t91_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="61" />
@@ -396,18 +392,18 @@
 	</item>
 	<item id="9424" type="Armor" name="Dynasty Boots - Heavy Armor">
 		<set name="icon" val="icon.armor_t91_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="61" />
@@ -416,13 +412,13 @@
 	</item>
 	<item id="9425" type="Armor" name="Dynasty Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
@@ -434,19 +430,19 @@
 	</item>
 	<item id="9426" type="Armor" name="Dynasty Leather Armor - Dagger Master">
 		<set name="icon" val="icon.armor_t92_ud_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+			<player categoryType="DAGGER_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -455,20 +451,19 @@
 	</item>
 	<item id="9427" type="Armor" name="Dynasty Leather Armor - Bow Master">
 		<set name="icon" val="icon.armor_t92_ub_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@bow_master}}}" />
 		<cond msgId="1518">
-			<player class_id_restriction="92, 102, 109, 134" />
+			<player categoryType="BOW_MASTER" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -477,13 +472,13 @@
 	</item>
 	<item id="9428" type="Armor" name="Dynasty Leather Leggings">
 		<set name="icon" val="icon.armor_t92_l_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="549" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
 		<set name="element_enabled" val="true" />
@@ -495,12 +490,12 @@
 	</item>
 	<item id="9429" type="Armor" name="Dynasty Leather Helmet">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
@@ -512,12 +507,12 @@
 	</item>
 	<item id="9430" type="Armor" name="Dynasty Leather Gloves - Light Armor">
 		<set name="icon" val="icon.armor_t92_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
@@ -529,12 +524,12 @@
 	</item>
 	<item id="9431" type="Armor" name="Dynasty Leather Boots - Light Armor">
 		<set name="icon" val="icon.armor_t92_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
@@ -546,19 +541,19 @@
 	</item>
 	<item id="9432" type="Armor" name="Dynasty Tunic">
 		<set name="icon" val="icon.armor_t93_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
@@ -568,22 +563,21 @@
 	</item>
 	<item id="9433" type="Armor" name="Dynasty Tunic - Healer">
 		<set name="icon" val="icon.armor_t93_uh_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@heal_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="97, 105, 112" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="HEAL_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -594,22 +588,21 @@
 	</item>
 	<item id="9434" type="Armor" name="Dynasty Tunic - Enchanter">
 		<set name="icon" val="icon.armor_t93_ue_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="98, 115, 116" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="BUFF_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -620,22 +613,21 @@
 	</item>
 	<item id="9435" type="Armor" name="Dynasty Tunic - Summoner">
 		<set name="icon" val="icon.armor_t93_us_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="96, 104, 111" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="SUMMON_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -646,22 +638,21 @@
 	</item>
 	<item id="9436" type="Armor" name="Dynasty Tunic - Wizard">
 		<set name="icon" val="icon.armor_t93_uw_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@wizard_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-				<player class_id_restriction="94, 95, 103, 110" />
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player categoryType="WIZARD_MASTER" />
 			</and>
 		</cond>
 		<for>
@@ -672,19 +663,19 @@
 	</item>
 	<item id="9437" type="Armor" name="Dynasty Stockings">
 		<set name="icon" val="icon.armor_t93_l_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="549" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="scale_of_dragon" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="860" />
 		<set name="price" val="11436000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="71" />
@@ -694,18 +685,18 @@
 	</item>
 	<item id="9438" type="Armor" name="Dynasty Circlet">
 		<set name="icon" val="icon.armor_circlet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="92" />
@@ -714,18 +705,18 @@
 	</item>
 	<item id="9439" type="Armor" name="Dynasty Gloves - Robe">
 		<set name="icon" val="icon.armor_t93_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="61" />
@@ -734,18 +725,18 @@
 	</item>
 	<item id="9440" type="Armor" name="Dynasty Shoes - Robe">
 		<set name="icon" val="icon.armor_t93_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="leather" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="61" />
@@ -754,17 +745,17 @@
 	</item>
 	<item id="9441" type="Armor" name="Dynasty Shield">
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="307" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1150" />
 		<set name="price" val="6404000" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -775,16 +766,16 @@
 	</item>
 	<item id="9442" type="Weapon" name="Dynasty Sword">
 		<set name="icon" val="icon.weapon_dynasty_blade_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="change_weaponId" val="9376" />
@@ -803,16 +794,16 @@
 	</item>
 	<item id="9443" type="Weapon" name="Dynasty Blade">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
 		<set name="change_weaponId" val="9380" />
@@ -831,16 +822,16 @@
 	</item>
 	<item id="9444" type="Weapon" name="Dynasty Phantom">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -859,16 +850,16 @@
 	</item>
 	<item id="9445" type="Weapon" name="Dynasty Bow">
 		<set name="icon" val="icon.weapon_dynasty_bow_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="change_weaponId" val="9384" />
@@ -890,16 +881,16 @@
 	</item>
 	<item id="9446" type="Weapon" name="Dynasty Knife">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -918,16 +909,16 @@
 	</item>
 	<item id="9447" type="Weapon" name="Dynasty Halberd">
 		<set name="icon" val="icon.weapon_dynasty_spear_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="bronze" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -947,16 +938,16 @@
 	</item>
 	<item id="9448" type="Weapon" name="Dynasty Cudgel">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -975,16 +966,16 @@
 	</item>
 	<item id="9449" type="Weapon" name="Dynasty Mace">
 		<set name="icon" val="icon.weapon_dynasty_staff_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1004,16 +995,16 @@
 	</item>
 	<item id="9450" type="Weapon" name="Dynasty Bagh-Nakh">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
@@ -1032,20 +1023,20 @@
 	</item>
 	<item id="9451" type="EtcItem" name="Dynastic Essence">
 		<set name="icon" val="icon.etc_armor_soul_i00" />
-		<set name="etcitem_type" val="material" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9452" type="Armor" name="Sealed Dynasty Earring">
 		<set name="icon" val="icon.accessary_dynasty_earing_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="194" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="4032000" />
 		<set name="enchant_enabled" val="1" />
@@ -1056,12 +1047,12 @@
 	</item>
 	<item id="9453" type="Armor" name="Sealed Dynasty Necklace">
 		<set name="icon" val="icon.accessary_dynasty_necklace_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="258" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5376000" />
 		<set name="enchant_enabled" val="1" />
@@ -1072,12 +1063,12 @@
 	</item>
 	<item id="9454" type="Armor" name="Sealed Dynasty Ring">
 		<set name="icon" val="icon.accessary_dynasty_ring_i01" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="129" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="gold" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="2688000" />
 		<set name="enchant_enabled" val="1" />
@@ -1088,12 +1079,12 @@
 	</item>
 	<item id="9455" type="Armor" name="Dynasty Earrings">
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
 		<set name="enchant_enabled" val="1" />
@@ -1105,12 +1096,12 @@
 	</item>
 	<item id="9456" type="Armor" name="Dynasty Necklace">
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
 		<set name="enchant_enabled" val="1" />
@@ -1122,12 +1113,12 @@
 	</item>
 	<item id="9457" type="Armor" name="Dynasty Ring">
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="gold" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
 		<set name="enchant_enabled" val="1" />
@@ -1139,12 +1130,12 @@
 	</item>
 	<item id="9458" type="Armor" name="Dynasty Earrings - Stun Resistance">
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
 		<set name="enchant_enabled" val="1" />
@@ -1157,12 +1148,12 @@
 	</item>
 	<item id="9459" type="Armor" name="Dynasty Necklace - Stun Resistance">
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
 		<set name="enchant_enabled" val="1" />
@@ -1175,12 +1166,12 @@
 	</item>
 	<item id="9460" type="Armor" name="Dynasty Ring - Stun Resistance">
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="gold" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
 		<set name="enchant_enabled" val="1" />
@@ -1193,12 +1184,12 @@
 	</item>
 	<item id="9461" type="Armor" name="Dynasty Earrings - Poison Resistance">
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
 		<set name="enchant_enabled" val="1" />
@@ -1211,12 +1202,12 @@
 	</item>
 	<item id="9462" type="Armor" name="Dynasty Necklace - Poison Resistance">
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
 		<set name="enchant_enabled" val="1" />
@@ -1229,12 +1220,12 @@
 	</item>
 	<item id="9463" type="Armor" name="Dynasty Ring - Poison Resistance">
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="gold" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
 		<set name="enchant_enabled" val="1" />
@@ -1247,12 +1238,12 @@
 	</item>
 	<item id="9464" type="Armor" name="Dynasty Earrings - Bleed Resistance">
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
 		<set name="enchant_enabled" val="1" />
@@ -1265,12 +1256,12 @@
 	</item>
 	<item id="9465" type="Armor" name="Dynasty Necklace - Bleed Resistance">
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
 		<set name="enchant_enabled" val="1" />
@@ -1283,12 +1274,12 @@
 	</item>
 	<item id="9466" type="Armor" name="Dynasty Ring - Bleed Resistance">
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="gold" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
 		<set name="enchant_enabled" val="1" />
@@ -1301,12 +1292,12 @@
 	</item>
 	<item id="9467" type="Armor" name="Dynasty Earrings - Sleep Resistance">
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
 		<set name="enchant_enabled" val="1" />
@@ -1319,12 +1310,12 @@
 	</item>
 	<item id="9468" type="Armor" name="Dynasty Necklace - Sleep Resistance">
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
 		<set name="enchant_enabled" val="1" />
@@ -1337,12 +1328,12 @@
 	</item>
 	<item id="9469" type="Armor" name="Dynasty Ring - Sleep Resistance">
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="gold" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
 		<set name="enchant_enabled" val="1" />
@@ -1355,12 +1346,12 @@
 	</item>
 	<item id="9470" type="Armor" name="Dynasty Earrings - Paralysis Resistance">
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
 		<set name="enchant_enabled" val="1" />
@@ -1373,12 +1364,12 @@
 	</item>
 	<item id="9471" type="Armor" name="Dynasty Necklace - Paralysis Resistance">
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
 		<set name="enchant_enabled" val="1" />
@@ -1391,12 +1382,12 @@
 	</item>
 	<item id="9472" type="Armor" name="Dynasty Ring - Paralysis Resistance">
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="gold" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
 		<set name="enchant_enabled" val="1" />
@@ -1409,12 +1400,12 @@
 	</item>
 	<item id="9473" type="Armor" name="Dynasty Earrings - Hold Resistance">
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
 		<set name="enchant_enabled" val="1" />
@@ -1427,12 +1418,12 @@
 	</item>
 	<item id="9474" type="Armor" name="Dynasty Necklace - Hold Resistance">
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
 		<set name="enchant_enabled" val="1" />
@@ -1445,12 +1436,12 @@
 	</item>
 	<item id="9475" type="Armor" name="Dynasty Ring - Hold Resistance">
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="gold" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
 		<set name="enchant_enabled" val="1" />
@@ -1463,12 +1454,12 @@
 	</item>
 	<item id="9476" type="Armor" name="Dynasty Earrings - Fear Resistance">
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
 		<set name="enchant_enabled" val="1" />
@@ -1481,12 +1472,12 @@
 	</item>
 	<item id="9477" type="Armor" name="Dynasty Necklace - Fear Resistance">
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
 		<set name="enchant_enabled" val="1" />
@@ -1499,12 +1490,12 @@
 	</item>
 	<item id="9478" type="Armor" name="Dynasty Ring - Fear Resistance">
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="gold" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
 		<set name="enchant_enabled" val="1" />
@@ -1517,12 +1508,12 @@
 	</item>
 	<item id="9479" type="Armor" name="Dynasty Earrings (Not In Use) - Resistance to Dark">
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
 		<set name="enchant_enabled" val="1" />
@@ -1534,12 +1525,12 @@
 	</item>
 	<item id="9480" type="Armor" name="Dynasty Necklace (Not In Use) - Resistance to Dark">
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="silver" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
 		<set name="enchant_enabled" val="1" />
@@ -1551,12 +1542,12 @@
 	</item>
 	<item id="9481" type="Armor" name="Dynasty Ring (Not In Use) - Resistance to Dark">
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="s" />
-		<set name="material" val="gold" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
 		<set name="enchant_enabled" val="1" />
@@ -1568,10 +1559,10 @@
 	</item>
 	<item id="9482" type="EtcItem" name="Recipe: Sealed Dynasty Breast Plate (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="488000" />
 		<set name="recipe_id" val="881" />
@@ -1580,10 +1571,10 @@
 	</item>
 	<item id="9483" type="EtcItem" name="Recipe: Sealed Dynasty Gaiters (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="305000" />
 		<set name="recipe_id" val="882" />
@@ -1592,10 +1583,10 @@
 	</item>
 	<item id="9484" type="EtcItem" name="Recipe: Sealed Dynasty Helmet (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="183000" />
 		<set name="recipe_id" val="883" />
@@ -1604,10 +1595,10 @@
 	</item>
 	<item id="9485" type="EtcItem" name="Recipe: Sealed Dynasty Gauntlet (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="122000" />
 		<set name="recipe_id" val="884" />
@@ -1616,10 +1607,10 @@
 	</item>
 	<item id="9486" type="EtcItem" name="Recipe: Sealed Dynasty Boots (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="122000" />
 		<set name="recipe_id" val="885" />
@@ -1628,10 +1619,10 @@
 	</item>
 	<item id="9487" type="EtcItem" name="Recipe: Sealed Dynasty Leather Armor (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="366000" />
 		<set name="recipe_id" val="886" />
@@ -1640,10 +1631,10 @@
 	</item>
 	<item id="9488" type="EtcItem" name="Recipe: Sealed Dynasty Leather Leggings (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="228700" />
 		<set name="recipe_id" val="887" />
@@ -1652,10 +1643,10 @@
 	</item>
 	<item id="9489" type="EtcItem" name="Recipe: Sealed Dynasty Leather Helmet (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="183000" />
 		<set name="recipe_id" val="888" />
@@ -1664,10 +1655,10 @@
 	</item>
 	<item id="9490" type="EtcItem" name="Recipe: Sealed Dynasty Leather Gloves (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="122000" />
 		<set name="recipe_id" val="889" />
@@ -1676,10 +1667,10 @@
 	</item>
 	<item id="9491" type="EtcItem" name="Recipe: Sealed Dynasty Leather Boots (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="122000" />
 		<set name="recipe_id" val="890" />
@@ -1688,10 +1679,10 @@
 	</item>
 	<item id="9492" type="EtcItem" name="Recipe: Sealed Dynasty Tunic (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="366000" />
 		<set name="recipe_id" val="891" />
@@ -1700,10 +1691,10 @@
 	</item>
 	<item id="9493" type="EtcItem" name="Recipe: Sealed Dynasty Stockings (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="228700" />
 		<set name="recipe_id" val="892" />
@@ -1712,10 +1703,10 @@
 	</item>
 	<item id="9494" type="EtcItem" name="Recipe: Sealed Dynasty Circlet (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="183000" />
 		<set name="recipe_id" val="893" />
@@ -1724,10 +1715,10 @@
 	</item>
 	<item id="9495" type="EtcItem" name="Recipe: Sealed Dynasty Gloves (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="122000" />
 		<set name="recipe_id" val="894" />
@@ -1736,10 +1727,10 @@
 	</item>
 	<item id="9496" type="EtcItem" name="Recipe: Sealed Dynasty Shoes (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="122000" />
 		<set name="recipe_id" val="895" />
@@ -1748,10 +1739,10 @@
 	</item>
 	<item id="9497" type="EtcItem" name="Recipe: Sealed Dynasty Shield (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="128100" />
 		<set name="recipe_id" val="896" />
@@ -1760,10 +1751,10 @@
 	</item>
 	<item id="9498" type="EtcItem" name="Recipe: Sealed Dynasty Breast Plate (100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="998000" />
 		<set name="recipe_id" val="2" />
@@ -1771,10 +1762,10 @@
 	</item>
 	<item id="9499" type="EtcItem" name="Recipe: Sealed Dynasty Gaiters (100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="recipe" />
-		<set name="etcitem_type" val="recipe" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="624000" />
 		<set name="recipe_id" val="2" />

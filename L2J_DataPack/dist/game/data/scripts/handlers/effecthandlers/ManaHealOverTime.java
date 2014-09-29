@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,47 +18,35 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
-public class ManaHealOverTime extends L2Effect
+/**
+ * Mana Heal Over Time effect implementation.
+ */
+public final class ManaHealOverTime extends AbstractEffect
 {
-	public ManaHealOverTime(Env env, EffectTemplate template)
-	{
-		super(env, template);
-	}
+	private final double _power;
 	
-	// Special constructor to steal this effect
-	public ManaHealOverTime(Env env, L2Effect effect)
+	public ManaHealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, effect);
-	}
-	
-	@Override
-	protected boolean effectCanBeStolen()
-	{
-		return true;
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onActionTime(BuffInfo info)
 	{
-		return L2EffectType.MANA_HEAL_OVER_TIME;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		double mp = getEffected().getCurrentMp();
-		double maxmp = getEffected().getMaxRecoverableMp();
+		double mp = info.getEffected().getCurrentMp();
+		double maxmp = info.getEffected().getMaxRecoverableMp();
 		
 		// Not needed to set the MP and send update packet if player is already at max MP
 		if (mp >= maxmp)
@@ -66,13 +54,9 @@ public class ManaHealOverTime extends L2Effect
 			return true;
 		}
 		
-		mp += calc();
+		mp += _power * getTicksMultiplier();
 		mp = Math.min(mp, maxmp);
-		
-		getEffected().setCurrentMp(mp);
-		StatusUpdate sump = new StatusUpdate(getEffected());
-		sump.addAttribute(StatusUpdate.CUR_MP, (int) mp);
-		getEffected().sendPacket(sump);
-		return true;
+		info.getEffected().setCurrentMp(mp);
+		return info.getSkill().isToggle();
 	}
 }

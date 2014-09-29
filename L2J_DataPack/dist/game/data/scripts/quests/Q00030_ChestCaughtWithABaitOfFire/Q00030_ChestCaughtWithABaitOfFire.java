@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -41,9 +41,9 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 	private static final int RUKAL_MUSICAL = 7628;
 	private static final int PROTECTION_NECKLACE = 916;
 	
-	public Q00030_ChestCaughtWithABaitOfFire(int questId, String name, String descr)
+	public Q00030_ChestCaughtWithABaitOfFire()
 	{
-		super(questId, name, descr);
+		super(30, Q00030_ChestCaughtWithABaitOfFire.class.getSimpleName(), "Chest Caught With A Bait Of Fire");
 		addStartNpc(LINNAEUS);
 		addTalkId(LINNAEUS, RUKAL);
 		registerQuestItems(RUKAL_MUSICAL);
@@ -95,7 +95,7 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		
 		switch (st.getState())
 		{
@@ -141,10 +141,5 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00030_ChestCaughtWithABaitOfFire(30, Q00030_ChestCaughtWithABaitOfFire.class.getSimpleName(), "Chest Caught With A Bait Of Fire");
 	}
 }

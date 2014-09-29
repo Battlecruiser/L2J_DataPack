@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -38,9 +38,9 @@ public class Q00119_LastImperialPrince extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 74;
 	
-	public Q00119_LastImperialPrince(int id, String name, String descr)
+	public Q00119_LastImperialPrince()
 	{
-		super(id, name, descr);
+		super(119, Q00119_LastImperialPrince.class.getSimpleName(), "Last Imperial Prince");
 		addStartNpc(NAMELESS_SPIRIT);
 		addTalkId(NAMELESS_SPIRIT, DEVORIN);
 	}
@@ -113,7 +113,7 @@ public class Q00119_LastImperialPrince extends Quest
 		{
 			case State.COMPLETED:
 			{
-				if (npc.getNpcId() == NAMELESS_SPIRIT)
+				if (npc.getId() == NAMELESS_SPIRIT)
 				{
 					htmltext = "31453-06.html";
 				}
@@ -126,7 +126,7 @@ public class Q00119_LastImperialPrince extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == NAMELESS_SPIRIT)
+				if (npc.getId() == NAMELESS_SPIRIT)
 				{
 					if (st.isCond(1))
 					{
@@ -145,7 +145,7 @@ public class Q00119_LastImperialPrince extends Quest
 						htmltext = "31453-09.html";
 					}
 				}
-				else if (npc.getNpcId() == DEVORIN)
+				else if (npc.getId() == DEVORIN)
 				{
 					if (st.isCond(1))
 					{
@@ -160,10 +160,5 @@ public class Q00119_LastImperialPrince extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00119_LastImperialPrince(119, Q00119_LastImperialPrince.class.getSimpleName(), "Last Imperial Prince");
 	}
 }

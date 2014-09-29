@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,30 +18,36 @@
  */
 package quests.Q00026_TiredOfWaiting;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Tired Of Waiting (26)
  * @author corbin12
  */
-public class Q00026_TiredOfWaiting extends Quest
+public final class Q00026_TiredOfWaiting extends Quest
 {
 	// NPCs
 	private static final int ISAEL_SILVERSHADOW = 30655;
 	private static final int KITZKA = 31045;
 	// Items
 	private static final int DELIVERY_BOX = 17281;
-	private static final int WILL_OF_ANTHARAS = 17266;
-	private static final int LARGE_DRAGON_BONE = 17248;
-	private static final int SEALED_BLOOD_CRYSTAL = 17267;
-	
-	public Q00026_TiredOfWaiting(int questId, String name, String descr)
+	private static final Map<String, Integer> REWARDS = new HashMap<>();
+	static
 	{
-		super(questId, name, descr);
+		REWARDS.put("31045-10.html", 17248); // Large Dragon Bone
+		REWARDS.put("31045-11.html", 17266); // Will of Antharas
+		REWARDS.put("31045-12.html", 17267); // Sealed Blood Crystal
+	}
+	
+	public Q00026_TiredOfWaiting()
+	{
+		super(26, Q00026_TiredOfWaiting.class.getSimpleName(), "Tired of Waiting");
 		addStartNpc(ISAEL_SILVERSHADOW);
 		addTalkId(ISAEL_SILVERSHADOW, KITZKA);
 		registerQuestItems(DELIVERY_BOX);
@@ -50,41 +56,51 @@ public class Q00026_TiredOfWaiting extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
+		String htmltext = null;
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (event)
 		{
-			case ISAEL_SILVERSHADOW:
-				if (event.equalsIgnoreCase("30655-04.html"))
+			case "30655-02.htm":
+			case "30655-03.htm":
+			case "30655-05.html":
+			case "30655-06.html":
+			case "31045-02.html":
+			case "31045-03.html":
+			case "31045-05.html":
+			case "31045-06.html":
+			case "31045-07.html":
+			case "31045-08.html":
+			case "31045-09.html":
+				htmltext = event;
+				break;
+			case "30655-04.html":
+				if (st.isCreated())
 				{
 					st.giveItems(DELIVERY_BOX, 1);
 					st.startQuest();
+					htmltext = event;
 				}
 				break;
-			case KITZKA:
-				if (event.equalsIgnoreCase("31045-04.html"))
+			case "31045-04.html":
+				if (st.isStarted())
 				{
-					st.takeItems(DELIVERY_BOX, 1);
+					st.takeItems(DELIVERY_BOX, -1);
+					htmltext = event;
 				}
-				else if (event.equalsIgnoreCase("31045-10.html"))
+				break;
+			case "31045-10.html":
+			case "31045-11.html":
+			case "31045-12.html":
+				if (st.isStarted())
 				{
-					st.giveItems(LARGE_DRAGON_BONE, 1);
+					st.giveItems(REWARDS.get(event), 1);
 					st.exitQuest(false, true);
-				}
-				else if (event.equalsIgnoreCase("31045-11.html"))
-				{
-					st.giveItems(WILL_OF_ANTHARAS, 1);
-					st.exitQuest(false, true);
-				}
-				else if (event.equalsIgnoreCase("31045-12.html"))
-				{
-					st.giveItems(SEALED_BLOOD_CRYSTAL, 1);
-					st.exitQuest(false, true);
+					htmltext = event;
 				}
 				break;
 		}
@@ -101,41 +117,29 @@ public class Q00026_TiredOfWaiting extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
-		switch (st.getState())
+		switch (npc.getId())
 		{
-			case State.CREATED:
-				if (npcId == ISAEL_SILVERSHADOW)
+			case ISAEL_SILVERSHADOW:
+				if (st.isCreated())
 				{
-					htmltext = (player.getLevel() >= 80) ? "30655-01.htm" : "30655-00.html";
+					htmltext = ((player.getLevel() >= 80) ? "30655-01.htm" : "30655-00.html");
 				}
-				break;
-			case State.STARTED:
-				if (st.isCond(1))
+				else if (st.isStarted())
 				{
-					switch (npcId)
-					{
-						case ISAEL_SILVERSHADOW:
-							htmltext = "30655-07.html";
-							break;
-						case KITZKA:
-							htmltext = (st.hasQuestItems(DELIVERY_BOX)) ? "31045-01.html" : "31045-09.html";
-							break;
-					}
+					htmltext = "30655-07.html";
 				}
-				break;
-			case State.COMPLETED:
-				if (npcId == ISAEL_SILVERSHADOW)
+				else
 				{
 					htmltext = "30655-08.html";
 				}
 				break;
+			case KITZKA:
+				if (st.isStarted())
+				{
+					htmltext = (st.hasQuestItems(DELIVERY_BOX) ? "31045-01.html" : "31045-09.html");
+				}
+				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00026_TiredOfWaiting(26, Q00026_TiredOfWaiting.class.getSimpleName(), "Tired of Waiting");
 	}
 }

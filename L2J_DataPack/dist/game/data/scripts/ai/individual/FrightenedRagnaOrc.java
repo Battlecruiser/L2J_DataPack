@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,12 +21,12 @@ package ai.individual;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
@@ -46,9 +46,9 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 	// Skill
 	private static final SkillHolder SKILL = new SkillHolder(6234, 1);
 	
-	private FrightenedRagnaOrc(String name, String descr)
+	private FrightenedRagnaOrc()
 	{
-		super(name, descr);
+		super(FrightenedRagnaOrc.class.getSimpleName(), "ai/individual");
 		addAttackId(MOB_ID);
 		addKillId(MOB_ID);
 	}
@@ -108,7 +108,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 						npc.doCast(SKILL.getSkill());
 						for (int i = 0; i < 10; i++)
 						{
-							((L2Attackable) npc).dropItem(player, PcInventory.ADENA_ID, ADENA2);
+							npc.dropItem(player, Inventory.ADENA_ID, ADENA2);
 						}
 					}
 					else if (getRandom(100000) < CHANCE)
@@ -119,7 +119,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 						npc.doCast(SKILL.getSkill());
 						for (int i = 0; i < 10; i++)
 						{
-							((L2Attackable) npc).dropItem(player, PcInventory.ADENA_ID, ADENA);
+							((L2Attackable) npc).dropItem(player, Inventory.ADENA_ID, ADENA);
 						}
 					}
 					else
@@ -134,7 +134,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 			case "despawn":
 			{
 				npc.setRunning();
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition((npc.getX() + getRandom(-800, 800)), (npc.getY() + getRandom(-800, 800)), npc.getZ(), npc.getHeading()));
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location((npc.getX() + getRandom(-800, 800)), (npc.getY() + getRandom(-800, 800)), npc.getZ(), npc.getHeading()));
 				npc.deleteMe();
 				break;
 			}
@@ -144,6 +144,6 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new FrightenedRagnaOrc(FrightenedRagnaOrc.class.getSimpleName(), "ai");
+		new FrightenedRagnaOrc();
 	}
 }

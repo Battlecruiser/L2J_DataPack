@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,10 +18,11 @@
  */
 package village_master.DarkElvenChange2;
 
+import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
@@ -31,10 +32,8 @@ import com.l2jserver.gameserver.util.Util;
  * Original Jython script by DraX and DrLecter
  * @author nonom
  */
-public class DarkElvenChange2 extends Quest
+public final class DarkElvenChange2 extends Quest
 {
-	private static final String qn = "DarkElvenChange2";
-	
 	// NPCs
 	private static int[] NPCS =
 	{
@@ -51,7 +50,6 @@ public class DarkElvenChange2 extends Quest
 		31974, // Drizzit
 		32096, // Helminter
 	};
-	
 	// Items
 	private static int MARK_OF_CHALLENGER = 2627;
 	private static int MARK_OF_DUTY = 2633;
@@ -66,23 +64,21 @@ public class DarkElvenChange2 extends Quest
 	private static int MARK_OF_SAGITTARIUS = 3293;
 	private static int MARK_OF_WITCHCRAFT = 3307;
 	private static int MARK_OF_SUMMONER = 3336;
-	
 	// @formatter:off
 	private static int[][] CLASSES = 
 	{
-	    { 33, 32, 26, 27, 28, 29, MARK_OF_DUTY, MARK_OF_FATE, MARK_OF_WITCHCRAFT }, // SK
-	    { 34, 32, 30, 31, 32, 33, MARK_OF_CHALLENGER, MARK_OF_FATE, MARK_OF_DUELIST }, // BD
-	    { 43, 42, 34, 35, 36, 37, MARK_OF_PILGRIM, MARK_OF_FATE, MARK_OF_REFORMER }, // SE
-	    { 36, 35, 38, 39, 40, 41, MARK_OF_SEEKER, MARK_OF_FATE, MARK_OF_SEARCHER }, // AW
-	    { 37, 35, 42, 43, 44, 45, MARK_OF_SEEKER, MARK_OF_FATE, MARK_OF_SAGITTARIUS }, // PR
-	    { 40, 39, 46, 47, 48, 49, MARK_OF_SCHOLAR, MARK_OF_FATE, MARK_OF_MAGUS }, // SH
-	    { 41, 39, 50, 51, 52, 53, MARK_OF_SCHOLAR, MARK_OF_FATE, MARK_OF_SUMMONER }, // PS
-	 };
+		{ 33, 32, 26, 27, 28, 29, MARK_OF_DUTY, MARK_OF_FATE, MARK_OF_WITCHCRAFT }, // SK
+		{ 34, 32, 30, 31, 32, 33, MARK_OF_CHALLENGER, MARK_OF_FATE, MARK_OF_DUELIST }, // BD
+		{ 43, 42, 34, 35, 36, 37, MARK_OF_PILGRIM, MARK_OF_FATE, MARK_OF_REFORMER }, // SE
+		{ 36, 35, 38, 39, 40, 41, MARK_OF_SEEKER, MARK_OF_FATE, MARK_OF_SEARCHER }, // AW
+		{ 37, 35, 42, 43, 44, 45, MARK_OF_SEEKER, MARK_OF_FATE, MARK_OF_SAGITTARIUS }, // PR
+		{ 40, 39, 46, 47, 48, 49, MARK_OF_SCHOLAR, MARK_OF_FATE, MARK_OF_MAGUS }, // SH
+		{ 41, 39, 50, 51, 52, 53, MARK_OF_SCHOLAR, MARK_OF_FATE, MARK_OF_SUMMONER }, // PS
+	};
 	// @formatter:on
-	
-	public DarkElvenChange2(int questId, String name, String descr)
+	private DarkElvenChange2()
 	{
-		super(questId, name, descr);
+		super(-1, DarkElvenChange2.class.getSimpleName(), "village_master");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}
@@ -90,7 +86,7 @@ public class DarkElvenChange2 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -100,7 +96,7 @@ public class DarkElvenChange2 extends Quest
 		{
 			int i = Integer.valueOf(event);
 			final ClassId cid = player.getClassId();
-			if ((cid.getRace() == Race.DarkElf) && (cid.getId() == CLASSES[i][1]))
+			if ((cid.getRace() == Race.DARK_ELF) && (cid.getId() == CLASSES[i][1]))
 			{
 				int suffix;
 				final boolean item1 = st.hasQuestItems(CLASSES[i][6]);
@@ -139,7 +135,7 @@ public class DarkElvenChange2 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);
@@ -150,7 +146,7 @@ public class DarkElvenChange2 extends Quest
 		}
 		
 		final ClassId cid = player.getClassId();
-		if (cid.getRace() == Race.DarkElf)
+		if (cid.getRace() == Race.DARK_ELF)
 		{
 			switch (cid)
 			{
@@ -203,6 +199,6 @@ public class DarkElvenChange2 extends Quest
 	
 	public static void main(String[] args)
 	{
-		new DarkElvenChange2(-1, qn, "village_master");
+		new DarkElvenChange2();
 	}
 }

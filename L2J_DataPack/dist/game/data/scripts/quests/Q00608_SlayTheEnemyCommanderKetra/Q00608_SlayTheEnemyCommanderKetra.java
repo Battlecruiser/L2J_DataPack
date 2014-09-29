@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -42,9 +42,9 @@ public class Q00608_SlayTheEnemyCommanderKetra extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 75;
 	
-	private Q00608_SlayTheEnemyCommanderKetra(int questId, String name, String descr)
+	public Q00608_SlayTheEnemyCommanderKetra()
 	{
-		super(questId, name, descr);
+		super(608, Q00608_SlayTheEnemyCommanderKetra.class.getSimpleName(), "Slay the Enemy Commander! (Ketra)");
 		addStartNpc(KADUN);
 		addTalkId(KADUN);
 		addKillId(MOS);
@@ -123,10 +123,5 @@ public class Q00608_SlayTheEnemyCommanderKetra extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00608_SlayTheEnemyCommanderKetra(608, Q00608_SlayTheEnemyCommanderKetra.class.getSimpleName(), "Slay the Enemy Commander! (Ketra)");
 	}
 }

@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="16400" type="Armor" name="Teddy Girl Summon Bracelet - Permanent Use">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -17,10 +17,10 @@
 	</item>
 	<item id="16401" type="Armor" name="Teddy Boy Summon Bracelet (event) - Permanent Use">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -32,10 +32,10 @@
 	</item>
 	<item id="16402" type="Armor" name="Teddy Girl Summon Bracelet (event) - Permanent Use">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -47,10 +47,11 @@
 	</item>
 	<item id="16403" type="EtcItem" name="Christmas Cake">
 		<set name="icon" val="icon.event_six_party_cake_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="potion" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="15" />
+		<set name="reuse_delay" val="3600000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -62,9 +63,9 @@
 	</item>
 	<item id="16404" type="EtcItem" name="White Christmas Wish Candle">
 		<set name="icon" val="icon.etc_candle_white_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="potion" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -76,10 +77,11 @@
 	</item>
 	<item id="16405" type="EtcItem" name="Christmas Cake (event)">
 		<set name="icon" val="icon.event_six_party_cake_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="potion" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="15" />
+		<set name="reuse_delay" val="3600000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -91,9 +93,9 @@
 	</item>
 	<item id="16406" type="EtcItem" name="White Christmas Wish Candle (event)">
 		<set name="icon" val="icon.etc_candle_white_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="potion" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -105,8 +107,8 @@
 	</item>
 	<item id="16407" type="EtcItem" name="Santa's Stocking - Event">
 		<set name="icon" val="icon.xmas_present_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -119,10 +121,10 @@
 	</item>
 	<item id="16408" type="EtcItem" name="Santa's Buff Scroll - Event">
 		<set name="icon" val="icon.mysterious_wedding_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="potion" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="liquid" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="reuse_delay" val="3000" />
 		<set name="is_depositable" val="false" />

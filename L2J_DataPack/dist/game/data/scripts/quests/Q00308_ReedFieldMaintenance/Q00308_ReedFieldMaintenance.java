@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,6 +25,7 @@ import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
 import quests.Q00309_ForAGoodCause.Q00309_ForAGoodCause;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -33,7 +34,7 @@ import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Success/Failure Of Business (238)<br>
+ * Reed Field Maintenance (308)<br>
  * Original Jython script by Bloodshed.
  * @author Joxit
  */
@@ -92,9 +93,9 @@ public class Q00308_ReedFieldMaintenance extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00308_ReedFieldMaintenance(int questId, String name, String descr)
+	public Q00308_ReedFieldMaintenance()
 	{
-		super(questId, name, descr);
+		super(308, Q00308_ReedFieldMaintenance.class.getSimpleName(), "Reed Field Maintenance");
 		addStartNpc(KATENSA);
 		addTalkId(KATENSA);
 		addKillId(MUCROKIAN.keySet());
@@ -217,10 +218,10 @@ public class Q00308_ReedFieldMaintenance extends Quest
 		if (partyMember != null)
 		{
 			final QuestState st = partyMember.getQuestState(getName());
-			float chance = (MUCROKIAN.get(npc.getNpcId()) * Config.RATE_QUEST_DROP);
+			float chance = (MUCROKIAN.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
-				if (npc.getNpcId() == AWAKENED_MUCROKIAN)
+				if (npc.getId() == AWAKENED_MUCROKIAN)
 				{
 					st.giveItems(AWAKENED_MUCROKIAN_HIDE, 1);
 				}
@@ -258,10 +259,5 @@ public class Q00308_ReedFieldMaintenance extends Quest
 			htmltext = (talker.getLevel() >= MIN_LEVEL) ? "32646-01.htm" : "32646-00.html";
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00308_ReedFieldMaintenance(308, Q00308_ReedFieldMaintenance.class.getSimpleName(), "Reed Field Maintenance");
 	}
 }

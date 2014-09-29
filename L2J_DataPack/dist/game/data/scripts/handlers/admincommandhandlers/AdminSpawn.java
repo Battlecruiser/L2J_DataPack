@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -28,7 +28,7 @@ import java.util.regex.Pattern;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.datatables.AdminTable;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
@@ -84,11 +84,11 @@ public class AdminSpawn implements IAdminCommandHandler
 	{
 		if (command.equals("admin_show_spawns"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "spawns.htm");
+			AdminHtml.showAdminHtml(activeChar, "spawns.htm");
 		}
 		else if (command.equalsIgnoreCase("admin_spawn_debug_menu"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "spawns_debug.htm");
+			AdminHtml.showAdminHtml(activeChar, "spawns_debug.htm");
 		}
 		else if (command.startsWith("admin_spawn_debug_print"))
 		{
@@ -103,7 +103,7 @@ public class AdminSpawn implements IAdminCommandHandler
 					printSpawn((L2Npc) target, type);
 					if (command.contains("_menu"))
 					{
-						AdminHelpPage.showHelpPage(activeChar, "spawns_debug.htm");
+						AdminHtml.showAdminHtml(activeChar, "spawns_debug.htm");
 					}
 				}
 				catch (Exception e)
@@ -134,12 +134,12 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				AdminHelpPage.showHelpPage(activeChar, "spawns.htm");
+				AdminHtml.showAdminHtml(activeChar, "spawns.htm");
 			}
 		}
 		else if (command.equals("admin_show_npcs"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "npcs.htm");
+			AdminHtml.showAdminHtml(activeChar, "npcs.htm");
 		}
 		else if (command.startsWith("admin_npc_index"))
 		{
@@ -160,7 +160,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				AdminHelpPage.showHelpPage(activeChar, "npcs.htm");
+				AdminHtml.showAdminHtml(activeChar, "npcs.htm");
 			}
 		}
 		else if (command.startsWith("admin_instance_spawns"))
@@ -195,7 +195,7 @@ public class AdminSpawn implements IAdminCommandHandler
 							}
 						}
 						StringUtil.append(html, "<tr><td>Skipped:</td><td>" + String.valueOf(skiped) + "</td></tr></table></body></html>");
-						NpcHtmlMessage ms = new NpcHtmlMessage(1);
+						final NpcHtmlMessage ms = new NpcHtmlMessage();
 						ms.setHtml(html.toString());
 						activeChar.sendPacket(ms);
 					}
@@ -237,12 +237,12 @@ public class AdminSpawn implements IAdminCommandHandler
 			DayNightSpawnManager.getInstance().cleanUp();
 			L2World.getInstance().deleteVisibleNpcSpawns();
 			// now respawn all
-			NpcTable.getInstance().reloadAllNpc();
+			NpcData.getInstance().load();
 			SpawnTable.getInstance().load();
 			RaidBossSpawnManager.getInstance().load();
 			AutoSpawnHandler.getInstance().reload();
 			SevenSigns.getInstance().spawnSevenSignsNPC();
-			QuestManager.getInstance().reloadAllQuests();
+			QuestManager.getInstance().reloadAllScripts();
 			AdminTable.getInstance().broadcastMessageToGMs("NPC Respawn completed!");
 		}
 		else if (command.startsWith("admin_spawn_monster") || command.startsWith("admin_spawn"))
@@ -273,7 +273,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{ // Case of wrong or missing monster data
-				AdminHelpPage.showHelpPage(activeChar, "spawns.htm");
+				AdminHtml.showAdminHtml(activeChar, "spawns.htm");
 			}
 		}
 		else if (command.startsWith("admin_list_spawns") || command.startsWith("admin_list_positions"))
@@ -292,7 +292,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				else
 				{
 					params[1] = params[1].replace('_', ' ');
-					npcId = NpcTable.getInstance().getTemplateByName(params[1]).getNpcId();
+					npcId = NpcData.getInstance().getTemplateByName(params[1]).getId();
 				}
 				if (params.length > 2)
 				{
@@ -341,11 +341,11 @@ public class AdminSpawn implements IAdminCommandHandler
 				{
 					if (showposition && (npc != null))
 					{
-						activeChar.teleToLocation(npc.getX(), npc.getY(), npc.getZ(), true);
+						activeChar.teleToLocation(npc.getLocation(), true);
 					}
 					else
 					{
-						activeChar.teleToLocation(spawn.getLocx(), spawn.getLocy(), spawn.getLocz(), true);
+						activeChar.teleToLocation(spawn.getLocation(), true);
 					}
 				}
 			}
@@ -357,7 +357,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn + "): " + spawn.getLocx() + " " + spawn.getLocy() + " " + spawn.getLocz());
+					activeChar.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn + "): " + spawn.getX() + " " + spawn.getY() + " " + spawn.getZ());
 				}
 			}
 		}
@@ -370,10 +370,10 @@ public class AdminSpawn implements IAdminCommandHandler
 	
 	private void printSpawn(L2Npc target, int type)
 	{
-		int i = target.getNpcId();
-		int x = target.getSpawn().getLocx();
-		int y = target.getSpawn().getLocy();
-		int z = target.getSpawn().getLocz();
+		int i = target.getId();
+		int x = target.getSpawn().getX();
+		int y = target.getSpawn().getY();
+		int z = target.getSpawn().getZ();
 		int h = target.getSpawn().getHeading();
 		switch (type)
 		{
@@ -403,13 +403,13 @@ public class AdminSpawn implements IAdminCommandHandler
 		{
 			// First parameter was an ID number
 			int monsterTemplate = Integer.parseInt(monsterId);
-			template1 = NpcTable.getInstance().getTemplate(monsterTemplate);
+			template1 = NpcData.getInstance().getTemplate(monsterTemplate);
 		}
 		else
 		{
 			// First parameter wasn't just numbers so go by name not ID
 			monsterId = monsterId.replace('_', ' ');
-			template1 = NpcTable.getInstance().getTemplateByName(monsterId);
+			template1 = NpcData.getInstance().getTemplateByName(monsterId);
 		}
 		
 		try
@@ -419,9 +419,9 @@ public class AdminSpawn implements IAdminCommandHandler
 			{
 				spawn.setCustom(true);
 			}
-			spawn.setLocx(target.getX());
-			spawn.setLocy(target.getY());
-			spawn.setLocz(target.getZ());
+			spawn.setX(target.getX());
+			spawn.setY(target.getY());
+			spawn.setZ(target.getZ());
 			spawn.setAmount(mobCount);
 			spawn.setHeading(activeChar.getHeading());
 			spawn.setRespawnDelay(respawnTime);
@@ -435,13 +435,13 @@ public class AdminSpawn implements IAdminCommandHandler
 				spawn.setInstanceId(0);
 			}
 			// TODO add checks for GrandBossSpawnManager
-			if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcid()))
+			if (RaidBossSpawnManager.getInstance().isDefined(spawn.getId()))
 			{
 				activeChar.sendMessage("You cannot spawn another instance of " + template1.getName() + ".");
 			}
 			else
 			{
-				if (RaidBossSpawnManager.getInstance().getValidTemplate(spawn.getNpcid()) != null)
+				if (RaidBossSpawnManager.getInstance().getValidTemplate(spawn.getId()) != null)
 				{
 					spawn.setRespawnMinDelay(43200);
 					spawn.setRespawnMaxDelay(129600);
@@ -467,7 +467,7 @@ public class AdminSpawn implements IAdminCommandHandler
 	
 	private void showMonsters(L2PcInstance activeChar, int level, int from)
 	{
-		final List<L2NpcTemplate> mobs = NpcTable.getInstance().getAllMonstersOfLevel(level);
+		final List<L2NpcTemplate> mobs = NpcData.getInstance().getAllMonstersOfLevel(level);
 		final int mobsCount = mobs.size();
 		final StringBuilder tb = StringUtil.startAppend(500 + (mobsCount * 80), "<html><title>Spawn Monster:</title><body><p> Level : ", Integer.toString(level), "<br>Total Npc's : ", Integer.toString(mobsCount), "<br>");
 		
@@ -475,7 +475,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		int i = from;
 		for (int j = 0; (i < mobsCount) && (j < 50); i++, j++)
 		{
-			StringUtil.append(tb, "<a action=\"bypass -h admin_spawn_monster ", Integer.toString(mobs.get(i).getNpcId()), "\">", mobs.get(i).getName(), "</a><br1>");
+			StringUtil.append(tb, "<a action=\"bypass -h admin_spawn_monster ", Integer.toString(mobs.get(i).getId()), "\">", mobs.get(i).getName(), "</a><br1>");
 		}
 		
 		if (i == mobsCount)
@@ -487,12 +487,12 @@ public class AdminSpawn implements IAdminCommandHandler
 			StringUtil.append(tb, "<br><center><button value=\"Next\" action=\"bypass -h admin_spawn_index ", Integer.toString(level), " ", Integer.toString(i), "\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><button value=\"Back\" action=\"bypass -h admin_show_spawns\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>");
 		}
 		
-		activeChar.sendPacket(new NpcHtmlMessage(5, tb.toString()));
+		activeChar.sendPacket(new NpcHtmlMessage(tb.toString()));
 	}
 	
 	private void showNpcs(L2PcInstance activeChar, String starting, int from)
 	{
-		final List<L2NpcTemplate> mobs = NpcTable.getInstance().getAllNpcStartingWith(starting);
+		final List<L2NpcTemplate> mobs = NpcData.getInstance().getAllNpcStartingWith(starting);
 		final int mobsCount = mobs.size();
 		final StringBuilder tb = StringUtil.startAppend(500 + (mobsCount * 80), "<html><title>Spawn Monster:</title><body><p> There are ", Integer.toString(mobsCount), " Npcs whose name starts with ", starting, ":<br>");
 		
@@ -500,7 +500,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		int i = from;
 		for (int j = 0; (i < mobsCount) && (j < 50); i++, j++)
 		{
-			StringUtil.append(tb, "<a action=\"bypass -h admin_spawn_monster ", Integer.toString(mobs.get(i).getNpcId()), "\">", mobs.get(i).getName(), "</a><br1>");
+			StringUtil.append(tb, "<a action=\"bypass -h admin_spawn_monster ", Integer.toString(mobs.get(i).getId()), "\">", mobs.get(i).getName(), "</a><br1>");
 		}
 		
 		if (i == mobsCount)
@@ -512,6 +512,6 @@ public class AdminSpawn implements IAdminCommandHandler
 			StringUtil.append(tb, "<br><center><button value=\"Next\" action=\"bypass -h admin_npc_index ", starting, " ", Integer.toString(i), "\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><button value=\"Back\" action=\"bypass -h admin_show_npcs\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>");
 		}
 		
-		activeChar.sendPacket(new NpcHtmlMessage(5, tb.toString()));
+		activeChar.sendPacket(new NpcHtmlMessage(tb.toString()));
 	}
 }

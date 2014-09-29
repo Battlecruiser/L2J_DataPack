@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00645_GhostsOfBatur;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -49,9 +50,9 @@ public class Q00645_GhostsOfBatur extends Quest
 		686
 	};
 	
-	private Q00645_GhostsOfBatur(int questId, String name, String descr)
+	public Q00645_GhostsOfBatur()
 	{
-		super(questId, name, descr);
+		super(645, Q00645_GhostsOfBatur.class.getSimpleName(), "Ghosts of Batur");
 		addStartNpc(KARUDA);
 		addTalkId(KARUDA);
 		addKillId(CONTAMINATED_MOREK_WARRIOR, CONTAMINATED_BATUR_WARRIOR, CONTAMINATED_BATUR_COMMANDER);
@@ -101,7 +102,7 @@ public class Q00645_GhostsOfBatur extends Quest
 		final L2PcInstance player = getRandomPartyMember(killer, 1);
 		if ((player != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			if (getRandom(1000) < CHANCES[npc.getNpcId() - CONTAMINATED_MOREK_WARRIOR])
+			if (getRandom(1000) < CHANCES[npc.getId() - CONTAMINATED_MOREK_WARRIOR])
 			{
 				final QuestState st = player.getQuestState(getName());
 				st.giveItems(CURSED_BURIAL_ITEMS, 1);
@@ -154,10 +155,5 @@ public class Q00645_GhostsOfBatur extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00645_GhostsOfBatur(645, Q00645_GhostsOfBatur.class.getSimpleName(), "Ghosts of Batur");
 	}
 }

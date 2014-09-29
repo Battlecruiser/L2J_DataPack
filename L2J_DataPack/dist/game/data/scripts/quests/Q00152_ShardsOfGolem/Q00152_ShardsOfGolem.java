@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00152_ShardsOfGolem;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -44,9 +45,9 @@ public class Q00152_ShardsOfGolem extends Quest
 	// Misc
 	private static final int MIN_LVL = 10;
 	
-	public Q00152_ShardsOfGolem(int questId, String name, String descr)
+	public Q00152_ShardsOfGolem()
 	{
-		super(questId, name, descr);
+		super(152, Q00152_ShardsOfGolem.class.getSimpleName(), "Shards of Golem");
 		addStartNpc(HARRYS);
 		addTalkId(HARRYS, ALTRAN);
 		addKillId(STONE_GOLEM);
@@ -111,7 +112,7 @@ public class Q00152_ShardsOfGolem extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case HARRYS:
 				{
@@ -210,10 +211,5 @@ public class Q00152_ShardsOfGolem extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00152_ShardsOfGolem(152, Q00152_ShardsOfGolem.class.getSimpleName(), "Shards of Golem");
 	}
 }

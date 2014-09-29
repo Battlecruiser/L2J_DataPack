@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,6 +19,9 @@
 package handlers;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -28,8 +31,9 @@ import com.l2jserver.gameserver.handler.ActionShiftHandler;
 import com.l2jserver.gameserver.handler.AdminCommandHandler;
 import com.l2jserver.gameserver.handler.BypassHandler;
 import com.l2jserver.gameserver.handler.ChatHandler;
+import com.l2jserver.gameserver.handler.IHandler;
 import com.l2jserver.gameserver.handler.ItemHandler;
-import com.l2jserver.gameserver.handler.SkillHandler;
+import com.l2jserver.gameserver.handler.PunishmentHandler;
 import com.l2jserver.gameserver.handler.TargetHandler;
 import com.l2jserver.gameserver.handler.TelnetHandler;
 import com.l2jserver.gameserver.handler.UserCommandHandler;
@@ -38,26 +42,24 @@ import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 import handlers.actionhandlers.L2ArtefactInstanceAction;
 import handlers.actionhandlers.L2DecoyAction;
 import handlers.actionhandlers.L2DoorInstanceAction;
-import handlers.actionhandlers.L2DoorInstanceActionShift;
 import handlers.actionhandlers.L2ItemInstanceAction;
-import handlers.actionhandlers.L2ItemInstanceActionShift;
 import handlers.actionhandlers.L2NpcAction;
-import handlers.actionhandlers.L2NpcActionShift;
 import handlers.actionhandlers.L2PcInstanceAction;
-import handlers.actionhandlers.L2PcInstanceActionShift;
 import handlers.actionhandlers.L2PetInstanceAction;
 import handlers.actionhandlers.L2StaticObjectInstanceAction;
-import handlers.actionhandlers.L2StaticObjectInstanceActionShift;
 import handlers.actionhandlers.L2SummonAction;
-import handlers.actionhandlers.L2SummonActionShift;
 import handlers.actionhandlers.L2TrapAction;
+import handlers.actionshifthandlers.L2DoorInstanceActionShift;
+import handlers.actionshifthandlers.L2ItemInstanceActionShift;
+import handlers.actionshifthandlers.L2NpcActionShift;
+import handlers.actionshifthandlers.L2PcInstanceActionShift;
+import handlers.actionshifthandlers.L2StaticObjectInstanceActionShift;
+import handlers.actionshifthandlers.L2SummonActionShift;
 import handlers.admincommandhandlers.AdminAdmin;
 import handlers.admincommandhandlers.AdminAnnouncements;
 import handlers.admincommandhandlers.AdminBBS;
-import handlers.admincommandhandlers.AdminBan;
 import handlers.admincommandhandlers.AdminBuffs;
 import handlers.admincommandhandlers.AdminCHSiege;
-import handlers.admincommandhandlers.AdminCache;
 import handlers.admincommandhandlers.AdminCamera;
 import handlers.admincommandhandlers.AdminChangeAccessLevel;
 import handlers.admincommandhandlers.AdminClan;
@@ -68,7 +70,6 @@ import handlers.admincommandhandlers.AdminDelete;
 import handlers.admincommandhandlers.AdminDisconnect;
 import handlers.admincommandhandlers.AdminDoorControl;
 import handlers.admincommandhandlers.AdminEditChar;
-import handlers.admincommandhandlers.AdminEditNpc;
 import handlers.admincommandhandlers.AdminEffects;
 import handlers.admincommandhandlers.AdminElement;
 import handlers.admincommandhandlers.AdminEnchant;
@@ -82,9 +83,9 @@ import handlers.admincommandhandlers.AdminGeodata;
 import handlers.admincommandhandlers.AdminGm;
 import handlers.admincommandhandlers.AdminGmChat;
 import handlers.admincommandhandlers.AdminGraciaSeeds;
+import handlers.admincommandhandlers.AdminGrandBoss;
 import handlers.admincommandhandlers.AdminHeal;
-import handlers.admincommandhandlers.AdminHellbound;
-import handlers.admincommandhandlers.AdminHelpPage;
+import handlers.admincommandhandlers.AdminHtml;
 import handlers.admincommandhandlers.AdminInstance;
 import handlers.admincommandhandlers.AdminInstanceZone;
 import handlers.admincommandhandlers.AdminInvul;
@@ -104,10 +105,13 @@ import handlers.admincommandhandlers.AdminPcCondOverride;
 import handlers.admincommandhandlers.AdminPetition;
 import handlers.admincommandhandlers.AdminPledge;
 import handlers.admincommandhandlers.AdminPolymorph;
+import handlers.admincommandhandlers.AdminPunishment;
 import handlers.admincommandhandlers.AdminQuest;
+import handlers.admincommandhandlers.AdminReload;
 import handlers.admincommandhandlers.AdminRepairChar;
 import handlers.admincommandhandlers.AdminRes;
 import handlers.admincommandhandlers.AdminRide;
+import handlers.admincommandhandlers.AdminScan;
 import handlers.admincommandhandlers.AdminShop;
 import handlers.admincommandhandlers.AdminShowQuests;
 import handlers.admincommandhandlers.AdminShutdown;
@@ -124,7 +128,6 @@ import handlers.admincommandhandlers.AdminTvTEvent;
 import handlers.admincommandhandlers.AdminUnblockIp;
 import handlers.admincommandhandlers.AdminVitality;
 import handlers.admincommandhandlers.AdminZone;
-import handlers.bypasshandlers.ArenaBuff;
 import handlers.bypasshandlers.Augment;
 import handlers.bypasshandlers.Buy;
 import handlers.bypasshandlers.BuyShadowItem;
@@ -132,14 +135,13 @@ import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
 import handlers.bypasshandlers.EventEngine;
 import handlers.bypasshandlers.Festival;
-import handlers.bypasshandlers.FortSiege;
 import handlers.bypasshandlers.Freight;
-import handlers.bypasshandlers.Henna;
 import handlers.bypasshandlers.ItemAuctionLink;
 import handlers.bypasshandlers.Link;
 import handlers.bypasshandlers.Loto;
 import handlers.bypasshandlers.ManorManager;
 import handlers.bypasshandlers.Multisell;
+import handlers.bypasshandlers.NpcViewMod;
 import handlers.bypasshandlers.Observation;
 import handlers.bypasshandlers.OlympiadManagerLink;
 import handlers.bypasshandlers.OlympiadObservation;
@@ -149,14 +151,13 @@ import handlers.bypasshandlers.QuestLink;
 import handlers.bypasshandlers.QuestList;
 import handlers.bypasshandlers.ReceivePremium;
 import handlers.bypasshandlers.ReleaseAttribute;
-import handlers.bypasshandlers.RemoveDeathPenalty;
 import handlers.bypasshandlers.RentPet;
-import handlers.bypasshandlers.RideWyvern;
 import handlers.bypasshandlers.Rift;
 import handlers.bypasshandlers.SkillList;
 import handlers.bypasshandlers.SupportBlessing;
 import handlers.bypasshandlers.SupportMagic;
 import handlers.bypasshandlers.TerritoryStatus;
+import handlers.bypasshandlers.TutorialClose;
 import handlers.bypasshandlers.VoiceCommand;
 import handlers.bypasshandlers.Wear;
 import handlers.chathandlers.ChatAll;
@@ -173,17 +174,16 @@ import handlers.chathandlers.ChatShout;
 import handlers.chathandlers.ChatTell;
 import handlers.chathandlers.ChatTrade;
 import handlers.itemhandlers.BeastSoulShot;
-import handlers.itemhandlers.BeastSpice;
 import handlers.itemhandlers.BeastSpiritShot;
 import handlers.itemhandlers.BlessedSpiritShot;
 import handlers.itemhandlers.Book;
 import handlers.itemhandlers.Bypass;
 import handlers.itemhandlers.Calculator;
+import handlers.itemhandlers.CharmOfCourage;
 import handlers.itemhandlers.Disguise;
 import handlers.itemhandlers.Elixir;
 import handlers.itemhandlers.EnchantAttribute;
 import handlers.itemhandlers.EnchantScrolls;
-import handlers.itemhandlers.EnergyStarStone;
 import handlers.itemhandlers.EventItem;
 import handlers.itemhandlers.ExtractableItems;
 import handlers.itemhandlers.FishShots;
@@ -194,11 +194,9 @@ import handlers.itemhandlers.ManaPotion;
 import handlers.itemhandlers.Maps;
 import handlers.itemhandlers.MercTicket;
 import handlers.itemhandlers.NicknameColor;
-import handlers.itemhandlers.PaganKeys;
 import handlers.itemhandlers.PetFood;
 import handlers.itemhandlers.Recipes;
 import handlers.itemhandlers.RollingDice;
-import handlers.itemhandlers.ScrollOfResurrection;
 import handlers.itemhandlers.Seed;
 import handlers.itemhandlers.SevenSignsRecord;
 import handlers.itemhandlers.SoulShots;
@@ -206,38 +204,9 @@ import handlers.itemhandlers.SpecialXMas;
 import handlers.itemhandlers.SpiritShot;
 import handlers.itemhandlers.SummonItems;
 import handlers.itemhandlers.TeleportBookmark;
-import handlers.skillhandlers.BallistaBomb;
-import handlers.skillhandlers.BeastSkills;
-import handlers.skillhandlers.Blow;
-import handlers.skillhandlers.Continuous;
-import handlers.skillhandlers.CpDamPercent;
-import handlers.skillhandlers.Craft;
-import handlers.skillhandlers.DeluxeKey;
-import handlers.skillhandlers.Detection;
-import handlers.skillhandlers.Disablers;
-import handlers.skillhandlers.Dummy;
-import handlers.skillhandlers.Fishing;
-import handlers.skillhandlers.FishingSkill;
-import handlers.skillhandlers.GetPlayer;
-import handlers.skillhandlers.GiveReco;
-import handlers.skillhandlers.GiveVitality;
-import handlers.skillhandlers.InstantJump;
-import handlers.skillhandlers.Manadam;
-import handlers.skillhandlers.Mdam;
-import handlers.skillhandlers.NornilsPower;
-import handlers.skillhandlers.Pdam;
-import handlers.skillhandlers.RefuelAirShip;
-import handlers.skillhandlers.Resurrect;
-import handlers.skillhandlers.ShiftTarget;
-import handlers.skillhandlers.Sow;
-import handlers.skillhandlers.StealBuffs;
-import handlers.skillhandlers.StrSiegeAssault;
-import handlers.skillhandlers.SummonFriend;
-import handlers.skillhandlers.TakeCastle;
-import handlers.skillhandlers.TakeFort;
-import handlers.skillhandlers.TransformDispel;
-import handlers.skillhandlers.Trap;
-import handlers.skillhandlers.Unlock;
+import handlers.punishmenthandlers.BanHandler;
+import handlers.punishmenthandlers.ChatBanHandler;
+import handlers.punishmenthandlers.JailHandler;
 import handlers.targethandlers.Area;
 import handlers.targethandlers.AreaCorpseMob;
 import handlers.targethandlers.AreaFriendly;
@@ -248,10 +217,9 @@ import handlers.targethandlers.BehindArea;
 import handlers.targethandlers.BehindAura;
 import handlers.targethandlers.Clan;
 import handlers.targethandlers.ClanMember;
+import handlers.targethandlers.CommandChannel;
 import handlers.targethandlers.CorpseClan;
 import handlers.targethandlers.CorpseMob;
-import handlers.targethandlers.CorpsePet;
-import handlers.targethandlers.CorpsePlayer;
 import handlers.targethandlers.EnemySummon;
 import handlers.targethandlers.FlagPole;
 import handlers.targethandlers.FrontArea;
@@ -265,9 +233,12 @@ import handlers.targethandlers.PartyClan;
 import handlers.targethandlers.PartyMember;
 import handlers.targethandlers.PartyNotMe;
 import handlers.targethandlers.PartyOther;
+import handlers.targethandlers.PcBody;
 import handlers.targethandlers.Pet;
 import handlers.targethandlers.Self;
+import handlers.targethandlers.Servitor;
 import handlers.targethandlers.Summon;
+import handlers.targethandlers.TargetParty;
 import handlers.targethandlers.Unlockable;
 import handlers.telnethandlers.ChatsHandler;
 import handlers.telnethandlers.DebugHandler;
@@ -289,16 +260,15 @@ import handlers.usercommandhandlers.Mount;
 import handlers.usercommandhandlers.MyBirthday;
 import handlers.usercommandhandlers.OlympiadStat;
 import handlers.usercommandhandlers.PartyInfo;
+import handlers.usercommandhandlers.SiegeStatus;
 import handlers.usercommandhandlers.Time;
 import handlers.usercommandhandlers.Unstuck;
 import handlers.voicedcommandhandlers.Banking;
 import handlers.voicedcommandhandlers.ChangePassword;
 import handlers.voicedcommandhandlers.ChatAdmin;
 import handlers.voicedcommandhandlers.Debug;
-import handlers.voicedcommandhandlers.Hellbound;
 import handlers.voicedcommandhandlers.Lang;
 import handlers.voicedcommandhandlers.StatsVCmd;
-import handlers.voicedcommandhandlers.TvTVoicedInfo;
 import handlers.voicedcommandhandlers.Wedding;
 
 /**
@@ -309,19 +279,19 @@ public class MasterHandler
 {
 	private static final Logger _log = Logger.getLogger(MasterHandler.class.getName());
 	
-	private static final Class<?>[] _loadInstances =
+	private static final IHandler<?, ?>[] _loadInstances =
 	{
-		ActionHandler.class,
-		ActionShiftHandler.class,
-		AdminCommandHandler.class,
-		BypassHandler.class,
-		ChatHandler.class,
-		ItemHandler.class,
-		SkillHandler.class,
-		UserCommandHandler.class,
-		VoicedCommandHandler.class,
-		TargetHandler.class,
-		TelnetHandler.class,
+		ActionHandler.getInstance(),
+		ActionShiftHandler.getInstance(),
+		AdminCommandHandler.getInstance(),
+		BypassHandler.getInstance(),
+		ChatHandler.getInstance(),
+		ItemHandler.getInstance(),
+		PunishmentHandler.getInstance(),
+		UserCommandHandler.getInstance(),
+		VoicedCommandHandler.getInstance(),
+		TargetHandler.getInstance(),
+		TelnetHandler.getInstance(),
 	};
 	
 	private static final Class<?>[][] _handlers =
@@ -352,10 +322,8 @@ public class MasterHandler
 			// Admin Command Handlers
 			AdminAdmin.class,
 			AdminAnnouncements.class,
-			AdminBan.class,
 			AdminBBS.class,
 			AdminBuffs.class,
-			AdminCache.class,
 			AdminCamera.class,
 			AdminChangeAccessLevel.class,
 			AdminCHSiege.class,
@@ -368,7 +336,6 @@ public class MasterHandler
 			AdminDisconnect.class,
 			AdminDoorControl.class,
 			AdminEditChar.class,
-			AdminEditNpc.class,
 			AdminEffects.class,
 			AdminElement.class,
 			AdminEnchant.class,
@@ -382,9 +349,9 @@ public class MasterHandler
 			AdminGm.class,
 			AdminGmChat.class,
 			AdminGraciaSeeds.class,
+			AdminGrandBoss.class,
 			AdminHeal.class,
-			AdminHellbound.class,
-			AdminHelpPage.class,
+			AdminHtml.class,
 			AdminInstance.class,
 			AdminInstanceZone.class,
 			AdminInvul.class,
@@ -403,10 +370,13 @@ public class MasterHandler
 			AdminPForge.class,
 			AdminPledge.class,
 			AdminPolymorph.class,
+			AdminPunishment.class,
 			AdminQuest.class,
+			AdminReload.class,
 			AdminRepairChar.class,
 			AdminRes.class,
 			AdminRide.class,
+			AdminScan.class,
 			AdminShop.class,
 			AdminShowQuests.class,
 			AdminShutdown.class,
@@ -427,21 +397,19 @@ public class MasterHandler
 		{
 			// Bypass Handlers
 			Augment.class,
-			ArenaBuff.class,
 			Buy.class,
 			BuyShadowItem.class,
 			ChatLink.class,
 			ClanWarehouse.class,
 			EventEngine.class,
 			Festival.class,
-			FortSiege.class,
 			Freight.class,
-			Henna.class,
 			ItemAuctionLink.class,
 			Link.class,
 			Loto.class,
 			ManorManager.class,
 			Multisell.class,
+			NpcViewMod.class,
 			Observation.class,
 			OlympiadObservation.class,
 			OlympiadManagerLink.class,
@@ -451,14 +419,13 @@ public class MasterHandler
 			QuestList.class,
 			ReceivePremium.class,
 			ReleaseAttribute.class,
-			RemoveDeathPenalty.class,
 			RentPet.class,
-			RideWyvern.class,
 			Rift.class,
 			SkillList.class,
 			SupportBlessing.class,
 			SupportMagic.class,
 			TerritoryStatus.class,
+			TutorialClose.class,
 			VoiceCommand.class,
 			Wear.class,
 		},
@@ -480,75 +447,43 @@ public class MasterHandler
 		},
 		{
 			// Item Handlers
-			ScrollOfResurrection.class,
-			SoulShots.class,
-			SpiritShot.class,
-			BlessedSpiritShot.class,
 			BeastSoulShot.class,
 			BeastSpiritShot.class,
+			BlessedSpiritShot.class,
+			Book.class,
 			Bypass.class,
 			Calculator.class,
-			PaganKeys.class,
-			Maps.class,
-			NicknameColor.class,
-			Recipes.class,
-			RollingDice.class,
+			CharmOfCourage.class,
+			Disguise.class,
+			Elixir.class,
 			EnchantAttribute.class,
 			EnchantScrolls.class,
+			EventItem.class,
 			ExtractableItems.class,
-			Book.class,
-			SevenSignsRecord.class,
+			FishShots.class,
+			Harvester.class,
 			ItemSkills.class,
 			ItemSkillsTemplate.class,
-			Seed.class,
-			Harvester.class,
-			MercTicket.class,
-			FishShots.class,
-			PetFood.class,
-			SpecialXMas.class,
-			SummonItems.class,
-			BeastSpice.class,
-			TeleportBookmark.class,
-			Elixir.class,
-			Disguise.class,
 			ManaPotion.class,
-			EnergyStarStone.class,
-			EventItem.class,
+			Maps.class,
+			MercTicket.class,
+			NicknameColor.class,
+			PetFood.class,
+			Recipes.class,
+			RollingDice.class,
+			Seed.class,
+			SevenSignsRecord.class,
+			SoulShots.class,
+			SpecialXMas.class,
+			SpiritShot.class,
+			SummonItems.class,
+			TeleportBookmark.class,
 		},
 		{
-			// Skill Handlers
-			BallistaBomb.class,
-			BeastSkills.class,
-			Blow.class,
-			Continuous.class,
-			CpDamPercent.class,
-			Craft.class,
-			DeluxeKey.class,
-			Detection.class,
-			Disablers.class,
-			Dummy.class,
-			Fishing.class,
-			FishingSkill.class,
-			GetPlayer.class,
-			GiveReco.class,
-			GiveVitality.class,
-			InstantJump.class,
-			Manadam.class,
-			Mdam.class,
-			NornilsPower.class,
-			Pdam.class,
-			RefuelAirShip.class,
-			Resurrect.class,
-			ShiftTarget.class,
-			Sow.class,
-			StealBuffs.class,
-			StrSiegeAssault.class,
-			SummonFriend.class,
-			TakeCastle.class,
-			TakeFort.class,
-			TransformDispel.class,
-			Trap.class,
-			Unlock.class,
+			// Punishment Handlers
+			BanHandler.class,
+			ChatBanHandler.class,
+			JailHandler.class,
 		},
 		{
 			// User Command Handlers
@@ -566,6 +501,7 @@ public class MasterHandler
 			ChannelDelete.class,
 			ChannelInfo.class,
 			MyBirthday.class,
+			SiegeStatus.class,
 		},
 		{
 			// Voiced Command Handlers
@@ -575,12 +511,10 @@ public class MasterHandler
 			// SetVCmd.class,
 			(Config.L2JMOD_ALLOW_WEDDING ? Wedding.class : null),
 			(Config.BANKING_SYSTEM_ENABLED ? Banking.class : null),
-			(Config.TVT_ALLOW_VOICED_COMMAND ? TvTVoicedInfo.class : null),
 			(Config.L2JMOD_CHAT_ADMIN ? ChatAdmin.class : null),
 			(Config.L2JMOD_MULTILANG_ENABLE && Config.L2JMOD_MULTILANG_VOICED_ALLOW ? Lang.class : null),
 			(Config.L2JMOD_DEBUG_VOICE_COMMAND ? Debug.class : null),
 			(Config.L2JMOD_ALLOW_CHANGE_PASSWORD ? ChangePassword.class : null),
-			(Config.L2JMOD_HELLBOUND_STATUS ? Hellbound.class : null),
 		},
 		{
 			// Target Handlers
@@ -594,10 +528,9 @@ public class MasterHandler
 			BehindAura.class,
 			Clan.class,
 			ClanMember.class,
+			CommandChannel.class,
 			CorpseClan.class,
 			CorpseMob.class,
-			CorpsePet.class,
-			CorpsePlayer.class,
 			EnemySummon.class,
 			FlagPole.class,
 			FrontArea.class,
@@ -611,9 +544,12 @@ public class MasterHandler
 			PartyMember.class,
 			PartyNotMe.class,
 			PartyOther.class,
+			PcBody.class,
 			Pet.class,
 			Self.class,
+			Servitor.class,
 			Summon.class,
+			TargetParty.class,
 			Unlockable.class,
 		},
 		{
@@ -636,27 +572,27 @@ public class MasterHandler
 	{
 		_log.log(Level.INFO, "Loading Handlers...");
 		
-		Object loadInstance = null;
-		Method method = null;
-		Class<?>[] interfaces = null;
-		Object handler = null;
-		
-		for (int i = 0; i < _loadInstances.length; i++)
+		Map<IHandler<?, ?>, Method> registerHandlerMethods = new HashMap<>();
+		for (IHandler<?, ?> loadInstance : _loadInstances)
 		{
-			try
+			registerHandlerMethods.put(loadInstance, null);
+			for (Method method : loadInstance.getClass().getMethods())
 			{
-				method = _loadInstances[i].getMethod("getInstance");
-				loadInstance = method.invoke(_loadInstances[i]);
+				if (method.getName().equals("registerHandler") && !method.isBridge())
+				{
+					registerHandlerMethods.put(loadInstance, method);
+				}
 			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, "Failed invoking getInstance method for handler: " + _loadInstances[i].getSimpleName(), e);
-				continue;
-			}
-			
-			method = null;
-			
-			for (Class<?> c : _handlers[i])
+		}
+		
+		registerHandlerMethods.entrySet().stream().filter(e -> e.getValue() == null).forEach(e ->
+		{
+			_log.log(Level.WARNING, "Failed loading handlers of: " + e.getKey().getClass().getSimpleName() + " seems registerHandler function does not exist.");
+		});
+		
+		for (Class<?> classes[] : _handlers)
+		{
+			for (Class<?> c : classes)
 			{
 				if (c == null)
 				{
@@ -665,18 +601,13 @@ public class MasterHandler
 				
 				try
 				{
-					// Don't wtf some classes extending another like ItemHandler, Elixir, etc.. and we need to find where the hell is interface xD
-					interfaces = c.getInterfaces().length > 0 ? // Standardly handler has implementation
-					c.getInterfaces() : c.getSuperclass().getInterfaces().length > 0 ? // No? then it extends another handler like (ItemSkills->ItemSkillsTemplate)
-					c.getSuperclass().getInterfaces() : c.getSuperclass().getSuperclass().getInterfaces(); // O noh that's Elixir->ItemSkills->ItemSkillsTemplate
-					if (method == null)
+					Object handler = c.newInstance();
+					for (Entry<IHandler<?, ?>, Method> entry : registerHandlerMethods.entrySet())
 					{
-						method = loadInstance.getClass().getMethod("registerHandler", interfaces);
-					}
-					handler = c.newInstance();
-					if (method.getParameterTypes()[0].isInstance(handler))
-					{
-						method.invoke(loadInstance, handler);
+						if ((entry.getValue() != null) && entry.getValue().getParameterTypes()[0].isInstance(handler))
+						{
+							entry.getValue().invoke(entry.getKey(), handler);
+						}
 					}
 				}
 				catch (Exception e)
@@ -685,18 +616,11 @@ public class MasterHandler
 					continue;
 				}
 			}
-			// And lets try get size
-			try
-			{
-				method = loadInstance.getClass().getMethod("size");
-				Object returnVal = method.invoke(loadInstance);
-				_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + returnVal + " Handlers");
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, "Failed invoking size method for handler: " + loadInstance.getClass().getSimpleName(), e);
-				continue;
-			}
+		}
+		
+		for (IHandler<?, ?> loadInstance : _loadInstances)
+		{
+			_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + loadInstance.size() + " Handlers");
 		}
 		
 		_log.log(Level.INFO, "Handlers Loaded...");

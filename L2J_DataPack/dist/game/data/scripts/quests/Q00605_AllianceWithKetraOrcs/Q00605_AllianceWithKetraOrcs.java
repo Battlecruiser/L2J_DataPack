@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00605_AllianceWithKetraOrcs;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -150,9 +151,9 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 		200, // cond 5
 	};
 	
-	private Q00605_AllianceWithKetraOrcs(int questId, String name, String descr)
+	public Q00605_AllianceWithKetraOrcs()
 	{
-		super(questId, name, descr);
+		super(605, Q00605_AllianceWithKetraOrcs.class.getSimpleName(), "Alliance with Ketra Orcs");
 		addStartNpc(WAHKAN);
 		addTalkId(WAHKAN);
 		addKillId(MOBS.keySet());
@@ -269,8 +270,8 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 		if (member != null)
 		{
 			final QuestState st = member.getQuestState(getName());
-			final DropInfo info = MOBS.get(npc.getNpcId());
-			if ((st.getCond() >= info.getMinCond()) && canGetItem(st, info.getItemId()) && (getRandom(1000) < info.getChance()))
+			final DropInfo info = MOBS.get(npc.getId());
+			if ((st.getCond() >= info.getMinCond()) && (st.getCond() < 6) && canGetItem(st, info.getItemId()) && (getRandom(1000) < info.getChance()))
 			{
 				st.giveItems(info.getItemId(), 1);
 			}
@@ -328,10 +329,5 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00605_AllianceWithKetraOrcs(605, Q00605_AllianceWithKetraOrcs.class.getSimpleName(), "Alliance with Ketra Orcs");
 	}
 }

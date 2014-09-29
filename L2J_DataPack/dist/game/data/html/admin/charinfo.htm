@@ -22,7 +22,7 @@
 </tr><tr>
 <td><button value="Lv/Exp/Sp" action="bypass -h admin_add_exp_sp_to_character" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><button value="Instance" action="bypass -h admin_instancezone %name%" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Buffs" action="bypass -h admin_getbuffs %name%" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Effects" action="bypass -h admin_getbuffs %name%" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><button value="Party" action="bypass -h admin_partyinfo" width=65 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>
@@ -34,6 +34,9 @@
 <tr>
 <td>Account IP: </td><td><font color="LEVEL"><a action="bypass -h admin_find_ip %ip%">%ip%</a></font></td>
 </tr>
+<tr> 
+<td>Punishment: </td><td><font color="LEVEL"><a action="bypass -h admin_punishment player %name%">Info</a></font></td>
+</tr> 
 </table>
 <br>
 <br>

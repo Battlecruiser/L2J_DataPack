@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -86,7 +86,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				command += " (" + activeChar.getName() + ")";
 			}
 			Announcements.getInstance().handleAnnounce(command, 20, false);
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_critannounce_menu"))
 		{
@@ -104,11 +104,11 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			{
 			}
 			
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.equals("admin_announce_announcements"))
 		{
-			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
+			for (L2PcInstance player : L2World.getInstance().getPlayers())
 			{
 				Announcements.getInstance().showAnnouncements(player);
 			}
@@ -297,7 +297,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 	private void listAutoAnnouncements(L2PcInstance activeChar)
 	{
 		String content = HtmCache.getInstance().getHtmForce(activeChar.getHtmlPrefix(), "data/html/admin/autoannounce.htm");
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setHtml(content);
 		
 		final StringBuilder replyMSG = StringUtil.startAppend(500, "<br>");

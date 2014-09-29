@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.event.LongTimeEvent;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -32,9 +32,9 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Love Your Gatekeeper event.
  * @author Gladicek
  */
-public class LoveYourGatekeeper extends LongTimeEvent
+public final class LoveYourGatekeeper extends LongTimeEvent
 {
-	// NCP
+	// NPC
 	private static final int GATEKEEPER = 32477;
 	// Item
 	private static final int GATEKEEPER_TRANSFORMATION_STICK = 12814;
@@ -44,7 +44,7 @@ public class LoveYourGatekeeper extends LongTimeEvent
 	// Skills
 	private static SkillHolder TELEPORTER_TRANSFORM = new SkillHolder(5655, 1);
 	
-	public LoveYourGatekeeper()
+	private LoveYourGatekeeper()
 	{
 		super(LoveYourGatekeeper.class.getSimpleName(), "events");
 		addStartNpc(GATEKEEPER);
@@ -80,13 +80,13 @@ public class LoveYourGatekeeper extends LongTimeEvent
 						final int minutes = (int) ((remainingTime % 3600) / 60);
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
 						sm.addItemName(GATEKEEPER_TRANSFORMATION_STICK);
-						sm.addNumber(hours);
-						sm.addNumber(minutes);
+						sm.addInt(hours);
+						sm.addInt(minutes);
 						player.sendPacket(sm);
 					}
 					else
 					{
-						st.takeItems(PcInventory.ADENA_ID, PRICE);
+						st.takeItems(Inventory.ADENA_ID, PRICE);
 						st.giveItems(GATEKEEPER_TRANSFORMATION_STICK, 1);
 						st.setState(State.STARTED);
 						st.set("reuse", String.valueOf(System.currentTimeMillis() + (HOURS * 3600000)));

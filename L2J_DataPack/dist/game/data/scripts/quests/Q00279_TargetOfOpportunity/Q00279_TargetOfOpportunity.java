@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00279_TargetOfOpportunity;
 import java.util.Arrays;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -56,9 +57,9 @@ public final class Q00279_TargetOfOpportunity extends Quest
 		15516
 	};
 	
-	public Q00279_TargetOfOpportunity(int questId, String name, String descr)
+	public Q00279_TargetOfOpportunity()
 	{
-		super(questId, name, descr);
+		super(279, Q00279_TargetOfOpportunity.class.getSimpleName(), "Target of Opportunity");
 		addStartNpc(JERIAN);
 		addTalkId(JERIAN);
 		addKillId(MONSTERS);
@@ -93,7 +94,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		L2PcInstance pl = getRandomPartyMember(player, "progress", "1");
-		final int idx = Arrays.binarySearch(MONSTERS, npc.getNpcId());
+		final int idx = Arrays.binarySearch(MONSTERS, npc.getId());
 		if ((pl == null) || (idx < 0))
 		{
 			return null;
@@ -154,10 +155,5 @@ public final class Q00279_TargetOfOpportunity extends Quest
 			}
 		}
 		return true;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00279_TargetOfOpportunity(279, Q00279_TargetOfOpportunity.class.getSimpleName(), "Target of Opportunity");
 	}
 }

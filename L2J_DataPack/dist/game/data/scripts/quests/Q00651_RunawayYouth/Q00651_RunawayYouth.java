@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -38,9 +38,9 @@ public class Q00651_RunawayYouth extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 26;
 	
-	public Q00651_RunawayYouth(int questId, String name, String descr)
+	public Q00651_RunawayYouth()
 	{
-		super(questId, name, descr);
+		super(651, Q00651_RunawayYouth.class.getSimpleName(), "Runaway Youth");
 		addStartNpc(IVAN);
 		addTalkId(BATIDAE, IVAN);
 	}
@@ -83,7 +83,7 @@ public class Q00651_RunawayYouth extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case IVAN:
 				switch (st.getState())
@@ -106,10 +106,5 @@ public class Q00651_RunawayYouth extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00651_RunawayYouth(651, Q00651_RunawayYouth.class.getSimpleName(), "Runaway Youth");
 	}
 }

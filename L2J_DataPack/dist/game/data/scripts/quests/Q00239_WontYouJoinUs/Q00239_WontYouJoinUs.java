@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00239_WontYouJoinUs;
 import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
 import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -50,9 +51,9 @@ public class Q00239_WontYouJoinUs extends Quest
 	private static final int CHANCE_FOR_FRAGMENT = 80;
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00239_WontYouJoinUs(int questId, String name, String descr)
+	public Q00239_WontYouJoinUs()
 	{
-		super(questId, name, descr);
+		super(239, Q00239_WontYouJoinUs.class.getSimpleName(), "Won't You Join Us?");
 		addStartNpc(ATHENIA);
 		addTalkId(ATHENIA);
 		addKillId(WASTE_LANDFILL_MACHINE, SUPPRESSOR, EXTERMINATOR);
@@ -92,7 +93,7 @@ public class Q00239_WontYouJoinUs extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (npc.getNpcId() == WASTE_LANDFILL_MACHINE)
+		if (npc.getId() == WASTE_LANDFILL_MACHINE)
 		{
 			final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
 			if (partyMember != null)
@@ -196,10 +197,5 @@ public class Q00239_WontYouJoinUs extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00239_WontYouJoinUs(239, Q00239_WontYouJoinUs.class.getSimpleName(), "Won't You Join Us?");
 	}
 }

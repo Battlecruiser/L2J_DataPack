@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -38,9 +38,9 @@ public class Q10267_JourneyToGracia extends Quest
 	// Item
 	private static final int LETTER = 13810;
 	
-	public Q10267_JourneyToGracia(int questId, String name, String descr)
+	public Q10267_JourneyToGracia()
 	{
-		super(questId, name, descr);
+		super(10267, Q10267_JourneyToGracia.class.getSimpleName(), "Journey to Gracia");
 		addStartNpc(ORVEN);
 		addTalkId(ORVEN, KEUCEREUS, PAPIKU);
 		registerQuestItems(LETTER);
@@ -83,7 +83,7 @@ public class Q10267_JourneyToGracia extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ORVEN:
 				switch (st.getState())
@@ -117,10 +117,5 @@ public class Q10267_JourneyToGracia extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10267_JourneyToGracia(10267, Q10267_JourneyToGracia.class.getSimpleName(), "Journey to Gracia");
 	}
 }

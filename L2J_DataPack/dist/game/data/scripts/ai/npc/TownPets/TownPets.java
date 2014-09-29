@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,8 +23,8 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Town Pets AI
  * @author malyelfik
  */
-public class TownPets extends AbstractNpcAI
+public final class TownPets extends AbstractNpcAI
 {
 	// Pet IDs
 	private static final int[] PETS =
@@ -51,9 +51,9 @@ public class TownPets extends AbstractNpcAI
 		31955, // Ruby
 	};
 	
-	private TownPets(String name, String descr)
+	private TownPets()
 	{
-		super(name, descr);
+		super(TownPets.class.getSimpleName(), "ai/npc");
 		addSpawnId(PETS);
 		
 		for (int npcId : PETS)
@@ -70,10 +70,10 @@ public class TownPets extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("move"))
 		{
-			final int locX = (npc.getSpawn().getLocx() - 50) + getRandom(100);
-			final int locY = (npc.getSpawn().getLocy() - 50) + getRandom(100);
+			final int locX = (npc.getSpawn().getX() - 50) + getRandom(100);
+			final int locY = (npc.getSpawn().getY() - 50) + getRandom(100);
 			npc.setRunning();
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(locX, locY, npc.getZ(), 0));
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(locX, locY, npc.getZ(), 0));
 			startQuestTimer("move", 5000, npc, null);
 		}
 		return null;
@@ -91,6 +91,6 @@ public class TownPets extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new TownPets(TownPets.class.getSimpleName(), "ai/npc");
+		new TownPets();
 	}
 }

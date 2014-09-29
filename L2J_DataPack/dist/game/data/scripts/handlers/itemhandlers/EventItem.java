@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,23 +18,19 @@
  */
 package handlers.itemhandlers;
 
-import java.util.logging.Logger;
-
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager;
-import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager.ArenaParticipantsHolder;
+import com.l2jserver.gameserver.model.ArenaParticipantsHolder;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class EventItem implements IItemHandler
 {
-	private static final Logger _log = Logger.getLogger(EventItem.class.getName());
-	
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
@@ -48,7 +44,7 @@ public class EventItem implements IItemHandler
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		
-		final int itemId = item.getItemId();
+		final int itemId = item.getId();
 		switch (itemId)
 		{
 			case 13787: // Handy's Block Checker Bond
@@ -74,7 +70,7 @@ public class EventItem implements IItemHandler
 			return false;
 		}
 		
-		final L2Skill sk = item.getEtcItem().getSkills()[0].getSkill();
+		final Skill sk = item.getEtcItem().getSkills()[0].getSkill();
 		if (sk == null)
 		{
 			return false;
@@ -96,7 +92,7 @@ public class EventItem implements IItemHandler
 				final int enemyTeam = holder.getPlayerTeam(pc);
 				if ((enemyTeam != -1) && (enemyTeam != team))
 				{
-					sk.getEffects(castor, pc);
+					sk.applyEffects(castor, pc);
 				}
 			}
 			return true;

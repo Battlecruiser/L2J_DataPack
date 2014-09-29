@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,17 +21,17 @@ package handlers.actionhandlers;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jserver.gameserver.model.events.EventDispatcher;
+import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSummonTalk;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.PetStatusShow;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 public class L2PetInstanceAction implements IActionHandler
 {
@@ -47,28 +47,14 @@ public class L2PetInstanceAction implements IActionHandler
 		
 		boolean isOwner = activeChar.getObjectId() == ((L2PetInstance) target).getOwner().getObjectId();
 		
-		activeChar.sendPacket(new ValidateLocation((L2Character) target));
 		if (isOwner && (activeChar != ((L2PetInstance) target).getOwner()))
 		{
 			((L2PetInstance) target).updateRefOwner(activeChar);
 		}
 		if (activeChar.getTarget() != target)
 		{
-			if (Config.DEBUG)
-			{
-				_log.fine("new target selected:" + target.getObjectId());
-			}
-			
 			// Set the target of the L2PcInstance activeChar
 			activeChar.setTarget(target);
-			
-			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character) target).getLevel()));
-			
-			// Send a Server->Client packet StatusUpdate of the L2PetInstance to the L2PcInstance to update its HP bar
-			StatusUpdate su = new StatusUpdate(target);
-			su.addAttribute(StatusUpdate.CUR_HP, (int) ((L2Character) target).getCurrentHp());
-			su.addAttribute(StatusUpdate.MAX_HP, ((L2Character) target).getMaxHp());
-			activeChar.sendPacket(su);
 		}
 		else if (interact)
 		{
@@ -111,6 +97,9 @@ public class L2PetInstanceAction implements IActionHandler
 				if (isOwner)
 				{
 					activeChar.sendPacket(new PetStatusShow((L2PetInstance) target));
+					
+					// Notify to scripts
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonTalk((L2Summon) target), (L2Summon) target);
 				}
 				activeChar.updateNotMoveUntil();
 			}

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,21 +18,21 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.List;
+import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ClassListData;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.PledgeSkillList;
@@ -75,13 +75,14 @@ public class AdminSkill implements IAdminCommandHandler
 		"admin_reset_skills",
 		"admin_give_all_skills",
 		"admin_give_all_skills_fs",
+		"admin_give_clan_skills",
 		"admin_give_all_clan_skills",
 		"admin_remove_all_skills",
 		"admin_add_clan_skill",
 		"admin_setskill"
 	};
 	
-	private static L2Skill[] adminSkills;
+	private static Skill[] adminSkills;
 	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -103,14 +104,14 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_skill_list"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "skills.htm");
+			AdminHtml.showAdminHtml(activeChar, "skills.htm");
 		}
 		else if (command.startsWith("admin_skill_index"))
 		{
 			try
 			{
 				String val = command.substring(18);
-				AdminHelpPage.showHelpPage(activeChar, "skills/" + val + ".htm");
+				AdminHtml.showAdminHtml(activeChar, "skills/" + val + ".htm");
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -157,9 +158,13 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			adminGiveAllSkills(activeChar, true);
 		}
+		else if (command.equals("admin_give_clan_skills"))
+		{
+			adminGiveClanSkills(activeChar, false);
+		}
 		else if (command.equals("admin_give_all_clan_skills"))
 		{
-			adminGiveAllClanSkills(activeChar);
+			adminGiveClanSkills(activeChar, true);
 		}
 		else if (command.equals("admin_remove_all_skills"))
 		{
@@ -170,7 +175,7 @@ public class AdminSkill implements IAdminCommandHandler
 				return false;
 			}
 			final L2PcInstance player = target.getActingPlayer();
-			for (L2Skill skill : player.getAllSkills())
+			for (Skill skill : player.getAllSkills())
 			{
 				player.removeSkill(skill);
 			}
@@ -196,7 +201,7 @@ public class AdminSkill implements IAdminCommandHandler
 			String[] split = command.split(" ");
 			int id = Integer.parseInt(split[1]);
 			int lvl = Integer.parseInt(split[2]);
-			L2Skill skill = SkillTable.getInstance().getInfo(id, lvl);
+			Skill skill = SkillData.getInstance().getSkill(id, lvl);
 			activeChar.addSkill(skill);
 			activeChar.sendSkillList();
 			activeChar.sendMessage("You added yourself skill " + skill.getName() + "(" + id + ") level " + lvl);
@@ -227,8 +232,9 @@ public class AdminSkill implements IAdminCommandHandler
 	 * This function will give all the skills that the target's clan can learn at it's level.<br>
 	 * If the target is not the clan leader, a system message will be sent to the Game Master.
 	 * @param activeChar the active char, probably a Game Master.
+	 * @param includeSquad if Squad skills is included
 	 */
-	private void adminGiveAllClanSkills(L2PcInstance activeChar)
+	private void adminGiveClanSkills(L2PcInstance activeChar, boolean includeSquad)
 	{
 		final L2Object target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -239,6 +245,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		final L2PcInstance player = target.getActingPlayer();
 		final L2Clan clan = player.getClan();
+		
 		if (clan == null)
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_MUST_BE_IN_CLAN);
@@ -247,16 +254,15 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		if (!player.isClanLeader())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.TARGET_MUST_BE_IN_CLAN);
-			sm.addPcName(player);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
+			sm.addString(player.getName());
 			activeChar.sendPacket(sm);
 		}
 		
-		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailablePledgeSkills(clan);
-		SkillTable st = SkillTable.getInstance();
-		for (L2SkillLearn s : skills)
+		final Map<Integer, L2SkillLearn> skills = SkillTreesData.getInstance().getMaxPledgeSkills(clan, includeSquad);
+		for (L2SkillLearn s : skills.values())
 		{
-			clan.addNewSkill(st.getInfo(s.getSkillId(), s.getSkillLevel()));
+			clan.addNewSkill(SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()));
 		}
 		
 		// Notify target and active char
@@ -285,7 +291,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		
 		final L2PcInstance player = target.getActingPlayer();
-		final L2Skill[] skills = player.getAllSkills().toArray(new L2Skill[player.getAllSkills().size()]);
+		final Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
 		
 		int maxSkillsPerPage = 10;
 		int maxPages = skills.length / maxSkillsPerPage;
@@ -306,7 +312,7 @@ public class AdminSkill implements IAdminCommandHandler
 			skillsEnd = skillsStart + maxSkillsPerPage;
 		}
 		
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		final StringBuilder replyMSG = StringUtil.startAppend(500 + (maxPages * 50) + (((skillsEnd - skillsStart) + 1) * 50), "<html><body>" + "<table width=260><tr>" + "<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>" + "<td width=180><center>Character Selection Menu</center></td>" + "<td width=40><button value=\"Back\" action=\"bypass -h admin_show_skills\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>" + "</tr></table>" + "<br><br>" + "<center>Editing <font color=\"LEVEL\">", player.getName(), "</font></center>" + "<br><table width=270><tr><td>Lv: ", String.valueOf(player.getLevel()), " ", ClassListData.getInstance().getClass(player.getClassId()).getClientCode(), "</td></tr></table>" + "<br><table width=270><tr><td>Note: Dont forget that modifying players skills can</td></tr>" + "<tr><td>ruin the game...</td></tr></table>" + "<br><center>Click on the skill you wish to remove:</center>" + "<br>" + "<center><table width=270><tr>");
 		
 		for (int x = 0; x < maxPages; x++)
@@ -339,7 +345,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		final L2PcInstance player = target.getActingPlayer();
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/charskills.htm");
 		adminReply.replace("%name%", player.getName());
 		adminReply.replace("%level%", String.valueOf(player.getLevel()));
@@ -365,13 +371,13 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			L2Skill[] skills = player.getAllSkills().toArray(new L2Skill[player.getAllSkills().size()]);
-			adminSkills = activeChar.getAllSkills().toArray(new L2Skill[activeChar.getAllSkills().size()]);
-			for (L2Skill skill : adminSkills)
+			Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
+			adminSkills = activeChar.getAllSkills().toArray(new Skill[activeChar.getAllSkills().size()]);
+			for (Skill skill : adminSkills)
 			{
 				activeChar.removeSkill(skill);
 			}
-			for (L2Skill skill : skills)
+			for (Skill skill : skills)
 			{
 				activeChar.addSkill(skill, true);
 			}
@@ -399,20 +405,20 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			L2Skill[] skills = player.getAllSkills().toArray(new L2Skill[player.getAllSkills().size()]);
-			for (L2Skill skill : skills)
+			Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
+			for (Skill skill : skills)
 			{
 				player.removeSkill(skill);
 			}
-			for (L2Skill skill : activeChar.getAllSkills())
+			for (Skill skill : activeChar.getAllSkills())
 			{
 				player.addSkill(skill, true);
 			}
-			for (L2Skill skill : skills)
+			for (Skill skill : skills)
 			{
 				activeChar.removeSkill(skill);
 			}
-			for (L2Skill skill : adminSkills)
+			for (Skill skill : adminSkills)
 			{
 				activeChar.addSkill(skill, true);
 			}
@@ -446,14 +452,14 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			L2Skill skill = null;
+			Skill skill = null;
 			try
 			{
 				String id = st.nextToken();
 				String level = st.nextToken();
 				int idval = Integer.parseInt(id);
 				int levelval = Integer.parseInt(level);
-				skill = SkillTable.getInstance().getInfo(idval, levelval);
+				skill = SkillData.getInstance().getSkill(idval, levelval);
 			}
 			catch (Exception e)
 			{
@@ -495,7 +501,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		final L2PcInstance player = target.getActingPlayer();
-		L2Skill skill = SkillTable.getInstance().getInfo(idval, player.getSkillLevel(idval));
+		Skill skill = SkillData.getInstance().getSkill(idval, player.getSkillLevel(idval));
 		if (skill != null)
 		{
 			String skillname = skill.getName();
@@ -546,7 +552,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		final L2Skill skill = SkillTable.getInstance().getInfo(id, level);
+		final Skill skill = SkillData.getInstance().getSkill(id, level);
 		if (skill == null)
 		{
 			activeChar.sendMessage("Error: there is no such skill.");

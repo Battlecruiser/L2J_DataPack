@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00137_TempleChampionPart1;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -45,9 +46,9 @@ public class Q00137_TempleChampionPart1 extends Quest
 	private static final int EXECUTOR = 10334;
 	private static final int MISSIONARY = 10339;
 	
-	public Q00137_TempleChampionPart1(int questId, String name, String descr)
+	public Q00137_TempleChampionPart1()
 	{
-		super(questId, name, descr);
+		super(137, Q00137_TempleChampionPart1.class.getSimpleName(), "Temple Champion - 1");
 		addStartNpc(SYLVAIN);
 		addTalkId(SYLVAIN);
 		addKillId(MOBS);
@@ -162,10 +163,5 @@ public class Q00137_TempleChampionPart1 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00137_TempleChampionPart1(137, Q00137_TempleChampionPart1.class.getSimpleName(), "Temple Champion - 1");
 	}
 }

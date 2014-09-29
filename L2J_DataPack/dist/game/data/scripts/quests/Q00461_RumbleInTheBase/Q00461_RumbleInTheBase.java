@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,11 +23,12 @@ import java.util.Map;
 
 import quests.Q00252_ItSmellsDelicious.Q00252_ItSmellsDelicious;
 
+import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
@@ -55,9 +56,9 @@ public class Q00461_RumbleInTheBase extends Quest
 		MONSTERS.put(18908, 782);
 	}
 	
-	public Q00461_RumbleInTheBase(int questId, String name, String descr)
+	public Q00461_RumbleInTheBase()
 	{
-		super(questId, name, descr);
+		super(461, Q00461_RumbleInTheBase.class.getSimpleName(), "Rumble in the Base");
 		addStartNpc(STAN);
 		addTalkId(STAN);
 		addKillId(MONSTERS.keySet());
@@ -90,12 +91,12 @@ public class Q00461_RumbleInTheBase extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		QuestState st = null;
-		if (getRandom(1000) >= MONSTERS.get(npc.getNpcId()))
+		if (getRandom(1000) >= MONSTERS.get(npc.getId()))
 		{
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		if (npc.getNpcId() == 18908)
+		if (npc.getId() == 18908)
 		{
 			st = player.getQuestState(getName());
 			if ((st != null) && st.isCond(1) && (st.getQuestItemsCount(SHINY_SALMON) < 5))
@@ -171,10 +172,5 @@ public class Q00461_RumbleInTheBase extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00461_RumbleInTheBase(461, Q00461_RumbleInTheBase.class.getSimpleName(), "Rumble in the Base");
 	}
 }

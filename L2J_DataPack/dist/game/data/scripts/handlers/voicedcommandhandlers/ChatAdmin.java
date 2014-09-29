@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,8 +23,13 @@ import java.util.StringTokenizer;
 import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.datatables.CharNameTable;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
+import com.l2jserver.gameserver.instancemanager.PunishmentManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.punishment.PunishmentAffect;
+import com.l2jserver.gameserver.model.punishment.PunishmentTask;
+import com.l2jserver.gameserver.model.punishment.PunishmentType;
+import com.l2jserver.gameserver.util.Util;
 
 public class ChatAdmin implements IVoicedCommandHandler
 {
@@ -53,22 +58,14 @@ public class ChatAdmin implements IVoicedCommandHandler
 			if (st.hasMoreTokens())
 			{
 				String name = st.nextToken();
-				int length = 0;
+				long expirationTime = 0;
 				if (st.hasMoreTokens())
 				{
-					try
+					String token = st.nextToken();
+					if (Util.isDigit(token))
 					{
-						length = Integer.parseInt(st.nextToken());
+						expirationTime = System.currentTimeMillis() + (Integer.parseInt(st.nextToken()) * 60 * 1000);
 					}
-					catch (NumberFormatException e)
-					{
-						activeChar.sendMessage("Wrong ban length !");
-						return false;
-					}
-				}
-				if (length < 0)
-				{
-					length = 0;
 				}
 				
 				int objId = CharNameTable.getInstance().getIdByName(name);
@@ -80,7 +77,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 						activeChar.sendMessage("Player not online !");
 						return false;
 					}
-					if (player.getPunishLevel() != L2PcInstance.PunishLevel.NONE)
+					if (player.isChatBanned())
 					{
 						activeChar.sendMessage("Player is already punished !");
 						return false;
@@ -101,12 +98,12 @@ public class ChatAdmin implements IVoicedCommandHandler
 						return false;
 					}
 					
-					player.setPunishLevel(L2PcInstance.PunishLevel.CHAT, length);
+					PunishmentManager.getInstance().startPunishment(new PunishmentTask(objId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, expirationTime, "Chat banned by moderator", activeChar.getName()));
 					player.sendMessage("Chat banned by moderator " + activeChar.getName());
 					
-					if (length > 0)
+					if (expirationTime > 0)
 					{
-						activeChar.sendMessage("Player " + player.getName() + " chat banned for " + length + " minutes.");
+						activeChar.sendMessage("Player " + player.getName() + " chat banned for " + expirationTime + " minutes.");
 					}
 					else
 					{
@@ -141,13 +138,13 @@ public class ChatAdmin implements IVoicedCommandHandler
 						activeChar.sendMessage("Player not online !");
 						return false;
 					}
-					if (player.getPunishLevel() != L2PcInstance.PunishLevel.CHAT)
+					if (!player.isChatBanned())
 					{
 						activeChar.sendMessage("Player is not chat banned !");
 						return false;
 					}
 					
-					player.setPunishLevel(L2PcInstance.PunishLevel.NONE, 0);
+					PunishmentManager.getInstance().stopPunishment(objId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);
 					
 					activeChar.sendMessage("Player " + player.getName() + " chat unbanned.");
 					player.sendMessage("Chat unbanned by moderator " + activeChar.getName());

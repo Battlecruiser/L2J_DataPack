@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,6 +23,7 @@ import java.util.Map;
 
 import quests.Q00139_ShadowFoxPart1.Q00139_ShadowFoxPart1;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -58,9 +59,9 @@ public class Q00140_ShadowFoxPart2 extends Quest
 	private static final int CRYSTAL_COUNT = 5;
 	private static final int OXYDE_COUNT = 2;
 	
-	private Q00140_ShadowFoxPart2(int questId, String name, String descr)
+	public Q00140_ShadowFoxPart2()
 	{
-		super(questId, name, descr);
+		super(140, Q00140_ShadowFoxPart2.class.getSimpleName(), "Shadow Fox - 2");
 		addStartNpc(KLUCK);
 		addTalkId(KLUCK, XENOVIA);
 		addKillId(MOBS.keySet());
@@ -141,7 +142,7 @@ public class Q00140_ShadowFoxPart2 extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState st = member.getQuestState(getName());
-		if (getRandom(100) < MOBS.get(npc.getNpcId()))
+		if (getRandom(100) < MOBS.get(npc.getId()))
 		{
 			st.giveItems(DARK_CRYSTAL, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -159,7 +160,7 @@ public class Q00140_ShadowFoxPart2 extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case KLUCK:
 				switch (st.getState())
@@ -220,10 +221,5 @@ public class Q00140_ShadowFoxPart2 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00140_ShadowFoxPart2(140, Q00140_ShadowFoxPart2.class.getSimpleName(), "Shadow Fox - 2");
 	}
 }

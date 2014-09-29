@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Elemental Master (92)
  * @author Emperorc
  */
 public class SagaOfTheElementalMaster extends SagasSuperClass
 {
-	public static String qn1 = "92_SagaOfTheElementalMaster";
-	public static int qnu = 92;
-	public static String qna = "Saga of the Elemental Master";
-	
 	public SagaOfTheElementalMaster()
 	{
-		super(qnu, qn1, qna);
+		super(92, "92_SagaOfTheElementalMaster", "Saga of the Elemental Master");
 		NPC = new int[]
 		{
 			30174,
@@ -67,7 +65,6 @@ public class SagaOfTheElementalMaster extends SagasSuperClass
 			27241,
 			27311
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			104
@@ -76,23 +73,11 @@ public class SagaOfTheElementalMaster extends SagasSuperClass
 		{
 			0x1c
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			161719,
-			124376,
-			124355
-		};
-		Y = new int[]
-		{
-			-92823,
-			82127,
-			82155
-		};
-		Z = new int[]
-		{
-			-1893,
-			-2796,
-			-2803
+			new Location(161719, -92823, -1893),
+			new Location(124376, 82127, -2796),
+			new Location(124355, 82155, -2803)
 		};
 		Text = new String[]
 		{

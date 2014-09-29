@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,31 +18,29 @@
  */
 package ai.npc.Teleports.TeleportToRaceTrack;
 
+import java.util.HashMap;
 import java.util.Map;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
+import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Race Track teleport AI.<br>
- * Original python script by DraX & updated by DrLecter.
+ * Monster Derby Track teleport AI.
  * @author Plim
  */
-public class TeleportToRaceTrack extends AbstractNpcAI
+public final class TeleportToRaceTrack extends AbstractNpcAI
 {
 	// NPC
 	private static final int RACE_MANAGER = 30995;
-	// Misc
-	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<>();
 	// Locations
-	private static final Location[] RETURN_LOCS =
+	private static final Location TELEPORT = new Location(12661, 181687, -3540);
+	private static final Location DION_CASTLE_TOWN = new Location(15670, 142983, -2700);
+	private static final Location[] RETURN_LOCATIONS =
 	{
 		new Location(-80826, 149775, -3043),
 		new Location(-12672, 122776, -3116),
@@ -57,73 +55,62 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 		new Location(87386, -143246, -1293),
 		new Location(12882, 181053, -3560)
 	};
+	// Misc
+	private static final Map<Integer, Integer> TELEPORTERS = new HashMap<>();
+	static
+	{
+		TELEPORTERS.put(30059, 2); // Trisha
+		TELEPORTERS.put(30080, 3); // Clarissa
+		TELEPORTERS.put(30177, 5); // Valentina
+		TELEPORTERS.put(30233, 7); // Esmeralda
+		TELEPORTERS.put(30256, 1); // Bella
+		TELEPORTERS.put(30320, 0); // Richlin
+		TELEPORTERS.put(30848, 6); // Elisa
+		TELEPORTERS.put(30899, 4); // Flauen
+		TELEPORTERS.put(31320, 8); // Ilyana
+		TELEPORTERS.put(31275, 9); // Tatiana
+		TELEPORTERS.put(31964, 10); // Bilia
+	}
+	// Player Variables
+	private static final String MONSTER_RETURN = "MONSTER_RETURN";
+	
+	private TeleportToRaceTrack()
+	{
+		super(TeleportToRaceTrack.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(RACE_MANAGER);
+		addStartNpc(TELEPORTERS.keySet());
+		addTalkId(RACE_MANAGER);
+		addTalkId(TELEPORTERS.keySet());
+	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		
-		if (st == null)
+		if (npc.getId() == RACE_MANAGER)
 		{
-			return null;
-		}
-		
-		if (TELEPORTERS.containsKey(npc.getNpcId()))
-		{
-			st.getPlayer().teleToLocation(12661, 181687, -3560);
-			st.setState(State.STARTED);
-			st.set("id", String.valueOf(TELEPORTERS.get(npc.getNpcId())));
-		}
-		else if (npc.getNpcId() == RACE_MANAGER)
-		{
-			if ((st.getState() == State.STARTED) && (st.getInt("id") > 0))
+			final int returnId = player.getVariables().getInt(MONSTER_RETURN, -1);
+			
+			if (returnId != -1)
 			{
-				int return_id = st.getInt("id") - 1;
-				if (return_id < 13)
-				{
-					st.getPlayer().teleToLocation(RETURN_LOCS[return_id], false);
-					st.unset("id");
-				}
+				player.teleToLocation(RETURN_LOCATIONS[returnId]);
+				player.getVariables().remove(MONSTER_RETURN);
 			}
 			else
 			{
-				player.sendPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "You've arrived here from a different way. I'll send you to Dion Castle Town which is the nearest town."));
-				st.getPlayer().teleToLocation(15670, 142983, -2700);
+				broadcastNpcSay(npc, Say2.ALL, NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_ILL_BE_SENDING_YOU_BACK_TO_RUNE_TOWNSHIP_WHICH_IS_THE_NEAREST_TOWN);
+				player.teleToLocation(DION_CASTLE_TOWN);
 			}
-			st.exitQuest(true);
 		}
-		return htmltext;
-	}
-	
-	public TeleportToRaceTrack(String name, String descr)
-	{
-		super(name, descr);
-		TELEPORTERS.put(30059, 3); // TRISHA
-		TELEPORTERS.put(30080, 4); // CLARISSA
-		TELEPORTERS.put(30177, 6); // VALENTIA
-		TELEPORTERS.put(30233, 8); // ESMERALDA
-		TELEPORTERS.put(30256, 2); // BELLA
-		TELEPORTERS.put(30320, 1); // RICHLIN
-		TELEPORTERS.put(30848, 7); // ELISA
-		TELEPORTERS.put(30899, 5); // FLAUEN
-		TELEPORTERS.put(31320, 9); // ILYANA
-		TELEPORTERS.put(31275, 10); // TATIANA
-		TELEPORTERS.put(31964, 11); // BILIA
-		TELEPORTERS.put(31210, 12); // RACE TRACK GK
-		
-		for (int npcId : TELEPORTERS.keySet())
+		else
 		{
-			addStartNpc(npcId);
-			addTalkId(npcId);
+			player.teleToLocation(TELEPORT);
+			player.getVariables().set(MONSTER_RETURN, String.valueOf(TELEPORTERS.get(npc.getId())));
 		}
-		
-		addStartNpc(RACE_MANAGER);
-		addTalkId(RACE_MANAGER);
+		return super.onTalk(npc, player);
 	}
 	
 	public static void main(String[] args)
 	{
-		new TeleportToRaceTrack(TeleportToRaceTrack.class.getSimpleName(), "ai/npc/Teleports");
+		new TeleportToRaceTrack();
 	}
 }

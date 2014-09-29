@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Hierophant (86)
  * @author Emperorc
  */
 public class SagaOfTheHierophant extends SagasSuperClass
 {
-	public static String qn1 = "86_SagaOfTheHierophant";
-	public static int qnu = 86;
-	public static String qna = "Saga of the Hierophant";
-	
 	public SagaOfTheHierophant()
 	{
-		super(qnu, qn1, qna);
+		super(86, "86_SagaOfTheHierophant", "Saga of the Hierophant");
 		NPC = new int[]
 		{
 			30191,
@@ -67,7 +65,6 @@ public class SagaOfTheHierophant extends SagasSuperClass
 			27235,
 			27275
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			98
@@ -76,23 +73,11 @@ public class SagaOfTheHierophant extends SagasSuperClass
 		{
 			0x11
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			161719,
-			124355,
-			124376
-		};
-		Y = new int[]
-		{
-			-92823,
-			82155,
-			82127
-		};
-		Z = new int[]
-		{
-			-1893,
-			-2803,
-			-2796
+			new Location(161719, -92823, -1893),
+			new Location(124355, 82155, -2803),
+			new Location(124376, 82127, -2796)
 		};
 		Text = new String[]
 		{

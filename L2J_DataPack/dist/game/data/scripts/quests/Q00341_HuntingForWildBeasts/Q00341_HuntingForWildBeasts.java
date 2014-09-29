@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00341_HuntingForWildBeasts;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -51,9 +52,9 @@ public class Q00341_HuntingForWildBeasts extends Quest
 	private static final int ADENA_COUNT = 3710;
 	private static final int REQUIRED_COUNT = 20;
 	
-	public Q00341_HuntingForWildBeasts(int questId, String name, String descr)
+	public Q00341_HuntingForWildBeasts()
 	{
-		super(questId, name, descr);
+		super(341, Q00341_HuntingForWildBeasts.class.getSimpleName(), "Hunting for Wild Beasts");
 		addStartNpc(PANO);
 		addTalkId(PANO);
 		addKillId(MONSTERS.keySet());
@@ -127,7 +128,7 @@ public class Q00341_HuntingForWildBeasts extends Quest
 			long skins = st.getQuestItemsCount(BEAR_SKIN);
 			if (skins < REQUIRED_COUNT)
 			{
-				if (getRandom(100) < MONSTERS.get(npc.getNpcId()))
+				if (getRandom(100) < MONSTERS.get(npc.getId()))
 				{
 					st.giveItems(BEAR_SKIN, 1);
 					if ((++skins) < REQUIRED_COUNT)
@@ -142,10 +143,5 @@ public class Q00341_HuntingForWildBeasts extends Quest
 			}
 		}
 		return super.onKill(npc, player, isPet);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00341_HuntingForWildBeasts(341, Q00341_HuntingForWildBeasts.class.getSimpleName(), "Hunting for Wild Beasts");
 	}
 }

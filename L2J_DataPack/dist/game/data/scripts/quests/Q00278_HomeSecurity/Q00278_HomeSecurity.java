@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Home Security (278)
@@ -40,10 +39,12 @@ public class Q00278_HomeSecurity extends Quest
 	};
 	// Item
 	private static final int SEL_MAHUM_MANE = 15531;
+	// Misc
+	private static final int SEL_MAHUM_MANE_COUNT = 300;
 	
-	public Q00278_HomeSecurity(int questId, String name, String descr)
+	public Q00278_HomeSecurity()
 	{
-		super(questId, name, descr);
+		super(278, Q00278_HomeSecurity.class.getSimpleName(), "Home Security");
 		addStartNpc(TUNATUN);
 		addTalkId(TUNATUN);
 		addKillId(MONSTER);
@@ -60,73 +61,79 @@ public class Q00278_HomeSecurity extends Quest
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("31537-02.htm"))
+		switch (event)
 		{
-			htmltext = (player.getLevel() >= 82) ? "31537-02.htm" : "31537-03.html";
-		}
-		else if (event.equalsIgnoreCase("31537-04.htm"))
-		{
-			st.startQuest();
-		}
-		else if (event.equalsIgnoreCase("31537-07.html"))
-		{
-			int i0 = getRandom(100);
-			
-			if (i0 < 10)
+			case "31537-02.htm":
 			{
-				st.giveItems(960, 1);
+				htmltext = (player.getLevel() >= 82) ? "31537-02.htm" : "31537-03.html";
+				break;
 			}
-			else if (i0 < 19)
+			case "31537-04.htm":
 			{
-				st.giveItems(960, 2);
+				st.startQuest();
+				break;
 			}
-			else if (i0 < 27)
+			case "31537-07.html":
 			{
-				st.giveItems(960, 3);
+				int i0 = getRandom(100);
+				
+				if (i0 < 10)
+				{
+					st.giveItems(960, 1);
+				}
+				else if (i0 < 19)
+				{
+					st.giveItems(960, 2);
+				}
+				else if (i0 < 27)
+				{
+					st.giveItems(960, 3);
+				}
+				else if (i0 < 34)
+				{
+					st.giveItems(960, 4);
+				}
+				else if (i0 < 40)
+				{
+					st.giveItems(960, 5);
+				}
+				else if (i0 < 45)
+				{
+					st.giveItems(960, 6);
+				}
+				else if (i0 < 49)
+				{
+					st.giveItems(960, 7);
+				}
+				else if (i0 < 52)
+				{
+					st.giveItems(960, 8);
+				}
+				else if (i0 < 54)
+				{
+					st.giveItems(960, 9);
+				}
+				else if (i0 < 55)
+				{
+					st.giveItems(960, 10);
+				}
+				else if (i0 < 75)
+				{
+					st.giveItems(9553, 1);
+				}
+				else if (i0 < 90)
+				{
+					st.giveItems(9553, 2);
+				}
+				else
+				{
+					st.giveItems(959, 1);
+				}
+				
+				st.exitQuest(true, true);
+				htmltext = "31537-07.html";
+				break;
 			}
-			else if (i0 < 34)
-			{
-				st.giveItems(960, 4);
-			}
-			else if (i0 < 40)
-			{
-				st.giveItems(960, 5);
-			}
-			else if (i0 < 45)
-			{
-				st.giveItems(960, 6);
-			}
-			else if (i0 < 49)
-			{
-				st.giveItems(960, 7);
-			}
-			else if (i0 < 52)
-			{
-				st.giveItems(960, 8);
-			}
-			else if (i0 < 54)
-			{
-				st.giveItems(960, 9);
-			}
-			else if (i0 < 55)
-			{
-				st.giveItems(960, 10);
-			}
-			else if (i0 < 75)
-			{
-				st.giveItems(9553, 1);
-			}
-			else if (i0 < 90)
-			{
-				st.giveItems(9553, 2);
-			}
-			else
-			{
-				st.giveItems(959, 1);
-			}
-			
-			st.exitQuest(true, true);
-			htmltext = "31537-07.html";
 		}
 		return htmltext;
 	}
@@ -134,65 +141,29 @@ public class Q00278_HomeSecurity extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		L2PcInstance partyMember = getRandomPartyMember(player, 1);
-		if (partyMember == null)
+		final QuestState st = getRandomPartyMemberState(player, 1, 3, npc);
+		if (st != null)
 		{
-			return null;
-		}
-		final QuestState st = partyMember.getQuestState(getName());
-		
-		int chance, i1;
-		if (st.isCond(1))
-		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
-				case 18907: // Beast Devourer
-				case 18906: // Farm Bandit
-					chance = getRandom(1000);
-					if (chance < 85)
-					{
-						st.giveItems(SEL_MAHUM_MANE, 1);
-						if (st.getQuestItemsCount(SEL_MAHUM_MANE) >= 300)
-						{
-							st.setCond(2, true);
-						}
-						else
-						{
-							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						}
-					}
-					break;
 				case 18905: // Farm Ravager (Crazy)
-					chance = getRandom(1000);
-					if (chance < 486)
+				{
+					final int itemCount = ((getRandom(1000) < 486) ? getRandom(6) + 1 : getRandom(5) + 1);
+					if (st.giveItemRandomly(npc, SEL_MAHUM_MANE, itemCount, SEL_MAHUM_MANE_COUNT, 1.0, true))
 					{
-						i1 = getRandom(6) + 1;
-						if ((i1 + st.getQuestItemsCount(SEL_MAHUM_MANE)) >= 300)
-						{
-							st.giveItems(SEL_MAHUM_MANE, (300 - st.getQuestItemsCount(SEL_MAHUM_MANE)));
-							st.setCond(2, true);
-						}
-						else
-						{
-							st.giveItems(SEL_MAHUM_MANE, i1);
-							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						}
-					}
-					else
-					{
-						i1 = (getRandom(5) + 1);
-						if ((i1 + st.getQuestItemsCount(SEL_MAHUM_MANE)) >= 300)
-						{
-							st.giveItems(SEL_MAHUM_MANE, (300 - st.getQuestItemsCount(SEL_MAHUM_MANE)));
-							st.setCond(2, true);
-						}
-						else
-						{
-							st.giveItems(SEL_MAHUM_MANE, i1);
-							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						}
+						st.setCond(2, true);
 					}
 					break;
+				}
+				case 18906: // Farm Bandit
+				case 18907: // Beast Devourer
+				{
+					if (st.giveItemRandomly(npc, SEL_MAHUM_MANE, 1, SEL_MAHUM_MANE_COUNT, 0.85, true))
+					{
+						st.setCond(2, true);
+					}
+					break;
+				}
 			}
 		}
 		return null;
@@ -208,27 +179,21 @@ public class Q00278_HomeSecurity extends Quest
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		if (st.isCreated())
 		{
-			case State.CREATED:
-				htmltext = "31537-01.htm";
-				break;
-			case State.STARTED:
-				if (st.isCond(1) || (st.getQuestItemsCount(SEL_MAHUM_MANE) < 300))
-				{
-					htmltext = "31537-06.html";
-				}
-				else if (st.isCond(2) && (st.getQuestItemsCount(SEL_MAHUM_MANE) >= 300))
-				{
-					htmltext = "31537-05.html";
-				}
-				break;
+			htmltext = "31537-01.htm";
+		}
+		else if (st.isStarted())
+		{
+			if (st.isCond(1) || (getQuestItemsCount(player, SEL_MAHUM_MANE) < SEL_MAHUM_MANE_COUNT))
+			{
+				htmltext = "31537-06.html";
+			}
+			else if (st.isCond(2) && (getQuestItemsCount(player, SEL_MAHUM_MANE) >= SEL_MAHUM_MANE_COUNT))
+			{
+				htmltext = "31537-05.html";
+			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00278_HomeSecurity(278, Q00278_HomeSecurity.class.getSimpleName(), "Home Security");
 	}
 }

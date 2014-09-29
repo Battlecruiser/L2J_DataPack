@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00312_TakeAdvantageOfTheCrisis;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -58,9 +59,9 @@ public class Q00312_TakeAdvantageOfTheCrisis extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	
-	private Q00312_TakeAdvantageOfTheCrisis(int questId, String name, String descr)
+	public Q00312_TakeAdvantageOfTheCrisis()
 	{
-		super(questId, name, descr);
+		super(312, Q00312_TakeAdvantageOfTheCrisis.class.getSimpleName(), "Take Advantage of the Crisis!");
 		addStartNpc(FILAUR);
 		addTalkId(FILAUR);
 		addKillId(MOBS.keySet());
@@ -103,7 +104,7 @@ public class Q00312_TakeAdvantageOfTheCrisis extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance member = getRandomPartyMember(player, 1);
-		if ((member != null) && (getRandom(1000) < MOBS.get(npc.getNpcId())))
+		if ((member != null) && (getRandom(1000) < MOBS.get(npc.getId())))
 		{
 			final QuestState st = member.getQuestState(getName());
 			st.giveItems(MINERAL_FRAGMENT, 1);
@@ -132,10 +133,5 @@ public class Q00312_TakeAdvantageOfTheCrisis extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00312_TakeAdvantageOfTheCrisis(312, Q00312_TakeAdvantageOfTheCrisis.class.getSimpleName(), "Take Advantage of the Crisis!");
 	}
 }

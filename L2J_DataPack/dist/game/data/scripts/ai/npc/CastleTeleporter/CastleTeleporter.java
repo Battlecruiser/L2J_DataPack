@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Castle Teleporter AI.
  * @author malyelfik
  */
-public class CastleTeleporter extends AbstractNpcAI
+public final class CastleTeleporter extends AbstractNpcAI
 {
 	// Teleporter IDs
 	private static final int[] NPCS =
@@ -49,9 +49,9 @@ public class CastleTeleporter extends AbstractNpcAI
 		35547, // Mass Gatekeeper (Schuttgart)
 	};
 	
-	private CastleTeleporter(String name, String descr)
+	private CastleTeleporter()
 	{
-		super(name, descr);
+		super(CastleTeleporter.class.getSimpleName(), "ai/npc");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 		addFirstTalkId(NPCS);
@@ -65,7 +65,7 @@ public class CastleTeleporter extends AbstractNpcAI
 			if (npc.isScriptValue(0))
 			{
 				final Siege siege = npc.getCastle().getSiege();
-				final int time = (siege.getIsInProgress() && (siege.getControlTowerCount() == 0)) ? 480000 : 30000;
+				final int time = (siege.isInProgress() && (siege.getControlTowerCount() == 0)) ? 480000 : 30000;
 				startQuestTimer("teleport", time, npc, null);
 				npc.setScriptValue(1);
 			}
@@ -78,9 +78,8 @@ public class CastleTeleporter extends AbstractNpcAI
 			msg.addStringParameter(npc.getCastle().getName());
 			npc.getCastle().oustAllPlayers();
 			npc.setScriptValue(0);
-			
-			final L2PcInstance[] players = L2World.getInstance().getAllPlayersArray();
-			for (L2PcInstance pl : players)
+			// TODO: Is it possible to get all the players for that region, instead of all players?
+			for (L2PcInstance pl : L2World.getInstance().getPlayers())
 			{
 				if (region == MapRegionManager.getInstance().getMapRegionLocId(pl))
 				{
@@ -95,11 +94,11 @@ public class CastleTeleporter extends AbstractNpcAI
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		final Siege siege = npc.getCastle().getSiege();
-		return (npc.isScriptValue(0)) ? (siege.getIsInProgress() && (siege.getControlTowerCount() == 0)) ? "teleporter-02.html" : "teleporter-01.html" : "teleporter-03.html";
+		return (npc.isScriptValue(0)) ? (siege.isInProgress() && (siege.getControlTowerCount() == 0)) ? "teleporter-02.html" : "teleporter-01.html" : "teleporter-03.html";
 	}
 	
 	public static void main(String[] args)
 	{
-		new CastleTeleporter(CastleTeleporter.class.getSimpleName(), "ai/npc");
+		new CastleTeleporter();
 	}
 }

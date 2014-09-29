@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -57,9 +58,9 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	
 	private static final int ANCIENT_EGG = 18344;
 	
-	public Q00642_APowerfulPrimevalCreature(int id, String name, String descr)
+	public Q00642_APowerfulPrimevalCreature()
 	{
-		super(id, name, descr);
+		super(642, Q00642_APowerfulPrimevalCreature.class.getSimpleName(), "A Powerful Primeval Creature");
 		addStartNpc(DINN);
 		addTalkId(DINN);
 		addKillId(ANCIENT_EGG);
@@ -119,7 +120,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (MOBS_TISSUE.containsKey(npcId))
 		{
 			float chance = (MOBS_TISSUE.get(npcId) * Config.RATE_QUEST_DROP);
@@ -157,10 +158,5 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00642_APowerfulPrimevalCreature(642, Q00642_APowerfulPrimevalCreature.class.getSimpleName(), "A Powerful Primeval Creature");
 	}
 }

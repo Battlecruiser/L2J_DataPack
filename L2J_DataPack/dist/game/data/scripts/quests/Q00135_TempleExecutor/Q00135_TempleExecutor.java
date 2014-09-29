@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -61,9 +61,9 @@ public class Q00135_TempleExecutor extends Quest
 	private static final int ITEM_COUNT = 10;
 	private static final int MAX_REWARD_LEVEL = 41;
 	
-	private Q00135_TempleExecutor(int questId, String name, String descr)
+	public Q00135_TempleExecutor()
 	{
-		super(questId, name, descr);
+		super(135, Q00135_TempleExecutor.class.getSimpleName(), "Temple Executor");
 		addStartNpc(SHEGFIELD);
 		addTalkId(SHEGFIELD, ALEX, SONIN, PANO);
 		addKillId(MOBS.keySet());
@@ -125,7 +125,7 @@ public class Q00135_TempleExecutor extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState st = member.getQuestState(getName());
-		if ((getRandom(1000) < MOBS.get(npc.getNpcId())))
+		if ((getRandom(1000) < MOBS.get(npc.getId())))
 		{
 			if (st.getQuestItemsCount(STOLEN_CARGO) < ITEM_COUNT)
 			{
@@ -158,7 +158,7 @@ public class Q00135_TempleExecutor extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case SHEGFIELD:
 				switch (st.getState())
@@ -318,10 +318,5 @@ public class Q00135_TempleExecutor extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00135_TempleExecutor(135, Q00135_TempleExecutor.class.getSimpleName(), "Temple Executor");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,92 +22,83 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.skills.Skill;
 
 /**
  * Tar Beetle AI
  * @author nonom, malyelfik
  */
-public class TarBeetle extends AbstractNpcAI
+public final class TarBeetle extends AbstractNpcAI
 {
 	// NPC
 	private static final int TAR_BEETLE = 18804;
-	
 	// Skills
-	private static final int SKILL_ID = 6142;
+	private static final int TAR_SPITE = 6142;
 	private static SkillHolder[] SKILLS =
 	{
-		new SkillHolder(SKILL_ID, 1),
-		new SkillHolder(SKILL_ID, 2),
-		new SkillHolder(SKILL_ID, 3)
+		new SkillHolder(TAR_SPITE, 1),
+		new SkillHolder(TAR_SPITE, 2),
+		new SkillHolder(TAR_SPITE, 3)
 	};
 	
 	private static final TarBeetleSpawn spawn = new TarBeetleSpawn();
 	
+	private TarBeetle()
+	{
+		super(TarBeetle.class.getSimpleName(), "ai/npc");
+		addAggroRangeEnterId(TAR_BEETLE);
+		addSpellFinishedId(TAR_BEETLE);
+	}
+	
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if ((spawn.getBeetle(npc).getScriptValue() > 0) && canCastSkill(npc))
+		if (npc.getScriptValue() > 0)
 		{
-			int level = 0;
-			final L2Effect effect = player.getFirstEffect(SKILL_ID);
-			if (effect != null)
-			{
-				level = effect.getSkill().getAbnormalLvl();
-			}
+			final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(TAR_SPITE);
+			final int level = (info != null) ? info.getSkill().getAbnormalLvl() : 0;
 			if (level < 3)
 			{
-				
-				npc.setTarget(player);
-				npc.doCast(SKILLS[level].getSkill());
+				final Skill skill = SKILLS[level].getSkill();
+				if (!npc.isSkillDisabled(skill))
+				{
+					npc.setTarget(player);
+					npc.doCast(skill);
+				}
 			}
 		}
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
-		if ((skill != null) && (skill.getId() == SKILL_ID))
+		if ((skill != null) && (skill.getId() == TAR_SPITE))
 		{
-			int val = spawn.getBeetle(npc).getScriptValue() - 1;
+			final int val = npc.getScriptValue() - 1;
 			if ((val <= 0) || (SKILLS[0].getSkill().getMpConsume() > npc.getCurrentMp()))
 			{
 				spawn.removeBeetle(npc);
 			}
 			else
 			{
-				spawn.getBeetle(npc).isScriptValue(val);
+				npc.setScriptValue(val);
 			}
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
-	private boolean canCastSkill(L2Npc npc)
+	@Override
+	public boolean unload()
 	{
-		for (SkillHolder holder : SKILLS)
-		{
-			if (npc.isSkillDisabled(holder.getSkill()))
-			{
-				return false;
-			}
-		}
-		return true;
-	}
-	
-	public TarBeetle(String name, String descr)
-	{
-		super(name, descr);
-		addAggroRangeEnterId(TAR_BEETLE);
-		addSpellFinishedId(TAR_BEETLE);
-		
-		spawn.startTasks();
+		spawn.unload();
+		return super.unload();
 	}
 	
 	public static void main(String[] args)
 	{
-		new TarBeetle(TarBeetle.class.getSimpleName(), "ai/npc");
+		new TarBeetle();
 	}
 }

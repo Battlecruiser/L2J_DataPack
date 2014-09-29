@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -37,7 +37,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Seven Signs, Embryo (198)
  * @author Adry_85
  */
-public class Q00198_SevenSignsEmbryo extends Quest
+public final class Q00198_SevenSignsEmbryo extends Quest
 {
 	// NPCs
 	private static final int SHILENS_EVIL_THOUGHTS = 27346;
@@ -53,9 +53,9 @@ public class Q00198_SevenSignsEmbryo extends Quest
 	// Skill
 	private static SkillHolder NPC_HEAL = new SkillHolder(4065, 8);
 	
-	public Q00198_SevenSignsEmbryo(int questId, String name, String descr)
+	public Q00198_SevenSignsEmbryo()
 	{
-		super(questId, name, descr);
+		super(198, Q00198_SevenSignsEmbryo.class.getSimpleName(), "Seven Signs, Embryo");
 		addFirstTalkId(JAINA);
 		addStartNpc(WOOD);
 		addTalkId(WOOD, FRANZ);
@@ -66,18 +66,18 @@ public class Q00198_SevenSignsEmbryo extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if ((npc.getNpcId() == SHILENS_EVIL_THOUGHTS) && "despawn".equals(event))
+		if ((npc.getId() == SHILENS_EVIL_THOUGHTS) && "despawn".equals(event))
 		{
 			if (!npc.isDead())
 			{
 				isBusy = false;
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.NEXT_TIME_YOU_WILL_NOT_ESCAPE));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.NEXT_TIME_YOU_WILL_NOT_ESCAPE));
 				npc.deleteMe();
 			}
 			return super.onAdvEvent(event, npc, player);
 		}
 		
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -108,12 +108,10 @@ public class Q00198_SevenSignsEmbryo extends Quest
 				if (st.isCond(1))
 				{
 					isBusy = true;
-					NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.S1_THAT_STRANGER_MUST_BE_DEFEATED_HERE_IS_THE_ULTIMATE_HELP);
-					ns.addStringParameter(player.getName());
-					npc.broadcastPacket(ns);
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.S1_THAT_STRANGER_MUST_BE_DEFEATED_HERE_IS_THE_ULTIMATE_HELP).addStringParameter(player.getName()));
 					startQuestTimer("heal", 30000 - getRandom(20000), npc, player);
 					L2MonsterInstance monster = (L2MonsterInstance) addSpawn(SHILENS_EVIL_THOUGHTS, -23734, -9184, -5384, 0, false, 0, false, npc.getInstanceId());
-					monster.broadcastPacket(new NpcSay(monster.getObjectId(), Say2.NPC_ALL, monster.getNpcId(), NpcStringId.YOU_ARE_NOT_THE_OWNER_OF_THAT_ITEM));
+					monster.broadcastPacket(new NpcSay(monster.getObjectId(), Say2.NPC_ALL, monster.getId(), NpcStringId.YOU_ARE_NOT_THE_OWNER_OF_THAT_ITEM));
 					monster.setRunning();
 					monster.addDamageHate(player, 0, 999);
 					monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -125,7 +123,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 			{
 				if (!npc.isInsideRadius(player, 600, true, false))
 				{
-					NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.LOOK_HERE_S1_DONT_FALL_TOO_FAR_BEHIND);
+					NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.LOOK_HERE_S1_DONT_FALL_TOO_FAR_BEHIND);
 					ns.addStringParameter(player.getName());
 					npc.broadcastPacket(ns);
 				}
@@ -154,7 +152,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 					st.takeItems(SCULPTURE_OF_DOUBT, -1);
 					st.setCond(3, true);
 					htmltext = event;
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.WE_WILL_BE_WITH_YOU_ALWAYS));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.WE_WILL_BE_WITH_YOU_ALWAYS));
 				}
 				break;
 			}
@@ -170,13 +168,6 @@ public class Q00198_SevenSignsEmbryo extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		return "32617-01.html";
 	}
 	
@@ -189,34 +180,27 @@ public class Q00198_SevenSignsEmbryo extends Quest
 			return null;
 		}
 		
-		final QuestState st = partyMember.getQuestState(getName());
-		
-		if (npc.isInsideRadius(player, 1500, true, false))
+		final QuestState st = getQuestState(partyMember, false);
+		if (npc.isInsideRadius(partyMember, 1500, true, false))
 		{
 			st.giveItems(SCULPTURE_OF_DOUBT, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
-			st.setCond(2);
+			st.setCond(2, true);
 		}
 		
 		isBusy = false;
 		cancelQuestTimers("despawn");
 		cancelQuestTimers("heal");
-		NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU);
-		ns.addStringParameter(player.getName());
-		npc.broadcastPacket(ns);
+		npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU).addStringParameter(partyMember.getName()));
+		npc.deleteMe();
+		partyMember.showQuestMovie(14);
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -226,7 +210,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 			}
 			case State.CREATED:
 			{
-				if (npc.getNpcId() == WOOD)
+				if (npc.getId() == WOOD)
 				{
 					st = player.getQuestState(Q00197_SevenSignsTheSacredBookOfSeal.class.getSimpleName());
 					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "32593-01.htm" : "32593-03.html";
@@ -235,7 +219,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == WOOD)
+				if (npc.getId() == WOOD)
 				{
 					if ((st.getCond() > 0) && (st.getCond() < 3))
 					{
@@ -247,7 +231,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 						{
 							st.addExpAndSp(315108090, 34906059);
 							st.giveItems(DAWNS_BRACELET, 1);
-							st.giveItems(PcInventory.ANCIENT_ADENA_ID, 1500000);
+							st.giveItems(Inventory.ANCIENT_ADENA_ID, 1500000);
 							st.exitQuest(false, true);
 							htmltext = "32593-05.html";
 						}
@@ -257,7 +241,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 						}
 					}
 				}
-				else if (npc.getNpcId() == FRANZ)
+				else if (npc.getId() == FRANZ)
 				{
 					switch (st.getCond())
 					{
@@ -285,10 +269,5 @@ public class Q00198_SevenSignsEmbryo extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00198_SevenSignsEmbryo(198, Q00198_SevenSignsEmbryo.class.getSimpleName(), "Seven Signs, Embryo");
 	}
 }

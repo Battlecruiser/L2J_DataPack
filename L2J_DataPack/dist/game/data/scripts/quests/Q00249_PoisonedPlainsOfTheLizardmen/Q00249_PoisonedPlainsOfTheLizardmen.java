@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -35,9 +35,9 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 	private static final int MOUEN = 30196;
 	private static final int JOHNNY = 32744;
 	
-	public Q00249_PoisonedPlainsOfTheLizardmen(int questId, String name, String descr)
+	public Q00249_PoisonedPlainsOfTheLizardmen()
 	{
-		super(questId, name, descr);
+		super(249, Q00249_PoisonedPlainsOfTheLizardmen.class.getSimpleName(), "Poisoned Plains of the Lizardmen");
 		addStartNpc(MOUEN);
 		addTalkId(MOUEN, JOHNNY);
 	}
@@ -52,14 +52,14 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == MOUEN)
+		if (npc.getId() == MOUEN)
 		{
 			if (event.equalsIgnoreCase("30196-03.htm"))
 			{
 				st.startQuest();
 			}
 		}
-		else if ((npc.getNpcId() == JOHNNY) && event.equalsIgnoreCase("32744-03.htm"))
+		else if ((npc.getId() == JOHNNY) && event.equalsIgnoreCase("32744-03.htm"))
 		{
 			st.giveAdena(83056, true);
 			st.addExpAndSp(477496, 58743);
@@ -78,7 +78,7 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == MOUEN)
+		if (npc.getId() == MOUEN)
 		{
 			switch (st.getState())
 			{
@@ -96,7 +96,7 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 					break;
 			}
 		}
-		else if (npc.getNpcId() == JOHNNY)
+		else if (npc.getId() == JOHNNY)
 		{
 			if (st.isCond(1))
 			{
@@ -108,10 +108,5 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00249_PoisonedPlainsOfTheLizardmen(249, Q00249_PoisonedPlainsOfTheLizardmen.class.getSimpleName(), "Poisoned Plains of the Lizardmen");
 	}
 }

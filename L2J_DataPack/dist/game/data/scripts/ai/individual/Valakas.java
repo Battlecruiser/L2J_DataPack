@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -26,9 +26,9 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
+import com.l2jserver.gameserver.enums.MountType;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -36,9 +36,9 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
@@ -49,12 +49,14 @@ import com.l2jserver.gameserver.util.Util;
  * Valakas' AI.
  * @author Tryskell
  */
-public class Valakas extends AbstractNpcAI
+public final class Valakas extends AbstractNpcAI
 {
 	// NPC
 	private static final int VALAKAS = 29028;
 	// Skills
 	private static final SkillHolder VALAKAS_LAVA_SKIN = new SkillHolder(4680, 1);
+	private static final int VALAKAS_REGENERATION = 4691;
+	
 	private static final SkillHolder[] VALAKAS_REGULAR_SKILLS =
 	{
 		new SkillHolder(4681, 1), // Valakas Trample
@@ -62,6 +64,7 @@ public class Valakas extends AbstractNpcAI
 		new SkillHolder(4683, 1), // Valakas Dragon Breath
 		new SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used.
 	};
+	
 	private static final SkillHolder[] VALAKAS_LOWHP_SKILLS =
 	{
 		new SkillHolder(4681, 1), // Valakas Trample
@@ -70,6 +73,7 @@ public class Valakas extends AbstractNpcAI
 		new SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used.
 		new SkillHolder(4690, 1), // Valakas Meteor Storm
 	};
+	
 	private static final SkillHolder[] VALAKAS_AOE_SKILLS =
 	{
 		new SkillHolder(4683, 1), // Valakas Dragon Breath
@@ -80,6 +84,7 @@ public class Valakas extends AbstractNpcAI
 		new SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used.
 		new SkillHolder(4690, 1), // Valakas Meteor Storm
 	};
+	
 	// Locations
 	private static final Location TELEPORT_CUBE_LOCATIONS[] =
 	{
@@ -99,6 +104,9 @@ public class Valakas extends AbstractNpcAI
 		new Location(215456, -117328, -1392),
 		new Location(213200, -118160, -1424)
 	};
+	private static final Location ATTACKER_REMOVE = new Location(150037, -57255, -2976);
+	private static final Location VALAKAS_LAIR = new Location(212852, -114842, -1632);
+	private static final Location VALAKAS_REGENERATION_LOC = new Location(-105200, -253104, -15264);
 	// Valakas status.
 	private static final byte DORMANT = 0; // Valakas is spawned and no one has entered yet. Entry is unlocked.
 	private static final byte WAITING = 1; // Valakas is spawned and someone has entered, triggering a 30 minute window for additional people to enter. Entry is unlocked.
@@ -109,13 +117,12 @@ public class Valakas extends AbstractNpcAI
 	private L2Playable _actualVictim; // Actual target of Valakas.
 	private static L2BossZone ZONE;
 	
-	private Valakas(String name, String descr)
+	private Valakas()
 	{
-		super(name, descr);
+		super(Valakas.class.getSimpleName(), "ai/individual");
 		registerMobs(VALAKAS);
 		
 		ZONE = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
-		
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(VALAKAS);
 		final int status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
 		
@@ -143,12 +150,12 @@ public class Valakas extends AbstractNpcAI
 		}
 		else
 		{
-			final int loc_x = info.getInteger("loc_x");
-			final int loc_y = info.getInteger("loc_y");
-			final int loc_z = info.getInteger("loc_z");
-			final int heading = info.getInteger("heading");
-			final int hp = info.getInteger("currentHP");
-			final int mp = info.getInteger("currentMP");
+			final int loc_x = info.getInt("loc_x");
+			final int loc_y = info.getInt("loc_y");
+			final int loc_z = info.getInt("loc_z");
+			final int heading = info.getInt("heading");
+			final int hp = info.getInt("currentHP");
+			final int mp = info.getInt("currentMP");
 			
 			final L2Npc valakas = addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
 			GrandBossManager.getInstance().addBoss((L2GrandBossInstance) valakas);
@@ -190,7 +197,7 @@ public class Valakas extends AbstractNpcAI
 				_timeTracker = System.currentTimeMillis();
 				
 				// Teleport Valakas to his lair.
-				npc.teleToLocation(212852, -114842, -1632);
+				npc.teleToLocation(VALAKAS_LAIR);
 				
 				// Sound + socialAction.
 				for (L2PcInstance plyr : ZONE.getPlayersInside())
@@ -220,7 +227,7 @@ public class Valakas extends AbstractNpcAI
 					if ((_timeTracker + 900000) < System.currentTimeMillis())
 					{
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-						npc.teleToLocation(-105200, -253104, -15264);
+						npc.teleToLocation(VALAKAS_REGENERATION_LOC);
 						
 						GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
 						npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
@@ -235,83 +242,71 @@ public class Valakas extends AbstractNpcAI
 					}
 				}
 				
-				int lvl = 0;
-				
 				// Verify if "Valakas Regeneration" skill is active.
-				final L2Effect[] effects = npc.getAllEffects();
-				if ((effects != null) && (effects.length != 0))
-				{
-					for (L2Effect e : effects)
-					{
-						if (e.getSkill().getId() == 4629)
-						{
-							lvl = e.getSkill().getLevel();
-							break;
-						}
-					}
-				}
+				final BuffInfo info = npc.getEffectList().getBuffInfoBySkillId(VALAKAS_REGENERATION);
+				final int lvl = info != null ? info.getSkill().getLevel() : 0;
 				
 				// Current HPs are inferior to 25% ; apply lvl 4 of regen skill.
 				if ((npc.getCurrentHp() < (npc.getMaxHp() / 4)) && (lvl != 4))
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(4691, 4));
+					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 4));
 				}
 				// Current HPs are inferior to 50% ; apply lvl 3 of regen skill.
 				else if ((npc.getCurrentHp() < ((npc.getMaxHp() * 2) / 4.0)) && (lvl != 3))
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(4691, 3));
+					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 3));
 				}
 				// Current HPs are inferior to 75% ; apply lvl 2 of regen skill.
 				else if ((npc.getCurrentHp() < ((npc.getMaxHp() * 3) / 4.0)) && (lvl != 2))
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(4691, 2));
+					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 2));
 				}
 				// Apply lvl 1.
 				else if (lvl != 1)
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(4691, 1));
+					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 1));
 				}
 			}
 			// Spawn cinematic, regen_task and choose of skill.
 			else if (event.equalsIgnoreCase("spawn_1"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1800, 180, -1, 1500, 10000, 0, 0, 1, 0));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 1800, 180, -1, 1500, 15000, 10000, 0, 0, 1, 0, 0));
 			}
 			else if (event.equalsIgnoreCase("spawn_2"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1300, 180, -5, 3000, 10000, 0, -5, 1, 0));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 1300, 180, -5, 3000, 15000, 10000, 0, -5, 1, 0, 0));
 			}
 			else if (event.equalsIgnoreCase("spawn_3"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 500, 180, -8, 600, 10000, 0, 60, 1, 0));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 500, 180, -8, 600, 15000, 10000, 0, 60, 1, 0, 0));
 			}
 			else if (event.equalsIgnoreCase("spawn_4"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 800, 180, -8, 2700, 10000, 0, 30, 1, 0));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 800, 180, -8, 2700, 15000, 10000, 0, 30, 1, 0, 0));
 			}
 			else if (event.equalsIgnoreCase("spawn_5"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 200, 250, 70, 0, 10000, 30, 80, 1, 0));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 200, 250, 70, 0, 15000, 10000, 30, 80, 1, 0, 0));
 			}
 			else if (event.equalsIgnoreCase("spawn_6"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1100, 250, 70, 2500, 10000, 30, 80, 1, 0));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 1100, 250, 70, 2500, 15000, 10000, 30, 80, 1, 0, 0));
 			}
 			else if (event.equalsIgnoreCase("spawn_7"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 700, 150, 30, 0, 10000, -10, 60, 1, 0));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 700, 150, 30, 0, 15000, 10000, -10, 60, 1, 0, 0));
 			}
 			else if (event.equalsIgnoreCase("spawn_8"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1200, 150, 20, 2900, 10000, -10, 30, 1, 0));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 1200, 150, 20, 2900, 15000, 10000, -10, 30, 1, 0, 0));
 			}
 			else if (event.equalsIgnoreCase("spawn_9"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 750, 170, -10, 3400, 4000, 10, -15, 1, 0));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 750, 170, -10, 3400, 15000, 4000, 10, -15, 1, 0, 0));
 			}
 			else if (event.equalsIgnoreCase("spawn_10"))
 			{
@@ -324,35 +319,35 @@ public class Valakas extends AbstractNpcAI
 			// Death cinematic, spawn of Teleport Cubes.
 			else if (event.equalsIgnoreCase("die_1"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 2000, 130, -1, 0, 10000, 0, 0, 1, 1));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 2000, 130, -1, 0, 15000, 10000, 0, 0, 1, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("die_2"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1100, 210, -5, 3000, 10000, -13, 0, 1, 1));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 1100, 210, -5, 3000, 15000, 10000, -13, 0, 1, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("die_3"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1300, 200, -8, 3000, 10000, 0, 15, 1, 1));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 1300, 200, -8, 3000, 15000, 10000, 0, 15, 1, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("die_4"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1000, 190, 0, 500, 10000, 0, 10, 1, 1));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 1000, 190, 0, 500, 15000, 10000, 0, 10, 1, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("die_5"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 120, 0, 2500, 10000, 12, 40, 1, 1));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 1700, 120, 0, 2500, 15000, 10000, 12, 40, 1, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("die_6"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 20, 0, 700, 10000, 10, 10, 1, 1));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 1700, 20, 0, 700, 15000, 10000, 10, 10, 1, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("die_7"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 10, 0, 1000, 10000, 20, 70, 1, 1));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 1700, 10, 0, 1000, 15000, 10000, 20, 70, 1, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("die_8"))
 			{
-				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 10, 0, 300, 250, 20, -20, 1, 1));
+				ZONE.broadcastPacket(new SpecialCamera(npc, 1700, 10, 0, 300, 15000, 250, 20, -20, 1, 1, 0));
 				
 				for (Location loc : TELEPORT_CUBE_LOCATIONS)
 				{
@@ -405,15 +400,15 @@ public class Valakas extends AbstractNpcAI
 		
 		if (GrandBossManager.getInstance().getBossStatus(VALAKAS) != FIGHTING)
 		{
-			attacker.teleToLocation(150037, -57255, -2976);
+			attacker.teleToLocation(ATTACKER_REMOVE);
 			return null;
 		}
 		
 		// Debuff strider-mounted players.
-		if (attacker.getMountType() == 1)
+		if (attacker.getMountType() == MountType.STRIDER)
 		{
-			final L2Skill skill = SkillTable.getInstance().getInfo(4258, 1);
-			if (attacker.getFirstEffect(skill) == null)
+			final Skill skill = SkillData.getInstance().getSkill(4258, 1);
+			if (!attacker.isAffectedBySkill(4258))
 			{
 				npc.setTarget(attacker);
 				npc.doCast(skill);
@@ -433,7 +428,7 @@ public class Valakas extends AbstractNpcAI
 		
 		// Launch death animation.
 		ZONE.broadcastPacket(new PlaySound(1, "B03_D", 0, 0, 0, 0, 0));
-		ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1200, 20, -10, 0, 13000, 0, 0, 1, 0));
+		ZONE.broadcastPacket(new SpecialCamera(npc, 1200, 20, -10, 0, 10000, 13000, 0, 0, 0, 0, 0));
 		
 		startQuestTimer("die_1", 300, npc, null); // 300
 		startQuestTimer("die_2", 600, npc, null); // 300
@@ -489,15 +484,15 @@ public class Valakas extends AbstractNpcAI
 				int posX = x + getRandom(-1400, 1400);
 				int posY = y + getRandom(-1400, 1400);
 				
-				if (GeoData.getInstance().canMoveFromToTarget(x, y, z, posX, posY, z, npc.getInstanceId()))
+				if (GeoData.getInstance().canMove(x, y, z, posX, posY, z, npc.getInstanceId()))
 				{
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(posX, posY, z, 0));
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, z, 0));
 				}
 			}
 			return;
 		}
 		
-		final L2Skill skill = getRandomSkill(npc).getSkill();
+		final Skill skill = getRandomSkill(npc).getSkill();
 		
 		// Cast the skill or follow the target.
 		if (Util.checkIfInRange((skill.getCastRange() < 600) ? 600 : skill.getCastRange(), npc, _actualVictim, true))
@@ -526,7 +521,7 @@ public class Valakas extends AbstractNpcAI
 		final int hpRatio = (int) ((npc.getCurrentHp() / npc.getMaxHp()) * 100);
 		
 		// Valakas Lava Skin has priority.
-		if ((hpRatio < 75) && (getRandom(150) == 0) && (npc.getFirstEffect(VALAKAS_LAVA_SKIN.getSkillId()) == null))
+		if ((hpRatio < 75) && (getRandom(150) == 0) && !npc.isAffectedBySkill(VALAKAS_LAVA_SKIN.getSkillId()))
 		{
 			return VALAKAS_LAVA_SKIN;
 		}
@@ -571,6 +566,6 @@ public class Valakas extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Valakas(Valakas.class.getSimpleName(), "ai");
+		new Valakas();
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Doombringer (67)
  * @author Emperorc
  */
 public class SagaOfTheDoombringer extends SagasSuperClass
 {
-	public static String qn1 = "67_SagaOfTheDoombringer";
-	public static int qnu = 67;
-	public static String qna = "Saga of the Doombringer";
-	
 	public SagaOfTheDoombringer()
 	{
-		super(qnu, qn1, qna);
+		super(67, "67_SagaOfTheDoombringer", "Saga of the Doombringer");
 		NPC = new int[]
 		{
 			32138,
@@ -67,7 +65,6 @@ public class SagaOfTheDoombringer extends SagasSuperClass
 			27325,
 			27326
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			131
@@ -76,23 +73,11 @@ public class SagaOfTheDoombringer extends SagasSuperClass
 		{
 			0x7f
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			191046,
-			47429,
-			47391
-		};
-		Y = new int[]
-		{
-			-40640,
-			-56923,
-			-56929
-		};
-		Z = new int[]
-		{
-			-3042,
-			-2383,
-			-2370
+			new Location(191046, -40640, -3042),
+			new Location(47429, -56923, -2383),
+			new Location(47391, -56929, -2370)
 		};
 		Text = new String[]
 		{

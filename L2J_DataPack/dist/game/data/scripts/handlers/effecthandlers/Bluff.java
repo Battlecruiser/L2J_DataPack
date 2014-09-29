@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,60 +18,55 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.serverpackets.StartRotation;
 import com.l2jserver.gameserver.network.serverpackets.StopRotation;
 
 /**
- * Implementation of the Bluff Effect
+ * Bluff effect implementation.
  * @author decad
  */
-public class Bluff extends L2Effect
+public final class Bluff extends AbstractEffect
 {
-	public Bluff(Env env, EffectTemplate template)
+	private final int _chance;
+	
+	public Bluff(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_chance = params.getInt("chance", 100);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return L2EffectType.BLUFF; // test for bluff effect
+		return Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		if (getEffected() instanceof L2NpcInstance)
-		{
-			return false;
-		}
-		
-		if ((getEffected() instanceof L2Npc) && (((L2Npc) getEffected()).getNpcId() == 35062))
-		{
-			return false;
-		}
-		
-		if (getEffected() instanceof L2SiegeSummonInstance)
-		{
-			return false;
-		}
-		
-		getEffected().broadcastPacket(new StartRotation(getEffected().getObjectId(), getEffected().getHeading(), 1, 65535));
-		getEffected().broadcastPacket(new StopRotation(getEffected().getObjectId(), getEffector().getHeading(), 65535));
-		getEffected().setHeading(getEffector().getHeading());
 		return true;
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public void onStart(BuffInfo info)
 	{
-		return false;
+		final L2Character effected = info.getEffected();
+		// Headquarters NPC should not rotate
+		if ((effected.getId() == 35062) || effected.isRaid() || effected.isRaidMinion())
+		{
+			return;
+		}
+		
+		final L2Character effector = info.getEffector();
+		effected.broadcastPacket(new StartRotation(effected.getObjectId(), effected.getHeading(), 1, 65535));
+		effected.broadcastPacket(new StopRotation(effected.getObjectId(), effector.getHeading(), 65535));
+		effected.setHeading(effector.getHeading());
 	}
 }

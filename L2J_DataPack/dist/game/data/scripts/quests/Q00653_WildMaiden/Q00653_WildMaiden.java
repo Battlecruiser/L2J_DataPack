@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -38,9 +38,9 @@ public class Q00653_WildMaiden extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 36;
 	
-	public Q00653_WildMaiden(int questId, String name, String descr)
+	public Q00653_WildMaiden()
 	{
-		super(questId, name, descr);
+		super(653, Q00653_WildMaiden.class.getSimpleName(), "Wild Maiden");
 		addStartNpc(SUKI);
 		addTalkId(GALIBREDO, SUKI);
 	}
@@ -83,7 +83,7 @@ public class Q00653_WildMaiden extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case SUKI:
 				switch (st.getState())
@@ -106,10 +106,5 @@ public class Q00653_WildMaiden extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00653_WildMaiden(653, Q00653_WildMaiden.class.getSimpleName(), "Wild Maiden");
 	}
 }

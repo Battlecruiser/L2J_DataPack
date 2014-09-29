@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -42,9 +42,9 @@ public class Q00614_SlayTheEnemyCommanderVarka extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 75;
 	
-	private Q00614_SlayTheEnemyCommanderVarka(int questId, String name, String descr)
+	public Q00614_SlayTheEnemyCommanderVarka()
 	{
-		super(questId, name, descr);
+		super(614, Q00614_SlayTheEnemyCommanderVarka.class.getSimpleName(), "Slay the Enemy Commander! (Varka)");
 		addStartNpc(ASHAS);
 		addTalkId(ASHAS);
 		addKillId(TAYR);
@@ -123,10 +123,5 @@ public class Q00614_SlayTheEnemyCommanderVarka extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00614_SlayTheEnemyCommanderVarka(614, Q00614_SlayTheEnemyCommanderVarka.class.getSimpleName(), "Slay the Enemy Commander! (Varka)");
 	}
 }

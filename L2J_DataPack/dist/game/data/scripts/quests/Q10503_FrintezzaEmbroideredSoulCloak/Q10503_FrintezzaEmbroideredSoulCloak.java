@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q10503_FrintezzaEmbroideredSoulCloak;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -43,9 +44,9 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 	private static final int MIN_LEVEL = 80;
 	private static final int FRAGMENT_COUNT = 20;
 	
-	private Q10503_FrintezzaEmbroideredSoulCloak(int questId, String name, String descr)
+	public Q10503_FrintezzaEmbroideredSoulCloak()
 	{
-		super(questId, name, descr);
+		super(10503, Q10503_FrintezzaEmbroideredSoulCloak.class.getSimpleName(), "Frintezza Embroidered Soul Cloak");
 		addStartNpc(OLF_ADAMS);
 		addTalkId(OLF_ADAMS);
 		addKillId(SCARLET_VAN_HALISHA);
@@ -139,10 +140,5 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10503_FrintezzaEmbroideredSoulCloak(10503, Q10503_FrintezzaEmbroideredSoulCloak.class.getSimpleName(), "Frintezza Embroidered Soul Cloak");
 	}
 }

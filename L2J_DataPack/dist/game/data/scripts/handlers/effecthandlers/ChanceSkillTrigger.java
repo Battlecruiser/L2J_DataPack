@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,97 +18,43 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.ChanceCondition;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
-public class ChanceSkillTrigger extends L2Effect
+/**
+ * Chance Skill Trigger effect implementation.
+ */
+public final class ChanceSkillTrigger extends AbstractEffect
 {
-	private final int _triggeredId;
-	private final int _triggeredLevel;
-	private final ChanceCondition _chanceCondition;
-	
-	public ChanceSkillTrigger(Env env, EffectTemplate template)
+	public ChanceSkillTrigger(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		
-		_triggeredId = template.triggeredId;
-		_triggeredLevel = template.triggeredLevel;
-		_chanceCondition = template.chanceCondition;
-	}
-	
-	// Special constructor to steal this effect
-	public ChanceSkillTrigger(Env env, L2Effect effect)
-	{
-		super(env, effect);
-		
-		_triggeredId = effect.getEffectTemplate().triggeredId;
-		_triggeredLevel = effect.getEffectTemplate().triggeredLevel;
-		_chanceCondition = effect.getEffectTemplate().chanceCondition;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	protected boolean effectCanBeStolen()
+	public boolean onActionTime(BuffInfo info)
 	{
-		return true;
+		info.getEffected().onActionTimeChanceEffect(info.getSkill().getElement());
+		return info.getSkill().isPassive();
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.CHANCE_SKILL_TRIGGER;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		getEffected().addChanceTrigger(this);
-		getEffected().onStartChanceEffect(getSkill().getElement());
-		return super.onStart();
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		getEffected().onActionTimeChanceEffect(getSkill().getElement());
-		return false;
-	}
-	
-	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
 		// trigger only if effect in use and successfully ticked to the end
-		if (getInUse() && (getCount() == 0))
+		if (info.getTickCount(this) >= getTicks())
 		{
-			getEffected().onExitChanceEffect(getSkill().getElement());
+			info.getEffected().onExitChanceEffect(info.getSkill().getElement());
 		}
-		getEffected().removeChanceEffect(this);
-		super.onExit();
+		info.getEffected().removeChanceEffect(this);
 	}
 	
 	@Override
-	public int getTriggeredChanceId()
+	public void onStart(BuffInfo info)
 	{
-		return _triggeredId;
-	}
-	
-	@Override
-	public int getTriggeredChanceLevel()
-	{
-		return _triggeredLevel;
-	}
-	
-	@Override
-	public boolean triggersChanceSkill()
-	{
-		return _triggeredId > 1;
-	}
-	
-	@Override
-	public ChanceCondition getTriggeredChanceCondition()
-	{
-		return _chanceCondition;
+		info.getEffected().addChanceTrigger(this);
+		info.getEffected().onStartChanceEffect(info.getSkill().getElement());
 	}
 }

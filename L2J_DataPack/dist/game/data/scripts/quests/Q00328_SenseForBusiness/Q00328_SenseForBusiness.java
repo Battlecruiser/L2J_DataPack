@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00328_SenseForBusiness;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -60,9 +61,9 @@ public class Q00328_SenseForBusiness extends Quest
 	private static final int BONUS_COUNT = 10;
 	private static final int MIN_LVL = 21;
 	
-	public Q00328_SenseForBusiness(int questId, String name, String descr)
+	public Q00328_SenseForBusiness()
 	{
-		super(questId, name, descr);
+		super(328, Q00328_SenseForBusiness.class.getSimpleName(), "Sense for Business");
 		addStartNpc(SARIEN);
 		addTalkId(SARIEN);
 		addKillId(MONSTER_EYES.keySet());
@@ -139,22 +140,22 @@ public class Q00328_SenseForBusiness extends Quest
 		if ((st != null) && st.isStarted())
 		{
 			final int chance = getRandom(100);
-			if (MONSTER_EYES.containsKey(npc.getNpcId()))
+			if (MONSTER_EYES.containsKey(npc.getId()))
 			{
-				if (chance < MONSTER_EYES.get(npc.getNpcId())[0])
+				if (chance < MONSTER_EYES.get(npc.getId())[0])
 				{
 					st.giveItems(MONSTER_EYE_CARCASS, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
-				else if (chance < MONSTER_EYES.get(npc.getNpcId())[1])
+				else if (chance < MONSTER_EYES.get(npc.getId())[1])
 				{
 					st.giveItems(MONSTER_EYE_LENS, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
-			else if (MONSTER_BASILISKS.containsKey(npc.getNpcId()))
+			else if (MONSTER_BASILISKS.containsKey(npc.getId()))
 			{
-				if (chance < MONSTER_BASILISKS.get(npc.getNpcId()))
+				if (chance < MONSTER_BASILISKS.get(npc.getId()))
 				{
 					st.giveItems(BASILISK_GIZZARD, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -162,10 +163,5 @@ public class Q00328_SenseForBusiness extends Quest
 			}
 		}
 		return super.onKill(npc, player, isPet);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00328_SenseForBusiness(328, Q00328_SenseForBusiness.class.getSimpleName(), "Sense for Business");
 	}
 }

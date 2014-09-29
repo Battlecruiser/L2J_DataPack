@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -64,7 +64,7 @@ public final class MithrilMines extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		final int[] minions = (npc.getNpcId() == GRAVE_ROBBER_SUMMONER) ? SUMMONER_MINIONS : MAGICIAN_MINIONS;
+		final int[] minions = (npc.getId() == GRAVE_ROBBER_SUMMONER) ? SUMMONER_MINIONS : MAGICIAN_MINIONS;
 		addMinion((L2MonsterInstance) npc, minions[getRandom(minions.length)]);
 		return super.onSpawn(npc);
 	}

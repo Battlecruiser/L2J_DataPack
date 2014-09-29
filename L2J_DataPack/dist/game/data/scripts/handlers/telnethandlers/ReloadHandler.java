@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -27,9 +27,9 @@ import javax.script.ScriptException;
 
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.MultiSell;
-import com.l2jserver.gameserver.datatables.NpcTable;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.MultisellData;
+import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
@@ -63,20 +63,20 @@ public class ReloadHandler implements ITelnetHandler
 				if (type.equals("multisell"))
 				{
 					_print.print("Reloading multisell... ");
-					MultiSell.getInstance().reload();
+					MultisellData.getInstance().load();
 					_print.println("done");
 				}
 				else if (type.equals("skill"))
 				{
 					_print.print("Reloading skills... ");
-					SkillTable.getInstance().reload();
+					SkillData.getInstance().reload();
 					_print.println("done");
 				}
 				else if (type.equals("npc"))
 				{
 					_print.print("Reloading npc templates... ");
-					NpcTable.getInstance().reloadAllNpc();
-					QuestManager.getInstance().reloadAllQuests();
+					NpcData.getInstance().load();
+					QuestManager.getInstance().reloadAllScripts();
 					_print.println("done");
 				}
 				else if (type.equals("html"))
@@ -109,7 +109,7 @@ public class ReloadHandler implements ITelnetHandler
 					RaidBossSpawnManager.getInstance().cleanUp();
 					DayNightSpawnManager.getInstance().cleanUp();
 					L2World.getInstance().deleteVisibleNpcSpawns();
-					NpcTable.getInstance().reloadAllNpc();
+					NpcData.getInstance().load();
 					SpawnTable.getInstance().load();
 					RaidBossSpawnManager.getInstance().load();
 					_print.println("done\n");

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -54,7 +54,7 @@ public class AdminGmChat implements IAdminCommandHandler
 		}
 		if (command.startsWith("admin_gmchat_menu"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		return true;
 	}

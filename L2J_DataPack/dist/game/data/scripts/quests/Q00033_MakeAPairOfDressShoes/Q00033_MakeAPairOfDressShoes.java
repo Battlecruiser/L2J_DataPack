@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,7 +20,7 @@ package quests.Q00033_MakeAPairOfDressShoes;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -47,9 +47,9 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 	private static final int ADENA_COUNT2 = 200000;
 	private static final int ADENA_COUNT3 = 300000;
 	
-	private Q00033_MakeAPairOfDressShoes(int questId, String name, String descr)
+	public Q00033_MakeAPairOfDressShoes()
 	{
-		super(questId, name, descr);
+		super(33, Q00033_MakeAPairOfDressShoes.class.getSimpleName(), "Make a Pair of Dress Shoes");
 		addStartNpc(WOODLEY);
 		addTalkId(WOODLEY, IAN, LEIKAR);
 	}
@@ -77,7 +77,7 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 				{
 					st.takeItems(LEATHER, LEATHER_COUNT);
 					st.takeItems(THREAD, LEATHER_COUNT);
-					st.takeItems(PcInventory.ADENA_ID, ADENA_COUNT2);
+					st.takeItems(Inventory.ADENA_ID, ADENA_COUNT2);
 					st.setCond(4, true);
 				}
 				else
@@ -97,7 +97,7 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 				{
 					return "30164-03.html";
 				}
-				st.takeItems(PcInventory.ADENA_ID, ADENA_COUNT3);
+				st.takeItems(Inventory.ADENA_ID, ADENA_COUNT3);
 				st.setCond(5, true);
 				break;
 			default:
@@ -117,7 +117,7 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case WOODLEY:
 				switch (st.getState())
@@ -178,10 +178,5 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00033_MakeAPairOfDressShoes(33, Q00033_MakeAPairOfDressShoes.class.getSimpleName(), "Make a Pair of Dress Shoes");
 	}
 }

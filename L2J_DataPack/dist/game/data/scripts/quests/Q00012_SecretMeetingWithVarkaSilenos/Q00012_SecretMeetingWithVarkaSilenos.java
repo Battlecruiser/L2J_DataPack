@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -38,9 +38,9 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 	// Item
 	private static final int BOX = 7232;
 	
-	private Q00012_SecretMeetingWithVarkaSilenos(int questId, String name, String descr)
+	public Q00012_SecretMeetingWithVarkaSilenos()
 	{
-		super(questId, name, descr);
+		super(12, Q00012_SecretMeetingWithVarkaSilenos.class.getSimpleName(), "Secret Meeting With Varka Silenos");
 		addStartNpc(CADMON);
 		addTalkId(CADMON, HELMUT, NARAN);
 		registerQuestItems(BOX);
@@ -65,7 +65,7 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 				if (st.isCond(1))
 				{
 					st.setCond(2, true);
-					st.giveItems(BOX, 1);
+					giveItems(player, BOX, 1);
 				}
 				break;
 			case "31378-02.html":
@@ -93,7 +93,7 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -129,10 +129,5 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00012_SecretMeetingWithVarkaSilenos(12, Q00012_SecretMeetingWithVarkaSilenos.class.getSimpleName(), "Secret Meeting With Varka Silenos");
 	}
 }

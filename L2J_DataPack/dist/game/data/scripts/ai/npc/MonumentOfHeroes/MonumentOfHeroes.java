@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.util.Util;
  * Monument of Heroes AI.
  * @author Adry_85
  */
-public class MonumentOfHeroes extends AbstractNpcAI
+public final class MonumentOfHeroes extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] MONUMENTS =
@@ -59,9 +59,9 @@ public class MonumentOfHeroes extends AbstractNpcAI
 		9390, // Infinity Shooter
 	};
 	
-	private MonumentOfHeroes(String name, String descr)
+	private MonumentOfHeroes()
 	{
-		super(name, descr);
+		super(MonumentOfHeroes.class.getSimpleName(), "ai/npc");
 		addStartNpc(MONUMENTS);
 		addTalkId(MONUMENTS);
 	}
@@ -113,6 +113,6 @@ public class MonumentOfHeroes extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new MonumentOfHeroes(MonumentOfHeroes.class.getSimpleName(), "ai/npc");
+		new MonumentOfHeroes();
 	}
 }
