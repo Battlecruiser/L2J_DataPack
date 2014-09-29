@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00175_TheWayOfTheWarrior' WHERE name='175_TheWayOfTheWarrior';

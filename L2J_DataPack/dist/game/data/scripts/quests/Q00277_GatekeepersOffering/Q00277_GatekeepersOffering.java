@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00277_GatekeepersOffering;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -41,9 +42,9 @@ public class Q00277_GatekeepersOffering extends Quest
 	private static final int MIN_LEVEL = 15;
 	private static final int STARSTONE_COUT = 20;
 	
-	private Q00277_GatekeepersOffering(int questId, String name, String descr)
+	public Q00277_GatekeepersOffering()
 	{
-		super(questId, name, descr);
+		super(277, Q00277_GatekeepersOffering.class.getSimpleName(), "Gatekeeper's Offering");
 		addStartNpc(TAMIL);
 		addTalkId(TAMIL);
 		addKillId(GREYSTONE_GOLEM);
@@ -114,10 +115,5 @@ public class Q00277_GatekeepersOffering extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00277_GatekeepersOffering(277, Q00277_GatekeepersOffering.class.getSimpleName(), "Gatekeeper's Offering");
 	}
 }

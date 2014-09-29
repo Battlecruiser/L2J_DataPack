@@ -2,14 +2,14 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="20600" type="Weapon" name="Twilight Staff - Dance of Shadow - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_invokespirit_stick_a_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -27,10 +27,10 @@
 	</item>
 	<item id="20601" type="Armor" name="Anniversary Hat - Soul of Phoenix - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -43,8 +43,8 @@
 	</item>
 	<item id="20602" type="EtcItem" name="Soul Silver Foil (Event)">
 		<set name="icon" val="BranchSys.icon.br_ghost_silverpaper_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -56,8 +56,8 @@
 	</item>
 	<item id="20603" type="EtcItem" name="Soul Scent (Event)">
 		<set name="icon" val="BranchSys.icon.br_ghost_incense_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -69,8 +69,8 @@
 	</item>
 	<item id="20604" type="EtcItem" name="Low-Class Certificate (Event)">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -80,8 +80,8 @@
 	</item>
 	<item id="20605" type="EtcItem" name="Mid-Class Certificate (Event)">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -91,8 +91,8 @@
 	</item>
 	<item id="20606" type="EtcItem" name="High-Class Certificate (Event) - 8-hour limited period">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -103,9 +103,9 @@
 	</item>
 	<item id="20607" type="EtcItem" name="Headphone Pack - Town Theme">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -119,9 +119,9 @@
 	</item>
 	<item id="20608" type="EtcItem" name="Headphone Pack - Hero Theme">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -135,9 +135,9 @@
 	</item>
 	<item id="20609" type="EtcItem" name="Headphone Pack - Theme Park">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -151,9 +151,9 @@
 	</item>
 	<item id="20610" type="EtcItem" name="Headphone 7-Day Pack - Town Theme : Great Adventurer's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -167,9 +167,9 @@
 	</item>
 	<item id="20611" type="EtcItem" name="Headphone 7-Day Pack - Hero Theme : Great Warrior's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -183,9 +183,9 @@
 	</item>
 	<item id="20612" type="EtcItem" name="Headphone 7-Day Pack - Park theme : Great Wizard's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -199,10 +199,10 @@
 	</item>
 	<item id="20613" type="Armor" name="Headphone - Town Theme">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -214,10 +214,10 @@
 	</item>
 	<item id="20614" type="Armor" name="Headphone - Hero Theme">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -229,10 +229,10 @@
 	</item>
 	<item id="20615" type="Armor" name="Headphone - Park Theme">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -244,10 +244,10 @@
 	</item>
 	<item id="20616" type="Armor" name="Headphone - Town Theme - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -259,10 +259,10 @@
 	</item>
 	<item id="20617" type="Armor" name="Headphone - Hero Theme - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -274,10 +274,10 @@
 	</item>
 	<item id="20618" type="Armor" name="Headphone - Park Theme - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -289,9 +289,9 @@
 	</item>
 	<item id="20619" type="EtcItem" name="Female Weaver Agathion 24-Hour Pack - Flute Sound">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -303,9 +303,9 @@
 	</item>
 	<item id="20620" type="EtcItem" name="Female Weaver Agathion 3-Day Pack - Flute Sound">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -317,10 +317,10 @@
 	</item>
 	<item id="20621" type="Armor" name="Agathion Seal Bracelet - Female Weaver - Flute Sound - 24-hour limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -334,10 +334,10 @@
 	</item>
 	<item id="20622" type="Armor" name="Agathion Seal Bracelet - Female Weaver - Flute Sound - 3-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -351,9 +351,9 @@
 	</item>
 	<item id="20623" type="EtcItem" name="Soul Silver Foil - Scent Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -365,9 +365,9 @@
 	</item>
 	<item id="20624" type="EtcItem" name="Soul Scent 100 Sheet Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -379,9 +379,9 @@
 	</item>
 	<item id="20625" type="EtcItem" name="Anniversary Hat 7-Day Pack - Resurrection">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -395,10 +395,10 @@
 	</item>
 	<item id="20626" type="Armor" name="Anniversary Hat - Resurrection - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -411,9 +411,9 @@
 	</item>
 	<item id="20627" type="EtcItem" name="Summon of Love Bracelet 7-Day Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -427,10 +427,10 @@
 	</item>
 	<item id="20628" type="Armor" name="Summon of Love Bracelet - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_ring_of_friendship_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -443,9 +443,9 @@
 	</item>
 	<item id="20629" type="EtcItem" name="Fortune of Love Box (event)">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="default_action" val="capsule" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -453,9 +453,10 @@
 	</item>
 	<item id="20630" type="EtcItem" name="Soul Magic Box">
 		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
-		<set name="default_action" val="skill_reduce" />
-		<set name="etcitem_type" val="elixir" />
-		<set name="material" val="fish" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
+		<set name="material" val="FISH" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -467,9 +468,9 @@
 	</item>
 	<item id="20631" type="EtcItem" name="Laborer Hat 7-Day Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -483,9 +484,9 @@
 	</item>
 	<item id="20632" type="EtcItem" name="Watermelon Hat Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -499,10 +500,10 @@
 	</item>
 	<item id="20633" type="Armor" name="Watermelon Hat - Ability of a Cool Watermelon - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -514,10 +515,10 @@
 	</item>
 	<item id="20634" type="Armor" name="Watermelon Hat">
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -527,9 +528,9 @@
 	</item>
 	<item id="20635" type="EtcItem" name="No Grade Beginner's Adventurer Support Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -541,9 +542,9 @@
 	</item>
 	<item id="20636" type="EtcItem" name="D-Grade Fighter Support Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -555,9 +556,9 @@
 	</item>
 	<item id="20637" type="EtcItem" name="D-Grade Mage Support Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -569,9 +570,9 @@
 	</item>
 	<item id="20638" type="EtcItem" name="Beginner's Adventurer Reinforcement Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -584,15 +585,15 @@
 	</item>
 	<item id="20639" type="Weapon" name="Common Item - Elven Long Sword">
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="100" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -609,15 +610,15 @@
 	</item>
 	<item id="20640" type="Weapon" name="Common Item - Light Crossbow">
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="100" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
@@ -637,15 +638,15 @@
 	</item>
 	<item id="20641" type="Weapon" name="Common Item - Knight's Sword*Elven Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="100" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -662,11 +663,11 @@
 	</item>
 	<item id="20642" type="Armor" name="Common Item - Mithril Gloves">
 		<set name="icon" val="icon.armor_t46_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="mithril" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -678,11 +679,11 @@
 	</item>
 	<item id="20643" type="Armor" name="Common Item - Plate Boots">
 		<set name="icon" val="icon.armor_t46_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -694,18 +695,18 @@
 	</item>
 	<item id="20644" type="Armor" name="Common Item - Plate Shield">
 		<set name="icon" val="icon.shield_plate_shield_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -715,11 +716,11 @@
 	</item>
 	<item id="20645" type="Armor" name="Common Item - Plate Helmet">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -731,19 +732,19 @@
 	</item>
 	<item id="20646" type="Armor" name="Common Item - Plate Gaiters">
 		<set name="icon" val="icon.armor_t46_l_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="70" />
@@ -751,19 +752,19 @@
 	</item>
 	<item id="20647" type="Armor" name="Common Item - Half Plate Armor">
 		<set name="icon" val="icon.armor_t46_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="111" />
@@ -771,12 +772,12 @@
 	</item>
 	<item id="20648" type="Armor" name="Common Item - Salamander Skin Mail">
 		<set name="icon" val="icon.armor_t45_ul_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -788,15 +789,15 @@
 	</item>
 	<item id="20649" type="Weapon" name="Common Item - Ghost Staff">
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="100" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -815,19 +816,19 @@
 	</item>
 	<item id="20650" type="Armor" name="Common Item - Mithril Tunic">
 		<set name="icon" val="icon.armor_t51_u_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="mithril" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="52" />
@@ -836,19 +837,19 @@
 	</item>
 	<item id="20651" type="Armor" name="Common Item - Mithril Stockings">
 		<set name="icon" val="icon.armor_t51_l_i00" />
-		<set name="default_action" val="equip" />
-		<set name="armor_type" val="magic" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="mithril" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="32" />
@@ -857,11 +858,11 @@
 	</item>
 	<item id="20652" type="Armor" name="Common Item - Salamander Skin Boots">
 		<set name="icon" val="icon.armor_t45_b_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="leather" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -873,11 +874,11 @@
 	</item>
 	<item id="20653" type="Armor" name="Common Item - Ogre Power Gauntlet">
 		<set name="icon" val="icon.armor_t45_g_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="1" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -889,10 +890,10 @@
 	</item>
 	<item id="20654" type="Armor" name="Agathion Seal Bracelet - Chon-chon">
 		<set name="icon" val="BranchSys.icon.br_aga_luckygirl_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -906,10 +907,10 @@
 	</item>
 	<item id="20655" type="Armor" name="Agathion Seal Bracelet - Chon-chon - Great Warrior's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_luckygirl_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -923,10 +924,10 @@
 	</item>
 	<item id="20656" type="Armor" name="Agathion Seal Bracelet - Tang-tang">
 		<set name="icon" val="BranchSys.icon.br_aga_luckyboy_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -940,10 +941,10 @@
 	</item>
 	<item id="20657" type="Armor" name="Agathion Seal Bracelet - Tang-tang - Great Wizard's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_luckyboy_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -957,10 +958,10 @@
 	</item>
 	<item id="20658" type="Armor" name="Agthion Seal Bracelet - Dancing Lucky Kid">
 		<set name="icon" val="BranchSys.icon.br_aga_dancingchild_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -974,10 +975,10 @@
 	</item>
 	<item id="20659" type="Armor" name="Agthion Seal Bracelet - Dancing Lucky Kid - Great Adventurer's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_dancingchild_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -991,10 +992,10 @@
 	</item>
 	<item id="20660" type="Armor" name="Agathion Seal Bracelet - Monkey King">
 		<set name="icon" val="BranchSys.icon.br_aga_sunwukong_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1008,10 +1009,10 @@
 	</item>
 	<item id="20661" type="Armor" name="Agathion Seal Bracelet - Monkey King - Great Wizard's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_sunwukong_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1025,10 +1026,10 @@
 	</item>
 	<item id="20662" type="Armor" name="Agathion Seal Bracelet - Utanka Agathion">
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1042,10 +1043,10 @@
 	</item>
 	<item id="20663" type="Armor" name="Agathion Seal Bracelet - Utanka Agathion - Great Warrior's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1059,10 +1060,10 @@
 	</item>
 	<item id="20664" type="Armor" name="Agathion Seal Bracelet - Bonus B Agathion">
 		<set name="icon" val="BranchSys.icon.br_aga_bonus_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1076,10 +1077,10 @@
 	</item>
 	<item id="20665" type="Armor" name="Agathion Seal Bracelet - Bonus B Agathion - Great Adventurer's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_bonus_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1093,10 +1094,10 @@
 	</item>
 	<item id="20666" type="Armor" name="Valkyrie Hat">
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1108,10 +1109,10 @@
 	</item>
 	<item id="20667" type="Armor" name="Valkyrie Hat - Great Adventurer's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1124,10 +1125,10 @@
 	</item>
 	<item id="20668" type="Armor" name="Tiger Hat">
 		<set name="icon" val="BranchSys.icon.br_tiger_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1139,10 +1140,10 @@
 	</item>
 	<item id="20669" type="Armor" name="Tiger Hat - Great Warrior's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_tiger_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1155,10 +1156,10 @@
 	</item>
 	<item id="20670" type="Armor" name="Maid's Hairband">
 		<set name="icon" val="BranchSys.icon.br_maid_hairband_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1170,10 +1171,10 @@
 	</item>
 	<item id="20671" type="Armor" name="Maid Hairband - Great Wizard's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_maid_hairband_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1186,10 +1187,10 @@
 	</item>
 	<item id="20672" type="Armor" name="Baby Panda Hat">
 		<set name="icon" val="BranchSys.icon.br_babypanda_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1201,10 +1202,10 @@
 	</item>
 	<item id="20673" type="Armor" name="Baby Panda Hat - Blessed Escape - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_babypanda_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1217,10 +1218,10 @@
 	</item>
 	<item id="20674" type="Armor" name="Bamboo Panda Hat">
 		<set name="icon" val="BranchSys.icon.br_kungfupanda_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1232,10 +1233,10 @@
 	</item>
 	<item id="20675" type="Armor" name="Bamboo Panda Hat - Great Adventurer's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_kungfupanda_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1248,10 +1249,10 @@
 	</item>
 	<item id="20676" type="Armor" name="Sexy Panda Hat">
 		<set name="icon" val="BranchSys.icon.br_sexypanda_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1263,10 +1264,10 @@
 	</item>
 	<item id="20677" type="Armor" name="Sexy Panda Hat - Blessed Resurrection - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_sexypanda_cap_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1279,10 +1280,10 @@
 	</item>
 	<item id="20678" type="Armor" name="Gatekeeper Hat">
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1294,10 +1295,10 @@
 	</item>
 	<item id="20679" type="Armor" name="Gatekeeper Hat - Destroy Instinct - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
-		<set name="default_action" val="equip" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="wood" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1310,9 +1311,9 @@
 	</item>
 	<item id="20680" type="EtcItem" name="Chon-chon Agathion Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1326,9 +1327,9 @@
 	</item>
 	<item id="20681" type="EtcItem" name="Chon-chon Agathion 7-Day Pack - Great Warrior's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1342,9 +1343,9 @@
 	</item>
 	<item id="20682" type="EtcItem" name="Tang-tang Agathion Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1358,9 +1359,9 @@
 	</item>
 	<item id="20683" type="EtcItem" name="Tang-tang Agathion 7-Day Pack - Great Wizard's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1374,9 +1375,9 @@
 	</item>
 	<item id="20684" type="EtcItem" name="Dancing Lucky Kid Agathion Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1390,9 +1391,9 @@
 	</item>
 	<item id="20685" type="EtcItem" name="Dancing Lucky Kid Agathion Pack (7 day) - Great Adventurer's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1406,9 +1407,9 @@
 	</item>
 	<item id="20686" type="EtcItem" name="Monkey King Agathion Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1422,9 +1423,9 @@
 	</item>
 	<item id="20687" type="EtcItem" name="Monkey King Agathion 7-Day Pack - Great Wizard's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1438,9 +1439,9 @@
 	</item>
 	<item id="20688" type="EtcItem" name="Utanka Agathion Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1454,9 +1455,9 @@
 	</item>
 	<item id="20689" type="EtcItem" name="Utanka Agathion 7-Day Pack - Great Warrior's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1470,9 +1471,9 @@
 	</item>
 	<item id="20690" type="EtcItem" name="Bonus B Agathion Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1486,9 +1487,9 @@
 	</item>
 	<item id="20691" type="EtcItem" name="Bonus B Agathion 7-day Pack - Great Adventurer's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1502,9 +1503,9 @@
 	</item>
 	<item id="20692" type="EtcItem" name="Valkyrie Hat Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1518,9 +1519,9 @@
 	</item>
 	<item id="20693" type="EtcItem" name="Valkyrie Hat 7-Day Pack - Great Adventurer's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1534,9 +1535,9 @@
 	</item>
 	<item id="20694" type="EtcItem" name="Tiger Hat Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1550,9 +1551,9 @@
 	</item>
 	<item id="20695" type="EtcItem" name="Tiger Hat 7-Day Pack - Great Warrior's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1566,9 +1567,9 @@
 	</item>
 	<item id="20696" type="EtcItem" name="Maid Hairband Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1582,9 +1583,9 @@
 	</item>
 	<item id="20697" type="EtcItem" name="Maid Hairband 7-Day Pack - Great Wizard's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1598,9 +1599,9 @@
 	</item>
 	<item id="20698" type="EtcItem" name="Baby Panda Hat Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1614,9 +1615,9 @@
 	</item>
 	<item id="20699" type="EtcItem" name="Agathion of Baby Panda 7-Day Pack - Blessing of Escape">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="default_action" val="peel" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="paper" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />

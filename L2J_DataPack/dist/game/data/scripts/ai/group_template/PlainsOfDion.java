@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -79,9 +79,9 @@ public final class PlainsOfDion extends AbstractNpcAI
 				broadcastNpcSay(npc, Say2.NPC_ALL, MONSTERS_MSG[i]);
 			}
 			
-			for (L2Character obj : npc.getKnownList().getKnownCharactersInRadius(npc.getFactionRange()))
+			for (L2Character obj : npc.getKnownList().getKnownCharactersInRadius(npc.getTemplate().getClanHelpRange()))
 			{
-				if (obj.isMonster() && Util.contains(DELU_LIZARDMEN, ((L2MonsterInstance) obj).getNpcId()) && !obj.isAttackingNow() && !obj.isDead() && GeoData.getInstance().canSeeTarget(npc, obj))
+				if (obj.isMonster() && Util.contains(DELU_LIZARDMEN, obj.getId()) && !obj.isAttackingNow() && !obj.isDead() && GeoData.getInstance().canSeeTarget(npc, obj))
 				{
 					final L2MonsterInstance monster = (L2MonsterInstance) obj;
 					attackPlayer(monster, player);

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -42,7 +42,7 @@ public class Disguise implements IItemHandler
 		L2PcInstance activeChar = playable.getActingPlayer();
 		
 		int regId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(activeChar);
-		if ((regId > 0) && (regId == (item.getItemId() - 13596)))
+		if ((regId > 0) && (regId == (item.getId() - 13596)))
 		{
 			if ((activeChar.getClan() != null) && (activeChar.getClan().getCastleId() > 0))
 			{

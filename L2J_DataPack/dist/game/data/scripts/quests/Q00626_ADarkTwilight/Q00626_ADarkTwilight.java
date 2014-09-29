@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  *
  * This file is part of L2J DataPack.
  *
@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -66,9 +67,9 @@ public class Q00626_ADarkTwilight extends Quest
 	private static final int XP_COUNT = 162773;
 	private static final int SP_COUNT = 12500;
 	
-	private Q00626_ADarkTwilight(int questId, String name, String descr)
+	public Q00626_ADarkTwilight()
 	{
-		super(questId, name, descr);
+		super(626, Q00626_ADarkTwilight.class.getSimpleName(), "A Dark Twilight");
 		addStartNpc(HIERARCH);
 		addTalkId(HIERARCH);
 		addKillId(MONSTERS.keySet());
@@ -123,7 +124,7 @@ public class Q00626_ADarkTwilight extends Quest
 		if (partyMember != null)
 		{
 			final QuestState st = partyMember.getQuestState(getName());
-			final float chance = (MONSTERS.get(npc.getNpcId()) * Config.RATE_QUEST_DROP);
+			final float chance = (MONSTERS.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
 				st.giveItems(BLOOD_OF_SAINT, 1);
@@ -167,10 +168,5 @@ public class Q00626_ADarkTwilight extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00626_ADarkTwilight(626, Q00626_ADarkTwilight.class.getSimpleName(), "A Dark Twilight");
 	}
 }

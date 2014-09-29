@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00193_SevenSignsDyingMessage;
 import quests.Q00192_SevenSignsSeriesOfDoubt.Q00192_SevenSignsSeriesOfDoubt;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -36,7 +37,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Seven Signs, Dying Message (193)
  * @author Adry_85
  */
-public class Q00193_SevenSignsDyingMessage extends Quest
+public final class Q00193_SevenSignsDyingMessage extends Quest
 {
 	// NPCs
 	private static final int SHILENS_EVIL_THOUGHTS = 27343;
@@ -54,9 +55,9 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 	// Skill
 	private static SkillHolder NPC_HEAL = new SkillHolder(4065, 8);
 	
-	public Q00193_SevenSignsDyingMessage(int questId, String name, String descr)
+	public Q00193_SevenSignsDyingMessage()
 	{
-		super(questId, name, descr);
+		super(193, Q00193_SevenSignsDyingMessage.class.getSimpleName(), "Seven Signs, Dying Message");
 		addStartNpc(HOLLINT);
 		addTalkId(HOLLINT, CAIN, ERIC, SIR_GUSTAV_ATHEBALDT);
 		addKillId(SHILENS_EVIL_THOUGHTS);
@@ -66,18 +67,18 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if ((npc.getNpcId() == SHILENS_EVIL_THOUGHTS) && "despawn".equals(event))
+		if ((npc.getId() == SHILENS_EVIL_THOUGHTS) && "despawn".equals(event))
 		{
 			if (!npc.isDead())
 			{
 				isBusy = false;
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.NEXT_TIME_YOU_WILL_NOT_ESCAPE));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.NEXT_TIME_YOU_WILL_NOT_ESCAPE));
 				npc.deleteMe();
 			}
 			return super.onAdvEvent(event, npc, player);
 		}
 		
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -159,12 +160,12 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 				if (st.isCond(4))
 				{
 					isBusy = true;
-					NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.S1_THAT_STRANGER_MUST_BE_DEFEATED_HERE_IS_THE_ULTIMATE_HELP);
+					NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.S1_THAT_STRANGER_MUST_BE_DEFEATED_HERE_IS_THE_ULTIMATE_HELP);
 					ns.addStringParameter(player.getName());
 					npc.broadcastPacket(ns);
 					startQuestTimer("heal", 30000 - getRandom(20000), npc, player);
 					L2MonsterInstance monster = (L2MonsterInstance) addSpawn(SHILENS_EVIL_THOUGHTS, 82425, 47232, -3216, 0, false, 0, false);
-					monster.broadcastPacket(new NpcSay(monster.getObjectId(), Say2.NPC_ALL, monster.getNpcId(), NpcStringId.YOU_ARE_NOT_THE_OWNER_OF_THAT_ITEM));
+					monster.broadcastPacket(new NpcSay(monster.getObjectId(), Say2.NPC_ALL, monster.getId(), NpcStringId.YOU_ARE_NOT_THE_OWNER_OF_THAT_ITEM));
 					monster.setRunning();
 					monster.addDamageHate(player, 0, 999);
 					monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -176,7 +177,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			{
 				if (!npc.isInsideRadius(player, 600, true, false))
 				{
-					NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.LOOK_HERE_S1_DONT_FALL_TOO_FAR_BEHIND);
+					NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.LOOK_HERE_S1_DONT_FALL_TOO_FAR_BEHIND);
 					ns.addStringParameter(player.getName());
 					npc.broadcastPacket(ns);
 				}
@@ -188,13 +189,20 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 				startQuestTimer("heal", 30000 - getRandom(20000), npc, player);
 				break;
 			}
-			case "30760-02.html":
+			case "reward":
 			{
 				if (st.isCond(6))
 				{
-					st.addExpAndSp(52518015, 5817677);
-					st.exitQuest(false, true);
-					htmltext = event;
+					if (player.getLevel() >= MIN_LEVEL)
+					{
+						st.addExpAndSp(52518015, 5817677);
+						st.exitQuest(false, true);
+						htmltext = "30760-02.html";
+					}
+					else
+					{
+						htmltext = "level_check.html";
+					}
 				}
 				break;
 			}
@@ -211,9 +219,8 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			return null;
 		}
 		
-		final QuestState st = partyMember.getQuestState(getName());
-		
-		if (npc.isInsideRadius(player, 1500, true, false))
+		final QuestState st = getQuestState(partyMember, false);
+		if (npc.isInsideRadius(partyMember, 1500, true, false))
 		{
 			st.giveItems(SCULPTURE_OF_DOUBT, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
@@ -223,23 +230,15 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 		isBusy = false;
 		cancelQuestTimers("despawn");
 		cancelQuestTimers("heal");
-		NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU);
-		ns.addStringParameter(player.getName());
-		npc.broadcastPacket(ns);
-		
+		npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU).addStringParameter(partyMember.getName()));
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -249,7 +248,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			}
 			case State.CREATED:
 			{
-				if (npc.getNpcId() == HOLLINT)
+				if (npc.getId() == HOLLINT)
 				{
 					st = player.getQuestState(Q00192_SevenSignsSeriesOfDoubt.class.getSimpleName());
 					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "30191-01.htm" : "30191-03.html";
@@ -258,7 +257,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case HOLLINT:
 					{
@@ -346,10 +345,5 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00193_SevenSignsDyingMessage(193, Q00193_SevenSignsDyingMessage.class.getSimpleName(), "Seven Signs, Dying Message");
 	}
 }

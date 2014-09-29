@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,9 +21,10 @@ package quests.Q00162_CurseOfTheUndergroundFortress;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -56,9 +57,9 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 	private static final int MIN_LVL = 12;
 	private static final int REQUIRED_COUNT = 13;
 	
-	private Q00162_CurseOfTheUndergroundFortress(int questId, String name, String descr)
+	public Q00162_CurseOfTheUndergroundFortress()
 	{
-		super(questId, name, descr);
+		super(162, Q00162_CurseOfTheUndergroundFortress.class.getSimpleName(), "Curse of the Underground Fortress");
 		addStartNpc(UNOREN);
 		addTalkId(UNOREN);
 		addKillId(MONSTERS_SKULLS.keySet());
@@ -97,9 +98,9 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			if (MONSTERS_SKULLS.containsKey(npc.getNpcId()))
+			if (MONSTERS_SKULLS.containsKey(npc.getId()))
 			{
-				if (getRandom(100) < MONSTERS_SKULLS.get(npc.getNpcId()))
+				if (getRandom(100) < MONSTERS_SKULLS.get(npc.getId()))
 				{
 					long skulls = st.getQuestItemsCount(ELF_SKULL);
 					if (skulls < 3)
@@ -116,9 +117,9 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 					}
 				}
 			}
-			else if (MONSTERS_BONES.containsKey(npc.getNpcId()))
+			else if (MONSTERS_BONES.containsKey(npc.getId()))
 			{
-				if (getRandom(100) < MONSTERS_BONES.get(npc.getNpcId()))
+				if (getRandom(100) < MONSTERS_BONES.get(npc.getId()))
 				{
 					long bones = st.getQuestItemsCount(BONE_FRAGMENT);
 					if (bones < 10)
@@ -150,7 +151,7 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() != Race.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30147-02.htm" : "30147-01.htm" : "30147-00.htm";
+					htmltext = (player.getRace() != Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30147-02.htm" : "30147-01.htm" : "30147-00.htm";
 					break;
 				}
 				case State.STARTED:
@@ -177,10 +178,5 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00162_CurseOfTheUndergroundFortress(162, Q00162_CurseOfTheUndergroundFortress.class.getSimpleName(), "Curse of the Underground Fortress");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,11 +21,12 @@ package quests.Q00463_IMustBeaGenius;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -103,9 +104,9 @@ public class Q00463_IMustBeaGenius extends Quest
 	// Misc @formatter:on
 	private static final int MIN_LEVEL = 70;
 	
-	public Q00463_IMustBeaGenius(int questId, String name, String descr)
+	public Q00463_IMustBeaGenius()
 	{
-		super(questId, name, descr);
+		super(463, Q00463_IMustBeaGenius.class.getSimpleName(), "I Must Be a Genius");
 		addStartNpc(GUTENHAGEN);
 		addTalkId(GUTENHAGEN);
 		addKillId(MOBS.keySet());
@@ -166,9 +167,9 @@ public class Q00463_IMustBeaGenius extends Quest
 		if (st.isCond(1))
 		{
 			boolean msg = false;
-			int number = MOBS.get(npc.getNpcId()).getCount();
+			int number = MOBS.get(npc.getId()).getCount();
 			
-			if (MOBS.get(npc.getNpcId()).getSpecialChance() == st.getInt("chance"))
+			if (MOBS.get(npc.getId()).getSpecialChance() == st.getInt("chance"))
 			{
 				number = getRandom(100) + 1;
 			}
@@ -186,7 +187,7 @@ public class Q00463_IMustBeaGenius extends Quest
 			
 			if (msg)
 			{
-				final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
+				final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
 				ns.addStringParameter(player.getName());
 				ns.addStringParameter(String.valueOf(number));
 				npc.broadcastPacket(ns);
@@ -246,10 +247,5 @@ public class Q00463_IMustBeaGenius extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00463_IMustBeaGenius(463, Q00463_IMustBeaGenius.class.getSimpleName(), "I Must Be a Genius");
 	}
 }

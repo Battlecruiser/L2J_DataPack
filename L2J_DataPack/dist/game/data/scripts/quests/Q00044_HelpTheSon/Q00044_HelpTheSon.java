@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00044_HelpTheSon;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -44,9 +45,9 @@ public class Q00044_HelpTheSon extends Quest
 	private static final int GEMSTONE = 7553;
 	private static final int PET_TICKET = 7585;
 	
-	public Q00044_HelpTheSon(int questId, String name, String descr)
+	public Q00044_HelpTheSon()
 	{
-		super(questId, name, descr);
+		super(44, Q00044_HelpTheSon.class.getSimpleName(), "Help The Son!");
 		addStartNpc(LUNDY);
 		addTalkId(LUNDY, DRIKUS);
 		addKillId(MAILLE_GUARD, MAILLE_LIZARDMAN, MAILLE_SCOUT);
@@ -140,7 +141,7 @@ public class Q00044_HelpTheSon extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case LUNDY:
 				switch (st.getState())
@@ -189,10 +190,5 @@ public class Q00044_HelpTheSon extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00044_HelpTheSon(44, Q00044_HelpTheSon.class.getSimpleName(), "Help The Son!");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,9 +20,9 @@ package quests.Q00173_ToTheIsleOfSouls;
 
 import quests.Q00172_NewHorizons.Q00172_NewHorizons;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -43,9 +43,9 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 	private static final int MARK_OF_TRAVELER = 7570;
 	private static final int SCROLL_OF_ESCAPE_KAMAEL_VILLAGE = 9716;
 	
-	public Q00173_ToTheIsleOfSouls(int questId, String name, String descr)
+	public Q00173_ToTheIsleOfSouls()
 	{
-		super(questId, name, descr);
+		super(173, Q00173_ToTheIsleOfSouls.class.getSimpleName(), "To the Isle of Souls");
 		addStartNpc(GALLADUCCI);
 		addTalkId(GALLADUCCI, GENTLER);
 		
@@ -95,14 +95,14 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case GALLADUCCI:
 				switch (st.getState())
 				{
 					case State.CREATED:
 						final QuestState qs = player.getQuestState(Q00172_NewHorizons.class.getSimpleName());
-						htmltext = ((qs != null) && qs.isCompleted() && (player.getRace() == Race.Kamael) && st.hasQuestItems(MARK_OF_TRAVELER)) ? "30097-01.htm" : "30097-02.htm";
+						htmltext = ((qs != null) && qs.isCompleted() && (player.getRace() == Race.KAMAEL) && st.hasQuestItems(MARK_OF_TRAVELER)) ? "30097-01.htm" : "30097-02.htm";
 						break;
 					case State.STARTED:
 						htmltext = (st.isCond(1)) ? "30097-04.html" : "30097-05.html";
@@ -120,10 +120,5 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00173_ToTheIsleOfSouls(173, Q00173_ToTheIsleOfSouls.class.getSimpleName(), "To the Isle of Souls");
 	}
 }

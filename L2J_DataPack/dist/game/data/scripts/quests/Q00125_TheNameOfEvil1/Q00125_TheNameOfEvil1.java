@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -24,6 +24,7 @@ import java.util.Map;
 import quests.Q00124_MeetingTheElroki.Q00124_MeetingTheElroki;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -66,9 +67,9 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		DEINONYCHUS.put(22225, 319);
 	}
 	
-	public Q00125_TheNameOfEvil1(int id, String name, String descr)
+	public Q00125_TheNameOfEvil1()
 	{
-		super(id, name, descr);
+		super(125, Q00125_TheNameOfEvil1.class.getSimpleName(), "The Name of Evil - 1");
 		addStartNpc(MUSHIKA);
 		addTalkId(MUSHIKA, KARAKAWEI, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU);
 		addKillId(ORNITHOMIMUS.keySet());
@@ -254,7 +255,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (ORNITHOMIMUS.containsKey(npcId))
 		{
 			if (st.getQuestItemsCount(ORNITHOMIMUS_CLAW) < 2)
@@ -297,7 +298,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case MUSHIKA:
 				switch (st.getState())
@@ -493,10 +494,5 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00125_TheNameOfEvil1(125, Q00125_TheNameOfEvil1.class.getSimpleName(), "The Name of Evil - 1");
 	}
 }

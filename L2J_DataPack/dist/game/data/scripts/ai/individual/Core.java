@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -39,7 +39,7 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
  * Core AI
  * @author DrLecter Revised By Emperorc
  */
-public class Core extends AbstractNpcAI
+public final class Core extends AbstractNpcAI
 {
 	private static final int CORE = 29006;
 	private static final int DEATH_KNIGHT = 29007;
@@ -58,9 +58,9 @@ public class Core extends AbstractNpcAI
 	
 	private final List<L2Attackable> Minions = new FastList<>();
 	
-	private Core(String name, String descr)
+	private Core()
 	{
-		super(name, descr);
+		super(Core.class.getSimpleName(), "ai/individual");
 		registerMobs(CORE, DEATH_KNIGHT, DOOM_WRAITH, SUSCEPTOR);
 		
 		_FirstAttacked = false;
@@ -91,12 +91,12 @@ public class Core extends AbstractNpcAI
 			{
 				_FirstAttacked = true;
 			}
-			int loc_x = info.getInteger("loc_x");
-			int loc_y = info.getInteger("loc_y");
-			int loc_z = info.getInteger("loc_z");
-			int heading = info.getInteger("heading");
-			int hp = info.getInteger("currentHP");
-			int mp = info.getInteger("currentMP");
+			int loc_x = info.getInt("loc_x");
+			int loc_y = info.getInt("loc_y");
+			int loc_z = info.getInt("loc_z");
+			int heading = info.getInt("heading");
+			int hp = info.getInt("currentHP");
+			int mp = info.getInt("currentMP");
 			L2GrandBossInstance core = (L2GrandBossInstance) addSpawn(CORE, loc_x, loc_y, loc_z, heading, false, 0);
 			core.setCurrentHpMp(hp, mp);
 			spawnBoss(core);
@@ -149,7 +149,7 @@ public class Core extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("spawn_minion"))
 		{
-			L2Attackable mob = (L2Attackable) addSpawn(npc.getNpcId(), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
+			L2Attackable mob = (L2Attackable) addSpawn(npc.getId(), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 			mob.setIsRaidMinion(true);
 			Minions.add(mob);
 		}
@@ -171,20 +171,20 @@ public class Core extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		if (npc.getNpcId() == CORE)
+		if (npc.getId() == CORE)
 		{
 			if (_FirstAttacked)
 			{
 				if (getRandom(100) == 0)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.REMOVING_INTRUDERS));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.REMOVING_INTRUDERS));
 				}
 			}
 			else
 			{
 				_FirstAttacked = true;
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.A_NON_PERMITTED_TARGET_HAS_BEEN_DISCOVERED));
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.INTRUDER_REMOVAL_SYSTEM_INITIATED));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.A_NON_PERMITTED_TARGET_HAS_BEEN_DISCOVERED));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.INTRUDER_REMOVAL_SYSTEM_INITIATED));
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
@@ -193,7 +193,7 @@ public class Core extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (npcId == CORE)
 		{
 			int objId = npc.getObjectId();
@@ -225,6 +225,6 @@ public class Core extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Core(Core.class.getSimpleName(), "ai");
+		new Core();
 	}
 }

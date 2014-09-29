@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,7 +25,7 @@ import java.util.List;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -37,13 +37,12 @@ import com.l2jserver.gameserver.util.Util;
 public class AreaCorpseMob implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
-		if (!target.isL2Attackable() || !target.isDead())
+		if ((target == null) || !target.isAttackable() || !target.isDead())
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		if (onlyFirst)
@@ -54,19 +53,19 @@ public class AreaCorpseMob implements ITargetTypeHandler
 			};
 		}
 		
+		final List<L2Character> targetList = new ArrayList<>();
 		targetList.add(target);
 		
-		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
-		
+		final boolean srcInArena = activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE);
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharacters();
 		for (L2Character obj : objs)
 		{
-			if (!(obj.isL2Attackable() || obj.isPlayable()) || !Util.checkIfInRange(skill.getAffectRange(), target, obj, true))
+			if (!(obj.isAttackable() || obj.isPlayable()) || !Util.checkIfInRange(skill.getAffectRange(), target, obj, true))
 			{
 				continue;
 			}
 			
-			if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+			if (!Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
 			{
 				continue;
 			}
@@ -76,7 +75,7 @@ public class AreaCorpseMob implements ITargetTypeHandler
 		
 		if (targetList.isEmpty())
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		return targetList.toArray(new L2Character[targetList.size()]);
 	}

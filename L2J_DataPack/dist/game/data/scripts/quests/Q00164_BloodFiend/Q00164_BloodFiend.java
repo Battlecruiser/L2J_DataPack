@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,9 @@
  */
 package quests.Q00164_BloodFiend;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -43,9 +43,9 @@ public class Q00164_BloodFiend extends Quest
 	// Misc
 	private static final int MIN_LVL = 21;
 	
-	public Q00164_BloodFiend(int questId, String name, String descr)
+	public Q00164_BloodFiend()
 	{
-		super(questId, name, descr);
+		super(164, Q00164_BloodFiend.class.getSimpleName(), "Blood Fiend");
 		addStartNpc(CREAMEES);
 		addTalkId(CREAMEES);
 		addKillId(KIRUNAK);
@@ -88,7 +88,7 @@ public class Q00164_BloodFiend extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() != Race.DarkElf) ? player.getLevel() >= MIN_LVL ? "30149-03.htm" : "30149-02.htm" : "30149-00.htm";
+					htmltext = (player.getRace() != Race.DARK_ELF) ? player.getLevel() >= MIN_LVL ? "30149-03.htm" : "30149-02.htm" : "30149-00.htm";
 					break;
 				}
 				case State.STARTED:
@@ -114,10 +114,5 @@ public class Q00164_BloodFiend extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00164_BloodFiend(164, Q00164_BloodFiend.class.getSimpleName(), "Blood Fiend");
 	}
 }

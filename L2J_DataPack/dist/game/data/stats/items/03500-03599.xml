@@ -2,9 +2,9 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="3500" type="EtcItem" name="Dragonflute of Wind">
 		<set name="icon" val="icon.etc_flute_i00" />
-		<set name="default_action" val="skill_maintain" />
-		<set name="etcitem_type" val="pet_collar" />
-		<set name="material" val="steel" />
+		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="etcitem_type" val="PET_COLLAR" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="20" />
 		<set name="price" val="1000" />
 		<set name="is_oly_restricted" val="true" />
@@ -17,9 +17,9 @@
 	</item>
 	<item id="3501" type="EtcItem" name="Dragonflute of Star">
 		<set name="icon" val="icon.etc_flute_i00" />
-		<set name="default_action" val="skill_maintain" />
-		<set name="etcitem_type" val="pet_collar" />
-		<set name="material" val="steel" />
+		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="etcitem_type" val="PET_COLLAR" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="20" />
 		<set name="price" val="1000" />
 		<set name="is_oly_restricted" val="true" />
@@ -32,9 +32,9 @@
 	</item>
 	<item id="3502" type="EtcItem" name="Dragonflute of Twilight">
 		<set name="icon" val="icon.etc_flute_i00" />
-		<set name="default_action" val="skill_maintain" />
-		<set name="etcitem_type" val="pet_collar" />
-		<set name="material" val="steel" />
+		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="etcitem_type" val="PET_COLLAR" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="20" />
 		<set name="price" val="1000" />
 		<set name="is_oly_restricted" val="true" />
@@ -47,8 +47,8 @@
 	</item>
 	<item id="3503" type="EtcItem" name="Deliverymen Decertificate">
 		<set name="icon" val="icon.etc_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -58,8 +58,8 @@
 	</item>
 	<item id="3504" type="EtcItem" name="Kirunas Horn">
 		<set name="icon" val="icon.etc_horn_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -69,8 +69,8 @@
 	</item>
 	<item id="3505" type="EtcItem" name="Mithril Mold">
 		<set name="icon" val="icon.etc_silver_mold_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -80,8 +80,8 @@
 	</item>
 	<item id="3506" type="EtcItem" name="Bloody Letter">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -91,8 +91,8 @@
 	</item>
 	<item id="3507" type="EtcItem" name="Supplies to Alex">
 		<set name="icon" val="icon.etc_squares_wood_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -102,8 +102,8 @@
 	</item>
 	<item id="3508" type="EtcItem" name="Supplies to Endrigo">
 		<set name="icon" val="icon.etc_squares_wood_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -113,8 +113,8 @@
 	</item>
 	<item id="3509" type="EtcItem" name="Alex's Coins">
 		<set name="icon" val="icon.etc_coins_gold_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -124,8 +124,8 @@
 	</item>
 	<item id="3510" type="EtcItem" name="Wardens Appreciation">
 		<set name="icon" val="icon.etc_paper_blue_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -135,8 +135,8 @@
 	</item>
 	<item id="3511" type="EtcItem" name="Blackbox to Orim">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -146,8 +146,8 @@
 	</item>
 	<item id="3512" type="EtcItem" name="Deluxe Windsus Ham">
 		<set name="icon" val="icon.etc_meat_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -157,8 +157,8 @@
 	</item>
 	<item id="3513" type="EtcItem" name="Heart of Silenos">
 		<set name="icon" val="icon.etc_heart_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -168,8 +168,8 @@
 	</item>
 	<item id="3514" type="EtcItem" name="Request Giran">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -179,8 +179,8 @@
 	</item>
 	<item id="3515" type="EtcItem" name="Request Gludin">
 		<set name="icon" val="icon.etc_letter_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -190,8 +190,8 @@
 	</item>
 	<item id="3516" type="EtcItem" name="Request Hunters">
 		<set name="icon" val="icon.etc_letter_red_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -201,8 +201,8 @@
 	</item>
 	<item id="3517" type="EtcItem" name="Delivery Score Red">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -212,8 +212,8 @@
 	</item>
 	<item id="3518" type="EtcItem" name="Delivery Score Blue">
 		<set name="icon" val="icon.etc_ticket_blue_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -223,8 +223,8 @@
 	</item>
 	<item id="3519" type="EtcItem" name="Deliverymen Advanced Certificate Super">
 		<set name="icon" val="icon.etc_paper_black_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -234,8 +234,8 @@
 	</item>
 	<item id="3520" type="EtcItem" name="1st Confirmation Document">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -245,8 +245,8 @@
 	</item>
 	<item id="3521" type="EtcItem" name="2nd Confirmation Document">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -256,8 +256,8 @@
 	</item>
 	<item id="3522" type="EtcItem" name="Delivery Goods 01">
 		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -267,8 +267,8 @@
 	</item>
 	<item id="3523" type="EtcItem" name="Delivery Goods 02">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -278,8 +278,8 @@
 	</item>
 	<item id="3524" type="EtcItem" name="Delivery Goods 03">
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -289,8 +289,8 @@
 	</item>
 	<item id="3525" type="EtcItem" name="Delivery Goods 04">
 		<set name="icon" val="icon.etc_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -300,8 +300,8 @@
 	</item>
 	<item id="3526" type="EtcItem" name="Delivery Goods 05">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -311,8 +311,8 @@
 	</item>
 	<item id="3527" type="EtcItem" name="Delivery Goods 06">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -322,8 +322,8 @@
 	</item>
 	<item id="3528" type="EtcItem" name="Delivery Goods 07">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -333,8 +333,8 @@
 	</item>
 	<item id="3529" type="EtcItem" name="Delivery Goods 08">
 		<set name="icon" val="icon.etc_painting_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -344,8 +344,8 @@
 	</item>
 	<item id="3530" type="EtcItem" name="Delivery Goods 09">
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -355,8 +355,8 @@
 	</item>
 	<item id="3531" type="EtcItem" name="Delivery Goods 10">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -366,8 +366,8 @@
 	</item>
 	<item id="3532" type="EtcItem" name="Delivery Goods 11">
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -377,8 +377,8 @@
 	</item>
 	<item id="3533" type="EtcItem" name="Delivery Goods 12">
 		<set name="icon" val="icon.etc_squares_silver_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -388,8 +388,8 @@
 	</item>
 	<item id="3534" type="EtcItem" name="Delivery Goods 13">
 		<set name="icon" val="icon.etc_instrument_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -399,8 +399,8 @@
 	</item>
 	<item id="3535" type="EtcItem" name="Delivery Goods 14">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -410,8 +410,8 @@
 	</item>
 	<item id="3536" type="EtcItem" name="Delivery Goods 15">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -421,8 +421,8 @@
 	</item>
 	<item id="3537" type="EtcItem" name="Delivery Goods 16">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -432,8 +432,8 @@
 	</item>
 	<item id="3538" type="EtcItem" name="Delivery Goods 17">
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -443,8 +443,8 @@
 	</item>
 	<item id="3539" type="EtcItem" name="Delivery Goods 18">
 		<set name="icon" val="icon.etc_holy_statue_bronze_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -454,8 +454,8 @@
 	</item>
 	<item id="3540" type="EtcItem" name="Delivery Goods 19">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -465,8 +465,8 @@
 	</item>
 	<item id="3541" type="EtcItem" name="Delivery Goods 20">
 		<set name="icon" val="icon.etc_statue_of_einhasad_silver_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -476,8 +476,8 @@
 	</item>
 	<item id="3542" type="EtcItem" name="Delivery Goods 21">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -487,8 +487,8 @@
 	</item>
 	<item id="3543" type="EtcItem" name="Delivery Goods 22">
 		<set name="icon" val="icon.etc_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -498,8 +498,8 @@
 	</item>
 	<item id="3544" type="EtcItem" name="Delivery Goods 23">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -509,8 +509,8 @@
 	</item>
 	<item id="3545" type="EtcItem" name="Delivery Goods 24">
 		<set name="icon" val="icon.etc_holy_statue_bronze_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -520,8 +520,8 @@
 	</item>
 	<item id="3546" type="EtcItem" name="Delivery Goods 25">
 		<set name="icon" val="icon.etc_synthetic_cokes_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -531,8 +531,8 @@
 	</item>
 	<item id="3547" type="EtcItem" name="Delivery Goods 26">
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -542,8 +542,8 @@
 	</item>
 	<item id="3548" type="EtcItem" name="Delivery Goods 27">
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -553,8 +553,8 @@
 	</item>
 	<item id="3549" type="EtcItem" name="Delivery Goods 28">
 		<set name="icon" val="icon.etc_painting_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -564,8 +564,8 @@
 	</item>
 	<item id="3550" type="EtcItem" name="Delivery Goods 29">
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -575,8 +575,8 @@
 	</item>
 	<item id="3551" type="EtcItem" name="Delivery Goods 30">
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -586,8 +586,8 @@
 	</item>
 	<item id="3552" type="EtcItem" name="Delivery Goods 31">
 		<set name="icon" val="icon.etc_gem_blue_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -597,8 +597,8 @@
 	</item>
 	<item id="3553" type="EtcItem" name="Delivery Goods 32">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -608,8 +608,8 @@
 	</item>
 	<item id="3554" type="EtcItem" name="Delivery Goods 33">
 		<set name="icon" val="icon.etc_lump_yellow_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -619,8 +619,8 @@
 	</item>
 	<item id="3555" type="EtcItem" name="Delivery Goods 34">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -630,8 +630,8 @@
 	</item>
 	<item id="3556" type="EtcItem" name="Delivery Goods 35">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -641,8 +641,8 @@
 	</item>
 	<item id="3557" type="EtcItem" name="Delivery Goods 36">
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -652,8 +652,8 @@
 	</item>
 	<item id="3558" type="EtcItem" name="Delivery Goods 37">
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -663,8 +663,8 @@
 	</item>
 	<item id="3559" type="EtcItem" name="Delivery Goods 38">
 		<set name="icon" val="icon.etc_synthetic_cokes_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -674,8 +674,8 @@
 	</item>
 	<item id="3560" type="EtcItem" name="Delivery Goods 39">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -685,8 +685,8 @@
 	</item>
 	<item id="3561" type="EtcItem" name="Delivery Goods 40">
 		<set name="icon" val="icon.etc_adamantite_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -696,8 +696,8 @@
 	</item>
 	<item id="3562" type="EtcItem" name="Delivery Goods 41">
 		<set name="icon" val="icon.etc_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -707,8 +707,8 @@
 	</item>
 	<item id="3563" type="EtcItem" name="Delivery Goods 42">
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -718,8 +718,8 @@
 	</item>
 	<item id="3564" type="EtcItem" name="Delivery Goods 43">
 		<set name="icon" val="icon.etc_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -729,8 +729,8 @@
 	</item>
 	<item id="3565" type="EtcItem" name="Delivery Goods 44">
 		<set name="icon" val="icon.etc_squares_silver_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -740,8 +740,8 @@
 	</item>
 	<item id="3566" type="EtcItem" name="Delivery Goods 45">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -751,8 +751,8 @@
 	</item>
 	<item id="3567" type="EtcItem" name="Delivery Goods 46">
 		<set name="icon" val="icon.etc_key_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -762,8 +762,8 @@
 	</item>
 	<item id="3568" type="EtcItem" name="Delivery Goods 47">
 		<set name="icon" val="icon.etc_instrument_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -773,8 +773,8 @@
 	</item>
 	<item id="3569" type="EtcItem" name="Delivery Goods 48">
 		<set name="icon" val="icon.etc_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -784,8 +784,8 @@
 	</item>
 	<item id="3570" type="EtcItem" name="Delivery Goods 49">
 		<set name="icon" val="icon.etc_adamantite_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -795,8 +795,8 @@
 	</item>
 	<item id="3571" type="EtcItem" name="Delivery Goods 50">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -806,8 +806,8 @@
 	</item>
 	<item id="3572" type="EtcItem" name="Delivery Goods 51">
 		<set name="icon" val="icon.etc_squares_wood_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -817,8 +817,8 @@
 	</item>
 	<item id="3573" type="EtcItem" name="Delivery Goods 52">
 		<set name="icon" val="icon.etc_painting_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -828,8 +828,8 @@
 	</item>
 	<item id="3574" type="EtcItem" name="Delivery Goods 53">
 		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -839,8 +839,8 @@
 	</item>
 	<item id="3575" type="EtcItem" name="Delivery Goods 54">
 		<set name="icon" val="icon.etc_squares_wood_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -850,8 +850,8 @@
 	</item>
 	<item id="3576" type="EtcItem" name="Delivery Goods 55">
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -861,8 +861,8 @@
 	</item>
 	<item id="3577" type="EtcItem" name="Delivery Goods 56">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -872,8 +872,8 @@
 	</item>
 	<item id="3578" type="EtcItem" name="Delivery Goods 57">
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -883,8 +883,8 @@
 	</item>
 	<item id="3579" type="EtcItem" name="Delivery Goods 58">
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -894,8 +894,8 @@
 	</item>
 	<item id="3580" type="EtcItem" name="Delivery Goods 59">
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -905,8 +905,8 @@
 	</item>
 	<item id="3581" type="EtcItem" name="Delivery Goods 60">
 		<set name="icon" val="icon.etc_silver_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -916,8 +916,8 @@
 	</item>
 	<item id="3582" type="EtcItem" name="Delivery Goods 61">
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -927,8 +927,8 @@
 	</item>
 	<item id="3583" type="EtcItem" name="Delivery Goods 62">
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -938,8 +938,8 @@
 	</item>
 	<item id="3584" type="EtcItem" name="Delivery Goods 63">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -949,8 +949,8 @@
 	</item>
 	<item id="3585" type="EtcItem" name="Delivery Goods 64">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -960,8 +960,8 @@
 	</item>
 	<item id="3586" type="EtcItem" name="Delivery Goods 65">
 		<set name="icon" val="icon.etc_parasite_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -971,8 +971,8 @@
 	</item>
 	<item id="3587" type="EtcItem" name="Delivery Goods 66">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -982,8 +982,8 @@
 	</item>
 	<item id="3588" type="EtcItem" name="Delivery Goods 67">
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -993,8 +993,8 @@
 	</item>
 	<item id="3589" type="EtcItem" name="Confirmation Document 01">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1004,8 +1004,8 @@
 	</item>
 	<item id="3590" type="EtcItem" name="Confirmation Document 02">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1015,8 +1015,8 @@
 	</item>
 	<item id="3591" type="EtcItem" name="Confirmation Document 03">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1026,8 +1026,8 @@
 	</item>
 	<item id="3592" type="EtcItem" name="Confirmation Document 04">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1037,8 +1037,8 @@
 	</item>
 	<item id="3593" type="EtcItem" name="Confirmation Document 05">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1048,8 +1048,8 @@
 	</item>
 	<item id="3594" type="EtcItem" name="Confirmation Document 06">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1059,8 +1059,8 @@
 	</item>
 	<item id="3595" type="EtcItem" name="Confirmation Document 07">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1070,8 +1070,8 @@
 	</item>
 	<item id="3596" type="EtcItem" name="Confirmation Document 08">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1081,8 +1081,8 @@
 	</item>
 	<item id="3597" type="EtcItem" name="Confirmation Document 09">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1092,8 +1092,8 @@
 	</item>
 	<item id="3598" type="EtcItem" name="Confirmation Document 10">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1103,8 +1103,8 @@
 	</item>
 	<item id="3599" type="EtcItem" name="Confirmation Document 11">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="immediate_effect" val="1" />
-		<set name="material" val="steel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

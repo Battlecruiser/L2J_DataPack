@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,11 +18,12 @@
  */
 package quests.Q00451_LuciensAltar;
 
+import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
@@ -49,9 +50,9 @@ public class Q00451_LuciensAltar extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	
-	public Q00451_LuciensAltar(int questId, String name, String descr)
+	public Q00451_LuciensAltar()
 	{
-		super(questId, name, descr);
+		super(451, Q00451_LuciensAltar.class.getSimpleName(), "Lucien's Altar");
 		addStartNpc(DAICHIR);
 		addTalkId(ALTARS);
 		addTalkId(DAICHIR);
@@ -93,7 +94,7 @@ public class Q00451_LuciensAltar extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		if (npcId == DAICHIR)
 		{
 			switch (st.getState())
@@ -152,10 +153,5 @@ public class Q00451_LuciensAltar extends Quest
 		}
 		
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00451_LuciensAltar(451, Q00451_LuciensAltar.class.getSimpleName(), "Lucien's Altar");
 	}
 }

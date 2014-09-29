@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -189,7 +189,7 @@ public class AdminRes implements IAdminCommandHandler
 		}
 		else
 		{
-			DecayTaskManager.getInstance().cancelDecayTask(targetChar);
+			DecayTaskManager.getInstance().cancel(targetChar);
 		}
 		
 		targetChar.doRevive();

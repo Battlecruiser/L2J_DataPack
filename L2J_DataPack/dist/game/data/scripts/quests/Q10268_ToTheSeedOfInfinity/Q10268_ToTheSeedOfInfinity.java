@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -37,9 +37,9 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 	// Item
 	private static final int INTRODUCTION = 13811;
 	
-	public Q10268_ToTheSeedOfInfinity(int questId, String name, String descr)
+	public Q10268_ToTheSeedOfInfinity()
 	{
-		super(questId, name, descr);
+		super(10268, Q10268_ToTheSeedOfInfinity.class.getSimpleName(), "To the Seed of Infinity");
 		addStartNpc(KEUCEREUS);
 		addTalkId(KEUCEREUS, TEPIOS);
 		registerQuestItems(INTRODUCTION);
@@ -72,7 +72,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case KEUCEREUS:
 				switch (st.getState())
@@ -106,10 +106,5 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10268_ToTheSeedOfInfinity(10268, Q10268_ToTheSeedOfInfinity.class.getSimpleName(), "To the Seed of Infinity");
 	}
 }

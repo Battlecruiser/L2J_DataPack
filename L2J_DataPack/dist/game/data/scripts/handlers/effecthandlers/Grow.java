@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,18 +18,21 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
-public class Grow extends L2Effect
+/**
+ * Grow effect implementation.
+ */
+public final class Grow extends AbstractEffect
 {
-	public Grow(Env env, EffectTemplate template)
+	public Grow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -39,38 +42,24 @@ public class Grow extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public void onExit(BuffInfo info)
 	{
-		if (getEffected().isNpc())
+		if (info.getEffected().isNpc())
 		{
-			L2Npc npc = (L2Npc) getEffected();
-			// TODO: Uncomment line when fix for mobs falling underground is found
-			// npc.setCollisionHeight((int) (npc.getCollisionHeight() * 1.24));
-			npc.setCollisionRadius((npc.getCollisionRadius() * 1.19));
-			
-			getEffected().startAbnormalEffect(AbnormalEffect.GROW);
-			return true;
-		}
-		return false;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		if (getEffected().isNpc())
-		{
-			L2Npc npc = (L2Npc) getEffected();
-			// TODO: Uncomment line when fix for mobs falling underground is found
-			// npc.setCollisionHeight(npc.getTemplate().collisionHeight);
+			L2Npc npc = (L2Npc) info.getEffected();
+			npc.setCollisionHeight(npc.getTemplate().getCollisionHeight());
 			npc.setCollisionRadius(npc.getTemplate().getfCollisionRadius());
-			
-			getEffected().stopAbnormalEffect(AbnormalEffect.GROW);
+		}
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		if (info.getEffected().isNpc())
+		{
+			L2Npc npc = (L2Npc) info.getEffected();
+			npc.setCollisionHeight(npc.getTemplate().getCollisionHeightGrown());
+			npc.setCollisionRadius(npc.getTemplate().getCollisionRadiusGrown());
 		}
 	}
 }

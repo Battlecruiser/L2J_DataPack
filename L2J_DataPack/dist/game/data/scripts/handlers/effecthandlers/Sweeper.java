@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,56 +18,55 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
- * Sweeper effect.
+ * Sweeper effect implementation.
  * @author Zoey76
  */
-public class Sweeper extends L2Effect
+public final class Sweeper extends AbstractEffect
 {
-	private static final int MAX_SWEEPER_TIME = 15000;
-	
-	public Sweeper(Env env, EffectTemplate template)
+	public Sweeper(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isL2Attackable())
+		return true;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isAttackable())
 		{
-			return false;
+			return;
 		}
 		
-		final L2PcInstance player = getEffector().getActingPlayer();
-		final L2Attackable monster = (L2Attackable) getEffected();
+		final L2PcInstance player = info.getEffector().getActingPlayer();
+		final L2Attackable monster = (L2Attackable) info.getEffected();
 		if (!monster.checkSpoilOwner(player, false))
 		{
-			return false;
-		}
-		
-		if (monster.isOldCorpse(player, MAX_SWEEPER_TIME, false))
-		{
-			return false;
+			return;
 		}
 		
 		if (!player.getInventory().checkInventorySlotsAndWeight(monster.getSpoilLootItems(), false, false))
 		{
-			return false;
+			return;
 		}
 		
-		ItemHolder[] items = monster.takeSweep();
+		final ItemHolder[] items = monster.takeSweep();
 		if ((items == null) || (items.length == 0))
 		{
-			return false;
+			return;
 		}
 		
 		for (ItemHolder item : items)
@@ -78,21 +77,8 @@ public class Sweeper extends L2Effect
 			}
 			else
 			{
-				player.addItem("Sweeper", item, getEffected(), true);
+				player.addItem("Sweeper", item, info.getEffected(), true);
 			}
 		}
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
 	}
 }

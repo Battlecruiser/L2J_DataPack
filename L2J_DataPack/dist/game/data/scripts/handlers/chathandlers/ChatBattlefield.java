@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -52,8 +52,8 @@ public class ChatBattlefield implements IChatHandler
 				return;
 			}
 			
-			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
+			final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
+			for (L2PcInstance player : L2World.getInstance().getPlayers())
 			{
 				if (player.getSiegeSide() == activeChar.getSiegeSide())
 				{

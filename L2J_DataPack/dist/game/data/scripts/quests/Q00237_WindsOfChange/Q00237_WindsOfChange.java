@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -50,9 +50,9 @@ public class Q00237_WindsOfChange extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00237_WindsOfChange(int questId, String name, String descr)
+	public Q00237_WindsOfChange()
 	{
-		super(questId, name, descr);
+		super(237, Q00237_WindsOfChange.class.getSimpleName(), "Winds of Change");
 		addStartNpc(FLAUEN);
 		addTalkId(FLAUEN, IASON, ROMAN, MORELYN, HELVETICA, ATHENIA);
 		registerQuestItems(FLAUENS_LETTER, DOSKOZER_LETTER, ATHENIA_LETTER);
@@ -160,7 +160,7 @@ public class Q00237_WindsOfChange extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case FLAUEN:
 				switch (st.getState())
@@ -271,10 +271,5 @@ public class Q00237_WindsOfChange extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00237_WindsOfChange(237, Q00237_WindsOfChange.class.getSimpleName(), "Winds of Change");
 	}
 }

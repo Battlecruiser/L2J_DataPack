@@ -84,4 +84,55 @@ INSERT INTO `herb_droplist_groups` VALUES
 (3,14824,1,1,13,9000),-- Ancient Herb - Slayer
 (3,14825,1,1,13,9000),-- Ancient Herb - Immortal
 (3,14826,1,1,13,25000), -- Ancient Herb - Terminator
-(3,14827,1,1,13,30000); -- Ancient Herb - Guide
+(3,14827,1,1,13,30000), -- Ancient Herb - Guide
+-- Sel Mahum training grounds - chief group
+(4,13028,1,1,0,3299), -- Vitality Replenishing Herb
+(4,8600,1,1,1,231000), -- Herb of Life
+(4,8601,1,1,1,159600), -- Greater Herb of Life
+(4,8602,1,1,1,29400), -- Superior Herb of Life
+(4,8603,1,1,2,44000), -- Herb of Mana
+(4,8604,1,1,2,57200), -- Greater Herb of Mana
+(4,8605,1,1,2,8800), -- Superior Herb of Mana
+(4,8612,1,1,3,3300), -- Herb of the Warrior
+(4,8613,1,1,3,3300), -- Herb of the Mystic
+(4,8614,1,1,3,3400), -- Herb of Recovery
+(4,8606,1,1,4,50000), -- Herb of Power
+(4,8608,1,1,4,50000), -- Herb of Atk. Spd.
+(4,8610,1,1,4,50000), -- Herb of Critical Attack - Probability
+(4,10655,1,1,4,50000), -- Herb of Vampiric Rage
+(4,10656,1,1,4,50000), -- Herb of Critical Attack - Power
+(4,8607,1,1,5,50000), -- Herb of Magic
+(4,8609,1,1,5,50000), -- Herb of Casting Spd.
+(4,8611,1,1,6,103400), -- Herb of Speed
+(4,10657,1,1,6,3299), -- Herb of Doubt
+-- Sel Mahum training grounds - soldier group
+(5,8600,1,1,1,275000), -- Herb of Life
+(5,8601,1,1,1,190000), -- Greater Herb of Life
+(5,8602,1,1,1,35000), -- Superior Herb of Life
+-- Sel Mahum training grounds - squad leader group
+(6,13028,1,1,0,3300), -- Vitality Replenishing Herb
+(6,8600,1,1,1,231000), -- Herb of Life
+(6,8601,1,1,1,159600), -- Greater Herb of Life
+(6,8602,1,1,1,29400), -- Superior Herb of Life
+(6,8603,1,1,2,44000), -- Herb of Mana
+(6,8604,1,1,2,57200), -- Greater Herb of Mana
+(6,8605,1,1,2,8800), -- Superior Herb of Mana
+(6,8606,1,1,3,50000), -- Herb of Power
+(6,8608,1,1,3,50000), -- Herb of Atk. Spd.
+(6,8610,1,1,3,50000), -- Herb of Critical Attack - Probability
+(6,10655,1,1,3,50000), -- Herb of Vampiric Rage
+(6,10656,1,1,3,50000), -- Herb of Critical Attack - Power
+(6,8607,1,1,4,50000), -- Herb of Magic
+(6,8609,1,1,4,50000), -- Herb of Casting Spd.
+(6,8612,1,1,5,3300), -- Herb of the Warrior
+(6,8613,1,1,5,3300), -- Herb of the Mystic
+(6,8614,1,1,5,3400), -- Herb of Recovery
+(6,8611,1,1,6,103400), -- Herb of Speed
+(6,10657,1,1,6,3300), -- Herb of Doubt
+(6,10655,1,1,7,450000), -- Herb of Vampiric Rage
+-- Antharas minions - Behemoth and Tarask Dragon
+(7,8952,10,20,1,1000000), -- Greater Herb of Life
+(7,8953,10,20,2,1000000), -- Greater Herb of Mana
+-- Antharas minions - Dragon Bomber
+(8,8952,10,20,1,1000000), -- Greater Herb of Life
+(8,8953,10,20,2,1000000); -- Greater Herb of Mana

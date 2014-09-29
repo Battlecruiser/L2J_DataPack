@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -27,17 +27,18 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
-import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeFinish;
+import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.scripting.scriptengine.events.SiegeEvent;
 
 /**
  * Venom AI on Rune Castle.
@@ -85,9 +86,7 @@ public final class Venom extends AbstractNpcAI
 	private L2Npc _venom;
 	private final L2Npc _massymore;
 	
-	private int _venomX;
-	private int _venomY;
-	private int _venomZ;
+	private final Location _loc;
 	
 	private boolean _aggroMode = false;
 	private boolean _prisonIsOpen = false;
@@ -101,10 +100,9 @@ public final class Venom extends AbstractNpcAI
 	
 	private static List<L2PcInstance> _targets = new ArrayList<>();
 	
-	private Venom(String name, String descr)
+	private Venom()
 	{
-		super(name, descr);
-		
+		super(Venom.class.getSimpleName(), "ai/individual");
 		addStartNpc(DUNGEON_KEEPER, TELEPORT_CUBE);
 		addFirstTalkId(DUNGEON_KEEPER, TELEPORT_CUBE);
 		addTalkId(DUNGEON_KEEPER, TELEPORT_CUBE);
@@ -113,15 +111,14 @@ public final class Venom extends AbstractNpcAI
 		addAttackId(VENOM);
 		addKillId(VENOM);
 		addAggroRangeEnterId(VENOM);
-		addSiegeNotify();
+		setCastleSiegeStartId(this::onSiegeStart, CASTLE);
+		setCastleSiegeFinishId(this::onSiegeFinish, CASTLE);
 		
 		_massymore = SpawnTable.getInstance().getFirstSpawn(DUNGEON_KEEPER).getLastSpawn();
 		_venom = SpawnTable.getInstance().getFirstSpawn(VENOM).getLastSpawn();
-		_venomX = _venom.getX();
-		_venomY = _venom.getY();
-		_venomZ = _venom.getZ();
-		_venom.disableSkill(VENOM_TELEPORT.getSkill(), 0);
-		_venom.disableSkill(RANGE_TELEPORT.getSkill(), 0);
+		_loc = _venom.getLocation();
+		_venom.disableSkill(VENOM_TELEPORT.getSkill(), -1);
+		_venom.disableSkill(RANGE_TELEPORT.getSkill(), -1);
 		_venom.doRevive();
 		((L2Attackable) _venom).setCanReturnToSpawnPoint(false);
 		if (checkStatus() == DEAD)
@@ -141,18 +138,18 @@ public final class Venom extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case TELEPORT_CUBE:
 			{
-				talker.teleToLocation(MapRegionManager.TeleportWhereType.Town);
+				talker.teleToLocation(TeleportWhereType.TOWN);
 				break;
 			}
 			case DUNGEON_KEEPER:
 			{
 				if (_prisonIsOpen)
 				{
-					talker.teleToLocation(TELEPORT, 0);
+					talker.teleToLocation(TELEPORT);
 				}
 				else
 				{
@@ -181,7 +178,7 @@ public final class Venom extends AbstractNpcAI
 			case "raid_check":
 				if (!npc.isInsideZone(ZoneId.SIEGE) && !npc.isTeleporting())
 				{
-					npc.teleToLocation(new Location(_venomX, _venomY, _venomZ), false);
+					npc.teleToLocation(_loc);
 				}
 				break;
 			case "cube_despawn":
@@ -209,55 +206,41 @@ public final class Venom extends AbstractNpcAI
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
-	@Override
-	public boolean onSiegeEvent(SiegeEvent event)
+	public void onSiegeStart(OnCastleSiegeStart event)
 	{
-		if (event.getSiege().getCastle().getCastleId() == CASTLE)
+		_aggroMode = true;
+		_prisonIsOpen = false;
+		if ((_venom != null) && !_venom.isDead())
 		{
-			if (event.getSiege().getCastle().getIsTimeRegistrationOver() && !event.getSiege().getAttackerClans().isEmpty())
-			{
-				_prisonIsOpen = true;
-				changeLocation(MoveTo.PRISON);
-			}
-			
-			switch (event.getStage())
-			{
-				case START:
-					_aggroMode = true;
-					_prisonIsOpen = false;
-					if ((_venom != null) && !_venom.isDead())
-					{
-						_venom.setCurrentHp(_venom.getMaxHp());
-						_venom.setCurrentMp(_venom.getMaxMp());
-						_venom.enableSkill(VENOM_TELEPORT.getSkill());
-						_venom.enableSkill(RANGE_TELEPORT.getSkill());
-						startQuestTimer("tower_check", 30000, _venom, null, true);
-					}
-					break;
-				case END:
-					_aggroMode = false;
-					if ((_venom != null) && !_venom.isDead())
-					{
-						changeLocation(MoveTo.PRISON);
-						_venom.disableSkill(VENOM_TELEPORT.getSkill(), 0);
-						_venom.disableSkill(RANGE_TELEPORT.getSkill(), 0);
-					}
-					updateStatus(ALIVE);
-					cancelQuestTimer("tower_check", _venom, null);
-					cancelQuestTimer("raid_check", _venom, null);
-					break;
-			}
+			_venom.setCurrentHp(_venom.getMaxHp());
+			_venom.setCurrentMp(_venom.getMaxMp());
+			_venom.enableSkill(VENOM_TELEPORT.getSkill());
+			_venom.enableSkill(RANGE_TELEPORT.getSkill());
+			startQuestTimer("tower_check", 30000, _venom, null, true);
 		}
-		return true;
+	}
+	
+	public void onSiegeFinish(OnCastleSiegeFinish event)
+	{
+		_aggroMode = false;
+		if ((_venom != null) && !_venom.isDead())
+		{
+			changeLocation(MoveTo.PRISON);
+			_venom.disableSkill(VENOM_TELEPORT.getSkill(), -1);
+			_venom.disableSkill(RANGE_TELEPORT.getSkill(), -1);
+		}
+		updateStatus(ALIVE);
+		cancelQuestTimer("tower_check", _venom, null);
+		cancelQuestTimer("raid_check", _venom, null);
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
 		switch (skill.getId())
 		{
 			case 4222:
-				npc.teleToLocation(new Location(_venomX, _venomY, _venomZ), false);
+				npc.teleToLocation(_loc);
 				break;
 			case 4995:
 				teleportTarget(player);
@@ -308,7 +291,7 @@ public final class Venom extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		final double distance = Math.sqrt(npc.getPlanDistanceSq(attacker.getX(), attacker.getY()));
+		final double distance = npc.calculateDistance(attacker, false, false);
 		if (_aggroMode && (getRandom(100) < 25))
 		{
 			npc.setTarget(attacker);
@@ -337,7 +320,7 @@ public final class Venom extends AbstractNpcAI
 	{
 		updateStatus(DEAD);
 		broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.ITS_NOT_OVER_YET_IT_WONT_BE_OVER_LIKE_THIS_NEVER);
-		if (!CastleManager.getInstance().getCastleById(CASTLE).getSiege().getIsInProgress())
+		if (!CastleManager.getInstance().getCastleById(CASTLE).getSiege().isInProgress())
 		{
 			L2Npc cube = addSpawn(TELEPORT_CUBE, CUBE, false, 0);
 			startQuestTimer("cube_despawn", 120000, cube, null);
@@ -370,9 +353,7 @@ public final class Venom extends AbstractNpcAI
 				cancelQuestTimer("tower_check", _venom, null);
 				break;
 		}
-		_venomX = _venom.getX();
-		_venomY = _venom.getY();
-		_venomZ = _venom.getZ();
+		_loc.setLocation(_venom.getLocation());
 	}
 	
 	private void teleportTarget(L2PcInstance player)
@@ -392,13 +373,13 @@ public final class Venom extends AbstractNpcAI
 	private int checkStatus()
 	{
 		int checkStatus = ALIVE;
-		if (GlobalVariablesManager.getInstance().isVariableStored("VenomStatus"))
+		if (GlobalVariablesManager.getInstance().hasVariable("VenomStatus"))
 		{
-			checkStatus = Integer.parseInt(GlobalVariablesManager.getInstance().getStoredVariable("VenomStatus"));
+			checkStatus = GlobalVariablesManager.getInstance().getInt("VenomStatus");
 		}
 		else
 		{
-			GlobalVariablesManager.getInstance().storeVariable("VenomStatus", "0");
+			GlobalVariablesManager.getInstance().set("VenomStatus", 0);
 		}
 		return checkStatus;
 	}
@@ -409,7 +390,7 @@ public final class Venom extends AbstractNpcAI
 	 */
 	private void updateStatus(int status)
 	{
-		GlobalVariablesManager.getInstance().storeVariable("VenomStatus", Integer.toString(status));
+		GlobalVariablesManager.getInstance().set("VenomStatus", Integer.toString(status));
 	}
 	
 	private enum MoveTo
@@ -420,6 +401,6 @@ public final class Venom extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Venom(Venom.class.getSimpleName(), "ai/individual");
+		new Venom();
 	}
 }

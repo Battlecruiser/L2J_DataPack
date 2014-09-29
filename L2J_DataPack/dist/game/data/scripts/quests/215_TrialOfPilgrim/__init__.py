@@ -7,7 +7,7 @@ import sys
 from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 from com.l2jserver.gameserver.network.serverpackets import SocialAction
 
 qn = "215_TrialOfPilgrim"
@@ -92,7 +92,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30648 and id != State.STARTED : return htmltext
 
@@ -224,7 +224,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return 
    if not st.isStarted() : return 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    cond=st.getInt("cond")
    if npcId == 27116 :
      if cond == 3 and not st.hasQuestItems(ESSENSE_OF_FLAME) and not self.getRandom(5) :

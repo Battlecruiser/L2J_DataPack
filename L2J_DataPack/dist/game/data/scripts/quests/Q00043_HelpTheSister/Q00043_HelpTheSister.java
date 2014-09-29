@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00043_HelpTheSister;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -43,9 +44,9 @@ public class Q00043_HelpTheSister extends Quest
 	private static final int MAP = 7551;
 	private static final int PET_TICKET = 7584;
 	
-	public Q00043_HelpTheSister(int questId, String name, String descr)
+	public Q00043_HelpTheSister()
 	{
-		super(questId, name, descr);
+		super(43, Q00043_HelpTheSister.class.getSimpleName(), "Help The Sister!");
 		addStartNpc(COOPER);
 		addTalkId(COOPER, GALLADUCCI);
 		addKillId(SORROW_MAIDEN, SPECTER);
@@ -139,7 +140,7 @@ public class Q00043_HelpTheSister extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case COOPER:
 				switch (st.getState())
@@ -188,10 +189,5 @@ public class Q00043_HelpTheSister extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00043_HelpTheSister(43, Q00043_HelpTheSister.class.getSimpleName(), "Help The Sister!");
 	}
 }

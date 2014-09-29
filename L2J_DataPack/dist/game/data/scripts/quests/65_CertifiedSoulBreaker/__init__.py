@@ -2,13 +2,13 @@
 # this script is part of the Official L2J Datapack Project.
 # Visit http://www.l2jdp.com/forum/ for more details.
 import sys
-from com.l2jserver.gameserver.ai                 			import CtrlIntention
-from com.l2jserver.gameserver.model.quest        			import State
-from com.l2jserver.gameserver.model.quest        			import QuestState
-from com.l2jserver.gameserver.model.quest.jython 			import QuestJython as JQuest
-from com.l2jserver.gameserver.network.serverpackets      	import NpcSay
-from com.l2jserver.gameserver.network.serverpackets      	import SocialAction
-from com.l2jserver.gameserver.network.serverpackets      	import ActionFailed
+from com.l2jserver.gameserver.ai import CtrlIntention
+from com.l2jserver.gameserver.model.quest import State
+from com.l2jserver.gameserver.model.quest import QuestState
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
+from com.l2jserver.gameserver.network.serverpackets import NpcSay
+from com.l2jserver.gameserver.network.serverpackets import SocialAction
+from com.l2jserver.gameserver.network.serverpackets import ActionFailed
 
 qn = "65_CertifiedSoulBreaker"
 
@@ -100,7 +100,7 @@ class Quest (JQuest) :
     def onFirstTalk (self,npc,player):
         st = player.getQuestState(qn)
         if st :
-            if npc.getNpcId() == Katenar and st.getInt("cond") == 12:
+            if npc.getId() == Katenar and st.getInt("cond") == 12:
                 st.unset("angel")
                 st.playSound("ItemSound.quest_itemget")
                 st.set("cond","13")
@@ -115,7 +115,7 @@ class Quest (JQuest) :
         htmltext = Quest.getNoQuestMsg(player)
         st = player.getQuestState(qn)
         if not st : return htmltext
-        npcId = npc.getNpcId()
+        npcId = npc.getId()
         id = st.getState()
         cond = st.getInt("cond")
         if id == State.COMPLETED :
@@ -228,7 +228,7 @@ class Quest (JQuest) :
                htmltext = "32243-01.htm"
                if st.getInt("angel") == 0 and self.isAngelSpawned == 0 :
                   angel = st.addSpawn(27332,36198,191949,-3728,180000)
-                  angel.broadcastPacket(NpcSay(angel.getObjectId(),0,angel.getNpcId(),player.getName()+"! Step back from the confounded box! I will take it myself!"))
+                  angel.broadcastPacket(NpcSay(angel.getObjectId(),0,angel.getId(),player.getName()+"! Step back from the confounded box! I will take it myself!"))
                   angel.setRunning()
                   angel.addDamageHate(player,0,999)
                   angel.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
@@ -236,7 +236,7 @@ class Quest (JQuest) :
                   self.startQuestTimer("angel_cleanup",180000,angel,player)
                elif self.isKatenarSpawned == 0 and st.getInt("angel") == 1:
                   katenar = st.addSpawn(32242,36110,191921,-3712,60000)
-                  katenar.broadcastPacket(NpcSay(katenar.getObjectId(),0,katenar.getNpcId(),"I am late!"))
+                  katenar.broadcastPacket(NpcSay(katenar.getObjectId(),0,katenar.getId(),"I am late!"))
                   self.isKatenarSpawned == 1
                   self.startQuestTimer("katenar_cleanup",60000,katenar,player)
                   htmltext = "32243-02.htm"
@@ -248,15 +248,15 @@ class Quest (JQuest) :
         st = player.getQuestState(qn)
         if not st : return
         if st.getState() != State.STARTED : return
-        npcId = npc.getNpcId()
+        npcId = npc.getId()
         cond = st.getInt("cond")
         if npcId == Angel and cond == 12:
             st.set("angel","1")
             self.isAngelSpawned = 0
-            npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"Grr. I've been hit..."))
+            npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getId(),"Grr. I've been hit..."))
             if self.isKatenarSpawned == 0 :
                   katenar = st.addSpawn(32242,36110,191921,-3712,60000)
-                  katenar.broadcastPacket(NpcSay(katenar.getObjectId(),0,katenar.getNpcId(),"I am late!"))
+                  katenar.broadcastPacket(NpcSay(katenar.getObjectId(),0,katenar.getId(),"I am late!"))
                   self.isKatenarSpawned == 1
                   self.startQuestTimer("katenar_cleanup",60000,katenar,player)
         if npcId == Wyrm and st.getQuestItemsCount(Heart) < 10 and cond == 15 and self.getRandom(100) <= 25:

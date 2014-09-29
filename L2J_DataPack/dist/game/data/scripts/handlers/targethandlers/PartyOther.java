@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,7 +21,7 @@ package handlers.targethandlers;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 public class PartyOther implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		if ((target != null) && (target != activeChar) && activeChar.isInParty() && target.isInParty() && (activeChar.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId()))
 		{
@@ -50,7 +50,7 @@ public class PartyOther implements ITargetTypeHandler
 									target
 								};
 							}
-							return _emptyTargetList;
+							return EMPTY_TARGET_LIST;
 						case 427:
 							if (target.getActingPlayer().isMageClass())
 							{
@@ -59,7 +59,7 @@ public class PartyOther implements ITargetTypeHandler
 									target
 								};
 							}
-							return _emptyTargetList;
+							return EMPTY_TARGET_LIST;
 					}
 				}
 				return new L2Character[]
@@ -67,10 +67,10 @@ public class PartyOther implements ITargetTypeHandler
 					target
 				};
 			}
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-		return _emptyTargetList;
+		return EMPTY_TARGET_LIST;
 	}
 	
 	@Override

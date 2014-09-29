@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,13 +21,13 @@ package ai.group_template;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2EffectZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -99,8 +99,12 @@ public class DenOfEvil extends AbstractNpcAI
 	private DenOfEvil()
 	{
 		super(DenOfEvil.class.getSimpleName(), "ai/group_template");
-		registerMobs(EYE_IDS, QuestEventType.ON_KILL, QuestEventType.ON_SPAWN);
-		spawnEyes();
+		addKillId(EYE_IDS);
+		addSpawnId(EYE_IDS);
+		for (Location loc : EYE_SPAWNS)
+		{
+			addSpawn(EYE_IDS[getRandom(EYE_IDS.length)], loc, false, 0);
+		}
 	}
 	
 	private int getSkillIdByNpcId(int npcId)
@@ -121,7 +125,7 @@ public class DenOfEvil extends AbstractNpcAI
 			_log.warning("NPC " + npc + " spawned outside of L2EffectZone, check your zone coords! X:" + npc.getX() + " Y:" + npc.getY() + " Z:" + npc.getZ());
 			return null;
 		}
-		int skillId = getSkillIdByNpcId(npc.getNpcId());
+		int skillId = getSkillIdByNpcId(npc.getId());
 		int skillLevel = zone.getSkillLevel(skillId);
 		zone.addSkill(skillId, skillLevel + 1);
 		if (skillLevel == 3) // 3+1=4
@@ -146,18 +150,10 @@ public class DenOfEvil extends AbstractNpcAI
 			_log.warning("NPC " + npc + " killed outside of L2EffectZone, check your zone coords! X:" + npc.getX() + " Y:" + npc.getY() + " Z:" + npc.getZ());
 			return null;
 		}
-		int skillId = getSkillIdByNpcId(npc.getNpcId());
+		int skillId = getSkillIdByNpcId(npc.getId());
 		int skillLevel = zone.getSkillLevel(skillId);
 		zone.addSkill(skillId, skillLevel - 1);
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	private void spawnEyes()
-	{
-		for (Location loc : EYE_SPAWNS)
-		{
-			addSpawn(EYE_IDS[getRandom(EYE_IDS.length)], loc, false, 0);
-		}
 	}
 	
 	private class RespawnNewEye implements Runnable
@@ -209,8 +205,8 @@ public class DenOfEvil extends AbstractNpcAI
 				}
 				if (character.isPlayable())
 				{
-					L2Skill skill = SkillTable.getInstance().getInfo(6149, 1);
-					skill.getEffects(character, character); // apply effect
+					Skill skill = SkillData.getInstance().getSkill(6149, 1);
+					skill.applyEffects(character, character);
 				}
 				else
 				{
@@ -220,7 +216,7 @@ public class DenOfEvil extends AbstractNpcAI
 						{
 							// respawn eye
 							L2Npc npc = (L2Npc) character;
-							if (Util.contains(EYE_IDS, npc.getNpcId()))
+							if (Util.contains(EYE_IDS, npc.getId()))
 							{
 								ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(npc.getLocation()), 15000);
 							}

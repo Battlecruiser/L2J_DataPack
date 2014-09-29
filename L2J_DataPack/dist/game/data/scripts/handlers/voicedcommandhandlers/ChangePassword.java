@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -99,7 +99,7 @@ public class ChangePassword implements IVoicedCommandHandler
 			{
 				html = "<html><body><br><br><center><font color=LEVEL>404:</font> File Not Found</center></body></html>";
 			}
-			activeChar.sendPacket(new NpcHtmlMessage(1, html));
+			activeChar.sendPacket(new NpcHtmlMessage(html));
 			return true;
 		}
 		return true;

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -51,9 +51,9 @@ public final class Anais extends AbstractNpcAI
 	private L2Npc _current = null;
 	private int _pot = 0;
 	
-	private Anais(String name, String descr)
+	private Anais()
 	{
-		super(name, descr);
+		super(Anais.class.getSimpleName(), "ai/individual");
 		addAttackId(ANAIS);
 		addKillId(GRAIL_WARD);
 		
@@ -120,7 +120,7 @@ public final class Anais extends AbstractNpcAI
 			case "GUARD_ATTACK":
 				if (_nextTarget != null)
 				{
-					final double distance = Math.sqrt(npc.getPlanDistanceSq(_nextTarget.getX(), _nextTarget.getY()));
+					final double distance = npc.calculateDistance(_nextTarget, false, false);
 					if (distance < 100)
 					{
 						npc.doCast(DIVINE_NOVA.getSkill());
@@ -174,6 +174,7 @@ public final class Anais extends AbstractNpcAI
 	{
 		npc.doCast(DIVINE_NOVA.getSkill());
 		cancelQuestTimer("GUARD_ATTACK", npc, _nextTarget);
+		cancelQuestTimer("CHECK", npc, null);
 		if (_current != null)
 		{
 			_current.setDisplayEffect(2);
@@ -185,6 +186,6 @@ public final class Anais extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Anais(Anais.class.getSimpleName(), "ai");
+		new Anais();
 	}
 }

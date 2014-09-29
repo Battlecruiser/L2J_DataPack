@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,9 +21,10 @@ package quests.Q00102_SeaOfSporesFever;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -76,9 +77,9 @@ public class Q00102_SeaOfSporesFever extends Quest
 		SENTINELS.put(ALBERIUS, COBENDELLS_MEDICINE1);
 	}
 	
-	public Q00102_SeaOfSporesFever(int questId, String name, String descr)
+	public Q00102_SeaOfSporesFever()
 	{
-		super(questId, name, descr);
+		super(102, Q00102_SeaOfSporesFever.class.getSimpleName(), "Sea of Spores Fever");
 		addStartNpc(ALBERIUS);
 		addTalkId(ALBERIUS, COBENDELL, GARTRANDELL, BERROS, VELTRESS, RAYEN);
 		addKillId(DRYAD, DRYAD_ELDER);
@@ -124,7 +125,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case ALBERIUS:
 				{
@@ -132,7 +133,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 					{
 						case State.CREATED:
 						{
-							htmltext = player.getRace() == Race.Elf ? player.getLevel() >= MIN_LVL ? "30284-07.htm" : "30284-08.htm" : "30284-00.htm";
+							htmltext = player.getRace() == Race.ELF ? player.getLevel() >= MIN_LVL ? "30284-07.htm" : "30284-08.htm" : "30284-00.htm";
 							break;
 						}
 						case State.STARTED:
@@ -275,24 +276,19 @@ public class Q00102_SeaOfSporesFever extends Quest
 				case VELTRESS:
 				case BERROS:
 				{
-					if (st.hasQuestItems(ALBERIUS_LIST, SENTINELS.get(npc.getNpcId())))
+					if (st.hasQuestItems(ALBERIUS_LIST, SENTINELS.get(npc.getId())))
 					{
-						st.takeItems(SENTINELS.get(npc.getNpcId()), -1);
+						st.takeItems(SENTINELS.get(npc.getId()), -1);
 						if (!hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
 						{
 							st.setCond(6);
 						}
-						htmltext = npc.getNpcId() + "-01.html";
+						htmltext = npc.getId() + "-01.html";
 					}
 					break;
 				}
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00102_SeaOfSporesFever(102, Q00102_SeaOfSporesFever.class.getSimpleName(), "Sea of Spores Fever");
 	}
 }

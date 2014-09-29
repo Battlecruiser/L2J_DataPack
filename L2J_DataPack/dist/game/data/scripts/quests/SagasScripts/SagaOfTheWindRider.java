@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Wind Rider (80)
  * @author Emperorc
  */
 public class SagaOfTheWindRider extends SagasSuperClass
 {
-	public static String qn1 = "80_SagaOfTheWindRider";
-	public static int qnu = 80;
-	public static String qna = "Saga of the Wind Rider";
-	
 	public SagaOfTheWindRider()
 	{
-		super(qnu, qn1, qna);
+		super(80, "80_SagaOfTheWindRider", "Saga of the Wind Rider");
 		NPC = new int[]
 		{
 			31603,
@@ -67,7 +65,6 @@ public class SagaOfTheWindRider extends SagasSuperClass
 			27229,
 			27303
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			101
@@ -76,23 +73,11 @@ public class SagaOfTheWindRider extends SagasSuperClass
 		{
 			0x17
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			161719,
-			124314,
-			124355
-		};
-		Y = new int[]
-		{
-			-92823,
-			82155,
-			82155
-		};
-		Z = new int[]
-		{
-			-1893,
-			-2803,
-			-2803
+			new Location(161719, -92823, -1893),
+			new Location(124314, 82155, -2803),
+			new Location(124355, 82155, -2803)
 		};
 		Text = new String[]
 		{

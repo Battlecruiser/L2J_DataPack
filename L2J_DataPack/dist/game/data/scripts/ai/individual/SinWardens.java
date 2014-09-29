@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Manages Sin Wardens disappearing and chat.
  * @author GKR
  */
-public class SinWardens extends AbstractNpcAI
+public final class SinWardens extends AbstractNpcAI
 {
 	private static final int[] SIN_WARDEN_MINIONS =
 	{
@@ -56,9 +56,9 @@ public class SinWardens extends AbstractNpcAI
 	
 	private final Map<Integer, Integer> killedMinionsCount = new FastMap<>();
 	
-	private SinWardens(String name, String descr)
+	private SinWardens()
 	{
-		super(name, descr);
+		super(SinWardens.class.getSimpleName(), "ai/individual");
 		addKillId(SIN_WARDEN_MINIONS);
 	}
 	
@@ -75,7 +75,7 @@ public class SinWardens extends AbstractNpcAI
 				
 				if ((killedCount) == 5)
 				{
-					master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getNpcId(), NpcStringId.WE_MIGHT_NEED_NEW_SLAVES_ILL_BE_BACK_SOON_SO_WAIT));
+					master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getId(), NpcStringId.WE_MIGHT_NEED_NEW_SLAVES_ILL_BE_BACK_SOON_SO_WAIT));
 					master.doDie(killer);
 					killedMinionsCount.remove(master.getObjectId());
 				}
@@ -90,6 +90,6 @@ public class SinWardens extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new SinWardens(SinWardens.class.getSimpleName(), "ai");
+		new SinWardens();
 	}
 }

@@ -2,9 +2,9 @@
 # 2010-02-20
 
 import sys
-from com.l2jserver.gameserver.model.quest				import State
-from com.l2jserver.gameserver.model.quest				import QuestState
-from com.l2jserver.gameserver.model.quest.jython	import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import State
+from com.l2jserver.gameserver.model.quest import QuestState
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "61_LawEnforcement"
 
@@ -42,7 +42,7 @@ class Quest (JQuest) :
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
-		npcId = npc.getNpcId()
+		npcId = npc.getId()
 		cond = st.getInt("cond")
 
 		if npcId == LIANE:

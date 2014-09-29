@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -43,9 +43,9 @@ public class Q00131_BirdInACage extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 78;
 	
-	public Q00131_BirdInACage(int questId, String name, String descr)
+	public Q00131_BirdInACage()
 	{
-		super(questId, name, descr);
+		super(131, Q00131_BirdInACage.class.getSimpleName(), "Bird in a Cage");
 		addStartNpc(KANIS);
 		addTalkId(KANIS, PARME);
 		registerQuestItems(ECHO_CRYSTAL_OF_FREE_THOUGHT, PARMES_LETTER);
@@ -147,7 +147,7 @@ public class Q00131_BirdInACage extends Quest
 				}
 				break;
 			}
-			case "32292-04.html":
+			case "32271-04.html":
 			{
 				if (st.isCond(3))
 				{
@@ -182,7 +182,7 @@ public class Q00131_BirdInACage extends Quest
 			}
 			case State.CREATED:
 			{
-				if (npc.getNpcId() == KANIS)
+				if (npc.getId() == KANIS)
 				{
 					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32264-01.htm" : "32264-02.html";
 				}
@@ -190,7 +190,7 @@ public class Q00131_BirdInACage extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == KANIS)
+				if (npc.getId() == KANIS)
 				{
 					switch (st.getCond())
 					{
@@ -221,7 +221,7 @@ public class Q00131_BirdInACage extends Quest
 						}
 					}
 				}
-				else if (npc.getNpcId() == PARME)
+				else if (npc.getId() == PARME)
 				{
 					if (st.getCond() < 3)
 					{
@@ -236,10 +236,5 @@ public class Q00131_BirdInACage extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00131_BirdInACage(131, Q00131_BirdInACage.class.getSimpleName(), "Bird in a Cage");
 	}
 }

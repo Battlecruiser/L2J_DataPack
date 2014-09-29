@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,15 +21,17 @@ package quests.Q00104_SpiritOfMirrors;
 import java.util.HashMap;
 import java.util.Map;
 
+import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
+
+import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
  * Spirit of Mirrors (104)
@@ -56,9 +58,6 @@ public final class Q00104_SpiritOfMirrors extends Quest
 		MONSTERS.put(27005, SPIRITBOUND_WAND3); // Spirit Of Mirrors
 	}
 	// Rewards
-	private static final int SOULSHOT_NO_GRADE = 1835;
-	private static final int SPIRITSHOT_NO_GRADE = 2509;
-	private static final int SPIRITSHOT = 5790;
 	private static final ItemHolder[] REWARDS =
 	{
 		new ItemHolder(1060, 100), // Lesser Healing Potion
@@ -72,9 +71,9 @@ public final class Q00104_SpiritOfMirrors extends Quest
 	// Misc
 	private static final int MIN_LVL = 10;
 	
-	private Q00104_SpiritOfMirrors(int questId, String name, String descr)
+	public Q00104_SpiritOfMirrors()
 	{
-		super(questId, name, descr);
+		super(104, Q00104_SpiritOfMirrors.class.getSimpleName(), "Spirit of Mirrors");
 		addStartNpc(GALLINT);
 		addTalkId(ARNOLD, GALLINT, JOHNSTONE, KENYOS);
 		addKillId(MONSTERS.keySet());
@@ -98,10 +97,10 @@ public final class Q00104_SpiritOfMirrors extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && (st.isCond(1) || st.isCond(2)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == GALLINTS_OAK_WAND) && !st.hasQuestItems(MONSTERS.get(npc.getNpcId())))
+		if ((st != null) && (st.isCond(1) || st.isCond(2)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == GALLINTS_OAK_WAND) && !st.hasQuestItems(MONSTERS.get(npc.getId())))
 		{
 			st.takeItems(GALLINTS_OAK_WAND, 1);
-			st.giveItems(MONSTERS.get(npc.getNpcId()), 1);
+			st.giveItems(MONSTERS.get(npc.getId()), 1);
 			if (st.hasQuestItems(SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3))
 			{
 				st.setCond(3, true);
@@ -121,7 +120,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case GALLINT:
 				{
@@ -129,35 +128,21 @@ public final class Q00104_SpiritOfMirrors extends Quest
 					{
 						case State.CREATED:
 						{
-							htmltext = (player.getRace() == Race.Human) ? (player.getLevel() >= MIN_LVL) ? "30017-03.htm" : "30017-02.htm" : "30017-01.htm";
+							htmltext = (player.getRace() == Race.HUMAN) ? (player.getLevel() >= MIN_LVL) ? "30017-03.htm" : "30017-02.htm" : "30017-01.htm";
 							break;
 						}
 						case State.STARTED:
 						{
 							if (st.isCond(3) && st.hasQuestItems(SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3))
 							{
-								if ((player.getLevel() < 25) && player.isMageClass())
-								{
-									st.rewardItems(SPIRITSHOT, 3000);
-									st.playTutorialVoice("tutorial_voice_027");
-								}
+								Q00281_HeadForTheHills.giveNewbieReward(player);
 								for (ItemHolder reward : REWARDS)
 								{
 									st.giveItems(reward);
 								}
-								if (player.isMageClass())
-								{
-									st.giveItems(SPIRITSHOT_NO_GRADE, 500);
-								}
-								else
-								{
-									st.giveItems(SOULSHOT_NO_GRADE, 1000);
-								}
 								st.addExpAndSp(39750, 3407);
 								st.giveAdena(16866, true);
 								st.exitQuest(false, true);
-								// TODO: Newbie Guide
-								showOnScreenMsg(player, NpcStringId.ACQUISITION_OF_RACE_SPECIFIC_WEAPON_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
 								htmltext = "30017-06.html";
 							}
 							else
@@ -189,16 +174,11 @@ public final class Q00104_SpiritOfMirrors extends Quest
 							st.setCond(2, true);
 						}
 					}
-					htmltext = npc.getNpcId() + "-01.html";
+					htmltext = npc.getId() + "-01.html";
 					break;
 				}
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00104_SpiritOfMirrors(104, Q00104_SpiritOfMirrors.class.getSimpleName(), "Spirit of Mirrors");
 	}
 }

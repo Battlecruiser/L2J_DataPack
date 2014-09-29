@@ -1,40 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3001" levels="1" name="int_1">
+		<set name="magicLvl" val="0" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="3002" levels="1" name="int_2">
+		<set name="magicLvl" val="0" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="3003" levels="1" name="str_2">
+		<set name="magicLvl" val="0" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="3004" levels="1" name="maxmp_5">
+		<set name="magicLvl" val="0" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="3005" levels="1" name="Bleed">
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="50" />
+		<set name="basicProperty" val="CON" />
+		<set name="icon" val="icon.skill0223" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="66" abnormalLvl="5" abnormalType="bleeding" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="44" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3006" levels="1" name="Equip Set Items">
+		<set name="icon" val="icon.skill0042" />
+		<set name="magicLvl" val="0" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
@@ -42,67 +50,85 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#accCombat"> 6.88 6.07 5.72 5.37 5.02 4.68 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
+		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="#accCombat" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="#accCombat" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3008" levels="6" name="Special Ability: Guidance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#accCombat"> 5.42 5.12 4.82 4.53 4.24 3.95 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
+		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="#accCombat" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="#accCombat" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3009" levels="8" name="Special Ability: Evasion">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 80 80 </table>
 		<table name="#rEvas"> 2.95 2.82 2.68 2.55 2.41 2.28 7.5 5.31 </table>
+		<set name="icon" val="icon.skill0198" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#rEvas" />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="#rEvas" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3010" levels="6" name="Special Ability: Focus">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#rCrit"> 86.7 82.2 77.8 73.3 68.9 64.5 </table>
+		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="#rCrit" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="#rCrit" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3011" levels="6" name="Special Ability: Focus">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#rCrit"> 90.5 85.9 81.2 76.6 71.9 67.3 </table>
+		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="#rCrit" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="#rCrit" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3012" levels="6" name="Special Ability: Anger">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 </table>
+		<set name="icon" val="icon.skill1062" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
-			<mul order="0x30" stat="maxHp" val="0.85" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+				<mul order="0x30" stat="maxHp" val="0.85" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3013" levels="5" name="Special Ability: Health">
@@ -110,172 +136,205 @@
 		<table name="#atkCountMax"> 0 4 0 4 0 </table>
 		<table name="#magicLvl"> 1 1 64 64 70 </table>
 		<table name="#pvpBonus"> 1 1 1.05 1.05 1.05 </table>
+		<set name="icon" val="icon.skill0211" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxHp" val="1.25" />
-			<add order="0x40" stat="atkCountMax" val="#atkCountMax" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxHp" val="1.25" />
+				<add order="0x40" stat="atkCountMax" val="#atkCountMax" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3014" levels="3" name="Special Ability: Mana Up">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 1 64 70 </table>
 		<table name="#pvpBonus"> 1 1.05 1.05 </table>
+		<set name="icon" val="icon.skill0213" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.3" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxMp" val="1.3" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3016" levels="6" name="Special Ability: Critical Stun">
 		<!-- Confirmed CT2.5 -->
+		<table name="#activateRates"> 34 32 31 29 27 25 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
+		<set name="activateRate" val="#activateRates" />
+		<set name="basicProperty" val="CON" />
+		<set name="effectPoint" val="-92" />
+		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="3018" levels="6" name="Special Ability: Back Blow">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#rCrit"> 0.71 0.67 0.63 0.6 0.56 0.53 </table>
+		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<basemul order="0x30" stat="rCrit" val="#rCrit">
-				<player behind="true" />
-			</basemul>
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="#rCrit">
+					<player behind="true" />
+				</basemul>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3019" levels="6" name="Special Ability: Back Blow">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#rCrit"> 0.5 0.47 0.45 0.42 0.4 0.37 </table>
+		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<basemul order="0x30" stat="rCrit" val="#rCrit">
-				<player behind="true" />
-			</basemul>
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="#rCrit">
+					<player behind="true" />
+				</basemul>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3020" levels="6" name="Special Ability: Critical Bleed">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
-		<table name="#dot"> 384 384 570 570 570 768 </table>
+		<table name="#activateRates"> 17 17 14 14 14 12 </table>
+		<table name="#dot"> 128 128 190 190 190 256 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="#activateRates" />
+		<set name="basicProperty" val="CON" />
+		<set name="icon" val="icon.skill0223" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="bleeding" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3021" levels="6" name="Special Ability: Critical Bleed">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 129 129 192 192 195 264 </table>
+		<table name="#activateRates"> 51 51 42 42 41 35 </table>
+		<table name="#dot"> 43 43 64 64 65 88 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="#activateRates" />
+		<set name="basicProperty" val="CON" />
+		<set name="icon" val="icon.skill0223" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="5" abnormalType="bleeding" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3022" levels="6" name="Special Ability: Critical Drain">
 		<!-- Confirmed CT2.5 -->
-		<table name="#absorbPart"> 21 23 25 28 31 35 </table>
+		<table name="#absorbPart"> 0.21 0.23 0.25 0.28 0.31 0.35 </table>
+		<table name="#effectPoints"> -209 -214 -219 -224 -229 -234 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#power"> 9.26 9.33 9.31 9.19 8.97 8.65 </table>
-		<set name="absorbPart" val="#absorbPart" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
+		<set name="icon" val="icon.skill0070" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HpDrain">
+				<param power="#absorbPart" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3023" levels="6" name="Special Ability: Critical Damage">
 		<!-- Confirmed CT2.5 -->
 		<table name="#cAtkAdd"> 174.78 194.1 213.12 231.29 247.98 262.57 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
+		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3024" levels="6" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
-		<table name="#dot"> 573 573 873 873 873 1209 </table>
+		<table name="#activateRates"> 15 15 12 12 12 10 </table>
+		<table name="#dot"> 191 191 291 291 291 403 </table>
+		<table name="#effectPoints"> -121 -203 -285 -418 -495 -582 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
+		<set name="activateRate" val="#activateRates" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
+		<set name="icon" val="icon.skill1168" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="12000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="poison" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3025" levels="6" name="Special Ability: Critical Anger">
@@ -285,18 +344,20 @@
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="3026" levels="6" name="Special Ability: Critical Anger">
 		<!-- Confirmed CT2.5 -->
 		<table name="#cAtkAdd"> 248.56 298.04 352.73 411.98 474.82 539.9 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
+		<set name="icon" val="icon.skill1062" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3027" levels="7" name="Special Ability: Rsk. Focus">
@@ -304,94 +365,115 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 80 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 </table>
 		<table name="#rCrit"> 138.7 130.9 123.1 115.4 107.7 99.9 164 </table>
+		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="#rCrit">
-				<player hp="60" />
-			</add>
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="#rCrit">
+					<player hp="60" />
+				</add>
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3028" levels="6" name="Special Ability: Rsk. Evasion">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#rEvas"> 7.63 7.29 6.95 6.6 6.24 5.87 </table>
+		<set name="icon" val="icon.skill0198" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#rEvas">
-				<player hp="60" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="#rEvas">
+					<player hp="60" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3029" levels="6" name="Special Ability: Rsk. Evasion">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#rEvas"> 4.44 4.24 4.04 3.84 3.63 3.41 </table>
+		<set name="icon" val="icon.skill0198" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#rEvas">
-				<player hp="60" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="#rEvas">
+					<player hp="60" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3030" levels="6" name="Special Ability: Rsk. Evasion">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#rEvas"> 7.63 7.29 6.95 6.6 6.24 5.87 </table>
+		<set name="icon" val="icon.skill0198" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#rEvas">
-				<player hp="60" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="#rEvas">
+					<player hp="60" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3031" levels="6" name="Special Ability: Rsk. Evasion">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#rEvas"> 7.63 7.29 6.95 6.6 6.24 5.87 </table>
+		<set name="icon" val="icon.skill0198" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#rEvas">
-				<player hp="60" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="#rEvas">
+					<player hp="60" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3032" levels="6" name="Special Ability: Rsk. Haste">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#pAtkSpd"> 1.13 1.12 1.12 1.11 1.1 1.09 </table>
+		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
-				<player hp="60" />
-			</mul>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
+					<player hp="60" />
+				</mul>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3033" levels="6" name="Special Ability: Rsk. Haste">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#pAtkSpd"> 1.13 1.12 1.12 1.11 1.1 1.09 </table>
+		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
-				<player hp="60" />
-			</mul>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
+					<player hp="60" />
+				</mul>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3034" levels="7" name="Special Ability: Rsk. Haste">
@@ -399,124 +481,153 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 80 </table>
 		<table name="#pAtkSpd"> 1.13 1.12 1.12 1.11 1.1 1.09 1.09 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 </table>
+		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
-				<player hp="60" />
-			</mul>
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
+					<player hp="60" />
+				</mul>
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3035" levels="6" name="Special Ability: Mighty Mortal">
 		<!-- Confirmed CT2.5 -->
 		<table name="#blowRate"> 1.5 1.48 1.46 1.44 1.42 1.4 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
+		<set name="icon" val="icon.skill0016" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="blowRate" val="#blowRate" />
+			<effect name="Buff">
+				<mul order="0x30" stat="blowRate" val="#blowRate" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3036" levels="6" name="Special Ability: Haste">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
+		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3037" levels="6" name="Special Ability: Haste">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
+		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3038" levels="6" name="Special Ability: Haste">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
+		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3039" levels="7" name="Special Ability: Critical Drain">
 		<!-- Confirmed CT2.5 -->
-		<table name="#absorbPart"> 33 31 30 28 26 24 24 </table>
+		<table name="#absorbPart"> 0.33 0.31 0.3 0.28 0.26 0.24 0.24 </table>
+		<table name="#effectPoints"> -239 -243 -248 -253 -257 -262 -266 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 70 </table>
 		<table name="#power"> 6.85 7.96 9.26 10.8 12.62 14.82 14.82 </table>
-		<set name="absorbPart" val="#absorbPart" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HpDrain">
+				<param power="#absorbPart" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3040" levels="6" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
-		<table name="#dot"> 504 504 747 747 747 1008 </table>
+		<table name="#activateRates"> 17 17 14 14 14 12 </table>
+		<table name="#dot"> 168 168 249 249 249 336 </table>
+		<table name="#effectPoints"> -121 -203 -285 -418 -495 -582 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
+		<set name="activateRate" val="#activateRates" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
+		<set name="icon" val="icon.skill1168" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="poison" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3041" levels="6" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
-		<table name="#dot"> 951 951 1494 1494 1494 2013 </table>
+		<table name="#activateRates"> 9 9 7 7 7 6 </table>
+		<table name="#dot"> 317 317 498 498 498 671 </table>
+		<table name="#effectPoints"> -121 -203 -285 -418 -495 -582 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
+		<set name="activateRate" val="#activateRates" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
+		<set name="icon" val="icon.skill1168" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="poison" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3042" levels="20" name="Special Ability: Critical Damage">
@@ -524,25 +635,31 @@
 		<table name="#cAtkAdd"> 81.6 61.4 84.14 75.49 66.77 58.01 49.42 84.11 166.26 146.88 127 107.01 133.97 124.79 275.26 267.13 257.98 297.21 331.38 361.06 </table>
 		<table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
+		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3043" levels="6" name="Special Ability: Critical Damage">
 		<!-- Confirmed CT2.5 -->
 		<table name="#cAtkAdd"> 106.45 118.22 129.81 140.87 151.04 159.93 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
+		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3044" levels="20" name="Special Ability: Focus">
@@ -550,14 +667,17 @@
 		<table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
 		<table name="#rCrit"> 53.6 38.5 50.4 43.2 36.5 30.4 24.8 40.4 76.6 65 54 43.7 52.6 47.2 98.7 92.4 86.2 96 103.5 109.2 </table>
+		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="#rCrit" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="#rCrit" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3045" levels="20" name="Special Ability: Haste">
@@ -565,14 +685,17 @@
 		<table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
 		<table name="#pAtkSpd"> 1.05 1.04 1.05 1.04 1.03 1.03 1.02 1.04 1.07 1.06 1.05 1.04 1.05 1.04 1.09 1.08 1.08 1.09 1.09 1.1 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
+		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3046" levels="20" name="Special Ability: Guidance">
@@ -580,82 +703,99 @@
 		<table name="#accCombat"> 3.9 2.8 3.7 3.1 2.6 2.2 1.8 2.9 5.7 4.8 3.9 3.2 3.8 3.4 6.5 6.5 6.5 6.5 6.5 6.5 </table>
 		<table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
+		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="#accCombat" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="#accCombat" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3047" levels="3" name="Special Ability: Acumen">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 64 70 </table>
 		<table name="#pvpBonus"> 1 1.05 1.05 </table>
+		<set name="icon" val="icon.skill1085" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3048" levels="3" name="Special Ability: Conversion">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 64 70 </table>
 		<table name="#pvpBonus"> 1 1.05 1.05 </table>
+		<set name="icon" val="icon.skill1048" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.6" />
-			<mul order="0x30" stat="maxHp" val="0.6" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxMp" val="1.6" />
+				<mul order="0x30" stat="maxHp" val="0.6" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3049" levels="2" name="Special Ability: Increase Critical">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="8.39" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="NONE" />
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="3050" levels="2" name="Special Ability: Focus">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 70 </table>
+		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="61.6" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="61.6" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3051" levels="2" name="Special Ability: Focus">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 67 70 </table>
+		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="67.3" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="67.3" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3052" levels="2" name="Special Ability: Critical Bleed">
@@ -663,19 +803,21 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="42" />
+		<set name="basicProperty" val="CON" />
+		<set name="icon" val="icon.skill0223" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="222" abnormalLvl="7" abnormalType="bleeding" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="74" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3053" levels="2" name="Special Ability: Critical Bleed">
@@ -683,19 +825,20 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="35" />
+		<set name="basicProperty" val="CON" />
+		<set name="icon" val="icon.skill0223" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="264" abnormalLvl="7" abnormalType="bleeding" abnormalVisualEffect="bleed">
+			<effect name="DamOverTime" ticks="3">
+				<param power="88" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -705,19 +848,20 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="12" />
+		<set name="basicProperty" val="CON" />
+		<set name="icon" val="icon.skill0223" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="768" abnormalLvl="7" abnormalType="bleeding" abnormalVisualEffect="bleed">
+			<effect name="DamOverTime" ticks="3">
+				<param power="256" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -727,120 +871,136 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="24" />
+		<set name="basicProperty" val="CON" />
+		<set name="icon" val="icon.skill0223" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="384" abnormalLvl="7" abnormalType="bleeding" abnormalVisualEffect="bleed">
+			<effect name="DamOverTime" ticks="3">
+				<param power="128" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="3056" levels="3" name="Special Ability: Rsk. Haste">
 		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 64 64 67 </table>
+		<table name="#magicLvl"> 64 64 70 </table>
 		<table name="#pvpBonus"> 1 1.05 1.05 </table>
+		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.11">
-				<player hp="60" />
-			</mul>
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.11">
+					<player hp="60" />
+				</mul>
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3057" levels="4" name="Special Ability: Anger">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 70 80 </table>
 		<table name="#pAtk"> 31.3 32.05 32.05 78.33 </table>
+		<set name="icon" val="icon.skill1062" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
-			<mul order="0x30" stat="maxHp" val="0.85" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+				<mul order="0x30" stat="maxHp" val="0.85" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3058" levels="2" name="Special Ability: Anger">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<table name="#pAtk"> 38.09 39 </table>
+		<set name="icon" val="icon.skill1062" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
-			<mul order="0x30" stat="maxHp" val="0.85" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+				<mul order="0x30" stat="maxHp" val="0.85" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3059" levels="2" name="Special Ability: Critical Drain">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<table name="#power"> 18 19 </table>
-		<set name="absorbPart" val="35" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HpDrain">
+				<param power="0.65" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3060" levels="2" name="Special Ability: Critical Drain">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<table name="#power"> 10 11 </table>
-		<set name="absorbPart" val="35" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HpDrain">
+				<param power="0.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3061" levels="3" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 1209 1209 1317 </table>
+		<table name="#dot"> 403 403 439 </table>
 		<table name="#magicLvl"> 64 67 70 </table>
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
+		<set name="activateRate" val="10" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="icon" val="icon.skill1168" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="7" abnormalType="poison" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="#dot" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3062" levels="2" name="Special Ability: Critical Poison">
@@ -848,88 +1008,105 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
+		<set name="activateRate" val="18" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="icon" val="icon.skill1168" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="672" abnormalLvl="7" abnormalType="poison" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3">
+				<param power="224" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3063" levels="2" name="Special Ability: Back Blow">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 70 </table>
+		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<basemul order="0x30" stat="rCrit" val="0.37">
-				<player behind="true" />
-			</basemul>
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="0.37">
+					<player behind="true" />
+				</basemul>
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3064" levels="1" name="Special Ability: Guidance">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="3.95" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="3.95" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3065" levels="1" name="Special Ability: Guidance">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="5.41" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="5.41" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3066" levels="4" name="Special Ability: Critical Damage">
 		<!-- Confirmed CT2.5 -->
 		<table name="#cAtkAdd"> 180.94 200.79 200.79 559 </table>
 		<table name="#magicLvl"> 64 67 70 80 </table>
+		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3067" levels="2" name="Special Ability: Critical Damage">
 		<!-- Confirmed CT2.5 -->
 		<table name="#cAtkAdd"> 297.68 326.28 </table>
 		<table name="#magicLvl"> 64 67 </table>
+		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3068" levels="3" name="Special Ability: Haste">
@@ -937,89 +1114,106 @@
 		<table name="#magicLvl"> 64 64 70 </table>
 		<table name="#pAtkSpd"> 1.06 1.06 1.06 </table>
 		<table name="#pvpBonus"> 1 1.05 1.05 </table>
+		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3069" levels="1" name="Special Ability: Rsk. Evasion">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skill0198" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="6.8">
-				<player hp="60" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="6.8">
+					<player hp="60" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3070" levels="4" name="Special Ability: Critical Stun">
 		<!-- Confirmed CT2.5 -->
+		<table name="#activateRates"> 25 25 25 48 </table>
 		<table name="#magicLvl"> 64 67 70 80 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
+		<set name="activateRate" val="#activateRates" />
+		<set name="basicProperty" val="CON" />
+		<set name="effectPoint" val="-100" />
+		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="3071" levels="2" name="Special Ability: Rsk. Focus">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvpBonus"> 1 1.05 </table>
+		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="130">
-				<player hp="60" />
-			</add>
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="130">
+					<player hp="60" />
+				</add>
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3072" levels="2" name="Special Ability: Empower">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<table name="#mAtk"> 30.76 31.38 </table>
+		<set name="icon" val="icon.skill1059" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3073" levels="2" name="Special Ability: Magic Power">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<table name="#mAtk"> 153.28 167.02 </table>
+		<set name="icon" val="icon.skill1059" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="1.15" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.15" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3074" levels="2" name="Special Ability: Magic Silence">
@@ -1027,22 +1221,23 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="silence" />
+		<set name="abnormalType" val="SILENCE" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
+		<set name="icon" val="icon.skill1064" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MUTE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence" />
+			<effect name="Mute" />
 		</for>
 	</skill>
 	<skill id="3075" levels="2" name="Special Ability: Magic Paralyze">
@@ -1050,48 +1245,59 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="paralyze" />
+		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="20" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
+		<set name="icon" val="icon.skill1170" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" chanceType="ON_EXIT" triggeredId="6126">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6126" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="3076" levels="6" name="Special Ability: Empower">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#mAtk"> 20.36 22.51 24.59 26.53 28.27 29.7 </table>
+		<set name="icon" val="icon.skill1059" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3077" levels="6" name="Special Ability: Magic Power">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#mAtk"> 75.86 87.22 99.39 112.26 125.66 139.41 </table>
+		<set name="icon" val="icon.skill1059" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="1.15" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3078" levels="6" name="Special Ability: Magic Silence">
@@ -1099,22 +1305,23 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="silence" />
+		<set name="abnormalType" val="SILENCE" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
+		<set name="icon" val="icon.skill1064" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MUTE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence" />
+			<effect name="Mute" />
 		</for>
 	</skill>
 	<skill id="3079" levels="6" name="Special Ability: Magic Paralyze">
@@ -1122,398 +1329,520 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="paralyze" />
+		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="20" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
+		<set name="icon" val="icon.skill1170" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="pvp" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" chanceType="ON_EXIT" triggeredId="6126">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6126" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="3080" levels="10" name="Item Skill: Aggression">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -438 -467 -495 -523 -549 -574 -597 -617 -635 -659 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#power"> 438 467 495 523 549 574 597 617 635 659 </table>
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="isDebuff" val="true" />
+		<set name="castRange" val="40" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="AGGDAMAGE" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="TargetMe" abnormalTime="3" val="0" />
+			<effect name="TargetMeProbability">
+				<param chance="40" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3081" levels="10" name="Item Skill: Charm">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
-		<set name="trait" val="DERANGEMENT" />
-		<set name="triggeredId" val="5165" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
-	</skill>
-	<skill id="3082" levels="10" name="Item Skill: Mana Burn">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<table name="#power"> -219 -234 -248 -262 -275 -287 -299 -309 -318 -330 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="30000" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="AddHate">
+				<param power="#power" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3082" levels="10" name="Item Skill: Mana Burn">
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="MANADAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttackMp" />
+		</for>
 	</skill>
 	<skill id="3083" levels="10" name="Item Skill: Slow">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="speed_down" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="5166" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3084" levels="10" name="Item Skill: Winter">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="attack_time_up" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="5167" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="pAtkSpd" val="0.77" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3085" levels="10" name="Item Skill: Stun">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="stun" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="CON" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
-		<set name="triggeredId" val="5168" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Stun" />
+		</for>
 	</skill>
 	<skill id="3086" levels="10" name="Item Skill: Hold">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="root_magically" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
-		<set name="triggeredId" val="5169" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3087" levels="10" name="Item Skill: Sleep">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="sleep" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="abnormalType" val="SLEEP" />
+		<set name="abnormalVisualEffect" val="SLEEP" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SLEEP" />
-		<set name="triggeredId" val="5170" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Sleep" />
+			<effect name="DefenceTrait">
+				<param SLEEP="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3088" levels="10" name="Item Skill: Paralyze">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="paralyze" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
-		<set name="triggeredId" val="5171" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="pAtkSpd" val="0.5" />
+				<mul order="0x30" stat="runSpd" val="0.5" />
+				<mul order="0x30" stat="mAtkSpd" val="0.5" />
+			</effect>
+		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6126" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="3089" levels="10" name="Item Skill: Medusa">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="turn_stone" />
+		<set name="abnormalType" val="TURN_STONE" />
+		<set name="abnormalVisualEffect" val="FLESH_STONE" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
+		<set name="icon" val="icon.skill3080" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
-		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_stone" />
+			<effect name="Petrification" />
 		</for>
 	</skill>
 	<skill id="3090" levels="10" name="Item Skill: Fear">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="turn_flee" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<set name="triggeredId" val="5173" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Fear" />
+		</for>
 	</skill>
 	<skill id="3091" levels="10" name="Item Skill: Poison">
+		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<table name="#dot"> 41 41 50 50 50 58 58 58 63 63 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="poison" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="abnormalType" val="POISON" />
+		<set name="abnormalVisualEffect" val="DOT_POISON" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="CON" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
-		<set name="triggeredId" val="5174" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3092" levels="10" name="Item Skill: Bleed">
+		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<table name="#dot"> 44 44 54 54 54 62 62 62 67 67 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="CON" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
-		<set name="triggeredId" val="5175" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3093" levels="10" name="Item Skill: Silence">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="silence" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="abnormalType" val="SILENCE" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<set name="triggeredId" val="5176" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Mute" />
+		</for>
 	</skill>
 	<skill id="3094" levels="10" name="Item Skill: Doom">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="silence_all" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_HIT" />
+		<set name="abnormalType" val="SILENCE_ALL" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<set name="triggeredId" val="5177" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+		</for>
 	</skill>
 	<skill id="3095" levels="10" name="Item Skill: Mana Burn">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1500" />
+		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="MANADAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttackMp" />
+		</for>
 	</skill>
 	<skill id="3096" levels="10" name="Item Skill: Slow">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="speed_down" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1500" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="5166" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3097" levels="10" name="Item Skill: Winter">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="attack_time_up" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1500" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="5167" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="pAtkSpd" val="0.77" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3098" levels="10" name="Item Skill: Stun">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="stun" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="CON" />
+		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1500" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
-		<set name="triggeredId" val="5168" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Stun" />
+		</for>
 	</skill>
 	<skill id="3099" levels="10" name="Item Skill: Hold">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="root_magically" />
-		<set name="activationChance" val="#chance" />
-		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1500" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="HOLD" />
-		<set name="triggeredId" val="5169" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
+		<for>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
+		</for>
 	</skill>
 </list>

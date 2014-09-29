@@ -6,7 +6,7 @@ import sys
 from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 373,"SupplierOfReagents","Supplier of Reagents"
 qn = "373_SupplierOfReagents"
@@ -224,7 +224,7 @@ class Quest (JQuest) :
              if item :
                 chance,qty=TEMPERATURE[temp]
                 if item == MIMIRS_ELIXIR :
-                   mimirs=st.getPlayer().getQuestState("235_MimirsElixir")
+                   mimirs=st.getPlayer().getQuestState("Q00235_MimirsElixir")
                    if mimirs :
                       chance = 100
                       qty = 1
@@ -254,7 +254,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId == WESLEY :
       if id == State.CREATED :
@@ -273,7 +273,7 @@ class Quest (JQuest) :
      partyMember = self.getRandomPartyMemberState(player, State.STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      # The quest rates increase the rates of dropping "something", but only one
      # entry will be chosen to drop per kill.  In order to not overshadow entries
      # that appear later in the list, first check with the sum of all entries to

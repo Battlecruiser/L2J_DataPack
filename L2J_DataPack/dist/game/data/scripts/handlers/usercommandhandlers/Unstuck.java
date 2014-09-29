@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,12 +22,13 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.handler.IUserCommandHandler;
-import com.l2jserver.gameserver.instancemanager.MapRegionManager;
+import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
@@ -52,17 +53,29 @@ public class Unstuck implements IUserCommandHandler
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
+		else if (activeChar.isJailed())
+		{
+			activeChar.sendMessage("You cannot use this function while you are jailed.");
+			return false;
+		}
 		
 		int unstuckTimer = (activeChar.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
 		
-		if (activeChar.isCastingNow() || activeChar.isMovementDisabled() || activeChar.isMuted() || activeChar.isAlikeDead() || activeChar.isInOlympiadMode() || activeChar.inObserverMode() || activeChar.isCombatFlagEquipped())
+		if (activeChar.isInOlympiadMode())
+		{
+			activeChar.sendPacket(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			return false;
+		}
+		
+		if (activeChar.isCastingNow() || activeChar.isMovementDisabled() || activeChar.isMuted() || activeChar.isAlikeDead() || activeChar.inObserverMode() || activeChar.isCombatFlagEquipped())
 		{
 			return false;
 		}
+		
 		activeChar.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 		
-		L2Skill escape = SkillTable.getInstance().getInfo(2099, 1); // 5 minutes escape
-		L2Skill GM_escape = SkillTable.getInstance().getInfo(2100, 1); // 1 second escape
+		Skill escape = SkillData.getInstance().getSkill(2099, 1); // 5 minutes escape
+		Skill GM_escape = SkillData.getInstance().getSkill(2100, 1); // 1 second escape
 		if (activeChar.getAccessLevel().isGm())
 		{
 			if (GM_escape != null)
@@ -126,7 +139,7 @@ public class Unstuck implements IUserCommandHandler
 			_activeChar.enableAllSkills();
 			_activeChar.setIsCastingNow(false);
 			_activeChar.setInstanceId(0);
-			_activeChar.teleToLocation(MapRegionManager.TeleportWhereType.Town);
+			_activeChar.teleToLocation(TeleportWhereType.TOWN);
 		}
 	}
 	

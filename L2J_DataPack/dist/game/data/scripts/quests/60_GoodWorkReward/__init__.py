@@ -6,7 +6,7 @@ import sys
 from com.l2jserver.gameserver.ai import CtrlIntention
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 from com.l2jserver.gameserver.network.serverpackets import NpcSay
 
 qn = "60_GoodWorkReward"
@@ -92,7 +92,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_middle")
     elif event == "32487-02.htm" and self.isNpcSpawned == 0:
       npc = st.addSpawn(27340,72590,148100,-3312,1800000)
-      npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),player.getName()+"! I must kill you. Blame your own curiosity."))
+      npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getId(),player.getName()+"! I must kill you. Blame your own curiosity."))
       npc.setRunning()
       npc.addDamageHate(st.getPlayer(),0,999)
       npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st.getPlayer())
@@ -152,7 +152,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    cond = st.getInt("cond")
    id = st.getState()
    if id == State.COMPLETED :
@@ -214,13 +214,13 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return
    if st.getState() != State.STARTED : return
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    cond = st.getInt("cond")
    if npcId == 27340 and cond == 1:
      string = "You are strong. This was a mistake."
      if self.getRandom(1):
        string = "You have good luck. I shall return."
-     npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),string))
+     npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getId(),string))
      st.giveItems(10867,1)
      st.set("cond","2")
      st.playSound("ItemSound.quest_middle")

@@ -3,7 +3,7 @@
 import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "422_RepentYourSins"
 
@@ -31,7 +31,7 @@ TRISALIM_TARANTULA = 20561
 def findPetLvl (player, itemid) :
     pet = player.getSummon()
     if pet:
-        if pet.getNpcId() == 12564 :
+        if pet.getId() == 12564 :
             level = pet.getStat().getLevel()
         else :
             item = player.getInventory().getItemByItemId(itemid)
@@ -87,7 +87,7 @@ class Quest (JQuest) :
         olevel = st.getInt("level")
         pet = player.getSummon()
         if pet:
-            if pet.getNpcId() == 12564 :
+            if pet.getId() == 12564 :
                 htmltext = "30981-16.htm"
         else :
             if level > olevel :
@@ -131,7 +131,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
    condition = st.getInt("cond")
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId == 30981 : #Black Judge
        if id == State.CREATED :
@@ -247,7 +247,7 @@ class Quest (JQuest) :
    if not st : return
    if st.getState() != State.STARTED : return
    condition = st.getInt("cond")
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    skulls = st.getQuestItemsCount(SCAVENGER_WERERAT_SKULL)
    tails = st.getQuestItemsCount(TUREK_WARHOUND_TAIL)
    heart = st.getQuestItemsCount(TYRANT_KINGPIN_HEART)

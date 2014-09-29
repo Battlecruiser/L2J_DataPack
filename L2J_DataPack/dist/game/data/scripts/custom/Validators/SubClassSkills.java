@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -24,12 +24,13 @@ import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ClassListData;
+import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -40,148 +41,44 @@ import com.l2jserver.gameserver.util.Util;
 public final class SubClassSkills extends Quest
 {
 	// arrays must be sorted
+	// @formatter:off
 	private static final int[] _allCertSkillIds =
 	{
-		631,
-		632,
-		633,
-		634,
-		637,
-		638,
-		639,
-		640,
-		641,
-		642,
-		643,
-		644,
-		645,
-		646,
-		647,
-		648,
-		650,
-		651,
-		652,
-		653,
-		654,
-		655,
-		656,
-		657,
-		658,
-		659,
-		660,
-		661,
-		662,
-		799,
-		800,
-		801,
-		802,
-		803,
-		804,
-		1489,
-		1490,
-		1491
+		631, 632, 633, 634, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646,
+		647, 648, 650, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 661,
+		662, 799, 800, 801, 802, 803, 804, 1489, 1490, 1491
 	};
 	private static final int[][] _certSkillsByLevel =
 	{
 		{
-			631,
-			632,
-			633,
-			634
+			631, 632, 633, 634
 		},
 		{
-			631,
-			632,
-			633,
-			634
+			631, 632, 633, 634
 		},
 		{
-			637,
-			638,
-			639,
-			640,
-			641,
-			642,
-			643,
-			644,
-			645,
-			646,
-			647,
-			648,
-			650,
-			651,
-			652,
-			653,
-			654,
-			655,
-			799,
-			800,
-			801,
-			802,
-			803,
-			804,
-			1489,
-			1490,
+			637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 650,
+			651, 652, 653, 654, 655, 799, 800, 801, 802, 803, 804, 1489, 1490,
 			1491
 		},
 		{
-			656,
-			657,
-			658,
-			659,
-			660,
-			661,
-			662
+			656, 657, 658, 659, 660, 661, 662
 		}
 	};
 	
 	private static final int[] _allCertItemIds =
 	{
-		10280,
-		10281,
-		10282,
-		10283,
-		10284,
-		10285,
-		10286,
-		10287,
-		10288,
-		10289,
-		10290,
-		10291,
-		10292,
-		10293,
-		10294,
-		10612
+		10280, 10281, 10282, 10283, 10284, 10285, 10286, 10287, 10288, 10289,
+		10290, 10291, 10292, 10293, 10294, 10612
 	};
 	private static final int[][] _certItemsByLevel =
 	{
-		{
-			10280
-		},
-		{
-			10280
-		},
-		{
-			10612,
-			10281,
-			10282,
-			10283,
-			10284,
-			10285,
-			10286,
-			10287
-		},
-		{
-			10288,
-			10289,
-			10290,
-			10291,
-			10292,
-			10293,
-			10294
-		}
+		{ 10280 },
+		{ 10280 },
+		{ 10612, 10281, 10282, 10283, 10284, 10285, 10286, 10287 },
+		{ 10288, 10289, 10290, 10291, 10292, 10293, 10294 }
 	};
+	// @formatter:on
 	
 	private static final String[] VARS =
 	{
@@ -191,9 +88,9 @@ public final class SubClassSkills extends Quest
 		"ClassAbility80-"
 	};
 	
-	public SubClassSkills(int id, String name, String descr)
+	private SubClassSkills()
 	{
-		super(id, name, descr);
+		super(-1, SubClassSkills.class.getSimpleName(), "custom");
 		setOnEnterWorld(true);
 	}
 	
@@ -210,14 +107,14 @@ public final class SubClassSkills extends Quest
 			return null;
 		}
 		
-		final L2Skill[] certSkills = getCertSkills(player);
+		final Skill[] certSkills = getCertSkills(player);
 		if (player.isSubClassActive())
 		{
 			if (certSkills != null)
 			{
-				for (L2Skill s : certSkills)
+				for (Skill s : certSkills)
 				{
-					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has cert skill on subclass :" + s.getName() + "(" + s.getId() + "/" + s.getLevel() + "), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(), 0);
+					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has cert skill on subclass :" + s.getName() + "(" + s.getId() + "/" + s.getLevel() + "), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(), IllegalActionPunishmentType.NONE);
 					
 					if (Config.SKILL_CHECK_REMOVE)
 					{
@@ -228,7 +125,7 @@ public final class SubClassSkills extends Quest
 			return null;
 		}
 		
-		L2Skill skill;
+		Skill skill;
 		int[][] cSkills = null; // skillId/skillLvl
 		if (certSkills != null)
 		{
@@ -301,22 +198,22 @@ public final class SubClassSkills extends Quest
 								if (!Util.contains(_certSkillsByLevel[i], id))
 								{
 									// should remove this skill ?
-									Util.handleIllegalPlayerAction(player, "Invalid cert variable WITH skill:" + qName + "=" + qValue + " - skill does not match certificate level", 0);
+									Util.handleIllegalPlayerAction(player, "Invalid cert variable WITH skill:" + qName + "=" + qValue + " - skill does not match certificate level", IllegalActionPunishmentType.NONE);
 								}
 							}
 							else
 							{
-								Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - skill not found", 0);
+								Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - skill not found", IllegalActionPunishmentType.NONE);
 							}
 						}
 						else
 						{
-							Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - no certified skills found", 0);
+							Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - no certified skills found", IllegalActionPunishmentType.NONE);
 						}
 					}
 					catch (NumberFormatException e)
 					{
-						Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - not a number", 0);
+						Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - not a number", IllegalActionPunishmentType.NONE);
 					}
 				}
 				else
@@ -348,25 +245,25 @@ public final class SubClassSkills extends Quest
 							}
 							if (item != null)
 							{
-								if (!Util.contains(_certItemsByLevel[i], item.getItemId()))
+								if (!Util.contains(_certItemsByLevel[i], item.getId()))
 								{
-									Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - item found but does not match certificate level", 0);
+									Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - item found but does not match certificate level", IllegalActionPunishmentType.NONE);
 								}
 							}
 							else
 							{
-								Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - item not found", 0);
+								Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - item not found", IllegalActionPunishmentType.NONE);
 							}
 						}
 						else
 						{
-							Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - no cert item found in inventory", 0);
+							Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - no cert item found in inventory", IllegalActionPunishmentType.NONE);
 						}
 						
 					}
 					catch (NumberFormatException e)
 					{
-						Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - not a number", 0);
+						Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - not a number", IllegalActionPunishmentType.NONE);
 					}
 				}
 			}
@@ -386,11 +283,11 @@ public final class SubClassSkills extends Quest
 				{
 					if (cSkills[i][1] == skill.getLevel())
 					{
-						Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has invalid cert skill :" + skill.getName() + "(" + skill.getId() + "/" + skill.getLevel() + ")", 0);
+						Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has invalid cert skill :" + skill.getName() + "(" + skill.getId() + "/" + skill.getLevel() + ")", IllegalActionPunishmentType.NONE);
 					}
 					else
 					{
-						Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has invalid cert skill :" + skill.getName() + "(" + skill.getId() + "/" + skill.getLevel() + "), level too high", 0);
+						Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has invalid cert skill :" + skill.getName() + "(" + skill.getId() + "/" + skill.getLevel() + "), level too high", IllegalActionPunishmentType.NONE);
 					}
 					
 					if (Config.SKILL_CHECK_REMOVE)
@@ -400,7 +297,7 @@ public final class SubClassSkills extends Quest
 				}
 				else
 				{
-					Util.handleIllegalPlayerAction(player, "Invalid cert skill :" + skill.getName() + "(" + skill.getId() + "/" + skill.getLevel() + "), level too low", 0);
+					Util.handleIllegalPlayerAction(player, "Invalid cert skill :" + skill.getName() + "(" + skill.getId() + "/" + skill.getLevel() + "), level too low", IllegalActionPunishmentType.NONE);
 				}
 			}
 		}
@@ -415,17 +312,17 @@ public final class SubClassSkills extends Quest
 				}
 				
 				item = certItems[i];
-				Util.handleIllegalPlayerAction(player, "Invalid cert item without variable or with wrong count:" + item.getObjectId(), 0);
+				Util.handleIllegalPlayerAction(player, "Invalid cert item without variable or with wrong count:" + item.getObjectId(), IllegalActionPunishmentType.NONE);
 			}
 		}
 		
 		return null;
 	}
 	
-	private L2Skill[] getCertSkills(L2PcInstance player)
+	private Skill[] getCertSkills(L2PcInstance player)
 	{
-		FastList<L2Skill> tmp = null;
-		for (L2Skill s : player.getAllSkills())
+		FastList<Skill> tmp = null;
+		for (Skill s : player.getAllSkills())
 		{
 			if ((s != null) && (Arrays.binarySearch(_allCertSkillIds, s.getId()) >= 0))
 			{
@@ -442,7 +339,7 @@ public final class SubClassSkills extends Quest
 			return null;
 		}
 		
-		final L2Skill[] result = tmp.toArray(new L2Skill[tmp.size()]);
+		final Skill[] result = tmp.toArray(new Skill[tmp.size()]);
 		FastList.recycle(tmp);
 		return result;
 	}
@@ -452,7 +349,7 @@ public final class SubClassSkills extends Quest
 		FastList<L2ItemInstance> tmp = null;
 		for (L2ItemInstance i : player.getInventory().getItems())
 		{
-			if ((i != null) && (Arrays.binarySearch(_allCertItemIds, i.getItemId()) >= 0))
+			if ((i != null) && (Arrays.binarySearch(_allCertItemIds, i.getId()) >= 0))
 			{
 				if (tmp == null)
 				{
@@ -474,6 +371,6 @@ public final class SubClassSkills extends Quest
 	
 	public static void main(String[] args)
 	{
-		new SubClassSkills(-1, "SubClassSkills", "custom");
+		new SubClassSkills();
 	}
 }

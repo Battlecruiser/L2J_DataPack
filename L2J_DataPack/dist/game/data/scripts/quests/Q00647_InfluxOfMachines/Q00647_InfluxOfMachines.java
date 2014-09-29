@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00647_InfluxOfMachines;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -71,9 +72,9 @@ public class Q00647_InfluxOfMachines extends Quest
 	private static final int MIN_LEVEL = 70;
 	private static final int FRAGMENT_COUNT = 500;
 	
-	private Q00647_InfluxOfMachines(int questId, String name, String descr)
+	public Q00647_InfluxOfMachines()
 	{
-		super(questId, name, descr);
+		super(647, Q00647_InfluxOfMachines.class.getSimpleName(), "Influx of Machines");
 		addStartNpc(GUTENHAGEN);
 		addTalkId(GUTENHAGEN);
 		addKillId(MOBS.keySet());
@@ -119,7 +120,7 @@ public class Q00647_InfluxOfMachines extends Quest
 		if (member != null)
 		{
 			final QuestState st = member.getQuestState(getName());
-			if (st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getNpcId())))
+			if (st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getId())))
 			{
 				st.giveItems(BROKEN_GOLEM_FRAGMENT, 1);
 				if (st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT)
@@ -162,10 +163,5 @@ public class Q00647_InfluxOfMachines extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00647_InfluxOfMachines(647, Q00647_InfluxOfMachines.class.getSimpleName(), "Influx of Machines");
 	}
 }

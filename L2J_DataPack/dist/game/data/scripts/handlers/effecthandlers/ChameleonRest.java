@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,19 +19,32 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.skills.L2SkillType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
-public class ChameleonRest extends L2Effect
+/**
+ * Chameleon Rest effect implementation.
+ */
+public final class ChameleonRest extends AbstractEffect
 {
-	public ChameleonRest(Env env, EffectTemplate template)
+	private final double _power;
+	
+	public ChameleonRest(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
+	}
+	
+	@Override
+	public int getEffectFlags()
+	{
+		return (EffectFlag.SILENT_MOVE.getMask() | EffectFlag.RELAXING.getMask());
 	}
 	
 	@Override
@@ -41,62 +54,42 @@ public class ChameleonRest extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onActionTime(BuffInfo info)
 	{
-		if (getEffected().isPlayer())
-		{
-			getEffected().getActingPlayer().sitDown(false);
-		}
-		else
-		{
-			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
-		}
-		return super.onStart();
-	}
-	
-	@Override
-	public void onExit()
-	{
-		super.onExit();
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		// Only cont skills shouldn't end
-		if (getSkill().getSkillType() != L2SkillType.CONT)
+		if (info.getEffected().isPlayer())
 		{
-			return false;
-		}
-		
-		if (getEffected().isPlayer())
-		{
-			if (!getEffected().getActingPlayer().isSitting())
+			if (!info.getEffected().getActingPlayer().isSitting())
 			{
 				return false;
 			}
 		}
 		
-		double manaDam = calc();
-		
-		if (manaDam > getEffected().getCurrentMp())
+		double manaDam = _power * getTicksMultiplier();
+		if (manaDam > info.getEffected().getCurrentMp())
 		{
-			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+			info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 			return false;
 		}
 		
-		getEffected().reduceCurrentMp(manaDam);
-		return true;
+		info.getEffected().reduceCurrentMp(manaDam);
+		return info.getSkill().isToggle();
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public void onStart(BuffInfo info)
 	{
-		return (EffectFlag.SILENT_MOVE.getMask() | EffectFlag.RELAXING.getMask());
+		if (info.getEffected().isPlayer())
+		{
+			info.getEffected().getActingPlayer().sitDown(false);
+		}
+		else
+		{
+			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
+		}
 	}
 }

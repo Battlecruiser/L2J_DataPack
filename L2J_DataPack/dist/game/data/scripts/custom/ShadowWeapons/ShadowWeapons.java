@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
  * Original Jython script by DrLecter.
  * @author Nyaran, jurchiks
  */
-public class ShadowWeapons extends Quest
+public final class ShadowWeapons extends Quest
 {
 	// @formatter:off
 	private static final int[] NPCS =
@@ -44,8 +44,7 @@ public class ShadowWeapons extends Quest
 		32230, 32233, 32234
 	};
 	// @formatter:on
-	
-	public ShadowWeapons()
+	private ShadowWeapons()
 	{
 		super(-1, ShadowWeapons.class.getSimpleName(), "custom");
 		addStartNpc(NPCS);

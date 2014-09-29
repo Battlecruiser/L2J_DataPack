@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -24,6 +24,7 @@ import java.util.Map;
 import quests.Q00140_ShadowFoxPart2.Q00140_ShadowFoxPart2;
 import quests.Q00998_FallenAngelSelect.Q00998_FallenAngelSelect;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -54,9 +55,9 @@ public class Q00141_ShadowFoxPart3 extends Quest
 	private static final int MAX_REWARD_LEVEL = 42;
 	private static final int REPORT_COUNT = 30;
 	
-	private Q00141_ShadowFoxPart3(int questId, String name, String descr)
+	public Q00141_ShadowFoxPart3()
 	{
-		super(questId, name, descr);
+		super(141, Q00141_ShadowFoxPart3.class.getSimpleName(), "Shadow Fox - 3");
 		addStartNpc(NATOOLS);
 		addTalkId(NATOOLS);
 		addKillId(MOBS.keySet());
@@ -129,7 +130,7 @@ public class Q00141_ShadowFoxPart3 extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState st = member.getQuestState(getName());
-		if ((getRandom(100) < MOBS.get(npc.getNpcId())))
+		if ((getRandom(100) < MOBS.get(npc.getId())))
 		{
 			st.giveItems(PREDECESSORS_REPORT, 1);
 			if (st.getQuestItemsCount(PREDECESSORS_REPORT) >= REPORT_COUNT)
@@ -195,10 +196,5 @@ public class Q00141_ShadowFoxPart3 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00141_ShadowFoxPart3(141, Q00141_ShadowFoxPart3.class.getSimpleName(), "Shadow Fox - 3");
 	}
 }

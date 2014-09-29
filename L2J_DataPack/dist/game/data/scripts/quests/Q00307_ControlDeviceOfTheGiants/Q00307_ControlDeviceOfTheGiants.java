@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00307_ControlDeviceOfTheGiants;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -47,9 +48,9 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 	private final static int RESPAWN_DELAY = 3600000; // 1 hour
 	private static L2Npc hekaton;
 	
-	public Q00307_ControlDeviceOfTheGiants(int id, String name, String descr)
+	public Q00307_ControlDeviceOfTheGiants()
 	{
-		super(id, name, descr);
+		super(307, Q00307_ControlDeviceOfTheGiants.class.getSimpleName(), "Control Device of the Giants");
 		addStartNpc(DROPH);
 		addTalkId(DROPH);
 		addKillId(GORGOLOS, LAST_TITAN_UTENUS, GIANT_MARPANAK, HEKATON_PRIME);
@@ -125,7 +126,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 		}
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case GORGOLOS:
 			{
@@ -203,10 +204,5 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00307_ControlDeviceOfTheGiants(307, Q00307_ControlDeviceOfTheGiants.class.getSimpleName(), "Control Device of the Giants");
 	}
 }

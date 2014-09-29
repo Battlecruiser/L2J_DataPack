@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,11 +21,13 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
+import hellbound.HellboundEngine;
+
 /**
+ * Hellbound admin command.
  * @author DS, Gladicek
  */
 public class AdminHellbound implements IAdminCommandHandler
@@ -50,7 +52,7 @@ public class AdminHellbound implements IAdminCommandHandler
 			return false;
 		}
 		
-		if (command.startsWith(ADMIN_COMMANDS[0])) // setlevel
+		if (command.startsWith(ADMIN_COMMANDS[0]))
 		{
 			try
 			{
@@ -61,7 +63,8 @@ public class AdminHellbound implements IAdminCommandHandler
 				{
 					throw new NumberFormatException();
 				}
-				HellboundManager.getInstance().setLevel(level);
+				
+				HellboundEngine.getInstance().setLevel(level);
 				activeChar.sendMessage("Hellbound level set to " + level);
 				return true;
 			}
@@ -71,7 +74,7 @@ public class AdminHellbound implements IAdminCommandHandler
 				return false;
 			}
 		}
-		else if (command.startsWith(ADMIN_COMMANDS[1])) // Admin menu by Gladicek
+		else if (command.startsWith(ADMIN_COMMANDS[1]))
 		{
 			showMenu(activeChar);
 			return true;
@@ -81,12 +84,12 @@ public class AdminHellbound implements IAdminCommandHandler
 	
 	private void showMenu(L2PcInstance activeChar)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(0);
+		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/hellbound.htm");
-		html.replace("%hbstage%", String.valueOf(HellboundManager.getInstance().getLevel()));
-		html.replace("%trust%", String.valueOf(HellboundManager.getInstance().getTrust()));
-		html.replace("%maxtrust%", String.valueOf(HellboundManager.getInstance().getMaxTrust()));
-		html.replace("%mintrust%", String.valueOf(HellboundManager.getInstance().getMinTrust()));
+		html.replace("%hbstage%", String.valueOf(HellboundEngine.getInstance().getLevel()));
+		html.replace("%trust%", String.valueOf(HellboundEngine.getInstance().getTrust()));
+		html.replace("%maxtrust%", String.valueOf(HellboundEngine.getInstance().getMaxTrust()));
+		html.replace("%mintrust%", String.valueOf(HellboundEngine.getInstance().getMinTrust()));
 		activeChar.sendPacket(html);
 	}
 }

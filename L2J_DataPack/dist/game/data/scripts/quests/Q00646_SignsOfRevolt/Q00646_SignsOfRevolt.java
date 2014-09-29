@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -35,9 +35,9 @@ public class Q00646_SignsOfRevolt extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	
-	private Q00646_SignsOfRevolt(int questId, String name, String descr)
+	public Q00646_SignsOfRevolt()
 	{
-		super(questId, name, descr);
+		super(646, Q00646_SignsOfRevolt.class.getSimpleName(), "Signs of Revolt");
 		addStartNpc(TORRANT);
 		addTalkId(TORRANT);
 	}
@@ -51,10 +51,5 @@ public class Q00646_SignsOfRevolt extends Quest
 			st.exitQuest(true);
 		}
 		return (player.getLevel() >= MIN_LEVEL) ? "32016-01.html" : "32016-02.html";
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00646_SignsOfRevolt(646, Q00646_SignsOfRevolt.class.getSimpleName(), "Signs of Revolt");
 	}
 }

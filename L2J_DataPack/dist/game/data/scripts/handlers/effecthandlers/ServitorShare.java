@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,23 +18,50 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
- * Synchronizing effects on player and servitor if one of them gets removed for some reason the same will happen to another.
- * @author UnAfraid
+ * Servitor Share effect implementation.<br>
+ * Synchronizing effects on player and servitor if one of them gets removed for some reason the same will happen to another. Partner's effect exit is executed in own thread, since there is no more queue to schedule the effects,<br>
+ * partner's effect is called while this effect is still exiting issuing an exit call for the effect, causing a stack over flow.
+ * @author UnAfraid, Zoey76
  */
-public class ServitorShare extends L2Effect
+public final class ServitorShare extends AbstractEffect
 {
-	public ServitorShare(Env env, EffectTemplate template)
+	private static final class ScheduledEffectExitTask implements Runnable
 	{
-		super(env, template);
+		private final L2Character _effected;
+		private final int _skillId;
+		
+		public ScheduledEffectExitTask(L2Character effected, int skillId)
+		{
+			_effected = effected;
+			_skillId = skillId;
+		}
+		
+		@Override
+		public void run()
+		{
+			_effected.stopSkillEffects(false, _skillId);
+		}
+	}
+	
+	public ServitorShare(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	{
+		super(attachCond, applyCond, set, params);
+	}
+	
+	@Override
+	public int getEffectFlags()
+	{
+		return EffectFlag.SERVITOR_SHARE.getMask();
 	}
 	
 	@Override
@@ -44,55 +71,12 @@ public class ServitorShare extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		L2Effect[] effects = null;
-		if (getEffected().isPlayer())
+		final L2Character effected = info.getEffected().isPlayer() ? info.getEffected().getSummon() : info.getEffected().getActingPlayer();
+		if (effected != null)
 		{
-			L2Summon summon = getEffector().getSummon();
-			if ((summon != null) && summon.isServitor())
-			{
-				effects = summon.getAllEffects();
-			}
+			ThreadPoolManager.getInstance().scheduleEffect(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);
 		}
-		else if (getEffected().isServitor())
-		{
-			L2PcInstance owner = getEffected().getActingPlayer();
-			if (owner != null)
-			{
-				effects = owner.getAllEffects();
-			}
-		}
-		
-		if (effects != null)
-		{
-			for (L2Effect eff : effects)
-			{
-				if (eff.getSkill().getId() == getSkill().getId())
-				{
-					eff.exit();
-					break;
-				}
-			}
-		}
-		super.onExit();
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public boolean canBeStolen()
-	{
-		return false;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.SERVITOR_SHARE.getMask();
 	}
 }

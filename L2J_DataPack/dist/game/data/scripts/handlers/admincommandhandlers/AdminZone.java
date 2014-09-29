@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -27,9 +27,11 @@ import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.L2WorldRegion;
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
+import com.l2jserver.gameserver.model.zone.type.NpcSpawnTerritory;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
 
@@ -41,7 +43,6 @@ public class AdminZone implements IAdminCommandHandler
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_zone_check",
-		"admin_zone_reload",
 		"admin_zone_visual",
 		"admin_zone_visual_clear"
 	};
@@ -69,22 +70,17 @@ public class AdminZone implements IAdminCommandHandler
 			
 			Location loc;
 			
-			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, MapRegionManager.TeleportWhereType.Castle);
+			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CASTLE);
 			activeChar.sendMessage("TeleToLocation (Castle): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			
-			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, MapRegionManager.TeleportWhereType.ClanHall);
+			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CLANHALL);
 			activeChar.sendMessage("TeleToLocation (ClanHall): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			
-			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, MapRegionManager.TeleportWhereType.SiegeFlag);
+			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.SIEGEFLAG);
 			activeChar.sendMessage("TeleToLocation (SiegeFlag): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			
-			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, MapRegionManager.TeleportWhereType.Town);
+			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.TOWN);
 			activeChar.sendMessage("TeleToLocation (Town): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
-		}
-		else if (actualCommand.equalsIgnoreCase("admin_zone_reload"))
-		{
-			ZoneManager.getInstance().reload();
-			activeChar.sendMessage("All Zones have been reloaded");
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_zone_visual"))
 		{
@@ -94,6 +90,10 @@ public class AdminZone implements IAdminCommandHandler
 				for (L2ZoneType zone : ZoneManager.getInstance().getZones(activeChar))
 				{
 					zone.visualizeZone(activeChar.getZ());
+				}
+				for (NpcSpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+				{
+					territory.visualizeZone(activeChar.getZ());
 				}
 				showHtml(activeChar);
 			}
@@ -114,7 +114,7 @@ public class AdminZone implements IAdminCommandHandler
 	private static void showHtml(L2PcInstance activeChar)
 	{
 		final String htmContent = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/zone.htm");
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setHtml(htmContent);
 		adminReply.replace("%PEACE%", (activeChar.isInsideZone(ZoneId.PEACE) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		adminReply.replace("%PVP%", (activeChar.isInsideZone(ZoneId.PVP) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
@@ -152,6 +152,10 @@ public class AdminZone implements IAdminCommandHandler
 				}
 				StringUtil.append(zones, " ");
 			}
+		}
+		for (NpcSpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+		{
+			StringUtil.append(zones, territory.getName() + "<br1>");
 		}
 		adminReply.replace("%ZLIST%", zones.toString());
 		activeChar.sendPacket(adminReply);

@@ -3,30 +3,28 @@
 	<skill id="20000" levels="1" name="Block Checker Search">
 		<!-- "If you open your heart and look afar, you can find a hidden treasure chest." -->
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="20001" levels="1" name="Block Checker Hammer Punch">
 		<!-- Slams down on the treasure chest with a hammer to open it. -->
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="20002" levels="1" name="Dragon Blow">
 		<!-- A dragon's powerful blow that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
 		<set name="blowChance" val="20" />
 		<set name="castRange" val="55" />
-		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="effectRange" val="550" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" /> <!-- FIXME: value unconfirmed -->
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="overHit" val="true" />
 		<set name="power" val="3420" />
 		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" />
+		</for>
 	</skill>
 	<skill id="20003" levels="1" name="Dragon Slash">
 		<!-- A dragon's powerful slash that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
@@ -34,37 +32,38 @@
 		<set name="effectRange" val="550" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" /> <!-- FIXME: value unconfirmed -->
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="3420" />
 		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="20004" levels="1" name="Dragon Dash">
 		<!-- Increases Speed by 100% for 5 seconds with a dragon's strength. -->
+		<set name="abnormalTime" val="5" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" /> <!-- FIXME: value unconfirmed -->
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="speed_up_special">
+			<effect name="Buff">
 				<mul order="0x30" stat="runSpd" val="2" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="20005" levels="1" name="Dragon Aura">
 		<!-- Increases Critical Rate by 30% for 20 minutes with a dragon's strength. -->
+		<set name="abnormalTime" val="1200" />
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="critical_prob_up">
+			<effect name="Buff">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
@@ -72,21 +71,25 @@
 	<skill id="20006" levels="1" name="Soul Roar">
 		<!-- High Five Skill -->
 		<set name="abnormalTime" val="600" />
-		<set name="aggroPoints" val="635" /> <!-- FIXME: value unconfirmed -->
+		<set name="effectPoint" val="611" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="BranchSys2.icon.skill20006" />
 		<set name="magicLvl" val="62" />
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="240000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.15" />
 				<mul order="0x30" stat="maxCp" val="1.15" />
 			</effect>
-			<effect name="CpHealPercent" noicon="1" val="15" />
-			<effect name="HealPercent" noicon="1" val="15" />
+			<effect name="CpHealPercent">
+				<param power="15" />
+			</effect>
+			<effect name="HealPercent">
+				<param power="15" />
+			</effect>
 		</for>
 	</skill>
 </list>

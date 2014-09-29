@@ -4,88 +4,106 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#mDef"> 50.4 100.8 151.2 </table>
 		<set name="excludedFromCheck" val="true" />
+		<set name="icon" val="icon.skill0142" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mDef" val="#mDef" />
+			<effect name="Buff">
+				<add order="0x40" stat="mDef" val="#mDef" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="801" levels="1" name="Warrior Ability - Boost CP">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
+		<set name="icon" val="icon.skill0440" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxCp" val="738.3" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxCp" val="738.3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="802" levels="1" name="Wizard Ability - Anti-magic">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
+		<set name="icon" val="icon.skill0146" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="magicDamVul" val="0.95" />
+			<effect name="Buff">
+				<mul order="0x30" stat="magicSuccRes" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="803" levels="1" name="Healer Ability - Divine Protection">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
+		<set name="icon" val="icon.skill1353" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="5" />
-			<add order="0x40" stat="holyRes" val="5" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="5" />
+				<add order="0x40" stat="holyRes" val="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="804" levels="1" name="Knight Ability - Resist Critical">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
+		<set name="icon" val="icon.skill0232" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="critVuln" val="0.95" />
+			<effect name="Buff">
+				<mul order="0x30" stat="defCritDamage" val="0.95" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="805" levels="1" name="not used">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skill0142" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="806" levels="1" name="Magic Obstacle">
 		<set name="affectRange" val="100" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="magicLvl" val="83" />
-		<set name="maxNegated" val="5" />
 		<set name="mpConsume" val="49" />
 		<set name="operateType" val="A1" />
-		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="75000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+			<effect name="DispelByCategory">
+				<param slot="buff" rate="25" max="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="807" levels="1" name="Over-hit">
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="pa_up" />
+		<set name="abnormalType" val="PA_UP" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="99" abnormalType="pa_up">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.4" />
 			</effect>
 		</for>
@@ -93,60 +111,72 @@
 	<skill id="808" levels="1" name="Golem Punch">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="830" />
+		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="53" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
 		<set name="power" val="11205" />
 		<set name="reuseDelay" val="3000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="809" levels="1" name="Golem Tornado Swing">
 		<set name="affectRange" val="100" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="830" />
+		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="53" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="6199" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="PDAM" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="810" levels="1" name="Vanguard">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="21600" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="5000" />
+		<set name="icon" val="icon.skill0810" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="312" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="21600" val="0" abnormalLvl="1" abnormalType="transform">
+			<effect name="Transformation">
+				<param id="312" />
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<add order="0x40" stat="accCombat" val="1">
-					<using kind="Big Sword" />
+					<and>
+						<using kind="SWORD" />
+						<using slot="lrhand" />
+					</and>
 				</add>
 			</effect>
 		</for>
@@ -154,20 +184,28 @@
 	<skill id="811" levels="1" name="Vanguard">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="21600" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="5000" />
+		<set name="icon" val="icon.skill0810" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="313" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="21600" val="0" abnormalLvl="1" abnormalType="transform">
+			<effect name="Transformation">
+				<param id="313" />
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08">
-					<using kind="Dual Sword" />
+					<and>
+						<using kind="SWORD" />
+						<using slot="lrhand" />
+					</and>
 				</mul>
 			</effect>
 		</for>
@@ -175,20 +213,28 @@
 	<skill id="812" levels="1" name="Vanguard">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="21600" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="5000" />
+		<set name="icon" val="icon.skill0810" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="314" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="21600" val="0" abnormalLvl="1" abnormalType="transform">
+			<effect name="Transformation">
+				<param id="314" />
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<add order="0x40" stat="accCombat" val="1">
-					<using kind="Big Sword" />
+					<and>
+						<using kind="SWORD" />
+						<using slot="lrhand" />
+					</and>
 				</add>
 			</effect>
 		</for>
@@ -196,26 +242,32 @@
 	<skill id="813" levels="1" name="Vanguard">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="21600" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="5000" />
+		<set name="icon" val="icon.skill0810" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="315" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="21600" val="0" abnormalLvl="1" abnormalType="transform">
+			<effect name="Transformation">
+				<param id="315" />
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08">
-					<using kind="Dual Sword" />
+					<using kind="DUAL" />
 				</mul>
 			</effect>
 		</for>
 	</skill>
 	<skill id="814" levels="43" name="Full Swing">
 		<!-- Vanguard Stance Skill -->
+		<table name="#effectPoints"> -208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 -335 -337 -338 -340 -341 -342 -343 -344 -345 -346 -347 </table>
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
 		<table name="#power"> 893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176 </table>
@@ -223,24 +275,30 @@
 		<set name="affectRange" val="200" />
 		<set name="baseCritRate" val="15" />
 		<set name="coolTime" val="733" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1067" />
+		<set name="icon" val="icon.skill0814" />
 		<set name="ignoreShld" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="11000" />
-		<set name="skillType" val="PDAM" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
 		<cond msgId="113" addName="1">
-			<using kind="Big Sword,Big Blunt" />
+			<and>
+				<using kind="SWORD,BLUNT" />
+				<using slot="lrhand" />
+			</and>
 		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="815" levels="43" name="Blade Hurricane">
 		<!-- Vanguard Stance Skill -->
+		<table name="#effectPoints"> -208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 -335 -337 -338 -340 -341 -342 -343 -344 -345 -346 -347 </table>
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
 		<table name="#power"> 893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176 </table>
@@ -248,163 +306,186 @@
 		<set name="affectRange" val="200" />
 		<set name="baseCritRate" val="15" />
 		<set name="coolTime" val="733" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1067" />
+		<set name="icon" val="icon.skill0815" />
 		<set name="ignoreShld" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="11000" />
-		<set name="skillType" val="PDAM" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Sword" />
+			<using kind="DUAL" />
 		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="816" levels="43" name="Cleave">
 		<!-- Vanguard Stance Skill -->
+		<table name="#effectPoints"> -311 -319 -326 -334 -341 -349 -356 -363 -370 -378 -385 -392 -399 -406 -412 -419 -425 -431 -438 -444 -449 -455 -460 -466 -471 -475 -480 -484 -488 -492 -496 -499 -502 -505 -507 -509 -511 -513 -515 -516 -518 -519 -521 </table>
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
 		<table name="#power"> 992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="1080" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1620" />
 		<set name="hpConsume" val="1" />
+		<set name="icon" val="icon.skill0816" />
 		<set name="ignoreShld" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="PDAM" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Big Sword,Big Blunt" />
+			<and>
+				<using kind="SWORD,BLUNT" />
+				<using slot="lrhand" />
+			</and>
 		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="817" levels="43" name="Double Strike">
 		<!-- Vanguard Stance Skill -->
+		<table name="#effectPoints"> -311 -319 -326 -334 -341 -349 -356 -363 -370 -378 -385 -392 -399 -406 -412 -419 -425 -431 -438 -444 -449 -455 -460 -466 -471 -475 -480 -484 -488 -492 -496 -499 -502 -505 -507 -509 -511 -513 -515 -516 -518 -519 -521 </table>
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
 		<table name="#power"> 992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="167" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1733" />
+		<set name="icon" val="icon.skill0817" />
 		<set name="ignoreShld" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="PDAM" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Dual Sword" />
+			<using kind="DUAL" />
 		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="818" levels="1" name="Evasion Counter">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skill0818" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5673" />
+			<effect name="ChanceSkillTrigger" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5673" />
 		</for>
 	</skill>
 	<skill id="819" levels="1" name="Evasion Chance">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skill0819" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5674" />
+			<effect name="ChanceSkillTrigger" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5674" />
 		</for>
 	</skill>
 	<skill id="820" levels="1" name="Evasion Haste">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skill0820" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5675" />
+			<effect name="ChanceSkillTrigger" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5675" />
 		</for>
 	</skill>
 	<skill id="821" levels="1" name="Shadow Step">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
+		<set name="icon" val="icon.skill0821" />
 		<set name="magicLvl" val="72" />
 		<set name="mpConsume" val="50" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="INSTANT_JUMP" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="RemoveTarget" effectPower="100" noicon="1" val="0" />
+			<effect name="TeleportToTarget" />
+			<effect name="TargetCancel" />
 		</for>
 	</skill>
 	<skill id="822" levels="3" name="Repair Golem">
 		<!-- Confirmed CT2.5 -->
-		<table name="#aggroPoints"> 362 481 562 </table>
 		<table name="#amount"> 8 12 15 </table>
+		<table name="#effectPoints"> 362 481 562 </table>
 		<table name="#magicLvl"> 40 49 55 </table>
 		<table name="#mpConsume"> 61 78 88 </table>
-		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skill0822" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="targetType" val="SUMMON" />
-		<!-- FIXME: It shouldn't affect all summons, missing condition for target race "construct" -->
+		<set name="targetType" val="SERVITOR" />
+		<cond msgId="109">
+			<target race="CONSTRUCT" />
+		</cond>
 		<for>
-			<effect name="HealPercent" noicon="1" val="#amount" />
+			<effect name="HealPercent">
+				<param power="#amount" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="823" levels="3" name="Strengthen Golem">
 		<!-- Confirmed CT2.5 -->
-		<table name="#aggroPoints"> 408 495 549 </table>
+		<table name="#effectPoints"> 408 495 549 </table>
 		<table name="#magicLvl"> 43 52 58 </table>
 		<table name="#mpConsume"> 24 36 42 </table>
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
 		<table name="#pAtkSpd"> 1.03 1.06 1.09 </table>
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="pa_up" />
-		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="abnormalType" val="PA_UP" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill0823" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SUMMON" />
-		<!-- FIXME: It shouldn't affect all summons, missing condition for target race "construct" -->
+		<set name="targetType" val="SERVITOR" />
+		<cond msgId="109">
+			<target race="CONSTRUCT" />
+		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="4" abnormalType="pa_up">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
@@ -412,28 +493,30 @@
 	</skill>
 	<skill id="824" levels="3" name="Golem Reinforcement">
 		<!-- Confirmed CT2.5 -->
-		<table name="#aggroPoints"> 379 467 523 </table>
+		<table name="#effectPoints"> 379 467 523 </table>
 		<table name="#magicLvl"> 40 49 55 </table>
 		<table name="#maxHp"> 1.05 1.08 1.1 </table>
 		<table name="#mpConsume"> 35 44 44 </table>
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="pd_up" />
-		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="abnormalType" val="PD_UP" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill0824" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SUMMON" />
-		<!-- FIXME: It shouldn't affect all summons, missing condition for target race "construct" -->
+		<set name="targetType" val="SERVITOR" />
+		<cond msgId="109">
+			<target race="CONSTRUCT" />
+		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="4" abnormalType="pd_up">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
@@ -443,25 +526,25 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="dwarf_attack_buff" />
-		<set name="aggroPoints" val="467" />
+		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="467" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill0825" />
 		<set name="magicLvl" val="49" />
 		<set name="mpConsume" val="44" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Sword,Big Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist" />
+					<using kind="SWORD,DAGGER,DUALDAGGER,POLE,RAPIER,ANCIENTSWORD,DUAL,DUALFIST" />
 				</mul>
 				<basemul order="0x30" stat="rCrit" val="0.2">
-					<using kind="Sword,Big Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist" />
+					<using kind="SWORD,DAGGER,DUALDAGGER,POLE,RAPIER,ANCIENTSWORD,DUAL,DUALFIST" />
 				</basemul>
 			</effect>
 		</for>
@@ -470,24 +553,26 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="dwarf_attack_buff" />
-		<set name="aggroPoints" val="467" />
+		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="467" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill0826" />
 		<set name="magicLvl" val="49" />
 		<set name="mpConsume" val="44" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Blunt,Big Blunt" />
+					<using kind="BLUNT" />
 				</mul>
-				<add order="0x40" stat="stunProf" val="8" />
+			</effect>
+			<effect name="AttackTrait">
+				<param SHOCK="8" />
 			</effect>
 		</for>
 	</skill>
@@ -495,25 +580,25 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="dwarf_attack_buff" />
-		<set name="aggroPoints" val="467" />
+		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="467" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill0827" />
 		<set name="magicLvl" val="49" />
 		<set name="mpConsume" val="44" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</mul>
 				<add order="0x40" stat="pAtkRange" val="100">
-					<using kind="Bow,Crossbow" />
+					<using kind="BOW,CROSSBOW" />
 				</add>
 			</effect>
 		</for>
@@ -522,22 +607,22 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="dwarf_defence_buff" />
-		<set name="aggroPoints" val="438" />
+		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="438" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill0828" />
 		<set name="magicLvl" val="46" />
 		<set name="mpConsume" val="41" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.1">
-					<using kind="Heavy" />
+					<using kind="HEAVY" />
 				</mul>
 			</effect>
 		</for>
@@ -546,25 +631,25 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="dwarf_defence_buff" />
-		<set name="aggroPoints" val="438" />
+		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="438" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill0829" />
 		<set name="magicLvl" val="46" />
 		<set name="mpConsume" val="41" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.05">
-					<using kind="Light" />
+					<using kind="LIGHT" />
 				</mul>
 				<add order="0x40" stat="rEvas" val="2">
-					<using kind="Light" />
+					<using kind="LIGHT" />
 				</add>
 			</effect>
 		</for>
@@ -573,43 +658,46 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="dwarf_defence_buff" />
-		<set name="aggroPoints" val="438" />
+		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="438" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill0830" />
 		<set name="magicLvl" val="46" />
 		<set name="mpConsume" val="41" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.05">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</mul>
 				<add order="0x40" stat="regMp" val="2">
-					<using kind="Magic" />
+					<using kind="MAGIC" />
 				</add>
 			</effect>
 		</for>
 	</skill>
 	<skill id="831" levels="1" name="Summon Merchant Golem">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="15000" />
+		<set name="icon" val="icon.skill0831" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="5" />
-		<set name="itemConsumeId" val="1458" />
+		<set name="itemConsumeId" val="1458" /> <!-- Crystal (D-Grade) -->
+		<set name="magicLvl" val="52" />
 		<set name="mpConsume" val="122" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="13128" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="1000" />
-		<set name="summonTotalLifeTime" val="180000" /> <!-- FIXME: This don't have life time for spawn in retail, probably should dissapear when all items are sold -->
+		<for>
+			<effect name="SummonNpc">
+				<param npcId="13128" npcCount="1" despawnDelay="180000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="832" levels="2" name="Fast Recovery">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
@@ -617,139 +705,180 @@
 		<table name="#magicLvl"> 43 49 </table>
 		<table name="#regHpCp"> 4 6 </table>
 		<table name="#regMp"> 2 4 </table>
+		<set name="icon" val="icon.skill0832" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="regHp" val="#regHpCp" />
-			<add order="0x40" stat="regMp" val="#regMp" />
-			<add order="0x40" stat="regCp" val="#regHpCp" />
+			<effect name="Buff">
+				<add order="0x40" stat="regHp" val="#regHpCp" />
+				<add order="0x40" stat="regMp" val="#regMp" />
+				<add order="0x40" stat="regCp" val="#regHpCp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="833" levels="1" name="Body Reconstruction">
-		<set name="aggroPoints" val="100" />
+		<set name="effectPoint" val="562" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0833" />
 		<set name="magicLvl" val="52" />
 		<set name="mpConsume" val="94" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="900000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="HealPercent" noicon="1" val="100" />
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="834" levels="1" name="Blood Pact">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="blood_constract" />
+		<set name="abnormalType" val="BLOOD_CONSTRACT" />
 		<set name="affectRange" val="1000" />
+		<set name="effectPoint" val="566" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0834" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="50" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="blood_constract">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.1" />
 				<add order="0x40" stat="regHp" val="10" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="835" levels="4" name="Imbue Seed of Destruction">
+		<table name="#calledSkillLevel"> 1 2 3 4 </table>
+		<table name="#effectPoints"> -317 -323 -328 -333 </table>
 		<table name="#magicLvl"> 68 70 72 74 </table>
-		<table name="#mdot"> 76 83 83 83 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 </table>
+		<table name="#mdot"> 16 17 17 17 </table>
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="dark_seed" />
+		<set name="abnormalType" val="DARK_SEED" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1800" />
-		<set name="isDebuff" val="true" />
+		<set name="icon" val="icon.skill0835" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10112" />
+		<set name="itemConsumeId" val="10112" /> <!-- Dark Seed -->
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="30" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="15000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="ManaDamOverTime" abnormalTime="3" val="#mdot" abnormalVisualEffect="bleed" />
-			<effect name="ChanceSkillTrigger" abnormalTime="20" noicon="1" val="0" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
+			<effect name="ManaDamOverTime" ticks="5">
+				<param power="#mdot" />
+			</effect>
 		</for>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="5697" skillLevel="#calledSkillLevel" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="836" levels="3" name="Oblivion Trap">
-		<!-- CT2.2 retail confirmed -->
-		<table name="#triggerSkillLvl"> 1 2 3 </table>
-		<set name="affectRange" val="350" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 64 68 72 </table>
+		<table name="#npcId"> 13125 13126 13127 </table>
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="3000" />
-		<set name="mpConsume" val="50" />
-		<set name="npcId" val="13037" />
+		<set name="icon" val="icon.skill0836" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="45000" />
-		<set name="skillType" val="SUMMON_TRAP" />
 		<set name="staticReuse" val="true" />
-		<set name="summonTotalLifeTime" val="30000" />
 		<set name="targetType" val="SELF" />
-		<set name="triggerSkillId" val="5679" />
-		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
+		<for>
+			<effect name="SummonTrap">
+				<param npcId="#npcId" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="837" levels="1" name="Painkiller">
-		<!-- CT2.2 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
-		<set name="abnormalType" val="invincibility" />
-		<set name="castRange" val="400" />
+		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill0837" />
+		<set name="magicLvl" val="58" />
 		<set name="mpConsume" val="53" />
 		<set name="operateType" val="A2" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Invincible" abnormalTime="8" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
+			<effect name="Invincible" />
 		</for>
 	</skill>
 	<skill id="838" levels="1" name="Switch Stance">
+		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="10" />
 		<set name="hitTime" val="5000" />
+		<set name="icon" val="icon.skilltransform2" />
+		<set name="magicLvl" val="43" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="TRANSFORMDISPEL" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DispelBySlot">
+				<param dispel="TRANSFORM,-1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="839" levels="1" name="Dismount">
+		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="10" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform2" />
+		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="TRANSFORMDISPEL" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DispelBySlot">
+				<param dispel="TRANSFORM,-1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="840" levels="1" name="Final Flying Form">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="-1" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="hpConsume" val="200" />
+		<set name="icon" val="icon.skill0840" />
+		<set name="magicLvl" val="-2" />
 		<set name="mpConsume" val="72" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="CONT" />
 		<set name="soulMaxConsumeCount" val="20" />
 		<set name="staticReuse" val="true" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="260" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="2721">
 			<player landingZone="true" />
 		</cond>
@@ -757,13 +886,8 @@
 			<player souls="20" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
-				<set order="0x08" stat="STR" val="41" />
-				<set order="0x08" stat="INT" val="29" />
-				<set order="0x08" stat="CON" val="31" />
-				<set order="0x08" stat="DEX" val="33" />
-				<set order="0x08" stat="WIT" val="11" />
-				<set order="0x08" stat="MEN" val="25" />
+			<effect name="Transformation">
+				<param id="260" />
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="mDef" val="0.7" />
 			</effect>
@@ -772,27 +896,26 @@
 	<skill id="841" levels="1" name="Aura Bird - Falcon">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="-1" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skill0841" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="mpConsume" val="72" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="CONT" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="8" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="2721">
 			<player landingZone="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
-				<set order="0x08" stat="STR" val="41" />
-				<set order="0x08" stat="INT" val="29" />
-				<set order="0x08" stat="CON" val="31" />
-				<set order="0x08" stat="DEX" val="33" />
-				<set order="0x08" stat="WIT" val="11" />
-				<set order="0x08" stat="MEN" val="25" />
+			<effect name="Transformation">
+				<param id="8" />
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="mDef" val="0.7" />
 			</effect>
@@ -801,27 +924,26 @@
 	<skill id="842" levels="1" name="Aura Bird - Owl">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="-1" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skill0842" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="mpConsume" val="72" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="CONT" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="9" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="2721">
 			<player landingZone="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
-				<set order="0x08" stat="STR" val="41" />
-				<set order="0x08" stat="INT" val="29" />
-				<set order="0x08" stat="CON" val="31" />
-				<set order="0x08" stat="DEX" val="33" />
-				<set order="0x08" stat="WIT" val="11" />
-				<set order="0x08" stat="MEN" val="25" />
+			<effect name="Transformation">
+				<param id="9" />
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="mDef" val="0.7" />
 			</effect>
@@ -830,345 +952,468 @@
 	<skill id="843" levels="1" name="Shooting Star">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-689" />
 		<set name="effectRange" val="1500" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0843" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="60" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="3480" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="844" levels="1" name="Outpost Construction">
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill0247" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isOutpost" val="true" />
 		<set name="itemConsumeCount" val="120" />
-		<set name="itemConsumeId" val="2132" />
+		<set name="itemConsumeId" val="2132" /> <!-- Gemstone B -->
+		<set name="isOutpost" val="true" />
+		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="30" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="SIEGEFLAG" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canCreateOutpost="true" />
+		</cond>
+		<for>
+			<effect name="OutpostCreate" />
+		</for>
 	</skill>
 	<skill id="845" levels="1" name="Outpost Demolition">
 		<set name="castRange" val="100" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill0247" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="36590" />
 		</cond>
+		<for>
+			<effect name="OutpostDestroy" />
+		</for>
 	</skill>
 	<skill id="846" levels="1" name="Possess Ward">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="0.2" />
-			<mul order="0x30" stat="mAtk" val="0.2" />
-			<mul order="0x30" stat="pAtkSpd" val="0.2" />
-			<mul order="0x30" stat="mAtkSpd" val="0.2" />
-			<mul order="0x30" stat="runSpd" val="0.2" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="0.2" />
+				<mul order="0x30" stat="mAtk" val="0.2" />
+				<mul order="0x30" stat="pAtkSpd" val="0.2" />
+				<mul order="0x30" stat="mAtkSpd" val="0.2" />
+				<mul order="0x30" stat="runSpd" val="0.2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="847" levels="1" name="Ward Transport">
-		<set name="castRange" val="100" />
-		<set name="effectRange" val="600" />
+		<set name="castRange" val="85" />
+		<set name="effectPoint" val="0" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="180000" />
+		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="CA1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="36590" />
 		</cond>
+		<for>
+			<effect name="TakeTerritoryFlag" />
+		</for>
 	</skill>
 	<skill id="848" levels="1" name="Gludio Territory Benefaction">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="1" />
-			<add order="0x10" stat="INT" val="1" />
+			<effect name="Buff">
+				<add order="0x10" stat="STR" val="1" />
+				<add order="0x10" stat="INT" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="849" levels="1" name="Dion Territory Benefaction">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="DEX" val="1" />
-			<add order="0x10" stat="WIT" val="1" />
+			<effect name="Buff">
+				<add order="0x10" stat="DEX" val="1" />
+				<add order="0x10" stat="WIT" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="850" levels="1" name="Giran Territory Benefaction">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="1" />
-			<add order="0x10" stat="MEN" val="1" />
+			<effect name="Buff">
+				<add order="0x10" stat="STR" val="1" />
+				<add order="0x10" stat="MEN" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="851" levels="1" name="Oren Territory Benefaction">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="CON" val="1" />
-			<add order="0x10" stat="MEN" val="1" />
+			<effect name="Buff">
+				<add order="0x10" stat="CON" val="1" />
+				<add order="0x10" stat="MEN" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="852" levels="1" name="Aden Territory Benefaction">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="DEX" val="1" />
-			<add order="0x10" stat="MEN" val="1" />
+			<effect name="Buff">
+				<add order="0x10" stat="DEX" val="1" />
+				<add order="0x10" stat="MEN" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="853" levels="1" name="Innadril Territory Benefaction">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="CON" val="1" />
-			<add order="0x10" stat="INT" val="1" />
+			<effect name="Buff">
+				<add order="0x10" stat="CON" val="1" />
+				<add order="0x10" stat="INT" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="854" levels="1" name="Goddard Territory Benefaction">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="DEX" val="1" />
-			<add order="0x10" stat="INT" val="1" />
+			<effect name="Buff">
+				<add order="0x10" stat="DEX" val="1" />
+				<add order="0x10" stat="INT" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="855" levels="1" name="Rune Territory Benefaction">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="1" />
-			<add order="0x10" stat="WIT" val="1" />
+			<effect name="Buff">
+				<add order="0x10" stat="STR" val="1" />
+				<add order="0x10" stat="WIT" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="856" levels="1" name="Schuttgart Territory Benefaction">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="CON" val="1" />
-			<add order="0x10" stat="WIT" val="1" />
+			<effect name="Buff">
+				<add order="0x10" stat="CON" val="1" />
+				<add order="0x10" stat="WIT" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="857" levels="1" name="Human Mercenary">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="10" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation">
+				<param id="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="858" levels="1" name="Elf Mercenary">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="11" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation">
+				<param id="11" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="859" levels="1" name="Dark Elf Mercenary">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="12" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation">
+				<param id="12" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="860" levels="1" name="Orc Mercenary">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="13" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation">
+				<param id="13" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="861" levels="1" name="Dwarf Mercenary">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="14" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation">
+				<param id="14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="862" levels="1" name="Kamael Mercenary">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="15" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation">
+				<param id="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="863" levels="1" name="Royal Guard Captain">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="16" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation">
+				<param id="16" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="864" levels="1" name="Archer Captain">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="17" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation">
+				<param id="17" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="865" levels="1" name="Magic Leader">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="18" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation">
+				<param id="18" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="866" levels="1" name="Kamael Guard Captain">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="19" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation">
+				<param id="19" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="867" levels="1" name="Knight of Dawn">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="20" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation">
+				<param id="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="868" levels="1" name="Fortress Captain">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="21" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation">
+				<param id="21" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="869" levels="9" name="Mercenary Power Strike">
@@ -1177,217 +1422,250 @@
 		<table name="#power"> 2272 3252 4224 4312 4399 4482 4563 4640 4715 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
+		<set name="icon" val="icon.skill0003" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="8" />
 		<set name="nextActionAttack" val="true" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="870" levels="8" name="Knight Mercenary Power Strike">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -321 -342 -343 -344 -345 -346 -347 -348 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 3252 4224 4312 4399 4482 4563 4640 4715 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
+		<set name="icon" val="icon.skill0003" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="8" />
 		<set name="nextActionAttack" val="true" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="871" levels="1" name="Might">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="pa_up" />
+		<set name="abnormalType" val="PA_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1068" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="28" />
 		<set name="mpInitialConsume" val="7" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="pa_up">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="872" levels="8" name="Archer Mercenary Power Shot">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -646 -684 -686 -688 -690 -692 -694 -696 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 4336 5632 5750 5865 5976 6084 6187 6286 </table>
 		<set name="castRange" val="700" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="3200" />
+		<set name="icon" val="icon.skill0056" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="16" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="873" levels="1" name="Rapid Shot">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="attack_speed_up_bow" />
-		<set name="aggroPoints" val="549" />
+		<set name="abnormalType" val="ATTACK_SPEED_UP_BOW" />
+		<set name="effectPoint" val="549" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0099" />
 		<set name="magicLvl" val="70" />
 		<set name="mpConsume" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="attack_speed_up_bow">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.12">
-					<using kind="Bow" />
+					<using kind="BOW" />
 				</mul>
 			</effect>
 		</for>
 	</skill>
 	<skill id="874" levels="8" name="Wizard Mercenary Flame Strike">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 -692 -694 </table>
 		<table name="#elementPower"> 20 25 30 35 40 45 50 55 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 68 78 78 79 80 81 81 82 </table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="#elementPower" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1181" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="32" />
 		<set name="mpInitialConsume" val="8" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="875" levels="1" name="Empower">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="ma_up" />
+		<set name="abnormalType" val="MA_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1059" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="70" />
 		<set name="mpConsume" val="56" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="ma_up">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="1.75" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="876" levels="8" name="Kamael Captain Mercenary Enuma Elish">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -646 -684 -686 -688 -690 -692 -694 -696 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 4878 6335 6468 6598 6723 6844 6960 7072 </table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="400" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="fanRange" val="0,0,400,90" />
 		<set name="hitTime" val="1080" />
+		<set name="icon" val="icon.skill0526" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="25" />
 		<set name="nextActionAttack" val="true" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="PDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="PhysicalSoulAttack" />
+		</for>
 	</skill>
 	<skill id="877" levels="8" name="Kamael Captain Mercenary Disarm">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -646 -684 -686 -688 -690 -692 -694 -696 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="disarm" />
+		<set name="abnormalType" val="DISARM" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="70" />
+		<set name="basicProperty" val="STR" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0485" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="25" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="STR" />
-		<set name="skillType" val="DISARM" />
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm">
+			<effect name="Disarm">
 				<mul order="0x30" stat="pAtk" val="0.6" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="878" levels="7" name="Knight Captain Mercenary Power Strike">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -323 -342 -343 -344 -345 -346 -347 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 5068 5175 5278 5379 5475 5568 5658 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
+		<set name="icon" val="icon.skill0003" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="1" />
 		<set name="nextActionAttack" val="true" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="879" levels="7" name="Knight Captain Mercenary Curse Fear">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="turn_flee" />
+		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
+		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1169" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -1395,32 +1673,29 @@
 		<set name="mpConsume" val="56" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
-		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="3000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="FEAR" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
+			<effect name="Fear" />
 		</for>
 	</skill>
 	<skill id="880" levels="1" name="Knight Captain Mercenary Ultimate Defense">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="pd_up_special" />
-		<set name="aggroPoints" val="438" />
+		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
+		<set name="effectPoint" val="438" />
 		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill0110" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="21" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ImmobileBuff" abnormalTime="30" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="2" abnormalType="pd_up_special">
+			<effect name="ImmobileBuff">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -1433,20 +1708,23 @@
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 116 117 119 120 121 122 123 </table>
 		<set name="castRange" val="750" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="1250" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="#elementPower" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1178" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="56" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="882" levels="7" name="Commander Mercenary Blaze">
 		<!-- Confirmed CT2.5 -->
@@ -1454,30 +1732,38 @@
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 116 117 119 120 121 122 123 </table>
 		<set name="castRange" val="750" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="1250" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="#elementPower" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1220" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="56" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="883" levels="7" name="Commander Mercenary Seal of Binding">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="root_magically" />
+		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
+		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
+		<set name="basicProperty" val="MEN" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1208" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -1485,15 +1771,14 @@
 		<set name="mpConsume" val="56" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
-		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="5000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="ROOT" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="HOLD" />
 		<for>
-			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="884" levels="11" name="Air Assault">
@@ -1502,219 +1787,258 @@
 		<set name="affectRange" val="100" />
 		<set name="castRange" val="2500" />
 		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="-1378" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
+		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="30" />
 		<set name="nextActionAttack" val="true" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="DA1" />
 		<set name="power" val="1" />
 		<set name="reuseDelay" val="23000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AREA" />
 		<cond msgId="113" addName="1">
 			<target mindistance="200" />
 		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="885" levels="1" name="Air Blink">
 		<!-- Aurabird Falcon and Owl -->
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="100" />
 		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="-659" />
 		<set name="flyCourse" val="0" /> <!-- Teleport to Back -->
 		<set name="flyRadius" val="500" />
 		<set name="flyType" val="DUMMY" />
 		<set name="hitTime" val="100" />
+		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="100" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="23000" />
 		<set name="simultaneousCast" val="true" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Stun" abnormalTime="2" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" special="airstun" />
-			<effect self="1" name="Warp" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
+		<selfEffects>
+			<effect name="Blink" />
+		</selfEffects>
 	</skill>
 	<skill id="886" levels="11" name="Air Shock Bomb">
 		<!-- Aurabird Falcon -->
+		<table name="#effectPoints"> -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
 		<table name="#power"> 2251 2310 2367 2424 2480 2534 2588 2639 2690 2738 2784 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="AIR_BATTLE_SLOW" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1500" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" special="airstun" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="887" levels="11" name="Sky Clutch">
 		<!-- Aurabird Owl -->
+		<table name="#effectPoints"> -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
 		<table name="#power"> 110 111 112 114 115 116 117 119 120 121 122 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="root_magically" />
+		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="AIR_BATTLE_ROOT" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1800" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
-			<effect name="Root" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="root_magically" special="airroot" />
+			<effect name="MagicalAttack" />
+			<effect name="Root" />
 		</for>
 	</skill>
 	<skill id="888" levels="11" name="Energy Storm">
 		<!-- Aurabird Falcon -->
+		<table name="#effectPoints"> -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
 		<table name="#power"> 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="1080" />
+		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="889" levels="11" name="Energy Storm">
 		<!-- Aurabird Owl -->
+		<table name="#effectPoints"> -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
 		<table name="#power"> 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="1080" />
+		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="890" levels="11" name="Prodigious Flare">
 		<!-- Aurabird Falcon -->
+		<table name="#effectPoints"> -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
 		<table name="#power"> 5627 5773 5918 6060 6199 6335 6468 6598 6723 6844 6960 </table>
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="891" levels="11" name="Energy Shot">
 		<!-- Aurabird Falcon -->
+		<table name="#effectPoints"> -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
 		<table name="#power"> 88 89 90 91 92 93 94 95 96 97 98 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1800" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="892" levels="11" name="Energy Shot">
 		<!-- Aurabird Owl -->
+		<table name="#effectPoints"> -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
 		<table name="#power"> 131 133 135 136 138 139 141 142 144 145 146 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1800" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="893" levels="11" name="Concentrated Energy Shot">
 		<!-- Aurabird Owl -->
+		<table name="#effectPoints"> -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
 		<table name="#power"> 197 199 202 204 206 209 211 213 215 217 219 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1800" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="894" levels="1" name="Exhilarate">
 		<!-- Aurabird Falcon -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="69" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="pDef" val="1.18" />
@@ -1726,17 +2050,17 @@
 		<!-- Aurabird Owl -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+			<effect name="Buff">
 				<mul order="0x30" stat="regMp" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="mAtk" val="1.2" />
@@ -1748,86 +2072,97 @@
 		</for>
 	</skill>
 	<skill id="896" levels="6" name="Rolling Step">
+		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
 		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="897" levels="6" name="Double Blast">
+		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
 		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1500" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="898" levels="6" name="Tornado Slash">
+		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 5068 5175 5278 5379 5475 5568 </table>
 		<table name="#pvpPower"> 1690 1725 1760 1793 1825 1856 </table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="100" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="899" levels="6" name="Cat Roar">
+		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 3168 3234 3299 3362 3422 3480 </table>
 		<table name="#pvpPower"> 1056 1078 1100 1121 1141 1160 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="multi_debuff" />
+		<set name="abnormalType" val="MULTI_DEBUFF" />
+		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="100" />
+		<set name="basicProperty" val="MEN" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="2000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PDAM" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="multi_debuff" effectPower="80" >
+			<effect name="PhysicalAttack" />
+			<effect name="Debuff">
 				<mul order="0x30" stat="pDef" val="0.6" />
 				<mul order="0x30" stat="mDef" val="0.6" />
 				<mul order="0x30" stat="runSpd" val="0.6" />

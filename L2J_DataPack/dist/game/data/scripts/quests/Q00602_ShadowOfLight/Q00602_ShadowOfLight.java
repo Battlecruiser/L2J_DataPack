@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00602_ShadowOfLight;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -71,9 +72,9 @@ public class Q00602_ShadowOfLight extends Quest
 		}
 	};
 	
-	public Q00602_ShadowOfLight(int questId, String name, String descr)
+	public Q00602_ShadowOfLight()
 	{
-		super(questId, name, descr);
+		super(602, Q00602_ShadowOfLight.class.getSimpleName(), "Shadow of Light");
 		addStartNpc(EYE_OF_ARGOS);
 		addTalkId(EYE_OF_ARGOS);
 		addKillId(MOBS);
@@ -128,7 +129,7 @@ public class Q00602_ShadowOfLight extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		int chance = (npc.getNpcId() == MOBS[0]) ? 560 : 800;
+		int chance = (npc.getId() == MOBS[0]) ? 560 : 800;
 		
 		if (st.isCond(1) && (getRandom(1000) < chance))
 		{
@@ -166,10 +167,5 @@ public class Q00602_ShadowOfLight extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00602_ShadowOfLight(602, Q00602_ShadowOfLight.class.getSimpleName(), "Shadow of Light");
 	}
 }

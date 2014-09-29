@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,29 +19,26 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.L2Party;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Rebalance HP effect.
+ * Rebalance HP effect implementation.
  * @author Adry_85, earendil
  */
-public class RebalanceHP extends L2Effect
+public final class RebalanceHP extends AbstractEffect
 {
-	public RebalanceHP(Env env, EffectTemplate template)
+	public RebalanceHP(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -51,54 +48,80 @@ public class RebalanceHP extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		if (!getEffector().isPlayer() || !getEffector().isInParty())
+		return true;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		if (!info.getEffector().isPlayer() || !info.getEffector().isInParty())
 		{
-			return false;
+			return;
 		}
 		
 		double fullHP = 0;
 		double currentHPs = 0;
-		final L2Party party = getEffector().getParty();
+		final L2Party party = info.getEffector().getParty();
+		final Skill skill = info.getSkill();
+		final L2Character effector = info.getEffector();
 		for (L2PcInstance member : party.getMembers())
 		{
-			if (member.isDead() || !Util.checkIfInRange(getSkill().getAffectRange(), getEffector(), member, true))
+			if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
 			{
-				continue;
+				fullHP += member.getMaxHp();
+				currentHPs += member.getCurrentHp();
 			}
 			
-			fullHP += member.getMaxHp();
-			currentHPs += member.getCurrentHp();
+			final L2Summon summon = member.getSummon();
+			if ((summon != null) && (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
+			{
+				fullHP += summon.getMaxHp();
+				currentHPs += summon.getCurrentHp();
+			}
 		}
 		
 		double percentHP = currentHPs / fullHP;
 		for (L2PcInstance member : party.getMembers())
 		{
-			if (member.isDead() || !Util.checkIfInRange(getSkill().getAffectRange(), getEffector(), member, true))
+			if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
 			{
-				continue;
+				double newHP = member.getMaxHp() * percentHP;
+				if (newHP > member.getCurrentHp()) // The target gets healed
+				{
+					// The heal will be blocked if the current hp passes the limit
+					if (member.getCurrentHp() > member.getMaxRecoverableHp())
+					{
+						newHP = member.getCurrentHp();
+					}
+					else if (newHP > member.getMaxRecoverableHp())
+					{
+						newHP = member.getMaxRecoverableHp();
+					}
+				}
+				
+				member.setCurrentHp(newHP);
 			}
 			
-			double newHP = member.getMaxHp() * percentHP;
-			if (newHP > member.getCurrentHp()) // The target gets healed
+			final L2Summon summon = member.getSummon();
+			if ((summon != null) && (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
 			{
-				// The heal will be blocked if the current hp passes the limit
-				if (member.getCurrentHp() > member.getMaxRecoverableHp())
+				double newHP = summon.getMaxHp() * percentHP;
+				if (newHP > summon.getCurrentHp()) // The target gets healed
 				{
-					newHP = member.getCurrentHp();
+					// The heal will be blocked if the current hp passes the limit
+					if (summon.getCurrentHp() > summon.getMaxRecoverableHp())
+					{
+						newHP = summon.getCurrentHp();
+					}
+					else if (newHP > summon.getMaxRecoverableHp())
+					{
+						newHP = summon.getMaxRecoverableHp();
+					}
 				}
-				else if (newHP > member.getMaxRecoverableHp())
-				{
-					newHP = member.getMaxRecoverableHp();
-				}
+				summon.setCurrentHp(newHP);
 			}
-			
-			member.setCurrentHp(newHP);
-			StatusUpdate su = new StatusUpdate(member);
-			su.addAttribute(StatusUpdate.CUR_HP, (int) member.getCurrentHp());
-			member.sendPacket(su);
 		}
-		return true;
 	}
 }

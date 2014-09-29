@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
@@ -40,13 +40,13 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 public class AreaFriendly implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new ArrayList<>();
 		if (!checkTarget(activeChar, target) && (skill.getCastRange() >= 0))
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		if (onlyFirst)
@@ -81,7 +81,7 @@ public class AreaFriendly implements ITargetTypeHandler
 					continue;
 				}
 				
-				if (targetList.size() >= maxTargets)
+				if ((maxTargets > 0) && (targetList.size() >= maxTargets))
 				{
 					break;
 				}
@@ -92,7 +92,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		
 		if (targetList.isEmpty())
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		return targetList.toArray(new L2Character[targetList.size()]);
 	}
@@ -144,7 +144,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		@Override
 		public int compare(L2Character char1, L2Character char2)
 		{
-			return Integer.compare((int) (char1.getCurrentHp() / char1.getMaxHp()), (int) (char2.getCurrentHp() / char2.getMaxHp()));
+			return Double.compare((char1.getCurrentHp() / char1.getMaxHp()), (char2.getCurrentHp() / char2.getMaxHp()));
 		}
 	}
 	

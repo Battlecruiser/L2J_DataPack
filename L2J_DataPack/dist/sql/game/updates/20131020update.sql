@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00111_ElrokianHuntersProof' WHERE name='111_Elrokian_Hunters_Proof';

@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00624_TheFinestIngredientsPart1' WHERE name='624_TheFinestIngredientsPart1';

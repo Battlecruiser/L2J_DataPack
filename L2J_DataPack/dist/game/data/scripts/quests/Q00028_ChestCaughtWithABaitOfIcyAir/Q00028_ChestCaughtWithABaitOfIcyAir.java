@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -41,9 +41,9 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 	private static final int KIKIS_LETTER = 7626;
 	private static final int ELVEN_RING = 881;
 	
-	public Q00028_ChestCaughtWithABaitOfIcyAir(int questId, String name, String descr)
+	public Q00028_ChestCaughtWithABaitOfIcyAir()
 	{
-		super(questId, name, descr);
+		super(28, Q00028_ChestCaughtWithABaitOfIcyAir.class.getSimpleName(), "Chest Caught With A Bait Of Icy Air");
 		addStartNpc(OFULLE);
 		addTalkId(OFULLE, KIKI);
 		registerQuestItems(KIKIS_LETTER);
@@ -96,7 +96,7 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -141,10 +141,5 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00028_ChestCaughtWithABaitOfIcyAir(28, Q00028_ChestCaughtWithABaitOfIcyAir.class.getSimpleName(), "Chest Caught With A Bait Of Icy Air");
 	}
 }

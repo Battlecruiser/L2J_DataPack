@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,9 +21,10 @@ package quests.Q00165_ShilensHunt;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -52,9 +53,9 @@ public class Q00165_ShilensHunt extends Quest
 	private static final int MIN_LVL = 3;
 	private static final int REQUIRED_COUNT = 13;
 	
-	private Q00165_ShilensHunt(int questId, String name, String descr)
+	public Q00165_ShilensHunt()
 	{
-		super(questId, name, descr);
+		super(165, Q00165_ShilensHunt.class.getSimpleName(), "Shilen's Hunt");
 		addStartNpc(NELSYA);
 		addTalkId(NELSYA);
 		addKillId(MONSTERS.keySet());
@@ -77,7 +78,7 @@ public class Q00165_ShilensHunt extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && st.isCond(1) && (getRandom(3) < MONSTERS.get(npc.getNpcId())))
+		if ((st != null) && st.isCond(1) && (getRandom(3) < MONSTERS.get(npc.getId())))
 		{
 			st.giveItems(DARK_BEZOAR, 1);
 			if (st.getQuestItemsCount(DARK_BEZOAR) < REQUIRED_COUNT)
@@ -103,7 +104,7 @@ public class Q00165_ShilensHunt extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() == Race.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30348-02.htm" : "30348-01.htm" : "30348-00.htm";
+					htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30348-02.htm" : "30348-01.htm" : "30348-00.htm";
 					break;
 				}
 				case State.STARTED:
@@ -129,10 +130,5 @@ public class Q00165_ShilensHunt extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00165_ShilensHunt(165, Q00165_ShilensHunt.class.getSimpleName(), "Shilen's Hunt");
 	}
 }

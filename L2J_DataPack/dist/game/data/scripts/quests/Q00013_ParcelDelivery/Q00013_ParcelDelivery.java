@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -37,9 +37,9 @@ public class Q00013_ParcelDelivery extends Quest
 	// Item
 	private static final int PACKAGE = 7263;
 	
-	private Q00013_ParcelDelivery(int questId, String name, String descr)
+	public Q00013_ParcelDelivery()
 	{
-		super(questId, name, descr);
+		super(13, Q00013_ParcelDelivery.class.getSimpleName(), "Parcel Delivery");
 		addStartNpc(FUNDIN);
 		addTalkId(FUNDIN, VULCAN);
 		registerQuestItems(PACKAGE);
@@ -87,7 +87,7 @@ public class Q00013_ParcelDelivery extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -115,10 +115,5 @@ public class Q00013_ParcelDelivery extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00013_ParcelDelivery(13, Q00013_ParcelDelivery.class.getSimpleName(), "Parcel Delivery");
 	}
 }

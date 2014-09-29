@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -46,9 +46,9 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 75;
 	
-	private Q00616_MagicalPowerOfFirePart2(int questId, String name, String descr)
+	public Q00616_MagicalPowerOfFirePart2()
 	{
-		super(questId, name, descr);
+		super(616, Q00616_MagicalPowerOfFirePart2.class.getSimpleName(), "Magical Power of Fire - Part 2");
 		addStartNpc(UDAN);
 		addTalkId(UDAN, KETRA_TOTEM);
 		addKillId(NASTRON);
@@ -72,7 +72,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			if (npc.getNpcId() == NASTRON)
+			if (npc.getId() == NASTRON)
 			{
 				switch (st.getCond())
 				{
@@ -164,7 +164,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case UDAN:
 				switch (st.getState())
@@ -214,10 +214,5 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 		nastron.broadcastPacket(new NpcSay(nastron, Say2.NPC_ALL, NpcStringId.THE_MAGICAL_POWER_OF_FIRE_IS_ALSO_THE_POWER_OF_FLAMES_AND_LAVA_IF_YOU_DARE_TO_CONFRONT_IT_ONLY_DEATH_WILL_AWAIT_YOU));
 		startQuestTimer("despawn_nastron", 1200000, nastron, null);
 		return "31558-02.html";
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00616_MagicalPowerOfFirePart2(616, Q00616_MagicalPowerOfFirePart2.class.getSimpleName(), "Magical Power of Fire - Part 2");
 	}
 }

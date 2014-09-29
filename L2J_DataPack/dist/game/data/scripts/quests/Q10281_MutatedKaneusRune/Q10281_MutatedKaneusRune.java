@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q10281_MutatedKaneusRune;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -41,9 +42,9 @@ public class Q10281_MutatedKaneusRune extends Quest
 	// Item
 	private static final int TISSUE_WA = 13840;
 	
-	public Q10281_MutatedKaneusRune(int questId, String name, String descr)
+	public Q10281_MutatedKaneusRune()
 	{
-		super(questId, name, descr);
+		super(10281, Q10281_MutatedKaneusRune.class.getSimpleName(), "Mutated Kaneus - Rune");
 		addStartNpc(MATHIAS);
 		addTalkId(MATHIAS, KAYAN);
 		addKillId(WHITE_ALLOSCE);
@@ -81,7 +82,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 			return null;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		if (killer.getParty() != null)
 		{
 			final List<QuestState> PartyMembers = new ArrayList<>();
@@ -116,7 +117,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case MATHIAS:
 				switch (st.getState())
@@ -157,10 +158,5 @@ public class Q10281_MutatedKaneusRune extends Quest
 	{
 		st.giveItems(TISSUE_WA, 1);
 		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10281_MutatedKaneusRune(10281, Q10281_MutatedKaneusRune.class.getSimpleName(), "Mutated Kaneus - Rune");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,29 +20,31 @@ package handlers.effecthandlers;
 
 import java.util.logging.Level;
 
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.PetDataTable;
 import com.l2jserver.gameserver.model.L2PetData;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.PetItemHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.PetItemList;
 
 /**
+ * Summon Pet effect implementation.
  * @author UnAfraid
  */
-public class SummonPet extends L2Effect
+public final class SummonPet extends AbstractEffect
 {
-	public SummonPet(Env env, EffectTemplate template)
+	public SummonPet(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -52,47 +54,48 @@ public class SummonPet extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isPlayer() || getEffected().isAlikeDead())
+		return true;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
-		final L2PcInstance player = getEffector().getActingPlayer();
-		if (player.isInOlympiadMode())
-		{
-			player.sendPacket(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
-			return false;
-		}
+		final L2PcInstance player = info.getEffector().getActingPlayer();
 		
 		if ((player.hasSummon() || player.isMounted()))
 		{
 			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
-			return false;
+			return;
 		}
 		
 		final PetItemHolder holder = player.removeScript(PetItemHolder.class);
 		if (holder == null)
 		{
 			_log.log(Level.WARNING, "Summoning pet without attaching PetItemHandler!", new Throwable());
-			return false;
+			return;
 		}
 		
 		final L2ItemInstance item = holder.getItem();
 		if (player.getInventory().getItemByObjectId(item.getObjectId()) != item)
 		{
 			_log.log(Level.WARNING, "Player: " + player + " is trying to summon pet from item that he doesn't owns.");
-			return false;
+			return;
 		}
 		
-		final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getItemId());
+		final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
 		if ((petData == null) || (petData.getNpcId() == -1))
 		{
-			return false;
+			return;
 		}
 		
-		final L2NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(petData.getNpcId());
+		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
 		final L2PetInstance pet = L2PetInstance.spawnPet(npcTemplate, player, item);
 		
 		pet.setShowSummonAnimation(true);
@@ -108,34 +111,15 @@ public class SummonPet extends L2Effect
 		
 		if (!pet.isRespawned())
 		{
-			pet.store();
+			pet.storeMe();
 		}
 		
+		item.setEnchantLevel(pet.getLevel());
 		player.setPet(pet);
-		
 		pet.spawnMe(player.getX() + 50, player.getY() + 100, player.getZ());
 		pet.startFeed();
-		item.setEnchantLevel(pet.getLevel());
-		
-		if (pet.getCurrentFed() <= 0)
-		{
-			pet.unSummon(player);
-		}
-		else
-		{
-			pet.startFeed();
-		}
-		
 		pet.setFollowStatus(true);
-		
 		pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
 		pet.broadcastStatusUpdate();
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

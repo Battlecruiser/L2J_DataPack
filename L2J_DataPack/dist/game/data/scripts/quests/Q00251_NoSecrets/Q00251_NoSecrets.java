@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00251_NoSecrets;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -51,9 +52,9 @@ public class Q00251_NoSecrets extends Quest
 		22778
 	};
 	
-	public Q00251_NoSecrets(int id, String name, String descr)
+	public Q00251_NoSecrets()
 	{
-		super(id, name, descr);
+		super(251, Q00251_NoSecrets.class.getSimpleName(), "No Secrets");
 		addStartNpc(PINAPS);
 		addTalkId(PINAPS);
 		addKillId(MOBS);
@@ -83,7 +84,7 @@ public class Q00251_NoSecrets extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isStarted() && st.isCond(1))
 		{
-			final int npcId = npc.getNpcId();
+			final int npcId = npc.getId();
 			
 			if (Util.contains(MOBS, npcId) && (getRandom(100) < 10) && (st.getQuestItemsCount(DIARY) < 10))
 			{
@@ -146,10 +147,5 @@ public class Q00251_NoSecrets extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00251_NoSecrets(251, Q00251_NoSecrets.class.getSimpleName(), "No Secrets");
 	}
 }

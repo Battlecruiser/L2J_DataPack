@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Ghost Sentinel (84)
  * @author Emperorc
  */
 public class SagaOfTheGhostSentinel extends SagasSuperClass
 {
-	public static String qn1 = "84_SagaOfTheGhostSentinel";
-	public static int qnu = 84;
-	public static String qna = "Saga of the Ghost Sentinel";
-	
 	public SagaOfTheGhostSentinel()
 	{
-		super(qnu, qn1, qna);
+		super(84, "84_SagaOfTheGhostSentinel", "Saga of the Ghost Sentinel");
 		NPC = new int[]
 		{
 			30702,
@@ -67,7 +65,6 @@ public class SagaOfTheGhostSentinel extends SagasSuperClass
 			27233,
 			27307
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			109
@@ -76,23 +73,11 @@ public class SagaOfTheGhostSentinel extends SagasSuperClass
 		{
 			0x25
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			161719,
-			124376,
-			124376
-		};
-		Y = new int[]
-		{
-			-92823,
-			82127,
-			82127
-		};
-		Z = new int[]
-		{
-			-1893,
-			-2796,
-			-2796
+			new Location(161719, -92823, -1893),
+			new Location(124376, 82127, -2796),
+			new Location(124376, 82127, -2796)
 		};
 		Text = new String[]
 		{

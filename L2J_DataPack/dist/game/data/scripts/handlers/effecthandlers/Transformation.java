@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,92 +18,42 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.instancemanager.TransformationManager;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.datatables.TransformData;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
+ * Transformation effect implementation.
  * @author nBd
  */
-public class Transformation extends L2Effect
+public final class Transformation extends AbstractEffect
 {
-	public Transformation(Env env, EffectTemplate template)
-	{
-		super(env, template);
-	}
+	private final int _id;
 	
-	// Special constructor to steal this effect
-	public Transformation(Env env, L2Effect effect)
+	public Transformation(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, effect);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.TRANSFORMATION;
+		super(attachCond, applyCond, set, params);
+		
+		_id = params.getInt("id", 0);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean canStart(BuffInfo info)
 	{
-		if (!getEffected().isPlayer())
-		{
-			return false;
-		}
-		
-		L2PcInstance trg = getEffected().getActingPlayer();
-		if (trg == null)
-		{
-			return false;
-		}
-		
-		if (trg.isAlikeDead() || trg.isCursedWeaponEquipped())
-		{
-			return false;
-		}
-		
-		if (trg.isSitting())
-		{
-			trg.sendPacket(SystemMessageId.CANNOT_TRANSFORM_WHILE_SITTING);
-			return false;
-		}
-		
-		if (trg.isTransformed() || trg.isInStance())
-		{
-			trg.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
-			return false;
-		}
-		
-		if (trg.isInWater())
-		{
-			trg.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_INTO_THE_DESIRED_FORM_IN_WATER);
-			return false;
-		}
-		
-		if (trg.isFlyingMounted() || trg.isMounted() || trg.isRidingStrider())
-		{
-			trg.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_PET);
-			return false;
-		}
-		
-		TransformationManager.getInstance().transformPlayer(getSkill().getTransformId(), trg);
-		return true;
+		return info.getEffected().isPlayer();
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public void onExit(BuffInfo info)
 	{
-		return false;
+		info.getEffected().stopTransformation(false);
 	}
 	
 	@Override
-	public void onExit()
+	public void onStart(BuffInfo info)
 	{
-		getEffected().stopTransformation(false);
+		TransformData.getInstance().transformPlayer(_id, info.getEffected().getActingPlayer());
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,7 +22,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Weaver Olf - Pins And Pouch Unseal AI.
  * @author Gigiikun, Bloodshed, Adry_85
  */
-public class WeaverOlf extends AbstractNpcAI
+public final class WeaverOlf extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCs =
@@ -152,9 +152,9 @@ public class WeaverOlf extends AbstractNpcAI
 		}
 	};
 	
-	private WeaverOlf(String name, String descr)
+	private WeaverOlf()
 	{
-		super(name, descr);
+		super(WeaverOlf.class.getSimpleName(), "ai/npc");
 		addStartNpc(NPCs);
 		addTalkId(NPCs);
 	}
@@ -196,7 +196,7 @@ public class WeaverOlf extends AbstractNpcAI
 			{
 				if (player.getAdena() > price)
 				{
-					takeItems(player, PcInventory.ADENA_ID, price);
+					takeItems(player, Inventory.ADENA_ID, price);
 					takeItems(player, itemIds[0], 1);
 					int rand = getRandom(200);
 					if (rand <= CHANCES[0])
@@ -217,17 +217,17 @@ public class WeaverOlf extends AbstractNpcAI
 					}
 					else
 					{
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.WHAT_A_PREDICAMENT_MY_ATTEMPTS_WERE_UNSUCCESSFUL));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.WHAT_A_PREDICAMENT_MY_ATTEMPTS_WERE_UNSUCCESSFUL));
 					}
 				}
 				else
 				{
-					return npc.getNpcId() + "-low.htm";
+					return npc.getId() + "-low.htm";
 				}
 			}
 			else
 			{
-				return npc.getNpcId() + "-no.htm";
+				return npc.getId() + "-no.htm";
 			}
 			return super.onAdvEvent(event, npc, player);
 		}
@@ -237,11 +237,11 @@ public class WeaverOlf extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		return npc.getNpcId() + "-1.htm";
+		return npc.getId() + "-1.htm";
 	}
 	
 	public static void main(String[] args)
 	{
-		new WeaverOlf(WeaverOlf.class.getSimpleName(), "ai/npc");
+		new WeaverOlf();
 	}
 }

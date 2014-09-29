@@ -2,16 +2,16 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="11700" type="Weapon" name="Common Item - Spinebone Sword*Artisan's Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="820" />
 		<set name="price" val="52050" />
 		<set name="soulshots" val="3" />
@@ -25,16 +25,16 @@
 	</item>
 	<item id="11701" type="Weapon" name="Common Item - Arm Breaker">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="607" />
 		<set name="price" val="52050" />
 		<set name="change_weaponId" val="11683" />
@@ -42,7 +42,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="reuse_delay" val="400" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="100" />
@@ -54,16 +54,16 @@
 	</item>
 	<item id="11702" type="Weapon" name="Common Item - Epee">
 		<set name="icon" val="icon.weapon_rapier_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="483" />
 		<set name="price" val="52050" />
 		<set name="change_weaponId" val="11714" />
@@ -71,7 +71,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant4_skill" val="3426-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="72" />
@@ -83,16 +83,16 @@
 	</item>
 	<item id="11703" type="Weapon" name="Common Item - Winged Spear">
 		<set name="icon" val="icon.weapon_winged_spear_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="687" />
 		<set name="price" val="52050" />
 		<set name="soulshots" val="3" />
@@ -108,16 +108,16 @@
 	</item>
 	<item id="11704" type="Weapon" name="Common Item - Artisan's Sword*Knight's Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="823" />
 		<set name="price" val="52050" />
 		<set name="soulshots" val="3" />
@@ -131,16 +131,16 @@
 	</item>
 	<item id="11705" type="Weapon" name="Common Item - Artisan's Sword*Artisan's Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="827" />
 		<set name="price" val="52050" />
 		<set name="soulshots" val="3" />
@@ -154,16 +154,16 @@
 	</item>
 	<item id="11706" type="Weapon" name="Common Item - Cursed Maingauche">
 		<set name="icon" val="icon.weapon_maingauche_i01" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="357" />
 		<set name="price" val="52050" />
 		<set name="soulshots" val="3" />
@@ -180,23 +180,23 @@
 	</item>
 	<item id="11707" type="Weapon" name="Common Item - Katzbalger">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="673" />
 		<set name="price" val="52050" />
 		<set name="change_weaponId" val="11710" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="86" />
@@ -208,16 +208,16 @@
 	</item>
 	<item id="11708" type="Weapon" name="Common Item - Tarbar">
 		<set name="icon" val="icon.weapon_tarbar_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="577" />
 		<set name="price" val="52050" />
 		<set name="soulshots" val="3" />
@@ -232,16 +232,16 @@
 	</item>
 	<item id="11709" type="Weapon" name="Common Item - Crucifix of Blood">
 		<set name="icon" val="icon.weapon_crucifix_of_blood_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="etc" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="180" />
 		<set name="price" val="52050" />
 		<set name="soulshots" val="3" />
@@ -256,16 +256,16 @@
 	</item>
 	<item id="11710" type="Weapon" name="Common Item - Titan Sword">
 		<set name="icon" val="icon.weapon_giants_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="673" />
 		<set name="price" val="52050" />
 		<set name="change_weaponId" val="11707" />
@@ -280,16 +280,16 @@
 	</item>
 	<item id="11711" type="Weapon" name="Common Item - Titan Hammer">
 		<set name="icon" val="icon.weapon_giants_hammer_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="700" />
 		<set name="price" val="52050" />
 		<set name="soulshots" val="3" />
@@ -304,16 +304,16 @@
 	</item>
 	<item id="11712" type="Weapon" name="Common Item - War Pick">
 		<set name="icon" val="icon.weapon_hammer_in_flames_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="683" />
 		<set name="price" val="52050" />
 		<set name="soulshots" val="3" />
@@ -329,16 +329,16 @@
 	</item>
 	<item id="11713" type="Weapon" name="Common Item - Heavy Bone Club">
 		<set name="icon" val="icon.weapon_heavy_bone_club_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="bone" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BONE" />
 		<set name="weight" val="577" />
 		<set name="price" val="52050" />
 		<set name="soulshots" val="3" />
@@ -353,16 +353,16 @@
 	</item>
 	<item id="11714" type="Weapon" name="Common Item - Sword of Revolution">
 		<set name="icon" val="icon.weapon_sword_of_revolution_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="96" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="483" />
 		<set name="price" val="52050" />
 		<set name="change_weaponId" val="11702" />
@@ -377,16 +377,16 @@
 	</item>
 	<item id="11715" type="Weapon" name="Common Item - Demon Fangs">
 		<set name="icon" val="icon.weapon_demon_fangs_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="etc" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="104" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="533" />
 		<set name="price" val="56310" />
 		<set name="soulshots" val="3" />
@@ -401,16 +401,16 @@
 	</item>
 	<item id="11716" type="Weapon" name="Common Item - Knight's Sword*Elven Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="112" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="817" />
 		<set name="price" val="60780" />
 		<set name="soulshots" val="3" />
@@ -424,16 +424,16 @@
 	</item>
 	<item id="11717" type="Weapon" name="Common Item - Knight's Sword*Crimson Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="112" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="820" />
 		<set name="price" val="60780" />
 		<set name="soulshots" val="3" />
@@ -447,16 +447,16 @@
 	</item>
 	<item id="11718" type="Weapon" name="Common Item - Bastard Sword*Elven Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="112" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="820" />
 		<set name="price" val="60780" />
 		<set name="soulshots" val="3" />
@@ -470,16 +470,16 @@
 	</item>
 	<item id="11719" type="Weapon" name="Common Item - Bastard Sword*Crimson Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="112" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="823" />
 		<set name="price" val="60780" />
 		<set name="soulshots" val="3" />
@@ -493,16 +493,16 @@
 	</item>
 	<item id="11720" type="Weapon" name="Common Item - Spinebone Sword*Elven Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="112" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="820" />
 		<set name="price" val="60780" />
 		<set name="soulshots" val="3" />
@@ -516,16 +516,16 @@
 	</item>
 	<item id="11721" type="Weapon" name="Common Item - Spinebone Sword*Crimson Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="112" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="840" />
 		<set name="price" val="60780" />
 		<set name="soulshots" val="3" />
@@ -539,16 +539,16 @@
 	</item>
 	<item id="11722" type="Weapon" name="Common Item - Artisan's Sword*Elven Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="112" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="823" />
 		<set name="price" val="60780" />
 		<set name="soulshots" val="3" />
@@ -562,16 +562,16 @@
 	</item>
 	<item id="11723" type="Weapon" name="Common Item - Artisan's Sword*Crimson Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="112" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="817" />
 		<set name="price" val="60780" />
 		<set name="soulshots" val="3" />
@@ -585,16 +585,16 @@
 	</item>
 	<item id="11724" type="Weapon" name="Common Item - Grand Epee">
 		<set name="icon" val="icon.weapon_rapier_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="480" />
 		<set name="price" val="65580" />
 		<set name="change_weaponId" val="11733" />
@@ -602,7 +602,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant4_skill" val="3426-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="83" />
@@ -614,16 +614,16 @@
 	</item>
 	<item id="11725" type="Weapon" name="Common Item - Glaive">
 		<set name="icon" val="icon.weapon_glaive_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="683" />
 		<set name="price" val="65580" />
 		<set name="soulshots" val="3" />
@@ -639,16 +639,16 @@
 	</item>
 	<item id="11726" type="Weapon" name="Common Item - Mithril Dagger">
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="mithril" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="353" />
 		<set name="price" val="65580" />
 		<set name="soulshots" val="3" />
@@ -663,16 +663,16 @@
 	</item>
 	<item id="11727" type="Weapon" name="Common Item - Bonebreaker">
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="573" />
 		<set name="price" val="65580" />
 		<set name="soulshots" val="3" />
@@ -687,16 +687,16 @@
 	</item>
 	<item id="11728" type="Weapon" name="Common Item - Light Crossbow">
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="603" />
 		<set name="price" val="65580" />
 		<set name="change_weaponId" val="11735" />
@@ -714,16 +714,16 @@
 	</item>
 	<item id="11729" type="Weapon" name="Common Item - Staff of Life">
 		<set name="icon" val="icon.weapon_life_stick_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="393" />
 		<set name="price" val="65580" />
 		<set name="soulshots" val="3" />
@@ -739,16 +739,16 @@
 	</item>
 	<item id="11730" type="Weapon" name="Common Item - Scallop Jamadhr">
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="507" />
 		<set name="price" val="65580" />
 		<set name="soulshots" val="3" />
@@ -763,16 +763,16 @@
 	</item>
 	<item id="11731" type="Weapon" name="Common Item - Atuba Mace">
 		<set name="icon" val="icon.weapon_atuba_mace_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="337" />
 		<set name="price" val="65580" />
 		<set name="soulshots" val="3" />
@@ -788,16 +788,16 @@
 	</item>
 	<item id="11732" type="Weapon" name="Common Item - Atuba Hammer">
 		<set name="icon" val="icon.weapon_atuba_hammer_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="337" />
 		<set name="price" val="65580" />
 		<set name="soulshots" val="3" />
@@ -813,16 +813,16 @@
 	</item>
 	<item id="11733" type="Weapon" name="Common Item - Elven Long Sword">
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="480" />
 		<set name="price" val="65580" />
 		<set name="change_weaponId" val="11724" />
@@ -837,23 +837,23 @@
 	</item>
 	<item id="11734" type="Weapon" name="Common Item - General's Katzbalger">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="670" />
 		<set name="price" val="65580" />
 		<set name="change_weaponId" val="11736" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="100" />
@@ -865,16 +865,16 @@
 	</item>
 	<item id="11735" type="Weapon" name="Common Item - Cranequin">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="603" />
 		<set name="price" val="65580" />
 		<set name="change_weaponId" val="11728" />
@@ -882,7 +882,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="reuse_delay" val="400" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="117" />
@@ -894,16 +894,16 @@
 	</item>
 	<item id="11736" type="Weapon" name="Common Item - Claymore">
 		<set name="icon" val="icon.weapon_claymore_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="697" />
 		<set name="price" val="65580" />
 		<set name="change_weaponId" val="11734" />
@@ -918,16 +918,16 @@
 	</item>
 	<item id="11737" type="Weapon" name="Common Item - Ghost Staff">
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="121" />
-		<set name="crystal_type" val="d" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="333" />
 		<set name="price" val="65580" />
 		<set name="soulshots" val="3" />
@@ -943,16 +943,16 @@
 	</item>
 	<item id="11738" type="Weapon" name="Common Item - Saber*Sword of Revolution">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="28" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="807" />
 		<set name="price" val="70600" />
 		<set name="soulshots" val="2" />
@@ -966,16 +966,16 @@
 	</item>
 	<item id="11739" type="Weapon" name="Common Item - Elven Sword*Elven Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="28" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="813" />
 		<set name="price" val="70600" />
 		<set name="soulshots" val="2" />
@@ -989,16 +989,16 @@
 	</item>
 	<item id="11740" type="Weapon" name="Common Item - Crimson Sword*Elven Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="28" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="817" />
 		<set name="price" val="70600" />
 		<set name="soulshots" val="2" />
@@ -1012,16 +1012,16 @@
 	</item>
 	<item id="11741" type="Weapon" name="Common Item - Crimson Sword*Crimson Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="28" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="813" />
 		<set name="price" val="70600" />
 		<set name="soulshots" val="2" />
@@ -1035,16 +1035,16 @@
 	</item>
 	<item id="11742" type="Weapon" name="Common Item - Knight's Sword*Sword of Revolution">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="30" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="810" />
 		<set name="price" val="75980" />
 		<set name="soulshots" val="2" />
@@ -1058,16 +1058,16 @@
 	</item>
 	<item id="11743" type="Weapon" name="Common Item - Bastard Sword*Sword of Revolution">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="30" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="817" />
 		<set name="price" val="75980" />
 		<set name="soulshots" val="2" />
@@ -1081,16 +1081,16 @@
 	</item>
 	<item id="11744" type="Weapon" name="Common Item - Spinebone Sword*Sword of Revolution">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="30" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="820" />
 		<set name="price" val="75980" />
 		<set name="soulshots" val="2" />
@@ -1104,16 +1104,16 @@
 	</item>
 	<item id="11745" type="Weapon" name="Common Item - Artisan's Sword*Sword of Revolution">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="30" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="807" />
 		<set name="price" val="75980" />
 		<set name="soulshots" val="2" />
@@ -1127,16 +1127,16 @@
 	</item>
 	<item id="11746" type="Weapon" name="Common Item - Wolverine Needle">
 		<set name="icon" val="icon.weapon_needle_wolverine_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="347" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1151,16 +1151,16 @@
 	</item>
 	<item id="11747" type="Weapon" name="Common Item - Dark Elven Dagger">
 		<set name="icon" val="icon.weapon_darkelven_dagger_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="350" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1175,16 +1175,16 @@
 	</item>
 	<item id="11748" type="Weapon" name="Common Item - Mysterious Sword">
 		<set name="icon" val="icon.weapon_mystery_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="477" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1199,16 +1199,16 @@
 	</item>
 	<item id="11749" type="Weapon" name="Common Item - Body Slasher">
 		<set name="icon" val="icon.weapon_body_slasher_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="677" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1224,16 +1224,16 @@
 	</item>
 	<item id="11750" type="Weapon" name="Common Item - Battle Axe">
 		<set name="icon" val="icon.weapon_battle_axe_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="573" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1248,16 +1248,16 @@
 	</item>
 	<item id="11751" type="Weapon" name="Common Item - Scythe">
 		<set name="icon" val="icon.weapon_scythe_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="680" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1273,16 +1273,16 @@
 	</item>
 	<item id="11752" type="Weapon" name="Common Item - Saber*Elven Long Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="807" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1296,16 +1296,16 @@
 	</item>
 	<item id="11753" type="Weapon" name="Common Item - Soldat Estoc">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="477" />
 		<set name="price" val="81600" />
 		<set name="change_weaponId" val="11756" />
@@ -1313,7 +1313,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant4_skill" val="3426-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="97" />
@@ -1325,23 +1325,23 @@
 	</item>
 	<item id="11754" type="Weapon" name="Common Item - Schlager">
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="660" />
 		<set name="price" val="81600" />
 		<set name="change_weaponId" val="11766" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="116" />
@@ -1353,16 +1353,16 @@
 	</item>
 	<item id="11755" type="Weapon" name="Common Item - Skull Graver">
 		<set name="icon" val="icon.weapon_skull_graver_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="547" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1377,16 +1377,16 @@
 	</item>
 	<item id="11756" type="Weapon" name="Common Item - Stormbringer">
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="477" />
 		<set name="price" val="81600" />
 		<set name="change_weaponId" val="11753" />
@@ -1401,16 +1401,16 @@
 	</item>
 	<item id="11757" type="Weapon" name="Common Item - Stick of Faith">
 		<set name="icon" val="icon.weapon_stick_of_faith_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="387" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1426,16 +1426,16 @@
 	</item>
 	<item id="11758" type="Weapon" name="Common Item - Arbalest">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="597" />
 		<set name="price" val="81600" />
 		<set name="change_weaponId" val="11759" />
@@ -1443,7 +1443,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="reuse_delay" val="400" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="135" />
@@ -1455,16 +1455,16 @@
 	</item>
 	<item id="11759" type="Weapon" name="Common Item - Crystallized Ice Bow">
 		<set name="icon" val="icon.weapon_crystallized_ice_bow_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="crystal" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="597" />
 		<set name="price" val="81600" />
 		<set name="change_weaponId" val="11758" />
@@ -1482,16 +1482,16 @@
 	</item>
 	<item id="11760" type="Weapon" name="Common Item - Orcish Glaive">
 		<set name="icon" val="icon.weapon_orcish_glaive_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="677" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1507,16 +1507,16 @@
 	</item>
 	<item id="11761" type="Weapon" name="Common Item - Silver Axe">
 		<set name="icon" val="icon.weapon_war_pick_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="563" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1531,16 +1531,16 @@
 	</item>
 	<item id="11762" type="Weapon" name="Common Item - Cursed Dagger">
 		<set name="icon" val="icon.weapon_cursed_dagger_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="mithril" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="347" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1555,16 +1555,16 @@
 	</item>
 	<item id="11763" type="Weapon" name="Common Item - Chakram">
 		<set name="icon" val="icon.weapon_chakram_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="497" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1579,16 +1579,16 @@
 	</item>
 	<item id="11764" type="Weapon" name="Common Item - Crystal Staff">
 		<set name="icon" val="icon.weapon_crystal_staff_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="crystal" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="340" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1604,16 +1604,16 @@
 	</item>
 	<item id="11765" type="Weapon" name="Common Item - Big Hammer">
 		<set name="icon" val="icon.weapon_big_hammer_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="570" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1628,16 +1628,16 @@
 	</item>
 	<item id="11766" type="Weapon" name="Common Item - Flamberge">
 		<set name="icon" val="icon.weapon_flamberge_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="bronze" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BRONZE" />
 		<set name="weight" val="670" />
 		<set name="price" val="81600" />
 		<set name="change_weaponId" val="11754" />
@@ -1652,16 +1652,16 @@
 	</item>
 	<item id="11767" type="Weapon" name="Common Item - Heavy Doom Axe">
 		<set name="icon" val="icon.weapon_heavy_doom_axe_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;56;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="337" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1677,16 +1677,16 @@
 	</item>
 	<item id="11768" type="Weapon" name="Common Item - Heavy Doom Hammer">
 		<set name="icon" val="icon.weapon_heavy_doom_hammer_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="33" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="340" />
 		<set name="price" val="81600" />
 		<set name="soulshots" val="2" />
@@ -1702,16 +1702,16 @@
 	</item>
 	<item id="11769" type="Weapon" name="Common Item - Knight's Sword*Elven Long Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="35" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="790" />
 		<set name="price" val="87420" />
 		<set name="soulshots" val="2" />
@@ -1725,16 +1725,16 @@
 	</item>
 	<item id="11770" type="Weapon" name="Common Item - Bastard Sword*Elven Long Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="35" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="810" />
 		<set name="price" val="87420" />
 		<set name="soulshots" val="2" />
@@ -1748,16 +1748,16 @@
 	</item>
 	<item id="11771" type="Weapon" name="Common Item - Spinebone Sword*Elven Long Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="35" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="797" />
 		<set name="price" val="87420" />
 		<set name="soulshots" val="2" />
@@ -1771,16 +1771,16 @@
 	</item>
 	<item id="11772" type="Weapon" name="Common Item - Elven Sword*Sword of Revolution">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="35" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="803" />
 		<set name="price" val="87420" />
 		<set name="soulshots" val="2" />
@@ -1794,16 +1794,16 @@
 	</item>
 	<item id="11773" type="Weapon" name="Common Item - Artisan's Sword*Elven Long Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="35" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="803" />
 		<set name="price" val="87420" />
 		<set name="soulshots" val="2" />
@@ -1817,16 +1817,16 @@
 	</item>
 	<item id="11774" type="Weapon" name="Common Item - Crimson Sword*Sword of Revolution">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="35" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="797" />
 		<set name="price" val="87420" />
 		<set name="soulshots" val="2" />
@@ -1840,16 +1840,16 @@
 	</item>
 	<item id="11775" type="Weapon" name="Common Item - Noble Elven Bow">
 		<set name="icon" val="icon.weapon_noble_elven_bow_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="mithril" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="MITHRIL" />
 		<set name="weight" val="587" />
 		<set name="price" val="100200" />
 		<set name="change_weaponId" val="11781" />
@@ -1867,16 +1867,16 @@
 	</item>
 	<item id="11776" type="Weapon" name="Common Item - Knuckle Duster">
 		<set name="icon" val="icon.weapon_knuckle_dust_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="497" />
 		<set name="price" val="100200" />
 		<set name="soulshots" val="2" />
@@ -1891,16 +1891,16 @@
 	</item>
 	<item id="11777" type="Weapon" name="Common Item - Dwarven War Hammer">
 		<set name="icon" val="icon.weapon_dwarven_warhammer_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="557" />
 		<set name="price" val="100200" />
 		<set name="soulshots" val="2" />
@@ -1915,16 +1915,16 @@
 	</item>
 	<item id="11778" type="Weapon" name="Common Item - Raid Sword">
 		<set name="icon" val="icon.weapon_raid_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="473" />
 		<set name="price" val="100200" />
 		<set name="change_weaponId" val="11787" />
@@ -1939,16 +1939,16 @@
 	</item>
 	<item id="11779" type="Weapon" name="Common Item - Soulfire Dirk">
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="250" />
 		<set name="price" val="100200" />
 		<set name="soulshots" val="2" />
@@ -1964,16 +1964,16 @@
 	</item>
 	<item id="11780" type="Weapon" name="Common Item - Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="590" />
 		<set name="price" val="100200" />
 		<set name="change_weaponId" val="11790" />
@@ -1981,7 +1981,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="reuse_delay" val="400" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="155" />
@@ -1993,16 +1993,16 @@
 	</item>
 	<item id="11781" type="Weapon" name="Common Item - Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="590" />
 		<set name="price" val="100200" />
 		<set name="change_weaponId" val="11775" />
@@ -2010,7 +2010,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="reuse_delay" val="400" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="155" />
@@ -2022,16 +2022,16 @@
 	</item>
 	<item id="11782" type="Weapon" name="Common Item - Bec de Corbin">
 		<set name="icon" val="icon.weapon_bech_de_corbin_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="673" />
 		<set name="price" val="100200" />
 		<set name="soulshots" val="2" />
@@ -2047,16 +2047,16 @@
 	</item>
 	<item id="11783" type="Weapon" name="Common Item - Shamshir">
 		<set name="icon" val="icon.weapon_shamshir_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="473" />
 		<set name="price" val="100200" />
 		<set name="change_weaponId" val="11784" />
@@ -2071,16 +2071,16 @@
 	</item>
 	<item id="11784" type="Weapon" name="Common Item - Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="473" />
 		<set name="price" val="100200" />
 		<set name="change_weaponId" val="11783" />
@@ -2088,7 +2088,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant4_skill" val="3426-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="111" />
@@ -2100,16 +2100,16 @@
 	</item>
 	<item id="11785" type="Weapon" name="Common Item - Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="473" />
 		<set name="price" val="100200" />
 		<set name="change_weaponId" val="11794" />
@@ -2117,7 +2117,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant4_skill" val="3426-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="111" />
@@ -2129,16 +2129,16 @@
 	</item>
 	<item id="11786" type="Weapon" name="Common Item - Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="473" />
 		<set name="price" val="100200" />
 		<set name="change_weaponId" val="11789" />
@@ -2146,7 +2146,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant4_skill" val="3426-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="111" />
@@ -2158,16 +2158,16 @@
 	</item>
 	<item id="11787" type="Weapon" name="Common Item - Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="473" />
 		<set name="price" val="100200" />
 		<set name="change_weaponId" val="11778" />
@@ -2175,7 +2175,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant4_skill" val="3426-1" />
 		<cond msgId="1518">
-			<player races="Kamael" />
+			<player races="KAMAEL" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="111" />
@@ -2187,16 +2187,16 @@
 	</item>
 	<item id="11788" type="Weapon" name="Common Item - Stiletto">
 		<set name="icon" val="icon.weapon_stiletto_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="343" />
 		<set name="price" val="100200" />
 		<set name="soulshots" val="2" />
@@ -2211,16 +2211,16 @@
 	</item>
 	<item id="11789" type="Weapon" name="Common Item - Spirit Sword">
 		<set name="icon" val="icon.weapon_spirits_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="473" />
 		<set name="price" val="100200" />
 		<set name="change_weaponId" val="11786" />
@@ -2235,16 +2235,16 @@
 	</item>
 	<item id="11790" type="Weapon" name="Common Item - Elemental Bow">
 		<set name="icon" val="icon.weapon_elemental_bow_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="590" />
 		<set name="price" val="100200" />
 		<set name="change_weaponId" val="11780" />
@@ -2262,16 +2262,16 @@
 	</item>
 	<item id="11791" type="Weapon" name="Common Item - Elven Sword*Elven Long Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="803" />
 		<set name="price" val="100200" />
 		<set name="soulshots" val="2" />
@@ -2286,16 +2286,16 @@
 	</item>
 	<item id="11792" type="Weapon" name="Common Item - Horn of Glory">
 		<set name="icon" val="icon.weapon_horn_of_glory_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="etc" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="180" />
 		<set name="price" val="100200" />
 		<set name="soulshots" val="2" />
@@ -2310,16 +2310,16 @@
 	</item>
 	<item id="11793" type="Weapon" name="Common Item - Cursed Staff">
 		<set name="icon" val="icon.weapon_cursed_staff_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="bigblunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="333" />
 		<set name="price" val="100200" />
 		<set name="soulshots" val="2" />
@@ -2335,16 +2335,16 @@
 	</item>
 	<item id="11794" type="Weapon" name="Common Item - Katana">
 		<set name="icon" val="icon.weapon_katana_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="473" />
 		<set name="price" val="100200" />
 		<set name="change_weaponId" val="11785" />
@@ -2359,16 +2359,16 @@
 	</item>
 	<item id="11795" type="Weapon" name="Common Item - Crimson Sword*Elven Long Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="787" />
 		<set name="price" val="100200" />
 		<set name="soulshots" val="2" />
@@ -2383,16 +2383,16 @@
 	</item>
 	<item id="11796" type="Weapon" name="Common Item - Sword of Revolution*Sword of Revolution">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="787" />
 		<set name="price" val="100200" />
 		<set name="soulshots" val="2" />
@@ -2407,16 +2407,16 @@
 	</item>
 	<item id="11797" type="Weapon" name="Common Item - Sword of Revolution*Elven Long Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="60" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="780" />
 		<set name="price" val="150600" />
 		<set name="soulshots" val="3" />
@@ -2431,16 +2431,16 @@
 	</item>
 	<item id="11798" type="Weapon" name="Common Item - Elven Long Sword*Elven Long Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="68" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="fine_steel" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="780" />
 		<set name="price" val="169400" />
 		<set name="soulshots" val="3" />
@@ -2455,16 +2455,16 @@
 	</item>
 	<item id="11799" type="Weapon" name="Common Item - Stick of Eternity">
 		<set name="icon" val="icon.weapon_stick_of_eternity_i00" />
-		<set name="default_action" val="equip" />
-		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="73" />
-		<set name="crystal_type" val="c" />
-		<set name="material" val="wood" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="377" />
 		<set name="price" val="182200" />
 		<set name="soulshots" val="3" />

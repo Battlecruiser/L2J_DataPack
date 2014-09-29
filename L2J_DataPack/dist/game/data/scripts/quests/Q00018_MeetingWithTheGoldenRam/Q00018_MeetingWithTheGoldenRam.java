@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -38,9 +38,9 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 	// Item
 	private static final int BOX = 7245;
 	
-	public Q00018_MeetingWithTheGoldenRam(int questId, String name, String descr)
+	public Q00018_MeetingWithTheGoldenRam()
 	{
-		super(questId, name, descr);
+		super(18, Q00018_MeetingWithTheGoldenRam.class.getSimpleName(), "Meeting With The Golden Ram");
 		addStartNpc(DONAL);
 		addTalkId(DONAL, DAISY, ABERCROMBIE);
 		registerQuestItems(BOX);
@@ -94,7 +94,7 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -122,10 +122,5 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00018_MeetingWithTheGoldenRam(18, Q00018_MeetingWithTheGoldenRam.class.getSimpleName(), "Meeting With The Golden Ram");
 	}
 }

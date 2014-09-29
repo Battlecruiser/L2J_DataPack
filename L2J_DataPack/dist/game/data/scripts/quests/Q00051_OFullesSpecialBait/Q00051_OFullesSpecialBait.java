@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,6 +19,7 @@
 package quests.Q00051_OFullesSpecialBait;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -39,9 +40,9 @@ public class Q00051_OFullesSpecialBait extends Quest
 	private static final int LOST_BAIT = 7622;
 	private static final int ICY_AIR_LURE = 7611;
 	
-	public Q00051_OFullesSpecialBait(int questId, String name, String descr)
+	public Q00051_OFullesSpecialBait()
 	{
-		super(questId, name, descr);
+		super(51, Q00051_OFullesSpecialBait.class.getSimpleName(), "O'Fulle's Special Bait");
 		addStartNpc(OFULLE);
 		addTalkId(OFULLE);
 		addKillId(FETTERED_SOUL);
@@ -125,10 +126,5 @@ public class Q00051_OFullesSpecialBait extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00051_OFullesSpecialBait(51, Q00051_OFullesSpecialBait.class.getSimpleName(), "O'Fulle's Special Bait");
 	}
 }

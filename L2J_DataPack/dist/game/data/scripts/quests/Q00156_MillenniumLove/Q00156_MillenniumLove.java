@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -40,9 +40,9 @@ public class Q00156_MillenniumLove extends Quest
 	// Misc
 	private static final int MIN_LVL = 15;
 	
-	public Q00156_MillenniumLove(int questId, String name, String descr)
+	public Q00156_MillenniumLove()
 	{
-		super(questId, name, descr);
+		super(156, Q00156_MillenniumLove.class.getSimpleName(), "Millennium Love");
 		addStartNpc(LILITH);
 		addTalkId(LILITH, BAENEDES);
 		registerQuestItems(LILITHS_LETTER, THEONS_DIARY);
@@ -110,7 +110,7 @@ public class Q00156_MillenniumLove extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case LILITH:
 				{
@@ -170,10 +170,5 @@ public class Q00156_MillenniumLove extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00156_MillenniumLove(156, Q00156_MillenniumLove.class.getSimpleName(), "Millennium Love");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,6 +20,7 @@ package ai.npc.Teleports.TeleportWithCharm;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -28,7 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Original Jython script by DraX.
  * @author Plim
  */
-public class TeleportWithCharm extends AbstractNpcAI
+public final class TeleportWithCharm extends AbstractNpcAI
 {
 	// NPCs
 	private final static int WHIRPY = 30540;
@@ -36,18 +37,28 @@ public class TeleportWithCharm extends AbstractNpcAI
 	// Items
 	private final static int ORC_GATEKEEPER_CHARM = 1658;
 	private final static int DWARF_GATEKEEPER_TOKEN = 1659;
+	// Locations
+	private final static Location ORC_TELEPORT = new Location(-80826, 149775, -3043);
+	private final static Location DWARF_TELEPORT = new Location(-80826, 149775, -3043);
+	
+	private TeleportWithCharm()
+	{
+		super(TeleportWithCharm.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(WHIRPY, TAMIL);
+		addTalkId(WHIRPY, TAMIL);
+	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case WHIRPY:
 			{
 				if (hasQuestItems(player, DWARF_GATEKEEPER_TOKEN))
 				{
 					takeItems(player, DWARF_GATEKEEPER_TOKEN, 1);
-					player.teleToLocation(-80826, 149775, -3043);
+					player.teleToLocation(DWARF_TELEPORT);
 				}
 				else
 				{
@@ -60,7 +71,7 @@ public class TeleportWithCharm extends AbstractNpcAI
 				if (hasQuestItems(player, ORC_GATEKEEPER_CHARM))
 				{
 					takeItems(player, ORC_GATEKEEPER_CHARM, 1);
-					player.teleToLocation(-80826, 149775, -3043);
+					player.teleToLocation(ORC_TELEPORT);
 				}
 				else
 				{
@@ -72,15 +83,8 @@ public class TeleportWithCharm extends AbstractNpcAI
 		return super.onTalk(npc, player);
 	}
 	
-	private TeleportWithCharm(String name, String descr)
-	{
-		super(name, descr);
-		addStartNpc(WHIRPY, TAMIL);
-		addTalkId(WHIRPY, TAMIL);
-	}
-	
 	public static void main(String[] args)
 	{
-		new TeleportWithCharm(TeleportWithCharm.class.getSimpleName(), "ai/npc/Teleports");
+		new TeleportWithCharm();
 	}
 }

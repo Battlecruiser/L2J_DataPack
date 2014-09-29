@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00142_FallenAngelRequestOfDawn;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -63,9 +64,9 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 	private static final int FRAGMENT_COUNT = 30;
 	private boolean isAngelSpawned = false;
 	
-	private Q00142_FallenAngelRequestOfDawn(int questId, String name, String descr)
+	public Q00142_FallenAngelRequestOfDawn()
 	{
-		super(questId, name, descr);
+		super(142, Q00142_FallenAngelRequestOfDawn.class.getSimpleName(), "Fallen Angel - Request of Dawn");
 		addTalkId(NATOOLS, RAYMOND, CASIAN, ROCK);
 		addKillId(MOBS.keySet());
 		addKillId(FALLEN_ANGEL);
@@ -135,7 +136,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st;
-		if ((npc.getNpcId() == FALLEN_ANGEL))
+		if ((npc.getId() == FALLEN_ANGEL))
 		{
 			st = player.getQuestState(getName());
 			if (st.isCond(5))
@@ -151,7 +152,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 			if (member != null)
 			{
 				st = member.getQuestState(getName());
-				if (getRandom(1000) < MOBS.get(npc.getNpcId()))
+				if (getRandom(1000) < MOBS.get(npc.getId()))
 				{
 					st.giveItems(PROPHECY_FRAGMENT, 1);
 					if (st.getQuestItemsCount(PROPHECY_FRAGMENT) >= FRAGMENT_COUNT)
@@ -179,7 +180,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case NATOOLS:
 				switch (st.getState())
@@ -288,10 +289,5 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00142_FallenAngelRequestOfDawn(142, Q00142_FallenAngelRequestOfDawn.class.getSimpleName(), "Fallen Angel - Request of Dawn");
 	}
 }

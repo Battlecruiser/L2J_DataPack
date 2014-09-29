@@ -4,7 +4,7 @@ import sys
 from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 386,"StolenDignity","Stolen Dignity"
@@ -178,7 +178,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if id == State.CREATED :
       st.set("cond","0")
@@ -198,7 +198,7 @@ class Quest (JQuest) :
      partyMember = self.getRandomPartyMemberState(player, State.STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
-     numItems,chance = divmod(MOB[npc.getNpcId()]*Config.RATE_QUEST_DROP,MAX)
+     numItems,chance = divmod(MOB[npc.getId()]*Config.RATE_QUEST_DROP,MAX)
      prevItems = st.getQuestItemsCount(SI_ORE)
      if self.getRandom(MAX) < chance :
         numItems = numItems + 1

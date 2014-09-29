@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,25 +19,15 @@
 package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javolution.text.TextBuilder;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.AdminTable;
-import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.MultiSell;
-import com.l2jserver.gameserver.datatables.NpcTable;
-import com.l2jserver.gameserver.datatables.SkillTable;
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.QuestManager;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Hero;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -61,18 +51,16 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_admin5",
 		"admin_admin6",
 		"admin_admin7",
-		"admin_admin8",
 		"admin_gmliston",
 		"admin_gmlistoff",
 		"admin_silence",
 		"admin_diet",
 		"admin_tradeoff",
-		"admin_reload",
 		"admin_set",
 		"admin_set_mod",
 		"admin_saveolymp",
-		"admin_manualhero",
 		"admin_sethero",
+		"admin_givehero",
 		"admin_endolympiad",
 		"admin_setconfig",
 		"admin_config_server",
@@ -94,13 +82,13 @@ public class AdminAdmin implements IAdminCommandHandler
 		{
 			AdminTable.getInstance().showGm(activeChar);
 			activeChar.sendMessage("Registered into gm list");
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_gmlistoff"))
 		{
 			AdminTable.getInstance().hideGm(activeChar);
 			activeChar.sendMessage("Removed from gm list");
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_silence"))
 		{
@@ -114,7 +102,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				activeChar.setSilenceMode(true);
 				activeChar.sendPacket(SystemMessageId.MESSAGE_REFUSAL_MODE);
 			}
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_saveolymp"))
 		{
@@ -133,7 +121,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			activeChar.sendMessage("Heroes formed.");
 		}
-		else if (command.startsWith("admin_manualhero") || command.startsWith("admin_sethero"))
+		else if (command.startsWith("admin_sethero"))
 		{
 			if (activeChar.getTarget() == null)
 			{
@@ -144,6 +132,22 @@ public class AdminAdmin implements IAdminCommandHandler
 			final L2PcInstance target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
 			target.setHero(!target.isHero());
 			target.broadcastUserInfo();
+		}
+		else if (command.startsWith("admin_givehero"))
+		{
+			if (activeChar.getTarget() == null)
+			{
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				return false;
+			}
+			
+			final L2PcInstance target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
+			if (Hero.getInstance().isClaimed(target.getObjectId()))
+			{
+				activeChar.sendMessage("This player has already claimed the hero status.");
+				return false;
+			}
+			Hero.getInstance().claimHero(target);
 		}
 		else if (command.startsWith("admin_diet"))
 		{
@@ -179,7 +183,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			{
 				activeChar.refreshOverloaded();
 			}
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_tradeoff"))
 		{
@@ -210,97 +214,7 @@ public class AdminAdmin implements IAdminCommandHandler
 					activeChar.sendMessage("Trade refusal enabled");
 				}
 			}
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
-		}
-		else if (command.startsWith("admin_reload"))
-		{
-			StringTokenizer st = new StringTokenizer(command);
-			st.nextToken();
-			if (!st.hasMoreTokens())
-			{
-				activeChar.sendMessage("You need to specify a type to reload!");
-				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|npcwalkers|access|quests>");
-				return false;
-			}
-			
-			final String type = st.nextToken();
-			try
-			{
-				if (type.equals("multisell"))
-				{
-					MultiSell.getInstance().reload();
-					activeChar.sendMessage("All Multisells have been reloaded");
-				}
-				else if (type.startsWith("teleport"))
-				{
-					TeleportLocationTable.getInstance().reloadAll();
-					activeChar.sendMessage("Teleport Locations have been reloaded");
-				}
-				else if (type.startsWith("skill"))
-				{
-					SkillTable.getInstance().reload();
-					activeChar.sendMessage("All Skills have been reloaded");
-				}
-				else if (type.startsWith("npcId"))
-				{
-					Integer npcId = Integer.parseInt(st.nextToken());
-					if (npcId != null)
-					{
-						NpcTable.getInstance().reloadNpc(npcId);
-						for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
-						{
-							if (spawn != null)
-							{
-								spawn.respawnNpc(spawn.getLastSpawn());
-							}
-						}
-						activeChar.sendMessage("NPC " + npcId + " have been reloaded");
-					}
-				}
-				else if (type.equals("npc"))
-				{
-					NpcTable.getInstance().reloadAllNpc();
-					QuestManager.getInstance().reloadAllQuests();
-					activeChar.sendMessage("All NPCs have been reloaded");
-				}
-				else if (type.startsWith("htm"))
-				{
-					HtmCache.getInstance().reload();
-					activeChar.sendMessage("Cache[HTML]: " + HtmCache.getInstance().getMemoryUsage() + " megabytes on " + HtmCache.getInstance().getLoadedFiles() + " files loaded");
-				}
-				else if (type.startsWith("item"))
-				{
-					ItemTable.getInstance().reload();
-					activeChar.sendMessage("Item Templates have been reloaded");
-				}
-				else if (type.startsWith("config"))
-				{
-					Config.load();
-					activeChar.sendMessage("All Config Settings have been reloaded");
-				}
-				else if (type.startsWith("access"))
-				{
-					AdminTable.getInstance().load();
-					activeChar.sendMessage("Access Rights have been reloaded");
-				}
-				else if (type.startsWith("quests"))
-				{
-					QuestManager.getInstance().reloadAllQuests();
-					activeChar.sendMessage("All Quests have been reloaded.");
-				}
-				else if (type.startsWith("door"))
-				{
-					DoorTable.getInstance().load();
-					activeChar.sendMessage("All Doors have been reloaded");
-				}
-				activeChar.sendMessage("WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
-			}
-			catch (Exception e)
-			{
-				activeChar.sendMessage("An error occured while reloading " + type + " !");
-				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|npcwalkers|access|quests>");
-				_log.log(Level.WARNING, "An error occured while reloading " + type + ": " + e, e);
-			}
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_setconfig"))
 		{
@@ -359,7 +273,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				{
 					if (cmd[2].equalsIgnoreCase("mod"))
 					{
-						AdminHelpPage.showHelpPage(activeChar, "mods_menu.htm");
+						AdminHtml.showAdminHtml(activeChar, "mods_menu.htm");
 					}
 				}
 			}
@@ -411,33 +325,23 @@ public class AdminAdmin implements IAdminCommandHandler
 			case 7:
 				filename = "gm";
 				break;
-			case 8:
-				filename = "old";
-				break;
 			default:
-				if (Config.GM_ADMIN_MENU_STYLE.equals("modern"))
-				{
-					filename = "main";
-				}
-				else
-				{
-					filename = "classic";
-				}
+				filename = "main";
 				break;
 		}
-		AdminHelpPage.showHelpPage(activeChar, filename + "_menu.htm");
+		AdminHtml.showAdminHtml(activeChar, filename + "_menu.htm");
 	}
 	
 	public void showConfigPage(L2PcInstance activeChar)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		TextBuilder replyMSG = new TextBuilder("<html><title>L2J :: Config</title><body>");
 		replyMSG.append("<center><table width=270><tr><td width=60><button value=\"Main\" action=\"bypass -h admin_admin\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=150>Config Server Panel</td><td width=60><button value=\"Back\" action=\"bypass -h admin_admin4\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></center><br>");
 		replyMSG.append("<center><table width=260><tr><td width=140></td><td width=40></td><td width=40></td></tr>");
 		replyMSG.append("<tr><td><font color=\"00AA00\">Drop:</font></td><td></td><td></td></tr>");
 		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate EXP</font> = " + Config.RATE_XP + "</td><td><edit var=\"param1\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateXp $param1\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate SP</font> = " + Config.RATE_SP + "</td><td><edit var=\"param2\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateSp $param2\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
-		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate Drop Spoil</font> = " + Config.RATE_DROP_SPOIL + "</td><td><edit var=\"param4\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateDropSpoil $param4\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate Drop Spoil</font> = " + Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER + "</td><td><edit var=\"param4\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateDropSpoil $param4\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 		replyMSG.append("<tr><td width=140></td><td width=40></td><td width=40></td></tr>");
 		replyMSG.append("<tr><td><font color=\"00AA00\">Enchant:</font></td><td></td><td></td></tr>");
 		replyMSG.append("<tr><td><font color=\"LEVEL\">Enchant Element Stone</font> = " + Config.ENCHANT_CHANCE_ELEMENT_STONE + "</td><td><edit var=\"param8\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig EnchantChanceElementStone $param8\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");

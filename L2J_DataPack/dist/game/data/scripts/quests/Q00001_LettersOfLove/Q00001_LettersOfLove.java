@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -44,9 +44,9 @@ public class Q00001_LettersOfLove extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
-	private Q00001_LettersOfLove(int questId, String name, String descr)
+	public Q00001_LettersOfLove()
 	{
-		super(questId, name, descr);
+		super(1, Q00001_LettersOfLove.class.getSimpleName(), "Letters of Love");
 		addStartNpc(DARIN);
 		addTalkId(DARIN, ROXXY, BAULRO);
 		registerQuestItems(DARINS_LETTER, ROXXYS_KERCHIEF, DARINS_RECEIPT, BAULROS_POTION);
@@ -108,7 +108,7 @@ public class Q00001_LettersOfLove extends Quest
 				{
 					case 1:
 					{
-						switch (npc.getNpcId())
+						switch (npc.getId())
 						{
 							case DARIN:
 							{
@@ -131,7 +131,7 @@ public class Q00001_LettersOfLove extends Quest
 					}
 					case 2:
 					{
-						switch (npc.getNpcId())
+						switch (npc.getId())
 						{
 							case DARIN:
 							{
@@ -157,7 +157,7 @@ public class Q00001_LettersOfLove extends Quest
 					}
 					case 3:
 					{
-						switch (npc.getNpcId())
+						switch (npc.getId())
 						{
 							case DARIN:
 							{
@@ -195,7 +195,7 @@ public class Q00001_LettersOfLove extends Quest
 					}
 					case 4:
 					{
-						switch (npc.getNpcId())
+						switch (npc.getId())
 						{
 							case DARIN:
 							{
@@ -237,10 +237,5 @@ public class Q00001_LettersOfLove extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00001_LettersOfLove(1, Q00001_LettersOfLove.class.getSimpleName(), "Letters of Love");
 	}
 }

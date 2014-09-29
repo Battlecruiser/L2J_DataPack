@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,51 +18,41 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
+import com.l2jserver.gameserver.ai.CtrlEvent;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
-public class Petrification extends L2Effect
+/**
+ * Petrification effect implementation.
+ */
+public final class Petrification extends AbstractEffect
 {
-	public Petrification(Env env, EffectTemplate template)
+	public Petrification(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.PETRIFICATION;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		getEffected().startAbnormalEffect(AbnormalEffect.HOLD_2);
-		getEffected().startParalyze();
-		return super.onStart();
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().stopAbnormalEffect(AbnormalEffect.HOLD_2);
-		getEffected().stopParalyze(false);
-		super.onExit();
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
 	public int getEffectFlags()
 	{
 		return EffectFlag.PARALYZED.getMask() | EffectFlag.INVUL.getMask();
+	}
+	
+	@Override
+	public void onExit(BuffInfo info)
+	{
+		if (!info.getEffected().isPlayer())
+		{
+			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+		}
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		info.getEffected().startParalyze();
 	}
 }

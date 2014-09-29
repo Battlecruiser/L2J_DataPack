@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,11 +20,12 @@ package quests.Q00453_NotStrongEnoughAlone;
 
 import quests.Q10282_ToTheSeedOfAnnihilation.Q10282_ToTheSeedOfAnnihilation;
 
+import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jserver.gameserver.util.Util;
@@ -98,9 +99,9 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		}
 	};
 	
-	public Q00453_NotStrongEnoughAlone(int questId, String name, String descr)
+	public Q00453_NotStrongEnoughAlone()
 	{
-		super(questId, name, descr);
+		super(453, Q00453_NotStrongEnoughAlone.class.getSimpleName(), "Not Strong Enought Alone");
 		addStartNpc(KLEMIS);
 		addTalkId(KLEMIS);
 		addKillId(MONSTER1);
@@ -117,11 +118,11 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 			return;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (Util.checkIfInRange(1500, npc, player, false))
 		{
-			final ExQuestNpcLogList log = new ExQuestNpcLogList(getQuestIntId());
+			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 			
 			if (Util.contains(MONSTER1, npcId) && st.isCond(2))
 			{
@@ -350,10 +351,5 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 			}
 		}
 		st.setCond(5, true);
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00453_NotStrongEnoughAlone(453, Q00453_NotStrongEnoughAlone.class.getSimpleName(), "Not Strong Enought Alone");
 	}
 }

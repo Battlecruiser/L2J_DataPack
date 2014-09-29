@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -38,9 +38,9 @@ public class Q00112_WalkOfFate extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 20;
 	
-	private Q00112_WalkOfFate(int questId, String name, String descr)
+	public Q00112_WalkOfFate()
 	{
-		super(questId, name, descr);
+		super(112, Q00112_WalkOfFate.class.getSimpleName(), "Walk of Fate");
 		addStartNpc(LIVINA);
 		addTalkId(LIVINA, KARUDA);
 	}
@@ -91,7 +91,7 @@ public class Q00112_WalkOfFate extends Quest
 				htmltext = (player.getLevel() < MIN_LEVEL) ? "30572-03.html" : "30572-01.htm";
 				break;
 			case State.STARTED:
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case LIVINA:
 					{
@@ -112,10 +112,5 @@ public class Q00112_WalkOfFate extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00112_WalkOfFate(112, Q00112_WalkOfFate.class.getSimpleName(), "Walk of Fate");
 	}
 }

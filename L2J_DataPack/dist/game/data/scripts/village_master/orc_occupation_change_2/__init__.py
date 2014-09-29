@@ -7,7 +7,7 @@ import sys
 
 from com.l2jserver.gameserver.model.quest        import State
 from com.l2jserver.gameserver.model.quest        import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "orc_occupation_change_2"
 
@@ -49,7 +49,7 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onAdvEvent (self,event,npc,player) :
-   npcId    = npc.getNpcId()
+   npcId    = npc.getId()
    htmltext = default
    suffix = ''
    st = player.getQuestState(qn)
@@ -83,7 +83,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
    st = player.getQuestState(qn)
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    race = player.getRace().ordinal()
    classId = player.getClassId()
    id = classId.getId()

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,14 +18,13 @@
  */
 package handlers.bypasshandlers;
 
-import java.util.List;
-
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.Quest.QuestEventType;
+import com.l2jserver.gameserver.model.events.EventDispatcher;
+import com.l2jserver.gameserver.model.events.EventType;
+import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
 
 public class ChatLink implements IBypassHandler
 {
@@ -53,10 +52,9 @@ public class ChatLink implements IBypassHandler
 		}
 		
 		final L2Npc npc = (L2Npc) target;
-		final List<Quest> firstTalk = npc.getTemplate().getEventQuests(QuestEventType.ON_FIRST_TALK);
-		if ((val == 0) && (firstTalk != null) && (firstTalk.size() == 1))
+		if ((val == 0) && npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 		{
-			firstTalk.get(0).notifyFirstTalk(npc, activeChar);
+			EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, activeChar), npc);
 		}
 		else
 		{

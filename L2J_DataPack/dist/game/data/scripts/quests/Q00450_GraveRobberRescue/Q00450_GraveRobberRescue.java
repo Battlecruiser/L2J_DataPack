@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,21 +19,21 @@
 package quests.Q00450_GraveRobberRescue;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.QuestType;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
- * Grave Robber Rescue (450)<br>
- * Original Jython script by Bloodshed.
+ * Grave Robber Rescue (450)
  * @author malyelfik
  */
 public class Q00450_GraveRobberRescue extends Quest
@@ -48,9 +48,9 @@ public class Q00450_GraveRobberRescue extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	
-	public Q00450_GraveRobberRescue(int questId, String name, String descr)
+	public Q00450_GraveRobberRescue()
 	{
-		super(questId, name, descr);
+		super(450, Q00450_GraveRobberRescue.class.getSimpleName(), "Grave Robber Rescue");
 		addStartNpc(KANEMIKA);
 		addTalkId(KANEMIKA, WARRIOR);
 		registerQuestItems(EVIDENCE_OF_MIGRATION);
@@ -99,7 +99,7 @@ public class Q00450_GraveRobberRescue extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == KANEMIKA)
+		if (npc.getId() == KANEMIKA)
 		{
 			switch (st.getState())
 			{
@@ -138,7 +138,7 @@ public class Q00450_GraveRobberRescue extends Quest
 			{
 				st.giveItems(EVIDENCE_OF_MIGRATION, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(npc.getX() + 100, npc.getY() + 100, npc.getZ(), 0));
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(npc.getX() + 100, npc.getY() + 100, npc.getZ(), 0));
 				npc.setBusy(true);
 				
 				startQuestTimer("despawn", 3000, npc, player);
@@ -153,11 +153,11 @@ public class Q00450_GraveRobberRescue extends Quest
 			{
 				if (getRandom(100) < 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.GRUNT_OH));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.GRUNT_OH));
 				}
 				else
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.GRUNT_WHATS_WRONG_WITH_ME));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.GRUNT_WHATS_WRONG_WITH_ME));
 				}
 				npc.deleteMe();
 				htmltext = null;
@@ -171,10 +171,5 @@ public class Q00450_GraveRobberRescue extends Quest
 		}
 		
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00450_GraveRobberRescue(450, Q00450_GraveRobberRescue.class.getSimpleName(), "Grave Robber Rescue");
 	}
 }

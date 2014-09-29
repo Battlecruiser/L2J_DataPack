@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,6 +20,7 @@ package ai.individual;
 
 import java.util.Arrays;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import ai.npc.AbstractNpcAI;
 
@@ -28,13 +29,12 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.util.MinionList;
-import com.l2jserver.util.L2FastMap;
 
 /**
  * Manages minion's spawn, idle despawn and Teleportation Cube spawn.
  * @author GKR
  */
-public class Epidos extends AbstractNpcAI
+public final class Epidos extends AbstractNpcAI
 {
 	private static final int[] EPIDOSES =
 	{
@@ -59,11 +59,11 @@ public class Epidos extends AbstractNpcAI
 		11
 	};
 	
-	private final Map<Integer, Double> _lastHp = new L2FastMap<>(true);
+	private final Map<Integer, Double> _lastHp = new ConcurrentHashMap<>();
 	
-	private Epidos(String name, String descr)
+	private Epidos()
 	{
-		super(name, descr);
+		super(Epidos.class.getSimpleName(), "ai/individual");
 		addKillId(EPIDOSES);
 		addSpawnId(EPIDOSES);
 	}
@@ -94,7 +94,7 @@ public class Epidos extends AbstractNpcAI
 				
 				for (int i = 0; i < minionsCount; i++)
 				{
-					MinionList.spawnMinion((L2MonsterInstance) npc, MINIONS[Arrays.binarySearch(EPIDOSES, npc.getNpcId())]);
+					MinionList.spawnMinion((L2MonsterInstance) npc, MINIONS[Arrays.binarySearch(EPIDOSES, npc.getId())]);
 				}
 				
 				_lastHp.put(npc.getObjectId(), npc.getCurrentHp());
@@ -140,6 +140,6 @@ public class Epidos extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Epidos(Epidos.class.getSimpleName(), "ai");
+		new Epidos();
 	}
 }

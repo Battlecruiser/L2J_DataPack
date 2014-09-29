@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,10 +23,10 @@ import java.util.Map;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.util.Util;
  * Original Jython script by Emperorc and Kerberos_20.
  * @author Nyaran
  */
-public class VarkaSilenosSupport extends AbstractNpcAI
+public final class VarkaSilenosSupport extends AbstractNpcAI
 {
 	private static class BuffsData
 	{
@@ -47,9 +47,9 @@ public class VarkaSilenosSupport extends AbstractNpcAI
 			_cost = cost;
 		}
 		
-		public L2Skill getSkill()
+		public Skill getSkill()
 		{
-			return SkillTable.getInstance().getInfo(_skill, 1);
+			return SkillData.getInstance().getSkill(_skill, 1);
 		}
 		
 		public int getCost()
@@ -90,9 +90,9 @@ public class VarkaSilenosSupport extends AbstractNpcAI
 		BUFF.put(8, new BuffsData(4357, 6)); // Haste: Requires 6 Nepenthese Seeds
 	}
 	
-	private VarkaSilenosSupport(String name, String descr)
+	private VarkaSilenosSupport()
 	{
-		super(name, descr);
+		super(VarkaSilenosSupport.class.getSimpleName(), "ai/npc");
 		addFirstTalkId(ASHAS, NARAN, UDAN, DIYABU, HAGOS, SHIKON, TERANU);
 		addTalkId(UDAN, HAGOS, TERANU);
 		addStartNpc(HAGOS, TERANU);
@@ -149,7 +149,7 @@ public class VarkaSilenosSupport extends AbstractNpcAI
 	{
 		String htmltext = getNoQuestMsg(player);
 		final int AllianceLevel = getAllianceLevel(player);
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ASHAS:
 				htmltext = (AllianceLevel < 0) ? "31377-friend.html" : "31377-no.html";
@@ -210,6 +210,6 @@ public class VarkaSilenosSupport extends AbstractNpcAI
 	
 	public static void main(String args[])
 	{
-		new VarkaSilenosSupport(VarkaSilenosSupport.class.getSimpleName(), "ai/npc");
+		new VarkaSilenosSupport();
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -47,9 +47,9 @@ public class Q00037_MakeFormalWear extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 60;
 	
-	private Q00037_MakeFormalWear(int questId, String name, String descr)
+	public Q00037_MakeFormalWear()
 	{
-		super(questId, name, descr);
+		super(37, Q00037_MakeFormalWear.class.getSimpleName(), "Make Formal Wear");
 		addStartNpc(ALEXIS);
 		addTalkId(ALEXIS, JEREMY, LEIKAR, MIST);
 		registerQuestItems(SIGNET_RING, ICE_WINE, BOX_OF_COOKIES);
@@ -133,7 +133,7 @@ public class Q00037_MakeFormalWear extends Quest
 		{
 			return htmltext;
 		}
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ALEXIS:
 				switch (st.getState())
@@ -212,10 +212,5 @@ public class Q00037_MakeFormalWear extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00037_MakeFormalWear(37, Q00037_MakeFormalWear.class.getSimpleName(), "Make Formal Wear");
 	}
 }

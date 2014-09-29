@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -35,9 +35,9 @@ public class Q00122_OminousNews extends Quest
 	private static final int MOIRA = 31979;
 	private static final int KARUDA = 32017;
 	
-	public Q00122_OminousNews(int questId, String name, String descr)
+	public Q00122_OminousNews()
 	{
-		super(questId, name, descr);
+		super(122, Q00122_OminousNews.class.getSimpleName(), "Ominous News");
 		addStartNpc(MOIRA);
 		addTalkId(MOIRA, KARUDA);
 	}
@@ -75,7 +75,7 @@ public class Q00122_OminousNews extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case MOIRA:
 				switch (st.getState())
@@ -99,10 +99,5 @@ public class Q00122_OminousNews extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00122_OminousNews(122, Q00122_OminousNews.class.getSimpleName(), "Ominous News");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,19 +18,18 @@
  */
 package quests.Q00377_ExplorationOfTheGiantsCavePart2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.network.serverpackets.RadarControl;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Exploration of the Giants' Cave Part 2 (377)<br>
  * Original Jython script by Gnacik.
  * @author nonom
- * @version 2010-02-17 based on official Franz server
  */
 public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 {
@@ -43,76 +42,62 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	private static final int BOOK3 = 14844;
 	private static final int BOOK4 = 14845;
 	private static final int BOOK5 = 14846;
-	// Drop Chance
-	private static final int DROP_CHANCE = 50;
 	// Mobs
-	private static final int[] MOBS =
+	private static final Map<Integer, Integer> MOBS1 = new HashMap<>();
+	private static final Map<Integer, Double> MOBS2 = new HashMap<>();
+	static
 	{
-		22661,
-		22662,
-		22663,
-		22664,
-		22665,
-		22666,
-		22667,
-		22668,
-		22669
-	};
-	// Rewards
-	private static final int OBLIVION = 9625;
-	private static final int DISCIPLINE = 9626;
-	private static final int LEONARD = 9628;
-	private static final int ADAMANTINE = 9629;
-	private static final int ORICHALCUM = 9630;
+		MOBS1.put(22660, 366); // lesser_giant_re
+		MOBS1.put(22661, 424); // lesser_giant_soldier_re
+		MOBS1.put(22662, 304); // lesser_giant_shooter_re
+		MOBS1.put(22663, 304); // lesser_giant_scout_re
+		MOBS1.put(22664, 354); // lesser_giant_mage_re
+		MOBS1.put(22665, 324); // lesser_giant_elder_re
+		MOBS2.put(22666, 0.276); // barif_re
+		MOBS2.put(22667, 0.284); // barif_pet_re
+		MOBS2.put(22668, 0.240); // gamlin_re
+		MOBS2.put(22669, 0.240); // leogul_re
+	}
 	
-	public Q00377_ExplorationOfTheGiantsCavePart2(int id, String name, String descr)
+	public Q00377_ExplorationOfTheGiantsCavePart2()
 	{
-		super(id, name, descr);
+		super(377, Q00377_ExplorationOfTheGiantsCavePart2.class.getSimpleName(), "Exploration of the Giants' Cave - Part 2");
 		addStartNpc(SOBLING);
 		addTalkId(SOBLING);
-		addKillId(MOBS);
+		addKillId(MOBS1.keySet());
+		addKillId(MOBS2.keySet());
 		registerQuestItems(TITAN_ANCIENT_BOOK);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		String htmltext = null;
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("31147-02.htm"))
+		switch (event)
 		{
-			st.startQuest();
-			player.sendPacket(new RadarControl(0, 2, -113360, -244676, -15536));
-		}
-		else if (event.equalsIgnoreCase("31147-quit.html"))
-		{
-			st.exitQuest(true, true);
-		}
-		else if (Util.isDigit(event))
-		{
-			final int val = Integer.parseInt(event);
-			switch (val)
+			case "31147-02.htm":
 			{
-				case OBLIVION:
-					htmltext = exchangeRequest(st, val, 1, 5); // Giant's Codex - Oblivion
-					break;
-				case DISCIPLINE:
-					htmltext = exchangeRequest(st, val, 1, 5); // Giant's Codex - Discipline
-					break;
-				case LEONARD:
-					htmltext = exchangeRequest(st, val, 6, 1); // Leonard
-					break;
-				case ADAMANTINE:
-					htmltext = exchangeRequest(st, val, 3, 1); // Adamantine
-					break;
-				case ORICHALCUM:
-					htmltext = exchangeRequest(st, val, 4, 1); // Orichalcum
-					break;
+				qs.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "31147-04.html":
+			case "31147-cont.html":
+			{
+				htmltext = event;
+				break;
+			}
+			case "31147-quit.html":
+			{
+				qs.exitQuest(true, true);
+				htmltext = event;
+				break;
 			}
 		}
 		return htmltext;
@@ -121,16 +106,19 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
+		if (qs != null)
 		{
-			return null;
-		}
-		
-		if ((st.isCond(1)) && (getRandom(100) < DROP_CHANCE))
-		{
-			st.giveItems(TITAN_ANCIENT_BOOK, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			int npcId = npc.getId();
+			if (MOBS1.containsKey(npcId))
+			{
+				final int itemCount = ((getRandom(1000) < MOBS1.get(npcId)) ? 3 : 2);
+				giveItemRandomly(qs.getPlayer(), npc, TITAN_ANCIENT_BOOK, itemCount, 0, 1.0, true);
+			}
+			else
+			{
+				giveItemRandomly(qs.getPlayer(), npc, TITAN_ANCIENT_BOOK, 1, 0, MOBS2.get(npcId), true);
+			}
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -138,47 +126,21 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == SOBLING)
+		if (qs.isCreated())
 		{
-			switch (st.getState())
-			{
-				case State.CREATED:
-					htmltext = (player.getLevel() >= 79) ? "31147-01.htm" : "31147-00.html";
-					break;
-				case State.STARTED:
-					htmltext = (st.hasQuestItems(BOOK1) && st.hasQuestItems(BOOK2) && st.hasQuestItems(BOOK3) && st.hasQuestItems(BOOK4) && st.hasQuestItems(BOOK5)) ? "31147-03.html" : "31147-02a.html";
-					break;
-			}
-			
+			htmltext = ((player.getLevel() >= 79) ? "31147-01.htm" : "31147-00.html");
+		}
+		else if (qs.isStarted())
+		{
+			htmltext = (hasQuestItems(player, BOOK1, BOOK2, BOOK3, BOOK4, BOOK5) ? "31147-03.html" : "31147-02a.html");
 		}
 		return htmltext;
-	}
-	
-	private static String exchangeRequest(QuestState st, int giveid, int qty, int rem)
-	{
-		if ((st.getQuestItemsCount(BOOK1) >= rem) && (st.getQuestItemsCount(BOOK2) >= rem) && (st.getQuestItemsCount(BOOK3) >= rem) && (st.getQuestItemsCount(BOOK4) >= rem) && (st.getQuestItemsCount(BOOK5) >= rem))
-		{
-			st.takeItems(BOOK1, rem);
-			st.takeItems(BOOK2, rem);
-			st.takeItems(BOOK3, rem);
-			st.takeItems(BOOK4, rem);
-			st.takeItems(BOOK5, rem);
-			st.giveItems(giveid, qty);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
-			return "31147-ok.html";
-		}
-		return "31147-no.html";
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00377_ExplorationOfTheGiantsCavePart2(377, Q00377_ExplorationOfTheGiantsCavePart2.class.getSimpleName(), "Exploration of the Giants' Cave - Part 2");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -357,7 +357,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 	
 	private void sendSiegableHallPage(L2PcInstance activeChar, String hallId, SiegableHall hall)
 	{
-		NpcHtmlMessage msg = new NpcHtmlMessage(5);
+		final NpcHtmlMessage msg = new NpcHtmlMessage();
 		msg.setFile(null, "data/html/admin/siegablehall.htm");
 		msg.replace("%clanhallId%", hallId);
 		msg.replace("%clanhallName%", hall.getName());

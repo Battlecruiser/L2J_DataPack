@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,15 +20,14 @@ package ai.npc.DragonVortex;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * Dragon Vortex AI
+ * Dragon Vortex AI.
  * @author UnAfraid, improved by Adry_85
  */
-public class DragonVortex extends AbstractNpcAI
+public final class DragonVortex extends AbstractNpcAI
 {
 	// NPC
 	private static final int VORTEX = 32871;
@@ -48,13 +47,12 @@ public class DragonVortex extends AbstractNpcAI
 	// Misc
 	private static final int DESPAWN_DELAY = 1800000; // 30min
 	
-	private DragonVortex(String name, String descr)
+	private DragonVortex()
 	{
-		super(name, descr);
+		super(DragonVortex.class.getSimpleName(), "ai/npc");
 		addStartNpc(VORTEX);
 		addFirstTalkId(VORTEX);
 		addTalkId(VORTEX);
-		addKillId(RAIDS);
 	}
 	
 	@Override
@@ -65,7 +63,7 @@ public class DragonVortex extends AbstractNpcAI
 			if (hasQuestItems(player, LARGE_DRAGON_BONE))
 			{
 				takeItems(player, LARGE_DRAGON_BONE, 1);
-				int random = getRandom(1000);
+				final int random = getRandom(1000);
 				int raid = 0;
 				if (random < 292)
 				{
@@ -91,23 +89,22 @@ public class DragonVortex extends AbstractNpcAI
 				{
 					raid = RAIDS[5]; // Shadow Summoner 5.6%
 				}
-				else if (random < 1000)
+				else
 				{
 					raid = RAIDS[6]; // Muscle Bomber 4.4%
 				}
-				addSpawn(raid, new Location(player.getX() + getRandom(100), player.getY() + getRandom(100), player.getZ(), player.getHeading()), true, DESPAWN_DELAY);
+				addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, DESPAWN_DELAY, true);
 			}
 			else
 			{
 				return "32871-no.html";
 			}
 		}
-		
 		return super.onAdvEvent(event, npc, player);
 	}
 	
 	public static void main(String[] args)
 	{
-		new DragonVortex(DragonVortex.class.getSimpleName(), "ai/npc");
+		new DragonVortex();
 	}
 }

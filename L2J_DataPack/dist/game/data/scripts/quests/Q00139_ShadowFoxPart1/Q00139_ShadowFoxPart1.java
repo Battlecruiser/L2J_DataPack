@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,6 +20,7 @@ package quests.Q00139_ShadowFoxPart1;
 
 import quests.Q00138_TempleChampionPart2.Q00138_TempleChampionPart2;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -50,9 +51,9 @@ public class Q00139_ShadowFoxPart1 extends Quest
 	private static final int MAX_REWARD_LEVEL = 42;
 	private static final int DROP_CHANCE = 68;
 	
-	private Q00139_ShadowFoxPart1(int questId, String name, String descr)
+	public Q00139_ShadowFoxPart1()
 	{
-		super(questId, name, descr);
+		super(139, Q00139_ShadowFoxPart1.class.getSimpleName(), "Shadow Fox - 1");
 		addStartNpc(MIA);
 		addTalkId(MIA);
 		addKillId(MOBS);
@@ -171,10 +172,5 @@ public class Q00139_ShadowFoxPart1 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00139_ShadowFoxPart1(139, Q00139_ShadowFoxPart1.class.getSimpleName(), "Shadow Fox - 1");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,10 +22,10 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.event.LongTimeEvent;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -37,7 +37,7 @@ import com.l2jserver.gameserver.util.Util;
  * Freya Celebration event AI.
  * @author Gnacik
  */
-public class FreyaCelebration extends LongTimeEvent
+public final class FreyaCelebration extends LongTimeEvent
 {
 	// NPC
 	private static final int FREYA = 13296;
@@ -67,6 +67,15 @@ public class FreyaCelebration extends LongTimeEvent
 		NpcStringId.I_AM_ICE_QUEEN_FREYA_THIS_FEELING_AND_EMOTION_ARE_NOTHING_BUT_A_PART_OF_MELISSAA_MEMORIES
 	};
 	
+	private FreyaCelebration()
+	{
+		super(FreyaCelebration.class.getSimpleName(), "events");
+		addStartNpc(FREYA);
+		addFirstTalkId(FREYA);
+		addTalkId(FREYA);
+		addSkillSeeId(FREYA);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -78,7 +87,7 @@ public class FreyaCelebration extends LongTimeEvent
 		
 		if (event.equalsIgnoreCase("give_potion"))
 		{
-			if (st.getQuestItemsCount(PcInventory.ADENA_ID) > 1)
+			if (st.getQuestItemsCount(Inventory.ADENA_ID) > 1)
 			{
 				long _curr_time = System.currentTimeMillis();
 				String value = loadGlobalQuestVar(player.getAccountName());
@@ -87,7 +96,7 @@ public class FreyaCelebration extends LongTimeEvent
 				if (_curr_time > _reuse_time)
 				{
 					st.setState(State.STARTED);
-					st.takeItems(PcInventory.ADENA_ID, 1);
+					st.takeItems(Inventory.ADENA_ID, 1);
 					st.giveItems(FREYA_POTION, 1);
 					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (HOURS * 3600000)));
 				}
@@ -98,16 +107,16 @@ public class FreyaCelebration extends LongTimeEvent
 					int minutes = (int) ((remainingTime % 3600) / 60);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
 					sm.addItemName(FREYA_POTION);
-					sm.addNumber(hours);
-					sm.addNumber(minutes);
+					sm.addInt(hours);
+					sm.addInt(minutes);
 					player.sendPacket(sm);
 				}
 			}
 			else
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_UNIT_OF_THE_ITEM_S1_REQUIRED);
-				sm.addItemName(PcInventory.ADENA_ID);
-				sm.addNumber(1);
+				sm.addItemName(Inventory.ADENA_ID);
+				sm.addInt(1);
 				player.sendPacket(sm);
 			}
 		}
@@ -115,14 +124,14 @@ public class FreyaCelebration extends LongTimeEvent
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if ((caster == null) || (npc == null))
 		{
 			return null;
 		}
 		
-		if ((npc.getNpcId() == FREYA) && Util.contains(targets, npc) && Util.contains(SKILLS, skill.getId()))
+		if ((npc.getId() == FREYA) && Util.contains(targets, npc) && Util.contains(SKILLS, skill.getId()))
 		{
 			if (getRandom(100) < 5)
 			{
@@ -154,18 +163,8 @@ public class FreyaCelebration extends LongTimeEvent
 		return "13296.htm";
 	}
 	
-	public FreyaCelebration(String name, String descr)
-	{
-		super(name, descr);
-		
-		addStartNpc(FREYA);
-		addFirstTalkId(FREYA);
-		addTalkId(FREYA);
-		addSkillSeeId(FREYA);
-	}
-	
 	public static void main(String[] args)
 	{
-		new FreyaCelebration(FreyaCelebration.class.getSimpleName(), "events");
+		new FreyaCelebration();
 	}
 }

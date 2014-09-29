@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,10 +18,11 @@
  */
 package village_master.DarkElvenChange1;
 
+import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
@@ -31,10 +32,8 @@ import com.l2jserver.gameserver.util.Util;
  * Original Jython script by DraX and DrLecter
  * @author nonom
  */
-public class DarkElvenChange1 extends Quest
+public final class DarkElvenChange1 extends Quest
 {
-	private static final String qn = "DarkElvenChange1";
-	
 	// NPCs
 	private static int[] NPCS =
 	{
@@ -43,16 +42,13 @@ public class DarkElvenChange1 extends Quest
 		30462, // Tronix
 		32160, // Devon
 	};
-	
 	// Items
 	private static int GAZE_OF_ABYSS = 1244;
 	private static int IRON_HEART = 1252;
 	private static int JEWEL_OF_DARKNESS = 1261;
 	private static int ORB_OF_ABYSS = 1270;
-	
 	// Rewards
 	private static int SHADOW_WEAPON_COUPON_DGRADE = 8869;
-	
 	// @formatter:off
 	private static int[][] CLASSES = 
 	{
@@ -62,10 +58,9 @@ public class DarkElvenChange1 extends Quest
 		{ 42, 38, 27, 28, 29, 30, ORB_OF_ABYSS }, // SO
 	};
 	// @formatter:on
-	
-	public DarkElvenChange1(int questId, String name, String descr)
+	private DarkElvenChange1()
 	{
-		super(questId, name, descr);
+		super(-1, DarkElvenChange1.class.getSimpleName(), "village_master");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}
@@ -73,7 +68,7 @@ public class DarkElvenChange1 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -83,7 +78,7 @@ public class DarkElvenChange1 extends Quest
 		{
 			int i = Integer.valueOf(event);
 			final ClassId cid = player.getClassId();
-			if ((cid.getRace() == Race.DarkElf) && (cid.getId() == CLASSES[i][1]))
+			if ((cid.getRace() == Race.DARK_ELF) && (cid.getId() == CLASSES[i][1]))
 			{
 				int suffix;
 				final boolean item = st.hasQuestItems(CLASSES[i][6]);
@@ -109,7 +104,7 @@ public class DarkElvenChange1 extends Quest
 						st.exitQuest(false);
 					}
 				}
-				event = npc.getNpcId() + "-" + suffix + ".html";
+				event = npc.getId() + "-" + suffix + ".html";
 			}
 		}
 		return event;
@@ -119,7 +114,7 @@ public class DarkElvenChange1 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);
@@ -130,18 +125,18 @@ public class DarkElvenChange1 extends Quest
 		}
 		
 		final ClassId cid = player.getClassId();
-		if (cid.getRace() == Race.DarkElf)
+		if (cid.getRace() == Race.DARK_ELF)
 		{
 			switch (cid)
 			{
 				case darkFighter:
 				{
-					htmltext = npc.getNpcId() + "-01.html";
+					htmltext = npc.getId() + "-01.html";
 					break;
 				}
 				case darkMage:
 				{
-					htmltext = npc.getNpcId() + "-08.html";
+					htmltext = npc.getId() + "-08.html";
 					break;
 				}
 				default:
@@ -149,25 +144,25 @@ public class DarkElvenChange1 extends Quest
 					if (cid.level() == 1)
 					{
 						// first occupation change already made
-						return npc.getNpcId() + "-32.html";
+						return npc.getId() + "-32.html";
 					}
 					else if (cid.level() >= 2)
 					{
 						// second/third occupation change already made
-						return npc.getNpcId() + "-31.html";
+						return npc.getId() + "-31.html";
 					}
 				}
 			}
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-33.html"; // other races
+			htmltext = npc.getId() + "-33.html"; // other races
 		}
 		return htmltext;
 	}
 	
 	public static void main(String[] args)
 	{
-		new DarkElvenChange1(-1, qn, "village_master");
+		new DarkElvenChange1();
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,11 +18,8 @@
  */
 package handlers.bypasshandlers;
 
-import java.util.logging.Level;
-
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -36,30 +33,25 @@ public class Link implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isNpc())
+		String htmlPath = command.substring(4).trim();
+		if (htmlPath.isEmpty())
 		{
+			_log.warning("Player " + activeChar.getName() + " sent empty link html!");
 			return false;
 		}
 		
-		try
+		if (htmlPath.contains(".."))
 		{
-			String path = command.substring(5).trim();
-			if (path.indexOf("..") != -1)
-			{
-				return false;
-			}
-			String filename = "data/html/" + path;
-			NpcHtmlMessage html = new NpcHtmlMessage(((L2Npc) target).getObjectId());
-			html.setFile(activeChar.getHtmlPrefix(), filename);
-			html.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
-			activeChar.sendPacket(html);
-			return true;
+			_log.warning("Player " + activeChar.getName() + " sent invalid link html: " + htmlPath);
+			return false;
 		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
-		}
-		return false;
+		
+		String filename = "data/html/" + htmlPath;
+		final NpcHtmlMessage html = new NpcHtmlMessage(target != null ? target.getObjectId() : 0);
+		html.setFile(activeChar.getHtmlPrefix(), filename);
+		html.replace("%objectId%", String.valueOf(target != null ? target.getObjectId() : 0));
+		activeChar.sendPacket(html);
+		return true;
 	}
 	
 	@Override

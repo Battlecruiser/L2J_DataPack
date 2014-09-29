@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -38,7 +38,7 @@ public class Maps implements IItemHandler
 			return false;
 		}
 		
-		playable.sendPacket(new ShowMiniMap(item.getItemId()));
+		playable.sendPacket(new ShowMiniMap(item.getId()));
 		return true;
 	}
 }

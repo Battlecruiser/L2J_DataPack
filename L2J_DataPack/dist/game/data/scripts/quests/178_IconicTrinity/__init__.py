@@ -5,7 +5,7 @@
 import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "178_IconicTrinity"
 
@@ -98,7 +98,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      htmltext = Quest.getNoQuestMsg(player)
      st = player.getQuestState(qn)
      if not st : return htmltext

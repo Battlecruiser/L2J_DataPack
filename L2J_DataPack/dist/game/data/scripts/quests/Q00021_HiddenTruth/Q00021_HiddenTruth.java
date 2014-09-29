@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00021_HiddenTruth;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
@@ -61,9 +62,9 @@ public class Q00021_HiddenTruth extends Quest
 	private boolean PAGE_SPAWNED = false;
 	private boolean MOVE_ENDED = false;
 	
-	public Q00021_HiddenTruth(int questId, String name, String descr)
+	public Q00021_HiddenTruth()
 	{
-		super(questId, name, descr);
+		super(21, Q00021_HiddenTruth.class.getSimpleName(), "Hidden Truth");
 		addStartNpc(MYSTERIOUS_WIZARD);
 		addTalkId(MYSTERIOUS_WIZARD, TOMBSTONE, GHOST_OF_VON_HELLMAN, GHOST_OF_VON_HELLMANS_PAGE, BROKEN_BOOKSHELF, AGRIPEL, BENEDICT, DOMINIC, INNOCENTIN);
 		addSeeCreatureId(GHOST_OF_VON_HELLMANS_PAGE);
@@ -135,7 +136,7 @@ public class Q00021_HiddenTruth extends Quest
 					else
 					{
 						final L2Npc ghost = addSpawn(GHOST_OF_VON_HELLMAN, GHOST_LOC, false, 0);
-						ghost.broadcastPacket(new NpcSay(ghost.getObjectId(), 0, ghost.getNpcId(), NpcStringId.WHO_AWOKE_ME));
+						ghost.broadcastPacket(new NpcSay(ghost.getObjectId(), 0, ghost.getId(), NpcStringId.WHO_AWOKE_ME));
 						GHOST_SPAWNED = true;
 						st.startQuestTimer("DESPAWN_GHOST", 1000 * 300, ghost);
 						st.setCond(2);
@@ -150,7 +151,7 @@ public class Q00021_HiddenTruth extends Quest
 					{
 						final L2Npc page = addSpawn(GHOST_OF_VON_HELLMANS_PAGE, PAGE_LOC, false, 0);
 						page.setScriptValue(player.getObjectId());
-						page.broadcastPacket(new NpcSay(page.getObjectId(), Say2.NPC_ALL, page.getNpcId(), NpcStringId.MY_MASTER_HAS_INSTRUCTED_ME_TO_BE_YOUR_GUIDE_S1).addStringParameter(player.getName()));
+						page.broadcastPacket(new NpcSay(page.getObjectId(), Say2.NPC_ALL, page.getId(), NpcStringId.MY_MASTER_HAS_INSTRUCTED_ME_TO_BE_YOUR_GUIDE_S1).addStringParameter(player.getName()));
 						WalkingManager.getInstance().startMoving(page, PAGE_ROUTE_NAME);
 						PAGE_COUNT++;
 						st.setCond(3);
@@ -219,7 +220,7 @@ public class Q00021_HiddenTruth extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case MYSTERIOUS_WIZARD:
 				{
@@ -451,10 +452,5 @@ public class Q00021_HiddenTruth extends Quest
 			st.startQuestTimer("DESPAWN", 15000, npc);
 			MOVE_ENDED = true;
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00021_HiddenTruth(21, Q00021_HiddenTruth.class.getSimpleName(), "Hidden Truth");
 	}
 }

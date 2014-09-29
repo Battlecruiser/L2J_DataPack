@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,57 +18,57 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Hp By Level effect.
+ * Hp By Level effect implementation.
  * @author Zoey76
  */
-public class HpByLevel extends L2Effect
+public final class HpByLevel extends AbstractEffect
 {
-	public HpByLevel(Env env, EffectTemplate template)
-	{
-		super(env, template);
-	}
+	private final double _power;
 	
-	@Override
-	public boolean onStart()
+	public HpByLevel(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		if ((getEffector() == null) || (getEffected() == null))
-		{
-			return false;
-		}
-		// Calculation
-		final int abs = (int) calc();
-		final double absorb = ((getEffected().getCurrentHp() + abs) > getEffected().getMaxHp() ? getEffected().getMaxHp() : (getEffected().getCurrentHp() + abs));
-		final int restored = (int) (absorb - getEffected().getCurrentHp());
-		getEffected().setCurrentHp(absorb);
-		// Status update
-		final StatusUpdate su = new StatusUpdate(getEffected());
-		su.addAttribute(StatusUpdate.CUR_HP, (int) absorb);
-		getEffected().sendPacket(su);
-		// System message
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
-		sm.addNumber(restored);
-		getEffected().sendPacket(sm);
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.BUFF;
+	}
+	
+	@Override
+	public boolean isInstant()
+	{
+		return true;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		if (info.getEffector() == null)
+		{
+			return;
+		}
+		
+		// Calculation
+		final double abs = _power;
+		final double absorb = ((info.getEffector().getCurrentHp() + abs) > info.getEffector().getMaxHp() ? info.getEffector().getMaxHp() : (info.getEffector().getCurrentHp() + abs));
+		final int restored = (int) (absorb - info.getEffector().getCurrentHp());
+		info.getEffector().setCurrentHp(absorb);
+		// System message
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
+		sm.addInt(restored);
+		info.getEffector().sendPacket(sm);
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  *
  * This file is part of L2J DataPack.
  *
@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -69,9 +70,9 @@ public class Q00627_HeartInSearchOfPower extends Quest
 	private static final int ENRIA = 4042;
 	private static final int MOLD_HARDENER = 4041;
 	
-	private Q00627_HeartInSearchOfPower(int questId, String name, String descr)
+	public Q00627_HeartInSearchOfPower()
 	{
-		super(questId, name, descr);
+		super(627, Q00627_HeartInSearchOfPower.class.getSimpleName(), "Heart in Search of Power");
 		addStartNpc(MYSTERIOUS_NECROMANCER);
 		addTalkId(MYSTERIOUS_NECROMANCER, ENFEUX);
 		addKillId(MONSTERS.keySet());
@@ -163,7 +164,7 @@ public class Q00627_HeartInSearchOfPower extends Quest
 		if (partyMember != null)
 		{
 			final QuestState st = partyMember.getQuestState(getName());
-			final float chance = (MONSTERS.get(npc.getNpcId()) * Config.RATE_QUEST_DROP);
+			final float chance = (MONSTERS.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
 				st.giveItems(BEAD_OF_OBEDIENCE, 1);
@@ -192,13 +193,13 @@ public class Q00627_HeartInSearchOfPower extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (npc.getNpcId() == MYSTERIOUS_NECROMANCER)
+				if (npc.getId() == MYSTERIOUS_NECROMANCER)
 				{
 					htmltext = (player.getLevel() >= MIN_LEVEL_REQUIRED) ? "31518-01.htm" : "31518-00.htm";
 				}
 				break;
 			case State.STARTED:
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case MYSTERIOUS_NECROMANCER:
 						switch (st.getCond())
@@ -232,10 +233,5 @@ public class Q00627_HeartInSearchOfPower extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00627_HeartInSearchOfPower(627, Q00627_HeartInSearchOfPower.class.getSimpleName(), "Heart in Search of Power");
 	}
 }

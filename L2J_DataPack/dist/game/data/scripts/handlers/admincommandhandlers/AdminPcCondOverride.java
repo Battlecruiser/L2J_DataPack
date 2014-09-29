@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -49,7 +49,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 			{
 				case "admin_exceptions":
 				{
-					NpcHtmlMessage msg = new NpcHtmlMessage(5, 1);
+					final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
 					msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/cond_override.htm");
 					StringBuilder sb = new StringBuilder();
 					for (PcCondOverride ex : PcCondOverride.values())

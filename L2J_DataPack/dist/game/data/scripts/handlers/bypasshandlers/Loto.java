@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -93,10 +93,10 @@ public class Loto implements IBypassHandler
 	// >24 - check lottery ticket by item object id
 	public static final void showLotoWindow(L2PcInstance player, L2Npc npc, int val)
 	{
-		int npcId = npc.getTemplate().getNpcId();
+		int npcId = npc.getTemplate().getId();
 		String filename;
 		SystemMessage sm;
-		NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		
 		if (val == 0) // 0 - first buy lottery ticket window
 		{
@@ -262,7 +262,7 @@ public class Loto implements IBypassHandler
 				{
 					continue;
 				}
-				if ((item.getItemId() == 4442) && (item.getCustomType1() < lotonumber))
+				if ((item.getId() == 4442) && (item.getCustomType1() < lotonumber))
 				{
 					message = message + "<a action=\"bypass -h npc_%objectId%_Loto " + item.getObjectId() + "\">" + item.getCustomType1() + " Event Number ";
 					int[] numbers = Lottery.getInstance().decodeNumbers(item.getEnchantLevel(), item.getCustomType2());
@@ -308,7 +308,7 @@ public class Loto implements IBypassHandler
 		{
 			int lotonumber = Lottery.getInstance().getId();
 			L2ItemInstance item = player.getInventory().getItemByObjectId(val);
-			if ((item == null) || (item.getItemId() != 4442) || (item.getCustomType1() >= lotonumber))
+			if ((item == null) || (item.getId() != 4442) || (item.getCustomType1() >= lotonumber))
 			{
 				return;
 			}

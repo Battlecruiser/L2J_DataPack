@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,12 +19,13 @@
 package quests.Q00053_LinnaeusSpecialBait;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Linnaeus Special Bait (53)<br>
@@ -44,9 +45,9 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 	// Default False to require fishing skill level, any other value to ignore fishing and evaluate char level only.
 	private static final boolean ALT_IGNORE_FISHING = false;
 	
-	public Q00053_LinnaeusSpecialBait(int questId, String name, String descr)
+	public Q00053_LinnaeusSpecialBait()
 	{
-		super(questId, name, descr);
+		super(53, Q00053_LinnaeusSpecialBait.class.getSimpleName(), "Linnaeus Special Bait");
 		addStartNpc(LINNAEUS);
 		addTalkId(LINNAEUS);
 		addKillId(CRIMSON_DRAKE);
@@ -145,17 +146,12 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 		if (!ALT_IGNORE_FISHING)
 		{
 			level = player.getSkillLevel(1315);
-			L2Effect effect = player.getFirstEffect(2274);
-			if (effect != null)
+			final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(2274);
+			if (info != null)
 			{
-				level = (int) effect.getSkill().getPower();
+				level = (int) info.getSkill().getPower();
 			}
 		}
 		return level;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00053_LinnaeusSpecialBait(53, Q00053_LinnaeusSpecialBait.class.getSimpleName(), "Linnaeus Special Bait");
 	}
 }

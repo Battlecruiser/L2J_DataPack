@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,8 +21,7 @@ package ai.npc.Dorian;
 import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheForestOfTheDead;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
@@ -33,7 +32,7 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
  * Dorian (Raid Fighter) - Quest AI
  * @author malyelfik
  */
-public class Dorian extends AbstractNpcAI
+public final class Dorian extends AbstractNpcAI
 {
 	// NPC
 	private static final int DORIAN = 25332;
@@ -41,53 +40,32 @@ public class Dorian extends AbstractNpcAI
 	private static final int SILVER_CROSS = 7153;
 	private static final int BROKEN_SILVER_CROSS = 7154;
 	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	private Dorian()
 	{
-		if (event.equals("checkArea"))
-		{
-			if (npc.isDecayed())
-			{
-				cancelQuestTimers("checkArea");
-			}
-			else
-			{
-				for (L2PcInstance pl : npc.getKnownList().getKnownPlayersInRadius(300))
-				{
-					final QuestState qs = pl.getQuestState(Q00024_InhabitantsOfTheForestOfTheDead.class.getSimpleName());
-					if ((qs != null) && qs.isCond(3))
-					{
-						qs.takeItems(SILVER_CROSS, -1);
-						qs.giveItems(BROKEN_SILVER_CROSS, 1);
-						qs.setCond(4, true);
-						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THAT_SIGN);
-					}
-				}
-			}
-		}
-		return null;
+		super(Dorian.class.getSimpleName(), "ai/npc");
+		addSeeCreatureId(DORIAN);
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
 	{
-		startQuestTimer("checkArea", 3000, npc, null, true);
-		return null;
-	}
-	
-	public Dorian(String name, String descr)
-	{
-		super(name, descr);
-		addSpawnId(DORIAN);
-		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(DORIAN))
+		if (creature.isPlayer())
 		{
-			startQuestTimer("checkArea", 3000, spawn.getLastSpawn(), null, true);
+			final L2PcInstance pl = creature.getActingPlayer();
+			final QuestState qs = pl.getQuestState(Q00024_InhabitantsOfTheForestOfTheDead.class.getSimpleName());
+			if ((qs != null) && qs.isCond(3))
+			{
+				takeItems(pl, SILVER_CROSS, -1);
+				giveItems(pl, BROKEN_SILVER_CROSS, 1);
+				qs.setCond(4, true);
+				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THAT_SIGN);
+			}
 		}
+		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Dorian(Dorian.class.getSimpleName(), "ai/npc");
+		new Dorian();
 	}
 }

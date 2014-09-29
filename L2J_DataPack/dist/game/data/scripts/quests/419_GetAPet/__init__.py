@@ -5,7 +5,7 @@ import sys
 from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "419_GetAPet"
 
@@ -183,7 +183,7 @@ class Quest (JQuest):
     st = player.getQuestState(qn)
     if not st : return htmltext
 
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     id = st.getState()
     if npcId != PET_MANAGER_MARTIN and id == State.STARTED:
       if st.get("step")!="SLAYED" : return htmltext
@@ -221,7 +221,7 @@ class Quest (JQuest):
       if not st : return 
       if st.getState() != State.STARTED : return 
    
-      npcId = npc.getNpcId()
+      npcId = npc.getId()
       collected = getCount_proof(st)
       if collected < REQUIRED_SPIDER_LEGS:
          race = player.getRace().ordinal()

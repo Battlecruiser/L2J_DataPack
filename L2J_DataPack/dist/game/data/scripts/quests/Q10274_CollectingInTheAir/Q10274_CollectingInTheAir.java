@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,13 +20,14 @@ package quests.Q10274_CollectingInTheAir;
 
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 
 /**
  * Collecting in the Air (10274)<br>
@@ -56,9 +57,9 @@ public class Q10274_CollectingInTheAir extends Quest
 		18692, // Green Star Stone
 	};
 	
-	public Q10274_CollectingInTheAir(int questId, String name, String descr)
+	public Q10274_CollectingInTheAir()
 	{
-		super(questId, name, descr);
+		super(10274, Q10274_CollectingInTheAir.class.getSimpleName(), "Collecting in the Air");
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addSkillSeeId(MOBS);
@@ -83,7 +84,7 @@ public class Q10274_CollectingInTheAir extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		final QuestState st = caster.getQuestState(getName());
 		if ((st == null) || !st.isStarted())
@@ -93,7 +94,7 @@ public class Q10274_CollectingInTheAir extends Quest
 		
 		if (st.isCond(1) && (skill.getId() == 2630))
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case 18684:
 				case 18685:
@@ -158,10 +159,5 @@ public class Q10274_CollectingInTheAir extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10274_CollectingInTheAir(10274, Q10274_CollectingInTheAir.class.getSimpleName(), "Collecting in the Air");
 	}
 }

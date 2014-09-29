@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -35,9 +35,9 @@ public class Q00121_PavelTheGiant extends Quest
 	private static final int NEWYEAR = 31961;
 	private static final int YUMI = 32041;
 	
-	public Q00121_PavelTheGiant(int questId, String name, String descr)
+	public Q00121_PavelTheGiant()
 	{
-		super(questId, name, descr);
+		super(121, Q00121_PavelTheGiant.class.getSimpleName(), "Pavel the Giant");
 		addStartNpc(NEWYEAR);
 		addTalkId(NEWYEAR, YUMI);
 	}
@@ -74,7 +74,7 @@ public class Q00121_PavelTheGiant extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case NEWYEAR:
 				switch (st.getState())
@@ -98,10 +98,5 @@ public class Q00121_PavelTheGiant extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00121_PavelTheGiant(121, Q00121_PavelTheGiant.class.getSimpleName(), "Pavel the Giant");
 	}
 }

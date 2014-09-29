@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,7 +18,6 @@
  */
 package ai.npc.Teleports.GrandBossTeleporters;
 
-import ai.individual.Antharas;
 import ai.individual.Valakas;
 import ai.npc.AbstractNpcAI;
 
@@ -26,6 +25,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -38,13 +38,11 @@ import com.l2jserver.gameserver.model.zone.type.L2BossZone;
  * Original python script by Emperorc.
  * @author Plim
  */
-public class GrandBossTeleporters extends AbstractNpcAI
+public final class GrandBossTeleporters extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCs =
 	{
-		13001, // Heart of Warding : Teleport into Lair of Antharas
-		31859, // Teleportation Cubic : Teleport out of Lair of Antharas
 		31384, // Gatekeeper of Fire Dragon : Opening some doors
 		31385, // Heart of Volcano : Teleport into Lair of Valakas
 		31540, // Watcher of Valakas Klein : Teleport into Hall of Flames
@@ -53,20 +51,19 @@ public class GrandBossTeleporters extends AbstractNpcAI
 		31759, // Teleportation Cubic : Teleport out of Lair of Valakas
 	};
 	// Items
-	private static final int PORTAL_STONE = 3865;
 	private static final int VACUALITE_FLOATING_STONE = 7267;
-	
-	private Quest valakasAI()
-	{
-		return QuestManager.getInstance().getQuest(Valakas.class.getSimpleName());
-	}
-	
-	private Quest antharasAI()
-	{
-		return QuestManager.getInstance().getQuest(Antharas.class.getSimpleName());
-	}
+	private static final Location ENTER_HALL_OF_FLAMES = new Location(183813, -115157, -3303);
+	private static final Location TELEPORT_INTO_VALAKAS_LAIR = new Location(204328, -111874, 70);
+	private static final Location TELEPORT_OUT_OF_VALAKAS_LAIR = new Location(150037, -57720, -2976);
 	
 	private static int playerCount = 0;
+	
+	private GrandBossTeleporters()
+	{
+		super(GrandBossTeleporters.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(NPCs);
+		addTalkId(NPCs);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -81,7 +78,7 @@ public class GrandBossTeleporters extends AbstractNpcAI
 		
 		if (st.hasQuestItems(VACUALITE_FLOATING_STONE))
 		{
-			player.teleToLocation(183813, -115157, -3303);
+			player.teleToLocation(ENTER_HALL_OF_FLAMES);
 			st.set("allowEnter", "1");
 		}
 		else
@@ -102,57 +99,8 @@ public class GrandBossTeleporters extends AbstractNpcAI
 			return null;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
-			case 13001:
-			{
-				if (antharasAI() != null)
-				{
-					int status = GrandBossManager.getInstance().getBossStatus(29019);
-					int statusW = GrandBossManager.getInstance().getBossStatus(29066);
-					int statusN = GrandBossManager.getInstance().getBossStatus(29067);
-					int statusS = GrandBossManager.getInstance().getBossStatus(29068);
-					
-					if ((status == 2) || (statusW == 2) || (statusN == 2) || (statusS == 2))
-					{
-						htmltext = "13001-02.htm";
-					}
-					else if ((status == 3) || (statusW == 3) || (statusN == 3) || (statusS == 3))
-					{
-						htmltext = "13001-01.htm";
-					}
-					else if ((status == 0) || (status == 1)) // If entrance to see Antharas is unlocked (he is Dormant or Waiting)
-					{
-						if (st.hasQuestItems(PORTAL_STONE))
-						{
-							L2BossZone zone = GrandBossManager.getInstance().getZone(179700, 113800, -7709);
-							
-							if (zone != null)
-							{
-								zone.allowPlayerEntry(player, 30);
-							}
-							
-							player.teleToLocation(179700 + getRandom(700), 113800 + getRandom(2100), -7709);
-							
-							if (status == 0)
-							{
-								L2GrandBossInstance antharas = GrandBossManager.getInstance().getBoss(29019);
-								antharasAI().notifyEvent("waiting", antharas, player);
-							}
-						}
-						else
-						{
-							htmltext = "13001-03.htm";
-						}
-					}
-				}
-				break;
-			}
-			case 31859:
-			{
-				player.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
-				break;
-			}
 			case 31385:
 			{
 				if (valakasAI() != null)
@@ -175,7 +123,7 @@ public class GrandBossTeleporters extends AbstractNpcAI
 								zone.allowPlayerEntry(player, 30);
 							}
 							
-							player.teleToLocation(204328 + getRandom(600), -111874 + getRandom(600), 70);
+							player.teleToLocation(TELEPORT_INTO_VALAKAS_LAIR.getX() + getRandom(600), TELEPORT_INTO_VALAKAS_LAIR.getY() + getRandom(600), TELEPORT_INTO_VALAKAS_LAIR.getZ());
 							
 							playerCount++;
 							
@@ -247,22 +195,20 @@ public class GrandBossTeleporters extends AbstractNpcAI
 			}
 			case 31759:
 			{
-				player.teleToLocation(150037 + getRandom(500), -57720 + getRandom(500), -2976);
+				player.teleToLocation(TELEPORT_OUT_OF_VALAKAS_LAIR.getX() + getRandom(500), TELEPORT_OUT_OF_VALAKAS_LAIR.getY() + getRandom(500), TELEPORT_OUT_OF_VALAKAS_LAIR.getZ());
 				break;
 			}
 		}
 		return htmltext;
 	}
 	
-	private GrandBossTeleporters(String name, String descr)
+	private Quest valakasAI()
 	{
-		super(name, descr);
-		addStartNpc(NPCs);
-		addTalkId(NPCs);
+		return QuestManager.getInstance().getQuest(Valakas.class.getSimpleName());
 	}
 	
 	public static void main(String[] args)
 	{
-		new GrandBossTeleporters(GrandBossTeleporters.class.getSimpleName(), "ai/npc/Teleports");
+		new GrandBossTeleporters();
 	}
 }

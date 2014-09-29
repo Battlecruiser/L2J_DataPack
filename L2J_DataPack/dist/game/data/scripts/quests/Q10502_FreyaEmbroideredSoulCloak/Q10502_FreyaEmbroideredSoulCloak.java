@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q10502_FreyaEmbroideredSoulCloak;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -42,9 +43,9 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 	private static final int MIN_LEVEL = 82;
 	private static final int FRAGMENT_COUNT = 20;
 	
-	private Q10502_FreyaEmbroideredSoulCloak(int questId, String name, String descr)
+	public Q10502_FreyaEmbroideredSoulCloak()
 	{
-		super(questId, name, descr);
+		super(10502, Q10502_FreyaEmbroideredSoulCloak.class.getSimpleName(), "Freya Embroidered Soul Cloak");
 		addStartNpc(OLF_ADAMS);
 		addTalkId(OLF_ADAMS);
 		addKillId(FREYA);
@@ -138,10 +139,5 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10502_FreyaEmbroideredSoulCloak(10502, Q10502_FreyaEmbroideredSoulCloak.class.getSimpleName(), "Freya Embroidered Soul Cloak");
 	}
 }

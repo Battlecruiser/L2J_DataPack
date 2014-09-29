@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
@@ -28,10 +29,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  */
 public class SagaOfTheDuelist extends SagasSuperClass
 {
-	public static String qn1 = "73_SagaOfTheDuelist";
-	public static int qnu = 73;
-	public static String qna = "Saga of the Duelist";
-	
 	/**
 	 * Third Class Transfer Quest - Duelist: The quest asks for "Top-grade Meat" which can now be acquired directly through NPC Tunatun, instead of through an additional quest from NPC Tunatun.
 	 */
@@ -40,7 +37,7 @@ public class SagaOfTheDuelist extends SagasSuperClass
 	
 	public SagaOfTheDuelist()
 	{
-		super(qnu, qn1, qna);
+		super(73, "73_SagaOfTheDuelist", "Saga of the Duelist");
 		NPC = new int[]
 		{
 			30849,
@@ -77,7 +74,6 @@ public class SagaOfTheDuelist extends SagasSuperClass
 			27222,
 			27281
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			88
@@ -86,23 +82,11 @@ public class SagaOfTheDuelist extends SagasSuperClass
 		{
 			0x02
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			164650,
-			47429,
-			47391
-		};
-		Y = new int[]
-		{
-			-74121,
-			-56923,
-			-56929
-		};
-		Z = new int[]
-		{
-			-2871,
-			-2383,
-			-2370
+			new Location(164650, -74121, -2871),
+			new Location(47429, -56923, -2383),
+			new Location(47391, -56929, -2370)
 		};
 		Text = new String[]
 		{
@@ -133,10 +117,10 @@ public class SagaOfTheDuelist extends SagasSuperClass
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.getNpcId() == TUNATUN)
+		if (npc.getId() == TUNATUN)
 		{
 			String htmltext = getNoQuestMsg(player);
-			QuestState st = player.getQuestState(qn);
+			QuestState st = player.getQuestState(getName());
 			if ((st != null) && st.isCond(3))
 			{
 				if (!st.hasQuestItems(TOPQUALITYMEAT))

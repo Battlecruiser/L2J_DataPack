@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -40,6 +40,7 @@ import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.LoginServerThread;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -365,7 +366,7 @@ public class DebugHandler implements ITelnetHandler
 		int max = LoginServerThread.getInstance().getMaxPlayer();
 		
 		playerCount = L2World.getInstance().getAllPlayersCount();
-		objectCount = L2World.getInstance().getAllVisibleObjectsCount();
+		objectCount = L2World.getInstance().getVisibleObjectsCount();
 		
 		int itemCount = 0;
 		int itemVoidCount = 0;
@@ -380,8 +381,7 @@ public class DebugHandler implements ITelnetHandler
 		int summonCount = 0;
 		int AICount = 0;
 		
-		L2Object[] objs = L2World.getInstance().getAllVisibleObjectsArray();
-		for (L2Object obj : objs)
+		for (L2Object obj : L2World.getInstance().getVisibleObjects())
 		{
 			if (obj == null)
 			{
@@ -396,7 +396,7 @@ public class DebugHandler implements ITelnetHandler
 			}
 			if (obj instanceof L2ItemInstance)
 			{
-				if (((L2ItemInstance) obj).getLocation() == L2ItemInstance.ItemLocation.VOID)
+				if (((L2ItemInstance) obj).getItemLocation() == ItemLocation.VOID)
 				{
 					itemVoidCount++;
 				}

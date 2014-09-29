@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -67,7 +67,7 @@ public class AdminDelete implements IAdminCommandHandler
 			{
 				spawn.stopRespawn();
 				
-				if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcid()))
+				if (RaidBossSpawnManager.getInstance().isDefined(spawn.getId()))
 				{
 					RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
 				}

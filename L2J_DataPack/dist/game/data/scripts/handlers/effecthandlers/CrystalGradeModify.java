@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,45 +18,37 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Crystal Grade Modify effect implementation.
  * @author Zoey76
  */
-public class CrystalGradeModify extends L2Effect
+public final class CrystalGradeModify extends AbstractEffect
 {
-	public CrystalGradeModify(Env env, EffectTemplate template)
+	private final int _grade;
+	
+	public CrystalGradeModify(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_grade = params.getInt("grade", 0);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean canStart(BuffInfo info)
 	{
-		return L2EffectType.BUFF;
+		return info.getEffected().isPlayer();
 	}
 	
 	@Override
-	public boolean onStart()
+	public void onExit(BuffInfo info)
 	{
-		final L2PcInstance player = getEffected().getActingPlayer();
-		if (player != null)
-		{
-			player.setExpertisePenaltyBonus((int) calc());
-			return true;
-		}
-		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		final L2PcInstance player = getEffected().getActingPlayer();
+		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (player != null)
 		{
 			player.setExpertisePenaltyBonus(0);
@@ -64,8 +56,8 @@ public class CrystalGradeModify extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public void onStart(BuffInfo info)
 	{
-		return false;
+		info.getEffected().getActingPlayer().setExpertisePenaltyBonus(_grade);
 	}
 }

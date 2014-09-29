@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,61 +18,39 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
+ * Noblesse Blessing effect implementation.
  * @author earendil
  */
-public class NoblesseBless extends L2Effect
+public final class NoblesseBless extends AbstractEffect
 {
-	public NoblesseBless(Env env, EffectTemplate template)
+	public NoblesseBless(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	// Special constructor to steal this effect
-	public NoblesseBless(Env env, L2Effect effect)
-	{
-		super(env, effect);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	protected boolean effectCanBeStolen()
+	public boolean canStart(BuffInfo info)
 	{
-		return true;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NOBLESSE_BLESSING;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		// just stop this effect
-		return false;
+		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayable();
 	}
 	
 	@Override
 	public int getEffectFlags()
 	{
 		return EffectFlag.NOBLESS_BLESSING.getMask();
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.NOBLESSE_BLESSING;
 	}
 }

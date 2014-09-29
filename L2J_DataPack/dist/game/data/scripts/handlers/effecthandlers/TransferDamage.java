@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,55 +18,38 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
+ * Transfer Damage effect implementation.
  * @author UnAfraid
  */
-public class TransferDamage extends L2Effect
+public final class TransferDamage extends AbstractEffect
 {
-	public TransferDamage(Env env, EffectTemplate template)
+	public TransferDamage(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	public TransferDamage(Env env, L2Effect effect)
-	{
-		super(env, effect);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public void onExit(BuffInfo info)
 	{
-		return L2EffectType.DAMAGE_TRANSFER;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		if (getEffected().isPlayable() && getEffector().isPlayer())
+		if (info.getEffected().isPlayable() && info.getEffector().isPlayer())
 		{
-			((L2Playable) getEffected()).setTransferDamageTo(getEffector().getActingPlayer());
-		}
-		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		if (getEffected().isPlayable() && getEffector().isPlayer())
-		{
-			((L2Playable) getEffected()).setTransferDamageTo(null);
+			((L2Playable) info.getEffected()).setTransferDamageTo(null);
 		}
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public void onStart(BuffInfo info)
 	{
-		return false;
+		if (info.getEffected().isPlayable() && info.getEffector().isPlayer())
+		{
+			((L2Playable) info.getEffected()).setTransferDamageTo(info.getEffector().getActingPlayer());
+		}
 	}
 }

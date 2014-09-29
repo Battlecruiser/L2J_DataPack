@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q10288_SecretMission;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -36,10 +37,12 @@ public class Q10288_SecretMission extends Quest
 	private static final int GREYMORE = 32757;
 	// Item
 	private static final int LETTER = 15529;
+	// Location
+	private static final Location TELEPORT = new Location(118833, -80589, -2688);
 	
-	public Q10288_SecretMission(int questId, String name, String descr)
+	public Q10288_SecretMission()
 	{
-		super(questId, name, descr);
+		super(10288, Q10288_SecretMission.class.getSimpleName(), "Secret Mission");
 		addStartNpc(AQUILANI, DOMINIC);
 		addFirstTalkId(AQUILANI);
 		addTalkId(DOMINIC, GREYMORE, AQUILANI);
@@ -84,9 +87,9 @@ public class Q10288_SecretMission extends Quest
 				}
 				break;
 			case "teleport":
-				if ((npc.getNpcId() == AQUILANI) && st.isCompleted())
+				if ((npc.getId() == AQUILANI) && st.isCompleted())
 				{
-					player.teleToLocation(118833, -80589, -2688);
+					player.teleToLocation(TELEPORT);
 					return null;
 				}
 		}
@@ -115,7 +118,7 @@ public class Q10288_SecretMission extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case DOMINIC:
 				switch (st.getState())
@@ -155,10 +158,5 @@ public class Q10288_SecretMission extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10288_SecretMission(10288, Q10288_SecretMission.class.getSimpleName(), "Secret Mission");
 	}
 }

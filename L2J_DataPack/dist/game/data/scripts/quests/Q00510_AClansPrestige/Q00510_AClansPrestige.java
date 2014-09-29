@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00510_AClansPrestige;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -46,9 +47,9 @@ public class Q00510_AClansPrestige extends Quest
 		22217
 	};
 	
-	public Q00510_AClansPrestige(int id, String name, String descr)
+	public Q00510_AClansPrestige()
 	{
-		super(id, name, descr);
+		super(510, Q00510_AClansPrestige.class.getSimpleName(), "A Clan's Prestige");
 		addStartNpc(VALDIS);
 		addTalkId(VALDIS);
 		addKillId(MOBS);
@@ -139,7 +140,7 @@ public class Q00510_AClansPrestige extends Quest
 					st.playSound(QuestSound.ITEMSOUND_QUEST_FANFARE_1);
 					st.takeItems(TYRANNOSAURUS_CLAW, -1);
 					clan.addReputationScore(reward, true);
-					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addNumber(reward));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addInt(reward));
 					clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 					htmltext = "31331-7.html";
 				}
@@ -148,10 +149,5 @@ public class Q00510_AClansPrestige extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00510_AClansPrestige(510, Q00510_AClansPrestige.class.getSimpleName(), "A Clan's Prestige");
 	}
 }

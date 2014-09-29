@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,22 +20,20 @@ package instances.NornilsGarden;
 
 import quests.Q00179_IntoTheLargeCavern.Q00179_IntoTheLargeCavern;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -46,7 +44,7 @@ import com.l2jserver.gameserver.util.Util;
  * @author Gnacik
  * @version 2010-10-15 Based on official server Naia
  */
-public class NornilsGarden extends Quest
+public final class NornilsGarden extends Quest
 {
 	protected class NornilsWorld extends InstanceWorld
 	{
@@ -57,8 +55,7 @@ public class NornilsGarden extends Quest
 		public boolean spawned_4 = false;
 	}
 	
-	private static final String qn = "NornilsGarden";
-	private static final int INSTANCE_ID = 11;
+	private static final int TEMPLATE_ID = 11;
 	
 	private static final int DURATION_TIME = 70;
 	private static final int EMPTY_DESTROY_TIME = 5;
@@ -97,10 +94,10 @@ public class NornilsGarden extends Quest
 		}
 	};
 	
-	private static final L2Skill skill1 = SkillTable.getInstance().getInfo(4322, 1);
-	private static final L2Skill skill2 = SkillTable.getInstance().getInfo(4327, 1);
-	private static final L2Skill skill3 = SkillTable.getInstance().getInfo(4329, 1);
-	private static final L2Skill skill4 = SkillTable.getInstance().getInfo(4324, 1);
+	private static final Skill skill1 = SkillData.getInstance().getSkill(4322, 1);
+	private static final Skill skill2 = SkillData.getInstance().getSkill(4327, 1);
+	private static final Skill skill3 = SkillData.getInstance().getSkill(4329, 1);
+	private static final Skill skill4 = SkillData.getInstance().getSkill(4324, 1);
 	
 	private static final int _herb_jar = 18478;
 	
@@ -189,52 +186,59 @@ public class NornilsGarden extends Quest
 		{
 			if (chance < element[2])
 			{
-				((L2MonsterInstance) mob).dropItem(player, element[0], element[1]);
+				mob.dropItem(player, element[0], element[1]);
 			}
 		}
 	}
 	
 	private static final void removeBuffs(L2Character ch)
 	{
-		for (L2Effect e : ch.getAllEffects())
-		{
-			if (e == null)
-			{
-				continue;
-			}
-			L2Skill skill = e.getSkill();
-			if (skill.isDebuff() || skill.isStayAfterDeath())
-			{
-				continue;
-			}
-			e.exit();
-		}
+		ch.stopAllEffectsExceptThoseThatLastThroughDeath();
 	}
 	
 	private static final void giveBuffs(L2Character ch)
 	{
 		if (skill1 != null)
 		{
-			skill1.getEffects(ch, ch);
+			skill1.applyEffects(ch, ch);
 		}
 		if (skill2 != null)
 		{
-			skill2.getEffects(ch, ch);
+			skill2.applyEffects(ch, ch);
 		}
 		if (skill3 != null)
 		{
-			skill3.getEffects(ch, ch);
+			skill3.applyEffects(ch, ch);
 		}
 		if (skill4 != null)
 		{
-			skill4.getEffects(ch, ch);
+			skill4.applyEffects(ch, ch);
 		}
+	}
+	
+	private NornilsGarden()
+	{
+		super(-1, NornilsGarden.class.getSimpleName(), "instances");
+		addStartNpc(_garden_guard);
+		addFirstTalkId(_garden_guard);
+		addTalkId(_garden_guard);
+		for (int i[] : _gatekeepers)
+		{
+			addKillId(i[0]);
+		}
+		for (int i[] : _auto_gates)
+		{
+			addEnterZoneId(i[0]);
+		}
+		addTalkId(_final_gates);
+		addAttackId(_herb_jar);
+		addAttackId(18362); // first garden guard
 	}
 	
 	@Override
 	public final void teleportPlayer(L2PcInstance player, Location loc, int instanceId)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);
@@ -265,7 +269,7 @@ public class NornilsGarden extends Quest
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
-			if (!(world instanceof NornilsWorld) || (world.getTemplateId() != INSTANCE_ID))
+			if (!(world instanceof NornilsWorld) || (world.getTemplateId() != TEMPLATE_ID))
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return null;
@@ -296,14 +300,14 @@ public class NornilsGarden extends Quest
 		final int instanceId = InstanceManager.getInstance().createDynamicInstance("NornilsGarden.xml");
 		final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
 		
-		inst.setName(InstanceManager.getInstance().getInstanceIdName(INSTANCE_ID));
+		inst.setName(InstanceManager.getInstance().getInstanceIdName(TEMPLATE_ID));
 		inst.setSpawnLoc(new Location(player));
 		inst.setAllowSummon(false);
 		inst.setDuration(DURATION_TIME * 60000);
 		inst.setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
 		world = new NornilsWorld();
 		world.setInstanceId(instanceId);
-		world.setTemplateId(INSTANCE_ID);
+		world.setTemplateId(TEMPLATE_ID);
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("Nornils Garden: started, Instance: " + instanceId + " created by player: " + player.getName());
 		
@@ -523,13 +527,13 @@ public class NornilsGarden extends Quest
 		player.sendMessage("On Event");
 		
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
-		if ((npc.getNpcId() == _garden_guard) && event.equalsIgnoreCase("enter_instance"))
+		if ((npc.getId() == _garden_guard) && event.equalsIgnoreCase("enter_instance"))
 		{
 			try
 			{
@@ -539,7 +543,7 @@ public class NornilsGarden extends Quest
 			{
 			}
 		}
-		else if ((npc.getNpcId() == 32258) && event.equalsIgnoreCase("exit"))
+		else if ((npc.getId() == 32258) && event.equalsIgnoreCase("exit"))
 		{
 			try
 			{
@@ -549,7 +553,7 @@ public class NornilsGarden extends Quest
 			{
 			}
 		}
-		else if (Util.contains(_final_gates, npc.getNpcId()))
+		else if (Util.contains(_final_gates, npc.getId()))
 		{
 			if (event.equalsIgnoreCase("32260-02.html") || event.equalsIgnoreCase("32261-02.html") || event.equalsIgnoreCase("32262-02.html"))
 			{
@@ -560,26 +564,26 @@ public class NornilsGarden extends Quest
 				int correct = st.getInt("correct");
 				correct++;
 				st.set("correct", String.valueOf(correct));
-				htmltext = npc.getNpcId() + "-0" + String.valueOf(correct + 2) + ".html";
+				htmltext = npc.getId() + "-0" + String.valueOf(correct + 2) + ".html";
 			}
 			else if (event.equalsIgnoreCase("check"))
 			{
 				int correct = st.getInt("correct");
-				if ((npc.getNpcId() == 32260) && (correct == 3))
+				if ((npc.getId() == 32260) && (correct == 3))
 				{
 					openDoor(st, player, 16200014);
 				}
-				else if ((npc.getNpcId() == 32261) && (correct == 3))
+				else if ((npc.getId() == 32261) && (correct == 3))
 				{
 					openDoor(st, player, 16200015);
 				}
-				else if ((npc.getNpcId() == 32262) && (correct == 4))
+				else if ((npc.getId() == 32262) && (correct == 4))
 				{
 					openDoor(st, player, 16200016);
 				}
 				else
 				{
-					return npc.getNpcId() + "-00.html";
+					return npc.getId() + "-00.html";
 				}
 			}
 		}
@@ -589,12 +593,12 @@ public class NornilsGarden extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (Util.contains(_final_gates, npc.getNpcId()))
+		if (Util.contains(_final_gates, npc.getId()))
 		{
 			QuestState cst = player.getQuestState(Q00179_IntoTheLargeCavern.class.getSimpleName());
 			if ((cst != null) && (cst.getState() == State.STARTED))
 			{
-				return npc.getNpcId() + "-01.html";
+				return npc.getId() + "-01.html";
 			}
 			return getNoQuestMsg(player);
 		}
@@ -605,24 +609,24 @@ public class NornilsGarden extends Quest
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);
 		}
-		return npc.getNpcId() + ".html";
+		return npc.getId() + ".html";
 	}
 	
 	@Override
 	public final String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		if ((npc.getNpcId() == _herb_jar) && !npc.isDead())
+		if ((npc.getId() == _herb_jar) && !npc.isDead())
 		{
 			dropHerb(npc, attacker, HP_HERBS_DROPLIST);
 			dropHerb(npc, attacker, MP_HERBS_DROPLIST);
 			npc.doDie(attacker);
 		}
-		else if ((npc.getNpcId() == 18362) && (npc.getInstanceId() > 0))
+		else if ((npc.getId() == 18362) && (npc.getInstanceId() > 0))
 		{
 			spawn1(npc);
 		}
@@ -632,7 +636,7 @@ public class NornilsGarden extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -640,10 +644,10 @@ public class NornilsGarden extends Quest
 		
 		for (int _gk[] : _gatekeepers)
 		{
-			if (npc.getNpcId() == _gk[0])
+			if (npc.getId() == _gk[0])
 			{
 				// Drop key
-				((L2MonsterInstance) npc).dropItem(player, _gk[1], 1);
+				npc.dropItem(player, _gk[1], 1);
 				
 				// Check if gatekeeper should open bridge, and open it
 				if (_gk[2] > 0)
@@ -655,7 +659,7 @@ public class NornilsGarden extends Quest
 					}
 				}
 			}
-			if (npc.getNpcId() == 18355)
+			if (npc.getId() == 18355)
 			{
 				spawn2(npc);
 			}
@@ -663,30 +667,8 @@ public class NornilsGarden extends Quest
 		return super.onKill(npc, player, isSummon);
 	}
 	
-	public NornilsGarden(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
-		addStartNpc(_garden_guard);
-		addFirstTalkId(_garden_guard);
-		addTalkId(_garden_guard);
-		
-		for (int i[] : _gatekeepers)
-		{
-			addKillId(i[0]);
-		}
-		for (int i[] : _auto_gates)
-		{
-			addEnterZoneId(i[0]);
-		}
-		addTalkId(_final_gates);
-		
-		addAttackId(_herb_jar);
-		addAttackId(18362); // first garden guard
-	}
-	
 	public static void main(String[] args)
 	{
-		new NornilsGarden(-1, qn, "instances");
+		new NornilsGarden();
 	}
 }

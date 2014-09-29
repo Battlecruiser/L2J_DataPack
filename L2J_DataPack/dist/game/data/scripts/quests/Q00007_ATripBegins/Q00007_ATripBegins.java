@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,9 @@
  */
 package quests.Q00007_ATripBegins;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -42,9 +42,9 @@ public class Q00007_ATripBegins extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	private Q00007_ATripBegins(int questId, String name, String descr)
+	public Q00007_ATripBegins()
 	{
-		super(questId, name, descr);
+		super(7, Q00007_ATripBegins.class.getSimpleName(), "A Trip Begins");
 		addStartNpc(MIRABEL);
 		addTalkId(MIRABEL, ARIEL, ASTERIOS);
 		registerQuestItems(ARIELS_RECOMMENDATION);
@@ -99,13 +99,13 @@ public class Q00007_ATripBegins extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case MIRABEL:
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = ((player.getRace() == Race.Elf) && (player.getLevel() >= MIN_LEVEL)) ? "30146-01.htm" : "30146-02.html";
+						htmltext = ((player.getRace() == Race.ELF) && (player.getLevel() >= MIN_LEVEL)) ? "30146-01.htm" : "30146-02.html";
 						break;
 					case State.STARTED:
 						if (st.isCond(1))
@@ -150,10 +150,5 @@ public class Q00007_ATripBegins extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00007_ATripBegins(7, Q00007_ATripBegins.class.getSimpleName(), "A Trip Begins");
 	}
 }

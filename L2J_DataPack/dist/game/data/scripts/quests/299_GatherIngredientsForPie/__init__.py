@@ -2,7 +2,7 @@
 import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "299_GatherIngredientsForPie"
 
@@ -65,7 +65,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30620 and id != State.STARTED : return htmltext
 
@@ -93,7 +93,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    count = st.getQuestItemsCount(HONEY_POUCH)
    if st.getInt("cond") == 1 and count < 100 :
      st.giveItems(HONEY_POUCH,1)

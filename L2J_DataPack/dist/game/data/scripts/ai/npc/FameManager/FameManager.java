@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.UserInfo;
  * Fame Manager AI.
  * @author St3eT
  */
-public class FameManager extends AbstractNpcAI
+public final class FameManager extends AbstractNpcAI
 {
 	// Npc
 	private static final int[] FAME_MANAGER =
@@ -44,9 +44,9 @@ public class FameManager extends AbstractNpcAI
 	private static final int MIN_CLAN_LVL = 5;
 	private static final int CLASS_LVL = 2;
 	
-	private FameManager(String name, String descr)
+	private FameManager()
 	{
-		super(name, descr);
+		super(FameManager.class.getSimpleName(), "ai/npc");
 		addStartNpc(FAME_MANAGER);
 		addTalkId(FAME_MANAGER);
 		addFirstTalkId(FAME_MANAGER);
@@ -77,16 +77,16 @@ public class FameManager extends AbstractNpcAI
 						player.setFame(player.getFame() - DECREASE_COST);
 						player.setPkKills(player.getPkKills() - 1);
 						player.sendPacket(new UserInfo(player));
-						htmltext = npc.getNpcId() + "-06.html";
+						htmltext = npc.getId() + "-06.html";
 					}
 					else
 					{
-						htmltext = npc.getNpcId() + "-01.html";
+						htmltext = npc.getId() + "-01.html";
 					}
 				}
 				else
 				{
-					htmltext = npc.getNpcId() + "-05.html";
+					htmltext = npc.getId() + "-05.html";
 				}
 				break;
 			}
@@ -100,16 +100,16 @@ public class FameManager extends AbstractNpcAI
 						player.getClan().addReputationScore(50, true);
 						player.sendPacket(new UserInfo(player));
 						player.sendPacket(SystemMessageId.ACQUIRED_50_CLAN_FAME_POINTS);
-						htmltext = npc.getNpcId() + "-04.html";
+						htmltext = npc.getId() + "-04.html";
 					}
 					else
 					{
-						htmltext = npc.getNpcId() + "-01.html";
+						htmltext = npc.getId() + "-01.html";
 					}
 				}
 				else
 				{
-					htmltext = npc.getNpcId() + "-03.html";
+					htmltext = npc.getId() + "-03.html";
 				}
 				break;
 			}
@@ -120,11 +120,11 @@ public class FameManager extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return ((player.getFame() > 0) && (player.getLevel() >= MIN_LVL) && (player.getClassId().level() >= CLASS_LVL)) ? npc.getNpcId() + ".html" : npc.getNpcId() + "-01.html";
+		return ((player.getFame() > 0) && (player.getLevel() >= MIN_LVL) && (player.getClassId().level() >= CLASS_LVL)) ? npc.getId() + ".html" : npc.getId() + "-01.html";
 	}
 	
 	public static void main(String[] args)
 	{
-		new FameManager(FameManager.class.getSimpleName(), "ai/npc");
+		new FameManager();
 	}
 }

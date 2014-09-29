@@ -3,7 +3,7 @@ import sys
 from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "343_UnderTheShadowOfTheIvoryTower"
 
@@ -152,7 +152,7 @@ class Quest (JQuest) :
      st = player.getQuestState(qn)
      if not st : return htmltext
 
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      id = st.getState()
      level = player.getLevel()
      cond = st.getInt("cond")
@@ -192,7 +192,7 @@ class Quest (JQuest) :
      if not st : return 
      if st.getState() != State.STARTED : return 
    
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      if self.getRandom(100) < CHANCE :
          st.giveItems(ORB,1)
          st.playSound("ItemSound.quest_itemget")

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,13 +20,12 @@ package handlers.actionhandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.cache.HtmCache;
+import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2StaticObjectInstance;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class L2StaticObjectInstanceAction implements IActionHandler
@@ -37,7 +36,7 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 		final L2StaticObjectInstance staticObject = (L2StaticObjectInstance) target;
 		if (staticObject.getType() < 0)
 		{
-			_log.info("L2StaticObjectInstance: StaticObject with invalid type! StaticObjectId: " + staticObject.getStaticObjectId());
+			_log.info("L2StaticObjectInstance: StaticObject with invalid type! StaticObjectId: " + staticObject.getId());
 		}
 		
 		// Check if the L2PcInstance already target the L2NpcInstance
@@ -45,12 +44,9 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 		{
 			// Set the target of the L2PcInstance activeChar
 			activeChar.setTarget(staticObject);
-			activeChar.sendPacket(new MyTargetSelected(staticObject.getObjectId(), 0));
 		}
 		else if (interact)
 		{
-			activeChar.sendPacket(new MyTargetSelected(staticObject.getObjectId(), 0));
-			
 			// Calculate the distance between the L2PcInstance and the L2NpcInstance
 			if (!activeChar.isInsideRadius(staticObject, L2Npc.INTERACTION_DISTANCE, false, false))
 			{
@@ -61,7 +57,7 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 			{
 				if (staticObject.getType() == 2)
 				{
-					final String filename = (staticObject.getStaticObjectId() == 24230101) ? "data/html/signboards/tomb_of_crystalgolem.htm" : "data/html/signboards/pvp_signboard.htm";
+					final String filename = (staticObject.getId() == 24230101) ? "data/html/signboards/tomb_of_crystalgolem.htm" : "data/html/signboards/pvp_signboard.htm";
 					final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
 					final NpcHtmlMessage html = new NpcHtmlMessage(staticObject.getObjectId());
 					

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,22 +20,22 @@ package ai.individual;
 
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import javolution.util.FastSet;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.util.L2FastMap;
 
 /**
  * Dark Water Dragon's AI.
  */
-public class DarkWaterDragon extends AbstractNpcAI
+public final class DarkWaterDragon extends AbstractNpcAI
 {
 	private static final int DRAGON = 22267;
 	private static final int SHADE1 = 22268;
@@ -45,11 +45,11 @@ public class DarkWaterDragon extends AbstractNpcAI
 	private static final int DETRACTOR2 = 22271;
 	private static Set<Integer> SECOND_SPAWN = new FastSet<>(); // Used to track if second Shades were already spawned
 	private static Set<Integer> MY_TRACKING_SET = new FastSet<>(); // Used to track instances of npcs
-	private static Map<Integer, L2PcInstance> ID_MAP = new L2FastMap<>(true); // Used to track instances of npcs
+	private static Map<Integer, L2PcInstance> ID_MAP = new ConcurrentHashMap<>(); // Used to track instances of npcs
 	
-	private DarkWaterDragon(String name, String descr)
+	private DarkWaterDragon()
 	{
-		super(name, descr);
+		super(DarkWaterDragon.class.getSimpleName(), "ai/individual");
 		int[] mobs =
 		{
 			DRAGON,
@@ -59,7 +59,9 @@ public class DarkWaterDragon extends AbstractNpcAI
 			DETRACTOR1,
 			DETRACTOR2
 		};
-		registerMobs(mobs, QuestEventType.ON_KILL, QuestEventType.ON_SPAWN, QuestEventType.ON_ATTACK);
+		addKillId(mobs);
+		addAttackId(mobs);
+		addSpawnId(mobs);
 		MY_TRACKING_SET.clear();
 		SECOND_SPAWN.clear();
 	}
@@ -113,7 +115,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 				player = ID_MAP.remove(npc.getObjectId());
 				if (player != null)
 				{
-					((L2Attackable) npc).doItemDrop(NpcTable.getInstance().getTemplate(18485), player);
+					((L2Attackable) npc).doItemDrop(NpcData.getInstance().getTemplate(18485), player);
 				}
 				
 				npc.deleteMe();
@@ -143,7 +145,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int npcObjId = npc.getObjectId();
 		if (npcId == DRAGON)
 		{
@@ -176,7 +178,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int npcObjId = npc.getObjectId();
 		if (npcId == DRAGON)
 		{
@@ -206,7 +208,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int npcObjId = npc.getObjectId();
 		if (npcId == FAFURION)
 		{
@@ -241,6 +243,6 @@ public class DarkWaterDragon extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new DarkWaterDragon(DarkWaterDragon.class.getSimpleName(), "ai");
+		new DarkWaterDragon();
 	}
 }

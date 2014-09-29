@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,11 +18,11 @@
  */
 package quests.Q00452_FindingtheLostSoldiers;
 
+import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
@@ -42,9 +42,9 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 		32772
 	};
 	
-	public Q00452_FindingtheLostSoldiers(int questId, String name, String descr)
+	public Q00452_FindingtheLostSoldiers()
 	{
-		super(questId, name, descr);
+		super(452, Q00452_FindingtheLostSoldiers.class.getSimpleName(), "Finding the Lost Soldiers");
 		addStartNpc(JAKAN);
 		addTalkId(JAKAN);
 		addTalkId(SOLDIER_CORPSES);
@@ -62,7 +62,7 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 		
 		String htmltext = event;
 		
-		if (npc.getNpcId() == JAKAN)
+		if (npc.getId() == JAKAN)
 		{
 			if (event.equals("32773-3.htm"))
 			{
@@ -102,7 +102,7 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == JAKAN)
+		if (npc.getId() == JAKAN)
 		{
 			switch (st.getState())
 			{
@@ -144,10 +144,5 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00452_FindingtheLostSoldiers(452, Q00452_FindingtheLostSoldiers.class.getSimpleName(), "Finding the Lost Soldiers");
 	}
 }

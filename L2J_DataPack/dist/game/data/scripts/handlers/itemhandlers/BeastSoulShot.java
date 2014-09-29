@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,8 +20,8 @@ package handlers.itemhandlers;
 
 import java.util.logging.Level;
 
+import com.l2jserver.gameserver.enums.ShotType;
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -58,7 +58,7 @@ public class BeastSoulShot implements IItemHandler
 			return false;
 		}
 		
-		final int itemId = item.getItemId();
+		final int itemId = item.getId();
 		final short shotConsumption = activeOwner.getSummon().getSoulShotsPerHit();
 		final long shotCount = item.getCount();
 		final SkillHolder[] skills = item.getItem().getSkills();

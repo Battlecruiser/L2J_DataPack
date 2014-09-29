@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -38,23 +38,15 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
  */
 public final class FortressOfTheDead extends ClanHallSiegeEngine
 {
-	private static final String qn = "FortressOfTheDead";
-	
 	private static final int LIDIA = 35629;
 	private static final int ALFRED = 35630;
 	private static final int GISELLE = 35631;
 	
 	private static Map<Integer, Integer> _damageToLidia = new HashMap<>();
 	
-	/**
-	 * @param questId
-	 * @param name
-	 * @param descr
-	 * @param hallId
-	 */
-	public FortressOfTheDead(int questId, String name, String descr, final int hallId)
+	public FortressOfTheDead()
 	{
-		super(questId, name, descr, hallId);
+		super(FortressOfTheDead.class.getSimpleName(), "conquerablehalls", FORTRESS_OF_DEAD);
 		addKillId(LIDIA);
 		addKillId(ALFRED);
 		addKillId(GISELLE);
@@ -69,15 +61,15 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (npc.getNpcId() == LIDIA)
+		if (npc.getId() == LIDIA)
 		{
 			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.HMM_THOSE_WHO_ARE_NOT_OF_THE_BLOODLINE_ARE_COMING_THIS_WAY_TO_TAKE_OVER_THE_CASTLE_HUMPH_THE_BITTER_GRUDGES_OF_THE_DEAD_YOU_MUST_NOT_MAKE_LIGHT_OF_THEIR_POWER);
 		}
-		else if (npc.getNpcId() == ALFRED)
+		else if (npc.getId() == ALFRED)
 		{
 			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.HEH_HEH_I_SEE_THAT_THE_FEAST_HAS_BEGUN_BE_WARY_THE_CURSE_OF_THE_HELLMANN_FAMILY_HAS_POISONED_THIS_LAND);
 		}
-		else if (npc.getNpcId() == GISELLE)
+		else if (npc.getId() == GISELLE)
 		{
 			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.ARISE_MY_FAITHFUL_SERVANTS_YOU_MY_PEOPLE_WHO_HAVE_INHERITED_THE_BLOOD_IT_IS_THE_CALLING_OF_MY_DAUGHTER_THE_FEAST_OF_BLOOD_WILL_NOW_BEGIN);
 		}
@@ -98,7 +90,7 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 			
 			if ((clan != null) && checkIsAttacker(clan))
 			{
-				final int id = clan.getClanId();
+				final int id = clan.getId();
 				if ((id > 0) && _damageToLidia.containsKey(id))
 				{
 					int newDamage = _damageToLidia.get(id);
@@ -122,7 +114,7 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 			return null;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		
 		if ((npcId == ALFRED) || (npcId == GISELLE))
 		{
@@ -179,6 +171,6 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 	
 	public static void main(String[] args)
 	{
-		new FortressOfTheDead(-1, qn, "conquerablehalls", FORTRESS_OF_DEAD);
+		new FortressOfTheDead();
 	}
 }

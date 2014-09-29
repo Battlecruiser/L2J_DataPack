@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -24,7 +24,7 @@ import java.util.Map.Entry;
 
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ClanTable;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
@@ -40,8 +40,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public final class FortressOfResistance extends ClanHallSiegeEngine
 {
-	private static final String qn = "FortressOfResistance";
-	
 	private final int MESSENGER = 35382;
 	private final int BLOODY_LORD_NURKA = 35375;
 	
@@ -57,15 +55,9 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 	private final Map<Integer, Long> _damageToNurka = new HashMap<>();
 	private NpcHtmlMessage _messengerMsg;
 	
-	/**
-	 * @param questId
-	 * @param name
-	 * @param descr
-	 * @param hallId
-	 */
-	public FortressOfResistance(int questId, String name, String descr, final int hallId)
+	private FortressOfResistance()
 	{
-		super(questId, name, descr, hallId);
+		super(FortressOfResistance.class.getSimpleName(), "conquerablehalls", FORTRESS_RESSISTANCE);
 		addFirstTalkId(MESSENGER);
 		addKillId(BLOODY_LORD_NURKA);
 		addAttackId(BLOODY_LORD_NURKA);
@@ -73,7 +65,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 		
 		try
 		{
-			_nurka = new L2Spawn(NpcTable.getInstance().getTemplate(BLOODY_LORD_NURKA));
+			_nurka = new L2Spawn(NpcData.getInstance().getTemplate(BLOODY_LORD_NURKA));
 			_nurka.setAmount(1);
 			_nurka.setRespawnDelay(10800);
 //			@formatter:off
@@ -105,7 +97,8 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 		String html = HtmCache.getInstance().getHtm(null, "data/scripts/conquerablehalls/FortressOfResistance/partisan_ordery_brakel001.htm");
 		if (html != null)
 		{
-			_messengerMsg = new NpcHtmlMessage(5);
+			// FIXME: We don't have an object id to put in here :(
+			_messengerMsg = new NpcHtmlMessage();
 			_messengerMsg.setHtml(html);
 			_messengerMsg.replace("%nextSiege%", Util.formatDate(_hall.getSiegeDate().getTime(), "yyyy-MM-dd HH:mm:ss"));
 		}
@@ -187,6 +180,6 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 	
 	public static void main(String[] args)
 	{
-		new FortressOfResistance(-1, qn, "conquerablehalls", FORTRESS_RESSISTANCE);
+		new FortressOfResistance();
 	}
 }

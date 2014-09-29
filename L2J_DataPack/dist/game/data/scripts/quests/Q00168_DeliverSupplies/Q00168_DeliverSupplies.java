@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,9 +21,9 @@ package quests.Q00168_DeliverSupplies;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -54,9 +54,9 @@ public class Q00168_DeliverSupplies extends Quest
 		SENTRIES.put(ROSELYN, SENTRY_BLADE2);
 	}
 	
-	private Q00168_DeliverSupplies(int questId, String name, String descr)
+	public Q00168_DeliverSupplies()
 	{
-		super(questId, name, descr);
+		super(168, Q00168_DeliverSupplies.class.getSimpleName(), "Deliver Supplies");
 		addStartNpc(JENNA);
 		addTalkId(JENNA, ROSELYN, KRISTIN, HARANT);
 		registerQuestItems(JENNAS_LETTER, SENTRY_BLADE1, SENTRY_BLADE2, SENTRY_BLADE3, OLD_BRONZE_SWORD);
@@ -82,7 +82,7 @@ public class Q00168_DeliverSupplies extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case JENNA:
 				{
@@ -90,7 +90,7 @@ public class Q00168_DeliverSupplies extends Quest
 					{
 						case State.CREATED:
 						{
-							htmltext = (player.getRace() == Race.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30349-02.htm" : "30349-01.htm" : "30349-00.htm";
+							htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30349-02.htm" : "30349-01.htm" : "30349-00.htm";
 							break;
 						}
 						case State.STARTED:
@@ -164,29 +164,24 @@ public class Q00168_DeliverSupplies extends Quest
 				case ROSELYN:
 				case KRISTIN:
 				{
-					if (st.isCond(3) && st.hasQuestItems(SENTRIES.get(npc.getNpcId())))
+					if (st.isCond(3) && st.hasQuestItems(SENTRIES.get(npc.getId())))
 					{
-						st.takeItems(SENTRIES.get(npc.getNpcId()), -1);
+						st.takeItems(SENTRIES.get(npc.getId()), -1);
 						st.giveItems(OLD_BRONZE_SWORD, 1);
 						if (st.getQuestItemsCount(OLD_BRONZE_SWORD) >= 2)
 						{
 							st.setCond(4, true);
 						}
-						htmltext = npc.getNpcId() + "-01.html";
+						htmltext = npc.getId() + "-01.html";
 					}
-					else if (!st.hasQuestItems(SENTRIES.get(npc.getNpcId())) && st.hasQuestItems(OLD_BRONZE_SWORD))
+					else if (!st.hasQuestItems(SENTRIES.get(npc.getId())) && st.hasQuestItems(OLD_BRONZE_SWORD))
 					{
-						htmltext = npc.getNpcId() + "-02.html";
+						htmltext = npc.getId() + "-02.html";
 					}
 					break;
 				}
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00168_DeliverSupplies(168, Q00168_DeliverSupplies.class.getSimpleName(), "Deliver Supplies");
 	}
 }

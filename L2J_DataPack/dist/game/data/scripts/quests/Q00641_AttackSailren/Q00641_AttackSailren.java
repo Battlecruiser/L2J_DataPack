@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,6 +20,7 @@ package quests.Q00641_AttackSailren;
 
 import quests.Q00126_TheNameOfEvil2.Q00126_TheNameOfEvil2;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -48,9 +49,9 @@ public class Q00641_AttackSailren extends Quest
 		22199, // Pterosaur
 	};
 	
-	public Q00641_AttackSailren(int id, String name, String descr)
+	public Q00641_AttackSailren()
 	{
-		super(id, name, descr);
+		super(641, Q00641_AttackSailren.class.getSimpleName(), "Attack Sailren!");
 		addStartNpc(SHILENS_STONE_STATUE);
 		addTalkId(SHILENS_STONE_STATUE);
 		addKillId(MOBS);
@@ -133,10 +134,5 @@ public class Q00641_AttackSailren extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00641_AttackSailren(641, Q00641_AttackSailren.class.getSimpleName(), "Attack Sailren!");
 	}
 }

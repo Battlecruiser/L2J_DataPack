@@ -5,7 +5,7 @@
 import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "214_TrialOfScholar"
 
@@ -238,7 +238,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
    cond = st.getInt("cond")
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30461 and id != State.STARTED : return htmltext
 
@@ -479,7 +479,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return
    if st.getState() != State.STARTED : return
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 20580 :
     if st.getInt("cond") == 11 and st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID)<5 :
       if self.getRandom(100) < 50 :

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,14 +19,11 @@
 package handlers.actionhandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
-import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 public class L2ArtefactInstanceAction implements IActionHandler
 {
@@ -50,18 +47,9 @@ public class L2ArtefactInstanceAction implements IActionHandler
 		{
 			return false;
 		}
-		
 		if (activeChar.getTarget() != target)
 		{
-			// Set the target of the L2PcInstance activeChar
 			activeChar.setTarget(target);
-			
-			// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
-			MyTargetSelected my = new MyTargetSelected(target.getObjectId(), 0);
-			activeChar.sendPacket(my);
-			
-			// Send a Server->Client packet ValidateLocation to correct the L2ArtefactInstance position and heading on the client
-			activeChar.sendPacket(new ValidateLocation((L2Character) target));
 		}
 		else if (interact)
 		{

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -49,10 +49,11 @@ public class Q00153_DeliverGoods extends Quest
 	private static final int RING_OF_KNOWLEDGE_ID = 875;
 	private static final int XP_REWARD_AMOUNT = 600;
 	
-	public Q00153_DeliverGoods(int questId, String name, String descr)
+	public Q00153_DeliverGoods()
 	{
-		super(questId, name, descr);
-		addStartNpc(ARNOLD_ID, JACKSON_ID, SILVIA_ID, ARNOLD_ID, RANT_ID);
+		super(153, Q00153_DeliverGoods.class.getSimpleName(), "Deliver Goods");
+		addStartNpc(ARNOLD_ID);
+		addTalkId(JACKSON_ID, SILVIA_ID, ARNOLD_ID, RANT_ID);
 		registerQuestItems(DELIVERY_LIST_ID, HEAVY_WOOD_BOX_ID, CLOTH_BUNDLE_ID, CLAY_POT_ID, JACKSONS_RECEIPT_ID, SILVIAS_RECEIPT_ID, RANTS_RECEIPT_ID);
 	}
 	
@@ -60,7 +61,7 @@ public class Q00153_DeliverGoods extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && (npc.getNpcId() == ARNOLD_ID))
+		if ((st != null) && (npc.getId() == ARNOLD_ID))
 		{
 			if (event.equalsIgnoreCase("30041-02.html"))
 			{
@@ -81,7 +82,7 @@ public class Q00153_DeliverGoods extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if (st != null)
 		{
-			if (npc.getNpcId() == ARNOLD_ID)
+			if (npc.getId() == ARNOLD_ID)
 			{
 				switch (st.getState())
 				{
@@ -114,7 +115,7 @@ public class Q00153_DeliverGoods extends Quest
 			}
 			else
 			{
-				if (npc.getNpcId() == JACKSON_ID)
+				if (npc.getId() == JACKSON_ID)
 				{
 					if (st.hasQuestItems(HEAVY_WOOD_BOX_ID))
 					{
@@ -127,7 +128,7 @@ public class Q00153_DeliverGoods extends Quest
 						htmltext = "30002-02.html";
 					}
 				}
-				else if (npc.getNpcId() == SILVIA_ID)
+				else if (npc.getId() == SILVIA_ID)
 				{
 					if (st.hasQuestItems(CLOTH_BUNDLE_ID))
 					{
@@ -141,7 +142,7 @@ public class Q00153_DeliverGoods extends Quest
 						htmltext = "30003-02.html";
 					}
 				}
-				else if (npc.getNpcId() == RANT_ID)
+				else if (npc.getId() == RANT_ID)
 				{
 					if (st.hasQuestItems(CLAY_POT_ID))
 					{
@@ -162,10 +163,5 @@ public class Q00153_DeliverGoods extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00153_DeliverGoods(153, Q00153_DeliverGoods.class.getSimpleName(), "Deliver Goods");
 	}
 }

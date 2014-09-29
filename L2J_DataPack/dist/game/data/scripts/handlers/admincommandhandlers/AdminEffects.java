@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,7 +23,8 @@ import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.communitybbs.Manager.RegionBBSManager;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
+import com.l2jserver.gameserver.enums.Team;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -31,8 +32,8 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2ChestInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CharInfo;
 import com.l2jserver.gameserver.network.serverpackets.Earthquake;
@@ -45,9 +46,9 @@ import com.l2jserver.gameserver.network.serverpackets.SSQInfo;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SunRise;
 import com.l2jserver.gameserver.network.serverpackets.SunSet;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.gameserver.util.Broadcast;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * This class handles following admin commands: <li>invis/invisible/vis/visible = makes yourself invisible or visible <li>earthquake = causes an earthquake of a given intensity and duration around you <li>bighead/shrinkhead = changes head size <li>gmspeed = temporary Super Haste effect. <li>
@@ -61,6 +62,7 @@ public class AdminEffects implements IAdminCommandHandler
 	{
 		"admin_invis",
 		"admin_invisible",
+		"admin_setinvis",
 		"admin_vis",
 		"admin_visible",
 		"admin_invis_menu",
@@ -87,12 +89,11 @@ public class AdminEffects implements IAdminCommandHandler
 		"admin_setteam",
 		"admin_social",
 		"admin_effect",
-		"admin_social_menu",
-		"admin_special",
-		"admin_special_menu",
 		"admin_effect_menu",
-		"admin_abnormal",
-		"admin_abnormal_menu",
+		"admin_ave_abnormal",
+		"admin_ave_special",
+		"admin_ave_event",
+		"admin_social_menu",
 		"admin_play_sounds",
 		"admin_play_sound",
 		"admin_atmosphere",
@@ -109,36 +110,55 @@ public class AdminEffects implements IAdminCommandHandler
 		
 		if (command.equals("admin_invis_menu"))
 		{
-			if (!activeChar.getAppearance().getInvisible())
+			if (!activeChar.isInvisible())
 			{
-				activeChar.getAppearance().setInvisible();
+				activeChar.setInvisible(true);
 				activeChar.broadcastUserInfo();
 				activeChar.decayMe();
 				activeChar.spawnMe();
+				activeChar.sendMessage("You are now invisible.");
 			}
 			else
 			{
-				activeChar.getAppearance().setVisible();
+				activeChar.setInvisible(false);
 				activeChar.broadcastUserInfo();
+				activeChar.sendMessage("You are now visible.");
 			}
 			RegionBBSManager.getInstance().changeCommunityBoard();
 			command = "";
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_invis"))
 		{
-			activeChar.getAppearance().setInvisible();
+			activeChar.setInvisible(true);
 			activeChar.broadcastUserInfo();
 			activeChar.decayMe();
 			activeChar.spawnMe();
 			RegionBBSManager.getInstance().changeCommunityBoard();
+			activeChar.sendMessage("You are now invisible.");
 		}
-		
 		else if (command.startsWith("admin_vis"))
 		{
-			activeChar.getAppearance().setVisible();
+			activeChar.setInvisible(false);
 			activeChar.broadcastUserInfo();
 			RegionBBSManager.getInstance().changeCommunityBoard();
+			activeChar.sendMessage("You are now visible.");
+		}
+		else if (command.startsWith("admin_setinvis"))
+		{
+			if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter())
+			{
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				return false;
+			}
+			final L2Character target = (L2Character) activeChar.getTarget();
+			target.setInvisible(!target.isInvisible());
+			activeChar.sendMessage("You've made " + target.getName() + " " + (target.isInvisible() ? "invisible" : "visible") + ".");
+			
+			if (target.isPlayer())
+			{
+				((L2PcInstance) target).broadcastUserInfo();
+			}
 		}
 		else if (command.startsWith("admin_earthquake"))
 		{
@@ -172,13 +192,13 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_play_sounds"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "songs/songs.htm");
+			AdminHtml.showAdminHtml(activeChar, "songs/songs.htm");
 		}
 		else if (command.startsWith("admin_play_sounds"))
 		{
 			try
 			{
-				AdminHelpPage.showHelpPage(activeChar, "songs/songs" + command.substring(18) + ".htm");
+				AdminHtml.showAdminHtml(activeChar, "songs/songs" + command.substring(18) + ".htm");
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -205,7 +225,7 @@ public class AdminEffects implements IAdminCommandHandler
 				{
 					if (!player.isGM())
 					{
-						player.startAbnormalEffect(AbnormalEffect.HOLD_1);
+						player.startAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
 						player.setIsParalyzed(true);
 						player.startParalyze();
 					}
@@ -222,9 +242,8 @@ public class AdminEffects implements IAdminCommandHandler
 				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
 				for (L2PcInstance player : plrs)
 				{
-					player.stopAbnormalEffect(AbnormalEffect.HOLD_1);
+					player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
 					player.setIsParalyzed(false);
-					player.stopParalyze(false);
 				}
 			}
 			catch (Exception e)
@@ -250,11 +269,11 @@ public class AdminEffects implements IAdminCommandHandler
 					player = (L2Character) target;
 					if (type.equals("1"))
 					{
-						player.startAbnormalEffect(AbnormalEffect.HOLD_1);
+						player.startAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
 					}
 					else
 					{
-						player.startAbnormalEffect(AbnormalEffect.HOLD_2);
+						player.startAbnormalVisualEffect(true, AbnormalVisualEffect.FLESH_STONE);
 					}
 					player.setIsParalyzed(true);
 					player.startParalyze();
@@ -283,14 +302,13 @@ public class AdminEffects implements IAdminCommandHandler
 					player = (L2Character) target;
 					if (type.equals("1"))
 					{
-						player.stopAbnormalEffect(AbnormalEffect.HOLD_1);
+						player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
 					}
 					else
 					{
-						player.stopAbnormalEffect(AbnormalEffect.HOLD_2);
+						player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.FLESH_STONE);
 					}
 					player.setIsParalyzed(false);
-					player.stopParalyze(false);
 				}
 			}
 			catch (Exception e)
@@ -306,7 +324,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (target instanceof L2Character)
 				{
 					player = (L2Character) target;
-					player.startAbnormalEffect(AbnormalEffect.BIG_HEAD);
+					player.startAbnormalVisualEffect(true, AbnormalVisualEffect.BIG_HEAD);
 				}
 			}
 			catch (Exception e)
@@ -322,7 +340,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (target instanceof L2Character)
 				{
 					player = (L2Character) target;
-					player.stopAbnormalEffect(AbnormalEffect.BIG_HEAD);
+					player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.BIG_HEAD);
 				}
 			}
 			catch (Exception e)
@@ -334,17 +352,11 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				int val = Integer.parseInt(st.nextToken());
-				boolean sendMessage = activeChar.getFirstEffect(7029) != null;
-				activeChar.stopSkillEffects(7029);
-				if ((val == 0) && sendMessage)
+				boolean sendMessage = activeChar.isAffectedBySkill(7029);
+				activeChar.stopSkillEffects((val == 0) && sendMessage, 7029);
+				if ((val >= 1) && (val <= 4))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EFFECT_S1_DISAPPEARED);
-					sm.addSkillName(7029);
-					activeChar.sendPacket(sm);
-				}
-				else if ((val >= 1) && (val <= 4))
-				{
-					L2Skill gmSpeedSkill = SkillTable.getInstance().getInfo(7029, val);
+					Skill gmSpeedSkill = SkillData.getInstance().getSkill(7029, val);
 					activeChar.doSimultaneousCast(gmSpeedSkill);
 				}
 			}
@@ -355,7 +367,7 @@ public class AdminEffects implements IAdminCommandHandler
 			if (command.contains("_menu"))
 			{
 				command = "";
-				AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+				AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 			}
 		}
 		else if (command.startsWith("admin_polyself"))
@@ -364,7 +376,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				String id = st.nextToken();
 				activeChar.getPoly().setPolyInfo("npc", id);
-				activeChar.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), false);
+				activeChar.teleToLocation(activeChar.getLocation());
 				CharInfo info1 = new CharInfo(activeChar);
 				activeChar.broadcastPacket(info1);
 				UserInfo info2 = new UserInfo(activeChar);
@@ -394,7 +406,7 @@ public class AdminEffects implements IAdminCommandHandler
 				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
 				for (L2PcInstance player : plrs)
 				{
-					player.setTeam(0);
+					player.setTeam(Team.NONE);
 					player.broadcastUserInfo();
 				}
 			}
@@ -412,25 +424,24 @@ public class AdminEffects implements IAdminCommandHandler
 				{
 					radius = Integer.parseInt(st.nextToken());
 				}
-				int teamVal = Integer.parseInt(val);
+				Team team = Team.valueOf(val.toUpperCase());
 				Collection<L2Character> plrs = activeChar.getKnownList().getKnownCharactersInRadius(radius);
 				
 				for (L2Character player : plrs)
 				{
-					player.setTeam(teamVal);
+					player.setTeam(team);
 				}
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage: //setteam_close <teamId>");
+				activeChar.sendMessage("Usage: //setteam_close <none|blue|red> [radius]");
 			}
 		}
 		else if (command.startsWith("admin_setteam"))
 		{
 			try
 			{
-				String val = st.nextToken();
-				int teamVal = Integer.parseInt(val);
+				Team team = Team.valueOf(st.nextToken().toUpperCase());
 				L2Character target = null;
 				if (activeChar.getTarget() instanceof L2Character)
 				{
@@ -440,11 +451,11 @@ public class AdminEffects implements IAdminCommandHandler
 				{
 					return false;
 				}
-				target.setTeam(teamVal);
+				target.setTeam(team);
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage: //setteam <teamId>");
+				activeChar.sendMessage("Usage: //setteam <none|blue|red>");
 			}
 		}
 		else if (command.startsWith("admin_social"))
@@ -519,159 +530,61 @@ public class AdminEffects implements IAdminCommandHandler
 				}
 			}
 		}
-		else if (command.startsWith("admin_abnormal"))
+		else if (command.startsWith("admin_ave_abnormal") || command.startsWith("admin_ave_special") || command.startsWith("admin_ave_event"))
 		{
-			try
+			if (st.countTokens() > 0)
 			{
-				String target = null;
-				L2Object obj = activeChar.getTarget();
-				if (st.countTokens() == 2)
+				final String param1 = st.nextToken();
+				AbnormalVisualEffect ave;
+				
+				try
 				{
-					String parm = st.nextToken();
-					int abnormal = Integer.decode("0x" + parm);
-					target = st.nextToken();
-					if (target != null)
+					ave = AbnormalVisualEffect.valueOf(param1);
+				}
+				catch (Exception e)
+				{
+					
+					return false;
+				}
+				
+				int radius = 0;
+				String param2 = null;
+				if (st.countTokens() == 1)
+				{
+					param2 = st.nextToken();
+					if (Util.isDigit(param2))
 					{
-						L2PcInstance player = L2World.getInstance().getPlayer(target);
-						if (player != null)
-						{
-							if (performAbnormal(abnormal, player))
-							{
-								activeChar.sendMessage(player.getName() + "'s abnormal status was affected by your request.");
-							}
-							else
-							{
-								activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
-							}
-						}
-						else
-						{
-							try
-							{
-								int radius = Integer.parseInt(target);
-								Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
-								
-								for (L2Object object : objs)
-								{
-									if (activeChar.isInsideRadius(object, radius, false, false))
-									{
-										performAbnormal(abnormal, object);
-									}
-								}
-								activeChar.sendMessage(radius + " units radius affected by your request.");
-							}
-							catch (NumberFormatException nbe)
-							{
-								activeChar.sendMessage("Usage: //abnormal <hex_abnormal_mask> [player|radius]");
-							}
-						}
+						radius = Integer.parseInt(param2);
 					}
 				}
-				else if (st.countTokens() == 1)
+				
+				if (radius > 0)
 				{
-					int abnormal = Integer.decode("0x" + st.nextToken());
-					if (obj == null)
+					for (L2Object object : activeChar.getKnownList().getKnownObjects().values())
 					{
-						obj = activeChar;
+						if (activeChar.isInsideRadius(object, radius, false, false))
+						{
+							performAbnormalVisualEffect(ave, object);
+						}
 					}
-					
-					if (performAbnormal(abnormal, obj))
+					activeChar.sendMessage("Affected all characters in radius " + param2 + " by " + param1 + " abnormal visual effect.");
+				}
+				else
+				{
+					final L2Object obj = activeChar.getTarget() != null ? activeChar.getTarget() : activeChar;
+					if (performAbnormalVisualEffect(ave, obj))
 					{
-						activeChar.sendMessage(obj.getName() + "'s abnormal status was affected by your request.");
+						activeChar.sendMessage(obj.getName() + " affected by " + param1 + " abnormal visual effect.");
 					}
 					else
 					{
 						activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 					}
 				}
-				else if (!command.contains("menu"))
-				{
-					activeChar.sendMessage("Usage: //abnormal <abnormal_mask> [player_name|radius]");
-				}
 			}
-			catch (Exception e)
+			else
 			{
-				if (Config.DEBUG)
-				{
-					e.printStackTrace();
-				}
-			}
-		}
-		else if (command.startsWith("admin_special"))
-		{
-			try
-			{
-				String target = null;
-				L2Object obj = activeChar.getTarget();
-				if (st.countTokens() == 2)
-				{
-					String parm = st.nextToken();
-					int special = Integer.decode("0x" + parm);
-					target = st.nextToken();
-					if (target != null)
-					{
-						L2PcInstance player = L2World.getInstance().getPlayer(target);
-						if (player != null)
-						{
-							if (performSpecial(special, player))
-							{
-								activeChar.sendMessage(player.getName() + "'s special status was affected by your request.");
-							}
-							else
-							{
-								activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
-							}
-						}
-						else
-						{
-							try
-							{
-								int radius = Integer.parseInt(target);
-								Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
-								for (L2Object object : objs)
-								{
-									if (activeChar.isInsideRadius(object, radius, false, false))
-									{
-										performSpecial(special, object);
-									}
-								}
-								activeChar.sendMessage(radius + " units radius affected by your request.");
-							}
-							catch (NumberFormatException nbe)
-							{
-								activeChar.sendMessage("Usage: //special <hex_special_mask> [player|radius]");
-							}
-						}
-					}
-				}
-				else if (st.countTokens() == 1)
-				{
-					int special = Integer.decode("0x" + st.nextToken());
-					if (obj == null)
-					{
-						obj = activeChar;
-					}
-					
-					if (performSpecial(special, obj))
-					{
-						activeChar.sendMessage(obj.getName() + "'s special status was affected by your request.");
-					}
-					else
-					{
-						activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
-					}
-				}
-				else if (!command.contains("menu"))
-				{
-					activeChar.sendMessage("Usage: //special <special_mask> [player_name|radius]");
-				}
-			}
-			catch (Exception e)
-			{
-				if (Config.DEBUG)
-				{
-					e.printStackTrace();
-				}
+				activeChar.sendMessage("Usage: //" + command.replace("admin_", "") + " <AbnormalVisualEffect> [radius]");
 			}
 		}
 		else if (command.startsWith("admin_effect"))
@@ -730,7 +643,8 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.sendMessage("Usage: //set_displayeffect <id>");
 			}
 		}
-		if (command.contains("menu"))
+		
+		if (command.contains("menu") || command.contains("ave_"))
 		{
 			showMainPage(activeChar, command);
 		}
@@ -738,40 +652,22 @@ public class AdminEffects implements IAdminCommandHandler
 	}
 	
 	/**
-	 * @param action bitmask that should be applied over target's abnormal
-	 * @param target
-	 * @return <i>true</i> if target's abnormal state was affected , <i>false</i> otherwise.
+	 * @param ave the abnormal visual effect
+	 * @param target the target
+	 * @return {@code true} if target's abnormal state was affected, {@code false} otherwise.
 	 */
-	private boolean performAbnormal(int action, L2Object target)
+	private boolean performAbnormalVisualEffect(AbnormalVisualEffect ave, L2Object target)
 	{
 		if (target instanceof L2Character)
 		{
-			L2Character character = (L2Character) target;
-			if ((character.getAbnormalEffect() & action) == action)
+			final L2Character character = (L2Character) target;
+			if (character.hasAbnormalVisualEffect(ave))
 			{
-				character.stopAbnormalEffect(action);
+				character.stopAbnormalVisualEffect(true, ave);
 			}
 			else
 			{
-				character.startAbnormalEffect(action);
-			}
-			return true;
-		}
-		return false;
-	}
-	
-	private boolean performSpecial(int action, L2Object target)
-	{
-		if (target instanceof L2PcInstance)
-		{
-			L2Character character = (L2Character) target;
-			if ((character.getSpecialEffect() & action) == action)
-			{
-				character.stopSpecialEffect(action);
-			}
-			else
-			{
-				character.startSpecialEffect(action);
+				character.startAbnormalVisualEffect(true, ave);
 			}
 			return true;
 		}
@@ -883,18 +779,22 @@ public class AdminEffects implements IAdminCommandHandler
 	private void showMainPage(L2PcInstance activeChar, String command)
 	{
 		String filename = "effects_menu";
-		if (command.contains("abnormal"))
+		if (command.contains("ave_abnormal"))
 		{
-			filename = "abnormal";
+			filename = "ave_abnormal";
 		}
-		else if (command.contains("special"))
+		else if (command.contains("ave_special"))
 		{
-			filename = "special";
+			filename = "ave_special";
+		}
+		else if (command.contains("ave_event"))
+		{
+			filename = "ave_event";
 		}
 		else if (command.contains("social"))
 		{
 			filename = "social";
 		}
-		AdminHelpPage.showHelpPage(activeChar, filename + ".htm");
+		AdminHtml.showAdminHtml(activeChar, filename + ".htm");
 	}
 }

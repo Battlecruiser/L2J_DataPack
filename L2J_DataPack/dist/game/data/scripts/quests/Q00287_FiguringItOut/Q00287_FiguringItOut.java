@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,6 +23,7 @@ import java.util.Map;
 
 import quests.Q00250_WatchWhatYouEat.Q00250_WatchWhatYouEat;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -86,9 +87,9 @@ public class Q00287_FiguringItOut extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00287_FiguringItOut(int questId, String name, String descr)
+	public Q00287_FiguringItOut()
 	{
-		super(questId, name, descr);
+		super(287, Q00287_FiguringItOut.class.getSimpleName(), "Figuring It Out!");
 		addStartNpc(LAKI);
 		addTalkId(LAKI);
 		addKillId(MONSTERS.keySet());
@@ -169,7 +170,7 @@ public class Q00287_FiguringItOut extends Quest
 		}
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		if (getRandom(1000) < MONSTERS.get(npc.getNpcId()))
+		if (getRandom(1000) < MONSTERS.get(npc.getId()))
 		{
 			st.giveItems(VIAL_OF_TANTA_BLOOD, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -199,10 +200,5 @@ public class Q00287_FiguringItOut extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00287_FiguringItOut(287, Q00287_FiguringItOut.class.getSimpleName(), "Figuring It Out!");
 	}
 }

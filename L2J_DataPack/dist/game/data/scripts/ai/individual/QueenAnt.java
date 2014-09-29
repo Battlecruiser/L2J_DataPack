@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,8 +25,8 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -35,7 +35,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.CommonSkill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
@@ -44,7 +45,7 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
  * Queen Ant's AI
  * @author Emperorc
  */
-public class QueenAnt extends AbstractNpcAI
+public final class QueenAnt extends AbstractNpcAI
 {
 	private static final int QUEEN = 29001;
 	private static final int LARVA = 29002;
@@ -60,6 +61,10 @@ public class QueenAnt extends AbstractNpcAI
 		GUARD,
 		ROYAL
 	};
+	
+	private static final Location OUST_LOC_1 = new Location(-19480, 187344, -5600);
+	private static final Location OUST_LOC_2 = new Location(-17928, 180912, -5520);
+	private static final Location OUST_LOC_3 = new Location(-23808, 182368, -5600);
 	
 	private static final int QUEEN_X = -21610;
 	private static final int QUEEN_Y = 181594;
@@ -78,15 +83,15 @@ public class QueenAnt extends AbstractNpcAI
 	private L2MonsterInstance _larva = null;
 	private final List<L2MonsterInstance> _nurses = new FastList<>(5);
 	
-	private QueenAnt(String name, String descr)
+	private QueenAnt()
 	{
-		super(name, descr);
-		
-		registerMobs(MOBS, QuestEventType.ON_SPAWN, QuestEventType.ON_KILL, QuestEventType.ON_AGGRO_RANGE_ENTER);
+		super(QueenAnt.class.getSimpleName(), "ai/individual");
+		addSpawnId(MOBS);
+		addKillId(MOBS);
+		addAggroRangeEnterId(MOBS);
 		addFactionCallId(NURSE);
 		
 		_zone = GrandBossManager.getInstance().getZone(QUEEN_X, QUEEN_Y, QUEEN_Z);
-		
 		StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
 		int status = GrandBossManager.getInstance().getBossStatus(QUEEN);
 		if (status == DEAD)
@@ -109,12 +114,12 @@ public class QueenAnt extends AbstractNpcAI
 		}
 		else
 		{
-			int loc_x = info.getInteger("loc_x");
-			int loc_y = info.getInteger("loc_y");
-			int loc_z = info.getInteger("loc_z");
-			int heading = info.getInteger("heading");
-			int hp = info.getInteger("currentHP");
-			int mp = info.getInteger("currentMP");
+			int loc_x = info.getInt("loc_x");
+			int loc_y = info.getInt("loc_y");
+			int loc_z = info.getInt("loc_z");
+			int heading = info.getInt("heading");
+			int hp = info.getInt("currentHP");
+			int mp = info.getInt("currentMP");
 			if (!_zone.isInsideZone(loc_x, loc_y, loc_z))
 			{
 				loc_x = QUEEN_X;
@@ -132,15 +137,15 @@ public class QueenAnt extends AbstractNpcAI
 		GrandBossManager.getInstance().addBoss(npc);
 		if (getRandom(100) < 33)
 		{
-			_zone.movePlayersTo(-19480, 187344, -5600);
+			_zone.movePlayersTo(OUST_LOC_1);
 		}
 		else if (getRandom(100) < 50)
 		{
-			_zone.movePlayersTo(-17928, 180912, -5520);
+			_zone.movePlayersTo(OUST_LOC_2);
 		}
 		else
 		{
-			_zone.movePlayersTo(-23808, 182368, -5600);
+			_zone.movePlayersTo(OUST_LOC_3);
 		}
 		GrandBossManager.getInstance().addBoss(npc);
 		startQuestTimer("action", 10000, npc, null, true);
@@ -223,7 +228,7 @@ public class QueenAnt extends AbstractNpcAI
 	public String onSpawn(L2Npc npc)
 	{
 		final L2MonsterInstance mob = (L2MonsterInstance) npc;
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case LARVA:
 				mob.setIsImmobilized(true);
@@ -266,7 +271,7 @@ public class QueenAnt extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if (npc == null)
+		if ((npc == null) || (player.isGM() && player.isInvisible()))
 		{
 			return null;
 		}
@@ -291,26 +296,26 @@ public class QueenAnt extends AbstractNpcAI
 		
 		if (!Config.RAID_DISABLE_CURSE && ((character.getLevel() - npc.getLevel()) > 8))
 		{
-			L2Skill curse = null;
+			Skill curse = null;
 			if (isMage)
 			{
 				if (!character.isMuted() && (getRandom(4) == 0))
 				{
-					curse = SkillTable.FrequentSkill.RAID_CURSE.getSkill();
+					curse = CommonSkill.RAID_CURSE.getSkill();
 				}
 			}
 			else
 			{
 				if (!character.isParalyzed() && (getRandom(4) == 0))
 				{
-					curse = SkillTable.FrequentSkill.RAID_CURSE2.getSkill();
+					curse = CommonSkill.RAID_CURSE2.getSkill();
 				}
 			}
 			
 			if (curse != null)
 			{
 				npc.broadcastPacket(new MagicSkillUse(npc, character, curse.getId(), curse.getLevel(), 300, 0));
-				curse.getEffects(npc, character);
+				curse.applyEffects(npc, character);
 			}
 			
 			((L2Attackable) npc).stopHating(character); // for calling again
@@ -323,7 +328,7 @@ public class QueenAnt extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (npcId == QUEEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
@@ -368,6 +373,6 @@ public class QueenAnt extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new QueenAnt(QueenAnt.class.getSimpleName(), "ai");
+		new QueenAnt();
 	}
 }

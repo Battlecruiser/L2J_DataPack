@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,7 +21,7 @@ package ai.group_template;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -102,7 +102,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 			npc.doCast(FANTASY_MUSHROOM_SKILL.getSkill());
 			for (L2Character target : npc.getKnownList().getKnownCharactersInRadius(200))
 			{
-				if ((target != null) && target.isL2Attackable())
+				if ((target != null) && target.isAttackable())
 				{
 					final L2Attackable monster = (L2Attackable) target;
 					npc.setTarget(monster);
@@ -118,10 +118,10 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case TANTA_SUMMONER:
-				if (npc.getFirstEffect(DEMOTIVATION_HEX.getSkillId()) == null)
+				if (!npc.isAffectedBySkill(DEMOTIVATION_HEX.getSkillId()))
 				{
 					npc.doCast(DEMOTIVATION_HEX.getSkill());
 				}
@@ -142,13 +142,13 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 					npc.setIsInvul(true);
 					for (L2Character target : npc.getKnownList().getKnownCharactersInRadius(1000))
 					{
-						if ((target != null) && target.isL2Attackable())
+						if ((target != null) && target.isAttackable())
 						{
 							final L2Attackable monster = (L2Attackable) target;
-							if ((monster.getNpcId() == TANTA_MAGICIAN) || (monster.getNpcId() == TANTA_SCOUT))
+							if ((monster.getId() == TANTA_MAGICIAN) || (monster.getId() == TANTA_SCOUT))
 							{
 								target.setIsRunning(true);
-								target.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(npc.getX(), npc.getY(), npc.getZ(), 0));
+								target.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(npc.getX(), npc.getY(), npc.getZ(), 0));
 							}
 						}
 					}

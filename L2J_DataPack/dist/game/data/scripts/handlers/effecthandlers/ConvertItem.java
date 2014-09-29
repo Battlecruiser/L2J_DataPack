@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,47 +19,53 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.Elementals;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Convert Item effect.
+ * Convert Item effect implementation.
  * @author Zoey76
  */
-public class ConvertItem extends L2Effect
+public final class ConvertItem extends AbstractEffect
 {
-	public ConvertItem(Env env, EffectTemplate template)
+	public ConvertItem(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		if ((getEffector() == null) || (getEffected() == null) || getEffected().isAlikeDead() || !getEffected().isPlayer())
+		return true;
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		if ((info.getEffector() == null) || (info.getEffected() == null) || info.getEffected().isAlikeDead() || !info.getEffected().isPlayer())
 		{
-			return false;
+			return;
 		}
 		
-		final L2PcInstance player = getEffected().getActingPlayer();
+		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (player.isEnchanting())
 		{
-			return false;
+			return;
 		}
 		
 		final L2Weapon weaponItem = player.getActiveWeaponItem();
 		if (weaponItem == null)
 		{
-			return false;
+			return;
 		}
 		
 		L2ItemInstance wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
@@ -70,13 +76,13 @@ public class ConvertItem extends L2Effect
 		
 		if ((wpn == null) || wpn.isAugmented() || (weaponItem.getChangeWeaponId() == 0))
 		{
-			return false;
+			return;
 		}
 		
 		final int newItemId = weaponItem.getChangeWeaponId();
 		if (newItemId == -1)
 		{
-			return false;
+			return;
 		}
 		
 		final int enchantLevel = wpn.getEnchantLevel();
@@ -91,7 +97,7 @@ public class ConvertItem extends L2Effect
 		
 		if (unequiped.length <= 0)
 		{
-			return false;
+			return;
 		}
 		byte count = 0;
 		for (L2ItemInstance item : unequiped)
@@ -106,7 +112,7 @@ public class ConvertItem extends L2Effect
 			if (item.getEnchantLevel() > 0)
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPMENT_S1_S2_REMOVED);
-				sm.addNumber(item.getEnchantLevel());
+				sm.addInt(item.getEnchantLevel());
 				sm.addItemName(item);
 			}
 			else
@@ -119,19 +125,19 @@ public class ConvertItem extends L2Effect
 		
 		if (count == unequiped.length)
 		{
-			return false;
+			return;
 		}
 		
 		final L2ItemInstance destroyItem = player.getInventory().destroyItem("ChangeWeapon", wpn, player, null);
 		if (destroyItem == null)
 		{
-			return false;
+			return;
 		}
 		
 		final L2ItemInstance newItem = player.getInventory().addItem("ChangeWeapon", newItemId, 1, player, destroyItem);
 		if (newItem == null)
 		{
-			return false;
+			return;
 		}
 		
 		if ((elementals != null) && (elementals.getElement() != -1) && (elementals.getValue() != -1))
@@ -145,7 +151,7 @@ public class ConvertItem extends L2Effect
 		if (newItem.getEnchantLevel() > 0)
 		{
 			msg = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_EQUIPPED);
-			msg.addNumber(newItem.getEnchantLevel());
+			msg.addInt(newItem.getEnchantLevel());
 			msg.addItemName(newItem);
 		}
 		else
@@ -161,18 +167,5 @@ public class ConvertItem extends L2Effect
 		player.sendPacket(u);
 		
 		player.broadcastUserInfo();
-		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.BUFF;
 	}
 }

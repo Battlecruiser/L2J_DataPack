@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -92,7 +92,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 			{
 				final Collection<CursedWeapon> cws = cwm.getCursedWeapons();
 				final StringBuilder replyMSG = new StringBuilder(cws.size() * 300);
-				NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+				final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 				adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/cwinfo.htm");
 				for (CursedWeapon cw : cwm.getCursedWeapons())
 				{

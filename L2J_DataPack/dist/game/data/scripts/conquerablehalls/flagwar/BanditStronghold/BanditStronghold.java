@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,7 +21,6 @@ package conquerablehalls.flagwar.BanditStronghold;
 import java.util.Collection;
 
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
 
@@ -34,8 +33,6 @@ public final class BanditStronghold extends FlagWar
 {
 	static
 	{
-		qn = "BanditStronghold";
-		
 		ROYAL_FLAG = 35422;
 		FLAG_RED = 35423;
 		FLAG_YELLOW = 35424;
@@ -87,12 +84,12 @@ public final class BanditStronghold extends FlagWar
 		}
 		
 		QUEST_REWARD = 5009;
-		CENTER = new L2CharPosition(82882, -16280, -1894, 0);
+		CENTER = new Location(82882, -16280, -1894, 0);
 	}
 	
-	public BanditStronghold(int questId, String name, String descr, int hallId)
+	private BanditStronghold()
 	{
-		super(questId, name, descr, hallId);
+		super(BanditStronghold.class.getSimpleName(), BANDIT_STRONGHOLD);
 	}
 	
 	@Override
@@ -151,6 +148,6 @@ public final class BanditStronghold extends FlagWar
 	
 	public static void main(String[] args)
 	{
-		new BanditStronghold(-1, qn, "conquerablehalls/flagwar", BANDIT_STRONGHOLD);
+		new BanditStronghold();
 	}
 }

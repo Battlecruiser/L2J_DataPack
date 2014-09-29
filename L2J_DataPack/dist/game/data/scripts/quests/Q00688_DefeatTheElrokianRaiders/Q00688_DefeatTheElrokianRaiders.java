@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -19,6 +19,7 @@
 package quests.Q00688_DefeatTheElrokianRaiders;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -40,9 +41,9 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 	private static final int MIN_LEVEL = 75;
 	private static final int DROP_RATE = 448;
 	
-	public Q00688_DefeatTheElrokianRaiders(int questId, String name, String descr)
+	public Q00688_DefeatTheElrokianRaiders()
 	{
-		super(questId, name, descr);
+		super(688, Q00688_DefeatTheElrokianRaiders.class.getSimpleName(), "Defeat the Elrokian Raiders!");
 		addStartNpc(DINN);
 		addTalkId(DINN);
 		addKillId(ELROKI);
@@ -163,10 +164,5 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String args[])
-	{
-		new Q00688_DefeatTheElrokianRaiders(688, Q00688_DefeatTheElrokianRaiders.class.getSimpleName(), "Defeat the Elrokian Raiders!");
 	}
 }

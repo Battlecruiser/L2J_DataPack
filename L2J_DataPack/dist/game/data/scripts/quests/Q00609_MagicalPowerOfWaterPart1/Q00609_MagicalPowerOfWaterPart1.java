@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -83,9 +83,9 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 74;
 	
-	private Q00609_MagicalPowerOfWaterPart1(int questId, String name, String descr)
+	public Q00609_MagicalPowerOfWaterPart1()
 	{
-		super(questId, name, descr);
+		super(609, Q00609_MagicalPowerOfWaterPart1.class.getSimpleName(), "Magical Power of Water - Part 1");
 		addStartNpc(WAHKAN);
 		addTalkId(ASEFA, WAHKAN, UDANS_BOX);
 		addAttackId(VARKA_MOBS);
@@ -162,7 +162,7 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case WAHKAN:
 				switch (st.getState())
@@ -217,10 +217,5 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00609_MagicalPowerOfWaterPart1(609, Q00609_MagicalPowerOfWaterPart1.class.getSimpleName(), "Magical Power of Water - Part 1");
 	}
 }

@@ -2,7 +2,7 @@
 import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 
 qn = "337_AudienceWithTheLandDragon"
 
@@ -104,7 +104,7 @@ class Quest (JQuest) :
     htmltext = Quest.getNoQuestMsg(player)
     st = player.getQuestState(qn)
     if not st : return htmltext
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     cond = st.getInt("cond")
     id = st.getState()
     level = player.getLevel()
@@ -249,7 +249,7 @@ class Quest (JQuest) :
  def onAttack (self, npc, player, damage, isPet, skill):
    st = player.getQuestState(qn)
    if st :
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      maxHp = npc.getMaxHp()
      nowHp = npc.getCurrentHp()
      cond = st.getInt("cond")
@@ -301,7 +301,7 @@ class Quest (JQuest) :
      return
 
  def onKill(self,npc,player,isPet):
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     st = player.getQuestState(qn)
     if st :
         cond = st.getInt("cond")

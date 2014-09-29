@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -45,7 +45,7 @@ public class AdminInvul implements IAdminCommandHandler
 		if (command.equals("admin_invul"))
 		{
 			handleInvul(activeChar);
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		if (command.equals("admin_setinvul"))
 		{

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,10 @@
  */
 package quests.Q00004_LongLiveThePaagrioLord;
 
+import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -51,9 +52,9 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
-	private Q00004_LongLiveThePaagrioLord(int questId, String name, String descr)
+	public Q00004_LongLiveThePaagrioLord()
 	{
-		super(questId, name, descr);
+		super(4, Q00004_LongLiveThePaagrioLord.class.getSimpleName(), "Long Live the Pa'agrio Lord");
 		addStartNpc(NAKUSIN);
 		addTalkId(NAKUSIN, VARKEES, URUTU, HESTUI, KUNAI, USKA, GROOKIN);
 		registerQuestItems(HONEY_KHANDAR, BEAR_FUR_CLOAK, BLOODY_AXE, ANCESTOR_SKULL, SPIDER_DUST, DEEP_SEA_ORB);
@@ -93,13 +94,13 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case NAKUSIN:
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = (player.getRace() != Race.Orc) ? "30578-00.htm" : (player.getLevel() >= MIN_LEVEL) ? "30578-02.htm" : "30578-01.htm";
+						htmltext = (player.getRace() != Race.ORC) ? "30578-00.htm" : (player.getLevel() >= MIN_LEVEL) ? "30578-02.htm" : "30578-01.htm";
 						break;
 					case State.STARTED:
 						if (st.isCond(1))
@@ -123,22 +124,22 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 				}
 				break;
 			case VARKEES:
-				htmltext = giveItem(st, npc.getNpcId(), HONEY_KHANDAR, getRegisteredItemIds());
+				htmltext = giveItem(st, npc.getId(), HONEY_KHANDAR, getRegisteredItemIds());
 				break;
 			case URUTU:
-				htmltext = giveItem(st, npc.getNpcId(), DEEP_SEA_ORB, getRegisteredItemIds());
+				htmltext = giveItem(st, npc.getId(), DEEP_SEA_ORB, getRegisteredItemIds());
 				break;
 			case HESTUI:
-				htmltext = giveItem(st, npc.getNpcId(), BEAR_FUR_CLOAK, getRegisteredItemIds());
+				htmltext = giveItem(st, npc.getId(), BEAR_FUR_CLOAK, getRegisteredItemIds());
 				break;
 			case KUNAI:
-				htmltext = giveItem(st, npc.getNpcId(), SPIDER_DUST, getRegisteredItemIds());
+				htmltext = giveItem(st, npc.getId(), SPIDER_DUST, getRegisteredItemIds());
 				break;
 			case USKA:
-				htmltext = giveItem(st, npc.getNpcId(), ANCESTOR_SKULL, getRegisteredItemIds());
+				htmltext = giveItem(st, npc.getId(), ANCESTOR_SKULL, getRegisteredItemIds());
 				break;
 			case GROOKIN:
-				htmltext = giveItem(st, npc.getNpcId(), BLOODY_AXE, getRegisteredItemIds());
+				htmltext = giveItem(st, npc.getId(), BLOODY_AXE, getRegisteredItemIds());
 				break;
 		}
 		return htmltext;
@@ -161,10 +162,5 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 			st.setCond(2, true);
 		}
 		return npcId + "-01.html";
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00004_LongLiveThePaagrioLord(4, Q00004_LongLiveThePaagrioLord.class.getSimpleName(), "Long Live the Pa'agrio Lord");
 	}
 }

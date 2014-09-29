@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q10275_ContainingTheAttributePower;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -51,9 +52,9 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	private static final SkillHolder BLESSING_OF_FIRE = new SkillHolder(2635, 1);
 	private static final SkillHolder BLESSING_OF_EARTH = new SkillHolder(2636, 1);
 	
-	public Q10275_ContainingTheAttributePower(int questId, String name, String descr)
+	public Q10275_ContainingTheAttributePower()
 	{
-		super(questId, name, descr);
+		super(10275, Q10275_ContainingTheAttributePower.class.getSimpleName(), "Containing the Attribute Power");
 		addStartNpc(HOLLY, WEBER);
 		addTalkId(HOLLY, WEBER, YIN, YANG);
 		addKillId(AIR, WATER);
@@ -108,19 +109,19 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				break;
 			case "32325-09.html":
 				st.setCond(5, true);
-				BLESSING_OF_FIRE.getSkill().getEffects(player, player);
+				BLESSING_OF_FIRE.getSkill().applyEffects(player, player);
 				st.giveItems(YINSWORD, 1, Elementals.FIRE, 10);
 				break;
 			case "32326-09.html":
 				st.setCond(10, true);
-				BLESSING_OF_EARTH.getSkill().getEffects(player, player);
+				BLESSING_OF_EARTH.getSkill().applyEffects(player, player);
 				st.giveItems(YANGSWORD, 1, Elementals.EARTH, 10);
 				break;
 		}
 		
 		if (Util.isDigit(event))
 		{
-			htmltext = Integer.toString(npc.getNpcId()) + "-1" + event + ".html";
+			htmltext = Integer.toString(npc.getId()) + "-1" + event + ".html";
 			st.giveItems(10520 + Integer.valueOf(event), 2);
 			st.addExpAndSp(202160, 20375);
 			st.exitQuest(false, true);
@@ -138,7 +139,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			return null;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case AIR:
 				if ((st.isCond(8) || st.isCond(10)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YANGSWORD) && (st.getQuestItemsCount(SOULPIECEAIR) < 6) && (getRandom(100) < 30))
@@ -183,7 +184,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case HOLLY:
 			{
@@ -285,10 +286,5 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10275_ContainingTheAttributePower(10275, Q10275_ContainingTheAttributePower.class.getSimpleName(), "Containing the Attribute Power");
 	}
 }

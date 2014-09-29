@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Ghost Hunter (81)
  * @author Emperorc
  */
 public class SagaOfTheGhostHunter extends SagasSuperClass
 {
-	public static String qn1 = "81_SagaOfTheGhostHunter";
-	public static int qnu = 81;
-	public static String qna = "Saga of the Ghost Hunter";
-	
 	public SagaOfTheGhostHunter()
 	{
-		super(qnu, qn1, qna);
+		super(81, "81_SagaOfTheGhostHunter", "Saga of the Ghost Hunter");
 		NPC = new int[]
 		{
 			31603,
@@ -67,7 +65,6 @@ public class SagaOfTheGhostHunter extends SagasSuperClass
 			27230,
 			27304
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			108
@@ -76,23 +73,11 @@ public class SagaOfTheGhostHunter extends SagasSuperClass
 		{
 			0x24
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			164650,
-			47391,
-			47429
-		};
-		Y = new int[]
-		{
-			-74121,
-			-56929,
-			-56923
-		};
-		Z = new int[]
-		{
-			-2871,
-			-2370,
-			-2383
+			new Location(164650, -74121, -2871),
+			new Location(47391, -56929, -2370),
+			new Location(47429, -56923, -2383)
 		};
 		Text = new String[]
 		{

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q10276_MutatedKaneusGludio;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -43,9 +44,9 @@ public class Q10276_MutatedKaneusGludio extends Quest
 	private static final int TISSUE_TK = 13830;
 	private static final int TISSUE_OA = 13831;
 	
-	public Q10276_MutatedKaneusGludio(int questId, String name, String descr)
+	public Q10276_MutatedKaneusGludio()
 	{
-		super(questId, name, descr);
+		super(10276, Q10276_MutatedKaneusGludio.class.getSimpleName(), "Mutated Kaneus - Gludio");
 		addStartNpc(BATHIS);
 		addTalkId(BATHIS, ROHMER);
 		addKillId(TOMLAN_KAMOS, OL_ARIOSH);
@@ -83,7 +84,7 @@ public class Q10276_MutatedKaneusGludio extends Quest
 			return null;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		if (killer.getParty() != null)
 		{
 			final List<QuestState> PartyMembers = new ArrayList<>();
@@ -118,7 +119,7 @@ public class Q10276_MutatedKaneusGludio extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case BATHIS:
 				switch (st.getState())
@@ -167,10 +168,5 @@ public class Q10276_MutatedKaneusGludio extends Quest
 			st.giveItems(TISSUE_OA, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q10276_MutatedKaneusGludio(10276, Q10276_MutatedKaneusGludio.class.getSimpleName(), "Mutated Kaneus - Gludio");
 	}
 }

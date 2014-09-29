@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,41 +18,57 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
- * @author Zoey76
+ * CP Damage Percent effect implementation.
+ * @author Zoey76, Adry_85
  */
-public class CpDamPercent extends L2Effect
+public final class CpDamPercent extends AbstractEffect
 {
-	public CpDamPercent(Env env, EffectTemplate template)
+	private final double _power;
+	
+	public CpDamPercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean isInstant()
 	{
-		return L2EffectType.CPDAMPERCENT;
+		return true;
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public void onStart(BuffInfo info)
 	{
-		if (getEffected().isDead())
+		if (!info.getEffected().isPlayer())
 		{
-			return false;
+			return;
 		}
 		
-		double cp = (getEffected().getCurrentCp() * (100 - getEffectPower())) / 100;
-		getEffected().setCurrentCp(cp);
-		StatusUpdate sucp = new StatusUpdate(getEffected());
-		sucp.addAttribute(StatusUpdate.CUR_CP, (int) cp);
-		getEffected().sendPacket(sucp);
-		return false;
+		if (info.getEffected().isPlayer() && info.getEffected().getActingPlayer().isFakeDeath())
+		{
+			info.getEffected().stopFakeDeath(true);
+		}
+		
+		int damage = (int) ((info.getEffected().getCurrentCp() * _power) / 100);
+		// Manage attack or cast break of the target (calculating rate, sending message)
+		if (!info.getEffected().isRaid() && Formulas.calcAtkBreak(info.getEffected(), damage))
+		{
+			info.getEffected().breakAttack();
+			info.getEffected().breakCast();
+		}
+		
+		if (damage > 0)
+		{
+			info.getEffected().setCurrentCp(info.getEffected().getCurrentCp() - damage);
+		}
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,6 +18,7 @@
  */
 package quests.Q00035_FindGlitteringJewelry;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -48,9 +49,9 @@ public class Q00035_FindGlitteringJewelry extends Quest
 	private static final int NUGGET_COUNT = 500;
 	private static final int THONS_COUNT = 150;
 	
-	private Q00035_FindGlitteringJewelry(int questId, String name, String descr)
+	public Q00035_FindGlitteringJewelry()
 	{
-		super(questId, name, descr);
+		super(35, Q00035_FindGlitteringJewelry.class.getSimpleName(), "Find Glittering Jewelry");
 		addStartNpc(ELLIE);
 		addTalkId(ELLIE, FELTON);
 		addKillId(ALLIGATOR);
@@ -137,7 +138,7 @@ public class Q00035_FindGlitteringJewelry extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ELLIE:
 				switch (st.getState())
@@ -179,10 +180,5 @@ public class Q00035_FindGlitteringJewelry extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00035_FindGlitteringJewelry(35, Q00035_FindGlitteringJewelry.class.getSimpleName(), "Find Glittering Jewelry");
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -38,9 +38,9 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 	// Item
 	private static final int BOX = 7231;
 	
-	private Q00011_SecretMeetingWithKetraOrcs(int questId, String name, String descr)
+	public Q00011_SecretMeetingWithKetraOrcs()
 	{
-		super(questId, name, descr);
+		super(11, Q00011_SecretMeetingWithKetraOrcs.class.getSimpleName(), "Secret Meeting With Ketra Orcs");
 		addStartNpc(CADMON);
 		addTalkId(CADMON, LEON, WAHKAN);
 		registerQuestItems(BOX);
@@ -93,7 +93,7 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 			return htmltext;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -129,10 +129,5 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00011_SecretMeetingWithKetraOrcs(11, Q00011_SecretMeetingWithKetraOrcs.class.getSimpleName(), "Secret Meeting With Ketra Orcs");
 	}
 }

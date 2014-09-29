@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,20 +18,28 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
+ * Stun effect implementation.
  * @author mkizub
  */
-public class Stun extends L2Effect
+public final class Stun extends AbstractEffect
 {
-	public Stun(Env env, EffectTemplate template)
+	public Stun(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+	}
+	
+	@Override
+	public int getEffectFlags()
+	{
+		return EffectFlag.STUNNED.getMask();
 	}
 	
 	@Override
@@ -41,27 +49,14 @@ public class Stun extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public void onExit(BuffInfo info)
 	{
-		getEffected().startStunning();
-		return true;
+		info.getEffected().stopStunning(false);
 	}
 	
 	@Override
-	public void onExit()
+	public void onStart(BuffInfo info)
 	{
-		getEffected().stopStunning(false);
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.STUNNED.getMask();
+		info.getEffected().startStunning();
 	}
 }

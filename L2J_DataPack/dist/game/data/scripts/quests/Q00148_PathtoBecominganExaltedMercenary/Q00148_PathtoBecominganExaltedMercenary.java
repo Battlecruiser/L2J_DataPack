@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -50,9 +50,9 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 	private static final int ELITE_CERTIFICATE = 13767;
 	private static final int TOP_ELITE_CERTIFICATE = 13768;
 	
-	public Q00148_PathtoBecominganExaltedMercenary(int questId, String name, String descr)
+	public Q00148_PathtoBecominganExaltedMercenary()
 	{
-		super(questId, name, descr);
+		super(148, Q00148_PathtoBecominganExaltedMercenary.class.getSimpleName(), "Path to Becoming an Exalted Mercenary");
 		addStartNpc(MERC);
 		addTalkId(MERC);
 	}
@@ -130,10 +130,5 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00148_PathtoBecominganExaltedMercenary(148, Q00148_PathtoBecominganExaltedMercenary.class.getSimpleName(), "Path to Becoming an Exalted Mercenary");
 	}
 }

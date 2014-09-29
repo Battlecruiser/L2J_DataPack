@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,55 +18,38 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
+ * Disarm effect implementation.
  * @author nBd
  */
-public class Disarm extends L2Effect
+public final class Disarm extends AbstractEffect
 {
-	public Disarm(Env env, EffectTemplate template)
+	public Disarm(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean canStart(BuffInfo info)
 	{
-		return L2EffectType.DISARM;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		if (!getEffected().isPlayer())
-		{
-			return false;
-		}
-		
-		getEffected().getActingPlayer().disarmWeapons();
-		return true;
-		
-	}
-	
-	@Override
-	public void onExit()
-	{
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
+		return info.getEffected().isPlayer();
 	}
 	
 	@Override
 	public int getEffectFlags()
 	{
 		return EffectFlag.DISARMED.getMask();
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		info.getEffected().getActingPlayer().disarmWeapons();
 	}
 }

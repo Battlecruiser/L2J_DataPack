@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -23,6 +23,7 @@ import java.util.Map;
 
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -54,9 +55,9 @@ public class Q00699_GuardianOfTheSkies extends Quest
 	private static final int BONUS = 8335;
 	private static final int BONUS_COUNT = 10;
 	
-	public Q00699_GuardianOfTheSkies(int questId, String name, String descr)
+	public Q00699_GuardianOfTheSkies()
 	{
-		super(questId, name, descr);
+		super(699, Q00699_GuardianOfTheSkies.class.getSimpleName(), "Guardian of the Skies");
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addKillId(VALDSTONE);
@@ -102,7 +103,7 @@ public class Q00699_GuardianOfTheSkies extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if (st != null)
 		{
-			if (npc.getNpcId() == VALDSTONE)
+			if (npc.getId() == VALDSTONE)
 			{
 				int amount = 0, chance = getRandom(1000);
 				if (chance < 215)
@@ -126,7 +127,7 @@ public class Q00699_GuardianOfTheSkies extends Quest
 			}
 			else
 			{
-				if (getRandom(1000) < MONSTERS.get(npc.getNpcId()))
+				if (getRandom(1000) < MONSTERS.get(npc.getId()))
 				{
 					st.giveItems(VULTURES_GOLDEN_FEATHER, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -169,10 +170,5 @@ public class Q00699_GuardianOfTheSkies extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00699_GuardianOfTheSkies(699, Q00699_GuardianOfTheSkies.class.getSimpleName(), "Guardian of the Skies");
 	}
 }

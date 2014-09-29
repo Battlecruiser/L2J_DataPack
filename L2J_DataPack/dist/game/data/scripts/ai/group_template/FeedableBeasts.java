@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,7 +25,7 @@ import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TamedBeastInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
@@ -173,7 +173,8 @@ public class FeedableBeasts extends AbstractNpcAI
 	private FeedableBeasts()
 	{
 		super(FeedableBeasts.class.getSimpleName(), "ai/group_template");
-		registerMobs(FEEDABLE_BEASTS, QuestEventType.ON_KILL, QuestEventType.ON_SKILL_SEE);
+		addKillId(FEEDABLE_BEASTS);
+		addSkillSeeId(FEEDABLE_BEASTS);
 		
 		// TODO: no grendels?
 		GrowthCapableMob temp;
@@ -348,7 +349,7 @@ public class FeedableBeasts extends AbstractNpcAI
 	
 	private void spawnNext(L2Npc npc, int growthLevel, L2PcInstance player, int food)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int nextNpcId = 0;
 		
 		// find the next mob to spawn, based on the current npcId, growthlevel, and food.
@@ -421,7 +422,7 @@ public class FeedableBeasts extends AbstractNpcAI
 				}
 			}
 			
-			L2NpcTemplate template = NpcTable.getInstance().getTemplate(nextNpcId);
+			L2NpcTemplate template = NpcData.getInstance().getTemplate(nextNpcId);
 			L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, food - FOODSKILLDIFF, npc.getX(), npc.getY(), npc.getZ());
 			nextNpc.setRunning();
 			Q00020_BringUpWithLove.checkJewelOfInnocence(player);
@@ -476,7 +477,7 @@ public class FeedableBeasts extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("polymorph Mad Cow") && (npc != null) && (player != null))
 		{
-			if (MAD_COW_POLYMORPH.containsKey(npc.getNpcId()))
+			if (MAD_COW_POLYMORPH.containsKey(npc.getId()))
 			{
 				// remove the feed info from the previous mob
 				if (_FeedInfo.get(npc.getObjectId()) == player.getObjectId())
@@ -486,7 +487,7 @@ public class FeedableBeasts extends AbstractNpcAI
 				// despawn the mad cow
 				npc.deleteMe();
 				// spawn the new mob
-				L2Attackable nextNpc = (L2Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getNpcId()), npc);
+				L2Attackable nextNpc = (L2Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getId()), npc);
 				
 				// register the player in the feedinfo for the mob that just spawned
 				_FeedInfo.put(nextNpc.getObjectId(), player.getObjectId());
@@ -499,7 +500,7 @@ public class FeedableBeasts extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		// this behavior is only run when the target of skill is the passed npc (chest)
 		// i.e. when the player is attempting to open the chest using a skill
@@ -508,7 +509,7 @@ public class FeedableBeasts extends AbstractNpcAI
 			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		// gather some values on local variables
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int skillId = skill.getId();
 		// check if the npc and skills used are valid for this script. Exit if invalid.
 		if ((skillId != SKILL_GOLDEN_SPICE) && (skillId != SKILL_CRYSTAL_SPICE))

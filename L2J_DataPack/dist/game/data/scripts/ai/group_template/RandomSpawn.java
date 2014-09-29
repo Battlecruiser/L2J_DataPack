@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
  * Manages spawn of NPCs having several random spawn points.
  * @author GKR
  */
-public class RandomSpawn extends AbstractNpcAI
+public final class RandomSpawn extends AbstractNpcAI
 {
 	private static Map<Integer, Location[]> SPAWN_POINTS = new FastMap<>();
 	static
@@ -82,10 +82,7 @@ public class RandomSpawn extends AbstractNpcAI
 	public RandomSpawn()
 	{
 		super(RandomSpawn.class.getSimpleName(), "ai/group_template");
-		for (int npcId : SPAWN_POINTS.keySet())
-		{
-			addSpawnId(npcId);
-		}
+		addSpawnId(SPAWN_POINTS.keySet());
 	}
 	
 	@Override
@@ -93,7 +90,7 @@ public class RandomSpawn extends AbstractNpcAI
 	{
 		if (!npc.isTeleporting())
 		{
-			final Location[] spawnlist = SPAWN_POINTS.get(npc.getNpcId());
+			final Location[] spawnlist = SPAWN_POINTS.get(npc.getId());
 			final Location loc = spawnlist[getRandom(spawnlist.length)];
 			if (!npc.isInsideRadius(loc, 200, false, false))
 			{

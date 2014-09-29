@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,6 +20,7 @@ package quests.Q00270_TheOneWhoEndsSilence;
 
 import quests.Q10288_SecretMission.Q10288_SecretMission;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -51,9 +52,9 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00270_TheOneWhoEndsSilence(int questId, String name, String descr)
+	public Q00270_TheOneWhoEndsSilence()
 	{
-		super(questId, name, descr);
+		super(270, Q00270_TheOneWhoEndsSilence.class.getSimpleName(), "The One Who Ends Silence");
 		addStartNpc(FAKE_GREYMORE);
 		addTalkId(FAKE_GREYMORE);
 		addKillId(SEEKER_SOLINA, SAVIOR_SOLINA, ASCETIC_SOLINA, DIVINITY_JUDGE, DIVINITY_MANAGER, DIVINITY_SUPERVISOR, DIVINITY_WORSHIPPER, DIVINITY_PROTECTOR, DIVINITY_FIGHTER, DIVINITY_MAGUS);
@@ -130,9 +131,10 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 					{
 						rewardScroll(st, 1);
 					}
-					htmltext = "32757-09.html";
-					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					
 					st.takeItems(TATTERED_MONK_CLOTHES, 100);
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					htmltext = "32757-09.html";
 				}
 				else
 				{
@@ -153,9 +155,10 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 						st.giveItems(10397 + getRandom(9), 1);
 					}
 					rewardScroll(st, 2);
-					htmltext = "32757-09.html";
-					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					
 					st.takeItems(TATTERED_MONK_CLOTHES, 200);
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					htmltext = "32757-09.html";
 				}
 				else
 				{
@@ -170,9 +173,10 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 					st.giveItems(10373 + getRandom(9), 1);
 					st.giveItems(10397 + getRandom(9), 1);
 					rewardScroll(st, 3);
-					htmltext = "32757-09.html";
-					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					
 					st.takeItems(TATTERED_MONK_CLOTHES, 300);
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					htmltext = "32757-09.html";
 				}
 				else
 				{
@@ -203,9 +207,10 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 					{
 						rewardScroll(st, 1);
 					}
-					htmltext = "32757-09.html";
-					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					
 					st.takeItems(TATTERED_MONK_CLOTHES, 400);
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					htmltext = "32757-09.html";
 				}
 				else
 				{
@@ -229,10 +234,11 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 					{
 						st.giveItems(10397 + getRandom(9), 1);
 					}
+					
 					rewardScroll(st, 2);
-					htmltext = "32757-09.html";
+					st.takeItems(TATTERED_MONK_CLOTHES, 500);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					st.takeItems(TATTERED_MONK_CLOTHES, 300);
+					htmltext = "32757-09.html";
 				}
 				else
 				{
@@ -272,7 +278,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case SEEKER_SOLINA:
 			{
@@ -445,10 +451,5 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 				qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00270_TheOneWhoEndsSilence(270, Q00270_TheOneWhoEndsSilence.class.getSimpleName(), "The One Who Ends Silence");
 	}
 }

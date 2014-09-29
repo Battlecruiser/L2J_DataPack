@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,9 +18,9 @@
  */
 package quests.Q00179_IntoTheLargeCavern;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -36,9 +36,9 @@ public class Q00179_IntoTheLargeCavern extends Quest
 	private static final int KEKROPUS = 32138;
 	private static final int MENACING_MACHINE = 32258;
 	
-	public Q00179_IntoTheLargeCavern(int questId, String name, String descr)
+	public Q00179_IntoTheLargeCavern()
 	{
-		super(questId, name, descr);
+		super(179, Q00179_IntoTheLargeCavern.class.getSimpleName(), "Into The Large Cavern");
 		addStartNpc(KEKROPUS);
 		addTalkId(KEKROPUS, MENACING_MACHINE);
 	}
@@ -53,14 +53,14 @@ public class Q00179_IntoTheLargeCavern extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == KEKROPUS)
+		if (npc.getId() == KEKROPUS)
 		{
 			if (event.equalsIgnoreCase("32138-03.html"))
 			{
 				st.startQuest();
 			}
 		}
-		else if (npc.getNpcId() == MENACING_MACHINE)
+		else if (npc.getId() == MENACING_MACHINE)
 		{
 			if (event.equalsIgnoreCase("32258-08.html"))
 			{
@@ -89,12 +89,12 @@ public class Q00179_IntoTheLargeCavern extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == KEKROPUS)
+		if (npc.getId() == KEKROPUS)
 		{
 			switch (st.getState())
 			{
 				case State.CREATED:
-					if (player.getRace() != Race.Kamael)
+					if (player.getRace() != Race.KAMAEL)
 					{
 						htmltext = "32138-00b.html";
 					}
@@ -127,15 +127,10 @@ public class Q00179_IntoTheLargeCavern extends Quest
 					break;
 			}
 		}
-		else if ((npc.getNpcId() == MENACING_MACHINE) && (st.getState() == State.STARTED))
+		else if ((npc.getId() == MENACING_MACHINE) && (st.getState() == State.STARTED))
 		{
 			htmltext = "32258-01.html";
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00179_IntoTheLargeCavern(179, Q00179_IntoTheLargeCavern.class.getSimpleName(), "Into The Large Cavern");
 	}
 }

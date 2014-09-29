@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Trickster (69)
  * @author Emperorc
  */
 public class SagaOfTheTrickster extends SagasSuperClass
 {
-	public static String qn1 = "69_SagaOfTheTrickster";
-	public static int qnu = 69;
-	public static String qna = "Saga of the Trickster";
-	
 	public SagaOfTheTrickster()
 	{
-		super(qnu, qn1, qna);
+		super(69, "69_SagaOfTheTrickster", "Saga of the Trickster");
 		NPC = new int[]
 		{
 			32138,
@@ -67,7 +65,6 @@ public class SagaOfTheTrickster extends SagasSuperClass
 			27334,
 			27335
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			134
@@ -76,23 +73,11 @@ public class SagaOfTheTrickster extends SagasSuperClass
 		{
 			0x82
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			164014,
-			124355,
-			124376
-		};
-		Y = new int[]
-		{
-			-74733,
-			82155,
-			82127
-		};
-		Z = new int[]
-		{
-			-3093,
-			-2803,
-			-2796
+			new Location(164014, -74733, -3093),
+			new Location(124355, 82155, -2803),
+			new Location(124376, 82127, -2796)
 		};
 		Text = new String[]
 		{

@@ -8,15 +8,8 @@
 						<xs:sequence minOccurs="1" maxOccurs="1">
 							<xs:element name="bonus" type="xs:integer" minOccurs="1" maxOccurs="20" />
 						</xs:sequence>
-						<xs:attribute name="grade" use="required">
-							<xs:simpleType>
-								<xs:restriction base="xs:integer">
-									<xs:minInclusive value="0" />
-									<xs:maxInclusive value="5" />
-								</xs:restriction>
-							</xs:simpleType>
-						</xs:attribute>
-                    </xs:complexType>
+						<xs:attribute name="grade" type="xs:token" use="required" />
+					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
 		</xs:complexType>

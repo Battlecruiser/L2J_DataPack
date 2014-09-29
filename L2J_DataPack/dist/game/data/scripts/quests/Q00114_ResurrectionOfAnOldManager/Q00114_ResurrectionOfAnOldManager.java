@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -57,9 +57,9 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	
 	private static L2Attackable golem = null;
 	
-	public Q00114_ResurrectionOfAnOldManager(int questId, String name, String descr)
+	public Q00114_ResurrectionOfAnOldManager()
 	{
-		super(questId, name, descr);
+		super(114, Q00114_ResurrectionOfAnOldManager.class.getSimpleName(), "Resurrection of an Old Manager");
 		addStartNpc(YUMI);
 		addTalkId(YUMI, WENDY, BOX, STONES, NEWYEAR);
 		addKillId(GUARDIAN);
@@ -194,7 +194,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				if ((golem == null) || ((golem != null) && golem.isDead()))
 				{
 					golem = (L2Attackable) addSpawn(GUARDIAN, 96977, -110625, -3280, 0, false, 0);
-					golem.broadcastPacket(new NpcSay(golem.getObjectId(), Say2.NPC_ALL, golem.getNpcId(), NpcStringId.YOU_S1_YOU_ATTACKED_WENDY_PREPARE_TO_DIE).addStringParameter(player.getName()));
+					golem.broadcastPacket(new NpcSay(golem.getObjectId(), Say2.NPC_ALL, golem.getId(), NpcStringId.YOU_S1_YOU_ATTACKED_WENDY_PREPARE_TO_DIE).addStringParameter(player.getName()));
 					golem.setRunning();
 					golem.addDamageHate(player, 0, 999);
 					golem.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -233,7 +233,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				if (player.getAdena() >= 3000)
 				{
 					st.giveItems(STARSTONE2, 1);
-					st.takeItems(PcInventory.ADENA_ID, 3000);
+					st.takeItems(Inventory.ADENA_ID, 3000);
 					st.unset("talk");
 					st.setCond(26, true);
 				}
@@ -267,7 +267,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 			// Quest timer
 			case "golem_despawn":
 				st.unset("spawned");
-				golem.broadcastPacket(new NpcSay(golem.getObjectId(), Say2.NPC_ALL, golem.getNpcId(), NpcStringId.S1_YOUR_ENEMY_WAS_DRIVEN_OUT_I_WILL_NOW_WITHDRAW_AND_AWAIT_YOUR_NEXT_COMMAND).addStringParameter(player.getName()));
+				golem.broadcastPacket(new NpcSay(golem.getObjectId(), Say2.NPC_ALL, golem.getId(), NpcStringId.S1_YOUR_ENEMY_WAS_DRIVEN_OUT_I_WILL_NOW_WITHDRAW_AND_AWAIT_YOUR_NEXT_COMMAND).addStringParameter(player.getName()));
 				golem.deleteMe();
 				golem = null;
 				htmltext = null;
@@ -329,7 +329,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		
 		if ((st != null) && st.isCond(10) && (st.getInt("spawned") == 1))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.THIS_ENEMY_IS_FAR_TOO_POWERFUL_FOR_ME_TO_FIGHT_I_MUST_WITHDRAW));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.THIS_ENEMY_IS_FAR_TOO_POWERFUL_FOR_ME_TO_FIGHT_I_MUST_WITHDRAW));
 			st.setCond(11, true);
 			st.unset("spawned");
 			cancelQuestTimers("golem_despawn");
@@ -367,7 +367,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		
 		int talk = st.getInt("talk");
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case YUMI:
 				switch (st.getState())
@@ -590,10 +590,5 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		}
 		
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00114_ResurrectionOfAnOldManager(114, Q00114_ResurrectionOfAnOldManager.class.getSimpleName(), "Resurrection of an Old Manager");
 	}
 }

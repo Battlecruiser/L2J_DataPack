@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -49,9 +49,9 @@ public class Q00151_CureForFever extends Quest
 	private static final int MIN_LEVEL = 15;
 	private static final int CHANCE = 0;
 	
-	private Q00151_CureForFever(int questId, String name, String descr)
+	public Q00151_CureForFever()
 	{
-		super(questId, name, descr);
+		super(151, Q00151_CureForFever.class.getSimpleName(), "Cure for Fever");
 		addStartNpc(ELLIAS);
 		addTalkId(ELLIAS, YOHANES);
 		addKillId(MOBS);
@@ -92,7 +92,7 @@ public class Q00151_CureForFever extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ELLIAS:
 				switch (st.getState())
@@ -141,10 +141,5 @@ public class Q00151_CureForFever extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00151_CureForFever(151, Q00151_CureForFever.class.getSimpleName(), "Cure for Fever");
 	}
 }

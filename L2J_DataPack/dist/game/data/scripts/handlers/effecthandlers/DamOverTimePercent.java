@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,20 +18,28 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
+ * Damage Over Time Percent effect implementation.
  * @author Adry_85
  */
-public class DamOverTimePercent extends L2Effect
+public final class DamOverTimePercent extends AbstractEffect
 {
-	public DamOverTimePercent(Env env, EffectTemplate template)
+	private final boolean _canKill;
+	private final double _power;
+	
+	public DamOverTimePercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_canKill = params.getBoolean("canKill", false);
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -41,37 +49,37 @@ public class DamOverTimePercent extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onActionTime(BuffInfo info)
 	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		double damage = getEffected().getCurrentHp() * calc();
-		
-		if (damage >= (getEffected().getCurrentHp() - 1))
+		double damage = info.getEffected().getCurrentHp() * _power * getTicksMultiplier();
+		if (damage >= (info.getEffected().getCurrentHp() - 1))
 		{
-			if (getSkill().isToggle())
+			if (info.getSkill().isToggle())
 			{
-				getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_HP);
+				info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_HP);
 				return false;
 			}
 			
 			// For DOT skills that will not kill effected player.
-			if (!getSkill().killByDOT())
+			if (!_canKill)
 			{
 				// Fix for players dying by DOTs if HP < 1 since reduceCurrentHP method will kill them
-				if (getEffected().getCurrentHp() <= 1)
+				if (info.getEffected().getCurrentHp() <= 1)
 				{
-					return true;
+					return info.getSkill().isToggle();
 				}
 				
-				damage = getEffected().getCurrentHp() - 1;
+				damage = info.getEffected().getCurrentHp() - 1;
 			}
 		}
-		getEffected().reduceCurrentHpByDOT(damage, getEffector(), getSkill());
+		info.getEffected().reduceCurrentHpByDOT(damage, info.getEffector(), info.getSkill());
+		info.getEffected().notifyDamageReceived(damage, info.getEffector(), info.getSkill(), false, true);
 		
-		return true;
+		return info.getSkill().isToggle();
 	}
 }

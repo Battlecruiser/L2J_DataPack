@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,8 +20,8 @@ package ai.individual;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -32,16 +32,20 @@ import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
  * DrChaos' AI.
  * @author Kerberos
  */
-public class DrChaos extends Quest
+public final class DrChaos extends Quest
 {
 	private static final int DR_CHAOS = 32033;
 	private static final int STRANGE_MACHINE = 32032;
 	private static final int CHAOS_GOLEM = 25703;
 	private static boolean _IsGolemSpawned;
 	
-	private DrChaos(int questId, String name, String descr)
+	private static final Location PLAYER_TELEPORT = new Location(94832, -112624, -3304);
+	private static final Location NPC_LOCATION = new Location(-113091, -243942, -15536);
+	
+	private DrChaos()
 	{
-		super(questId, name, descr);
+		// TODO extends AbstractNpcAI
+		super(-1, "Doctor Chaos", "ai/individual");
 		addFirstTalkId(DR_CHAOS);
 		_IsGolemSpawned = false;
 	}
@@ -62,11 +66,10 @@ public class DrChaos extends Quest
 			if (machine != null)
 			{
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine);
-				machine.broadcastPacket(new SpecialCamera(machine.getObjectId(), 1, -200, 15, 10000, 20000, 0, 0, 1, 0));
+				machine.broadcastPacket(new SpecialCamera(machine, 1, -200, 15, 10000, 1000, 20000, 0, 0, 0, 0, 0));
 			}
 			else
 			{
-				// print "Dr Chaos AI: problem finding Strange Machine (npcid = "+STRANGE_MACHINE+"). Error: not spawned!"
 				startQuestTimer("2", 2000, npc, player);
 			}
 			startQuestTimer("3", 10000, npc, player);
@@ -77,18 +80,18 @@ public class DrChaos extends Quest
 		}
 		else if (event.equalsIgnoreCase("3"))
 		{
-			npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1, -150, 10, 3000, 20000, 0, 0, 1, 0));
+			npc.broadcastPacket(new SpecialCamera(npc, 1, -150, 10, 3000, 1000, 20000, 0, 0, 0, 0, 0));
 			startQuestTimer("4", 2500, npc, player);
 		}
 		else if (event.equalsIgnoreCase("4"))
 		{
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(96055, -110759, -3312, 0));
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(96055, -110759, -3312, 0));
 			startQuestTimer("5", 2000, npc, player);
 		}
 		else if (event.equalsIgnoreCase("5"))
 		{
-			player.teleToLocation(94832, -112624, -3304);
-			npc.teleToLocation(-113091, -243942, -15536);
+			player.teleToLocation(PLAYER_TELEPORT);
+			npc.teleToLocation(NPC_LOCATION);
 			if (!_IsGolemSpawned)
 			{
 				L2Npc golem = addSpawn(CHAOS_GOLEM, 94640, -112496, -3336, 0, false, 0);
@@ -99,7 +102,7 @@ public class DrChaos extends Quest
 		}
 		else if (event.equalsIgnoreCase("6"))
 		{
-			npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 30, -200, 20, 6000, 8000, 0, 0, 1, 0));
+			npc.broadcastPacket(new SpecialCamera(npc, 30, -200, 20, 6000, 700, 8000, 0, 0, 0, 0, 0));
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -107,9 +110,9 @@ public class DrChaos extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.getNpcId() == DR_CHAOS)
+		if (npc.getId() == DR_CHAOS)
 		{
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(96323, -110914, -3328, 0));
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(96323, -110914, -3328, 0));
 			this.startQuestTimer("1", 3000, npc, player);
 		}
 		return "";
@@ -117,6 +120,6 @@ public class DrChaos extends Quest
 	
 	public static void main(String[] args)
 	{
-		new DrChaos(-1, "Doctor Chaos", "ai");
+		new DrChaos();
 	}
 }

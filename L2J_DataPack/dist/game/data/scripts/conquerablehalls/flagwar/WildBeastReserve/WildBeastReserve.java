@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,7 +21,6 @@ package conquerablehalls.flagwar.WildBeastReserve;
 import java.util.Collection;
 
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
 
@@ -34,8 +33,6 @@ public final class WildBeastReserve extends FlagWar
 {
 	static
 	{
-		qn = "WildBeastReserve";
-		
 		ROYAL_FLAG = 35606;
 		FLAG_RED = 35607; // White flag
 		FLAG_YELLOW = 35608; // Red flag
@@ -87,12 +84,12 @@ public final class WildBeastReserve extends FlagWar
 		}
 		
 		QUEST_REWARD = 0;
-		CENTER = new L2CharPosition(57762, -92696, -1359, 0);
+		CENTER = new Location(57762, -92696, -1359, 0);
 	}
 	
-	public WildBeastReserve(int questId, String name, String descr, int hallId)
+	private WildBeastReserve()
 	{
-		super(questId, name, descr, hallId);
+		super(WildBeastReserve.class.getSimpleName(), BEAST_FARM);
 	}
 	
 	@Override
@@ -157,6 +154,6 @@ public final class WildBeastReserve extends FlagWar
 	
 	public static void main(String[] args)
 	{
-		new WildBeastReserve(-1, qn, "conquerablehalls/flagwar", BEAST_FARM);
+		new WildBeastReserve();
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -26,15 +26,15 @@ import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.L2AccessLevel;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * This class handles following admin commands: - changelvl = change a character's access level Can be used for character ban (as opposed to regular //ban that affects accounts) or to grant mod/GM privileges ingame
- * @version $Revision: 1.1.2.2.2.3 $ $Date: 2005/04/11 10:06:00 $ con.close() change by Zoey76 24/02/2011
+ * Change access level command handler.
  */
-public class AdminChangeAccessLevel implements IAdminCommandHandler
+public final class AdminChangeAccessLevel implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -44,23 +44,6 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		handleChangeLevel(command, activeChar);
-		return true;
-	}
-	
-	@Override
-	public String[] getAdminCommandList()
-	{
-		return ADMIN_COMMANDS;
-	}
-	
-	/**
-	 * If no character name is specified, tries to change GM's target access level. Else if a character name is provided, will try to reach it either from L2World or from a database connection.
-	 * @param command
-	 * @param activeChar
-	 */
-	private void handleChangeLevel(String command, L2PcInstance activeChar)
-	{
 		String[] parts = command.split(" ");
 		if (parts.length == 2)
 		{
@@ -69,7 +52,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 				int lvl = Integer.parseInt(parts[1]);
 				if (activeChar.getTarget() instanceof L2PcInstance)
 				{
-					onLineChange(activeChar, (L2PcInstance) activeChar.getTarget(), lvl);
+					onlineChange(activeChar, (L2PcInstance) activeChar.getTarget(), lvl);
 				}
 				else
 				{
@@ -88,7 +71,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 			L2PcInstance player = L2World.getInstance().getPlayer(name);
 			if (player != null)
 			{
-				onLineChange(activeChar, player, lvl);
+				onlineChange(activeChar, player, lvl);
 			}
 			else
 			{
@@ -119,22 +102,30 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 				}
 			}
 		}
+		return true;
+	}
+	
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**
-	 * @param activeChar
-	 * @param player
-	 * @param lvl
+	 * @param activeChar the active GM
+	 * @param player the online target
+	 * @param lvl the access level
 	 */
-	private void onLineChange(L2PcInstance activeChar, L2PcInstance player, int lvl)
+	private static void onlineChange(L2PcInstance activeChar, L2PcInstance player, int lvl)
 	{
 		if (lvl >= 0)
 		{
 			if (AdminTable.getInstance().hasAccessLevel(lvl))
 			{
+				final L2AccessLevel acccessLevel = AdminTable.getInstance().getAccessLevel(lvl);
 				player.setAccessLevel(lvl);
-				player.sendMessage("Your access level has been changed to " + lvl);
-				activeChar.sendMessage("Character's access level is now set to " + lvl + ". Effects won't be noticeable until next session.");
+				player.sendMessage("Your access level has been changed to " + acccessLevel.getName() + " (" + acccessLevel.getLevel() + ").");
+				activeChar.sendMessage(player.getName() + "'s access level has been changed to " + acccessLevel.getName() + " (" + acccessLevel.getLevel() + ").");
 			}
 			else
 			{

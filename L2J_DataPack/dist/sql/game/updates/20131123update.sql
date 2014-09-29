@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00327_RecoverTheFarmland' WHERE name='327_ReclaimTheLand';

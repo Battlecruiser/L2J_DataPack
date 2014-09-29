@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
  * Queen Shyeed AI
  * @author malyelfik
  */
-public class QueenShyeed extends AbstractNpcAI
+public final class QueenShyeed extends AbstractNpcAI
 {
 	// NPC
 	private static final int SHYEED = 25671;
@@ -75,9 +75,9 @@ public class QueenShyeed extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	public QueenShyeed(String name, String descr)
+	private QueenShyeed()
 	{
-		super(name, descr);
+		super(QueenShyeed.class.getSimpleName(), "ai/individual");
 		addKillId(SHYEED);
 		spawnShyeed();
 	}
@@ -109,6 +109,6 @@ public class QueenShyeed extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new QueenShyeed(QueenShyeed.class.getSimpleName(), "ai");
+		new QueenShyeed();
 	}
 }

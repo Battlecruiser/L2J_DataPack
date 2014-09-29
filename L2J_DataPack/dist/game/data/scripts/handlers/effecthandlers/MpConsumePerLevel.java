@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,43 +18,43 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
-public class MpConsumePerLevel extends L2Effect
+/**
+ * Mp Consume Per Level effect implementation.
+ */
+public final class MpConsumePerLevel extends AbstractEffect
 {
-	public MpConsumePerLevel(Env env, EffectTemplate template)
+	private final double _power;
+	
+	public MpConsumePerLevel(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
+		
+		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onActionTime(BuffInfo info)
 	{
-		return L2EffectType.MP_CONSUME_PER_LEVEL;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		double base = calc();
-		double consume = ((getEffected().getLevel() - 1) / 7.5) * base * getAbnormalTime();
-		
-		if (consume > getEffected().getCurrentMp())
+		final double base = _power * getTicksMultiplier();
+		final double consume = (info.getAbnormalTime() > 0) ? ((info.getEffected().getLevel() - 1) / 7.5) * base * info.getAbnormalTime() : base;
+		if (consume > info.getEffected().getCurrentMp())
 		{
-			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+			info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 			return false;
 		}
 		
-		getEffected().reduceCurrentMp(consume);
-		return true;
+		info.getEffected().reduceCurrentMp(consume);
+		return info.getSkill().isToggle();
 	}
 }

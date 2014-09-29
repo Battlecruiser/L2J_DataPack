@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,13 +20,13 @@ package ai.npc.TerritoryManagers;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.MultiSell;
+import com.l2jserver.gameserver.datatables.MultisellData;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
@@ -41,7 +41,7 @@ import com.l2jserver.gameserver.network.serverpackets.UserInfo;
  * @author Zoey76
  * @version 1.0b
  */
-public class TerritoryManagers extends AbstractNpcAI
+public final class TerritoryManagers extends AbstractNpcAI
 {
 	private static final int[] preciousSoul1ItemIds =
 	{
@@ -64,6 +64,18 @@ public class TerritoryManagers extends AbstractNpcAI
 		7593
 	};
 	
+	private TerritoryManagers()
+	{
+		super(TerritoryManagers.class.getSimpleName(), "ai/npc");
+		
+		for (int i = 0; i < 9; i++)
+		{
+			addFirstTalkId(36490 + i);
+			addTalkId(36490 + i);
+			addStartNpc(36490 + i);
+		}
+	}
+	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -72,14 +84,14 @@ public class TerritoryManagers extends AbstractNpcAI
 			// If the player does not have the second class transfer or is under level 40, it cannot continue.
 			return "36490-08.html";
 		}
-		return npc.getNpcId() + ".html";
+		return npc.getId() + ".html";
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		final int itemId = 13757 + (npcId - 36490);
 		final int territoryId = 81 + (npcId - 36490);
 		switch (event)
@@ -99,7 +111,7 @@ public class TerritoryManagers extends AbstractNpcAI
 				{
 					// If the player has at least one Territory Badges then show the multisell.
 					final int multiSellId = 364900001 + ((npcId - 36490) * 10000);
-					MultiSell.getInstance().separateAndSend(multiSellId, player, npc, false);
+					MultisellData.getInstance().separateAndSend(multiSellId, player, npc, false);
 				}
 				else
 				{
@@ -148,7 +160,7 @@ public class TerritoryManagers extends AbstractNpcAI
 					// Complete the sub-class related quest.
 					// Complete quest Seeds of Chaos (236) for Kamael characters.
 					// Complete quest Mimir's Elixir (235) for other races characters.
-					final Quest q = QuestManager.getInstance().getQuest((player.getRace() == Race.Kamael) ? 236 : 235);
+					final Quest q = QuestManager.getInstance().getQuest((player.getRace() == Race.KAMAEL) ? 236 : 235);
 					if (q != null)
 					{
 						QuestState qs = player.getQuestState(q.getName());
@@ -213,7 +225,7 @@ public class TerritoryManagers extends AbstractNpcAI
 					badgeId = TerritoryWarManager.getInstance().TERRITORY_ITEM_IDS.get(territoryId);
 				}
 				int[] reward = TerritoryWarManager.getInstance().calcReward(player);
-				NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 				if (TerritoryWarManager.getInstance().isTWInProgress() || (reward[0] == 0))
 				{
 					html.setFile(player.getHtmlPrefix(), "data/scripts/ai/npc/TerritoryManagers/reward-0a.html");
@@ -298,18 +310,6 @@ public class TerritoryManagers extends AbstractNpcAI
 		if (item != null)
 		{
 			player.destroyItem(event, item, npc, true);
-		}
-	}
-	
-	public TerritoryManagers()
-	{
-		super(TerritoryManagers.class.getSimpleName(), "ai/npc");
-		
-		for (int i = 0; i < 9; i++)
-		{
-			addFirstTalkId(36490 + i);
-			addTalkId(36490 + i);
-			addStartNpc(36490 + i);
 		}
 	}
 	

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,11 +18,11 @@
  */
 package handlers.usercommandhandlers;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.handler.IUserCommandHandler;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.zone.type.L2RespawnZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -44,7 +44,7 @@ public class Loc implements IUserCommandHandler
 		L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
 		if (zone != null)
 		{
-			region = MapRegionManager.getInstance().getRestartRegion(activeChar, zone.getAllRespawnPoints().get(Race.Human)).getLocId();
+			region = MapRegionManager.getInstance().getRestartRegion(activeChar, zone.getAllRespawnPoints().get(Race.HUMAN)).getLocId();
 		}
 		else
 		{
@@ -57,9 +57,9 @@ public class Loc implements IUserCommandHandler
 			sm = SystemMessage.getSystemMessage(region);
 			if (sm.getSystemMessageId().getParamCount() == 3)
 			{
-				sm.addNumber(activeChar.getX());
-				sm.addNumber(activeChar.getY());
-				sm.addNumber(activeChar.getZ());
+				sm.addInt(activeChar.getX());
+				sm.addInt(activeChar.getY());
+				sm.addInt(activeChar.getZ());
 			}
 		}
 		else

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,14 +22,14 @@ import java.util.List;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.PetDataTable;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -42,7 +42,7 @@ public class PetFood implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (playable.isPet() && !((L2PetInstance) playable).canEatFoodId(item.getItemId()))
+		if (playable.isPet() && !((L2PetInstance) playable).canEatFoodId(item.getId()))
 		{
 			playable.sendPacket(SystemMessageId.PET_CANNOT_USE_ITEM);
 			return false;
@@ -61,7 +61,7 @@ public class PetFood implements IItemHandler
 	
 	public boolean useFood(L2Playable activeChar, int skillId, int skillLevel, L2ItemInstance item)
 	{
-		final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+		final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 		if (skill != null)
 		{
 			if (activeChar.isPet())
@@ -72,7 +72,7 @@ public class PetFood implements IItemHandler
 					pet.broadcastPacket(new MagicSkillUse(pet, pet, skillId, skillLevel, 0, 0));
 					pet.setCurrentFed(pet.getCurrentFed() + (skill.getFeed() * Config.PET_FOOD_RATE));
 					pet.broadcastStatusUpdate();
-					if (pet.getCurrentFed() < ((pet.getPetData().getHungryLimit() / 100f) * pet.getPetLevelData().getPetMaxFeed()))
+					if (pet.isHungry())
 					{
 						pet.sendPacket(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY);
 					}
@@ -85,7 +85,7 @@ public class PetFood implements IItemHandler
 				if (player.isMounted())
 				{
 					final List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
-					if (foodIds.contains(Integer.valueOf(item.getItemId())))
+					if (foodIds.contains(Integer.valueOf(item.getId())))
 					{
 						if (player.destroyItem("Consume", item.getObjectId(), 1, null, false))
 						{

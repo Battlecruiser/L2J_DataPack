@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00325_GrimCollector' WHERE name='325_GrimCollector';

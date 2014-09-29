@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,6 +21,7 @@ package quests.Q00601_WatchingEyes;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -71,9 +72,9 @@ public class Q00601_WatchingEyes extends Quest
 		}
 	};
 	
-	public Q00601_WatchingEyes(int questId, String name, String descr)
+	public Q00601_WatchingEyes()
 	{
-		super(questId, name, descr);
+		super(601, Q00601_WatchingEyes.class.getSimpleName(), "Watching Eyes");
 		addStartNpc(EYE_OF_ARGOS);
 		addTalkId(EYE_OF_ARGOS);
 		addKillId(MOBS.keySet());
@@ -123,7 +124,7 @@ public class Q00601_WatchingEyes extends Quest
 	{
 		final QuestState st = player.getQuestState(getName());
 		
-		if ((st != null) && st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getNpcId())))
+		if ((st != null) && st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getId())))
 		{
 			st.giveItems(PROOF_OF_AVENGER, 1);
 			if (st.getQuestItemsCount(PROOF_OF_AVENGER) == 100)
@@ -159,10 +160,5 @@ public class Q00601_WatchingEyes extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00601_WatchingEyes(601, Q00601_WatchingEyes.class.getSimpleName(), "Watching Eyes");
 	}
 }

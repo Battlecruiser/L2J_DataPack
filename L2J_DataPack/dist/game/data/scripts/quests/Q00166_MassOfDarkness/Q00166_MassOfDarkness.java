@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -21,9 +21,9 @@ package quests.Q00166_MassOfDarkness;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -55,9 +55,9 @@ public class Q00166_MassOfDarkness extends Quest
 		NPCs.put(TRUDY, GARMIELS_SCRIPTURE);
 	}
 	
-	private Q00166_MassOfDarkness(int questId, String name, String descr)
+	public Q00166_MassOfDarkness()
 	{
-		super(questId, name, descr);
+		super(166, Q00166_MassOfDarkness.class.getSimpleName(), "Mass of Darkness");
 		addStartNpc(UNDRIAS);
 		addTalkId(UNDRIAS, IRIA, DORANKUS, TRUDY);
 		registerQuestItems(UNDRIAS_LETTER, CEREMONIAL_DAGGER, DREVIANT_WINE, GARMIELS_SCRIPTURE);
@@ -83,7 +83,7 @@ public class Q00166_MassOfDarkness extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case UNDRIAS:
 				{
@@ -91,7 +91,7 @@ public class Q00166_MassOfDarkness extends Quest
 					{
 						case State.CREATED:
 						{
-							htmltext = (player.getRace() == Race.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30130-02.htm" : "30130-01.htm" : "30130-00.htm";
+							htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30130-02.htm" : "30130-01.htm" : "30130-00.htm";
 							break;
 						}
 						case State.STARTED:
@@ -124,7 +124,7 @@ public class Q00166_MassOfDarkness extends Quest
 				{
 					if (st.isStarted())
 					{
-						final int npcId = npc.getNpcId();
+						final int npcId = npc.getId();
 						final int itemId = NPCs.get(npcId);
 						if (st.isCond(1) && !st.hasQuestItems(itemId))
 						{
@@ -145,10 +145,5 @@ public class Q00166_MassOfDarkness extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00166_MassOfDarkness(166, Q00166_MassOfDarkness.class.getSimpleName(), "Mass of Darkness");
 	}
 }

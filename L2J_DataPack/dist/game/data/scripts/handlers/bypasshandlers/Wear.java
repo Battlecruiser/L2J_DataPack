@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,11 +22,11 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.TradeController;
+import com.l2jserver.gameserver.datatables.BuyListData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.L2TradeList;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.buylist.L2BuyList;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ShopPreviewList;
 
@@ -72,25 +72,17 @@ public class Wear implements IBypassHandler
 	
 	private static final void showWearWindow(L2PcInstance player, int val)
 	{
-		player.tempInventoryDisable();
-		
-		if (Config.DEBUG)
+		final L2BuyList buyList = BuyListData.getInstance().getBuyList(val);
+		if (buyList == null)
 		{
-			_log.fine("Showing wearlist");
-		}
-		
-		L2TradeList list = TradeController.getInstance().getBuyList(val);
-		
-		if (list != null)
-		{
-			ShopPreviewList bl = new ShopPreviewList(list, player.getAdena(), player.getExpertiseLevel());
-			player.sendPacket(bl);
-		}
-		else
-		{
-			_log.warning("no buylist with id:" + val);
+			_log.warning("BuyList not found! BuyListId:" + val);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
+		
+		player.setInventoryBlockingStatus(true);
+		
+		player.sendPacket(new ShopPreviewList(buyList, player.getAdena(), player.getExpertiseLevel()));
 	}
 	
 	@Override

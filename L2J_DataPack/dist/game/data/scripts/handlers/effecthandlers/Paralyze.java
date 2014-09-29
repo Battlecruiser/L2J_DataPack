@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -18,31 +18,29 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
-public class Paralyze extends L2Effect
+/**
+ * Paralyze effect implementation.
+ */
+public final class Paralyze extends AbstractEffect
 {
-	public Paralyze(Env env, EffectTemplate template)
+	public Paralyze(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	// Special constructor to steal this effect
-	public Paralyze(Env env, L2Effect effect)
-	{
-		super(env, effect);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	protected boolean effectCanBeStolen()
+	public int getEffectFlags()
 	{
-		return true;
+		return EffectFlag.PARALYZED.getMask();
 	}
 	
 	@Override
@@ -52,31 +50,18 @@ public class Paralyze extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public void onExit(BuffInfo info)
 	{
-		getEffected().startAbnormalEffect(AbnormalEffect.HOLD_1);
-		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, getEffector());
-		getEffected().startParalyze();
-		return super.onStart();
+		if (!info.getEffected().isPlayer())
+		{
+			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+		}
 	}
 	
 	@Override
-	public void onExit()
+	public void onStart(BuffInfo info)
 	{
-		getEffected().stopAbnormalEffect(AbnormalEffect.HOLD_1);
-		getEffected().stopParalyze(false);
-		super.onExit();
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.PARALYZED.getMask();
+		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, info.getEffector());
+		info.getEffected().startParalyze();
 	}
 }

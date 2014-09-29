@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -20,6 +20,7 @@ package quests.Q00126_TheNameOfEvil2;
 
 import quests.Q00125_TheNameOfEvil1.Q00125_TheNameOfEvil1;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -47,9 +48,9 @@ public class Q00126_TheNameOfEvil2 extends Quest
 	// Reward
 	private static final int ENCHANT_WEAPON_A = 729;
 	
-	public Q00126_TheNameOfEvil2(int id, String name, String descr)
+	public Q00126_TheNameOfEvil2()
 	{
-		super(id, name, descr);
+		super(126, Q00126_TheNameOfEvil2.class.getSimpleName(), "The Name of Evil - 2");
 		addStartNpc(ASAMAH);
 		addTalkId(ASAMAH, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU, WARRIORS_GRAVE, SHILENS_STONE_STATUE, MUSHIKA);
 		registerQuestItems(GAZKH_FRAGMENT, BONE_POWDER);
@@ -342,7 +343,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ASAMAH:
 				switch (st.getState())
@@ -607,10 +608,5 @@ public class Q00126_TheNameOfEvil2 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00126_TheNameOfEvil2(126, Q00126_TheNameOfEvil2.class.getSimpleName(), "The Name of Evil - 2");
 	}
 }

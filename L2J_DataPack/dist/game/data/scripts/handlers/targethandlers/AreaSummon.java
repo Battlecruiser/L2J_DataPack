@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -25,7 +25,7 @@ import java.util.List;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.util.Util;
@@ -36,13 +36,13 @@ import com.l2jserver.gameserver.util.Util;
 public class AreaSummon implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new ArrayList<>();
 		target = activeChar.getSummon();
 		if ((target == null) || !target.isServitor() || target.isDead())
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		if (onlyFirst)
@@ -69,17 +69,17 @@ public class AreaSummon implements ITargetTypeHandler
 				continue;
 			}
 			
-			if (!(obj.isL2Attackable() || obj.isPlayable()))
+			if (!(obj.isAttackable() || obj.isPlayable()))
 			{
 				continue;
 			}
 			
-			if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+			if (!Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
 			{
 				continue;
 			}
 			
-			if (targetList.size() >= maxTargets)
+			if ((maxTargets > 0) && (targetList.size() >= maxTargets))
 			{
 				break;
 			}
@@ -89,7 +89,7 @@ public class AreaSummon implements ITargetTypeHandler
 		
 		if (targetList.isEmpty())
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		return targetList.toArray(new L2Character[targetList.size()]);

@@ -4,8 +4,8 @@
 import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
-from com.l2jserver.gameserver.model.base import Race
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
+from com.l2jserver.gameserver.enums import Race
 
 qn = "236_SeedsOfChaos"
 
@@ -145,7 +145,7 @@ class Quest (JQuest) :
     htmltext = Quest.getNoQuestMsg(player)
     st = player.getQuestState(qn)
     if not st : return htmltext
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     id = st.getState()
     cond = st.getInt("cond")
     if npcId == KEKROPUS :
@@ -234,7 +234,7 @@ class Quest (JQuest) :
     if not st : return 
     if st.getState() != State.STARTED : return 
     #The following algorithm should work for both quest mobs and drops for this quest.... hopefully.
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     dropcond, item = DROPLIST[npcId]
     drop = self.getRandom(100)
     cond = st.getInt("cond")

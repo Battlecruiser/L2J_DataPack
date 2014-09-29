@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -57,9 +58,9 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 76;
 	
-	private Q00691_MatrasSuspiciousRequest(int questId, String name, String descr)
+	public Q00691_MatrasSuspiciousRequest()
 	{
-		super(questId, name, descr);
+		super(691, Q00691_MatrasSuspiciousRequest.class.getSimpleName(), "Matras' Suspicious Request");
 		addStartNpc(MATRAS);
 		addTalkId(MATRAS);
 		addKillId(REWARD_CHANCES.keySet());
@@ -134,7 +135,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 		}
 		
 		final QuestState st = pl.getQuestState(getName());
-		int chance = (int) (Config.RATE_QUEST_DROP * REWARD_CHANCES.get(npc.getNpcId()));
+		int chance = (int) (Config.RATE_QUEST_DROP * REWARD_CHANCES.get(npc.getId()));
 		int numItems = Math.max((chance / 1000), 1);
 		chance = chance % 1000;
 		if (getRandom(1000) <= chance)
@@ -176,10 +177,5 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00691_MatrasSuspiciousRequest(691, Q00691_MatrasSuspiciousRequest.class.getSimpleName(), "Matras' Suspicious Request");
 	}
 }

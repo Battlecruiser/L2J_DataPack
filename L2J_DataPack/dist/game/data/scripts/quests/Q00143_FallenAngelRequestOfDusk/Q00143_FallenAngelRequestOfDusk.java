@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -46,9 +46,9 @@ public class Q00143_FallenAngelRequestOfDusk extends Quest
 	private static final int MAX_REWARD_LEVEL = 43;
 	private boolean isAngelSpawned = false;
 	
-	private Q00143_FallenAngelRequestOfDusk(int questId, String name, String descr)
+	public Q00143_FallenAngelRequestOfDusk()
 	{
-		super(questId, name, descr);
+		super(143, Q00143_FallenAngelRequestOfDusk.class.getSimpleName(), "Fallen Angel - Request of Dusk");
 		addTalkId(NATOOLS, TOBIAS, CASIAN, ROCK, ANGEL);
 		registerQuestItems(SEALED_PROPHECY_PATH_OF_THE_GOD, PROPHECY_PATH_OF_THE_GOD, EMPTY_SOUND_CRYSTAL, ANGEL_MEDICINE, ANGELS_MESSAGE);
 	}
@@ -150,7 +150,7 @@ public class Q00143_FallenAngelRequestOfDusk extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case NATOOLS:
 				switch (st.getState())
@@ -264,10 +264,5 @@ public class Q00143_FallenAngelRequestOfDusk extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public static void main(String[] args)
-	{
-		new Q00143_FallenAngelRequestOfDusk(143, Q00143_FallenAngelRequestOfDusk.class.getSimpleName(), "Fallen Angel - Request of Dusk");
 	}
 }
