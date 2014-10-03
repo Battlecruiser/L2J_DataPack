@@ -122,7 +122,7 @@ public final class UrbanArea extends AbstractNpcAI
 			
 			if (htmltext == null)
 			{
-				enterInstance(player, "HellboundTown.xml");
+				enterInstance(player, "UrbanArea.xml");
 			}
 		}
 		else if (npc.getId() == TOMBSTONE)
