@@ -886,9 +886,9 @@
 	<skill id="9057" levels="1" name="Freezing Core">
 		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalRange" val="2000" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SKILL_IGNORE" />
+		<set name="affectRange" val="2000" />
 		<set name="icon" val="icon.skill1418" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -909,9 +909,9 @@
 	<skill id="9058" levels="1" name="Black Freezing Core">
 		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalRange" val="2000" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SKILL_IGNORE" />
+		<set name="affectRange" val="2000" />
 		<set name="icon" val="icon.skill1418" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15470" /> <!-- Black Frozen Core -->
