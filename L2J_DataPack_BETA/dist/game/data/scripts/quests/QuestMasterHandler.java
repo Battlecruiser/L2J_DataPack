@@ -267,7 +267,10 @@ import quests.Q00410_PathOfThePalusKnight.Q00410_PathOfThePalusKnight;
 import quests.Q00411_PathOfTheAssassin.Q00411_PathOfTheAssassin;
 import quests.Q00412_PathOfTheDarkWizard.Q00412_PathOfTheDarkWizard;
 import quests.Q00413_PathOfTheShillienOracle.Q00413_PathOfTheShillienOracle;
+import quests.Q00414_PathOfTheOrcRaider.Q00414_PathOfTheOrcRaider;
+import quests.Q00415_PathOfTheOrcMonk.Q00415_PathOfTheOrcMonk;
 import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
+import quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan;
 import quests.Q00420_LittleWing.Q00420_LittleWing;
 import quests.Q00421_LittleWingsBigAdventure.Q00421_LittleWingsBigAdventure;
 import quests.Q00423_TakeYourBestShot.Q00423_TakeYourBestShot;
@@ -650,7 +653,10 @@ public class QuestMasterHandler
 		Q00411_PathOfTheAssassin.class,
 		Q00412_PathOfTheDarkWizard.class,
 		Q00413_PathOfTheShillienOracle.class,
+		Q00414_PathOfTheOrcRaider.class,
+		Q00415_PathOfTheOrcMonk.class,
 		Q00416_PathOfTheOrcShaman.class,
+		Q00418_PathOfTheArtisan.class,
 		Q00420_LittleWing.class,
 		Q00421_LittleWingsBigAdventure.class,
 		Q00423_TakeYourBestShot.class,
