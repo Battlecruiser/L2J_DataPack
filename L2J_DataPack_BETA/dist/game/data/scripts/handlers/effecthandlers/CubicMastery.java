@@ -17,7 +17,7 @@ public final class CubicMastery extends AbstractEffect
 	{
 		super(attachCond, applyCond, set, params);
 		
-		_cubicCount = params.getInt("cubicCount", 0);
+		_cubicCount = params.getInt("cubicCount", 1);
 	}
 	
 	@Override
@@ -29,8 +29,7 @@ public final class CubicMastery extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final int cubicCount = info.getEffected().getActingPlayer().getStat().getMaxCubicCount() + _cubicCount;
-		info.getEffected().getActingPlayer().getStat().setMaxCubicCount(cubicCount);
+		info.getEffected().getActingPlayer().getStat().setMaxCubicCount(_cubicCount);
 	}
 	
 	@Override
@@ -42,14 +41,6 @@ public final class CubicMastery extends AbstractEffect
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		final int cubicCount = info.getEffected().getActingPlayer().getStat().getMaxCubicCount() - _cubicCount;
-		if (cubicCount <= 0)
-		{
-			info.getEffected().getActingPlayer().getStat().setMaxCubicCount(0);
-		}
-		else
-		{
-			info.getEffected().getActingPlayer().getStat().setMaxCubicCount(cubicCount);
-		}
+		info.getEffected().getActingPlayer().getStat().setMaxCubicCount(1);
 	}
 }
