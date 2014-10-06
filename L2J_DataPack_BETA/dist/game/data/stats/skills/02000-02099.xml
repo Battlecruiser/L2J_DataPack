@@ -178,6 +178,9 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
+		<cond>
+			<player canResurrect="true" />
+		</cond>
 		<for>
 			<effect name="Resurrection" />
 		</for>
@@ -541,6 +544,9 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
+		<cond>
+			<player canResurrect="true" />
+		</cond>
 		<for>
 			<effect name="Resurrection">
 				<param power="100" />
@@ -756,6 +762,9 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
+		<cond>
+			<player canResurrect="true" />
+		</cond>
 		<for>
 			<effect name="Resurrection">
 				<param power="100" />

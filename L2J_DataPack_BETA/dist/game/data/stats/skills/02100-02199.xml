@@ -1081,6 +1081,9 @@
 		<cond msgId="113" addName="1">
 			<target npcType="L2PetInstance" />
 		</cond>
+		<cond>
+			<player canResurrect="true" />
+		</cond>
 		<for>
 			<effect name="Resurrection">
 				<param power="100" />

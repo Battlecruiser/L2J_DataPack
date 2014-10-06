@@ -704,6 +704,9 @@
 		<cond msgId="2292">
 			<player agathionId="16031" />
 		</cond>
+		<cond>
+			<player canResurrect="true" />
+		</cond>
 		<for>
 			<effect name="Resurrection">
 				<param power="100" />
@@ -778,6 +781,9 @@
 		<set name="targetType" val="PC_BODY" />
 		<cond msgId="2292">
 			<player agathionId="16032" />
+		</cond>
+		<cond>
+			<player canResurrect="true" />
 		</cond>
 		<for>
 			<effect name="Resurrection">
