@@ -77,6 +77,9 @@
 		<cond msgId="2292">
 			<player agathionId="1502" />
 		</cond>
+		<cond>
+			<player canResurrect="true" />
+		</cond>
 		<for>
 			<effect name="Resurrection">
 				<param power="100" />
@@ -168,6 +171,9 @@
 		<cond msgId="2292">
 			<player agathionId="1504" />
 		</cond>
+		<cond>
+			<player canResurrect="true" />
+		</cond>
 		<for>
 			<effect name="Resurrection">
 				<param power="100" />
@@ -239,6 +245,9 @@
 		<set name="targetType" val="PC_BODY" />
 		<cond msgId="2292">
 			<player agathionId="1506" />
+		</cond>
+		<cond>
+			<player canResurrect="true" />
 		</cond>
 		<for>
 			<effect name="Resurrection">
@@ -504,6 +513,9 @@
 		<set name="targetType" val="PC_BODY" />
 		<cond msgId="2292">
 			<player agathionId="1510" />
+		</cond>
+		<cond>
+			<player canResurrect="true" />
 		</cond>
 		<for>
 			<effect name="Resurrection">
@@ -1036,6 +1048,9 @@
 		<set name="targetType" val="PC_BODY" />
 		<cond msgId="2292">
 			<player agathionId="1522" />
+		</cond>
+		<cond>
+			<player canResurrect="true" />
 		</cond>
 		<for>
 			<effect name="Resurrection">

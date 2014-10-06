@@ -1229,6 +1229,9 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="PC_BODY" />
 		<!-- TODO: revive all dead characters in the Command Channel -->
+		<cond>
+			<player canResurrect="true" />
+		</cond>
 		<for>
 			<effect name="Resurrection">
 				<param power="100" />

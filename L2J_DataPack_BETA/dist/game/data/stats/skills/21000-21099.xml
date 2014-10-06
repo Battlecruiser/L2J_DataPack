@@ -800,6 +800,9 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
 		<set name="targetType" val="PC_BODY" />
+		<cond>
+			<player canResurrect="true" />
+		</cond>
 		<for>
 			<effect name="Resurrection">
 				<param power="100" />
@@ -1542,6 +1545,9 @@
 		<set name="reuseDelay" val="86400000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canResurrect="true" />
+		</cond>
 		<for>
 			<effect name="ResurrectionSpecial">
 				<param power="100" />
@@ -1593,6 +1599,9 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
 		<set name="targetType" val="PC_BODY" />
+		<cond>
+			<player canResurrect="true" />
+		</cond>
 		<for>
 			<effect name="Resurrection">
 				<param power="100" />
