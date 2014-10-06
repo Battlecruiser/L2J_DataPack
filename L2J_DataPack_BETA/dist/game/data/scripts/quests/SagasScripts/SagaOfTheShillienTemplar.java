@@ -28,7 +28,7 @@ public class SagaOfTheShillienTemplar extends SagasSuperClass
 {
 	public SagaOfTheShillienTemplar()
 	{
-		super(97, "97_SagaOfTheShillienTemplar", "Saga of the Shillien Templar");
+		super(97, "Q00097_SagaOfTheShillienTemplar", "Saga of the Shillien Templar");
 		NPC = new int[]
 		{
 			31580,

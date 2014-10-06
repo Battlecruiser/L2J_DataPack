@@ -28,7 +28,7 @@ public class SagaOfTheStormScreamer extends SagasSuperClass
 {
 	public SagaOfTheStormScreamer()
 	{
-		super(90, "90_SagaOfTheStormScreamer", "Saga of the Storm Screamer");
+		super(90, "Q00090_SagaOfTheStormScreamer", "Saga of the Storm Screamer");
 		NPC = new int[]
 		{
 			30175,

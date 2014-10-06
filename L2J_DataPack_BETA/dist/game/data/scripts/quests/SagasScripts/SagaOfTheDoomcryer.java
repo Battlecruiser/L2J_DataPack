@@ -28,7 +28,7 @@ public class SagaOfTheDoomcryer extends SagasSuperClass
 {
 	public SagaOfTheDoomcryer()
 	{
-		super(78, "78_SagaOfTheDoomcryer", "Saga of the Doomcryer");
+		super(78, "Q00078_SagaOfTheDoomcryer", "Saga of the Doomcryer");
 		NPC = new int[]
 		{
 			31336,

@@ -28,7 +28,7 @@ public class SagaOfTheGhostHunter extends SagasSuperClass
 {
 	public SagaOfTheGhostHunter()
 	{
-		super(81, "81_SagaOfTheGhostHunter", "Saga of the Ghost Hunter");
+		super(81, "Q00081_SagaOfTheGhostHunter", "Saga of the Ghost Hunter");
 		NPC = new int[]
 		{
 			31603,

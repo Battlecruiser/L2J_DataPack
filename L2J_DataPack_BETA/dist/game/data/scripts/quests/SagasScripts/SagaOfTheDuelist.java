@@ -37,7 +37,7 @@ public class SagaOfTheDuelist extends SagasSuperClass
 	
 	public SagaOfTheDuelist()
 	{
-		super(73, "73_SagaOfTheDuelist", "Saga of the Duelist");
+		super(73, "Q00073_SagaOfTheDuelist", "Saga of the Duelist");
 		NPC = new int[]
 		{
 			30849,

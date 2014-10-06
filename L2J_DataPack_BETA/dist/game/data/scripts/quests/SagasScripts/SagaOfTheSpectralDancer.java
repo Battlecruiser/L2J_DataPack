@@ -28,7 +28,7 @@ public class SagaOfTheSpectralDancer extends SagasSuperClass
 {
 	public SagaOfTheSpectralDancer()
 	{
-		super(96, "96_SagaOfTheSpectralDancer", "Saga of the Spectral Dancer");
+		super(96, "Q00096_SagaOfTheSpectralDancer", "Saga of the Spectral Dancer");
 		NPC = new int[]
 		{
 			31582,

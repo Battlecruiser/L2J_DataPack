@@ -28,7 +28,7 @@ public class SagaOfTheSoultaker extends SagasSuperClass
 {
 	public SagaOfTheSoultaker()
 	{
-		super(94, "94_SagaOfTheSoultaker", "Saga of the Soultaker");
+		super(94, "Q00094_SagaOfTheSoultaker", "Saga of the Soultaker");
 		NPC = new int[]
 		{
 			30832,

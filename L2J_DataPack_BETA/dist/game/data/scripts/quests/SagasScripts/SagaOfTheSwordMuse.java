@@ -28,7 +28,7 @@ public class SagaOfTheSwordMuse extends SagasSuperClass
 {
 	public SagaOfTheSwordMuse()
 	{
-		super(72, "72_SagaOfTheSwordMuse", "Saga of the Sword Muse");
+		super(72, "Q00072_SagaOfTheSwordMuse", "Saga of the Sword Muse");
 		NPC = new int[]
 		{
 			30853,

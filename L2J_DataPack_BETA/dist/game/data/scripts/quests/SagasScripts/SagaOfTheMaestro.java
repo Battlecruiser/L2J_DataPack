@@ -28,7 +28,7 @@ public class SagaOfTheMaestro extends SagasSuperClass
 {
 	public SagaOfTheMaestro()
 	{
-		super(100, "100_SagaOfTheMaestro", "Saga of the Maestro");
+		super(100, "Q00100_SagaOfTheMaestro", "Saga of the Maestro");
 		NPC = new int[]
 		{
 			31592,

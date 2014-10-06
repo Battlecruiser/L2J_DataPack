@@ -28,7 +28,7 @@ public class SagaOfTheMoonlightSentinel extends SagasSuperClass
 {
 	public SagaOfTheMoonlightSentinel()
 	{
-		super(83, "83_SagaOfTheMoonlightSentinel", "Saga of the Moonlight Sentinel");
+		super(83, "Q00083_SagaOfTheMoonlightSentinel", "Saga of the Moonlight Sentinel");
 		NPC = new int[]
 		{
 			30702,

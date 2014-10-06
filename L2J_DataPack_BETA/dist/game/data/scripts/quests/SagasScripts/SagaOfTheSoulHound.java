@@ -28,7 +28,7 @@ public class SagaOfTheSoulHound extends SagasSuperClass
 {
 	public SagaOfTheSoulHound()
 	{
-		super(68, "68_SagaOfTheSoulHound", "Saga of the Soul Hound");
+		super(68, "Q00068_SagaOfTheSoulHound", "Saga of the Soul Hound");
 		NPC = new int[]
 		{
 			32138,

@@ -28,7 +28,7 @@ public class SagaOfTheArchmage extends SagasSuperClass
 {
 	public SagaOfTheArchmage()
 	{
-		super(88, "88_SagaOfTheArchmage", "Saga of the Archmage");
+		super(88, "Q00088_SagaOfTheArchmage", "Saga of the Archmage");
 		NPC = new int[]
 		{
 			30176,
