@@ -1066,7 +1066,7 @@ public class SagasSuperClass extends Quest
 		_scripts.add(new SagaOfTheDominator());
 		_scripts.add(new SagaOfTheDoombringer());
 		_scripts.add(new SagaOfTheDoomcryer());
-		_scripts.add(new SagaOfTheDreadnoughts());
+		_scripts.add(new SagaOfTheDreadnought());
 		_scripts.add(new SagaOfTheDuelist());
 		_scripts.add(new SagaOfTheElementalMaster());
 		_scripts.add(new SagaOfTheFortuneSeeker());

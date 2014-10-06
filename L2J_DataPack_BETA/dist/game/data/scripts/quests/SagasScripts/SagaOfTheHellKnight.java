@@ -28,7 +28,7 @@ public class SagaOfTheHellKnight extends SagasSuperClass
 {
 	public SagaOfTheHellKnight()
 	{
-		super(95, "95_SagaOfTheHellKnight", "Saga of the Hell Knight");
+		super(95, "Q00095_SagaOfTheHellKnight", "Saga of the Hell Knight");
 		NPC = new int[]
 		{
 			31582,

@@ -28,7 +28,7 @@ public class SagaOfTheArcanaLord extends SagasSuperClass
 {
 	public SagaOfTheArcanaLord()
 	{
-		super(91, "91_SagaOfTheArcanaLord", "Saga of the Arcana Lord");
+		super(91, "Q00091_SagaOfTheArcanaLord", "Saga of the Arcana Lord");
 		NPC = new int[]
 		{
 			31605,

@@ -28,7 +28,7 @@ public class SagaOfEvasSaint extends SagasSuperClass
 {
 	public SagaOfEvasSaint()
 	{
-		super(87, "87_SagaOfEvasSaint", "Saga of Eva's Saint");
+		super(87, "Q00087_SagaOfEvasSaint", "Saga of Eva's Saint");
 		NPC = new int[]
 		{
 			30191,

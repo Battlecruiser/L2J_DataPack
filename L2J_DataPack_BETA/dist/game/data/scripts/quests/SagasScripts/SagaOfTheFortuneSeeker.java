@@ -28,7 +28,7 @@ public class SagaOfTheFortuneSeeker extends SagasSuperClass
 {
 	public SagaOfTheFortuneSeeker()
 	{
-		super(99, "99_SagaOfTheFortuneSeeker", "Saga of the Fortune Seeker");
+		super(99, "Q00099_SagaOfTheFortuneSeeker", "Saga of the Fortune Seeker");
 		NPC = new int[]
 		{
 			31594,

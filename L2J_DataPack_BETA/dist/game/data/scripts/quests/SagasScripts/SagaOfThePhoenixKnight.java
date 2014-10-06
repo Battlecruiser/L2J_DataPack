@@ -28,7 +28,7 @@ public class SagaOfThePhoenixKnight extends SagasSuperClass
 {
 	public SagaOfThePhoenixKnight()
 	{
-		super(70, "70_SagaOfThePhoenixKnight", "Saga of the Phoenix Knight");
+		super(70, "Q00070_SagaOfThePhoenixKnight", "Saga of the Phoenix Knight");
 		NPC = new int[]
 		{
 			30849,

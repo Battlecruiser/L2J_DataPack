@@ -28,7 +28,7 @@ public class SagaOfTheWindRider extends SagasSuperClass
 {
 	public SagaOfTheWindRider()
 	{
-		super(80, "80_SagaOfTheWindRider", "Saga of the Wind Rider");
+		super(80, "Q00080_SagaOfTheWindRider", "Saga of the Wind Rider");
 		NPC = new int[]
 		{
 			31603,

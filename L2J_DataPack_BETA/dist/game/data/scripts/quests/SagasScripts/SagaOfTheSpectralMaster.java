@@ -28,7 +28,7 @@ public class SagaOfTheSpectralMaster extends SagasSuperClass
 {
 	public SagaOfTheSpectralMaster()
 	{
-		super(93, "93_SagaOfTheSpectralMaster", "Saga of the Spectral Master");
+		super(93, "Q00093_SagaOfTheSpectralMaster", "Saga of the Spectral Master");
 		NPC = new int[]
 		{
 			30175,

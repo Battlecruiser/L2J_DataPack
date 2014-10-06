@@ -28,7 +28,7 @@ public class SagaOfTheMysticMuse extends SagasSuperClass
 {
 	public SagaOfTheMysticMuse()
 	{
-		super(89, "89_SagaOfTheMysticMuse", "Saga of the Mystic Muse");
+		super(89, "Q00089_SagaOfTheMysticMuse", "Saga of the Mystic Muse");
 		NPC = new int[]
 		{
 			30174,

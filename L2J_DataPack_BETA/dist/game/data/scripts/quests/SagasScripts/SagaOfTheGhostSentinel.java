@@ -28,7 +28,7 @@ public class SagaOfTheGhostSentinel extends SagasSuperClass
 {
 	public SagaOfTheGhostSentinel()
 	{
-		super(84, "84_SagaOfTheGhostSentinel", "Saga of the Ghost Sentinel");
+		super(84, "Q00084_SagaOfTheGhostSentinel", "Saga of the Ghost Sentinel");
 		NPC = new int[]
 		{
 			30702,

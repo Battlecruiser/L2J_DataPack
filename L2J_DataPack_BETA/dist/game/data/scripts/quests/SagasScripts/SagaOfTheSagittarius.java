@@ -28,7 +28,7 @@ public class SagaOfTheSagittarius extends SagasSuperClass
 {
 	public SagaOfTheSagittarius()
 	{
-		super(82, "82_SagaOfTheSagittarius", "Saga of the Sagittarius");
+		super(82, "Q00082_SagaOfTheSagittarius", "Saga of the Sagittarius");
 		NPC = new int[]
 		{
 			30702,

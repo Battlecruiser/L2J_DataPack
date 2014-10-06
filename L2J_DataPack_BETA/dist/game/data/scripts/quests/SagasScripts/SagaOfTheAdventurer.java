@@ -28,7 +28,7 @@ public class SagaOfTheAdventurer extends SagasSuperClass
 {
 	public SagaOfTheAdventurer()
 	{
-		super(79, "79_SagaOfTheAdventurer", "Saga of the Adventurer");
+		super(79, "Q00079_SagaOfTheAdventurer", "Saga of the Adventurer");
 		NPC = new int[]
 		{
 			31603,

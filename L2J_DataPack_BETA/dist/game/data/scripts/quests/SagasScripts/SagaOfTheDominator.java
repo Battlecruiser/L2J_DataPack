@@ -28,7 +28,7 @@ public class SagaOfTheDominator extends SagasSuperClass
 {
 	public SagaOfTheDominator()
 	{
-		super(77, "77_SagaOfTheDominator", "Saga of the Dominator");
+		super(77, "Q00077_SagaOfTheDominator", "Saga of the Dominator");
 		NPC = new int[]
 		{
 			31336,

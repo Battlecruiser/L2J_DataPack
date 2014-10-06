@@ -28,7 +28,7 @@ public class SagaOfTheGrandKhavatari extends SagasSuperClass
 {
 	public SagaOfTheGrandKhavatari()
 	{
-		super(76, "76_SagaOfTheGrandKhavatari", "Saga of the Grand Khavatari");
+		super(76, "Q00076_SagaOfTheGrandKhavatari", "Saga of the Grand Khavatari");
 		NPC = new int[]
 		{
 			31339,

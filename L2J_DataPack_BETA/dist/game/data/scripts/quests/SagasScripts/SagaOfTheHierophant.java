@@ -28,7 +28,7 @@ public class SagaOfTheHierophant extends SagasSuperClass
 {
 	public SagaOfTheHierophant()
 	{
-		super(86, "86_SagaOfTheHierophant", "Saga of the Hierophant");
+		super(86, "Q00086_SagaOfTheHierophant", "Saga of the Hierophant");
 		NPC = new int[]
 		{
 			30191,

@@ -28,7 +28,7 @@ public class SagaOfTheElementalMaster extends SagasSuperClass
 {
 	public SagaOfTheElementalMaster()
 	{
-		super(92, "92_SagaOfTheElementalMaster", "Saga of the Elemental Master");
+		super(92, "Q00092_SagaOfTheElementalMaster", "Saga of the Elemental Master");
 		NPC = new int[]
 		{
 			30174,

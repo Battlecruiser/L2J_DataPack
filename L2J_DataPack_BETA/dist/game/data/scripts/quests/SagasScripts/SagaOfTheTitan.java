@@ -28,7 +28,7 @@ public class SagaOfTheTitan extends SagasSuperClass
 {
 	public SagaOfTheTitan()
 	{
-		super(75, "75_SagaOfTheTitan", "Saga of the Titan");
+		super(75, "Q00075_SagaOfTheTitan", "Saga of the Titan");
 		NPC = new int[]
 		{
 			31327,
