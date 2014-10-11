@@ -2,6 +2,14 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25800" level="25" type="L2RaidBoss" name="Mammon Collector Talos" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25801" count="3" respawnTime="360" weightPoint="1" /> <!-- Talos' Cohort -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="RangeHold_a" id="4197" level="2" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire expRate="1" sp="79280" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -58,6 +66,10 @@
 	</npc>
 	<npc id="25801" level="22" type="L2Monster" name="Talos' Cohort" title="Follower of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4743" level="2" /> <!-- BOSS Strike -->
+		</parameters>
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="6247.184788" hpRegen="17.157688" mp="218.52" mpRegen="1.5" />

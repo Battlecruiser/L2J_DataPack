@@ -2795,7 +2795,7 @@
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="80" />
 			<minions name="Privates">
-				<npc id="21433" respawnTime="0" weightPoint="1" /> <!-- Jamadar Beetle -->
+				<npc id="21433" count="1" respawnTime="0" weightPoint="1" /> <!-- Jamadar Beetle -->
 			</minions>
 			<skill name="PhysicalSpecial" id="4040" level="9" /> <!-- NPC Bow Attack -->
 			<skill name="MagicHeal" id="4065" level="9" /> <!-- NPC Heal -->
@@ -2964,13 +2964,9 @@
 			<param name="MoveAroundSocial1" value="90" />
 			<param name="MoveAroundSocial2" value="90" />
 			<minions name="Privates">
-				<npc id="21435" respawnTime="0" weightPoint="1" /> <!-- Guide of Offering -->
-				<npc id="21436" respawnTime="0" weightPoint="1" /> <!-- Leader of Offering -->
-				<npc id="21436" respawnTime="0" weightPoint="1" /> <!-- Leader of Offering -->
-				<npc id="21436" respawnTime="0" weightPoint="1" /> <!-- Leader of Offering -->
-				<npc id="21436" respawnTime="0" weightPoint="1" /> <!-- Leader of Offering -->
-				<npc id="21823" respawnTime="0" weightPoint="1" /> <!-- Executor of Offerings -->
-				<npc id="21823" respawnTime="0" weightPoint="1" /> <!-- Executor of Offerings -->
+				<npc id="21435" count="1" respawnTime="0" weightPoint="1" /> <!-- Guide of Offering -->
+				<npc id="21436" count="4" respawnTime="0" weightPoint="1" /> <!-- Leader of Offering -->
+				<npc id="21823" count="2" respawnTime="0" weightPoint="1" /> <!-- Executor of Offerings -->
 			</minions>
 			<param name="SummonSlave" value="21437" /> <!-- Offering Bug -->
 			<skill name="PhysicalSpecial1" id="4605" level="9" /> <!-- Surrender To Fire -->

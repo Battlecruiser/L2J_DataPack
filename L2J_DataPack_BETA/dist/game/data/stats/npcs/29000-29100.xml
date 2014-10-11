@@ -1911,10 +1911,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="29031" respawnTime="360" weightPoint="1" /> <!-- Kerinne's Ifrit -->
-				<npc id="29031" respawnTime="360" weightPoint="1" /> <!-- Kerinne's Ifrit -->
-				<npc id="29032" respawnTime="360" weightPoint="1" /> <!-- Kerinne's Golem -->
-				<npc id="29032" respawnTime="360" weightPoint="1" /> <!-- Kerinne's Golem -->
+				<npc id="29031" count="2" respawnTime="360" weightPoint="1" /> <!-- Kerinne's Ifrit -->
+				<npc id="29032" count="2" respawnTime="360" weightPoint="1" /> <!-- Kerinne's Golem -->
 			</minions>
 			<skill name="RangeDDMagic_a" id="4178" level="9" /> <!-- BOSS Flamestrike -->
 		</parameters>
@@ -2062,10 +2060,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="29034" respawnTime="360" weightPoint="1" /> <!-- Freki's Ifrit -->
-				<npc id="29034" respawnTime="360" weightPoint="1" /> <!-- Freki's Ifrit -->
-				<npc id="29034" respawnTime="360" weightPoint="1" /> <!-- Freki's Ifrit -->
-				<npc id="29035" respawnTime="360" weightPoint="1" /> <!-- Freki's Golem -->
+				<npc id="29034" count="3" respawnTime="360" weightPoint="1" /> <!-- Freki's Ifrit -->
+				<npc id="29035" count="1" respawnTime="360" weightPoint="1" /> <!-- Freki's Golem -->
 			</minions>
 			<skill name="RangeHold_a" id="4197" level="9" /> <!-- Hold -->
 		</parameters>
@@ -2276,10 +2272,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="29038" respawnTime="360" weightPoint="1" /> <!-- Kinaz's Ifrit -->
-				<npc id="29038" respawnTime="360" weightPoint="1" /> <!-- Kinaz's Ifrit -->
-				<npc id="29038" respawnTime="360" weightPoint="1" /> <!-- Kinaz's Ifrit -->
-				<npc id="29039" respawnTime="360" weightPoint="1" /> <!-- Kinaz's Ifrit -->
+				<npc id="29038" count="3" respawnTime="360" weightPoint="1" /> <!-- Kinaz's Ifrit -->
+				<npc id="29039" count="1" respawnTime="360" weightPoint="1" /> <!-- Kinaz's Ifrit -->
 			</minions>
 			<skill name="DDMagic_a" id="4195" level="9" /> <!-- BOSS Twister -->
 			<skill name="SelfRangeDebuff_a" id="4184" level="9" /> <!-- Decrease Atk. Spd. -->
@@ -2437,10 +2431,10 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="29041" respawnTime="30" weightPoint="1" /> <!-- Inferno Golem -->
-				<npc id="29042" respawnTime="30" weightPoint="1" /> <!-- Inferno Golem -->
-				<npc id="29043" respawnTime="30" weightPoint="1" /> <!-- Howling Ifrit -->
-				<npc id="29044" respawnTime="30" weightPoint="1" /> <!-- Howling Ifrit -->
+				<npc id="29041" count="1" respawnTime="30" weightPoint="1" /> <!-- Inferno Golem -->
+				<npc id="29042" count="1" respawnTime="30" weightPoint="1" /> <!-- Inferno Golem -->
+				<npc id="29043" count="1" respawnTime="30" weightPoint="1" /> <!-- Howling Ifrit -->
+				<npc id="29044" count="1" respawnTime="30" weightPoint="1" /> <!-- Howling Ifrit -->
 			</minions>
 			<param name="MaxPrivateNumber" value="32" />
 			<skill name="SelfRangeCancel_a" id="4177" level="10" /> <!-- BOSS Cancel Magic -->
@@ -3257,10 +3251,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="29058" respawnTime="360" weightPoint="1" /> <!-- Sirra's Beholder -->
-				<npc id="29058" respawnTime="360" weightPoint="1" /> <!-- Sirra's Beholder -->
-				<npc id="29057" respawnTime="360" weightPoint="1" /> <!-- Sirra's Page -->
-				<npc id="29057" respawnTime="360" weightPoint="1" /> <!-- Sirra's Page -->
+				<npc id="29058" count="2" respawnTime="360" weightPoint="1" /> <!-- Sirra's Beholder -->
+				<npc id="29057" count="2" respawnTime="360" weightPoint="1" /> <!-- Sirra's Page -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="RangeDDMagic_a" id="4478" level="1" /> <!-- Ice Fairy Aqua Splash -->
@@ -5846,11 +5838,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="29098" respawnTime="360" weightPoint="1" /> <!-- Splendor Worshiper -->
-				<npc id="29098" respawnTime="360" weightPoint="1" /> <!-- Splendor Worshiper -->
-				<npc id="29098" respawnTime="360" weightPoint="1" /> <!-- Splendor Worshiper -->
-				<npc id="29097" respawnTime="360" weightPoint="1" /> <!-- Disciple of Splendor -->
-				<npc id="29097" respawnTime="360" weightPoint="1" /> <!-- Disciple of Splendor -->
+				<npc id="29098" count="3" respawnTime="360" weightPoint="1" /> <!-- Splendor Worshiper -->
+				<npc id="29097" count="2" respawnTime="360" weightPoint="1" /> <!-- Disciple of Splendor -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<param name="doSummonNPC" value="1" />

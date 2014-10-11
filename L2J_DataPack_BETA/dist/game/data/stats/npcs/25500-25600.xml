@@ -41,11 +41,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25502" respawnTime="360" weightPoint="1" /> <!-- Akata's Thug -->
-				<npc id="25502" respawnTime="360" weightPoint="1" /> <!-- Akata's Thug -->
-				<npc id="25502" respawnTime="360" weightPoint="1" /> <!-- Akata's Thug -->
-				<npc id="25503" respawnTime="360" weightPoint="1" /> <!-- Akata's Lackey -->
-				<npc id="25503" respawnTime="360" weightPoint="1" /> <!-- Akata's Lackey -->
+				<npc id="25502" count="3" respawnTime="360" weightPoint="1" /> <!-- Akata's Thug -->
+				<npc id="25503" count="2" respawnTime="360" weightPoint="1" /> <!-- Akata's Lackey -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="PhysicalSpecial_b" id="4722" level="3" /> <!-- BOSS Strike -->
@@ -196,9 +193,7 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25505" respawnTime="360" weightPoint="1" /> <!-- Nellis' Follower -->
-				<npc id="25505" respawnTime="360" weightPoint="1" /> <!-- Nellis' Follower -->
-				<npc id="25505" respawnTime="360" weightPoint="1" /> <!-- Nellis' Follower -->
+				<npc id="25505" count="3" respawnTime="360" weightPoint="1" /> <!-- Nellis' Follower -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="RangeHold_a" id="4197" level="3" /> <!-- Hold -->
@@ -327,10 +322,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25507" respawnTime="360" weightPoint="1" /> <!-- Rayito's Henchman -->
-				<npc id="25508" respawnTime="360" weightPoint="1" /> <!-- Rayito's Henchman -->
-				<npc id="25508" respawnTime="360" weightPoint="1" /> <!-- Rayito's Henchman -->
-				<npc id="25508" respawnTime="360" weightPoint="1" /> <!-- Rayito's Henchman -->
+				<npc id="25507" count="1" respawnTime="360" weightPoint="1" /> <!-- Rayito's Henchman -->
+				<npc id="25508" count="3" respawnTime="360" weightPoint="1" /> <!-- Rayito's Henchman -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="RangeHold_a" id="4197" level="3" /> <!-- Hold -->
@@ -482,11 +475,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25511" respawnTime="360" weightPoint="1" /> <!-- Varangka's Page -->
-				<npc id="25511" respawnTime="360" weightPoint="1" /> <!-- Varangka's Page -->
-				<npc id="25511" respawnTime="360" weightPoint="1" /> <!-- Varangka's Page -->
-				<npc id="25511" respawnTime="360" weightPoint="1" /> <!-- Varangka's Page -->
-				<npc id="25510" respawnTime="360" weightPoint="1" /> <!-- Varangka's Descendant -->
+				<npc id="25511" count="4" respawnTime="360" weightPoint="1" /> <!-- Varangka's Page -->
+				<npc id="25510" count="1" respawnTime="360" weightPoint="1" /> <!-- Varangka's Descendant -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="DDMagic_a" id="4195" level="5" /> <!-- BOSS Twister -->
@@ -737,10 +727,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25516" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
-				<npc id="25515" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
-				<npc id="25515" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
-				<npc id="25515" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
+				<npc id="25516" count="1" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
+				<npc id="25515" count="3" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="RangeHold_a" id="4197" level="8" /> <!-- Hold -->
@@ -970,10 +958,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25525" respawnTime="360" weightPoint="1" /> <!-- Flame Spirit -->
-				<npc id="25525" respawnTime="360" weightPoint="1" /> <!-- Flame Spirit -->
-				<npc id="25526" respawnTime="360" weightPoint="1" /> <!-- Charged Spirit -->
-				<npc id="25526" respawnTime="360" weightPoint="1" /> <!-- Charged Spirit -->
+				<npc id="25525" count="2" respawnTime="360" weightPoint="1" /> <!-- Flame Spirit -->
+				<npc id="25526" count="2" respawnTime="360" weightPoint="1" /> <!-- Charged Spirit -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="RangeDDMagic_a" id="4178" level="8" /> <!-- BOSS Flamestrike -->
@@ -1200,10 +1186,8 @@
 			<param name="Party_Loyalty" value="1" />
 			<param name="Party_OneShot" value="10" />
 			<minions name="Privates">
-				<npc id="25529" respawnTime="240" weightPoint="1" /> <!-- Garden Guard -->
-				<npc id="25530" respawnTime="150" weightPoint="1" /> <!-- Garden Guard -->
-				<npc id="25530" respawnTime="180" weightPoint="1" /> <!-- Garden Guard -->
-				<npc id="25530" respawnTime="180" weightPoint="1" /> <!-- Garden Guard -->
+				<npc id="25529" count="1" respawnTime="240" weightPoint="1" /> <!-- Garden Guard -->
+				<npc id="25530" count="3" respawnTime="150" weightPoint="1" /> <!-- Garden Guard -->
 			</minions>
 			<param name="Skill01_Probablity" value="300" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -2325,10 +2309,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25547" respawnTime="360" weightPoint="1" /> <!-- Rhianna's Escort -->
-				<npc id="25547" respawnTime="360" weightPoint="1" /> <!-- Rhianna's Escort -->
-				<npc id="25548" respawnTime="360" weightPoint="1" /> <!-- Rhianna's Healer -->
-				<npc id="25548" respawnTime="360" weightPoint="1" /> <!-- Rhianna's Healer -->
+				<npc id="25547" count="2" respawnTime="360" weightPoint="1" /> <!-- Rhianna's Escort -->
+				<npc id="25548" count="2" respawnTime="360" weightPoint="1" /> <!-- Rhianna's Healer -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<param name="CouldDespawn" value="1" />
@@ -2485,10 +2467,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25550" respawnTime="360" weightPoint="1" /> <!-- Tesla's Apprentice -->
-				<npc id="25550" respawnTime="360" weightPoint="1" /> <!-- Tesla's Apprentice -->
-				<npc id="25550" respawnTime="360" weightPoint="1" /> <!-- Tesla's Apprentice -->
-				<npc id="25551" respawnTime="360" weightPoint="1" /> <!-- Tesla's Herald -->
+				<npc id="25550" count="3" respawnTime="360" weightPoint="1" /> <!-- Tesla's Apprentice -->
+				<npc id="25551" count="1" respawnTime="360" weightPoint="1" /> <!-- Tesla's Herald -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -2798,11 +2778,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25555" respawnTime="360" weightPoint="1" /> <!-- Brutus' Right Hand -->
-				<npc id="25556" respawnTime="360" weightPoint="1" /> <!-- Brutus' Left Hand -->
-				<npc id="25556" respawnTime="360" weightPoint="1" /> <!-- Brutus' Left Hand -->
-				<npc id="25556" respawnTime="360" weightPoint="1" /> <!-- Brutus' Left Hand -->
-				<npc id="25556" respawnTime="360" weightPoint="1" /> <!-- Brutus' Left Hand -->
+				<npc id="25555" count="1" respawnTime="360" weightPoint="1" /> <!-- Brutus' Right Hand -->
+				<npc id="25556" count="4" respawnTime="360" weightPoint="1" /> <!-- Brutus' Left Hand -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -2965,10 +2942,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25558" respawnTime="360" weightPoint="1" /> <!-- Karankawa's Root -->
-				<npc id="25558" respawnTime="360" weightPoint="1" /> <!-- Karankawa's Root -->
-				<npc id="25558" respawnTime="360" weightPoint="1" /> <!-- Karankawa's Root -->
-				<npc id="25559" respawnTime="360" weightPoint="1" /> <!-- Karankawa's Blossom -->
+				<npc id="25558" count="3" respawnTime="360" weightPoint="1" /> <!-- Karankawa's Root -->
+				<npc id="25559" count="1" respawnTime="360" weightPoint="1" /> <!-- Karankawa's Blossom -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="CouldDespawn" value="1" />
@@ -3126,10 +3101,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25561" respawnTime="360" weightPoint="1" /> <!-- Sargon's Attendant -->
-				<npc id="25561" respawnTime="360" weightPoint="1" /> <!-- Sargon's Attendant -->
-				<npc id="25562" respawnTime="360" weightPoint="1" /> <!-- Sargon's Squire -->
-				<npc id="25562" respawnTime="360" weightPoint="1" /> <!-- Sargon's Squire -->
+				<npc id="25561" count="2" respawnTime="360" weightPoint="1" /> <!-- Sargon's Attendant -->
+				<npc id="25562" count="2" respawnTime="360" weightPoint="1" /> <!-- Sargon's Squire -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -3289,11 +3262,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25564" respawnTime="360" weightPoint="1" /> <!-- Atrielle's Follower -->
-				<npc id="25565" respawnTime="360" weightPoint="1" /> <!-- Atrielle's Minion -->
-				<npc id="25565" respawnTime="360" weightPoint="1" /> <!-- Atrielle's Minion -->
-				<npc id="25565" respawnTime="360" weightPoint="1" /> <!-- Atrielle's Minion -->
-				<npc id="25565" respawnTime="360" weightPoint="1" /> <!-- Atrielle's Minion -->
+				<npc id="25564" count="1" respawnTime="360" weightPoint="1" /> <!-- Atrielle's Follower -->
+				<npc id="25565" count="4" respawnTime="360" weightPoint="1" /> <!-- Atrielle's Minion -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -3458,10 +3428,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25567" respawnTime="360" weightPoint="1" /> <!-- Nagen's Cohort -->
-				<npc id="25567" respawnTime="360" weightPoint="1" /> <!-- Nagen's Cohort -->
-				<npc id="25567" respawnTime="360" weightPoint="1" /> <!-- Nagen's Cohort -->
-				<npc id="25568" respawnTime="360" weightPoint="1" /> <!-- Nagen's Friend -->
+				<npc id="25567" count="3" respawnTime="360" weightPoint="1" /> <!-- Nagen's Cohort -->
+				<npc id="25568" count="1" respawnTime="360" weightPoint="1" /> <!-- Nagen's Friend -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="doSummonNPC" value="1" />
@@ -3633,11 +3601,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25570" respawnTime="360" weightPoint="1" /> <!-- Jax's Vanguard -->
-				<npc id="25570" respawnTime="360" weightPoint="1" /> <!-- Jax's Vanguard -->
-				<npc id="25570" respawnTime="360" weightPoint="1" /> <!-- Jax's Vanguard -->
-				<npc id="25571" respawnTime="360" weightPoint="1" /> <!-- Jax's Raider -->
-				<npc id="25571" respawnTime="360" weightPoint="1" /> <!-- Jax's Raider -->
+				<npc id="25570" count="3" respawnTime="360" weightPoint="1" /> <!-- Jax's Vanguard -->
+				<npc id="25571" count="2" respawnTime="360" weightPoint="1" /> <!-- Jax's Raider -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<param name="CouldDespawn" value="1" />
@@ -3803,10 +3768,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25573" respawnTime="360" weightPoint="1" /> <!-- Hager's Henchman -->
-				<npc id="25573" respawnTime="360" weightPoint="1" /> <!-- Hager's Henchman -->
-				<npc id="25574" respawnTime="360" weightPoint="1" /> <!-- Hager's Bodyguard -->
-				<npc id="25574" respawnTime="360" weightPoint="1" /> <!-- Hager's Bodyguard -->
+				<npc id="25573" count="2" respawnTime="360" weightPoint="1" /> <!-- Hager's Henchman -->
+				<npc id="25574" count="2" respawnTime="360" weightPoint="1" /> <!-- Hager's Bodyguard -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<param name="CouldDespawn" value="1" />
@@ -3962,11 +3925,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25576" respawnTime="360" weightPoint="1" /> <!-- Rango's Iris -->
-				<npc id="25576" respawnTime="360" weightPoint="1" /> <!-- Rango's Iris -->
-				<npc id="25576" respawnTime="360" weightPoint="1" /> <!-- Rango's Iris -->
-				<npc id="25576" respawnTime="360" weightPoint="1" /> <!-- Rango's Iris -->
-				<npc id="25577" respawnTime="360" weightPoint="1" /> <!-- Rango's Lens -->
+				<npc id="25576" count="4" respawnTime="360" weightPoint="1" /> <!-- Rango's Iris -->
+				<npc id="25577" count="1" respawnTime="360" weightPoint="1" /> <!-- Rango's Lens -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="CouldDespawn" value="1" />
@@ -4193,11 +4153,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25580" respawnTime="360" weightPoint="1" /> <!-- Helsing's Guard -->
-				<npc id="25580" respawnTime="360" weightPoint="1" /> <!-- Helsing's Guard -->
-				<npc id="25580" respawnTime="360" weightPoint="1" /> <!-- Helsing's Guard -->
-				<npc id="25580" respawnTime="360" weightPoint="1" /> <!-- Helsing's Guard -->
-				<npc id="25581" respawnTime="360" weightPoint="1" /> <!-- Helsing's Assassin -->
+				<npc id="25580" count="4" respawnTime="360" weightPoint="1" /> <!-- Helsing's Guard -->
+				<npc id="25581" count="1" respawnTime="360" weightPoint="1" /> <!-- Helsing's Assassin -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -4365,10 +4322,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25583" respawnTime="360" weightPoint="1" /> <!-- Gillien's Daughter -->
-				<npc id="25583" respawnTime="360" weightPoint="1" /> <!-- Gillien's Daughter -->
-				<npc id="25584" respawnTime="360" weightPoint="1" /> <!-- Gillien's Attendant -->
-				<npc id="25584" respawnTime="360" weightPoint="1" /> <!-- Gillien's Attendant -->
+				<npc id="25583" count="2" respawnTime="360" weightPoint="1" /> <!-- Gillien's Daughter -->
+				<npc id="25584" count="2" respawnTime="360" weightPoint="1" /> <!-- Gillien's Attendant -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -4523,10 +4478,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25586" respawnTime="360" weightPoint="1" /> <!-- Medici's Sister -->
-				<npc id="25586" respawnTime="360" weightPoint="1" /> <!-- Medici's Sister -->
-				<npc id="25586" respawnTime="360" weightPoint="1" /> <!-- Medici's Sister -->
-				<npc id="25587" respawnTime="360" weightPoint="1" /> <!-- Medici's Brother -->
+				<npc id="25586" count="3" respawnTime="360" weightPoint="1" /> <!-- Medici's Sister -->
+				<npc id="25587" count="1" respawnTime="360" weightPoint="1" /> <!-- Medici's Brother -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -4768,11 +4721,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25590" respawnTime="360" weightPoint="1" /> <!-- Brand's Chamberlain -->
-				<npc id="25591" respawnTime="360" weightPoint="1" /> <!-- Brand's Servant -->
-				<npc id="25591" respawnTime="360" weightPoint="1" /> <!-- Brand's Servant -->
-				<npc id="25591" respawnTime="360" weightPoint="1" /> <!-- Brand's Servant -->
-				<npc id="25591" respawnTime="360" weightPoint="1" /> <!-- Brand's Servant -->
+				<npc id="25590" count="1" respawnTime="360" weightPoint="1" /> <!-- Brand's Chamberlain -->
+				<npc id="25591" count="4" respawnTime="360" weightPoint="1" /> <!-- Brand's Servant -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -5010,11 +4960,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25594" respawnTime="360" weightPoint="1" /> <!-- Gerg's Follower -->
-				<npc id="25594" respawnTime="360" weightPoint="1" /> <!-- Gerg's Follower -->
-				<npc id="25594" respawnTime="360" weightPoint="1" /> <!-- Gerg's Follower -->
-				<npc id="25595" respawnTime="360" weightPoint="1" /> <!-- Gerg's Henchman -->
-				<npc id="25595" respawnTime="360" weightPoint="1" /> <!-- Gerg's Henchman -->
+				<npc id="25594" count="3" respawnTime="360" weightPoint="1" /> <!-- Gerg's Follower -->
+				<npc id="25595" count="2" respawnTime="360" weightPoint="1" /> <!-- Gerg's Henchman -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
