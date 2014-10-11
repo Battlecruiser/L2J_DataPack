@@ -84,9 +84,9 @@ public final class Venom extends AbstractNpcAI
 	private static final SkillHolder RANGE_TELEPORT = new SkillHolder(4996, 1);
 	
 	private L2Npc _venom;
-	private final L2Npc _massymore;
+	private L2Npc _massymore;
 	
-	private final Location _loc;
+	private Location _loc;
 	
 	private boolean _aggroMode = false;
 	private boolean _prisonIsOpen = false;
@@ -113,18 +113,6 @@ public final class Venom extends AbstractNpcAI
 		addAggroRangeEnterId(VENOM);
 		setCastleSiegeStartId(this::onSiegeStart, CASTLE);
 		setCastleSiegeFinishId(this::onSiegeFinish, CASTLE);
-		
-		_massymore = SpawnTable.getInstance().getFirstSpawn(DUNGEON_KEEPER).getLastSpawn();
-		_venom = SpawnTable.getInstance().getFirstSpawn(VENOM).getLastSpawn();
-		_loc = _venom.getLocation();
-		_venom.disableSkill(VENOM_TELEPORT.getSkill(), -1);
-		_venom.disableSkill(RANGE_TELEPORT.getSkill(), -1);
-		_venom.doRevive();
-		((L2Attackable) _venom).setCanReturnToSpawnPoint(false);
-		if (checkStatus() == DEAD)
-		{
-			_venom.deleteMe();
-		}
 		
 		final long currentTime = System.currentTimeMillis();
 		final long startSiegeDate = CastleManager.getInstance().getCastleById(CASTLE).getSiegeDate().getTimeInMillis();
@@ -275,6 +263,21 @@ public final class Venom extends AbstractNpcAI
 	{
 		if (!npc.isTeleporting())
 		{
+			if ((_massymore == null) || (_venom == null))
+			{
+				_massymore = SpawnTable.getInstance().getFirstSpawn(DUNGEON_KEEPER).getLastSpawn();
+				_venom = SpawnTable.getInstance().getFirstSpawn(VENOM).getLastSpawn();
+				
+				_loc = _venom.getLocation();
+				_venom.disableSkill(VENOM_TELEPORT.getSkill(), -1);
+				_venom.disableSkill(RANGE_TELEPORT.getSkill(), -1);
+				_venom.doRevive();
+				((L2Attackable) _venom).setCanReturnToSpawnPoint(false);
+				if (checkStatus() == DEAD)
+				{
+					_venom.deleteMe();
+				}
+			}
 			if (checkStatus() == DEAD)
 			{
 				npc.deleteMe();

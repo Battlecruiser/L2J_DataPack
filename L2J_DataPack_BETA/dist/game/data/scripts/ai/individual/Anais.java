@@ -56,13 +56,6 @@ public final class Anais extends AbstractNpcAI
 		super(Anais.class.getSimpleName(), "ai/individual");
 		addAttackId(ANAIS);
 		addKillId(GRAIL_WARD);
-		
-		int i = 0;
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(DIVINE_BURNER))
-		{
-			_divineBurners[i++] = spawn.getLastSpawn();
-		}
-		_anais = SpawnTable.getInstance().getFirstSpawn(ANAIS).getLastSpawn();
 	}
 	
 	private void burnerOnAttack(int pot)
@@ -167,6 +160,25 @@ public final class Anais extends AbstractNpcAI
 			burnerOnAttack(3);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
+	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.quest.Quest#onSpawn(com.l2jserver.gameserver.model.actor.L2Npc)
+	 */
+	@Override
+	public String onSpawn(L2Npc npc)
+	{
+		if (!npc.isTeleporting())
+		{
+			int i = 0;
+			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(DIVINE_BURNER))
+			{
+				_divineBurners[i++] = spawn.getLastSpawn();
+			}
+			_anais = SpawnTable.getInstance().getFirstSpawn(ANAIS).getLastSpawn();
+		}
+		return super.onSpawn(npc);
 	}
 	
 	@Override

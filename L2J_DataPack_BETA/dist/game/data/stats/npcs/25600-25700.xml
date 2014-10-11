@@ -8,8 +8,7 @@
 			<param name="Party_Type" value="2" />
 			<param name="OutOfTerritory" value="1" />
 			<minions name="Privates">
-				<npc id="25596" respawnTime="0" weightPoint="1" /> <!-- Ocular Servitor -->
-				<npc id="25596" respawnTime="0" weightPoint="1" /> <!-- Ocular Servitor -->
+				<npc id="25596" count="2" respawnTime="0" weightPoint="1" /> <!-- Ocular Servitor -->
 			</minions>
 			<param name="Skill01_Probablity" value="1000" />
 			<param name="Skill02_Probablity" value="1000" />
@@ -95,8 +94,7 @@
 			<param name="Party_Type" value="2" />
 			<param name="OutOfTerritory" value="1" />
 			<minions name="Privates">
-				<npc id="25596" respawnTime="0" weightPoint="1" /> <!-- Ocular Servitor -->
-				<npc id="25596" respawnTime="0" weightPoint="1" /> <!-- Ocular Servitor -->
+				<npc id="25596" count="2" respawnTime="0" weightPoint="1" /> <!-- Ocular Servitor -->
 			</minions>
 			<param name="Skill01_Probablity" value="1000" />
 			<param name="Skill02_Probablity" value="1000" />
@@ -183,8 +181,7 @@
 			<param name="Party_Type" value="2" />
 			<param name="OutOfTerritory" value="1" />
 			<minions name="Privates">
-				<npc id="25596" respawnTime="0" weightPoint="1" /> <!-- Ocular Servitor -->
-				<npc id="25596" respawnTime="0" weightPoint="1" /> <!-- Ocular Servitor -->
+				<npc id="25596" count="2" respawnTime="0" weightPoint="1" /> <!-- Ocular Servitor -->
 			</minions>
 			<param name="Skill01_Check_Dist" value="1" />
 			<param name="Skill01_Dist_Min" value="200" />
@@ -4735,10 +4732,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25673" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
-				<npc id="25672" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
-				<npc id="25672" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
-				<npc id="25672" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
+				<npc id="25673" count="1" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
+				<npc id="25672" count="3" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="RangeHold_a" id="4197" level="9" /> <!-- Hold -->
@@ -4898,11 +4893,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25675" respawnTime="360" weightPoint="1" /> <!-- Guard of Gwindorr -->
-				<npc id="25675" respawnTime="360" weightPoint="1" /> <!-- Guard of Gwindorr -->
-				<npc id="25675" respawnTime="360" weightPoint="1" /> <!-- Guard of Gwindorr -->
-				<npc id="25676" respawnTime="360" weightPoint="1" /> <!-- Follower of Gwindorr -->
-				<npc id="25676" respawnTime="360" weightPoint="1" /> <!-- Follower of Gwindorr -->
+				<npc id="25675" count="3" respawnTime="360" weightPoint="1" /> <!-- Guard of Gwindorr -->
+				<npc id="25676" count="2" respawnTime="360" weightPoint="1" /> <!-- Follower of Gwindorr -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="PhysicalSpecial_b" id="4743" level="9" /> <!-- BOSS Strike -->
@@ -5051,10 +5043,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25678" respawnTime="360" weightPoint="1" /> <!-- Sprite of Gildor -->
-				<npc id="25678" respawnTime="360" weightPoint="1" /> <!-- Sprite of Gildor -->
-				<npc id="25678" respawnTime="360" weightPoint="1" /> <!-- Sprite of Gildor -->
-				<npc id="25679" respawnTime="360" weightPoint="1" /> <!-- Guardian of Gildor -->
+				<npc id="25678" count="3" respawnTime="360" weightPoint="1" /> <!-- Sprite of Gildor -->
+				<npc id="25679" count="1" respawnTime="360" weightPoint="1" /> <!-- Guardian of Gildor -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="RangeHold_a" id="4197" level="9" /> <!-- Hold -->
@@ -5297,9 +5287,7 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25682" respawnTime="360" weightPoint="1" /> <!-- Cursed Life -->
-				<npc id="25682" respawnTime="360" weightPoint="1" /> <!-- Cursed Life -->
-				<npc id="25682" respawnTime="360" weightPoint="1" /> <!-- Cursed Life -->
+				<npc id="25682" count="3" respawnTime="360" weightPoint="1" /> <!-- Cursed Life -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="DDMagic_a" id="4196" level="8" /> <!-- Decrease Speed -->
@@ -5457,9 +5445,7 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25685" respawnTime="360" weightPoint="1" /> <!-- Utenus's Wizard -->
-				<npc id="25685" respawnTime="360" weightPoint="1" /> <!-- Utenus's Wizard -->
-				<npc id="25685" respawnTime="360" weightPoint="1" /> <!-- Utenus's Wizard -->
+				<npc id="25685" count="3" respawnTime="360" weightPoint="1" /> <!-- Utenus's Wizard -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="RangeHold_a" id="4197" level="8" /> <!-- Hold -->
@@ -5629,9 +5615,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25688" respawnTime="360" weightPoint="1" /> <!-- Hekaton Cottus -->
-				<npc id="25689" respawnTime="360" weightPoint="1" /> <!-- Hekaton Chires -->
-				<npc id="25689" respawnTime="360" weightPoint="1" /> <!-- Hekaton Chires -->
+				<npc id="25688" count="1" respawnTime="360" weightPoint="1" /> <!-- Hekaton Cottus -->
+				<npc id="25689" count="2" respawnTime="360" weightPoint="1" /> <!-- Hekaton Chires -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="DDMagic_a" id="4195" level="8" /> <!-- BOSS Twister -->

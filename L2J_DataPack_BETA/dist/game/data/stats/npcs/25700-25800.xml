@@ -199,17 +199,10 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25704" respawnTime="420" weightPoint="1" /> <!-- Gigantic Golem Subordinate -->
-				<npc id="25704" respawnTime="420" weightPoint="1" /> <!-- Gigantic Golem Subordinate -->
-				<npc id="25704" respawnTime="420" weightPoint="1" /> <!-- Gigantic Golem Subordinate -->
+				<npc id="25704" count="3" respawnTime="420" weightPoint="1" /> <!-- Gigantic Golem Subordinate -->
 			</minions>
 			<minions name="Privates2">
-				<npc id="25705" respawnTime="360" weightPoint="1" /> <!-- Gigantic Boom Golem -->
-				<npc id="25705" respawnTime="360" weightPoint="1" /> <!-- Gigantic Boom Golem -->
-				<npc id="25705" respawnTime="360" weightPoint="1" /> <!-- Gigantic Boom Golem -->
-				<npc id="25705" respawnTime="360" weightPoint="1" /> <!-- Gigantic Boom Golem -->
-				<npc id="25705" respawnTime="360" weightPoint="1" /> <!-- Gigantic Boom Golem -->
-				<npc id="25705" respawnTime="360" weightPoint="1" /> <!-- Gigantic Boom Golem -->
+				<npc id="25705" count="6" respawnTime="360" weightPoint="1" /> <!-- Gigantic Boom Golem -->
 			</minions>
 			<param name="Party_Type" value="2" />
 			<param name="Party_Loyalty" value="2" />
@@ -578,10 +571,8 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25711" respawnTime="150" weightPoint="1" /> <!-- Lost Guard -->
-				<npc id="25711" respawnTime="150" weightPoint="1" /> <!-- Lost Guard -->
-				<npc id="25712" respawnTime="150" weightPoint="1" /> <!-- Lost Assistant Guard -->
-				<npc id="25712" respawnTime="150" weightPoint="1" /> <!-- Lost Assistant Guard -->
+				<npc id="25711" count="2" respawnTime="150" weightPoint="1" /> <!-- Lost Guard -->
+				<npc id="25712" count="2" respawnTime="150" weightPoint="1" /> <!-- Lost Assistant Guard -->
 			</minions>
 			<param name="PCCafe_Reward" value="13002" /> <!-- Essence of Kamaloka -->
 			<param name="PCCafe_Number" value="19" />
@@ -2062,6 +2053,15 @@
 	</npc>
 	<npc id="25735" level="23" type="L2RaidBoss" name="Greyclaw Kutus" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25736" count="3" respawnTime="360" weightPoint="1" /> <!-- Kutus' Guard -->
+				<npc id="25737" count="1" respawnTime="360" weightPoint="1" /> <!-- Kutus' Pawn -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="RangeHold_a" id="4197" level="2" /> <!-- Hold -->
+		</parameters>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="67" lhand="633" /> <!-- rhand: Orcish Sword lhand: Zubei's Shield -->
 		<acquire expRate="1" sp="69902" />
@@ -2186,6 +2186,15 @@
 	</npc>
 	<npc id="25738" level="23" type="L2RaidBoss" name="Lead Tracker Sharuk" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25739" count="2" respawnTime="360" weightPoint="1" /> <!-- Sharuk's Minion -->
+				<npc id="25740" count="3" respawnTime="360" weightPoint="1" /> <!-- Sharuk's Marksman -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="PhysicalSpecial_b" id="4743" level="2" /> <!-- BOSS Strike -->
+		</parameters>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" /> <!-- rhand: Trident -->
 		<acquire expRate="1" sp="69902" />
@@ -2317,6 +2326,15 @@
 	</npc>
 	<npc id="25741" level="21" type="L2RaidBoss" name="Sukar Wererat Chief" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25742" count="2" respawnTime="360" weightPoint="1" /> <!-- Sukar Wererat Guard -->
+				<npc id="25743" count="1" respawnTime="360" weightPoint="1" /> <!-- Sukar Wererat Priest -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="RangeDDMagic_a" id="4178" level="2" /> <!-- BOSS Flamestrike -->
+		</parameters>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="216" /> <!-- rhand: Dirk -->
 		<acquire expRate="2" sp="60367" />
@@ -2436,6 +2454,15 @@
 	</npc>
 	<npc id="25744" level="25" type="L2RaidBoss" name="Ikuntai" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25745" count="2" respawnTime="360" weightPoint="1" /> <!-- Ikuntai's Servitor -->
+				<npc id="25746" count="2" respawnTime="360" weightPoint="1" /> <!-- Ikuntai's Pawn -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="RangeDDMagic_a" id="4178" level="2" /> <!-- BOSS Flamestrike -->
+		</parameters>
+		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="150" /> <!-- rhand: Elemental Sword -->
 		<acquire sp="122871" />
@@ -2564,7 +2591,14 @@
 	</npc>
 	<npc id="25747" level="25" type="L2RaidBoss" name="Zombie Lord Crowl" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
-		<sex>MALE</sex>
+		<parameters>
+			<minions name="Privates">
+				<npc id="25748" count="3" respawnTime="360" weightPoint="1" /> <!-- Evil Spirit Archer -->
+				<npc id="25749" count="2" respawnTime="360" weightPoint="1" /> <!-- Evil Spirit Warrior -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="PhysicalSpecial_b" id="4741" level="2" /> <!-- BOSS Strike -->
+		</parameters>
 		<acquire expRate="1" sp="79280" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="43316.308536" hpRegen="18.438531" mp="259.2" mpRegen="1.5" />
@@ -2692,6 +2726,15 @@
 	</npc>
 	<npc id="25750" level="20" type="L2RaidBoss" name="Zombie Lord Ferkel" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25751" count="2" respawnTime="360" weightPoint="1" /> <!-- Ferkel's Warrior -->
+				<npc id="25752" count="1" respawnTime="360" weightPoint="1" /> <!-- Ferkel's Priest -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="RangeDDMagic_a" id="4178" level="2" /> <!-- BOSS Flamestrike -->
+		</parameters>
+		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire expRate="3" sp="59634" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -2825,6 +2868,14 @@
 	</npc>
 	<npc id="25753" level="35" type="L2RaidBoss" name="Guillotine Warden" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="SelfRangeCancel_a" id="4177" level="4" /> <!-- BOSS Cancel Magic -->
+			<skill name="SelfBuff_a" id="4175" level="4" /> <!-- BOSS Haste -->
+			<skill name="PhysicalSpecial_a" id="4726" level="4" /> <!-- Stun -->
+			<skill name="SelfRangePhysicalSpecial_a" id="4736" level="4" /> <!-- BOSS Spinning Slash -->
+		</parameters>
+		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="96" /> <!-- rhand: Scythe -->
 		<acquire sp="144137" />
@@ -2891,6 +2942,17 @@
 	</npc>
 	<npc id="25754" level="35" type="L2RaidBoss" name="Fire Lord Shadar" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25755" count="1" respawnTime="360" weightPoint="1" /> <!-- Sword of Shadar -->
+				<npc id="25756" count="4" respawnTime="360" weightPoint="1" /> <!-- Whip of Shadar -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="DDMagic_a" id="4192" level="3" /> <!-- BOSS HP Drain -->
+			<skill name="SelfRangeDebuff_a" id="4182" level="3" /> <!-- Poison -->
+			<skill name="SelfRangeDebuffAnother_a" id="4186" level="3" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire sp="144137" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -3015,6 +3077,15 @@
 	</npc>
 	<npc id="25757" level="35" type="L2RaidBoss" name="Soul Collector Acheron" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25758" count="3" respawnTime="360" weightPoint="1" /> <!-- Soul Slasher -->
+				<npc id="25759" count="1" respawnTime="360" weightPoint="1" /> <!-- Soul Strainer -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="RangeHold_a" id="4197" level="3" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="192" /> <!-- rhand: Crystal Staff -->
 		<acquire sp="144137" />
@@ -3149,6 +3220,15 @@
 	</npc>
 	<npc id="25760" level="60" type="L2RaidBoss" name="Lord Ishka" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25761" count="1" respawnTime="360" weightPoint="1" /> <!-- Ishka's Elite Officer -->
+				<npc id="25762" count="2" respawnTime="360" weightPoint="1" /> <!-- Ishka's Elite Soldier -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="RangeHold_a" id="4197" level="6" /> <!-- Hold -->
+		</parameters>
+		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
 		<acquire sp="394692" />
@@ -3292,6 +3372,15 @@
 	</npc>
 	<npc id="25763" level="59" type="L2RaidBoss" name="Demon Kuri" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25764" count="2" respawnTime="360" weightPoint="1" /> <!-- Kuri's Wife -->
+				<npc id="25765" count="2" respawnTime="360" weightPoint="1" /> <!-- Devil Blader of Chaos -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="RangeDDMagic_a" id="4178" level="5" /> <!-- BOSS Flamestrike -->
+		</parameters>
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire sp="381459" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -3427,6 +3516,14 @@
 	</npc>
 	<npc id="25766" level="60" type="L2RaidBoss" name="Ancient Drake" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="SelfRangeCancel_a" id="4177" level="6" /> <!-- BOSS Cancel Magic -->
+			<skill name="SelfBuff_a" id="4175" level="6" /> <!-- BOSS Haste -->
+			<skill name="PhysicalSpecial_a" id="4731" level="6" /> <!-- BOSS Mortal Blow -->
+			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="6" /> <!-- Stun -->
+		</parameters>
+		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire sp="394692" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -3488,6 +3585,15 @@
 	</npc>
 	<npc id="25767" level="50" type="L2RaidBoss" name="Carnage Lord Gato" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25768" count="3" respawnTime="360" weightPoint="1" /> <!-- Gato's Marksman -->
+				<npc id="25769" count="2" respawnTime="360" weightPoint="1" /> <!-- Gato's Champion -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="PhysicalSpecial_b" id="4741" level="5" /> <!-- BOSS Strike -->
+		</parameters>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="71" /> <!-- rhand: Flamberge -->
 		<acquire sp="281312" />
@@ -3615,6 +3721,15 @@
 	</npc>
 	<npc id="25770" level="49" type="L2RaidBoss" name="Ketra Commander Atis" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25771" count="3" respawnTime="360" weightPoint="1" /> <!-- Ketra Marksman -->
+				<npc id="25772" count="2" respawnTime="360" weightPoint="1" /> <!-- Ketra Raider -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="PhysicalSpecial_b" id="4746" level="4" /> <!-- Stun -->
+		</parameters>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="84" /> <!-- rhand: Homunkulus's Sword -->
 		<acquire sp="284981" />
@@ -3740,6 +3855,15 @@
 	</npc>
 	<npc id="25773" level="45" type="L2RaidBoss" name="Beacon of Blue Sky" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25774" count="3" respawnTime="360" weightPoint="1" /> <!-- Beacon's Shooter -->
+				<npc id="25775" count="2" respawnTime="360" weightPoint="1" /> <!-- Beacon's Warrior -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="PhysicalSpecial_b" id="4742" level="4" /> <!-- BOSS Strike -->
+		</parameters>
+		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire sp="229987" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -3870,6 +3994,17 @@
 	</npc>
 	<npc id="25776" level="43" type="L2RaidBoss" name="Earth Protector Panathen" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25777" count="1" respawnTime="360" weightPoint="1" /> <!-- Panathen's Knight -->
+				<npc id="25778" count="4" respawnTime="360" weightPoint="1" /> <!-- Panathen's Protectors -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="DDMagic_a" id="4191" level="4" /> <!-- BOSS Windstrike -->
+			<skill name="SelfRangeDebuff_a" id="4183" level="4" /> <!-- Decrease P. Atk. -->
+			<skill name="SelfRangeDebuffAnother_a" id="4189" level="4" /> <!-- Paralysis -->
+		</parameters>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="183" /> <!-- rhand: Mystic Staff -->
 		<acquire sp="206038" />
@@ -3990,6 +4125,15 @@
 	</npc>
 	<npc id="25779" level="25" type="L2RaidBoss" name="Betrayer of Urutu Freki" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25780" count="2" respawnTime="360" weightPoint="1" /> <!-- Freki's Vampire Bat -->
+				<npc id="25781" count="1" respawnTime="360" weightPoint="1" /> <!-- Freki's Wild Bear -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="RangeHold_a" id="4197" level="2" /> <!-- Hold -->
+		</parameters>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire expRate="1" sp="79280" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -4104,6 +4248,14 @@
 	</npc>
 	<npc id="25782" level="39" type="L2RaidBoss" name="Nellis' Vengeful Spirit" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25783" count="3" respawnTime="360" weightPoint="1" /> <!-- Nellis' Follower -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="RangeHold_a" id="4197" level="3" /> <!-- Hold -->
+		</parameters>
+		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8532" /> <!-- rhand: For Monsters Only (Spinebone Sword) -->
 		<acquire sp="173127" />
@@ -4213,6 +4365,15 @@
 	</npc>
 	<npc id="25784" level="37" type="L2RaidBoss" name="Rayito the Looter" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25785" count="1" respawnTime="360" weightPoint="1" /> <!-- Rayito's Henchman -->
+				<npc id="25786" count="3" respawnTime="360" weightPoint="1" /> <!-- Rayito's Henchman -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="RangeHold_a" id="4197" level="3" /> <!-- Hold -->
+		</parameters>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="67" lhand="633" /> <!-- rhand: Orcish Sword lhand: Zubei's Shield -->
 		<acquire sp="153693" />
@@ -4333,6 +4494,15 @@
 	</npc>
 	<npc id="25787" level="80" type="L2RaidBoss" name="Ketra's Hero Hekaton" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25788" count="3" respawnTime="360" weightPoint="1" /> <!-- Scout of Hekaton -->
+				<npc id="25789" count="2" respawnTime="360" weightPoint="1" /> <!-- Servant of Hekaton -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="PhysicalSpecial_b" id="4746" level="9" /> <!-- Stun -->
+		</parameters>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- rhand: Monster Only(Ketra Orc Chieftain) -->
 		<acquire sp="557272" />
@@ -4449,6 +4619,17 @@
 	</npc>
 	<npc id="25790" level="80" type="L2RaidBoss" name="Varka's Hero Shadith" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25791" count="1" respawnTime="360" weightPoint="1" /> <!-- Shadith's Royal Guard Captain -->
+				<npc id="25792" count="4" respawnTime="360" weightPoint="1" /> <!-- Shadith's Sentinel -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="DDMagic_a" id="4195" level="9" /> <!-- BOSS Twister -->
+			<skill name="SelfRangeDebuff_a" id="4184" level="9" /> <!-- Decrease Atk. Spd. -->
+			<skill name="SelfRangeDebuffAnother_a" id="4188" level="9" /> <!-- Bleed -->
+		</parameters>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- rhand: Monster Only(Silenos Shaman) -->
 		<acquire sp="557272" />
@@ -4633,6 +4814,17 @@
 	</npc>
 	<npc id="25794" level="75" type="L2RaidBoss" name="Kernon" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25795" count="1" respawnTime="360" weightPoint="1" /> <!-- Taliadon -->
+				<npc id="25796" count="4" respawnTime="360" weightPoint="1" /> <!-- Vemsk -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="DDMagic_a" id="4195" level="8" /> <!-- BOSS Twister -->
+			<skill name="SelfRangeDebuff_a" id="4182" level="8" /> <!-- Poison -->
+			<skill name="SelfRangeDebuffAnother_a" id="4190" level="8" /> <!-- Decrease MP -->
+		</parameters>
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire sp="864099" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -4771,6 +4963,17 @@
 	</npc>
 	<npc id="25797" level="70" type="L2RaidBoss" name="Meanas Anor" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25798" count="3" respawnTime="360" weightPoint="1" /> <!-- Wyvern of Marsh -->
+				<npc id="25799" count="1" respawnTime="360" weightPoint="1" /> <!-- Succubus of Marsh -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="DDMagic_a" id="4195" level="7" /> <!-- BOSS Twister -->
+			<skill name="SelfRangeDebuff_a" id="4184" level="7" /> <!-- Decrease Atk. Spd. -->
+			<skill name="SelfRangeDebuffAnother_a" id="4188" level="7" /> <!-- Bleed -->
+		</parameters>
+		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire sp="802604" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
