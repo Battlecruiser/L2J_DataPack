@@ -263,7 +263,7 @@ public final class Q00415_PathOfTheOrcMonk extends Quest
 				}
 				case 1:
 				{
-					if ((npc.getVariables().getInt("Q00415__last_attacker") != attacker.getObjectId()) || !checkWeapon(attacker))
+					if ((npc.getVariables().getInt("Q00415_last_attacker") != attacker.getObjectId()) || !checkWeapon(attacker))
 					{
 						npc.setScriptValue(2);
 					}
