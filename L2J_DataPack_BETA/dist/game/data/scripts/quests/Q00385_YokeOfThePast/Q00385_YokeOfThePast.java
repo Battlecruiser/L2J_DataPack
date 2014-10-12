@@ -44,7 +44,7 @@ public final class Q00385_YokeOfThePast extends Quest
 	};
 	// @formatter:on
 	// Item
-	private static final int ANCIENT_SCROLL = 5902;
+	private static final int SCROLL_OF_ANCIENT_MAGIC = 5902;
 	// Reward
 	private static final int BLANK_SCROLL = 5965;
 	// Monsters
@@ -103,7 +103,7 @@ public final class Q00385_YokeOfThePast extends Quest
 		addStartNpc(ZIGGURATS);
 		addTalkId(ZIGGURATS);
 		addKillId(MONSTER_CHANCES.keySet());
-		registerQuestItems(ANCIENT_SCROLL, BLANK_SCROLL);
+		registerQuestItems(SCROLL_OF_ANCIENT_MAGIC);
 	}
 	
 	@Override
@@ -157,10 +157,10 @@ public final class Q00385_YokeOfThePast extends Quest
 			}
 			case State.STARTED:
 			{
-				if (hasQuestItems(talker, ANCIENT_SCROLL))
+				if (hasQuestItems(talker, SCROLL_OF_ANCIENT_MAGIC))
 				{
-					rewardItems(talker, BLANK_SCROLL, getQuestItemsCount(talker, ANCIENT_SCROLL));
-					takeItems(talker, ANCIENT_SCROLL, -1);
+					rewardItems(talker, BLANK_SCROLL, getQuestItemsCount(talker, SCROLL_OF_ANCIENT_MAGIC));
+					takeItems(talker, SCROLL_OF_ANCIENT_MAGIC, -1);
 					htmltext = "ziggurat-09.html";
 				}
 				else
@@ -179,7 +179,7 @@ public final class Q00385_YokeOfThePast extends Quest
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
 		if (qs != null)
 		{
-			giveItemRandomly(qs.getPlayer(), npc, ANCIENT_SCROLL, 1, 0, MONSTER_CHANCES.get(npc.getId()), true);
+			giveItemRandomly(qs.getPlayer(), npc, SCROLL_OF_ANCIENT_MAGIC, 1, 0, MONSTER_CHANCES.get(npc.getId()), true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
