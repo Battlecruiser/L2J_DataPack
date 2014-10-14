@@ -35,11 +35,12 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.util.Rnd;
 
 /**
+ * Minion Spawn Manager.
  * @author Zealar
  */
 public final class MinionSpawnManager extends AbstractNpcAI
 {
-	static Set<Integer> NPC = new HashSet<>(354);
+	private static final Set<Integer> NPC = new HashSet<>(354);
 	
 	static
 	{
