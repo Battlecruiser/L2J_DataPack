@@ -23,16 +23,12 @@ import java.util.Set;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.holders.MinionHolder;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.util.Rnd;
 
 /**
  * Minion Spawn Manager.
@@ -424,12 +420,9 @@ public final class MinionSpawnManager extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if ((npc instanceof L2MonsterInstance) || (npc instanceof L2RaidBossInstance))
+		if (npc.getTemplate().getParameters().getSet().get("SummonPrivateRate") == null)
 		{
-			if (!npc.getTemplate().getParameters().getSet().containsKey("SummonPrivateRate"))
-			{
-				((L2MonsterInstance) npc).getMinionList().spawnMinions(npc.getTemplate().getParameters().getMinionList("Privates"));
-			}
+			((L2MonsterInstance) npc).getMinionList().spawnMinions(npc.getTemplate().getParameters().getMinionList("Privates"));
 		}
 		return super.onSpawn(npc);
 	}
@@ -442,16 +435,11 @@ public final class MinionSpawnManager extends AbstractNpcAI
 			L2MonsterInstance monster = (L2MonsterInstance) npc;
 			if (!monster.hasMinions())
 			{
-				final int summonPrivateRate = npc.getTemplate().getParameters().getInt("SummonPrivateRate", 0);
-				if (Rnd.get(1, 100) <= summonPrivateRate)
+				if (getRandom(1, 100) <= npc.getTemplate().getParameters().getInt("SummonPrivateRate", 0))
 				{
-					L2NpcTemplate template = NpcData.getInstance().getTemplate(npc.getId());
-					if (template.getParameters().getMinionList("Privates") != null)
+					for (MinionHolder is : npc.getTemplate().getParameters().getMinionList("Privates"))
 					{
-						for (MinionHolder is : template.getParameters().getMinionList("Privates"))
-						{
-							addMinion((L2MonsterInstance) npc, is.getId());
-						}
+						addMinion((L2MonsterInstance) npc, is.getId());
 					}
 					broadcastNpcSay(npc, Say2.NPC_ALL, ON_ATTACK_MSG[getRandom(ON_ATTACK_MSG.length)]);
 				}

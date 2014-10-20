@@ -53,56 +53,65 @@ public final class DrChaos extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("1"))
+		switch (event)
 		{
-			L2Npc machine = null;
-			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(STRANGE_MACHINE))
+			case "1":
 			{
-				if (spawn != null)
+				L2Npc machine = null;
+				for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(STRANGE_MACHINE))
 				{
-					machine = spawn.getLastSpawn();
+					if (spawn != null)
+					{
+						machine = spawn.getLastSpawn();
+					}
 				}
+				if (machine != null)
+				{
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine);
+					machine.broadcastPacket(new SpecialCamera(machine, 1, -200, 15, 10000, 1000, 20000, 0, 0, 0, 0, 0));
+				}
+				else
+				{
+					startQuestTimer("2", 2000, npc, player);
+				}
+				startQuestTimer("3", 10000, npc, player);
+				break;
 			}
-			if (machine != null)
+			case "2":
 			{
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine);
-				machine.broadcastPacket(new SpecialCamera(machine, 1, -200, 15, 10000, 1000, 20000, 0, 0, 0, 0, 0));
+				npc.broadcastSocialAction(3);
+				break;
 			}
-			else
+			case "3":
 			{
-				startQuestTimer("2", 2000, npc, player);
+				npc.broadcastPacket(new SpecialCamera(npc, 1, -150, 10, 3000, 1000, 20000, 0, 0, 0, 0, 0));
+				startQuestTimer("4", 2500, npc, player);
+				break;
 			}
-			startQuestTimer("3", 10000, npc, player);
-		}
-		else if (event.equalsIgnoreCase("2"))
-		{
-			npc.broadcastSocialAction(3);
-		}
-		else if (event.equalsIgnoreCase("3"))
-		{
-			npc.broadcastPacket(new SpecialCamera(npc, 1, -150, 10, 3000, 1000, 20000, 0, 0, 0, 0, 0));
-			startQuestTimer("4", 2500, npc, player);
-		}
-		else if (event.equalsIgnoreCase("4"))
-		{
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(96055, -110759, -3312, 0));
-			startQuestTimer("5", 2000, npc, player);
-		}
-		else if (event.equalsIgnoreCase("5"))
-		{
-			player.teleToLocation(PLAYER_TELEPORT);
-			npc.teleToLocation(NPC_LOCATION);
-			if (!_IsGolemSpawned)
+			case "4":
 			{
-				L2Npc golem = addSpawn(CHAOS_GOLEM, 94640, -112496, -3336, 0, false, 0);
-				_IsGolemSpawned = true;
-				startQuestTimer("6", 1000, golem, player);
-				player.sendPacket(new PlaySound(1, "Rm03_A", 0, 0, 0, 0, 0));
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(96055, -110759, -3312, 0));
+				startQuestTimer("5", 2000, npc, player);
+				break;
 			}
-		}
-		else if (event.equalsIgnoreCase("6"))
-		{
-			npc.broadcastPacket(new SpecialCamera(npc, 30, -200, 20, 6000, 700, 8000, 0, 0, 0, 0, 0));
+			case "5":
+			{
+				player.teleToLocation(PLAYER_TELEPORT);
+				npc.teleToLocation(NPC_LOCATION);
+				if (!_IsGolemSpawned)
+				{
+					L2Npc golem = addSpawn(CHAOS_GOLEM, 94640, -112496, -3336, 0, false, 0);
+					_IsGolemSpawned = true;
+					startQuestTimer("6", 1000, golem, player);
+					player.sendPacket(new PlaySound(1, "Rm03_A", 0, 0, 0, 0, 0));
+				}
+				break;
+			}
+			case "6":
+			{
+				npc.broadcastPacket(new SpecialCamera(npc, 30, -200, 20, 6000, 700, 8000, 0, 0, 0, 0, 0));
+				break;
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

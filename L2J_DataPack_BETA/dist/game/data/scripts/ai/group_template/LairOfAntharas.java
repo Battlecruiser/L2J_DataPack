@@ -18,12 +18,8 @@
  */
 package ai.group_template;
 
-import java.util.Arrays;
-
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -57,14 +53,6 @@ public final class LairOfAntharas extends AbstractNpcAI
 		addSpawnId(DRAGON_KNIGHT, DRAGON_KNIGHT2, DRAGON_GUARD, DRAGON_MAGE);
 		addMoveFinishedId(DRAGON_GUARD, DRAGON_MAGE);
 		addAggroRangeEnterId(KNORIKS);
-		
-		for (int npcId : Arrays.asList(DRAGON_KNIGHT, DRAGON_KNIGHT2, DRAGON_GUARD, DRAGON_MAGE))
-		{
-			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
-			{
-				onSpawn(spawn.getLastSpawn());
-			}
-		}
 	}
 	
 	@Override

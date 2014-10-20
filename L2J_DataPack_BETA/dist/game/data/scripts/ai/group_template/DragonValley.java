@@ -22,8 +22,6 @@ import java.util.EnumMap;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
@@ -136,22 +134,9 @@ public final class DragonValley extends AbstractNpcAI
 		addAttackId(SUMMON_NPC);
 		addKillId(NECROMANCER_OF_THE_VALLEY);
 		addKillId(SPOIL_REACT_MONSTER);
-		addSpawnId(EXPLODING_ORC_GHOST);
+		addSpawnId(EXPLODING_ORC_GHOST, NECROMANCER_OF_THE_VALLEY);
 		addSpawnId(SPOIL_REACT_MONSTER);
 		addSpellFinishedId(EXPLODING_ORC_GHOST);
-		
-		for (int npcId : SPOIL_REACT_MONSTER)
-		{
-			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
-			{
-				onSpawn(spawn.getLastSpawn());
-			}
-		}
-		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(NECROMANCER_OF_THE_VALLEY))
-		{
-			onSpawn(spawn.getLastSpawn());
-		}
 	}
 	
 	@Override

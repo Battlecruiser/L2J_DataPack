@@ -20,13 +20,9 @@ package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.holders.MinionHolder;
-import com.l2jserver.util.Rnd;
 
 /**
  * Grove Robber's AI.<br>
@@ -45,45 +41,28 @@ public final class GraveRobbers extends AbstractNpcAI
 	{
 		super(GraveRobbers.class.getSimpleName(), "ai/individual");
 		addSpawnId(GRAVE_ROBBER_SUMMONER, GRAVE_ROBBER_MEGICIAN);
-		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(GRAVE_ROBBER_MEGICIAN))
-		{
-			onSpawn(spawn.getLastSpawn());
-		}
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (npc instanceof L2MonsterInstance)
+		if (getRandom(2) == 0)
 		{
-			if (!((L2MonsterInstance) npc).hasMinions())
-			{
-				L2NpcTemplate template = npc.getTemplate();
-				
-				if (Rnd.get(2) == 0)
-				{
-					if (template.getParameters().getMinionList("Privates1") != null)
-					{
-						for (MinionHolder is : template.getParameters().getMinionList("Privates1"))
-						{
-							addMinion((L2MonsterInstance) npc, is.getId());
-						}
-					}
-				}
-				else
-				{
-					if (template.getParameters().getMinionList("Privates2") != null)
-					{
-						for (MinionHolder is : template.getParameters().getMinionList("Privates2"))
-						{
-							addMinion((L2MonsterInstance) npc, is.getId());
-						}
-					}
-				}
-			}
+			spawnMinions(npc, "Privates1");
+		}
+		else
+		{
+			spawnMinions(npc, "Privates2");
 		}
 		return super.onSpawn(npc);
+	}
+	
+	private void spawnMinions(final L2Npc npc, final String spawnName)
+	{
+		for (MinionHolder is : npc.getTemplate().getParameters().getMinionList(spawnName))
+		{
+			addMinion((L2MonsterInstance) npc, is.getId());
+		}
 	}
 	
 	public static void main(String[] args)

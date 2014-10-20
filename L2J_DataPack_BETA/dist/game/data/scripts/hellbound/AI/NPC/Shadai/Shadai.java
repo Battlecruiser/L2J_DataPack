@@ -72,10 +72,7 @@ public final class Shadai extends AbstractNpcAI
 	@Override
 	public final String onSpawn(L2Npc npc)
 	{
-		if (!npc.isTeleporting())
-		{
-			startQuestTimer("VALIDATE_POS", 60000, npc, null, true);
-		}
+		startQuestTimer("VALIDATE_POS", 60000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 }

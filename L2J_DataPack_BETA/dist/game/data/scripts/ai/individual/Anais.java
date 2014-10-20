@@ -18,13 +18,12 @@
  */
 package ai.individual;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -45,8 +44,7 @@ public final class Anais extends AbstractNpcAI
 	// Skill
 	private static SkillHolder DIVINE_NOVA = new SkillHolder(6326, 1);
 	// Instances
-	private final L2Npc[] _divineBurners = new L2Npc[4];
-	private L2Npc _anais = null;
+	ArrayList<L2Npc> _divineBurners = new ArrayList<>(4);
 	private L2PcInstance _nextTarget = null;
 	private L2Npc _current = null;
 	private int _pot = 0;
@@ -55,26 +53,27 @@ public final class Anais extends AbstractNpcAI
 	{
 		super(Anais.class.getSimpleName(), "ai/individual");
 		addAttackId(ANAIS);
+		addSpawnId(DIVINE_BURNER);
 		addKillId(GRAIL_WARD);
 	}
 	
-	private void burnerOnAttack(int pot)
+	private void burnerOnAttack(int pot, L2Npc anais)
 	{
-		L2Npc npc = _divineBurners[pot];
+		L2Npc npc = _divineBurners.get(pot);
 		npc.setDisplayEffect(1);
 		npc.setIsRunning(false);
 		if (pot < 4)
 		{
 			_current = npc;
-			QuestTimer checkAround = getQuestTimer("CHECK", _anais, null);
+			QuestTimer checkAround = getQuestTimer("CHECK", anais, null);
 			if (checkAround == null) // || !checkAround.getIsActive()
 			{
-				startQuestTimer("CHECK", 3000, _anais, null);
+				startQuestTimer("CHECK", 3000, anais, null);
 			}
 		}
 		else
 		{
-			cancelQuestTimer("CHECK", _anais, null);
+			cancelQuestTimer("CHECK", anais, null);
 		}
 	}
 	
@@ -90,14 +89,14 @@ public final class Anais extends AbstractNpcAI
 				}
 				if ((_current != null) || (_pot < 4))
 				{
-					Map<Integer, L2PcInstance> players = _anais.getKnownList().getKnownPlayers();
+					Map<Integer, L2PcInstance> players = npc.getKnownList().getKnownPlayers();
 					L2PcInstance target = players.get(getRandom(players.size() - 1));
 					_nextTarget = target;
 					if (_nextTarget == null)
 					{
-						_nextTarget = (L2PcInstance) _anais.getTarget();
+						_nextTarget = (L2PcInstance) npc.getTarget();
 					}
-					L2Npc b = _divineBurners[_pot];
+					L2Npc b = _divineBurners.get(_pot);
 					_pot = _pot + 1;
 					b.setDisplayEffect(1);
 					b.setIsRunning(false);
@@ -145,19 +144,19 @@ public final class Anais extends AbstractNpcAI
 	{
 		if (_pot == 0)
 		{
-			burnerOnAttack(0);
+			burnerOnAttack(0, npc);
 		}
 		else if ((npc.getCurrentHp() <= (npc.getMaxRecoverableHp() * 0.75)) && (_pot == 1))
 		{
-			burnerOnAttack(1);
+			burnerOnAttack(1, npc);
 		}
 		else if ((npc.getCurrentHp() <= (npc.getMaxRecoverableHp() * 0.5)) && (_pot == 2))
 		{
-			burnerOnAttack(2);
+			burnerOnAttack(2, npc);
 		}
 		else if ((npc.getCurrentHp() <= (npc.getMaxRecoverableHp() * 0.25)) && (_pot == 3))
 		{
-			burnerOnAttack(3);
+			burnerOnAttack(3, npc);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
@@ -169,15 +168,7 @@ public final class Anais extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (!npc.isTeleporting())
-		{
-			int i = 0;
-			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(DIVINE_BURNER))
-			{
-				_divineBurners[i++] = spawn.getLastSpawn();
-			}
-			_anais = SpawnTable.getInstance().getFirstSpawn(ANAIS).getLastSpawn();
-		}
+		_divineBurners.add(npc);
 		return super.onSpawn(npc);
 	}
 	
