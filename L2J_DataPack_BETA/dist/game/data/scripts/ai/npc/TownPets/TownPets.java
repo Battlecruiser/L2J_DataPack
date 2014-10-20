@@ -22,8 +22,6 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -54,14 +52,10 @@ public final class TownPets extends AbstractNpcAI
 	private TownPets()
 	{
 		super(TownPets.class.getSimpleName(), "ai/npc");
-		addSpawnId(PETS);
 		
-		for (int npcId : PETS)
+		if (Config.ALLOW_PET_WALKERS)
 		{
-			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
-			{
-				onSpawn(spawn.getLastSpawn());
-			}
+			addSpawnId(PETS);
 		}
 	}
 	
@@ -82,10 +76,7 @@ public final class TownPets extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (Config.ALLOW_PET_WALKERS)
-		{
-			startQuestTimer("move", 3000, npc, null);
-		}
+		startQuestTimer("move", 3000, npc, null);
 		return super.onSpawn(npc);
 	}
 	

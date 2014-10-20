@@ -20,8 +20,6 @@ package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 
 /**
@@ -35,10 +33,6 @@ public class NonLethalableNpcs extends AbstractNpcAI
 	{
 		super(NonLethalableNpcs.class.getSimpleName(), "ai/group_template");
 		addSpawnId(HEADQUARTERS);
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(HEADQUARTERS))
-		{
-			onSpawn(spawn.getLastSpawn());
-		}
 	}
 	
 	@Override

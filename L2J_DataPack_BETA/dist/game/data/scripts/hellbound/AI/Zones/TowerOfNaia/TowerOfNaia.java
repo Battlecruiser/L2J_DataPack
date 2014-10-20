@@ -760,7 +760,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	{
 		final int npcId = npc.getId();
 		
-		if ((npcId == MUTATED_ELPY) && !npc.isTeleporting())
+		if (npcId == MUTATED_ELPY)
 		{
 			DoorTable.getInstance().getDoor(18250025).openMe();
 			ZoneManager.getInstance().getZoneById(200100).setEnabled(false);

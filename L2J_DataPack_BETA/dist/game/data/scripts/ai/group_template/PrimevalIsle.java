@@ -22,10 +22,8 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.handler.ItemHandler;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -120,22 +118,6 @@ public final class PrimevalIsle extends AbstractNpcAI
 		addKillId(EGG, SAILREN, DEINO, ORNIT);
 		addSeeCreatureId(TREX);
 		addSeeCreatureId(MONSTERS);
-		
-		for (int npcId : SPRIGNANT)
-		{
-			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
-			{
-				onSpawn(spawn.getLastSpawn());
-			}
-		}
-		
-		for (int npcId : TREX)
-		{
-			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
-			{
-				onSpawn(spawn.getLastSpawn());
-			}
-		}
 	}
 	
 	@Override

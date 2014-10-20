@@ -20,14 +20,9 @@ package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.holders.MinionHolder;
-import com.l2jserver.util.Rnd;
 
 /**
  * Ragna Orc Commander AI.
@@ -41,54 +36,29 @@ public final class RagnaOrcCommander extends AbstractNpcAI
 	{
 		super(RagnaOrcCommander.class.getSimpleName(), "ai/individual");
 		addSpawnId(RAGNA_ORC_COMMANDER);
-		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(RAGNA_ORC_COMMANDER))
-		{
-			onSpawn(spawn.getLastSpawn());
-		}
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (npc instanceof L2MonsterInstance)
+		spawnMinions(npc, "Privates1");
+		if (getRandom(100) < 50)
 		{
-			L2MonsterInstance monster = (L2MonsterInstance) npc;
-			if (!monster.hasMinions())
-			{
-				L2NpcTemplate template = NpcData.getInstance().getTemplate(RAGNA_ORC_COMMANDER);
-				
-				if (template.getParameters().getMinionList("Privates1") != null)
-				{
-					for (MinionHolder is : template.getParameters().getMinionList("Privates1"))
-					{
-						addMinion((L2MonsterInstance) npc, is.getId());
-					}
-				}
-				
-				if (Rnd.get(100) < 50)
-				{
-					if (template.getParameters().getMinionList("Privates2") != null)
-					{
-						for (MinionHolder is : template.getParameters().getMinionList("Privates1"))
-						{
-							addMinion((L2MonsterInstance) npc, is.getId());
-						}
-					}
-				}
-				else
-				{
-					if (template.getParameters().getMinionList("Privates3") != null)
-					{
-						for (MinionHolder is : template.getParameters().getMinionList("Privates1"))
-						{
-							addMinion((L2MonsterInstance) npc, is.getId());
-						}
-					}
-				}
-			}
+			spawnMinions(npc, "Privates2");
+		}
+		else
+		{
+			spawnMinions(npc, "Privates3");
 		}
 		return super.onSpawn(npc);
+	}
+	
+	private void spawnMinions(final L2Npc npc, final String spawnName)
+	{
+		for (MinionHolder is : npc.getTemplate().getParameters().getMinionList(spawnName))
+		{
+			addMinion((L2MonsterInstance) npc, is.getId());
+		}
 	}
 	
 	public static void main(String[] args)

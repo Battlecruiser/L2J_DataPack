@@ -24,7 +24,6 @@ import java.util.List;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jserver.gameserver.model.Location;
@@ -106,7 +105,7 @@ public final class Venom extends AbstractNpcAI
 		addStartNpc(DUNGEON_KEEPER, TELEPORT_CUBE);
 		addFirstTalkId(DUNGEON_KEEPER, TELEPORT_CUBE);
 		addTalkId(DUNGEON_KEEPER, TELEPORT_CUBE);
-		addSpawnId(VENOM);
+		addSpawnId(VENOM, DUNGEON_KEEPER);
 		addSpellFinishedId(VENOM);
 		addAttackId(VENOM);
 		addKillId(VENOM);
@@ -261,32 +260,38 @@ public final class Venom extends AbstractNpcAI
 	@Override
 	public final String onSpawn(L2Npc npc)
 	{
-		if (!npc.isTeleporting())
+		switch (npc.getId())
 		{
-			if ((_massymore == null) || (_venom == null))
+			case DUNGEON_KEEPER:
 			{
-				_massymore = SpawnTable.getInstance().getFirstSpawn(DUNGEON_KEEPER).getLastSpawn();
-				_venom = SpawnTable.getInstance().getFirstSpawn(VENOM).getLastSpawn();
+				_massymore = npc;
+				break;
+			}
+			case VENOM:
+			{
+				_venom = npc;
 				
 				_loc = _venom.getLocation();
 				_venom.disableSkill(VENOM_TELEPORT.getSkill(), -1);
 				_venom.disableSkill(RANGE_TELEPORT.getSkill(), -1);
 				_venom.doRevive();
+				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.WHO_DARES_TO_COVET_THE_THRONE_OF_OUR_CASTLE_LEAVE_IMMEDIATELY_OR_YOU_WILL_PAY_THE_PRICE_OF_YOUR_AUDACITY_WITH_YOUR_VERY_OWN_BLOOD);
 				((L2Attackable) _venom).setCanReturnToSpawnPoint(false);
 				if (checkStatus() == DEAD)
 				{
 					_venom.deleteMe();
 				}
+				break;
 			}
-			if (checkStatus() == DEAD)
-			{
-				npc.deleteMe();
-			}
-			else
-			{
-				npc.doRevive();
-				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.WHO_DARES_TO_COVET_THE_THRONE_OF_OUR_CASTLE_LEAVE_IMMEDIATELY_OR_YOU_WILL_PAY_THE_PRICE_OF_YOUR_AUDACITY_WITH_YOUR_VERY_OWN_BLOOD);
-			}
+		}
+		if (checkStatus() == DEAD)
+		{
+			npc.deleteMe();
+		}
+		else
+		{
+			npc.doRevive();
+			
 		}
 		return super.onSpawn(npc);
 	}

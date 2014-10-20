@@ -23,9 +23,7 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -86,16 +84,6 @@ public final class SelMahumSquad extends AbstractNpcAI
 		addSpawnId(CHEF, FIRE);
 		addSpawnId(SQUAD_LEADERS);
 		addSpellFinishedId(CHEF);
-		
-		// Send event to monsters, that was spawned through SpawnTable at server start (it is impossible to track first spawn)
-		for (L2Spawn npcSpawn : SpawnTable.getInstance().getSpawns(CHEF))
-		{
-			onSpawn(npcSpawn.getLastSpawn());
-		}
-		for (L2Spawn npcSpawn : SpawnTable.getInstance().getSpawns(FIRE))
-		{
-			onSpawn(npcSpawn.getLastSpawn());
-		}
 	}
 	
 	@Override
@@ -358,23 +346,20 @@ public final class SelMahumSquad extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (!npc.isTeleporting())
+		if (npc.getId() == CHEF)
 		{
-			if (npc.getId() == CHEF)
-			{
-				npc.setIsInvul(false);
-			}
-			
-			else if (npc.getId() == FIRE)
-			{
-				startQuestTimer("fire", 1000, npc, null);
-			}
-			
-			else if (Util.contains(SQUAD_LEADERS, npc.getId()))
-			{
-				npc.setDisplayEffect(3);
-				npc.setIsNoRndWalk(false);
-			}
+			npc.setIsInvul(false);
+		}
+		
+		else if (npc.getId() == FIRE)
+		{
+			startQuestTimer("fire", 1000, npc, null);
+		}
+		
+		else if (Util.contains(SQUAD_LEADERS, npc.getId()))
+		{
+			npc.setDisplayEffect(3);
+			npc.setIsNoRndWalk(false);
 		}
 		return null;
 	}
