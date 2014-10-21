@@ -208,6 +208,7 @@ import quests.Q00295_DreamingOfTheSkies.Q00295_DreamingOfTheSkies;
 import quests.Q00296_TarantulasSpiderSilk.Q00296_TarantulasSpiderSilk;
 import quests.Q00297_GatekeepersFavor.Q00297_GatekeepersFavor;
 import quests.Q00298_LizardmensConspiracy.Q00298_LizardmensConspiracy;
+import quests.Q00299_GatherIngredientsForPie.Q00299_GatherIngredientsForPie;
 import quests.Q00300_HuntingLetoLizardman.Q00300_HuntingLetoLizardman;
 import quests.Q00303_CollectArrowheads.Q00303_CollectArrowheads;
 import quests.Q00306_CrystalOfFireAndIce.Q00306_CrystalOfFireAndIce;
@@ -594,6 +595,7 @@ public class QuestMasterHandler
 		Q00296_TarantulasSpiderSilk.class,
 		Q00297_GatekeepersFavor.class,
 		Q00298_LizardmensConspiracy.class,
+		Q00299_GatherIngredientsForPie.class,
 		Q00300_HuntingLetoLizardman.class,
 		Q00303_CollectArrowheads.class,
 		Q00306_CrystalOfFireAndIce.class,
