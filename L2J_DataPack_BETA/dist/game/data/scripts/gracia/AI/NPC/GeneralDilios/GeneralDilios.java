@@ -20,6 +20,7 @@ package gracia.AI.NPC.GeneralDilios;
 
 import java.util.Collections;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import ai.npc.AbstractNpcAI;
 
@@ -40,7 +41,7 @@ public final class GeneralDilios extends AbstractNpcAI
 	private static final int GUARD_ID = 32619;
 	
 	private L2Npc _general = null;
-	private final Set<L2Spawn> _guards = Collections.emptySet();
+	private final Set<L2Spawn> _guards = Collections.newSetFromMap(new ConcurrentHashMap<L2Spawn, Boolean>());
 	
 	private static final NpcStringId[] diliosText =
 	{
