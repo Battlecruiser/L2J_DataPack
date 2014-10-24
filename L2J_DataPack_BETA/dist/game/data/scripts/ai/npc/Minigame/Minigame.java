@@ -19,6 +19,7 @@
 package ai.npc.Minigame;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import ai.npc.AbstractNpcAI;
 
@@ -58,7 +59,7 @@ public final class Minigame extends AbstractNpcAI
 	private static final int TIMER_INTERVAL = 3;
 	private static final int MAX_ATTEMPTS = 3;
 	
-	private final ArrayList<MinigameRoom> _rooms = new ArrayList<>(2);
+	private final List<MinigameRoom> _rooms = new ArrayList<>(2);
 	
 	private Minigame()
 	{
