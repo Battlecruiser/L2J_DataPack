@@ -43,7 +43,7 @@ public final class GeneralDilios extends AbstractNpcAI
 	private L2Npc _general = null;
 	private final Set<L2Spawn> _guards = Collections.newSetFromMap(new ConcurrentHashMap<L2Spawn, Boolean>());
 	
-	private static final NpcStringId[] diliosText =
+	private static final NpcStringId[] DILIOS_TEXT =
 	{
 		NpcStringId.MESSENGER_INFORM_THE_PATRONS_OF_THE_KEUCEREUS_ALLIANCE_BASE_WERE_GATHERING_BRAVE_ADVENTURERS_TO_ATTACK_TIATS_MOUNTED_TROOP_THATS_ROOTED_IN_THE_SEED_OF_DESTRUCTION,
 		// NpcStringId.MESSENGER_INFORM_THE_PATRONS_OF_THE_KEUCEREUS_ALLIANCE_BASE_THE_SEED_OF_DESTRUCTION_IS_CURRENTLY_SECURED_UNDER_THE_FLAG_OF_THE_KEUCEREUS_ALLIANCE,
@@ -58,6 +58,8 @@ public final class GeneralDilios extends AbstractNpcAI
 	public GeneralDilios()
 	{
 		super(GeneralDilios.class.getSimpleName(), "gracia/AI/NPC");
+		
+		addSpawnId(GENERAL_ID, GUARD_ID);
 	}
 	
 	@Override
@@ -74,7 +76,7 @@ public final class GeneralDilios extends AbstractNpcAI
 			else
 			{
 				value = -1;
-				_general.broadcastPacket(new NpcSay(_general.getObjectId(), Say2.NPC_SHOUT, GENERAL_ID, diliosText[getRandom(diliosText.length)]));
+				_general.broadcastPacket(new NpcSay(_general.getObjectId(), Say2.NPC_SHOUT, GENERAL_ID, DILIOS_TEXT[getRandom(DILIOS_TEXT.length)]));
 			}
 			startQuestTimer("command_" + (value + 1), 60000, null, null);
 		}
