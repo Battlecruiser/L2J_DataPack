@@ -18,9 +18,10 @@
  */
 package hellbound.AI;
 
-import java.util.List;
+import java.util.Collections;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
-import javolution.util.FastList;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -101,41 +102,41 @@ public final class Keltas extends AbstractNpcAI
 	};
 	// Misc
 	private L2MonsterInstance _spawnedKeltas = null;
-	private final List<L2Spawn> _spawnedMonsters;
+	private final Set<L2Spawn> _spawnedMonsters = Collections.newSetFromMap(new ConcurrentHashMap<L2Spawn, Boolean>());
 	
 	public Keltas()
 	{
 		super(Keltas.class.getSimpleName(), "hellbound/AI");
 		addKillId(KELTAS);
 		addSpawnId(KELTAS);
-		
-		_spawnedMonsters = new FastList<>();
 	}
 	
 	private void spawnMinions()
 	{
 		for (Location loc : ENFORCER_SPAWN_POINTS)
 		{
-			L2MonsterInstance minion = (L2MonsterInstance) addSpawn(ENFORCER, loc, false, 0, false);
-			minion.getSpawn().setRespawnDelay(60);
-			minion.getSpawn().setAmount(1);
-			minion.getSpawn().startRespawn();
-			_spawnedMonsters.add(minion.getSpawn());
+			final L2MonsterInstance minion = (L2MonsterInstance) addSpawn(ENFORCER, loc, false, 0, false);
+			final L2Spawn spawn = minion.getSpawn();
+			spawn.setRespawnDelay(60);
+			spawn.setAmount(1);
+			spawn.startRespawn();
+			_spawnedMonsters.add(spawn);
 		}
 		
 		for (Location loc : EXECUTIONER_SPAWN_POINTS)
 		{
-			L2MonsterInstance minion = (L2MonsterInstance) addSpawn(EXECUTIONER, loc, false, 0, false);
-			minion.getSpawn().setRespawnDelay(80);
-			minion.getSpawn().setAmount(1);
-			minion.getSpawn().startRespawn();
-			_spawnedMonsters.add(minion.getSpawn());
+			final L2MonsterInstance minion = (L2MonsterInstance) addSpawn(EXECUTIONER, loc, false, 0, false);
+			final L2Spawn spawn = minion.getSpawn();
+			spawn.setRespawnDelay(80);
+			spawn.setAmount(1);
+			spawn.startRespawn();
+			_spawnedMonsters.add(spawn);
 		}
 	}
 	
 	private void despawnMinions()
 	{
-		if ((_spawnedMonsters == null) || _spawnedMonsters.isEmpty())
+		if (_spawnedMonsters.isEmpty())
 		{
 			return;
 		}
@@ -157,11 +158,12 @@ public final class Keltas extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("despawn"))
 		{
-			if ((_spawnedKeltas != null) && !_spawnedKeltas.isDead())
+			final L2Npc keltas = _spawnedKeltas;
+			if ((keltas != null) && !keltas.isDead())
 			{
-				broadcastNpcSay(_spawnedKeltas, Say2.NPC_SHOUT, NpcStringId.THAT_IS_IT_FOR_TODAYLETS_RETREAT_EVERYONE_PULL_BACK);
-				_spawnedKeltas.deleteMe();
-				_spawnedKeltas.getSpawn().decreaseCount(_spawnedKeltas);
+				broadcastNpcSay(keltas, Say2.NPC_SHOUT, NpcStringId.THAT_IS_IT_FOR_TODAYLETS_RETREAT_EVERYONE_PULL_BACK);
+				keltas.deleteMe();
+				keltas.getSpawn().decreaseCount(keltas);
 				despawnMinions();
 			}
 		}
