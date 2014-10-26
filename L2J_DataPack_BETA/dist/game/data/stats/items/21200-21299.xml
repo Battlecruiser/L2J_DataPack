@@ -18,6 +18,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="21202,1,1,100" />
 	</item>
 	<item id="21202" type="Armor" name="Magic Glasses - 30-day limited period">
 		<!-- Description: Dimensional item. Magic glasses that has MP +10 and M. Def. +70 effect. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
@@ -28,6 +30,8 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="21241-1" />
 		<set name="time" val="43200" />
 		<for>
 			<add order="0x40" stat="maxMp" val="10" />
