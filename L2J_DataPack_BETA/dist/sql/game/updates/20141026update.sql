@@ -32,3 +32,10 @@ UPDATE character_quests SET name='Q00072_SagaOfTheSwordMuse' WHERE name='72_Saga
 UPDATE character_quests SET name='Q00075_SagaOfTheTitan' WHERE name='75_SagaOfTheTitan';
 UPDATE character_quests SET name='Q00069_SagaOfTheTrickster' WHERE name='69_SagaOfTheTrickster';
 UPDATE character_quests SET name='Q00080_SagaOfTheWindRider' WHERE name='80_SagaOfTheWindRider';
+UPDATE character_quests SET name='Q00213_TrialOfTheSeeker' WHERE name='213_TrialOfSeeker';
+UPDATE character_quests SET name='Q00214_TrialOfTheScholar' WHERE name='214_TrialOfScholar';
+UPDATE character_quests SET name='Q00215_TrialOfThePilgrim' WHERE name='215_TrialOfPilgrim';
+UPDATE character_quests SET name='Q00217_TestimonyOfTrust' WHERE name='217_TestimonyOfTrust';
+UPDATE character_quests SET name='Q00218_TestimonyOfLife' WHERE name='218_TestimonyOfLife';
+UPDATE character_quests SET name='Q00219_TestimonyOfFate' WHERE name='219_TestimonyOfFate';
+UPDATE character_quests SET name='Q00221_TestimonyOfProsperity' WHERE name='221_TestimonyOfProsperity';
