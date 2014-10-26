@@ -468,9 +468,16 @@
 		</for>
 	</skill>
 	<skill id="21241" levels="1" name="Magic Glasses">
-		<!-- Increases M. Def. by 70. -->
+		<!-- High Five Skill -->
+		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add order="0x40" stat="mDef" val="70" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21242" levels="1" name="Zaken's Call">
 		<!-- Can move to near Zaken's Headquarters. Reuse delay 30 minutes. -->
