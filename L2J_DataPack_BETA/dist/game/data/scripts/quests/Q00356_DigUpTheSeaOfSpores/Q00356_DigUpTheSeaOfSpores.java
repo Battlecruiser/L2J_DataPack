@@ -23,9 +23,9 @@ import java.util.Map;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -42,11 +42,13 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 43;
 	// Monsters
-	private static final Map<Integer, ItemChanceHolder> MONSTERS = new HashMap<>();
+	private static final int ROTTING_TREE = 20558;
+	private static final int SPORE_ZOMBIE = 20562;
+	private static final Map<Integer, Double> MONSTER_DROP_CHANCES = new HashMap<>();
 	static
 	{
-		MONSTERS.put(20558, new ItemChanceHolder(HERBIVOROUS_SPORE, 0.73, 1));
-		MONSTERS.put(20562, new ItemChanceHolder(CARNIVORE_SPORE, 0.94, 1));
+		MONSTER_DROP_CHANCES.put(ROTTING_TREE, 0.73);
+		MONSTER_DROP_CHANCES.put(SPORE_ZOMBIE, 0.94);
 	}
 	
 	public Q00356_DigUpTheSeaOfSpores()
@@ -54,7 +56,7 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 		super(356, Q00356_DigUpTheSeaOfSpores.class.getSimpleName(), "Dig Up the Sea of Spores!");
 		addStartNpc(GAUEN);
 		addTalkId(GAUEN);
-		addKillId(MONSTERS.keySet());
+		addKillId(ROTTING_TREE, SPORE_ZOMBIE);
 		registerQuestItems(HERBIVOROUS_SPORE, CARNIVORE_SPORE);
 	}
 	
@@ -136,19 +138,25 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if (qs != null)
+		final QuestState qs = getQuestState(killer, false);
+		
+		if ((qs == null) || !Util.checkIfInRange(1500, npc, killer, true))
 		{
-			final ItemChanceHolder item = MONSTERS.get(npc.getId());
-			if (giveItemRandomly(qs.getPlayer(), npc, item.getId(), item.getCount(), 50, item.getChance(), true) //
-				&& (getQuestItemsCount(qs.getPlayer(), CARNIVORE_SPORE) >= 50) //
-				&& (getQuestItemsCount(qs.getPlayer(), CARNIVORE_SPORE) >= 50))
+			return null;
+		}
+		
+		final int dropItem = ((npc.getId() == ROTTING_TREE) ? HERBIVOROUS_SPORE : CARNIVORE_SPORE);
+		final int otherItem = ((dropItem == HERBIVOROUS_SPORE) ? CARNIVORE_SPORE : HERBIVOROUS_SPORE);
+		
+		if (giveItemRandomly(killer, npc, dropItem, 1, 50, MONSTER_DROP_CHANCES.get(npc.getId()), true))
+		{
+			if (getQuestItemsCount(killer, otherItem) >= 50)
 			{
-				qs.setCond(3, true);
+				qs.setCond(3);
 			}
 			else
 			{
-				qs.setCond(2, true);
+				qs.setCond(2);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -165,21 +173,24 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 		}
 		else if (qs.isStarted())
 		{
-			if ((getQuestItemsCount(player, HERBIVOROUS_SPORE) < 50) && (getQuestItemsCount(player, CARNIVORE_SPORE) < 50))
+			final boolean hasAllHerbSpores = (getQuestItemsCount(player, HERBIVOROUS_SPORE) >= 50);
+			final boolean hasAllCarnSpores = (getQuestItemsCount(player, CARNIVORE_SPORE) >= 50);
+			
+			if (hasAllHerbSpores && hasAllCarnSpores)
 			{
-				htmltext = "30717-07.html";
+				htmltext = "30717-13.html";
 			}
-			else if ((getQuestItemsCount(player, HERBIVOROUS_SPORE) >= 50) && (getQuestItemsCount(player, CARNIVORE_SPORE) < 50))
-			{
-				htmltext = "30717-08.html";
-			}
-			else if ((getQuestItemsCount(player, HERBIVOROUS_SPORE) < 50) && (getQuestItemsCount(player, CARNIVORE_SPORE) >= 50))
+			else if (hasAllCarnSpores)
 			{
 				htmltext = "30717-12.html";
 			}
+			else if (hasAllHerbSpores)
+			{
+				htmltext = "30717-08.html";
+			}
 			else
 			{
-				htmltext = "30717-13.html";
+				htmltext = "30717-07.html";
 			}
 		}
 		return htmltext;
