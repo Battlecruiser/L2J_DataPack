@@ -154,6 +154,13 @@ import quests.Q00197_SevenSignsTheSacredBookOfSeal.Q00197_SevenSignsTheSacredBoo
 import quests.Q00198_SevenSignsEmbryo.Q00198_SevenSignsEmbryo;
 import quests.Q00211_TrialOfTheChallenger.Q00211_TrialOfTheChallenger;
 import quests.Q00212_TrialOfDuty.Q00212_TrialOfDuty;
+import quests.Q00213_TrialOfTheSeeker.Q00213_TrialOfTheSeeker;
+import quests.Q00214_TrialOfTheScholar.Q00214_TrialOfTheScholar;
+import quests.Q00215_TrialOfThePilgrim.Q00215_TrialOfThePilgrim;
+import quests.Q00217_TestimonyOfTrust.Q00217_TestimonyOfTrust;
+import quests.Q00218_TestimonyOfLife.Q00218_TestimonyOfLife;
+import quests.Q00219_TestimonyOfFate.Q00219_TestimonyOfFate;
+import quests.Q00221_TestimonyOfProsperity.Q00221_TestimonyOfProsperity;
 import quests.Q00235_MimirsElixir.Q00235_MimirsElixir;
 import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
 import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
@@ -542,6 +549,13 @@ public class QuestMasterHandler
 		Q00198_SevenSignsEmbryo.class,
 		Q00211_TrialOfTheChallenger.class,
 		Q00212_TrialOfDuty.class,
+		Q00213_TrialOfTheSeeker.class,
+		Q00214_TrialOfTheScholar.class,
+		Q00215_TrialOfThePilgrim.class,
+		Q00217_TestimonyOfTrust.class,
+		Q00218_TestimonyOfLife.class,
+		Q00219_TestimonyOfFate.class,
+		Q00221_TestimonyOfProsperity.class,
 		Q00235_MimirsElixir.class,
 		Q00237_WindsOfChange.class,
 		Q00238_SuccessFailureOfBusiness.class,
