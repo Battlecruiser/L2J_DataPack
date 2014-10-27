@@ -18,6 +18,7 @@
  */
 package village_master.KamaelChange2;
 
+import quests.Q00064_CertifiedBerserker.Q00064_CertifiedBerserker;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.CategoryData;
@@ -152,7 +153,7 @@ public final class KamaelChange2 extends AbstractNpcAI
 				{
 					if (classId == 127)
 					{
-						QuestState qs = player.getQuestState("64_CertifiedBerserker");
+						QuestState qs = player.getQuestState(Q00064_CertifiedBerserker.class.getSimpleName());
 						if (player.getLevel() < 40)
 						{
 							if ((qs != null) && qs.isCompleted())
