@@ -72,6 +72,7 @@ import quests.Q00052_WilliesSpecialBait.Q00052_WilliesSpecialBait;
 import quests.Q00053_LinnaeusSpecialBait.Q00053_LinnaeusSpecialBait;
 import quests.Q00062_PathOfTheTrooper.Q00062_PathOfTheTrooper;
 import quests.Q00063_PathOfTheWarder.Q00063_PathOfTheWarder;
+import quests.Q00064_CertifiedBerserker.Q00064_CertifiedBerserker;
 import quests.Q00101_SwordOfSolidarity.Q00101_SwordOfSolidarity;
 import quests.Q00102_SeaOfSporesFever.Q00102_SeaOfSporesFever;
 import quests.Q00103_SpiritOfCraftsman.Q00103_SpiritOfCraftsman;
@@ -279,6 +280,7 @@ import quests.Q00413_PathOfTheShillienOracle.Q00413_PathOfTheShillienOracle;
 import quests.Q00414_PathOfTheOrcRaider.Q00414_PathOfTheOrcRaider;
 import quests.Q00415_PathOfTheOrcMonk.Q00415_PathOfTheOrcMonk;
 import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
+import quests.Q00417_PathOfTheScavenger.Q00417_PathOfTheScavenger;
 import quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan;
 import quests.Q00420_LittleWing.Q00420_LittleWing;
 import quests.Q00421_LittleWingsBigAdventure.Q00421_LittleWingsBigAdventure;
@@ -467,6 +469,7 @@ public class QuestMasterHandler
 		Q00053_LinnaeusSpecialBait.class,
 		Q00062_PathOfTheTrooper.class,
 		Q00063_PathOfTheWarder.class,
+		Q00064_CertifiedBerserker.class,
 		Q00101_SwordOfSolidarity.class,
 		Q00102_SeaOfSporesFever.class,
 		Q00103_SpiritOfCraftsman.class,
@@ -674,6 +677,7 @@ public class QuestMasterHandler
 		Q00414_PathOfTheOrcRaider.class,
 		Q00415_PathOfTheOrcMonk.class,
 		Q00416_PathOfTheOrcShaman.class,
+		Q00417_PathOfTheScavenger.class,
 		Q00418_PathOfTheArtisan.class,
 		Q00420_LittleWing.class,
 		Q00421_LittleWingsBigAdventure.class,
