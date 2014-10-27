@@ -31,11 +31,13 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.datatables.ClanTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
+import com.l2jserver.gameserver.instancemanager.CastleManorManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2TeleportLocation;
 import com.l2jserver.gameserver.model.PcCondOverride;
+import com.l2jserver.gameserver.model.SeedProduction;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
@@ -43,11 +45,19 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.entity.Castle.CastleFunction;
 import com.l2jserver.gameserver.model.entity.Fort;
+import com.l2jserver.gameserver.model.events.EventType;
+import com.l2jserver.gameserver.model.events.ListenerRegisterType;
+import com.l2jserver.gameserver.model.events.annotations.Id;
+import com.l2jserver.gameserver.model.events.annotations.RegisterEvent;
+import com.l2jserver.gameserver.model.events.annotations.RegisterType;
+import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ExShowCropInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExShowCropSetting;
 import com.l2jserver.gameserver.network.serverpackets.ExShowDominionRegistry;
+import com.l2jserver.gameserver.network.serverpackets.ExShowManorDefaultInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExShowSeedInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExShowSeedSetting;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -759,10 +769,23 @@ public final class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
 				{
+					long seedIncome = 0;
+					if (Config.ALLOW_MANOR)
+					{
+						for (SeedProduction sp : CastleManorManager.getInstance().getSeedProduction(castle.getResidenceId(), false))
+						{
+							final long diff = sp.getStartAmount() - sp.getAmount();
+							if (diff != 0)
+							{
+								seedIncome += diff * sp.getPrice();
+							}
+						}
+					}
+					
 					final NpcHtmlMessage html = getHtmlPacket(player, npc, "castlemanagevault.html");
 					html.replace("%tax_income%", Util.formatAdena(castle.getTreasury()));
 					html.replace("%tax_income_reserved%", "0"); // TODO: Implement me!
-					html.replace("%seed_income%", "0"); // TODO: Implement me!
+					html.replace("%seed_income%", Util.formatAdena(seedIncome));
 					player.sendPacket(html);
 				}
 				else
@@ -1136,35 +1159,13 @@ public final class CastleChamberlain extends AbstractNpcAI
 			}
 			case "manor":
 			{
-				htmltext = (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_MANOR_ADMIN)) ? "manor.html" : "chamberlain-21.html";
-				break;
-			}
-			case "seed_status":
-			{
-				player.sendPacket(new ExShowSeedInfo(castle.getResidenceId(), castle.getSeedProduction(0)));
-				break;
-			}
-			case "seed_setup":
-			{
-				if (castle.isNextPeriodApproved())
+				if (Config.ALLOW_MANOR)
 				{
-					player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM);
+					htmltext = (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_MANOR_ADMIN)) ? "manor.html" : "chamberlain-21.html";
 				}
 				else
 				{
-					player.sendPacket(new ExShowSeedSetting(castle.getResidenceId()));
-				}
-				break;
-			}
-			case "crop_setup":
-			{
-				if (castle.isNextPeriodApproved())
-				{
-					player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM);
-				}
-				else
-				{
-					player.sendPacket(new ExShowCropSetting(castle.getResidenceId()));
+					player.sendMessage("Manor system is deactivated.");
 				}
 				break;
 			}
@@ -1311,6 +1312,58 @@ public final class CastleChamberlain extends AbstractNpcAI
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		return (isOwner(player, npc)) ? "chamberlain-01.html" : "chamberlain-04.html";
+	}
+	
+	// @formatter:off
+	@RegisterEvent(EventType.ON_NPC_MANOR_BYPASS)
+	@RegisterType(ListenerRegisterType.NPC)
+	@Id({35100, 35142, 35184, 35226, 35274,	35316, 35363, 35509, 35555})
+	// @formatter:on
+	public final void onNpcManorBypass(OnNpcManorBypass evt)
+	{
+		final L2PcInstance player = evt.getActiveChar();
+		final L2Npc npc = evt.getTarget();
+		if (isOwner(player, npc))
+		{
+			final CastleManorManager manor = CastleManorManager.getInstance();
+			if (manor.isUnderMaintenance())
+			{
+				player.sendPacket(SystemMessageId.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE);
+				return;
+			}
+			
+			final int castleId = (evt.getManorId() == -1) ? npc.getCastle().getResidenceId() : evt.getManorId();
+			switch (evt.getRequest())
+			{
+				case 3: // Seed info
+					player.sendPacket(new ExShowSeedInfo(castleId, evt.isNextPeriod(), true));
+					break;
+				case 4: // Crop info
+					player.sendPacket(new ExShowCropInfo(castleId, evt.isNextPeriod(), true));
+					break;
+				case 5: // Basic info
+					player.sendPacket(new ExShowManorDefaultInfo(true));
+					break;
+				case 7: // Seed settings
+					if (manor.isManorApproved())
+					{
+						player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_4_30_AM_AND_8_PM);
+						return;
+					}
+					player.sendPacket(new ExShowSeedSetting(castleId));
+					break;
+				case 8: // Crop settings
+					if (manor.isManorApproved())
+					{
+						player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_4_30_AM_AND_8_PM);
+						return;
+					}
+					player.sendPacket(new ExShowCropSetting(castleId));
+					break;
+				default:
+					_log.warning(getClass().getSimpleName() + ": Player " + player.getName() + " (" + player.getObjectId() + ") send unknown request id " + evt.getRequest() + "!");
+			}
+		}
 	}
 	
 	public static void main(String[] args)

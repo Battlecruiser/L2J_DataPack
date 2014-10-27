@@ -18,13 +18,12 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.datatables.ManorData;
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.L2Seed;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2ChestInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -42,28 +41,25 @@ public class Seed implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!playable.isPlayer())
+		if (!Config.ALLOW_MANOR)
+		{
+			return false;
+		}
+		else if (!playable.isPlayer())
 		{
 			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
 		
-		if (CastleManorManager.getInstance().isDisabled())
-		{
-			return false;
-		}
-		
 		final L2Object tgt = playable.getTarget();
-		if (!(tgt instanceof L2Npc))
+		if (!tgt.isNpc())
 		{
 			playable.sendPacket(SystemMessageId.INCORRECT_TARGET);
-			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
-		if (!(tgt instanceof L2MonsterInstance) || (tgt instanceof L2ChestInstance) || ((L2Character) tgt).isRaid())
+		else if (!tgt.isMonster() || ((L2MonsterInstance) tgt).isRaid() || (tgt instanceof L2ChestInstance))
 		{
 			playable.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
-			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
@@ -71,26 +67,29 @@ public class Seed implements IItemHandler
 		if (target.isDead())
 		{
 			playable.sendPacket(SystemMessageId.INCORRECT_TARGET);
-			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
-		
-		if (target.isSeeded())
+		else if (target.isSeeded())
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
-		final int seedId = item.getId();
-		if (!areaValid(seedId, MapRegionManager.getInstance().getAreaCastle(playable)))
+		final L2Seed seed = CastleManorManager.getInstance().getSeed(item.getId());
+		if (seed == null)
+		{
+			return false;
+		}
+		else if (seed.getCastleId() != MapRegionManager.getInstance().getAreaCastle(playable)) // TODO: replace me with tax zone
 		{
 			playable.sendPacket(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
 			return false;
 		}
 		
-		target.setSeeded(seedId, (L2PcInstance) playable);
-		final SkillHolder[] skills = item.getItem().getSkills();
 		final L2PcInstance activeChar = playable.getActingPlayer();
+		target.setSeeded(seed, activeChar);
+		
+		final SkillHolder[] skills = item.getItem().getSkills();
 		if (skills != null)
 		{
 			for (SkillHolder sk : skills)
@@ -99,15 +98,5 @@ public class Seed implements IItemHandler
 			}
 		}
 		return true;
-	}
-	
-	/**
-	 * @param seedId
-	 * @param castleId
-	 * @return
-	 */
-	private boolean areaValid(int seedId, int castleId)
-	{
-		return (ManorData.getInstance().getCastleIdForSeed(seedId) == castleId);
 	}
 }
