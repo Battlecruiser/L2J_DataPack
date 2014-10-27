@@ -613,9 +613,15 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="3" chanceType="ON_HIT" triggeredId="23319" />
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="3" />
+				<param skillId="23319" skillLevel="1" />
+				<param targetType="ONE" />
+				<param allowWeapons="ALL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21253" levels="1" name="Butcher Blades">
@@ -623,9 +629,15 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="3" chanceType="ON_HIT" triggeredId="23320" />
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="3" />
+				<param skillId="23320" skillLevel="1" />
+				<param targetType="ONE" />
+				<param allowWeapons="ALL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21254" levels="1" name="Claw of Destruction">
@@ -633,9 +645,15 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="3" chanceType="ON_HIT" triggeredId="23321" />
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="3" />
+				<param skillId="23321" skillLevel="1" />
+				<param targetType="ONE" />
+				<param allowWeapons="ALL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21255" levels="1" name="Blades of Delusion">
@@ -643,9 +661,15 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="3" chanceType="ON_HIT" triggeredId="23322" triggeredLevel="10" />
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="3" />
+				<param skillId="23322" skillLevel="10" />
+				<param targetType="ONE" />
+				<param allowWeapons="ALL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21256" levels="1" name="Blood Brother">
@@ -653,9 +677,15 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i00" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="3" chanceType="ON_HIT" triggeredId="23323" triggeredLevel="10" />
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="3" />
+				<param skillId="23323" skillLevel="10" />
+				<param targetType="ONE" />
+				<param allowWeapons="ALL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21257" levels="1" name="Mardil">
@@ -663,9 +693,14 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i00" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="3" chanceType="ON_ATTACKED" triggeredId="23324" />
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="3" />
+				<param skillId="23324" skillLevel="1" />
+				<param targetType="SELF" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="21258" levels="1" name="Rocking Horse Mount">

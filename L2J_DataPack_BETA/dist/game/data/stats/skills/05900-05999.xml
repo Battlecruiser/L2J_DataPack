@@ -18,6 +18,16 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="90" />
+				<param skillId="5902" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5901" levels="2" name="Mist of Oblivion">
 		<table name="#hitTime"> 2000 22940 </table>
@@ -37,6 +47,16 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="90" />
+				<param skillId="5902" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5902" levels="1" name="NPC Trigger Target Cancel">
 		<!-- Confirmed CT2.5 -->
@@ -221,7 +241,16 @@
 	<skill id="5913" levels="1" name="Putrefection Cleanse">
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="100" />
+				<param skillId="5914" skillLevel="1" />
+				<param targetType="ONE" />
+				<param allowWeapons="ALL" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5914" levels="1" name="Putrefaction Cleanse">
 		<set name="abnormalLvl" val="1" />
@@ -272,11 +301,10 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5918" levels="10" name="Physical Root Weakness">
-		<!-- TODO: Implement me! -->
 		<table name="#trait_root_physically"> -10 -20 -30 -40 -50 -60 -70 -80 -90 -99 </table>
-		<set name="magicLvl" val="10" />
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 80 90 95 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
 		<for>
 			<effect name="DefenceTrait">
 				<param ROOT_PHYSICALLY="#trait_root_physically" />

@@ -3356,9 +3356,15 @@
 		<set name="icon" val="icon.skill1498" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="5" chanceType="ON_HIT" triggeredId="5571" />
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="5" />
+				<param skillId="5571" skillLevel="1" />
+				<param targetType="SUMMON" />
+				<param allowWeapons="ALL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1499" levels="1" name="Improved Combat">

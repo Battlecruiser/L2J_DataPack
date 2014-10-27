@@ -9,30 +9,27 @@
 		<table name="#ench2cAtkAdd"> 65 81 96 112 127 143 158 174 189 205 220 236 251 267 282 298 313 329 344 360 375 391 406 422 437 453 468 484 499 515 </table>
 		<table name="#ench3pAtkSpd"> 1 1 1 1 1 1 1 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 5 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="activationChance" val="50" /> <!-- TODO: Remove when support for effects using conditions is done -->
-		<set name="chanceType" val="ON_HIT" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<set name="icon" val="icon.skill0217" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="#triggeredId" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<!-- TODO: Remove when support for effects using conditions is done -->
-		<cond>
-			<using kind="SWORD,BLUNT" />
-		</cond>
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pAtk" val="#pAtk">
 					<using kind="SWORD,BLUNT" />
 				</add>
 			</effect>
-			<!-- TODO: Require support for effects using conditions -->
-			<!-- <effect name="ChanceSkillTrigger" activationChance="50" chanceType="ON_HIT" triggeredId="#triggeredId"> -->
-			<!-- <using kind="SWORD,BLUNT" /> -->
-			<!-- </effect> -->
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="50" />
+				<param skillId="#triggeredId" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT" />
+			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
@@ -43,10 +40,14 @@
 					<using kind="SWORD,BLUNT" />
 				</add>
 			</effect>
-			<!-- TODO: Require support for effects using conditions -->
-			<!-- <effect name="ChanceSkillTrigger" activationChance="50" chanceType="ON_HIT" triggeredId="5604"> -->
-			<!-- <using kind="SWORD,BLUNT" /> -->
-			<!-- </effect> -->
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="50" />
+				<param skillId="5604" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT" />
+			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff">
@@ -57,10 +58,14 @@
 					<using kind="SWORD,BLUNT" />
 				</add>
 			</effect>
-			<!-- TODO: Require support for effects using conditions -->
-			<!-- <effect name="ChanceSkillTrigger" activationChance="50" chanceType="ON_HIT" triggeredId="5604"> -->
-			<!-- <using kind="SWORD,BLUNT" /> -->
-			<!-- </effect> -->
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="50" />
+				<param skillId="5604" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT" />
+			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="Buff">
@@ -71,10 +76,14 @@
 					<using kind="SWORD,BLUNT" />
 				</add>
 			</effect>
-			<!-- TODO: Require support for effects using conditions -->
-			<!-- <effect name="ChanceSkillTrigger" activationChance="50" chanceType="ON_HIT" triggeredId="5604"> -->
-			<!-- <using kind="SWORD,BLUNT" /> -->
-			<!-- </effect> -->
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="50" />
+				<param skillId="5604" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT" />
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="208" levels="52" name="Bow Mastery" enchantGroup1="1" enchantGroup2="1">
@@ -120,30 +129,27 @@
 		<table name="#ench2rCrit"> 0.0019 0.0029 0.0039 0.0048 0.0058 0.0068 0.0077 0.0087 0.0097 0.0106 0.0116 0.0126 0.0135 0.0145 0.0155 0.0164 0.0174 0.0184 0.0193 0.0203 0.0213 0.0222 0.0232 0.0242 0.0251 0.0261 0.0271 0.028 0.029 0.03 </table>
 		<table name="#ench3cAtk"> 1.0019 1.0029 1.0039 1.0048 1.0058 1.0068 1.0077 1.0087 1.0097 1.0106 1.0116 1.0126 1.0135 1.0145 1.0155 1.0164 1.0174 1.0184 1.0193 1.0203 1.0213 1.0222 1.0232 1.0242 1.0251 1.0261 1.0271 1.028 1.029 1.03 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="activationChance" val="33" /> <!-- TODO: Remove when support for effects using conditions is done -->
-		<set name="chanceType" val="ON_HIT" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<set name="icon" val="icon.skill0209" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="#triggeredId" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<!-- TODO: Remove when support for effects using conditions is done -->
-		<cond>
-			<using kind="DAGGER,DUALDAGGER" />
-		</cond>
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pAtk" val="#pAtk">
 					<using kind="DAGGER,DUALDAGGER" />
 				</add>
 			</effect>
-			<!-- TODO: Require support for effects using conditions -->
-			<!-- <effect name="ChanceSkillTrigger" activationChance="33" chanceType="ON_HIT" triggeredId="#triggeredId"> -->
-			<!-- <using kind="DAGGER,DUALDAGGER" /> -->
-			<!-- </effect> -->
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="33" />
+				<param skillId="#triggeredId" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="DAGGER,DUALDAGGER" />
+			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
@@ -151,10 +157,14 @@
 					<using kind="DAGGER,DUALDAGGER" />
 				</add>
 			</effect>
-			<!-- TODO: Require support for effects using conditions -->
-			<!-- <effect name="ChanceSkillTrigger" activationChance="33" chanceType="ON_HIT" triggeredId="5603"> -->
-			<!-- <using kind="DAGGER,DUALDAGGER" /> -->
-			<!-- </effect> -->
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="33" />
+				<param skillId="5603" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="DAGGER,DUALDAGGER" />
+			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff">
@@ -165,10 +175,14 @@
 					<using kind="DAGGER,DUALDAGGER" />
 				</basemul>
 			</effect>
-			<!-- TODO: Require support for effects using conditions -->
-			<!-- <effect name="ChanceSkillTrigger" activationChance="33" chanceType="ON_HIT" triggeredId="5603"> -->
-			<!-- <using kind="DAGGER,DUALDAGGER" /> -->
-			<!-- </effect> -->
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="33" />
+				<param skillId="5603" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="DAGGER,DUALDAGGER" />
+			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="Buff">
@@ -179,10 +193,14 @@
 					<using kind="DAGGER,DUALDAGGER" />
 				</mul>
 			</effect>
-			<!-- TODO: Require support for effects using conditions -->
-			<!-- <effect name="ChanceSkillTrigger" activationChance="33" chanceType="ON_HIT" triggeredId="5603"> -->
-			<!-- <using kind="DAGGER,DUALDAGGER" /> -->
-			<!-- </effect> -->
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="33" />
+				<param skillId="5603" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="DAGGER,DUALDAGGER" />
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="210" levels="45" name="Fist Weapon Mastery" enchantGroup1="1" enchantGroup2="1">

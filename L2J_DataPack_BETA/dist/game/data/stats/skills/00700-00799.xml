@@ -1460,17 +1460,9 @@
 	</skill>
 	<skill id="758" levels="1" name="Fighter's Will">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="3" /> <!-- TODO: Remove when support for effects using conditions is done -->
-		<set name="chanceType" val="ON_HIT" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<set name="icon" val="icon.skill0758" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="5559" /> <!-- TODO: Remove when support for effects using conditions is done -->
-		<!-- TODO: Remove when support for effects using conditions is done -->
-		<cond>
-			<using kind="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" />
-		</cond>
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="pAtk" val="100">
@@ -1480,25 +1472,21 @@
 					<using kind="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" />
 				</mul>
 			</effect>
-			<!-- TODO: Require support for effects using conditions -->
-			<!-- <effect name="ChanceSkillTrigger" activationChance="3" chanceType="ON_HIT" triggeredId="5559"> -->
-			<!-- <using kind="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" /> -->
-			<!-- </effect> -->
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="3" />
+				<param skillId="5559" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="759" levels="1" name="Archer's Will">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="3" /> <!-- TODO: Remove when support for effects using conditions is done -->
-		<set name="chanceType" val="ON_HIT" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<set name="icon" val="icon.skill0759" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="5559" /> <!-- TODO: Remove when support for effects using conditions is done -->
-		<!-- TODO: Remove when support for effects using conditions is done -->
-		<cond>
-			<using kind="BOW,CROSSBOW" />
-		</cond>
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="accCombat" val="8">
@@ -1508,10 +1496,14 @@
 					<using kind="CROSSBOW,BOW" />
 				</add>
 			</effect>
-			<!-- TODO: Require support for effects using conditions -->
-			<!-- <effect name="ChanceSkillTrigger" activationChance="3" chanceType="ON_HIT" triggeredId="5559"> -->
-			<!-- <using kind="CROSSBOW,BOW" /> -->
-			<!-- </effect> -->
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="3" />
+				<param skillId="5559" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="760" levels="1" name="Anti Magic Armor">

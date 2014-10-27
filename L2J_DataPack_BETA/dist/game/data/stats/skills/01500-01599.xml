@@ -859,7 +859,7 @@
 	</skill>
 	<skill id="1526" levels="3" name="Steal Mana">
 		<!-- Confirmed CT2.5 -->
-		<table name="#activationMinDamage"> 41 51 49 </table>
+		<table name="#minDamage"> 41 51 49 </table>
 		<table name="#magicLvl"> 44 56 64 </table>
 		<table name="#triggeredId"> 5676 5677 5678 </table>
 		<set name="icon" val="icon.skill1526" />
@@ -867,7 +867,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="10" activationMinDamage="#activationMinDamage" chanceType="ON_HIT" triggeredId="#triggeredId" />
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param isCritical="true" />
+				<param minDamage="#minDamage" chance="10" />
+				<param skillId="#triggeredId" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1527" levels="3" name="Expert Casting">
@@ -1354,9 +1361,13 @@
 		<set name="icon" val="icon.skill1543" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="30" activationSkills="927" chanceType="ON_CAST" triggeredId="6060" />
+			<effect name="TriggerSkillBySkill">
+				<param castSkillId="927" />
+				<param chance="30" />
+				<param skillId="6060" skillLevel="1" />
+				<param targetType="PARTY" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1544" levels="7" name="Death Beam">
@@ -1766,10 +1777,13 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
+			<effect name="TriggerSkillBySkill">
+				<param castSkillId="1558" />
+				<param chance="5" />
+				<param skillId="5571" skillLevel="1" />
+				<param targetType="SUMMON" />
+			</effect>
 		</for>
-		<selfEffects>
-			<effect name="ChanceSkillTrigger" activationChance="5" chanceType="ON_START" triggeredId="5571" />
-		</selfEffects>
 	</skill>
 	<skill id="1559" levels="3" name="Potential Ability">
 		<!-- High Five Skill -->

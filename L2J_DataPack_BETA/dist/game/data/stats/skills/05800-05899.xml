@@ -654,12 +654,24 @@
 		</for>
 	</skill>
 	<skill id="5845" levels="12" name="NPC Trigger Bleed">
-		<set name="magicLvl" val="10" />
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#skillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="20" />
+				<param skillId="5846" skillLevel="#skillLevel" />
+				<param targetType="ONE" />
+				<param allowWeapons="ALL" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5846" levels="12" name="Bleed">
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<table name="#dot"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
@@ -675,8 +687,13 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
+		<for>
+			<effect name="DamOverTime" ticks="5">
+				<param power="#dot" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5847" levels="1" name="Flip Nearby Blocks">
 		<set name="affectLimit" val="10-10" />

@@ -52,7 +52,6 @@ public final class EffectMasterHandler
 		CallPc.class,
 		CallSkill.class,
 		ChameleonRest.class,
-		ChanceSkillTrigger.class,
 		ChangeFace.class,
 		ChangeFishingMastery.class,
 		ChangeHairColor.class,
@@ -188,7 +187,10 @@ public final class EffectMasterHandler
 		Transformation.class,
 		TrapDetect.class,
 		TrapRemove.class,
+		TriggerSkillByAttack.class,
+		TriggerSkillByAvoid.class,
 		TriggerSkillByDamage.class,
+		TriggerSkillBySkill.class,
 		UnsummonAgathion.class,
 		VitalityPointUp.class,
 	};
