@@ -978,7 +978,14 @@
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
-			<effect name="ChanceSkillTrigger" activationChance="100" chanceType="ON_HIT" triggeredId="5760" triggeredLevel="1" />
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="99" />
+				<param skillId="5760" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8240" levels="3" name="Obliteration Storm">

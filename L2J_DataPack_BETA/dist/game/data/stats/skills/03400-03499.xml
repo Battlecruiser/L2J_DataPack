@@ -373,7 +373,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="5" chanceType="ON_HIT" triggeredId="5547" />
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="5" />
+				<param skillId="5547" skillLevel="1" />
+				<param targetType="PARTY" />
+				<param allowWeapons="ALL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3427" levels="1" name="Special Ability: Infinity Rapier">
@@ -392,8 +399,15 @@
 				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 				<add order="0x40" stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
+			</effect>			
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="5" />
+				<param skillId="5547" skillLevel="1" />
+				<param targetType="PARTY" />
+				<param allowWeapons="ALL" />
 			</effect>
-			<effect name="ChanceSkillTrigger" activationChance="5" chanceType="ON_HIT" triggeredId="5547" />
 		</for>
 	</skill>
 	<skill id="3428" levels="1" name="Blue Talisman - Explosion">

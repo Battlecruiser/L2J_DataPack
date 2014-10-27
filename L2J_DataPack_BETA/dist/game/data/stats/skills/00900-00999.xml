@@ -1195,8 +1195,12 @@
 				</add>
 			</effect>
 			<mul order="0x30" stat="rShld" val="#rShld" />
-			<!-- FIXME: activationChance value unconfirmed -->
-			<effect name="ChanceSkillTrigger" activationChance="30" activationSkills="997" chanceType="ON_CAST" triggeredId="6920" />
+			<effect name="TriggerSkillBySkill">
+				<param castSkillId="997" />
+				<param chance="30" />
+				<param skillId="6920" skillLevel="1" />
+				<param targetType="SELF" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="953" levels="1" name="Life to Soul">
@@ -2138,53 +2142,54 @@
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 </table>
-		<set name="activationChance" val="15" /> <!-- TODO: Remove when support for effects using conditions is done -->
-		<set name="chanceType" val="ON_HIT" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<set name="icon" val="icon.skill0992" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="6813" /> <!-- TODO: Remove when support for effects using conditions is done -->
-		<set name="triggeredLevel" val="#triggeredLevel" /> <!-- TODO: Remove when support for effects using conditions is done -->
-		<!-- TODO: Remove when support for effects using conditions is done -->
-		<cond>
-			<using kind="DUAL,SWORD,BLUNT" />
-		</cond>
-		<!-- TODO: Require support for effects using conditions -->
-		<!-- <for> -->
-		<!-- <effect name="ChanceSkillTrigger" activationChance="15" chanceType="ON_HIT" triggeredId="6813" triggeredLevel="#triggeredLevel"> -->
-		<!-- <using kind="DUAL,SWORD,BLUNT" /> -->
-		<!-- </effect> -->
-		<!-- <effect name="ChanceSkillTrigger" activationChance="30" chanceType="ON_CRIT" triggeredId="6813" triggeredLevel="#triggeredLevel"> -->
-		<!-- <using kind="DUAL,SWORD,BLUNT" /> -->
-		<!-- </effect> -->
-		<!-- </for> -->
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="15" />
+				<param skillId="6813" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="DUAL,SWORD,BLUNT" />
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="30" />
+				<param skillId="6813" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="DUAL,SWORD,BLUNT" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="993" levels="8" name="Force Mastery">
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 24 32 40 52 60 66 72 79 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 </table>
-		<set name="activationChance" val="15" /> <!-- TODO: Remove when support for effects using conditions is done -->
-		<set name="chanceType" val="ON_HIT" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<set name="icon" val="icon.skill0993" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="6814" /> <!-- TODO: Remove when support for effects using conditions is done -->
-		<set name="triggeredLevel" val="#triggeredLevel" /> <!-- TODO: Remove when support for effects using conditions is done -->
-		<!-- TODO: Remove when support for effects using conditions is done -->
-		<cond>
-			<using kind="DUALFIST" />
-		</cond>
-		<!-- TODO: Require support for effects using conditions -->
-		<!-- <for> -->
-		<!-- <effect name="ChanceSkillTrigger" activationChance="15" chanceType="ON_HIT" triggeredId="6814" triggeredLevel="#triggeredLevel"> -->
-		<!-- <using kind="DUALFIST" /> -->
-		<!-- </effect> -->
-		<!-- <effect name="ChanceSkillTrigger" activationChance="30" chanceType="ON_CRIT" triggeredId="6814" triggeredLevel="#triggeredLevel"> -->
-		<!-- <using kind="DUALFIST" /> -->
-		<!-- </effect> -->
-		<!-- </for> -->
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="15" />
+				<param skillId="6814" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="DUALFIST" />
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="30" />
+				<param skillId="6814" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="DUALFIST" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="994" levels="1" name="Rush">
 		<!-- High Five Skill -->

@@ -197,10 +197,13 @@
 				<xs:attribute type="xs:string" name="attackerType" use="optional" />
 				<xs:attribute type="xs:byte" name="minAttackerLevel" use="optional" />
 				<xs:attribute type="xs:byte" name="maxAttackerLevel" use="optional" />
+				<xs:attribute type="xs:boolean" name="isCritical" use="optional" />
+				<xs:attribute type="xs:string" name="minDamage" use="optional" />
+				<xs:attribute type="xs:short" name="castSkillId" use="optional" />
 				<xs:attribute type="xs:byte" name="blockedActions" use="optional" />
-				<xs:attribute type="xs:short" name="minDamage" use="optional" />
-				<xs:attribute type="xs:short" name="skillId" use="optional" />
+				<xs:attribute type="xs:string" name="skillId" use="optional" />
 				<xs:attribute type="xs:string" name="skillLevel" use="optional" />
+				<xs:attribute type="xs:string" name="allowWeapons" use="optional" />
 				<xs:attribute type="xs:string" name="targetType" use="optional" />
 				<xs:attribute type="xs:byte" name="npcCount" use="optional" />
 				<xs:attribute type="xs:string" name="expNeeded" use="optional" />

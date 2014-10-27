@@ -839,10 +839,8 @@
 		</for>
 	</skill>
 	<skill id="5549" levels="1" name="Physical Short-range Weakness">
-		<!-- TODO: Implement me! -->
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
 		<for>
 			<effect name="DefenceTrait">
 				<param BLUNT="-30" />
@@ -859,13 +857,18 @@
 	<skill id="5550" levels="12" name="NPC Trigger Stun">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#triggeredLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<set name="activationChance" val="15" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
-		<set name="triggeredId" val="5551" />
-		<set name="triggeredLevel" val="#triggeredLvl" />
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="15" />
+				<param skillId="5551" skillLevel="#triggeredLvl" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5551" levels="12" name="Stun">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>

@@ -391,9 +391,12 @@
 		<set name="icon" val="icon.skill0818" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5673" />
+			<effect name="TriggerSkillByAvoid">
+				<param chance="10" />
+				<param skillId="5673" skillLevel="1" />
+				<param targetType="ONE" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="819" levels="1" name="Evasion Chance">
@@ -401,9 +404,12 @@
 		<set name="icon" val="icon.skill0819" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5674" />
+			<effect name="TriggerSkillByAvoid">
+				<param chance="10" />
+				<param skillId="5674" skillLevel="1" />
+				<param targetType="SELF" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="820" levels="1" name="Evasion Haste">
@@ -411,9 +417,12 @@
 		<set name="icon" val="icon.skill0820" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5675" />
+			<effect name="TriggerSkillByAvoid">
+				<param chance="10" />
+				<param skillId="5675" skillLevel="1" />
+				<param targetType="SELF" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="821" levels="1" name="Shadow Step">

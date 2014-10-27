@@ -891,7 +891,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="2" chanceType="ON_HIT" triggeredId="5572" />
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="2" />
+				<param skillId="5572" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="652" levels="1" name="Knight Ability - Defense">
@@ -900,7 +907,6 @@
 		<set name="icon" val="icon.skill0110" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
@@ -917,9 +923,15 @@
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="2" chanceType="ON_HIT" triggeredId="5574" />
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="2" />
+				<param skillId="5574" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="654" levels="1" name="Wizard Ability - Mana Steal">
@@ -928,9 +940,15 @@
 		<set name="icon" val="icon.skill1398" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" activationChance="2" chanceType="ON_HIT" triggeredId="5575" />
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="2" />
+				<param skillId="5575" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="655" levels="1" name="Enchanter Ability - Barrier">
