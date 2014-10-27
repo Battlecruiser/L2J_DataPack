@@ -18,12 +18,11 @@
  */
 package handlers.itemhandlers;
 
-import java.util.logging.Level;
-
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.instancemanager.CastleManorManager;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -33,37 +32,31 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 /**
  * @author l3x
  */
-public class Harvester implements IItemHandler
+public final class Harvester implements IItemHandler
 {
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!playable.isPlayer())
+		if (!Config.ALLOW_MANOR)
+		{
+			return false;
+		}
+		else if (!playable.isPlayer())
 		{
 			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
 		
-		if (CastleManorManager.getInstance().isDisabled())
+		final SkillHolder[] skills = item.getItem().getSkills();
+		if (skills == null)
 		{
+			_log.warning(getClass().getSimpleName() + ": is missing skills!");
 			return false;
 		}
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
-		final SkillHolder[] skills = item.getItem().getSkills();
-		L2MonsterInstance target = null;
-		if ((activeChar.getTarget() != null) && activeChar.getTarget().isMonster())
-		{
-			target = (L2MonsterInstance) activeChar.getTarget();
-		}
-		
-		if (skills == null)
-		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
-			return false;
-		}
-		
-		if ((target == null) || !target.isDead())
+		final L2Object target = activeChar.getTarget();
+		if ((target == null) || !target.isMonster() || !((L2Character) target).isDead())
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);

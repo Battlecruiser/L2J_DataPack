@@ -19,8 +19,8 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.ManorData;
 import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.model.L2Seed;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -65,20 +65,15 @@ public final class Sow extends AbstractEffect
 			return;
 		}
 		
-		final int seedId = target.getSeedType();
-		if (seedId == 0)
-		{
-			return;
-		}
-		
 		// Consuming used seed
-		if (!player.destroyItemByItemId("Consume", seedId, 1, target, false))
+		final L2Seed seed = target.getSeed();
+		if (!player.destroyItemByItemId("Consume", seed.getSeedId(), 1, target, false))
 		{
 			return;
 		}
 		
 		final SystemMessage sm;
-		if (calcSuccess(player, target, seedId))
+		if (calcSuccess(player, target, seed))
 		{
 			player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
 			target.setSeeded(player.getActingPlayer());
@@ -89,27 +84,27 @@ public final class Sow extends AbstractEffect
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_NOT_SOWN);
 		}
 		
-		if (player.getParty() == null)
+		if (player.isInParty())
 		{
-			player.sendPacket(sm);
+			player.getParty().broadcastPacket(sm);
 		}
 		else
 		{
-			player.getParty().broadcastPacket(sm);
+			player.sendPacket(sm);
 		}
 		
 		// TODO: Mob should not aggro on player, this way doesn't work really nice
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 	}
 	
-	private static boolean calcSuccess(L2Character activeChar, L2Character target, int seedId)
+	private static boolean calcSuccess(L2Character activeChar, L2Character target, L2Seed seed)
 	{
 		// TODO: check all the chances
-		int basicSuccess = (ManorData.getInstance().isAlternative(seedId) ? 20 : 90);
-		final int minlevelSeed = ManorData.getInstance().getSeedMinLevel(seedId);
-		final int maxlevelSeed = ManorData.getInstance().getSeedMaxLevel(seedId);
+		final int minlevelSeed = seed.getLevel() - 5;
+		final int maxlevelSeed = seed.getLevel() + 5;
 		final int levelPlayer = activeChar.getLevel(); // Attacker Level
 		final int levelTarget = target.getLevel(); // target Level
+		int basicSuccess = seed.isAlternative() ? 20 : 90;
 		
 		// seed level
 		if (levelTarget < minlevelSeed)

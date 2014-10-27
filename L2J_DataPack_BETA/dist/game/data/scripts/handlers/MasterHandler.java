@@ -139,7 +139,6 @@ import handlers.bypasshandlers.Freight;
 import handlers.bypasshandlers.ItemAuctionLink;
 import handlers.bypasshandlers.Link;
 import handlers.bypasshandlers.Loto;
-import handlers.bypasshandlers.ManorManager;
 import handlers.bypasshandlers.Multisell;
 import handlers.bypasshandlers.NpcViewMod;
 import handlers.bypasshandlers.Observation;
@@ -407,7 +406,6 @@ public class MasterHandler
 			ItemAuctionLink.class,
 			Link.class,
 			Loto.class,
-			ManorManager.class,
 			Multisell.class,
 			NpcViewMod.class,
 			Observation.class,
