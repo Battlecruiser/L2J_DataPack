@@ -52,6 +52,11 @@ public class Ground implements ITargetTypeHandler
 					continue;
 				}
 				
+				if (character.isDoor())
+				{
+					continue;
+				}
+				
 				if ((maxTargets > 0) && (targetList.size() >= maxTargets))
 				{
 					break;
