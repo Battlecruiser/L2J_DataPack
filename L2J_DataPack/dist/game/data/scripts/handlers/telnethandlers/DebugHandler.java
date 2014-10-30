@@ -35,7 +35,6 @@ import java.util.StringTokenizer;
 import javolution.util.FastComparator;
 import javolution.util.FastTable;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.LoginServerThread;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -167,8 +166,6 @@ public class DebugHandler implements ITelnetHandler
 					
 					StringBuilder sb = new StringBuilder();
 					sb.append(sdf.format(cal.getTime()));
-					sb.append("\n\nL2J Server Version: " + Config.SERVER_VERSION);
-					sb.append("\nDP Revision: " + Config.DATAPACK_VERSION);
 					sb.append("\n\n");
 					uptime = _uptime;
 					sb.append(getServerStatus());
