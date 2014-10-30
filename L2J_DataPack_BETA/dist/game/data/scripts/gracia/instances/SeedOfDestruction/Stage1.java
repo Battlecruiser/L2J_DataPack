@@ -603,8 +603,11 @@ public final class Stage1 extends Quest
 						{
 							if (_spawnZoneList.containsKey(spw.zone))
 							{
-								int[] point = _spawnZoneList.get(spw.zone).getRandomPoint();
-								spawn(world, spw.npcId, point[0], point[1], GeoData.getInstance().getSpawnHeight(point[0], point[1], point[2], point[3]), getRandom(65535), spw.isNeededNextFlag);
+								final Location location = _spawnZoneList.get(spw.zone).getRandomPoint();
+								if (location != null)
+								{
+									spawn(world, spw.npcId, location.getX(), location.getY(), GeoData.getInstance().getSpawnHeight(location), getRandom(65535), spw.isNeededNextFlag);
+								}
 							}
 							else
 							{
