@@ -1512,9 +1512,6 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<cond>
-			<player canResurrect="true" />
-		</cond>
 		<for>
 			<effect name="ResurrectionSpecial">
 				<param power="100" />

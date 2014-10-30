@@ -317,9 +317,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="targetType" val="SELF" />
-		<cond>
-			<player canResurrect="true" />
-		</cond>
 		<for>
 			<effect name="ResurrectionSpecial">
 				<param power="50" />
