@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00061_LawEnforcement' WHERE name='61_LawEnforcement'; 
