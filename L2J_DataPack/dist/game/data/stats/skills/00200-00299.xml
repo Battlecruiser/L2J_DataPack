@@ -171,9 +171,9 @@
 				<add order="0x40" stat="pAtk" val="112.8">
 					<using kind="DAGGER,DUALDAGGER" />
 				</add>
-				<basemul order="0x30" stat="rCrit" val="#ench2rCrit">
+				<mul order="0x01" stat="rCrit" val="#ench2rCrit">
 					<using kind="DAGGER,DUALDAGGER" />
-				</basemul>
+				</mul>
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -983,6 +983,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="244" levels="3" name="Armor Mastery">
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 7 11 14 </table>
 		<table name="#pDef"> 6.7 8 9.2 </table>
 		<set name="icon" val="icon.skill0244" />
@@ -990,7 +991,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef" />
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="245" levels="15" name="Wild Sweep">
@@ -1519,15 +1522,17 @@
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<add order="0x40" stat="pDef" val="56.1">
-				<using kind="HEAVY" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.68">
-				<using kind="HEAVY" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="#ench3pAtkSpd">
-				<using kind="HEAVY" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="56.1">
+					<using kind="HEAVY" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.68">
+					<using kind="HEAVY" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="#ench3pAtkSpd">
+					<using kind="HEAVY" />
+				</mul>
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="260" levels="37" name="Hammer Crush" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
@@ -1954,7 +1959,7 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="1" />
+				<mul order="0x01" stat="rCrit" val="1" />
 			</effect>
 		</for>
 	</skill>

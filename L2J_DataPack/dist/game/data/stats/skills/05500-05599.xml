@@ -386,8 +386,8 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="cAtk" val="1.35" />
-				<basemul order="0x30" stat="rCrit" val="0.3" />
-				<basemul order="0x30" stat="mCritRate" val="3" />
+				<mul order="0x01" stat="rCrit" val="0.3" />
+				<mul order="0x01" stat="mCritRate" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -1010,7 +1010,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="physicalSkillPower" val="1.2" />
-				<basemul order="0x30" stat="rCrit" val="0.2" />
+				<mul order="0x01" stat="rCrit" val="0.2" />
 			</effect>
 		</for>
 	</skill>
@@ -1051,7 +1051,7 @@
 				<param skillId="5561" skillLevel="#triggeredLevel" /> <!-- Seed of Revenge -->
 				<param targetType="SELF" />
 				<add order="0x40" stat="pAtk" val="300" />
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>
@@ -1113,7 +1113,7 @@
 				<param targetType="SELF" />
 				<add order="0x40" stat="mDef" val="400" />
 				<add order="0x40" stat="waterPower" val="#waterPower" />
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -1260,7 +1260,7 @@
 				<mul order="0x30" stat="pAtk" val="1.35" />
 				<mul order="0x30" stat="mAtk" val="1.75" />
 				<mul order="0x30" stat="cAtk" val="1.35" />
-				<basemul order="0x30" stat="rCrit" val="0.3" />
+				<mul order="0x01" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1341,7 +1341,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="0.32" />
+				<mul order="0x01" stat="rCrit" val="0.32" />
 			</effect>
 		</for>
 	</skill>
@@ -1646,7 +1646,7 @@
 		<set name="targetType" val="OWNER_PET" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>

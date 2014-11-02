@@ -1036,8 +1036,8 @@
 		<set name="targetType" val="TARGET_PARTY" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
-				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="mCritRate" val="#mCritRate" />
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>

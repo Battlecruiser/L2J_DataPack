@@ -220,7 +220,7 @@
 		<for>
 			<effect name="Buff">
 				<add order="0x40" stat="mAtk" val="#mAtk" />
-				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+				<mul order="0x01" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
 	</skill>
@@ -445,19 +445,19 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 				<add order="0x40" stat="cAtkAdd" val="#cAtk" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#ench1rCrit" />
+				<mul order="0x01" stat="rCrit" val="#ench1rCrit" />
 				<add order="0x40" stat="cAtkAdd" val="317" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="0.25" />
+				<mul order="0x01" stat="rCrit" val="0.25" />
 				<add order="0x40" stat="cAtkAdd" val="#ench2cAtk" />
 			</effect>
 		</enchant2for>
@@ -802,14 +802,16 @@
 		</for>
 	</skill>
 	<skill id="644" levels="1" name="Rogue Ability - Evasion">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1087" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="4" />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="645" levels="1" name="Rogue Ability - Long Shot">

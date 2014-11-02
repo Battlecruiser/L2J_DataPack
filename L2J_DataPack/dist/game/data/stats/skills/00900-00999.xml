@@ -1030,7 +1030,7 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="1.05" />
 				<mul order="0x30" stat="mAtkSpd" val="1.05" />
-				<basemul order="0x30" stat="mCritRate" val="0.05" />
+				<mul order="0x01" stat="mCritRate" val="0.05" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
@@ -1193,8 +1193,8 @@
 				<add order="0x40" stat="pAtk" val="#pAtk">
 					<using kind="SWORD,BLUNT" />
 				</add>
+				<mul order="0x30" stat="rShld" val="#rShld" />
 			</effect>
-			<mul order="0x30" stat="rShld" val="#rShld" />
 			<effect name="TriggerSkillBySkill">
 				<param castSkillId="997" />
 				<param chance="30" />
@@ -1614,9 +1614,9 @@
 				<add order="0x40" stat="accCombat" val="6">
 					<using kind="BOW" />
 				</add>
-				<basemul order="0x30" stat="rCrit" val="0.2">
+				<mul order="0x01" stat="rCrit" val="0.2">
 					<using kind="BOW" />
-				</basemul>
+				</mul>
 				<add order="0x40" stat="pAtkRange" val="200">
 					<using kind="BOW" />
 				</add>

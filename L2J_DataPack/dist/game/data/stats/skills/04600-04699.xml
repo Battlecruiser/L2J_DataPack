@@ -51,7 +51,7 @@
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>
@@ -314,7 +314,7 @@
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -752,7 +752,7 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
-				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+				<mul order="0x01" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
 	</skill>
@@ -778,7 +778,7 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
-				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+				<mul order="0x01" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
 	</skill>
@@ -874,7 +874,7 @@
 				<add order="0x40" stat="runSpd" val="#runSpd" />
 				<mul order="0x30" stat="pDef" val="#pDef" />
 				<mul order="0x30" stat="mDef" val="#mDef" />
-				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+				<mul order="0x01" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
 	</skill>
@@ -935,7 +935,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
-				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+				<mul order="0x01" stat="mCritRate" val="#mCritRate" />
 				<add order="0x40" stat="reflectDam" val="#reflect" />
 			</effect>
 		</for>
@@ -963,7 +963,7 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
-				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+				<mul order="0x01" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
 	</skill>
@@ -1125,7 +1125,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -2196,7 +2196,7 @@
 				<sub order="0x40" stat="rEvas" val="4" />
 				<mul order="0x30" stat="pDef" val="0.55" />
 				<mul order="0x30" stat="pAtkSpd" val="0.75" />
-				<basemul order="0x30" stat="rCrit" val="-0.23" />
+				<mul order="0x01" stat="rCrit" val="-0.23" />
 				<mul order="0x30" stat="mDef" val="0.2" />
 			</effect>
 		</for>
@@ -2290,7 +2290,7 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>

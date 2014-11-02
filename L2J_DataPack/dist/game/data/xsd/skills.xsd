@@ -264,7 +264,6 @@
 			<xs:element name="add" type="addType" />
 			<xs:element name="mul" type="addType" />
 			<xs:element name="sub" type="addType" />
-			<xs:element name="basemul" type="addType" />
 			<xs:element name="set" type="addType" />
 			<xs:element name="share" type="shareType" />
 		</xs:choice>
@@ -281,12 +280,6 @@
 	<xs:complexType name="forType" mixed="true">
 		<xs:choice maxOccurs="unbounded" minOccurs="0">
 			<xs:element name="effect" type="effectType" />
-			<xs:element name="param" type="paramType" />
-			<xs:element name="add" type="addType" />
-			<xs:element name="mul" type="addType" />
-			<xs:element name="sub" type="addType" />
-			<xs:element name="basemul" type="addType" />
-			<xs:element name="set" type="addType" />
 		</xs:choice>
 		<xs:attribute type="xs:string" name="name" use="optional" />
 		<xs:attribute type="xs:byte" name="val" use="optional" />

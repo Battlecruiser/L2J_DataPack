@@ -338,7 +338,7 @@
 		</for>
 		<enchant3for>
 			<effect name="Root">
-				<basemul order="0x30" stat="defCritRate" val="#ench3defCritRate" />
+				<mul order="0x01" stat="defCritRate" val="#ench3defCritRate" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param HOLD="100" />
@@ -947,12 +947,12 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rate" />
+				<mul order="0x01" stat="rCrit" val="#rate" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#ench1rate" />
+				<mul order="0x01" stat="rCrit" val="#ench1rate" />
 			</effect>
 		</enchant1for>
 	</skill>

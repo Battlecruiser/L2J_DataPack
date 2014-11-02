@@ -1534,7 +1534,7 @@
 				<mul order="0x30" stat="pAtkSpd" val="1.1" />
 				<add order="0x40" stat="accCombat" val="10" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
-				<basemul order="0x30" stat="rCrit" val="1.2" />
+				<mul order="0x01" stat="rCrit" val="1.2" />
 			</effect>
 		</for>
 	</skill>

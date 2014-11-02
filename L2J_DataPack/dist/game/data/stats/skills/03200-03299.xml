@@ -726,7 +726,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="healEffect" val="1.01" />
+			<effect name="Buff">
+				<mul order="0x30" stat="healEffect" val="1.01" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3239" levels="10" name="Item Skill: Mana Gain">
@@ -860,7 +862,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="0.2" />
+				<mul order="0x01" stat="rCrit" val="0.2" />
 			</effect>
 		</for>
 	</skill>

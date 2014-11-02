@@ -207,7 +207,7 @@
 				<add order="0x40" stat="rEvas" val="4" />
 				<mul order="0x30" stat="pDef" val="1.83" />
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
-				<basemul order="0x30" stat="rCrit" val="0.3" />
+				<mul order="0x01" stat="rCrit" val="0.3" />
 				<mul order="0x30" stat="mDef" val="5" />
 			</effect>
 		</for>
@@ -1017,7 +1017,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>

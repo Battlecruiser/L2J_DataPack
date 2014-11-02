@@ -1586,7 +1586,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="0.5" />
+				<mul order="0x01" stat="rCrit" val="0.5" />
 			</effect>
 		</for>
 	</skill>
