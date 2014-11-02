@@ -175,7 +175,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="0.3" />
+				<mul order="0x01" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
 	</skill>
@@ -310,7 +310,7 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pAtkSpd" val="1.3" />
-				<basemul order="0x30" stat="rCrit" val="0.3" />
+				<mul order="0x01" stat="rCrit" val="0.3" />
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -1301,7 +1301,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 				<mul order="0x30" stat="pAtk" val="#pmAtk" />
 				<mul order="0x30" stat="mAtk" val="#pmAtk" />

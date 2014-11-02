@@ -667,7 +667,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="0.35" />
+				<mul order="0x01" stat="rCrit" val="0.35" />
 			</effect>
 		</for>
 	</skill>
@@ -735,9 +735,9 @@
 		<for>
 			<effect name="DamOverTimePercent" ticks="5">
 				<param power="#dot" />
-				<basemul order="0x30" stat="rCrit" val="#rCrit">
+				<mul order="0x01" stat="rCrit" val="#rCrit">
 					<using kind="BOW,CROSSBOW" />
-				</basemul>
+				</mul>
 				<mul order="0x30" stat="cAtk" val="#cAtk">
 					<using kind="BOW,CROSSBOW" />
 				</mul>
@@ -762,9 +762,9 @@
 		<for>
 			<effect name="DamOverTimePercent" ticks="5">
 				<param power="0.05" />
-				<basemul order="0x30" stat="rCrit" val="0.9">
+				<mul order="0x01" stat="rCrit" val="0.9">
 					<using kind="BOW,CROSSBOW" />
-				</basemul>
+				</mul>
 				<mul order="0x30" stat="cAtk" val="1.5">
 					<using kind="BOW,CROSSBOW" />
 				</mul>

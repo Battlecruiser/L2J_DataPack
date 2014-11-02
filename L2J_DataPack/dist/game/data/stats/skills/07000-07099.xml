@@ -388,7 +388,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="0.3" />
+				<mul order="0x01" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
 	</skill>
@@ -886,8 +886,8 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
-				<basemul order="0x30" stat="rCrit" val="0.2" />
-				<basemul order="0x30" stat="mCritRate" val="0.2" />
+				<mul order="0x01" stat="rCrit" val="0.2" />
+				<mul order="0x01" stat="mCritRate" val="0.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
@@ -1307,7 +1307,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="0.3" />
+				<mul order="0x01" stat="rCrit" val="0.3" />
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
@@ -1401,9 +1401,9 @@
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="SWORD,DUAL,ANCIENTSWORD,RAPIER,DAGGER,DUALDAGGER,POLE,DUALFIST" />
 				</mul>
-				<basemul order="0x30" stat="rCrit" val="0.2">
+				<mul order="0x01" stat="rCrit" val="0.2">
 					<using kind="SWORD,DUAL,ANCIENTSWORD,RAPIER,DAGGER,DUALDAGGER,POLE,DUALFIST" />
-				</basemul>
+				</mul>
 			</effect>
 		</for>
 	</skill>

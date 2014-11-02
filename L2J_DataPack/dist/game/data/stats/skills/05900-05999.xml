@@ -389,7 +389,7 @@
 				<mul order="0x30" stat="pAtkSpd" val="0.95" />
 				<mul order="0x30" stat="mAtk" val="0.95" />
 				<sub order="0x40" stat="accCombat" val="3" />
-				<basemul order="0x30" stat="rCrit" val="-0.1" />
+				<mul order="0x01" stat="rCrit" val="-0.1" />
 				<mul order="0x30" stat="cAtk" val="0.9" />
 			</effect>
 		</for>
@@ -1241,9 +1241,9 @@
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="SWORD,DAGGER,DUALDAGGER,POLE,RAPIER,ANCIENTSWORD,DUAL,DUALFIST,BLUNT,BOW,CROSSBOW" />
 				</mul>
-				<basemul order="0x30" stat="rCrit" val="0.2">
+				<mul order="0x01" stat="rCrit" val="0.2">
 					<using kind="SWORD,DAGGER,DUALDAGGER,POLE,RAPIER,ANCIENTSWORD,DUAL,DUALFIST" />
-				</basemul>
+				</mul>
 				<add order="0x40" stat="pAtkRange" val="100">
 					<using kind="BOW,CROSSBOW" />
 				</add>

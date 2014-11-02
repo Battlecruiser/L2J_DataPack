@@ -50,7 +50,7 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Debuff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SWORD="#traits" />
@@ -68,7 +68,7 @@
 		<enchant2for>
 			<effect name="PhysicalAttack" />
 			<effect name="Debuff">
-				<basemul order="0x30" stat="rCrit" val="-0.5" />
+				<mul order="0x01" stat="rCrit" val="-0.5" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SWORD="-20" />
@@ -87,7 +87,7 @@
 			<effect name="PhysicalAttack" />
 			<effect name="Debuff">
 				<mul order="0x30" stat="cAtk" val="#ench3cAtk" />
-				<basemul order="0x30" stat="rCrit" val="-0.5" />
+				<mul order="0x01" stat="rCrit" val="-0.5" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SWORD="-20" />
@@ -173,7 +173,7 @@
 		<enchant3for>
 			<effect name="PhysicalAttack" />
 			<effect name="Debuff">
-				<basemul order="0x30" stat="rCrit" val="#ench3rCrit" />
+				<mul order="0x01" stat="rCrit" val="#ench3rCrit" />
 				<mul order="0x30" stat="cAtk" val="0.65" />
 			</effect>
 			<effect name="DefenceTrait">
@@ -2637,7 +2637,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 				<mul order="0x30" stat="pDef" val="0.95" />
 			</effect>

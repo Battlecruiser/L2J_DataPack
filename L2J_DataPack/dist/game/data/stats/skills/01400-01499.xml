@@ -514,7 +514,7 @@
 				<mul order="0x30" stat="maxCp" val="1.2" />
 				<mul order="0x30" stat="regCp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
-				<basemul order="0x30" stat="rCrit" val="0.2" />
+				<mul order="0x01" stat="rCrit" val="0.2" />
 				<mul order="0x30" stat="mCritPower" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -534,7 +534,7 @@
 				<mul order="0x30" stat="maxCp" val="1.2" />
 				<mul order="0x30" stat="regCp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
-				<basemul order="0x30" stat="rCrit" val="0.2" />
+				<mul order="0x01" stat="rCrit" val="0.2" />
 				<mul order="0x30" stat="mCritPower" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -2600,7 +2600,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="#amount" />
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x01" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="cAtk" val="#amount" />
 			</effect>
 		</for>
@@ -2726,7 +2726,7 @@
 			<effect name="Buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.15" />
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
-				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+				<mul order="0x01" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
 	</skill>

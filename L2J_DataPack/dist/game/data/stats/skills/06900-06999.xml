@@ -149,7 +149,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.15" />
-				<basemul order="0x30" stat="rCrit" val="0.1" />
+				<mul order="0x01" stat="rCrit" val="0.1" />
 				<mul order="0x30" stat="cAtk" val="1.1" />
 				<mul order="0x30" stat="pAtkSpd" val="1.03" />
 				<add order="0x40" stat="runSpd" val="5" />
