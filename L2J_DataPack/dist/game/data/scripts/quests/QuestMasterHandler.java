@@ -295,6 +295,7 @@ import quests.Q00369_CollectorOfJewels.Q00369_CollectorOfJewels;
 import quests.Q00370_AnElderSowsSeeds.Q00370_AnElderSowsSeeds;
 import quests.Q00376_ExplorationOfTheGiantsCavePart1.Q00376_ExplorationOfTheGiantsCavePart1;
 import quests.Q00377_ExplorationOfTheGiantsCavePart2.Q00377_ExplorationOfTheGiantsCavePart2;
+import quests.Q00378_GrandFeast.Q00378_GrandFeast;
 import quests.Q00380_BringOutTheFlavorOfIngredients.Q00380_BringOutTheFlavorOfIngredients;
 import quests.Q00381_LetsBecomeARoyalMember.Q00381_LetsBecomeARoyalMember;
 import quests.Q00382_KailsMagicCoin.Q00382_KailsMagicCoin;
@@ -727,6 +728,7 @@ public class QuestMasterHandler
 		Q00370_AnElderSowsSeeds.class,
 		Q00376_ExplorationOfTheGiantsCavePart1.class,
 		Q00377_ExplorationOfTheGiantsCavePart2.class,
+		Q00378_GrandFeast.class,
 		Q00380_BringOutTheFlavorOfIngredients.class,
 		Q00381_LetsBecomeARoyalMember.class,
 		Q00382_KailsMagicCoin.class,
