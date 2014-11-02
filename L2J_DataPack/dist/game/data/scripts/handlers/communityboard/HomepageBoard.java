@@ -16,27 +16,34 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.admincommandhandlers;
+package handlers.communityboard;
 
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.cache.HtmCache;
+import com.l2jserver.gameserver.handler.CommunityBoardHandler;
+import com.l2jserver.gameserver.handler.IParseBoardHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-public class AdminBBS implements IAdminCommandHandler
+/**
+ * Homepage board.
+ * @author Zoey76
+ */
+public class HomepageBoard implements IParseBoardHandler
 {
-	private static final String[] ADMIN_COMMANDS =
+	private static final String[] COMMANDS =
 	{
-		"admin_bbs"
+		"_bbslink"
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public String[] getCommunityBoardCommands()
 	{
-		return true;
+		return COMMANDS;
 	}
 	
 	@Override
-	public String[] getAdminCommandList()
+	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
 	{
-		return ADMIN_COMMANDS;
+		CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/homepage.html"), activeChar);
+		return true;
 	}
 }

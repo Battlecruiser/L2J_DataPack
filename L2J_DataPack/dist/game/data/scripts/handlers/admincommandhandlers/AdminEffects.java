@@ -22,7 +22,6 @@ import java.util.Collection;
 import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.communitybbs.Manager.RegionBBSManager;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.Team;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
@@ -124,7 +123,7 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.broadcastUserInfo();
 				activeChar.sendMessage("You are now visible.");
 			}
-			RegionBBSManager.getInstance().changeCommunityBoard();
+			
 			command = "";
 			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
@@ -134,14 +133,12 @@ public class AdminEffects implements IAdminCommandHandler
 			activeChar.broadcastUserInfo();
 			activeChar.decayMe();
 			activeChar.spawnMe();
-			RegionBBSManager.getInstance().changeCommunityBoard();
 			activeChar.sendMessage("You are now invisible.");
 		}
 		else if (command.startsWith("admin_vis"))
 		{
 			activeChar.setInvisible(false);
 			activeChar.broadcastUserInfo();
-			RegionBBSManager.getInstance().changeCommunityBoard();
 			activeChar.sendMessage("You are now visible.");
 		}
 		else if (command.startsWith("admin_setinvis"))

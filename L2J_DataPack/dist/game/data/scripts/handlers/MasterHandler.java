@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.handler.ActionShiftHandler;
 import com.l2jserver.gameserver.handler.AdminCommandHandler;
 import com.l2jserver.gameserver.handler.BypassHandler;
 import com.l2jserver.gameserver.handler.ChatHandler;
+import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.handler.IHandler;
 import com.l2jserver.gameserver.handler.ItemHandler;
 import com.l2jserver.gameserver.handler.PunishmentHandler;
@@ -172,6 +173,14 @@ import handlers.chathandlers.ChatPetition;
 import handlers.chathandlers.ChatShout;
 import handlers.chathandlers.ChatTell;
 import handlers.chathandlers.ChatTrade;
+import handlers.communityboard.ClanBoard;
+import handlers.communityboard.FavoriteBoard;
+import handlers.communityboard.FriendsBoard;
+import handlers.communityboard.HomeBoard;
+import handlers.communityboard.HomepageBoard;
+import handlers.communityboard.MailBoard;
+import handlers.communityboard.MemoBoard;
+import handlers.communityboard.RegionBoard;
 import handlers.itemhandlers.BeastSoulShot;
 import handlers.itemhandlers.BeastSpiritShot;
 import handlers.itemhandlers.BlessedSpiritShot;
@@ -278,13 +287,14 @@ public class MasterHandler
 {
 	private static final Logger _log = Logger.getLogger(MasterHandler.class.getName());
 	
-	private static final IHandler<?, ?>[] _loadInstances =
+	private static final IHandler<?, ?>[] LOAD_INSTANCES =
 	{
 		ActionHandler.getInstance(),
 		ActionShiftHandler.getInstance(),
 		AdminCommandHandler.getInstance(),
 		BypassHandler.getInstance(),
 		ChatHandler.getInstance(),
+		CommunityBoardHandler.getInstance(),
 		ItemHandler.getInstance(),
 		PunishmentHandler.getInstance(),
 		UserCommandHandler.getInstance(),
@@ -293,7 +303,7 @@ public class MasterHandler
 		TelnetHandler.getInstance(),
 	};
 	
-	private static final Class<?>[][] _handlers =
+	private static final Class<?>[][] HANDLERS =
 	{
 		{
 			// Action Handlers
@@ -444,6 +454,17 @@ public class MasterHandler
 			ChatTrade.class,
 		},
 		{
+			// Community Board
+			ClanBoard.class,
+			FavoriteBoard.class,
+			FriendsBoard.class,
+			HomeBoard.class,
+			HomepageBoard.class,
+			MailBoard.class,
+			MemoBoard.class,
+			RegionBoard.class,
+		},
+		{
 			// Item Handlers
 			BeastSoulShot.class,
 			BeastSpiritShot.class,
@@ -563,15 +584,12 @@ public class MasterHandler
 		},
 	};
 	
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args)
 	{
 		_log.log(Level.INFO, "Loading Handlers...");
 		
 		Map<IHandler<?, ?>, Method> registerHandlerMethods = new HashMap<>();
-		for (IHandler<?, ?> loadInstance : _loadInstances)
+		for (IHandler<?, ?> loadInstance : LOAD_INSTANCES)
 		{
 			registerHandlerMethods.put(loadInstance, null);
 			for (Method method : loadInstance.getClass().getMethods())
@@ -588,7 +606,7 @@ public class MasterHandler
 			_log.log(Level.WARNING, "Failed loading handlers of: " + e.getKey().getClass().getSimpleName() + " seems registerHandler function does not exist.");
 		});
 		
-		for (Class<?> classes[] : _handlers)
+		for (Class<?> classes[] : HANDLERS)
 		{
 			for (Class<?> c : classes)
 			{
@@ -616,7 +634,7 @@ public class MasterHandler
 			}
 		}
 		
-		for (IHandler<?, ?> loadInstance : _loadInstances)
+		for (IHandler<?, ?> loadInstance : LOAD_INSTANCES)
 		{
 			_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + loadInstance.size() + " Handlers");
 		}
