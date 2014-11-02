@@ -1170,7 +1170,7 @@
 		<for>
 			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
-				<mul order="0x01" stat="rCrit" val="0.3" />
+				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
 	</skill>

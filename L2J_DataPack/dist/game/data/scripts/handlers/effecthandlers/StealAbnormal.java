@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.EffectScope;
+import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
@@ -73,7 +74,11 @@ public final class StealAbnormal extends AbstractEffect
 			for (BuffInfo infoToSteal : toSteal)
 			{
 				// Invert effected and effector.
-				final BuffInfo stolen = new BuffInfo(info.getEffected(), info.getEffector(), infoToSteal.getSkill());
+				final Env env = new Env();
+				env.setCharacter(info.getEffected());
+				env.setTarget(info.getEffector());
+				env.setSkill(infoToSteal.getSkill());
+				final BuffInfo stolen = new BuffInfo(env);
 				stolen.setAbnormalTime(infoToSteal.getTime()); // Copy the remaining time.
 				// To include all the effects, it's required to go through the template rather the buff info.
 				infoToSteal.getSkill().applyEffectScope(EffectScope.GENERAL, stolen, true, true);

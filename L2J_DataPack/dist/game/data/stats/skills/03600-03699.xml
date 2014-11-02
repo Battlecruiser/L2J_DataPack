@@ -293,18 +293,15 @@
 		</for>
 	</skill>
 	<skill id="3613" levels="1" name="Enchant Robe (Grade D)">
-		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<add order="0x40" stat="pDef" val="16">
-					<using kind="MAGIC" />
-				</add>
-				<mul order="0x30" stat="weightLimit" val="1.3" />
-			</effect>
+			<add order="0x40" stat="pDef" val="16">
+				<using kind="MAGIC" />
+			</add>
+			<mul order="0x30" stat="weightLimit" val="1.3" />
 		</for>
 	</skill>
 	<skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">

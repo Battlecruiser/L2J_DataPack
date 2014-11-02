@@ -397,16 +397,14 @@
 		</for>
 	</skill>
 	<skill id="4116" levels="10" name="Resist M.Atk">
-		<!-- Confirmed CT2.5 -->
+		<!-- Freya retail confirmed -->
 		<table name="#mDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 3.33 10 </table>
 		<set name="icon" val="icon.skill4116_new" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="#mDef" />
-			</effect>
+			<mul order="0x30" stat="mDef" val="#mDef" />
 		</for>
 	</skill>
 	<skill id="4117" levels="12" name="Paralysis">
@@ -553,9 +551,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<set order="0x08" stat="debuffImmunity" val="1" />
-			</effect>
+			<set order="0x08" stat="debuffImmunity" val="1" />
 			<effect name="DefenceTrait">
 				<param SHOCK="80" />
 			</effect>

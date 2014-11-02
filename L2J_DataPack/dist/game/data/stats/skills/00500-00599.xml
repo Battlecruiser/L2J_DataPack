@@ -860,9 +860,9 @@
 				<add order="0x40" stat="accCombat" val="#accCombat">
 					<using kind="CROSSBOW" />
 				</add>
-				<mul order="0x01" stat="rCrit" val="0.2">
+				<basemul order="0x30" stat="rCrit" val="0.2">
 					<using kind="CROSSBOW" />
-				</mul>
+				</basemul>
 				<add order="0x40" stat="pAtkRange" val="#range">
 					<using kind="CROSSBOW" />
 				</add>
@@ -876,9 +876,9 @@
 				<add order="0x40" stat="accCombat" val="#ench1Acc">
 					<using kind="CROSSBOW" />
 				</add>
-				<mul order="0x01" stat="rCrit" val="0.2">
+				<basemul order="0x30" stat="rCrit" val="0.2">
 					<using kind="CROSSBOW" />
-				</mul>
+				</basemul>
 				<add order="0x40" stat="pAtkRange" val="200">
 					<using kind="CROSSBOW" />
 				</add>

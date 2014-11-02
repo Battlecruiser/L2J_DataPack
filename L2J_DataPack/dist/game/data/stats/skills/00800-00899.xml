@@ -552,9 +552,9 @@
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="SWORD,DAGGER,DUALDAGGER,POLE,RAPIER,ANCIENTSWORD,DUAL,DUALFIST" />
 				</mul>
-				<mul order="0x01" stat="rCrit" val="0.2">
+				<basemul order="0x30" stat="rCrit" val="0.2">
 					<using kind="SWORD,DAGGER,DUALDAGGER,POLE,RAPIER,ANCIENTSWORD,DUAL,DUALFIST" />
-				</mul>
+				</basemul>
 			</effect>
 		</for>
 	</skill>

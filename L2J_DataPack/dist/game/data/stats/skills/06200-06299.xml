@@ -250,7 +250,7 @@
 		<for>
 			<effect name="Buff">
 				<sub order="0x40" stat="accCombat" val="16" />
-				<mul order="0x01" stat="rCrit" val="#rCrit" />
+				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="pAtk" val="0.9" />
