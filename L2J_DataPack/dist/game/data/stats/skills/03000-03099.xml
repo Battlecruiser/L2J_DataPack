@@ -199,9 +199,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit">
+				<mul order="0x01" stat="rCrit" val="#rCrit">
 					<player behind="true" />
-				</basemul>
+				</mul>
 			</effect>
 		</for>
 	</skill>
@@ -215,9 +215,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="#rCrit">
+				<mul order="0x01" stat="rCrit" val="#rCrit">
 					<player behind="true" />
-				</basemul>
+				</mul>
 			</effect>
 		</for>
 	</skill>
@@ -1036,9 +1036,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<basemul order="0x30" stat="rCrit" val="0.37">
+				<mul order="0x01" stat="rCrit" val="0.37">
 					<player behind="true" />
-				</basemul>
+				</mul>
 				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
 				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
 				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
