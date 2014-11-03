@@ -377,7 +377,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="6" />
-				<param skillId="5665" skillLevel="1" />
+				<param skillId="5665" skillLevel="1" /> <!-- Stun -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
 			</effect>
@@ -440,13 +440,12 @@
 		<set name="icon" val="icon.skill0100" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="6" />
-				<param skillId="5666" skillLevel="1" />
+				<param skillId="5666" skillLevel="1" /> <!-- Stun -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
 			</effect>
@@ -509,13 +508,12 @@
 		<set name="icon" val="icon.skill0100" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="6" />
-				<param skillId="5667" skillLevel="1" />
+				<param skillId="5667" skillLevel="1" /> <!-- Stun -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
 			</effect>
@@ -787,7 +785,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="5" />
-				<param skillId="5668" skillLevel="1" />
+				<param skillId="5668" skillLevel="1" /> <!-- Poison -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
 			</effect>
@@ -978,7 +976,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="6" />
-				<param skillId="5669" skillLevel="1" />
+				<param skillId="5669" skillLevel="1" /> <!-- Stun -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
 			</effect>
@@ -1059,7 +1057,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="6" />
-				<param skillId="5670" skillLevel="1" />
+				<param skillId="5670" skillLevel="1" /> <!-- Stun -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
 			</effect>
@@ -1103,7 +1101,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="#activationChance" />
-				<param skillId="#triggeredId" skillLevel="1" />
+				<param skillId="#triggeredId" skillLevel="1" /> <!-- Stun -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
 			</effect>

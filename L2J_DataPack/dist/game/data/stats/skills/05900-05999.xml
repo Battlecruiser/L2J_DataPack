@@ -23,7 +23,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="90" />
-				<param skillId="5902" skillLevel="1" />
+				<param skillId="5902" skillLevel="1" /> <!-- NPC Trigger Target Cancel -->
 				<param targetType="SELF" />
 				<param allowWeapons="ALL" />
 			</effect>
@@ -52,7 +52,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="90" />
-				<param skillId="5902" skillLevel="1" />
+				<param skillId="5902" skillLevel="1" /> <!-- NPC Trigger Target Cancel -->
 				<param targetType="SELF" />
 				<param allowWeapons="ALL" />
 			</effect>
@@ -246,7 +246,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="100" />
-				<param skillId="5914" skillLevel="1" />
+				<param skillId="5914" skillLevel="1" /> <!-- Putrefaction Cleanse -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
 			</effect>

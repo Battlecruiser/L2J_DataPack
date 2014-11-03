@@ -1196,9 +1196,9 @@
 				<mul order="0x30" stat="rShld" val="#rShld" />
 			</effect>
 			<effect name="TriggerSkillBySkill">
-				<param castSkillId="997" />
+				<param castSkillId="997" /> <!-- Crushing Strike -->
 				<param chance="30" />
-				<param skillId="6920" skillLevel="1" />
+				<param skillId="6920" skillLevel="1" /> <!-- Collector's Fortune -->
 				<param targetType="SELF" />
 			</effect>
 		</for>
@@ -2141,7 +2141,7 @@
 	<skill id="992" levels="8" name="Sonic Mastery">
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 </table>
+		<table name="#skillLevel"> 1 2 3 4 5 6 7 8 </table>
 		<set name="icon" val="icon.skill0992" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -2150,7 +2150,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="15" />
-				<param skillId="6813" skillLevel="1" />
+				<param skillId="6813" skillLevel="#skillLevel" /> <!-- Focus Sonic -->
 				<param targetType="SELF" />
 				<param allowWeapons="DUAL,SWORD,BLUNT" />
 			</effect>
@@ -2158,7 +2158,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="true" />
 				<param minDamage="1" chance="30" />
-				<param skillId="6813" skillLevel="1" />
+				<param skillId="6813" skillLevel="#skillLevel" /> <!-- Focus Sonic -->
 				<param targetType="SELF" />
 				<param allowWeapons="DUAL,SWORD,BLUNT" />
 			</effect>
@@ -2167,7 +2167,7 @@
 	<skill id="993" levels="8" name="Force Mastery">
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 24 32 40 52 60 66 72 79 </table>
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 </table>
+		<table name="#skillLevel"> 1 2 3 4 5 6 7 8 </table>
 		<set name="icon" val="icon.skill0993" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -2177,7 +2177,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="15" />
-				<param skillId="6814" skillLevel="1" />
+				<param skillId="6814" skillLevel="#skillLevel" /> <!-- Focus Force -->
 				<param targetType="SELF" />
 				<param allowWeapons="DUALFIST" />
 			</effect>
@@ -2185,7 +2185,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="true" />
 				<param minDamage="1" chance="30" />
-				<param skillId="6814" skillLevel="1" />
+				<param skillId="6814" skillLevel="#skillLevel" /> <!-- Focus Force -->
 				<param targetType="SELF" />
 				<param allowWeapons="DUALFIST" />
 			</effect>

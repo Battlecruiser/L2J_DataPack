@@ -1476,7 +1476,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="3" />
-				<param skillId="5559" skillLevel="1" />
+				<param skillId="5559" skillLevel="1" /> <!-- Physical Pose -->
 				<param targetType="SELF" />
 				<param allowWeapons="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" />
 			</effect>
@@ -1500,9 +1500,9 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="3" />
-				<param skillId="5559" skillLevel="1" />
+				<param skillId="5559" skillLevel="1" /> <!-- Physical Pose -->
 				<param targetType="SELF" />
-				<param allowWeapons="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" />
+				<param allowWeapons="CROSSBOW,BOW" />
 			</effect>
 		</for>
 	</skill>

@@ -864,8 +864,8 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="15" />
-				<param skillId="5551" skillLevel="#triggeredLvl" />
-				<param targetType="SELF" />
+				<param skillId="5551" skillLevel="#triggeredLvl" /> <!-- Stun -->
+				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
 			</effect>
 		</for>
@@ -1042,7 +1042,6 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -1072,7 +1071,6 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -1103,7 +1101,6 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -1133,7 +1130,6 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />

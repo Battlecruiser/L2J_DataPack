@@ -865,13 +865,12 @@
 		<set name="icon" val="icon.skill1526" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param isCritical="true" />
 				<param minDamage="#minDamage" chance="10" />
-				<param skillId="#triggeredId" skillLevel="1" />
+				<param skillId="#triggeredId" skillLevel="1" /> <!-- Steal Mana -->
 				<param targetType="SELF" />
 				<param allowWeapons="ALL" />
 			</effect>
@@ -1363,9 +1362,9 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillBySkill">
-				<param castSkillId="927" />
+				<param castSkillId="927" /> <!-- Burning Chop -->
 				<param chance="30" />
-				<param skillId="6060" skillLevel="1" />
+				<param skillId="6060" skillLevel="1" /> <!-- Great Fury -->
 				<param targetType="PARTY" />
 			</effect>
 		</for>
@@ -1778,9 +1777,9 @@
 		<for>
 			<effect name="MagicalAttack" />
 			<effect name="TriggerSkillBySkill">
-				<param castSkillId="1558" />
+				<param castSkillId="1558" /> <!-- Dimension Spiral -->
 				<param chance="5" />
-				<param skillId="5571" skillLevel="1" />
+				<param skillId="5571" skillLevel="1" /> <!-- Mutual Response -->
 				<param targetType="SUMMON" />
 			</effect>
 		</for>

@@ -371,13 +371,12 @@
 		<!-- Rapier +4 Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="true" />
 				<param minDamage="1" chance="5" />
-				<param skillId="5547" skillLevel="1" />
+				<param skillId="5547" skillLevel="1" /> <!-- Maximum Ability -->
 				<param targetType="PARTY" />
 				<param allowWeapons="ALL" />
 			</effect>
@@ -404,7 +403,7 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="true" />
 				<param minDamage="1" chance="5" />
-				<param skillId="5547" skillLevel="1" />
+				<param skillId="5547" skillLevel="1" /> <!-- Maximum Ability -->
 				<param targetType="PARTY" />
 				<param allowWeapons="ALL" />
 			</effect>
