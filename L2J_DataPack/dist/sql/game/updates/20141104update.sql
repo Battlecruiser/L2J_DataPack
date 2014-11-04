@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00352_HelpRoodRaiseANewPet' WHERE name='352_HelpRoodRaiseANewPet';
