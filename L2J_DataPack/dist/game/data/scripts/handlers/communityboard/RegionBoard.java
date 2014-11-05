@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * Region board.
@@ -78,8 +79,16 @@ public class RegionBoard implements IWriteBoardHandler
 		}
 		else if (command.startsWith("_bbsloc;"))
 		{
-			CommunityBoardHandler.getInstance().addBypass(activeChar, command, "Region>");
-			// TODO: Implement region info.
+			CommunityBoardHandler.getInstance().addBypass(activeChar, "Region>", command);
+			
+			final String id = command.replace("_bbsloc;", "");
+			if (!Util.isDigit(id))
+			{
+				LOG.warning(RegionBoard.class.getSimpleName() + ": Player " + activeChar + " sent and invalid region bypass " + command + "!");
+				return false;
+			}
+			
+			// TODO: Implement.
 		}
 		return true;
 	}
@@ -87,6 +96,7 @@ public class RegionBoard implements IWriteBoardHandler
 	@Override
 	public boolean writeCommunityBoardCommand(L2PcInstance activeChar, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
+		// TODO: Implement.
 		return false;
 	}
 }

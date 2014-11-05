@@ -8,5 +8,5 @@ CREATE TABLE `bbs_favorites` (
 	UNIQUE INDEX `favId_playerId` (`favId`, `playerId`)
 )
 COMMENT='This table saves the Favorite links from each player for the community board.'
-COLLATE='utf8_general_ci'
+COLLATE='utf8_unicode_ci'
 ENGINE=InnoDB;

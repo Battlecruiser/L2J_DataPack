@@ -54,6 +54,7 @@ public class MemoBoard implements IWriteBoardHandler
 	@Override
 	public boolean writeCommunityBoardCommand(L2PcInstance activeChar, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
+		// TODO: Implement.
 		return false;
 	}
 }

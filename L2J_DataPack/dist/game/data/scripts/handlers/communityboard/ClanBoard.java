@@ -18,8 +18,6 @@
  */
 package handlers.communityboard;
 
-import java.util.StringTokenizer;
-
 import com.l2jserver.gameserver.datatables.ClanTable;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.handler.IWriteBoardHandler;
@@ -74,10 +72,15 @@ public class ClanBoard implements IWriteBoardHandler
 			}
 			else if (command.startsWith("_bbsclan_clanlist;"))
 			{
-				StringTokenizer st = new StringTokenizer(command, ";");
-				st.nextToken();
-				int index = Integer.parseInt(st.nextToken());
-				clanList(activeChar, index);
+				try
+				{
+					clanList(activeChar, Integer.parseInt(command.split(";")[1]));
+				}
+				catch (Exception e)
+				{
+					clanList(activeChar, 1);
+					LOG.warning(ClanBoard.class.getSimpleName() + ": Player " + activeChar + " send invalid clan list bypass " + command + "!");
+				}
 			}
 		}
 		else if (command.startsWith("_bbsclan_clanhome"))
@@ -90,10 +93,15 @@ public class ClanBoard implements IWriteBoardHandler
 			}
 			else if (command.startsWith("_bbsclan_clanhome;"))
 			{
-				StringTokenizer st = new StringTokenizer(command, ";");
-				st.nextToken();
-				int index = Integer.parseInt(st.nextToken());
-				clanHome(activeChar, index);
+				try
+				{
+					clanHome(activeChar, Integer.parseInt(command.split(";")[1]));
+				}
+				catch (Exception e)
+				{
+					clanHome(activeChar);
+					LOG.warning(ClanBoard.class.getSimpleName() + ": Player " + activeChar + " send invalid clan home bypass " + command + "!");
+				}
 			}
 		}
 		else if (command.startsWith("_bbsclan_clannotice_edit;"))
@@ -157,7 +165,7 @@ public class ClanBoard implements IWriteBoardHandler
 					
 					StringUtil.append(html, "</td></tr></table><img src=\"L2UI.Squaregray\" width=\"610\" height=\"1\"><br> <br><table width=610 border=0 cellspacing=2 cellpadding=0><tr><td>Edit Notice: </td></tr><tr><td height=5></td></tr><tr><td><MultiEdit var =\"Content\" width=610 height=100></td></tr></table><br><table width=610 border=0 cellspacing=0 cellpadding=0><tr><td height=5></td></tr><tr><td align=center FIXWIDTH=65><button value=\"&$140;\" action=\"Write Notice Set _ Content Content Content\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\" ></td><td align=center FIXWIDTH=45></td><td align=center FIXWIDTH=500></td></tr></table></center></body></html>");
 					
-					Util.sendCBHtml(activeChar, html.toString(), activeChar.getClan().getNotice(), false);
+					Util.sendCBHtml(activeChar, html.toString(), activeChar.getClan().getNotice());
 				}
 				else
 				{
@@ -275,6 +283,7 @@ public class ClanBoard implements IWriteBoardHandler
 	@Override
 	public boolean writeCommunityBoardCommand(L2PcInstance activeChar, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
+		// TODO: Implement.
 		return false;
 	}
 }
