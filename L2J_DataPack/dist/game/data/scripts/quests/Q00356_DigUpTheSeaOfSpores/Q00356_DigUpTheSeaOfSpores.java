@@ -72,16 +72,16 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "30717-02.html":
-			case "30717-03.html":
-			case "30717-04.html":
+			case "30717-02.htm":
+			case "30717-03.htm":
+			case "30717-04.htm":
 			case "30717-10.html":
 			case "30717-18.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30717-05.html":
+			case "30717-05.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
@@ -169,7 +169,7 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			htmltext = (player.getLevel() >= MIN_LEVEL) ? "30717-01.html" : "30717-06.htm";
+			htmltext = (player.getLevel() >= MIN_LEVEL) ? "30717-01.htm" : "30717-06.htm";
 		}
 		else if (qs.isStarted())
 		{
