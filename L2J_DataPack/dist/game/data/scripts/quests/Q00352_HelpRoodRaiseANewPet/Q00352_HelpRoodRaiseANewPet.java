@@ -128,12 +128,13 @@ public final class Q00352_HelpRoodRaiseANewPet extends Quest
 		}
 		
 		final DropInfo info = MOBS.get(npc.getId());
+		final int random = getRandom(100);
 		
-		if (getRandom(100) < info.getFirstChance())
+		if (random < info.getFirstChance())
 		{
 			qs.giveItemRandomly(npc, LIENRIK_EGG1, 1, 0, 1.0, true);
 		}
-		else if (getRandom(100) < info.getSecondChance())
+		else if (random < info.getSecondChance())
 		{
 			qs.giveItemRandomly(npc, LIENRIK_EGG2, 1, 0, 1.0, true);
 		}
