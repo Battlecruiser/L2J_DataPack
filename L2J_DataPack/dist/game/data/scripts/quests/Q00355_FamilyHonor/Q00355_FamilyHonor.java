@@ -150,10 +150,9 @@ public final class Q00355_FamilyHonor extends Quest
 			}
 			case "30929-03.html":
 			{
-				final boolean hasSculptorBerona = hasQuestItems(player, SCULPTOR_BERONA);
 				final int random = getRandom(100);
 				
-				if (hasSculptorBerona)
+				if (hasQuestItems(player, SCULPTOR_BERONA))
 				{
 					if (random < 2)
 					{
@@ -229,8 +228,7 @@ public final class Q00355_FamilyHonor extends Quest
 		{
 			if (npc.getId() == GALIBREDO)
 			{
-				final boolean hasSculptorBerona = hasQuestItems(player, SCULPTOR_BERONA);
-				if (hasSculptorBerona)
+				if (hasQuestItems(player, SCULPTOR_BERONA))
 				{
 					htmltext = "30181-11.html";
 				}

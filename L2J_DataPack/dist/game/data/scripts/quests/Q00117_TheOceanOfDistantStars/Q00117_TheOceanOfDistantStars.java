@@ -207,7 +207,7 @@ public final class Q00117_TheOceanOfDistantStars extends Quest
 		
 		if (giveItemRandomly(killer, npc, BOOK_OF_GREY_STAR, 1, 1, MONSTER_DROP_CHANCES.get(npc.getId()), true))
 		{
-			qs.setCond(8, true);
+			qs.setCond(8);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
