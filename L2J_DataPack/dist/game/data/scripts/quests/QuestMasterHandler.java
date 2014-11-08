@@ -124,6 +124,7 @@ import quests.Q00113_StatusOfTheBeaconTower.Q00113_StatusOfTheBeaconTower;
 import quests.Q00114_ResurrectionOfAnOldManager.Q00114_ResurrectionOfAnOldManager;
 import quests.Q00115_TheOtherSideOfTruth.Q00115_TheOtherSideOfTruth;
 import quests.Q00116_BeyondTheHillsOfWinter.Q00116_BeyondTheHillsOfWinter;
+import quests.Q00117_TheOceanOfDistantStars.Q00117_TheOceanOfDistantStars;
 import quests.Q00119_LastImperialPrince.Q00119_LastImperialPrince;
 import quests.Q00121_PavelTheGiant.Q00121_PavelTheGiant;
 import quests.Q00122_OminousNews.Q00122_OminousNews;
@@ -559,6 +560,7 @@ public class QuestMasterHandler
 		Q00114_ResurrectionOfAnOldManager.class,
 		Q00115_TheOtherSideOfTruth.class,
 		Q00116_BeyondTheHillsOfWinter.class,
+		Q00117_TheOceanOfDistantStars.class,
 		Q00119_LastImperialPrince.class,
 		Q00121_PavelTheGiant.class,
 		Q00122_OminousNews.class,

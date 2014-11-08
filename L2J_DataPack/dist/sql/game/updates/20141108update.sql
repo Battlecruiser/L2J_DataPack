@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00117_TheOceanOfDistantStars' WHERE name='117_OceanOfDistantStar';
