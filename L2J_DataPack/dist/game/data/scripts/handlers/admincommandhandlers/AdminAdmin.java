@@ -142,7 +142,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			
 			final L2PcInstance target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
-			if (Hero.getInstance().isClaimed(target.getObjectId()))
+			if (Hero.getInstance().isHero(target.getObjectId()))
 			{
 				activeChar.sendMessage("This player has already claimed the hero status.");
 				return false;
