@@ -29,8 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.GeoUtils;
 
 /**
- * @author -Nemesiss-
- * @author FBIagent
+ * @author -Nemesiss-, HorridoJoho
  */
 public class AdminGeodata implements IAdminCommandHandler
 {

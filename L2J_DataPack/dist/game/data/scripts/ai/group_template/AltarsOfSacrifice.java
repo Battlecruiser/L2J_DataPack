@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.interfaces.ILocational;
 import com.l2jserver.util.Rnd;
 
 /**
- * @author FBIagent, janiko, FinalDestination, lion
+ * @author HorridoJoho, janiko, FinalDestination, lion
  */
 public final class AltarsOfSacrifice extends AbstractNpcAI
 {

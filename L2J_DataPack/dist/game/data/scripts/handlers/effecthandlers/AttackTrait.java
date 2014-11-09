@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.model.stats.TraitType;
 
 /**
  * Attack Trait effect implementation.
- * @author Nos
+ * @author NosBit
  */
 public final class AttackTrait extends AbstractEffect
 {

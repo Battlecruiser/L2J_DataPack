@@ -36,7 +36,7 @@ import com.l2jserver.util.Rnd;
 
 /**
  * Energy Attack effect implementation.
- * @author Nos
+ * @author NosBit
  */
 public final class EnergyAttack extends AbstractEffect
 {

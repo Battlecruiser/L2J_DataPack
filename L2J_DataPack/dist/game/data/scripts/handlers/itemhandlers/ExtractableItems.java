@@ -32,7 +32,7 @@ import com.l2jserver.util.Rnd;
 
 /**
  * Extractable Items handler.
- * @author FBIagent
+ * @author HorridoJoho
  */
 public class ExtractableItems implements IItemHandler
 {

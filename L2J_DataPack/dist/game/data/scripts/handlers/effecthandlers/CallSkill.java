@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Call Skill effect implementation.
- * @author Nos
+ * @author NosBit
  */
 public final class CallSkill extends AbstractEffect
 {

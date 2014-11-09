@@ -47,7 +47,7 @@ import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * @author Nos
+ * @author NosBit
  */
 public class AdminReload implements IAdminCommandHandler
 {

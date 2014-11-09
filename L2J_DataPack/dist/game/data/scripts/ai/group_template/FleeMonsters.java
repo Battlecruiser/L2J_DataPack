@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Flee Monsters AI.
- * @author Pandragon, Nos
+ * @author Pandragon, NosBit
  */
 public final class FleeMonsters extends AbstractNpcAI
 {

@@ -41,7 +41,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * This class handles commands for gm to forge packets
- * @author Maktakien, FBIagent
+ * @author Maktakien, HorridoJoho
  */
 public final class AdminPForge implements IAdminCommandHandler
 {

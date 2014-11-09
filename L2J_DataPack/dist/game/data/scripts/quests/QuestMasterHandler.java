@@ -449,7 +449,7 @@ import quests.Q10504_JewelOfAntharas.Q10504_JewelOfAntharas;
 import quests.Q10505_JewelOfValakas.Q10505_JewelOfValakas;
 
 /**
- * @author Nos
+ * @author NosBit
  */
 public class QuestMasterHandler
 {

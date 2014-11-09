@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.entity.TvTEventTeleporter;
 import com.l2jserver.gameserver.model.entity.TvTManager;
 
 /**
- * @author FBIagent
+ * @author HorridoJoho
  */
 public class AdminTvTEvent implements IAdminCommandHandler
 {

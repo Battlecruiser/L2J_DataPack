@@ -44,7 +44,7 @@ import com.l2jserver.gameserver.util.HtmlUtil;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * @author Nos
+ * @author NosBit
  */
 public class NpcViewMod implements IBypassHandler
 {

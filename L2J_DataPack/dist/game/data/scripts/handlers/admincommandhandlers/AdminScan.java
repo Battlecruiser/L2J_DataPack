@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
- * @author Nos
+ * @author NosBit
  */
 public class AdminScan implements IAdminCommandHandler
 {

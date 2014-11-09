@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * @author FBIagent, UnAfraid
+ * @author HorridoJoho, UnAfraid
  */
 public class SummonItems extends ItemSkillsTemplate
 {

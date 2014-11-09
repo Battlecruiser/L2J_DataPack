@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 
 /**
  * Give Recommendation effect implementation.
- * @author Nos
+ * @author NosBit
  */
 public final class GiveRecommendation extends AbstractEffect
 {
