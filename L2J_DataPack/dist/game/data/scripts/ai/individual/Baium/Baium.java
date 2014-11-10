@@ -683,7 +683,7 @@ public final class Baium extends AbstractNpcAI
 		for (int i = 0; i < 3; i++)
 		{
 			final L2Character attacker = vars.getObject("c_quest" + i, L2Character.class);
-			if ((attacker != null) && ((npc.calculateDistance(attacker, true, false) > 9000) || attacker.isDead()))
+			if ((attacker == null) || ((npc.calculateDistance(attacker, true, false) > 9000) || attacker.isDead()))
 			{
 				vars.set("i_quest" + i, 0);
 			}
