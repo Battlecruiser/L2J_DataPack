@@ -2749,7 +2749,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.12" />
+				<mul stat="pAtk" val="1.12" />
 			</effect>
 		</for>
 	</skill>
@@ -2765,7 +2765,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.12" />
+				<mul stat="pDef" val="1.12" />
 			</effect>
 		</for>
 	</skill>
@@ -2782,8 +2782,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.33" />
-				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+				<mul stat="pAtkSpd" val="1.33" />
+				<mul stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -2799,7 +2799,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="33" />
+				<add stat="runSpd" val="33" />
 			</effect>
 		</for>
 	</skill>
@@ -2815,7 +2815,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="cAtk" val="1.3" />
+				<mul stat="cAtk" val="1.3" />
 			</effect>
 		</for>
 	</skill>

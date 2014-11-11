@@ -71,10 +71,10 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="190" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="190" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15404" type="EtcItem" name="6th Anniversary Party Gift Box (2003) - Event">
@@ -436,8 +436,8 @@
 		<set name="item_skill" val="8361-1" />
 		<set name="time" val="43200" />
 		<for>
-			<add order="0x10" stat="mDef" val="63" />
-			<add order="0x40" stat="maxMp" val="31" />
+			<add order="0" stat="mDef" val="63" />
+			<add stat="maxMp" val="31" />
 		</for>
 	</item>
 	<item id="15429" type="Armor" name="6th Anniversary Party Belt (Event) - 7-day limited period">
@@ -555,9 +555,9 @@
 		<set name="item_skill" val="8246-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15437" type="EtcItem" name="Transformation Scroll Box">

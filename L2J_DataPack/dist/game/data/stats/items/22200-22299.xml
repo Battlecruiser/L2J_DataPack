@@ -87,8 +87,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="10080" />
 		<for>
-			<add order="0x10" stat="mDef" val="125" />
-			<add order="0x40" stat="maxMp" val="50" />
+			<add order="0" stat="mDef" val="125" />
+			<add stat="maxMp" val="50" />
 		</for>
 	</item>
 	<item id="22212" type="Armor" name="Angry Bunny Earring - 7-day limited period (event)">
@@ -102,8 +102,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="10080" />
 		<for>
-			<add order="0x10" stat="mDef" val="94" />
-			<add order="0x40" stat="maxMp" val="37" />
+			<add order="0" stat="mDef" val="94" />
+			<add stat="maxMp" val="37" />
 		</for>
 	</item>
 	<item id="22213" type="Armor" name="Angry Bunny Ring - 7-day limited period (event)">
@@ -117,8 +117,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="10080" />
 		<for>
-			<add order="0x10" stat="mDef" val="62" />
-			<add order="0x40" stat="maxMp" val="25" />
+			<add order="0" stat="mDef" val="62" />
+			<add stat="maxMp" val="25" />
 		</for>
 	</item>
 	<item id="22214" type="Armor" name="Angry Bunny Necklace - 30-day limited period (event)">
@@ -132,8 +132,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="43200" />
 		<for>
-			<add order="0x10" stat="mDef" val="125" />
-			<add order="0x40" stat="maxMp" val="50" />
+			<add order="0" stat="mDef" val="125" />
+			<add stat="maxMp" val="50" />
 		</for>
 	</item>
 	<item id="22215" type="Armor" name="Angry Bunny Earring - 30-day limited period (event)">
@@ -147,8 +147,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="43200" />
 		<for>
-			<add order="0x10" stat="mDef" val="94" />
-			<add order="0x40" stat="maxMp" val="37" />
+			<add order="0" stat="mDef" val="94" />
+			<add stat="maxMp" val="37" />
 		</for>
 	</item>
 	<item id="22216" type="Armor" name="Angry Bunny Ring - 30-day limited period (event)">
@@ -162,8 +162,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="43200" />
 		<for>
-			<add order="0x10" stat="mDef" val="62" />
-			<add order="0x40" stat="maxMp" val="25" />
+			<add order="0" stat="mDef" val="62" />
+			<add stat="maxMp" val="25" />
 		</for>
 	</item>
 	<item id="22217" type="EtcItem" name="Lantern Agathion's Gift Set - Event">
@@ -424,7 +424,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="7" />
+			<add order="0" stat="mDef" val="7" />
 		</for>
 	</item>
 	<item id="22238" type="EtcItem" name="Scroll: Hair Accessory - Warrior Use">
@@ -470,7 +470,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="material" val="GOLD" />
 		<for>
-			<add order="0x10" stat="mDef" val="7" />
+			<add order="0" stat="mDef" val="7" />
 		</for>
 	</item>
 	<item id="22244" type="EtcItem" name="Mysterious Soulshot (C-Grade)">
@@ -842,10 +842,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="22282" type="EtcItem" name="Sujin Transformation Stick 7-Day Pack - Event">
@@ -867,10 +867,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="22284" type="EtcItem" name="Trejuo Transformation Stick 7-Day Pack - Event">

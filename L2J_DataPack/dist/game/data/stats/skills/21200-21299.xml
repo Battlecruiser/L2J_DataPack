@@ -361,7 +361,7 @@
 		<for>
 			<effect name="Transformation">
 				<param id="20004" />
-				<mul order="0x30" stat="runSpd" val="1.5" />
+				<mul stat="runSpd" val="1.5" />
 			</effect>
 		</for>
 	</skill>
@@ -397,7 +397,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="7" />
+				<add stat="runSpd" val="7" />
 			</effect>
 		</for>
 	</skill>
@@ -475,7 +475,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="mDef" val="70" />
+				<add stat="mDef" val="70" />
 			</effect>
 		</for>
 	</skill>

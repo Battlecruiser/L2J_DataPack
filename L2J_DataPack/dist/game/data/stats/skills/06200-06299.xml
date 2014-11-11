@@ -38,9 +38,9 @@
 		<for>
 			<effect name="Transformation">
 				<param id="111" />
-				<mul order="0x30" stat="weightLimit" val="11" />
-				<add order="0x40" stat="weightPenalty" val="9000" />
-				<add order="0x40" stat="inventoryLimit" val="8" />
+				<mul stat="weightLimit" val="11" />
+				<add stat="weightPenalty" val="9000" />
+				<add stat="inventoryLimit" val="8" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
@@ -69,9 +69,9 @@
 		<for>
 			<effect name="Transformation">
 				<param id="112" />
-				<mul order="0x30" stat="weightLimit" val="11" />
-				<add order="0x40" stat="weightPenalty" val="9000" />
-				<add order="0x40" stat="inventoryLimit" val="8" />
+				<mul stat="weightLimit" val="11" />
+				<add stat="weightPenalty" val="9000" />
+				<add stat="inventoryLimit" val="8" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
@@ -100,9 +100,9 @@
 		<for>
 			<effect name="Transformation">
 				<param id="124" />
-				<mul order="0x30" stat="weightLimit" val="11" />
-				<add order="0x40" stat="weightPenalty" val="9000" />
-				<add order="0x40" stat="inventoryLimit" val="8" />
+				<mul stat="weightLimit" val="11" />
+				<add stat="weightPenalty" val="9000" />
+				<add stat="inventoryLimit" val="8" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
@@ -131,9 +131,9 @@
 		<for>
 			<effect name="Transformation">
 				<param id="113" />
-				<mul order="0x30" stat="weightLimit" val="11" />
-				<add order="0x40" stat="weightPenalty" val="9000" />
-				<add order="0x40" stat="inventoryLimit" val="8" />
+				<mul stat="weightLimit" val="11" />
+				<add stat="weightPenalty" val="9000" />
+				<add stat="inventoryLimit" val="8" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
@@ -224,7 +224,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="66" />
+				<add stat="runSpd" val="66" />
 			</effect>
 		</for>
 	</skill>
@@ -249,11 +249,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="accCombat" val="16" />
-				<mul order="0x01" stat="rCrit" val="#rCrit" />
-				<mul order="0x30" stat="cAtk" val="#cAtk" />
-				<mul order="0x30" stat="pAtkSpd" val="0.9" />
-				<mul order="0x30" stat="pAtk" val="0.9" />
+				<sub stat="accCombat" val="16" />
+				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="cAtk" val="#cAtk" />
+				<mul stat="pAtkSpd" val="0.9" />
+				<mul stat="pAtk" val="0.9" />
 			</effect>
 		</for>
 	</skill>
@@ -268,10 +268,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="rEvas" val="#rEvas" />
-				<mul order="0x30" stat="pAtkSpd" val="#amount" />
-				<mul order="0x30" stat="mAtkSpd" val="#amount" />
-				<mul order="0x30" stat="runSpd" val="#amount" />
+				<sub stat="rEvas" val="#rEvas" />
+				<mul stat="pAtkSpd" val="#amount" />
+				<mul stat="mAtkSpd" val="#amount" />
+				<mul stat="runSpd" val="#amount" />
 			</effect>
 		</for>
 	</skill>
@@ -431,7 +431,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.2" />
+				<mul stat="runSpd" val="0.2" />
 			</effect>
 		</for>
 	</skill>
@@ -455,9 +455,9 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.5" />
-				<mul order="0x30" stat="pAtkSpd" val="0.5" />
-				<mul order="0x30" stat="mAtkSpd" val="0.5" />
+				<mul stat="runSpd" val="0.5" />
+				<mul stat="pAtkSpd" val="0.5" />
+				<mul stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
 	</skill>
@@ -1014,7 +1014,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="vengeanceMdam" val="20" />
+				<add stat="vengeanceMdam" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1050,9 +1050,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.15" />
-				<mul order="0x30" stat="pAtk" val="1.15" />
-				<mul order="0x30" stat="pAtkSpd" val="1.15" />
+				<mul stat="pDef" val="1.15" />
+				<mul stat="pAtk" val="1.15" />
+				<mul stat="pAtkSpd" val="1.15" />
 			</effect>
 		</for>
 	</skill>
@@ -1069,7 +1069,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+				<mul stat="mAtkSpd" val="1.15" />
 			</effect>
 		</for>
 	</skill>
@@ -1091,8 +1091,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.1" />
-				<mul order="0x30" stat="regHp" val="1.15" />
+				<mul stat="pDef" val="1.1" />
+				<mul stat="regHp" val="1.15" />
 			</effect>
 		</for>
 	</skill>
@@ -1135,8 +1135,8 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="4" />
-				<mul order="0x30" stat="mDef" val="4" />
+				<mul stat="pDef" val="4" />
+				<mul stat="mDef" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -1155,10 +1155,10 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="3" />
-				<mul order="0x30" stat="mAtk" val="3" />
-				<mul order="0x30" stat="pAtkSpd" val="1.25" />
-				<mul order="0x30" stat="mAtkSpd" val="1.25" />
+				<mul stat="pAtk" val="3" />
+				<mul stat="mAtk" val="3" />
+				<mul stat="pAtkSpd" val="1.25" />
+				<mul stat="mAtkSpd" val="1.25" />
 			</effect>
 		</for>
 	</skill>
@@ -1260,7 +1260,7 @@
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.15" />
+				<mul stat="pAtk" val="1.15" />
 			</effect>
 		</for>
 	</skill>

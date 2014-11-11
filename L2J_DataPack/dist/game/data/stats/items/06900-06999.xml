@@ -39,10 +39,10 @@
 			</and>
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="90" />
-			<enchant val="0" order="0x0C" stat="sDef" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="90" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="6903" type="EtcItem" name="Music Box M">
@@ -183,8 +183,8 @@
 		<set name="price" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="6918" type="Weapon" name="Monster Only (Shield of Silenos)">
@@ -197,10 +197,10 @@
 		<set name="price" val="12900" />
 		<set name="for_npc" val="true" />
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="90" />
-			<enchant val="0" order="0x0C" stat="sDef" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="90" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="6919" type="Weapon" name="Monster Only (Shield of Ketra Orc)">
@@ -214,10 +214,10 @@
 		<set name="price" val="78400" />
 		<set name="for_npc" val="true" />
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="142" />
-			<enchant val="0" order="0x0C" stat="sDef" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="142" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="6920" type="EtcItem" name="Recipe: Greater Fish Oil (100%)">

@@ -892,7 +892,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="time" val="20160" />
 		<for>
-			<add order="0x40" stat="maxMp" val="15" />
+			<add stat="maxMp" val="15" />
 		</for>
 	</item>
 	<item id="14774" type="Weapon" name="Wild Rose Pig Candy - 14-day limited period">
@@ -912,10 +912,10 @@
 		<set name="item_skill" val="8325-1;8326-1" />
 		<set name="time" val="20160" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="14775" type="Armor" name="Agathion Seal Bracelet - Love - 14-day limited period">
@@ -983,7 +983,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
+			<set stat="rCrit" val="8" />
 		</for>
 	</item>
 	<item id="14781" type="Weapon" name="Baguette's Dagger">
@@ -999,8 +999,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
 		</for>
 	</item>
 	<item id="14782" type="Weapon" name="Baguette's Two-handed Sword">
@@ -1016,7 +1016,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
+			<set stat="rCrit" val="8" />
 		</for>
 	</item>
 	<item id="14783" type="Weapon" name="Baguette's Mace">
@@ -1033,8 +1033,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
 		</for>
 	</item>
 	<item id="14784" type="Weapon" name="Baguette's Two-handed Hammer">
@@ -1051,8 +1051,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
 		</for>
 	</item>
 	<item id="14785" type="Weapon" name="Baguette's Spear">
@@ -1068,8 +1068,8 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
 		</for>
 	</item>
 	<item id="14786" type="Weapon" name="Baguette's Bow">
@@ -1087,8 +1087,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
 		</for>
 	</item>
 	<item id="14787" type="Weapon" name="Baguette's Fist">
@@ -1105,8 +1105,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
 		</for>
 	</item>
 	<item id="14788" type="Weapon" name="Baguette's Magic Sword">
@@ -1124,7 +1124,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
+			<set stat="rCrit" val="8" />
 		</for>
 	</item>
 	<item id="14789" type="Weapon" name="Baguette's Staff">
@@ -1142,8 +1142,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
 		</for>
 	</item>
 	<item id="14790" type="Weapon" name="Baguette's Two-handed Staff">
@@ -1164,8 +1164,8 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="duration" val="600" />
 		<for>
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
 		</for>
 	</item>
 	<item id="14791" type="Armor" name="Baguette's Shield">
@@ -1185,9 +1185,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="90" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="90" />
 		</for>
 	</item>
 	<item id="14792" type="Weapon" name="Baguette's Rapier">
@@ -1207,8 +1207,8 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
 		</for>
 	</item>
 	<item id="14793" type="Weapon" name="Baguette's Ancient Sword">
@@ -1229,8 +1229,8 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
 		</for>
 	</item>
 	<item id="14794" type="Weapon" name="Baguette's Crossbow">
@@ -1251,8 +1251,8 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
 		</for>
 	</item>
 	<item id="14795" type="Weapon" name="Baguette's Dualsword">
@@ -1270,7 +1270,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="rCrit" val="8" />
+			<set stat="rCrit" val="8" />
 		</for>
 	</item>
 	<item id="14796" type="Armor" name="Baguette's Sigil">
@@ -1288,7 +1288,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="14797" type="Weapon" name="Baguette's Two-handed Dagger">
@@ -1312,8 +1312,8 @@
 			</and>
 		</cond>
 		<for>
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
 		</for>
 	</item>
 	<item id="14798" type="Armor" name="Afro Perm Wig - Black">

@@ -11,16 +11,16 @@
 				<param BLEED="50" />
 				<param HOLD="50" />
 				<param SLEEP="50" />
-				<mul order="0x30" stat="pDef" val="1.0847" /> <!-- Def. Power +8.47% -->
-				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power +5.57% -->
-				<mul order="0x30" stat="magicSuccRes" val="1.02" /> <!-- Resistance to Damage Magic +2% -->
-				<add order="0x40" stat="maxHp" val="541" /> <!-- Max. HP +541 -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
-				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<mul stat="pDef" val="1.0847" /> <!-- Def. Power +8.47% -->
+				<mul stat="pAtk" val="1.0557" /> <!-- Atk. Power +5.57% -->
+				<mul stat="magicSuccRes" val="1.02" /> <!-- Resistance to Damage Magic +2% -->
+				<add stat="maxHp" val="541" /> <!-- Max. HP +541 -->
+				<add stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
+				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -34,16 +34,16 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
-				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power + 5.57% -->
-				<mul order="0x30" stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
-				<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
-				<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<add order="0x40" stat="cAtkAdd" val="182" /> <!-- Increases Critical Damage by 182 -->
-				<add order="0x40" stat="maxMp" val="360" /> <!-- Increases Max MP by 360 -->
+				<mul stat="pAtk" val="1.0557" /> <!-- Atk. Power + 5.57% -->
+				<mul stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
+				<mul stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
+				<mul stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
+				<add stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add stat="cAtkAdd" val="182" /> <!-- Increases Critical Damage by 182 -->
+				<add stat="maxMp" val="360" /> <!-- Increases Max MP by 360 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -57,15 +57,15 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
-				<mul order="0x30" stat="mAtk" val="1.087" /> <!-- M. Power +8.7% -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
-				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-				<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 92 -->
+				<mul stat="mAtk" val="1.087" /> <!-- M. Power +8.7% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
+				<mul stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
+				<add stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<add stat="maxMp" val="92" /> <!-- Increases Max MP by 92 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -81,15 +81,15 @@
 				<param BLEED="50" />
 				<param HOLD="50" />
 				<param SLEEP="50" />
-				<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- P. Atk. +6.59% -->
-				<add order="0x40" stat="rCrit" val="127.4" /> <!-- Critical rate +127.4 -->
-				<mul order="0x30" stat="magicSuccRes" val="1.02" /> <!-- Resistance to damage magic +2% -->
-				<add order="0x40" stat="maxHp" val="550" /> <!-- Max. HP +550 -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<add order="0x40" stat="absorbDam" val="3" /> <!-- Steal opponent's HP on attack -->
+				<mul stat="pAtk" val="1.0659" /> <!-- P. Atk. +6.59% -->
+				<add stat="rCrit" val="127.4" /> <!-- Critical rate +127.4 -->
+				<mul stat="magicSuccRes" val="1.02" /> <!-- Resistance to damage magic +2% -->
+				<add stat="maxHp" val="550" /> <!-- Max. HP +550 -->
+				<add stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add stat="absorbDam" val="3" /> <!-- Steal opponent's HP on attack -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -103,14 +103,14 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
-				<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- Attack Power +6.59% -->
-				<mul order="0x30" stat="pAtkSpd" val="1.06" /> <!-- Atk. Spd. +6% -->
-				<add order="0x40" stat="rCrit" val="170.5" /> <!-- Crt. Rate +170.5 -->
-				<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<mul stat="pAtk" val="1.0659" /> <!-- Attack Power +6.59% -->
+				<mul stat="pAtkSpd" val="1.06" /> <!-- Atk. Spd. +6% -->
+				<add stat="rCrit" val="170.5" /> <!-- Crt. Rate +170.5 -->
+				<mul stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
+				<add stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -124,16 +124,16 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
-				<mul order="0x30" stat="mAtk" val="1.1" /> <!-- M. Power +10% -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
-				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-				<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 97 -->
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
+				<mul stat="mAtk" val="1.1" /> <!-- M. Power +10% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
+				<mul stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
+				<add stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<add stat="maxMp" val="92" /> <!-- Increases Max MP by 97 -->
+				<mul stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -154,16 +154,16 @@
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
-				<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
-				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
-				<mul order="0x30" stat="magicSuccRes" val="1.02" /> <!-- Resistance to Damage Magic +2% -->
-				<add order="0x40" stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
-				<add order="0x40" stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
-				<add order="0x40" stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
-				<add order="0x40" stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
-				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
+				<mul stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
+				<mul stat="magicSuccRes" val="1.02" /> <!-- Resistance to Damage Magic +2% -->
+				<add stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
+				<add stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
+				<add stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
+				<add stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
+				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -184,16 +184,16 @@
 			</effect>
 			<effect name="DefenceTrait">
 				<param HOLD="50" />
-				<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
-				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
-				<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-				<add order="0x40" stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
-				<add order="0x40" stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
-				<add order="0x40" stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
-				<add order="0x40" stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
-				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
+				<mul stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
+				<mul stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
+				<add stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
+				<add stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
+				<add stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
+				<add stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
+				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -214,15 +214,15 @@
 			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
-				<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Power +8.11% -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- resistance to earth attributes +5 -->
-				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="mAtk" val="1.0811" /> <!-- M. Power +8.11% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
+				<add stat="fireRes" val="5" /> <!-- resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- resistance to earth attributes +5 -->
+				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -245,19 +245,19 @@
 				<param BLEED="50" />
 				<param HOLD="50" />
 				<param SLEEP="50" />
-				<mul order="0x30" stat="pDef" val="1.0847" /> <!-- Def. Power +8.47% -->
-				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power +5.57% -->
-				<mul order="0x30" stat="magicSuccRes" val="1.02" /> <!-- Resistance to Damage Magic +2% -->
-				<add order="0x40" stat="maxHp" val="541" /> <!-- Max. HP +541 -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
-				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pDef" val="1.0847" /> <!-- Def. Power +8.47% -->
+				<mul stat="pAtk" val="1.0557" /> <!-- Atk. Power +5.57% -->
+				<mul stat="magicSuccRes" val="1.02" /> <!-- Resistance to Damage Magic +2% -->
+				<add stat="maxHp" val="541" /> <!-- Max. HP +541 -->
+				<add stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
+				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -278,19 +278,19 @@
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
-				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power + 5.57% -->
-				<mul order="0x30" stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
-				<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
-				<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<add order="0x40" stat="cAtkAdd" val="182" /> <!-- Increases Critical Damage by 182 -->
-				<add order="0x40" stat="maxMp" val="360" /> <!-- Increases Max MP by 360 -->
-				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pAtk" val="1.0557" /> <!-- Atk. Power + 5.57% -->
+				<mul stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
+				<mul stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
+				<mul stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
+				<add stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add stat="cAtkAdd" val="182" /> <!-- Increases Critical Damage by 182 -->
+				<add stat="maxMp" val="360" /> <!-- Increases Max MP by 360 -->
+				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -311,18 +311,18 @@
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
-				<mul order="0x30" stat="mAtk" val="1.087" /> <!-- M. Power +8.7% -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
-				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-				<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 92 -->
-				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="mAtk" val="1.087" /> <!-- M. Power +8.7% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
+				<mul stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
+				<add stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<add stat="maxMp" val="92" /> <!-- Increases Max MP by 92 -->
+				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -345,18 +345,18 @@
 				<param BLEED="50" />
 				<param HOLD="50" />
 				<param SLEEP="50" />
-				<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- P. Atk. +6.59% -->
-				<add order="0x40" stat="rCrit" val="127.4" /> <!-- Critical rate +127.4 -->
-				<mul order="0x30" stat="magicSuccRes" val="1.02" /> <!-- Resistance to damage magic +2% -->
-				<add order="0x40" stat="maxHp" val="550" /> <!-- Max. HP +550 -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<add order="0x40" stat="absorbDam" val="3" /> <!-- Steal opponent's HP on attack -->
-				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pAtk" val="1.0659" /> <!-- P. Atk. +6.59% -->
+				<add stat="rCrit" val="127.4" /> <!-- Critical rate +127.4 -->
+				<mul stat="magicSuccRes" val="1.02" /> <!-- Resistance to damage magic +2% -->
+				<add stat="maxHp" val="550" /> <!-- Max. HP +550 -->
+				<add stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add stat="absorbDam" val="3" /> <!-- Steal opponent's HP on attack -->
+				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -377,17 +377,17 @@
 			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
-				<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- Attack Power +6.59% -->
-				<mul order="0x30" stat="pAtkSpd" val="1.06" /> <!-- Atk. Spd. +6% -->
-				<add order="0x40" stat="rCrit" val="170.5" /> <!-- Crt. Rate +170.5 -->
-				<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pAtk" val="1.0659" /> <!-- Attack Power +6.59% -->
+				<mul stat="pAtkSpd" val="1.06" /> <!-- Atk. Spd. +6% -->
+				<add stat="rCrit" val="170.5" /> <!-- Crt. Rate +170.5 -->
+				<mul stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
+				<add stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -408,19 +408,19 @@
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
-				<mul order="0x30" stat="mAtk" val="1.1" /> <!-- M. Power +10% -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
-				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
-				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-				<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 97 -->
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
-				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="mAtk" val="1.1" /> <!-- M. Power +10% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
+				<mul stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
+				<add stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<add stat="maxMp" val="92" /> <!-- Increases Max MP by 97 -->
+				<mul stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
+				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -452,9 +452,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="5" />
-				<mul order="0x30" stat="pAtk" val="1.0125" />
-				<mul order="0x30" stat="pAtkSpd" val="1.01" />
-				<add order="0x40" stat="fireRes" val="3" />
+				<mul stat="pAtk" val="1.0125" />
+				<mul stat="pAtkSpd" val="1.01" />
+				<add stat="fireRes" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -467,12 +467,12 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="5" />
-				<mul order="0x30" stat="pAtk" val="1.0426" />
-				<mul order="0x30" stat="pAtkSpd" val="1.04" />
-				<add order="0x40" stat="waterRes" val="1" />
-				<add order="0x40" stat="fireRes" val="1" />
-				<add order="0x40" stat="windRes" val="1" />
-				<add order="0x40" stat="earthRes" val="1" />
+				<mul stat="pAtk" val="1.0426" />
+				<mul stat="pAtkSpd" val="1.04" />
+				<add stat="waterRes" val="1" />
+				<add stat="fireRes" val="1" />
+				<add stat="windRes" val="1" />
+				<add stat="earthRes" val="1" />
 			</effect>
 		</for>
 	</skill>
@@ -485,9 +485,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="5" />
-				<mul order="0x30" stat="pAtk" val="1.0208" />
-				<mul order="0x30" stat="pAtkSpd" val="1.0167" />
-				<add order="0x40" stat="waterRes" val="3" />
+				<mul stat="pAtk" val="1.0208" />
+				<mul stat="pAtkSpd" val="1.0167" />
+				<add stat="waterRes" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -500,9 +500,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="5" />
-				<mul order="0x30" stat="pAtk" val="1.0083" />
-				<mul order="0x30" stat="pAtkSpd" val="1.0067" />
-				<add order="0x40" stat="windRes" val="3" />
+				<mul stat="pAtk" val="1.0083" />
+				<mul stat="pAtkSpd" val="1.0067" />
+				<add stat="windRes" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -515,9 +515,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="5" />
-				<mul order="0x30" stat="pAtk" val="1.0083" />
-				<mul order="0x30" stat="pAtkSpd" val="1.0067" />
-				<add order="0x40" stat="earthRes" val="3" />
+				<mul stat="pAtk" val="1.0083" />
+				<mul stat="pAtkSpd" val="1.0067" />
+				<add stat="earthRes" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -529,7 +529,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="magicSuccRes" val="1.02" /> <!-- resistance to damage magic by 2% -->
+				<mul stat="magicSuccRes" val="1.02" /> <!-- resistance to damage magic by 2% -->
 			</effect>
 		</for>
 	</skill>
@@ -542,9 +542,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param HOLD="5" />
-				<mul order="0x30" stat="pAtk" val="1.0125" />
-				<mul order="0x30" stat="regMp" val="1.01" />
-				<add order="0x40" stat="fireRes" val="3" />
+				<mul stat="pAtk" val="1.0125" />
+				<mul stat="regMp" val="1.01" />
+				<add stat="fireRes" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -557,9 +557,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param HOLD="5" />
-				<mul order="0x30" stat="pAtk" val="1.0426" />
-				<mul order="0x30" stat="regMp" val="1.04" />
-				<add order="0x40" stat="waterRes" val="3" />
+				<mul stat="pAtk" val="1.0426" />
+				<mul stat="regMp" val="1.04" />
+				<add stat="waterRes" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -572,9 +572,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param HOLD="5" />
-				<mul order="0x30" stat="pAtk" val="1.0208" />
-				<mul order="0x30" stat="regMp" val="1.0167" />
-				<add order="0x40" stat="waterRes" val="3" />
+				<mul stat="pAtk" val="1.0208" />
+				<mul stat="regMp" val="1.0167" />
+				<add stat="waterRes" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -587,9 +587,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param HOLD="5" />
-				<mul order="0x30" stat="pAtk" val="1.0083" />
-				<mul order="0x30" stat="regMp" val="1.0067" />
-				<add order="0x40" stat="windRes" val="3" />
+				<mul stat="pAtk" val="1.0083" />
+				<mul stat="regMp" val="1.0067" />
+				<add stat="windRes" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -602,9 +602,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param HOLD="5" />
-				<mul order="0x30" stat="pAtk" val="1.0083" />
-				<mul order="0x30" stat="regMp" val="1.0067" />
-				<add order="0x40" stat="earthRes" val="3" />
+				<mul stat="pAtk" val="1.0083" />
+				<mul stat="regMp" val="1.0067" />
+				<add stat="earthRes" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -617,8 +617,8 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
-				<mul order="0x30" stat="mAtk" val="1.0062" />
-				<add order="0x40" stat="fireRes" val="5" />
+				<mul stat="mAtk" val="1.0062" />
+				<add stat="fireRes" val="5" />
 			</effect>
 		</for>
 	</skill>
@@ -631,12 +631,12 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
-				<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Atk. +8.11% -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Cast. Spd. +15% -->
-				<add order="0x40" stat="waterRes" val="1" />
-				<add order="0x40" stat="fireRes" val="1" />
-				<add order="0x40" stat="windRes" val="1" />
-				<add order="0x40" stat="earthRes" val="1" />
+				<mul stat="mAtk" val="1.0811" /> <!-- M. Atk. +8.11% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Cast. Spd. +15% -->
+				<add stat="waterRes" val="1" />
+				<add stat="fireRes" val="1" />
+				<add stat="windRes" val="1" />
+				<add stat="earthRes" val="1" />
 			</effect>
 		</for>
 	</skill>
@@ -649,8 +649,8 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
-				<mul order="0x30" stat="mAtk" val="1.0103" />
-				<add order="0x40" stat="waterRes" val="5" />
+				<mul stat="mAtk" val="1.0103" />
+				<add stat="waterRes" val="5" />
 			</effect>
 		</for>
 	</skill>
@@ -663,8 +663,8 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
-				<mul order="0x30" stat="mAtk" val="1.0041" />
-				<add order="0x40" stat="windRes" val="5" />
+				<mul stat="mAtk" val="1.0041" />
+				<add stat="windRes" val="5" />
 			</effect>
 		</for>
 	</skill>
@@ -677,8 +677,8 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
-				<mul order="0x30" stat="mAtk" val="1.0041" />
-				<add order="0x40" stat="earthRes" val="5" />
+				<mul stat="mAtk" val="1.0041" />
+				<add stat="earthRes" val="5" />
 			</effect>
 		</for>
 	</skill>
@@ -690,7 +690,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="magicSuccRes" val="1.02" /> <!-- resistance to damage magic by 2% -->
+				<mul stat="magicSuccRes" val="1.02" /> <!-- resistance to damage magic by 2% -->
 			</effect>
 		</for>
 	</skill>
@@ -704,9 +704,9 @@
 			<effect name="DefenceTrait">
 				<param SLEEP="10.5" />
 				<param HOLD="10.5" />
-				<mul order="0x30" stat="pAtk" val="1.0062" />
-				<mul order="0x30" stat="pDef" val="1.0062" />
-				<add order="0x40" stat="maxHp" val="133" />
+				<mul stat="pAtk" val="1.0062" />
+				<mul stat="pDef" val="1.0062" />
+				<add stat="maxHp" val="133" />
 			</effect>
 		</for>
 	</skill>
@@ -720,9 +720,9 @@
 			<effect name="DefenceTrait">
 				<param SLEEP="28" />
 				<param HOLD="28" />
-				<mul order="0x30" stat="pAtk" val="1.0557" />
-				<mul order="0x30" stat="pDef" val="1.0557" />
-				<add order="0x40" stat="maxHp" val="531" />
+				<mul stat="pAtk" val="1.0557" />
+				<mul stat="pDef" val="1.0557" />
+				<add stat="maxHp" val="531" />
 			</effect>
 		</for>
 	</skill>
@@ -736,9 +736,9 @@
 			<effect name="DefenceTrait">
 				<param SLEEP="18" />
 				<param HOLD="18" />
-				<mul order="0x30" stat="pAtk" val="1.0103" />
-				<mul order="0x30" stat="pDef" val="1.0103" />
-				<add order="0x40" stat="maxHp" val="55" />
+				<mul stat="pAtk" val="1.0103" />
+				<mul stat="pDef" val="1.0103" />
+				<add stat="maxHp" val="55" />
 			</effect>
 		</for>
 	</skill>
@@ -752,9 +752,9 @@
 			<effect name="DefenceTrait">
 				<param SLEEP="7" />
 				<param HOLD="7" />
-				<mul order="0x30" stat="pAtk" val="1.0041" />
-				<mul order="0x30" stat="pDef" val="1.0041" />
-				<add order="0x40" stat="maxHp" val="22" />
+				<mul stat="pAtk" val="1.0041" />
+				<mul stat="pDef" val="1.0041" />
+				<add stat="maxHp" val="22" />
 			</effect>
 		</for>
 	</skill>
@@ -768,9 +768,9 @@
 			<effect name="DefenceTrait">
 				<param SLEEP="7" />
 				<param HOLD="7" />
-				<mul order="0x30" stat="pAtk" val="1.0041" />
-				<mul order="0x30" stat="pDef" val="1.0041" />
-				<add order="0x40" stat="maxHp" val="22" />
+				<mul stat="pAtk" val="1.0041" />
+				<mul stat="pDef" val="1.0041" />
+				<add stat="maxHp" val="22" />
 			</effect>
 		</for>
 	</skill>
@@ -782,7 +782,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="magicSuccRes" val="1.02" /> <!-- resistance to damage magic by 2% -->
+				<mul stat="magicSuccRes" val="1.02" /> <!-- resistance to damage magic by 2% -->
 			</effect>
 		</for>
 	</skill>
@@ -794,10 +794,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.0041" />
-				<mul order="0x30" stat="pAtkSpd" val="1.0041" />
-				<mul order="0x30" stat="regMp" val="1.0041" />
-				<add order="0x40" stat="maxMp" val="87" />
+				<mul stat="pAtk" val="1.0041" />
+				<mul stat="pAtkSpd" val="1.0041" />
+				<mul stat="regMp" val="1.0041" />
+				<add stat="maxMp" val="87" />
 			</effect>
 		</for>
 	</skill>
@@ -809,10 +809,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.0557" />
-				<mul order="0x30" stat="pAtkSpd" val="1.05" />
-				<mul order="0x30" stat="regMp" val="1.05" />
-				<add order="0x40" stat="maxMp" val="347" />
+				<mul stat="pAtk" val="1.0557" />
+				<mul stat="pAtkSpd" val="1.05" />
+				<mul stat="regMp" val="1.05" />
+				<add stat="maxMp" val="347" />
 			</effect>
 		</for>
 	</skill>
@@ -824,10 +824,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.0068" />
-				<mul order="0x30" stat="pAtkSpd" val="1.0068" />
-				<mul order="0x30" stat="regMp" val="1.0068" />
-				<add order="0x40" stat="maxMp" val="145" />
+				<mul stat="pAtk" val="1.0068" />
+				<mul stat="pAtkSpd" val="1.0068" />
+				<mul stat="regMp" val="1.0068" />
+				<add stat="maxMp" val="145" />
 			</effect>
 		</for>
 	</skill>
@@ -839,10 +839,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.0027" />
-				<mul order="0x30" stat="pAtkSpd" val="1.0027" />
-				<mul order="0x30" stat="regMp" val="1.0027" />
-				<add order="0x40" stat="maxMp" val="58" />
+				<mul stat="pAtk" val="1.0027" />
+				<mul stat="pAtkSpd" val="1.0027" />
+				<mul stat="regMp" val="1.0027" />
+				<add stat="maxMp" val="58" />
 			</effect>
 		</for>
 	</skill>
@@ -854,10 +854,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.0027" />
-				<mul order="0x30" stat="pAtkSpd" val="1.0027" />
-				<mul order="0x30" stat="regMp" val="1.0027" />
-				<add order="0x40" stat="maxMp" val="58" />
+				<mul stat="pAtk" val="1.0027" />
+				<mul stat="pAtkSpd" val="1.0027" />
+				<mul stat="regMp" val="1.0027" />
+				<add stat="maxMp" val="58" />
 			</effect>
 		</for>
 	</skill>
@@ -870,9 +870,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="7.5" />
-				<mul order="0x30" stat="mAtk" val="1.0041" />
-				<mul order="0x30" stat="regMp" val="1.0041" />
-				<sub order="0x40" stat="cancel" val="4.5" />
+				<mul stat="mAtk" val="1.0041" />
+				<mul stat="regMp" val="1.0041" />
+				<sub stat="cancel" val="4.5" />
 			</effect>
 		</for>
 	</skill>
@@ -885,10 +885,10 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="20" />
-				<mul order="0x30" stat="mAtk" val="1.0847" />
-				<mul order="0x30" stat="mAtkSpd" val="1.15" />
-				<mul order="0x30" stat="regMp" val="1.05" />
-				<sub order="0x40" stat="cancel" val="12" />
+				<mul stat="mAtk" val="1.0847" />
+				<mul stat="mAtkSpd" val="1.15" />
+				<mul stat="regMp" val="1.05" />
+				<sub stat="cancel" val="12" />
 			</effect>
 		</for>
 	</skill>
@@ -901,9 +901,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="12.5" />
-				<mul order="0x30" stat="mAtk" val="1.0068" />
-				<mul order="0x30" stat="regMp" val="1.0068" />
-				<sub order="0x40" stat="cancel" val="7.5" />
+				<mul stat="mAtk" val="1.0068" />
+				<mul stat="regMp" val="1.0068" />
+				<sub stat="cancel" val="7.5" />
 			</effect>
 		</for>
 	</skill>
@@ -916,9 +916,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="5" />
-				<mul order="0x30" stat="mAtk" val="1.0027" />
-				<mul order="0x30" stat="regMp" val="1.0027" />
-				<sub order="0x40" stat="cancel" val="3" />
+				<mul stat="mAtk" val="1.0027" />
+				<mul stat="regMp" val="1.0027" />
+				<sub stat="cancel" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -931,9 +931,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="5" />
-				<mul order="0x30" stat="mAtk" val="1.0027" />
-				<mul order="0x30" stat="regMp" val="1.0027" />
-				<sub order="0x40" stat="cancel" val="3" />
+				<mul stat="mAtk" val="1.0027" />
+				<mul stat="regMp" val="1.0027" />
+				<sub stat="cancel" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -945,7 +945,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="magicSuccRes" val="1.02" /> <!-- resistance to damage magic by 2% -->
+				<mul stat="magicSuccRes" val="1.02" /> <!-- resistance to damage magic by 2% -->
 			</effect>
 		</for>
 	</skill>
@@ -981,7 +981,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="16" />
+				<add stat="maxMp" val="16" />
 			</effect>
 		</for>
 	</skill>
@@ -1006,7 +1006,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="33" />
+				<add stat="maxMp" val="33" />
 			</effect>
 		</for>
 	</skill>
@@ -1030,7 +1030,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="weightPenalty" val="3000" />
+				<add stat="weightPenalty" val="3000" />
 			</effect>
 		</for>
 	</skill>
@@ -1048,11 +1048,11 @@
 				<param SHOCK="15" />
 				<param SLEEP="15" />
 				<param DERANGEMENT="10" />
-				<add order="0x40" stat="maxMp" val="50" />
-				<add order="0x40" stat="regMp" val="0.23" />
-				<add order="0x40" stat="waterRes" val="10" />
-				<mul order="0x30" stat="mReuse" val="0.95" />
-				<add order="0x40" stat="reflectDam" val="4" />
+				<add stat="maxMp" val="50" />
+				<add stat="regMp" val="0.23" />
+				<add stat="waterRes" val="10" />
+				<mul stat="mReuse" val="0.95" />
+				<add stat="reflectDam" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -1070,16 +1070,16 @@
 				<param SHOCK="20" />
 				<param SLEEP="20" />
 				<param DERANGEMENT="10" />
-				<add order="0x40" stat="maxMp" val="50" />
-				<add order="0x40" stat="regMp" val="0.46" />
-				<add order="0x40" stat="waterRes" val="15" />
-				<mul order="0x30" stat="mReuse" val="0.95" />
-				<add order="0x40" stat="reflectDam" val="4" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
-				<add order="0x40" stat="healEffect" val="15" />
-				<add order="0x10" stat="MEN" val="2" />
-				<add order="0x10" stat="CON" val="1" />
-				<sub order="0x10" stat="STR" val="1" />
+				<add stat="maxMp" val="50" />
+				<add stat="regMp" val="0.46" />
+				<add stat="waterRes" val="15" />
+				<mul stat="mReuse" val="0.95" />
+				<add stat="reflectDam" val="4" />
+				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<add stat="healEffect" val="15" />
+				<add stat="MEN" val="2" />
+				<add stat="CON" val="1" />
+				<sub stat="STR" val="1" />
 			</effect>
 		</for>
 	</skill>
@@ -1091,10 +1091,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="pDef" val="70">
+				<add stat="pDef" val="70">
 					<using kind="HEAVY" />
 				</add>
-				<add order="0x40" stat="regMp" val="32">
+				<add stat="regMp" val="32">
 					<and>
 						<player resting="true" />
 						<or>
@@ -1112,10 +1112,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="2">
+				<add stat="rEvas" val="2">
 					<using kind="LIGHT" />
 				</add>
-				<add order="0x40" stat="mDef" val="39">
+				<add stat="mDef" val="39">
 					<using kind="LIGHT" />
 				</add>
 			</effect>
@@ -1128,10 +1128,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="pDef" val="45">
+				<add stat="pDef" val="45">
 					<using kind="MAGIC" />
 				</add>
-				<mul order="0x30" stat="weightLimit" val="1.3" />
+				<mul stat="weightLimit" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1258,9 +1258,9 @@
 			<effect name="DefenceTrait">
 				<param SLEEP="10.5" />
 				<param HOLD="10.5" />
-				<mul order="0x30" stat="pAtk" val="1.0062" />
-				<mul order="0x30" stat="pDef" val="1.0062" />
-				<add order="0x40" stat="maxHp" val="133" />
+				<mul stat="pAtk" val="1.0062" />
+				<mul stat="pDef" val="1.0062" />
+				<add stat="maxHp" val="133" />
 			</effect>
 		</for>
 	</skill>
@@ -1274,9 +1274,9 @@
 			<effect name="DefenceTrait">
 				<param SLEEP="18" />
 				<param HOLD="18" />
-				<mul order="0x30" stat="pAtk" val="1.0103" />
-				<mul order="0x30" stat="pDef" val="1.0103" />
-				<add order="0x40" stat="maxHp" val="55" />
+				<mul stat="pAtk" val="1.0103" />
+				<mul stat="pDef" val="1.0103" />
+				<add stat="maxHp" val="55" />
 			</effect>
 		</for>
 	</skill>
@@ -1290,9 +1290,9 @@
 			<effect name="DefenceTrait">
 				<param SLEEP="7" />
 				<param HOLD="7" />
-				<mul order="0x30" stat="pAtk" val="1.0041" />
-				<mul order="0x30" stat="pDef" val="1.0041" />
-				<add order="0x40" stat="maxHp" val="22" />
+				<mul stat="pAtk" val="1.0041" />
+				<mul stat="pDef" val="1.0041" />
+				<add stat="maxHp" val="22" />
 			</effect>
 		</for>
 	</skill>
@@ -1306,9 +1306,9 @@
 			<effect name="DefenceTrait">
 				<param SLEEP="7" />
 				<param HOLD="7" />
-				<mul order="0x30" stat="pAtk" val="1.0041" />
-				<mul order="0x30" stat="pDef" val="1.0041" />
-				<add order="0x40" stat="maxHp" val="22" />
+				<mul stat="pAtk" val="1.0041" />
+				<mul stat="pDef" val="1.0041" />
+				<add stat="maxHp" val="22" />
 			</effect>
 		</for>
 	</skill>
@@ -1320,10 +1320,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.0041" />
-				<mul order="0x30" stat="pAtkSpd" val="1.0041" />
-				<mul order="0x30" stat="regMp" val="1.0041" />
-				<add order="0x40" stat="maxMp" val="87" />
+				<mul stat="pAtk" val="1.0041" />
+				<mul stat="pAtkSpd" val="1.0041" />
+				<mul stat="regMp" val="1.0041" />
+				<add stat="maxMp" val="87" />
 			</effect>
 		</for>
 	</skill>
@@ -1335,10 +1335,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.0068" />
-				<mul order="0x30" stat="pAtkSpd" val="1.0068" />
-				<mul order="0x30" stat="regMp" val="1.0068" />
-				<add order="0x40" stat="maxMp" val="145" />
+				<mul stat="pAtk" val="1.0068" />
+				<mul stat="pAtkSpd" val="1.0068" />
+				<mul stat="regMp" val="1.0068" />
+				<add stat="maxMp" val="145" />
 			</effect>
 		</for>
 	</skill>
@@ -1350,10 +1350,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.0027" />
-				<mul order="0x30" stat="pAtkSpd" val="1.0027" />
-				<mul order="0x30" stat="regMp" val="1.0027" />
-				<add order="0x40" stat="maxMp" val="58" />
+				<mul stat="pAtk" val="1.0027" />
+				<mul stat="pAtkSpd" val="1.0027" />
+				<mul stat="regMp" val="1.0027" />
+				<add stat="maxMp" val="58" />
 			</effect>
 		</for>
 	</skill>
@@ -1365,10 +1365,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.0027" />
-				<mul order="0x30" stat="pAtkSpd" val="1.0027" />
-				<mul order="0x30" stat="regMp" val="1.0027" />
-				<add order="0x40" stat="maxMp" val="58" />
+				<mul stat="pAtk" val="1.0027" />
+				<mul stat="pAtkSpd" val="1.0027" />
+				<mul stat="regMp" val="1.0027" />
+				<add stat="maxMp" val="58" />
 			</effect>
 		</for>
 	</skill>
@@ -1381,9 +1381,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="7.5" />
-				<mul order="0x30" stat="mAtk" val="1.0041" />
-				<mul order="0x30" stat="regMp" val="1.0041" />
-				<sub order="0x40" stat="cancel" val="4.5" />
+				<mul stat="mAtk" val="1.0041" />
+				<mul stat="regMp" val="1.0041" />
+				<sub stat="cancel" val="4.5" />
 			</effect>
 		</for>
 	</skill>
@@ -1396,9 +1396,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="12.5" />
-				<mul order="0x30" stat="mAtk" val="1.0068" />
-				<mul order="0x30" stat="regMp" val="1.0068" />
-				<sub order="0x40" stat="cancel" val="7.5" />
+				<mul stat="mAtk" val="1.0068" />
+				<mul stat="regMp" val="1.0068" />
+				<sub stat="cancel" val="7.5" />
 			</effect>
 		</for>
 	</skill>
@@ -1411,9 +1411,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="5" />
-				<mul order="0x30" stat="mAtk" val="1.0027" />
-				<mul order="0x30" stat="regMp" val="1.0027" />
-				<sub order="0x40" stat="cancel" val="3" />
+				<mul stat="mAtk" val="1.0027" />
+				<mul stat="regMp" val="1.0027" />
+				<sub stat="cancel" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -1426,9 +1426,9 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param SHOCK="5" />
-				<mul order="0x30" stat="mAtk" val="1.0027" />
-				<mul order="0x30" stat="regMp" val="1.0027" />
-				<sub order="0x40" stat="cancel" val="3" />
+				<mul stat="mAtk" val="1.0027" />
+				<mul stat="regMp" val="1.0027" />
+				<sub stat="cancel" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -1440,7 +1440,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.05" />
+				<mul stat="rShld" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -1452,7 +1452,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.05" />
+				<mul stat="rShld" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -1464,7 +1464,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.05" />
+				<mul stat="rShld" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -1476,7 +1476,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.05" />
+				<mul stat="rShld" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -1495,7 +1495,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="STR" val="2" />
+				<add stat="STR" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -1507,7 +1507,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="DEX" val="2" />
+				<add stat="DEX" val="2" />
 			</effect>
 		</for>
 	</skill>

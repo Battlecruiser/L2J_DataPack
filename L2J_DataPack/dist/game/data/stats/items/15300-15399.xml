@@ -21,10 +21,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="282" />
-			<set order="0x08" stat="mAtk" val="114" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="282" />
+			<set stat="mAtk" val="114" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15301" type="Weapon" name="Transparent Pole (for NPC)">
@@ -48,11 +48,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="156" />
-			<set order="0x08" stat="mAtk" val="83" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15302" type="Weapon" name="Transparent Bow (for NPC)">
@@ -78,11 +78,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="114" />
-			<set order="0x08" stat="mAtk" val="35" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="114" />
+			<set stat="mAtk" val="35" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="227" />
 		</for>
 	</item>
 	<item id="15303" type="Weapon" name="Transparent Claw (for NPC)">
@@ -107,11 +107,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="376" />
-			<set order="0x08" stat="mAtk" val="119" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="376" />
+			<set stat="mAtk" val="119" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15304" type="Weapon" name="Transparent Bowgun (for NPC)">
@@ -139,11 +139,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="64" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="15305" type="Weapon" name="Transparent Rapier (for NPC)">
@@ -170,11 +170,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="36" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="36" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="15306" type="Weapon" name="Transparent Dual Dagger (for NPC)">
@@ -205,11 +205,11 @@
 			</and>
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="304" />
-			<set order="0x08" stat="mAtk" val="157" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="304" />
+			<set stat="mAtk" val="157" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="15307" type="EtcItem" name="Holy Pomander - Cardinal">
@@ -269,10 +269,10 @@
 			<player instanceId="112" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="7" />
-			<set order="0x08" stat="mAtk" val="5" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="7" />
+			<set stat="mAtk" val="5" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15311" type="EtcItem" name="Delusion Chamber Invitation">
@@ -324,10 +324,10 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="281" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="281" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15314" type="Weapon" name="Player Commendation - Basalt Battlehammer - Player Recommendation Weapon">
@@ -354,11 +354,11 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="281" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="281" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15315" type="Weapon" name="Player Commendation - Imperial Staff - Player Recommendation Weapon">
@@ -386,11 +386,11 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="274" />
-			<set order="0x08" stat="mAtk" val="193" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="274" />
+			<set stat="mAtk" val="193" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15316" type="Weapon" name="Player Commendation - Angel Slayer - Player Recommendation Weapon">
@@ -417,11 +417,11 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="246" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="246" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="15317" type="Weapon" name="Player Commendation - Dragon Hunter Axe - Player Recommendation Weapon">
@@ -448,11 +448,11 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15318" type="Weapon" name="Player Commendation - Saint Spear - Player Recommendation Weapon">
@@ -479,11 +479,11 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="281" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="281" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15319" type="Weapon" name="Player Commendation - Demon Splinter - Player Recommendation Weapon">
@@ -510,11 +510,11 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15320" type="Weapon" name="Player Commendation - Heaven's Divider - Player Recommendation Weapon">
@@ -541,10 +541,10 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15321" type="Weapon" name="Player Commendation - Arcana Macw - Player Recommendation Weapon">
@@ -572,11 +572,11 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="225" />
-			<set order="0x08" stat="mAtk" val="175" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="225" />
+			<set stat="mAtk" val="175" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15322" type="Weapon" name="Player Commendation - Draconic Bow - Player Recommendation Weapon">
@@ -605,11 +605,11 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="581" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="581" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="15323" type="Weapon" name="Player Commendation - Laevateinn - Player Recommendation Weapon">
@@ -640,11 +640,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="255" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="255" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="15324" type="Weapon" name="Player Commendation - Gram - Player Recommendation Weapon">
@@ -674,11 +674,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="304" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="304" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="15325" type="Weapon" name="Player Commendation - Sarunga - Player Recommendation Weapon">
@@ -709,11 +709,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="356" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="356" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="15326" type="Weapon" name="Player Commendation - Tallum Blade *Dark Legion's Edge - Player Recommendation Weapon">
@@ -740,10 +740,10 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15327" type="EtcItem" name="Seed: Sea Coba">
@@ -924,10 +924,10 @@
 		<set name="item_skill" val="2994-1" />
 		<set name="time" val="86400" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15343" type="EtcItem" name="Aqua Elf Transforming Harp 60-day Pack">
@@ -963,10 +963,10 @@
 		<set name="item_skill" val="2994-1" />
 		<set name="time" val="86400" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15345" type="EtcItem" name="Aqua Elf Transforming Harp 60-day Pack">

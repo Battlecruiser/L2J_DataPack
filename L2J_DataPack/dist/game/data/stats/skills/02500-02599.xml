@@ -238,7 +238,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
+				<add stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
 	</skill>
@@ -267,8 +267,8 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="2" />
-				<mul order="0x30" stat="regMp" val="2" />
+				<mul stat="regHp" val="2" />
+				<mul stat="regMp" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -290,7 +290,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul stat="cAtk" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -1554,7 +1554,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+				<sub stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
 	</skill>

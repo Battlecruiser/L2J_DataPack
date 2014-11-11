@@ -985,10 +985,10 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.25">
+				<mul stat="pAtk" val="1.25">
 					<using kind="FIST,SWORD,DAGGER,DUALDAGGER,DUALFIST,DUAL,BLUNT,ANCIENTSWORD,RAPIER,ETC" />
 				</mul>
-				<mul order="0x30" stat="pAtk" val="1.15">
+				<mul stat="pAtk" val="1.15">
 					<using kind="BOW,POLE,CROSSBOW" />
 				</mul>
 			</effect>
@@ -1012,7 +1012,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtk" val="1.75" />
+				<mul stat="mAtk" val="1.75" />
 			</effect>
 		</for>
 	</skill>
@@ -1032,7 +1032,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="firePower" val="20" />
+				<add stat="firePower" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1052,7 +1052,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="waterPower" val="20" />
+				<add stat="waterPower" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1072,7 +1072,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="windPower" val="20" />
+				<add stat="windPower" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1092,7 +1092,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="earthPower" val="20" />
+				<add stat="earthPower" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1112,7 +1112,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="darkPower" val="20" />
+				<add stat="darkPower" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1132,7 +1132,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="holyPower" val="20" />
+				<add stat="holyPower" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1675,7 +1675,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.15" />
+				<mul stat="pAtk" val="1.15" />
 			</effect>
 		</for>
 	</skill>
@@ -1698,7 +1698,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtk" val="1.75" />
+				<mul stat="mAtk" val="1.75" />
 			</effect>
 		</for>
 	</skill>
@@ -1721,7 +1721,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+				<mul stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
 	</skill>
@@ -1744,7 +1744,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+				<mul stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1767,7 +1767,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x01" stat="rCrit" val="0.3" />
+				<mul stat="rCrit" val="0.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1790,7 +1790,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="33" />
+				<add stat="runSpd" val="33" />
 			</effect>
 		</for>
 	</skill>

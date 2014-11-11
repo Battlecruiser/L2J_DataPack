@@ -672,13 +672,13 @@
 		<set name="oncrit_chance" val="50" />
 		<set name="oncrit_skill" val="3005-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="62" />
-			<set order="0x08" stat="mAtk" val="42" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="62" />
+			<set stat="mAtk" val="42" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="1661" type="EtcItem" name="Thief Key">

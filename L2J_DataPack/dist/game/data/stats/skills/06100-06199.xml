@@ -183,15 +183,15 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.1" />
-				<mul order="0x30" stat="maxMp" val="1.1" />
-				<mul order="0x30" stat="maxCp" val="1.1" />
-				<add order="0x40" stat="runSpd" val="15" />
-				<mul order="0x30" stat="pAtk" val="1.1" />
-				<mul order="0x30" stat="mAtk" val="1.15" />
-				<add order="0x40" stat="rCrit" val="50" />
-				<mul order="0x30" stat="cAtk" val="1.15" />
-				<add order="0x40" stat="mCritRate" val="2" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+				<mul stat="maxCp" val="1.1" />
+				<add stat="runSpd" val="15" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="mAtk" val="1.15" />
+				<add stat="rCrit" val="50" />
+				<mul stat="cAtk" val="1.15" />
+				<add stat="mCritRate" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -533,9 +533,9 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="#speed" />
-				<mul order="0x30" stat="pDef" val="#pDef" />
-				<mul order="0x30" stat="rEvas" val="#pDef" />
+				<mul stat="runSpd" val="#speed" />
+				<mul stat="pDef" val="#pDef" />
+				<mul stat="rEvas" val="#pDef" />
 			</effect>
 		</for>
 	</skill>
@@ -588,9 +588,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="vengeancePdam" val="70" />
-				<add order="0x40" stat="reflectSkillPhysic" val="70" />
-				<add order="0x40" stat="reflectDam" val="70" />
+				<add stat="vengeancePdam" val="70" />
+				<add stat="reflectSkillPhysic" val="70" />
+				<add stat="reflectDam" val="70" />
 			</effect>
 		</for>
 	</skill>
@@ -615,9 +615,9 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Mute">
-				<sub order="0x40" stat="accCombat" val="99" />
-				<mul order="0x30" stat="pAtkSpd" val="0.5" />
-				<mul order="0x30" stat="pAtk" val="0.01" />
+				<sub stat="accCombat" val="99" />
+				<mul stat="pAtkSpd" val="0.5" />
+				<mul stat="pAtk" val="0.01" />
 			</effect>
 		</for>
 	</skill>
@@ -637,9 +637,9 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtk" val="0.5" />
-				<mul order="0x30" stat="pDef" val="0.5" />
-				<mul order="0x30" stat="runSpd" val="0.5" />
+				<mul stat="pAtk" val="0.5" />
+				<mul stat="pDef" val="0.5" />
+				<mul stat="runSpd" val="0.5" />
 			</effect>
 		</for>
 	</skill>
@@ -663,7 +663,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -698,7 +698,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtk" val="#pAtk" />
+				<mul stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -735,7 +735,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="Debuff">
-				<add order="0x40" stat="rCrit" val="#rCrit" />
+				<add stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -832,11 +832,11 @@
 		<for>
 			<!-- NOTE: Using abnormalLvl 99 instead of 1 due is a irreplaceable buff -->
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.05" />
-				<mul order="0x30" stat="mAtk" val="1.05" />
-				<mul order="0x30" stat="mCritPower" val="1.05" />
-				<mul order="0x30" stat="pAtkSpd" val="1.05" />
-				<mul order="0x30" stat="mAtkSpd" val="1.05" />
+				<mul stat="pAtk" val="1.05" />
+				<mul stat="mAtk" val="1.05" />
+				<mul stat="mCritPower" val="1.05" />
+				<mul stat="pAtkSpd" val="1.05" />
+				<mul stat="mAtkSpd" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -854,11 +854,11 @@
 		<for>
 			<!-- NOTE: Using abnormalLvl 99 instead of 1 due is a irreplaceable buff -->
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.05" />
-				<mul order="0x30" stat="mAtk" val="1.05" />
-				<mul order="0x30" stat="mCritPower" val="1.05" />
-				<mul order="0x30" stat="pAtkSpd" val="1.05" />
-				<mul order="0x30" stat="mAtkSpd" val="1.05" />
+				<mul stat="pAtk" val="1.05" />
+				<mul stat="mAtk" val="1.05" />
+				<mul stat="mCritPower" val="1.05" />
+				<mul stat="pAtkSpd" val="1.05" />
+				<mul stat="mAtkSpd" val="1.05" />
 			</effect>
 		</for>
 	</skill>

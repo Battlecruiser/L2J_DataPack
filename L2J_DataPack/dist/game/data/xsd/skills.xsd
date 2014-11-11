@@ -237,6 +237,119 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+	<xs:simpleType name="statType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="mAtk" />
+			<xs:enumeration value="mDef" />
+			<xs:enumeration value="pAtk" />
+			<xs:enumeration value="pDef" />
+			<xs:enumeration value="sDef" />
+			<xs:enumeration value="mAtk" />
+			<xs:enumeration value="pAtkAngle" />
+			<xs:enumeration value="pAtkRange" />
+			<xs:enumeration value="cancel" />
+			<xs:enumeration value="pAtkSpd" />
+			<xs:enumeration value="rCrit" />
+			<xs:enumeration value="rShld" />
+			<xs:enumeration value="rEvas" />
+			<xs:enumeration value="cAtk" />
+			<xs:enumeration value="runSpd" />
+			<xs:enumeration value="reflectDam" />
+			<xs:enumeration value="defCritRate" />
+			<xs:enumeration value="cancelVuln" />
+			<xs:enumeration value="maxHp" />
+			<xs:enumeration value="pSkillEvas" />
+			<xs:enumeration value="regMp" />
+			<xs:enumeration value="regHp" />
+			<xs:enumeration value="mReuse" />
+			<xs:enumeration value="mAtkSpd" />
+			<xs:enumeration value="cAtkAdd" />
+			<xs:enumeration value="defCritDamage" />
+			<xs:enumeration value="absorbDamMana" />
+			<xs:enumeration value="manaCharge" />
+			<xs:enumeration value="damageZoneVuln" />
+			<xs:enumeration value="healEffect" />
+			<xs:enumeration value="weightLimit" />
+			<xs:enumeration value="transDam" />
+			<xs:enumeration value="PhysicalMpConsumeRate" />
+			<xs:enumeration value="blowRate" />
+			<xs:enumeration value="breath" />
+			<xs:enumeration value="pvpMagicalDmg" />
+			<xs:enumeration value="transDamToPlayer" />
+			<xs:enumeration value="vengeancePdam" />
+			<xs:enumeration value="physicalSkillPower" />
+			<xs:enumeration value="vengeanceMdam" />
+			<xs:enumeration value="maxSouls" />
+			<xs:enumeration value="BowMpConsumeRate" />
+			<xs:enumeration value="fishingExpertise" />
+			<xs:enumeration value="mCritPower" />
+			<xs:enumeration value="maxRecoverableCp" />
+			<xs:enumeration value="maxRecoverableHp" />
+			<xs:enumeration value="whLimit" />
+			<xs:enumeration value="FreightLimit" />
+			<xs:enumeration value="DwarfRecipeLimit" />
+			<xs:enumeration value="CommonRecipeLimit" />
+			<xs:enumeration value="fall" />
+			<xs:enumeration value="STR" />
+			<xs:enumeration value="INT" />
+			<xs:enumeration value="CON" />
+			<xs:enumeration value="MEN" />
+			<xs:enumeration value="WIT" />
+			<xs:enumeration value="DEX" />
+			<xs:enumeration value="waterPower" />
+			<xs:enumeration value="windPower" />
+			<xs:enumeration value="firePower" />
+			<xs:enumeration value="bonusSp" />
+			<xs:enumeration value="defCritRateAdd" />
+			<xs:enumeration value="bonusExp" />
+			<xs:enumeration value="pvePhysDmg" />
+			<xs:enumeration value="pvePhysSkillsDmg" />
+			<xs:enumeration value="pveBowDmg" />
+			<xs:enumeration value="pveBowSkillsDmg" />
+			<xs:enumeration value="pveMagicalDmg" />
+			<xs:enumeration value="MagicalMpConsumeRate" />
+			<xs:enumeration value="DanceMpConsumeRate" />
+			<xs:enumeration value="mCritRate" />
+			<xs:enumeration value="maxRecoverableMp" />
+			<xs:enumeration value="manaShield" />
+			<xs:enumeration value="pvpMagicalDef" />
+			<xs:enumeration value="pvpPhysSkillsDef" />
+			<xs:enumeration value="pvpPhysDef" />
+			<xs:enumeration value="absorbDam" />
+			<xs:enumeration value="shieldDefAngle" />
+			<xs:enumeration value="reflectSkillMagic" />
+			<xs:enumeration value="reflectSkillPhysic" />
+			<xs:enumeration value="skillMastery" />
+			<xs:enumeration value="PrivateBuyLimit" />
+			<xs:enumeration value="PrivateSellLimit" />
+			<xs:enumeration value="inventoryLimit" />
+			<xs:enumeration value="pReuse" />
+			<xs:enumeration value="dReuse" />
+			<xs:enumeration value="debuffImmunity" />
+			<xs:enumeration value="vitalityConsumeRate" />
+			<xs:enumeration value="weightPenalty" />
+			<xs:enumeration value="darkPower" />
+			<xs:enumeration value="defCritDamageAdd" />
+			<xs:enumeration value="debuffVuln" />
+			<xs:enumeration value="atkCountMax" />
+			<xs:enumeration value="regCp" />
+			<xs:enumeration value="maxCp" />
+			<xs:enumeration value="pvpPhysDmg" />
+			<xs:enumeration value="pvpPhysSkillsDmg" />
+			<xs:enumeration value="earthPower" />
+			<xs:enumeration value="movementVuln" />
+			<xs:enumeration value="accCombat" />
+			<xs:enumeration value="darkRes" />
+			<xs:enumeration value="earthRes" />
+			<xs:enumeration value="fireRes" />
+			<xs:enumeration value="holyPower" />
+			<xs:enumeration value="holyRes" />
+			<xs:enumeration value="maxMp" />
+			<xs:enumeration value="waterRes" />
+			<xs:enumeration value="windRes" />
+			<xs:enumeration value="magicSuccRes" />
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="addType" mixed="true">
 		<xs:all>
 			<xs:element name="using" minOccurs="0" type="usingType" />
@@ -245,15 +358,15 @@
 			<xs:element name="player" minOccurs="0" type="playerType" />
 			<xs:element name="game" minOccurs="0" type="gameType" />
 		</xs:all>
-		<xs:attribute type="xs:string" name="order" use="optional" />
-		<xs:attribute type="xs:string" name="stat" use="optional" />
-		<xs:attribute type="xs:string" name="val" use="optional" />
+		<xs:attribute name="order" type="xs:byte" use="optional" />
+		<xs:attribute name="stat" use="required" type="statType" />
+		<xs:attribute name="val" type="xs:string" use="required" />
 	</xs:complexType>
 	<xs:complexType name="shareType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
-				<xs:attribute type="xs:string" name="order" use="optional" />
-				<xs:attribute type="xs:string" name="stat" use="optional" />
+				<xs:attribute name="order" type="xs:byte" use="optional" />
+				<xs:attribute name="stat" type="statType" />
 				<xs:attribute type="xs:float" name="val" use="optional" />
 			</xs:extension>
 		</xs:simpleContent>
@@ -279,6 +392,11 @@
 	</xs:complexType>
 	<xs:complexType name="forType" mixed="true">
 		<xs:choice maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="add" type="addType" />
+			<xs:element name="mul" type="addType" />
+			<xs:element name="sub" type="addType" />
+			<xs:element name="basemul" type="addType" />
+			<xs:element name="set" type="addType" />
 			<xs:element name="effect" type="effectType" />
 		</xs:choice>
 		<xs:attribute type="xs:string" name="name" use="optional" />
@@ -337,7 +455,6 @@
 		<xs:attribute type="xs:byte" name="enchantGroup7" use="optional" />
 		<xs:attribute type="xs:byte" name="enchantGroup8" use="optional" />
 	</xs:complexType>
-
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>

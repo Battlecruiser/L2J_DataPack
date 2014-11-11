@@ -24,8 +24,8 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="#pAtk" />
-				<add order="0x40" stat="accCombat" val="#accCombat" />
+				<mul stat="pAtk" val="#pAtk" />
+				<add stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
 	</skill>
@@ -72,7 +72,7 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regMp" val="#regMp" />
+				<mul stat="regMp" val="#regMp" />
 			</effect>
 		</for>
 	</skill>
@@ -99,7 +99,7 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mReuse" val="#mReuse" />
+				<mul stat="mReuse" val="#mReuse" />
 			</effect>
 		</for>
 	</skill>
@@ -156,8 +156,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="mDef" val="#mpDef" />
-				<mul order="0x30" stat="pDef" val="#mpDef" />
+				<mul stat="mDef" val="#mpDef" />
+				<mul stat="pDef" val="#mpDef" />
 			</effect>
 			<effect name="TargetMeProbability">
 				<param chance="80" />
@@ -198,8 +198,8 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="mDef" val="#mpDef" />
-				<mul order="0x30" stat="pDef" val="#mpDef" />
+				<mul stat="mDef" val="#mpDef" />
+				<mul stat="pDef" val="#mpDef" />
 			</effect>
 			<effect name="TargetMeProbability">
 				<param chance="40" />
@@ -332,10 +332,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ImmobileBuff">
-				<mul order="0x30" stat="mDef" val="5" />
-				<mul order="0x30" stat="pDef" val="5" />
-				<mul order="0x30" stat="pAtkSpd" val="0.3" />
-				<mul order="0x30" stat="runSpd" val="0.1" />
+				<mul stat="mDef" val="5" />
+				<mul stat="pDef" val="5" />
+				<mul stat="pAtkSpd" val="0.3" />
+				<mul stat="runSpd" val="0.1" />
 			</effect>
 		</for>
 	</skill>
@@ -1979,8 +1979,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="#rEvas" />
-				<mul order="0x30" stat="mDef" val="#mDef" />
+				<add stat="rEvas" val="#rEvas" />
+				<mul stat="mDef" val="#mDef" />
 			</effect>
 		</for>
 	</skill>

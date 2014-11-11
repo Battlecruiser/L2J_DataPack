@@ -8,7 +8,7 @@
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="12701" type="EtcItem" name="Foundation Sealed Dynasty Leather Helmet">
@@ -19,7 +19,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
 		<for>
-			<add order="0x10" stat="pDef" val="92" />
+			<add order="0" stat="pDef" val="92" />
 		</for>
 	</item>
 	<item id="12702" type="EtcItem" name="Foundation Sealed Dynasty Boots">
@@ -33,7 +33,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="12703" type="EtcItem" name="Foundation Sealed Dynasty Breastplate">
@@ -48,7 +48,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="214" />
+			<add order="0" stat="pDef" val="214" />
 		</for>
 	</item>
 	<item id="12704" type="EtcItem" name="Foundation Sealed Dynasty Shield">
@@ -62,9 +62,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="305" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="305" />
 		</for>
 	</item>
 	<item id="12705" type="EtcItem" name="Foundation Sealed Dynasty Shoes">
@@ -78,7 +78,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="12706" type="EtcItem" name="Foundation Sealed Dynasty Circlet">
@@ -92,7 +92,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="92" />
+			<add order="0" stat="pDef" val="92" />
 		</for>
 	</item>
 	<item id="12707" type="EtcItem" name="Foundation Sealed Dynasty Tunic">
@@ -107,8 +107,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="107" />
-			<add order="0x40" stat="maxMp" val="592" />
+			<add order="0" stat="pDef" val="107" />
+			<add stat="maxMp" val="592" />
 		</for>
 	</item>
 	<item id="12708" type="EtcItem" name="Foundation Sealed Dynasty Helmet">
@@ -122,7 +122,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="92" />
+			<add order="0" stat="pDef" val="92" />
 		</for>
 	</item>
 	<item id="12709" type="EtcItem" name="Foundation Sealed Dynasty Stockings">
@@ -137,8 +137,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="67" />
-			<add order="0x40" stat="maxMp" val="370" />
+			<add order="0" stat="pDef" val="67" />
+			<add stat="maxMp" val="370" />
 		</for>
 	</item>
 	<item id="12710" type="EtcItem" name="Foundation Adamantite Earring">
@@ -149,7 +149,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="465900" />
 		<for>
-			<add order="0x10" stat="mDef" val="51" />
+			<add order="0" stat="mDef" val="51" />
 		</for>
 	</item>
 	<item id="12711" type="EtcItem" name="Foundation Adamantite Necklace">
@@ -160,7 +160,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="621200" />
 		<for>
-			<add order="0x10" stat="mDef" val="68" />
+			<add order="0" stat="mDef" val="68" />
 		</for>
 	</item>
 	<item id="12712" type="EtcItem" name="Foundation Adamantite Ring">
@@ -171,7 +171,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="310600" />
 		<for>
-			<add order="0x10" stat="mDef" val="34" />
+			<add order="0" stat="mDef" val="34" />
 		</for>
 	</item>
 	<item id="12713" type="EtcItem" name="Foundation Earring of Black Ore">
@@ -182,7 +182,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="711000" />
 		<for>
-			<add order="0x10" stat="mDef" val="54" />
+			<add order="0" stat="mDef" val="54" />
 		</for>
 	</item>
 	<item id="12714" type="EtcItem" name="Foundation Necklace of Black Ore">
@@ -193,7 +193,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="948000" />
 		<for>
-			<add order="0x10" stat="mDef" val="72" />
+			<add order="0" stat="mDef" val="72" />
 		</for>
 	</item>
 	<item id="12715" type="EtcItem" name="Foundation Ring of Black Ore">
@@ -204,7 +204,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="474000" />
 		<for>
-			<add order="0x10" stat="mDef" val="36" />
+			<add order="0" stat="mDef" val="36" />
 		</for>
 	</item>
 	<item id="12716" type="EtcItem" name="Foundation Sealed Phoenix Necklace">
@@ -215,7 +215,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1340000" />
 		<for>
-			<add order="0x10" stat="mDef" val="76" />
+			<add order="0" stat="mDef" val="76" />
 		</for>
 	</item>
 	<item id="12717" type="EtcItem" name="Foundation Sealed Phoenix Ring">
@@ -226,7 +226,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="670000" />
 		<for>
-			<add order="0x10" stat="mDef" val="38" />
+			<add order="0" stat="mDef" val="38" />
 		</for>
 	</item>
 	<item id="12718" type="EtcItem" name="Foundation Sealed Phoenix Earring">
@@ -237,7 +237,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1005000" />
 		<for>
-			<add order="0x10" stat="mDef" val="57" />
+			<add order="0" stat="mDef" val="57" />
 		</for>
 	</item>
 	<item id="12719" type="EtcItem" name="Foundation Phoenix Necklace">
@@ -248,7 +248,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1340000" />
 		<for>
-			<add order="0x10" stat="mDef" val="76" />
+			<add order="0" stat="mDef" val="76" />
 		</for>
 	</item>
 	<item id="12720" type="EtcItem" name="Foundation Phoenix Ring">
@@ -259,7 +259,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="670000" />
 		<for>
-			<add order="0x10" stat="mDef" val="38" />
+			<add order="0" stat="mDef" val="38" />
 		</for>
 	</item>
 	<item id="12721" type="EtcItem" name="Foundation Phoenix Earring">
@@ -270,7 +270,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1005000" />
 		<for>
-			<add order="0x10" stat="mDef" val="57" />
+			<add order="0" stat="mDef" val="57" />
 		</for>
 	</item>
 	<item id="12722" type="EtcItem" name="Foundation Majestic Necklace">
@@ -281,7 +281,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1998000" />
 		<for>
-			<add order="0x10" stat="mDef" val="80" />
+			<add order="0" stat="mDef" val="80" />
 		</for>
 	</item>
 	<item id="12723" type="EtcItem" name="Foundation Majestic Ring">
@@ -292,7 +292,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="999000" />
 		<for>
-			<add order="0x10" stat="mDef" val="40" />
+			<add order="0" stat="mDef" val="40" />
 		</for>
 	</item>
 	<item id="12724" type="EtcItem" name="Foundation Majestic Earring">
@@ -303,7 +303,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1498000" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
+			<add order="0" stat="mDef" val="60" />
 		</for>
 	</item>
 	<item id="12725" type="EtcItem" name="Foundation Sealed Majestic Necklace">
@@ -314,7 +314,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1998000" />
 		<for>
-			<add order="0x10" stat="mDef" val="80" />
+			<add order="0" stat="mDef" val="80" />
 		</for>
 	</item>
 	<item id="12726" type="EtcItem" name="Foundation Sealed Majestic Ring">
@@ -325,7 +325,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="999000" />
 		<for>
-			<add order="0x10" stat="mDef" val="40" />
+			<add order="0" stat="mDef" val="40" />
 		</for>
 	</item>
 	<item id="12727" type="EtcItem" name="Foundation Sealed Majestic Earring">
@@ -336,7 +336,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1498000" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
+			<add order="0" stat="mDef" val="60" />
 		</for>
 	</item>
 	<item id="12728" type="EtcItem" name="Foundation Sealed Tateossian Necklace">
@@ -347,7 +347,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="4361000" />
 		<for>
-			<add order="0x10" stat="mDef" val="91" />
+			<add order="0" stat="mDef" val="91" />
 		</for>
 	</item>
 	<item id="12729" type="EtcItem" name="Foundation Sealed Tateossian Ring">
@@ -358,7 +358,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="2180000" />
 		<for>
-			<add order="0x10" stat="mDef" val="46" />
+			<add order="0" stat="mDef" val="46" />
 		</for>
 	</item>
 	<item id="12730" type="EtcItem" name="Foundation Sealed Tateossian Earring">
@@ -369,7 +369,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3270000" />
 		<for>
-			<add order="0x10" stat="mDef" val="68" />
+			<add order="0" stat="mDef" val="68" />
 		</for>
 	</item>
 	<item id="12731" type="EtcItem" name="Foundation Tateossian Necklace">
@@ -380,7 +380,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="4361000" />
 		<for>
-			<add order="0x10" stat="mDef" val="91" />
+			<add order="0" stat="mDef" val="91" />
 		</for>
 	</item>
 	<item id="12732" type="EtcItem" name="Foundation Tateossian Ring">
@@ -391,7 +391,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="2180000" />
 		<for>
-			<add order="0x10" stat="mDef" val="46" />
+			<add order="0" stat="mDef" val="46" />
 		</for>
 	</item>
 	<item id="12733" type="EtcItem" name="Foundation Tateossian Earring">
@@ -402,7 +402,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3270000" />
 		<for>
-			<add order="0x10" stat="mDef" val="68" />
+			<add order="0" stat="mDef" val="68" />
 		</for>
 	</item>
 	<item id="12734" type="EtcItem" name="Foundation Dynasty Necklace">
@@ -413,7 +413,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
 		<for>
-			<add order="0x10" stat="mDef" val="106" />
+			<add order="0" stat="mDef" val="106" />
 		</for>
 	</item>
 	<item id="12735" type="EtcItem" name="Foundation Dynasty Ring">
@@ -424,7 +424,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
 		<for>
-			<add order="0x10" stat="mDef" val="53" />
+			<add order="0" stat="mDef" val="53" />
 		</for>
 	</item>
 	<item id="12736" type="EtcItem" name="Foundation Dynasty Earring">
@@ -435,7 +435,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
 		<for>
-			<add order="0x10" stat="mDef" val="79" />
+			<add order="0" stat="mDef" val="79" />
 		</for>
 	</item>
 	<item id="12737" type="EtcItem" name="Foundation Sealed Dynasty Necklace">
@@ -446,7 +446,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
 		<for>
-			<add order="0x10" stat="mDef" val="106" />
+			<add order="0" stat="mDef" val="106" />
 		</for>
 	</item>
 	<item id="12738" type="EtcItem" name="Foundation Sealed Dynasty Ring">
@@ -457,7 +457,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
 		<for>
-			<add order="0x10" stat="mDef" val="53" />
+			<add order="0" stat="mDef" val="53" />
 		</for>
 	</item>
 	<item id="12739" type="EtcItem" name="Foundation Sealed Dynasty Earring">
@@ -468,7 +468,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
 		<for>
-			<add order="0x10" stat="mDef" val="79" />
+			<add order="0" stat="mDef" val="79" />
 		</for>
 	</item>
 	<item id="12740" type="Armor" name="Baby Pet Scale Armor">
@@ -485,7 +485,7 @@
 			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="112" />
+			<add order="0" stat="pDef" val="112" />
 		</for>
 	</item>
 	<item id="12741" type="Armor" name="Baby Pet Bronze Armor">
@@ -502,7 +502,7 @@
 			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="124" />
+			<add order="0" stat="pDef" val="124" />
 		</for>
 	</item>
 	<item id="12742" type="Armor" name="Baby Pet Plate Armor">
@@ -519,7 +519,7 @@
 			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="136" />
+			<add order="0" stat="pDef" val="136" />
 		</for>
 	</item>
 	<item id="12743" type="Armor" name="Baby Pet Mithril Armor">
@@ -536,7 +536,7 @@
 			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="148" />
+			<add order="0" stat="pDef" val="148" />
 		</for>
 	</item>
 	<item id="12744" type="Armor" name="Baby Pet Oriharukon Armor">
@@ -553,7 +553,7 @@
 			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="160" />
+			<add order="0" stat="pDef" val="160" />
 		</for>
 	</item>
 	<item id="12745" type="Armor" name="Baby Pet Orichalcum Armor">
@@ -570,7 +570,7 @@
 			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="171" />
+			<add order="0" stat="pDef" val="171" />
 		</for>
 	</item>
 	<item id="12746" type="Armor" name="Crystal Pendant">
@@ -586,7 +586,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="mDef" val="22" />
+			<add order="0" stat="mDef" val="22" />
 		</for>
 	</item>
 	<item id="12747" type="Armor" name="Ruby Pendant">
@@ -602,7 +602,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="mDef" val="30" />
+			<add order="0" stat="mDef" val="30" />
 		</for>
 	</item>
 	<item id="12748" type="Armor" name="Sapphire Pendant">
@@ -618,7 +618,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="mDef" val="40" />
+			<add order="0" stat="mDef" val="40" />
 		</for>
 	</item>
 	<item id="12749" type="Armor" name="Diamond Pendant">
@@ -634,7 +634,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="mDef" val="52" />
+			<add order="0" stat="mDef" val="52" />
 		</for>
 	</item>
 	<item id="12750" type="Armor" name="Enria Pendant">
@@ -650,7 +650,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="mDef" val="66" />
+			<add order="0" stat="mDef" val="66" />
 		</for>
 	</item>
 	<item id="12751" type="Armor" name="Thons Pendant">
@@ -666,7 +666,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="mDef" val="80" />
+			<add order="0" stat="mDef" val="80" />
 		</for>
 	</item>
 	<item id="12752" type="Armor" name="Asofe Pendant">
@@ -682,7 +682,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0x10" stat="mDef" val="94" />
+			<add order="0" stat="mDef" val="94" />
 		</for>
 	</item>
 	<item id="12753" type="EtcItem" name="Kamael Village Teleportation Scroll">
@@ -1141,10 +1141,10 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="12794" type="Weapon" name="X Stick - 30-day limited period">
@@ -1163,10 +1163,10 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="12795" type="Weapon" name="Scissors Stick - 30-day limited period">
@@ -1185,10 +1185,10 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="12796" type="Weapon" name="Rock Stick - 30-day limited period">
@@ -1207,10 +1207,10 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="12797" type="Weapon" name="Paper Stick - 30-day limited period">
@@ -1229,10 +1229,10 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="12798" type="Weapon" name="Snowman Transformation Stick">
@@ -1253,10 +1253,10 @@
 		<set name="item_skill" val="3418-1" />
 		<set name="time" val="43200" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="12799" type="Weapon" name="Scarecrow Transformation Stick">
@@ -1277,10 +1277,10 @@
 		<set name="item_skill" val="3418-1" />
 		<set name="time" val="43200" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 </list>

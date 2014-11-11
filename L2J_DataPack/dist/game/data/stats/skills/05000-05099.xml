@@ -46,7 +46,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb HP from damage inflicted on enemies -->
+				<add stat="absorbDam" val="9" /> <!-- absorb HP from damage inflicted on enemies -->
 			</effect>
 		</for>
 	</skill>
@@ -166,12 +166,12 @@
 		<set name="trait" val="#traits" />
 		<for>
 			<effect name="#effectname1">
-				<mul order="0x30" stat="pAtk" val="#attackAndSpeed" />
-				<mul order="0x30" stat="mAtk" val="#attackAndSpeed" />
-				<mul order="0x30" stat="pAtkSpd" val="#attackAndSpeed" />
-				<mul order="0x30" stat="mAtkSpd" val="#attackAndSpeed" />
-				<add order="0x40" stat="runSpd" val="#attackAndSpeed" />
-				<mul order="0x30" stat="healEffect" val="#healEffect" />
+				<mul stat="pAtk" val="#attackAndSpeed" />
+				<mul stat="mAtk" val="#attackAndSpeed" />
+				<mul stat="pAtkSpd" val="#attackAndSpeed" />
+				<mul stat="mAtkSpd" val="#attackAndSpeed" />
+				<add stat="runSpd" val="#attackAndSpeed" />
+				<mul stat="healEffect" val="#healEffect" />
 			</effect>
 			<effect name="DispelByCategory">
 				<param slot="buff" rate="#activateRate" max="#maxNegated" />
@@ -374,7 +374,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Grow">
-				<mul order="0x30" stat="runSpd" val="1.22" />
+				<mul stat="runSpd" val="1.22" />
 			</effect>
 			<effect name="HealPercent">
 				<param power="20" />
@@ -603,9 +603,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpDmg" />
-				<mul order="0x30" stat="pvpPhysDmg" val="#pvpDmg" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpDmg" />
+				<mul stat="pvpMagicalDmg" val="#pvpDmg" />
+				<mul stat="pvpPhysDmg" val="#pvpDmg" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvpDmg" />
 			</effect>
 		</for>
 	</skill>
@@ -710,9 +710,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ImmobileBuff">
-				<add order="0x40" stat="pDef" val="#pDef" />
-				<add order="0x40" stat="mDef" val="#mDef" />
-				<sub order="0x40" stat="cancelVuln" val="80" />
+				<add stat="pDef" val="#pDef" />
+				<add stat="mDef" val="#mDef" />
+				<sub stat="cancelVuln" val="80" />
 			</effect>
 		</for>
 	</skill>
@@ -1095,7 +1095,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.1" />
+				<mul stat="maxCp" val="1.1" />
 			</effect>
 		</for>
 	</skill>
@@ -1106,7 +1106,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="0.9" />
+				<mul stat="maxCp" val="0.9" />
 			</effect>
 		</for>
 	</skill>
@@ -1122,15 +1122,15 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
-				<mul order="0x30" stat="pAtkSpd" val="#pAtkpAtkSpdmAtkmAtkSpd" />
-				<mul order="0x30" stat="mAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
-				<mul order="0x30" stat="mAtkSpd" val="#pAtkpAtkSpdmAtkmAtkSpd" />
-				<sub order="0x40" stat="accCombat" val="#accCombatrEvas" />
-				<sub order="0x40" stat="rEvas" val="#accCombatrEvas" />
-				<mul order="0x30" stat="pDef" val="#pDefmDef" />
-				<mul order="0x30" stat="mDef" val="#pDefmDef" />
-				<mul order="0x30" stat="runSpd" val="#runSpd" />
+				<mul stat="pAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+				<mul stat="pAtkSpd" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+				<mul stat="mAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+				<mul stat="mAtkSpd" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+				<sub stat="accCombat" val="#accCombatrEvas" />
+				<sub stat="rEvas" val="#accCombatrEvas" />
+				<mul stat="pDef" val="#pDefmDef" />
+				<mul stat="mDef" val="#pDefmDef" />
+				<mul stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -1148,7 +1148,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="cAtk" val="1.5" />
+				<mul stat="cAtk" val="1.5" />
 			</effect>
 		</for>
 	</skill>
@@ -1169,8 +1169,8 @@
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.33" />
-				<mul order="0x01" stat="rCrit" val="0.3" />
+				<mul stat="pAtkSpd" val="1.33" />
+				<mul stat="rCrit" val="0.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1191,8 +1191,8 @@
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.33" />
-				<mul order="0x30" stat="pAtk" val="1.15" />
+				<mul stat="pAtkSpd" val="1.33" />
+				<mul stat="pAtk" val="1.15" />
 			</effect>
 		</for>
 	</skill>
@@ -1290,7 +1290,7 @@
 		<selfEffects>
 			<effect name="Buff">
 				<param chance="80" />
-				<add order="0x40" stat="runSpd" val="40" />
+				<add stat="runSpd" val="40" />
 			</effect>
 		</selfEffects>
 	</skill>
@@ -1354,9 +1354,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
-				<mul order="0x30" stat="pAtk" val="#pAtk" />
-				<mul order="0x30" stat="pDef" val="#pDef" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pDef" val="#pDef" />
 			</effect>
 		</for>
 	</skill>

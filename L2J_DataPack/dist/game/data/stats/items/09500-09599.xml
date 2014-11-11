@@ -171,8 +171,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="214" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="214" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9515" type="Armor" name="Sealed Dynasty Gaiter">
@@ -192,8 +192,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="134" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="134" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9516" type="Armor" name="Sealed Dynasty Helmet">
@@ -212,8 +212,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="92" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="92" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9517" type="Armor" name="Sealed Dynasty Gauntlets">
@@ -232,8 +232,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="61" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9518" type="Armor" name="Sealed Dynasty Boots">
@@ -252,8 +252,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="61" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9519" type="Armor" name="Sealed Dynasty Leather Armor">
@@ -270,8 +270,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="161" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="161" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9520" type="Armor" name="Sealed Dynasty Leather Leggings">
@@ -288,8 +288,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="100" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="100" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9521" type="Armor" name="Sealed Dynasty Leather Helmet">
@@ -305,8 +305,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="92" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="92" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9522" type="Armor" name="Sealed Dynasty Leather Gloves">
@@ -322,8 +322,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="61" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9523" type="Armor" name="Sealed Dynasty Leather Boots">
@@ -339,8 +339,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="61" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9524" type="Armor" name="Sealed Dynasty Tunic">
@@ -360,9 +360,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="107" />
-			<add order="0x40" stat="maxMp" val="592" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="107" />
+			<add stat="maxMp" val="592" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9525" type="Armor" name="Sealed Dynasty Stockings">
@@ -382,9 +382,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="67" />
-			<add order="0x40" stat="maxMp" val="370" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="67" />
+			<add stat="maxMp" val="370" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9526" type="Armor" name="Sealed Dynasty Circlet">
@@ -403,8 +403,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="92" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="92" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9527" type="Armor" name="Sealed Dynasty Gloves">
@@ -423,8 +423,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="61" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9528" type="Armor" name="Sealed Dynasty Shoes">
@@ -443,8 +443,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="61" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9529" type="Armor" name="Sealed Dynasty Shield">
@@ -462,10 +462,10 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="305" />
-			<enchant val="0" order="0x0C" stat="sDef" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="305" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="9530" type="EtcItem" name="Sealed Dynasty Breast Plate Piece">
@@ -972,7 +972,7 @@
 		<set name="price" val="1300" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="6" />
+			<add order="0" stat="pDef" val="6" />
 		</for>
 	</item>
 	<item id="9578" type="Armor" name="Linen Shirt">
@@ -987,8 +987,8 @@
 		<set name="price" val="25000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="12" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="12" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9579" type="Armor" name="Silk Shirt">
@@ -1003,8 +1003,8 @@
 		<set name="price" val="80000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="17" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="17" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9580" type="Armor" name="Thin Leather Shirt">
@@ -1019,8 +1019,8 @@
 		<set name="price" val="260000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="21" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="21" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9581" type="Armor" name="Scale Shirt">
@@ -1035,8 +1035,8 @@
 		<set name="price" val="588000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="23" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="23" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9582" type="Armor" name="Mithril Shirt">
@@ -1051,8 +1051,8 @@
 		<set name="price" val="1800000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="28" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="28" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9583" type="Armor" name="Striped Cotton Shirt">
@@ -1065,7 +1065,7 @@
 		<set name="price" val="6100" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="8" />
+			<add order="0" stat="pDef" val="8" />
 		</for>
 	</item>
 	<item id="9584" type="Armor" name="Stripe Linen Shirt">
@@ -1080,8 +1080,8 @@
 		<set name="price" val="49000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="14" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="14" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9585" type="Armor" name="Striped Silk Shirt">
@@ -1096,8 +1096,8 @@
 		<set name="price" val="180000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="19" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="19" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9586" type="Armor" name="Thin Striped Leather Shirt">
@@ -1112,8 +1112,8 @@
 		<set name="price" val="400000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="22" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="22" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9587" type="Armor" name="Striped Scale Shirt">
@@ -1128,8 +1128,8 @@
 		<set name="price" val="880000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="26" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="26" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9588" type="Armor" name="Striped Mithril Shirt">
@@ -1144,8 +1144,8 @@
 		<set name="price" val="2540000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="30" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="30" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9589" type="Armor" name="Iron Bracelet">

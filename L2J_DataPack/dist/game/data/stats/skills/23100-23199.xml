@@ -345,7 +345,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="weightPenalty" val="9000" />
+				<add stat="weightPenalty" val="9000" />
 			</effect>
 		</for>
 	</skill>
@@ -379,7 +379,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+				<mul stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
 	</skill>
@@ -413,7 +413,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+				<mul stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -448,7 +448,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="20" />
+				<add stat="runSpd" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -979,7 +979,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
+				<mul stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>
 	</skill>
@@ -1029,7 +1029,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="20" />
+				<add stat="runSpd" val="20" />
 			</effect>
 		</for>
 	</skill>

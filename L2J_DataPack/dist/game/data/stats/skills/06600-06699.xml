@@ -170,7 +170,7 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.5" />
+				<mul stat="runSpd" val="0.5" />
 			</effect>
 		</for>
 	</skill>
@@ -200,7 +200,7 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.1" />
+				<mul stat="runSpd" val="0.1" />
 			</effect>
 		</for>
 	</skill>
@@ -223,10 +223,10 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="pAtk" val="#pAtk" />
+				<add stat="pAtk" val="#pAtk" />
 			</effect>
 			<effect name="Buff">
-				<add order="0x40" stat="mAtk" val="#mAtk" />
+				<add stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -249,10 +249,10 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="pAtk" val="#pAtk" />
+				<add stat="pAtk" val="#pAtk" />
 			</effect>
 			<effect name="Buff">
-				<add order="0x40" stat="mAtk" val="#mAtk" />
+				<add stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -277,7 +277,7 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Stun">
-				<mul order="0x30" stat="defCritRate" val="0.5" />
+				<mul stat="defCritRate" val="0.5" />
 			</effect>
 		</for>
 	</skill>
@@ -414,7 +414,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.15" />
+				<mul stat="pAtk" val="1.15" />
 			</effect>
 		</for>
 	</skill>
@@ -447,7 +447,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+				<mul stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
 	</skill>
@@ -480,7 +480,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rCrit" val="1.3" />
+				<mul stat="rCrit" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -500,7 +500,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="33" />
+				<add stat="runSpd" val="33" />
 			</effect>
 		</for>
 	</skill>
@@ -526,8 +526,8 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="2" />
-				<mul order="0x30" stat="regMp" val="2" />
+				<mul stat="regHp" val="2" />
+				<mul stat="regMp" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -554,8 +554,8 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="2" />
-				<mul order="0x30" stat="regMp" val="2" />
+				<mul stat="regHp" val="2" />
+				<mul stat="regMp" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -575,7 +575,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul stat="cAtk" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -596,7 +596,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+				<sub stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -873,7 +873,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.18" />
+				<mul stat="pDef" val="1.18" />
 			</effect>
 		</for>
 	</skill>
@@ -894,7 +894,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="33" />
+				<add stat="runSpd" val="33" />
 			</effect>
 		</for>
 	</skill>
@@ -915,7 +915,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul stat="cAtk" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -936,7 +936,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.35" />
+				<mul stat="maxHp" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -957,7 +957,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="absorbDam" val="9" />
+				<add stat="absorbDam" val="9" />
 			</effect>
 		</for>
 	</skill>
@@ -978,14 +978,14 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtk" val="1.16" />
-				<mul order="0x30" stat="pAtk" val="1.08" />
-				<mul order="0x30" stat="mDef" val="0.84" />
-				<mul order="0x30" stat="pDef" val="0.92" />
-				<mul order="0x30" stat="mAtkSpd" val="1.08" />
-				<mul order="0x30" stat="pAtkSpd" val="1.08" />
-				<add order="0x40" stat="runSpd" val="8" />
-				<sub order="0x40" stat="rEvas" val="4" />
+				<mul stat="mAtk" val="1.16" />
+				<mul stat="pAtk" val="1.08" />
+				<mul stat="mDef" val="0.84" />
+				<mul stat="pDef" val="0.92" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
+				<sub stat="rEvas" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -1006,7 +1006,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.05" />
+				<mul stat="rShld" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -1033,7 +1033,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="pAtkRange" val="50">
+				<add stat="pAtkRange" val="50">
 					<using kind="BOW,CROSSBOW" />
 				</add>
 			</effect>
@@ -1129,7 +1129,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="40" />
+				<add stat="runSpd" val="40" />
 			</effect>
 		</for>
 	</skill>
@@ -1153,7 +1153,7 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="45" />
+				<add stat="runSpd" val="45" />
 			</effect>
 		</for>
 	</skill>
@@ -1255,7 +1255,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="physicalSkillPower" val="1.2" />
+				<mul stat="physicalSkillPower" val="1.2" />
 			</effect>
 		</for>
 	</skill>
@@ -1277,7 +1277,7 @@
 		<for>
 			<effect name="DamOverTimePercent" ticks="5">
 				<param power="0.02" />
-				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul stat="pAtkSpd" val="1.2" />
 			</effect>
 		</for>
 	</skill>

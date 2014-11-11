@@ -7,8 +7,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.022" /> <!-- P. Def. +2.2% -->
-				<add order="0x40" stat="maxHp" val="41" /> <!-- HP +41 -->
+				<mul stat="pDef" val="1.022" /> <!-- P. Def. +2.2% -->
+				<add stat="maxHp" val="41" /> <!-- HP +41 -->
 			</effect>
 		</for>
 	</skill>
@@ -19,7 +19,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			</effect>
 		</for>
 	</skill>
@@ -41,7 +41,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="80" /> <!-- MP +80 -->
+				<add stat="maxMp" val="80" /> <!-- MP +80 -->
 			</effect>
 		</for>
 	</skill>
@@ -52,8 +52,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtk" val="1.1025" /> <!-- M. Atk. +10.25% -->
-				<mul order="0x30" stat="regMp" val="0.95" /> <!-- MP Regeneration -5% -->
+				<mul stat="mAtk" val="1.1025" /> <!-- M. Atk. +10.25% -->
+				<mul stat="regMp" val="0.95" /> <!-- MP Regeneration -5% -->
 			</effect>
 		</for>
 	</skill>
@@ -64,7 +64,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="91.81" /> <!-- MP +91.81 -->
+				<add stat="maxMp" val="91.81" /> <!-- MP +91.81 -->
 			</effect>
 		</for>
 	</skill>
@@ -75,8 +75,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.05" /> <!-- P. Def. +5% -->
-				<add order="0x40" stat="maxHp" val="153" /> <!-- HP +153 -->
+				<mul stat="pDef" val="1.05" /> <!-- P. Def. +5% -->
+				<add stat="maxHp" val="153" /> <!-- HP +153 -->
 			</effect>
 		</for>
 	</skill>
@@ -87,7 +87,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="7" /> <!-- Speed +7 -->
+				<add stat="runSpd" val="7" /> <!-- Speed +7 -->
 			</effect>
 		</for>
 	</skill>
@@ -98,7 +98,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="4" /> <!-- Evasion +4 -->
+				<add stat="rEvas" val="4" /> <!-- Evasion +4 -->
 			</effect>
 		</for>
 	</skill>
@@ -121,8 +121,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<mul stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			</effect>
 		</for>
 	</skill>
@@ -139,7 +139,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="weightPenalty" val="5795" /> <!-- Point at which a weight penalty is applied +5795 -->
+				<add stat="weightPenalty" val="5795" /> <!-- Point at which a weight penalty is applied +5795 -->
 			</effect>
 		</for>
 	</skill>
@@ -150,7 +150,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="maxHp" val="269.65" /> <!-- HP -269.65 -->
+				<sub stat="maxHp" val="269.65" /> <!-- HP -269.65 -->
 			</effect>
 		</for>
 	</skill>
@@ -161,7 +161,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
+				<mul stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
 			</effect>
 		</for>
 	</skill>
@@ -172,7 +172,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="1.0526" /> <!-- M. Def. +5.26% -->
+				<mul stat="mDef" val="1.0526" /> <!-- M. Def. +5.26% -->
 			</effect>
 		</for>
 	</skill>
@@ -183,7 +183,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="269.65" /> <!-- HP +269.65 -->
+				<add stat="maxHp" val="269.65" /> <!-- HP +269.65 -->
 			</effect>
 		</for>
 	</skill>
@@ -194,8 +194,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
-				<add order="0x40" stat="maxMp" val="170.62" /> <!-- MP +170.62 -->
+				<mul stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
+				<add stat="maxMp" val="170.62" /> <!-- MP +170.62 -->
 			</effect>
 		</for>
 	</skill>
@@ -206,8 +206,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.246 -->
-				<add order="0x40" stat="maxHp" val="294.49" /> <!-- HP +294.49 -->
+				<mul stat="pDef" val="1.0526" /> <!-- P. Def. +5.246 -->
+				<add stat="maxHp" val="294.49" /> <!-- HP +294.49 -->
 			</effect>
 		</for>
 	</skill>
@@ -218,7 +218,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="294.49" /> <!-- HP +294.49 -->
+				<add stat="maxHp" val="294.49" /> <!-- HP +294.49 -->
 			</effect>
 		</for>
 	</skill>
@@ -229,7 +229,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="4" /> <!-- Evasion +4 -->
+				<add stat="rEvas" val="4" /> <!-- Evasion +4 -->
 			</effect>
 		</for>
 	</skill>
@@ -240,8 +240,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="1.0525" /> <!-- M. Def. +5.25% -->
-				<add order="0x40" stat="weightPenalty" val="5795" /> <!-- Point at which a weight penalty is applied +5795 -->
+				<mul stat="mDef" val="1.0525" /> <!-- M. Def. +5.25% -->
+				<add stat="weightPenalty" val="5795" /> <!-- Point at which a weight penalty is applied +5795 -->
 			</effect>
 		</for>
 	</skill>
@@ -252,8 +252,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtk" val="1.1025" /> <!-- M. Atk. +10.25% -->
-				<mul order="0x30" stat="regMp" val="0.95" /> <!-- MP Regeneration -5% -->
+				<mul stat="mAtk" val="1.1025" /> <!-- M. Atk. +10.25% -->
+				<mul stat="regMp" val="0.95" /> <!-- MP Regeneration -5% -->
 			</effect>
 		</for>
 	</skill>
@@ -264,8 +264,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<mul stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			</effect>
 		</for>
 	</skill>
@@ -276,8 +276,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="7" /> <!-- Speed +7 -->
-				<mul order="0x30" stat="regHp" val="1.0526" /> <!-- HP Regeneration +5.26% -->
+				<add stat="runSpd" val="7" /> <!-- Speed +7 -->
+				<mul stat="regHp" val="1.0526" /> <!-- HP Regeneration +5.26% -->
 			</effect>
 		</for>
 	</skill>
@@ -288,8 +288,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="320" /> <!-- HP +320 -->
-				<add order="0x40" stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
+				<add stat="maxHp" val="320" /> <!-- HP +320 -->
+				<add stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
 			</effect>
 		</for>
 	</skill>
@@ -300,8 +300,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<mul stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			</effect>
 		</for>
 	</skill>
@@ -312,9 +312,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
-				<mul order="0x30" stat="pAtk" val="1.027" /> <!-- P. Atk. +2.7% -->
-				<mul order="0x30" stat="regMp" val="1.025" /> <!-- MP Regeneration +2.5% -->
+				<add stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
+				<mul stat="pAtk" val="1.027" /> <!-- P. Atk. +2.7% -->
+				<mul stat="regMp" val="1.025" /> <!-- MP Regeneration +2.5% -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="20" />
@@ -328,8 +328,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="206" /> <!-- MP +206 -->
-				<mul order="0x30" stat="regMp" val="1.0524" /> <!-- MP Regeneration +5.24% -->
+				<add stat="maxMp" val="206" /> <!-- MP +206 -->
+				<mul stat="regMp" val="1.0524" /> <!-- MP Regeneration +5.24% -->
 			</effect>
 		</for>
 	</skill>
@@ -340,9 +340,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="7" /> <!-- Speed + 7 -->
-				<add order="0x40" stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
-				<mul order="0x30" stat="regMp" val="1.0526" /> <!-- MP Regeneration +5.26% -->
+				<add stat="runSpd" val="7" /> <!-- Speed + 7 -->
+				<add stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
+				<mul stat="regMp" val="1.0526" /> <!-- MP Regeneration +5.26% -->
 			</effect>
 		</for>
 	</skill>
@@ -353,7 +353,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="healEffect" val="1.04" /> <!-- Heal +4% -->
+				<mul stat="healEffect" val="1.04" /> <!-- Heal +4% -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
@@ -367,8 +367,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.08" /> <!-- Atk. Spd. +8% -->
-				<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
+				<mul stat="pAtkSpd" val="1.08" /> <!-- Atk. Spd. +8% -->
+				<add stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="80" />
@@ -383,8 +383,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
-				<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
+				<mul stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
+				<mul stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
@@ -398,8 +398,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
-				<add order="0x40" stat="maxMp" val="222" /> <!-- MP +222 -->
+				<mul stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
+				<add stat="maxMp" val="222" /> <!-- MP +222 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="80" />
@@ -414,8 +414,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-				<mul order="0x30" stat="mDef" val="1.08" /> <!-- M. Def. +8% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<mul stat="mDef" val="1.08" /> <!-- M. Def. +8% -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="80" />
@@ -430,10 +430,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.08" /> <!-- P. Def. +8% -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-				<add order="0x40" stat="runSpd" val="7" /> <!-- Speed +7 -->
-				<sub order="0x40" stat="cancel" val="50" /> <!-- Small decrease in chance of spell interruption -->
+				<mul stat="pDef" val="1.08" /> <!-- P. Def. +8% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add stat="runSpd" val="7" /> <!-- Speed +7 -->
+				<sub stat="cancel" val="50" /> <!-- Small decrease in chance of spell interruption -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
@@ -447,7 +447,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
+				<mul stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="70" />
@@ -462,8 +462,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
-				<add order="0x40" stat="accCombat" val="3.1" /> <!-- Accuracy +3.1 -->
+				<mul stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
+				<add stat="accCombat" val="3.1" /> <!-- Accuracy +3.1 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
@@ -477,8 +477,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="1.04" /> <!-- M. Def. +4% -->
-				<add order="0x40" stat="absorbDam" val="3" /> <!-- Restores 3% of melee damage inflicted on the enemy to oneself -->
+				<mul stat="mDef" val="1.04" /> <!-- M. Def. +4% -->
+				<add stat="absorbDam" val="3" /> <!-- Restores 3% of melee damage inflicted on the enemy to oneself -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="70" />
@@ -493,11 +493,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.08"> <!-- Archery P. Atk. +8% -->
+				<mul stat="pAtk" val="1.08"> <!-- Archery P. Atk. +8% -->
 					<using kind="BOW,CROSSBOW" />
 				</mul>
-				<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
-				<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
+				<add stat="maxMp" val="240" /> <!-- MP +240 -->
+				<add stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
@@ -511,8 +511,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regMp" val="1.04" /> <!-- MP Regeneration +4% -->
-				<mul order="0x30" stat="mAtk" val="1.08" /> <!-- M. Atk. +8% -->
+				<mul stat="regMp" val="1.04" /> <!-- MP Regeneration +4% -->
+				<mul stat="mAtk" val="1.08" /> <!-- M. Atk. +8% -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="70" />
@@ -527,9 +527,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-				<mul order="0x30" stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
+				<add stat="maxMp" val="240" /> <!-- MP +240 -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<mul stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
@@ -546,7 +546,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="cAtkAdd" val="#cAtkAdd" />
 			</effect>
 		</for>
 	</skill>
@@ -558,7 +558,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="126.13" />
+				<add stat="maxHp" val="126.13" />
 			</effect>
 		</for>
 	</skill>
@@ -570,7 +570,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="20" />
+				<add stat="maxHp" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -582,7 +582,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxHp" val="198.21" />
+				<add stat="maxHp" val="198.21" />
 			</effect>
 		</for>
 	</skill>
@@ -594,7 +594,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="1.0526" />
+				<mul stat="mDef" val="1.0526" />
 			</effect>
 		</for>
 	</skill>
@@ -606,7 +606,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.0526" />
+				<mul stat="rShld" val="1.0526" />
 			</effect>
 		</for>
 	</skill>
@@ -618,7 +618,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.24" />
+				<mul stat="rShld" val="1.24" />
 			</effect>
 		</for>
 	</skill>
@@ -630,7 +630,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.24" />
+				<mul stat="rShld" val="1.24" />
 			</effect>
 		</for>
 	</skill>
@@ -642,7 +642,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.18" />
+				<mul stat="rShld" val="1.18" />
 			</effect>
 		</for>
 	</skill>
@@ -654,7 +654,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="reflectDam" val="5" />
+				<add stat="reflectDam" val="5" />
 			</effect>
 		</for>
 	</skill>
@@ -669,10 +669,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="atkCountMax" val="#atkCountMax" />
-				<mul order="0x30" stat="pvpPhysDmg" val="#bonus" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#bonus" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="#bonus" />
+				<add stat="atkCountMax" val="#atkCountMax" />
+				<mul stat="pvpPhysDmg" val="#bonus" />
+				<mul stat="pvpPhysSkillsDmg" val="#bonus" />
+				<mul stat="pvpMagicalDmg" val="#bonus" />
 			</effect>
 		</for>
 	</skill>
@@ -683,8 +683,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.08" /> <!-- P Def. +8% -->
-				<add order="0x40" stat="maxHp" val="445" /> <!-- Maximum HP +445 -->
+				<mul stat="pDef" val="1.08" /> <!-- P Def. +8% -->
+				<add stat="maxHp" val="445" /> <!-- Maximum HP +445 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="70" />
@@ -712,10 +712,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Attack Speed +4% -->
-				<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk +4% -->
-				<add order="0x40" stat="maxMp" val="289" /> <!-- Maximum MP +289 -->
-				<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
+				<mul stat="pAtkSpd" val="1.04" /> <!-- Attack Speed +4% -->
+				<mul stat="pAtk" val="1.04" /> <!-- P. Atk +4% -->
+				<add stat="maxMp" val="289" /> <!-- Maximum MP +289 -->
+				<add stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
 			</effect>
 		</for>
 	</skill>
@@ -726,10 +726,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtk" val="1.17" /> <!-- M. Atk +17% -->
-				<add order="0x40" stat="runSpd" val="7" /> <!-- Movement Speed +7 -->
-				<sub order="0x40" stat="cancel" val="50" /> <!-- Casting Cancel Probability -50% -->
-				<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
+				<mul stat="mAtk" val="1.17" /> <!-- M. Atk +17% -->
+				<add stat="runSpd" val="7" /> <!-- Movement Speed +7 -->
+				<sub stat="cancel" val="50" /> <!-- Casting Cancel Probability -50% -->
+				<add stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
@@ -745,14 +745,14 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="fireRes" val="15" />
-				<add order="0x40" stat="maxHp" val="445" />
-				<mul order="0x30" stat="pAtk" val="1.04" />
-				<mul order="0x30" stat="mAtk" val="1.08" />
-				<add order="0x40" stat="mCritRate" val="2" />
-				<mul order="0x30" stat="pReuse" val="0.9" />
-				<mul order="0x30" stat="mReuse" val="0.9" />
-				<add order="0x40" stat="reflectDam" val="5" />
+				<add stat="fireRes" val="15" />
+				<add stat="maxHp" val="445" />
+				<mul stat="pAtk" val="1.04" />
+				<mul stat="mAtk" val="1.08" />
+				<add stat="mCritRate" val="2" />
+				<mul stat="pReuse" val="0.9" />
+				<mul stat="mReuse" val="0.9" />
+				<add stat="reflectDam" val="5" />
 			</effect>
 			<effect name="AttackTrait">
 				<param SLEEP="40" />
@@ -771,11 +771,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="earthRes" val="15" />
-				<mul order="0x30" stat="healEffect" val="1.1" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
-				<add order="0x40" stat="absorbDam" val="4" /> <!-- absorb 4% HP from damage inflicted on enemies -->
+				<add stat="earthRes" val="15" />
+				<mul stat="healEffect" val="1.1" />
+				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<add stat="absorbDam" val="4" /> <!-- absorb 4% HP from damage inflicted on enemies -->
 			</effect>
 			<effect name="AttackTrait">
 				<param BLEED="40" />
@@ -802,9 +802,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="healEffect" val="#healEffect" />
-				<add order="0x40" stat="absorbDam" val="4" />
-				<add order="0x40" stat="darkRes" val="#darkRes" />
+				<mul stat="healEffect" val="#healEffect" />
+				<add stat="absorbDam" val="4" />
+				<add stat="darkRes" val="#darkRes" />
 			</effect>
 			<effect name="AttackTrait">
 				<param BLEED="30" />
@@ -827,7 +827,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="healEffect" val="1.06" />
+				<mul stat="healEffect" val="1.06" />
 			</effect>
 			<effect name="AttackTrait">
 				<param BLEED="20" />
@@ -846,10 +846,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="accCombat" val="2" />
-				<mul order="0x30" stat="cAtk" val="1.15" />
-				<mul order="0x30" stat="pAtkSpd" val="1.04" />
-				<mul order="0x30" stat="mAtkSpd" val="1.04" />
+				<add stat="accCombat" val="2" />
+				<mul stat="cAtk" val="1.15" />
+				<mul stat="pAtkSpd" val="1.04" />
+				<mul stat="mAtkSpd" val="1.04" />
 			</effect>
 			<effect name="AttackTrait">
 				<param POISON="40" />
@@ -870,8 +870,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="accCombat" val="2" />
-				<mul order="0x30" stat="cAtk" val="1.15" />
+				<add stat="accCombat" val="2" />
+				<mul stat="cAtk" val="1.15" />
 			</effect>
 			<effect name="AttackTrait">
 				<param POISON="30" />
@@ -892,7 +892,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="accCombat" val="1" />
+				<add stat="accCombat" val="1" />
 			</effect>
 			<effect name="AttackTrait">
 				<param POISON="20" />
@@ -912,10 +912,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
-				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -929,10 +929,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rCrit" val="#rCrit" />
-				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+				<add stat="rCrit" val="#rCrit" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -946,10 +946,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rCrit" val="#rCrit" />
-				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+				<add stat="rCrit" val="#rCrit" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -963,10 +963,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rCrit" val="#rCrit" />
-				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+				<add stat="rCrit" val="#rCrit" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -980,10 +980,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="absorbDam" val="#absorbDam" />
-				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+				<add stat="absorbDam" val="#absorbDam" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -997,10 +997,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="regHp" val="#regHp" />
-				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+				<add stat="regHp" val="#regHp" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -1012,12 +1012,12 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.15" />
-				<mul order="0x30" stat="maxMp" val="1.2" />
-				<mul order="0x30" stat="maxCp" val="1.3" />
-				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+				<mul stat="maxHp" val="1.15" />
+				<mul stat="maxMp" val="1.2" />
+				<mul stat="maxCp" val="1.3" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -1053,10 +1053,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
-				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -1070,10 +1070,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="accCombat" val="#accCombat" />
-				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+				<add stat="accCombat" val="#accCombat" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -1097,7 +1097,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -1111,10 +1111,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="mAtk" val="#mAtk" />
-				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+				<add stat="mAtk" val="#mAtk" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -1128,10 +1128,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="regMp" val="#regMp" />
-				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+				<add stat="regMp" val="#regMp" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -1166,15 +1166,15 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
-				<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
-				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
-				<mul order="0x30" stat="sDef" val="1.33" /> <!-- Shield P.Def. +33% -->
+				<mul stat="maxHp" val="1.25" /> <!-- HP +25% -->
+				<mul stat="maxMp" val="1.3" /> <!-- MP +30% -->
+				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<mul stat="sDef" val="1.33" /> <!-- Shield P.Def. +33% -->
 				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<add order="0x40" stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
+				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<add stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
 			</effect>
 		</for>
 	</skill>
@@ -1194,7 +1194,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pDef" val="0.77" />
+				<mul stat="pDef" val="0.77" />
 			</effect>
 		</for>
 	</skill>
@@ -1206,15 +1206,15 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
-				<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
-				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
-				<mul order="0x30" stat="rShld" val="1.39" /> <!-- Shield Block Rate +39% -->
+				<mul stat="maxHp" val="1.25" /> <!-- HP +25% -->
+				<mul stat="maxMp" val="1.3" /> <!-- MP +30% -->
+				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<mul stat="rShld" val="1.39" /> <!-- Shield Block Rate +39% -->
 				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<add order="0x40" stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
+				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<add stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
 			</effect>
 		</for>
 	</skill>
@@ -1239,16 +1239,16 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="cAtkAdd" val="504" /> <!-- P.Atk. +504 on a critical hit -->
-				<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
-				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
-				<add order="0x40" stat="rCrit" val="78.7" /> <!-- Critical +78.7 -->
+				<add stat="cAtkAdd" val="504" /> <!-- P.Atk. +504 on a critical hit -->
+				<mul stat="maxHp" val="1.25" /> <!-- HP +25% -->
+				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<add stat="rCrit" val="78.7" /> <!-- Critical +78.7 -->
 				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<add order="0x40" stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
-				<add order="0x40" stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
+				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<add stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
+				<add stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
 			</effect>
 		</for>
 	</skill>
@@ -1260,15 +1260,15 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
-				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
-				<mul order="0x30" stat="pAtkSpd" val="1.07" /> <!-- Atk. Spd. +7% -->
+				<mul stat="maxHp" val="1.25" /> <!-- HP +25% -->
+				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<mul stat="pAtkSpd" val="1.07" /> <!-- Atk. Spd. +7% -->
 				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<add order="0x40" stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
-				<add order="0x40" stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
+				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<add stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
+				<add stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
 			</effect>
 		</for>
 	</skill>
@@ -1301,16 +1301,16 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
-				<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
-				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
-				<add order="0x40" stat="rCrit" val="78.7" /> <!-- Critical +78.7 -->
+				<mul stat="maxHp" val="1.25" /> <!-- HP +25% -->
+				<mul stat="maxMp" val="1.3" /> <!-- MP +30% -->
+				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<add stat="rCrit" val="78.7" /> <!-- Critical +78.7 -->
 				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<add order="0x40" stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
-				<add order="0x40" stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
+				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<add stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
+				<add stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
 			</effect>
 		</for>
 	</skill>
@@ -1343,16 +1343,16 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
-				<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
-				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
-				<add order="0x40" stat="rEvas" val="3.15" /> <!-- Evasion +3.15 -->
+				<mul stat="maxHp" val="1.25" /> <!-- HP +25% -->
+				<mul stat="maxMp" val="1.3" /> <!-- MP +30% -->
+				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<add stat="rEvas" val="3.15" /> <!-- Evasion +3.15 -->
 				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<add order="0x40" stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
-				<add order="0x40" stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
+				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<add stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
+				<add stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
 			</effect>
 		</for>
 	</skill>
@@ -1385,18 +1385,18 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
-				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
-				<mul order="0x30" stat="pAtkSpd" val="1.03" /> <!-- Atk. Spd. +3% -->
-				<add order="0x40" stat="regMp" val="0.51" /> <!-- MP regen per tick +0.51 -->
-				<mul order="0x01" stat="rCrit" val="0.22"> <!-- Critical +22% from behind target -->
+				<mul stat="maxMp" val="1.3" /> <!-- MP +30% -->
+				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<mul stat="pAtkSpd" val="1.03" /> <!-- Atk. Spd. +3% -->
+				<add stat="regMp" val="0.51" /> <!-- MP regen per tick +0.51 -->
+				<mul stat="rCrit" val="0.22"> <!-- Critical +22% from behind target -->
 					<player behind="true" />
 				</mul>
 				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<add order="0x40" stat="absorbDam" val="2" /> <!-- absorb 2% HP from damage inflicted on enemies -->
+				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<add stat="absorbDam" val="2" /> <!-- absorb 2% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
 	</skill>
@@ -1429,18 +1429,18 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
-				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
-				<mul order="0x30" stat="pAtkSpd" val="1.07" /> <!-- Atk. Spd. +7% -->
-				<add order="0x40" stat="accCombat" val="4.89" /> <!-- Accuracy +4.89 -->
+				<mul stat="maxHp" val="1.25" /> <!-- HP +25% -->
+				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<mul stat="pAtkSpd" val="1.07" /> <!-- Atk. Spd. +7% -->
+				<add stat="accCombat" val="4.89" /> <!-- Accuracy +4.89 -->
 				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 				<!-- NOTE: The skill reflection rate has been increased in H5, values unconfirmed -->
-				<add order="0x40" stat="reflectSkillPhysic" val="20" /> <!-- Reflect Skills 20% of the time -->
-				<add order="0x40" stat="reflectSkillMagic" val="20" /> <!-- Reflect Skills 20% of the time -->
-				<add order="0x40" stat="atkCountMax" val="5" />
+				<add stat="reflectSkillPhysic" val="20" /> <!-- Reflect Skills 20% of the time -->
+				<add stat="reflectSkillMagic" val="20" /> <!-- Reflect Skills 20% of the time -->
+				<add stat="atkCountMax" val="5" />
 			</effect>
 		</for>
 	</skill>
@@ -1465,12 +1465,12 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
-				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<mul stat="maxMp" val="1.3" /> <!-- MP +30% -->
+				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
 				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			</effect>
 		</for>
 	</skill>
@@ -1491,7 +1491,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -1502,16 +1502,16 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
-				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
-				<add order="0x40" stat="mAtk" val="29.67" /> <!-- M.Atk. +29.67 -->
-				<add order="0x40" stat="mCritRate" val="1" /> <!-- Magic Critical Rate +1 -->
+				<mul stat="maxMp" val="1.3" /> <!-- MP +30% -->
+				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<add stat="mAtk" val="29.67" /> <!-- M.Atk. +29.67 -->
+				<add stat="mCritRate" val="1" /> <!-- Magic Critical Rate +1 -->
 				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.96" /> <!-- Magic MP Cost -4% -->
-				<sub order="0x40" stat="cancel" val="106" /> <!-- Chance of Magic Cancelation -106 -->
+				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="MagicalMpConsumeRate" val="0.96" /> <!-- Magic MP Cost -4% -->
+				<sub stat="cancel" val="106" /> <!-- Chance of Magic Cancelation -106 -->
 			</effect>
 		</for>
 	</skill>
@@ -1542,14 +1542,14 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
-				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-				<add order="0x40" stat="regMp" val="0.51" /> <!-- MP regen per tick +0.51 -->
+				<mul stat="maxMp" val="1.3" /> <!-- MP +30% -->
+				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add stat="regMp" val="0.51" /> <!-- MP regen per tick +0.51 -->
 				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			</effect>
 		</for>
 	</skill>
@@ -1580,7 +1580,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="atkCountMax" val="2" />
+				<add stat="atkCountMax" val="2" />
 			</effect>
 		</for>
 	</skill>

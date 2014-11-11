@@ -1013,9 +1013,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3561-1" /> <!-- Guess -->
 		<for>
-			<add order="0x10" stat="mDef" val="48" />
-			<add order="0x40" stat="maxMp" val="21" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="22174" type="Armor" name="Improved Ring of Queen Ant">
@@ -1032,9 +1032,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3562-1" /> <!-- Guess -->
 		<for>
-			<add order="0x10" stat="mDef" val="48" />
-			<add order="0x40" stat="maxMp" val="21" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="22175" type="Armor" name="Improved Blessed Earring of Zaken">
@@ -1050,9 +1050,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3559-2" /> <!-- Guess -->
 		<for>
-			<add order="0x10" stat="mDef" val="94" />
-			<add order="0x40" stat="maxMp" val="37" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="94" />
+			<add stat="maxMp" val="37" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="22176" type="EtcItem" name="Angry Bunny Lure Scroll - Event">

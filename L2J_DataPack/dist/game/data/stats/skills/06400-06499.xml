@@ -19,7 +19,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="mAtkSpd" val="0.8" />
+				<mul stat="mAtkSpd" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -91,7 +91,7 @@
 			<effect name="PhysicalAttack" />
 			<effect name="DamOverTime" ticks="5">
 				<param power="58" />
-				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -116,7 +116,7 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.3" />
+				<mul stat="runSpd" val="0.3" />
 			</effect>
 		</for>
 	</skill>
@@ -141,9 +141,9 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<add order="0x40" stat="runSpd" val="20" />
-				<mul order="0x30" stat="pAtkSpd" val="1.2" />
-				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<add stat="runSpd" val="20" />
+				<mul stat="pAtkSpd" val="1.2" />
+				<mul stat="mAtkSpd" val="1.2" />
 			</effect>
 		</for>
 	</skill>
@@ -527,7 +527,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="0.1" />
+				<mul stat="pDef" val="0.1" />
 			</effect>
 		</for>
 	</skill>
@@ -607,10 +607,10 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.15">
+				<mul stat="pAtk" val="1.15">
 					<using kind="BOW,CROSSBOW" />
 				</mul>
-				<mul order="0x30" stat="regHp" val="5" />
+				<mul stat="regHp" val="5" />
 			</effect>
 		</for>
 	</skill>
@@ -646,7 +646,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.19" />
+				<mul stat="pAtk" val="1.19" />
 			</effect>
 		</for>
 	</skill>
@@ -667,7 +667,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x01" stat="rCrit" val="0.35" />
+				<mul stat="rCrit" val="0.35" />
 			</effect>
 		</for>
 	</skill>
@@ -688,7 +688,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="accCombat" val="7" />
+				<add stat="accCombat" val="7" />
 			</effect>
 		</for>
 	</skill>
@@ -709,7 +709,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.38" />
+				<mul stat="pAtkSpd" val="1.38" />
 			</effect>
 		</for>
 	</skill>
@@ -735,10 +735,10 @@
 		<for>
 			<effect name="DamOverTimePercent" ticks="5">
 				<param power="#dot" />
-				<mul order="0x01" stat="rCrit" val="#rCrit">
+				<mul stat="rCrit" val="#rCrit">
 					<using kind="BOW,CROSSBOW" />
 				</mul>
-				<mul order="0x30" stat="cAtk" val="#cAtk">
+				<mul stat="cAtk" val="#cAtk">
 					<using kind="BOW,CROSSBOW" />
 				</mul>
 			</effect>
@@ -762,10 +762,10 @@
 		<for>
 			<effect name="DamOverTimePercent" ticks="5">
 				<param power="0.05" />
-				<mul order="0x01" stat="rCrit" val="0.9">
+				<mul stat="rCrit" val="0.9">
 					<using kind="BOW,CROSSBOW" />
 				</mul>
-				<mul order="0x30" stat="cAtk" val="1.5">
+				<mul stat="cAtk" val="1.5">
 					<using kind="BOW,CROSSBOW" />
 				</mul>
 			</effect>
@@ -912,7 +912,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pveMagicalDmg" val="2.0" />
+				<mul stat="pveMagicalDmg" val="2.0" />
 			</effect>
 		</for>
 	</skill>
@@ -931,8 +931,8 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pvePhysDmg" val="2.0" />
-				<mul order="0x30" stat="pvePhysSkillsDmg" val="2.0" />
+				<mul stat="pvePhysDmg" val="2.0" />
+				<mul stat="pvePhysSkillsDmg" val="2.0" />
 			</effect>
 		</for>
 	</skill>
@@ -951,8 +951,8 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pveBowDmg" val="2.0" />
-				<mul order="0x30" stat="pveBowSkillsDmg" val="2.0" />
+				<mul stat="pveBowDmg" val="2.0" />
+				<mul stat="pveBowSkillsDmg" val="2.0" />
 			</effect>
 		</for>
 	</skill>

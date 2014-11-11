@@ -79,7 +79,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<for>
-			<add order="0x10" stat="pDef" val="28" />
+			<add order="0" stat="pDef" val="28" />
 		</for>
 	</item>
 	<item id="21707" type="EtcItem" name="Blessed Olf's T-shirt Enchant Scroll - Event">
@@ -147,9 +147,9 @@
 		<set name="item_skill" val="3559-2" />
 		<set name="price" val="11394000" />
 		<for>
-			<add order="0x10" stat="mDef" val="94" />
-			<add order="0x40" stat="maxMp" val="37" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="94" />
+			<add stat="maxMp" val="37" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="21713" type="EtcItem" name="Sealed Cloak of Zaken">
@@ -188,13 +188,13 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0x40" stat="darkRes" val="15" />
-			<add order="0x40" stat="earthRes" val="5" />
-			<add order="0x40" stat="fireRes" val="5" />
-			<add order="0x40" stat="holyRes" val="5" />
-			<add order="0x40" stat="waterRes" val="15" />
-			<add order="0x40" stat="windRes" val="15" />
-			<add order="0x10" stat="pDef" val="20" />
+			<add stat="darkRes" val="15" />
+			<add stat="earthRes" val="5" />
+			<add stat="fireRes" val="5" />
+			<add stat="holyRes" val="5" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="21717" type="Armor" name="Cloak of Freya">
@@ -212,13 +212,13 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0x40" stat="darkRes" val="10" />
-			<add order="0x40" stat="earthRes" val="10" />
-			<add order="0x40" stat="fireRes" val="10" />
-			<add order="0x40" stat="holyRes" val="20" />
-			<add order="0x40" stat="waterRes" val="20" />
-			<add order="0x40" stat="windRes" val="20" />
-			<add order="0x10" stat="pDef" val="30" />
+			<add stat="darkRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="fireRes" val="10" />
+			<add stat="holyRes" val="20" />
+			<add stat="waterRes" val="20" />
+			<add stat="windRes" val="20" />
+			<add order="0" stat="pDef" val="30" />
 		</for>
 	</item>
 	<item id="21718" type="Armor" name="Cloak of Frintezza">
@@ -236,13 +236,13 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0x40" stat="darkRes" val="15" />
-			<add order="0x40" stat="earthRes" val="15" />
-			<add order="0x40" stat="fireRes" val="15" />
-			<add order="0x40" stat="holyRes" val="5" />
-			<add order="0x40" stat="waterRes" val="5" />
-			<add order="0x40" stat="windRes" val="5" />
-			<add order="0x10" stat="pDef" val="20" />
+			<add stat="darkRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="fireRes" val="15" />
+			<add stat="holyRes" val="5" />
+			<add stat="waterRes" val="5" />
+			<add stat="windRes" val="5" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="21719" type="Armor" name="Soul Cloak of Zaken">
@@ -261,13 +261,13 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0x40" stat="darkRes" val="10" />
-			<add order="0x40" stat="earthRes" val="5" />
-			<add order="0x40" stat="fireRes" val="5" />
-			<add order="0x40" stat="holyRes" val="5" />
-			<add order="0x40" stat="waterRes" val="10" />
-			<add order="0x40" stat="windRes" val="10" />
-			<add order="0x10" stat="pDef" val="40" />
+			<add stat="darkRes" val="10" />
+			<add stat="earthRes" val="5" />
+			<add stat="fireRes" val="5" />
+			<add stat="holyRes" val="5" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add order="0" stat="pDef" val="40" />
 		</for>
 	</item>
 	<item id="21720" type="Armor" name="Soul Cloak of Freya">
@@ -286,13 +286,13 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0x40" stat="darkRes" val="5" />
-			<add order="0x40" stat="earthRes" val="5" />
-			<add order="0x40" stat="fireRes" val="5" />
-			<add order="0x40" stat="holyRes" val="15" />
-			<add order="0x40" stat="waterRes" val="15" />
-			<add order="0x40" stat="windRes" val="15" />
-			<add order="0x10" stat="pDef" val="60" />
+			<add stat="darkRes" val="5" />
+			<add stat="earthRes" val="5" />
+			<add stat="fireRes" val="5" />
+			<add stat="holyRes" val="15" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
+			<add order="0" stat="pDef" val="60" />
 		</for>
 	</item>
 	<item id="21721" type="Armor" name="Soul Cloak of Frintezza">
@@ -311,13 +311,13 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0x40" stat="darkRes" val="10" />
-			<add order="0x40" stat="earthRes" val="10" />
-			<add order="0x40" stat="fireRes" val="10" />
-			<add order="0x40" stat="holyRes" val="5" />
-			<add order="0x40" stat="waterRes" val="5" />
-			<add order="0x40" stat="windRes" val="5" />
-			<add order="0x10" stat="pDef" val="40" />
+			<add stat="darkRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="fireRes" val="10" />
+			<add stat="holyRes" val="5" />
+			<add stat="waterRes" val="5" />
+			<add stat="windRes" val="5" />
+			<add order="0" stat="pDef" val="40" />
 		</for>
 	</item>
 	<item id="21722" type="EtcItem" name="Zaken's Soul Fragment">
@@ -438,13 +438,13 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="69" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="69" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21732" type="Weapon" name="Sword of Revolution - Event">
@@ -461,12 +461,12 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="79" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="79" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21733" type="Weapon" name="Titan Sword - Event">
@@ -483,12 +483,12 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21734" type="Weapon" name="Priest Mace - Event">
@@ -505,13 +505,13 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="63" />
-			<set order="0x08" stat="mAtk" val="63" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="63" />
+			<set stat="mAtk" val="63" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21735" type="Weapon" name="Tarbar - Event">
@@ -528,13 +528,13 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="79" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="79" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21736" type="Weapon" name="Goat Head Staff - Event">
@@ -551,13 +551,13 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="77" />
-			<set order="0x08" stat="mAtk" val="69" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="77" />
+			<set stat="mAtk" val="69" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21737" type="Weapon" name="Titan Hammer - Event">
@@ -574,13 +574,13 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21738" type="Weapon" name="Winged Spear - Event">
@@ -597,13 +597,13 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="79" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="79" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21739" type="Weapon" name="Reinforced Long Bow - Event">
@@ -620,13 +620,13 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="179" />
-			<set order="0x08" stat="mAtk" val="51" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="227" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="179" />
+			<set stat="mAtk" val="51" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="227" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21740" type="Weapon" name="Epee - Event">
@@ -643,13 +643,13 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="72" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="406" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="72" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="406" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21741" type="Weapon" name="Sword of Magic Fog - Event">
@@ -666,12 +666,12 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="63" />
-			<set order="0x08" stat="mAtk" val="63" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="63" />
+			<set stat="mAtk" val="63" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21742" type="Weapon" name="Bastard Sword*Bastard Sword - Event">
@@ -688,12 +688,12 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21743" type="Weapon" name="Bich'Hwa - Event">
@@ -710,13 +710,13 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21744" type="Weapon" name="Katzbalger - Event">
@@ -736,13 +736,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="86" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="350" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="86" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="350" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21745" type="Weapon" name="Arm Breaker - Event">
@@ -759,13 +759,13 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="100" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="303" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="100" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="303" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="21746" type="EtcItem" name="Maestro's Key">
@@ -853,11 +853,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="1" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="21755" type="Armor" name="Manor Scholar's Hat">
@@ -1023,7 +1023,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="205" />
+			<add order="0" stat="pDef" val="205" />
 		</for>
 	</item>
 	<item id="21776" type="Armor" name="Imperial Crusader Gaiters of Fortune - 90-day limited period">
@@ -1043,7 +1043,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="128" />
+			<add order="0" stat="pDef" val="128" />
 		</for>
 	</item>
 	<item id="21777" type="Armor" name="Imperial Crusader Gauntlet of Fortune - 90-day limited period">
@@ -1059,7 +1059,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="21778" type="Armor" name="Imperial Crusader Boots of Fortune - 90-day limited period">
@@ -1075,7 +1075,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="21779" type="Armor" name="Imperial Crusader Helmet of Fortune - 90-day limited period">
@@ -1091,7 +1091,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
+			<add order="0" stat="pDef" val="83" />
 		</for>
 	</item>
 	<item id="21780" type="Armor" name="Imperial Crusader Shield of Fortune - 90-day limited period">
@@ -1110,9 +1110,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="290" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="290" />
 		</for>
 	</item>
 	<item id="21781" type="EtcItem" name="Imperial Crusader of Fortune Set Pack (S-Grade) - 90-day limited period">
@@ -1137,7 +1137,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="249" />
+			<add order="0" stat="pDef" val="249" />
 		</for>
 	</item>
 	<item id="21783" type="Armor" name="Draconic Leather Gloves of Fortune - 90-day limited period">
@@ -1153,7 +1153,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="21784" type="Armor" name="Draconic Leather Boots of Fortune - 90-day limited period">
@@ -1169,7 +1169,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="21785" type="Armor" name="Draconic Leather Helmet of Fortune - 90-day limited period">
@@ -1185,7 +1185,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
+			<add order="0" stat="pDef" val="83" />
 		</for>
 	</item>
 	<item id="21786" type="EtcItem" name="Draconic Leather of Fortune Set Pack (S-Grade) - 90-day limited period">
@@ -1213,8 +1213,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="166" />
-			<add order="0x40" stat="maxMp" val="866" />
+			<add order="0" stat="pDef" val="166" />
+			<add stat="maxMp" val="866" />
 		</for>
 	</item>
 	<item id="21788" type="Armor" name="Major Arcana Gloves of Fortune - 90-day limited period">
@@ -1230,7 +1230,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="21789" type="Armor" name="Major Arcana Boots of Fortune - 90-day limited period">
@@ -1246,7 +1246,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="55" />
+			<add order="0" stat="pDef" val="55" />
 		</for>
 	</item>
 	<item id="21790" type="Armor" name="Major Arcana Circlet of Fortune - 90-day limited period">
@@ -1262,7 +1262,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
+			<add order="0" stat="pDef" val="83" />
 		</for>
 	</item>
 	<item id="21791" type="Armor" name="Arcana Sickle of Fortune - 90-day limited period">
@@ -1277,7 +1277,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="13" />
+			<add order="0" stat="pDef" val="13" />
 		</for>
 	</item>
 	<item id="21792" type="EtcItem" name="Major Arcana Robe of Fortune Set Pack (S-Grade) - 90-day limited period">
@@ -1305,7 +1305,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="226" />
+			<add order="0" stat="pDef" val="226" />
 		</for>
 	</item>
 	<item id="21794" type="Armor" name="Dynasty Gaiters of Fortune - 90-day limited period">
@@ -1325,7 +1325,7 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="141" />
+			<add order="0" stat="pDef" val="141" />
 		</for>
 	</item>
 	<item id="21795" type="Armor" name="Dynasty Gauntlet of Fortune - 90-day limited period">
@@ -1341,7 +1341,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="21796" type="Armor" name="Dynasty Boots of Fortune - 90-day limited period">
@@ -1357,7 +1357,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="21797" type="Armor" name="Dynasty Helmet of Fortune - 90-day limited period">
@@ -1373,7 +1373,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="92" />
+			<add order="0" stat="pDef" val="92" />
 		</for>
 	</item>
 	<item id="21798" type="Armor" name="Dynasty Shield of Fortune - 90-day limited period">
@@ -1392,9 +1392,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="321" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="321" />
 		</for>
 	</item>
 	<item id="21799" type="EtcItem" name="Dynasty Breastplate of Fortune Set Pack (S-Grade) - 90-day limited period">

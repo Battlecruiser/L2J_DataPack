@@ -14,7 +14,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="170" />
+			<add order="0" stat="pDef" val="170" />
 		</for>
 	</item>
 	<item id="21801" type="Armor" name="Dynasty Leather Leggings of Fortune - 90-day limited period">
@@ -31,7 +31,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="106" />
+			<add order="0" stat="pDef" val="106" />
 		</for>
 	</item>
 	<item id="21802" type="Armor" name="Dynasty Leather Helmet of Fortune - 90-day limited period">
@@ -47,7 +47,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="92" />
+			<add order="0" stat="pDef" val="92" />
 		</for>
 	</item>
 	<item id="21803" type="Armor" name="Dynasty Leather Gloves of Fortune - 90-day limited period">
@@ -63,7 +63,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="21804" type="Armor" name="Dynasty Leather Boots of Fortune - 90-day limited period">
@@ -79,7 +79,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="21805" type="EtcItem" name="Dynasty Leather Mail of Fortune Set Pack (S-Grade) - 90-day limited period">
@@ -107,8 +107,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="113" />
-			<add order="0x40" stat="maxMp" val="592" />
+			<add order="0" stat="pDef" val="113" />
+			<add stat="maxMp" val="592" />
 		</for>
 	</item>
 	<item id="21807" type="Armor" name="Dynasty Stockings of Fortune - 90-day limited period">
@@ -128,8 +128,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="71" />
-			<add order="0x40" stat="maxMp" val="370" />
+			<add order="0" stat="pDef" val="71" />
+			<add stat="maxMp" val="370" />
 		</for>
 	</item>
 	<item id="21808" type="Armor" name="Dynasty Circlet of Fortune - 90-day limited period">
@@ -145,7 +145,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="92" />
+			<add order="0" stat="pDef" val="92" />
 		</for>
 	</item>
 	<item id="21809" type="Armor" name="Dynasty Gloves of Fortune - 90-day limited period">
@@ -161,7 +161,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="21810" type="Armor" name="Dynasty Shoes of Fortune - 90-day limited period">
@@ -177,7 +177,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="21811" type="Armor" name="Dynasty Sickle of Fortune - 90-day limited period">
@@ -192,7 +192,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="pDef" val="15" />
+			<add order="0" stat="pDef" val="15" />
 		</for>
 	</item>
 	<item id="21812" type="EtcItem" name="Dynasty Tunic of Fortune Set Pack (S-Grade) - 90-day limited period">
@@ -215,8 +215,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="mDef" val="71" />
-			<add order="0x40" stat="maxMp" val="31" />
+			<add order="0" stat="mDef" val="71" />
+			<add stat="maxMp" val="31" />
 		</for>
 	</item>
 	<item id="21814" type="Armor" name="Tateossian Ring of Fortune - 90-day limited period">
@@ -231,8 +231,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="mDef" val="48" />
-			<add order="0x40" stat="maxMp" val="21" />
+			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
 		</for>
 	</item>
 	<item id="21815" type="Armor" name="Tateossian Necklace of Fortune - 90-day limited period">
@@ -247,8 +247,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="mDef" val="95" />
-			<add order="0x40" stat="maxMp" val="42" />
+			<add order="0" stat="mDef" val="95" />
+			<add stat="maxMp" val="42" />
 		</for>
 	</item>
 	<item id="21816" type="EtcItem" name="Tateossian Accessory of Fortune Pack (S-Grade) - 90-day limited period">
@@ -271,8 +271,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="mDef" val="79" />
-			<add order="0x40" stat="maxMp" val="35" />
+			<add order="0" stat="mDef" val="79" />
+			<add stat="maxMp" val="35" />
 		</for>
 	</item>
 	<item id="21818" type="Armor" name="Dynasty Necklace of Fortune - 90-day limited period">
@@ -287,8 +287,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="mDef" val="106" />
-			<add order="0x40" stat="maxMp" val="46" />
+			<add order="0" stat="mDef" val="106" />
+			<add stat="maxMp" val="46" />
 		</for>
 	</item>
 	<item id="21819" type="Armor" name="Dynasty Ring of Fortune - 90-day limited period">
@@ -303,8 +303,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
-			<add order="0x40" stat="maxMp" val="23" />
+			<add order="0" stat="mDef" val="60" />
+			<add stat="maxMp" val="23" />
 		</for>
 	</item>
 	<item id="21820" type="EtcItem" name="Dynasty Accessory of Fortune Pack (S-Grade) - 90-day limited period">
@@ -332,11 +332,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="225" />
-			<set order="0x08" stat="mAtk" val="175" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="225" />
+			<set stat="mAtk" val="175" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="21822" type="Weapon" name="Angel Slayer of Fortune - 90-day limited period">
@@ -356,11 +356,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="246" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="246" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="21823" type="Weapon" name="Draconic Bow of Fortune - 90-day limited period">
@@ -380,11 +380,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="581" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="581" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="21824" type="Weapon" name="Basalt Battlehammer of Fortune - 90-day limited period">
@@ -404,11 +404,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="281" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="281" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="21825" type="Weapon" name="Forgotten Blade of Fortune - 90-day limited period">
@@ -428,10 +428,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="281" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="281" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="21826" type="Weapon" name="Heaven's Divider of Fortune - 90-day limited period">
@@ -451,10 +451,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="21827" type="Weapon" name="Demon Splinter of Fortune - 90-day limited period">
@@ -474,11 +474,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="21828" type="Weapon" name="Tallum Blade*Dark Legion's Edge of Fortune - 90-day limited period">
@@ -498,10 +498,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="342" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="342" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="21829" type="Weapon" name="Saint Spear of Fortune - 90-day limited period">
@@ -521,11 +521,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="281" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="281" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="21830" type="Weapon" name="Gram of Fortune - 90-day limited period">
@@ -548,11 +548,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="304" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="304" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="21831" type="Weapon" name="Laevateinn of Fortune - 90-day limited period">
@@ -572,11 +572,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="255" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="255" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="21832" type="Weapon" name="Sarunga of Fortune - 90-day limited period">
@@ -596,11 +596,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="356" />
-			<set order="0x08" stat="mAtk" val="132" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="356" />
+			<set stat="mAtk" val="132" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="21833" type="Weapon" name="Dynasty Phantom of Fortune - 90-day limited period">
@@ -620,10 +620,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="267" />
-			<set order="0x08" stat="mAtk" val="202" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="267" />
+			<set stat="mAtk" val="202" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="21834" type="Weapon" name="Dynasty Knife of Fortune - 90-day limited period">
@@ -643,11 +643,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="291" />
-			<set order="0x08" stat="mAtk" val="151" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="291" />
+			<set stat="mAtk" val="151" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="21835" type="Weapon" name="Dynasty Bow of Fortune - 90-day limited period">
@@ -667,11 +667,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="654" />
-			<set order="0x08" stat="mAtk" val="151" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="654" />
+			<set stat="mAtk" val="151" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="21836" type="Weapon" name="Dynasty Cudgel of Fortune - 90-day limited period">
@@ -691,11 +691,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="333" />
-			<set order="0x08" stat="mAtk" val="151" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="333" />
+			<set stat="mAtk" val="151" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="21837" type="Weapon" name="Dynasty Sword of Fortune - 90-day limited period">
@@ -715,10 +715,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="333" />
-			<set order="0x08" stat="mAtk" val="151" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="333" />
+			<set stat="mAtk" val="151" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="21838" type="Weapon" name="Dynasty Blade of Fortune - 90-day limited period">
@@ -738,10 +738,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="405" />
-			<set order="0x08" stat="mAtk" val="151" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="405" />
+			<set stat="mAtk" val="151" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="21839" type="Weapon" name="Dynasty Bagh-Nakh of Fortune - 90-day limited period">
@@ -761,11 +761,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="405" />
-			<set order="0x08" stat="mAtk" val="151" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="405" />
+			<set stat="mAtk" val="151" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="21840" type="Weapon" name="Dynasty Dualsword of Fortune - 90-day limited period">
@@ -785,10 +785,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="405" />
-			<set order="0x08" stat="mAtk" val="151" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="405" />
+			<set stat="mAtk" val="151" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="21841" type="Weapon" name="Dynasty Halberd of Fortune - 90-day limited period">
@@ -808,11 +808,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="333" />
-			<set order="0x08" stat="mAtk" val="151" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="333" />
+			<set stat="mAtk" val="151" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="21842" type="Weapon" name="Dynasty Ancient Sword of Fortune - 90-day limited period">
@@ -835,11 +835,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="361" />
-			<set order="0x08" stat="mAtk" val="151" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="361" />
+			<set stat="mAtk" val="151" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="21843" type="Weapon" name="Dynasty Rapier of Fortune - 90-day limited period">
@@ -859,11 +859,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="302" />
-			<set order="0x08" stat="mAtk" val="151" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="302" />
+			<set stat="mAtk" val="151" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="21844" type="Weapon" name="Dynasty Crossbow of Fortune - 90-day limited period">
@@ -883,11 +883,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
 		<for>
-			<set order="0x08" stat="pAtk" val="401" />
-			<set order="0x08" stat="mAtk" val="151" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1" /> <!-- Truncated value. -->
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="401" />
+			<set stat="mAtk" val="151" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1" /> <!-- Truncated value. -->
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="21845" type="EtcItem" name="Mysterious Soulshot (No-Grade)">

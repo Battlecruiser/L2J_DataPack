@@ -75,9 +75,9 @@
 		<set name="item_skill" val="3562-1" />
 		<set name="time" val="4320" />
 		<for>
-			<add order="0x10" stat="mDef" val="48" />
-			<add order="0x40" stat="maxMp" val="21" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="20205" type="Armor" name="Queen Ant's Ring (Event) - 7-day limited period">
@@ -95,9 +95,9 @@
 		<set name="item_skill" val="3562-1" />
 		<set name="time" val="10080" />
 		<for>
-			<add order="0x10" stat="mDef" val="48" />
-			<add order="0x40" stat="maxMp" val="21" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="20206" type="Armor" name="Queen Ant's Ring (Event) - 15-day limited period">
@@ -115,9 +115,9 @@
 		<set name="item_skill" val="3562-1" />
 		<set name="time" val="21600" />
 		<for>
-			<add order="0x10" stat="mDef" val="48" />
-			<add order="0x40" stat="maxMp" val="21" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="20207" type="Armor" name="Earring of Zaken (Event) - 3-day limited period">
@@ -135,9 +135,9 @@
 		<set name="item_skill" val="3559-1" />
 		<set name="time" val="4320" />
 		<for>
-			<add order="0x10" stat="mDef" val="71" />
-			<add order="0x40" stat="maxMp" val="31" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="71" />
+			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="20208" type="Armor" name="Earring of Zaken (Event) - 7-day limited period">
@@ -155,9 +155,9 @@
 		<set name="item_skill" val="3559-1" />
 		<set name="time" val="10080" />
 		<for>
-			<add order="0x10" stat="mDef" val="71" />
-			<add order="0x40" stat="maxMp" val="31" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="71" />
+			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="20209" type="Armor" name="Earring of Zaken (Event) - 15-day limited period">
@@ -175,9 +175,9 @@
 		<set name="item_skill" val="3559-1" />
 		<set name="time" val="21600" />
 		<for>
-			<add order="0x10" stat="mDef" val="71" />
-			<add order="0x40" stat="maxMp" val="31" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="71" />
+			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="20210" type="EtcItem" name="Charming Valentine Gift Set">
@@ -884,10 +884,10 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="2" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="20256" type="Weapon" name="Baguette Dagger - 7-day limited period">
@@ -911,11 +911,11 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="2" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="20257" type="Weapon" name="Baguette Dual Sword - 7-day limited period">
@@ -939,10 +939,10 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="2" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20258" type="Weapon" name="Baguette Mace - 7-day limited period">
@@ -966,11 +966,11 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="2" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="20259" type="Weapon" name="Baguette Heavy Hammer - 7-day limited period">
@@ -994,11 +994,11 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="2" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20260" type="Weapon" name="Baguette Spear - 7-day limited period">
@@ -1022,11 +1022,11 @@
 		<set name="item_skill" val="21042-1;3599-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="2" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20261" type="Weapon" name="Baguette Bow - 7-day limited period">
@@ -1052,11 +1052,11 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="3" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="3" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="227" />
 		</for>
 	</item>
 	<item id="20262" type="Weapon" name="Baguette Fist - 7-day limited period">
@@ -1080,11 +1080,11 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="2" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20263" type="Weapon" name="Baguette Magic Sword - 7-day limited period">
@@ -1108,10 +1108,10 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="2" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="20264" type="Weapon" name="Baguette Staff - 7-day limited period">
@@ -1135,11 +1135,11 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="2" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="20265" type="Weapon" name="Baguette Great Staff - 7-day limited period">
@@ -1163,11 +1163,11 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="2" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20266" type="Armor" name="Baguette Shield - 7-day limited period">
@@ -1189,9 +1189,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="5" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="5" />
 		</for>
 	</item>
 	<item id="20267" type="Weapon" name="Baguette Rapier - 7-day limited period">
@@ -1219,11 +1219,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="3" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="3" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="20268" type="Weapon" name="Baguette Ancient Sword - 7-day limited period">
@@ -1250,11 +1250,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="3" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="3" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="20269" type="Weapon" name="Baguette Crossbow - 7-day limited period">
@@ -1282,11 +1282,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="3" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="3" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="20270" type="Weapon" name="Baguette's Dualsword - 7-day limited period">
@@ -1310,10 +1310,10 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<for>
-			<set order="0x08" stat="pAtk" val="1" />
-			<set order="0x08" stat="mAtk" val="2" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20271" type="EtcItem" name="Baguette Legacy">

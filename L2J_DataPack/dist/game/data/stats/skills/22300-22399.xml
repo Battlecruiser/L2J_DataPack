@@ -7,8 +7,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="runSpd" val="1.30" /> <!--Increases Speed by 30% -->
-				<mul order="0x30" stat="fall" val="0.7" />
+				<mul stat="runSpd" val="1.30" /> <!--Increases Speed by 30% -->
+				<mul stat="fall" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -79,7 +79,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+				<sub stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
 	</skill>

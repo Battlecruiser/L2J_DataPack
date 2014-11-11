@@ -13,9 +13,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3823-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
-			<add order="0x40" stat="maxMp" val="23" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="60" />
+			<add stat="maxMp" val="23" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11601" type="Armor" name="Dynasty Earrings">
@@ -31,9 +31,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3824-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="79" />
-			<add order="0x40" stat="maxMp" val="35" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="79" />
+			<add stat="maxMp" val="35" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11602" type="Armor" name="Sealed Dynasty Necklace">
@@ -48,8 +48,8 @@
 		<set name="price" val="5376000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="mDef" val="95" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="95" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11603" type="Armor" name="Sealed Dynasty Ring">
@@ -64,8 +64,8 @@
 		<set name="price" val="2688000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="mDef" val="53" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="53" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11604" type="Armor" name="Sealed Dynasty Earring">
@@ -80,8 +80,8 @@
 		<set name="price" val="4032000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="mDef" val="71" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="71" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11605" type="Weapon" name="Common Item - Steel Sword">
@@ -102,10 +102,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="49" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="49" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11606" type="Weapon" name="Common Item - Reinforced Bow">
@@ -128,11 +128,11 @@
 		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
-			<set order="0x08" stat="pAtk" val="82" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="82" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="11607" type="Weapon" name="Common Item - Rapier">
@@ -157,11 +157,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="36" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="36" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="11608" type="Weapon" name="Common Item - Bagh-Nakh">
@@ -181,11 +181,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="49" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="49" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11609" type="Weapon" name="Common Item - Proof of Revenge">
@@ -206,10 +206,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="32" />
-			<set order="0x08" stat="mAtk" val="35" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="32" />
+			<set stat="mAtk" val="35" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11610" type="Weapon" name="Common Item - Bone Staff">
@@ -230,11 +230,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="39" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="39" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11611" type="Weapon" name="Common Item - Priest Sword">
@@ -255,10 +255,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="32" />
-			<set order="0x08" stat="mAtk" val="35" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="32" />
+			<set stat="mAtk" val="35" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11612" type="Weapon" name="Common Item - Branch of Life">
@@ -279,10 +279,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="32" />
-			<set order="0x08" stat="mAtk" val="35" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="32" />
+			<set stat="mAtk" val="35" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11613" type="Weapon" name="Common Item - Crafted Dagger">
@@ -302,11 +302,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="35" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="35" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="11614" type="Weapon" name="Common Item - Saber">
@@ -327,10 +327,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="40" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="40" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11615" type="Weapon" name="Common Item - Scalpel">
@@ -350,11 +350,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="40" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="40" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11616" type="Weapon" name="Common Item - Temptation of Abyss">
@@ -375,10 +375,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="32" />
-			<set order="0x08" stat="mAtk" val="35" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="32" />
+			<set stat="mAtk" val="35" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11617" type="Weapon" name="Common Item - Assassin Knife">
@@ -398,11 +398,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="35" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="35" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="11618" type="Weapon" name="Common Item - Work Hammer">
@@ -422,11 +422,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="40" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="40" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11619" type="Weapon" name="Common Item - Scroll of Wisdom">
@@ -447,10 +447,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="32" />
-			<set order="0x08" stat="mAtk" val="35" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="32" />
+			<set stat="mAtk" val="35" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11620" type="Weapon" name="Common Item - Talwar">
@@ -474,11 +474,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="43" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="43" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="11621" type="Weapon" name="Common Item - Talwar">
@@ -502,11 +502,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="43" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="43" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="11622" type="Weapon" name="Common Item - Trident">
@@ -527,11 +527,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="item_skill" val="3599-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="40" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="40" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11623" type="Weapon" name="Common Item - Hand Axe">
@@ -551,11 +551,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="40" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="40" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11624" type="Weapon" name="Common Item - Field Gun">
@@ -580,11 +580,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="11625" type="Weapon" name="Common Item - Heavy Sword">
@@ -605,10 +605,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="49" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="49" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11626" type="Weapon" name="Common Item - Heavy Mace">
@@ -628,11 +628,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="40" />
-			<set order="0x08" stat="mAtk" val="26" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="40" />
+			<set stat="mAtk" val="26" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11627" type="Weapon" name="Common Item - Mace of Prayer">
@@ -653,11 +653,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="41" />
-			<set order="0x08" stat="mAtk" val="43" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="41" />
+			<set stat="mAtk" val="43" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11628" type="Weapon" name="Common Item - Knight's Sword">
@@ -678,10 +678,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11629" type="Weapon" name="Common Item - Dark Elven Bow">
@@ -704,11 +704,11 @@
 		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="1500" />
 		<for>
-			<set order="0x08" stat="pAtk" val="105" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="105" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="11630" type="Weapon" name="Common Item - Doom Hammer">
@@ -729,11 +729,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="41" />
-			<set order="0x08" stat="mAtk" val="43" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="41" />
+			<set stat="mAtk" val="43" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11631" type="Weapon" name="Common Item - Dwarven Trident">
@@ -754,11 +754,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="item_skill" val="3599-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11632" type="Weapon" name="Common Item - Long Bow">
@@ -781,11 +781,11 @@
 		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="820" />
 		<for>
-			<set order="0x08" stat="pAtk" val="114" />
-			<set order="0x08" stat="mAtk" val="35" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="114" />
+			<set stat="mAtk" val="35" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="227" />
 		</for>
 	</item>
 	<item id="11633" type="Weapon" name="Common Item - Staff of Mana">
@@ -806,11 +806,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="50" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="50" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11634" type="Weapon" name="Common Item - Mystic Staff">
@@ -831,11 +831,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="50" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="50" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11635" type="Weapon" name="Common Item - Bastard Sword">
@@ -856,10 +856,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11636" type="Weapon" name="Common Item - Spinebone Sword">
@@ -880,10 +880,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11637" type="Weapon" name="Common Item - Divine Tome">
@@ -904,10 +904,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="41" />
-			<set order="0x08" stat="mAtk" val="43" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="41" />
+			<set stat="mAtk" val="43" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11638" type="Weapon" name="Common Item - Mace of Judgment">
@@ -928,11 +928,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="41" />
-			<set order="0x08" stat="mAtk" val="43" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="41" />
+			<set stat="mAtk" val="43" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11639" type="Weapon" name="Common Item - Military Talwar">
@@ -955,11 +955,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="55" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="55" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="11640" type="Weapon" name="Common Item - Elven Bow">
@@ -982,11 +982,11 @@
 		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="1500" />
 		<for>
-			<set order="0x08" stat="pAtk" val="105" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="105" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="11641" type="Weapon" name="Common Item - Mace of Miracle">
@@ -1007,11 +1007,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="41" />
-			<set order="0x08" stat="mAtk" val="43" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="41" />
+			<set stat="mAtk" val="43" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11642" type="Weapon" name="Common Item - Single-Edged Jamadhr">
@@ -1031,11 +1031,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="62" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="62" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11643" type="Weapon" name="Common Item - Artisan's Sword">
@@ -1056,10 +1056,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11644" type="Weapon" name="Common Item - Conjuror's Staff">
@@ -1080,11 +1080,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="50" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="50" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11645" type="Weapon" name="Common Item - Tomahawk">
@@ -1104,11 +1104,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11646" type="Weapon" name="Common Item - Poniard Dagger">
@@ -1128,11 +1128,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="45" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="11647" type="Weapon" name="Common Item - Pike">
@@ -1153,11 +1153,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="item_skill" val="3599-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11648" type="Weapon" name="Common Item - Fleuret">
@@ -1182,11 +1182,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="46" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="46" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="11649" type="Weapon" name="Common Item - Fleuret">
@@ -1211,11 +1211,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="46" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="46" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="11650" type="Weapon" name="Common Item - Fleuret">
@@ -1240,11 +1240,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="46" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="46" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="11651" type="Weapon" name="Common Item - Fleuret">
@@ -1269,11 +1269,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="46" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="46" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="11652" type="Weapon" name="Common Item - Hand Crossbow">
@@ -1298,11 +1298,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="64" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="11653" type="Weapon" name="Common Item - Hand Crossbow">
@@ -1327,11 +1327,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="64" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="11654" type="Weapon" name="Common Item - Hand Crossbow">
@@ -1356,11 +1356,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="64" />
-			<set order="0x08" stat="mAtk" val="32" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="32" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="11655" type="Weapon" name="Common Item - Sword of Magic">
@@ -1381,10 +1381,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="43" />
-			<set order="0x08" stat="mAtk" val="45" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="43" />
+			<set stat="mAtk" val="45" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11656" type="Weapon" name="Common Item - Sword of Mystic">
@@ -1405,10 +1405,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="43" />
-			<set order="0x08" stat="mAtk" val="45" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="43" />
+			<set stat="mAtk" val="45" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11657" type="Weapon" name="Common Item - Sword of Occult">
@@ -1429,10 +1429,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="43" />
-			<set order="0x08" stat="mAtk" val="45" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="43" />
+			<set stat="mAtk" val="45" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11658" type="Weapon" name="Common Item - Saber*Saber">
@@ -1452,10 +1452,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="73" />
-			<set order="0x08" stat="mAtk" val="37" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="73" />
+			<set stat="mAtk" val="37" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11659" type="Weapon" name="Common Item - Gastraphetes">
@@ -1478,11 +1478,11 @@
 		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="1500" />
 		<for>
-			<set order="0x08" stat="pAtk" val="132" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="132" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="11660" type="Weapon" name="Common Item - Shilen Knife">
@@ -1503,11 +1503,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="45" />
-			<set order="0x08" stat="mAtk" val="52" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="52" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="11661" type="Weapon" name="Common Item - Dwarven Pike">
@@ -1528,11 +1528,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="item_skill" val="3599-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="64" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11662" type="Weapon" name="Common Item - Dagger of Mana">
@@ -1553,11 +1553,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="45" />
-			<set order="0x08" stat="mAtk" val="52" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="52" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="11663" type="Weapon" name="Common Item - Staff of Magic">
@@ -1578,11 +1578,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="62" />
-			<set order="0x08" stat="mAtk" val="57" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="62" />
+			<set stat="mAtk" val="57" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11664" type="Weapon" name="Common Item - Mystic Knife">
@@ -1603,11 +1603,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="45" />
-			<set order="0x08" stat="mAtk" val="52" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="52" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="11665" type="Weapon" name="Common Item - Triple-Edged Jamadhr">
@@ -1627,11 +1627,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="78" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="78" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11666" type="Weapon" name="Common Item - Spiked Club">
@@ -1651,11 +1651,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="64" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11667" type="Weapon" name="Common Item - Two-Handed Sword">
@@ -1676,10 +1676,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="78" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="78" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11668" type="Weapon" name="Common Item - Estoc">
@@ -1704,11 +1704,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="58" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="58" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="11669" type="Weapon" name="Common Item - Estoc">
@@ -1733,11 +1733,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="58" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="58" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="11670" type="Weapon" name="Common Item - Elven Sword">
@@ -1758,10 +1758,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="64" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11671" type="Weapon" name="Common Item - War Hammer">
@@ -1782,11 +1782,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="item_skill" val="3599-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="64" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11672" type="Weapon" name="Common Item - Conjuror's Knife">
@@ -1807,11 +1807,11 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="45" />
-			<set order="0x08" stat="mAtk" val="52" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="52" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="11673" type="Weapon" name="Common Item - Kukuri">
@@ -1831,11 +1831,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="56" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="56" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="11674" type="Weapon" name="Common Item - Crossbow">
@@ -1860,11 +1860,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="81" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="81" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="11675" type="Weapon" name="Common Item - Crimson Sword">
@@ -1885,10 +1885,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="64" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11676" type="Weapon" name="Common Item - Tome of Blood">
@@ -1909,10 +1909,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="52" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="52" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11677" type="Weapon" name="Common Item - Field Sword">
@@ -1936,11 +1936,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="69" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="69" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="11678" type="Weapon" name="Common Item - Sage's Blood">
@@ -1961,10 +1961,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="52" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="52" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11679" type="Weapon" name="Common Item - Saber*Knight's Sword">
@@ -1984,10 +1984,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="83" />
-			<set order="0x08" stat="mAtk" val="41" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="83" />
+			<set stat="mAtk" val="41" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11680" type="Weapon" name="Common Item - Saber*Bastard Sword">
@@ -2007,10 +2007,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="83" />
-			<set order="0x08" stat="mAtk" val="41" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="83" />
+			<set stat="mAtk" val="41" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11681" type="Weapon" name="Common Item - Saber*Spinebone Sword">
@@ -2030,10 +2030,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="83" />
-			<set order="0x08" stat="mAtk" val="41" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="83" />
+			<set stat="mAtk" val="41" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11682" type="Weapon" name="Common Item - Saber*Artisan's Sword">
@@ -2053,10 +2053,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="83" />
-			<set order="0x08" stat="mAtk" val="41" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="83" />
+			<set stat="mAtk" val="41" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11683" type="Weapon" name="Common Item - Reinforced Long Bow">
@@ -2079,11 +2079,11 @@
 		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="820" />
 		<for>
-			<set order="0x08" stat="pAtk" val="179" />
-			<set order="0x08" stat="mAtk" val="51" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="179" />
+			<set stat="mAtk" val="51" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="227" />
 		</for>
 	</item>
 	<item id="11684" type="Weapon" name="Common Item - Knight's Sword*Knight's Sword">
@@ -2103,10 +2103,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11685" type="Weapon" name="Common Item - Maingauche">
@@ -2126,11 +2126,11 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="69" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="69" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="11686" type="Weapon" name="Common Item - Morning Star">
@@ -2150,11 +2150,11 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="79" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="79" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11687" type="Weapon" name="Common Item - Bastard Sword*Knight's Sword">
@@ -2174,10 +2174,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11688" type="Weapon" name="Common Item - Bastard Sword*Bastard Sword">
@@ -2197,10 +2197,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11689" type="Weapon" name="Common Item - Bastard Sword*Spinebone Sword">
@@ -2220,10 +2220,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11690" type="Weapon" name="Common Item - Bastard Sword*Artisan's Sword">
@@ -2243,10 +2243,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11691" type="Weapon" name="Common Item - Bich'Hwa">
@@ -2266,11 +2266,11 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11692" type="Weapon" name="Common Item - Priest Mace">
@@ -2291,11 +2291,11 @@
 		<set name="spiritshots" val="3" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="63" />
-			<set order="0x08" stat="mAtk" val="63" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="63" />
+			<set stat="mAtk" val="63" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11693" type="Weapon" name="Common Item - Goat Head Staff">
@@ -2316,11 +2316,11 @@
 		<set name="spiritshots" val="3" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="77" />
-			<set order="0x08" stat="mAtk" val="69" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="77" />
+			<set stat="mAtk" val="69" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11694" type="Weapon" name="Common Item - Saber*Elven Sword">
@@ -2340,10 +2340,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11695" type="Weapon" name="Common Item - Saber*Crimson Sword">
@@ -2363,10 +2363,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11696" type="Weapon" name="Common Item - Sword of Magic Fog">
@@ -2387,10 +2387,10 @@
 		<set name="spiritshots" val="3" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set order="0x08" stat="pAtk" val="63" />
-			<set order="0x08" stat="mAtk" val="63" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="63" />
+			<set stat="mAtk" val="63" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11697" type="Weapon" name="Common Item - Skull Breaker">
@@ -2410,11 +2410,11 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="79" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="79" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11698" type="Weapon" name="Common Item - Spinebone Sword*Knight's Sword">
@@ -2434,10 +2434,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11699" type="Weapon" name="Common Item - Spinebone Sword*Spinebone Sword">
@@ -2457,10 +2457,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="96" />
-			<set order="0x08" stat="mAtk" val="47" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 </list>

@@ -101,10 +101,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ImmobileBuff">
-				<add order="0x40" stat="pDef" val="1800" />
-				<add order="0x40" stat="mDef" val="1350" />
-				<sub order="0x40" stat="cancelVuln" val="80" />
-				<mul order="0x30" stat="regHp" val="1.8" />
+				<add stat="pDef" val="1800" />
+				<add stat="mDef" val="1350" />
+				<sub stat="cancelVuln" val="80" />
+				<mul stat="regHp" val="1.8" />
 			</effect>
 		</for>
 	</skill>
@@ -116,7 +116,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.9" />
+				<mul stat="rShld" val="1.9" />
 			</effect>
 		</for>
 	</skill>
@@ -208,7 +208,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<sub order="0x40" stat="fireRes" val="50" />
+				<sub stat="fireRes" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -232,7 +232,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<sub order="0x40" stat="waterRes" val="50" />
+				<sub stat="waterRes" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -256,7 +256,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<sub order="0x40" stat="windRes" val="50" />
+				<sub stat="windRes" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -280,7 +280,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<sub order="0x40" stat="earthRes" val="50" />
+				<sub stat="earthRes" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -323,7 +323,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="10" />
+				<mul stat="regHp" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -346,10 +346,10 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.15" />
-				<mul order="0x30" stat="mAtk" val="1.75" />
-				<mul order="0x30" stat="pAtkSpd" val="1.33" />
-				<add order="0x40" stat="runSpd" val="33" />
+				<mul stat="pAtk" val="1.15" />
+				<mul stat="mAtk" val="1.75" />
+				<mul stat="pAtkSpd" val="1.33" />
+				<add stat="runSpd" val="33" />
 			</effect>
 		</for>
 	</skill>
@@ -367,8 +367,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb HP from damage inflicted on enemies -->
-				<add order="0x40" stat="reflectDam" val="60" />
+				<add stat="absorbDam" val="9" /> <!-- absorb HP from damage inflicted on enemies -->
+				<add stat="reflectDam" val="60" />
 			</effect>
 		</for>
 	</skill>
@@ -385,9 +385,9 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="cAtk" val="1.35" />
-				<mul order="0x01" stat="rCrit" val="0.3" />
-				<mul order="0x01" stat="mCritRate" val="3" />
+				<mul stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="0.3" />
+				<mul stat="mCritRate" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -427,8 +427,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<!-- set order="0x08" stat="buffImmunity" val="1" / TODO: Needs Support -->
-				<sub order="0x40" stat="darkRes" val="50" />
+				<!-- set stat="buffImmunity" val="1" / TODO: Needs Support -->
+				<sub stat="darkRes" val="50" />
 			</effect>
 			<effect name="DispelByCategory">
 				<param slot="buff" rate="100" max="3" />
@@ -448,9 +448,9 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="cancelVuln" val="100" />
+				<sub stat="cancelVuln" val="100" />
 				<!-- TODO: Missing support to resist category "multi_buff". -->
-				<mul order="0x30" stat="mDef" val="1.3" />
+				<mul stat="mDef" val="1.3" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param BOW="40" />
@@ -470,7 +470,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.15" />
+				<mul stat="pDef" val="1.15" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SWORD="25" />
@@ -500,9 +500,9 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.9" />
-				<add order="0x40" stat="pDef" val="1000" />
-				<add order="0x40" stat="darkRes" val="50" />
+				<mul stat="rShld" val="1.9" />
+				<add stat="pDef" val="1000" />
+				<add stat="darkRes" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -556,7 +556,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<sub order="0x40" stat="darkRes" val="#vuln" />
+				<sub stat="darkRes" val="#vuln" />
 			</effect>
 		</for>
 	</skill>
@@ -811,11 +811,11 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.1" />
-				<mul order="0x30" stat="mAtk" val="1.1" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0" />
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0" />
-				<mul order="0x30" stat="healEffect" val="1.1" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="mAtk" val="1.1" />
+				<mul stat="MagicalMpConsumeRate" val="0" />
+				<mul stat="PhysicalMpConsumeRate" val="0" />
+				<mul stat="healEffect" val="1.1" />
 			</effect>
 		</for>
 	</skill>
@@ -905,7 +905,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="healEffect" val="#power" />
+				<add stat="healEffect" val="#power" />
 			</effect>
 		</for>
 	</skill>
@@ -917,7 +917,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="#power" />
+				<mul stat="regHp" val="#power" />
 			</effect>
 		</for>
 	</skill>
@@ -960,13 +960,13 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="mDef" val="1000" />
-				<add order="0x40" stat="fireRes" val="20" />
-				<add order="0x40" stat="waterRes" val="20" />
-				<add order="0x40" stat="windRes" val="20" />
-				<add order="0x40" stat="earthRes" val="20" />
-				<add order="0x40" stat="holyRes" val="20" />
-				<add order="0x40" stat="darkRes" val="20" />
+				<add stat="mDef" val="1000" />
+				<add stat="fireRes" val="20" />
+				<add stat="waterRes" val="20" />
+				<add stat="windRes" val="20" />
+				<add stat="earthRes" val="20" />
+				<add stat="holyRes" val="20" />
+				<add stat="darkRes" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1009,8 +1009,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="physicalSkillPower" val="1.2" />
-				<mul order="0x01" stat="rCrit" val="0.2" />
+				<mul stat="physicalSkillPower" val="1.2" />
+				<mul stat="rCrit" val="0.2" />
 			</effect>
 		</for>
 	</skill>
@@ -1049,9 +1049,9 @@
 				<param chance="#activationChance" />
 				<param skillId="5561" skillLevel="#triggeredLevel" /> <!-- Seed of Revenge -->
 				<param targetType="SELF" />
-				<add order="0x40" stat="pAtk" val="300" />
-				<mul order="0x01" stat="rCrit" val="#rCrit" />
-				<mul order="0x30" stat="cAtk" val="#cAtk" />
+				<add stat="pAtk" val="300" />
+				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -1078,10 +1078,10 @@
 				<param chance="#activationChance" />
 				<param skillId="5562" skillLevel="#triggeredLevel" /> <!-- Spirit of Phoenix -->
 				<param targetType="SELF" />
-				<add order="0x40" stat="pDef" val="500" />
-				<add order="0x40" stat="fireRes" val="#elementRes" />
-				<add order="0x40" stat="darkRes" val="#elementRes" />
-				<mul order="0x30" stat="healEffect" val="#healEffect" />
+				<add stat="pDef" val="500" />
+				<add stat="fireRes" val="#elementRes" />
+				<add stat="darkRes" val="#elementRes" />
+				<mul stat="healEffect" val="#healEffect" />
 			</effect>
 		</for>
 	</skill>
@@ -1108,9 +1108,9 @@
 				<param chance="#activationChance" />
 				<param skillId="5563" skillLevel="#triggeredLevel" /> <!-- Eva's Will -->
 				<param targetType="SELF" />
-				<add order="0x40" stat="mDef" val="400" />
-				<add order="0x40" stat="waterPower" val="#waterPower" />
-				<mul order="0x01" stat="rCrit" val="#rCrit" />
+				<add stat="mDef" val="400" />
+				<add stat="waterPower" val="#waterPower" />
+				<mul stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -1137,9 +1137,9 @@
 				<param chance="#activationChance" />
 				<param skillId="5564" skillLevel="#triggeredLevel" /> <!-- Pain of Shillien -->
 				<param targetType="SELF" />
-				<mul order="0x30" stat="cAtk" val="1.2" />
-				<add order="0x40" stat="windPower" val="#windPower" />
-				<add order="0x40" stat="absorbDam" val="#absorbDam" />
+				<mul stat="cAtk" val="1.2" />
+				<add stat="windPower" val="#windPower" />
+				<add stat="absorbDam" val="#absorbDam" />
 			</effect>
 		</for>
 	</skill>
@@ -1166,8 +1166,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pDef" val="0.8" />
-				<mul order="0x30" stat="defCritRate" val="1.3" />
+				<mul stat="pDef" val="0.8" />
+				<mul stat="defCritRate" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1213,7 +1213,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -1236,7 +1236,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtkSpd" val="0.77" />
+				<mul stat="pAtkSpd" val="0.77" />
 			</effect>
 		</for>
 	</skill>
@@ -1253,10 +1253,10 @@
 		<set name="targetType" val="SERVITOR" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.35" />
-				<mul order="0x30" stat="mAtk" val="1.75" />
-				<mul order="0x30" stat="cAtk" val="1.35" />
-				<mul order="0x01" stat="rCrit" val="0.3" />
+				<mul stat="pAtk" val="1.35" />
+				<mul stat="mAtk" val="1.75" />
+				<mul stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="0.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1296,7 +1296,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.32" />
+				<mul stat="pAtkSpd" val="1.32" />
 			</effect>
 		</for>
 	</skill>
@@ -1316,8 +1316,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.24" />
-				<mul order="0x30" stat="mDef" val="1.24" />
+				<mul stat="pDef" val="1.24" />
+				<mul stat="mDef" val="1.24" />
 			</effect>
 		</for>
 	</skill>
@@ -1337,7 +1337,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x01" stat="rCrit" val="0.32" />
+				<mul stat="rCrit" val="0.32" />
 			</effect>
 		</for>
 	</skill>
@@ -1404,10 +1404,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.08" />
-				<mul order="0x30" stat="pAtkSpd" val="1.08" />
-				<mul order="0x30" stat="mAtk" val="1.08" />
-				<mul order="0x30" stat="mAtkSpd" val="1.08" />
+				<mul stat="pAtk" val="1.08" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mAtk" val="1.08" />
+				<mul stat="mAtkSpd" val="1.08" />
 			</effect>
 		</for>
 	</skill>
@@ -1506,7 +1506,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtk" val="0.77" />
+				<mul stat="pAtk" val="0.77" />
 			</effect>
 		</for>
 	</skill>
@@ -1531,8 +1531,8 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtk" val="0.77" />
-				<mul order="0x30" stat="mAtk" val="0.77" />
+				<mul stat="pAtk" val="0.77" />
+				<mul stat="mAtk" val="0.77" />
 			</effect>
 		</for>
 	</skill>
@@ -1557,8 +1557,8 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="mAtkSpd" val="0.77" />
-				<mul order="0x30" stat="pAtkSpd" val="0.9" />
+				<mul stat="mAtkSpd" val="0.77" />
+				<mul stat="pAtkSpd" val="0.9" />
 			</effect>
 		</for>
 	</skill>
@@ -1586,7 +1586,7 @@
 		<set name="targetType" val="OWNER_PET" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="#rate" />
+				<mul stat="pAtk" val="#rate" />
 			</effect>
 		</for>
 	</skill>
@@ -1614,7 +1614,7 @@
 		<set name="targetType" val="OWNER_PET" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="#rate" />
+				<mul stat="pDef" val="#rate" />
 			</effect>
 		</for>
 	</skill>
@@ -1642,7 +1642,7 @@
 		<set name="targetType" val="OWNER_PET" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x01" stat="rCrit" val="#rCrit" />
+				<mul stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -1670,7 +1670,7 @@
 		<set name="targetType" val="OWNER_PET" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="cAtk" val="#cAtk" />
+				<mul stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -1828,7 +1828,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub order="0x40" stat="cancel" val="10000" />
+				<sub stat="cancel" val="10000" />
 			</effect>
 		</for>
 	</skill>

@@ -19,8 +19,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtk" val="1.75" />
-				<mul order="0x30" stat="mDef" val="1.3" />
+				<mul stat="mAtk" val="1.75" />
+				<mul stat="mDef" val="1.3" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="MA_UP,9;MD_UP,9" />
@@ -49,8 +49,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.35" />
-				<mul order="0x30" stat="maxMp" val="1.35" />
+				<mul stat="maxHp" val="1.35" />
+				<mul stat="maxMp" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="MAX_HP_UP,9;MAX_MP_UP,9" />
@@ -79,8 +79,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x01" stat="rCrit" val="0.3" />
-				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="0.3" />
+				<mul stat="cAtk" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
@@ -109,8 +109,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="rShld" val="1.3" />
-				<mul order="0x30" stat="sDef" val="1.5" />
+				<mul stat="rShld" val="1.3" />
+				<mul stat="sDef" val="1.5" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="SHIELD_PROB_UP,9;SHIELD_DEFENCE_UP,9" />
@@ -139,8 +139,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="33" />
-				<add order="0x40" stat="rEvas" val="4" />
+				<add stat="runSpd" val="33" />
+				<add stat="rEvas" val="4" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="SPEED_UP,9;AVOID_UP,9" />
@@ -234,7 +234,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="absorbDam" val="80" />
+				<add stat="absorbDam" val="80" />
 			</effect>
 		</for>
 	</skill>
@@ -297,9 +297,9 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="maxRecoverableHp" val="0.3" />
-				<mul order="0x30" stat="maxRecoverableMp" val="0.3" />
-				<mul order="0x30" stat="maxRecoverableCp" val="0.3" />
+				<mul stat="maxRecoverableHp" val="0.3" />
+				<mul stat="maxRecoverableMp" val="0.3" />
+				<mul stat="maxRecoverableCp" val="0.3" />
 			</effect>
 		</for>
 	</skill>
@@ -415,18 +415,18 @@
 			<effect name="MagicalSoulAttack" />
 			<effect name="ManaDamOverTime" ticks="5">
 				<param power="12" />
-				<mul order="0x30" stat="runSpd" val="0.8" />
-				<mul order="0x30" stat="pAtkSpd" val="0.7" />
-				<mul order="0x30" stat="mAtkSpd" val="0.7" />
+				<mul stat="runSpd" val="0.8" />
+				<mul stat="pAtkSpd" val="0.7" />
+				<mul stat="mAtkSpd" val="0.7" />
 			</effect>
 		</for>
 		<enchant3for>
 			<effect name="MagicalSoulAttack" />
 			<effect name="ManaDamOverTime" ticks="5">
 				<param power="12" />
-				<mul order="0x30" stat="runSpd" val="0.8" />
-				<mul order="0x30" stat="pAtkSpd" val="0.7" />
-				<mul order="0x30" stat="mAtkSpd" val="0.7" />
+				<mul stat="runSpd" val="0.8" />
+				<mul stat="pAtkSpd" val="0.7" />
+				<mul stat="mAtkSpd" val="0.7" />
 			</effect>
 		</enchant3for>
 	</skill>
@@ -491,7 +491,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="2" />
+				<mul stat="mDef" val="2" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param BOW="10" />
@@ -500,8 +500,8 @@
 		</for>
 		<enchant2for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="2" />
-				<add order="0x40" stat="pDef" val="#ench2pDef" />
+				<mul stat="mDef" val="2" />
+				<add stat="pDef" val="#ench2pDef" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param BOW="10" />
@@ -618,8 +618,8 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.15" />
-				<mul order="0x30" stat="pDef" val="1.15" />
+				<mul stat="pAtk" val="1.15" />
+				<mul stat="pDef" val="1.15" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="PA_UP,9;PD_UP,9" />
@@ -647,8 +647,8 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x01" stat="rCrit" val="0.3" />
-				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="0.3" />
+				<mul stat="cAtk" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
@@ -676,8 +676,8 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
-				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+				<add stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
+				<mul stat="pAtkSpd" val="1.33" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="VAMPIRIC_ATTACK,9;ATTACK_TIME_DOWN,9" />
@@ -816,8 +816,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<sub order="0x40" stat="holyRes" val="25" />
-				<add order="0x40" stat="darkRes" val="12" />
+				<sub stat="holyRes" val="25" />
+				<add stat="darkRes" val="12" />
 			</effect>
 		</for>
 	</skill>
@@ -853,7 +853,7 @@
 		<for>
 			<effect name="DamOverTime" ticks="5">
 				<param power="#dot" />
-				<mul order="0x30" stat="healEffect" val="0.5" />
+				<mul stat="healEffect" val="0.5" />
 			</effect>
 		</for>
 	</skill>
@@ -886,8 +886,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.1" />
-				<mul order="0x30" stat="mReuse" val="#mReuse" />
+				<mul stat="mAtkSpd" val="1.1" />
+				<mul stat="mReuse" val="#mReuse" />
 			</effect>
 		</for>
 	</skill>
@@ -962,7 +962,7 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -1065,10 +1065,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtk" val="1.4" />
-				<mul order="0x30" stat="mAtkSpd" val="1.5" />
-				<mul order="0x01" stat="mCritRate" val="0.5" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.1" />
+				<mul stat="mAtk" val="1.4" />
+				<mul stat="mAtkSpd" val="1.5" />
+				<mul stat="mCritRate" val="0.5" />
+				<mul stat="MagicalMpConsumeRate" val="0.1" />
 			</effect>
 		</for>
 	</skill>
@@ -1088,11 +1088,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtk" val="1.1" />
-				<mul order="0x30" stat="healEffect" val="1.4" />
-				<mul order="0x30" stat="mAtkSpd" val="1.5" />
-				<mul order="0x01" stat="mCritRate" val="0.5" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.1" />
+				<mul stat="mAtk" val="1.1" />
+				<mul stat="healEffect" val="1.4" />
+				<mul stat="mAtkSpd" val="1.5" />
+				<mul stat="mCritRate" val="0.5" />
+				<mul stat="MagicalMpConsumeRate" val="0.1" />
 			</effect>
 		</for>
 	</skill>
@@ -1115,7 +1115,7 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxCp" val="1.1" />
+				<mul stat="maxCp" val="1.1" />
 			</effect>
 		</for>
 	</skill>
@@ -1137,8 +1137,8 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="runSpd" val="33" />
-				<add order="0x40" stat="rEvas" val="4" />
+				<add stat="runSpd" val="33" />
+				<add stat="rEvas" val="4" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="SPEED_UP,9;AVOID_UP,9" />
@@ -1167,8 +1167,8 @@
 		<set name="targetType" val="PARTY_CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.15" />
-				<mul order="0x30" stat="pDef" val="1.15" />
+				<mul stat="pAtk" val="1.15" />
+				<mul stat="pDef" val="1.15" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="PA_UP,9;PD_UP,9" />
@@ -1197,8 +1197,8 @@
 		<set name="targetType" val="PARTY_CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x01" stat="rCrit" val="0.3" />
-				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="0.3" />
+				<mul stat="cAtk" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
@@ -1227,8 +1227,8 @@
 		<set name="targetType" val="PARTY_CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="1.35" />
-				<mul order="0x30" stat="maxMp" val="1.35" />
+				<mul stat="maxHp" val="1.35" />
+				<mul stat="maxMp" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="MAX_HP_UP,9;MAX_MP_UP,9" />
@@ -1319,10 +1319,10 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtk" val="0.5" />
-				<mul order="0x30" stat="pAtkSpd" val="0.5" />
-				<mul order="0x30" stat="runSpd" val="0.5" />
-				<sub order="0x40" stat="accCombat" val="12" />
+				<mul stat="pAtk" val="0.5" />
+				<mul stat="pAtkSpd" val="0.5" />
+				<mul stat="runSpd" val="0.5" />
+				<sub stat="accCombat" val="12" />
 			</effect>
 		</for>
 	</skill>
@@ -1351,7 +1351,7 @@
 				<param chance="80" />
 				<param skillId="6059" skillLevel="1" /> <!-- Counter Critical -->
 				<param targetType="SELF" />
-				<mul order="0x30" stat="defCritDamage" val="0.7" />
+				<mul stat="defCritDamage" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -1473,12 +1473,12 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="#amount" />
-				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
-				<mul order="0x30" stat="mAtk" val="#amount" />
-				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
-				<mul order="0x30" stat="physicalSkillPower" val="#physicalSkillPower" />
-				<mul order="0x01" stat="rCrit" val="#rCrit" />
+				<mul stat="pAtk" val="#amount" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="mAtk" val="#amount" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<mul stat="physicalSkillPower" val="#physicalSkillPower" />
+				<mul stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -1520,22 +1520,22 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="earthRes" val="#earthRes" />
+				<add stat="earthRes" val="#earthRes" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<add order="0x40" stat="earthRes" val="#enchvuln" />
+				<add stat="earthRes" val="#enchvuln" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff">
-				<add order="0x40" stat="earthRes" val="#enchvuln" />
+				<add stat="earthRes" val="#enchvuln" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="Buff">
-				<add order="0x40" stat="earthRes" val="#ench3vuln" />
+				<add stat="earthRes" val="#ench3vuln" />
 			</effect>
 		</enchant3for>
 	</skill>
@@ -1557,10 +1557,10 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="fireRes" val="20" />
-				<add order="0x40" stat="waterRes" val="20" />
-				<add order="0x40" stat="windRes" val="20" />
-				<add order="0x40" stat="earthRes" val="20" />
+				<add stat="fireRes" val="20" />
+				<add stat="waterRes" val="20" />
+				<add stat="windRes" val="20" />
+				<add stat="earthRes" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1717,7 +1717,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="manaShield" val="70" />
+				<add stat="manaShield" val="70" />
 			</effect>
 		</for>
 	</skill>
@@ -1739,15 +1739,15 @@
 		<for>
 			<!-- Note: 0.5 means 50% of owner's patk! -->
 			<effect name="ServitorShare">
-				<share order="0x40" stat="pAtk" val="0.5" />
-				<share order="0x40" stat="pDef" val="0.5" />
-				<share order="0x40" stat="mAtk" val="0.25" />
-				<share order="0x40" stat="mDef" val="0.25" />
-				<share order="0x40" stat="maxHp" val="0.1" />
-				<share order="0x40" stat="maxMp" val="0.1" />
-				<share order="0x40" stat="rCrit" val="0.2" />
-				<share order="0x40" stat="pAtkSpd" val="0.1" />
-				<share order="0x40" stat="mAtkSpd" val="0.03" />
+				<share stat="pAtk" val="0.5" />
+				<share stat="pDef" val="0.5" />
+				<share stat="mAtk" val="0.25" />
+				<share stat="mDef" val="0.25" />
+				<share stat="maxHp" val="0.1" />
+				<share stat="maxMp" val="0.1" />
+				<share stat="rCrit" val="0.2" />
+				<share stat="pAtkSpd" val="0.1" />
+				<share stat="mAtkSpd" val="0.03" />
 			</effect>
 		</for>
 		<selfEffects>
@@ -1795,10 +1795,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x01" stat="rCrit" val="#rCrit">
+				<mul stat="rCrit" val="#rCrit">
 					<using kind="DAGGER,DUALDAGGER,LIGHT" />
 				</mul>
-				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd">
+				<add stat="cAtkAdd" val="#cAtkAdd">
 					<using kind="DAGGER,DUALDAGGER,LIGHT" />
 				</add>
 			</effect>
@@ -1853,7 +1853,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="maxHp" val="#maxHp" />
+				<mul stat="maxHp" val="#maxHp" />
 			</effect>
 			<effect name="HealPercent">
 				<param power="#amount" />
@@ -1891,14 +1891,14 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="#pDef" />
-				<mul order="0x30" stat="mDef" val="#mDef" />
-				<sub order="0x40" stat="rEvas" val="#rEvas" />
-				<mul order="0x30" stat="pAtk" val="#pAtk" />
-				<mul order="0x30" stat="mAtk" val="#mAtk" />
-				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
-				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
-				<add order="0x40" stat="runSpd" val="#runSpd" />
+				<mul stat="pDef" val="#pDef" />
+				<mul stat="mDef" val="#mDef" />
+				<sub stat="rEvas" val="#rEvas" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="mAtk" val="#mAtk" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<add stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -1927,7 +1927,7 @@
 		<set name="targetType" val="PARTY_CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -1960,12 +1960,12 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="#maxMp" />
+				<add stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<add order="0x40" stat="maxMp" val="#ench1maxMp" />
+				<add stat="maxMp" val="#ench1maxMp" />
 			</effect>
 		</enchant1for>
 	</skill>

@@ -21,12 +21,12 @@
 		<set name="enchant4_skill" val="3411-1" />
 		<set name="item_skill" val="3835-3;3552-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="442" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11301" type="Weapon" name="Icarus Disperser - Confusion">
@@ -49,13 +49,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3858-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="318" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11302" type="Weapon" name="Icarus Disperser - Confusion - Focus">
@@ -78,13 +78,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3858-3;3567-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="318" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11303" type="Weapon" name="Icarus Disperser - Confusion - Evasion">
@@ -107,13 +107,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3009-8;3552-1;3858-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="318" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11304" type="Weapon" name="Icarus Disperser - Confusion - Critical Damage">
@@ -136,13 +136,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3858-3;3066-4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="318" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11305" type="Weapon" name="Icarus Sawsword - Destruction">
@@ -166,12 +166,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3825-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="363" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11306" type="Weapon" name="Icarus Sawsword - Destruction - Focus">
@@ -195,12 +195,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3825-3;3566-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="363" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11307" type="Weapon" name="Icarus Sawsword - Destruction - Health">
@@ -224,12 +224,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3825-3;3013-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="363" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11308" type="Weapon" name="Icarus Sawsword - Destruction - Light">
@@ -253,12 +253,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3552-1;3498-1;3825-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="363" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11309" type="Weapon" name="Icarus Shooter - Concentration">
@@ -286,13 +286,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="422" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="422" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11310" type="Weapon" name="Icarus Shooter - Concentration - Cheap Shot">
@@ -320,13 +320,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="422" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="422" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11311" type="Weapon" name="Icarus Shooter - Concentration - Guidance">
@@ -354,13 +354,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="422" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="422" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11312" type="Weapon" name="Icarus Shooter - Concentration - Focus">
@@ -388,13 +388,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="422" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="422" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11313" type="Weapon" name="Icarus Stinger - Destruction">
@@ -422,13 +422,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="329" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="329" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11314" type="Weapon" name="Icarus Stinger - Destruction - Focus">
@@ -456,13 +456,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="329" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="329" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11315" type="Weapon" name="Icarus Stinger - Destruction - Health">
@@ -490,13 +490,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="329" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="329" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11316" type="Weapon" name="Icarus Stinger - Destruction - Light">
@@ -524,13 +524,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="329" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="329" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11317" type="Weapon" name="Icarus Spirit - Nature">
@@ -554,12 +554,12 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3852-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="290" />
-			<set order="0x08" stat="mAtk" val="217" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<set stat="mAtk" val="217" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11318" type="Weapon" name="Icarus Spirit - Nature - Acumen">
@@ -583,12 +583,12 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3852-3;3047-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="290" />
-			<set order="0x08" stat="mAtk" val="217" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<set stat="mAtk" val="217" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11319" type="Weapon" name="Icarus Spirit - Nature - Mana Up">
@@ -612,12 +612,12 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3852-3;3014-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="290" />
-			<set order="0x08" stat="mAtk" val="217" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<set stat="mAtk" val="217" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11320" type="Weapon" name="Icarus Spirit - Nature - Conversion">
@@ -641,12 +641,12 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3852-3;3048-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="290" />
-			<set order="0x08" stat="mAtk" val="217" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<set stat="mAtk" val="217" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11321" type="Weapon" name="Icarus Spitter - Concentration">
@@ -672,13 +672,13 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3863-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="689" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="689" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11322" type="Weapon" name="Icarus Spitter - Concentration - Cheap Shot">
@@ -704,13 +704,13 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3863-3;3552-1;8312-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="689" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="689" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11323" type="Weapon" name="Icarus Spitter - Concentration - Guidance">
@@ -736,13 +736,13 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3863-3;3573-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="689" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="689" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11324" type="Weapon" name="Icarus Spitter - Concentration - Focus">
@@ -768,13 +768,13 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3863-3;3567-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="689" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="689" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11325" type="Weapon" name="Icarus Wingblade - Lightning">
@@ -801,13 +801,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="393" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="393" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11326" type="Weapon" name="Icarus Wingblade - Lightning - Focus">
@@ -834,13 +834,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="393" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="393" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11327" type="Weapon" name="Icarus Wingblade - Lightning - Health">
@@ -867,13 +867,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="393" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="393" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11328" type="Weapon" name="Icarus Wingblade - Lightning - Light">
@@ -900,13 +900,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="393" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="393" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11329" type="Weapon" name="Icarus Trident - Thunder">
@@ -929,13 +929,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3873-2;3599-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="363" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11330" type="Weapon" name="Icarus Trident - Thunder - Anger">
@@ -958,13 +958,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3873-2;3600-10" />
 		<for>
-			<set order="0x08" stat="pAtk" val="363" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11331" type="Weapon" name="Icarus Trident - Thunder - Critical Stun">
@@ -989,13 +989,13 @@
 		<set name="oncrit_skill" val="3070-4" />
 		<set name="item_skill" val="3873-2;3552-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="363" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11332" type="Weapon" name="Icarus Trident - Thunder - Light">
@@ -1018,13 +1018,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3552-2;3498-1;3873-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="363" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11333" type="Weapon" name="Icarus Hammer - Earth">
@@ -1047,13 +1047,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3884-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="363" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11334" type="Weapon" name="Icarus Hammer - Earth - Anger">
@@ -1076,13 +1076,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3884-3;3057-4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="363" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11335" type="Weapon" name="Icarus Hammer - Earth - Health">
@@ -1105,13 +1105,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3884-3;3013-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="363" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11336" type="Weapon" name="Icarus Hammer - Earth - Rsk. Focus">
@@ -1134,13 +1134,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3884-3;3027-7" />
 		<for>
-			<set order="0x08" stat="pAtk" val="363" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11337" type="Weapon" name="Icarus Hand - Destruction">
@@ -1163,13 +1163,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3879-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="442" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11338" type="Weapon" name="Icarus Hand - Destruction - Rsk. Evasion">
@@ -1192,13 +1192,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3069-1;3552-1;3879-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="442" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11339" type="Weapon" name="Icarus Hand - Destruction - Focus">
@@ -1221,13 +1221,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3879-3;3565-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="442" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11340" type="Weapon" name="Icarus Hand - Destruction - Haste">
@@ -1250,13 +1250,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3879-3;3564-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="442" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11341" type="Weapon" name="Icarus Heavy Arms - Lightning">
@@ -1280,12 +1280,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3845-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="442" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11342" type="Weapon" name="Icarus Heavy Arms - Lightning - Focus">
@@ -1309,12 +1309,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3845-2;3566-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="442" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11343" type="Weapon" name="Icarus Heavy Arms - Lightning - Health">
@@ -1338,12 +1338,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3845-2;3013-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="442" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11344" type="Weapon" name="Icarus Heavy Arms - Lightning - Light">
@@ -1367,12 +1367,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3552-1;3498-1;3845-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="442" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11345" type="Weapon" name="Icarus Hall - Hail">
@@ -1396,13 +1396,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3889-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="290" />
-			<set order="0x08" stat="mAtk" val="217" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<set stat="mAtk" val="217" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11346" type="Weapon" name="Icarus Hall - Hail - Mana Up">
@@ -1426,13 +1426,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3889-3;3014-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="290" />
-			<set order="0x08" stat="mAtk" val="217" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<set stat="mAtk" val="217" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11347" type="Weapon" name="Icarus Hall - Hail - Conversion">
@@ -1456,13 +1456,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3889-3;3048-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="290" />
-			<set order="0x08" stat="mAtk" val="217" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<set stat="mAtk" val="217" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11348" type="Weapon" name="Icarus Hall - Hail - Acumen">
@@ -1486,13 +1486,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3889-3;3047-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="290" />
-			<set order="0x08" stat="mAtk" val="217" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<set stat="mAtk" val="217" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="11349" type="Armor" name="Sealed Zubei's Gauntlet">
@@ -1507,8 +1507,8 @@
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11350" type="Armor" name="Sealed Zubei's Boots">
@@ -1523,8 +1523,8 @@
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11351" type="Armor" name="Sealed Avadon Gloves">
@@ -1539,8 +1539,8 @@
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11352" type="Armor" name="Sealed Avadon Boots">
@@ -1555,8 +1555,8 @@
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11353" type="Armor" name="Zubei's Leather Gaiters">
@@ -1573,8 +1573,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3668-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="73" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="73" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11354" type="Armor" name="Zubei's Leather Shirt">
@@ -1591,8 +1591,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3669-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="117" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="117" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11355" type="Armor" name="Zubei's Gaiters">
@@ -1612,8 +1612,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="98" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="98" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11356" type="Armor" name="Zubei's Gauntlet - Heavy Armor">
@@ -1632,8 +1632,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11357" type="Armor" name="Zubei's Gauntlet - Light Armor Use">
@@ -1649,8 +1649,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3670-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11358" type="Armor" name="Zubei's Gauntlet - Robe">
@@ -1669,8 +1669,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11359" type="Armor" name="Zubei's Boots - Heavy Armor">
@@ -1689,8 +1689,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11360" type="Armor" name="Zubei's Boots - Light Armor Use">
@@ -1706,8 +1706,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3671-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11361" type="Armor" name="Zubei's Boots - Robe">
@@ -1726,8 +1726,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11362" type="Armor" name="Zubei's Shield">
@@ -1746,10 +1746,10 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="216" />
-			<enchant val="0" order="0x0C" stat="sDef" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="216" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="11363" type="Armor" name="Zubei's Helmet - Heavy Armor">
@@ -1768,8 +1768,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="62" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="62" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11364" type="Armor" name="Zubei's Breastplate">
@@ -1789,8 +1789,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="157" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="157" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11365" type="Armor" name="Avadon Gloves - Heavy Armor">
@@ -1809,8 +1809,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11366" type="Armor" name="Avadon Gloves - Light Armor Use">
@@ -1826,8 +1826,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3689-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11367" type="Armor" name="Avadon Gloves - Robe">
@@ -1846,8 +1846,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11368" type="Armor" name="Avadon Leather Armor">
@@ -1864,8 +1864,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3690-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="191" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="191" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11369" type="Armor" name="Avadon Robe">
@@ -1885,9 +1885,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="127" />
-			<add order="0x40" stat="maxMp" val="561" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="127" />
+			<add stat="maxMp" val="561" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11370" type="Armor" name="Avadon Boots - Heavy Armor">
@@ -1906,8 +1906,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11371" type="Armor" name="Avadon Boots - Light Armor Use">
@@ -1923,8 +1923,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3691-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11372" type="Armor" name="Avadon Boots - Robe">
@@ -1943,8 +1943,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="41" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="41" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11373" type="Armor" name="Avadon Circlet - Heavy Armor">
@@ -1963,8 +1963,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="62" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="62" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11374" type="Armor" name="Avadon Shield">
@@ -1983,10 +1983,10 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="216" />
-			<enchant val="0" order="0x0C" stat="sDef" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="216" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="11375" type="Armor" name="Avadon Gaiters">
@@ -2006,8 +2006,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="98" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="98" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11376" type="Armor" name="Avadon Breastplate">
@@ -2027,8 +2027,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="157" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="157" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11377" type="Armor" name="Tunic of Zubei">
@@ -2048,9 +2048,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="78" />
-			<add order="0x40" stat="maxMp" val="345" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="78" />
+			<add stat="maxMp" val="345" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11378" type="Armor" name="Stockings of Zubei">
@@ -2070,9 +2070,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
-			<add order="0x40" stat="maxMp" val="216" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="49" />
+			<add stat="maxMp" val="216" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11379" type="Armor" name="Doom Gloves - Heavy Armor">
@@ -2091,8 +2091,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11380" type="Armor" name="Doom Gloves - Light Armor Use">
@@ -2108,8 +2108,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3702-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11381" type="Armor" name="Doom Gloves - Robe">
@@ -2128,8 +2128,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11382" type="Armor" name="Doom Boots - Heavy Armor">
@@ -2148,8 +2148,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11383" type="Armor" name="Doom Boots - Light Armor Use">
@@ -2165,8 +2165,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3703-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11384" type="Armor" name="Doom Boots - Robe">
@@ -2185,8 +2185,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11385" type="Armor" name="Doom Shield">
@@ -2205,10 +2205,10 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="230" />
-			<enchant val="0" order="0x0C" stat="sDef" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="230" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="11386" type="Armor" name="Doom Plate Armor">
@@ -2228,8 +2228,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="270" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="270" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11387" type="Armor" name="Doom Helmet - Heavy Armor">
@@ -2248,8 +2248,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="66" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="66" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11388" type="Armor" name="Leather Armor of Doom">
@@ -2266,8 +2266,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3701-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="202" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="202" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11389" type="Armor" name="Sealed Doom Gloves">
@@ -2282,8 +2282,8 @@
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11390" type="Armor" name="Sealed Doom Boots">
@@ -2298,8 +2298,8 @@
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11391" type="Armor" name="Sealed Blue Wolf Boots">
@@ -2314,8 +2314,8 @@
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11392" type="Armor" name="Sealed Blue Wolf Gloves">
@@ -2330,8 +2330,8 @@
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11393" type="Armor" name="Tunic of Doom">
@@ -2351,9 +2351,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="83" />
-			<add order="0x40" stat="maxMp" val="377" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="83" />
+			<add stat="maxMp" val="377" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11394" type="Armor" name="Blue Wolf Gaiters">
@@ -2373,8 +2373,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="104" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="104" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11395" type="Armor" name="Blue Wolf Leather Armor">
@@ -2391,8 +2391,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3715-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="202" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="202" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11396" type="Armor" name="Blue Wolf Boots - Heavy Armor">
@@ -2411,8 +2411,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11397" type="Armor" name="Blue Wolf Boots - Light Armor Use">
@@ -2428,8 +2428,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3716-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11398" type="Armor" name="Blue Wolf Boots - Robe">
@@ -2448,8 +2448,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11399" type="Armor" name="Blue Wolf Gloves - Heavy Armor">
@@ -2468,8 +2468,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="44" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="44" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 </list>

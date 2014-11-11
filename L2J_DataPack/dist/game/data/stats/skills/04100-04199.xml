@@ -66,8 +66,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<sub order="0x40" stat="fireRes" val="#fireRes" />
-				<add order="0x40" stat="waterRes" val="#waterRes" />
+				<sub stat="fireRes" val="#fireRes" />
+				<add stat="waterRes" val="#waterRes" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 20 35 65 </table>
@@ -89,7 +89,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="rEvas" val="#rEvas" />
+				<add stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 35 65 </table>
@@ -254,16 +254,16 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtk" val="0.85" />
-				<mul order="0x30" stat="mAtk" val="0.85" />
-				<mul order="0x30" stat="pDef" val="0.6" />
-				<mul order="0x30" stat="mDef" val="0.6" />
-				<mul order="0x30" stat="pAtkSpd" val="0.75" />
-				<mul order="0x30" stat="mAtkSpd" val="0.75" />
-				<mul order="0x30" stat="runSpd" val="0.5" />
-				<sub order="0x40" stat="accCombat" val="19" />
-				<sub order="0x40" stat="rEvas" val="19" />
-				<mul order="0x30" stat="rCrit" val="0.1" />
+				<mul stat="pAtk" val="0.85" />
+				<mul stat="mAtk" val="0.85" />
+				<mul stat="pDef" val="0.6" />
+				<mul stat="mDef" val="0.6" />
+				<mul stat="pAtkSpd" val="0.75" />
+				<mul stat="mAtkSpd" val="0.75" />
+				<mul stat="runSpd" val="0.5" />
+				<sub stat="accCombat" val="19" />
+				<sub stat="rEvas" val="19" />
+				<mul stat="rCrit" val="0.1" />
 			</effect>
 		</for>
 	</skill>
@@ -316,7 +316,7 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Petrification">
-				<mul order="0x30" stat="regHp" val="0" />
+				<mul stat="regHp" val="0" />
 			</effect>
 		</for>
 	</skill>
@@ -405,7 +405,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="#mDef" />
+				<mul stat="mDef" val="#mDef" />
 			</effect>
 		</for>
 	</skill>
@@ -494,7 +494,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<sub order="0x40" stat="accCombat" val="#accCombat" />
+				<sub stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 20 35 65 </table>
@@ -554,7 +554,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<set order="0x08" stat="debuffImmunity" val="1" />
+				<set stat="debuffImmunity" val="1" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="80" />
@@ -606,7 +606,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="regHp" val="0.05" />
+				<mul stat="regHp" val="0.05" />
 			</effect>
 		</for>
 	</skill>
@@ -623,7 +623,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pReuse" val="0.01" />
+				<mul stat="pReuse" val="0.01" />
 			</effect>
 		</for>
 	</skill>
@@ -964,7 +964,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtk" val="#pAtk" />
+				<mul stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -987,7 +987,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pDef" val="#pDef" />
+				<mul stat="pDef" val="#pDef" />
 			</effect>
 		</for>
 	</skill>
@@ -1159,7 +1159,7 @@
 		<for>
 			<effect name="MagicalAttack" />
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -1334,7 +1334,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -1351,7 +1351,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="reflectDam" val="20" />
+				<add stat="reflectDam" val="20" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
@@ -1376,9 +1376,9 @@
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.5" />
-				<mul order="0x30" stat="pAtkSpd" val="0.5" />
-				<mul order="0x30" stat="mAtkSpd" val="0.5" />
+				<mul stat="runSpd" val="0.5" />
+				<mul stat="pAtkSpd" val="0.5" />
+				<mul stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
 		<endEffects>
@@ -1449,8 +1449,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtkSpd" val="0.77" />
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul stat="pAtkSpd" val="0.77" />
+				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -1582,7 +1582,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="1.5" />
+				<mul stat="pAtk" val="1.5" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
@@ -1603,7 +1603,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pDef" val="1.5" />
+				<mul stat="pDef" val="1.5" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
@@ -1624,7 +1624,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtkSpd" val="1.5" />
+				<mul stat="pAtkSpd" val="1.5" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
@@ -1645,7 +1645,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<add order="0x40" stat="reflectDam" val="20" />
+				<add stat="reflectDam" val="20" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 8 11 15 20 25 30 34 36 38 38 39 40 </table>
@@ -1803,7 +1803,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="#pAtk" />
+				<mul stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
@@ -1829,7 +1829,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
@@ -1904,7 +1904,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="#runSpd" />
+				<mul stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
@@ -2114,7 +2114,7 @@
 		<for>
 			<effect name="MagicalAttack" />
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
@@ -2196,7 +2196,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="#pAtk" />
+				<mul stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>

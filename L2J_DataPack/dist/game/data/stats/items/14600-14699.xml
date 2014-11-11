@@ -14,10 +14,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8387-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="42" />
-			<add order="0x40" stat="maxMp" val="17" />
-			<add order="0x40" stat="darkRes" val="12" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="42" />
+			<add stat="maxMp" val="17" />
+			<add stat="darkRes" val="12" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14601" type="Armor" name="Ancient Cloak: Kamael exclusive - Kamael Use">
@@ -38,7 +38,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="14602" type="Armor" name="Ancient Cloak">
@@ -59,7 +59,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="14603" type="EtcItem" name="Sealed Ancient Cloak">
@@ -72,7 +72,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="14604" type="Armor" name="Red Talisman - Territory Guardian">
@@ -122,12 +122,12 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="78" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="78" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14607" type="EtcItem" name="Mark of Gracia">
@@ -159,7 +159,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="14609" type="Armor" name="Ancient Cloak">
@@ -177,7 +177,7 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="14610" type="Armor" name="Ancient Cloak: Robe exclusive">
@@ -199,7 +199,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="14611" type="Armor" name="Rudolph's Nose">
@@ -334,10 +334,10 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="38" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="38" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="14622" type="Weapon" name="Santa Claus' Sword of Ipos">
@@ -357,10 +357,10 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
 		<for>
-			<set order="0x08" stat="pAtk" val="62" />
-			<set order="0x08" stat="mAtk" val="38" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="62" />
+			<set stat="mAtk" val="38" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="14623" type="Weapon" name="Santa Claus' Barakiel Axe">
@@ -380,11 +380,11 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="38" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="38" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="14624" type="Weapon" name="Santa Claus' Behemoth Tuning Fork">
@@ -404,11 +404,11 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
 		<for>
-			<set order="0x08" stat="pAtk" val="62" />
-			<set order="0x08" stat="mAtk" val="38" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="62" />
+			<set stat="mAtk" val="38" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="14625" type="Weapon" name="Santa Claus' Naga Storm">
@@ -428,11 +428,11 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
 		<for>
-			<set order="0x08" stat="pAtk" val="45" />
-			<set order="0x08" stat="mAtk" val="38" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="38" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="14626" type="Weapon" name="Santa Claus' Tiphon Spear">
@@ -452,11 +452,11 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1;3599-1" />
 		<set name="time" val="180" />
 		<for>
-			<set order="0x08" stat="pAtk" val="51" />
-			<set order="0x08" stat="mAtk" val="38" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="38" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="14627" type="Weapon" name="Santa Claus' Shyeed Bow">
@@ -478,11 +478,11 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
 		<for>
-			<set order="0x08" stat="pAtk" val="116" />
-			<set order="0x08" stat="mAtk" val="42" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="116" />
+			<set stat="mAtk" val="42" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="227" />
 		</for>
 	</item>
 	<item id="14628" type="Weapon" name="Santa Claus' Sobekk Hurricane">
@@ -502,11 +502,11 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
 		<for>
-			<set order="0x08" stat="pAtk" val="41" />
-			<set order="0x08" stat="mAtk" val="38" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="41" />
+			<set stat="mAtk" val="38" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="14629" type="Weapon" name="Santa Claus' Themis Tongue">
@@ -527,10 +527,10 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1;3047-1" />
 		<set name="time" val="180" />
 		<for>
-			<set order="0x08" stat="pAtk" val="41" />
-			<set order="0x08" stat="mAtk" val="51" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="41" />
+			<set stat="mAtk" val="51" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="14630" type="Weapon" name="Santa Claus' Hand of Cabrio">
@@ -551,11 +551,11 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1;3047-1" />
 		<set name="time" val="180" />
 		<for>
-			<set order="0x08" stat="pAtk" val="50" />
-			<set order="0x08" stat="mAtk" val="51" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="50" />
+			<set stat="mAtk" val="51" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="14631" type="Weapon" name="Santa Claus' Daimon Crystal">
@@ -576,11 +576,11 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1;3047-1" />
 		<set name="time" val="180" />
 		<for>
-			<set order="0x08" stat="pAtk" val="62" />
-			<set order="0x08" stat="mAtk" val="56" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="62" />
+			<set stat="mAtk" val="56" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="14632" type="Weapon" name="Santa Claus' Eclair Bijou">
@@ -604,11 +604,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="46" />
-			<set order="0x08" stat="mAtk" val="38" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="46" />
+			<set stat="mAtk" val="38" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
 	<item id="14633" type="Weapon" name="Santa Claus' Screaming Vengeance">
@@ -632,11 +632,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="56" />
-			<set order="0x08" stat="mAtk" val="38" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="56" />
+			<set stat="mAtk" val="38" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="14634" type="Weapon" name="Santa Claus' Durendal">
@@ -659,11 +659,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="65" />
-			<set order="0x08" stat="mAtk" val="38" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
+			<set stat="pAtk" val="65" />
+			<set stat="mAtk" val="38" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="14635" type="EtcItem" name="Low Quality Battle Reward Chest">
@@ -1057,10 +1057,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8348-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="63" />
-			<add order="0x40" stat="maxMp" val="25" />
-			<add order="0x40" stat="waterRes" val="8" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="63" />
+			<add stat="maxMp" val="25" />
+			<add stat="waterRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14665" type="Armor" name="Dion Protection Earring">
@@ -1077,10 +1077,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8349-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="63" />
-			<add order="0x40" stat="maxMp" val="25" />
-			<add order="0x40" stat="holyRes" val="8" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="63" />
+			<add stat="maxMp" val="25" />
+			<add stat="holyRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14666" type="Armor" name="Giran Protection Earring">
@@ -1097,10 +1097,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8350-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="63" />
-			<add order="0x40" stat="maxMp" val="25" />
-			<add order="0x40" stat="windRes" val="8" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="63" />
+			<add stat="maxMp" val="25" />
+			<add stat="windRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14667" type="Armor" name="Oren Protection Earring">
@@ -1117,10 +1117,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8351-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="63" />
-			<add order="0x40" stat="maxMp" val="25" />
-			<add order="0x40" stat="darkRes" val="8" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="63" />
+			<add stat="maxMp" val="25" />
+			<add stat="darkRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14668" type="Armor" name="Aden Protection Earring">
@@ -1137,10 +1137,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8352-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="63" />
-			<add order="0x40" stat="maxMp" val="25" />
-			<add order="0x40" stat="earthRes" val="8" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="63" />
+			<add stat="maxMp" val="25" />
+			<add stat="earthRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14669" type="Armor" name="Innadril Protection Earring">
@@ -1157,10 +1157,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8353-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="63" />
-			<add order="0x40" stat="maxMp" val="25" />
-			<add order="0x40" stat="waterRes" val="8" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="63" />
+			<add stat="maxMp" val="25" />
+			<add stat="waterRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14670" type="Armor" name="Goddard Protection Earring">
@@ -1177,10 +1177,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8354-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="63" />
-			<add order="0x40" stat="maxMp" val="25" />
-			<add order="0x40" stat="fireRes" val="8" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="63" />
+			<add stat="maxMp" val="25" />
+			<add stat="fireRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14671" type="Armor" name="Rune Protection Earring">
@@ -1197,10 +1197,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8355-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="63" />
-			<add order="0x40" stat="maxMp" val="25" />
-			<add order="0x40" stat="fireRes" val="8" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="63" />
+			<add stat="maxMp" val="25" />
+			<add stat="fireRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14672" type="Armor" name="Schuttgart Protection Earring">
@@ -1217,10 +1217,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8356-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="63" />
-			<add order="0x40" stat="maxMp" val="25" />
-			<add order="0x40" stat="windRes" val="8" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="63" />
+			<add stat="maxMp" val="25" />
+			<add stat="windRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14673" type="EtcItem" name="Rudolph's Nose">
@@ -1248,10 +1248,10 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
 		<for>
-			<set order="0x08" stat="pAtk" val="61" />
-			<set order="0x08" stat="mAtk" val="51" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="61" />
+			<set stat="mAtk" val="51" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="14675" type="Armor" name="Agathion Seal Bracelet - Neolithica">

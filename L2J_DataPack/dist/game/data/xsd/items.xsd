@@ -151,11 +151,9 @@
 		<xs:attribute name="categoryType" type="xs:normalizedString" />
 	</xs:complexType>
 	<xs:complexType name="enchantType">
-		<xs:attribute name="order" type="xs:token" use="required"
-			fixed="0x0C" />
+		<xs:attribute name="order" type="xs:byte" use="optional" />
 		<xs:attribute name="stat" use="required" type="statType" />
-		<xs:attribute name="val" type="xs:integer" fixed="0"
-			use="required" />
+		<xs:attribute name="val" type="xs:integer" fixed="0" use="required" />
 	</xs:complexType>
 	<xs:simpleType name="statType">
 		<xs:restriction base="xs:token">
@@ -165,7 +163,6 @@
 			<xs:enumeration value="pDef" />
 			<xs:enumeration value="sDef" />
 			<xs:enumeration value="mAtk" />
-
 			<xs:enumeration value="pAtkAngle" />
 			<xs:enumeration value="pAtkRange" />
 			<xs:enumeration value="pAtkSpd" />
@@ -197,17 +194,8 @@
 		<xs:attribute type="xs:string" name="msg" use="optional" />
 	</xs:complexType>
 	<xs:complexType name="addType">
-		<xs:attribute name="order" use="required">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-					<xs:enumeration value="0x08" />
-					<xs:enumeration value="0x10" />
-					<xs:enumeration value="0x30" />
-					<xs:enumeration value="0x40" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
-		<xs:attribute name="stat" use="required" type="statType" />
+		<xs:attribute name="order" type="xs:byte" use="optional" />
+		<xs:attribute name="stat" type="statType" use="required" />
 		<xs:attribute name="val" type="xs:decimal" use="required" />
 	</xs:complexType>
 	<xs:complexType name="forType" mixed="true">
@@ -224,8 +212,7 @@
 	</xs:complexType>
 	<xs:complexType name="itemType">
 		<xs:sequence maxOccurs="1" minOccurs="1">
-			<xs:element name="set" maxOccurs="unbounded" minOccurs="1"
-				type="setType" />
+			<xs:element name="set" maxOccurs="unbounded" minOccurs="1" type="setType" />
 			<xs:element name="cond" maxOccurs="2" minOccurs="0" type="condType" />
 			<xs:element name="for" maxOccurs="1" minOccurs="0" type="forType" />
 		</xs:sequence>
@@ -251,8 +238,7 @@
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="item" type="itemType" minOccurs="1"
-					maxOccurs="unbounded" />
+				<xs:element name="item" type="itemType" minOccurs="1" maxOccurs="unbounded" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

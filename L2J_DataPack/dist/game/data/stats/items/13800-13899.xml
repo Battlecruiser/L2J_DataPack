@@ -39,7 +39,7 @@
 		<set name="unequip_skill" val="619-1" />
 		<set name="item_skill" val="8277-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="33" />
+			<add order="0" stat="pDef" val="33" />
 		</for>
 	</item>
 	<item id="13803" type="Armor" name="Native's Tunic">
@@ -57,7 +57,7 @@
 		<set name="unequip_skill" val="619-1" />
 		<set name="item_skill" val="8277-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="53" />
+			<add order="0" stat="pDef" val="53" />
 		</for>
 	</item>
 	<item id="13804" type="Armor" name="Native's Trousers">
@@ -75,7 +75,7 @@
 		<set name="unequip_skill" val="619-1" />
 		<set name="item_skill" val="8277-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="29" />
+			<add order="0" stat="pDef" val="29" />
 		</for>
 	</item>
 	<item id="13805" type="Armor" name="Guards of the Dawn Helmet">
@@ -93,7 +93,7 @@
 		<set name="unequip_skill" val="619-1" />
 		<set name="item_skill" val="8278-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="33" />
+			<add order="0" stat="pDef" val="33" />
 		</for>
 	</item>
 	<item id="13806" type="Armor" name="Guards of the Dawn Tunic">
@@ -111,7 +111,7 @@
 		<set name="unequip_skill" val="619-1" />
 		<set name="item_skill" val="8278-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="53" />
+			<add order="0" stat="pDef" val="53" />
 		</for>
 	</item>
 	<item id="13807" type="Armor" name="Guards of the Dawn Trousers">
@@ -129,7 +129,7 @@
 		<set name="unequip_skill" val="619-1" />
 		<set name="item_skill" val="8278-1" />
 		<for>
-			<add order="0x10" stat="pDef" val="29" />
+			<add order="0" stat="pDef" val="29" />
 		</for>
 	</item>
 	<item id="13808" type="EtcItem" name="Elmoreden Holy Water">
@@ -481,12 +481,12 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="78" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="78" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="13843" type="Weapon" name="Draconic Peltast Weapon">
@@ -510,13 +510,13 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="5" />
-			<set order="0x08" stat="mAtk" val="5" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="13844" type="EtcItem" name="Star Stone Extraction Scroll">
@@ -554,12 +554,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="duration" val="10" />
 		<for>
-			<set order="0x08" stat="pAtk" val="140" />
-			<set order="0x08" stat="mAtk" val="120" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="140" />
+			<set stat="mAtk" val="120" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="13846" type="EtcItem" name="Seal of Binding">
@@ -937,12 +937,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="duration" val="10" />
 		<for>
-			<set order="0x08" stat="pAtk" val="140" />
-			<set order="0x08" stat="mAtk" val="120" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="140" />
+			<set stat="mAtk" val="120" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="13882" type="Weapon" name="Dynasty Dual Daggers">
@@ -972,13 +972,13 @@
 			</and>
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="304" />
-			<set order="0x08" stat="mAtk" val="157" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="304" />
+			<set stat="mAtk" val="157" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="13883" type="Weapon" name="Icarus Dual Daggers">
@@ -1008,13 +1008,13 @@
 			</and>
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="332" />
-			<set order="0x08" stat="mAtk" val="169" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="332" />
+			<set stat="mAtk" val="169" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="13884" type="Weapon" name="Vesper Dual Daggers">
@@ -1044,13 +1044,13 @@
 			</and>
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="360" />
-			<set order="0x08" stat="mAtk" val="181" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="360" />
+			<set stat="mAtk" val="181" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="13885" type="Armor" name="Sealed Arcana Sigil">
@@ -1069,9 +1069,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<add order="0x10" stat="pDef" val="13" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="13" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13886" type="Armor" name="Sealed Dynasty Sigil">
@@ -1090,9 +1090,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<add order="0x10" stat="pDef" val="15" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="15" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13887" type="Armor" name="Sealed Vesper Sigil">
@@ -1111,9 +1111,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<add order="0x10" stat="pDef" val="17" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="17" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13888" type="Armor" name="Sealed Lord's Cloak">
@@ -1129,8 +1129,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="2" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="2" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13889" type="Armor" name="Holy Spirit's Cloak - Kamael exclusive">
@@ -1149,8 +1149,8 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="20" />
-			<add order="0x40" stat="darkRes" val="30" />
+			<add order="0" stat="pDef" val="20" />
+			<add stat="darkRes" val="30" />
 		</for>
 	</item>
 	<item id="13890" type="Armor" name="Holy Spirit's Cloak">
@@ -1166,8 +1166,8 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="20" />
-			<add order="0x40" stat="darkRes" val="30" />
+			<add order="0" stat="pDef" val="20" />
+			<add stat="darkRes" val="30" />
 		</for>
 	</item>
 	<item id="13891" type="Armor" name="Holy Spirit's Cloak - Light Armor exclusive">
@@ -1187,8 +1187,8 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="20" />
-			<add order="0x40" stat="darkRes" val="30" />
+			<add order="0" stat="pDef" val="20" />
+			<add stat="darkRes" val="30" />
 		</for>
 	</item>
 	<item id="13892" type="Armor" name="Holy Spirit's Cloak - Robe exclusive">
@@ -1208,8 +1208,8 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="20" />
-			<add order="0x40" stat="darkRes" val="30" />
+			<add order="0" stat="pDef" val="20" />
+			<add stat="darkRes" val="30" />
 		</for>
 	</item>
 	<item id="13893" type="EtcItem" name="Sealed Holy Spirit's Cloak">
@@ -1220,7 +1220,7 @@
 		<set name="weight" val="220" />
 		<set name="price" val="28671000" />
 		<for>
-			<add order="0x10" stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="13894" type="Armor" name="Cloth Belt">
@@ -1236,8 +1236,8 @@
 		<set name="price" val="45100" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="10" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="10" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13895" type="Armor" name="Leather Belt">
@@ -1253,8 +1253,8 @@
 		<set name="price" val="165000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="11" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="11" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13896" type="Armor" name="Iron Belt">
@@ -1270,8 +1270,8 @@
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="12" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="12" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13897" type="Armor" name="Mithril Belt">
@@ -1287,8 +1287,8 @@
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="14" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="14" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13898" type="EtcItem" name="Sealed Magic Pin (C-Grade)">

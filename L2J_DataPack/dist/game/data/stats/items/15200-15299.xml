@@ -1130,10 +1130,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="24" />
-			<set order="0x08" stat="mAtk" val="17" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="24" />
+			<set stat="mAtk" val="17" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15281" type="Weapon" name="Transparent 2HS (for NPC)">
@@ -1153,10 +1153,10 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set order="0x08" stat="pAtk" val="78" />
-			<set order="0x08" stat="mAtk" val="39" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="78" />
+			<set stat="mAtk" val="39" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15282" type="Armor" name="Gludio Water Royal Guard Necklace">
@@ -1172,10 +1172,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="106" />
-			<add order="0x40" stat="maxMp" val="46" />
-			<add order="0x40" stat="waterRes" val="30" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="106" />
+			<add stat="maxMp" val="46" />
+			<add stat="waterRes" val="30" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15283" type="Armor" name="Dion Holy Royal Guard Necklace">
@@ -1191,10 +1191,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="106" />
-			<add order="0x40" stat="maxMp" val="46" />
-			<add order="0x40" stat="holyRes" val="30" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="106" />
+			<add stat="maxMp" val="46" />
+			<add stat="holyRes" val="30" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15284" type="Armor" name="Giran Wind Royal Guard Necklace">
@@ -1210,10 +1210,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="106" />
-			<add order="0x40" stat="maxMp" val="46" />
-			<add order="0x40" stat="windRes" val="30" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="106" />
+			<add stat="maxMp" val="46" />
+			<add stat="windRes" val="30" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15285" type="Armor" name="Oren Dark Royal Guard Necklace">
@@ -1229,10 +1229,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="106" />
-			<add order="0x40" stat="maxMp" val="46" />
-			<add order="0x40" stat="darkRes" val="30" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="106" />
+			<add stat="maxMp" val="46" />
+			<add stat="darkRes" val="30" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15286" type="Armor" name="Aden Earth Royal Guard Necklace">
@@ -1248,10 +1248,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="106" />
-			<add order="0x40" stat="maxMp" val="46" />
-			<add order="0x40" stat="earthRes" val="30" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="106" />
+			<add stat="maxMp" val="46" />
+			<add stat="earthRes" val="30" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15287" type="Armor" name="Innadril Water Royal Guard Necklace">
@@ -1267,10 +1267,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="106" />
-			<add order="0x40" stat="maxMp" val="46" />
-			<add order="0x40" stat="waterRes" val="30" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="106" />
+			<add stat="maxMp" val="46" />
+			<add stat="waterRes" val="30" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15288" type="Armor" name="Goddard Fire Royal Guard Necklace">
@@ -1286,10 +1286,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="106" />
-			<add order="0x40" stat="maxMp" val="46" />
-			<add order="0x40" stat="fireRes" val="30" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="106" />
+			<add stat="maxMp" val="46" />
+			<add stat="fireRes" val="30" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15289" type="Armor" name="Rune Fire Royal Guard Necklace">
@@ -1305,10 +1305,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="106" />
-			<add order="0x40" stat="maxMp" val="46" />
-			<add order="0x40" stat="fireRes" val="30" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="106" />
+			<add stat="maxMp" val="46" />
+			<add stat="fireRes" val="30" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15290" type="Armor" name="Schuttgart Wind Royal Guard Necklace">
@@ -1324,10 +1324,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0x10" stat="mDef" val="106" />
-			<add order="0x40" stat="maxMp" val="46" />
-			<add order="0x40" stat="windRes" val="30" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="106" />
+			<add stat="maxMp" val="46" />
+			<add stat="windRes" val="30" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15291" type="Armor" name="Gludio Earth Royal Guard Ring">
@@ -1344,10 +1344,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8379-2" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
-			<add order="0x40" stat="maxMp" val="23" />
-			<add order="0x40" stat="earthRes" val="15" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="60" />
+			<add stat="maxMp" val="23" />
+			<add stat="earthRes" val="15" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15292" type="Armor" name="Dion Water Royal Guard Ring">
@@ -1364,10 +1364,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8380-2" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
-			<add order="0x40" stat="maxMp" val="23" />
-			<add order="0x40" stat="waterRes" val="15" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="60" />
+			<add stat="maxMp" val="23" />
+			<add stat="waterRes" val="15" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15293" type="Armor" name="Giran Fire Royal Guard Ring">
@@ -1384,10 +1384,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8381-2" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
-			<add order="0x40" stat="maxMp" val="23" />
-			<add order="0x40" stat="fireRes" val="15" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="60" />
+			<add stat="maxMp" val="23" />
+			<add stat="fireRes" val="15" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15294" type="Armor" name="Oren Earth Royal Guard Ring">
@@ -1404,10 +1404,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8382-2" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
-			<add order="0x40" stat="maxMp" val="23" />
-			<add order="0x40" stat="earthRes" val="15" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="60" />
+			<add stat="maxMp" val="23" />
+			<add stat="earthRes" val="15" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15295" type="Armor" name="Aden Holy Royal Guard Ring">
@@ -1424,10 +1424,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8383-2" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
-			<add order="0x40" stat="maxMp" val="23" />
-			<add order="0x40" stat="holyRes" val="15" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="60" />
+			<add stat="maxMp" val="23" />
+			<add stat="holyRes" val="15" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15296" type="Armor" name="Innadril Holy Royal Guard Ring">
@@ -1444,10 +1444,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8384-2" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
-			<add order="0x40" stat="maxMp" val="23" />
-			<add order="0x40" stat="holyRes" val="15" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="60" />
+			<add stat="maxMp" val="23" />
+			<add stat="holyRes" val="15" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15297" type="Armor" name="Goddard Dark Royal Guard Ring">
@@ -1464,10 +1464,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8385-2" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
-			<add order="0x40" stat="maxMp" val="23" />
-			<add order="0x40" stat="darkRes" val="15" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="60" />
+			<add stat="maxMp" val="23" />
+			<add stat="darkRes" val="15" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15298" type="Armor" name="Rune Wind Royal Guard Ring">
@@ -1484,10 +1484,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8386-2" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
-			<add order="0x40" stat="maxMp" val="23" />
-			<add order="0x40" stat="windRes" val="15" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="60" />
+			<add stat="maxMp" val="23" />
+			<add stat="windRes" val="15" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15299" type="Armor" name="Schuttgart Dark Royal Guard Ring">
@@ -1504,10 +1504,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8387-2" />
 		<for>
-			<add order="0x10" stat="mDef" val="60" />
-			<add order="0x40" stat="maxMp" val="23" />
-			<add order="0x40" stat="darkRes" val="15" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="60" />
+			<add stat="maxMp" val="23" />
+			<add stat="darkRes" val="15" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 </list>

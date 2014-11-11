@@ -191,9 +191,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3649-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="48" />
-			<add order="0x40" stat="maxMp" val="21" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="10315" type="Armor" name="Shadow Item - Purple Viking Circlet">

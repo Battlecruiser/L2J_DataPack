@@ -8,7 +8,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="CON" val="2" />
+				<add stat="CON" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -20,7 +20,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="INT" val="2" />
+				<add stat="INT" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -32,7 +32,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="WIT" val="2" />
+				<add stat="WIT" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -44,7 +44,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="MEN" val="2" />
+				<add stat="MEN" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -104,12 +104,12 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="STR" val="1" />
-				<add order="0x10" stat="DEX" val="1" />
-				<add order="0x10" stat="CON" val="1" />
-				<add order="0x10" stat="INT" val="1" />
-				<add order="0x10" stat="WIT" val="1" />
-				<add order="0x10" stat="MEN" val="1" />
+				<add stat="STR" val="1" />
+				<add stat="DEX" val="1" />
+				<add stat="CON" val="1" />
+				<add stat="INT" val="1" />
+				<add stat="WIT" val="1" />
+				<add stat="MEN" val="1" />
 			</effect>
 		</for>
 	</skill>

@@ -12,8 +12,8 @@
 		<set name="price" val="2032000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="73" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="73" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13001" type="Armor" name="Sealed Helm of Nightmare - Robe">
@@ -31,8 +31,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="73" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="73" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13002" type="EtcItem" name="Essence of Kamaloka">
@@ -472,10 +472,10 @@
 			<player instanceId="43" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="107" />
-			<set order="0x08" stat="mAtk" val="72" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="72" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13035" type="Weapon" name="Enhanced Sprite's Sword">
@@ -501,10 +501,10 @@
 			<player instanceId="43" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="127" />
-			<set order="0x08" stat="mAtk" val="82" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="127" />
+			<set stat="mAtk" val="82" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13036" type="Weapon" name="Sword of Ice and Fire">
@@ -530,10 +530,10 @@
 			<player instanceId="43" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="147" />
-			<set order="0x08" stat="mAtk" val="92" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="147" />
+			<set stat="mAtk" val="92" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13037" type="EtcItem" name="Pailaka Soulshot - Grade D">
@@ -641,10 +641,10 @@
 			<player instanceId="44" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="259" />
-			<set order="0x08" stat="mAtk" val="143" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="259" />
+			<set stat="mAtk" val="143" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13043" type="Weapon" name="Enhanced Ancient Legacy Sword">
@@ -670,10 +670,10 @@
 			<player instanceId="44" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="279" />
-			<set order="0x08" stat="mAtk" val="153" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="279" />
+			<set stat="mAtk" val="153" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13044" type="Weapon" name="Complete Ancient Legacy Sword">
@@ -699,10 +699,10 @@
 			<player instanceId="44" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="299" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="299" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13045" type="EtcItem" name="Pailaka Soulshot - Grade C">
@@ -803,8 +803,8 @@
 			<player instanceId="43,44,45" />
 		</cond>
 		<for>
-			<add order="0x10" stat="mDef" val="49" />
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0" stat="mDef" val="49" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
 	<item id="13051" type="EtcItem" name="Hair Accessory">
@@ -838,11 +838,11 @@
 			<player instanceId="45" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="251" />
-			<set order="0x08" stat="mAtk" val="161" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="251" />
+			<set stat="mAtk" val="161" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13053" type="Weapon" name="Enhanced Spear of Silenos">
@@ -869,11 +869,11 @@
 			<player instanceId="45" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="271" />
-			<set order="0x08" stat="mAtk" val="171" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="271" />
+			<set stat="mAtk" val="171" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13054" type="Weapon" name="Complete Spear of Silenos">
@@ -900,11 +900,11 @@
 			<player instanceId="45" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="291" />
-			<set order="0x08" stat="mAtk" val="181" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="291" />
+			<set stat="mAtk" val="181" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13055" type="EtcItem" name="Pailaka Soulshot - Grade A">
@@ -1011,11 +1011,11 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3014-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="267" />
-			<set order="0x08" stat="mAtk" val="202" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="267" />
+			<set stat="mAtk" val="202" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="13062" type="Weapon" name="Exclusive to Monsters (Employee's Friend)">
@@ -1038,10 +1038,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3013-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="442" />
-			<set order="0x08" stat="mAtk" val="163" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="442" />
+			<set stat="mAtk" val="163" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13063" type="EtcItem" name="Unfair Joystick">
@@ -1182,8 +1182,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
 		</for>
 	</item>
 	<item id="13078" type="Armor" name="Arcana Sigil">
@@ -1203,9 +1203,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<add order="0x10" stat="pDef" val="13" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="13" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13079" type="EtcItem" name="My Teleport Spellbook 1-Sheet Pack">

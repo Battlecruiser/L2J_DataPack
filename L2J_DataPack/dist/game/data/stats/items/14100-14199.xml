@@ -93,8 +93,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="236" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="236" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14106" type="Armor" name="Sealed Vesper Leather Breastplate">
@@ -111,8 +111,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="177" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="177" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14107" type="Armor" name="Sealed Vesper Tunic">
@@ -132,9 +132,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="118" />
-			<add order="0x40" stat="maxMp" val="637" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="118" />
+			<add stat="maxMp" val="637" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14108" type="Armor" name="Sealed Vesper Gaiters">
@@ -154,8 +154,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="148" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="148" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14109" type="Armor" name="Sealed Vesper Gauntlet">
@@ -174,8 +174,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="68" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14110" type="Armor" name="Sealed Vesper Boots">
@@ -194,8 +194,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="68" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14111" type="Armor" name="Sealed Vesper Shield">
@@ -213,10 +213,10 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<sub order="0x10" stat="rEvas" val="8" />
-			<set order="0x08" stat="rShld" val="20" />
-			<set order="0x08" stat="sDef" val="352" />
-			<enchant val="0" order="0x0C" stat="sDef" />
+			<sub stat="rEvas" val="8" />
+			<set stat="rShld" val="20" />
+			<set stat="sDef" val="352" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="14112" type="Armor" name="Sealed Vesper Leather Leggings">
@@ -233,8 +233,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="111" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="111" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14113" type="Armor" name="Sealed Vesper Leather Gloves">
@@ -250,8 +250,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="68" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14114" type="Armor" name="Sealed Vesper Leather Boots">
@@ -267,8 +267,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="68" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14115" type="Armor" name="Sealed Vesper Stockings">
@@ -288,9 +288,9 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="74" />
-			<add order="0x40" stat="maxMp" val="415" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="74" />
+			<add stat="maxMp" val="415" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14116" type="Armor" name="Sealed Vesper Gloves">
@@ -309,8 +309,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="68" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14117" type="Armor" name="Sealed Vesper Shoes">
@@ -329,8 +329,8 @@
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
 		<for>
-			<add order="0x10" stat="pDef" val="68" />
-			<enchant order="0x0C" stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="68" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14118" type="Weapon" name="Vesper Cutter - Haste">
@@ -354,12 +354,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3564-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="396" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14119" type="Weapon" name="Vesper Cutter - Health">
@@ -383,12 +383,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="396" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14120" type="Weapon" name="Vesper Cutter - Focus">
@@ -412,12 +412,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3566-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="396" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14121" type="Weapon" name="Vesper Slasher - Haste">
@@ -441,12 +441,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3564-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="482" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14122" type="Weapon" name="Vesper Slasher - Health">
@@ -470,12 +470,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="482" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14123" type="Weapon" name="Vesper Slasher - Focus">
@@ -499,12 +499,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3566-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="482" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14124" type="Weapon" name="Vesper Buster - Mana Up">
@@ -528,12 +528,12 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3014-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="317" />
-			<set order="0x08" stat="mAtk" val="234" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14125" type="Weapon" name="Vesper Buster - Acumen">
@@ -557,12 +557,12 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="317" />
-			<set order="0x08" stat="mAtk" val="234" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14126" type="Weapon" name="Vesper Buster - Magic Hold">
@@ -588,12 +588,12 @@
 		<set name="onmagic_skill" val="3577-2" />
 		<set name="item_skill" val="3552-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="317" />
-			<set order="0x08" stat="mAtk" val="234" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
+			<set stat="rCrit" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14127" type="Weapon" name="Vesper Shaper - Critical Damage">
@@ -616,13 +616,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3572-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="346" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="346" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14128" type="Weapon" name="Vesper Shaper - HP Drain">
@@ -645,13 +645,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3568-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="346" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="346" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14129" type="Weapon" name="Vesper Shaper - Haste">
@@ -674,13 +674,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3564-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="346" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="346" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14130" type="Weapon" name="Vesper Fighter - Focus">
@@ -703,13 +703,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3565-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="482" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14131" type="Weapon" name="Vesper Fighter - Health">
@@ -732,13 +732,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="482" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14132" type="Weapon" name="Vesper Fighter - Critical Stun">
@@ -763,13 +763,13 @@
 		<set name="oncrit_skill" val="3571-2" />
 		<set name="item_skill" val="3552-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="482" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14133" type="Weapon" name="Vesper Stormer - Health">
@@ -792,13 +792,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-4" />
 		<for>
-			<set order="0x08" stat="pAtk" val="396" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14134" type="Weapon" name="Vesper Stormer - Guidance">
@@ -821,13 +821,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3602-10" />
 		<for>
-			<set order="0x08" stat="pAtk" val="396" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14135" type="Weapon" name="Vesper Stormer - Haste">
@@ -850,13 +850,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3601-10" />
 		<for>
-			<set order="0x08" stat="pAtk" val="396" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14136" type="Weapon" name="Vesper Avenger - HP Drain">
@@ -879,13 +879,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3568-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="396" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14137" type="Weapon" name="Vesper Avenger - Health">
@@ -908,13 +908,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="396" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14138" type="Weapon" name="Vesper Avenger - HP Regeneration">
@@ -937,13 +937,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3569-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="396" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14139" type="Weapon" name="Vesper Retributer - HP Regeneration">
@@ -966,13 +966,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3569-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="482" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14140" type="Weapon" name="Vesper Retributer - Health">
@@ -995,13 +995,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="482" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14141" type="Weapon" name="Vesper Retributer - HP Drain">
@@ -1024,13 +1024,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3568-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="482" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14142" type="Weapon" name="Vesper Caster - Acumen">
@@ -1054,13 +1054,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="317" />
-			<set order="0x08" stat="mAtk" val="234" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14143" type="Weapon" name="Vesper Caster - MP Regeneration">
@@ -1084,13 +1084,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3576-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="317" />
-			<set order="0x08" stat="mAtk" val="234" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14144" type="Weapon" name="Vesper Caster - Mana Up">
@@ -1114,13 +1114,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3014-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="317" />
-			<set order="0x08" stat="mAtk" val="234" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14145" type="Weapon" name="Vesper Singer - Empower">
@@ -1144,13 +1144,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3575-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="386" />
-			<set order="0x08" stat="mAtk" val="257" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="386" />
+			<set stat="mAtk" val="257" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14146" type="Weapon" name="Vesper Singer - MP Regeneration">
@@ -1174,13 +1174,13 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3576-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="386" />
-			<set order="0x08" stat="mAtk" val="257" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="386" />
+			<set stat="mAtk" val="257" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14147" type="Weapon" name="Vesper Singer - Magic Hold">
@@ -1206,13 +1206,13 @@
 		<set name="onmagic_skill" val="3577-2" />
 		<set name="item_skill" val="3552-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="386" />
-			<set order="0x08" stat="mAtk" val="257" />
-			<set order="0x08" stat="rCrit" val="4" />
-			<add order="0x10" stat="accCombat" val="4.75" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="386" />
+			<set stat="mAtk" val="257" />
+			<set stat="rCrit" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14148" type="Weapon" name="Vesper Thrower - Cheap Shot">
@@ -1238,13 +1238,13 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3552-1;8312-2" />
 		<for>
-			<set order="0x08" stat="pAtk" val="724" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14149" type="Weapon" name="Vesper Thrower - Focus">
@@ -1270,13 +1270,13 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3567-3" />
 		<for>
-			<set order="0x08" stat="pAtk" val="724" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14150" type="Weapon" name="Vesper Thrower - Critical Slow">
@@ -1304,13 +1304,13 @@
 		<set name="oncrit_skill" val="3574-3" />
 		<set name="item_skill" val="3552-1" />
 		<for>
-			<set order="0x08" stat="pAtk" val="724" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="12" />
-			<add order="0x10" stat="accCombat" val="-3.75" />
-			<set order="0x08" stat="pAtkSpd" val="293" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="293" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14151" type="Weapon" name="Vesper Pincer - Haste">
@@ -1338,13 +1338,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="359" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14152" type="Weapon" name="Vesper Pincer - Health">
@@ -1372,13 +1372,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="359" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14153" type="Weapon" name="Vesper Pincer - Focus">
@@ -1406,13 +1406,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="359" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="406" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="406" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14154" type="Weapon" name="Vesper Shooter - Cheap Shot">
@@ -1440,13 +1440,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="444" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14155" type="Weapon" name="Vesper Shooter - Focus">
@@ -1474,13 +1474,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="444" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14156" type="Weapon" name="Vesper Shooter - Critical Slow">
@@ -1510,13 +1510,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="444" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="10" />
-			<add order="0x10" stat="accCombat" val="-1.5" />
-			<set order="0x08" stat="pAtkSpd" val="303" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="10" />
+			<add stat="accCombat" val="-1.5" />
+			<set stat="pAtkSpd" val="303" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14157" type="Weapon" name="Vesper Nagan - Haste">
@@ -1543,13 +1543,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="429" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="429" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14158" type="Weapon" name="Vesper Nagan - Health">
@@ -1576,13 +1576,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="429" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="429" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14159" type="Weapon" name="Vesper Nagan - Focus">
@@ -1609,13 +1609,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="429" />
-			<set order="0x08" stat="mAtk" val="176" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<add order="0x10" stat="accCombat" val="2" />
-			<set order="0x08" stat="pAtkSpd" val="350" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
+			<set stat="pAtk" val="429" />
+			<set stat="mAtk" val="176" />
+			<set stat="rCrit" val="8" />
+			<add stat="accCombat" val="2" />
+			<set stat="pAtkSpd" val="350" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="14160" type="Armor" name="Sealed Vesper Earring">
@@ -1630,8 +1630,8 @@
 		<set name="price" val="7713000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="mDef" val="83" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="83" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14161" type="Armor" name="Sealed Vesper Necklace">
@@ -1646,8 +1646,8 @@
 		<set name="price" val="10284000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="mDef" val="110" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="110" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14162" type="Armor" name="Sealed Vesper Ring">
@@ -1662,8 +1662,8 @@
 		<set name="price" val="5142000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="mDef" val="55" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="55" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14163" type="Armor" name="Vesper Earring">
@@ -1678,9 +1678,9 @@
 		<set name="price" val="11394000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="mDef" val="94" />
-			<add order="0x40" stat="maxMp" val="37" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="94" />
+			<add stat="maxMp" val="37" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14164" type="Armor" name="Vesper Necklace">
@@ -1695,9 +1695,9 @@
 		<set name="price" val="15192000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="mDef" val="125" />
-			<add order="0x40" stat="maxMp" val="50" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="125" />
+			<add stat="maxMp" val="50" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14165" type="Armor" name="Vesper Ring">
@@ -1712,9 +1712,9 @@
 		<set name="price" val="7596000" />
 		<set name="enchant_enabled" val="1" />
 		<for>
-			<add order="0x10" stat="mDef" val="62" />
-			<add order="0x40" stat="maxMp" val="25" />
-			<enchant order="0x0C" stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="62" />
+			<add stat="maxMp" val="25" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14166" type="EtcItem" name="Life Stone - Level 84">

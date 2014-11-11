@@ -19,7 +19,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mDef" val="0.34" />
+				<mul stat="mDef" val="0.34" />
 			</effect>
 		</for>
 	</skill>
@@ -42,7 +42,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="pAtk" val="0.34" />
+				<mul stat="pAtk" val="0.34" />
 			</effect>
 		</for>
 	</skill>
@@ -243,7 +243,7 @@
 			<effect name="MagicalAttack" />
 			<effect name="DamOverTime" ticks="5">
 				<param power="55" />
-				<mul order="0x30" stat="runSpd" val="0.77" />
+				<mul stat="runSpd" val="0.77" />
 			</effect>
 		</for>
 	</skill>

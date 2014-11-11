@@ -11,14 +11,7 @@
 									<xs:sequence maxOccurs="unbounded" minOccurs="1">
 										<xs:element name="add" maxOccurs="unbounded" minOccurs="0">
 											<xs:complexType>
-												<xs:attribute name="order" use="required">
-													<xs:simpleType>
-														<xs:restriction base="xs:token">
-															<xs:enumeration value="0x10" />
-															<xs:enumeration value="0x40"></xs:enumeration>
-														</xs:restriction>
-													</xs:simpleType>
-												</xs:attribute>
+												<xs:attribute name="order" type="xs:byte" use="optional" />
 												<xs:attribute name="stat" use="required">
 													<xs:simpleType>
 														<xs:restriction base="xs:token">
@@ -59,13 +52,7 @@
 										</xs:element>
 										<xs:element name="mul" maxOccurs="unbounded" minOccurs="0">
 											<xs:complexType>
-												<xs:attribute name="order" use="required">
-													<xs:simpleType>
-														<xs:restriction base="xs:token">
-															<xs:enumeration value="0x30" />
-														</xs:restriction>
-													</xs:simpleType>
-												</xs:attribute>
+												<xs:attribute name="order" type="xs:byte" use="optional" />
 												<xs:attribute name="stat" use="required">
 													<xs:simpleType>
 														<xs:restriction base="xs:token">
