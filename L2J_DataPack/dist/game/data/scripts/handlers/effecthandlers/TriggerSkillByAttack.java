@@ -74,7 +74,7 @@ public final class TriggerSkillByAttack extends AbstractEffect
 		
 		if (params.getString("allowWeapons").equalsIgnoreCase("ALL"))
 		{
-			_allowWeapons = 2097151;
+			_allowWeapons = 0;
 		}
 		else
 		{
@@ -119,9 +119,12 @@ public final class TriggerSkillByAttack extends AbstractEffect
 			return;
 		}
 		
-		if ((event.getAttacker().getActiveWeaponItem().getItemType().mask() & _allowWeapons) == 0)
+		if (_allowWeapons > 0)
 		{
-			return;
+			if ((event.getAttacker().getActiveWeaponItem() == null) || ((event.getAttacker().getActiveWeaponItem().getItemType().mask() & _allowWeapons) == 0))
+			{
+				return;
+			}
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
