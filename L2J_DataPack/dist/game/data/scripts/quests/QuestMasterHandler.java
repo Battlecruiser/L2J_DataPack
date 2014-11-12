@@ -300,6 +300,7 @@ import quests.Q00371_ShrieksOfGhosts.Q00371_ShrieksOfGhosts;
 import quests.Q00376_ExplorationOfTheGiantsCavePart1.Q00376_ExplorationOfTheGiantsCavePart1;
 import quests.Q00377_ExplorationOfTheGiantsCavePart2.Q00377_ExplorationOfTheGiantsCavePart2;
 import quests.Q00378_GrandFeast.Q00378_GrandFeast;
+import quests.Q00379_FantasyWine.Q00379_FantasyWine;
 import quests.Q00380_BringOutTheFlavorOfIngredients.Q00380_BringOutTheFlavorOfIngredients;
 import quests.Q00381_LetsBecomeARoyalMember.Q00381_LetsBecomeARoyalMember;
 import quests.Q00382_KailsMagicCoin.Q00382_KailsMagicCoin;
@@ -737,6 +738,7 @@ public class QuestMasterHandler
 		Q00376_ExplorationOfTheGiantsCavePart1.class,
 		Q00377_ExplorationOfTheGiantsCavePart2.class,
 		Q00378_GrandFeast.class,
+		Q00379_FantasyWine.class,
 		Q00380_BringOutTheFlavorOfIngredients.class,
 		Q00381_LetsBecomeARoyalMember.class,
 		Q00382_KailsMagicCoin.class,

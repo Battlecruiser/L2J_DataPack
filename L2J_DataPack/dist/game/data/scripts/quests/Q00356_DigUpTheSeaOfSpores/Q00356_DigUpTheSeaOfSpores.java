@@ -148,7 +148,7 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 		final int dropItem = ((npc.getId() == ROTTING_TREE) ? HERBIVOROUS_SPORE : CARNIVORE_SPORE);
 		final int otherItem = ((dropItem == HERBIVOROUS_SPORE) ? CARNIVORE_SPORE : HERBIVOROUS_SPORE);
 		
-		if (giveItemRandomly(killer, npc, dropItem, 1, 50, MONSTER_DROP_CHANCES.get(npc.getId()), true))
+		if (giveItemRandomly(qs.getPlayer(), npc, dropItem, 1, 50, MONSTER_DROP_CHANCES.get(npc.getId()), true))
 		{
 			if (getQuestItemsCount(killer, otherItem) >= 50)
 			{
