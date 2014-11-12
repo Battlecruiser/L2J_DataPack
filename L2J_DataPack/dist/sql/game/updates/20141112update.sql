@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00371_ShrieksOfGhosts' WHERE name='371_ShriekOfGhosts';
