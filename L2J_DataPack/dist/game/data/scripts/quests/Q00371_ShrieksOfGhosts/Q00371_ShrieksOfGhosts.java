@@ -73,7 +73,7 @@ public final class Q00371_ShrieksOfGhosts extends Quest
 	{
 		MOBS.put(20818, new DropInfo(350, 400)); // hallates_warrior
 		MOBS.put(20820, new DropInfo(583, 673)); // hallates_knight
-		MOBS.put(20820, new DropInfo(458, 538)); // hallates_commander
+		MOBS.put(20824, new DropInfo(458, 538)); // hallates_commander
 	}
 	
 	public Q00371_ShrieksOfGhosts()
