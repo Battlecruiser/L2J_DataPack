@@ -147,6 +147,12 @@ public class AdminAdmin implements IAdminCommandHandler
 				activeChar.sendMessage("This player has already claimed the hero status.");
 				return false;
 			}
+			
+			if (!Hero.getInstance().isUnclaimedHero(target.getObjectId()))
+			{
+				activeChar.sendMessage("This player cannot claim the hero status.");
+				return false;
+			}
 			Hero.getInstance().claimHero(target);
 		}
 		else if (command.startsWith("admin_diet"))

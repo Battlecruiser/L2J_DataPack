@@ -343,7 +343,7 @@ public class OlympiadManagerLink implements IBypassHandler
 						activeChar.sendPacket(new ExHeroList());
 						break;
 					case 5: // Hero Certification
-						if (!Hero.getInstance().isHero(activeChar.getObjectId()))
+						if (Hero.getInstance().isUnclaimedHero(activeChar.getObjectId()))
 						{
 							Hero.getInstance().claimHero(activeChar);
 							reply.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "hero_receive.htm");
