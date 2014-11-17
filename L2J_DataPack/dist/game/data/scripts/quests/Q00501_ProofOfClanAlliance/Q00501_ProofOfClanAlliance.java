@@ -111,12 +111,12 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		String htmltext = getNoQuestMsg(player);
 		if (qs == null)
 		{
-			return htmltext;
+			return null;
 		}
 		
+		String htmltext = null;
 		switch (event)
 		{
 			case "30756-06.html":
@@ -155,7 +155,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 				{
 					npc.setTarget(player);
 					npc.doCast(DIE_YOU_FOOL.getSkill());
-					startQuestTimer("2501010", 4000, npc, player);
+					startQuestTimer("SYMBOL_OF_LOYALTY", 4000, npc, player);
 					htmltext = "30757-03.html";
 				}
 				break;
@@ -211,23 +211,25 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 			}
 			case "30759-07.html":
 			{
-				takeItems(player, SYMBOL_OF_LOYALTY, -1);
-				giveItems(player, ANTIDOTE_RECIPE_LIST, 1);
-				npc.setTarget(player);
-				npc.doCast(POISON_OF_DEATH.getSkill());
-				qs.setCond(3, true);
-				qs.setMemoState(3);
-				htmltext = event;
+				if (qs.isMemoState(2) && (getQuestItemsCount(player, SYMBOL_OF_LOYALTY) >= 3))
+				{
+					takeItems(player, SYMBOL_OF_LOYALTY, -1);
+					giveItems(player, ANTIDOTE_RECIPE_LIST, 1);
+					npc.setTarget(player);
+					npc.doCast(POISON_OF_DEATH.getSkill());
+					qs.setCond(3, true);
+					qs.setMemoState(3);
+					htmltext = event;
+				}
 				break;
 			}
-			case "2501010":
+			case "SYMBOL_OF_LOYALTY":
 			{
 				if (player.isDead() && (qs.getInt("flag") != 2501))
 				{
 					giveItems(player, SYMBOL_OF_LOYALTY, 1);
 					qs.set("flag", 2501);
 				}
-				htmltext = null;
 				break;
 			}
 			case "DESPAWN_BOX":
@@ -337,13 +339,9 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = player.getQuestState(getName());
+		final QuestState qs = getQuestState(player, true);
 		final QuestState lqs = getLeaderQuestState(player, getName());
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (npc.getId())
 		{
@@ -392,7 +390,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 							qs.exitQuest(false);
 							htmltext = "30756-09.html";
 						}
-						else if ((qs.getMemoState() >= 1) && !hasQuestItems(player, VOUCHER_OF_FAITH))
+						else
 						{
 							htmltext = "30756-10.html";
 						}
@@ -560,7 +558,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 			return null;
 		}
 		
-		QuestState qs = player.getQuestState(getName());
+		QuestState qs = getQuestState(player, false);
 		if (!player.isInParty())
 		{
 			if (!Util.checkIfInRange(1500, player, target, true))
@@ -586,7 +584,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 				continue;
 			}
 			
-			qs = member.getQuestState(getName());
+			qs = getQuestState(member, false);
 			if (qs != null)
 			{
 				candidates.add(qs);
