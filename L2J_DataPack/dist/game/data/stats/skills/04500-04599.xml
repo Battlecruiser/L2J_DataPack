@@ -224,7 +224,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1">
+				<mul stat="rCrit" val="2">
 					<player behind="true" />
 				</mul>
 				<!-- TODO: Missing bonus for Rapier -->

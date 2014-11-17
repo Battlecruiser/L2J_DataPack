@@ -180,7 +180,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.2" />
-				<mul stat="rCrit" val="0.2" />
+				<mul stat="rCrit" val="1.2" />
 				<mul stat="mCritRate" val="0.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
@@ -281,7 +281,7 @@
 				<mul stat="pDef" val="1.1" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pAtkSpd" val="1.1" />
-				<mul stat="rCrit" val="0.1" />
+				<mul stat="rCrit" val="1.1" />
 				<mul stat="cAtk" val="1.1" />
 				<mul stat="mDef" val="1.1" />
 				<mul stat="mAtk" val="1.1" />
@@ -352,7 +352,7 @@
 		<set name="targetType" val="SERVITOR" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.2" />
+				<mul stat="rCrit" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="cAtk" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -408,7 +408,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.2" />
+				<mul stat="rCrit" val="1.2" />
 				<mul stat="cAtk" val="1.2" />
 			</effect>
 		</for>
@@ -1393,7 +1393,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.3" />
+				<mul stat="rCrit" val="1.3" />
 			</effect>
 		</for>
 	</skill>

@@ -192,7 +192,7 @@
 	<skill id="3018" levels="6" name="Special Ability: Back Blow">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
-		<table name="#rCrit"> 0.71 0.67 0.63 0.6 0.56 0.53 </table>
+		<table name="#rCrit"> 1.71 1.67 1.63 1.6 1.56 1.53 </table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -208,7 +208,7 @@
 	<skill id="3019" levels="6" name="Special Ability: Back Blow">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
-		<table name="#rCrit"> 0.5 0.47 0.45 0.42 0.4 0.37 </table>
+		<table name="#rCrit"> 1.5 1.47 1.45 1.42 1.4 1.37 </table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1036,7 +1036,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.37">
+				<mul stat="rCrit" val="1.37">
 					<player behind="true" />
 				</mul>
 				<mul stat="pvpPhysDmg" val="1.05" />

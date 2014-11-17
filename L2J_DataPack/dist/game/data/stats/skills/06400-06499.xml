@@ -667,7 +667,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.35" />
+				<mul stat="rCrit" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -719,7 +719,7 @@
 		<table name="#abnormalLvls"> 7 8 9 </table>
 		<table name="#cAtk"> 1.2 1.3 1.4 </table>
 		<table name="#dot"> 0.005 0.01 0.02 </table>
-		<table name="#rCrit"> 0.2 0.5 0.75 </table>
+		<table name="#rCrit"> 1.2 1.5 1.75 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />
@@ -762,7 +762,7 @@
 		<for>
 			<effect name="DamOverTimePercent" ticks="5">
 				<param power="0.05" />
-				<mul stat="rCrit" val="0.9">
+				<mul stat="rCrit" val="1.9">
 					<using kind="BOW,CROSSBOW" />
 				</mul>
 				<mul stat="cAtk" val="1.5">

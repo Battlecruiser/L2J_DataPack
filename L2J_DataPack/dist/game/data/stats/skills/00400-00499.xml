@@ -6,7 +6,7 @@
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 52 56 58 60 62 64 66 68 70 72 </table>
 		<table name="#power"> 924 1054 1146 1240 1337 1437 1538 1639 1741 1841 </table>
-		<table name="#rCrit"> -0.3 -0.3 -0.3 -0.3 -0.3 -0.4 -0.4 -0.4 -0.4 -0.5 </table>
+		<table name="#rCrit"> 0.7 0.7 0.7 0.7 0.7 0.6 0.6 0.6 0.6 0.5 </table>
 		<table name="#traits"> -12 -12 -12 -12 -12 -16 -16 -16 -16 -20 </table>
 		<table name="#ench1Power"> 1881 1921 1961 2001 2041 2081 2121 2161 2201 2241 2281 2321 2361 2401 2441 2481 2521 2561 2601 2641 2681 2721 2761 2801 2841 2881 2921 2961 3001 3041 </table>
 		<table name="#ench2ActivateRates"> 81 82 82 83 84 84 85 86 86 87 87 88 89 89 90 91 91 92 93 93 94 94 95 96 96 97 98 98 99 100 </table>
@@ -68,7 +68,7 @@
 		<enchant2for>
 			<effect name="PhysicalAttack" />
 			<effect name="Debuff">
-				<mul stat="rCrit" val="-0.5" />
+				<mul stat="rCrit" val="0.5" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SWORD="-20" />
@@ -87,7 +87,7 @@
 			<effect name="PhysicalAttack" />
 			<effect name="Debuff">
 				<mul stat="cAtk" val="#ench3cAtk" />
-				<mul stat="rCrit" val="-0.5" />
+				<mul stat="rCrit" val="0.5" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SWORD="-20" />
@@ -114,7 +114,7 @@
 		<table name="#ench1Power"> 2149 2195 2241 2286 2332 2378 2423 2469 2515 2561 2606 2652 2698 2743 2789 2835 2880 2926 2972 3018 3063 3109 3155 3200 3246 3292 3337 3383 3429 3475 </table>
 		<table name="#ench2AbnormalTimes"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
 		<table name="#ench2MpConsume"> 70 69 68 67 66 64 63 62 61 60 58 57 56 55 54 52 51 50 49 48 46 45 44 43 42 40 39 38 37 36 </table>
-		<table name="#ench3rCrit"> -0.05 -0.05 -0.05 -0.06 -0.06 -0.07 -0.07 -0.07 -0.08 -0.08 -0.08 -0.09 -0.09 -0.09 -0.1 -0.1 -0.1 -0.11 -0.11 -0.11 -0.12 -0.12 -0.12 -0.13 -0.13 -0.13 -0.14 -0.14 -0.14 -0.15 </table>
+		<table name="#ench3rCrit"> 0.95 0.95 0.95 0.94 0.94 0.93 0.93 0.93 0.92 0.92 0.92 0.91 0.91 0.91 0.9 0.9 0.9 0.89 0.89 0.89 0.88 0.88 0.88 0.87 0.87 0.87 0.86 0.86 0.86 0.85 </table>
 		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -2623,7 +2623,7 @@
 		<table name="#effectPoints"> 235 523 </table>
 		<table name="#magicLvl"> 24 55 </table>
 		<table name="#mpConsume"> 11 25 </table>
-		<table name="#rCrit"> 0.2 0.3 </table>
+		<table name="#rCrit"> 1.2 1.3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="90" />
 		<set name="abnormalType" val="PA_UP_SPECIAL" />

@@ -389,7 +389,7 @@
 				<mul stat="pAtkSpd" val="0.95" />
 				<mul stat="mAtk" val="0.95" />
 				<sub stat="accCombat" val="3" />
-				<mul stat="rCrit" val="-0.1" />
+				<mul stat="rCrit" val="0.9" />
 				<mul stat="cAtk" val="0.9" />
 			</effect>
 		</for>
@@ -1241,7 +1241,7 @@
 				<mul stat="pAtk" val="1.05">
 					<using kind="SWORD,DAGGER,DUALDAGGER,POLE,RAPIER,ANCIENTSWORD,DUAL,DUALFIST,BLUNT,BOW,CROSSBOW" />
 				</mul>
-				<mul stat="rCrit" val="0.2">
+				<mul stat="rCrit" val="1.2">
 					<using kind="SWORD,DAGGER,DUALDAGGER,POLE,RAPIER,ANCIENTSWORD,DUAL,DUALFIST" />
 				</mul>
 				<add stat="pAtkRange" val="100">

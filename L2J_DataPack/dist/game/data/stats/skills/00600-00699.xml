@@ -433,8 +433,8 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#cAtk"> 111 177 253 317 </table>
 		<table name="#magicLvl"> 43 52 60 66 </table>
-		<table name="#rCrit"> 0.1 0.15 0.2 0.25 </table>
-		<table name="#ench1rCrit"> 0.251 0.253 0.255 0.256 0.258 0.26 0.261 0.263 0.265 0.266 0.268 0.27 0.271 0.273 0.275 0.276 0.278 0.28 0.281 0.283 0.285 0.286 0.288 0.29 0.291 0.293 0.295 0.296 0.298 0.3 </table>
+		<table name="#rCrit"> 1.1 1.15 1.2 1.25 </table>
+		<table name="#ench1rCrit"> 1.251 1.253 1.255 1.256 1.258 1.26 1.261 1.263 1.265 1.266 1.268 1.27 1.271 1.273 1.275 1.276 1.278 1.28 1.281 1.283 1.285 1.286 1.288 1.29 1.291 1.293 1.295 1.296 1.298 1.3 </table>
 		<table name="#ench2cAtk"> 322 327 331 336 341 346 350 355 360 365 369 374 379 384 388 393 398 403 407 412 417 422 426 431 436 441 445 450 455 460 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="icon" val="icon.skill0312" />
@@ -457,7 +457,7 @@
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.25" />
+				<mul stat="rCrit" val="1.25" />
 				<add stat="cAtkAdd" val="#ench2cAtk" />
 			</effect>
 		</enchant2for>
