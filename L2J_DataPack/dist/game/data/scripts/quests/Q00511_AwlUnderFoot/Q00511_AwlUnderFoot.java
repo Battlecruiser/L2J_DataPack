@@ -417,7 +417,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		String ret = checkFortCondition(player, npc, false);
 		if (ret != null)
 		{

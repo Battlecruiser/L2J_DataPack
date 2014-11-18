@@ -156,7 +156,7 @@ public final class Q00311_ExpulsionOfEvilSpirits extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		if (qs == null)
 		{

@@ -20,8 +20,8 @@ package quests.Q00106_ForgottenTruth;
 
 import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
 
-import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -115,7 +115,7 @@ public final class Q00106_ForgottenTruth extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		final QuestState st = talker.getQuestState(getName());
+		final QuestState st = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
 		if (st == null)
 		{

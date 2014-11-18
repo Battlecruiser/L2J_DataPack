@@ -182,7 +182,7 @@ public class Q00287_FiguringItOut extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		final QuestState prev = player.getQuestState(Q00250_WatchWhatYouEat.class.getSimpleName());
 		
 		if (st == null)

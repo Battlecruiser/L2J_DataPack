@@ -108,7 +108,7 @@ public class Q10505_JewelOfValakas extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);

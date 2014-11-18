@@ -18,23 +18,23 @@
  */
 package handlers.bypasshandlers;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 
-import javolution.util.FastList;
-
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.cache.HtmCache;
+import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -89,37 +89,49 @@ public class QuestLink implements IBypassHandler
 	{
 		final StringBuilder sb = StringUtil.startAppend(150, "<html><body>");
 		String state = "";
+		String color = "";
 		int questId = -1;
-		for (Quest q : quests)
+		for (Quest quest : quests)
 		{
-			if (q == null)
+			if (quest == null)
 			{
 				continue;
 			}
 			
-			StringUtil.append(sb, "<a action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", q.getName(), "\">[");
-			final QuestState qs = player.getQuestState(q.getScriptName());
+			final QuestState qs = player.getQuestState(quest.getScriptName());
 			if ((qs == null) || qs.isCreated())
 			{
-				state = q.isCustomQuest() ? "" : "01";
+				state = quest.isCustomQuest() ? "" : "01";
+				if (quest.canStartQuest(player))
+				{
+					color = "bbaa88";
+				}
+				else
+				{
+					color = "a62f31";
+				}
 			}
 			else if (qs.isStarted())
 			{
-				state = q.isCustomQuest() ? " (In Progress)" : "02";
+				state = quest.isCustomQuest() ? " (In Progress)" : "02";
+				color = "ffdd66";
 			}
 			else if (qs.isCompleted())
 			{
-				state = q.isCustomQuest() ? " (Done)" : "03";
+				state = quest.isCustomQuest() ? " (Done)" : "03";
+				color = "787878";
 			}
+			StringUtil.append(sb, "<a action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">[");
+			StringUtil.append(sb, "<font color=\"" + color + "\">");
 			
-			if (q.isCustomQuest())
+			if (quest.isCustomQuest())
 			{
-				StringUtil.append(sb, q.getDescr(), state);
+				StringUtil.append(sb, quest.getDescr(), state);
 			}
 			else
 			{
-				questId = q.getId();
-				if (q.getId() > 10000)
+				questId = quest.getId();
+				if (quest.getId() > 10000)
 				{
 					questId -= 5000;
 				}
@@ -129,7 +141,7 @@ public class QuestLink implements IBypassHandler
 				}
 				StringUtil.append(sb, "<fstring>", String.valueOf(questId), state, "</fstring>");
 			}
-			sb.append("]</a><br>");
+			sb.append("]</font></a><br>");
 		}
 		sb.append("</body></html>");
 		
@@ -153,10 +165,10 @@ public class QuestLink implements IBypassHandler
 	{
 		String content = null;
 		
-		Quest q = QuestManager.getInstance().getQuest(questId);
+		final Quest q = QuestManager.getInstance().getQuest(questId);
 		
 		// Get the state of the selected quest
-		QuestState qs = player.getQuestState(questId);
+		final QuestState qs = player.getQuestState(questId);
 		
 		if (q != null)
 		{
@@ -179,50 +191,13 @@ public class QuestLink implements IBypassHandler
 						return;
 					}
 				}
-				// check for start point
-				for (AbstractEventListener listener : npc.getListeners(EventType.ON_NPC_QUEST_START))
-				{
-					if (listener.getOwner() instanceof Quest)
-					{
-						final Quest quest = (Quest) listener.getOwner();
-						if (quest == q)
-						{
-							qs = q.newQuestState(player);
-							break;
-						}
-					}
-				}
 			}
+			
+			q.notifyTalk(npc, player);
 		}
 		else
 		{
 			content = Quest.getNoQuestMsg(player); // no quests found
-		}
-		
-		if ((q != null) && (qs != null))
-		{
-			// If the quest is already started, no need to show a window
-			if (!q.notifyTalk(npc, player))
-			{
-				return;
-			}
-			
-			questId = q.getName();
-			String stateId = State.getStateName(qs.getState());
-			String path = "data/scripts/quests/" + questId + "/" + stateId + ".htm";
-			content = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), path); // TODO path for quests html
-			
-			if (Config.DEBUG)
-			{
-				if (content != null)
-				{
-					_log.fine("Showing quest window for quest " + questId + " html path: " + path);
-				}
-				else
-				{
-					_log.fine("File not exists for quest " + questId + " html path: " + path);
-				}
-			}
 		}
 		
 		// Send a Server->Client packet NpcHtmlMessage to the L2PcInstance in order to display the message of the L2NpcInstance
@@ -236,34 +211,69 @@ public class QuestLink implements IBypassHandler
 	}
 	
 	/**
+	 * @param player
+	 * @param npcId The Identifier of the NPC
+	 * @return a table containing all QuestState from the table _quests in which the L2PcInstance must talk to the NPC.
+	 */
+	private static List<QuestState> getQuestsForTalk(final L2PcInstance player, int npcId)
+	{
+		// Create a QuestState table that will contain all QuestState to modify
+		final List<QuestState> states = new ArrayList<>();
+		
+		final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
+		if (template == null)
+		{
+			_log.log(Level.WARNING, QuestLink.class.getSimpleName() + ": " + player.getName() + " requested quests for talk on non existing npc " + npcId);
+			return states;
+		}
+		
+		// Go through the QuestState of the L2PcInstance quests
+		for (AbstractEventListener listener : template.getListeners(EventType.ON_NPC_TALK))
+		{
+			if (listener.getOwner() instanceof Quest)
+			{
+				final Quest quest = (Quest) listener.getOwner();
+				
+				// Copy the current L2PcInstance QuestState in the QuestState table
+				final QuestState st = player.getQuestState(quest.getName());
+				if (st != null)
+				{
+					states.add(st);
+				}
+			}
+		}
+		
+		// Return a table containing all QuestState to modify
+		return states;
+	}
+	
+	/**
 	 * Collect awaiting quests/start points and display a QuestChooseWindow (if several available) or QuestWindow.
 	 * @param player the L2PcInstance that talk with the {@code npc}.
 	 * @param npc the L2NpcInstance that chats with the {@code player}.
 	 */
 	public static void showQuestWindow(L2PcInstance player, L2Npc npc)
 	{
+		boolean conditionMeet = false;
 		// collect awaiting quests and start points
-		List<Quest> options = new FastList<>();
-		
-		QuestState[] awaits = player.getQuestsForTalk(npc.getTemplate().getId());
+		final Set<Quest> options = new HashSet<>();
 		
 		// Quests are limited between 1 and 999 because those are the quests that are supported by the client.
 		// By limiting them there, we are allowed to create custom quests at higher IDs without interfering
-		if (awaits != null)
+		for (QuestState state : getQuestsForTalk(player, npc.getId()))
 		{
-			for (QuestState state : awaits)
+			final Quest quest = state.getQuest();
+			if (quest == null)
 			{
-				if (state.getQuest() == null)
+				_log.log(Level.WARNING, player + " Requested incorrect quest state for non existing quest: " + state.getQuestName());
+				continue;
+			}
+			if ((quest.getId() > 0) && (quest.getId() < 20000))
+			{
+				options.add(quest);
+				if (quest.canStartQuest(player))
 				{
-					_log.log(Level.WARNING, player + " Requested incorrect quest state for non existing quest: " + state.getQuestName());
-					continue;
-				}
-				if (!options.contains(state.getQuest()))
-				{
-					if ((state.getQuest().getId() > 0) && (state.getQuest().getId() < 20000))
-					{
-						options.add(state.getQuest());
-					}
+					conditionMeet = true;
 				}
 			}
 		}
@@ -273,21 +283,28 @@ public class QuestLink implements IBypassHandler
 			if (listener.getOwner() instanceof Quest)
 			{
 				final Quest quest = (Quest) listener.getOwner();
-				if (!options.contains(quest) && (quest.getId() > 0) && (quest.getId() < 20000))
+				if ((quest.getId() > 0) && (quest.getId() < 20000))
 				{
 					options.add(quest);
+					if (quest.canStartQuest(player))
+					{
+						conditionMeet = true;
+					}
 				}
 			}
 		}
 		
-		// Display a QuestChooseWindow (if several quests are available) or QuestWindow
-		if (options.size() > 1)
+		if (!conditionMeet)
+		{
+			showQuestWindow(player, npc, "");
+		}
+		else if (options.size() > 1)
 		{
 			showQuestChooseWindow(player, npc, options.toArray(new Quest[options.size()]));
 		}
 		else if (options.size() == 1)
 		{
-			showQuestWindow(player, npc, options.get(0).getName());
+			showQuestWindow(player, npc, options.stream().findFirst().get().getName());
 		}
 		else
 		{

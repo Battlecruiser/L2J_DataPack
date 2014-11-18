@@ -90,7 +90,7 @@ public final class Q00271_ProofOfValor extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		String htmltext = null;
 		if (st != null)
 		{

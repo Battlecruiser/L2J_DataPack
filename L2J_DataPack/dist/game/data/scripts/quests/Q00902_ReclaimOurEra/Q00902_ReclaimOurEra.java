@@ -169,7 +169,7 @@ public final class Q00902_ReclaimOurEra extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		if (st == null)
 		{

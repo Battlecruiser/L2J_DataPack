@@ -98,7 +98,7 @@ public final class Q00267_WrathOfVerdure extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{

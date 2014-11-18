@@ -122,7 +122,7 @@ public class Q00645_GhostsOfBatur extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
