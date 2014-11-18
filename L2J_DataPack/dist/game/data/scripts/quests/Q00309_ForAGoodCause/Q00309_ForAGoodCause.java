@@ -242,7 +242,7 @@ public class Q00309_ForAGoodCause extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
 		String htmltext = getNoQuestMsg(talker);
-		final QuestState st = talker.getQuestState(getName());
+		final QuestState st = getQuestState(talker, true);
 		if (st == null)
 		{
 			return htmltext;

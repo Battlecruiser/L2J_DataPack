@@ -88,7 +88,7 @@ public class Q00998_FallenAngelSelect extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		final QuestState qs = player.getQuestState(Q00141_ShadowFoxPart3.class.getSimpleName());
 		if ((st == null) || !st.isStarted())
 		{

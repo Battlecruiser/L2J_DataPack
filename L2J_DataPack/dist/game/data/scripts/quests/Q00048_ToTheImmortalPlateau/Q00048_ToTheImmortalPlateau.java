@@ -188,7 +188,7 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		QuestState st = talker.getQuestState(getName());
+		QuestState st = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
 		if (st == null)
 		{

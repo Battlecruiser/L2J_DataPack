@@ -86,7 +86,7 @@ public final class Q00636_TruthBeyond extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);

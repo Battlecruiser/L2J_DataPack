@@ -156,7 +156,7 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		final QuestState st = talker.getQuestState(getName());
+		final QuestState st = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
 		if (st == null)
 		{
