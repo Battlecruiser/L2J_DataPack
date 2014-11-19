@@ -103,7 +103,6 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 		addStartNpc(SIR_KRISTOF_RODEMAI, STATUE_OF_OFFERING);
 		addTalkId(SIR_KRISTOF_RODEMAI, STATUE_OF_OFFERING, ATHREA, KALIS);
 		addKillId(OEL_MAHUM_WITCH_DOCTOR, HARIT_LIZARDMAN_SHAMAN, VANOR_SILENOS_SHAMAN, BOX_OF_ATHREA_1, BOX_OF_ATHREA_2, BOX_OF_ATHREA_3, BOX_OF_ATHREA_4, BOX_OF_ATHREA_5);
-		addSpawnId(BOX_OF_ATHREA_1, BOX_OF_ATHREA_2, BOX_OF_ATHREA_3, BOX_OF_ATHREA_4, BOX_OF_ATHREA_5);
 		registerQuestItems(ANTIDOTE_RECIPE_LIST, VOUCHER_OF_FAITH, HERB_OF_HARIT, HERB_OF_VANOR, HERB_OF_OEL_MAHUM, BLOOD_OF_EVA, ATHREAS_COIN, SYMBOL_OF_LOYALTY);
 	}
 	
@@ -172,7 +171,9 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 						npc.setScriptValue(0);
 						for (Location loc : LOCS)
 						{
-							npc.addSummonedNpc(addSpawn(getRandom(BOX_OF_ATHREA_1, BOX_OF_ATHREA_5), loc));
+							final L2Npc box = addSpawn(npc, getRandom(BOX_OF_ATHREA_1, BOX_OF_ATHREA_5), loc, 300000);
+							box.disableCoreAI(true);
+							box.setIsNoRndWalk(true);
 						}
 						htmltext = event;
 					}
@@ -232,16 +233,6 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 				}
 				break;
 			}
-			case "DESPAWN_BOX":
-			{
-				npc.deleteMe();
-				final L2Character summoner = npc.getSummoner();
-				if ((summoner != null) && summoner.isNpc())
-				{
-					((L2Npc) summoner).removeSummonedNpc(npc.getObjectId());
-				}
-				break;
-			}
 		}
 		return htmltext;
 	}
@@ -292,42 +283,38 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 				case BOX_OF_ATHREA_5:
 				{
 					final L2Character summoner = npc.getSummoner();
-					if ((summoner != null) && summoner.isNpc())
+					if ((summoner != null) && summoner.isNpc() && lqs.isMemoState(4))
 					{
-						if (lqs.isMemoState(4))
+						final L2Npc arthea = (L2Npc) summoner;
+						if ((lqs.getInt("flag") == 3) && arthea.isScriptValue(15))
 						{
-							final L2Npc arthea = (L2Npc) summoner;
-							if ((lqs.getInt("flag") == 3) && arthea.isScriptValue(15))
-							{
-								lqs.set("flag", lqs.getInt("flag") + 1);
-								npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
-							}
-							else if ((lqs.getInt("flag") == 2) && arthea.isScriptValue(14))
-							{
-								lqs.set("flag", lqs.getInt("flag") + 1);
-								npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
-							}
-							else if ((lqs.getInt("flag") == 1) && arthea.isScriptValue(13))
-							{
-								lqs.set("flag", lqs.getInt("flag") + 1);
-								npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
-							}
-							else if ((lqs.getInt("flag") == 0) && arthea.isScriptValue(12))
-							{
-								lqs.set("flag", lqs.getInt("flag") + 1);
-								npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
-							}
-							else if (lqs.getInt("flag") < 4)
-							{
-								if (getRandom(4) == 0)
-								{
-									lqs.set("flag", lqs.getInt("flag") + 1);
-									npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
-								}
-							}
-							arthea.setScriptValue(arthea.getScriptValue() + 1);
+							lqs.set("flag", lqs.getInt("flag") + 1);
+							npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
 						}
-						((L2Npc) summoner).removeSummonedNpc(npc.getObjectId());
+						else if ((lqs.getInt("flag") == 2) && arthea.isScriptValue(14))
+						{
+							lqs.set("flag", lqs.getInt("flag") + 1);
+							npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
+						}
+						else if ((lqs.getInt("flag") == 1) && arthea.isScriptValue(13))
+						{
+							lqs.set("flag", lqs.getInt("flag") + 1);
+							npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
+						}
+						else if ((lqs.getInt("flag") == 0) && arthea.isScriptValue(12))
+						{
+							lqs.set("flag", lqs.getInt("flag") + 1);
+							npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
+						}
+						else if (lqs.getInt("flag") < 4)
+						{
+							if (getRandom(4) == 0)
+							{
+								lqs.set("flag", lqs.getInt("flag") + 1);
+								npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.BINGO));
+							}
+						}
+						arthea.setScriptValue(arthea.getScriptValue() + 1);
 					}
 					break;
 				}
@@ -512,13 +499,6 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onSpawn(L2Npc npc)
-	{
-		startQuestTimer("DESPAWN_BOX", 300000, npc, null);
-		return super.onSpawn(npc);
 	}
 	
 	/**
