@@ -100,7 +100,7 @@ class Quest (JQuest) :
  def onTalk (self,npc,player):
      npcId = npc.getId()
      htmltext = Quest.getNoQuestMsg(player)
-     st = self.getQuestState(player, true)
+     st = self.getQuestState(player, True)
      if not st : return htmltext
      id = st.getState()
      cond = st.getInt("cond")
