@@ -213,7 +213,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player) :
-   st = self.getQuestState(player, true)
+   st = self.getQuestState(player, True)
    htmltext = Quest.getNoQuestMsg(player) 
    if not st: return htmltext
    npcId = npc.getId()

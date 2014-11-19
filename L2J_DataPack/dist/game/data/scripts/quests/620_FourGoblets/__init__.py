@@ -39,7 +39,7 @@ class Quest (JQuest) :
 
   def onTalk (Self,npc,player) :
     htmltext = Quest.getNoQuestMsg(player)
-    st = self.getQuestState(player, true)
+    st = self.getQuestState(player, True)
     id = st.getState()
     if id == State.CREATED :
       st.set("cond","0")
