@@ -171,7 +171,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 						npc.setScriptValue(0);
 						for (Location loc : LOCS)
 						{
-							final L2Npc box = addSpawn(npc, getRandom(BOX_OF_ATHREA_1, BOX_OF_ATHREA_5), loc, 300000);
+							final L2Npc box = addSpawn(npc, getRandom(BOX_OF_ATHREA_1, BOX_OF_ATHREA_5), loc, false, 300000);
 							box.disableCoreAI(true);
 							box.setIsNoRndWalk(true);
 						}
