@@ -1223,6 +1223,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="50" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
@@ -1231,7 +1232,6 @@
 				<param BLEED="100" />
 			</effect>
 		</for>
-		<set name="mpConsume" val="50" />
 	</skill>
 	<skill id="4476" levels="5" name="Silent Move">
 		<!-- Confirmed CT2.5 -->

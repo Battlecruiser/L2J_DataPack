@@ -47,13 +47,28 @@
 		</for>
 	</skill>
 	<skill id="5702" levels="2" name="Adiantum Round Fighter">
+		<!-- Confirmed CT2.5 -->
+		<table name="#castRange"> 0 40 </table>
+		<table name="#effectRange"> 0 400 </table>
+		<table name="#targetType"> AURA ONE </table>
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="#castRange" />
 		<set name="effectPoint" val="-341" />
+		<set name="effectRange" val="#effectRange" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="36" />
+		<set name="mpConsume" val="5" />
+		<set name="mpInitialConsume" val="2" />
+		<set name="power" val="69" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="#targetType" />
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="5703" levels="2" name="Adiantum Water Strike Deflect">
 		<set name="abnormalLvl" val="1" />
