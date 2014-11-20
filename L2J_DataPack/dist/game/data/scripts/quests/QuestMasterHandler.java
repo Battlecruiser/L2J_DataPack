@@ -197,6 +197,7 @@ import quests.Q00215_TrialOfThePilgrim.Q00215_TrialOfThePilgrim;
 import quests.Q00217_TestimonyOfTrust.Q00217_TestimonyOfTrust;
 import quests.Q00218_TestimonyOfLife.Q00218_TestimonyOfLife;
 import quests.Q00219_TestimonyOfFate.Q00219_TestimonyOfFate;
+import quests.Q00220_TestimonyOfGlory.Q00220_TestimonyOfGlory;
 import quests.Q00221_TestimonyOfProsperity.Q00221_TestimonyOfProsperity;
 import quests.Q00235_MimirsElixir.Q00235_MimirsElixir;
 import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
@@ -637,6 +638,7 @@ public class QuestMasterHandler
 		Q00217_TestimonyOfTrust.class,
 		Q00218_TestimonyOfLife.class,
 		Q00219_TestimonyOfFate.class,
+		Q00220_TestimonyOfGlory.class,
 		Q00221_TestimonyOfProsperity.class,
 		Q00235_MimirsElixir.class,
 		Q00237_WindsOfChange.class,

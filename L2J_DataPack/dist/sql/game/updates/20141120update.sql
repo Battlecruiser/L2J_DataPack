@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00220_TestimonyOfGlory' WHERE name='220_TestimonyOfGlory'; 
