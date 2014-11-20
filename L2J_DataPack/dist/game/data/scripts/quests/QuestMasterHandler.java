@@ -202,6 +202,7 @@ import quests.Q00221_TestimonyOfProsperity.Q00221_TestimonyOfProsperity;
 import quests.Q00223_TestOfTheChampion.Q00223_TestOfTheChampion;
 import quests.Q00224_TestOfSagittarius.Q00224_TestOfSagittarius;
 import quests.Q00225_TestOfTheSearcher.Q00225_TestOfTheSearcher;
+import quests.Q00226_TestOfTheHealer.Q00226_TestOfTheHealer;
 import quests.Q00235_MimirsElixir.Q00235_MimirsElixir;
 import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
 import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
@@ -646,6 +647,7 @@ public class QuestMasterHandler
 		Q00223_TestOfTheChampion.class,
 		Q00224_TestOfSagittarius.class,
 		Q00225_TestOfTheSearcher.class,
+		Q00226_TestOfTheHealer.class,
 		Q00235_MimirsElixir.class,
 		Q00237_WindsOfChange.class,
 		Q00238_SuccessFailureOfBusiness.class,
