@@ -856,6 +856,7 @@
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
 		<set name="effectPoint" val="-1" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="12" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -863,7 +864,6 @@
 				<mul stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
-		<set name="mpConsume" val="12" />
 	</skill>
 	<skill id="4049" levels="16" name="Cubic Drain">
 		<!-- Cubic Skill -->
