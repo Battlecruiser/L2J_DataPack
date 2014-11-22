@@ -63,12 +63,12 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo.NpcInfo;
 import com.l2jserver.gameserver.network.serverpackets.Earthquake;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillCanceld;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jserver.gameserver.network.serverpackets.NpcInfo;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -1016,7 +1016,7 @@ public final class FinalEmperialTomb extends Quest
 					_world.overheadDummy.setIsInvul(true);
 					_world.overheadDummy.setIsImmobilized(true);
 					_world.overheadDummy.setCollisionHeight(600);
-					broadCastPacket(_world, new NpcInfo(_world.overheadDummy, null));
+					broadCastPacket(_world, new NpcInfo(_world.overheadDummy));
 					
 					_world.portraitDummy1 = addSpawn(29052, -89566, -153168, -9165, 16048, false, 0, false, _world.getInstanceId());
 					_world.portraitDummy1.setIsImmobilized(true);
