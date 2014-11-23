@@ -288,6 +288,7 @@ import quests.Q00344_1000YearsTheEndOfLamentation.Q00344_1000YearsTheEndOfLament
 import quests.Q00345_MethodToRaiseTheDead.Q00345_MethodToRaiseTheDead;
 import quests.Q00347_GoGetTheCalculator.Q00347_GoGetTheCalculator;
 import quests.Q00350_EnhanceYourWeapon.Q00350_EnhanceYourWeapon;
+import quests.Q00351_BlackSwan.Q00351_BlackSwan;
 import quests.Q00352_HelpRoodRaiseANewPet.Q00352_HelpRoodRaiseANewPet;
 import quests.Q00354_ConquestOfAlligatorIsland.Q00354_ConquestOfAlligatorIsland;
 import quests.Q00355_FamilyHonor.Q00355_FamilyHonor;
@@ -736,6 +737,7 @@ public class QuestMasterHandler
 		Q00345_MethodToRaiseTheDead.class,
 		Q00347_GoGetTheCalculator.class,
 		Q00350_EnhanceYourWeapon.class,
+		Q00351_BlackSwan.class,
 		Q00352_HelpRoodRaiseANewPet.class,
 		Q00354_ConquestOfAlligatorIsland.class,
 		Q00355_FamilyHonor.class,
