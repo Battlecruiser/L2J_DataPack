@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ExMagicAttackInfo;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -107,6 +108,12 @@ public final class Heal extends AbstractEffect
 			if (info.getSkill().isMagic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill())))
 			{
 				amount *= 3;
+				activeChar.sendPacket(SystemMessageId.CRITICAL_HIT_MAGIC);
+				activeChar.sendPacket(new ExMagicAttackInfo(activeChar.getObjectId(), target.getObjectId(), ExMagicAttackInfo.CRITICAL_HEAL));
+				if (target.isPlayer() && (target != activeChar))
+				{
+					target.sendPacket(new ExMagicAttackInfo(activeChar.getObjectId(), target.getObjectId(), ExMagicAttackInfo.CRITICAL_HEAL));
+				}
 			}
 		}
 		
