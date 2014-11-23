@@ -23,7 +23,6 @@ import java.util.Map;
 
 import quests.Q00345_MethodToRaiseTheDead.Q00345_MethodToRaiseTheDead;
 
-import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -158,28 +157,25 @@ public final class Q00351_BlackSwan extends Quest
 		final int random = getRandom(20);
 		if (random < 10)
 		{
-			giveItems(qs.getPlayer(), LIZARD_FANG, 1);
-			playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			giveItemRandomly(qs.getPlayer(), npc, LIZARD_FANG, 1, 0, 1.0, true);
 			
 			if (getRandom(20) == 0)
 			{
-				giveItems(qs.getPlayer(), BARREL_OF_LEAGUE, 1);
+				giveItemRandomly(qs.getPlayer(), npc, BARREL_OF_LEAGUE, 1, 0, 1.0, false);
 			}
 		}
 		else if (random < 15)
 		{
-			giveItems(qs.getPlayer(), LIZARD_FANG, 2);
-			playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			giveItemRandomly(qs.getPlayer(), npc, LIZARD_FANG, 2, 0, 1.0, true);
 			
 			if (getRandom(20) == 0)
 			{
-				giveItems(qs.getPlayer(), BARREL_OF_LEAGUE, 1);
+				giveItemRandomly(qs.getPlayer(), npc, BARREL_OF_LEAGUE, 1, 0, 1.0, false);
 			}
 		}
 		else if (getRandom(100) < MONSTER_DROP_CHANCES.get(npc.getId()))
 		{
-			giveItems(qs.getPlayer(), BARREL_OF_LEAGUE, 1);
-			playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			giveItemRandomly(qs.getPlayer(), npc, BARREL_OF_LEAGUE, 1, 0, 1.0, true);
 		}
 		
 		return super.onKill(npc, killer, isSummon);
