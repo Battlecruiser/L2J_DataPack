@@ -74,6 +74,7 @@ import quests.Q00061_LawEnforcement.Q00061_LawEnforcement;
 import quests.Q00062_PathOfTheTrooper.Q00062_PathOfTheTrooper;
 import quests.Q00063_PathOfTheWarder.Q00063_PathOfTheWarder;
 import quests.Q00064_CertifiedBerserker.Q00064_CertifiedBerserker;
+import quests.Q00066_CertifiedArbalester.Q00066_CertifiedArbalester;
 import quests.Q00067_SagaOfTheDoombringer.Q00067_SagaOfTheDoombringer;
 import quests.Q00068_SagaOfTheSoulHound.Q00068_SagaOfTheSoulHound;
 import quests.Q00069_SagaOfTheTrickster.Q00069_SagaOfTheTrickster;
@@ -524,6 +525,7 @@ public class QuestMasterHandler
 		Q00062_PathOfTheTrooper.class,
 		Q00063_PathOfTheWarder.class,
 		Q00064_CertifiedBerserker.class,
+		Q00066_CertifiedArbalester.class,
 		Q00067_SagaOfTheDoombringer.class,
 		Q00068_SagaOfTheSoulHound.class,
 		Q00069_SagaOfTheTrickster.class,

@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00066_CertifiedArbalester' WHERE name='66_CertifiedArbalester'; 
