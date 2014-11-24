@@ -19,6 +19,7 @@
 package village_master.KamaelChange2;
 
 import quests.Q00064_CertifiedBerserker.Q00064_CertifiedBerserker;
+import quests.Q00066_CertifiedArbalester.Q00066_CertifiedArbalester;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.CategoryData;
@@ -254,7 +255,7 @@ public final class KamaelChange2 extends AbstractNpcAI
 					}
 					else if (classId == 130)
 					{
-						QuestState qs = player.getQuestState("66_CertifiedArbalester");
+						QuestState qs = player.getQuestState(Q00066_CertifiedArbalester.class.getSimpleName());
 						if (player.getLevel() < 40)
 						{
 							if ((qs != null) && qs.isCompleted())
