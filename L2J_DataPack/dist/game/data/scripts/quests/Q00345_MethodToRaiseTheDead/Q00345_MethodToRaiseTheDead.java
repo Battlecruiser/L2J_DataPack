@@ -76,7 +76,6 @@ public final class Q00345_MethodToRaiseTheDead extends Quest
 		{
 			case "30970-02.htm":
 			{
-				qs.setMemoState(0);
 				qs.startQuest();
 				htmltext = event;
 				break;
@@ -105,9 +104,14 @@ public final class Q00345_MethodToRaiseTheDead extends Quest
 			}
 			case "30971-03.html":
 			{
-				giveAdena(player, getQuestItemsCount(player, USELESS_BONE_PIECES) * 104, true);
-				takeItems(player, USELESS_BONE_PIECES, -1);
-				htmltext = event;
+				final long uselessBonePiecesCount = getQuestItemsCount(player, USELESS_BONE_PIECES);
+				
+				if (uselessBonePiecesCount > 0)
+				{
+					giveAdena(player, uselessBonePiecesCount * 104, true);
+					takeItems(player, USELESS_BONE_PIECES, -1);
+					htmltext = event;
+				}
 				break;
 			}
 			case "30973-02.html":

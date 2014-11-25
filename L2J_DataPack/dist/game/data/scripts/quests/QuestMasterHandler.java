@@ -74,6 +74,7 @@ import quests.Q00061_LawEnforcement.Q00061_LawEnforcement;
 import quests.Q00062_PathOfTheTrooper.Q00062_PathOfTheTrooper;
 import quests.Q00063_PathOfTheWarder.Q00063_PathOfTheWarder;
 import quests.Q00064_CertifiedBerserker.Q00064_CertifiedBerserker;
+import quests.Q00066_CertifiedArbalester.Q00066_CertifiedArbalester;
 import quests.Q00067_SagaOfTheDoombringer.Q00067_SagaOfTheDoombringer;
 import quests.Q00068_SagaOfTheSoulHound.Q00068_SagaOfTheSoulHound;
 import quests.Q00069_SagaOfTheTrickster.Q00069_SagaOfTheTrickster;
@@ -205,6 +206,7 @@ import quests.Q00225_TestOfTheSearcher.Q00225_TestOfTheSearcher;
 import quests.Q00226_TestOfTheHealer.Q00226_TestOfTheHealer;
 import quests.Q00228_TestOfMagus.Q00228_TestOfMagus;
 import quests.Q00229_TestOfWitchcraft.Q00229_TestOfWitchcraft;
+import quests.Q00231_TestOfTheMaestro.Q00231_TestOfTheMaestro;
 import quests.Q00232_TestOfTheLord.Q00232_TestOfTheLord;
 import quests.Q00235_MimirsElixir.Q00235_MimirsElixir;
 import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
@@ -288,6 +290,7 @@ import quests.Q00344_1000YearsTheEndOfLamentation.Q00344_1000YearsTheEndOfLament
 import quests.Q00345_MethodToRaiseTheDead.Q00345_MethodToRaiseTheDead;
 import quests.Q00347_GoGetTheCalculator.Q00347_GoGetTheCalculator;
 import quests.Q00350_EnhanceYourWeapon.Q00350_EnhanceYourWeapon;
+import quests.Q00351_BlackSwan.Q00351_BlackSwan;
 import quests.Q00352_HelpRoodRaiseANewPet.Q00352_HelpRoodRaiseANewPet;
 import quests.Q00354_ConquestOfAlligatorIsland.Q00354_ConquestOfAlligatorIsland;
 import quests.Q00355_FamilyHonor.Q00355_FamilyHonor;
@@ -522,6 +525,7 @@ public class QuestMasterHandler
 		Q00062_PathOfTheTrooper.class,
 		Q00063_PathOfTheWarder.class,
 		Q00064_CertifiedBerserker.class,
+		Q00066_CertifiedArbalester.class,
 		Q00067_SagaOfTheDoombringer.class,
 		Q00068_SagaOfTheSoulHound.class,
 		Q00069_SagaOfTheTrickster.class,
@@ -653,6 +657,7 @@ public class QuestMasterHandler
 		Q00226_TestOfTheHealer.class,
 		Q00228_TestOfMagus.class,
 		Q00229_TestOfWitchcraft.class,
+		Q00231_TestOfTheMaestro.class,
 		Q00232_TestOfTheLord.class,
 		Q00235_MimirsElixir.class,
 		Q00237_WindsOfChange.class,
@@ -736,6 +741,7 @@ public class QuestMasterHandler
 		Q00345_MethodToRaiseTheDead.class,
 		Q00347_GoGetTheCalculator.class,
 		Q00350_EnhanceYourWeapon.class,
+		Q00351_BlackSwan.class,
 		Q00352_HelpRoodRaiseANewPet.class,
 		Q00354_ConquestOfAlligatorIsland.class,
 		Q00355_FamilyHonor.class,
