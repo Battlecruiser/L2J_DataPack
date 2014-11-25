@@ -18,7 +18,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.RequestAcquireSkill;
-import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
+import com.l2jserver.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
@@ -291,24 +291,14 @@ public class AvantGarde extends AbstractNpcAI
 	public static void showSubClassSkillList(L2PcInstance player)
 	{
 		final List<L2SkillLearn> subClassSkills = SkillTreesData.getInstance().getAvailableSubClassSkills(player);
-		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.SUBCLASS);
-		int count = 0;
 		
-		for (L2SkillLearn s : subClassSkills)
+		if (subClassSkills.isEmpty())
 		{
-			if (SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()) != null)
-			{
-				count++;
-				asl.addSkill(s.getSkillId(), s.getSkillLevel(), s.getSkillLevel(), 0, 0);
-			}
-		}
-		if (count > 0)
-		{
-			player.sendPacket(asl);
+			player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
+			player.sendPacket(new ExAcquirableSkillListByClass(subClassSkills, AcquireSkillType.TRANSFORM));
 		}
 	}
 	
@@ -319,19 +309,8 @@ public class AvantGarde extends AbstractNpcAI
 	public static void showTransformSkillList(L2PcInstance player)
 	{
 		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransformSkills(player);
-		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.TRANSFORM);
-		int counts = 0;
 		
-		for (L2SkillLearn s : skills)
-		{
-			if (SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()) != null)
-			{
-				counts++;
-				asl.addSkill(s.getSkillId(), s.getSkillLevel(), s.getSkillLevel(), s.getLevelUpSp(), 0);
-			}
-		}
-		
-		if (counts == 0)
+		if (skills.isEmpty())
 		{
 			final int minlevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, SkillTreesData.getInstance().getTransformSkillTree());
 			if (minlevel > 0)
@@ -348,7 +327,7 @@ public class AvantGarde extends AbstractNpcAI
 		}
 		else
 		{
-			player.sendPacket(asl);
+			player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.TRANSFORM));
 		}
 	}
 	
