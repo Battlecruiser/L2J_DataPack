@@ -19,11 +19,11 @@
 package ai.npc.Trainers.HealerTrainer;
 
 import java.util.Collection;
+import java.util.List;
 
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.base.AcquireSkillType;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
+import com.l2jserver.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 
 /**
  * Trainer healers AI.
@@ -94,24 +94,14 @@ public final class HealerTrainer extends AbstractNpcAI
 					break;
 				}
 				
-				final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.TRANSFER);
-				int count = 0;
-				for (L2SkillLearn skillLearn : SkillTreesData.getInstance().getAvailableTransferSkills(player))
+				final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransferSkills(player);
+				if (skills.isEmpty())
 				{
-					if (SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel()) != null)
-					{
-						count++;
-						asl.addSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel(), skillLearn.getSkillLevel(), skillLearn.getLevelUpSp(), 0);
-					}
-				}
-				
-				if (count > 0)
-				{
-					player.sendPacket(asl);
+					player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
 				}
 				else
 				{
-					player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
+					player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.TRANSFER));
 				}
 				break;
 			}
