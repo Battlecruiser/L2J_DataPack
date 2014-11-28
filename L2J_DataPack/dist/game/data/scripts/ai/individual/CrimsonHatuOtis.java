@@ -50,25 +50,29 @@ public final class CrimsonHatuOtis extends AbstractNpcAI
 	{
 		switch (event)
 		{
-			case "skill":
+			case "SKILL":
+			{
 				if (npc.isDead())
 				{
-					cancelQuestTimer("skill", npc, null);
+					cancelQuestTimer("SKILL", npc, null);
 					return null;
 				}
 				npc.setTarget(player);
 				npc.doCast(BOSS_SPINING_SLASH.getSkill());
-				startQuestTimer("skill", 60000, npc, null);
+				startQuestTimer("SKILL", 60000, npc, null);
 				break;
-			case "buff":
+			}
+			case "BUFF":
+			{
 				if (npc.isScriptValue(2))
 				{
 					npc.setTarget(npc);
 					npc.doCast(BOSS_HASTE.getSkill());
 				}
 				break;
+			}
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -77,13 +81,13 @@ public final class CrimsonHatuOtis extends AbstractNpcAI
 		if (npc.isScriptValue(0))
 		{
 			npc.setScriptValue(1);
-			startQuestTimer("skill", 5000, npc, null);
+			startQuestTimer("SKILL", 5000, npc, null);
 		}
 		else if (npc.isScriptValue(1) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.3)))
 		{
 			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.IVE_HAD_IT_UP_TO_HERE_WITH_YOU_ILL_TAKE_CARE_OF_YOU);
 			npc.setScriptValue(2);
-			startQuestTimer("buff", 1000, npc, null);
+			startQuestTimer("BUFF", 1000, npc, null);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
@@ -91,8 +95,8 @@ public final class CrimsonHatuOtis extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		cancelQuestTimer("skill", npc, null);
-		cancelQuestTimer("buff", npc, null);
+		cancelQuestTimer("SKILL", npc, null);
+		cancelQuestTimer("BUFF", npc, null);
 		return super.onKill(npc, player, isSummon);
 	}
 	

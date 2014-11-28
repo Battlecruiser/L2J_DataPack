@@ -64,8 +64,8 @@ public final class Core extends AbstractNpcAI
 		registerMobs(CORE, DEATH_KNIGHT, DOOM_WRAITH, SUSCEPTOR);
 		
 		_FirstAttacked = false;
-		StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);
-		int status = GrandBossManager.getInstance().getBossStatus(CORE);
+		final StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);
+		final int status = GrandBossManager.getInstance().getBossStatus(CORE);
 		if (status == DEAD)
 		{
 			// load the unlock date and time for Core from DB
@@ -86,18 +86,18 @@ public final class Core extends AbstractNpcAI
 		}
 		else
 		{
-			String test = loadGlobalQuestVar("Core_Attacked");
+			final String test = loadGlobalQuestVar("Core_Attacked");
 			if (test.equalsIgnoreCase("true"))
 			{
 				_FirstAttacked = true;
 			}
-			int loc_x = info.getInt("loc_x");
-			int loc_y = info.getInt("loc_y");
-			int loc_z = info.getInt("loc_z");
-			int heading = info.getInt("heading");
-			int hp = info.getInt("currentHP");
-			int mp = info.getInt("currentMP");
-			L2GrandBossInstance core = (L2GrandBossInstance) addSpawn(CORE, loc_x, loc_y, loc_z, heading, false, 0);
+			final int loc_x = info.getInt("loc_x");
+			final int loc_y = info.getInt("loc_y");
+			final int loc_z = info.getInt("loc_z");
+			final int heading = info.getInt("heading");
+			final int hp = info.getInt("currentHP");
+			final int mp = info.getInt("currentMP");
+			final L2GrandBossInstance core = (L2GrandBossInstance) addSpawn(CORE, loc_x, loc_y, loc_z, heading, false, 0);
 			core.setCurrentHpMp(hp, mp);
 			spawnBoss(core);
 		}
@@ -117,14 +117,14 @@ public final class Core extends AbstractNpcAI
 		L2Attackable mob;
 		for (int i = 0; i < 5; i++)
 		{
-			int x = 16800 + (i * 360);
+			final int x = 16800 + (i * 360);
 			mob = (L2Attackable) addSpawn(DEATH_KNIGHT, x, 110000, npc.getZ(), 280 + getRandom(40), false, 0);
 			mob.setIsRaidMinion(true);
 			Minions.add(mob);
 			mob = (L2Attackable) addSpawn(DEATH_KNIGHT, x, 109000, npc.getZ(), 280 + getRandom(40), false, 0);
 			mob.setIsRaidMinion(true);
 			Minions.add(mob);
-			int x2 = 16800 + (i * 600);
+			final int x2 = 16800 + (i * 600);
 			mob = (L2Attackable) addSpawn(DOOM_WRAITH, x2, 109300, npc.getZ(), 280 + getRandom(40), false, 0);
 			mob.setIsRaidMinion(true);
 			Minions.add(mob);
@@ -193,7 +193,7 @@ public final class Core extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		if (npcId == CORE)
 		{
 			int objId = npc.getObjectId();

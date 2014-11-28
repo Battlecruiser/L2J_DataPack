@@ -55,7 +55,8 @@ public final class EvasGiftBox extends AbstractNpcAI
 			{
 				npc.dropItem(killer, CRYSTAL);
 			}
-			else if (getRandom(100) < 33)
+			
+			if (getRandom(100) < 33)
 			{
 				npc.dropItem(killer, CORAL);
 			}

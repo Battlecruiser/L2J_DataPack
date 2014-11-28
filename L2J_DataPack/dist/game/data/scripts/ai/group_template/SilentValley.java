@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
  * Silent Valley AI
  * @author malyelfik
  */
-public class SilentValley extends AbstractNpcAI
+public final class SilentValley extends AbstractNpcAI
 {
 	// Skills
 	private static final SkillHolder BETRAYAL = new SkillHolder(6033, 1); // Treasure Seeker's Betrayal

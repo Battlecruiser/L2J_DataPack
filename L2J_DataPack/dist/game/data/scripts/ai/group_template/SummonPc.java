@@ -60,6 +60,7 @@ public final class SummonPc extends AbstractNpcAI
 					npc.setTarget(attacker);
 					npc.doCast(SUMMON_PC.getSkill());
 				}
+				
 				if ((SUMMON_PC.getSkill().getMpConsume() < npc.getCurrentMp()) && (SUMMON_PC.getSkill().getHpConsume() < npc.getCurrentHp()) && !npc.isSkillDisabled(SUMMON_PC.getSkill()))
 				{
 					npc.setTarget(attacker);

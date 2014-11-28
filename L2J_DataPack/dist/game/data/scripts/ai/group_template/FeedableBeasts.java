@@ -42,7 +42,7 @@ import com.l2jserver.gameserver.util.Util;
  * Growth-capable mobs: Polymorphing upon successful feeding.
  * @author Fulminus
  */
-public class FeedableBeasts extends AbstractNpcAI
+public final class FeedableBeasts extends AbstractNpcAI
 {
 	private static final int GOLDEN_SPICE = 6643;
 	private static final int CRYSTAL_SPICE = 6644;
