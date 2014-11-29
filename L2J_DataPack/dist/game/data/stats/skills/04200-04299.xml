@@ -1674,7 +1674,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="379" />
 		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="{@ride_wyvern}" />
+		<set name="rideState" val="WYVERN" />
 		<set name="targetType" val="AREA" />
 		<cond msg="You can only use Wyvern Breath when flying"> <!-- This skill really have condition ? -->
 			<player flying="true" />
