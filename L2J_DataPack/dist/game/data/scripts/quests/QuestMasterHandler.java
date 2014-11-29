@@ -196,6 +196,7 @@ import quests.Q00212_TrialOfDuty.Q00212_TrialOfDuty;
 import quests.Q00213_TrialOfTheSeeker.Q00213_TrialOfTheSeeker;
 import quests.Q00214_TrialOfTheScholar.Q00214_TrialOfTheScholar;
 import quests.Q00215_TrialOfThePilgrim.Q00215_TrialOfThePilgrim;
+import quests.Q00216_TrialOfTheGuildsman.Q00216_TrialOfTheGuildsman;
 import quests.Q00217_TestimonyOfTrust.Q00217_TestimonyOfTrust;
 import quests.Q00218_TestimonyOfLife.Q00218_TestimonyOfLife;
 import quests.Q00219_TestimonyOfFate.Q00219_TestimonyOfFate;
@@ -648,6 +649,7 @@ public class QuestMasterHandler
 		Q00213_TrialOfTheSeeker.class,
 		Q00214_TrialOfTheScholar.class,
 		Q00215_TrialOfThePilgrim.class,
+		Q00216_TrialOfTheGuildsman.class,
 		Q00217_TestimonyOfTrust.class,
 		Q00218_TestimonyOfLife.class,
 		Q00219_TestimonyOfFate.class,
