@@ -61,6 +61,7 @@
 		<!-- Transforms into a game Master. -->
 		<set name="abnormalTime" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Transformation">
@@ -97,6 +98,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -145,6 +147,7 @@
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="A2" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="15000" /> <!-- FIXME: value unconfirmed -->
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">

@@ -94,11 +94,13 @@
 	<skill id="4513" levels="1" name="Squash - Level up">
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4514" levels="1" name="Squash - Poisoned">
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4515" levels="1" name="Raid Curse">
@@ -115,6 +117,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Petrification" />
@@ -133,6 +136,7 @@
 		<set name="mpInitialConsume" val="16" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Heal">
@@ -144,6 +148,7 @@
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -157,6 +162,7 @@
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -170,6 +176,7 @@
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -184,6 +191,7 @@
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -221,6 +229,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
@@ -240,6 +249,7 @@
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -256,6 +266,7 @@
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" />
@@ -265,6 +276,7 @@
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -280,6 +292,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="HealPercent">
@@ -297,6 +310,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
@@ -317,6 +331,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
@@ -332,6 +347,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="56" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -344,6 +360,7 @@
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="HealPercent">
@@ -358,6 +375,7 @@
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="ManaHealPercent">
@@ -369,6 +387,7 @@
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -389,6 +408,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -409,6 +429,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -429,6 +450,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -449,6 +471,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -469,6 +492,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -489,6 +513,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -510,6 +535,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -531,6 +557,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -552,6 +579,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -593,6 +621,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -606,6 +635,7 @@
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -621,6 +651,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4547" levels="1" name="Gaze of Watcher">
@@ -635,6 +666,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" />
@@ -647,6 +679,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DispelBySlot">
@@ -659,6 +692,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4550" levels="1" name="Quest - Cursed Altar">
@@ -666,6 +700,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4551" levels="10" name="Hot Springs Rheumatism">
@@ -686,6 +721,7 @@
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -712,6 +748,7 @@
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -738,6 +775,7 @@
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -764,6 +802,7 @@
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -796,6 +835,7 @@
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DispelBySlot">
@@ -813,6 +853,7 @@
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DispelBySlot">
@@ -830,6 +871,7 @@
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DispelBySlot">
@@ -849,6 +891,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4560" levels="12" name="NPC Fire Burn">
@@ -867,6 +910,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -887,6 +931,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -910,6 +955,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -932,6 +978,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -954,6 +1001,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -976,6 +1024,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="20000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -997,6 +1046,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1018,6 +1068,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1042,6 +1093,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1065,6 +1117,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1088,6 +1141,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1108,6 +1162,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1128,6 +1183,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1147,6 +1203,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1167,6 +1224,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="20000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1190,6 +1248,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
@@ -1215,6 +1274,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
@@ -1245,6 +1305,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1269,6 +1330,7 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Petrification" />
@@ -1299,6 +1361,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1330,6 +1393,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1357,6 +1421,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -1385,6 +1450,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1414,6 +1480,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="17000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1443,6 +1510,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1477,6 +1545,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Grow">
@@ -1512,6 +1581,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1542,6 +1612,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1573,6 +1644,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
@@ -1608,6 +1680,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1636,6 +1709,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1664,6 +1738,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1694,6 +1769,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1723,6 +1799,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1752,6 +1829,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1778,6 +1856,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
@@ -1809,6 +1888,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1839,6 +1919,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1869,6 +1950,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1898,6 +1980,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">

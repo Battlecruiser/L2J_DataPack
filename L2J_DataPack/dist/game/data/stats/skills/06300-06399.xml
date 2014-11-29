@@ -13,6 +13,7 @@
 		<set name="mpConsume" val="123" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="3194" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -37,6 +38,7 @@
 		<set name="mpConsume" val="66" />
 		<set name="mpInitialConsume" val="17" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="ManaHealOverTime" ticks="5">
@@ -56,6 +58,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -79,6 +82,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -107,6 +111,7 @@
 		<set name="mpConsume" val="121" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -127,6 +132,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="4000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -156,6 +162,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -182,6 +189,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="120" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -205,6 +213,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="120" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -228,6 +237,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="120" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -248,6 +258,7 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="TargetCancel">
@@ -270,6 +281,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -291,6 +303,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -315,6 +328,7 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
 			<effect name="Buff">
@@ -341,6 +355,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="125" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -361,6 +376,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -379,6 +395,7 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="HealPercent">
@@ -404,6 +421,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="128" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -425,6 +443,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
 			<effect name="Buff">
@@ -448,6 +467,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
 			<effect name="Buff">
@@ -474,6 +494,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
@@ -500,6 +521,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="121" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -523,6 +545,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="121" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -540,6 +563,7 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -561,6 +585,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="121" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -582,6 +607,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="85" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -601,6 +627,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="20531" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -621,6 +648,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="11407" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -644,6 +672,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="205" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -664,6 +693,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -679,6 +709,7 @@
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="HealPercent">
@@ -700,6 +731,7 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Debuff">
@@ -721,6 +753,7 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Debuff">
@@ -752,6 +785,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -783,6 +817,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -803,6 +838,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="120" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -821,6 +857,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="121" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -839,6 +876,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -857,6 +895,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -886,6 +925,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -917,6 +957,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -936,6 +977,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="500" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -950,6 +992,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -975,6 +1018,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="TARGET_PARTY" />
 		<for>
 			<effect name="Buff">
@@ -1003,6 +1047,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="TARGET_PARTY" />
 		<for>
 			<effect name="Buff">
@@ -1033,6 +1078,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="TARGET_PARTY" />
 		<for>
 			<effect name="Buff">
@@ -1059,6 +1105,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" /> <!-- TODO: Remove when support for buffs without effects is finished. -->
@@ -1081,6 +1128,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" /> <!-- TODO: Remove when support for buffs without effects is finished. -->
@@ -1103,6 +1151,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" /> <!-- TODO: Remove when support for buffs without effects is finished. -->
@@ -1119,6 +1168,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6371" levels="1" name="Invincibility">
@@ -1130,6 +1180,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6372" levels="10" name="Power Up">
@@ -1142,6 +1193,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6373" levels="1" name="Thunderbolt">
@@ -1155,6 +1207,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6374" levels="1" name="Notification">
@@ -1163,6 +1216,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6375" levels="1" name="Notification">
@@ -1171,6 +1225,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6376" levels="9" name="Sonic Strike">
@@ -1183,6 +1238,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6377" levels="10" name="Assault Boost">
@@ -1195,6 +1251,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6378" levels="1" name="Earth Shift">
@@ -1207,6 +1264,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6379" levels="1" name="Blood Spurt">
@@ -1226,6 +1284,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="BLEED" />
 	</skill>
@@ -1248,6 +1307,7 @@
 		<set name="mpConsume" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1275,6 +1335,7 @@
 		<set name="mpConsume" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1302,6 +1363,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1329,6 +1391,7 @@
 		<set name="mpConsume" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1348,6 +1411,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1374,6 +1438,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1402,6 +1467,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="9125" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1424,6 +1490,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="13688" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1439,6 +1506,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="13688" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1458,6 +1526,7 @@
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1481,6 +1550,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
@@ -1508,6 +1578,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1535,6 +1606,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
@@ -1553,6 +1625,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="13688" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1568,6 +1641,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="13688" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1593,6 +1667,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1621,6 +1696,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1647,6 +1723,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="9125" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1674,6 +1751,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1691,6 +1769,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="13688" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />

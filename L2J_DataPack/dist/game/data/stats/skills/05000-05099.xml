@@ -10,6 +10,7 @@
 		<set name="mpConsume" val="108" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="10000000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -25,6 +26,7 @@
 		<set name="mpConsume" val="181" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="111" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="HpDrain">
@@ -43,6 +45,7 @@
 		<set name="mpConsume" val="49" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -64,6 +67,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="111" />
 		<set name="reuseDelay" val="15000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -87,6 +91,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="5964" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -107,6 +112,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Paralyze" />
@@ -120,6 +126,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5007" levels="5" name="Frintezza's Songs">
@@ -131,6 +138,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5008" levels="5" name="Frintezza's Songs">
@@ -162,6 +170,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="#traits" />
 		<for>
@@ -194,6 +203,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="6400" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -213,6 +223,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="106" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -230,6 +241,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="364" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -253,6 +265,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -271,6 +284,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="61" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="HpDrain">
@@ -297,6 +311,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -323,6 +338,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
 			<player insideZoneId="5015" />
@@ -351,6 +367,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -371,6 +388,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Grow">
@@ -395,6 +413,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -412,6 +431,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="314" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="HpDrain">
@@ -429,6 +449,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="HOLD" />
 	</skill>
@@ -447,6 +468,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="25000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5022" levels="12" name="Decrease Speed">
@@ -463,6 +485,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5023" levels="12" name="Hold">
@@ -478,6 +501,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="HOLD" />
 	</skill>
@@ -495,6 +519,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5025" levels="1" name="Raid Boss - Level 30">
@@ -593,6 +618,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5038" levels="16" name="Summon PVP Penalty">
@@ -614,6 +640,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5040" levels="12" name="NPC - Healing Potion">
@@ -636,6 +663,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="HealOverTime" ticks="1">
@@ -660,6 +688,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -682,6 +711,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="7000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -707,6 +737,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ImmobileBuff">
@@ -730,6 +761,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -748,6 +780,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="20000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -759,6 +792,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5048" levels="12" name="Castle Burst Shot">
@@ -768,6 +802,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="25000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5049" levels="12" name="Castle Blow">
@@ -777,6 +812,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5050" levels="12" name="Castle DD Fire">
@@ -785,6 +821,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5051" levels="12" name="Castle Self AE Fire">
@@ -804,6 +841,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -828,6 +866,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -848,6 +887,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -859,6 +899,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5055" levels="12" name="Castle Long AE Water">
@@ -867,6 +908,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5056" levels="12" name="Castle DD Wind">
@@ -887,6 +929,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -898,6 +941,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5058" levels="12" name="Castle Long AE Wind">
@@ -906,6 +950,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5059" levels="12" name="Castle DD Earth">
@@ -914,6 +959,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5060" levels="12" name="Castle Self AE Earth">
@@ -922,6 +968,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5061" levels="12" name="Castle Long AE Earth">
@@ -930,6 +977,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5062" levels="12" name="Castle DD Holy">
@@ -938,6 +986,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5063" levels="12" name="Castle Self AE Holy">
@@ -946,6 +995,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5064" levels="12" name="Castle Long AE Holy">
@@ -954,6 +1004,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5065" levels="12" name="Castle DD Unholy">
@@ -971,6 +1022,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -982,6 +1034,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5067" levels="12" name="Castle Long AE Unholy">
@@ -990,6 +1043,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5068" levels="12" name="Decrease Speed">
@@ -1006,6 +1060,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5069" levels="12" name="Decrease Atk. Spd.">
@@ -1022,6 +1077,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5070" levels="12" name="Decrease Casting Spd">
@@ -1038,6 +1094,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5071" levels="12" name="Decrease P. Atk.">
@@ -1054,6 +1111,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5072" levels="12" name="Decrease M. Atk.">
@@ -1069,6 +1127,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5073" levels="12" name="Quest Trap - Power Shot">
@@ -1083,6 +1142,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1139,6 +1199,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5078" levels="1" name="Frintezza Critical Power">
@@ -1166,6 +1227,7 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
@@ -1188,6 +1250,7 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
@@ -1216,6 +1279,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="FatalBlow" />
@@ -1232,6 +1296,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="2112" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1258,6 +1323,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1283,6 +1349,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A3" />
 		<set name="power" val="6335" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="FatalBlow" />
@@ -1311,6 +1378,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="23" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Stun" />
@@ -1334,6 +1402,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="23" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1351,6 +1420,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1367,6 +1437,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5089" levels="1" name="Representation - Enter the Sailren Nest Quest">
@@ -1377,6 +1448,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5090" levels="1" name="Sailren Production">
@@ -1385,6 +1457,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5091" levels="1" name="Sailren Production 2">
@@ -1392,6 +1465,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5092" levels="1" name="Antharas Terror">
@@ -1414,6 +1488,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1435,6 +1510,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="1084" />
 		<set name="reuseDelay" val="6000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1451,6 +1527,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="473" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1466,6 +1543,7 @@
 		<set name="mpConsume" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="30215" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1481,6 +1559,7 @@
 		<set name="mpConsume" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="88254" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1497,6 +1576,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="473" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1514,6 +1594,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 		<for>
 			<effect name="DefenceTrait">
@@ -1527,6 +1608,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 </list>

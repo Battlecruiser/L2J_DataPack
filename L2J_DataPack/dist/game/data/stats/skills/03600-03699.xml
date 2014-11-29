@@ -531,6 +531,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="CA5" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="22215,22216,22217" />
@@ -552,6 +553,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="CA5" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="22215,22216,22217" />
@@ -573,6 +575,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="CA5" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="22215,22216,22217" />
@@ -636,6 +639,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="11500" />
 		<set name="reuseDelay" val="60000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -653,6 +657,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="60000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -670,6 +675,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<not>
@@ -691,6 +697,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -1210,6 +1217,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1232,6 +1240,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">

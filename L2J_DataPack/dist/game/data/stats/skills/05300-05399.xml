@@ -17,6 +17,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -46,6 +47,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -77,6 +79,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -110,6 +113,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -145,6 +149,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -173,6 +178,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -205,6 +211,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -235,6 +242,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -265,6 +273,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -298,6 +307,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -322,6 +332,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -341,6 +352,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -364,6 +376,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -387,6 +400,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -408,6 +422,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -424,6 +439,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -447,6 +463,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -470,6 +487,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -491,6 +509,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -502,6 +521,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5320" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
@@ -510,6 +530,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5321" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
@@ -518,6 +539,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5322" levels="9" name="NPC(party) -Magic Single Long Range DD - Earth">
@@ -526,6 +548,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5323" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
@@ -534,6 +557,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5324" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
@@ -542,6 +566,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5325" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
@@ -550,6 +575,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5326" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
@@ -558,6 +584,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5327" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
@@ -566,6 +593,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5328" levels="9" name="NPC(party) -Magic Single Long Range DD - Dark">
@@ -586,6 +614,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -609,6 +638,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -630,6 +660,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -648,6 +679,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="250" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -670,6 +702,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttackMp" />
@@ -700,6 +733,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -720,6 +754,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -737,6 +772,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -753,6 +789,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="12777" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -764,6 +801,7 @@
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5338" levels="9" name="NPC(party) - Physical Single Close Range Attack - Fire">
@@ -781,6 +819,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -791,6 +830,7 @@
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5340" levels="9" name="NPC(party) - Physical Range Close Range Attack - Fire">
@@ -807,6 +847,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="12777" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -818,6 +859,7 @@
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5342" levels="9" name="NPC(party) - Physical Single Close Range Attack - Water">
@@ -835,6 +877,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -845,6 +888,7 @@
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5344" levels="9" name="NPC(party) - Physical Range Close Range Attack - Water">
@@ -853,6 +897,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5345" levels="9" name="NPC(party) - Physical Range Long Range Attack - Water">
@@ -861,6 +906,7 @@
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5346" levels="9" name="NPC(party) - Physical Single Close Range Attack - Wind">
@@ -878,6 +924,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -888,6 +935,7 @@
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5348" levels="9" name="NPC(party) - Physical Range Close Range Attack - Wind">
@@ -896,6 +944,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5349" levels="9" name="NPC(party) - Physical Range Long Range Attack - Wind">
@@ -904,6 +953,7 @@
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5350" levels="9" name="NPC(party) - Physical Single Close Range Attack - Earth">
@@ -921,6 +971,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -931,6 +982,7 @@
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5352" levels="9" name="NPC(party) - Physical Range Close Range Attack - Earth">
@@ -946,6 +998,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="12777" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -957,6 +1010,7 @@
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5354" levels="9" name="NPC(party) - Physical Single Close Range Attack - Holy">
@@ -965,6 +1019,7 @@
 		<set name="hitTime" val="830" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5355" levels="9" name="NPC(party) - Physical Single Long Range Attack - Holy">
@@ -972,6 +1027,7 @@
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5356" levels="9" name="NPC(party) - Physical Range Close Range Attack - Holy">
@@ -987,6 +1043,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="12777" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -998,6 +1055,7 @@
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5358" levels="9" name="NPC(party) - Physical Single Close Range Attack - Dark">
@@ -1015,6 +1073,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1034,6 +1093,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1052,6 +1112,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="12777" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1063,6 +1124,7 @@
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5362" levels="9" name="Stun">
@@ -1089,6 +1151,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1120,6 +1183,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1154,6 +1218,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1187,6 +1252,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1216,6 +1282,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1248,6 +1315,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1270,6 +1338,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
 	</skill>
@@ -1296,6 +1365,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1321,6 +1391,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
 	</skill>
@@ -1339,6 +1410,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1358,6 +1430,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1369,6 +1442,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5374" levels="9" name="NPC(party) -Magic Range Long Range DD - Fire">
@@ -1389,6 +1463,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1400,6 +1475,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5376" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction)">
@@ -1415,6 +1491,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1426,6 +1503,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5378" levels="9" name="NPC(party) -Magic Range Long Range DD - Water">
@@ -1434,6 +1512,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5379" levels="9" name="NPC(party) -Magic Range Close Range DD - Water">
@@ -1442,6 +1521,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5380" levels="9" name="NPC(party) -Magic Single Long Range DD - Wind">
@@ -1461,6 +1541,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1472,6 +1553,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5382" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
@@ -1489,6 +1571,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1511,6 +1594,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1522,6 +1606,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5385" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
@@ -1530,6 +1615,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5386" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
@@ -1538,6 +1624,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5387" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
@@ -1546,6 +1633,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5388" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
@@ -1554,6 +1642,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5389" levels="9" name="NPC(party) -Magic Single Long Range DD - Dark">
@@ -1573,6 +1662,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1596,6 +1686,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1617,6 +1708,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1639,6 +1731,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="HpDrain">
@@ -1662,6 +1755,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttackMp" />
@@ -1695,6 +1789,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1721,6 +1816,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Grow">
@@ -1737,6 +1833,7 @@
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="CA5" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5397" levels="3" name="NPC - Spell Force">
@@ -1748,6 +1845,7 @@
 		<set name="icon" val="icon.skill0427" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5398" levels="1" name="NPC - Combination Force">
@@ -1764,6 +1862,7 @@
 		<set name="mpInitialConsume" val="16" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="657" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1783,6 +1882,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond>
 			<and>

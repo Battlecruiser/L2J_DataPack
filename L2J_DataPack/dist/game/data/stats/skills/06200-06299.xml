@@ -9,6 +9,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond>
 			<player canUntransform="true" />
@@ -31,6 +32,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<cond>
 			<player canTransform="true" />
@@ -62,6 +64,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<cond>
 			<player canTransform="true" />
@@ -93,6 +96,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<cond>
 			<player canTransform="true" />
@@ -124,6 +128,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<cond>
 			<player canTransform="true" />
@@ -170,6 +175,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -203,6 +209,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -221,6 +228,7 @@
 		<set name="mpConsume" val="55" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -236,6 +244,7 @@
 		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6209" levels="4" name="Weapon Grade Penalty">
@@ -398,6 +407,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6235" levels="1" name="Blessed Focus">
@@ -407,12 +417,14 @@
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6236" levels="1" name="Presentation - Party Recall">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6237" levels="1" name="Moving Speed Decrease">
@@ -428,6 +440,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
@@ -451,6 +464,7 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="18162" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -469,6 +483,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -492,6 +507,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6241" levels="1" name="Heatstroke Prevention Effect - Gludio">
@@ -503,6 +519,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6242" levels="1" name="Heatstroke Prevention Effect - Dion">
@@ -514,6 +531,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6243" levels="1" name="Heatstroke Prevention Effect - Giran">
@@ -525,6 +543,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6244" levels="1" name="Heatstroke Prevention Effect - Oren">
@@ -536,6 +555,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6245" levels="1" name="Heatstroke Prevention Effect - Aden">
@@ -547,6 +567,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6246" levels="1" name="Heatstroke Prevention Effect - Innadril">
@@ -558,6 +579,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6247" levels="1" name="Heatstroke Prevention Effect - Goddard">
@@ -569,6 +591,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6248" levels="1" name="Heatstroke Prevention Effect - Rune">
@@ -580,6 +603,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6249" levels="1" name="Heatstroke Prevention Effect -Schuttgart">
@@ -591,6 +615,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6250" levels="1" name="Severe Heatstroke">
@@ -604,6 +629,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6251" levels="1" name="Summon Humidity">
@@ -611,6 +637,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonNpc">
@@ -623,6 +650,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6253" levels="1" name="Heatstroke Prevention Effect - Gludio">
@@ -634,6 +662,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6254" levels="1" name="Heatstroke Prevention Effect - Dion">
@@ -645,6 +674,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6255" levels="1" name="Heatstroke Prevention Effect - Giran">
@@ -656,6 +686,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6256" levels="1" name="Heatstroke Prevention Effect - Oren">
@@ -667,6 +698,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6257" levels="1" name="Heatstroke Prevention Effect - Aden">
@@ -678,6 +710,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6258" levels="1" name="Heatstroke Prevention Effect - Innadril">
@@ -689,6 +722,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6259" levels="1" name="Heatstroke Prevention Effect - Goddard">
@@ -700,6 +734,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6260" levels="1" name="Heatstroke Prevention Effect - Rune">
@@ -711,6 +746,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6261" levels="1" name="Heatstroke Prevention Effect - Schuttgart">
@@ -722,6 +758,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6262" levels="1" name="EMP Power">
@@ -730,6 +767,7 @@
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6263" levels="1" name="EMP Shock">
@@ -746,6 +784,7 @@
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
 	</skill>
@@ -755,6 +794,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6265" levels="1" name="Smoke">
@@ -763,6 +803,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6266" levels="1" name="Shock">
@@ -778,6 +819,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
 	</skill>
@@ -785,6 +827,7 @@
 		<set name="effectPoint" val="-574" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6268" levels="1" name="Power Attack">
@@ -792,6 +835,7 @@
 		<set name="fanRange" val="0,0,300,90" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="6269" levels="1" name="Poison Gas">
@@ -806,6 +850,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
 	</skill>
@@ -814,6 +859,7 @@
 		<set name="icon" val="icon.skill4036" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
 	</skill>
@@ -827,6 +873,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6272" levels="1" name="Underbug Defense Up">
@@ -839,6 +886,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6273" levels="1" name="Underbug Self Blasting">
@@ -846,6 +894,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
 	</skill>
@@ -864,6 +913,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="38976" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -887,6 +937,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="45256" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -908,6 +959,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="6277" levels="1" name="Summon Spirits">
@@ -921,6 +973,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6278" levels="1" name="Ice Ball">
@@ -938,6 +991,7 @@
 		<set name="mpConsume" val="168" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -956,6 +1010,7 @@
 		<set name="mpConsume" val="168" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -979,6 +1034,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<endEffects>
 			<effect name="CallSkill">
@@ -995,6 +1051,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1011,6 +1068,7 @@
 		<set name="mpConsume" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="45000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1031,6 +1089,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1047,6 +1106,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1066,6 +1126,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1088,6 +1149,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
@@ -1107,6 +1169,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="CpHealPercent">
@@ -1132,6 +1195,7 @@
 		<set name="icon" val="icon.skill6288" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
@@ -1152,6 +1216,7 @@
 		<set name="icon" val="icon.skill6289" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
@@ -1175,6 +1240,7 @@
 		<set name="mpConsume" val="123" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1192,6 +1258,7 @@
 		<set name="mpConsume" val="123" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1213,6 +1280,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DA1" />
 		<set name="power" val="4563" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<target mindistance="250" />
@@ -1237,6 +1305,7 @@
 		<set name="mpConsume" val="123" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1257,6 +1326,7 @@
 		<set name="mpConsume" val="66" />
 		<set name="mpInitialConsume" val="17" />
 		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
@@ -1274,6 +1344,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6296" levels="1" name="Rush">
@@ -1292,6 +1363,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DA1" />
 		<set name="power" val="4563" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<target mindistance="250" />
@@ -1315,6 +1387,7 @@
 		<set name="mpConsume" val="123" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1330,6 +1403,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6299" levels="1" name="Breath of Ice Palace - Ice Storm">
@@ -1345,6 +1419,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="1547" />
 		<set name="reuseDelay" val="15000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
