@@ -18,8 +18,6 @@
  */
 package ai.group_template;
 
-import java.util.List;
-
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.NpcData;
@@ -39,11 +37,6 @@ public final class RangeGuard extends AbstractNpcAI
 {
 	// Skill
 	private static SkillHolder ULTIMATE_DEFENSE = new SkillHolder(5044, 3); // NPC Ultimate Defense
-	
-	// Misc
-	private static final int MIN_DISTANCE = 150;
-	
-	// Not allowed skills
 	//@formatter:off
 	private static final int[] NOT_ALLOWED_SKILLS =
 	{
@@ -83,13 +76,14 @@ public final class RangeGuard extends AbstractNpcAI
 		1529, // Soul Web
 	};
 	//@formatter:on
+	// Misc
+	private static final int MIN_DISTANCE = 150;
 	
 	private RangeGuard()
 	{
 		super(RangeGuard.class.getSimpleName(), "ai/group_template");
 		
-		final List<L2NpcTemplate> monsters = NpcData.getInstance().getAllNpcOfClassType("L2Monster");
-		for (L2NpcTemplate template : monsters)
+		for (L2NpcTemplate template : NpcData.getInstance().getAllNpcOfClassType("L2Monster"))
 		{
 			if (template.getParameters().getInt("LongRangeGuardRate", -1) > 0)
 			{

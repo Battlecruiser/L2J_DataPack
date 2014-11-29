@@ -21,8 +21,6 @@ package ai.individual;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.holders.MinionHolder;
 
 /**
  * Ragna Orc Hero AI.
@@ -41,23 +39,8 @@ public final class RagnaOrcHero extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (getRandom(100) < 70)
-		{
-			spawnMinions(npc, "Privates1");
-		}
-		else
-		{
-			spawnMinions(npc, "Privates2");
-		}
+		spawnMinions(npc, getRandom(100) < 70 ? "Privates1" : "Privates2");
 		return super.onSpawn(npc);
-	}
-	
-	private void spawnMinions(final L2Npc npc, final String spawnName)
-	{
-		for (MinionHolder is : npc.getTemplate().getParameters().getMinionList(spawnName))
-		{
-			addMinion((L2MonsterInstance) npc, is.getId());
-		}
 	}
 	
 	public static void main(String[] args)

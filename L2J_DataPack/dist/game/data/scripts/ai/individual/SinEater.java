@@ -53,7 +53,7 @@ public final class SinEater extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("2001") && (player != null) && (player.getSummon() != null))
+		if (event.equals("TALK") && (player != null) && (player.getSummon() != null))
 		{
 			if (getRandom(100) < 30)
 			{
@@ -81,7 +81,7 @@ public final class SinEater extends AbstractNpcAI
 					broadcastSummonSay(summon, NpcStringId.OH_THIS_IS_DRAGGING_ON_TOO_LONG_AT_THIS_RATE_I_WONT_MAKE_IT_HOME_BEFORE_THE_SEVEN_SEALS_ARE_BROKEN);
 				}
 			}
-			startQuestTimer("2001", 60000, null, player);
+			startQuestTimer("TALK", 60000, null, player);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -137,7 +137,7 @@ public final class SinEater extends AbstractNpcAI
 	public void onSummonSpawn(L2Summon summon)
 	{
 		broadcastSummonSay(summon, getRandomBoolean() ? NpcStringId.HEY_IT_SEEMS_LIKE_YOU_NEED_MY_HELP_DOESNT_IT : NpcStringId.ALMOST_GOT_IT_OUCH_STOP_DAMN_THESE_BLOODY_MANACLES);
-		startQuestTimer("2001", 60000, null, summon.getOwner());
+		startQuestTimer("TALK", 60000, null, summon.getOwner());
 	}
 	
 	@Override

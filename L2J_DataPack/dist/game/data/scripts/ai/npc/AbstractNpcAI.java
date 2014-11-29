@@ -25,7 +25,9 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
+import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.MinionHolder;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.NpcStringId;
@@ -207,5 +209,13 @@ public abstract class AbstractNpcAI extends Quest
 		}
 		npc.setTarget(target);
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill.getSkill(), target);
+	}
+	
+	public void spawnMinions(final L2Npc npc, final String spawnName)
+	{
+		for (MinionHolder is : npc.getTemplate().getParameters().getMinionList(spawnName))
+		{
+			addMinion((L2MonsterInstance) npc, is.getId());
+		}
 	}
 }

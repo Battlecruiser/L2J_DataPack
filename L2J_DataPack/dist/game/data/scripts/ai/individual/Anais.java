@@ -83,20 +83,21 @@ public final class Anais extends AbstractNpcAI
 		switch (event)
 		{
 			case "CHECK":
+			{
 				if (!npc.isAttackingNow())
 				{
 					cancelQuestTimer("CHECK", npc, null);
 				}
 				if ((_current != null) || (_pot < 4))
 				{
-					Map<Integer, L2PcInstance> players = npc.getKnownList().getKnownPlayers();
-					L2PcInstance target = players.get(getRandom(players.size() - 1));
+					final Map<Integer, L2PcInstance> players = npc.getKnownList().getKnownPlayers();
+					final L2PcInstance target = players.get(getRandom(players.size() - 1));
 					_nextTarget = target;
 					if (_nextTarget == null)
 					{
 						_nextTarget = (L2PcInstance) npc.getTarget();
 					}
-					L2Npc b = _divineBurners.get(_pot);
+					final L2Npc b = _divineBurners.get(_pot);
 					_pot = _pot + 1;
 					b.setDisplayEffect(1);
 					b.setIsRunning(false);
@@ -109,7 +110,9 @@ public final class Anais extends AbstractNpcAI
 					ward.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _nextTarget);
 				}
 				break;
+			}
 			case "GUARD_ATTACK":
+			{
 				if (_nextTarget != null)
 				{
 					final double distance = npc.calculateDistance(_nextTarget, false, false);
@@ -124,7 +127,9 @@ public final class Anais extends AbstractNpcAI
 					}
 				}
 				break;
+			}
 			case "SUICIDE":
+			{
 				npc.doCast(DIVINE_NOVA.getSkill());
 				cancelQuestTimer("GUARD_ATTACK", npc, _nextTarget);
 				if (_current != null)
@@ -135,8 +140,9 @@ public final class Anais extends AbstractNpcAI
 				}
 				npc.doDie(null);
 				break;
+			}
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override

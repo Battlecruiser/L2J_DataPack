@@ -103,7 +103,7 @@ public final class TurekOrcs extends AbstractNpcAI
 			((L2Attackable) receiver).addDamageHate(reference.getActingPlayer(), 0, 99999);
 			receiver.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, reference.getActingPlayer());
 		}
-		return null;
+		return super.onEventReceived(eventName, sender, receiver, reference);
 	}
 	
 	@Override

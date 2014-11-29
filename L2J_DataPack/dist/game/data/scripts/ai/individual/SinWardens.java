@@ -67,7 +67,7 @@ public final class SinWardens extends AbstractNpcAI
 	{
 		if (npc.isMinion())
 		{
-			L2MonsterInstance master = ((L2MonsterInstance) npc).getLeader();
+			final L2MonsterInstance master = ((L2MonsterInstance) npc).getLeader();
 			if ((master != null) && !master.isDead())
 			{
 				int killedCount = killedMinionsCount.containsKey(master.getObjectId()) ? killedMinionsCount.get(master.getObjectId()) : 0;

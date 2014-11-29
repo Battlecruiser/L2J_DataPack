@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.skills.Skill;
  * Remnants AI.
  * @author DS
  */
-public class Remnants extends AbstractNpcAI
+public final class Remnants extends AbstractNpcAI
 {
 	private static final int[] NPCS =
 	{
@@ -83,7 +83,6 @@ public class Remnants extends AbstractNpcAI
 				}
 			}
 		}
-		
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	

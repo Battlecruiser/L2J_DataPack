@@ -69,7 +69,7 @@ public final class PlainsOfDion extends AbstractNpcAI
 	{
 		if (npc.isScriptValue(0))
 		{
-			int i = getRandom(5);
+			final int i = getRandom(5);
 			if (i < 2)
 			{
 				broadcastNpcSay(npc, Say2.NPC_ALL, MONSTERS_MSG[i], player.getName());

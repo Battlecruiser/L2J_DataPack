@@ -127,6 +127,7 @@ import quests.Q00115_TheOtherSideOfTruth.Q00115_TheOtherSideOfTruth;
 import quests.Q00116_BeyondTheHillsOfWinter.Q00116_BeyondTheHillsOfWinter;
 import quests.Q00117_TheOceanOfDistantStars.Q00117_TheOceanOfDistantStars;
 import quests.Q00119_LastImperialPrince.Q00119_LastImperialPrince;
+import quests.Q00120_PavelsLastResearch.Q00120_PavelsLastResearch;
 import quests.Q00121_PavelTheGiant.Q00121_PavelTheGiant;
 import quests.Q00122_OminousNews.Q00122_OminousNews;
 import quests.Q00124_MeetingTheElroki.Q00124_MeetingTheElroki;
@@ -578,6 +579,7 @@ public class QuestMasterHandler
 		Q00116_BeyondTheHillsOfWinter.class,
 		Q00117_TheOceanOfDistantStars.class,
 		Q00119_LastImperialPrince.class,
+		Q00120_PavelsLastResearch.class,
 		Q00121_PavelTheGiant.class,
 		Q00122_OminousNews.class,
 		Q00124_MeetingTheElroki.class,

@@ -197,7 +197,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 				break;
 			}
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -207,7 +207,6 @@ public final class SelMahumDrill extends AbstractNpcAI
 		{
 			npc.broadcastEvent("ATTACKED", 1000, null);
 		}
-		
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
@@ -258,7 +257,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 				}
 			}
 		}
-		return null;
+		return super.onEventReceived(eventName, sender, receiver, reference);
 	}
 	
 	@Override
@@ -283,7 +282,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 		
 		// Restore AI handling by core
 		npc.disableCoreAI(false);
-		return null;
+		return super.onSpawn(npc);
 	}
 	
 	private void handleSocialAction(L2Npc npc, Actions action, boolean firstCall)

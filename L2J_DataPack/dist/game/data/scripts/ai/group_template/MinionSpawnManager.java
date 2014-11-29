@@ -430,10 +430,10 @@ public final class MinionSpawnManager extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		if (npc instanceof L2MonsterInstance)
+		if (npc.isMonster())
 		{
-			L2MonsterInstance monster = (L2MonsterInstance) npc;
-			if (!monster.hasMinions())
+			final L2MonsterInstance monster = (L2MonsterInstance) npc;
+			if (!monster.isTeleporting())
 			{
 				if (getRandom(1, 100) <= npc.getTemplate().getParameters().getInt("SummonPrivateRate", 0))
 				{

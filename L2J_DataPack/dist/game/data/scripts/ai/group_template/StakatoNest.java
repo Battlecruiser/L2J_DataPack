@@ -38,7 +38,7 @@ import com.l2jserver.gameserver.util.Util;
  * Stakato Nest AI.
  * @author Gnacik
  */
-public class StakatoNest extends AbstractNpcAI
+public final class StakatoNest extends AbstractNpcAI
 {
 	// @formatter:off
 	// List of all mobs just for register
@@ -93,11 +93,11 @@ public class StakatoNest extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		L2MonsterInstance mob = (L2MonsterInstance) npc;
+		final L2MonsterInstance mob = (L2MonsterInstance) npc;
 		
 		if ((mob.getId() == STAKATO_LEADER) && (getRandom(1000) < 100) && (mob.getCurrentHp() < (mob.getMaxHp() * 0.3)))
 		{
-			L2MonsterInstance _follower = checkMinion(npc);
+			final L2MonsterInstance _follower = checkMinion(npc);
 			
 			if (_follower != null)
 			{
@@ -121,7 +121,7 @@ public class StakatoNest extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		L2MonsterInstance monster;
+		final L2MonsterInstance monster;
 		switch (npc.getId())
 		{
 			case STAKATO_NURSE:
@@ -186,7 +186,7 @@ public class StakatoNest extends AbstractNpcAI
 		if (Util.contains(COCOONS, npc.getId()) && Util.contains(targets, npc) && (skill.getId() == GROWTH_ACCELERATOR))
 		{
 			npc.doDie(caster);
-			L2Npc spawned = addSpawn(STAKATO_CHIEF, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, caster), false, 0, true);
+			final L2Npc spawned = addSpawn(STAKATO_CHIEF, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, caster), false, 0, true);
 			attackPlayer(caster, spawned);
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
@@ -214,7 +214,7 @@ public class StakatoNest extends AbstractNpcAI
 		{
 			npc.getSpawn().decreaseCount(npc);
 			npc.deleteMe();
-			L2Npc _spawned = addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, true);
+			final L2Npc _spawned = addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, true);
 			attackPlayer(player, _spawned);
 		}
 		return super.onAdvEvent(event, npc, player);
@@ -222,16 +222,15 @@ public class StakatoNest extends AbstractNpcAI
 	
 	private static L2MonsterInstance checkMinion(L2Npc npc)
 	{
-		L2MonsterInstance mob = (L2MonsterInstance) npc;
+		final L2MonsterInstance mob = (L2MonsterInstance) npc;
 		if (mob.hasMinions())
 		{
-			List<L2MonsterInstance> minion = mob.getMinionList().getSpawnedMinions();
+			final List<L2MonsterInstance> minion = mob.getMinionList().getSpawnedMinions();
 			if ((minion != null) && !minion.isEmpty() && (minion.get(0) != null) && !minion.get(0).isDead())
 			{
 				return minion.get(0);
 			}
 		}
-		
 		return null;
 	}
 	
