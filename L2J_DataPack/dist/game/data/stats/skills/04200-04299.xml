@@ -1676,9 +1676,6 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="rideState" val="WYVERN" />
 		<set name="targetType" val="AREA" />
-		<cond msg="You can only use Wyvern Breath when flying"> <!-- This skill really have condition ? -->
-			<player flying="true" />
-		</cond>
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
