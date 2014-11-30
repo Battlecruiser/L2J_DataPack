@@ -21,7 +21,6 @@ package ai.group_template;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
@@ -123,14 +122,14 @@ public final class SilentValley extends AbstractNpcAI
 			{
 				npc.setTarget(player);
 				npc.doCast(BLAZE.getSkill());
-				attackPlayer((L2Attackable) npc, player);
+				addAttackPlayerDesire(npc, player);
 				break;
 			}
 			default:
 			{
 				if (isSummon)
 				{
-					attackPlayer((L2Attackable) npc, player);
+					addAttackPlayerDesire(npc, player);
 				}
 			}
 		}
@@ -161,11 +160,11 @@ public final class SilentValley extends AbstractNpcAI
 			{
 				npc.setTarget(player);
 				npc.doCast(BLAZE.getSkill());
-				attackPlayer((L2Attackable) npc, player);
+				addAttackPlayerDesire(npc, player);
 			}
 			else if (creature.isAffectedBySkill(BETRAYAL.getSkillId()))
 			{
-				attackPlayer((L2Attackable) npc, player);
+				addAttackPlayerDesire(npc, player);
 			}
 		}
 		return super.onSeeCreature(npc, creature, isSummon);

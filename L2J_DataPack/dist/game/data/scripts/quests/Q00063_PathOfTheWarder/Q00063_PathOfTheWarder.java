@@ -18,9 +18,7 @@
  */
 package quests.Q00063_PathOfTheWarder;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.QuestSound;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
@@ -237,16 +235,6 @@ public final class Q00063_PathOfTheWarder extends Quest
 		return htmltext;
 	}
 	
-	private static void attackPlayer(L2Attackable npc, L2PcInstance player)
-	{
-		if ((npc != null) && (player != null))
-		{
-			npc.setIsRunning(true);
-			npc.addDamageHate(player, 0, 999);
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-		}
-	}
-	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
@@ -301,8 +289,8 @@ public final class Q00063_PathOfTheWarder extends Quest
 						else
 						{
 							qs.set("ex", 0);
-							final L2Attackable monster = (L2Attackable) addSpawn(OL_MAHUM_OFFICER_TAK, npc, true, 0, false);
-							attackPlayer(monster, killer);
+							final L2Npc monster = addSpawn(OL_MAHUM_OFFICER_TAK, npc, true, 0, false);
+							addAttackPlayerDesire(monster, killer);
 						}
 					}
 					break;

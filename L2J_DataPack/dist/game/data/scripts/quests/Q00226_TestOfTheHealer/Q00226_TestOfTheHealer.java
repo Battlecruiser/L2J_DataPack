@@ -18,10 +18,8 @@
  */
 package quests.Q00226_TestOfTheHealer;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.QuestSound;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
@@ -161,7 +159,7 @@ public final class Q00226_TestOfTheHealer extends Quest
 					qs.setCond(2, true);
 					if (npc.getSummonedNpcCount() < 1)
 					{
-						attackPlayer(addSpawn(npc, TATOMA, npc, true, 200000), player);
+						addAttackPlayerDesire(addSpawn(npc, TATOMA, npc, true, 200000), player);
 					}
 				}
 				htmltext = event;
@@ -674,16 +672,5 @@ public final class Q00226_TestOfTheHealer extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	private static void attackPlayer(L2Npc npc, L2PcInstance player)
-	{
-		L2Attackable monster = (L2Attackable) npc;
-		if ((monster != null) && (player != null))
-		{
-			monster.setIsRunning(true);
-			monster.addDamageHate(player, 0, 999);
-			monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-		}
 	}
 }

@@ -45,7 +45,7 @@ public final class Gordon extends AbstractNpcAI
 	{
 		if (creature.isPlayer() && ((L2PcInstance) creature).isCursedWeaponEquipped())
 		{
-			attackPlayer((L2Attackable) npc, (L2PcInstance) creature);
+			addAttackPlayerDesire(npc, (L2PcInstance) creature);
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
 	}

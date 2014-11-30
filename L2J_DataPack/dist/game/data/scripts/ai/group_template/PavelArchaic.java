@@ -20,7 +20,6 @@ package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -47,11 +46,11 @@ public final class PavelArchaic extends AbstractNpcAI
 	{
 		if (getRandom(100) < 70)
 		{
-			final L2Attackable golem1 = (L2Attackable) addSpawn(PINCER_GOLEM2, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, false);
-			attackPlayer(golem1, killer);
+			final L2Npc golem1 = addSpawn(PINCER_GOLEM2, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, false);
+			addAttackPlayerDesire(golem1, killer);
 			
-			final L2Attackable golem2 = (L2Attackable) addSpawn(PINCER_GOLEM3, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, false);
-			attackPlayer(golem2, killer);
+			final L2Npc golem2 = addSpawn(PINCER_GOLEM3, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, false);
+			addAttackPlayerDesire(golem2, killer);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

@@ -109,7 +109,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 					npc.getVariables().remove("INVUL_REMOVE_TIMER_STARTED");
 					if ((player != null) && !player.isDead() && npc.getKnownList().knowsThePlayer(player))
 					{
-						attackPlayer((L2MonsterInstance) npc, player);
+						addAttackPlayerDesire(npc, player);
 					}
 				}
 				break;

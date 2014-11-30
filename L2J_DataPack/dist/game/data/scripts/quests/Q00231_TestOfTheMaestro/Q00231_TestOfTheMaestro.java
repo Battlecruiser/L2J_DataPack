@@ -18,9 +18,7 @@
  */
 package quests.Q00231_TestOfTheMaestro;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.QuestSound;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
@@ -162,9 +160,9 @@ public final class Q00231_TestOfTheMaestro extends Quest
 			}
 			case "SPAWN_KING_BUGBEAR":
 			{
-				attackPlayer(addSpawn(KING_BUGBEAR, 140395, -194147, -3146, 0, false, 200000, false), player);
-				attackPlayer(addSpawn(KING_BUGBEAR, 140395, -194147, -3146, 0, false, 200000, false), player);
-				attackPlayer(addSpawn(KING_BUGBEAR, 140395, -194147, -3146, 0, false, 200000, false), player);
+				addAttackPlayerDesire(addSpawn(KING_BUGBEAR, 140395, -194147, -3146, 0, false, 200000, false), player);
+				addAttackPlayerDesire(addSpawn(KING_BUGBEAR, 140395, -194147, -3146, 0, false, 200000, false), player);
+				addAttackPlayerDesire(addSpawn(KING_BUGBEAR, 140395, -194147, -3146, 0, false, 200000, false), player);
 				break;
 			}
 		}
@@ -483,16 +481,5 @@ public final class Q00231_TestOfTheMaestro extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	private static void attackPlayer(L2Npc npc, L2PcInstance player)
-	{
-		L2Attackable monster = (L2Attackable) npc;
-		if ((monster != null) && (player != null))
-		{
-			monster.setIsRunning(true);
-			monster.addDamageHate(player, 0, 999);
-			monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-		}
 	}
 }

@@ -46,7 +46,7 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 {
 	protected class CavernOfThePirateCaptainWorld extends InstanceWorld
 	{
-		ArrayList<L2PcInstance> playersInside = new ArrayList<>();
+		List<L2PcInstance> playersInside = new ArrayList<>();
 		L2Attackable _zaken;
 		long storeTime = 0;
 		boolean _is83;
@@ -511,7 +511,7 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 		if ((player != null) && (npcId != ZAKEN_60) && (npcId != ZAKEN_83))
 		{
 			final L2Attackable mob = (L2Attackable) addSpawn(npcId, ROOM_DATA[roomId - 1][0] + getRandom(350), ROOM_DATA[roomId - 1][1] + getRandom(350), ROOM_DATA[roomId - 1][2], 0, false, 0, false, world.getInstanceId());
-			attackPlayer(mob, player);
+			addAttackPlayerDesire(mob, player);
 			return mob;
 		}
 		return (L2Attackable) addSpawn(npcId, ROOM_DATA[roomId - 1][0], ROOM_DATA[roomId - 1][1], ROOM_DATA[roomId - 1][2], 0, false, 0, false, world.getInstanceId());

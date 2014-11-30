@@ -22,10 +22,8 @@ import java.util.List;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -131,8 +129,8 @@ public final class StakatoNest extends AbstractNpcAI
 					Broadcast.toSelfAndKnownPlayers(npc, new MagicSkillUse(npc, 2046, 1, 1000, 0));
 					for (int i = 0; i < 3; i++)
 					{
-						L2Npc _spawned = addSpawn(STAKATO_CAPTAIN, monster, true);
-						attackPlayer(killer, _spawned);
+						L2Npc spawned = addSpawn(STAKATO_CAPTAIN, monster, true);
+						addAttackPlayerDesire(spawned, killer);
 					}
 				}
 				break;
@@ -150,8 +148,8 @@ public final class StakatoNest extends AbstractNpcAI
 					Broadcast.toSelfAndKnownPlayers(npc, new MagicSkillUse(npc, 2046, 1, 1000, 0));
 					for (int i = 0; i < 3; i++)
 					{
-						L2Npc _spawned = addSpawn(STAKATO_GUARD, monster, true);
-						attackPlayer(killer, _spawned);
+						L2Npc spawned = addSpawn(STAKATO_GUARD, monster, true);
+						addAttackPlayerDesire(spawned, killer);
 					}
 				}
 				break;
@@ -187,7 +185,7 @@ public final class StakatoNest extends AbstractNpcAI
 		{
 			npc.doDie(caster);
 			final L2Npc spawned = addSpawn(STAKATO_CHIEF, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, caster), false, 0, true);
-			attackPlayer(caster, spawned);
+			addAttackPlayerDesire(spawned, caster);
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
@@ -214,8 +212,8 @@ public final class StakatoNest extends AbstractNpcAI
 		{
 			npc.getSpawn().decreaseCount(npc);
 			npc.deleteMe();
-			final L2Npc _spawned = addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, true);
-			attackPlayer(player, _spawned);
+			final L2Npc spawned = addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, true);
+			addAttackPlayerDesire(spawned, player);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -232,16 +230,6 @@ public final class StakatoNest extends AbstractNpcAI
 			}
 		}
 		return null;
-	}
-	
-	private static void attackPlayer(L2PcInstance player, L2Npc npc)
-	{
-		if ((npc != null) && (player != null))
-		{
-			((L2Attackable) npc).setIsRunning(true);
-			((L2Attackable) npc).addDamageHate(player, 0, 999);
-			((L2Attackable) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-		}
 	}
 	
 	private static void giveCocoon(L2PcInstance player, L2Npc npc)
