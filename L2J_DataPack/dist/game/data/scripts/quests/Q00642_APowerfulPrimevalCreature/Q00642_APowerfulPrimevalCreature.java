@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * A Powerful Primeval Creature (642)
@@ -127,7 +126,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
 		
-		if ((qs == null) || !Util.checkIfInRange(1500, npc, killer, true))
+		if (qs == null)
 		{
 			return null;
 		}
