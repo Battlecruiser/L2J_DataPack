@@ -96,10 +96,10 @@ public final class LairOfAntharas extends AbstractNpcAI
 			{
 				if (getRandom(100) > KNIGHT_CHANCE)
 				{
-					final L2Attackable newKnight = (L2Attackable) addSpawn(DRAGON_KNIGHT2, npc.getLocation(), false, 0, true);
+					final L2Npc newKnight = addSpawn(DRAGON_KNIGHT2, npc, false, 0, true);
 					npc.deleteMe();
 					broadcastNpcSay(newKnight, Say2.NPC_SHOUT, NpcStringId.THOSE_WHO_SET_FOOT_IN_THIS_PLACE_SHALL_NOT_LEAVE_ALIVE);
-					attackPlayer(newKnight, killer);
+					addAttackPlayerDesire(newKnight, killer);
 				}
 				break;
 			}
@@ -107,10 +107,10 @@ public final class LairOfAntharas extends AbstractNpcAI
 			{
 				if (getRandom(100) > KNIGHT_CHANCE)
 				{
-					final L2Attackable eliteKnight = (L2Attackable) addSpawn(ELITE_DRAGON_KNIGHT, npc.getLocation(), false, 0, true);
+					final L2Npc eliteKnight = addSpawn(ELITE_DRAGON_KNIGHT, npc, false, 0, true);
 					npc.deleteMe();
 					broadcastNpcSay(eliteKnight, Say2.NPC_SHOUT, NpcStringId.IF_YOU_WISH_TO_SEE_HELL_I_WILL_GRANT_YOU_YOUR_WISH);
-					attackPlayer(eliteKnight, killer);
+					addAttackPlayerDesire(eliteKnight, killer);
 				}
 				break;
 			}

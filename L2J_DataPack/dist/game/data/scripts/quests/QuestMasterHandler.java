@@ -196,6 +196,7 @@ import quests.Q00212_TrialOfDuty.Q00212_TrialOfDuty;
 import quests.Q00213_TrialOfTheSeeker.Q00213_TrialOfTheSeeker;
 import quests.Q00214_TrialOfTheScholar.Q00214_TrialOfTheScholar;
 import quests.Q00215_TrialOfThePilgrim.Q00215_TrialOfThePilgrim;
+import quests.Q00216_TrialOfTheGuildsman.Q00216_TrialOfTheGuildsman;
 import quests.Q00217_TestimonyOfTrust.Q00217_TestimonyOfTrust;
 import quests.Q00218_TestimonyOfLife.Q00218_TestimonyOfLife;
 import quests.Q00219_TestimonyOfFate.Q00219_TestimonyOfFate;
@@ -317,6 +318,7 @@ import quests.Q00379_FantasyWine.Q00379_FantasyWine;
 import quests.Q00380_BringOutTheFlavorOfIngredients.Q00380_BringOutTheFlavorOfIngredients;
 import quests.Q00381_LetsBecomeARoyalMember.Q00381_LetsBecomeARoyalMember;
 import quests.Q00382_KailsMagicCoin.Q00382_KailsMagicCoin;
+import quests.Q00383_TreasureHunt.Q00383_TreasureHunt;
 import quests.Q00385_YokeOfThePast.Q00385_YokeOfThePast;
 import quests.Q00401_PathOfTheWarrior.Q00401_PathOfTheWarrior;
 import quests.Q00402_PathOfTheHumanKnight.Q00402_PathOfTheHumanKnight;
@@ -648,6 +650,7 @@ public class QuestMasterHandler
 		Q00213_TrialOfTheSeeker.class,
 		Q00214_TrialOfTheScholar.class,
 		Q00215_TrialOfThePilgrim.class,
+		Q00216_TrialOfTheGuildsman.class,
 		Q00217_TestimonyOfTrust.class,
 		Q00218_TestimonyOfLife.class,
 		Q00219_TestimonyOfFate.class,
@@ -769,6 +772,7 @@ public class QuestMasterHandler
 		Q00380_BringOutTheFlavorOfIngredients.class,
 		Q00381_LetsBecomeARoyalMember.class,
 		Q00382_KailsMagicCoin.class,
+		Q00383_TreasureHunt.class,
 		Q00385_YokeOfThePast.class,
 		Q00401_PathOfTheWarrior.class,
 		Q00402_PathOfTheHumanKnight.class,

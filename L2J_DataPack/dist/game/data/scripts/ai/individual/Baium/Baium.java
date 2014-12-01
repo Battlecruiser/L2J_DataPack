@@ -294,19 +294,19 @@ public final class Baium extends AbstractNpcAI
 				
 				if ((player != null) && !player.isDead())
 				{
-					attackPlayer((L2Attackable) npc, player);
+					addAttackPlayerDesire(npc, player);
 				}
 				else if ((_standbyPlayer != null) && !_standbyPlayer.isDead())
 				{
-					attackPlayer((L2Attackable) npc, _standbyPlayer);
+					addAttackPlayerDesire(npc, _standbyPlayer);
 				}
 				else
 				{
-					for (L2Character characters : npc.getKnownList().getKnownCharactersInRadius(2000))
+					for (L2Character creature : npc.getKnownList().getKnownCharactersInRadius(2000))
 					{
-						if ((characters != null) && characters.isPlayer() && zone.isInsideZone(characters) && !characters.isDead())
+						if ((creature != null) && creature.isPlayer() && zone.isInsideZone(creature) && !creature.isDead())
 						{
-							attackPlayer((L2Attackable) npc, (L2Playable) characters);
+							addAttackPlayerDesire(npc, (L2Playable) creature);
 							break;
 						}
 					}
@@ -332,20 +332,20 @@ public final class Baium extends AbstractNpcAI
 						{
 							mob.clearAggroList();
 						}
-						attackPlayer(mob, (L2Playable) mostHated);
+						addAttackPlayerDesire(mob, (L2Playable) mostHated);
 					}
 					else
 					{
 						boolean found = false;
-						for (L2Character characters : mob.getKnownList().getKnownCharactersInRadius(1000))
+						for (L2Character creature : mob.getKnownList().getKnownCharactersInRadius(1000))
 						{
-							if ((characters != null) && characters.isPlayable() && zone.isInsideZone(characters) && !characters.isDead())
+							if ((creature != null) && creature.isPlayable() && zone.isInsideZone(creature) && !creature.isDead())
 							{
-								if (mob.getTarget() != characters)
+								if (mob.getTarget() != creature)
 								{
 									mob.clearAggroList();
 								}
-								attackPlayer(mob, (L2Playable) characters);
+								addAttackPlayerDesire(mob, (L2Playable) creature);
 								found = true;
 								break;
 							}

@@ -18,9 +18,7 @@
  */
 package quests.Q00223_TestOfTheChampion;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.QuestSound;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
@@ -226,15 +224,12 @@ public final class Q00223_TestOfTheChampion extends Quest
 								{
 									if (getRandom(10) < 7)
 									{
-										final L2Attackable monster1 = (L2Attackable) addSpawn(HARPY_MATRIARCH, npc, true, 0, false);
-										attackPlayer(monster1, attacker);
+										addAttackPlayerDesire(addSpawn(HARPY_MATRIARCH, npc, true, 0, false), attacker);
 									}
 									else
 									{
-										final L2Attackable monster1 = (L2Attackable) addSpawn(HARPY_MATRIARCH, npc, true, 0, false);
-										final L2Attackable monster2 = (L2Attackable) addSpawn(HARPY_MATRIARCH, npc, true, 0, false);
-										attackPlayer(monster1, attacker);
-										attackPlayer(monster2, attacker);
+										addAttackPlayerDesire(addSpawn(HARPY_MATRIARCH, npc, true, 0, false), attacker);
+										addAttackPlayerDesire(addSpawn(HARPY_MATRIARCH, npc, true, 0, false), attacker);
 									}
 								}
 							}
@@ -262,15 +257,12 @@ public final class Q00223_TestOfTheChampion extends Quest
 								{
 									if (getRandom(10) < 7)
 									{
-										final L2Attackable monster1 = (L2Attackable) addSpawn(ROAD_COLLECTOR, npc, true, 0, false);
-										attackPlayer(monster1, attacker);
+										addAttackPlayerDesire(addSpawn(ROAD_COLLECTOR, npc, true, 0, false), attacker);
 									}
 									else
 									{
-										final L2Attackable monster1 = (L2Attackable) addSpawn(ROAD_COLLECTOR, npc, true, 0, false);
-										final L2Attackable monster2 = (L2Attackable) addSpawn(ROAD_COLLECTOR, npc, true, 0, false);
-										attackPlayer(monster1, attacker);
-										attackPlayer(monster2, attacker);
+										addAttackPlayerDesire(addSpawn(ROAD_COLLECTOR, npc, true, 0, false), attacker);
+										addAttackPlayerDesire(addSpawn(ROAD_COLLECTOR, npc, true, 0, false), attacker);
 									}
 								}
 							}
@@ -296,8 +288,7 @@ public final class Q00223_TestOfTheChampion extends Quest
 							{
 								if (getRandomBoolean())
 								{
-									final L2Attackable monster1 = (L2Attackable) addSpawn(BLOODY_AXE_ELITE, npc, true, 0, false);
-									attackPlayer(monster1, attacker);
+									addAttackPlayerDesire(addSpawn(BLOODY_AXE_ELITE, npc, true, 0, false), attacker);
 								}
 							}
 							npc.setScriptValue(1);
@@ -644,15 +635,5 @@ public final class Q00223_TestOfTheChampion extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	private static void attackPlayer(L2Attackable npc, L2PcInstance player)
-	{
-		if ((npc != null) && (player != null))
-		{
-			npc.setIsRunning(true);
-			npc.addDamageHate(player, 0, 999);
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-		}
 	}
 }

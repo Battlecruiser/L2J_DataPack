@@ -18,9 +18,7 @@
  */
 package quests.Q00225_TestOfTheSearcher;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.QuestSound;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
@@ -216,8 +214,7 @@ public final class Q00225_TestOfTheSearcher extends Quest
 			if (npc.isScriptValue(0) && hasQuestItems(attacker, LEIRYNNS_1ST_ORDER))
 			{
 				npc.setScriptValue(1);
-				final L2Attackable monster1 = (L2Attackable) addSpawn(NEER_BODYGUARD, npc, true, 200000);
-				attackPlayer(monster1, attacker);
+				addAttackPlayerDesire(addSpawn(NEER_BODYGUARD, npc, true, 200000), attacker);
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
@@ -606,15 +603,5 @@ public final class Q00225_TestOfTheSearcher extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	private static void attackPlayer(L2Attackable npc, L2PcInstance player)
-	{
-		if ((npc != null) && (player != null))
-		{
-			npc.setIsRunning(true);
-			npc.addDamageHate(player, 0, 999);
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-		}
 	}
 }

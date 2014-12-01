@@ -955,6 +955,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="21200,2,2,100" />
 	</item>
 	<item id="21199" type="EtcItem" name="Mysterious Scroll Pack - 8 Prophecies of Wind">
 		<!-- Description: Dimensional item pack. Gift box containing 8 mysterious scrolls - prophecy of wind. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
@@ -964,5 +966,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="21200,8,8,100" />
 	</item>
 </list>

@@ -1532,15 +1532,6 @@ public final class Q00120_PavelsLastResearch extends Quest
 		return html;
 	}
 	
-	private static void castSkill(L2Npc npc, L2PcInstance player, Skill skill)
-	{
-		if ((skill.getHpConsume() <= npc.getCurrentHp()) && (skill.getMpConsume() <= npc.getCurrentMp()) && (npc.getSkillRemainingReuseTime(skill.getReuseHashCode()) <= 0))
-		{
-			npc.setTarget(player);
-			npc.doCast(skill);
-		}
-	}
-	
 	private static boolean checkQ114(L2PcInstance player)
 	{
 		final QuestState q114 = player.getQuestState(Q00114_ResurrectionOfAnOldManager.class.getSimpleName());

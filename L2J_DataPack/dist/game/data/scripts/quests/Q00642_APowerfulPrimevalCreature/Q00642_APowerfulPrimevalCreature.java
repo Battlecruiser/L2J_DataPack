@@ -21,13 +21,11 @@ package quests.Q00642_APowerfulPrimevalCreature;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * A Powerful Primeval Creature (642)
@@ -40,23 +38,25 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	// Items
 	private static final int DINOSAUR_TISSUE = 8774;
 	private static final int DINOSAUR_EGG = 8775;
+	// Misc
+	private static final int MIN_LEVEL = 75;
+	// Mobs
+	private static final int ANCIENT_EGG = 18344;
 	
-	private static final Map<Integer, Integer> MOBS_TISSUE = new HashMap<>();
+	private static final Map<Integer, Double> MOBS_TISSUE = new HashMap<>();
 	
 	static
 	{
-		MOBS_TISSUE.put(22196, 309); // Velociraptor
-		MOBS_TISSUE.put(22197, 309); // Velociraptor
-		MOBS_TISSUE.put(22198, 309); // Velociraptor
-		MOBS_TISSUE.put(22199, 309); // Pterosaur
-		MOBS_TISSUE.put(22215, 988); // Tyrannosaurus
-		MOBS_TISSUE.put(22216, 988); // Tyrannosaurus
-		MOBS_TISSUE.put(22217, 988); // Tyrannosaurus
-		MOBS_TISSUE.put(22218, 309); // Velociraptor
-		MOBS_TISSUE.put(22223, 309); // Velociraptor
+		MOBS_TISSUE.put(22196, 0.309); // Velociraptor
+		MOBS_TISSUE.put(22197, 0.309); // Velociraptor
+		MOBS_TISSUE.put(22198, 0.309); // Velociraptor
+		MOBS_TISSUE.put(22199, 0.309); // Pterosaur
+		MOBS_TISSUE.put(22215, 0.988); // Tyrannosaurus
+		MOBS_TISSUE.put(22216, 0.988); // Tyrannosaurus
+		MOBS_TISSUE.put(22217, 0.988); // Tyrannosaurus
+		MOBS_TISSUE.put(22218, 0.309); // Velociraptor
+		MOBS_TISSUE.put(22223, 0.309); // Velociraptor
 	}
-	
-	private static final int ANCIENT_EGG = 18344;
 	
 	public Q00642_APowerfulPrimevalCreature()
 	{
@@ -71,91 +71,93 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
-			return getNoQuestMsg(player);
+			return null;
 		}
 		
 		String htmltext = event;
 		switch (event)
 		{
 			case "32105-05.html":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "32105-06.htm":
-				st.exitQuest(true);
+			{
+				qs.exitQuest(true);
 				break;
+			}
 			case "32105-09.html":
-				if (st.hasQuestItems(DINOSAUR_TISSUE))
+			{
+				if (hasQuestItems(player, DINOSAUR_TISSUE))
 				{
-					st.giveAdena(5000 * st.getQuestItemsCount(DINOSAUR_TISSUE), true);
-					st.takeItems(DINOSAUR_TISSUE, -1);
+					giveAdena(player, 5000 * getQuestItemsCount(player, DINOSAUR_TISSUE), true);
+					takeItems(player, DINOSAUR_TISSUE, -1);
+				}
+				else
+				{
+					htmltext = "32105-14.html";
 				}
 				break;
+			}
 			case "exit":
-				if (st.hasQuestItems(DINOSAUR_TISSUE))
+			{
+				if (hasQuestItems(player, DINOSAUR_TISSUE))
 				{
-					st.giveAdena(5000 * st.getQuestItemsCount(DINOSAUR_TISSUE), true);
-					st.exitQuest(true, true);
+					giveAdena(player, 5000 * getQuestItemsCount(player, DINOSAUR_TISSUE), true);
+					qs.exitQuest(true, true);
 					htmltext = "32105-12.html";
 				}
 				else
 				{
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = "32105-13.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
-		if (partyMember == null)
+		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
+		
+		if ((qs == null) || !Util.checkIfInRange(1500, npc, killer, true))
 		{
-			return super.onKill(npc, player, isSummon);
+			return null;
 		}
 		
-		final QuestState st = partyMember.getQuestState(getName());
 		int npcId = npc.getId();
+		
 		if (MOBS_TISSUE.containsKey(npcId))
 		{
-			float chance = (MOBS_TISSUE.get(npcId) * Config.RATE_QUEST_DROP);
-			if (getRandom(1000) < chance)
-			{
-				st.rewardItems(DINOSAUR_TISSUE, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
+			giveItemRandomly(qs.getPlayer(), npc, DINOSAUR_TISSUE, 1, 0, MOBS_TISSUE.get(npcId), true);
 		}
-		else if (npcId == ANCIENT_EGG)
+		else
 		{
-			st.rewardItems(DINOSAUR_EGG, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			giveItemRandomly(qs.getPlayer(), npc, DINOSAUR_EGG, 1, 0, 1.0, true);
 		}
-		return super.onKill(npc, player, isSummon);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
-		switch (st.getState())
+		if (qs.isCreated())
 		{
-			case State.CREATED:
-				htmltext = player.getLevel() < 75 ? "32105-01.htm" : "32105-02.htm";
-				break;
-			case State.STARTED:
-				htmltext = (!st.hasQuestItems(DINOSAUR_TISSUE) && !st.hasQuestItems(DINOSAUR_EGG)) ? "32105-07.html" : "32105-08.html";
-				break;
+			htmltext = player.getLevel() < MIN_LEVEL ? "32105-01.htm" : "32105-02.htm";
+		}
+		else if (qs.isStarted())
+		{
+			htmltext = (hasAtLeastOneQuestItem(player, DINOSAUR_TISSUE, DINOSAUR_EGG)) ? "32105-08.html" : "32105-07.html";
 		}
 		return htmltext;
 	}

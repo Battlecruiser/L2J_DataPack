@@ -112,67 +112,242 @@
 	</skill>
 	<skill id="22213" levels="1" name="Mysterious Scroll - Prophecy of Wind">
 		<!-- "For 60 minutes, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buff by 10%. Decreases Speed by 20%. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on an enemy." -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill1357" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21200" /> <!-- Mysterious Scroll - Prophecy of Wind -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="10000" />
+		<set name="targetType" val="SELF" />	
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="1.2" />
+				<mul stat="rCrit" val="1.2" />
+				<mul stat="cAtk" val="1.2" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pDef" val="1.2" />
+				<mul stat="pAtkSpd" val="1.2" />
+				<mul stat="mAtk" val="1.2" />
+				<mul stat="mDef" val="1.2" />
+				<mul stat="mAtkSpd" val="1.2" />
+				<sub stat="debuffVuln" val="10" />
+				<mul stat="runSpd" val="0.8" />
+				<add stat="absorbDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22214" levels="1" name="MP Recovery Potion">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- Magic potion that quickly recovers MP by 50% when used. -->
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21210" /> <!-- MP Recovery Potion -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="ManaHealPercent">
+				<param power="50" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22215" levels="1" name="Energy Replenishing Herb Tea">
 		<!-- "For 30 minute(s), energy is replenished when Exp. is acquired through hunting." -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="VP_UP" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="100" />
+		<set name="hitTime" val="100" />
+		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21212" /> <!-- Vitality Replenishing Herb Tea -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<sub stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22216" levels="1" name="Transformation Scroll - Anakim">
 		<!-- Transformed into Anakim. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21224" /> <!-- Transformation Scroll: Anakim -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="600000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="306" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22217" levels="1" name="Super Healthy Juice (HP)">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- Magic juice that instantly fully recovers HP. -->
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21239" /> <!-- Super Healthy Juice (HP) -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22218" levels="1" name="Super Healthy Juice (HP)">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- Magic juice that instantly fully recovers HP. -->
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21240" /> <!-- Super Healthy Juice (HP) - Event -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22219" levels="1" name="Super Healthy Juice (CP)">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- Magic juice that temporarily recovers CP in full. -->
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21243" /> <!-- Super Healthy Juice (CP) -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="CpHealPercent">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22220" levels="1" name="Super Healthy Juice (CP)">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- Magic juice that temporarily recovers CP in full. -->
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21244" /> <!-- Super Healthy Juice (CP) - Event -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="CpHealPercent">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22221" levels="1" name="Energy Replenishing Beverage">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- Vitality is replenished to 100% upon use. -->
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21247" /> <!-- Vitality Replenishing Beverage -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22222" levels="1" name="Energy Replenishing Beverage">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- Vitality is replenished to 100% upon use. -->
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21248" /> <!-- Vitality Replenishing Beverage - Event -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="VitalityPointUp">
+				<param value="20000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22223" levels="1" name="Potion of Energy Maintenance">
 		<!-- Energy is maintained for 30 minutes. -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="VP_KEEP" />
+		<set name="abnormalVisualEffect" val="VP_KEEP" />
+		<set name="effectPoint" val="100" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="BranchSys2.icon.br_essence_rose_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21251" /> <!-- Vitality Maintainig Potion (30 Minutes) -->
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="vitalityConsumeRate" val="0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22224" levels="1" name="Potion of Energy Maintenance">
 		<!-- Energy is maintained for 30 minutes. -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="VP_KEEP" />
+		<set name="abnormalVisualEffect" val="VP_KEEP" />
+		<set name="effectPoint" val="100" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="BranchSys2.icon.br_essence_rose_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21252" /> <!-- Vitality Maintainig Potion (30 Minutes) - Event -->
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="vitalityConsumeRate" val="0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22225" levels="1" name="Gludio Homemade Cookie">
 		<!-- Increases P. Atk. by 10% for 60 minutes. -->
