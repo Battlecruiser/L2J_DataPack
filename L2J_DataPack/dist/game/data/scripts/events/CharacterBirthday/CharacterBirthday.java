@@ -71,7 +71,7 @@ public final class CharacterBirthday extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
 		if (event.equalsIgnoreCase("despawn_npc"))
 		{
@@ -108,11 +108,7 @@ public final class CharacterBirthday extends Quest
 			return "busy.htm";
 		}
 		
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
+		QuestState st = getQuestState(player, true);
 		
 		if (!Util.checkIfInRange(10, npc, player, true))
 		{

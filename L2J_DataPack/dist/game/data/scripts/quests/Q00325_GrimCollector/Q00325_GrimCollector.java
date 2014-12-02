@@ -82,7 +82,7 @@ public final class Q00325_GrimCollector extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -192,7 +192,7 @@ public final class Q00325_GrimCollector extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = killer.getQuestState(getName());
+		final QuestState qs = getQuestState(killer, false);
 		
 		if ((qs == null) || !qs.isStarted())
 		{

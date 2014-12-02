@@ -56,7 +56,7 @@ public final class Q10504_JewelOfAntharas extends Quest
 	@Override
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
 			st.takeItems(CLEAR_CRYSTAL, -1);

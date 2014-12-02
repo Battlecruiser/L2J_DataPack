@@ -68,7 +68,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{
@@ -98,12 +98,6 @@ public class Q00250_WatchWhatYouEat extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			newQuestState(player);
-		}
-		
 		if (npc.getId() == SALLY)
 		{
 			return "32743-20.html";
@@ -115,7 +109,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;

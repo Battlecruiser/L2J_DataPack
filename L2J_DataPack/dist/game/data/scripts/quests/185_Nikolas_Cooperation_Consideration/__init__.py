@@ -31,7 +31,7 @@ class Quest (JQuest) :
         self.questItemIds = [NicolasMap,BrokenMetal,Metal]
 
     def onAdvEvent (self,event,npc, player) :
-        st = player.getQuestState(qn)
+        st = self.getQuestState(player, False)
         if not st: return
         htmltext = event
         if event == "30621-01.htm":
@@ -151,7 +151,7 @@ class Quest (JQuest) :
         return htmltext
 
     def onFirstTalk (self,npc,player):
-       st = player.getQuestState(qn)
+       st = self.getQuestState(player, False)
        q2 = QuestManager.getInstance().getQuest("184_Nikolas_Cooperation_Contract")
        if st:
            player.setLastQuestNpcObject(npc.getObjectId())

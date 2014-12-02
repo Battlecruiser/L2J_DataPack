@@ -138,7 +138,7 @@ public class Q00254_LegendaryTales extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{

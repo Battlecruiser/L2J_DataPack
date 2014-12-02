@@ -158,7 +158,7 @@ public final class OracleTeleport extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
 		int npcId = npc.getId();
 		if (event.equalsIgnoreCase("Return"))
@@ -273,7 +273,7 @@ public final class OracleTeleport extends AbstractNpcAI
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		
 		int npcId = npc.getId();
 		if (Util.contains(TOWN_DAWN, npcId))

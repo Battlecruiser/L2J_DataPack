@@ -75,7 +75,7 @@ public class Q00134_TempleMissionary extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -126,7 +126,7 @@ public class Q00134_TempleMissionary extends Quest
 		{
 			return super.onKill(npc, player, isSummon);
 		}
-		final QuestState st = member.getQuestState(getName());
+		final QuestState st = getQuestState(member, false);
 		if (npc.getId() == CRUMA_MARSHLANDS_TRAITOR)
 		{
 			st.giveItems(GIANTS_TECHNOLOGY_REPORT, 1);

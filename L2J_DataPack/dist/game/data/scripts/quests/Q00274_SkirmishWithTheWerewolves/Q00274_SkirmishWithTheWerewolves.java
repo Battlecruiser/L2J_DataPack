@@ -60,7 +60,7 @@ public final class Q00274_SkirmishWithTheWerewolves extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && event.equalsIgnoreCase("30569-04.htm"))
 		{
 			st.startQuest();
@@ -72,7 +72,7 @@ public final class Q00274_SkirmishWithTheWerewolves extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = killer.getQuestState(getName());
+		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && st.isCond(1))
 		{
 			st.giveItems(WEREWOLF_HEAD, 1);

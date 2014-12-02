@@ -88,7 +88,7 @@ public class Q00458_PerfectForm extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String noQuest = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return noQuest;
@@ -217,7 +217,7 @@ public class Q00458_PerfectForm extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && st.isCond(1))
 		{
 			int npcId = npc.getId();

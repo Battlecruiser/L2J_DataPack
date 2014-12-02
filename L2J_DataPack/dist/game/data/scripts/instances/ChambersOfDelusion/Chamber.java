@@ -362,11 +362,7 @@ public abstract class Chamber extends Quest
 		
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			QuestState st = partyMember.getQuestState(getName());
-			if (st == null)
-			{
-				st = newQuestState(partyMember);
-			}
+			final QuestState st = getQuestState(partyMember, true);
 			
 			if (st.hasQuestItems(DELUSION_MARK))
 			{
@@ -449,7 +445,7 @@ public abstract class Chamber extends Quest
 		}
 		final Instance inst = InstanceManager.getInstance().getInstance(player.getInstanceId());
 		Location ret = inst.getSpawnLoc();
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		
 		if (st != null)
 		{
@@ -491,7 +487,7 @@ public abstract class Chamber extends Quest
 		{
 			final CDWorld world = (CDWorld) tmpworld;
 			
-			QuestState st = player.getQuestState(getName());
+			QuestState st = getQuestState(player, false);
 			
 			if (st == null)
 			{
@@ -661,7 +657,7 @@ public abstract class Chamber extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		int npcId = npc.getId();
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{

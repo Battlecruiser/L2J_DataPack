@@ -273,7 +273,7 @@ public final class NpcLocationInfo extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{
@@ -308,6 +308,7 @@ public final class NpcLocationInfo extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		int npcId = npc.getId();
+		getQuestState(player, true);
 		
 		if (Util.contains(NPC, npcId))
 		{

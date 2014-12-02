@@ -98,7 +98,7 @@ class Quest (JQuest) :
         return htmltext
 
     def onFirstTalk (self,npc,player):
-        st = player.getQuestState(qn)
+        st = self.getQuestState(player, False)
         if st :
             if npc.getId() == Katenar and st.getInt("cond") == 12:
                 st.unset("angel")
@@ -245,7 +245,7 @@ class Quest (JQuest) :
         return htmltext
 
     def onKill(self,npc,player,isPet):
-        st = player.getQuestState(qn)
+        st = self.getQuestState(player, False)
         if not st : return
         if st.getState() != State.STARTED : return
         npcId = npc.getId()

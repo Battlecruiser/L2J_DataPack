@@ -59,7 +59,6 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -1576,11 +1575,7 @@ public final class FinalEmperialTomb extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		int npcId = npc.getId();
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
+		getQuestState(player, true);
 		if (npcId == GUIDE)
 		{
 			enterInstance(player, "FinalEmperialTomb.xml", ENTER_TELEPORT);

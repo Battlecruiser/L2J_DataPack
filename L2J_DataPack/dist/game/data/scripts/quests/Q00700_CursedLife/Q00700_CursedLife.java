@@ -76,7 +76,7 @@ public class Q00700_CursedLife extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if (st != null)
 		{
@@ -151,7 +151,7 @@ public class Q00700_CursedLife extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st != null)
 		{
 			if (npc.getId() == ROK)

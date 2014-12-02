@@ -71,7 +71,7 @@ public abstract class AbstractSagaQuest extends Quest
 	
 	private QuestState findQuest(L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st != null)
 		{
 			if (getId() == 68)
@@ -157,7 +157,7 @@ public abstract class AbstractSagaQuest extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if (st != null)
 		{
@@ -444,7 +444,7 @@ public abstract class AbstractSagaQuest extends Quest
 		if (st2 != null)
 		{
 			int cond = st2.getCond();
-			QuestState st = player.getQuestState(getName());
+			QuestState st = getQuestState(player, false);
 			int npcId = npc.getId();
 			if ((npcId == Mob[2]) && (st == st2) && (cond == 17))
 			{
@@ -483,7 +483,7 @@ public abstract class AbstractSagaQuest extends Quest
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		int npcId = npc.getId();
 		if (st != null)
 		{
@@ -555,7 +555,7 @@ public abstract class AbstractSagaQuest extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		int npcId = npc.getId();
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
 		{
 			if (npcId == Archon_Minion)

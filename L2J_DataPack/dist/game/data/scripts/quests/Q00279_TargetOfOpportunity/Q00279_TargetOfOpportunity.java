@@ -70,7 +70,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st == null) || (player.getLevel() < 82))
 		{
 			return getNoQuestMsg(player);
@@ -100,7 +100,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 			return null;
 		}
 		
-		final QuestState st = pl.getQuestState(getName());
+		final QuestState st = getQuestState(pl, false);
 		if (getRandom(1000) < (int) (311 * Config.RATE_QUEST_DROP))
 		{
 			if (!st.hasQuestItems(SEAL_COMPONENTS[idx]))

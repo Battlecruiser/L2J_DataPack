@@ -68,7 +68,7 @@ public final class Q00260_OrcHunting extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if (st == null)
 		{
@@ -101,7 +101,7 @@ public final class Q00260_OrcHunting extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = killer.getQuestState(getName());
+		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && (getRandom(10) > 4))
 		{
 			st.giveItems(MONSTERS.get(npc.getId()), 1);

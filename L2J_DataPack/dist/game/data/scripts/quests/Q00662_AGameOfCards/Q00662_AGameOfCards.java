@@ -102,7 +102,7 @@ public final class Q00662_AGameOfCards extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if (st == null)
 		{
@@ -718,7 +718,7 @@ public final class Q00662_AGameOfCards extends Quest
 		{
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
-				if (member.getQuestState(getName()) != null)
+				if (getQuestState(member, false) != null)
 				{
 					players.add(member);
 				}
@@ -730,7 +730,7 @@ public final class Q00662_AGameOfCards extends Quest
 		{
 			if (MONSTERS.get(npc.getId()) < getRandom(1000))
 			{
-				final QuestState st = player.getQuestState(getName());
+				final QuestState st = getQuestState(player, false);
 				if (st != null)
 				{
 					st.giveItems(RED_GEM, 1);

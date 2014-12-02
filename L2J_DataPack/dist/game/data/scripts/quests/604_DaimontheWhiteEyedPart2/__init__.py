@@ -52,7 +52,7 @@ class Quest (JQuest) :
    elif event == "spawn_npc" :
       self.addSpawn(31541,186304,-43744,-3193,57000, False, 0, True)
       return
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if not st: return
    cond = st.getInt("cond") 
    htmltext = event 
@@ -144,7 +144,7 @@ class Quest (JQuest) :
             st.set("cond","3") 
             st.playSound("ItemSound.quest_middle")
         else :
-            st = player.getQuestState(qn)
+            st = self.getQuestState(player, False)
             if not st : return
             if st.getState() == State.STARTED and (st.getInt("cond") == 1 or st.getInt("cond") == 2) :
                 if st.getQuestItemsCount(S_SUMMON) > 0 :

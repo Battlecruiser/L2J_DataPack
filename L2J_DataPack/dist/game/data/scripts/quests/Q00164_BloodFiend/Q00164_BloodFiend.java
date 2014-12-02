@@ -55,7 +55,7 @@ public class Q00164_BloodFiend extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && event.equals("30149-04.htm"))
 		{
 			st.startQuest();
@@ -67,7 +67,7 @@ public class Q00164_BloodFiend extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = killer.getQuestState(getName());
+		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && st.isCond(1))
 		{
 			npc.broadcastPacket(new NpcSay(npc, Say2.ALL, NpcStringId.I_HAVE_FULFILLED_MY_CONTRACT_WITH_TRADER_CREAMEES));

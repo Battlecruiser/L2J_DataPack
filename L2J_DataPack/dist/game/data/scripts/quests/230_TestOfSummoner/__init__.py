@@ -116,7 +116,7 @@ class Quest (JQuest) :
 
    def onAdvEvent (self,event,npc, player) :
       htmltext = event
-      st = player.getQuestState(qn)
+      st = self.getQuestState(player, False)
       if not st : return
       if event == "30634-08.htm" :                    # start part for Galatea
          for var in STATS:
@@ -301,7 +301,7 @@ class Quest (JQuest) :
    # on the first attack, the stat is in battle... anytime gives crystal and set stat
    def onAttack (self, npc, player,damage,isPet,skill):
       npcId = npc.getId()
-      st = player.getQuestState(qn)
+      st = self.getQuestState(player, False)
       if npcId in DROPLIST_SUMMON.keys() :
          var,start,progress,foul,defeat,victory = DROPLIST_SUMMON[npcId]
          # check if this npc has been attacked before
@@ -330,7 +330,7 @@ class Quest (JQuest) :
 
    def onKill(self,npc,player,isPet):
       npcId = npc.getId() 
-      st = player.getQuestState(qn)
+      st = self.getQuestState(player, False)
       # this part is just for laras parts.  It is only available to players who are doing the quest
       if npcId in DROPLIST_LARA.keys() :
          if not st : return

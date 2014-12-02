@@ -56,7 +56,7 @@ public class Q00906_TheCallOfValakas extends Quest
 	@Override
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
 			st.giveItems(LAVASAURUS_ALPHA_FRAGMENT, 1);
@@ -68,7 +68,7 @@ public class Q00906_TheCallOfValakas extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;

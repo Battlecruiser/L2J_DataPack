@@ -99,7 +99,7 @@ public class Q00287_FiguringItOut extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{
@@ -168,7 +168,7 @@ public class Q00287_FiguringItOut extends Quest
 		{
 			return super.onKill(npc, player, isSummon);
 		}
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		
 		if (getRandom(1000) < MONSTERS.get(npc.getId()))
 		{

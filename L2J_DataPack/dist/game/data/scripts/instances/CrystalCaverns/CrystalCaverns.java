@@ -2476,11 +2476,7 @@ public final class CrystalCaverns extends Quest
 			{
 				if (partyMember.getInstanceId() == instanceId)
 				{
-					QuestState st = partyMember.getQuestState(getName());
-					if (st == null)
-					{
-						st = newQuestState(partyMember);
-					}
+					final QuestState st = getQuestState(partyMember, true);
 					if (!isBaylor && st.hasQuestItems(CONT_CRYSTAL))
 					{
 						st.takeItems(CONT_CRYSTAL, 1);
@@ -2499,7 +2495,7 @@ public final class CrystalCaverns extends Quest
 		}
 		else if (player.getInstanceId() == instanceId)
 		{
-			QuestState st = player.getQuestState(getName());
+			QuestState st = getQuestState(player, false);
 			if (st == null)
 			{
 				st = newQuestState(player);
@@ -2758,7 +2754,7 @@ public final class CrystalCaverns extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		int npcId = npc.getId();
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			st = newQuestState(player);

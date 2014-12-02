@@ -66,7 +66,7 @@ public final class Q00624_TheFinestIngredientsPart1 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if (st != null)
 		{
@@ -115,7 +115,7 @@ public final class Q00624_TheFinestIngredientsPart1 extends Quest
 				}
 				if (getQuestItemsCount(partyMember, getRegisteredItemIds()) == 150)
 				{
-					partyMember.getQuestState(getName()).setCond(2, true);
+					getQuestState(partyMember, false).setCond(2, true);
 				}
 			}
 			else

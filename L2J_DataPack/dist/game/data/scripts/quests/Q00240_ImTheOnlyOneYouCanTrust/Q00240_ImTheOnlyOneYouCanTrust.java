@@ -69,7 +69,7 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -91,7 +91,7 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		st.giveItems(STAKATO_FANG, 1);
 		if (st.getQuestItemsCount(STAKATO_FANG) >= 25)
 		{

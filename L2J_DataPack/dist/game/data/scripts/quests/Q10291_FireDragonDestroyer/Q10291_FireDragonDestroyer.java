@@ -56,7 +56,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -83,7 +83,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 		{
 			if (Util.checkIfInRange(8000, npc, p, false))
 			{
-				QuestState st = p.getQuestState(getName());
+				QuestState st = getQuestState(p, false);
 				
 				if ((st != null) && st.isCond(1) && st.hasQuestItems(POOR_NECKLACE))
 				{

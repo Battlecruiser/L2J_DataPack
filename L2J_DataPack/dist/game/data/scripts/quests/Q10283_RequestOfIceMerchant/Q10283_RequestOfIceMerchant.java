@@ -56,7 +56,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return htmltext;
@@ -112,7 +112,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			return "32760-10.html";
 		}
 		
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && st.isCond(2))
 		{
 			return "32760-01.html";

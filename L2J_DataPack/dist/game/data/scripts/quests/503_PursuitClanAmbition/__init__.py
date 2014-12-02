@@ -498,7 +498,7 @@ class Quest (JQuest) :
     # only if the leader is online and within a certain distance!
     leader_st = 0
     if player.isClanLeader() :
-      leader_st = player.getQuestState(qn)
+      leader_st = self.getQuestState(player, False)
     else :
       clan = player.getClan()
       if clan:

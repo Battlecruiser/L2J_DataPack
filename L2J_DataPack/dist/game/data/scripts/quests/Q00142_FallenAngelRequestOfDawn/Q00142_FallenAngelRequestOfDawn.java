@@ -76,7 +76,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -151,7 +151,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 			final L2PcInstance member = getRandomPartyMember(player, 4);
 			if (member != null)
 			{
-				st = member.getQuestState(getName());
+				st = getQuestState(member, false);
 				if (getRandom(1000) < MOBS.get(npc.getId()))
 				{
 					st.giveItems(PROPHECY_FRAGMENT, 1);

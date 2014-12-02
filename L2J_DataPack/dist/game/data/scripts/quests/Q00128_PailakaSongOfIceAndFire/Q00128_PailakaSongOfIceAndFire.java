@@ -87,7 +87,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -305,7 +305,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && st.isStarted())
 		{
 			switch (npc.getId())

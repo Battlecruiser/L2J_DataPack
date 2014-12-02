@@ -61,7 +61,7 @@ public class Q00641_AttackSailren extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -89,7 +89,7 @@ public class Q00641_AttackSailren extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = partyMember.getQuestState(getName());
+			final QuestState st = getQuestState(partyMember, false);
 			if (st != null)
 			{
 				st.giveItems(GAZKH_FRAGMENT, 1);

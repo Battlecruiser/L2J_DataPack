@@ -170,7 +170,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return htmltext;
@@ -219,7 +219,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		int npcId = npc.getId();
 		if ((st == null) || (st.getState() != State.STARTED))
 		{

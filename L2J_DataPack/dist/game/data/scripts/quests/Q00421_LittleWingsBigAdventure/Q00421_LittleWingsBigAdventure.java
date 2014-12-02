@@ -375,7 +375,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		final QuestState qs = attacker.getQuestState(getName());
+		final QuestState qs = getQuestState(attacker, false);
 		if ((qs != null) && qs.isCond(2))
 		{
 			if (isSummon)

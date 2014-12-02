@@ -419,7 +419,7 @@ public final class Q00420_LittleWing extends Quest
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		final QuestState qs = attacker.getQuestState(getName());
+		final QuestState qs = getQuestState(attacker, false);
 		if ((qs != null) && (getQuestItemsCount(attacker, DELUXE_FAIRY_STONE) > 0) && (getRandom(100) < 30))
 		{
 			takeItems(attacker, DELUXE_FAIRY_STONE, -1);

@@ -83,7 +83,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && event.equalsIgnoreCase("30017-04.htm"))
 		{
 			st.startQuest();
@@ -96,7 +96,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = killer.getQuestState(getName());
+		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && (st.isCond(1) || st.isCond(2)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == GALLINTS_OAK_WAND) && !st.hasQuestItems(MONSTERS.get(npc.getId())))
 		{
 			st.takeItems(GALLINTS_OAK_WAND, 1);

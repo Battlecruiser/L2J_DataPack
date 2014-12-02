@@ -140,14 +140,7 @@ public final class Race extends Event
 		Announcements.getInstance().announceToAll("Visit Event Manager in Dion village and signup, you have " + _time_register + " min before Race Start...");
 		
 		// Schedule Event end
-		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				StartRace();
-			}
-		}, _time_register * 60 * 1000);
+		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(() -> StartRace(), _time_register * 60 * 1000);
 		
 		return true;
 		
@@ -190,14 +183,7 @@ public final class Race extends Event
 			}
 		}
 		// Schedule timeup for Race
-		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				timeUp();
-			}
-		}, _time_race * 60 * 1000);
+		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(() -> timeUp(), _time_race * 60 * 1000);
 	}
 	
 	@Override
@@ -290,7 +276,7 @@ public final class Race extends Event
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -344,11 +330,8 @@ public final class Race extends Event
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
+		getQuestState(player, true);
+		
 		if (npc.getId() == _start_npc)
 		{
 			if (_isRaceStarted)

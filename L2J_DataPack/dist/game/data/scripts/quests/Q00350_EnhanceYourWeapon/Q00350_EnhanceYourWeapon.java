@@ -152,7 +152,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (event.endsWith("-04.htm"))
 		{
 			st.startQuest();

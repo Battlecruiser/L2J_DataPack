@@ -55,7 +55,7 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 	@Override
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
 			final long currentCount = st.getQuestItemsCount(FREYAS_SOUL_FRAGMENT);
@@ -76,7 +76,7 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && (player.getLevel() >= MIN_LEVEL) && event.equals("32612-04.html"))
 		{
 			st.startQuest();

@@ -75,7 +75,7 @@ public class Q00612_BattleAgainstKetraOrcs extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -113,7 +113,7 @@ public class Q00612_BattleAgainstKetraOrcs extends Quest
 		final L2PcInstance member = getRandomPartyMember(killer, 1);
 		if ((member != null) && (getRandom(1000) < MOBS.get(npc.getId())))
 		{
-			final QuestState st = member.getQuestState(getName());
+			final QuestState st = getQuestState(member, false);
 			st.giveItems(MOLAR, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}

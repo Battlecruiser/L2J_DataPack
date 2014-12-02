@@ -48,7 +48,7 @@ class Quest (JQuest) :
  def onAdvEvent (self,event,npc,player) :
    npcId    = npc.getId()
    htmltext = event
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if not st : return
    race     = player.getRace().ordinal()
    classid  = player.getClassId().getId()
@@ -90,7 +90,7 @@ class Quest (JQuest) :
    npcId    = npc.getId()
    race     = player.getRace().ordinal()
    classid  = player.getClassId().getId()
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, True)
    if player.isSubClassActive() :
       st.exitQuest(1)
       return htmltext

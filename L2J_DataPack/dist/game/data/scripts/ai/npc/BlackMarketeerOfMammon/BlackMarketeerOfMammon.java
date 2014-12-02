@@ -57,7 +57,7 @@ public final class BlackMarketeerOfMammon extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState qs = player.getQuestState(getName());
+		final QuestState qs = getQuestState(player, false);
 		if ("exchange".equals(event))
 		{
 			if (exchangeAvailable())

@@ -84,7 +84,7 @@ public class Q00647_InfluxOfMachines extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -119,7 +119,7 @@ public class Q00647_InfluxOfMachines extends Quest
 		final L2PcInstance member = getRandomPartyMember(player, 1);
 		if (member != null)
 		{
-			final QuestState st = member.getQuestState(getName());
+			final QuestState st = getQuestState(member, false);
 			if (st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getId())))
 			{
 				st.giveItems(BROKEN_GOLEM_FRAGMENT, 1);

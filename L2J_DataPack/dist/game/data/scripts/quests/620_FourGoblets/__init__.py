@@ -115,7 +115,7 @@ class Quest (JQuest) :
     return htmltext
 
   def onKill (self,npc,player,isPet) :
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     npcId = npc.getId()
     if st:
       if int(st.get("cond")) == 1 or int(st.get("cond")) == 2 :
@@ -127,7 +127,7 @@ class Quest (JQuest) :
 
   def onAdvEvent (self,event,npc,player) :
     htmltext = event
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     htmltext = event
     if event == "Enter" : 
       FourSepulchersManager.getInstance().tryEntry(npc,player)

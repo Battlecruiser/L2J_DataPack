@@ -69,7 +69,7 @@ public class Q10274_CollectingInTheAir extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -86,7 +86,7 @@ public class Q10274_CollectingInTheAir extends Quest
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		final QuestState st = caster.getQuestState(getName());
+		final QuestState st = getQuestState(caster, false);
 		if ((st == null) || !st.isStarted())
 		{
 			return null;

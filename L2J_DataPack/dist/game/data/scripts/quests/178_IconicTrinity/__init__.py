@@ -22,7 +22,7 @@ class Quest (JQuest) :
  
  def onAdvEvent (self,event,npc, player) :
      htmltext = event
-     st = player.getQuestState(qn)
+     st = self.getQuestState(player, False)
      if not st : return
      player = st.getPlayer()
      passwrd = st.getInt("pass")

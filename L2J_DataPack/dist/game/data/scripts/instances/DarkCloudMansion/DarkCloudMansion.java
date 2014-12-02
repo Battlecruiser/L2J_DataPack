@@ -561,10 +561,7 @@ public final class DarkCloudMansion extends Quest
 		{
 			for (L2PcInstance partyMember : party.getMembers())
 			{
-				if (partyMember.getQuestState(getName()) == null)
-				{
-					newQuestState(partyMember);
-				}
+				getQuestState(partyMember, true);
 				world.addAllowed(partyMember.getObjectId());
 				teleportPlayer(partyMember, loc, instanceId);
 			}
@@ -1408,11 +1405,7 @@ public final class DarkCloudMansion extends Quest
 			if ((npc.getId() == SOTruth) && (world.getStatus() == 10))
 			{
 				npc.showChatWindow(player);
-				QuestState st = player.getQuestState(getName());
-				if (st == null)
-				{
-					st = newQuestState(player);
-				}
+				QuestState st = getQuestState(player, true);
 				
 				if (!st.hasQuestItems(CC))
 				{

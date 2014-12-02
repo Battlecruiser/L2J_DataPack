@@ -46,7 +46,7 @@ public final class Q00183_RelicExploration extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{

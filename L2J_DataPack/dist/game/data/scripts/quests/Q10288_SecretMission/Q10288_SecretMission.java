@@ -52,7 +52,7 @@ public class Q10288_SecretMission extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{
@@ -99,7 +99,7 @@ public class Q10288_SecretMission extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		// dialog only changes when you talk to Aquilani after quest completion
 		if ((st != null) && st.isCompleted())
 		{

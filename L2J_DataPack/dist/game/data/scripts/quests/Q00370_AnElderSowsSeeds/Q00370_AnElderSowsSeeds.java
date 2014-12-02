@@ -67,7 +67,7 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 	@Override
 	public boolean checkPartyMember(L2PcInstance member, L2Npc npc)
 	{
-		final QuestState st = member.getQuestState(getName());
+		final QuestState st = getQuestState(member, false);
 		return ((st != null) && st.isStarted());
 	}
 	

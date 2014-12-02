@@ -75,7 +75,7 @@ public class Q00021_HiddenTruth extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if (st != null)
 		{

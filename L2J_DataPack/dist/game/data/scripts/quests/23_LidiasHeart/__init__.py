@@ -32,7 +32,7 @@ class Quest (JQuest) :
        self.questItemIds = [MapForestofDeadman,SilverKey,LidiaHairPin,LidiaDiary,SilverSpear] 
 
     def onAdvEvent (self,event,npc,player) :
-        st = player.getQuestState(qn)
+        st = self.getQuestState(player, False)
         htmltext = event
         if event == "31328-02.htm": # call 31328-03.htm
             st.giveItems(MapForestofDeadman,1)

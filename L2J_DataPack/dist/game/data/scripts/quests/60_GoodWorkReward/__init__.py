@@ -77,7 +77,7 @@ class Quest (JQuest) :
     if event == "npc_cleanup" :
       self.isNpcSpawned = 0
       return
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     if not st: return
     htmltext = event
     if event == "31435-03.htm" :
@@ -211,7 +211,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    self.cancelQuestTimer("npc_cleanup", None, None)
    self.isNpcSpawned = 0
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if not st : return
    if st.getState() != State.STARTED : return
    npcId = npc.getId()
