@@ -1,4 +1,4 @@
-CREATE TABLE `bbs_favorites` (
+CREATE TABLE IF NOT EXISTS `bbs_favorites` (
 	`favId` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`playerId` INT UNSIGNED NOT NULL,
 	`favTitle` VARCHAR(50) NOT NULL,
