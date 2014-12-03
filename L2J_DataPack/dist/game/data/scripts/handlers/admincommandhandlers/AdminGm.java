@@ -42,7 +42,7 @@ public class AdminGm implements IAdminCommandHandler
 		if (command.equals("admin_gm") && activeChar.isGM())
 		{
 			AdminTable.getInstance().deleteGm(activeChar);
-			activeChar.setAccessLevel(0);
+			activeChar.setAccessLevel(0, true);
 			activeChar.sendMessage("You no longer have GM status.");
 			_log.info("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") turned his GM status off");
 		}

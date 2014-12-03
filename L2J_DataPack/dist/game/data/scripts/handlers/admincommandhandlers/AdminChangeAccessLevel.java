@@ -123,7 +123,7 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 			if (AdminTable.getInstance().hasAccessLevel(lvl))
 			{
 				final L2AccessLevel acccessLevel = AdminTable.getInstance().getAccessLevel(lvl);
-				player.setAccessLevel(lvl);
+				player.setAccessLevel(lvl, true);
 				player.sendMessage("Your access level has been changed to " + acccessLevel.getName() + " (" + acccessLevel.getLevel() + ").");
 				activeChar.sendMessage(player.getName() + "'s access level has been changed to " + acccessLevel.getName() + " (" + acccessLevel.getLevel() + ").");
 			}
@@ -134,7 +134,7 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 		}
 		else
 		{
-			player.setAccessLevel(lvl);
+			player.setAccessLevel(lvl, false);
 			player.sendMessage("Your character has been banned. Bye.");
 			player.logout();
 		}
