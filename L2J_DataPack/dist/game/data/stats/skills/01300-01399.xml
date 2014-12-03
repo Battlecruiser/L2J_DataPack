@@ -581,7 +581,7 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<mul stat="reduceDeadPenaltyByRaid" val="0" />
+				<mul stat="reduceDeathPenaltyByRaid" val="0" />
 			</effect>
 		</for>
 	</skill>

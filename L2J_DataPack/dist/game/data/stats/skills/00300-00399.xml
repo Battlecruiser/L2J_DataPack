@@ -2852,9 +2852,9 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="reduceExpLostByPvp" val="#byPvp" />
-				<mul stat="reduceDeadPenaltyByPvp" val="#byPvp" />
+				<mul stat="reduceDeathPenaltyByPvp" val="#byPvp" />
 				<mul stat="reduceExpLostByMob" val="#byMob" />
-				<mul stat="reduceDeadPenaltyByMob" val="#byMob" />
+				<mul stat="reduceDeathPenaltyByMob" val="#byMob" />
 			</effect>
 		</for>
 	</skill>

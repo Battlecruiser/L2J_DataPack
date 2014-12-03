@@ -130,9 +130,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="reduceDeadPenaltyByPvp" val="0.7" />
+				<mul stat="reduceDeathPenaltyByPvp" val="0.7" />
 				<mul stat="reduceExpLostByPvp" val="0.7" />
-				<mul stat="reduceDeadPenaltyByMob" val="0.88" />
+				<mul stat="reduceDeathPenaltyByMob" val="0.88" />
 				<mul stat="reduceExpLostByMob" val="0.88" />
 			</effect>
 		</for>
