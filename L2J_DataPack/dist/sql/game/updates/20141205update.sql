@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00222_TestOfTheDuelist' WHERE name='222_TestOfDuelist'; 

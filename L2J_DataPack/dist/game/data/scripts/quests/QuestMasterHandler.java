@@ -202,6 +202,7 @@ import quests.Q00218_TestimonyOfLife.Q00218_TestimonyOfLife;
 import quests.Q00219_TestimonyOfFate.Q00219_TestimonyOfFate;
 import quests.Q00220_TestimonyOfGlory.Q00220_TestimonyOfGlory;
 import quests.Q00221_TestimonyOfProsperity.Q00221_TestimonyOfProsperity;
+import quests.Q00222_TestOfTheDuelist.Q00222_TestOfTheDuelist;
 import quests.Q00223_TestOfTheChampion.Q00223_TestOfTheChampion;
 import quests.Q00224_TestOfSagittarius.Q00224_TestOfSagittarius;
 import quests.Q00225_TestOfTheSearcher.Q00225_TestOfTheSearcher;
@@ -656,6 +657,7 @@ public class QuestMasterHandler
 		Q00219_TestimonyOfFate.class,
 		Q00220_TestimonyOfGlory.class,
 		Q00221_TestimonyOfProsperity.class,
+		Q00222_TestOfTheDuelist.class,
 		Q00223_TestOfTheChampion.class,
 		Q00224_TestOfSagittarius.class,
 		Q00225_TestOfTheSearcher.class,
