@@ -18,16 +18,18 @@
  */
 package quests.Q00183_RelicExploration;
 
+import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
+import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;
+
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Relic Exploration (183)
- * @author IvanTotov
+ * @author ivantotov
  */
 public final class Q00183_RelicExploration extends Quest
 {
@@ -35,6 +37,9 @@ public final class Q00183_RelicExploration extends Quest
 	private static final int HEAD_BLACKSMITH_KUSTO = 30512;
 	private static final int MAESTRO_NIKOLA = 30621;
 	private static final int RESEARCHER_LORAIN = 30673;
+	// Misc
+	private static final int MIN_LEVEL = 40;
+	private static final int MAX_LEVEL_FOR_EXP_SP = 46;
 	
 	public Q00183_RelicExploration()
 	{
@@ -46,66 +51,93 @@ public final class Q00183_RelicExploration extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, false);
-		
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
+		
 		String htmltext = null;
 		switch (event)
 		{
+			case "30512-04.htm":
+			{
+				qs.startQuest();
+				qs.setMemoState(1);
+				htmltext = event;
+				break;
+			}
 			case "30512-02.htm":
-			case "30673-02.html":
-			case "30673-03.html":
 			{
-				htmltext = event;
-				break;
-			}
-			case "30512-03.htm":
-			{
-				st.startQuest();
-				htmltext = event;
-				break;
-			}
-			case "30673-04.html":
-			{
-				st.setCond(2, true);
 				htmltext = event;
 				break;
 			}
 			case "30621-02.html":
 			{
-				if (player.getLevel() < 43)
+				if (qs.isMemoState(2))
 				{
-					st.addExpAndSp(60000, 3000);
+					qs.giveAdena(18100, true);
+					if (player.getLevel() < MAX_LEVEL_FOR_EXP_SP)
+					{
+						qs.addExpAndSp(60000, 3000);
+						qs.exitQuest(false, true);
+						htmltext = event;
+					}
 				}
-				st.giveAdena(18100, true);
-				st.exitQuest(false, true);
-				htmltext = event;
+				break;
+			}
+			case "30673-02.html":
+			case "30673-03.html":
+			{
+				if (qs.isMemoState(1))
+				{
+					htmltext = event;
+				}
+				break;
+			}
+			case "30673-04.html":
+			{
+				if (qs.isMemoState(1))
+				{
+					qs.setMemoState(2);
+					qs.setCond(2, true);
+					htmltext = event;
+				}
 				break;
 			}
 			case "Contract":
 			{
-				final Quest quest = QuestManager.getInstance().getQuest("184_Nikolas_Cooperation_Contract");
-				st = player.getQuestState("184_Nikolas_Cooperation_Contract");
-				if ((quest != null) && (st == null))
+				final QuestState qs184 = player.getQuestState(Q00184_ArtOfPersuasion.class.getSimpleName());
+				final QuestState qs185 = player.getQuestState(Q00185_NikolasCooperation.class.getSimpleName());
+				final Quest quest = QuestManager.getInstance().getQuest(Q00184_ArtOfPersuasion.class.getSimpleName());
+				if ((quest != null) && (qs184 == null) && (qs185 == null))
 				{
-					st = quest.newQuestState(player);
-					st.setState(State.STARTED);
-					quest.notifyEvent("30621-01.htm", npc, player);
+					if (player.getLevel() >= MIN_LEVEL)
+					{
+						quest.notifyEvent("30621-03.htm", npc, player);
+					}
+					else
+					{
+						quest.notifyEvent("30621-03a.html", npc, player);
+					}
 				}
 				break;
 			}
 			case "Consideration":
 			{
-				final Quest quest = QuestManager.getInstance().getQuest("185_Nikolas_Cooperation_Consideration");
-				st = player.getQuestState("185_Nikolas_Cooperation_Consideration");
-				if ((quest != null) && (st == null))
+				final QuestState qs184 = player.getQuestState(Q00184_ArtOfPersuasion.class.getSimpleName());
+				final QuestState qs185 = player.getQuestState(Q00185_NikolasCooperation.class.getSimpleName());
+				final Quest quest = QuestManager.getInstance().getQuest(Q00185_NikolasCooperation.class.getSimpleName());
+				if ((quest != null) && (qs184 == null) && (qs185 == null))
 				{
-					st = quest.newQuestState(player);
-					st.setState(State.STARTED);
-					quest.notifyEvent("30621-01.htm", npc, player);
+					if (player.getLevel() >= MIN_LEVEL)
+					{
+						quest.notifyEvent("30621-03.htm", npc, player);
+					}
+					else
+					{
+						quest.notifyEvent("30621-03a.html", npc, player);
+					}
 				}
 				break;
 			}
@@ -116,55 +148,51 @@ public final class Q00183_RelicExploration extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		if (qs.isCreated())
 		{
-			return htmltext;
+			if (npc.getId() == HEAD_BLACKSMITH_KUSTO)
+			{
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "30512-01.htm" : "30512-03.html";
+			}
 		}
-		
-		switch (npc.getId())
+		else if (qs.isStarted())
 		{
-			case HEAD_BLACKSMITH_KUSTO:
+			switch (npc.getId())
 			{
-				switch (st.getState())
+				case HEAD_BLACKSMITH_KUSTO:
 				{
-					case State.CREATED:
-					{
-						htmltext = (player.getLevel() < 40) ? "30512-00.htm" : "30512-01.htm";
-						break;
-					}
-					case State.STARTED:
-					{
-						if (st.isCond(1))
-						{
-							htmltext = "30512-04.html";
-						}
-						break;
-					}
-					case State.COMPLETED:
-					{
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-					}
+					htmltext = "30512-05.html";
+					break;
 				}
-				break;
+				case MAESTRO_NIKOLA:
+				{
+					if (qs.isMemoState(2))
+					{
+						htmltext = "30621-01.html";
+					}
+					break;
+				}
+				case RESEARCHER_LORAIN:
+				{
+					if (qs.isMemoState(1))
+					{
+						htmltext = "30673-01.html";
+					}
+					else if (qs.isMemoState(2))
+					{
+						htmltext = "30673-05.html";
+					}
+					break;
+				}
 			}
-			case RESEARCHER_LORAIN:
+		}
+		if (qs.isCompleted())
+		{
+			if (npc.getId() == HEAD_BLACKSMITH_KUSTO)
 			{
-				if (st.isStarted())
-				{
-					htmltext = st.isCond(1) ? "30673-01.html" : "30673-05.html";
-				}
-				break;
-			}
-			case MAESTRO_NIKOLA:
-			{
-				if (st.isCond(2))
-				{
-					htmltext = "30621-01.html";
-				}
-				break;
+				htmltext = getAlreadyCompletedMsg(player);
 			}
 		}
 		return htmltext;
