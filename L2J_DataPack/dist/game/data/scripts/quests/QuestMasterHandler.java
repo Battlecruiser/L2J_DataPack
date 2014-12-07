@@ -178,6 +178,7 @@ import quests.Q00176_StepsForHonor.Q00176_StepsForHonor;
 import quests.Q00179_IntoTheLargeCavern.Q00179_IntoTheLargeCavern;
 import quests.Q00182_NewRecruits.Q00182_NewRecruits;
 import quests.Q00183_RelicExploration.Q00183_RelicExploration;
+import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
 import quests.Q00186_ContractExecution.Q00186_ContractExecution;
 import quests.Q00187_NikolasHeart.Q00187_NikolasHeart;
 import quests.Q00188_SealRemoval.Q00188_SealRemoval;
@@ -634,6 +635,7 @@ public class QuestMasterHandler
 		Q00179_IntoTheLargeCavern.class,
 		Q00182_NewRecruits.class,
 		Q00183_RelicExploration.class,
+		Q00184_ArtOfPersuasion.class,
 		Q00186_ContractExecution.class,
 		Q00187_NikolasHeart.class,
 		Q00188_SealRemoval.class,
