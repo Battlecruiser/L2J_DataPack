@@ -79,7 +79,7 @@ public final class NewbieCoupons extends Quest
 			return htmltext;
 		}
 		
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		int newbie = player.getNewbie();
 		int level = player.getLevel();
 		int occupation_level = player.getClassId().level();
@@ -154,11 +154,7 @@ public final class NewbieCoupons extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
+		getQuestState(player, true);
 		
 		return "30598.htm";
 	}

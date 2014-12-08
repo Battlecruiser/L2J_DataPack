@@ -142,7 +142,7 @@ class Quest (JQuest) :
             return item
 
  def onAdvEvent (self,event,npc,player):
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if not st: return
    htmltext = event
    npcId = str(npc.getId())
@@ -238,7 +238,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet) :
-     st = player.getQuestState(qn)
+     st = self.getQuestState(player, False)
      if not st : return
      npcId = npc.getId()
      if npcId in Droplist.keys() :

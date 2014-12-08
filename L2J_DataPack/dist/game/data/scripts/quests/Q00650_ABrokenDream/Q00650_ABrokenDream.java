@@ -23,6 +23,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import quests.Q00117_TheOceanOfDistantStars.Q00117_TheOceanOfDistantStars;
+
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -64,7 +66,7 @@ public final class Q00650_ABrokenDream extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if (st == null)
 		{
@@ -124,7 +126,7 @@ public final class Q00650_ABrokenDream extends Quest
 				}
 				else
 				{
-					final QuestState q117 = player.getQuestState("117_OceanOfDistantStar"); // TODO: Update.
+					final QuestState q117 = player.getQuestState(Q00117_TheOceanOfDistantStars.class.getSimpleName());
 					htmltext = (q117 != null) && q117.isCompleted() ? "32054-01.htm" : "32054-04.htm";
 				}
 				break;
@@ -142,7 +144,7 @@ public final class Q00650_ABrokenDream extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final List<L2PcInstance> randomList = new ArrayList<>();
-		final QuestState st = killer.getQuestState(getName());
+		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && st.isStarted())
 		{
 			randomList.add(killer);
@@ -154,7 +156,7 @@ public final class Q00650_ABrokenDream extends Quest
 		{
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
-				final QuestState qs = member.getQuestState(getName());
+				final QuestState qs = getQuestState(member, false);
 				if ((qs != null) && qs.isStarted())
 				{
 					randomList.add(member);

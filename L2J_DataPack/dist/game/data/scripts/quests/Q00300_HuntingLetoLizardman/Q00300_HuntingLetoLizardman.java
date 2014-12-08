@@ -70,7 +70,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -124,7 +124,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = partyMember.getQuestState(getName());
+			final QuestState st = getQuestState(partyMember, false);
 			if (st.isCond(1) && (getRandom(1000) < MOBS_SAC.get(npc.getId())))
 			{
 				st.giveItems(BRACELET_OF_LIZARDMAN, 1);

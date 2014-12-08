@@ -79,7 +79,7 @@ public class Q00626_ADarkTwilight extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -123,7 +123,7 @@ public class Q00626_ADarkTwilight extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = partyMember.getQuestState(getName());
+			final QuestState st = getQuestState(partyMember, false);
 			final float chance = (MONSTERS.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{

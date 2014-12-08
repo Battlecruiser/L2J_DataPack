@@ -56,7 +56,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -99,7 +99,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 				return;
 			}
 			
-			final QuestState st = player.getQuestState(getName());
+			final QuestState st = getQuestState(player, false);
 			if ((st != null) && st.isStarted() && (st.isCond(1)))
 			{
 				final int matches = st.getInt("undefeatable") + 1;
@@ -137,7 +137,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 				return;
 			}
 			
-			final QuestState st = player.getQuestState(getName());
+			final QuestState st = getQuestState(player, false);
 			if ((st != null) && st.isStarted() && (st.isCond(1)))
 			{
 				st.unset("undefeatable");

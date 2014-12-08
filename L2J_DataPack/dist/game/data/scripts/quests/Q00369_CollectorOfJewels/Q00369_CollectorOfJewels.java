@@ -64,7 +64,7 @@ public final class Q00369_CollectorOfJewels extends Quest
 	@Override
 	public boolean checkPartyMember(L2PcInstance member, L2Npc npc)
 	{
-		final QuestState st = member.getQuestState(getName());
+		final QuestState st = getQuestState(member, false);
 		return ((st != null) && (st.isMemoState(1) || st.isMemoState(3)));
 	}
 	
@@ -121,7 +121,7 @@ public final class Q00369_CollectorOfJewels extends Quest
 			L2PcInstance luckyPlayer = getRandomPartyMember(player, npc);
 			if (luckyPlayer != null)
 			{
-				final QuestState st = luckyPlayer.getQuestState(getName());
+				final QuestState st = getQuestState(luckyPlayer, false);
 				final int itemCount = (st.isMemoState(1) ? 50 : 200);
 				final int cond = (st.isMemoState(1) ? 2 : 4);
 				if (giveItemRandomly(luckyPlayer, npc, item.getId(), item.getCount(), itemCount, 1.0, true) //

@@ -69,7 +69,7 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if ((st != null) && event.equals("35437-02.htm"))
 		{
@@ -83,7 +83,7 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = killer.getQuestState(getName());
+		final QuestState st = getQuestState(killer, false);
 		if ((st == null) || !st.hasQuestItems(CONTEST_CERTIFICATE) || !st.isStarted())
 		{
 			return null;

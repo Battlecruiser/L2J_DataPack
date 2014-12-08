@@ -111,7 +111,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	
 	private void increaseKill(L2PcInstance player, L2Npc npc)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{
@@ -221,7 +221,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{

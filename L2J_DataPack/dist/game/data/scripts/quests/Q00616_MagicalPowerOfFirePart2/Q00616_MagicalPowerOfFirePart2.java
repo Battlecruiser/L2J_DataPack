@@ -69,7 +69,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 	@Override
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
 			if (npc.getId() == NASTRON)
@@ -96,7 +96,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 		String htmltext = null;
 		if (player != null)
 		{
-			final QuestState st = player.getQuestState(getName());
+			final QuestState st = getQuestState(player, false);
 			if (st == null)
 			{
 				return null;

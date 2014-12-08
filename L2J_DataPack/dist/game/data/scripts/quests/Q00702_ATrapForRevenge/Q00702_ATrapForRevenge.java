@@ -67,7 +67,7 @@ public class Q00702_ATrapForRevenge extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -272,7 +272,7 @@ public class Q00702_ATrapForRevenge extends Quest
 		{
 			return null;
 		}
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		final int chance = getRandom(1000);
 		switch (npc.getId())
 		{

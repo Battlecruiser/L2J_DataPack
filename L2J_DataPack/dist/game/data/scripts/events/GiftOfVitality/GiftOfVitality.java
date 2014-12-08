@@ -92,7 +92,7 @@ public final class GiftOfVitality extends LongTimeEvent
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
 		switch (event)
 		{

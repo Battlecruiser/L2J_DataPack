@@ -209,7 +209,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		}
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			QuestState st = partyMember.getQuestState(getName());
+			final QuestState st = getQuestState(partyMember, false);
 			if ((st == null) || (st.getInt("cond") < 1))
 			{
 				return getHtm(player.getHtmlPrefix(), "FortressWarden-05.htm").replace("%player%", partyMember.getName());
@@ -312,10 +312,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 			{
 				teleportPlayer(partyMember, coords, instanceId);
 				world.addAllowed(partyMember.getObjectId());
-				if (partyMember.getQuestState(getName()) == null)
-				{
-					newQuestState(partyMember);
-				}
+				getQuestState(partyMember, true);
 			}
 		}
 		return getHtm(player.getHtmlPrefix(), "FortressWarden-08.htm").replace("%clan%", player.getClan().getName());
@@ -333,11 +330,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 			tele[2] = -6580;
 			return enterInstance(player, "fortdungeon.xml", tele, _fortDungeons.get(npc.getId()), checkFortCondition(player, npc, true));
 		}
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
+		QuestState st = getQuestState(player, true);
 		
 		if (event.equalsIgnoreCase("FortressWarden-10.htm"))
 		{
@@ -467,7 +460,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 	
 	private void rewardPlayer(L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st.isCond(1))
 		{
 			st.giveItems(DL_MARK, 140);

@@ -68,7 +68,7 @@ public final class Q00649_ALooterAndARailroadMan extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -128,7 +128,7 @@ public final class Q00649_ALooterAndARailroadMan extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = killer.getQuestState(getName());
+		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, false) && (getRandom(1000) < MONSTERS.get(npc.getId())))
 		{
 			st.giveItems(THIEF_GUILD_MARK, 1);

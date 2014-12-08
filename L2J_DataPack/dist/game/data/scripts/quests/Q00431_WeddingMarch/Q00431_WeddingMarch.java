@@ -59,7 +59,7 @@ public class Q00431_WeddingMarch extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -90,7 +90,7 @@ public class Q00431_WeddingMarch extends Quest
 		final L2PcInstance member = getRandomPartyMember(player, 1);
 		if (member != null)
 		{
-			final QuestState st = member.getQuestState(getName());
+			final QuestState st = getQuestState(member, false);
 			if (getRandomBoolean())
 			{
 				st.giveItems(SILVER_CRYSTAL, 1);

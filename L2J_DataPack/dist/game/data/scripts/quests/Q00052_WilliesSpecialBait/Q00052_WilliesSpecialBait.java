@@ -52,7 +52,7 @@ public class Q00052_WilliesSpecialBait extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -85,7 +85,7 @@ public class Q00052_WilliesSpecialBait extends Quest
 			return null;
 		}
 		
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		if (st.getQuestItemsCount(TARLK_EYE) < 100)
 		{
 			float chance = 33 * Config.RATE_QUEST_DROP;

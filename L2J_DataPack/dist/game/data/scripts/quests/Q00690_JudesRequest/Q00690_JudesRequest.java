@@ -76,7 +76,7 @@ public class Q00690_JudesRequest extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{
@@ -131,7 +131,7 @@ public class Q00690_JudesRequest extends Quest
 		{
 			return null;
 		}
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		
 		final int npcId = npc.getId();
 		int chance = 0;

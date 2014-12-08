@@ -924,7 +924,9 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CharmOfLuck" />
+			<effect name="Buff">
+				<mul stat="reduceDeathPenaltyByRaid" val="0" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2169" levels="2" name="Magic Haste Potion">

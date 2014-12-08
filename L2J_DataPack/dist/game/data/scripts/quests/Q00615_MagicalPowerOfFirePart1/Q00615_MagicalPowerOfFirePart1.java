@@ -95,7 +95,7 @@ public class Q00615_MagicalPowerOfFirePart1 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -139,7 +139,7 @@ public class Q00615_MagicalPowerOfFirePart1 extends Quest
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		final QuestState st = attacker.getQuestState(getName());
+		final QuestState st = getQuestState(attacker, false);
 		if ((st != null) && st.isCond(2) && !st.isSet("spawned"))
 		{
 			st.set("spawned", "1");

@@ -63,7 +63,7 @@ public final class Q00262_TradeWithTheIvoryTower extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && event.equalsIgnoreCase("30137-03.htm"))
 		{
 			st.startQuest();
@@ -81,7 +81,7 @@ public final class Q00262_TradeWithTheIvoryTower extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		float chance = (MOBS_SAC.get(npc.getId()) * Config.RATE_QUEST_DROP);
 		if (getRandom(10) < chance)
 		{

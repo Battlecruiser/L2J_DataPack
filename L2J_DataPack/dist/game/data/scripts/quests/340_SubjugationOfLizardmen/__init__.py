@@ -29,7 +29,7 @@ class Quest (JQuest) :
      self.questItemIds = [TOTEM]
  
  def onAdvEvent (self, event, npc, player) :
-     st = player.getQuestState(qn)
+     st = self.getQuestState(player, False)
      if not st: return
      htmltext = event
      if event == "30385-03.htm" :
@@ -130,7 +130,7 @@ class Quest (JQuest) :
      return htmltext
     
  def onKill(self,npc,player,isPet):
-     st = player.getQuestState(qn)
+     st = self.getQuestState(player, False)
      if not st : return 
      npcId = npc.getId()
      chanse = self.getRandom(100)

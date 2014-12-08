@@ -553,7 +553,7 @@ class Quest (JQuest) :
           return m_no_box
           
   def onKill(self,npc,player,isPet):
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     if not st : return 
     if st.getState() != State.STARTED : return 
 

@@ -185,7 +185,7 @@ public class Q00611_AllianceWithVarkaSilenos extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -269,7 +269,7 @@ public class Q00611_AllianceWithVarkaSilenos extends Quest
 		final L2PcInstance member = getRandomPartyMemberState(killer, State.STARTED);
 		if (member != null)
 		{
-			final QuestState st = member.getQuestState(getName());
+			final QuestState st = getQuestState(member, false);
 			final DropInfo info = MOBS.get(npc.getId());
 			if ((st.getCond() >= info.getMinCond()) && (st.getCond() < 6) && canGetItem(st, info.getItemId()) && (getRandom(1000) < info.getChance()))
 			{

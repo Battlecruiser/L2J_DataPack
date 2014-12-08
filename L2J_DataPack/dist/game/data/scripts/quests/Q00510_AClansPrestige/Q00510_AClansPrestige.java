@@ -58,7 +58,7 @@ public class Q00510_AClansPrestige extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -87,14 +87,14 @@ public class Q00510_AClansPrestige extends Quest
 		QuestState st = null;
 		if (player.isClanLeader())
 		{
-			st = player.getQuestState(getName());
+			st = getQuestState(player, false);
 		}
 		else
 		{
 			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
 			if ((pleader != null) && player.isInsideRadius(pleader, 1500, true, false))
 			{
-				st = pleader.getQuestState(getName());
+				st = getQuestState(pleader, false);
 			}
 		}
 		

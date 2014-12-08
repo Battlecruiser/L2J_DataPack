@@ -122,7 +122,7 @@ public class Q00073_SagaOfTheDuelist extends AbstractSagaQuest
 		if (npc.getId() == TUNATUN)
 		{
 			String htmltext = getNoQuestMsg(player);
-			QuestState st = player.getQuestState(getName());
+			QuestState st = getQuestState(player, false);
 			if ((st != null) && st.isCond(3))
 			{
 				if (!st.hasQuestItems(TOPQUALITYMEAT))

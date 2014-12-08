@@ -68,7 +68,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -147,7 +147,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		if (st.isCond(9) && (st.getQuestItemsCount(ORB_OF_BINDING) < 4))
 		{
 			st.giveItems(ORB_OF_BINDING, 1);

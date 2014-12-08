@@ -63,7 +63,7 @@ public class Q00139_ShadowFoxPart1 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -130,7 +130,7 @@ public class Q00139_ShadowFoxPart1 extends Quest
 		{
 			return super.onKill(npc, player, isSummon);
 		}
-		final QuestState st = member.getQuestState(getName());
+		final QuestState st = getQuestState(member, false);
 		if (!st.isSet("talk") && (getRandom(100) < DROP_CHANCE))
 		{
 			int itemId = (getRandom(11) == 0) ? CHEST : FRAGMENT;

@@ -41,7 +41,7 @@ class Quest (JQuest) :
      self.well = 0
 
  def onAdvEvent (self,event,npc, player) :
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if not st: return
    htmltext = event 
    if event == "31334-02.htm" :
@@ -269,7 +269,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onAttack (self,npc,player,damage,isPet,skill):
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if st :
        npcId = npc.getId()
        id = st.getInt("id")
@@ -285,7 +285,7 @@ class Quest (JQuest) :
 
  def onKill(self,npc,player,isPet):
    npcId = npc.getId()
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if st :
        if npcId == SOUL_OF_WELL :
            self.well = 0

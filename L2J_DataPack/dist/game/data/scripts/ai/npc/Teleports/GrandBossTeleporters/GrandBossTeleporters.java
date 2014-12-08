@@ -69,12 +69,7 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
+		QuestState st = getQuestState(player, false);
 		
 		if (st.hasQuestItems(VACUALITE_FLOATING_STONE))
 		{
@@ -92,7 +87,7 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, true);
 		
 		if (st == null)
 		{

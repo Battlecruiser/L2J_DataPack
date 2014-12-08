@@ -74,7 +74,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -208,7 +208,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 					return null;
 				}
 				
-				st = partyMember.getQuestState(getName());
+				st = getQuestState(partyMember, false);
 				st.giveItems(LEGEND_OF_SEVENTEEN, 1);
 				st.setCond(4, true);
 				break;
@@ -221,7 +221,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 				{
 					return null;
 				}
-				st = partyMember.getQuestState(getName());
+				st = getQuestState(partyMember, false);
 				if ((MALRUK_SUCCUBUS_CLAW_CHANCE >= getRandom(100)) && (st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) < 10))
 				{
 					st.giveItems(MALRUK_SUCCUBUS_CLAW, 1);
@@ -241,7 +241,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 				{
 					return null;
 				}
-				st = partyMember.getQuestState(getName());
+				st = getQuestState(partyMember, false);
 				if ((CRIMSON_MOSS_CHANCE >= getRandom(100)) && (st.getQuestItemsCount(CRIMSON_MOSS) < 5))
 				{
 					st.giveItems(CRIMSON_MOSS, 1);

@@ -74,7 +74,7 @@ public final class Q00264_KeenClaws extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && event.equals("30136-03.htm"))
 		{
 			st.startQuest();
@@ -86,7 +86,7 @@ public final class Q00264_KeenClaws extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = killer.getQuestState(getName());
+		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && st.isCond(1))
 		{
 			final int random = getRandom(100);

@@ -55,7 +55,7 @@ public class Q00552_OlympiadVeteran extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -94,7 +94,7 @@ public class Q00552_OlympiadVeteran extends Quest
 				return;
 			}
 			
-			final QuestState st = player.getQuestState(getName());
+			final QuestState st = getQuestState(player, false);
 			if ((st != null) && st.isStarted())
 			{
 				int matches;
@@ -141,7 +141,7 @@ public class Q00552_OlympiadVeteran extends Quest
 			{
 				return;
 			}
-			final QuestState st = player.getQuestState(getName());
+			final QuestState st = getQuestState(player, false);
 			if ((st != null) && st.isStarted())
 			{
 				int matches;

@@ -302,13 +302,17 @@ public final class Q00383_TreasureHunt extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			if (player.getLevel() >= MIN_LEVEL)
+			if (player.getLevel() < MIN_LEVEL)
 			{
-				htmltext = (hasQuestItems(player, PIRATES_TREASURE_MAP)) ? "30890-03.htm" : "30890-02.html";
+				htmltext = "30890-01.html";
+			}
+			else if (!hasQuestItems(player, PIRATES_TREASURE_MAP))
+			{
+				htmltext = "30890-02.html";
 			}
 			else
 			{
-				htmltext = "30890-01.html";
+				htmltext = "30890-03.htm";
 			}
 		}
 		else if (qs.isStarted())

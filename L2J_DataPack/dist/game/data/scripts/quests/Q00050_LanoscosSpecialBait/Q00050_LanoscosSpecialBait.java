@@ -52,7 +52,7 @@ public class Q00050_LanoscosSpecialBait extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -86,7 +86,7 @@ public class Q00050_LanoscosSpecialBait extends Quest
 			return null;
 		}
 		
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		
 		if (st.getQuestItemsCount(ESSENCE_OF_WIND) < 100)
 		{

@@ -56,7 +56,7 @@ public class Q00551_OlympiadStarter extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -92,7 +92,7 @@ public class Q00551_OlympiadStarter extends Quest
 	{
 		if (loser != null)
 		{
-			final QuestState st = loser.getQuestState(getName());
+			final QuestState st = getQuestState(loser, false);
 			if ((st != null) && st.isStarted())
 			{
 				final int matches = st.getInt("matches") + 1;
@@ -132,7 +132,7 @@ public class Q00551_OlympiadStarter extends Quest
 			{
 				return;
 			}
-			final QuestState st = player.getQuestState(getName());
+			final QuestState st = getQuestState(player, false);
 			if ((st != null) && st.isStarted())
 			{
 				final int matches = st.getInt("matches") + 1;
@@ -168,7 +168,7 @@ public class Q00551_OlympiadStarter extends Quest
 			{
 				return;
 			}
-			final QuestState st = player.getQuestState(getName());
+			final QuestState st = getQuestState(player, false);
 			if ((st != null) && st.isStarted())
 			{
 				final int matches = st.getInt("matches") + 1;

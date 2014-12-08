@@ -124,11 +124,18 @@
 	</skill>
 	<skill id="610" levels="1" name="Residence Death Fortune">
 		<!-- Confirmed CT2.5 -->
-		<!-- TODO: Still missing info about other penalties than exp. loss -->
 		<set name="icon" val="icon.skill0390" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="reduceDeathPenaltyByPvp" val="0.7" />
+				<mul stat="reduceExpLostByPvp" val="0.7" />
+				<mul stat="reduceDeathPenaltyByMob" val="0.88" />
+				<mul stat="reduceExpLostByMob" val="0.88" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="611" levels="3" name="Fire Squad">
 		<!-- Confirmed CT2.5 -->

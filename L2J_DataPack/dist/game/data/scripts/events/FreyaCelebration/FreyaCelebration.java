@@ -79,7 +79,7 @@ public final class FreyaCelebration extends LongTimeEvent
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -156,10 +156,7 @@ public final class FreyaCelebration extends LongTimeEvent
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.getQuestState(getName()) == null)
-		{
-			newQuestState(player);
-		}
+		getQuestState(player, true);
 		return "13296.htm";
 	}
 	

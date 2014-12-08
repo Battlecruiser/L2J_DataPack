@@ -39,7 +39,7 @@ class Quest (JQuest) :
 
 
     def onAdvEvent (self,event,npc, player) :
-        st = player.getQuestState(qn)
+        st = self.getQuestState(player, False)
         if not st: return
         htmltext = event
         if event == "31349-02.htm" :
@@ -228,7 +228,7 @@ class Quest (JQuest) :
         return htmltext
 
     def onKill(self,npc,player,isPet):
-        st = player.getQuestState(qn)
+        st = self.getQuestState(player, False)
         if not st : return
         if st.getState() != State.STARTED : return
         if st.getInt("cond") == 7:

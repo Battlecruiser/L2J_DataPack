@@ -76,7 +76,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -148,7 +148,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				partyMember = getRandomPartyMember(player, "awaitsWaterbinder", "1");
 				if (partyMember != null)
 				{
-					st = partyMember.getQuestState(getName());
+					st = getQuestState(partyMember, false);
 					final int chance = getRandom(100);
 					if (st.isCond(2) && !st.hasQuestItems(WATERBINDER))
 					{
@@ -173,7 +173,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				partyMember = getRandomPartyMember(player, "awaitsEvergreen", "1");
 				if (partyMember != null)
 				{
-					st = partyMember.getQuestState(getName());
+					st = getQuestState(partyMember, false);
 					final long chance = getRandom(100);
 					if (st.isCond(2) && !st.hasQuestItems(EVERGREEN))
 					{
@@ -199,7 +199,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				{
 					for (L2PcInstance member : player.getParty().getMembers())
 					{
-						pst = member.getQuestState(getName());
+						pst = getQuestState(member, false);
 						if (pst != null)
 						{
 							if (pst.isCond(4) && !pst.hasQuestItems(RAIN_SONG))

@@ -51,7 +51,7 @@ public class Q00146_TheZeroHour extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -70,7 +70,7 @@ public class Q00146_TheZeroHour extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = partyMember.getQuestState(getName());
+			final QuestState st = getQuestState(partyMember, false);
 			if (!st.hasQuestItems(FANG))
 			{
 				st.giveItems(FANG, 1);

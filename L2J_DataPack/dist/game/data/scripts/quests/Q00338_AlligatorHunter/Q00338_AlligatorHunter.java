@@ -57,7 +57,7 @@ public class Q00338_AlligatorHunter extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -96,7 +96,7 @@ public class Q00338_AlligatorHunter extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st != null)
 		{
 			st.giveItems(ALLIGATOR_LEATHER, 1);

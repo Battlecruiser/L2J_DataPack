@@ -99,7 +99,7 @@ public final class Q00108_JumbleTumbleDiamondFuss extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if (st == null)
 		{
@@ -509,7 +509,7 @@ public final class Q00108_JumbleTumbleDiamondFuss extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = killer.getQuestState(getName());
+		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && Util.checkIfInRange(1500, npc, killer, true))
 		{
 			switch (npc.getId())

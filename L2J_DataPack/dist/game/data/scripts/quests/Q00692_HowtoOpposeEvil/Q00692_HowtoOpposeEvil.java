@@ -113,7 +113,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -179,7 +179,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		{
 			return null;
 		}
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		final int npcId = npc.getId();
 		if ((st != null) && QUEST_MOBS.containsKey(npcId))
 		{

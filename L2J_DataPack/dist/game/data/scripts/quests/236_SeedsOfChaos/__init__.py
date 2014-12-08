@@ -69,7 +69,7 @@ class Quest (JQuest) :
     self.questItemId = [BLACK_ECHO_CRYSTAL, SHINING_MEDALLION]
  
  def onAdvEvent (self,event,npc, player) :
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     if not st : return
     if event == "1" : #Go talk to the wizard!
         st.setState(State.STARTED)
@@ -230,7 +230,7 @@ class Quest (JQuest) :
     return htmltext
  
  def onKill(self,npc,player,isPet):
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     if not st : return 
     if st.getState() != State.STARTED : return 
     #The following algorithm should work for both quest mobs and drops for this quest.... hopefully.

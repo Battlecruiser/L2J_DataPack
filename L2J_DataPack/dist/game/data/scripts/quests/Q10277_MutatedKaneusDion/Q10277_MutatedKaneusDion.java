@@ -56,7 +56,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -78,7 +78,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		QuestState st = killer.getQuestState(getName());
+		QuestState st = getQuestState(killer, false);
 		if (st == null)
 		{
 			return super.onKill(npc, killer, isSummon);
@@ -90,7 +90,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 			final List<QuestState> PartyMembers = new ArrayList<>();
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
-				st = member.getQuestState(getName());
+				st = getQuestState(member, false);
 				if ((st != null) && st.isStarted() && (((npcId == CRIMSON_HATU) && !st.hasQuestItems(TISSUE_CH)) || ((npcId == SEER_FLOUROS) && !st.hasQuestItems(TISSUE_SF))))
 				{
 					PartyMembers.add(st);

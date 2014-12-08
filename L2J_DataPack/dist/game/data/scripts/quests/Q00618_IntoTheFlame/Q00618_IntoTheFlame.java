@@ -69,7 +69,7 @@ public class Q00618_IntoTheFlame extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -123,7 +123,7 @@ public class Q00618_IntoTheFlame extends Quest
 		final L2PcInstance member = getRandomPartyMember(player, 2);
 		if (member != null)
 		{
-			final QuestState qs = member.getQuestState(getName());
+			final QuestState qs = getQuestState(member, false);
 			if ((qs.getQuestItemsCount(VACUALITE_ORE) < REQUIRED_COUNT) && (getRandom(1000) < MONSTERS.get(npc.getId())))
 			{
 				qs.giveItems(VACUALITE_ORE, 1);

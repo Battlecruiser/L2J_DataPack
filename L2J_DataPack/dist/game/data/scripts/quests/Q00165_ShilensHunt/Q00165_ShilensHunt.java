@@ -65,7 +65,7 @@ public class Q00165_ShilensHunt extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && event.equalsIgnoreCase("30348-03.htm"))
 		{
 			st.startQuest();
@@ -77,7 +77,7 @@ public class Q00165_ShilensHunt extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = killer.getQuestState(getName());
+		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && st.isCond(1) && (getRandom(3) < MONSTERS.get(npc.getId())))
 		{
 			st.giveItems(DARK_BEZOAR, 1);

@@ -238,11 +238,6 @@ public final class NornilsGarden extends Quest
 	@Override
 	public final void teleportPlayer(L2PcInstance player, Location loc, int instanceId)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
 		removeBuffs(player);
 		giveBuffs(player);
 		if (player.hasSummon())
@@ -524,10 +519,8 @@ public final class NornilsGarden extends Quest
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		player.sendMessage("On Event");
-		
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -609,11 +602,7 @@ public final class NornilsGarden extends Quest
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
+		getQuestState(player, true);
 		return npc.getId() + ".html";
 	}
 	
@@ -636,7 +625,7 @@ public final class NornilsGarden extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;

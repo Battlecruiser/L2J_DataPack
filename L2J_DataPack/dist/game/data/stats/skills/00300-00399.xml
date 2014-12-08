@@ -2843,11 +2843,20 @@
 	</skill>
 	<skill id="390" levels="3" name="Clan Luck">
 		<!-- Confirmed CT2.5 -->
-		<!-- TODO: Still missing info about other penalties than exp. loss -->
+		<table name="#byPvp"> 0.7 0.5 0.4 </table>
+		<table name="#byMob"> 0.88 0.8 0.76 </table>
 		<set name="icon" val="icon.skill0390" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="reduceExpLostByPvp" val="#byPvp" />
+				<mul stat="reduceDeathPenaltyByPvp" val="#byPvp" />
+				<mul stat="reduceExpLostByMob" val="#byMob" />
+				<mul stat="reduceDeathPenaltyByMob" val="#byMob" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="391" levels="1" name="Clan Imperium">
 		<!-- Confirmed CT2.5 -->

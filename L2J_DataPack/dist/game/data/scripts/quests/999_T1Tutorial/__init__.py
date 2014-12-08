@@ -79,7 +79,7 @@ class Quest (JQuest) :
  def onAdvEvent(self,event,npc,player):
     if Config.DISABLE_TUTORIAL :
         return
-    st = player.getQuestState(qn)
+    st = self.getQuestState(player, False)
     if not st: return
     htmltext = event
     qs = st.getPlayer().getQuestState(qnTutorial)
@@ -142,9 +142,7 @@ class Quest (JQuest) :
    if not qs : 
       npc.showChatWindow(player)
       return None
-   st = player.getQuestState(qn)
-   if not st :
-      st = self.newQuestState(player)
+   st = self.getQuestState(player, True)
    htmltext = ""
    Ex = qs.getInt("Ex")
    npcId = npc.getId()
@@ -231,7 +229,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    if Config.DISABLE_TUTORIAL :
      return
-   st = player.getQuestState(qn)
+   st = self.getQuestState(player, False)
    if not st : return
    qs = st.getPlayer().getQuestState(qnTutorial)
    if not qs : return

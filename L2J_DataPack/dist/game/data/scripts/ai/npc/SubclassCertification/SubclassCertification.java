@@ -173,7 +173,7 @@ public final class SubclassCertification extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
@@ -187,7 +187,7 @@ public final class SubclassCertification extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return htmltext;

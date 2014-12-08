@@ -80,7 +80,7 @@ public final class MasterOfEnchanting extends LongTimeEvent
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (event.equalsIgnoreCase("buy_staff"))
 		{
 			if (!st.hasQuestItems(MASTER_YOGI_STAFF) && (st.getQuestItemsCount(Inventory.ADENA_ID) > STAFF_PRICE))

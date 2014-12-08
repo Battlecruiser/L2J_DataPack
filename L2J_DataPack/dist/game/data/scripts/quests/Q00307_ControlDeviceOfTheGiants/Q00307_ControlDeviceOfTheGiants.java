@@ -59,7 +59,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -124,7 +124,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 		{
 			return super.onKill(npc, player, isSummon);
 		}
-		final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = getQuestState(partyMember, false);
 		
 		switch (npc.getId())
 		{
@@ -152,7 +152,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				{
 					for (L2PcInstance pl : player.getParty().getMembers())
 					{
-						final QuestState qs = pl.getQuestState(getName());
+						final QuestState qs = getQuestState(pl, false);
 						
 						if ((qs != null) && qs.isCond(1))
 						{

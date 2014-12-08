@@ -511,10 +511,7 @@ public final class HallOfSuffering extends Quest
 			{
 				teleportPlayer(partyMember, coords, instanceId);
 				world.addAllowed(partyMember.getObjectId());
-				if (partyMember.getQuestState(getName()) == null)
-				{
-					newQuestState(partyMember);
-				}
+				getQuestState(partyMember, true);
 			}
 		}
 		return instanceId;
@@ -883,7 +880,7 @@ public final class HallOfSuffering extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		int npcId = npc.getId();
-		QuestState st = player.getQuestState(getName());
+		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			st = newQuestState(player);

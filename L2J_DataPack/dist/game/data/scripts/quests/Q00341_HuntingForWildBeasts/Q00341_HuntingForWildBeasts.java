@@ -64,7 +64,7 @@ public class Q00341_HuntingForWildBeasts extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if (st != null)
 		{
@@ -89,7 +89,7 @@ public class Q00341_HuntingForWildBeasts extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
@@ -122,7 +122,7 @@ public class Q00341_HuntingForWildBeasts extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if ((st != null) && st.isCond(1))
 		{
 			long skins = st.getQuestItemsCount(BEAR_SKIN);
