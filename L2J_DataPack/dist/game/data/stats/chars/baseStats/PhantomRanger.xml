@@ -2,24 +2,27 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/charTemplate.xsd">
 	<classId>37</classId>
 	<staticData>
-		<baseINT>25</baseINT>
-		<baseSTR>41</baseSTR>
-		<baseCON>32</baseCON>
-		<baseMEN>26</baseMEN>
-		<baseDEX>34</baseDEX>
-		<baseWIT>12</baseWIT>
+		<baseINT>42</baseINT>
+		<baseSTR>92</baseSTR>
+		<baseCON>77</baseCON>
+		<baseMEN>35</baseMEN>
+		<baseDEX>56</baseDEX>
+		<baseWIT>39</baseWIT>
+		<baseLUC>32</baseLUC>
+		<baseCHA>43</baseCHA>
 		<creationPoints>
-			<node x="28295" y="11063" z="-4224" />
-			<node x="28302" y="11008" z="-4224" />
-			<node x="28377" y="10916" z="-4224" />
-			<node x="28456" y="10997" z="-4224" />
-			<node x="28461" y="11044" z="-4224" />
-			<node x="28395" y="11127" z="-4224" />
+			<node x="-114628" y="259915" z="-1192" />
+			<node x="-114539" y="260101" z="-1192" />
+			<node x="-114376" y="260165" z="-1192" />
+			<node x="-114213" y="260019" z="-1192" />
+			<node x="-114452" y="259908" z="-1192" />
 		</creationPoints>
 		<basePAtk>4</basePAtk>
 		<baseCritRate>4</baseCritRate>
+		<baseMCritRate>7</baseMCritRate>
 		<baseAtkType>FIST</baseAtkType>
 		<basePAtkSpd>300</basePAtkSpd>
+		<baseMAtkSpd>490</baseMAtkSpd>
 		<basePDef>
 			<chest>31</chest>
 			<legs>18</legs>
@@ -741,6 +744,118 @@
 			<mp>1385.1</mp>
 			<cp>1916.0</cp>
 			<hpRegen>9.9</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="86">
+			<hp>3902.0</hp>
+			<mp>1411.35</mp>
+			<cp>1951.0</cp>
+			<hpRegen>10</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="87">
+			<hp>3972.4</hp>
+			<mp>1437.75</mp>
+			<cp>1986.2</cp>
+			<hpRegen>10.1</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="88">
+			<hp>4043.2</hp>
+			<mp>1464.3</mp>
+			<cp>2021.6</cp>
+			<hpRegen>10.2</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="89">
+			<hp>4114.4</hp>
+			<mp>1491.0</mp>
+			<cp>2057.2</cp>
+			<hpRegen>10.3</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="90">
+			<hp>4186.0</hp>
+			<mp>1517.85</mp>
+			<cp>2093.0</cp>
+			<hpRegen>10.4</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="91">
+			<hp>4258.0</hp>
+			<mp>1544.85</mp>
+			<cp>2129.0</cp>
+			<hpRegen>10.5</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="92">
+			<hp>4330.4</hp>
+			<mp>1572.0</mp>
+			<cp>2165.2</cp>
+			<hpRegen>10.6</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="93">
+			<hp>4403.2</hp>
+			<mp>1599.3</mp>
+			<cp>2201.6</cp>
+			<hpRegen>10.7</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="94">
+			<hp>4476.4</hp>
+			<mp>1626.75</mp>
+			<cp>2238.2</cp>
+			<hpRegen>10.8</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="95">
+			<hp>4550.0</hp>
+			<mp>1654.35</mp>
+			<cp>2275.0</cp>
+			<hpRegen>10.9</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="96">
+			<hp>4624.0</hp>
+			<mp>1682.1</mp>
+			<cp>2312.0</cp>
+			<hpRegen>11</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="97">
+			<hp>4698.4</hp>
+			<mp>1710.0</mp>
+			<cp>2349.2</cp>
+			<hpRegen>11.1</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="98">
+			<hp>4773.2</hp>
+			<mp>1738.05</mp>
+			<cp>2386.6</cp>
+			<hpRegen>11.2</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="99">
+			<hp>4848.4</hp>
+			<mp>1766.25</mp>
+			<cp>2424.2</cp>
+			<hpRegen>11.3</hpRegen>
 			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
