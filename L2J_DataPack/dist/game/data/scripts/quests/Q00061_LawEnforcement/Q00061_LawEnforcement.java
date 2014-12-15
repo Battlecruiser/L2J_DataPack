@@ -168,7 +168,7 @@ public final class Q00061_LawEnforcement extends Quest
 		{
 			if (player.getLevel() >= MIN_LEVEL)
 			{
-				if (player.getClassId() == ClassId.inspector)
+				if (player.getClassId() == ClassId.INSPECTOR)
 				{
 					final String html = getHtm(player.getHtmlPrefix(), "32222-01.htm");
 					return html.replace("%name%", player.getName());

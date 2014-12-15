@@ -76,7 +76,7 @@ public final class Q00410_PathOfThePalusKnight extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.darkFighter)
+				if (player.getClassId() == ClassId.DARK_FIGHTER)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -94,7 +94,7 @@ public final class Q00410_PathOfThePalusKnight extends Quest
 						htmltext = "30329-02.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.palusKnight)
+				else if (player.getClassId() == ClassId.PALUS_KNIGHT)
 				{
 					htmltext = "30329-02a.htm";
 				}

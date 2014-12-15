@@ -83,7 +83,7 @@ public final class Q00418_PathOfTheArtisan extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.dwarvenFighter)
+				if (player.getClassId() == ClassId.DWARVEN_FIGHTER)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -101,7 +101,7 @@ public final class Q00418_PathOfTheArtisan extends Quest
 						htmltext = "30527-03.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.artisan)
+				else if (player.getClassId() == ClassId.ARTISAN)
 				{
 					htmltext = "30527-02a.htm";
 				}

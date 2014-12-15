@@ -115,7 +115,7 @@ public final class Q00222_TestOfTheDuelist extends Quest
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
 					{
-						if (player.getClassId() == ClassId.palusKnight)
+						if (player.getClassId() == ClassId.PALUS_KNIGHT)
 						{
 							giveItems(player, DIMENSIONAL_DIAMOND, 104);
 						}
@@ -465,7 +465,7 @@ public final class Q00222_TestOfTheDuelist extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			if ((player.getClassId() == ClassId.warrior) || (player.getClassId() == ClassId.elvenKnight) || (player.getClassId() == ClassId.palusKnight) || (player.getClassId() == ClassId.orcMonk))
+			if ((player.getClassId() == ClassId.WARRIOR) || (player.getClassId() == ClassId.ELVEN_KNIGHT) || (player.getClassId() == ClassId.PALUS_KNIGHT) || (player.getClassId() == ClassId.ORC_MONK))
 			{
 				if (player.getLevel() >= MIN_LEVEL)
 				{

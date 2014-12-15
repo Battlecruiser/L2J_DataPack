@@ -103,7 +103,7 @@ public final class KamaelChange1 extends AbstractNpcAI
 			{
 				htmltext = "32191-12.htm"; // master_all_kamael100a
 			}
-			else if ((classId == 125) && (player.getClassId() == ClassId.maleSoldier))
+			else if ((classId == 125) && (player.getClassId() == ClassId.MALE_SOLDIER))
 			{
 				QuestState qs = player.getQuestState(Q00062_PathOfTheTrooper.class.getSimpleName());
 				if (player.getLevel() < 20)
@@ -132,7 +132,7 @@ public final class KamaelChange1 extends AbstractNpcAI
 					htmltext = "32191-16.htm"; // master_all_kamael011ma
 				}
 			}
-			else if ((classId == 126) && (player.getClassId() == ClassId.femaleSoldier))
+			else if ((classId == 126) && (player.getClassId() == ClassId.FEMALE_SOLDIER))
 			{
 				QuestState qs = player.getQuestState(Q00063_PathOfTheWarder.class.getSimpleName());
 				if (player.getLevel() < 20)
@@ -175,11 +175,11 @@ public final class KamaelChange1 extends AbstractNpcAI
 		}
 		else if (player.isInCategory(CategoryType.KAMAEL_FIRST_CLASS_GROUP))
 		{
-			if (player.getClassId() == ClassId.maleSoldier)
+			if (player.getClassId() == ClassId.MALE_SOLDIER)
 			{
 				htmltext = "32191-02.htm"; // master_all_kamael003m
 			}
-			else if (player.getClassId() == ClassId.femaleSoldier)
+			else if (player.getClassId() == ClassId.FEMALE_SOLDIER)
 			{
 				htmltext = "32191-06.htm"; // master_all_kamael003f
 			}

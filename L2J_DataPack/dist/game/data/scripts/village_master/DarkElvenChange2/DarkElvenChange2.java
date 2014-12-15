@@ -147,22 +147,22 @@ public final class DarkElvenChange2 extends Quest
 		{
 			switch (cid)
 			{
-				case palusKnight:
+				case PALUS_KNIGHT:
 				{
 					htmltext = "30474-01.html";
 					break;
 				}
-				case shillienOracle:
+				case SHILLIEN_ORACLE:
 				{
 					htmltext = "30474-08.html";
 					break;
 				}
-				case assassin:
+				case ASSASSIN:
 				{
 					htmltext = "30474-12.html";
 					break;
 				}
-				case darkWizard:
+				case DARK_WIZARD:
 				{
 					htmltext = "30474-19.html";
 					break;

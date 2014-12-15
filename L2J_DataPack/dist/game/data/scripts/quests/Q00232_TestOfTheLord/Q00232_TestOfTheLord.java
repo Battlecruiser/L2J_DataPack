@@ -366,7 +366,7 @@ public final class Q00232_TestOfTheLord extends Quest
 				{
 					htmltext = "30565-01.html";
 				}
-				else if (player.getClassId() != ClassId.orcShaman)
+				else if (player.getClassId() != ClassId.ORC_SHAMAN)
 				{
 					htmltext = "30565-02.html";
 				}

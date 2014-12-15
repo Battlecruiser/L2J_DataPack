@@ -170,17 +170,17 @@ public final class HealerTrainer extends AbstractNpcAI
 		int itemId;
 		switch (player.getClassId())
 		{
-			case cardinal:
+			case CARDINAL:
 			{
 				itemId = 15307;
 				break;
 			}
-			case evaSaint:
+			case EVA_SAINT:
 			{
 				itemId = 15308;
 				break;
 			}
-			case shillienSaint:
+			case SHILLIEN_SAINT:
 			{
 				itemId = 15309;
 				break;

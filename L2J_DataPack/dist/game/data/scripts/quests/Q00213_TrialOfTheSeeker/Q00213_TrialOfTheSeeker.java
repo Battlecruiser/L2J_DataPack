@@ -400,7 +400,7 @@ public final class Q00213_TrialOfTheSeeker extends Quest
 		{
 			if (npc.getId() == MASTER_DUFNER)
 			{
-				if ((player.getClassId() == ClassId.rogue) || (player.getClassId() == ClassId.elvenScout) || ((player.getClassId() == ClassId.assassin)))
+				if ((player.getClassId() == ClassId.ROGUE) || (player.getClassId() == ClassId.ELVEN_SCOUT) || ((player.getClassId() == ClassId.ASSASSIN)))
 				{
 					if (player.getLevel() < MIN_LVL)
 					{

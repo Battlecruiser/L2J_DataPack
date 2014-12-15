@@ -84,9 +84,9 @@ public final class Q00408_PathOfTheElvenWizard extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() != ClassId.elvenMage)
+				if (player.getClassId() != ClassId.ELVEN_MAGE)
 				{
-					if (player.getClassId() == ClassId.elvenWizard)
+					if (player.getClassId() == ClassId.ELVEN_WIZARD)
 					{
 						htmltext = "30414-02a.htm";
 					}

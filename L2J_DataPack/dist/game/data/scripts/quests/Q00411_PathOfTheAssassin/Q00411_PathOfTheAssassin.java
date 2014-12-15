@@ -76,7 +76,7 @@ public final class Q00411_PathOfTheAssassin extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.darkFighter)
+				if (player.getClassId() == ClassId.DARK_FIGHTER)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -96,7 +96,7 @@ public final class Q00411_PathOfTheAssassin extends Quest
 						htmltext = "30416-03.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.assassin)
+				else if (player.getClassId() == ClassId.ASSASSIN)
 				{
 					htmltext = "30416-02a.htm";
 				}

@@ -83,7 +83,7 @@ public final class Q00412_PathOfTheDarkWizard extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.darkMage)
+				if (player.getClassId() == ClassId.DARK_MAGE)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -103,7 +103,7 @@ public final class Q00412_PathOfTheDarkWizard extends Quest
 						htmltext = "30421-02.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.darkWizard)
+				else if (player.getClassId() == ClassId.DARK_WIZARD)
 				{
 					htmltext = "30421-02a.htm";
 				}

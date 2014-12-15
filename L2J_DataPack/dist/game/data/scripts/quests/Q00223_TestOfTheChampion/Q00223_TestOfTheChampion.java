@@ -107,7 +107,7 @@ public final class Q00223_TestOfTheChampion extends Quest
 					giveItems(player, ASCALONS_1ST_LETTER, 1);
 					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
 					{
-						if (player.getClassId() == ClassId.warrior)
+						if (player.getClassId() == ClassId.WARRIOR)
 						{
 							giveItems(player, DIMENSIONAL_DIAMOND, 72);
 						}
@@ -450,11 +450,11 @@ public final class Q00223_TestOfTheChampion extends Quest
 		{
 			if (npc.getId() == VETERAN_ASCALON)
 			{
-				if ((player.getClassId() == ClassId.warrior) || (player.getClassId() == ClassId.orcRaider))
+				if ((player.getClassId() == ClassId.WARRIOR) || (player.getClassId() == ClassId.ORC_RAIDER))
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						if (player.getClassId() == ClassId.warrior)
+						if (player.getClassId() == ClassId.WARRIOR)
 						{
 							htmltext = "30624-03.htm";
 						}

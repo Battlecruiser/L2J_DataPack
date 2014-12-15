@@ -366,7 +366,7 @@ public final class Q00224_TestOfSagittarius extends Quest
 		{
 			if (npc.getId() == GUILD_PRESIDENT_BERNARD)
 			{
-				if ((player.getClassId() == ClassId.rogue) || (player.getClassId() == ClassId.elvenScout) || (player.getClassId() == ClassId.assassin))
+				if ((player.getClassId() == ClassId.ROGUE) || (player.getClassId() == ClassId.ELVEN_SCOUT) || (player.getClassId() == ClassId.ASSASSIN))
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{

@@ -249,7 +249,7 @@ public final class Q00231_TestOfTheMaestro extends Quest
 		{
 			if (npc.getId() == IRON_GATES_LOCKIRIN)
 			{
-				if (player.getClassId() == ClassId.artisan)
+				if (player.getClassId() == ClassId.ARTISAN)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{

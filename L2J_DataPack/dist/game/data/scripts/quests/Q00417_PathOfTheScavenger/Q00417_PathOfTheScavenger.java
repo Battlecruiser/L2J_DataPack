@@ -100,7 +100,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.dwarvenFighter)
+				if (player.getClassId() == ClassId.DWARVEN_FIGHTER)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -121,7 +121,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 						htmltext = "30524-02.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.scavenger)
+				else if (player.getClassId() == ClassId.SCAVENGER)
 				{
 					htmltext = "30524-02a.htm";
 				}

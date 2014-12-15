@@ -107,7 +107,7 @@ public final class Q00403_PathOfTheRogue extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.fighter)
+				if (player.getClassId() == ClassId.FIGHTER)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -125,7 +125,7 @@ public final class Q00403_PathOfTheRogue extends Quest
 						htmltext = "30379-03.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.rogue)
+				else if (player.getClassId() == ClassId.ROGUE)
 				{
 					htmltext = "30379-02a.htm";
 				}

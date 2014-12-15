@@ -125,12 +125,12 @@ public final class DarkElvenChange1 extends Quest
 		{
 			switch (cid)
 			{
-				case darkFighter:
+				case DARK_FIGHTER:
 				{
 					htmltext = npc.getId() + "-01.html";
 					break;
 				}
-				case darkMage:
+				case DARK_MAGE:
 				{
 					htmltext = npc.getId() + "-08.html";
 					break;

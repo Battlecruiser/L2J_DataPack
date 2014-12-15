@@ -370,7 +370,7 @@ public final class Q00233_TestOfTheWarSpirit extends Quest
 			{
 				if (player.getRace() == Race.ORC)
 				{
-					if (player.getClassId() == ClassId.orcShaman)
+					if (player.getClassId() == ClassId.ORC_SHAMAN)
 					{
 						if (player.getLevel() < MIN_LEVEL)
 						{

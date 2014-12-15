@@ -223,7 +223,7 @@ public final class Q00216_TrialOfTheGuildsman extends Quest
 			}
 			case "30298-04.html":
 			{
-				if (player.getClassId() == ClassId.scavenger)
+				if (player.getClassId() == ClassId.SCAVENGER)
 				{
 					if (hasQuestItems(player, ALLTRANS_2ND_RECOMMENDATION))
 					{
@@ -268,12 +268,12 @@ public final class Q00216_TrialOfTheGuildsman extends Quest
 				if (qs != null)
 				{
 					int count = 0;
-					if ((qs.getPlayer().getClassId() == ClassId.scavenger) && npc.isSweepActive())
+					if ((qs.getPlayer().getClassId() == ClassId.SCAVENGER) && npc.isSweepActive())
 					{
 						count += 5;
 					}
 					
-					if (getRandomBoolean() && (qs.getPlayer().getClassId() == ClassId.artisan))
+					if (getRandomBoolean() && (qs.getPlayer().getClassId() == ClassId.ARTISAN))
 					{
 						giveItems(qs.getPlayer(), AMBER_LUMP, 1);
 						playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_MIDDLE);
@@ -412,7 +412,7 @@ public final class Q00216_TrialOfTheGuildsman extends Quest
 		{
 			if (npc.getId() == WAREHOUSE_KEEPER_VALKON)
 			{
-				if ((player.getClassId() == ClassId.artisan) || (player.getClassId() == ClassId.scavenger))
+				if ((player.getClassId() == ClassId.ARTISAN) || (player.getClassId() == ClassId.SCAVENGER))
 				{
 					if (player.getLevel() < MIN_LVL)
 					{

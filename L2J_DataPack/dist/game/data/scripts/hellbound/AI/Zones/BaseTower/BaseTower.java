@@ -57,7 +57,7 @@ public final class BaseTower extends AbstractNpcAI
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		final ClassId classId = player.getClassId();
-		if (classId.equalsOrChildOf(ClassId.hellKnight) || classId.equalsOrChildOf(ClassId.soultaker))
+		if (classId.equalsOrChildOf(ClassId.HELL_KNIGHT) || classId.equalsOrChildOf(ClassId.SOULTAKER))
 		{
 			return "32301-02.htm";
 		}

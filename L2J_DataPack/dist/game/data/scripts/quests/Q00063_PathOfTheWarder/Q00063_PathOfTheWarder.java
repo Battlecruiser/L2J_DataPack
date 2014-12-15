@@ -320,7 +320,7 @@ public final class Q00063_PathOfTheWarder extends Quest
 		{
 			if (npc.getId() == MASTER_SIONE)
 			{
-				if ((player.getClassId() == ClassId.femaleSoldier) && !hasQuestItems(player, STEELRAZOR_EVALUTION))
+				if ((player.getClassId() == ClassId.FEMALE_SOLDIER) && !hasQuestItems(player, STEELRAZOR_EVALUTION))
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{

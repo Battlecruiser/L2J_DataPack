@@ -87,9 +87,9 @@ public final class Q00406_PathOfTheElvenKnight extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() != ClassId.elvenFighter)
+				if (player.getClassId() != ClassId.ELVEN_FIGHTER)
 				{
-					if (player.getClassId() == ClassId.elvenKnight)
+					if (player.getClassId() == ClassId.ELVEN_KNIGHT)
 					{
 						htmltext = "30327-02a.htm";
 					}

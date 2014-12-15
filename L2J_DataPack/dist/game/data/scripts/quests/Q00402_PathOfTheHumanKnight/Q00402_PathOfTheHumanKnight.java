@@ -106,7 +106,7 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.fighter)
+				if (player.getClassId() == ClassId.FIGHTER)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -124,7 +124,7 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 						htmltext = "30417-02.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.knight)
+				else if (player.getClassId() == ClassId.KNIGHT)
 				{
 					htmltext = "30417-02a.htm";
 				}

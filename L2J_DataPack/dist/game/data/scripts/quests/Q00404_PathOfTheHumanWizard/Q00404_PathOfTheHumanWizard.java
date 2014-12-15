@@ -86,7 +86,7 @@ public final class Q00404_PathOfTheHumanWizard extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.mage)
+				if (player.getClassId() == ClassId.MAGE)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -105,7 +105,7 @@ public final class Q00404_PathOfTheHumanWizard extends Quest
 						htmltext = "30391-02.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.wizard)
+				else if (player.getClassId() == ClassId.WIZARD)
 				{
 					htmltext = "30391-02a.htm";
 				}

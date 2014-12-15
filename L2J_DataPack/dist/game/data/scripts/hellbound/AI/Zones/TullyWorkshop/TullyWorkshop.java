@@ -546,7 +546,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 		
 		if (TULLY_DOORLIST.containsKey(npcId))
 		{
-			if (classId.equalsOrChildOf(ClassId.maestro))
+			if (classId.equalsOrChildOf(ClassId.MAESTRO))
 			{
 				return "doorman-01c.htm";
 			}
@@ -560,7 +560,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			}
 			else if (!brokenContraptions.contains(npc.getObjectId()))
 			{
-				if (classId.equalsOrChildOf(ClassId.maestro))
+				if (classId.equalsOrChildOf(ClassId.MAESTRO))
 				{
 					return "32371-01a.htm";
 				}
@@ -877,12 +877,12 @@ public final class TullyWorkshop extends AbstractNpcAI
 			if (event.equalsIgnoreCase("touch_device"))
 			{
 				final int i0 = talkedContraptions.contains(npc.getObjectId()) ? 0 : 1;
-				final int i1 = player.getClassId().equalsOrChildOf(ClassId.maestro) ? 6 : 3;
+				final int i1 = player.getClassId().equalsOrChildOf(ClassId.MAESTRO) ? 6 : 3;
 				
 				if (getRandom(1000) < ((i1 - i0) * 100))
 				{
 					talkedContraptions.add(npc.getObjectId());
-					htmltext = player.getClassId().equalsOrChildOf(ClassId.maestro) ? "32371-03a.htm" : "32371-03.htm";
+					htmltext = player.getClassId().equalsOrChildOf(ClassId.MAESTRO) ? "32371-03a.htm" : "32371-03.htm";
 				}
 				else
 				{

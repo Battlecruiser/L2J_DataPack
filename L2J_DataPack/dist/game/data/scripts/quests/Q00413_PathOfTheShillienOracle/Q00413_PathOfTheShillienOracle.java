@@ -80,7 +80,7 @@ public final class Q00413_PathOfTheShillienOracle extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.darkMage)
+				if (player.getClassId() == ClassId.DARK_MAGE)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -98,7 +98,7 @@ public final class Q00413_PathOfTheShillienOracle extends Quest
 						htmltext = "30330-02.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.shillienOracle)
+				else if (player.getClassId() == ClassId.SHILLIEN_ORACLE)
 				{
 					htmltext = "30330-02a.htm";
 				}

@@ -162,7 +162,7 @@ public final class Q00062_PathOfTheTrooper extends Quest
 			{
 				if (player.getRace() == Race.KAMAEL)
 				{
-					if (player.getClassId() == ClassId.maleSoldier)
+					if (player.getClassId() == ClassId.MALE_SOLDIER)
 					{
 						if (player.getLevel() >= MIN_LEVEL)
 						{

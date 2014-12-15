@@ -80,7 +80,7 @@ public final class Q00409_PathOfTheElvenOracle extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.elvenMage)
+				if (player.getClassId() == ClassId.ELVEN_MAGE)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -101,7 +101,7 @@ public final class Q00409_PathOfTheElvenOracle extends Quest
 						htmltext = "30293-03.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.oracle)
+				else if (player.getClassId() == ClassId.ORACLE)
 				{
 					htmltext = "30293-02a.htm";
 				}

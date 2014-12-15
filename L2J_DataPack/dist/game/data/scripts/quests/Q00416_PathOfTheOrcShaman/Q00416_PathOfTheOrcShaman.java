@@ -106,9 +106,9 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 		{
 			case "START":
 			{
-				if (player.getClassId() != ClassId.orcMage)
+				if (player.getClassId() != ClassId.ORC_MAGE)
 				{
-					if (player.getClassId() == ClassId.orcShaman)
+					if (player.getClassId() == ClassId.ORC_SHAMAN)
 					{
 						htmltext = "30585-02.htm";
 					}

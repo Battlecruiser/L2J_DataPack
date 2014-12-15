@@ -105,15 +105,15 @@ public final class Q00226_TestOfTheHealer extends Quest
 					giveItems(player, REPORT_OF_PERRIN, 1);
 					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
 					{
-						if (player.getClassId() == ClassId.cleric)
+						if (player.getClassId() == ClassId.CLERIC)
 						{
 							giveItems(player, DIMENSIONAL_DIAMOND, 60);
 						}
-						else if (player.getClassId() == ClassId.knight)
+						else if (player.getClassId() == ClassId.KNIGHT)
 						{
 							giveItems(player, DIMENSIONAL_DIAMOND, 104);
 						}
-						else if (player.getClassId() == ClassId.oracle)
+						else if (player.getClassId() == ClassId.ORACLE)
 						{
 							giveItems(player, DIMENSIONAL_DIAMOND, 45);
 						}
