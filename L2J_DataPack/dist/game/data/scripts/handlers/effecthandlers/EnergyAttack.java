@@ -145,7 +145,7 @@ public final class EnergyAttack extends AbstractEffect
 			{
 				damage *= attacker.getStat().calcStat(Stats.PVP_PHYS_SKILL_DMG, 1.0);
 				damage *= target.getStat().calcStat(Stats.PVP_PHYS_SKILL_DEF, 1.0);
-				damage *= attacker.getStat().calcStat(Stats.PHYSICAL_SKILL_POWER, 1.0);
+				damage = attacker.getStat().calcStat(Stats.PHYSICAL_SKILL_POWER, damage);
 			}
 			
 			critical = (BaseStats.STR.calcBonus(attacker) * _criticalChance) > (Rnd.nextDouble() * 100);

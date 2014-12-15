@@ -151,7 +151,7 @@ class Quest (JQuest) :
     if npcId == KEKROPUS :
         if id == State.CREATED :
             st.set("cond","0")
-            if player.getRace() != Race.Kamael :
+            if player.getRace() != Race.KAMAEL :
                 st.exitQuest(1)
                 htmltext = "<html><body>I'm sorry, but I can only give this quest to Kamael. Talk to Magister Ladd.</body></html>"
             elif player.getLevel() < 75 :
