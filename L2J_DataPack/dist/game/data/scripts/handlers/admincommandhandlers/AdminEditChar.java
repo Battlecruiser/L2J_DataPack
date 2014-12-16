@@ -349,30 +349,19 @@ public class AdminEditChar implements IAdminCommandHandler
 				String val = command.substring(15).trim();
 				int classidval = Integer.parseInt(val);
 				L2Object target = activeChar.getTarget();
-				L2PcInstance player = null;
-				if (target instanceof L2PcInstance)
-				{
-					player = (L2PcInstance) target;
-				}
-				else
+				if ((target == null) || !target.isPlayer())
 				{
 					return false;
 				}
-				boolean valid = false;
-				for (ClassId classid : ClassId.values())
-				{
-					if (classidval == classid.getId())
-					{
-						valid = true;
-					}
-				}
-				if (valid && (player.getClassId().getId() != classidval))
+				final L2PcInstance player = target.getActingPlayer();
+				if ((ClassId.getClassId(classidval) != null) && (player.getClassId().getId() != classidval))
 				{
 					player.setClassId(classidval);
 					if (!player.isSubClassActive())
 					{
 						player.setBaseClass(classidval);
 					}
+					
 					String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
 					player.storeMe();
 					player.sendMessage("A GM changed your class to " + newclass + ".");
