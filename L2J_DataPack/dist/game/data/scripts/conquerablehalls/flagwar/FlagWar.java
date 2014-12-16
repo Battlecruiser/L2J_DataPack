@@ -28,7 +28,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.l2jserver.L2DatabaseFactory;
-import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2SpecialSiegeGuardAI;
@@ -52,6 +51,7 @@ import com.l2jserver.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * @author BiggBoss
@@ -458,7 +458,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		_hall.banishForeigners();
 		SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.REGISTRATION_TERM_FOR_S1_ENDED);
 		msg.addString(getName());
-		Announcements.getInstance().announceToAll(msg);
+		Broadcast.toAllOnlinePlayers(msg);
 		_hall.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
 		
 		_siegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new SiegeStarts(), 3600000);
@@ -474,7 +474,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			_hall.updateNextSiege();
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
 			sm.addString(_hall.getName());
-			Announcements.getInstance().announceToAll(sm);
+			Broadcast.toAllOnlinePlayers(sm);
 			return;
 		}
 		
