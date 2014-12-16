@@ -167,9 +167,12 @@
 			<xs:enumeration value="pAtkRange" />
 			<xs:enumeration value="pAtkSpd" />
 			<xs:enumeration value="rCrit" />
+			<xs:enumeration value="mCritRate" />
 			<xs:enumeration value="rShld" />
 			<xs:enumeration value="rEvas" />
+			<xs:enumeration value="rMagicEvas" />
 			<xs:enumeration value="accCombat" />
+			<xs:enumeration value="accMagic" />
 			<xs:enumeration value="darkRes" />
 			<xs:enumeration value="earthRes" />
 			<xs:enumeration value="fireRes" />
@@ -179,6 +182,7 @@
 			<xs:enumeration value="waterRes" />
 			<xs:enumeration value="windRes" />
 			<xs:enumeration value="magicSuccRes" />
+			<xs:enumeration value="runSpd" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="condType">
@@ -225,6 +229,7 @@
 			</xs:simpleType>
 		</xs:attribute>
 		<xs:attribute name="name" type="xs:normalizedString" use="required" />
+		<xs:attribute name="additionalName" type="xs:normalizedString" use="optional" />
 		<xs:attribute name="type" use="required">
 			<xs:simpleType>
 				<xs:restriction base="xs:token">

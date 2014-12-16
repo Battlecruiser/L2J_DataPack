@@ -1,0 +1,167 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="45373" name="Agathion - Blessed Pisces Pack" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing an Agathion - Blessed Pisces (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45374" name="Laser Gun" additionalName="Event" type="Weapon">
+		<!-- Use this and its active skill Pew Pew to defeat Alien Researchers! Deleted after event. -->
+		<set name="icon" val="icon.invasion_gun"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="100"/>
+		<for>
+			<add stat="pAtk" val="1.0"/>
+			<add stat="mAtk" val="1.0" />
+			<add stat="pAtkSpd" val="303.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="45375" name="Alien Nano Supplement" additionalName="Event" type="EtcItem">
+		<!-- Random basic stat + 6 for 30 min. Cannot be stacked with Fish Stew or other Alien Nano Supplements. -->
+		<set name="icon" val="icon.ev_invasion_buff_box"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45376" name="Reward Capsule" additionalName="Event" type="EtcItem">
+		<!-- It looks like something nice might be inside! Cannot be used in Olympiad. -->
+		<set name="icon" val="icon.general_fuel_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45377" name="L2B2's Gift Box" additionalName="Event" type="EtcItem">
+		<!-- Something nice might be inside! Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_treasure_box_i08"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45378" name="Vitality Replenishing Herb - Party" additionalName="Event" type="EtcItem">
+		<!-- Restores a certain amount of Vitality for all party members. -->
+		<set name="icon" val="icon.general_fuel_i00"/>
+	</item>
+	<item id="45379" name="Monster Research" additionalName="Event" type="EtcItem">
+		<!-- A report on the monsters of Aden. Take these to L2B2 for rewards. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45380" name="Depleted Plasma Gun" additionalName="1-hour" type="Weapon">
+		<!-- Looks like the energy pack is nearly drained, but it can use a Knock Back skill! 1-hour. -->
+		<set name="icon" val="icon.invasion_gun"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="100"/>
+		<set name="time" val="3600" />
+		<for>
+			<add stat="pAtk" val="1.0"/>
+			<add stat="mAtk" val="1.0" />
+			<add stat="pAtkSpd" val="303.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="45381" name="Charged Plasma Gun" additionalName="1-hour" type="Weapon">
+		<!-- Be careful, this one is set to the highest power! Use this and you can also use the Spirit Hit skill. 1-hour. -->
+		<set name="icon" val="icon.invasion_gun"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="100"/>
+		<set name="time" val="3600" />
+		<for>
+			<add stat="pAtk" val="1.0"/>
+			<add stat="mAtk" val="1.0" />
+			<add stat="pAtkSpd" val="303.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="45382" name="Top Hat" additionalName="15-day" type="Armor">
+		<!-- Magical-looking hat. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_magicial_cap_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="time" val="1296000" />
+	</item>
+	<item id="45383" name="Maid Hairband" additionalName="15-day" type="Armor">
+		<!-- Cute hairband. Female only. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.maid_hairband"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="time" val="1296000" />
+	</item>
+	<item id="45384" name="Laborer Hat" additionalName="15-day" type="Armor">
+		<!-- Hat worn by Lei Feng. Uses 1 hair accessory slot. -->
+		<set name="icon" val="icon.people_cap"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="time" val="1296000" />
+	</item>
+	<item id="45385" name="Ruthless Tribe Mask" additionalName="15-day" type="Armor">
+		<!-- Mask worn by a ruthless tribe. Uses 1 hair accessory slot. -->
+		<set name="icon" val="icon.crazy_driving_mask"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="time" val="1296000" />
+	</item>
+	<item id="45386" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45387" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45388" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45389" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45390" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45391" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45392" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45393" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45394" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45395" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45396" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45397" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45398" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="45399" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00"/>
+		<set name="price" val="150000" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

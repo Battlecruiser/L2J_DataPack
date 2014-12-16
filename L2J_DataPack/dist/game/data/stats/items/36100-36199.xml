@@ -1,0 +1,629 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="36100" name="Star Agathion - Chic Jaebum" additionalName="" type="Armor">
+		<!-- Bracelet for summoning Agathion - Chic Jaebum (7-day)\n(Used Skill)\n1. Blessing of Star Agathion\nIncreases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes)\n2. Star Agathion Teleport\nLets you teleport to various strongholds. (cooldown 30 minutes)\n3. Gift of Star Agathion\nCan get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150"/>
+	</item>
+	<item id="36101" name="Star Agathion - Cute Shinyoung" additionalName="" type="Armor">
+		<!-- Bracelet for summoning Agathion - Cute Shinyoung (7-day)\n(Used Skill)\n1. Blessing of Star Agathion\nIncreases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes)\n2. Star Agathion Teleport\nLets you teleport to various strongholds. (cooldown 30 minutes)\n3. Gift of Star Agathion\nCan get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150"/>
+	</item>
+	<item id="36102" name="Star Agathion Pack" additionalName="" type="EtcItem">
+		<!-- You can randomly acquire 1 Star Agathion Summoning Bracelet (7-day). -->
+		<set name="icon" val="icon.etc_pi_box_joy_pack"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36103" name="Transformation Scroll Pack" additionalName="" type="EtcItem">
+		<!-- You can get 1 Transformation Scroll: Zaken, Gordon, Ranku, and Kechi at a certain probability. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" val="100"/>
+	</item>
+	<item id="36104" name="Bronze Key Guild Badge" additionalName="" type="EtcItem">
+		<!-- Badge that symbolizes the Bronze Key Guild. You can get it after completing a clan request. Take it to the Clan Request Manager in any village. -->
+		<set name="icon" val="icon.etc_badge_silver_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36105" name="Black Anvil Guild Badge" additionalName="" type="EtcItem">
+		<!-- Badge that symbolizes the Black Anvil Guild. You can get it after completing a clan request. Take it to the Clan Request Manager in each village. -->
+		<set name="icon" val="icon.etc_badge_silver_i01"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36106" name="Golden Wheel Guild Badge" additionalName="" type="EtcItem">
+		<!-- Badge that symbolizes the Golden Wheel Guild. You can get it after completing a clan request. Take it to the Clan Request Manager in any village. -->
+		<set name="icon" val="icon.etc_badge_silver_i02"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36107" name="Clan Quest" additionalName="" type="EtcItem">
+		<!-- Contains details about clan missions. -->
+		<set name="icon" val="icon.etc_letter_white_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36108" name="Clan Request - 7 Members" additionalName="" type="EtcItem">
+		<!-- Contains details about clan requests. If you get disconnected after summoning the Clan Request Manager, you cannot start any clan request. (Can be used only once a-day) -->
+		<set name="icon" val="icon.item_normal20"/>
+	</item>
+	<item id="36109" name="Kaliel's Treasure Chest (Low-grade)" additionalName="" type="EtcItem">
+		<!-- Kaliel's Treasure Chest (Low-grade). Double-click to receive a gift. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36110" name="Kaliel's Treasure Chest (Mid-grade)" additionalName="" type="EtcItem">
+		<!-- Kaliel's Treasure Chest (Mid-grade). Double-click to receive a gift. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36111" name="Kaliel's Treasure Chest (High-grade)" additionalName="" type="EtcItem">
+		<!-- Kaliel's Treasure Chest (High-grade). Double-click to receive a gift. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36112" name="Kaliel's Token" additionalName="" type="EtcItem">
+		<!-- Kaliel's Token. Give it to Jolie (Event Manager) to receive a Gift Box or Soul Box. Deleted after event. -->
+		<set name="icon" val="icon.etc_ev_kalie_token"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36113" name="Vulcan's True Gold" additionalName="" type="EtcItem">
+		<!-- True Gold handed over by the Blacksmith of Flame Vulcan. It is said to be an ingredient for Mimir's Elixir. -->
+		<set name="icon" val="icon.etc_broken_crystal_gold_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36114" name="Vulcan's Pure Silver" additionalName="" type="EtcItem">
+		<!-- Pure Silver handed over by the Blacksmith of Flame Vulcan. It is said to be an ingredient for Mimir's Elixir. -->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36115" name="Vulcan's Blood Fire" additionalName="" type="EtcItem">
+		<!-- Blood Fire handed over by the Blacksmith of Flame Vulcan. It is said to be an ingredient for Mimir's Elixir. -->
+		<set name="icon" val="icon.etc_potion_red_i00"/>
+		<set name="weight" val="50"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36116" name="Scroll of Blessing (R-grade)" additionalName="Campaign" type="EtcItem">
+		<!-- The Blacksmith of Mammon can exchange standard Requiem, Immortal, Apocalypse or Twilight equipment for Blessed equipment for you at a low probability. Small fee is charged. -->
+		<set name="icon" val="icon.bless_scroll_r1"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36117" name="Scroll of Blessing (R95-grade)" additionalName="Campaign" type="EtcItem">
+		<!-- The Blacksmith of Mammon can exchange standard Specter or Seraph equipment for Blessed equipment for you at a low probability. Small fee is charged. -->
+		<set name="icon" val="icon.bless_scroll_r95"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36118" name="Elegia Sigil - Ceremony of Chaos" additionalName="" type="Armor">
+		<set name="icon" val="icon.weapon_pricklelotus_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="S80"/>
+		<set name="crystal_count" val="844"/>
+		<set name="weight" val="920"/>
+	</item>
+	<item id="36119" name="Elegia Shield - Ceremony of Chaos" additionalName="" type="Weapon">
+		<set name="icon" val="icon.heavengate_shield_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="S80"/>
+		<set name="crystal_count" val="844"/>
+		<set name="weight" val="1190"/>
+	</item>
+	<item id="36120" name="Clan Cloak - Clan Hall (Contestable)" additionalName="" type="Armor">
+		<!-- Alliance made with blood! Cloak that is specifically designed for clans and symbolizes the honor of clans. Can be used only on members of clans that own a contestable Clan Hall. STR + 1 / INT + 1 effect. Can use a private warehouse. When S or S80-grade armor set is all equipped, or upper armor above R-grade is equipped, the sealed cloak slot opens. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="220"/>
+		<set name="price" val="5000000" />
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+		</for>
+	</item>
+	<item id="36121" name="Rabbit Ears: STR (3-day)" additionalName="Campaign" type="Armor">
+		<!-- STR + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
+		<set name="icon" val="icon.accessory_rabbit_ear_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="36122" name="Rabbit Ears: DEX (3-day)" additionalName="Campaign" type="Armor">
+		<!-- DEX + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
+		<set name="icon" val="icon.accessory_rabbit_ear_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="36123" name="Rabbit Ears: WIT (3-day)" additionalName="Campaign" type="Armor">
+		<!-- WIT + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
+		<set name="icon" val="icon.accessory_rabbit_ear_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="36124" name="Rabbit Ears: INT (3-day)" additionalName="Campaign" type="Armor">
+		<!-- INT + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
+		<set name="icon" val="icon.accessory_rabbit_ear_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="36125" name="Angel Circlet - STR (7-day)" additionalName="Campaign" type="Armor">
+		<!-- STR + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
+		<set name="icon" val="icon.Accessary_angel_circlet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="36126" name="Angel Circlet - DEX (7-day)" additionalName="Campaign" type="Armor">
+		<!-- DEX + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
+		<set name="icon" val="icon.Accessary_angel_circlet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="36127" name="Angel Circlet - WIT (7-day)" additionalName="Campaign" type="Armor">
+		<!-- WIT + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
+		<set name="icon" val="icon.Accessary_angel_circlet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="36128" name="Angel Circlet - INT (7-day)" additionalName="Campaign" type="Armor">
+		<!-- INT + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
+		<set name="icon" val="icon.Accessary_angel_circlet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="36129" name="Clan Request - 14 Members" additionalName="" type="EtcItem">
+		<!-- Contains details about clan requests. If you get disconnected after summoning the Clan Request Manager, you cannot start any clan request. (Can be used only once a-day) -->
+		<set name="icon" val="icon.item_normal20"/>
+	</item>
+	<item id="36130" name="Scroll: Enchant Armor (R-grade) 5-unit Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 5 Scrolls: Enchant Armor (R-grade). -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36131" name="CON/MEN Pendant Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 1 Pendant of CON or 1 Pendant of MEN. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36132" name="INT/WIT Pendant Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 1 Pendant of INT or 1 Pendant of WIT. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36133" name="STR/DEX Pendant Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 1 Pendant of STR or 1 Pendant of DEX. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36134" name="P. Def./P. Evasion Pendant Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive one of the following: P. Def. Pendant, M. Def. Pendant and P. Evasion Pendant. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36135" name="P. Atk./P. Accuracy Pendant Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive one of the following: P. Atk. Pendant, M. Atk. Pendant and Accuracy Pendant. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36136" name="Critical Pendant Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 1 Critical Rate Pendant or 1 Critical Damage Pendant. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36137" name="Lv. 5 Legendary MEN Dye 10-unit Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 10 units of Lv. 5 Legendary MEN Dye. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36138" name="Lv. 5 Legendary WIT Dye 10-unit Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 10 units of Lv. 5 Legendary WIT Dye. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36139" name="Lv. 5 Legendary DEX Dye 10-unit Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 10 units of Lv. 5 Legendary DEX Dye. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36140" name="Lv. 5 Legendary CON Dye 10-unit Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 10 units of Lv. 5 Legendary CON Dye. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36141" name="Lv. 5 Legendary INT Dye 10-unit Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 10 units of Lv. 5 Legendary INT Dye. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36142" name="Lv. 5 Legendary STR Dye 10-unit Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 10 units of Lv. 5 Legendary STR Dye. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36143" name="Double Crystal Enhancement Reward: Amaranthine Box (Physical)" additionalName="" type="EtcItem">
+		<!-- Double-click to receive one of the following: Double Crystal Amaranthine Shaper, Cutter, Slasher, Avenger, Fighter, Stormer, Thrower, and Shooter. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36144" name="Double Crystal Enhancement Reward: Amaranthine Box (Magical)" additionalName="" type="EtcItem">
+		<!-- Double-click to receive one of the following: Double Crystal Amaranthine Buster, Caster, and Retributer. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36145" name="Double Crystal Enhancement Reward: Amaranthine Box (Dual Weapons)" additionalName="" type="EtcItem">
+		<!-- Double-click to receive one of the following: Double Crystal Amaranthine Dualsword, Dual Dagger, and Dual Blunt. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36146" name="Bloody Amaranthine Weapon Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive one of the Bloody Amaranthine Weapons. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36147" name="Dark Amaranthine Weapon Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive one of the Dark Amaranthine Weapons. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36148" name="Kaliel's Scroll of Escape Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive a Scroll of Escape: Ruins of Ye Sagira, Isle of Souls Harbor, Guillotine Fortress, Bloody Swampland, Crystal Caverns, and Seal of Shilen. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36149" name="Kaliel's Soul Bottle Box" additionalName="" type="EtcItem">
+		<!-- Double-click to receive an XP Bottle (10-hour). The obtained XP Bottle cannot be exchanged, dropped or sold in a store. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36150" name="Kaliel's Hourglass" additionalName="" type="EtcItem">
+		<!-- Increases XP obtained through hunting by 50% for 1 hour. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36151" name="Kaliel's Training Scroll" additionalName="" type="EtcItem">
+		<!-- Increases XP and SP obtained through hunting by 100% for 30 min. Can be used only by characters of level 90 or lower. Temporary event item. -->
+		<set name="icon" val="icon.etc_training_scroll_kalie_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36152" name="Kaliel's Energy Box" additionalName="" type="EtcItem">
+		<!-- Box containing Kaliel's Energy that prevents Seed Talismans from weakening when they fail to be enchanted. Double-click to receive one of the following: Kaliel's Energy - Annihilation/Hellfire/Desire. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36153" name="Kaliel's Attribute Stone Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 6 stones. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36154" name="Kaliel's Attribute Crystal Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 1 crystal. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36155" name="Enhanced Kaliel's Attribute Stone Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive one of the super-150 Attribute Stones. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36156" name="Enhanced Kaliel's Attribute Crystal Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive one of the super-150 Attribute Crystals. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36157" name="Scroll: Enchant Hair Accessory Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 1 Scroll: Enchant Hair Accessory. The obtained scroll cannot be exchanged, dropped, or sold in a store. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36158" name="Life Stone: Hair Accessory Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 1 Life Stone for Hair Accessories. The obtained stone cannot be exchanged, dropped, or sold in a store. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36159" name="Scroll of Blessing (R1-grade)" additionalName="" type="EtcItem">
+		<!-- The Blacksmith of Mammon can exchange standard Requiem or Immortal equipment for Blessed equipment for you. Small fee is charged. -->
+		<set name="icon" val="icon.bless_scroll_r1"/>
+	</item>
+	<item id="36160" name="Scroll of Blessing (R2-grade)" additionalName="" type="EtcItem">
+		<!-- The Blacksmith of Mammon can exchange standard Apocalypse or Twilight equipment for Blessed equipment for you. Small fee is charged. -->
+		<set name="icon" val="icon.bless_scroll_r2"/>
+	</item>
+	<item id="36161" name="Scroll of Blessing (R95-grade)" additionalName="" type="EtcItem">
+		<!-- The Blacksmith of Mammon can exchange standard Specter or Seraph equipment for Blessed equipment for you. Small fee is charged. -->
+		<set name="icon" val="icon.bless_scroll_r95"/>
+	</item>
+	<item id="36162" name="Scroll of Blessing (R99-grade)" additionalName="" type="EtcItem">
+		<!-- The Blacksmith of Mammon can exchange standard Amaranthine or Eternal equipment for Blessed equipment for you. Small fee is charged. -->
+		<set name="icon" val="icon.bless_scroll_r99"/>
+	</item>
+	<item id="36163" name="Giant's Scroll: Enchant Weapon (R-grade)" additionalName="" type="EtcItem">
+		<!-- P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases at + 4. All amounts are increased for blessed weapons. Randomly adds between + 1 and + 3 enchant value. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_r"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36164" name="Giant's Scroll: Enchant Armor (R-grade)" additionalName="" type="EtcItem">
+		<!-- P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. Randomly adds between + 1 and + 3 enchant value. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_r"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36165" name="Kaliel's Soul Box" additionalName="" type="EtcItem">
+		<!-- Double-click to receive various items with Kaliel's Blessing that are helpful for obtaining XP and hunting. Temporary event item. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36166" name="Kaliel's Gift Box" additionalName="" type="EtcItem">
+		<!-- Double-click to receive various valuable items with Kaliel's Blessing. Temporary event item. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36167" name="Nurka's Belt" additionalName="" type="Armor">
+		<!-- Belt that contains the power of Bloody Lord Nurka of the Fortress of Resistance. Increases damage by 5% and decreases received damage by 5%. Increases weight by 12800 and the number of inventory slots by 18. -->
+		<set name="icon" val="icon.event_energy_belt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="25.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="36168" name="Lidia's Belt" additionalName="" type="Armor">
+		<!-- Belt that contains the power of Lidia von Hellmann of the Fortress of the Dead. Increases damage by 5% and decreases received damage by 5%. Increases weight by 12800 and the number of inventory slots by 18. -->
+		<set name="icon" val="icon.event_energy_belt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="25.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="36169" name="Gustav's Belt" additionalName="" type="Armor">
+		<!-- Belt that contains the power of Gustav of the Devastated Castle. Increases damage by 5% and decreases received damage by 5%. Increases weight by 12800 and the number of inventory slots by 18. -->
+		<set name="icon" val="icon.event_energy_belt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="25.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="36170" name="Scroll of Escape: Fog of Blood Region" additionalName="" type="EtcItem">
+		<!-- Teleports you to the Fog of Blood Region. -->
+		<set name="icon" val="icon.etc_scroll_white_i00"/>
+		<set name="weight" val="30"/>
+		<set name="price" val="75000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36171" name="Scroll of Escape: Isle of Souls Harbor" additionalName="" type="EtcItem">
+		<!-- Teleports you to the Isle of Souls Harbor. -->
+		<set name="icon" val="icon.etc_scroll_white_i00"/>
+		<set name="weight" val="30"/>
+		<set name="price" val="75000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36172" name="Scroll of Escape: Ruins of Ye Sagira" additionalName="" type="EtcItem">
+		<!-- Teleports you to Hadel at the Ruins of Ye Sagira. -->
+		<set name="icon" val="icon.etc_scroll_white_i00"/>
+		<set name="weight" val="30"/>
+		<set name="price" val="75000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36173" name="Scroll of Escape: Guillotine Fortress" additionalName="" type="EtcItem">
+		<!-- Teleports you to Guillotine Fortress. -->
+		<set name="icon" val="icon.etc_scroll_white_i00"/>
+		<set name="weight" val="30"/>
+		<set name="price" val="75000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36174" name="Scroll of Escape: Parnassus" additionalName="" type="EtcItem">
+		<!-- Teleports you to Parnassus. -->
+		<set name="icon" val="icon.etc_scroll_white_i00"/>
+		<set name="weight" val="30"/>
+		<set name="price" val="75000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36175" name="Scroll of Escape: Seal of Shilen" additionalName="" type="EtcItem">
+		<!-- Teleports you to the Seal of Shilen. -->
+		<set name="icon" val="icon.etc_scroll_white_i00"/>
+		<set name="weight" val="30"/>
+		<set name="price" val="75000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36176" name="2012 World Olympiad Hero's Accessory" additionalName="Sigel Knight" type="Armor">
+		<!-- Hair accessory of 2012 World Olympiad Winner, Jowangshin. Mark of the strongest Sigel Knight in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<set name="icon" val="icon.accessory_archer_hat2_i00"/>
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="36177" name="2012 World Olympiad Hero's Accessory" additionalName="Yul Archer" type="Armor">
+		<!-- Hair accessory of 2012 World Olympiad Winner, NangmanNalppi. Mark of the strongest Yul Archer in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<set name="icon" val="icon.accessory_archer_hat2_i00"/>
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="36178" name="2012 World Olympiad Hero's Accessory" additionalName="Tyrr Warrior" type="Armor">
+		<!-- Hair accessory of 2012 World Olympiad Winner, Gumsungs. Mark of the strongest Tyrr Warrior in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<set name="icon" val="icon.accessory_archer_hat2_i00"/>
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="36179" name="2012 World Olympiad Hero's Accessory" additionalName="Othell Rogue" type="Armor">
+		<!-- Hair accessory of 2012 World Olympiad Winner, Matdongsan. Mark of the strongest Othell Rogue in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<set name="icon" val="icon.accessory_archer_hat2_i00"/>
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="36180" name="2012 World Olympiad Hero's Accessory" additionalName="Iss Enchanter" type="Armor">
+		<!-- Hair accessory of 2012 World Olympiad Winner, Akinsihoo. Mark of the strongest Iss Enchanter in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<set name="icon" val="icon.accessory_archer_hat2_i00"/>
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="36181" name="2012 World Olympiad Hero's Accessory" additionalName="Wynn Summoner" type="Armor">
+		<!-- Hair accessory of 2012 World Olympiad Winner, Isisunarang. Mark of the strongest Wynn Summoner in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<set name="icon" val="icon.accessory_archer_hat2_i00"/>
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="36182" name="2012 World Olympiad Hero's Accessory" additionalName="Aeore Healer" type="Armor">
+		<!-- Hair accessory of 2012 World Olympiad Winner, Shinudambi. Mark of the strongest Aeore Healer in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<set name="icon" val="icon.accessory_archer_hat2_i00"/>
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="36183" name="2012 World Olympiad Hero's Accessory" additionalName="Feoh Wizard" type="Armor">
+		<!-- Hair accessory of 2012 World Olympiad Winner, Chunhagun. Mark of the strongest Feoh Wizard in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<set name="icon" val="icon.accessory_archer_hat2_i00"/>
+		<set name="default_action" val="EQUIP" />
+	</item>
+	<item id="36184" name="Kaliel's Energy" additionalName="Annihilation" type="EtcItem">
+		<!-- Kaliel's Energy protects the Talisman - Annihilation from turning into Talisman - Destruction when enchanting to Talisman - Hellfire fails. -->
+		<set name="icon" val="icon.etc_spirit_kalie_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36185" name="Kaliel's Energy" additionalName="Hellfire" type="EtcItem">
+		<!-- Kaliel's Energy protects the Talisman - Hellfire from turning into Talisman - Annihilation when enchanting to Talisman - Desire fails. -->
+		<set name="icon" val="icon.etc_spirit_kalie_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36186" name="Kaliel's Energy" additionalName="Desire" type="EtcItem">
+		<!-- Kaliel's Energy protects the Talisman - Desire from turning into Talisman - Hellfire when enchanting to Talisman - Longing fails. -->
+		<set name="icon" val="icon.etc_spirit_kalie_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36187" name="Rising Shirt" additionalName="" type="Armor">
+		<!-- Increases Speed by 7, STR by 1, and INT by 1. Can be used if the levels of main and dual classes are 87 or higher. -->
+		<set name="icon" val="icon.dual_shirt1"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130"/>
+		<for>
+			<add stat="pDef" val="38.0"/>
+		</for>
+	</item>
+	<item id="36188" name="Blaze Shirt" additionalName="" type="Armor">
+		<!-- Increases Speed by 7, STR by 1, INT by 1, CON by 1, and MEN by 1. Can be used if the levels of main and dual classes are 92 or higher. -->
+		<set name="icon" val="icon.dual_shirt2"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130"/>
+		<for>
+			<add stat="pDef" val="38.0"/>
+		</for>
+	</item>
+	<item id="36189" name="Rising Belt" additionalName="" type="Armor">
+		<!-- Increases weight by 12800 and the number of inventory slots by 12. Can be used if the levels of main and dual classes are 87 or higher. -->
+		<set name="icon" val="icon.dual_belt1"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="25.0"/>
+		</for>
+	</item>
+	<item id="36190" name="Blaze Belt" additionalName="" type="Armor">
+		<!-- Increases weight by 12800 and the number of inventory slots by 18. Can be used if the levels of main and dual classes are 92 or higher. -->
+		<set name="icon" val="icon.dual_belt2"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="25.0"/>
+		</for>
+	</item>
+	<item id="36191" name="Kaliel's Wish" additionalName="" type="EtcItem">
+		<!-- Makes you eligible to receive a Kaliel's Blessing event reward token and 1st-place winner item for 1 hour. Can be used only by characters of Lv. 40 or higher who have done the 2nd class transfer. Buff gets deleted upon Subclass/Dual Class change. Temporary event item. -->
+		<set name="icon" val="icon.etc_blessed_kalie_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36192" name="Kaliel's Wish Pouch" additionalName="" type="EtcItem">
+		<!-- Double-click to receive 3 Kaliel's Wishes. Temporary event item. -->
+		<set name="icon" val="icon.etc_pouch_gold_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="36193" name="Shaper Sealed with Heroes' Power" additionalName="" type="Weapon">
+		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500"/>
+		<for>
+			<add stat="pAtk" val="685.0"/>
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="36194" name="Cutter Sealed with Heroes' Power" additionalName="" type="Weapon">
+		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<set name="icon" val="icon.weapon_the_sword_of_hero_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500"/>
+		<for>
+			<add stat="pAtk" val="752.0"/>
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="36195" name="Slasher Sealed with Heroes' Power" additionalName="" type="Weapon">
+		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500"/>
+		<for>
+			<add stat="pAtk" val="916.0"/>
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="36196" name="Avenger Sealed with Heroes' Power" additionalName="" type="Weapon">
+		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<set name="icon" val="icon.weapon_the_axe_of_hero_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500"/>
+		<for>
+			<add stat="pAtk" val="752.0"/>
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="36197" name="Fighter Sealed with Heroes' Power" additionalName="" type="Weapon">
+		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<set name="icon" val="icon.weapon_the_fist_of_hero_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500"/>
+		<for>
+			<add stat="pAtk" val="916.0"/>
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="36198" name="Stormer Sealed with Heroes' Power" additionalName="" type="Weapon">
+		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<set name="icon" val="icon.weapon_the_pole_of_hero_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500"/>
+		<for>
+			<add stat="pAtk" val="752.0"/>
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="36199" name="Thrower Sealed with Heroes' Power" additionalName="" type="Weapon">
+		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<set name="icon" val="icon.weapon_the_bow_of_hero_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="500"/>
+		<for>
+			<add stat="pAtk" val="1481.0"/>
+			<add stat="mAtk" val="414.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+</list>

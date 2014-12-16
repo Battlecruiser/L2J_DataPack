@@ -1,0 +1,1713 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="30500" name="Bound Hand Crossbow" additionalName="" type="Weapon">
+		<!-- Kamael-exclusive weapon: Elven Bow Conversion, Bound Hand Crossbow. Use an Unbind Scroll to change to a Standard item. -->
+		<set name="icon" val="icon.weapon_hunting_gun_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="CROSSBOW"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="38"/>
+		<set name="weight" val="1850"/>
+		<set name="price" val="12387" />
+		<set name="soulshots" val="4"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="64.0"/>
+			<add stat="mAtk" val="32.0" />
+			<add stat="pAtkSpd" val="303.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="30501" name="Bound Hand Crossbow" additionalName="" type="Weapon">
+		<!-- Kamael-exclusive weapon: Dark Elven Bow Conversion, Bound Hand Crossbow. Use an Unbind Scroll to change to a Standard item. -->
+		<set name="icon" val="icon.weapon_hunting_gun_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="CROSSBOW"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="38"/>
+		<set name="weight" val="1850"/>
+		<set name="price" val="12387" />
+		<set name="soulshots" val="4"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="64.0"/>
+			<add stat="mAtk" val="32.0" />
+			<add stat="pAtkSpd" val="303.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="30502" name="Bound Bow of Peril" additionalName="" type="Weapon">
+		<!-- Bound Item.\nBestows one of the following functions: Guidance, Quick Recovery or Cheap Shot. -->
+		<set name="icon" val="icon.weapon_hazard_bow_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BOW"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="56"/>
+		<set name="weight" val="1700"/>
+		<set name="price" val="252285" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="400.0"/>
+			<add stat="mAtk" val="99.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="30503" name="Bound Bow of Peril" additionalName="Guidance" type="Weapon">
+		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Accuracy by 3. -->
+		<set name="icon" val="icon.weapon_hazard_bow_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BOW"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="56"/>
+		<set name="weight" val="1700"/>
+		<set name="price" val="252285" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="400.0"/>
+			<add stat="mAtk" val="99.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="30504" name="Bound Bow of Peril" additionalName="Quick Recovery" type="Weapon">
+		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases cooldown by about 13%. -->
+		<set name="icon" val="icon.weapon_hazard_bow_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BOW"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="56"/>
+		<set name="weight" val="1700"/>
+		<set name="price" val="252285" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="400.0"/>
+			<add stat="mAtk" val="99.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="30505" name="Bound Bow of Peril" additionalName="Cheap Shot" type="Weapon">
+		<!-- Bound Item.\n(Soul Crystal Enhancement)\nHas a 42% chance of decreasing MP consumption to 1 during a standard attack. -->
+		<set name="icon" val="icon.weapon_hazard_bow_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BOW"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="56"/>
+		<set name="weight" val="1700"/>
+		<set name="price" val="252285" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="400.0"/>
+			<add stat="mAtk" val="99.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="30506" name="Bound War Pick" additionalName="" type="Weapon">
+		<!-- Bound War Pick. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_hammer_in_flames_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="POLE"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="82"/>
+		<set name="weight" val="2050"/>
+		<set name="price" val="26850" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="79.0"/>
+			<add stat="mAtk" val="47.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30507" name="Bound Compound Scale Mail" additionalName="" type="Armor">
+		<!-- Bound Compound Scale Mail. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t20_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="10"/>
+		<set name="weight" val="8620"/>
+		<set name="price" val="3527" />
+		<for>
+			<add stat="pDef" val="95.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30508" name="Bound Compound Scale Gaiters" additionalName="" type="Armor">
+		<!-- Bound Compound Scale Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t20_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="7"/>
+		<set name="weight" val="3770"/>
+		<set name="price" val="2440" />
+		<for>
+			<add stat="pDef" val="61.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30509" name="Bound Half Plate Armor" additionalName="" type="Armor">
+		<!-- Bound Half Plate. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t46_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="23"/>
+		<set name="weight" val="8220"/>
+		<set name="price" val="7520" />
+		<for>
+			<add stat="pDef" val="111.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30510" name="Bound Half Plate Armor" additionalName="" type="Armor">
+		<!-- Bound Half Plate. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t46_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="D"/>
+		<set name="price" val="7520" />
+		<for>
+			<add stat="pDef" val="111.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30511" name="Bound Lesser Giant's Hammer" additionalName="" type="Weapon">
+		<!-- Bound Lesser Giant's Hammer. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_giants_hammer_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="82"/>
+		<set name="weight" val="2100"/>
+		<set name="price" val="26850" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="96.0"/>
+			<add stat="mAtk" val="47.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30512" name="Bound Lesser Giant's Sword" additionalName="" type="Weapon">
+		<!-- Bound Lesser Giant's Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_giants_sword_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="82"/>
+		<set name="weight" val="2020"/>
+		<set name="price" val="26850" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="96.0"/>
+			<add stat="mAtk" val="47.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30513" name="Bound Tome of Blood" additionalName="" type="Weapon">
+		<!-- Bound Tome of Blood. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_tome_of_blood_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="57"/>
+		<set name="weight" val="570"/>
+		<set name="price" val="18587" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="51.0"/>
+			<add stat="mAtk" val="52.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30514" name="Bound Crucifix of Blood" additionalName="" type="Weapon">
+		<!-- Bound Crucifix of Blood. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_crucifix_of_blood_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="82"/>
+		<set name="weight" val="540"/>
+		<set name="price" val="26850" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="63.0"/>
+			<add stat="mAtk" val="63.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30515" name="Bound Fisted Blade" additionalName="" type="Weapon">
+		<!-- Bound Fisted Blade. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_fist_blade_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALFIST"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="1480"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="169.0"/>
+			<add stat="mAtk" val="76.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30516" name="Bound Fisted Blade" additionalName="Rsk. Evasion" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Evasion by 6 when HP drops to 60% or below. -->
+		<set name="icon" val="icon.weapon_fist_blade_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALFIST"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="1480"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="169.0"/>
+			<add stat="mAtk" val="76.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30517" name="Bound Fisted Blade" additionalName="Rsk. Haste" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by 12% when HP drops to 60% or below. -->
+		<set name="icon" val="icon.weapon_fist_blade_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALFIST"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="1480"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="169.0"/>
+			<add stat="mAtk" val="76.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30518" name="Bound Fisted Blade" additionalName="Haste" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_fist_blade_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALFIST"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="1480"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="169.0"/>
+			<add stat="mAtk" val="76.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30519" name="Bound Peacemaker" additionalName="" type="Weapon">
+		<!-- Bound Item.\nKamael-exclusive Weapon: Dark Elven Longbow conversion\nBestows one of the following functions: Evasion, Critical Bleed or Miser. -->
+		<set name="icon" val="icon.weapon_peace_maker_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="CROSSBOW"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="37"/>
+		<set name="weight" val="1720"/>
+		<set name="price" val="167012" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="221.0"/>
+			<add stat="mAtk" val="91.0" />
+			<add stat="pAtkSpd" val="303.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="30520" name="Bound Peacemaker" additionalName="Evasion" type="Weapon">
+		<!-- Bound Item.\nKamael-exclusive Weapon: Dark Elven Longbow Conversion\n(Soul Crystal Enhancement)\nIncreases Evasion by 2. -->
+		<set name="icon" val="icon.weapon_peace_maker_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="CROSSBOW"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="37"/>
+		<set name="weight" val="1720"/>
+		<set name="price" val="167012" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="221.0"/>
+			<add stat="mAtk" val="91.0" />
+			<add stat="pAtkSpd" val="303.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="30521" name="Bound Peacemaker" additionalName="Critical Bleed" type="Weapon">
+		<!-- Bound Item.\nKamael-exclusive Weapon: Dark Elven Longbow conversion\nHas a 41% chance of casting Bleed on the target during a standard Critical Attack. -->
+		<set name="icon" val="icon.weapon_peace_maker_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="CROSSBOW"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="37"/>
+		<set name="weight" val="1720"/>
+		<set name="price" val="167012" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="221.0"/>
+			<add stat="mAtk" val="91.0" />
+			<add stat="pAtkSpd" val="303.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="30522" name="Bound Peacemaker" additionalName="Miser" type="Weapon">
+		<!-- Bound Item.\nKamael-exclusive Weapon: Dark Elven Longbow conversion\n(Soul Crystal Enhancement))\nHas a 19% chance of reducing the number of Soulshots consumed to 1 during an attack. -->
+		<set name="icon" val="icon.weapon_peace_maker_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="CROSSBOW"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="37"/>
+		<set name="weight" val="1720"/>
+		<set name="price" val="167012" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="221.0"/>
+			<add stat="mAtk" val="91.0" />
+			<add stat="pAtkSpd" val="303.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="30523" name="Bound Phoenix Earring" additionalName="" type="Armor">
+		<!-- Phoenix Earring Has the effect of MP + 20. -->
+		<set name="icon" val="icon.accessary_phoenixs_earing_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2"/>
+		<set name="weight" val="150"/>
+		<set name="price" val="25125" />
+		<for>
+			<add stat="mDef" val="60.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="30524" name="Bound Phoenix Ring" additionalName="" type="Armor">
+		<!-- Phoenix Ring Has the effect of MP + 13. -->
+		<set name="icon" val="icon.accessary_phoenixs_ring_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1"/>
+		<set name="weight" val="150"/>
+		<set name="price" val="16750" />
+		<for>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="30525" name="Bound Phoenix Necklace" additionalName="" type="Armor">
+		<!-- Phoenix Necklace. Has the effect of MP + 26. -->
+		<set name="icon" val="icon.accessary_phoenixs_necklace_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="3"/>
+		<set name="weight" val="150"/>
+		<set name="price" val="33500" />
+		<for>
+			<add stat="mDef" val="80.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="30526" name="Bound Fleuret" additionalName="" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Bastard sword conversion, Bound fleuret. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_rapier_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="RAPIER"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="38"/>
+		<set name="weight" val="1500"/>
+		<set name="price" val="12387" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="46.0"/>
+			<add stat="mAtk" val="32.0" />
+			<add stat="pAtkSpd" val="406.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="30527" name="Bound Fleuret" additionalName="" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Spinebone sword conversion, Bound fleuret. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_rapier_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="RAPIER"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="38"/>
+		<set name="weight" val="1500"/>
+		<set name="price" val="12387" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="46.0"/>
+			<add stat="mAtk" val="32.0" />
+			<add stat="pAtkSpd" val="406.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="30528" name="Bound Fleuret" additionalName="" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Artisan's sword conversion, Bound fleuret. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_rapier_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="RAPIER"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="38"/>
+		<set name="weight" val="1500"/>
+		<set name="price" val="12387" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="46.0"/>
+			<add stat="mAtk" val="32.0" />
+			<add stat="pAtkSpd" val="406.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="30529" name="Bound Fleuret" additionalName="" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Knight's sword conversion, Bound fleuret. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_rapier_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="RAPIER"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="38"/>
+		<set name="weight" val="1500"/>
+		<set name="price" val="12387" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="46.0"/>
+			<add stat="mAtk" val="32.0" />
+			<add stat="pAtkSpd" val="406.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="30530" name="Bound Plate Gaiters" additionalName="" type="Armor">
+		<!-- Bound Plate Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t46_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="14"/>
+		<set name="weight" val="3770"/>
+		<set name="price" val="4700" />
+		<for>
+			<add stat="pDef" val="70.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30531" name="Bound Plate Gaiters" additionalName="" type="Armor">
+		<!-- Bound Plate Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t46_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="D"/>
+		<set name="price" val="4700" />
+		<for>
+			<add stat="pDef" val="70.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30532" name="Bound Plate Helmet" additionalName="" type="Armor">
+		<!-- Bound Plate Helmet. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="8"/>
+		<set name="weight" val="630"/>
+		<set name="price" val="2820" />
+		<for>
+			<add stat="pDef" val="44.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30533" name="Bound Plate Helmet" additionalName="" type="Armor">
+		<!-- Bound Plate Helmet. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="D"/>
+		<set name="price" val="2820" />
+		<for>
+			<add stat="pDef" val="44.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30534" name="Bound Plate Shield" additionalName="" type="Weapon">
+		<!-- Bound Plate Shield. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.shield_plate_shield_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="6"/>
+		<set name="weight" val="1310"/>
+		<set name="price" val="1975" />
+		<for>
+			<add stat="sDef" val="154.0" />
+			<add stat="rShld" val="20.0" />
+		</for>
+	</item>
+	<item id="30535" name="Bound Plate Shield" additionalName="" type="Weapon">
+		<!-- Bound Plate Shield. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.shield_plate_shield_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="D"/>
+		<set name="price" val="1975" />
+		<for>
+			<add stat="sDef" val="154.0" />
+			<add stat="rShld" val="20.0" />
+		</for>
+	</item>
+	<item id="30536" name="Bound Plate Boots" additionalName="" type="Armor">
+		<!-- Bound Plate Boots. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t46_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="5"/>
+		<set name="weight" val="1240"/>
+		<set name="price" val="1880" />
+		<for>
+			<add stat="pDef" val="29.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30537" name="Bound Plate Boots" additionalName="" type="Armor">
+		<!-- Bound Plate Boots. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t46_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="D"/>
+		<set name="price" val="1880" />
+		<for>
+			<add stat="pDef" val="29.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30538" name="Bound Plated Leather Armor" additionalName="" type="Armor">
+		<!-- Bound Plated Leather Armor. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t47_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="5"/>
+		<set name="weight" val="4450"/>
+		<set name="price" val="8575" />
+		<for>
+			<add stat="pDef" val="94.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30539" name="Bound Plated Leather Boots" additionalName="" type="Armor">
+		<!-- Bound plated leather Boots. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t47_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="1"/>
+		<set name="weight" val="1220"/>
+		<set name="price" val="2427" />
+		<for>
+			<add stat="pDef" val="32.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30540" name="Bound Plated Leather Gloves" additionalName="" type="Armor">
+		<!-- Bound plated leather Gloves. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t47_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="1"/>
+		<set name="weight" val="610"/>
+		<set name="price" val="2860" />
+		<for>
+			<add stat="pDef" val="33.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30541" name="Bound Plated Leather Gaiters" additionalName="" type="Armor">
+		<!-- Bound Plated Leather Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t47_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="3"/>
+		<set name="weight" val="1560"/>
+		<set name="price" val="5362" />
+		<for>
+			<add stat="pDef" val="59.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30542" name="Bound Flamberge" additionalName="" type="Weapon">
+		<!-- Bound Flamberge. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_flamberge_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="29"/>
+		<set name="weight" val="2010"/>
+		<set name="price" val="44072" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="130.0"/>
+			<add stat="mAtk" val="61.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30543" name="Bound Flamberge" additionalName="Critical Damage" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nP. Atk. + 174 during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_flamberge_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="29"/>
+		<set name="weight" val="2010"/>
+		<set name="price" val="44072" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="130.0"/>
+			<add stat="mAtk" val="61.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30544" name="Bound Flamberge" additionalName="Focus" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 86. -->
+		<set name="icon" val="icon.weapon_flamberge_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="29"/>
+		<set name="weight" val="2010"/>
+		<set name="price" val="44072" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="130.0"/>
+			<add stat="mAtk" val="61.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30545" name="Bound Flamberge" additionalName="Light Armor" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Weight Gauge by 20%. -->
+		<set name="icon" val="icon.weapon_flamberge_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="29"/>
+		<set name="weight" val="2010"/>
+		<set name="price" val="44072" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="130.0"/>
+			<add stat="mAtk" val="61.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30546" name="Bound Puma Skin Shirt" additionalName="" type="Armor">
+		<!-- Bound Puma Skin Shirt. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t09_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="3"/>
+		<set name="weight" val="4700"/>
+		<set name="price" val="1205" />
+		<for>
+			<add stat="pDef" val="58.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30547" name="Bound Puma Skin Gaiters" additionalName="" type="Armor">
+		<!-- Bound Puma Skin Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t09_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="2"/>
+		<set name="weight" val="1600"/>
+		<set name="price" val="752" />
+		<for>
+			<add stat="pDef" val="36.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30548" name="Bound Full Plate Helmet" additionalName="" type="Armor">
+		<!-- Bound full plate Helmet. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="6"/>
+		<set name="weight" val="600"/>
+		<set name="price" val="10315" />
+		<for>
+			<add stat="pDef" val="58.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30549" name="Bound Full Plate Armor" additionalName="" type="Armor">
+		<!-- Bound full plate armor. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t62_ul_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="29"/>
+		<set name="weight" val="10480"/>
+		<set name="price" val="44700" />
+		<for>
+			<add stat="pDef" val="239.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30550" name="Bound Full Plate Shield" additionalName="" type="Weapon">
+		<!-- Bound full plate Shield. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.shield_full_plate_shield_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="4"/>
+		<set name="weight" val="1220"/>
+		<set name="price" val="7220" />
+		<for>
+			<add stat="sDef" val="203.0" />
+			<add stat="rShld" val="20.0" />
+		</for>
+	</item>
+	<item id="30551" name="Bound Full Plate Boots" additionalName="" type="Armor">
+		<!-- Bound full plate Boots. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t62_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="4"/>
+		<set name="weight" val="1200"/>
+		<set name="price" val="6877" />
+		<for>
+			<add stat="pDef" val="39.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30552" name="Bound Full Plate Gauntlets" additionalName="" type="Armor">
+		<!-- Bound full plate Gauntlets. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t62_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="4"/>
+		<set name="weight" val="600"/>
+		<set name="price" val="6877" />
+		<for>
+			<add stat="pDef" val="39.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30553" name="Bound Blue Buckskin Boots" additionalName="" type="Armor">
+		<!-- Bound Blue Buckskin Boots. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.armor_t18_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="1"/>
+		<set name="weight" val="1300"/>
+		<set name="price" val="640" />
+		<for>
+			<add stat="pDef" val="22.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30554" name="Bound Blue Wolf Breastplate" additionalName="" type="Armor">
+		<set name="icon" val="icon.armor_t68_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="13"/>
+		<set name="weight" val="7820"/>
+		<set name="price" val="61875" />
+		<for>
+			<add stat="pDef" val="166.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30555" name="Bound Blue Wolf Stockings" additionalName="" type="Armor">
+		<set name="icon" val="icon.armor_t70_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="6"/>
+		<set name="weight" val="920"/>
+		<set name="price" val="29007" />
+		<for>
+			<add stat="pDef" val="52.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30556" name="Bound Blue Wolf Helmet" additionalName="" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="5"/>
+		<set name="weight" val="580"/>
+		<set name="price" val="23207" />
+		<for>
+			<add stat="pDef" val="66.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30557" name="Bound Blue Wolf Tunic" additionalName="" type="Armor">
+		<set name="icon" val="icon.armor_t70_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="10"/>
+		<set name="weight" val="1920"/>
+		<set name="price" val="46425" />
+		<for>
+			<add stat="pDef" val="83.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30558" name="Bound Blue Wolf Gloves" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy blue wolf set. -->
+		<set name="icon" val="icon.armor_t68_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="3"/>
+		<set name="weight" val="590"/>
+		<set name="price" val="15470" />
+		<for>
+			<add stat="pDef" val="44.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30559" name="Bound Blue Wolf Gloves" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light blue wolf set. -->
+		<set name="icon" val="icon.armor_t69_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="3"/>
+		<set name="weight" val="590"/>
+		<set name="price" val="15470" />
+		<for>
+			<add stat="pDef" val="44.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30560" name="Bound Blue Wolf Gloves" additionalName="Robe" type="Armor">
+		<!-- Part of the blue wolf robe set. -->
+		<set name="icon" val="icon.armor_t70_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="3"/>
+		<set name="weight" val="590"/>
+		<set name="price" val="15470" />
+		<for>
+			<add stat="pDef" val="44.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30561" name="Bound Blue Wolf Boots" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy blue wolf set. -->
+		<set name="icon" val="icon.armor_t68_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="3"/>
+		<set name="weight" val="1130"/>
+		<set name="price" val="15470" />
+		<for>
+			<add stat="pDef" val="44.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30562" name="Bound Blue Wolf Boots" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light blue wolf set. -->
+		<set name="icon" val="icon.armor_t69_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="3"/>
+		<set name="weight" val="1130"/>
+		<set name="price" val="15470" />
+		<for>
+			<add stat="pDef" val="44.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30563" name="Bound Blue Wolf Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the blue wolf robe set. -->
+		<set name="icon" val="icon.armor_t70_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="3"/>
+		<set name="weight" val="1130"/>
+		<set name="price" val="15470" />
+		<for>
+			<add stat="pDef" val="44.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30564" name="Bound Blue Wolf Leather Armor" additionalName="" type="Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t69_ul_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="fullarmor"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="16"/>
+		<set name="weight" val="5500"/>
+		<set name="price" val="75425" />
+		<for>
+			<add stat="pDef" val="202.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30565" name="Bound Blue Wolf Gaiters" additionalName="" type="Armor">
+		<set name="icon" val="icon.armor_t68_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="8"/>
+		<set name="weight" val="3370"/>
+		<set name="price" val="38677" />
+		<for>
+			<add stat="pDef" val="104.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="30566" name="Bound Poleaxe" additionalName="" type="Weapon">
+		<!-- Bound Poleaxe. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_poleaxe_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="POLE"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="2010"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="139.0"/>
+			<add stat="mAtk" val="76.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30567" name="Bound Poleaxe" additionalName="Critical Stun" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nHas about a 25% chance of casting Stun on the target during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="POLE"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="2010"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="139.0"/>
+			<add stat="mAtk" val="76.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30568" name="Bound Poleaxe" additionalName="Long Blow" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases the attack range. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="POLE"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="2010"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="139.0"/>
+			<add stat="mAtk" val="76.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30569" name="Bound Poleaxe" additionalName="Wide Blow" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nBroadens the angle of attack. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="POLE"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="2010"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="139.0"/>
+			<add stat="mAtk" val="76.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30570" name="Bound Forgotten Blade" additionalName="" type="Weapon">
+		<!-- Bound Item.\nBestows one of the following functions: Haste, Health or Focus. -->
+		<set name="icon" val="icon.weapon_forgotten_blade_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="68"/>
+		<set name="weight" val="1300"/>
+		<set name="price" val="1068985" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="281.0"/>
+			<add stat="mAtk" val="132.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30571" name="Bound Forgotten Blade" additionalName="Haste" type="Weapon">
+		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Atk. Spd. by 7%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_forgotten_blade_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="68"/>
+		<set name="weight" val="1300"/>
+		<set name="price" val="1068985" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="281.0"/>
+			<add stat="mAtk" val="132.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30572" name="Bound Forgotten Blade" additionalName="Health" type="Weapon">
+		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_forgotten_blade_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="68"/>
+		<set name="weight" val="1300"/>
+		<set name="price" val="1068985" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="281.0"/>
+			<add stat="mAtk" val="132.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30573" name="Bound Forgotten Blade" additionalName="Focus" type="Weapon">
+		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Critical by 84. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_forgotten_blade_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="68"/>
+		<set name="weight" val="1300"/>
+		<set name="price" val="1068985" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="281.0"/>
+			<add stat="mAtk" val="132.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30574" name="Bound Divine Pain" additionalName="" type="Weapon">
+		<!-- Bound Item.\nKamael-exclusive Weapon: Infernal Master conversion\nBestows one of the following functions: Haste, P. Critical Damage, or Focus. -->
+		<set name="icon" val="icon.weapon_pain_of_godness_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="ANCIENTSWORD"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="37"/>
+		<set name="weight" val="1900"/>
+		<set name="price" val="352450" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="231.0"/>
+			<add stat="mAtk" val="107.0" />
+			<add stat="pAtkSpd" val="350.0" />
+			<add stat="accCombat" val="2.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30575" name="Bound Divine Pain" additionalName="Haste" type="Weapon">
+		<!-- Bound Item.\nKamael-exclusive Weapon: Infernal Master conversion\n(Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_pain_of_godness_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="ANCIENTSWORD"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="37"/>
+		<set name="weight" val="1900"/>
+		<set name="price" val="352450" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="231.0"/>
+			<add stat="mAtk" val="107.0" />
+			<add stat="pAtkSpd" val="350.0" />
+			<add stat="accCombat" val="2.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30576" name="Bound Divine Pain" additionalName="Critical Damage" type="Weapon">
+		<!-- Bound Item.\nKamael-exclusive Weapon: Infernal Master Conversion\n(Soul Crystal Enhancement)\nP. Atk. + 297 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_pain_of_godness_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="ANCIENTSWORD"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="37"/>
+		<set name="weight" val="1900"/>
+		<set name="price" val="352450" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="231.0"/>
+			<add stat="mAtk" val="107.0" />
+			<add stat="pAtkSpd" val="350.0" />
+			<add stat="accCombat" val="2.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30577" name="Bound Divine Pain" additionalName="Focus" type="Weapon">
+		<!-- Bound Item.\nKamael-exclusive Weapon: Infernal Master conversion\n(Soul Crystal Enhancement)\nIncreases Critical by 61. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_pain_of_godness_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="ANCIENTSWORD"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="37"/>
+		<set name="weight" val="1900"/>
+		<set name="price" val="352450" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="231.0"/>
+			<add stat="mAtk" val="107.0" />
+			<add stat="pAtkSpd" val="350.0" />
+			<add stat="accCombat" val="2.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30578" name="Bound Paradia Staff" additionalName="" type="Weapon">
+		<!-- Bound Paradia Staff. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_paradia_staff_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="1010"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="135.0"/>
+			<add stat="mAtk" val="111.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30579" name="Bound Paradia Staff" additionalName="Magic Regeneration" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nHas a 30% chance of casting Regeneration on the target during magic use. -->
+		<set name="icon" val="icon.weapon_paradia_staff_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="1010"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="135.0"/>
+			<add stat="mAtk" val="111.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30580" name="Bound Paradia Staff" additionalName="Magic Mental Shield" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nHas a 50% chance of casting Mental Shield on the target during magic use. -->
+		<set name="icon" val="icon.weapon_paradia_staff_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="1010"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="135.0"/>
+			<add stat="mAtk" val="111.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30581" name="Bound Paradia Staff" additionalName="Magic Hold" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nHas a 6% chance of casting Dryad Root on the target during magic use. -->
+		<set name="icon" val="icon.weapon_paradia_staff_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="1010"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="135.0"/>
+			<add stat="mAtk" val="111.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30582" name="Bound Pike" additionalName="" type="Weapon">
+		<!-- Bound Pike. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_pike_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="POLE"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="38"/>
+		<set name="weight" val="2090"/>
+		<set name="price" val="12387" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="51.0"/>
+			<add stat="mAtk" val="32.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30583" name="Bound Pa'agrio Hammer" additionalName="" type="Weapon">
+		<!-- Bound Pa'agrio Hammer. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_paagrio_hammer_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="1010"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="135.0"/>
+			<add stat="mAtk" val="111.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30584" name="Bound Pa'agrio Hammer" additionalName="Rsk. Evasion" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Evasion by 6 when HP drops to 60% or below. -->
+		<set name="icon" val="icon.weapon_paagrio_hammer_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="1010"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="135.0"/>
+			<add stat="mAtk" val="111.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30585" name="Bound Pa'agrio Hammer" additionalName="Magic Poison" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nHas a 7% chance of casting Curse Poison on the target during magic use. -->
+		<set name="icon" val="icon.weapon_paagrio_hammer_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="1010"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="135.0"/>
+			<add stat="mAtk" val="111.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30586" name="Bound Pa'agrio Hammer" additionalName="Magic Weakness" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nHas a 7% chance of casting Curse Weakness on the target during magic use. -->
+		<set name="icon" val="icon.weapon_paagrio_hammer_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="55"/>
+		<set name="weight" val="1010"/>
+		<set name="price" val="82607" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="135.0"/>
+			<add stat="mAtk" val="111.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30587" name="Bound Pa'agrio Axe" additionalName="" type="Weapon">
+		<!-- Bound Pa'agrio Axe. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_paagrio_axe_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="61"/>
+		<set name="weight" val="990"/>
+		<set name="price" val="91942" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="141.0"/>
+			<add stat="mAtk" val="114.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30588" name="Bound Pa'agrio Axe" additionalName="Mana Up" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Max MP by 30%. -->
+		<set name="icon" val="icon.weapon_paagrio_axe_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="61"/>
+		<set name="weight" val="990"/>
+		<set name="price" val="91942" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="141.0"/>
+			<add stat="mAtk" val="114.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30589" name="Bound Pa'agrio Axe" additionalName="Magic Weakness" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nHas a 7% chance of casting Curse Weakness on the target during magic use. -->
+		<set name="icon" val="icon.weapon_paagrio_axe_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="61"/>
+		<set name="weight" val="990"/>
+		<set name="price" val="91942" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="141.0"/>
+			<add stat="mAtk" val="114.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30590" name="Bound Pa'agrio Axe" additionalName="Magic Chaos" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nHas a 7% chance of casting Curse Chaos on the target during magic use. -->
+		<set name="icon" val="icon.weapon_paagrio_axe_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="61"/>
+		<set name="weight" val="990"/>
+		<set name="price" val="91942" />
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="141.0"/>
+			<add stat="mAtk" val="114.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30591" name="Bound Poniard Dagger" additionalName="" type="Weapon">
+		<!-- Bound Poniard Dagger. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<set name="icon" val="icon.weapon_dirk_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="DAGGER"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="38"/>
+		<set name="weight" val="1090"/>
+		<set name="price" val="12387" />
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<for>
+			<add stat="pAtk" val="45.0"/>
+			<add stat="mAtk" val="32.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="30592" name="Bound Destroyer Hammer" additionalName="" type="Weapon">
+		<!-- Bound Item.\nBestows one of the following functions: Health, Haste or Critical Drain. -->
+		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="37"/>
+		<set name="weight" val="1910"/>
+		<set name="price" val="352450" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="259.0"/>
+			<add stat="mAtk" val="107.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30593" name="Bound Destroyer Hammer" additionalName="Health" type="Weapon">
+		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="37"/>
+		<set name="weight" val="1910"/>
+		<set name="price" val="352450" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="259.0"/>
+			<add stat="mAtk" val="107.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30594" name="Bound Destroyer Hammer" additionalName="Haste" type="Weapon">
+		<!-- Bound Item. Cannot be exchanged or dropped\n(Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="37"/>
+		<set name="weight" val="1910"/>
+		<set name="price" val="352450" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="259.0"/>
+			<add stat="mAtk" val="107.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30595" name="Bound Destroyer Hammer" additionalName="Critical Drain" type="Weapon">
+		<!-- Bound Item.\n(Soul Crystal Enhancement)\nAbsorbs 18 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="37"/>
+		<set name="weight" val="1910"/>
+		<set name="price" val="352450" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="259.0"/>
+			<add stat="mAtk" val="107.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="30596" name="Bound Wizard's Tear" additionalName="" type="Weapon">
+		<!-- Bound Item.\nBestows one of the following functions: Acumen, M. Atk. or Conversion. -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="56"/>
+		<set name="weight" val="1350"/>
+		<set name="price" val="252285" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="155.0"/>
+			<add stat="mAtk" val="132.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30597" name="Bound Wizard's Tear" additionalName="Acumen" type="Weapon">
+		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="56"/>
+		<set name="weight" val="1350"/>
+		<set name="price" val="252285" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="155.0"/>
+			<add stat="mAtk" val="132.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30598" name="Bound Wizard's Tear" additionalName="M. Atk." type="Weapon">
+		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases MP consumption by 15% and M. Atk. by 139 during magic use. -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="56"/>
+		<set name="weight" val="1350"/>
+		<set name="price" val="252285" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="155.0"/>
+			<add stat="mAtk" val="132.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="30599" name="Bound Wizard's Tear" additionalName="Conversion" type="Weapon">
+		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Max MP by 60% and decreases Max HP by 40%. -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="56"/>
+		<set name="weight" val="1350"/>
+		<set name="price" val="252285" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="155.0"/>
+			<add stat="mAtk" val="132.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+</list>

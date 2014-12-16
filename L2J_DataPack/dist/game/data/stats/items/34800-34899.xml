@@ -1,0 +1,584 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="34800" name="Dark Crystal" additionalName="Event" type="EtcItem">
+		<!-- Dark attack attribute increases by 5 when bestowed on a weapon. Holy Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<set name="icon" val="icon.etc_unholy_crystal_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34801" name="Holy Crystal" additionalName="Event" type="EtcItem">
+		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Dark Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<set name="icon" val="icon.etc_holy_crystal_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34811" name="Soulshot Pack" additionalName="Event" type="EtcItem">
+		<!-- Pack containing soulshot. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34812" name="Blessed Spiritshot Pack" additionalName="Event" type="EtcItem">
+		<!-- Pack containing blessed spiritshot. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34813" name="Stone Pack" additionalName="Event" type="EtcItem">
+		<!-- Pack containing attribute stone. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34814" name="Crystal Pack" additionalName="Event" type="EtcItem">
+		<!-- Pack containing attribute crystal. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34815" name="Scroll: Enchant Armor Pack (S-grade)" additionalName="Event" type="EtcItem">
+		<!-- Pack containing S-grade Scroll: Enchant Armor. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34816" name="Scroll: Enchant Armor Pack (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- Pack containing R-grade Scroll: Enchant Armor. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34817" name="Scroll: Enchant Weapon Pack (S-grade)" additionalName="Event" type="EtcItem">
+		<!-- Pack containing S-grade Scroll: Enchant Weapon. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34818" name="Scroll: Enchant Weapon Pack (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- Pack containing R-grade Scroll: Enchant Weapon. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34819" name="Squash Ring Pack" additionalName="Event" type="EtcItem">
+		<!-- Squash ring Pack. Can acquire a Warrior-type or Magic-type ring. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34820" name="Squash Earring Pack" additionalName="Event" type="EtcItem">
+		<!-- Squash earring Pack. Can acquire a Warrior-type or Magic-type earring. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34821" name="Squash Necklace Pack" additionalName="Event" type="EtcItem">
+		<!-- Squash necklace Pack. Can acquire a squash necklace. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34822" name="Squash Accessory Pack" additionalName="Event" type="EtcItem">
+		<!-- When opened, can acquire one of the following: a Squash Ring Pack, a Squash Earring Pack, or a Squash Necklace Pack. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34823" name="Rare Soul Crystal Pack (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- Pack containing rare Soul Crystal (R-grade). -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34824" name="Rare Soul Crystal Pack (R95-grade)" additionalName="Event" type="EtcItem">
+		<!-- Pack containing rare Soul Crystal (R95-grade). -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34825" name="Rare Soul Crystal Pack (R99-grade)" additionalName="Event" type="EtcItem">
+		<!-- Pack containing rare Soul Crystal (R99-grade). -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34826" name="Talisman Pack" additionalName="Event" type="EtcItem">
+		<!-- Pack containing talisman. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34827" name="Elixir Pack (S-grade)" additionalName="Event" type="EtcItem">
+		<!-- Pack containing S-grade elixir. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34828" name="Elixir Pack (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- Pack containing R-grade elixir. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34829" name="Scroll of Blessing Pack (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- Pack containing blessed scroll. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34830" name="Enchant Set Pack (R-grade)" additionalName="" type="EtcItem">
+		<!-- Pack containing 3 Scroll: Enchant Weapon (R-grade), 2 Blessed Scroll: Enchant Weapon, 15 Scroll: Enchant Armor, 5 Blessed Scroll: Enchant Armor, Super Attribute Stone, Rare Soul Crystal (R95-grade), and 4 Top-grade Life Stones. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34831" name="Squash Ring (Wizard)" additionalName="Event" type="Armor">
+		<!-- Squash ring for wizards. Increases M. Critical Rate by 2% and M. Accuracy by 2. 15-day. Wearing 2 of these rings will give the effect of 1. -->
+		<set name="icon" val="icon.accessory_ring_of_gourd_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="62.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="34832" name="Squash Earring (Wizard)" additionalName="Event" type="Armor">
+		<!-- Squash earring for wizards. Increases Casting Spd. by 4% and Speed by 5. 15-day. When two identical earrings are equipped, only one effect is applied. -->
+		<set name="icon" val="icon.accessory_earring_of_gourd_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="92.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="34833" name="Afro Hair" additionalName="" type="Armor">
+		<!-- Hair accessory that looks like Afro hair. -->
+		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34834" name="Afro Hair" additionalName="7-day" type="Armor">
+		<!-- Hair accessory that looks like Afro hair. (7-day) -->
+		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="time" val="604800" />
+	</item>
+	<item id="34835" name="Afro Hair Pack" additionalName="" type="EtcItem">
+		<!-- When opened, can acquire 1 Afro Hair Accessory. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34836" name="Afro Hair Pack (7-day)" additionalName="" type="EtcItem">
+		<!-- Open to acquire 1 Afro Hair Accessory (7-day). -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34837" name="Magic Rope (R-grade)" additionalName="" type="EtcItem">
+		<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
+		<set name="icon" val="icon.etc_braided_hemp_i00"/>
+		<set name="weight" val="2"/>
+		<set name="price" val="3000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34838" name="Soulshot Compressed Package (R-grade)" additionalName="" type="EtcItem">
+		<!-- Small pack containing compressed Soulshots (R-grade). When used, it will change to 300 Soulshots (R-grade). -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00"/>
+		<set name="weight" val="200"/>
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34839" name="Spiritshot Compressed Package (R-grade)" additionalName="" type="EtcItem">
+		<!-- Small pack containing compressed Spiritshots (R-grade). When used, it will change to 300 Spiritshots (R-grade). -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00"/>
+		<set name="weight" val="200"/>
+		<set name="price" val="45000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34840" name="Blessed Spiritshot Compressed Package (R-grade)" additionalName="" type="EtcItem">
+		<!-- Small pack containing compressed Blessed Spiritshots (R-grade). When used, it will change to 300 Blessed Spiritshots (R-grade). -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00"/>
+		<set name="weight" val="200"/>
+		<set name="price" val="112500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34841" name="Recipe: Soulshot (R-grade) Compressed Package" additionalName="" type="EtcItem">
+		<!-- For dwarves only. The recipe for Soulshot Compressed Package (R-grade) . Requires Create Item - Skill Lv. 11. Success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00"/>
+		<set name="weight" val="30"/>
+		<set name="price" val="675000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34842" name="Recipe: Spiritshot (R-grade) Compressed Package" additionalName="" type="EtcItem">
+		<!-- For dwarves only. The recipe for Spiritshot Compressed Package (R-grade). Requires Create Item - Skill Lv. 11. Success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00"/>
+		<set name="weight" val="30"/>
+		<set name="price" val="675000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34843" name="Recipe: Blessed Spiritshot (R-grade) Compressed Package" additionalName="" type="EtcItem">
+		<!-- For dwarves only. The recipe for Blessed Spiritshot Compressed Package (R-grade) . Requires Create Item - Skill Lv. 11. Success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00"/>
+		<set name="weight" val="30"/>
+		<set name="price" val="675000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34844" name="Mysterious Herb" additionalName="" type="EtcItem">
+		<set name="icon" val="icon.NOIMAGE"/>
+	</item>
+	<item id="34845" name="Mysterious Herb" additionalName="" type="EtcItem">
+		<set name="icon" val="icon.NOIMAGE"/>
+	</item>
+	<item id="34846" name="Bard's Gift" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Bard's heart. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34847" name="Pirate Elixir (2-hour)" additionalName="" type="EtcItem">
+		<!-- When used, you can temporarily feel the Vitality recovery herb's effect for 2 hours. No effect applies when used while the 'Birthday Vitality' buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34848" name="Circlet of Earthquake (60-day)" additionalName="" type="Armor">
+		<!-- Circlet that has the power of Severe Earthquake. Increases earth defense by 60. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_earthquake_circlet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34849" name="Mysterious Herb of Power" additionalName="" type="EtcItem">
+		<set name="icon" val="icon.etc_warrior_set_i00"/>
+	</item>
+	<item id="34850" name="Mysterious Herb of Magic" additionalName="" type="EtcItem">
+		<set name="icon" val="icon.etc_magic_set_i00"/>
+	</item>
+	<item id="34851" name="Cube Fragment Armor - R" additionalName="" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for a Scroll: Armor Enchant (R-grade). -->
+		<set name="icon" val="Branchsys2.icon.event_cubic_a_piece_i01"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34852" name="Cube Fragment Weapon - R" additionalName="" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for a Scroll: Weapon Enchant (R-grade). -->
+		<set name="icon" val="Branchsys2.icon.event_cubic_w_piece_i01"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34853" name="Shiny Cube Fragment Armor - R" additionalName="" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for a Blessed Scroll: Armor Enchant (R-grade). -->
+		<set name="icon" val="Branchsys2.icon.shine_cubic_a_piece_i01"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34854" name="Shiny Cube Fragment Weapon - R" additionalName="" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for a Blessed Scroll: Weapon Enchant (R-grade). -->
+		<set name="icon" val="Branchsys2.icon.shine_cubic_w_piece_i01"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34855" name="Raina's Box" additionalName="" type="EtcItem">
+		<!-- Raina's Box exchanged for the XP Bottle. Small chance of acquiring an Scroll: XP. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34856" name="Echo Crystal - Theme of Love" additionalName="Campaign" type="EtcItem">
+		<!-- Echo crystal that plays the theme music of love. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i02"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34857" name="Echo Crystal - Theme of Festival" additionalName="Campaign" type="EtcItem">
+		<!-- Echo crystal that plays the theme music of a feast. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i04"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34858" name="Echo Crystal - Theme of Celebration" additionalName="Campaign" type="EtcItem">
+		<!-- Echo crystal that plays the theme music of a celebration. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34859" name="Enhanced Istina's Bracelet" additionalName="" type="Armor">
+		<!-- Istina's Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP + 216, Con + 1, and Men + 1. -->
+		<set name="icon" val="icon.istina_bangel"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="150"/>
+	</item>
+	<item id="34860" name="Enhanced Octavis' Bracelet" additionalName="" type="Armor">
+		<!-- Octavis' Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP + 216, Dex + 1, and Wit + 1. -->
+		<set name="icon" val="icon.octavis_bangel"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="150"/>
+	</item>
+	<item id="34861" name="Ingredient and Hardener Pouch (R-grade)" additionalName="" type="EtcItem">
+		<!-- Pouch containing R-grade rafting ingredients and hardener -->
+		<set name="icon" val="icon.etc_pouch_gold_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34862" name="Lavish Decoration Paper" additionalName="" type="EtcItem">
+		<!-- It says 'You only get one lift' in angma language. -->
+		<set name="icon" val="icon.etc_plan_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34863" name="Contaminated Draco Egg" additionalName="" type="EtcItem">
+		<!-- Contaminated Draco Egg that the demon Triol created to plant Shilen's monsters. Double-click on it to purify the evil energy. -->
+		<set name="icon" val="icon.etc_ev_triol_egg"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34864" name="Small Draco Egg" additionalName="" type="EtcItem">
+		<!-- Draco Egg that has been purified of evil energy. Double-click on it to summon a Small Draco Egg. When the egg's temperature rises, it can be hatched. -->
+		<set name="icon" val="icon.etc_ev_small_egg"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34865" name="Large Draco Egg" additionalName="" type="EtcItem">
+		<!-- Draco Egg that has been purified of evil energy. Double-click on it to summon a Large Draco Egg. When the egg's temperature rises, it can be hatched. Multiple players are required to hatch the egg. -->
+		<set name="icon" val="icon.etc_ev_big_egg"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34866" name="Shattered Egg Shell" additionalName="" type="EtcItem">
+		<!-- You can receive a reward if you bring it to the Flame Servant Aslan. -->
+		<set name="icon" val="icon.etc_ev_broken_egg"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34867" name="Draco's Gift" additionalName="" type="EtcItem">
+		<!-- Gift from the Draco that was resurrected from a purified Draco Egg. -->
+		<set name="icon" val="icon.etc_treasure_box_i03"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34868" name="Draco's Shiny Gift" additionalName="" type="EtcItem">
+		<!-- Gift from the Draco that was resurrected from a purified Draco Egg. It shines for some unknown reason. -->
+		<set name="icon" val="icon.etc_treasure_box_i08"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34869" name="Agathion - Flame Spirit" additionalName="" type="Armor">
+		<!-- Bracelet distributed by Pa'agrio's servant Aslan in order to resurrect the purified Draco Eggs. When equipped, you can summon a Flame Spirit. -->
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150"/>
+	</item>
+	<item id="34870" name="Mentee Certificate Pack" additionalName="" type="EtcItem">
+		<!-- Dimensional Item Pack\nContains a Mentee Certificate, a Mentoring Guidebook, and a Mentee Headphone. Only 1 per account. Cannot be shared once opened. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34871" name="Low-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
+		<!-- Increases HP Recovery Rate. -->
+		<set name="icon" val="icon.r1_belt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="21"/>
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="19.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="34872" name="Standard Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
+		<!-- Increases HP Recovery Rate. -->
+		<set name="icon" val="icon.r1_belt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="21"/>
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="19.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="34873" name="High-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
+		<!-- Increases HP Recovery Rate. -->
+		<set name="icon" val="icon.r1_belt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="21"/>
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="19.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="34874" name="Top-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
+		<!-- Increases HP Recovery Rate. -->
+		<set name="icon" val="icon.r1_belt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="21"/>
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="19.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="34875" name="Low-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
+		<!-- Increases MP Recovery Rate. -->
+		<set name="icon" val="icon.r1_belt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="21"/>
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="19.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="34876" name="Standard Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
+		<!-- Increases MP Recovery Rate. -->
+		<set name="icon" val="icon.r1_belt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="21"/>
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="19.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="34877" name="High-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
+		<!-- Increases MP Recovery Rate. -->
+		<set name="icon" val="icon.r1_belt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="21"/>
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="19.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="34878" name="Top-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
+		<!-- Increases MP Recovery Rate. -->
+		<set name="icon" val="icon.r1_belt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="21"/>
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="19.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="34879" name="Low-grade Magic Rune Clip (R-grade)" additionalName="" type="EtcItem">
+		<!-- Low-grade Magic Rune Clip that can improve the function of R-grade Belt. -->
+		<set name="icon" val="icon.etc_rune_clip_i00"/>
+		<set name="weight" val="20"/>
+	</item>
+	<item id="34880" name="Mid-grade Magic Rune Clip (R-grade)" additionalName="" type="EtcItem">
+		<!-- Magic Rune Clip that can improve the function of R-grade Belt. -->
+		<set name="icon" val="icon.etc_rune_clip_i00"/>
+		<set name="weight" val="20"/>
+	</item>
+	<item id="34881" name="High-grade Magic Rune Clip (R-grade)" additionalName="" type="EtcItem">
+		<!-- High-grade Magic Rune Clip that can improve the function of R-grade Belt. -->
+		<set name="icon" val="icon.etc_rune_clip_i01"/>
+		<set name="weight" val="20"/>
+	</item>
+	<item id="34882" name="Top-grade Magic Rune Clip (R-grade)" additionalName="" type="EtcItem">
+		<!-- Top-grade Magic Rune Clip that can improve the function of R-grade Belt. -->
+		<set name="icon" val="icon.etc_rune_clip_i02"/>
+		<set name="weight" val="20"/>
+	</item>
+	<item id="34883" name="Bottle of Istina's Soul" additionalName="" type="EtcItem">
+		<!-- Bottle containing Istina's Soul. Bring it to Rumiese to bestow Istina's Soul on Istina's Bracelet. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00"/>
+		<set name="weight" val="60"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34884" name="Bottle of Octavis' Soul" additionalName="" type="EtcItem">
+		<!-- Bottle containing Octavis' Soul. Can bestow Octavis' Soul on Octavis' Bracelet. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06"/>
+		<set name="weight" val="60"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34885" name="Circlet of Earthquake Pack (60-day)" additionalName="" type="EtcItem">
+		<!-- Double-click on it to acquire the Circlet of Earthquake (60-day). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34886" name="Novella Prophecy" additionalName="" type="EtcItem">
+		<!-- Novella Prophecy. It contains a portion of the prophecy that was swallowed by the One Who Eats Prophecies. -->
+		<set name="icon" val="icon.etc_jewel_red_i00"/>
+	</item>
+	<item id="34887" name="Empty Hot Spring Water Bottle" additionalName="" type="EtcItem">
+		<!-- Empty bottle for holding hot spring water. Double-click on it while in the hot springs to fill it with hot spring water. -->
+		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00"/>
+		<set name="weight" val="20"/>
+	</item>
+	<item id="34888" name="Hot Springs Water Bottle" additionalName="" type="EtcItem">
+		<!-- Bottle for holding hot spring water. It contains hot spring water. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05"/>
+	</item>
+	<item id="34889" name="Durable Leather" additionalName="" type="EtcItem">
+		<!-- Durable Leather. Ingredient for making a weapon that purifies water. -->
+		<set name="icon" val="icon.etc_leather_brown_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34890" name="Trowel" additionalName="" type="EtcItem">
+		<!-- Trowel. Double-click on it to collect flame flowers from the Forge of the Gods. -->
+		<set name="icon" val="icon.etc_trowel_i00"/>
+		<set name="weight" val="20"/>
+	</item>
+	<item id="34891" name="Energy of Fire" additionalName="" type="EtcItem">
+		<!-- energy of fire. Ingredient for making a weapon that purifies water. -->
+		<set name="icon" val="icon.etc_bead_red_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34892" name="Hard Fossil Containing Energy of Water" additionalName="" type="EtcItem">
+		<!-- Hard fossil containing Energy of Water. Ingredient for making a weapon that purifies water. -->
+		<set name="icon" val="icon.etc_hard_fossil_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34893" name="Seed of Helping Herb" additionalName="" type="EtcItem">
+		<!-- Seed of Helping Herb. Double-click on it in a siege battle area to plant a Helping Herb. -->
+		<set name="icon" val="icon.etc_coda_seed_i00"/>
+	</item>
+	<item id="34894" name="Herb Remnants" additionalName="" type="EtcItem">
+		<!-- Herb Remnants. If you plant a Helping Herb in a siege battle area, you can obtain Herb Remnants. -->
+		<set name="icon" val="icon.etc_powder_orange_i00"/>
+	</item>
+	<item id="34895" name="Spellbook: Clan Flag" additionalName="" type="EtcItem">
+		<!-- Item needed to learn the Clan Flag Skill. When you use the Clan Flag Skill, 100 Clan Reputation are consumed. Can be used by Count or higher. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00"/>
+		<set name="weight" val="20"/>
+	</item>
+	<item id="34896" name="Rabbit Ears" additionalName="Campaign" type="Armor">
+		<!-- When equipped, STR + 3, DEX + 1, CON + 1, P. Evasion + 1, and M. Evasion + 1. -->
+		<set name="icon" val="icon.accessory_rabbit_ear_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34897" name="Angel Circlet" additionalName="Campaign" type="Armor">
+		<!-- Increases INT + 3, WIT + 1, MEN + 1, Physical Attack Resistance + 1, and Mental Attack Resistance + 1. -->
+		<set name="icon" val="icon.Accessary_angel_circlet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34898" name="Proof of Survival" additionalName="" type="EtcItem">
+		<!-- Someone who possesses the Proof of Survival can be suddenly challenged by the rare monster 'Scaldisect of Hellfire.' Always be prepared for the attack. -->
+		<set name="icon" val="icon.etc_fire_rune_i00"/>
+	</item>
+	<item id="34899" name="Key of Darkness" additionalName="" type="EtcItem">
+		<!-- Key that activates a device that allows you to go and meet Tauti through the temple. Must be used by a group leader in order to activate the device. -->
+		<set name="icon" val="icon.etc_dark_key_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

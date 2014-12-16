@@ -1,0 +1,1487 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="17300" name="Requiem Retributer" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_grangkaz_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="1202"/>
+		<set name="weight" val="1080"/>
+		<set name="price" val="28172791" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="423.0"/>
+			<add stat="mAtk" val="278.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="accMagic" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17301" name="Requiem Dualsword" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="1502"/>
+		<set name="weight" val="1520"/>
+		<set name="price" val="35215989" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="529.0"/>
+			<add stat="mAtk" val="189.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17302" name="Requiem Dual Dagger" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALDAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="1502"/>
+		<set name="weight" val="2050"/>
+		<set name="price" val="35215989" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="435.0"/>
+			<add stat="mAtk" val="189.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17303" name="Requiem Dual Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualblunt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALBLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="1502"/>
+		<set name="weight" val="1740"/>
+		<set name="price" val="35215989" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="529.0"/>
+			<add stat="mAtk" val="189.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17304" name="Immortal Helmet" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="146"/>
+		<set name="weight" val="530"/>
+		<set name="price" val="3439276" />
+		<for>
+			<add stat="pDef" val="116.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17305" name="Immortal Breastplate" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.armor_t501_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="391"/>
+		<set name="weight" val="7520"/>
+		<set name="price" val="9171402" />
+		<for>
+			<add stat="pDef" val="309.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17306" name="Immortal Gaiters" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_t501_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="244"/>
+		<set name="weight" val="3170"/>
+		<set name="price" val="5732126" />
+		<for>
+			<add stat="pDef" val="193.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17307" name="Immortal Gauntlets" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_t501_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="97"/>
+		<set name="weight" val="510"/>
+		<set name="price" val="2292850" />
+		<for>
+			<add stat="pDef" val="77.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17308" name="Immortal Boots" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_t501_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="97"/>
+		<set name="weight" val="1070"/>
+		<set name="price" val="2292850" />
+		<for>
+			<add stat="pDef" val="77.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17309" name="Immortal Shield" additionalName="Heavy Armor" type="Weapon">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.weapon_sacon_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="97"/>
+		<set name="weight" val="1130"/>
+		<set name="price" val="2292850" />
+		<for>
+			<add stat="sDef" val="422.0" />
+			<add stat="rShld" val="20.0" />
+		</for>
+	</item>
+	<item id="17310" name="Immortal Leather Helmet" additionalName="Light Armor" type="Armor">
+		<!-- Bestows an assassin or enchant type set option. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="146"/>
+		<set name="weight" val="530"/>
+		<set name="price" val="3439276" />
+		<for>
+			<add stat="pDef" val="116.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17311" name="Immortal Leather Armor" additionalName="Light Armor" type="Armor">
+		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<set name="icon" val="icon.armor_t502_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="391"/>
+		<set name="weight" val="4140"/>
+		<set name="price" val="9171402" />
+		<for>
+			<add stat="pDef" val="247.0"/>
+			<add stat="rEvas" val="5.0" />
+			<add stat="rMagicEvas" val="5.0" />
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17312" name="Immortal Leather Leggings" additionalName="Light Armor" type="Armor">
+		<!-- Bestows an assassin or enchant type set option. -->
+		<set name="icon" val="icon.armor_t502_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="244"/>
+		<set name="weight" val="1320"/>
+		<set name="price" val="5732126" />
+		<for>
+			<add stat="pDef" val="154.0"/>
+			<add stat="rEvas" val="3.0" />
+			<add stat="rMagicEvas" val="3.0" />
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17313" name="Immortal Leather Gloves" additionalName="Light Armor" type="Armor">
+		<!-- Bestows an assassin or enchant type set option. -->
+		<set name="icon" val="icon.armor_t502_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="97"/>
+		<set name="weight" val="510"/>
+		<set name="price" val="2292850" />
+		<for>
+			<add stat="pDef" val="77.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17314" name="Immortal Leather Boots" additionalName="Light Armor" type="Armor">
+		<!-- Bestows an assassin or enchant type set option. -->
+		<set name="icon" val="icon.armor_t502_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="97"/>
+		<set name="weight" val="1070"/>
+		<set name="price" val="2292850" />
+		<for>
+			<add stat="pDef" val="77.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17315" name="Immortal Circlet" additionalName="Robe" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.armor_circlet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="146"/>
+		<set name="weight" val="530"/>
+		<set name="price" val="3439276" />
+		<for>
+			<add stat="pDef" val="116.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17316" name="Immortal Tunic" additionalName="Robe" type="Armor">
+		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
+		<set name="icon" val="icon.armor_t503_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="391"/>
+		<set name="weight" val="1750"/>
+		<set name="price" val="9171402" />
+		<for>
+			<add stat="pDef" val="169.0"/>
+			<add stat="mDef" val="36.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17317" name="Immortal Stockings" additionalName="Robe" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.armor_t503_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="244"/>
+		<set name="weight" val="850"/>
+		<set name="price" val="5732126" />
+		<for>
+			<add stat="pDef" val="106.0"/>
+			<add stat="mDef" val="24.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17318" name="Immortal Gloves" additionalName="Robe" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.armor_t503_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="97"/>
+		<set name="weight" val="510"/>
+		<set name="price" val="2292850" />
+		<for>
+			<add stat="pDef" val="77.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17319" name="Immortal Shoes" additionalName="Robe" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.armor_t503_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="97"/>
+		<set name="weight" val="1070"/>
+		<set name="price" val="2292850" />
+		<for>
+			<add stat="pDef" val="77.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17320" name="Immortal Sigil" additionalName="Robe" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.weapon_karyen_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="97"/>
+		<set name="weight" val="920"/>
+		<set name="price" val="2292850" />
+		<for>
+			<add stat="pDef" val="38.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17321" name="Immortal Necklace" additionalName="" type="Armor">
+		<!-- Immortal Necklace. MP + 53 effect. -->
+		<set name="icon" val="icon.r1_necklace_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="127"/>
+		<set name="weight" val="150"/>
+		<set name="price" val="2985584" />
+		<for>
+			<add stat="mDef" val="126.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17322" name="Immortal Earring" additionalName="" type="Armor">
+		<!-- Immortal Earring. MP + 40 effect. -->
+		<set name="icon" val="icon.r1_earring_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="95"/>
+		<set name="weight" val="150"/>
+		<set name="price" val="2239188" />
+		<for>
+			<add stat="mDef" val="94.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17323" name="Immortal Ring" additionalName="" type="Armor">
+		<!-- Immortal Ring. MP + 26 effect. -->
+		<set name="icon" val="icon.r1_ring_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="63"/>
+		<set name="weight" val="150"/>
+		<set name="price" val="1492792" />
+		<for>
+			<add stat="mDef" val="63.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17324" name="Apocalypse Shaper" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_phasian_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="DAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="3274"/>
+		<set name="weight" val="1520"/>
+		<set name="price" val="76739019" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="441.0"/>
+			<add stat="mAtk" val="219.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17325" name="Apocalypse Cutter" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Haste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_pasis_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="3274"/>
+		<set name="weight" val="1520"/>
+		<set name="price" val="76739019" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="504.0"/>
+			<add stat="mAtk" val="219.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17326" name="Apocalypse Slasher" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_volver_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="3274"/>
+		<set name="weight" val="1740"/>
+		<set name="price" val="76739019" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="613.0"/>
+			<add stat="mAtk" val="219.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17327" name="Apocalypse Avenger" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_raksilion_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="3274"/>
+		<set name="weight" val="1740"/>
+		<set name="price" val="76739019" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="504.0"/>
+			<add stat="mAtk" val="219.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17328" name="Apocalypse Fighter" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_kirche_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALFIST"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="3274"/>
+		<set name="weight" val="1550"/>
+		<set name="price" val="76739019" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="613.0"/>
+			<add stat="mAtk" val="219.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17329" name="Apocalypse Stormer" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases Multi Attack when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_grave_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="POLE"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="3274"/>
+		<set name="weight" val="2010"/>
+		<set name="price" val="76739019" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="504.0"/>
+			<add stat="mAtk" val="219.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17330" name="Apocalypse Thrower" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_spina_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BOW"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="3274"/>
+		<set name="weight" val="1520"/>
+		<set name="price" val="76739019" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="992.0"/>
+			<add stat="mAtk" val="219.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17331" name="Apocalypse Shooter" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_medianox_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="CROSSBOW"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="3274"/>
+		<set name="weight" val="1580"/>
+		<set name="price" val="76739019" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="894.0"/>
+			<add stat="mAtk" val="219.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17332" name="Apocalypse Buster" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_imerose_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="3274"/>
+		<set name="weight" val="1520"/>
+		<set name="price" val="76739019" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="403.0"/>
+			<add stat="mAtk" val="293.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17333" name="Apocalypse Caster" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_yuke_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="3274"/>
+		<set name="weight" val="1080"/>
+		<set name="price" val="76739019" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="403.0"/>
+			<add stat="mAtk" val="293.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17334" name="Apocalypse Retributer" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_herencia_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="3274"/>
+		<set name="weight" val="1080"/>
+		<set name="price" val="76739019" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="491.0"/>
+			<add stat="mAtk" val="322.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="accMagic" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17335" name="Apocalypse Dualsword" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="4092"/>
+		<set name="weight" val="1520"/>
+		<set name="price" val="95923773" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="613.0"/>
+			<add stat="mAtk" val="219.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17336" name="Apocalypse Dual Dagger" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALDAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="4092"/>
+		<set name="weight" val="2050"/>
+		<set name="price" val="95923773" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="504.0"/>
+			<add stat="mAtk" val="219.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17337" name="Apocalypse Dual Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualblunt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALBLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="4092"/>
+		<set name="weight" val="1740"/>
+		<set name="price" val="95923773" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="613.0"/>
+			<add stat="mAtk" val="219.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17338" name="Twilight Helmet" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="399"/>
+		<set name="weight" val="530"/>
+		<set name="price" val="9368140" />
+		<for>
+			<add stat="pDef" val="128.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17339" name="Twilight Breastplate" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.armor_t601_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="1065"/>
+		<set name="weight" val="7520"/>
+		<set name="price" val="24981706" />
+		<for>
+			<add stat="pDef" val="341.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17340" name="Twilight Gaiters" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_t601_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="666"/>
+		<set name="weight" val="3170"/>
+		<set name="price" val="15613566" />
+		<for>
+			<add stat="pDef" val="213.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17341" name="Twilight Gauntlets" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_t601_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="266"/>
+		<set name="weight" val="510"/>
+		<set name="price" val="6245426" />
+		<for>
+			<add stat="pDef" val="85.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17342" name="Twilight Boots" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_t601_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="266"/>
+		<set name="weight" val="1070"/>
+		<set name="price" val="6245426" />
+		<for>
+			<add stat="pDef" val="85.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17343" name="Twilight Shield" additionalName="Heavy Armor" type="Weapon">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.kratere_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="266"/>
+		<set name="weight" val="1130"/>
+		<set name="price" val="6245426" />
+		<for>
+			<add stat="sDef" val="466.0" />
+			<add stat="rShld" val="20.0" />
+		</for>
+	</item>
+	<item id="17344" name="Twilight Leather Helmet" additionalName="Light Armor" type="Armor">
+		<!-- Bestows an assassin or enchant type set option. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="399"/>
+		<set name="weight" val="530"/>
+		<set name="price" val="9368140" />
+		<for>
+			<add stat="pDef" val="128.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17345" name="Twilight Leather Armor" additionalName="Light Armor" type="Armor">
+		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<set name="icon" val="icon.armor_t602_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="1065"/>
+		<set name="weight" val="4140"/>
+		<set name="price" val="24981706" />
+		<for>
+			<add stat="pDef" val="272.0"/>
+			<add stat="rEvas" val="5.0" />
+			<add stat="rMagicEvas" val="5.0" />
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17346" name="Twilight Leather Leggings" additionalName="Light Armor" type="Armor">
+		<!-- Bestows an assassin or enchant type set option. -->
+		<set name="icon" val="icon.armor_t602_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="666"/>
+		<set name="weight" val="1320"/>
+		<set name="price" val="15613566" />
+		<for>
+			<add stat="pDef" val="170.0"/>
+			<add stat="rEvas" val="3.0" />
+			<add stat="rMagicEvas" val="3.0" />
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17347" name="Twilight Leather Gloves" additionalName="Light Armor" type="Armor">
+		<!-- Bestows an assassin or enchant type set option. -->
+		<set name="icon" val="icon.armor_t602_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="266"/>
+		<set name="weight" val="510"/>
+		<set name="price" val="6245426" />
+		<for>
+			<add stat="pDef" val="85.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17348" name="Twilight Leather Boots" additionalName="Light Armor" type="Armor">
+		<!-- Bestows an assassin or enchant type set option. -->
+		<set name="icon" val="icon.armor_t602_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="266"/>
+		<set name="weight" val="1070"/>
+		<set name="price" val="6245426" />
+		<for>
+			<add stat="pDef" val="85.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17349" name="Twilight Circlet" additionalName="Robe" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.armor_circlet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="399"/>
+		<set name="weight" val="530"/>
+		<set name="price" val="9368140" />
+		<for>
+			<add stat="pDef" val="128.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17350" name="Twilight Tunic" additionalName="Robe" type="Armor">
+		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
+		<set name="icon" val="icon.armor_t603_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="1065"/>
+		<set name="weight" val="1750"/>
+		<set name="price" val="24981706" />
+		<for>
+			<add stat="pDef" val="187.0"/>
+			<add stat="mDef" val="41.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17351" name="Twilight Stockings" additionalName="Robe" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.armor_t603_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="666"/>
+		<set name="weight" val="850"/>
+		<set name="price" val="15613566" />
+		<for>
+			<add stat="pDef" val="117.0"/>
+			<add stat="mDef" val="27.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17352" name="Twilight Gloves" additionalName="Robe" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.armor_t603_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="266"/>
+		<set name="weight" val="510"/>
+		<set name="price" val="6245426" />
+		<for>
+			<add stat="pDef" val="85.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17353" name="Twilight Shoes" additionalName="Robe" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.armor_t603_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="266"/>
+		<set name="weight" val="1070"/>
+		<set name="price" val="6245426" />
+		<for>
+			<add stat="pDef" val="85.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17354" name="Twilight Sigil" additionalName="Robe" type="Armor">
+		<set name="icon" val="icon.weapon_dynaksus_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="266"/>
+		<set name="weight" val="920"/>
+		<set name="price" val="6245426" />
+		<for>
+			<add stat="pDef" val="42.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17355" name="Twilight Necklace" additionalName="" type="Armor">
+		<!-- Twilight Necklace. MP + 58 effect. -->
+		<set name="icon" val="icon.r2_necklace_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="346"/>
+		<set name="weight" val="150"/>
+		<set name="price" val="8132343" />
+		<for>
+			<add stat="mDef" val="142.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17356" name="Twilight Earring" additionalName="" type="Armor">
+		<!-- Twilight Earring. MP + 43 effect. -->
+		<set name="icon" val="icon.r2_earring_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="260"/>
+		<set name="weight" val="150"/>
+		<set name="price" val="6099257" />
+		<for>
+			<add stat="mDef" val="107.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17357" name="Twilight Ring" additionalName="" type="Armor">
+		<!-- Twilight Ring. MP + 29 effect. -->
+		<set name="icon" val="icon.r2_ring_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="R"/>
+		<set name="crystal_count" val="173"/>
+		<set name="weight" val="150"/>
+		<set name="price" val="4066171" />
+		<for>
+			<add stat="mDef" val="71.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17358" name="Belt of Insolence" additionalName="" type="Armor">
+		<set name="icon" val="icon.belt_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="213"/>
+		<set name="weight" val="440"/>
+		<for>
+			<add stat="pDef" val="14.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17359" name="T-shirt of Insolence" additionalName="" type="Armor">
+		<!-- Increases Max HP by 246 when enchanted to + 4 or higher. -->
+		<set name="icon" val="icon.tshirt_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="282"/>
+		<set name="weight" val="130"/>
+		<for>
+			<add stat="pDef" val="30.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17360" name="Bracelet of Insolence" additionalName="" type="Armor">
+		<!-- Activates 4 talisman slots when equipped. Max MP + 60. -->
+		<set name="icon" val="icon.bracelet_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="395"/>
+		<set name="weight" val="150"/>
+	</item>
+	<item id="17361" name="Necklace of Insolence" additionalName="" type="Armor">
+		<!-- Necklace of Insolence. Has the effect of MP + 26. -->
+		<set name="icon" val="icon.necklace_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="484"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="95.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17362" name="Ring of Insolence I" additionalName="" type="Armor">
+		<!-- Has the effect of MP + 15. Only one effect is applied when two of the same ring are equipped. -->
+		<set name="icon" val="icon.ring_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="192"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="48.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17363" name="Ring of Insolence II" additionalName="" type="Armor">
+		<!-- Has the effect of MP + 15 and resistance to Poison increased by 10%. Only one effect is applied when two of the same ring are equipped. -->
+		<set name="icon" val="icon.ring_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="192"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="48.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17364" name="Ring of Insolence III" additionalName="" type="Armor">
+		<!-- Has the effect of MP + 15, and increased Poison Resistance by 10% and Poison Atk. Rate by 10%. Only one effect is applied when two of the same ring are equipped. -->
+		<set name="icon" val="icon.ring_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="192"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="48.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17365" name="Ring of Insolence IV" additionalName="" type="Armor">
+		<!-- Has the effect of MP + 15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, and Hold Resistance by 10%. Only one effect is applied when two of the same ring are equipped. -->
+		<set name="icon" val="icon.ring_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="192"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="48.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17366" name="Ring of Insolence V" additionalName="" type="Armor">
+		<!-- Has the effect of MP + 15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, and hold Atk. Rate by 10%. Only one effect is applied when two of the same ring are equipped. -->
+		<set name="icon" val="icon.ring_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="192"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="48.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17367" name="Ring of Insolence VI" additionalName="" type="Armor">
+		<!-- Has the effect of MP + 15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, hold Atk. Rate by 10%, and increased Accuracy. Only one effect is applied when two of the same ring are equipped. -->
+		<set name="icon" val="icon.ring_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="192"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="48.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17368" name="Ring of Insolence VII" additionalName="" type="Armor">
+		<!-- Has the effect of MP + 15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, hold Atk. Rate by 10%, increased Accuracy, and increased Atk. Spd. Only one effect is applied when two of the same ring are equipped. -->
+		<set name="icon" val="icon.ring_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="192"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="48.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17369" name="Ring of Insolence VIII" additionalName="" type="Armor">
+		<!-- Has the effect of MP + 15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, hold Atk. Rate by 10%, increased Accuracy, increased Atk. Spd, and increased Casting Spd. Only one effect is applied when two of the same ring are equipped. -->
+		<set name="icon" val="icon.ring_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="192"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="48.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17370" name="Ring of Insolence IX" additionalName="" type="Armor">
+		<!-- Has the effect of MP + 15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, hold Atk. Rate by 10%, increased Accuracy, Atk. Spd, Casting Spd., and P. Critical Damage. Only one effect is applied when two of the same ring are equipped. -->
+		<set name="icon" val="icon.ring_of_oman"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="192"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="48.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="17371" name="Crystal (R-grade)" additionalName="" type="EtcItem">
+		<!-- R-grade Crystal -->
+		<set name="icon" val="icon.crystal_r_i00"/>
+		<set name="price" val="12500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="17372" name="Hurler's Spear" additionalName="" type="Weapon">
+		<set name="icon" val="icon.weapon_doomed_dagger_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="DAGGER"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="60"/>
+		<for>
+			<add stat="pAtk" val="5.0"/>
+			<add stat="mAtk" val="5.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17373" name="Apherus Door Key" additionalName="" type="EtcItem">
+		<!-- Receives a chance to open the Apherus Garden Gate inside the Garden of Genesis. -->
+		<set name="icon" val="icon.aphros_key"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="17374" name="Glimmer" additionalName="" type="EtcItem">
+		<!-- The source of life that has materialized into a crystal. It is smooth and soft. -->
+		<set name="icon" val="icon.glimmer"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="17375" name="Kimerian's Trace" additionalName="" type="EtcItem">
+		<!-- You found Kimerian's trace in the woods. Bring it back to Noeti Mimirede in Ancient City Arcan. -->
+		<set name="icon" val="icon.Kimerian_enter_easy"/>
+		<set name="weight" val="5"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="17376" name="Trace of Kimerian's Cavern" additionalName="" type="EtcItem">
+		<!-- Information containing Kimerian's exact location. Bring it back to Noeti Mimirede in Ancient City Arcan. -->
+		<set name="icon" val="icon.Kimerian_enter_hard"/>
+		<set name="weight" val="5"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="17377" name="Mark of Friendship" additionalName="" type="EtcItem">
+		<!-- It is the proof of a fairy's friendship. Collect and bring them back to Noeti Mimirede in Ancient City Arcan. -->
+		<set name="icon" val="icon.fairy_friendship"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="17378" name="Fairy's Leaf Flute" additionalName="" type="EtcItem">
+		<!-- During the battle where you chase Kimerian, you can use it to send a signal and call your fairy friends. -->
+		<set name="icon" val="icon.fairy_horn"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="17379" name="Letter containing secret information" additionalName="" type="EtcItem">
+		<!-- Letter containing secret information. Bring it to the fairy by Timiniel's side. -->
+		<set name="icon" val="icon.fairy_encounter_letter"/>
+	</item>
+	<item id="17380" name="Agathion - Fairy" additionalName="" type="Armor">
+		<!-- When equipped, you can summon a fairy Agathion. -->
+		<set name="icon" val="icon.agathion_magmeld_teleport"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150"/>
+	</item>
+	<item id="17381" name="Teredor Poison Antidote" additionalName="" type="EtcItem">
+		<!-- Potion that cancels the Teredor Poison . -->
+		<set name="icon" val="icon.grima_poison"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="17382" name="Specter Shaper" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_ignicion_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="DAGGER"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="6260"/>
+		<set name="weight" val="1520"/>
+		<set name="price" val="146721000" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="511.0"/>
+			<add stat="mAtk" val="254.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17383" name="Specter Cutter" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Haste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_ninfea_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="6260"/>
+		<set name="weight" val="1520"/>
+		<set name="price" val="146721000" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="584.0"/>
+			<add stat="mAtk" val="254.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17384" name="Specter Slasher" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_skia_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="6260"/>
+		<set name="weight" val="1740"/>
+		<set name="price" val="146721000" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="711.0"/>
+			<add stat="mAtk" val="254.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17385" name="Specter Avenger" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_ikeon_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="6260"/>
+		<set name="weight" val="1740"/>
+		<set name="price" val="146721000" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="584.0"/>
+			<add stat="mAtk" val="254.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17386" name="Specter Fighter" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_deodos_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALFIST"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="6260"/>
+		<set name="weight" val="1550"/>
+		<set name="price" val="146721000" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="711.0"/>
+			<add stat="mAtk" val="254.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17387" name="Specter Stormer" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases Multi Attack when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_transgredi_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="POLE"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="6260"/>
+		<set name="weight" val="2010"/>
+		<set name="price" val="146721000" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="584.0"/>
+			<add stat="mAtk" val="254.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17388" name="Specter Thrower" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_solenas_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BOW"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="6260"/>
+		<set name="weight" val="1520"/>
+		<set name="price" val="146721000" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="1151.0"/>
+			<add stat="mAtk" val="254.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17389" name="Specter Shooter" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_lapis_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="CROSSBOW"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="6260"/>
+		<set name="weight" val="1580"/>
+		<set name="price" val="146721000" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="1036.0"/>
+			<add stat="mAtk" val="254.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17390" name="Specter Buster" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_zihel_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="6260"/>
+		<set name="weight" val="1520"/>
+		<set name="price" val="146721000" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="467.0"/>
+			<add stat="mAtk" val="339.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17391" name="Specter Caster" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_alacer_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="6260"/>
+		<set name="weight" val="1080"/>
+		<set name="price" val="146721000" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="467.0"/>
+			<add stat="mAtk" val="339.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17392" name="Specter Retributer" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_rupe_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="6260"/>
+		<set name="weight" val="1080"/>
+		<set name="price" val="146721000" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="569.0"/>
+			<add stat="mAtk" val="373.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="accMagic" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17393" name="Specter Dualsword" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="7512"/>
+		<set name="weight" val="1520"/>
+		<set name="price" val="176065200" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="711.0"/>
+			<add stat="mAtk" val="254.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="17394" name="Specter Dual Dagger" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALDAGGER"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="7512"/>
+		<set name="weight" val="2050"/>
+		<set name="price" val="176065200" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="584.0"/>
+			<add stat="mAtk" val="254.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="17395" name="Specter Dual Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualblunt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALBLUNT"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="7512"/>
+		<set name="weight" val="1740"/>
+		<set name="price" val="176065200" />
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="711.0"/>
+			<add stat="mAtk" val="254.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="17396" name="Seraph Helmet" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="1226"/>
+		<set name="weight" val="530"/>
+		<set name="price" val="28745000" />
+		<for>
+			<add stat="pDef" val="141.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17397" name="Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.armor_t401_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="3270"/>
+		<set name="weight" val="7520"/>
+		<set name="price" val="76654000" />
+		<for>
+			<add stat="pDef" val="377.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17398" name="Seraph Gaiters" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_t401_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="2044"/>
+		<set name="weight" val="3170"/>
+		<set name="price" val="47909000" />
+		<for>
+			<add stat="pDef" val="235.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="17399" name="Seraph Gauntlets" additionalName="Heavy Armor" type="Armor">
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_t401_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R95"/>
+		<set name="crystal_count" val="817"/>
+		<set name="weight" val="510"/>
+		<set name="price" val="19163500" />
+		<for>
+			<add stat="pDef" val="94.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+</list>

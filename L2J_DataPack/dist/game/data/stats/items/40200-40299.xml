@@ -1,0 +1,739 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="40200" name="Sayha's Cloak" additionalName="Eviscerator" type="Armor">
+		<!-- Cloak for those that carry the power of Sayha. M. Def. + 40. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="40201" name="Sayha's Cloak" additionalName="Sayha's Seer" type="Armor">
+		<!-- Cloak for those that carry the power of Sayha. M. Def. + 40. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="40202" name="Supply Box (R-grade)" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain either a normal/blessed weapon/armor/accessory (R-grade). -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+	</item>
+	<item id="40203" name="Supply Box (R95-grade)" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain either a normal/blessed weapon/armor/accessory (R95-grade). -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+	</item>
+	<item id="40204" name="Supply Box (R99-grade)" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain either a normal/blessed weapon/armor/accessory (R99-grade). -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+	</item>
+	<item id="40205" name="Requiem Fragment" additionalName="" type="EtcItem">
+		<!-- Main ingredient for crafting a random R-grade item. -->
+		<set name="icon" val="icon.weapon_aspeda_i00_piece"/>
+		<set name="weight" val="60"/>
+		<set name="price" val="1000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40206" name="Specter Fragment" additionalName="" type="EtcItem">
+		<!-- Main ingredient for crafting a random R95-grade item. -->
+		<set name="icon" val="icon.etc_vesper_shaper_piece_i00"/>
+		<set name="weight" val="60"/>
+		<set name="price" val="2000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40207" name="Amaranthine Fragment" additionalName="" type="EtcItem">
+		<!-- Main ingredient for crafting a random R99-grade item. -->
+		<set name="icon" val="icon.etc_vesper_cutter_piece_i00"/>
+		<set name="weight" val="60"/>
+		<set name="price" val="2500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40208" name="Throwaway Item 1" additionalName="Not in Use" type="EtcItem">
+		<!-- Unidentified Amaranthine weapon. Double-click to see whether you got a normal or blessed weapon. -->
+		<set name="icon" val="icon.weapon_aspeda_i00"/>
+	</item>
+	<item id="40209" name="Throwaway Item 1" additionalName="Not in Use" type="EtcItem">
+		<!-- Unidentified Eternal armor. Double-click to see whether you got normal or blessed armor. -->
+		<set name="icon" val="icon.weapon_aspeda_i00"/>
+	</item>
+	<item id="40210" name="Recipe: R (100%)" additionalName="" type="EtcItem">
+		<!-- Recipe for crafting an R-grade equipment. Results vary. Very high chance of obtaining blessed equipment. Requires Create Item Lv. 12. 100% success rate. Tyrr Maestros only. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00"/>
+		<set name="weight" val="30"/>
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40211" name="Recipe: R95 (100%)" additionalName="" type="EtcItem">
+		<!-- Recipe for crafting an R95-grade equipment. Results vary. Very high chance of obtaining blessed equipment. Requires Create Item Lv. 13. 100% success rate. Tyrr Maestros only. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00"/>
+		<set name="weight" val="30"/>
+		<set name="price" val="20000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40212" name="Recipe: R99 (100%)" additionalName="" type="EtcItem">
+		<!-- Recipe for crafting an R99-grade equipment. Results vary. Very high chance of obtaining blessed equipment. Requires Create Item Lv. 14. 100% success rate. Tyrr Maestros only. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00"/>
+		<set name="weight" val="30"/>
+		<set name="price" val="25000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40213" name="Ertheia's Rare Accessory Pack" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to obtain a Blessed Antharas Earring, Blessed Valakas Necklace, Tauti's Ring, Earth Wyrm Heart Ring, and Blessed Zaken's Earring (7-day). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_marguene_collection_box_i00"/>
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="40214" name="Blessed Antharas' Earring  Pack" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to obtain a Blessed Antharas Earring (7-day). -->
+		<set name="icon" val="icon.etc_box_of_adventure_5_i00"/>
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="40215" name="Blessed Valakas' Necklace Pack" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to obtain a Blessed Valakas Necklace (7-day). -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00"/>
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="40216" name="Tauti's Ring Pack" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to obtain a Tauti's Ring (7-day). -->
+		<set name="icon" val="icon.etc_box_of_adventure_3_i00"/>
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="40217" name="Earth Wyrm Heart Ring Pack" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to obtain an Earth Wyrm Heart Ring (7-day). -->
+		<set name="icon" val="icon.etc_box_of_adventure_4_i00"/>
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="40218" name="Blessed Zaken's Earring" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to obtain a Blessed Zaken's Earring (7-day). -->
+		<set name="icon" val="icon.etc_box_of_adventure_2_i00"/>
+		<set name="is_stackable" val="true" />
+		<set name="time" val="604800" />
+	</item>
+	<item id="40219" name="Appearance Stone: Cat Fighter (Ertheia Only)" additionalName="90-day" type="EtcItem">
+		<!-- Changes the appearance of a fist weapon into that of a Cat Fighter. 90-day.\n\n(Note) Modified items can only be equipped by Ertheia. -->
+		<set name="icon" val="icon.shape_shifting_dualfist_i00"/>
+		<set name="is_stackable" val="true" />
+		<set name="time" val="7776000" />
+	</item>
+	<item id="40220" name="Appearance Stone: Cat Staff (Ertheia Only)" additionalName="90-day" type="EtcItem">
+		<!-- Changes the appearance of a two-handed magic blunt weapon into that of a Cat Staff. 90-day.\n\n(Note) Modified items can only be equipped by Ertheia. -->
+		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00"/>
+		<set name="is_stackable" val="true" />
+		<set name="time" val="7776000" />
+	</item>
+	<item id="40221" name="Ertheia's Attribute Stone Pack (+ 60)" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain an Attribute Stone (+ 60). -->
+		<set name="icon" val="icon.etc_treasure_box_i03"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40222" name="Ertheia's Attribute Stone Pack (+ 150)" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain an Attribute Stone (+ 150). -->
+		<set name="icon" val="icon.etc_treasure_box_i04"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40223" name="Ertheia's Attribute Crystal Pack - Super" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain an Attribute Crystal - Super. -->
+		<set name="icon" val="icon.etc_treasure_box_i02"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40224" name="Minstrel's Scroll of Escape: Town of Aden" additionalName="" type="EtcItem">
+		<!-- Scroll given as a gift. Teleoprts you to the Town of Aden. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03"/>
+		<set name="weight" val="30"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40225" name="Scroll of Escape: Pagan Temple" additionalName="" type="EtcItem">
+		<!-- Teleports you to Knight Captain Kargos, who is related to the Pagan Temple. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03"/>
+		<set name="weight" val="30"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40226" name="Freya's Frozen Lamp" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain a Freya's Frozen Scroll and a Freya’s Recovery Potion. Has a chance of obtaining one of the following items: Freya's Wish Box, Sirra's Wish Box, or a Snowman's Wish Box. -->
+		<set name="icon" val="icon.freya_lamp"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40227" name="Freya's Frozen Scroll" additionalName="" type="EtcItem">
+		<!-- Vitality consumption x 2 and XP/SP acquisition + 100% while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.freya_scroll"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40228" name="Freya's Wish Box" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain a very rare item at a random rate. -->
+		<set name="icon" val="icon.freya_box_i01"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40229" name="Sirra's Wish Box" additionalName="" type="EtcItem">
+		<!-- Double-click for a chance to obtain one of the following items: Lucky Enchant Stone, High-grade Lucky Enchant Stone, Blessed Lucky Enchant Stone, Elemental Shirt Pack, Dark/Bloody Eternal Enhancement Stone, Blessed High-grade Lucky Enchant Stone, Freya’s Lucky Enchant Stone, or a Dark/Bloody Amaranthine Enhancement Stone. -->
+		<set name="icon" val="icon.freya_box_i02"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40230" name="Snowman's Wish Box" additionalName="" type="EtcItem">
+		<!-- Double-click for a chance to obtain one of the following items: Energy of Destruction, Giant’s Energy, Kaliel’s Energy, Elemental Shirt Pack, Sealed Talisman – Longing, Seven Signs’ Energy, Talisman – Anakim, Talisman – Lilith, or Talisman – Seven Signs. -->
+		<set name="icon" val="icon.freya_box_i03"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40231" name="Freya's Frozen Scroll" additionalName="Event" type="EtcItem">
+		<!-- Vitality consumption x 2 and XP/SP acquisition + 100% while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.freya_scroll"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40232" name="Freya's Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
+		<!-- Enchant success rate + 20% for weapons (R-grade) when using Blessed Scroll: Enchant Weapon. Only for items enchanted between + 3 and + 15. If enchanting fails, the enchant value will drop by 1. -->
+		<set name="icon" val="icon.freya_stone_i01"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40233" name="Freya's Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
+		<!-- Enchant success rate + 30% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 15. If enchanting fails, the enchant value will drop by 1. -->
+		<set name="icon" val="icon.freya_stone_i02"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40234" name="Giant's Energy 3-unit Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain 3 Giant's Energy. -->
+		<set name="icon" val="icon.etc_exchange_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40235" name="Giant's Energy 20-unit Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain 20 Giant's Energy. -->
+		<set name="icon" val="icon.etc_exchange_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40236" name="Giant's Energy 100-unit Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain 100 Giant's Energy. -->
+		<set name="icon" val="icon.etc_exchange_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40237" name="Agathion - Freya" additionalName="30-day" type="Armor">
+		<!-- Summons Freya agathion. 30-day. Cannot be used in the Olymipad.\n(Active Skill)\n1. Freya's Scroll of Escape: Town of Aden / Town of Rune / Talking Island Village. Cooldown is 30 min.\n\n(Passive SKill)\n1. Freya's Mind: Mental/Paralysis Resistance + 10%, Water Resistance + 10.\n\n2. Freya's Strength: STR/INT/CON/DEX/WIT/MEN + 1.\n\n3. Freya's Magic: P./M. Skill MP Consumption - 3%. -->
+		<set name="icon" val="icon.pi_high_agathion_bracelet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="time" val="2592000" />
+	</item>
+	<item id="40238" name="Freya's Supply Box" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain a Transformation Scroll: Anakim / Zaken / Kechi / Saber Tooth Tiger / Doll Blader. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.freya_cube_box"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40239" name="Freya's Heart" additionalName="" type="EtcItem">
+		<!-- For 60 min., P. Atk. + 5%, M. Atk. + 20%, P./M. Def. + 5%, Atk./Casting Spd. + 5%, Max HP/MP + 5%. XP/SP acquisition + 50% while hunting. Does not stack with event buffs. -->
+		<set name="icon" val="icon.etc_jewel_gold_i00"/>
+		<set name="weight" val="5"/>
+	</item>
+	<item id="40240" name="Dark Assassin Suit" additionalName="" type="Armor">
+		<!-- Dark Assassin Suit. Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. -->
+		<set name="icon" val="icon.dark_assassin"/>
+		<set name="default_action" val="EQUIP" />
+		<for>
+			<add stat="pDef" val="400.0"/>
+		</for>
+	</item>
+	<item id="40241" name="Freya's Frozen Lamp" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain a Freya's Frozen Scroll. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.freya_lamp"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40242" name="Agathion - Freya Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain Agathion - Freya (30-day). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pi_box_wish_pack"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40243" name="Greater Abelius Cloak (20-day)" additionalName="Sigel Knight" type="Armor">
+		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="40244" name="Greater Sapyros Cloak (20-day)" additionalName="Tyrr Warrior" type="Armor">
+		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="40245" name="Greater Ashagen Cloak (20-day)" additionalName="Othell Rogue" type="Armor">
+		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="40246" name="Greater Cranigg Cloak (20-day)" additionalName="Yul Archer" type="Armor">
+		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="40247" name="Greater Soltkreig Cloak (20-day)" additionalName="Feoh Wizard" type="Armor">
+		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="40248" name="Greater Naviarope Cloak (20-day)" additionalName="Wynn Summoner" type="Armor">
+		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="40249" name="Greater Leister Cloak (20-day)" additionalName="Iss Enchanter" type="Armor">
+		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="40250" name="Greater Lakcis Cloak (20-day)" additionalName="Aeore Healer" type="Armor">
+		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="40251" name="Greater Sayha Cloak (20-day)" additionalName="Eviscerator" type="Armor">
+		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="40252" name="Greater Sayha Cloak (20-day)" additionalName="Sayha's Seer" type="Armor">
+		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add stat="pDef" val="50.0"/>
+			<add stat="mDef" val="40.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="40253" name="Potion of Protection: Stun" additionalName="Top-grade" type="EtcItem">
+		<!-- Stun Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40254" name="Potion of Protection: Hold" additionalName="Top-grade" type="EtcItem">
+		<!-- Hold Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40255" name="Potion of Protection: Bleed" additionalName="Top-grade" type="EtcItem">
+		<!-- Bleed Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40256" name="Potion of Protection: Paralyze" additionalName="Top-grade" type="EtcItem">
+		<!-- Paralyze Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40257" name="Potion of Protection: Mental" additionalName="Top-grade" type="EtcItem">
+		<!-- Mental Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40258" name="Potion of Protection: Sleep" additionalName="Top-grade" type="EtcItem">
+		<!-- Sleep Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40259" name="Potion of Protection: Poison" additionalName="Top-grade" type="EtcItem">
+		<!-- Poison Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40260" name="Potion of Protection: Knock Back / Knock Down" additionalName="Top-grade" type="EtcItem">
+		<!-- Knock Back / Knock Down Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40261" name="Potion of Protection: Aerial Yoke" additionalName="Top-grade" type="EtcItem">
+		<!-- Aerial Yoke Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40262" name="Faeron Support Box" additionalName="Ertheia Fighter" type="EtcItem">
+		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40263" name="Faeron Support Box" additionalName="Ertheia Wizard" type="EtcItem">
+		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40264" name="Emissary's Support Box" additionalName="Ertheia Fighter" type="EtcItem">
+		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40265" name="Emissary's Support Box" additionalName="Ertheia Wizard" type="EtcItem">
+		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40266" name="Navari's Support Box" additionalName="Marauder" type="EtcItem">
+		<!-- Queen Navari's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40267" name="Navari's Support Box" additionalName="Cloud Breaker" type="EtcItem">
+		<!-- Queen Navari's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
+		<set name="icon" val="icon.etc_jewel_box_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40268" name="Sayha's Box" additionalName="Eviscerator" type="EtcItem">
+		<!-- Box containing Sayha's power. Double-click to use. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40269" name="Sayha's Box" additionalName="Sayha's Seer" type="EtcItem">
+		<!-- Box containing Sayha's power. Double-click to use. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40270" name="Appearance Stone: Dark Assassin Suit" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of your entire armor into that of a Dark Assassit Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40271" name="Orc's Normal Old Box" additionalName="" type="EtcItem">
+		<!-- A box of relics gathered by the Aspiricing Orc Ruler of Aden. -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40272" name="Orc's Luxury Old Box" additionalName="" type="EtcItem">
+		<!-- A box of relics gathered by the Aspiricing Orc Ruler of Aden. -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40273" name="Ertheia's Boost Scroll" additionalName="" type="EtcItem">
+		<!-- For 30 min., P./M. Atk. + 30%, P./M. Critical Damage + 15%, Speed + 20. MP Consumption - 15%. -->
+		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40274" name="Buff Helmet" additionalName="" type="Armor">
+		<!-- Uses 2 Hair Accessory slots. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40275" name="Buff Helmet" additionalName="STR" type="Armor">
+		<!-- Uses 2 Hair Accessory slots. STR + 3. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40276" name="Buff Helmet" additionalName="DEX" type="Armor">
+		<!-- Uses 2 Hair Accessory slots. DEX + 3. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40277" name="Buff Helmet" additionalName="CON" type="Armor">
+		<!-- Uses 2 Hair Accessory slots. CON + 3. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40278" name="Buff Helmet" additionalName="MEN" type="Armor">
+		<!-- Uses 2 Hair Accessory slots. MEN + 3. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40279" name="Buff Helmet" additionalName="INT" type="Armor">
+		<!-- Uses 2 Hair Accessory slots. INT + 3. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40280" name="Buff Helmet" additionalName="WIT" type="Armor">
+		<!-- Uses 2 Hair Accessory slots. WIT + 3. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40281" name="Buff Helmet" additionalName="Critical Rate" type="Armor">
+		<!-- Uses 2 Hair Accessory slots. Critical Rate + 50. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40282" name="Buff Helmet" additionalName="Critical Damage" type="Armor">
+		<!-- Uses 2 Hair Accessory slots. P. Critical Damage + 90, M. Critical Damage + 68. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40283" name="Buff Helmet" additionalName="P. Def." type="Armor">
+		<!-- Uses 2 Hair Accessory slots. P. Def. + 5%. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40284" name="Buff Helmet" additionalName="M. Def." type="Armor">
+		<!-- Uses 2 Hair Accessory slots. M. Def. + 5%. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40285" name="Buff Helmet" additionalName="Evasion" type="Armor">
+		<!-- Uses 2 Hair Accessory slots. Evasion + 5. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40286" name="Buff Helmet" additionalName="P. Atk." type="Armor">
+		<!-- Uses 2 Hair Accessory slots. P. Atk. + 5%. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40287" name="Buff Helmet" additionalName="M. Atk." type="Armor">
+		<!-- Uses 2 Hair Accessory slots. M. Atk. + 10%. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40288" name="Buff Helmet" additionalName="Accuracy" type="Armor">
+		<!-- Uses 2 Hair Accessory slots. Accuracy + 5. -->
+		<set name="icon" val="icon.buff_helmet"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="40289" name="NC Magazine" additionalName="Event" type="EtcItem">
+		<!-- Go to Tiffany in town for a special gift. -->
+		<set name="icon" val="icon.nc_magazine"/>
+	</item>
+	<item id="40290" name="Lara the Cat's Card Key Pack" additionalName="Normal" type="EtcItem">
+		<!-- Double-click to obtain Lara the Cat's Card Key. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40291" name="Steel Demon's Staff" additionalName="Magic Chaos" type="Weapon">
+		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nHas a 7% chance of inflicting Curse Chaos on target when using a magical skill on them. -->
+		<set name="icon" val="icon.weapon_demons_staff_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="C"/>
+		<set name="weight" val="990"/>
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<for>
+			<add stat="pAtk" val="152.0"/>
+			<add stat="mAtk" val="122.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="40292" name="Steel Spirit's Staff" additionalName="Magic Mental Shield" type="Weapon">
+		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nHas a 50% chance of inflicting Mental Shield on target when using a magical skill on them. -->
+		<set name="icon" val="icon.weapon_sprites_staff_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="B"/>
+		<set name="weight" val="960"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="170.0"/>
+			<add stat="mAtk" val="134.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="40293" name="Steel Dasparion's Staff" additionalName="Acumen" type="Weapon">
+		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
+		<set name="icon" val="icon.weapon_dasparions_staff_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="A"/>
+		<set name="weight" val="920"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="207.0"/>
+			<add stat="mAtk" val="157.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="40294" name="Steel Imperial Staff" additionalName="Empower" type="Weapon">
+		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nM. Atk. + 60. PvP damage increased. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="910"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="274.0"/>
+			<add stat="mAtk" val="193.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="40295" name="Steel Dynasty Staff" additionalName="Acumen" type="Weapon">
+		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
+		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<for>
+			<add stat="pAtk" val="325.0"/>
+			<add stat="mAtk" val="222.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="40296" name="Monster Weapon Appearance Stone: Turikki's Blunt Weapon" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of a one-handed blunt weapon into that of a Turikki's Blunt Weapon. An appearance-modified item has no change in abilities. Double-click to use. -->
+		<set name="icon" val="icon.shape_shifting_blunt_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40297" name="Monster Weapon Appearance Stone: Tayga Archer's Bow" additionalName="" type="EtcItem">
+		<!-- Changes the appearance of a bow into that of a Tayga Archer's Bow. An appearance-modified item has no change in abilities. Double-click to use. -->
+		<set name="icon" val="icon.shape_shifting_bow_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="40298" name="Turikki's Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Monster weapon. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_dualblunt"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="250"/>
+		<for>
+			<add stat="pAtk" val="125.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="40299" name="Tiger Bow" additionalName="" type="Weapon">
+		<!-- Monster weapon. -->
+		<set name="icon" val="icon.pailaka_invader_bow_wp_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="BOW"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="181"/>
+		<for>
+			<add stat="pAtk" val="92.0"/>
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+</list>

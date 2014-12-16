@@ -1,0 +1,505 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="33600" name="Bound Dynasty Leather Gloves" additionalName="Event" type="Armor">
+		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
+		<set name="icon" val="icon.armor_t92_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="520"/>
+		<set name="price" val="152475" />
+		<for>
+			<add stat="pDef" val="61.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33601" name="Bound Dynasty Leather Boots" additionalName="Event" type="Armor">
+		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
+		<set name="icon" val="icon.armor_t92_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="1090"/>
+		<set name="price" val="152475" />
+		<for>
+			<add stat="pDef" val="61.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33602" name="Bound Dynasty Tunic" additionalName="Event" type="Armor">
+		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
+		<set name="icon" val="icon.armor_t93_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="1780"/>
+		<set name="price" val="457450" />
+		<for>
+			<add stat="pDef" val="113.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33603" name="Bound Dynasty Stockings" additionalName="Event" type="Armor">
+		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
+		<set name="icon" val="icon.armor_t93_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="860"/>
+		<set name="price" val="285900" />
+		<for>
+			<add stat="pDef" val="71.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33604" name="Bound Dynasty Circlet" additionalName="Event" type="Armor">
+		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
+		<set name="icon" val="icon.armor_circlet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="530"/>
+		<set name="price" val="228725" />
+		<for>
+			<add stat="pDef" val="92.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33605" name="Bound Dynasty Gloves" additionalName="Event" type="Armor">
+		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
+		<set name="icon" val="icon.armor_t93_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="520"/>
+		<set name="price" val="152475" />
+		<for>
+			<add stat="pDef" val="61.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33606" name="Bound Dynasty Shoes" additionalName="Event" type="Armor">
+		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
+		<set name="icon" val="icon.armor_t93_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="1090"/>
+		<set name="price" val="152475" />
+		<for>
+			<add stat="pDef" val="61.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33607" name="Bound Dynasty Sigil" additionalName="Event" type="Armor">
+		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
+		<set name="icon" val="icon.dynasty_sigil_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="930"/>
+		<set name="price" val="160100" />
+		<for>
+			<add stat="pDef" val="15.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33608" name="Unidentified Dynasty Knife" additionalName="Event" type="EtcItem">
+		<!-- Dynasty knife in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / dagger) -->
+		<set name="icon" val="icon.weapon_dynasty_dagger_i00"/>
+	</item>
+	<item id="33609" name="Unidentified Dynasty Sword" additionalName="Event" type="EtcItem">
+		<!-- Dynasty sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
+		<set name="icon" val="icon.weapon_dynasty_blade_i00"/>
+	</item>
+	<item id="33610" name="Unidentified Dynasty Phantom" additionalName="Event" type="EtcItem">
+		<!-- Dynasty phantom in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
+		<set name="icon" val="icon.weapon_dynasty_magic_sword_i00"/>
+	</item>
+	<item id="33611" name="Unidentified Dynasty Rapier" additionalName="Event" type="EtcItem">
+		<!-- Dynasty rapier in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / short sword) -->
+		<set name="icon" val="icon.weapon_dynasty_rapier_i00"/>
+	</item>
+	<item id="33612" name="Unidentified Dynasty Blade" additionalName="Event" type="EtcItem">
+		<!-- Dynasty blade in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / sword) -->
+		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i00"/>
+	</item>
+	<item id="33613" name="Unidentified Dynasty Ancient Sword" additionalName="Event" type="EtcItem">
+		<!-- Dynasty ancient sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / ancient sword) -->
+		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i00"/>
+	</item>
+	<item id="33614" name="Unidentified Dynasty Halberd" additionalName="Event" type="EtcItem">
+		<!-- Dynasty halberd in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / spear) -->
+		<set name="icon" val="icon.weapon_dynasty_spear_i00"/>
+	</item>
+	<item id="33615" name="Unidentified Dynasty Crossbow" additionalName="Event" type="EtcItem">
+		<!-- Dynasty crossbow in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / crossbow) -->
+		<set name="icon" val="icon.weapon_dynasty_crossbow_i00"/>
+	</item>
+	<item id="33616" name="Unidentified Dynasty Cudgel" additionalName="Event" type="EtcItem">
+		<!-- Dynasty cudgel in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / blunt) -->
+		<set name="icon" val="icon.weapon_dynasty_hammer_i00"/>
+	</item>
+	<item id="33617" name="Unidentified Dynasty Mace" additionalName="Event" type="EtcItem">
+		<!-- Dynasty mace in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / blunt) -->
+		<set name="icon" val="icon.weapon_dynasty_staff_i00"/>
+	</item>
+	<item id="33618" name="Unidentified Dynasty Staff" additionalName="Event" type="EtcItem">
+		<!-- Dynasty staff in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / blunt) -->
+		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i00"/>
+	</item>
+	<item id="33619" name="Unidentified Dynasty Crusher" additionalName="Event" type="EtcItem">
+		<!-- Dynasty crusher in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / blunt) -->
+		<set name="icon" val="icon.weapon_dynasty_crusher_i00"/>
+	</item>
+	<item id="33620" name="Unidentified Dynasty Bagh-Nakh" additionalName="Event" type="EtcItem">
+		<!-- Dynasty Bagh-Nakh in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / fist weapon) -->
+		<set name="icon" val="icon.weapon_dynasty_jamadhr_i00"/>
+	</item>
+	<item id="33621" name="Unidentified Dynasty Dualsword" additionalName="Event" type="EtcItem">
+		<!-- Dynasty dualsword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / dualsword) -->
+		<set name="icon" val="icon.weapon_dual_sword_i00"/>
+	</item>
+	<item id="33622" name="Unidentified Dynasty Dual Dagger" additionalName="Event" type="EtcItem">
+		<!-- Dynasty Dual Dagger in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / dual dagger) -->
+		<set name="icon" val="icon.dual_dagger_i00"/>
+	</item>
+	<item id="33623" name="Unidentified Dynasty Breastplate" additionalName="Event" type="EtcItem">
+		<!-- Dynasty breastplate in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper / heavy armor) -->
+		<set name="icon" val="icon.armor_t91_u_i00"/>
+	</item>
+	<item id="33624" name="Unidentified Dynasty Gaiters" additionalName="Event" type="EtcItem">
+		<!-- Dynasty gaiters in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower / heavy armor) -->
+		<set name="icon" val="icon.armor_t91_l_i00"/>
+	</item>
+	<item id="33625" name="Unidentified Dynasty Helmet" additionalName="Event" type="EtcItem">
+		<!-- Dynasty helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: headgear) -->
+		<set name="icon" val="icon.armor_helmet_i00"/>
+	</item>
+	<item id="33626" name="Unidentified Dynasty Gauntlets" additionalName="Event" type="EtcItem">
+		<!-- Dynasty gauntlets in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: gloves) -->
+		<set name="icon" val="icon.armor_t91_g_i00"/>
+	</item>
+	<item id="33627" name="Unidentified Dynasty Boots" additionalName="Event" type="EtcItem">
+		<!-- Dynasty boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: boots) -->
+		<set name="icon" val="icon.armor_t91_b_i00"/>
+	</item>
+	<item id="33628" name="Unidentified Dynasty Shield" additionalName="Event" type="EtcItem">
+		<!-- Dynasty shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: shield) -->
+		<set name="icon" val="icon.shield_dynasty_shield_i00"/>
+	</item>
+	<item id="33629" name="Unidentified Dynasty Leather Armor" additionalName="Event" type="EtcItem">
+		<!-- Dynasty leather armor in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper / light armor) -->
+		<set name="icon" val="icon.armor_t92_u_i00"/>
+	</item>
+	<item id="33630" name="Unidentified Dynasty Leather Leggings" additionalName="Event" type="EtcItem">
+		<!-- Dynasty leather leggings in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower / light armor) -->
+		<set name="icon" val="icon.armor_t92_l_i00"/>
+	</item>
+	<item id="33631" name="Unidentified Dynasty Leather Helmet" additionalName="Event" type="EtcItem">
+		<!-- Dynasty leather helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: headgear) -->
+		<set name="icon" val="icon.armor_leather_helmet_i00"/>
+	</item>
+	<item id="33632" name="Unidentified Dynasty Leather Gloves" additionalName="Event" type="EtcItem">
+		<!-- Dynasty leather gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: gloves) -->
+		<set name="icon" val="icon.armor_t92_g_i00"/>
+	</item>
+	<item id="33633" name="Unidentified Dynasty Leather Boots" additionalName="Event" type="EtcItem">
+		<!-- Dynasty leather boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: boots) -->
+		<set name="icon" val="icon.armor_t92_b_i00"/>
+	</item>
+	<item id="33634" name="Unidentified Dynasty Tunic" additionalName="Event" type="EtcItem">
+		<!-- Dynasty tunic in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper / robe) -->
+		<set name="icon" val="icon.armor_t93_u_i00"/>
+	</item>
+	<item id="33635" name="Unidentified Dynasty Stockings" additionalName="Event" type="EtcItem">
+		<!-- Dynasty stockings in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower / robe) -->
+		<set name="icon" val="icon.armor_t93_l_i00"/>
+	</item>
+	<item id="33636" name="Unidentified Dynasty Circlet" additionalName="Event" type="EtcItem">
+		<!-- Dynasty circlet in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: headgear) -->
+		<set name="icon" val="icon.armor_circlet_i00"/>
+	</item>
+	<item id="33637" name="Unidentified Dynasty Gloves" additionalName="Event" type="EtcItem">
+		<!-- Dynasty gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: gloves) -->
+		<set name="icon" val="icon.armor_t93_g_i00"/>
+	</item>
+	<item id="33638" name="Unidentified Dynasty Shoes" additionalName="Event" type="EtcItem">
+		<!-- Dynasty shoes in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: boots) -->
+		<set name="icon" val="icon.armor_t93_b_i00"/>
+	</item>
+	<item id="33639" name="Unidentified Dynasty Sigil" additionalName="Event" type="EtcItem">
+		<!-- Dynasty sigil in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: sigil) -->
+		<set name="icon" val="icon.dynasty_sigil_i00"/>
+	</item>
+	<item id="33640" name="Blessed Scroll of Escape" additionalName="Campaign" type="EtcItem">
+		<!-- Mysterious scroll that relocates user to the nearest village. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i01"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33641" name="Illusion Guard Helmet" additionalName="" type="EtcItem">
+		<!-- Illusion guard's helmet. -->
+		<set name="icon" val="icon.Accessary_demon_circlet_i00"/>
+		<set name="weight" val="10"/>
+		<for>
+			<add stat="pDef" val="37.0"/>
+		</for>
+	</item>
+	<item id="33642" name="Kukurin Bracelet" additionalName="" type="Armor">
+		<!-- When equipped, you can mount a Kukurin. -->
+		<set name="icon" val="icon.accessary_blue_coral_ring_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="30"/>
+	</item>
+	<item id="33643" name="Scroll: Minion" additionalName="" type="EtcItem">
+		<!-- Scroll that can summon a Minion for 2 hours. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33644" name="Scroll: Superior Minion" additionalName="" type="EtcItem">
+		<!-- Scroll that can summon a Superior Minion for 2 hours. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33645" name="Minion 3-unit Pack" additionalName="" type="EtcItem">
+		<!-- Scroll that can summon a Minion for 2 hours. Contains 3 sheets. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33646" name="Superior Minion 3-unit Pack" additionalName="" type="EtcItem">
+		<!-- Scroll that can summon a Superior Minion for 2 hours. Contains 3 sheets. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33647" name="Hero's Gift Box" additionalName="" type="EtcItem">
+		<!-- Can acquire a 5-unit Hero's Blessing Buff Scroll pack, a 3-unit Minion Coupon pack, a 5-unit Noblesse Blessing buff scroll pack, a 30-unit Kukuru mounting scroll pack, and a 3-unit Feather of Blessing pack. -->
+		<set name="icon" val="icon.new_user_box"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33648" name="Gift Box of Destiny" additionalName="" type="EtcItem">
+		<!-- Can acquire 250 Returning Hero's Marks, 1 Returning Hero's Vitality Replenishing Juice pack of 5, and a Superior Minion coupon pack of 2. -->
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33649" name="Kukurin Feather Helm" additionalName="" type="Armor">
+		<!-- Kukurin Feather Helm. -->
+		<set name="icon" val="icon.accessory_tengallon_brown_hat_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="33650" name="Shilen Wand" additionalName="" type="Weapon">
+		<!-- Shilen Wand. -->
+		<set name="icon" val="icon.weapon_apprentices_wand_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="1080"/>
+		<for>
+			<add stat="pAtk" val="10.0"/>
+			<add stat="mAtk" val="10.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33651" name="Unidentified Crystal Dagger" additionalName="Event" type="EtcItem">
+		<!-- Crystal Dagger in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / dagger) -->
+		<set name="icon" val="icon.weapon_crystal_dagger_i00"/>
+	</item>
+	<item id="33652" name="Unidentified Samurai Long Sword" additionalName="Event" type="EtcItem">
+		<!-- Samurai Long Sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
+		<set name="icon" val="icon.weapon_samurai_longsword_i00"/>
+	</item>
+	<item id="33653" name="Unidentified Ecliptic Sword" additionalName="Event" type="EtcItem">
+		<!-- Ecliptic Sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
+		<set name="icon" val="icon.weapon_sword_of_eclipse_i00"/>
+	</item>
+	<item id="33654" name="Unidentified Admiral's Estoc" additionalName="Event" type="EtcItem">
+		<!-- Kamael-exclusive Weapon: Samurai Long Sword Conversion, Admiral's Estoc in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon: rapier) -->
+		<set name="icon" val="icon.weapon_blink_slasher_i00"/>
+	</item>
+	<item id="33655" name="Unidentified Berserker Blade" additionalName="Event" type="EtcItem">
+		<!-- Berserker Blade in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / sword) -->
+		<set name="icon" val="icon.weapon_berserker_blade_i00"/>
+	</item>
+	<item id="33656" name="Unidentified Saber Tooth" additionalName="Event" type="EtcItem">
+		<!-- Kamael-exclusive Weapon: Berserker Blade Conversion, Saber Tooth in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / ancient sword) -->
+		<set name="icon" val="icon.weapon_invincible_blade_i00"/>
+	</item>
+	<item id="33657" name="Unidentified Eminence Bow" additionalName="Event" type="EtcItem">
+		<!-- Eminence Bow in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / bow) -->
+		<set name="icon" val="icon.weapon_eminence_bow_i00"/>
+	</item>
+	<item id="33658" name="Unidentified Sharpshooter" additionalName="Event" type="EtcItem">
+		<!-- Kamael-exclusive Weapon: Eminence Bow Conversion, Sharpshooter in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / crossbow) -->
+		<set name="icon" val="icon.weapon_taslam_i00"/>
+	</item>
+	<item id="33659" name="Unidentified Ecliptic Axe" additionalName="Event" type="EtcItem">
+		<!-- Ecliptic Axe in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / blunt) -->
+		<set name="icon" val="icon.weapon_eclipse_axe_i00"/>
+	</item>
+	<item id="33660" name="Unidentified Yaksa Mace" additionalName="Event" type="EtcItem">
+		<!-- Yaksa Mace in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / blunt) -->
+		<set name="icon" val="icon.weapon_yaksa_mace_i00"/>
+	</item>
+	<item id="33661" name="Unidentified Dwarven Hammer" additionalName="Event" type="EtcItem">
+		<!-- Dwarven Hammer in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / blunt) -->
+		<set name="icon" val="icon.weapon_dwarven_hammer_i00"/>
+	</item>
+	<item id="33662" name="Unidentified Ghoul's Staff" additionalName="Event" type="EtcItem">
+		<!-- Ghoul's Staff in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / blunt) -->
+		<set name="icon" val="icon.weapon_ghouls_staff_i00"/>
+	</item>
+	<item id="33663" name="Unidentified Orcish Poleaxe" additionalName="Event" type="EtcItem">
+		<!-- Orcish Poleaxe in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / spear) -->
+		<set name="icon" val="icon.weapon_orcish_poleaxe_i00"/>
+	</item>
+	<item id="33664" name="Unidentified Great Pata" additionalName="Event" type="EtcItem">
+		<!-- Great Pata in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / fist weapon) -->
+		<set name="icon" val="icon.weapon_great_pata_i00"/>
+	</item>
+	<item id="33665" name="Unidentified Shamshir*Shamshir" additionalName="Event" type="EtcItem">
+		<!-- Shamshir*Shamshir in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / dual weapon) -->
+		<set name="icon" val="icon.weapon_dual_sword_i00"/>
+	</item>
+	<item id="33666" name="Unidentified Full Plate Helmet" additionalName="Event" type="EtcItem">
+		<!-- Full Plate Helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Headgear) -->
+		<set name="icon" val="icon.armor_leather_helmet_i00"/>
+	</item>
+	<item id="33667" name="Unidentified Full Plate Armor" additionalName="Event" type="EtcItem">
+		<!-- Full Plate Armor in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-piece/ heavy armor) -->
+		<set name="icon" val="icon.armor_t62_ul_i00"/>
+	</item>
+	<item id="33668" name="Unidentified Full Plate Shield" additionalName="Event" type="EtcItem">
+		<!-- Full Plate Shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Shield) -->
+		<set name="icon" val="icon.shield_full_plate_shield_i00"/>
+	</item>
+	<item id="33669" name="Unidentified Full Plate Boots" additionalName="Event" type="EtcItem">
+		<!-- Full Plate Boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: boots) -->
+		<set name="icon" val="icon.armor_t62_b_i00"/>
+	</item>
+	<item id="33670" name="Unidentified Full Plate Gauntlets" additionalName="Event" type="EtcItem">
+		<!-- Full Plate Gauntlets in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Gloves) -->
+		<set name="icon" val="icon.armor_t62_g_i00"/>
+	</item>
+	<item id="33671" name="Unidentified Divine Stockings" additionalName="Event" type="EtcItem">
+		<!-- Divine Stockings in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower / robe) -->
+		<set name="icon" val="icon.armor_t57_l_i00"/>
+	</item>
+	<item id="33672" name="Unidentified Divine Tunic" additionalName="Event" type="EtcItem">
+		<!-- Divine Tunic in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper / robe) -->
+		<set name="icon" val="icon.armor_t57_u_i00"/>
+	</item>
+	<item id="33673" name="Unidentified Divine Gloves" additionalName="Event" type="EtcItem">
+		<!-- Divine Gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Gloves) -->
+		<set name="icon" val="icon.armor_t57_g_i00"/>
+	</item>
+	<item id="33674" name="Unidentified Drake Leather Boots" additionalName="Event" type="EtcItem">
+		<!-- Drake Leather boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: boots) -->
+		<set name="icon" val="icon.armor_t21_b_i00"/>
+	</item>
+	<item id="33675" name="Unidentified Drake Leather Armor" additionalName="Event" type="EtcItem">
+		<!-- Drake Leather armor in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one piece / light armor) -->
+		<set name="icon" val="icon.armor_t21_ul_i00"/>
+	</item>
+	<item id="33676" name="Unidentified Drake Leather Gloves" additionalName="Event" type="EtcItem">
+		<!-- Drake Leather gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Gloves) -->
+		<set name="icon" val="icon.armor_t21_g_i00"/>
+	</item>
+	<item id="33677" name="Unidentified Demon's Dagger" additionalName="Event" type="EtcItem">
+		<!-- Demon's Dagger in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / dagger) -->
+		<set name="icon" val="icon.weapon_demons_sword_i00"/>
+	</item>
+	<item id="33678" name="Unidentified Wizard's Tear" additionalName="Event" type="EtcItem">
+		<!-- Wizard's Tear in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i00"/>
+	</item>
+	<item id="33679" name="Unidentified Damascus Sword" additionalName="Event" type="EtcItem">
+		<!-- Damascus Sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
+		<set name="icon" val="icon.weapon_sword_of_damascus_i00"/>
+	</item>
+	<item id="33680" name="Unidentified Guardian's Sword" additionalName="Event" type="EtcItem">
+		<!-- Guardian's Sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / sword) -->
+		<set name="icon" val="icon.weapon_guardians_sword_i00"/>
+	</item>
+	<item id="33681" name="Unidentified Bow of Peril" additionalName="Event" type="EtcItem">
+		<!-- Bow of Peril in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / bow) -->
+		<set name="icon" val="icon.weapon_hazard_bow_i00"/>
+	</item>
+	<item id="33682" name="Unidentified Kaim Vanul's Bones" additionalName="Event" type="EtcItem">
+		<!-- Kaim Vanul's Bones in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / blunt) -->
+		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00"/>
+	</item>
+	<item id="33683" name="Unidentified Art of Battle Axe" additionalName="Event" type="EtcItem">
+		<!-- Art of Battle Axe in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / blunt) -->
+		<set name="icon" val="icon.weapon_art_of_battle_axe_i00"/>
+	</item>
+	<item id="33684" name="Unidentified Star Buster" additionalName="Event" type="EtcItem">
+		<!-- Star Buster in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / blunt) -->
+		<set name="icon" val="icon.weapon_star_buster_i00"/>
+	</item>
+	<item id="33685" name="Unidentified Staff of Evil Spirits" additionalName="Event" type="EtcItem">
+		<!-- Staff of Evil Spirits in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / blunt) -->
+		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00"/>
+	</item>
+	<item id="33686" name="Unidentified Lance" additionalName="Event" type="EtcItem">
+		<!-- Lance in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / spear) -->
+		<set name="icon" val="icon.weapon_lancia_i00"/>
+	</item>
+	<item id="33687" name="Unidentified Bellion Cestus" additionalName="Event" type="EtcItem">
+		<!-- Bellion Cestus in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / fist weapon) -->
+		<set name="icon" val="icon.weapon_bellion_cestus_i00"/>
+	</item>
+	<item id="33688" name="Unidentified Samurai Long Sword*Samurai Long Sword" additionalName="Event" type="EtcItem">
+		<!-- Samurai Long Sword*Samurai Long Sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / dual weapon) -->
+		<set name="icon" val="icon.weapon_dual_sword_i00"/>
+	</item>
+	<item id="33689" name="Unidentified Stockings of Doom" additionalName="Event" type="EtcItem">
+		<!-- Stockings of Doom in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower / robe) -->
+		<set name="icon" val="icon.armor_t73_l_i00"/>
+	</item>
+	<item id="33690" name="Unidentified Tunic of Doom" additionalName="Event" type="EtcItem">
+		<!-- Tunic of Doom in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper / robe) -->
+		<set name="icon" val="icon.armor_t73_u_i00"/>
+	</item>
+	<item id="33691" name="Unidentified Leather Armor of Doom" additionalName="Event" type="EtcItem">
+		<!-- Leather Armor of Doom in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one piece / light armor) -->
+		<set name="icon" val="icon.armor_t72_ul_i00"/>
+	</item>
+	<item id="33692" name="Unidentified Doom Helmet" additionalName="Event" type="EtcItem">
+		<!-- Doom Helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Headgear) -->
+		<set name="icon" val="icon.armor_leather_helmet_i00"/>
+	</item>
+	<item id="33693" name="Unidentified Doom Plate Armor" additionalName="Event" type="EtcItem">
+		<!-- Doom Plate Armor in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one piece / heavy armor) -->
+		<set name="icon" val="icon.armor_t71_ul_i00"/>
+	</item>
+	<item id="33694" name="Unidentified Doom Shield" additionalName="Event" type="EtcItem">
+		<!-- Doom Shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Shield) -->
+		<set name="icon" val="icon.shield_doom_shield_i00"/>
+	</item>
+	<item id="33695" name="Unidentified Doom Boots" additionalName="Event" type="EtcItem">
+		<!-- Doom Boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: boots) -->
+		<set name="icon" val="icon.armor_t71_b_i02"/>
+	</item>
+	<item id="33696" name="Unidentified Doom Gloves" additionalName="Event" type="EtcItem">
+		<!-- Doom Gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Gloves) -->
+		<set name="icon" val="icon.armor_t71_g_i02"/>
+	</item>
+	<item id="33697" name="Unidentified Soul Separator" additionalName="Event" type="EtcItem">
+		<!-- Soul Separator in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / dagger) -->
+		<set name="icon" val="icon.weapon_soul_separator_i00"/>
+	</item>
+	<item id="33698" name="Unidentified Sword of Miracles" additionalName="Event" type="EtcItem">
+		<!-- Sword of Miracles in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
+		<set name="icon" val="icon.weapon_sword_of_miracle_i00"/>
+	</item>
+	<item id="33699" name="Unidentified Dark Legion's Edge" additionalName="Event" type="EtcItem">
+		<!-- Dark Legion's Edge in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
+		<set name="icon" val="icon.weapon_dark_legions_edge_i00"/>
+	</item>
+</list>

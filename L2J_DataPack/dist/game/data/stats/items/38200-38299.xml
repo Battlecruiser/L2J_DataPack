@@ -1,0 +1,751 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="38200" name="Blue Mackerel Appearance Stone: One-handed Sword" additionalName="" type="EtcItem">
+		<!-- Turns the appearance of a one-handed sword into that of a Blue Mackerel . -->
+		<set name="icon" val="icon.shape_shifting_sword_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38201" name="Trumpetfish Appearance Stone: Dagger" additionalName="" type="EtcItem">
+		<!-- Turns the appearance of a one-handed dagger into that of a Trumpetfish . -->
+		<set name="icon" val="icon.shape_shifting_dagger_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38202" name="Shark Appearance Stone: Two-handed Sword" additionalName="" type="EtcItem">
+		<!-- Turns the appearance of a two-handed sword into that of a Shark . -->
+		<set name="icon" val="icon.shape_shifting_twohand_sword_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38203" name="Squid Appearance Stone: Spear" additionalName="" type="EtcItem">
+		<!-- Turns the appearance of a spear into that of a Squid . -->
+		<set name="icon" val="icon.shape_shifting_pole_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38204" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="" type="EtcItem">
+		<!-- Turns the appearance of a two-handed blunt weapon into that of a Sea Horse . -->
+		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38205" name="Lobster Appearance Stone: Fist Weapon" additionalName="" type="EtcItem">
+		<!-- Turns the appearance of a fist weapon into that of a Lobster . -->
+		<set name="icon" val="icon.shape_shifting_dualfist_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38206" name="Giant Crab Appearance Stone: Bow" additionalName="" type="EtcItem">
+		<!-- Turns the appearance of a bow into that of a Giant Crab . -->
+		<set name="icon" val="icon.shape_shifting_bow_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38207" name="Crayfish Appearance Stone: Crossbow" additionalName="" type="EtcItem">
+		<!-- Turns the appearance of a crossbow into that of a Crayfish . -->
+		<set name="icon" val="icon.shape_shifting_twohand_crossbow_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38208" name="Starfish Appearance Stone: Sigil" additionalName="" type="EtcItem">
+		<!-- Turns the appearance of a sigil into that of a Starfish . -->
+		<set name="icon" val="Icon.shape_shifting_sigil_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38209" name="Turtle Appearance Stone: Shield" additionalName="" type="EtcItem">
+		<!-- Turns the appearance of a shield into that of a Turtle . -->
+		<set name="icon" val="icon.shape_shifting_shield_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38210" name="Blue Mackerel Appearance Stone: Dualsword" additionalName="" type="EtcItem">
+		<!-- Turns the appearance of a dualsword into that of a Blue Mackerel . -->
+		<set name="icon" val="icon.shape_shifting_dual_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38211" name="Blue Mackerel: One-handed Sword" additionalName="" type="Weapon">
+		<!-- Blue Mackerel-shaped weapon. One-handed sword. -->
+		<set name="icon" val="icon.wp_fishing1"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="144"/>
+		<for>
+			<add stat="pAtk" val="92.0"/>
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="38212" name="Trumpetfish: Dagger" additionalName="" type="Weapon">
+		<!-- Trumpetfish-shaped weapon. Dagger. -->
+		<set name="icon" val="icon.wp_fishing2"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="DAGGER"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="106"/>
+		<for>
+			<add stat="pAtk" val="80.0"/>
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="38213" name="Shark: Two-handed Sword" additionalName="" type="Weapon">
+		<!-- Shark-shaped weapon. Two-handed sword. -->
+		<set name="icon" val="icon.wp_fishing3"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="209"/>
+		<for>
+			<add stat="pAtk" val="112.0"/>
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="38214" name="Squid: Spear" additionalName="" type="Weapon">
+		<!-- Squid-shaped weapon. Spear. -->
+		<set name="icon" val="icon.wp_fishing4"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="POLE"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="205"/>
+		<for>
+			<add stat="pAtk" val="92.0"/>
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="38215" name="Sea Horse: Two-handed Magic Blunt Weapon" additionalName="" type="Weapon">
+		<!-- Sea Horse-shaped weapon. Two-handed magic blunt weapon. -->
+		<set name="icon" val="icon.wp_fishing5"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="101"/>
+		<for>
+			<add stat="pAtk" val="152.0"/>
+			<add stat="mAtk" val="122.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="38216" name="Lobster: Fist Weapon" additionalName="" type="Weapon">
+		<!-- Lobster-shaped weapon. Fist weapon. -->
+		<set name="icon" val="icon.wp_fishing6"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALFIST"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="152"/>
+		<for>
+			<add stat="pAtk" val="112.0"/>
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="38217" name="Giant Crab: Bow" additionalName="" type="Weapon">
+		<!-- Giant crab-shaped weapon. Bow. -->
+		<set name="icon" val="icon.wp_fishing7"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BOW"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="181"/>
+		<for>
+			<add stat="pAtk" val="191.0"/>
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="38218" name="Crayfish: Crossbow" additionalName="" type="Weapon">
+		<!-- Crayfish-shaped weapon. Crossbow. -->
+		<set name="icon" val="icon.wp_fishing8"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="CROSSBOW"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="181"/>
+		<for>
+			<add stat="pAtk" val="117.0"/>
+			<add stat="mAtk" val="54.0" />
+			<add stat="pAtkSpd" val="303.0" />
+			<add stat="rCrit" val="10.0" />
+		</for>
+	</item>
+	<item id="38219" name="Starfish: Sigil" additionalName="" type="Armor">
+		<!-- Starfish-shaped sigil. -->
+		<set name="icon" val="icon.wp_fishing9"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="100"/>
+		<for>
+			<add stat="sDef" val="47.0" />
+			<add stat="rShld" val="20.0" />
+		</for>
+	</item>
+	<item id="38220" name="Turtle: Shield" additionalName="" type="Weapon">
+		<!-- Turtle-shaped shield. -->
+		<set name="icon" val="icon.wp_fishing10"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="200"/>
+		<for>
+			<add stat="pDef" val="25.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="38221" name="Blue Mackerel: Dualsword" additionalName="" type="Weapon">
+		<!-- Blue Mackerel-shaped weapon. Dualsword. -->
+		<set name="icon" val="icon.wp_fishing11"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="D"/>
+		<set name="weight" val="247"/>
+		<for>
+			<add stat="pAtk" val="107.0"/>
+			<add stat="mAtk" val="51.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="38222" name="Fish Stew" additionalName="WIT" type="EtcItem">
+		<!-- For 30 min., WIT + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
+		<set name="icon" val="icon.fish_stew_buff"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38223" name="Fish Stew" additionalName="INT" type="EtcItem">
+		<!-- For 30 min., INT + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
+		<set name="icon" val="icon.fish_stew_buff"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38224" name="Fish Stew" additionalName="MEN" type="EtcItem">
+		<!-- For 30 min., MEN + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
+		<set name="icon" val="icon.fish_stew_buff"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38225" name="Fish Stew" additionalName="DEX" type="EtcItem">
+		<!-- For 30 min., DEX + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
+		<set name="icon" val="icon.fish_stew_buff"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38226" name="Fish Stew" additionalName="STR" type="EtcItem">
+		<!-- For 30 min., STR + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
+		<set name="icon" val="icon.fish_stew_buff"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38227" name="Fish Stew" additionalName="CON" type="EtcItem">
+		<!-- For 30 min., CON + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
+		<set name="icon" val="icon.fish_stew_buff"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="38228" name="Lady's Hairpin" additionalName="STR" type="Armor">
+		<!-- STR + 3. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38229" name="Lady's Hairpin" additionalName="DEX" type="Armor">
+		<!-- DEX + 3. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38230" name="Lady's Hairpin" additionalName="CON" type="Armor">
+		<!-- CON + 3. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38231" name="Lady's Hairpin" additionalName="MEN" type="Armor">
+		<!-- MEN + 3. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38232" name="Lady's Hairpin" additionalName="INT" type="Armor">
+		<!-- INT + 3. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38233" name="Lady's Hairpin" additionalName="WIT" type="Armor">
+		<!-- WIT + 3. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38234" name="Lady's Hairpin" additionalName="Critical Rate" type="Armor">
+		<!-- Critical Rate + 50. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38235" name="Lady's Hairpin" additionalName="Critical Damage" type="Armor">
+		<!-- Critical Damage + 90, M. Critical Damage + 68. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38236" name="Lady's Hairpin" additionalName="P. Def." type="Armor">
+		<!-- P. Def. + 5%. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38237" name="Lady's Hairpin" additionalName="M. Def." type="Armor">
+		<!-- M. Def. + 5%. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38238" name="Lady's Hairpin" additionalName="Evasion" type="Armor">
+		<!-- Evasion + 5. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38239" name="Lady's Hairpin" additionalName="P. Atk." type="Armor">
+		<!-- P. Atk. + 5%. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38240" name="Lady's Hairpin" additionalName="M. Atk." type="Armor">
+		<!-- M. Atk. + 10%. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38241" name="Lady's Hairpin" additionalName="Accuracy" type="Armor">
+		<!-- Accuracy + 5. Female only. -->
+		<set name="icon" val="icon.accessory_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38242" name="Party Mask" additionalName="STR" type="Armor">
+		<!-- STR + 3. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38243" name="Party Mask" additionalName="DEX" type="Armor">
+		<!-- DEX + 3. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38244" name="Party Mask" additionalName="CON" type="Armor">
+		<!-- CON + 3. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38245" name="Party Mask" additionalName="MEN" type="Armor">
+		<!-- MEN + 3. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38246" name="Party Mask" additionalName="INT" type="Armor">
+		<!-- INT + 3. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38247" name="Party Mask" additionalName="WIT" type="Armor">
+		<!-- WIT + 3. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38248" name="Party Mask" additionalName="Critical Rate" type="Armor">
+		<!-- Critical Rate + 50. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38249" name="Party Mask" additionalName="Critical Damage" type="Armor">
+		<!-- Critical Damage + 90, M. Critical Damage + 68. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38250" name="Party Mask" additionalName="P. Def." type="Armor">
+		<!-- P. Def. + 5%. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38251" name="Party Mask" additionalName="M. Def." type="Armor">
+		<!-- M. Def. + 5%. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38252" name="Party Mask" additionalName="Evasion" type="Armor">
+		<!-- Evasion + 5. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38253" name="Party Mask" additionalName="P. Atk." type="Armor">
+		<!-- P. Atk. + 5%. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38254" name="Party Mask" additionalName="M. Atk." type="Armor">
+		<!-- M. Atk. + 10%. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38255" name="Party Mask" additionalName="Accuracy" type="Armor">
+		<!-- Accuracy + 5. -->
+		<set name="icon" val="icon.etc_party_mask_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38256" name="Monocle" additionalName="STR" type="Armor">
+		<!-- STR + 3. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38257" name="Monocle" additionalName="DEX" type="Armor">
+		<!-- DEX + 3. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38258" name="Monocle" additionalName="CON" type="Armor">
+		<!-- CON + 3. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38259" name="Monocle" additionalName="MEN" type="Armor">
+		<!-- MEN + 3. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38260" name="Monocle" additionalName="INT" type="Armor">
+		<!-- INT + 3. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38261" name="Monocle" additionalName="WIT" type="Armor">
+		<!-- WIT + 3. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38262" name="Monocle" additionalName="Critical Rate" type="Armor">
+		<!-- Critical Rate + 50. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38263" name="Monocle" additionalName="Critical Damage" type="Armor">
+		<!-- Critical Damage + 90, M. Critical Damage + 68. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38264" name="Monocle" additionalName="P. Def." type="Armor">
+		<!-- P. Def. + 5%. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38265" name="Monocle" additionalName="M. Def." type="Armor">
+		<!-- M. Def. + 5%. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38266" name="Monocle" additionalName="Evasion" type="Armor">
+		<!-- Evasion + 5. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38267" name="Monocle" additionalName="P. Atk." type="Armor">
+		<!-- P. Atk. + 5%. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38268" name="Monocle" additionalName="M. Atk." type="Armor">
+		<!-- M. Atk. + 10%. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38269" name="Monocle" additionalName="Accuracy" type="Armor">
+		<!-- Accuracy + 5. -->
+		<set name="icon" val="icon.accessory_glasses_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38270" name="Maiden's Hairpin" additionalName="STR" type="Armor">
+		<!-- STR + 3. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38271" name="Maiden's Hairpin" additionalName="DEX" type="Armor">
+		<!-- DEX + 3. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38272" name="Maiden's Hairpin" additionalName="CON" type="Armor">
+		<!-- CON + 3. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38273" name="Maiden's Hairpin" additionalName="MEN" type="Armor">
+		<!-- MEN + 3. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38274" name="Maiden's Hairpin" additionalName="INT" type="Armor">
+		<!-- INT + 3. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38275" name="Maiden's Hairpin" additionalName="WIT" type="Armor">
+		<!-- WIT + 3. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38276" name="Maiden's Hairpin" additionalName="Critical Rate" type="Armor">
+		<!-- Critical Rate + 50. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38277" name="Maiden's Hairpin" additionalName="Critical Damage" type="Armor">
+		<!-- Critical Damage + 90, M. Critical Damage + 68. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38278" name="Maiden's Hairpin" additionalName="P. Def." type="Armor">
+		<!-- P. Def. + 5%. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38279" name="Maiden's Hairpin" additionalName="M. Def." type="Armor">
+		<!-- M. Def. + 5%. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38280" name="Maiden's Hairpin" additionalName="Evasion" type="Armor">
+		<!-- Evasion + 5. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38281" name="Maiden's Hairpin" additionalName="P. Atk." type="Armor">
+		<!-- P. Atk. + 5%. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38282" name="Maiden's Hairpin" additionalName="M. Atk." type="Armor">
+		<!-- M. Atk. + 10%. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38283" name="Maiden's Hairpin" additionalName="Accuracy" type="Armor">
+		<!-- Accuracy + 5. Female only. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38284" name="Forget-me-not Hairpin" additionalName="STR" type="Armor">
+		<!-- STR + 3. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38285" name="Forget-me-not Hairpin" additionalName="DEX" type="Armor">
+		<!-- DEX + 3. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38286" name="Forget-me-not Hairpin" additionalName="CON" type="Armor">
+		<!-- CON + 3. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38287" name="Forget-me-not Hairpin" additionalName="MEN" type="Armor">
+		<!-- MEN + 3. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38288" name="Forget-me-not Hairpin" additionalName="INT" type="Armor">
+		<!-- INT + 3. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38289" name="Forget-me-not Hairpin" additionalName="WIT" type="Armor">
+		<!-- WIT + 3. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38290" name="Forget-me-not Hairpin" additionalName="Critical Rate" type="Armor">
+		<!-- Critical Rate + 50. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38291" name="Forget-me-not Hairpin" additionalName="Critical Damage" type="Armor">
+		<!-- Critical Damage + 90, M. Critical Damage + 68. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38292" name="Forget-me-not Hairpin" additionalName="P. Def." type="Armor">
+		<!-- P. Def. + 5%. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38293" name="Forget-me-not Hairpin" additionalName="M. Def." type="Armor">
+		<!-- M. Def. + 5%. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38294" name="Forget-me-not Hairpin" additionalName="Evasion" type="Armor">
+		<!-- Evasion + 5. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38295" name="Forget-me-not Hairpin" additionalName="P. Atk." type="Armor">
+		<!-- P. Atk. + 5%. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38296" name="Forget-me-not Hairpin" additionalName="M. Atk." type="Armor">
+		<!-- M. Atk. + 10%. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38297" name="Forget-me-not Hairpin" additionalName="Accuracy" type="Armor">
+		<!-- Accuracy + 5. Female only. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38298" name="Daisy Hairpin" additionalName="STR" type="Armor">
+		<!-- STR + 3. Female only. -->
+		<set name="icon" val="icon.accessory_daisy_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+	<item id="38299" name="Daisy Hairpin" additionalName="DEX" type="Armor">
+		<!-- DEX + 3. Female only. -->
+		<set name="icon" val="icon.accessory_daisy_hairpin_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+		<set name="price" val="25000" />
+	</item>
+</list>

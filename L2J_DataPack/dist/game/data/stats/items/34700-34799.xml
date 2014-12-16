@@ -1,0 +1,734 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="34700" name="Giant's Enchant Scroll Pack" additionalName="" type="EtcItem">
+		<!-- Item that is added to the Aden reconstruction renewal. It's functions have not materialized yet. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34701" name="Giant's Unbind Scroll Pack" additionalName="" type="EtcItem">
+		<!-- Item that is added to the Aden reconstruction renewal. It's functions have not materialized yet. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34702" name="Treasure Chest" additionalName="" type="EtcItem">
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34703" name="Hero's Treasure Chest" additionalName="" type="EtcItem">
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34704" name="Giant's Treasure Chest" additionalName="" type="EtcItem">
+		<set name="icon" val="icon.etc_pouch_gold_i00"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34705" name="Pirate's Eyepatch" additionalName="STR" type="Armor">
+		<!-- STR + 3 when equipped. -->
+		<set name="icon" val="icon.accessory_eye_bandage_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34706" name="Pirate's Eyepatch" additionalName="DEX" type="Armor">
+		<!-- DEX + 3 when equipped. -->
+		<set name="icon" val="icon.accessory_eye_bandage_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34707" name="Outlaw's Eyepatch" additionalName="CON" type="Armor">
+		<!-- CON + 3 when equipped. -->
+		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34708" name="Outlaw's Eyepatch" additionalName="MEN" type="Armor">
+		<!-- MEN + 3 when equipped. -->
+		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34709" name="Eyepatch" additionalName="INT" type="Armor">
+		<!-- INT + 3 when equipped. -->
+		<set name="icon" val="icon.Accessary_one_eye_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34710" name="Eyepatch" additionalName="WIT" type="Armor">
+		<!-- WIT + 3 when equipped. -->
+		<set name="icon" val="icon.Accessary_one_eye_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34711" name="Party Hat" additionalName="Critical Rate" type="Armor">
+		<!-- P. Critical Rate + 50 when equipped. -->
+		<set name="icon" val="icon.accessory_party_hat_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34712" name="Party Hat" additionalName="Critical Damage" type="Armor">
+		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
+		<set name="icon" val="icon.accessory_party_hat_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34713" name="Refined Angel Ring" additionalName="P. Def." type="Armor">
+		<!-- P. Def. + 5% when equipped. -->
+		<set name="icon" val="icon.accessory_angel_ring_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34714" name="Refined Angel Ring" additionalName="M. Def." type="Armor">
+		<!-- M. Def. + 5% when equipped. -->
+		<set name="icon" val="icon.accessory_angel_ring_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34715" name="Refined Angel Ring" additionalName="Evasion" type="Armor">
+		<!-- Evasion + 5 when equipped. -->
+		<set name="icon" val="icon.accessory_angel_ring_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34716" name="Refined Devil Horn" additionalName="P. Atk." type="Armor">
+		<!-- P. Atk. + 5% when equipped. -->
+		<set name="icon" val="icon.accessory_devil_horn_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34717" name="Refined Devil Horn" additionalName="M. Atk." type="Armor">
+		<!-- M. Atk. + 10% when equipped. -->
+		<set name="icon" val="icon.accessory_devil_horn_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34718" name="Refined Devil Horn" additionalName="Accuracy" type="Armor">
+		<!-- Accuracy + 5 when equipped. -->
+		<set name="icon" val="icon.accessory_devil_horn_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34719" name="Player Commendation - Apocalypse Dualsword (Earth)" additionalName="Damage Up (PC-exclusive)" type="Weapon">
+		<!-- Apocalypse Dualsword (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 332. Increases damage inflicted during PvP. Increases P. Critical Rate and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="155"/>
+		<for>
+			<add stat="pAtk" val="595.0"/>
+			<add stat="mAtk" val="226.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="34720" name="Player Commendation - Apocalypse Dualsword (Water)" additionalName="Damage Up (PC-exclusive)" type="Weapon">
+		<!-- Apocalypse Dualsword (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 332. Increases damage inflicted during PvP. Increases P. Critical Rate and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="155"/>
+		<for>
+			<add stat="pAtk" val="595.0"/>
+			<add stat="mAtk" val="226.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="34721" name="Player Commendation - Apocalypse Dualsword (Wind)" additionalName="Damage Up (PC-exclusive)" type="Weapon">
+		<!-- Apocalypse Dualsword (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 332. Increases damage inflicted during PvP. Increases P. Critical Rate and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="155"/>
+		<for>
+			<add stat="pAtk" val="595.0"/>
+			<add stat="mAtk" val="226.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="34722" name="Player Commendation - Apocalypse Dualsword (Fire)" additionalName="Damage Up (PC-exclusive)" type="Weapon">
+		<!-- Apocalypse Dualsword (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 332. Increases damage inflicted during PvP. Increases P. Critical Rate and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="155"/>
+		<for>
+			<add stat="pAtk" val="595.0"/>
+			<add stat="mAtk" val="226.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="34723" name="Player Commendation - Apocalypse Dualsword (Holy)" additionalName="Damage Up (PC-exclusive)" type="Weapon">
+		<!-- Apocalypse Dualsword (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 332. Increases damage inflicted during PvP. Increases P. Critical Rate and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="155"/>
+		<for>
+			<add stat="pAtk" val="595.0"/>
+			<add stat="mAtk" val="226.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="34724" name="Player Commendation - Apocalypse Dualsword (Dark)" additionalName="Damage Up (PC-exclusive)" type="Weapon">
+		<!-- Apocalypse Dualsword (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 332. Increases damage inflicted during PvP. Increases P. Critical Rate and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="155"/>
+		<for>
+			<add stat="pAtk" val="595.0"/>
+			<add stat="mAtk" val="226.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="34725" name="Player Commendation - Apocalypse Dual Dagger (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
+		<!-- Apocalypse Dual Dagger (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALDAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="205"/>
+		<for>
+			<add stat="pAtk" val="489.0"/>
+			<add stat="mAtk" val="226.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="34726" name="Player Commendation - Apocalypse Dual Dagger (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
+		<!-- Apocalypse Dual Dagger (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALDAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="205"/>
+		<for>
+			<add stat="pAtk" val="489.0"/>
+			<add stat="mAtk" val="226.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="34727" name="Player Commendation - Apocalypse Dual Dagger (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
+		<!-- Apocalypse Dual Dagger (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALDAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="205"/>
+		<for>
+			<add stat="pAtk" val="489.0"/>
+			<add stat="mAtk" val="226.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="34728" name="Player Commendation - Apocalypse Dual Dagger (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
+		<!-- Apocalypse Dual Dagger (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALDAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="205"/>
+		<for>
+			<add stat="pAtk" val="489.0"/>
+			<add stat="mAtk" val="226.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="34729" name="Player Commendation - Apocalypse Dual Dagger (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
+		<!-- Apocalypse Dual Dagger (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALDAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="205"/>
+		<for>
+			<add stat="pAtk" val="489.0"/>
+			<add stat="mAtk" val="226.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="34730" name="Player Commendation - Apocalypse Dual Dagger (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
+		<!-- Apocalypse Dual Dagger (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALDAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="205"/>
+		<for>
+			<add stat="pAtk" val="489.0"/>
+			<add stat="mAtk" val="226.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="34731" name="Sealed Power Shirt" additionalName="" type="Armor">
+		<!-- Sealed Power Shirt. Please note that after the transfer, if the seal on Power Shirt is removed, you can no longer use seal/unseal. -->
+		<set name="icon" val="BranchSys2.icon.7anni_shirt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130"/>
+	</item>
+	<item id="34732" name="Exchanged Power Shirt" additionalName="" type="Armor">
+		<!-- Power Shirt that has already been exchanged. Dimensional item.\nCan be enchanted to a max + 10 with Scroll: Enchant Power Shirts and Blessed Scroll: Enchant Power Shirts. -->
+		<set name="icon" val="BranchSys2.icon.7anni_shirt_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130"/>
+		<for>
+			<add stat="pDef" val="28.0"/>
+		</for>
+	</item>
+	<item id="34733" name="Pa'agrio's Box" additionalName="" type="EtcItem">
+		<!-- Box containing Pa'agrio's Shirt. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34734" name="Maphr's Box" additionalName="" type="EtcItem">
+		<!-- Box containing Maphr's Shirt. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34735" name="Sayha's Box" additionalName="" type="EtcItem">
+		<!-- Box containing Sayha's Shirt. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34736" name="Eva's Box" additionalName="" type="EtcItem">
+		<!-- Box containing Eva's Shirt. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34737" name="Pa'agrio's XL Box" additionalName="" type="EtcItem">
+		<!-- Box containing 4 Pa'agrio's Boxes and 1 Einhasad's Energy. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34738" name="Maphr's XL Box" additionalName="" type="EtcItem">
+		<!-- Box containing 4 Maphr's Boxes and 1 Einhasad's Energy. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34739" name="Sayha's XL Box" additionalName="" type="EtcItem">
+		<!-- Box containing 4 Sayha's Boxes and 1 Einhasad's Energy. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34740" name="Eva's XL Box" additionalName="" type="EtcItem">
+		<!-- Box containing 4 Eva's Boxes and 1 Einhasad's Energy. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34741" name="XP Bottle" additionalName="" type="EtcItem">
+		<!-- Agathion - XP Bottle's gift. Can exchange for an Scroll: XP through the Subclass Master Raina. -->
+		<set name="icon" val="icon.exp_bottle"/>
+		<set name="weight" val="5"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34742" name="Scroll: 500,000,000 XP" additionalName="" type="EtcItem">
+		<!-- Scroll that replenishes 500,000,000 XP. When used by characters below level 85, only 20% of the XP is replenished. Can be used by sub (dual) classes level 76 or above. -->
+		<set name="icon" val="icon.exp_bottle_scroll"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34743" name="Agathion - XP Bottle (10-hour)" additionalName="" type="Armor">
+		<!-- Bracelet that summons an Agathion - XP Bottle. The bracelet must be removed in order to seal an Agathion. After unequipping the bracelet, the XP bottle's divine power will not be felt for 10 seconds. -->
+		<set name="icon" val="icon.exp_bottle_agathion"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150"/>
+	</item>
+	<item id="34744" name="Agathion - XP Bottle (20-hour)" additionalName="" type="Armor">
+		<!-- Bracelet that summons an Agathion - XP Bottle. The bracelet must be removed in order to seal an Agathion. After unequipping the bracelet, the XP bottle's divine power will not be felt for 10 seconds. -->
+		<set name="icon" val="icon.exp_bottle_agathion"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150"/>
+	</item>
+	<item id="34745" name="Agathion - XP Bottle (30-hour)" additionalName="" type="Armor">
+		<!-- Bracelet that summons an Agathion - XP Bottle. The bracelet must be removed in order to seal an Agathion. After unequipping the bracelet, the XP bottle's divine power will not be felt for 10 seconds. -->
+		<set name="icon" val="icon.exp_bottle_agathion"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150"/>
+	</item>
+	<item id="34746" name="Agathion - XP Bottle (40-hour)" additionalName="" type="Armor">
+		<!-- Bracelet that summons an Agathion - XP Bottle. The bracelet must be removed in order to seal an Agathion. After unequipping the bracelet, the XP bottle's divine power will not be felt for 10 seconds. -->
+		<set name="icon" val="icon.exp_bottle_agathion"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150"/>
+	</item>
+	<item id="34747" name="Agathion - XP Bottle (50-hour)" additionalName="" type="Armor">
+		<!-- Bracelet that summons an Agathion - XP Bottle. The bracelet must be removed in order to seal an Agathion. After unequipping the bracelet, the XP bottle's divine power will not be felt for 10 seconds. -->
+		<set name="icon" val="icon.exp_bottle_agathion"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150"/>
+	</item>
+	<item id="34748" name="Agathion - XP Bottle (60-hour)" additionalName="" type="Armor">
+		<!-- Bracelet that summons an Agathion - XP Bottle. The bracelet must be removed in order to seal an Agathion. After unequipping the bracelet, the XP bottle's divine power will not be felt for 10 seconds. -->
+		<set name="icon" val="icon.exp_bottle_agathion"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150"/>
+	</item>
+	<item id="34749" name="Agathion - XP Bottle (70-hour)" additionalName="" type="Armor">
+		<!-- Bracelet that summons an Agathion - XP Bottle. The bracelet must be removed in order to seal an Agathion. After unequipping the bracelet, the XP bottle's divine power will not be felt for 10 seconds. -->
+		<set name="icon" val="icon.exp_bottle_agathion"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150"/>
+	</item>
+	<item id="34750" name="Agathion - XP Bottle (80-hour)" additionalName="" type="Armor">
+		<!-- Bracelet that summons an Agathion - XP Bottle. The bracelet must be removed in order to seal an Agathion. After unequipping the bracelet, the XP bottle's divine power will not be felt for 10 seconds. -->
+		<set name="icon" val="icon.exp_bottle_agathion"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150"/>
+	</item>
+	<item id="34751" name="Agathion - XP Bottle Pack (10-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - XP Bottle (10-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34752" name="Agathion - XP Bottle Pack (20-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - XP Bottle (20-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34753" name="Agathion - XP Bottle Pack (30-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - XP Bottle (30-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i01"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34754" name="Agathion - XP Bottle Pack (40-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - XP Bottle (40-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i01"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34755" name="Agathion - XP Bottle Pack (50-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - XP Bottle (50-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34756" name="Agathion - XP Bottle Pack (60-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - XP Bottle (60-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34757" name="Agathion - XP Bottle Pack (70-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - XP Bottle (70-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34758" name="Agathion - XP Bottle Pack (80-hour)" additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - XP Bottle (80-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34759" name="Mentee Headphone" additionalName="" type="Armor">
+		<!-- Hair accessory acquired by mentees. When equipped, there is a great effect that show that you are a mentee. -->
+		<set name="icon" val="BranchSys.icon.br_headphone_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10"/>
+	</item>
+	<item id="34760" name="Mentee Certificate Pack" additionalName="" type="EtcItem">
+		<!-- Dimensional Item Pack\nContains a Mentee Certificate, a Mentoring Guidebook, and a Mentee Headphone. Only 1 per account. Cannot be shared once opened. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34761" name="Fearsome Firecracker" additionalName="Campaign" type="EtcItem">
+		<!-- Firecracker that make a great bang. When used on the colony of bats on Fantasy Isle it will frighten them. WARNING: Excessive use may result in temporary hallucinogenic effects. -->
+		<set name="icon" val="icon.etc_small_ultra_bomb_i00"/>
+		<set name="weight" val="120"/>
+		<set name="price" val="200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34762" name="Tersi's Holy Water" additionalName="Campaign" type="EtcItem">
+		<!-- Holy water that can purify the Dwarf Corpse. -->
+		<set name="icon" val="icon.etc_holy_grail_i00"/>
+		<set name="weight" val="120"/>
+		<set name="price" val="200" />
+	</item>
+	<item id="34763" name="Tama Herb" additionalName="Campaign" type="EtcItem">
+		<!-- Bring it to Herbologist Pobre who is in the Ruins of Agony and Ruins of Despair. -->
+		<set name="icon" val="icon.tama_poisonous_plant"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34764" name="Purified Soul" additionalName="" type="EtcItem">
+		<!-- Purified Dwarf's Soul -->
+		<set name="icon" val="icon.etc_jewel_gold_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34765" name="Remnant Ashes" additionalName="" type="EtcItem">
+		<!-- Item obtained after defeating all the monsters in the Shrine of Loyalty. Collect an adequate amount and bring them to the Elmorean scholar Gerkenshtein in the Shrine of Loyalty. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34766" name="Succubus Essence" additionalName="" type="EtcItem">
+		<!-- Essence obtained after eliminating a Bloody Succubus from the Shrine of Loyalty. Bring it to the Elmorean scholar Gerkenshtein in the Shrine of Loyalty. -->
+		<set name="icon" val="icon.etc_crystal_ball_red_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34767" name="Gerkenshtein's Report" additionalName="" type="EtcItem">
+		<!-- Investigation report from the Elmorean scholar Gerkenshtein to Captain Andrei in the Town of Goddard. Double-click on it for more information. -->
+		<set name="icon" val="icon.etc_spell_books_red_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34768" name="Dimensional Fragment" additionalName="" type="EtcItem">
+		<!-- Fragment piece obtained after eliminating the evil creatures that suddenly appeared in the Shrine of Loyalty. Bring it to Goddard Vanguard Sirik in the Shrine of Loyalty. -->
+		<set name="icon" val="icon.etc_broken_crystal_blue_i00"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34769" name="Relics of the Empire" additionalName="" type="EtcItem">
+		<!-- Ancient relics that are being collected by the monsters that have appeared in the Imperial Tomb. Bring them to Vice Hierarch Zenya in the Imperial Tomb. -->
+		<set name="icon" val="icon.etc_piece_holy_light"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34770" name="Pa'agrio's Shirt" additionalName="Event" type="Armor">
+		<!-- Magic shirt filled with the power of Pa'agrio, the god of fire. Can be enchanted to + 10 using Scroll: Enchant Elemental Shirt. When enchanted above + 7, can remove abnormal conditions and use the ultimate invincibility skill for a certain amount of time. -->
+		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_fire"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130"/>
+		<for>
+			<add stat="pDef" val="28.0"/>
+		</for>
+	</item>
+	<item id="34771" name="Sayha's Shirt" additionalName="Event" type="Armor">
+		<!-- Magic shirt filled with the power of Sayha, the god of wind. Can be enchanted to + 10 using Scroll: Enchant Elemental Shirt. When enchanted above + 7, can use a portal teleport skill that allows you to create a portal at a selected location and teleport to that portal (cannot be used in the Olympiad). -->
+		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_wind"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130"/>
+		<for>
+			<add stat="pDef" val="28.0"/>
+		</for>
+	</item>
+	<item id="34772" name="Eva's Shirt" additionalName="Event" type="Armor">
+		<!-- Magic shirt filled with the power of Eva, the goddess of water. Can be enchanted to + 10 using Scroll: Enchant Elemental Shirt. When enchanted above + 7, can use HP, MP, and recovering CP skills. -->
+		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_water"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130"/>
+		<for>
+			<add stat="pDef" val="28.0"/>
+		</for>
+	</item>
+	<item id="34773" name="Maphr's Shirt" additionalName="Event" type="Armor">
+		<!-- Magic shirt filled with the power of Maphr, the goddess of earth. Can be enchanted to + 10 using Scroll: Enchant Elemental Shirt. When enchanted above + 7 and equipped, the enchant success rate is increased. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_earth"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="130"/>
+		<for>
+			<add stat="pDef" val="28.0"/>
+		</for>
+	</item>
+	<item id="34774" name="Scroll of Blessing (R1-grade)" additionalName="Event" type="EtcItem">
+		<!-- The Blacksmith of Mammon can exchange standard Requiem or Immortal equipment for Blessed equipment. Small fee is charged. -->
+		<set name="icon" val="icon.bless_scroll_r1"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34775" name="Scroll of Blessing (R2-grade)" additionalName="Event" type="EtcItem">
+		<!-- The Blacksmith of Mammon can exchange standard Apocalypse or Twilight equipment for Blessed equipment. Small fee is charged. -->
+		<set name="icon" val="icon.bless_scroll_r2"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34776" name="Scroll of Blessing (R95-grade)" additionalName="Event" type="EtcItem">
+		<!-- The Blacksmith of Mammon can exchange standard Specter or Seraph equipment for Blessed equipment. Small fee is charged. -->
+		<set name="icon" val="icon.bless_scroll_r95"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34777" name="Scroll of Blessing (R99-grade)" additionalName="Event" type="EtcItem">
+		<!-- The Blacksmith of Mammon can exchange standard Amaranthine or Eternal equipment for Blessed equipment. Small fee is charged. -->
+		<set name="icon" val="icon.bless_scroll_r99"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34778" name="Squash Ring (Warrior)" additionalName="Event" type="Armor">
+		<!-- Squash ring, warrior-type. Increases P. Critical Damage by 15% and P. Accuracy by 2. 15-day. When two identical rings are equipped, only one effect is applied. -->
+		<set name="icon" val="icon.accessory_ring_of_gourd_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="62.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="34779" name="Squash Earring (Warrior)" additionalName="Event" type="Armor">
+		<!-- Squash earring, warrior-type. Increases Atk. Spd. by 4% and Speed by 5. 15-day. When two identical earrings are equipped, only one effect is applied. -->
+		<set name="icon" val="icon.accessory_earring_of_gourd_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="92.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="34780" name="Squash Necklace" additionalName="Event" type="Armor">
+		<!-- Squash necklace. Increases Sleep/Paralysis/Stun/Poison/Bleed Resistance and attack rate by 20%. Decreases skill cooldown and skill MP consumption by 5%. 15-day. -->
+		<set name="icon" val="icon.accessory_necklace_of_gourd_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="S"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="123.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="34781" name="Blessed Scroll of Resurrection" additionalName="Event" type="EtcItem">
+		<!-- Magic scroll that resurrects a dead character and restores his or her XP completely. -->
+		<set name="icon" val="icon.etc_scroll_of_resurrection_i01"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34782" name="Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at + 4, P. Def. Increases by 3 and a HP bonus is granted. Enchanting is safe up to + 3, but one-piece body armor can be safely enchanted up to + 4. -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34783" name="Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. -->
+		<set name="icon" val="icon.scroll_of_enchant_armor_i06"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34784" name="Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34785" name="Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases at + 4. All amounts are increased for blessed weapons. -->
+		<set name="icon" val="icon.scroll_of_enchant_weapon_i06"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34786" name="Blessed Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at + 4, P. Def. Increases by 3. Enchanting is safe up to + 3, but one-piece body armor can be safely enchanted up to + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Starting at + 4, HP increases according to the enchanting and the enchant value. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34787" name="Blessed Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Def. + 2 for R-grade armor and accessories. Greatly increased starting at + 4. Can be enhanced safely to + 3. When enhanced + 4 or more, HP also increases according to the enchant value. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
+		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34788" name="Blessed Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. Starting at + 4, P. Atk. and M. Atk. bonus double. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34789" name="Blessed Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- P. Atk. + 6 for R-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. + 7 for two-handed sword, two-handed blunt, dualsword, and two-handed fist weapon, and crossbow. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk. and M. Atk. greatly increases starting at + 4. For blessed weapons, all stats increases more than normal weapons. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
+		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34790" name="Fire Stone" additionalName="Event" type="EtcItem">
+		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<set name="icon" val="icon.etc_fire_stone_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34791" name="Water Stone" additionalName="Event" type="EtcItem">
+		<!-- Water attack attribute increases by 5 when bestowed on a weapon. Fire Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<set name="icon" val="icon.etc_water_stone_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34792" name="Earth Stone" additionalName="Event" type="EtcItem">
+		<!-- Earth attack attribute increases by 5 when bestowed on a weapon. Wind Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<set name="icon" val="icon.etc_earth_stone_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34793" name="Wind Stone" additionalName="Event" type="EtcItem">
+		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<set name="icon" val="icon.etc_wind_stone_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34794" name="Dark Stone" additionalName="Event" type="EtcItem">
+		<!-- Dark attack attribute increases by 5 when bestowed on a weapon. Holy Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<set name="icon" val="icon.etc_unholy_stone_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34795" name="Holy Stone" additionalName="Event" type="EtcItem">
+		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Dark Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<set name="icon" val="icon.etc_holy_stone_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34796" name="Fire Crystal" additionalName="Event" type="EtcItem">
+		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<set name="icon" val="icon.etc_fire_crystal_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34797" name="Water Crystal" additionalName="Event" type="EtcItem">
+		<!-- Water attack attribute increases by 5 when bestowed on a weapon. Fire Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<set name="icon" val="icon.etc_water_crystal_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34798" name="Earth Crystal" additionalName="Event" type="EtcItem">
+		<!-- Earth attack attribute increases by 5 when bestowed on a weapon. Wind Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<set name="icon" val="icon.etc_earth_crystal_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="34799" name="Wind Crystal" additionalName="Event" type="EtcItem">
+		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<set name="icon" val="icon.etc_wind_crystal_i00"/>
+		<set name="weight" val="1"/>
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

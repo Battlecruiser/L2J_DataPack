@@ -1,0 +1,1239 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="33900" name="Immortal Circlet" additionalName="Robe (Event)" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.armor_circlet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="530"/>
+		<for>
+			<add stat="pDef" val="114.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33901" name="Immortal Tunic" additionalName="Robe (Event)" type="Armor">
+		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
+		<set name="icon" val="icon.armor_t503_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1750"/>
+		<for>
+			<add stat="pDef" val="167.0"/>
+			<add stat="mDef" val="36.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="33902" name="Immortal Stockings" additionalName="Robe (Event)" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.armor_t503_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="850"/>
+		<for>
+			<add stat="pDef" val="104.0"/>
+			<add stat="mDef" val="24.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="33903" name="Immortal Gloves" additionalName="Robe (Event)" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.armor_t503_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="510"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33904" name="Immortal Shoes" additionalName="Robe (Event)" type="Armor">
+		<!-- Bestows a magic or recovery type set option. -->
+		<set name="icon" val="icon.armor_t503_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1070"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33905" name="Immortal Sigil" additionalName="Robe (Event)" type="Armor">
+		<set name="icon" val="icon.weapon_karyen_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="920"/>
+		<for>
+			<add stat="pDef" val="19.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33906" name="Immortal Necklace" additionalName="Event" type="Armor">
+		<!-- Immortal Necklace. MP + 53 effect. -->
+		<set name="icon" val="icon.r1_necklace_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="123.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="33907" name="Immortal Earring" additionalName="Event" type="Armor">
+		<!-- Immortal Earring. MP + 40 effect. -->
+		<set name="icon" val="icon.r1_earring_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="92.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="33908" name="Immortal Ring" additionalName="Event" type="Armor">
+		<!-- Immortal Ring. MP + 26 effect. -->
+		<set name="icon" val="icon.r1_ring_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="150"/>
+		<for>
+			<add stat="mDef" val="62.0"/>
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="33909" name="Requiem Shaper" additionalName="Guidance (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.6. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_aspeda_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="DAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="369.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="33910" name="Requiem Shaper" additionalName="Haste (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_aspeda_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="DAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="369.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="33911" name="Requiem Shaper" additionalName="Focus (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nCritical increases by 82.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_aspeda_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="DAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="369.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="33912" name="Requiem Cutter" additionalName="Haste (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_estia_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="422.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33913" name="Requiem Cutter" additionalName="Focus (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_estia_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="422.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33914" name="Requiem Cutter" additionalName="Health (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_estia_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="422.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33915" name="Requiem Slasher" additionalName="Focus (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_polion_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1740"/>
+		<for>
+			<add stat="pAtk" val="514.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33916" name="Requiem Slasher" additionalName="Damage Up (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nP. Atk. + 288. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_polion_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1740"/>
+		<for>
+			<add stat="pAtk" val="514.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33917" name="Requiem Slasher" additionalName="Haste (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_polion_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1740"/>
+		<for>
+			<add stat="pAtk" val="514.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33918" name="Requiem Avenger" additionalName="Haste (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_batista_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1740"/>
+		<for>
+			<add stat="pAtk" val="422.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33919" name="Requiem Avenger" additionalName="Critical Damage (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by 1108 during a Critical Attack. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_batista_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1740"/>
+		<for>
+			<add stat="pAtk" val="422.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33920" name="Requiem Avenger" additionalName="Focus (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_batista_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1740"/>
+		<for>
+			<add stat="pAtk" val="422.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33921" name="Requiem Fighter" additionalName="Focus (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nCritical increases by 76.3. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_fantasma_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALFIST"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1550"/>
+		<for>
+			<add stat="pAtk" val="514.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33922" name="Requiem Fighter" additionalName="Damage Up (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nP. Atk. + 288. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_fantasma_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALFIST"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1550"/>
+		<for>
+			<add stat="pAtk" val="514.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33923" name="Requiem Fighter" additionalName="Haste (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_fantasma_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALFIST"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1550"/>
+		<for>
+			<add stat="pAtk" val="514.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33924" name="Requiem Stormer" additionalName="HP Drain (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nAbsorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.weapon_soryu_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="POLE"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="2010"/>
+		<for>
+			<add stat="pAtk" val="422.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33925" name="Requiem Stormer" additionalName="Guidance (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.6. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_soryu_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="POLE"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="2010"/>
+		<for>
+			<add stat="pAtk" val="422.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33926" name="Requiem Stormer" additionalName="Damage Up (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nP. Atk. + 288. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_soryu_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="POLE"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="2010"/>
+		<for>
+			<add stat="pAtk" val="422.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33927" name="Requiem Thrower" additionalName="Damage Up (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nP. Atk. + 288. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_grabathus_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BOW"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="831.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="33928" name="Requiem Thrower" additionalName="Focus (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_grabathus_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BOW"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="831.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="33929" name="Requiem Thrower" additionalName="Long Blow (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases the attack range. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_grabathus_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BOW"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="831.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="293.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="33930" name="Requiem Shooter" additionalName="Focus (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_shyayaka_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="CROSSBOW"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1580"/>
+		<for>
+			<add stat="pAtk" val="748.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="33931" name="Requiem Shooter" additionalName="Critical Slow (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nHas a chance of casting Slow on the target during a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_shyayaka_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="CROSSBOW"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1580"/>
+		<for>
+			<add stat="pAtk" val="748.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="33932" name="Requiem Shooter" additionalName="Haste (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_shyayaka_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="CROSSBOW"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1580"/>
+		<for>
+			<add stat="pAtk" val="748.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="33933" name="Requiem Buster" additionalName="Acumen (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_kaynon_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="338.0"/>
+			<add stat="mAtk" val="245.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33934" name="Requiem Buster" additionalName="Magic Hold (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nHas a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_kaynon_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="338.0"/>
+			<add stat="mAtk" val="245.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33935" name="Requiem Buster" additionalName="Mana Up (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_kaynon_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="338.0"/>
+			<add stat="mAtk" val="245.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33936" name="Requiem Caster" additionalName="Empower (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nM. Atk. + 296. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_anatrian_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1080"/>
+		<for>
+			<add stat="pAtk" val="338.0"/>
+			<add stat="mAtk" val="245.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33937" name="Requiem Caster" additionalName="Acumen (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_anatrian_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1080"/>
+		<for>
+			<add stat="pAtk" val="338.0"/>
+			<add stat="mAtk" val="245.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33938" name="Requiem Caster" additionalName="Magic Hold (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nHas a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_anatrian_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1080"/>
+		<for>
+			<add stat="pAtk" val="338.0"/>
+			<add stat="mAtk" val="245.0" />
+			<add stat="pAtkSpd" val="379.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33939" name="Requiem Retributer" additionalName="MP Regeneration (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases MP Recovery Rate. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_grangkaz_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1080"/>
+		<for>
+			<add stat="pAtk" val="411.0"/>
+			<add stat="mAtk" val="270.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="accMagic" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33940" name="Requiem Retributer" additionalName="Acumen (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_grangkaz_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1080"/>
+		<for>
+			<add stat="pAtk" val="411.0"/>
+			<add stat="mAtk" val="270.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="accMagic" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33941" name="Requiem Retributer" additionalName="Empower (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nM. Atk. + 296. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_grangkaz_i01"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="BLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1080"/>
+		<for>
+			<add stat="pAtk" val="411.0"/>
+			<add stat="mAtk" val="270.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="accMagic" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33942" name="Requiem Dualsword" additionalName="Haste (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="514.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33943" name="Requiem Dualsword" additionalName="Damage Up (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nP. Atk. + 288. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="514.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33944" name="Requiem Dualsword" additionalName="Health (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUAL"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1520"/>
+		<for>
+			<add stat="pAtk" val="514.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="rCrit" val="8.0" />
+		</for>
+	</item>
+	<item id="33945" name="Requiem Dual Dagger" additionalName="Damage Up (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nP. Atk. + 288. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALDAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="2050"/>
+		<for>
+			<add stat="pAtk" val="422.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="33946" name="Requiem Dual Dagger" additionalName="Focus (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALDAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="2050"/>
+		<for>
+			<add stat="pAtk" val="422.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="33947" name="Requiem Dual Dagger" additionalName="Guidance (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.6. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALDAGGER"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="2050"/>
+		<for>
+			<add stat="pAtk" val="422.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="433.0" />
+			<add stat="rCrit" val="12.0" />
+		</for>
+	</item>
+	<item id="33948" name="Requiem Dual Blunt Weapon" additionalName="Focus (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Skill Power. Increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualblunt_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALBLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1740"/>
+		<for>
+			<add stat="pAtk" val="514.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33949" name="Requiem Dual Blunt Weapon" additionalName="Guidance (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.6. Increases damage inflicted during PvP. Increases P. Skill Power. Increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualblunt_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALBLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1740"/>
+		<for>
+			<add stat="pAtk" val="514.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33950" name="Requiem Dual Blunt Weapon" additionalName="Damage Up (Event)" type="Weapon">
+		<!-- (Soul Crystal Enhancement)\nP. Atk. + 288. Increases damage inflicted during PvP. Increases P. Skill Power. Increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_r_dualblunt_i21"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand"/>
+		<set name="weapon_type" val="DUALBLUNT"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1740"/>
+		<for>
+			<add stat="pAtk" val="514.0"/>
+			<add stat="mAtk" val="186.0" />
+			<add stat="pAtkSpd" val="325.0" />
+			<add stat="accCombat" val="8.0" />
+			<add stat="rCrit" val="6.0" />
+		</for>
+	</item>
+	<item id="33951" name="Immortal Helmet" additionalName="Attack Type / Heavy (Event)" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="530"/>
+		<for>
+			<add stat="pDef" val="114.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33952" name="Immortal Breastplate" additionalName="Attack Type / Heavy (Event)" type="Armor">
+		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.armor_t501_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="7520"/>
+		<for>
+			<add stat="pDef" val="304.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33953" name="Immortal Gaiters" additionalName="Attack Type / Heavy (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t501_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="3170"/>
+		<for>
+			<add stat="pDef" val="190.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33954" name="Immortal Gauntlets" additionalName="Attack Type / Heavy (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t501_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="510"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33955" name="Immortal Boots" additionalName="Attack Type / Heavy (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t501_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1070"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33956" name="Immortal Shield" additionalName="Attack Type / Heavy (Event)" type="Weapon">
+		<!-- Additionally increases Shield Defense. -->
+		<set name="icon" val="icon.weapon_sacon_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1130"/>
+		<for>
+			<add stat="sDef" val="415.0" />
+			<add stat="rShld" val="20.0" />
+		</for>
+	</item>
+	<item id="33957" name="Immortal Leather Helmet" additionalName="Assassin Type / Light (Event)" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="530"/>
+		<for>
+			<add stat="pDef" val="114.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33958" name="Immortal Leather Armor" additionalName="Assassin Type / Light (Event)" type="Armor">
+		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<set name="icon" val="icon.armor_t502_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="4140"/>
+		<for>
+			<add stat="pDef" val="243.0"/>
+			<add stat="rEvas" val="5.0" />
+			<add stat="rMagicEvas" val="5.0" />
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33959" name="Immortal Leather Leggings" additionalName="Assassin Type / Light (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t502_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1320"/>
+		<for>
+			<add stat="pDef" val="152.0"/>
+			<add stat="rEvas" val="3.0" />
+			<add stat="rMagicEvas" val="3.0" />
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33960" name="Immortal Leather Gloves" additionalName="Assassin Type / Light (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t502_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="510"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33961" name="Immortal Leather Boots" additionalName="Assassin Type / Light (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t502_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1070"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33962" name="Immortal Circlet" additionalName="Magic Type / Robe (Event)" type="Armor">
+		<set name="icon" val="icon.armor_circlet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="530"/>
+		<for>
+			<add stat="pDef" val="114.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33963" name="Immortal Tunic" additionalName="Magic Type / Robe (Event)" type="Armor">
+		<!-- When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
+		<set name="icon" val="icon.armor_t503_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1750"/>
+		<for>
+			<add stat="pDef" val="167.0"/>
+			<add stat="mDef" val="36.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="33964" name="Immortal Stockings" additionalName="Magic Type / Robe (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t503_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="850"/>
+		<for>
+			<add stat="pDef" val="104.0"/>
+			<add stat="mDef" val="24.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="33965" name="Immortal Gloves" additionalName="Magic Type / Robe (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t503_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="510"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33966" name="Immortal Shoes" additionalName="Magic Type / Robe (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t503_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1070"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33967" name="Immortal Helmet" additionalName="Defense Type / Heavy (Event)" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="530"/>
+		<for>
+			<add stat="pDef" val="114.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33968" name="Immortal Breastplate" additionalName="Defense Type / Heavy (Event)" type="Armor">
+		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.armor_t501_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="7520"/>
+		<for>
+			<add stat="pDef" val="304.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33969" name="Immortal Gaiters" additionalName="Defense Type / Heavy (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t501_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="3170"/>
+		<for>
+			<add stat="pDef" val="190.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33970" name="Immortal Gauntlets" additionalName="Defense Type / Heavy (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t501_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="510"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33971" name="Immortal Boots" additionalName="Defense Type / Heavy (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t501_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1070"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33972" name="Immortal Shield" additionalName="Defense Type / Heavy (Event)" type="Weapon">
+		<!-- Additionally increases Shield Defense. -->
+		<set name="icon" val="icon.weapon_sacon_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1130"/>
+		<for>
+			<add stat="sDef" val="415.0" />
+			<add stat="rShld" val="20.0" />
+		</for>
+	</item>
+	<item id="33973" name="Immortal Leather Helmet" additionalName="Enchant Type / Light (Event)" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="530"/>
+		<for>
+			<add stat="pDef" val="114.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33974" name="Immortal Leather Armor" additionalName="Enchant Type / Light (Event)" type="Armor">
+		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<set name="icon" val="icon.armor_t502_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="4140"/>
+		<for>
+			<add stat="pDef" val="243.0"/>
+			<add stat="rEvas" val="5.0" />
+			<add stat="rMagicEvas" val="5.0" />
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33975" name="Immortal Leather Leggings" additionalName="Enchant Type / Light (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t502_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1320"/>
+		<for>
+			<add stat="pDef" val="152.0"/>
+			<add stat="rEvas" val="3.0" />
+			<add stat="rMagicEvas" val="3.0" />
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33976" name="Immortal Leather Gloves" additionalName="Enchant Type / Light (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t502_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="510"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33977" name="Immortal Leather Boots" additionalName="Enchant Type / Light (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t502_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1070"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33978" name="Immortal Circlet" additionalName="Recovery Type / Robe (Event)" type="Armor">
+		<set name="icon" val="icon.armor_circlet_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="530"/>
+		<for>
+			<add stat="pDef" val="114.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33979" name="Immortal Tunic" additionalName="Recovery Type / Robe (Event)" type="Armor">
+		<!-- When enchanted to + 4, increases M. Evasion and Resistance to Mental Attacks. -->
+		<set name="icon" val="icon.armor_t503_u_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1750"/>
+		<for>
+			<add stat="pDef" val="167.0"/>
+			<add stat="mDef" val="36.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="33980" name="Immortal Stockings" additionalName="Recovery Type / Robe (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t503_l_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="850"/>
+		<for>
+			<add stat="pDef" val="104.0"/>
+			<add stat="mDef" val="24.0"/>
+			<enchant stat="pDef" val="0" />
+			<enchant stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="33981" name="Immortal Gloves" additionalName="Recovery Type / Robe (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t503_g_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="510"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33982" name="Immortal Shoes" additionalName="Recovery Type / Robe (Event)" type="Armor">
+		<set name="icon" val="icon.armor_t503_b_i00"/>
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="R"/>
+		<set name="weight" val="1070"/>
+		<for>
+			<add stat="pDef" val="76.0"/>
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="33983" name="Lv. 5 Giant STR Dye" additionalName="STR + 5 / DEX + 1 (Event)" type="EtcItem">
+		<!-- Lv. 5 Giant STR Dye (Str + 5 Dex -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_1_dye_str"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33984" name="Lv. 5 Giant DEX Dye" additionalName="DEX + 5 / CON -1 (Event)" type="EtcItem">
+		<!-- Lv. 5 Giant DEX Dye (Dex + 5 Con -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_1_dye_dex"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33985" name="Lv. 5 Giant CON Dye" additionalName="CON + 5 / STR -1 (Event)" type="EtcItem">
+		<!-- Lv. 5 Giant CON Dye (Con + 5 Str -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_1_dye_con"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33986" name="Lv. 5 Giant INT Dye" additionalName="INT + 5 / WIT + 1 (Event)" type="EtcItem">
+		<!-- Lv. 5 Giant INT Dye (Int + 5 Wit -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_1_dye_int"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33987" name="Lv. 5 Giant WIT Dye" additionalName="Wit + 5 Men -1 (Event)" type="EtcItem">
+		<!-- Lv. 5 Giant WIT Dye (Wit + 5 Men -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_1_dye_wit"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33988" name="Lv. 5 Giant MEN Dye" additionalName="MEN + 5 / INT + 1 (Event)" type="EtcItem">
+		<!-- Lv. 5 Giant MEN Dye (Men + 5 Int -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_1_dye_men"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33989" name="Lv. 5 Ancient STR Dye" additionalName="STR + 5 / DEX - 1 / Fire Resistance + 25 (Event)" type="EtcItem">
+		<!-- Lv. 5 Ancient STR Dye (Str + 5 Dex -1 Fire Resistance + 25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_2_dye_str"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33990" name="Lv. 5 Ancient DEX Dye" additionalName="DEX + 5 / CON - 1 / Earth Resistance + 25 (Event)" type="EtcItem">
+		<!-- Lv. 5 Ancient DEX Dye (Dex + 5 Con -1 Earth Resistance + 25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_2_dye_dex"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33991" name="Lv. 5 Ancient CON Dye" additionalName="CON + 5 / STR - 1 / Dark Resistance + 25 (Event)" type="EtcItem">
+		<!-- Lv. 5 Ancient CON Dye (Con + 5 Str -1 Dark Resistance + 25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_2_dye_con"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33992" name="Lv. 5 Ancient INT Dye" additionalName="INT + 5 / WIT - 1 / Water Resistance + 25 (Event)" type="EtcItem">
+		<!-- Lv. 5 Ancient INT Dye (Int + 5 Wit -1 Water Resistance + 25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_2_dye_int"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33993" name="Lv. 5 Ancient WIT Dye" additionalName="WIT + 5 / MEN - 1 / Wind Resistance + 25 (Event)" type="EtcItem">
+		<!-- Lv. 5 Ancient WIT Dye (Wit + 5 Men -1 Wind Resistance + 25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_2_dye_wit"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33994" name="Lv. 5 Ancient MEN Dye" additionalName="MEN + 5 / INT - 1 / Holy Resistance + 25 (Event)" type="EtcItem">
+		<!-- Lv. 5 Ancient MEN Dye (Men + 5 Int -1 Holy Resistance + 25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_2_dye_men"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33995" name="Lv. 5 Legendary STR Dye" additionalName="STR + 5 / DEX + 1 / Fire Resistance + 25 (Event)" type="EtcItem">
+		<!-- Lv. 5 Legendary STR Dye (Str + 5 Dex + 1 Fire Resistance + 25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_3_dye_str"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33996" name="Lv. 5 Legendary DEX Dye" additionalName="DEX + 5 / CON + 1 / Earth Resistance + 25 (Event)" type="EtcItem">
+		<!-- Lv. 5 Legendary DEX Dye (Dex + 5 Con + 1 Earth Resistance + 25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_3_dye_dex"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33997" name="Lv. 5 Legendary CON Dye" additionalName="CON + 5 / STR + 1 / Dark Resistance + 25 (Event)" type="EtcItem">
+		<!-- Lv. 5 Legendary CON Dye (Con + 5 Str + 1 Dark Resistance + 25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_3_dye_con"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33998" name="Lv. 5 Legendary INT Dye" additionalName="INT + 5 / WIT + 1 / Water Resistance + 25 (Event)" type="EtcItem">
+		<!-- Lv. 5 Legendary INT Dye (Int + 5 Wit + 1 Water Resistance + 25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_3_dye_int"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33999" name="Lv. 5 Legendary WIT Dye" additionalName="WIT + 5 / MEN + 1 / Wind Resistance + 25 (Event)" type="EtcItem">
+		<!-- Lv. 5 Legendary WIT Dye (Wit + 5 Men + 1 Wind Resistance + 25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<set name="icon" val="icon.lv5_3_dye_wit"/>
+		<set name="weight" val="150"/>
+		<set name="is_stackable" val="true" />
+	</item>
+</list>
