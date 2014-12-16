@@ -133,11 +133,11 @@ public class AdminExpSp implements IAdminCommandHandler
 		String exp = st.nextToken();
 		String sp = st.nextToken();
 		long expval = 0;
-		int spval = 0;
+		long spval = 0;
 		try
 		{
 			expval = Long.parseLong(exp);
-			spval = Integer.parseInt(sp);
+			spval = Long.parseLong(sp);
 		}
 		catch (Exception e)
 		{
