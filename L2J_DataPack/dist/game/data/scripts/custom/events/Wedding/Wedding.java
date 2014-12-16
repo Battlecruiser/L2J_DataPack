@@ -21,7 +21,6 @@ package custom.events.Wedding;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.instancemanager.CoupleManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -32,6 +31,7 @@ import com.l2jserver.gameserver.model.skills.CommonSkill;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * Wedding AI.
@@ -153,7 +153,7 @@ public final class Wedding extends AbstractNpcAI
 						partner.doCast(skill);
 					}
 					
-					Announcements.getInstance().announceToAll("Congratulations to " + player.getName() + " and " + partner.getName() + "! They have been married.");
+					Broadcast.toAllOnlinePlayers("Congratulations to " + player.getName() + " and " + partner.getName() + "! They have been married.");
 					
 					htmltext = sendHtml(partner, "Accepted.html", null, null);
 				}

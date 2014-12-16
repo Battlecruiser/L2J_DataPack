@@ -1305,13 +1305,14 @@ public final class Kamaloka extends Quest
 	 */
 	private static final void removeBuffs(L2Character ch)
 	{
-		Function<BuffInfo, Boolean> removeBuffs = info ->
+		final Function<BuffInfo, Boolean> removeBuffs = info ->
 		{
 			if ((info != null) && !info.getSkill().isStayAfterDeath() && (Arrays.binarySearch(BUFFS_WHITELIST, info.getSkill().getId()) < 0))
 			{
 				info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
+				return true;
 			}
-			return true;
+			return false;
 		};
 		
 		ch.getEffectList().forEach(removeBuffs, false);

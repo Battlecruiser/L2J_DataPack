@@ -22,13 +22,13 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.StringTokenizer;
 
-import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
+import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * @author UnAfraid
@@ -50,7 +50,7 @@ public class ChatsHandler implements ITelnetHandler
 			try
 			{
 				command = command.substring(9);
-				Announcements.getInstance().announceToAll(command);
+				Broadcast.toAllOnlinePlayers(command);
 				_print.println("Announcement Sent!");
 			}
 			catch (StringIndexOutOfBoundsException e)

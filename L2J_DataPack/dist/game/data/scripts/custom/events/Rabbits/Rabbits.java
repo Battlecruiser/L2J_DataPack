@@ -23,13 +23,13 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Event;
 import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -115,10 +115,10 @@ public final class Rabbits extends Event
 		}
 		
 		// Announce event start
-		Announcements.getInstance().announceToAll("Rabbits Event: Chests spawned!");
-		Announcements.getInstance().announceToAll("Rabbits Event: Go to Fantasy Isle and grab some rewards!");
-		Announcements.getInstance().announceToAll("Rabbits Event: You have " + EVENT_TIME + " minuntes!");
-		Announcements.getInstance().announceToAll("Rabbits Event: After that time all chests will disappear...");
+		Broadcast.toAllOnlinePlayers("Rabbits Event: Chests spawned!");
+		Broadcast.toAllOnlinePlayers("Rabbits Event: Go to Fantasy Isle and grab some rewards!");
+		Broadcast.toAllOnlinePlayers("Rabbits Event: You have " + EVENT_TIME + " minuntes!");
+		Broadcast.toAllOnlinePlayers("Rabbits Event: After that time all chests will disappear...");
 		// Schedule event end
 		startQuestTimer("END_RABBITS_EVENT", EVENT_TIME * 60000, null, eventMaker);
 		return true;
@@ -159,7 +159,7 @@ public final class Rabbits extends Event
 		_players.clear();
 		
 		// Announce event end
-		Announcements.getInstance().announceToAll("Rabbits Event: Event has finished.");
+		Broadcast.toAllOnlinePlayers("Rabbits Event: Event has finished.");
 		
 		return true;
 	}
@@ -188,7 +188,7 @@ public final class Rabbits extends Event
 			}
 			case "END_RABBITS_EVENT":
 			{
-				Announcements.getInstance().announceToAll("Rabbits Event: Time up!");
+				Broadcast.toAllOnlinePlayers("Rabbits Event: Time up!");
 				eventStop();
 				break;
 			}
@@ -215,7 +215,7 @@ public final class Rabbits extends Event
 				
 				if (_npcs.size() <= 1)
 				{
-					Announcements.getInstance().announceToAll("Rabbits Event: No more chests...");
+					Broadcast.toAllOnlinePlayers("Rabbits Event: No more chests...");
 					eventStop();
 				}
 			}
