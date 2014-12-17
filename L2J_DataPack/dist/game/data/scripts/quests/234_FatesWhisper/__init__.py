@@ -195,10 +195,8 @@ class Quest (JQuest) :
           st.takeItems(REORINS_MOLD,1)
           htmltext = "31002-09.htm"
           st.set("cond","11")
-          qs = st.getPlayer().getQuestState("255_Tutorial")
-          if qs:
-             st.showQuestionMark(13)
-             st.playSound("ItemSound.quest_tutorial")
+          st.showQuestionMark(13)
+          st.playSound("ItemSound.quest_tutorial")
         # waiting for 984 B Grade Crystals
         elif cond == 11 and (st.getQuestItemsCount(CRYSTAL_B) < 984) :
           htmltext = "31002-09a.htm"
