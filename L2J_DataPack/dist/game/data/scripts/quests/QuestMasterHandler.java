@@ -469,6 +469,7 @@ import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
 import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
 import quests.Q10504_JewelOfAntharas.Q10504_JewelOfAntharas;
 import quests.Q10505_JewelOfValakas.Q10505_JewelOfValakas;
+import quests.Q10732_AForeignLand.Q10732_AForeignLand;
 
 /**
  * @author NosBit
@@ -926,7 +927,8 @@ public class QuestMasterHandler
 		Q10502_FreyaEmbroideredSoulCloak.class,
 		Q10503_FrintezzaEmbroideredSoulCloak.class,
 		Q10504_JewelOfAntharas.class,
-		Q10505_JewelOfValakas.class
+		Q10505_JewelOfValakas.class,
+		Q10732_AForeignLand.class
 	};
 	
 	public static void main(String[] args)
