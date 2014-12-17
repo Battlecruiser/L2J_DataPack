@@ -27,7 +27,6 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.GameTimeController;
-import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -323,18 +322,6 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (activeChar.isFestivalParticipant())
-		{
-			activeChar.sendMessage("You are in a festival.");
-			return false;
-		}
-		
-		if (activeChar.isInParty() && activeChar.getParty().isInDimensionalRift())
-		{
-			activeChar.sendMessage("You are in the dimensional rift.");
-			return false;
-		}
-		
 		// Thanks nbd
 		if (!TvTEvent.onEscapeUse(activeChar.getObjectId()))
 		{
@@ -396,19 +383,6 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("Your partner is in a duel.");
 			return false;
 		}
-		
-		if (partner.isFestivalParticipant())
-		{
-			activeChar.sendMessage("Your partner is in a festival.");
-			return false;
-		}
-		
-		if (partner.isInParty() && partner.getParty().isInDimensionalRift())
-		{
-			activeChar.sendMessage("Your partner is in dimensional rift.");
-			return false;
-		}
-		
 		if (partner.inObserverMode())
 		{
 			activeChar.sendMessage("Your partner is in the observation.");
@@ -419,30 +393,6 @@ public class Wedding implements IVoicedCommandHandler
 		{
 			activeChar.sendMessage("Your partner is in a siege, you cannot go to your partner.");
 			return false;
-		}
-		
-		if (partner.isIn7sDungeon() && !activeChar.isIn7sDungeon())
-		{
-			final int playerCabal = SevenSigns.getInstance().getPlayerCabal(activeChar.getObjectId());
-			final boolean isSealValidationPeriod = SevenSigns.getInstance().isSealValidationPeriod();
-			final int compWinner = SevenSigns.getInstance().getCabalHighestScore();
-			
-			if (isSealValidationPeriod)
-			{
-				if (playerCabal != compWinner)
-				{
-					activeChar.sendMessage("Your Partner is in a Seven Signs Dungeon and you are not in the winner Cabal!");
-					return false;
-				}
-			}
-			else
-			{
-				if (playerCabal == SevenSigns.CABAL_NULL)
-				{
-					activeChar.sendMessage("Your Partner is in a Seven Signs Dungeon and you are not registered!");
-					return false;
-				}
-			}
 		}
 		
 		if (!TvTEvent.onEscapeUse(partner.getObjectId()))
@@ -472,7 +422,7 @@ public class Wedding implements IVoicedCommandHandler
 		activeChar.sendPacket(sg);
 		// End SoE Animation section
 		
-		final EscapeFinalizer ef = new EscapeFinalizer(activeChar, partner.getLocation(), partner.isIn7sDungeon());
+		final EscapeFinalizer ef = new EscapeFinalizer(activeChar, partner.getLocation());
 		// continue execution later
 		activeChar.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(ef, teleportTimer));
 		activeChar.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (teleportTimer / GameTimeController.MILLIS_IN_TICK));
@@ -484,13 +434,11 @@ public class Wedding implements IVoicedCommandHandler
 	{
 		private final L2PcInstance _activeChar;
 		private final Location _partnerLoc;
-		private final boolean _to7sDungeon;
 		
-		EscapeFinalizer(L2PcInstance activeChar, Location loc, boolean to7sDungeon)
+		EscapeFinalizer(L2PcInstance activeChar, Location loc)
 		{
 			_activeChar = activeChar;
 			_partnerLoc = loc;
-			_to7sDungeon = to7sDungeon;
 		}
 		
 		@Override
@@ -507,7 +455,6 @@ public class Wedding implements IVoicedCommandHandler
 				return;
 			}
 			
-			_activeChar.setIsIn7sDungeon(_to7sDungeon);
 			_activeChar.enableAllSkills();
 			_activeChar.setIsCastingNow(false);
 			

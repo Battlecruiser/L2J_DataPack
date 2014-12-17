@@ -28,7 +28,6 @@ import java.util.StringTokenizer;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.datatables.ClanTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
@@ -56,7 +55,6 @@ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowCropInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExShowCropSetting;
-import com.l2jserver.gameserver.network.serverpackets.ExShowDominionRegistry;
 import com.l2jserver.gameserver.network.serverpackets.ExShowManorDefaultInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExShowSeedInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExShowSeedSetting;
@@ -299,52 +297,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				break;
 			}
 		}
-		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
-		{
-			case SevenSigns.CABAL_DUSK:
-				price *= 3;
-				break;
-			case SevenSigns.CABAL_DAWN:
-				price *= 0.8;
-				break;
-		}
 		return price;
-	}
-	
-	private final String getSealOwner(final int seal)
-	{
-		String npcString;
-		switch (SevenSigns.getInstance().getSealOwner(seal))
-		{
-			case SevenSigns.CABAL_DAWN:
-				npcString = "1000511";
-				break;
-			case SevenSigns.CABAL_DUSK:
-				npcString = "1000510";
-				break;
-			default:
-				npcString = "1000512";
-				break;
-		}
-		return npcString;
-	}
-	
-	private final int getTaxLimit()
-	{
-		final int taxLimit;
-		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
-		{
-			case SevenSigns.CABAL_DAWN:
-				taxLimit = 25;
-				break;
-			case SevenSigns.CABAL_DUSK:
-				taxLimit = 5;
-				break;
-			default:
-				taxLimit = 15;
-				break;
-		}
-		return taxLimit;
 	}
 	
 	private final int getTrapUpgradePrice(final int level)
@@ -363,16 +316,6 @@ public final class CastleChamberlain extends AbstractNpcAI
 				break;
 			case 4:
 				price = Config.TRAP_UPGRADE_PRICE4;
-				break;
-		}
-		
-		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
-		{
-			case SevenSigns.CABAL_DUSK:
-				price *= 3;
-				break;
-			case SevenSigns.CABAL_DAWN:
-				price *= 0.8;
 				break;
 		}
 		return price;
@@ -464,10 +407,6 @@ public final class CastleChamberlain extends AbstractNpcAI
 					else if (!isDomainFortressInContractStatus(castle.getResidenceId()))
 					{
 						htmltext = "chamberlain-27.html";
-					}
-					else if (!SevenSigns.getInstance().isCompResultsPeriod())
-					{
-						htmltext = "chamberlain-26.html";
 					}
 					else
 					{
@@ -676,23 +615,6 @@ public final class CastleChamberlain extends AbstractNpcAI
 						html.replace("%clanleadername%", clan.getLeaderName());
 						html.replace("%clanname%", clan.getName());
 						html.replace("%castlename%", String.valueOf(1001000 + castle.getResidenceId()));
-						
-						switch (SevenSigns.getInstance().getCurrentPeriod())
-						{
-							case SevenSigns.PERIOD_COMP_RECRUITING:
-								html.replace("%ss_event%", "1000509");
-								break;
-							case SevenSigns.PERIOD_COMPETITION:
-								html.replace("%ss_event%", "1000507");
-								break;
-							case SevenSigns.PERIOD_SEAL_VALIDATION:
-							case SevenSigns.PERIOD_COMP_RESULTS:
-								html.replace("%ss_event%", "1000508");
-								break;
-						}
-						html.replace("%ss_avarice%", getSealOwner(1));
-						html.replace("%ss_gnosis%", getSealOwner(2));
-						html.replace("%ss_strife%", getSealOwner(3));
 						player.sendPacket(html);
 					}
 				}
@@ -715,7 +637,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 						final NpcHtmlMessage html = getHtmlPacket(player, npc, "castlesettaxrate.html");
 						html.replace("%tax_rate%", Integer.toString(castle.getTaxPercent()));
 						html.replace("%next_tax_rate%", "0"); // TODO: Implement me!
-						html.replace("%tax_limit%", Integer.toString(getTaxLimit()));
+						html.replace("%tax_limit%", 15);
 						player.sendPacket(html);
 					}
 				}
@@ -744,7 +666,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					{
 						final NpcHtmlMessage html;
 						final int tax = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 0;
-						final int taxLimit = getTaxLimit();
+						final int taxLimit = 15;
 						if (tax > taxLimit)
 						{
 							html = getHtmlPacket(player, npc, "castletoohightaxrate.html");
@@ -1147,14 +1069,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 			}
 			case "list_territory_clans":
 			{
-				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE))
-				{
-					player.sendPacket(new ExShowDominionRegistry(castle.getResidenceId(), player));
-				}
-				else
-				{
-					htmltext = "chamberlain-21.html";
-				}
+				htmltext = "chamberlain-21.html";
 				break;
 			}
 			case "manor":
@@ -1232,25 +1147,18 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					else
 					{
-						if ((SevenSigns.getInstance().getPlayerCabal(player.getObjectId()) == SevenSigns.CABAL_DAWN) && SevenSigns.getInstance().isCompetitionPeriod())
+						final int ticketCount = castle.getTicketBuyCount();
+						if (ticketCount < (Config.SSQ_DAWN_TICKET_QUANTITY / Config.SSQ_DAWN_TICKET_BUNDLE))
 						{
-							final int ticketCount = castle.getTicketBuyCount();
-							if (ticketCount < (Config.SSQ_DAWN_TICKET_QUANTITY / Config.SSQ_DAWN_TICKET_BUNDLE))
-							{
-								final NpcHtmlMessage html = getHtmlPacket(player, npc, "ssq_selldawnticket.html");
-								html.replace("%DawnTicketLeft%", String.valueOf(Config.SSQ_DAWN_TICKET_QUANTITY - (ticketCount * Config.SSQ_DAWN_TICKET_BUNDLE)));
-								html.replace("%DawnTicketBundle%", String.valueOf(Config.SSQ_DAWN_TICKET_BUNDLE));
-								html.replace("%DawnTicketPrice%", String.valueOf(Config.SSQ_DAWN_TICKET_PRICE * Config.SSQ_DAWN_TICKET_BUNDLE));
-								player.sendPacket(html);
-							}
-							else
-							{
-								htmltext = "ssq_notenoughticket.html";
-							}
+							final NpcHtmlMessage html = getHtmlPacket(player, npc, "ssq_selldawnticket.html");
+							html.replace("%DawnTicketLeft%", String.valueOf(Config.SSQ_DAWN_TICKET_QUANTITY - (ticketCount * Config.SSQ_DAWN_TICKET_BUNDLE)));
+							html.replace("%DawnTicketBundle%", String.valueOf(Config.SSQ_DAWN_TICKET_BUNDLE));
+							html.replace("%DawnTicketPrice%", String.valueOf(Config.SSQ_DAWN_TICKET_PRICE * Config.SSQ_DAWN_TICKET_BUNDLE));
+							player.sendPacket(html);
 						}
 						else
 						{
-							htmltext = "ssq_notdawnorevent.html";
+							htmltext = "ssq_notenoughticket.html";
 						}
 					}
 				}
@@ -1270,31 +1178,24 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					else
 					{
-						if ((SevenSigns.getInstance().getPlayerCabal(player.getObjectId()) == SevenSigns.CABAL_DAWN) && SevenSigns.getInstance().isCompetitionPeriod())
+						final int ticketCount = castle.getTicketBuyCount();
+						if (ticketCount < (Config.SSQ_DAWN_TICKET_QUANTITY / Config.SSQ_DAWN_TICKET_BUNDLE))
 						{
-							final int ticketCount = castle.getTicketBuyCount();
-							if (ticketCount < (Config.SSQ_DAWN_TICKET_QUANTITY / Config.SSQ_DAWN_TICKET_BUNDLE))
+							final long totalCost = Config.SSQ_DAWN_TICKET_PRICE * Config.SSQ_DAWN_TICKET_BUNDLE;
+							if (player.getAdena() >= totalCost)
 							{
-								final long totalCost = Config.SSQ_DAWN_TICKET_PRICE * Config.SSQ_DAWN_TICKET_BUNDLE;
-								if (player.getAdena() >= totalCost)
-								{
-									takeItems(player, Inventory.ADENA_ID, totalCost);
-									giveItems(player, Config.SSQ_MANORS_AGREEMENT_ID, Config.SSQ_DAWN_TICKET_BUNDLE);
-									castle.setTicketBuyCount(ticketCount + 1);
-								}
-								else
-								{
-									htmltext = "chamberlain-09.html";
-								}
+								takeItems(player, Inventory.ADENA_ID, totalCost);
+								giveItems(player, Config.SSQ_MANORS_AGREEMENT_ID, Config.SSQ_DAWN_TICKET_BUNDLE);
+								castle.setTicketBuyCount(ticketCount + 1);
 							}
 							else
 							{
-								htmltext = "ssq_notenoughticket.html";
+								htmltext = "chamberlain-09.html";
 							}
 						}
 						else
 						{
-							htmltext = "ssq_notdawnorevent.html";
+							htmltext = "ssq_notenoughticket.html";
 						}
 					}
 				}

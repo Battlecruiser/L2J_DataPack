@@ -41,7 +41,6 @@ import com.l2jserver.gameserver.network.serverpackets.ExRedSky;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.SSQInfo;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SunRise;
 import com.l2jserver.gameserver.network.serverpackets.SunSet;
@@ -716,18 +715,7 @@ public class AdminEffects implements IAdminCommandHandler
 	{
 		L2GameServerPacket packet = null;
 		
-		if (type.equals("signsky"))
-		{
-			if (state.equals("dawn"))
-			{
-				packet = new SSQInfo(2);
-			}
-			else if (state.equals("dusk"))
-			{
-				packet = new SSQInfo(1);
-			}
-		}
-		else if (type.equals("sky"))
+		if (type.equals("sky"))
 		{
 			if (state.equals("night"))
 			{

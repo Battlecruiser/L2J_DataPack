@@ -94,7 +94,6 @@ import handlers.admincommandhandlers.AdminKick;
 import handlers.admincommandhandlers.AdminKill;
 import handlers.admincommandhandlers.AdminLevel;
 import handlers.admincommandhandlers.AdminLogin;
-import handlers.admincommandhandlers.AdminMammon;
 import handlers.admincommandhandlers.AdminManor;
 import handlers.admincommandhandlers.AdminMenu;
 import handlers.admincommandhandlers.AdminMessages;
@@ -123,7 +122,6 @@ import handlers.admincommandhandlers.AdminSummon;
 import handlers.admincommandhandlers.AdminTarget;
 import handlers.admincommandhandlers.AdminTargetSay;
 import handlers.admincommandhandlers.AdminTeleport;
-import handlers.admincommandhandlers.AdminTerritoryWar;
 import handlers.admincommandhandlers.AdminTest;
 import handlers.admincommandhandlers.AdminTvTEvent;
 import handlers.admincommandhandlers.AdminUnblockIp;
@@ -135,7 +133,6 @@ import handlers.bypasshandlers.BuyShadowItem;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
 import handlers.bypasshandlers.EventEngine;
-import handlers.bypasshandlers.Festival;
 import handlers.bypasshandlers.Freight;
 import handlers.bypasshandlers.ItemAuctionLink;
 import handlers.bypasshandlers.Link;
@@ -152,7 +149,6 @@ import handlers.bypasshandlers.QuestList;
 import handlers.bypasshandlers.ReceivePremium;
 import handlers.bypasshandlers.ReleaseAttribute;
 import handlers.bypasshandlers.RentPet;
-import handlers.bypasshandlers.Rift;
 import handlers.bypasshandlers.SkillList;
 import handlers.bypasshandlers.SupportBlessing;
 import handlers.bypasshandlers.SupportMagic;
@@ -162,7 +158,6 @@ import handlers.bypasshandlers.VoiceCommand;
 import handlers.bypasshandlers.Wear;
 import handlers.chathandlers.ChatAll;
 import handlers.chathandlers.ChatAlliance;
-import handlers.chathandlers.ChatBattlefield;
 import handlers.chathandlers.ChatClan;
 import handlers.chathandlers.ChatHeroVoice;
 import handlers.chathandlers.ChatParty;
@@ -188,7 +183,6 @@ import handlers.itemhandlers.Book;
 import handlers.itemhandlers.Bypass;
 import handlers.itemhandlers.Calculator;
 import handlers.itemhandlers.CharmOfCourage;
-import handlers.itemhandlers.Disguise;
 import handlers.itemhandlers.Elixir;
 import handlers.itemhandlers.EnchantAttribute;
 import handlers.itemhandlers.EnchantScrolls;
@@ -206,7 +200,6 @@ import handlers.itemhandlers.PetFood;
 import handlers.itemhandlers.Recipes;
 import handlers.itemhandlers.RollingDice;
 import handlers.itemhandlers.Seed;
-import handlers.itemhandlers.SevenSignsRecord;
 import handlers.itemhandlers.SoulShots;
 import handlers.itemhandlers.SpecialXMas;
 import handlers.itemhandlers.SpiritShot;
@@ -368,7 +361,6 @@ public class MasterHandler
 			AdminKill.class,
 			AdminLevel.class,
 			AdminLogin.class,
-			AdminMammon.class,
 			AdminManor.class,
 			AdminMenu.class,
 			AdminMessages.class,
@@ -396,7 +388,6 @@ public class MasterHandler
 			AdminTarget.class,
 			AdminTargetSay.class,
 			AdminTeleport.class,
-			AdminTerritoryWar.class,
 			AdminTest.class,
 			AdminTvTEvent.class,
 			AdminUnblockIp.class,
@@ -411,7 +402,6 @@ public class MasterHandler
 			ChatLink.class,
 			ClanWarehouse.class,
 			EventEngine.class,
-			Festival.class,
 			Freight.class,
 			ItemAuctionLink.class,
 			Link.class,
@@ -428,7 +418,6 @@ public class MasterHandler
 			ReceivePremium.class,
 			ReleaseAttribute.class,
 			RentPet.class,
-			Rift.class,
 			SkillList.class,
 			SupportBlessing.class,
 			SupportMagic.class,
@@ -441,7 +430,6 @@ public class MasterHandler
 			// Chat Handlers
 			ChatAll.class,
 			ChatAlliance.class,
-			ChatBattlefield.class,
 			ChatClan.class,
 			ChatHeroVoice.class,
 			ChatParty.class,
@@ -473,7 +461,6 @@ public class MasterHandler
 			Bypass.class,
 			Calculator.class,
 			CharmOfCourage.class,
-			Disguise.class,
 			Elixir.class,
 			EnchantAttribute.class,
 			EnchantScrolls.class,
@@ -491,7 +478,6 @@ public class MasterHandler
 			Recipes.class,
 			RollingDice.class,
 			Seed.class,
-			SevenSignsRecord.class,
 			SoulShots.class,
 			SpecialXMas.class,
 			SpiritShot.class,

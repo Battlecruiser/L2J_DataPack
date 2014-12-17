@@ -21,7 +21,6 @@ package handlers.admincommandhandlers;
 import java.util.Calendar;
 import java.util.StringTokenizer;
 
-import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.datatables.ClanTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.AuctionManager;
@@ -446,11 +445,6 @@ public class AdminSiege implements IAdminCommandHandler
 		else
 		{
 			newDay.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-		}
-		
-		if (!SevenSigns.getInstance().isDateInSealValidPeriod(newDay))
-		{
-			newDay.add(Calendar.DAY_OF_MONTH, 7);
 		}
 		
 		if (isSunday)

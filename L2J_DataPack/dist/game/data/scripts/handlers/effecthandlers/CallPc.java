@@ -19,7 +19,6 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -131,7 +130,7 @@ public final class CallPc extends AbstractEffect
 			return false;
 		}
 		
-		if (target.isFestivalParticipant() || target.isFlyingMounted() || target.isCombatFlagEquipped() || !TvTEvent.onEscapeUse(target.getObjectId()))
+		if (target.isFlyingMounted() || target.isCombatFlagEquipped() || !TvTEvent.onEscapeUse(target.getObjectId()))
 		{
 			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
 			return false;
@@ -159,25 +158,6 @@ public final class CallPc extends AbstractEffect
 			if (!Config.ALLOW_SUMMON_TO_INSTANCE || !summonerInstance.isSummonAllowed())
 			{
 				activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
-				return false;
-			}
-		}
-		
-		// TODO: on retail character can enter 7s dungeon with summon friend, but should be teleported away by mobs, because currently this is not working in L2J we do not allowing summoning.
-		if (activeChar.isIn7sDungeon())
-		{
-			int targetCabal = SevenSigns.getInstance().getPlayerCabal(target.getObjectId());
-			if (SevenSigns.getInstance().isSealValidationPeriod())
-			{
-				if (targetCabal != SevenSigns.getInstance().getCabalHighestScore())
-				{
-					activeChar.sendPacket(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
-					return false;
-				}
-			}
-			else if (targetCabal == SevenSigns.CABAL_NULL)
-			{
-				activeChar.sendPacket(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
 				return false;
 			}
 		}

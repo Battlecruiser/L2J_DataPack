@@ -18,7 +18,6 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.MercTicketManager;
@@ -67,42 +66,6 @@ public class MercTicket implements IItemHandler
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 			return false;
-		}
-		
-		// Checking Seven Signs Quest Period
-		if (SevenSigns.getInstance().getCurrentPeriod() != SevenSigns.PERIOD_SEAL_VALIDATION)
-		{
-			// _log.warning("Someone has tried to spawn a guardian during Quest Event Period of The Seven Signs.");
-			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
-			return false;
-		}
-		// Checking the Seal of Strife status
-		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
-		{
-			case SevenSigns.CABAL_NULL:
-			{
-				if (SevenSigns.getInstance().checkIsDawnPostingTicket(itemId))
-				{
-					// _log.warning("Someone has tried to spawn a Dawn Mercenary though the Seal of Strife is not controlled by anyone.");
-					activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
-					return false;
-				}
-				break;
-			}
-			case SevenSigns.CABAL_DUSK:
-			{
-				if (!SevenSigns.getInstance().checkIsRookiePostingTicket(itemId))
-				{
-					// _log.warning("Someone has tried to spawn a non-Rookie Mercenary though the Seal of Strife is controlled by Revolutionaries of Dusk.");
-					activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
-					return false;
-				}
-				break;
-			}
-			case SevenSigns.CABAL_DAWN:
-			{
-				break;
-			}
 		}
 		
 		if (MercTicketManager.getInstance().isAtCasleLimit(item.getId()))

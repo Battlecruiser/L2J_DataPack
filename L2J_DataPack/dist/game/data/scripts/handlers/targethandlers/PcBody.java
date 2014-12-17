@@ -87,12 +87,6 @@ public class PcBody implements ITargetTypeHandler
 							condGood = false;
 							activeChar.sendPacket(SystemMessageId.CANNOT_BE_RESURRECTED_DURING_SIEGE);
 						}
-						
-						if (targetPlayer.isFestivalParticipant()) // Check to see if the current player target is in a festival.
-						{
-							condGood = false;
-							activeChar.sendMessage("You may not resurrect participants in a festival.");
-						}
 					}
 				}
 				

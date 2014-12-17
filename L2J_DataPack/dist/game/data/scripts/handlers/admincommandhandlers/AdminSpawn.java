@@ -26,7 +26,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
@@ -241,7 +240,6 @@ public class AdminSpawn implements IAdminCommandHandler
 			SpawnTable.getInstance().load();
 			RaidBossSpawnManager.getInstance().load();
 			AutoSpawnHandler.getInstance().reload();
-			SevenSigns.getInstance().spawnSevenSignsNPC();
 			QuestManager.getInstance().reloadAllScripts();
 			AdminTable.getInstance().broadcastMessageToGMs("NPC Respawn completed!");
 		}
