@@ -18,8 +18,6 @@
  */
 package instances.NornilsGarden;
 
-import quests.Q00179_IntoTheLargeCavern.Q00179_IntoTheLargeCavern;
-
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
@@ -32,7 +30,6 @@ import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -466,18 +463,7 @@ public final class NornilsGarden extends Quest
 			}
 			if (partyMember.getRace().ordinal() == 5)
 			{
-				QuestState checkst = partyMember.getQuestState(Q00179_IntoTheLargeCavern.class.getSimpleName());
-				if ((checkst != null) && (checkst.getState() == State.STARTED))
-				{
-					_kamael = true;
-				}
-				else
-				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_QUEST_REQUIREMENT_NOT_SUFFICIENT);
-					sm.addPcName(partyMember);
-					player.sendPacket(sm);
-					return "32330-08.html";
-				}
+				_kamael = true;
 			}
 		}
 		if (!_kamael)
@@ -588,12 +574,7 @@ public final class NornilsGarden extends Quest
 	{
 		if (Util.contains(_final_gates, npc.getId()))
 		{
-			QuestState cst = player.getQuestState(Q00179_IntoTheLargeCavern.class.getSimpleName());
-			if ((cst != null) && (cst.getState() == State.STARTED))
-			{
-				return npc.getId() + "-01.html";
-			}
-			return getNoQuestMsg(player);
+			return npc.getId() + "-01.html";
 		}
 		
 		return null;

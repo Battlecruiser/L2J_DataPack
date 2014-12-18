@@ -18,20 +18,15 @@
  */
 package hellbound.AI.NPC.Warpgate;
 
-import quests.Q00130_PathToHellbound.Q00130_PathToHellbound;
-import quests.Q00133_ThatsBloodyHot.Q00133_ThatsBloodyHot;
+import hellbound.HellboundEngine;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
-
-import hellbound.HellboundEngine;
 
 /**
  * Warpgate teleport AI.
@@ -119,14 +114,6 @@ public final class Warpgate extends AbstractNpcAI
 			return false;
 		}
 		
-		if (Config.HELLBOUND_WITHOUT_QUEST)
-		{
-			return true;
-		}
-		
-		final QuestState path_to_hellbound_st = player.getQuestState(Q00130_PathToHellbound.class.getSimpleName());
-		final QuestState thats_bloody_hot_st = player.getQuestState(Q00133_ThatsBloodyHot.class.getSimpleName());
-		
-		return (((path_to_hellbound_st != null) && path_to_hellbound_st.isCompleted()) || ((thats_bloody_hot_st != null) && thats_bloody_hot_st.isCompleted()));
+		return true;
 	}
 }
