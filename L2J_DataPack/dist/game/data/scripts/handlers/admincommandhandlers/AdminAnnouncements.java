@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2013 L2J DataPack
+ * Copyright (C) 2004-2014 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -105,7 +105,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						String annInitDelay = st.nextToken();
-						if (!isDigit(annInitDelay))
+						if (!Util.isDigit(annInitDelay))
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -118,7 +118,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						String annDelay = st.nextToken();
-						if (!isDigit(annDelay))
+						if (!Util.isDigit(annDelay))
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -136,7 +136,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						String annRepeat = st.nextToken();
-						if (!isDigit(annRepeat))
+						if (!Util.isDigit(annRepeat))
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -179,7 +179,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						String annId = st.nextToken();
-						if (!isDigit(annId))
+						if (!Util.isDigit(annId))
 						{
 							activeChar.sendMessage("Syntax: //announces edit <id>");
 							break;
@@ -266,7 +266,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						String annInitDelay = st.nextToken();
-						if (!isDigit(annInitDelay))
+						if (!Util.isDigit(annInitDelay))
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -279,7 +279,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						String annDelay = st.nextToken();
-						if (!isDigit(annDelay))
+						if (!Util.isDigit(annDelay))
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -297,7 +297,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						String annRepeat = st.nextToken();
-						if (!isDigit(annRepeat))
+						if (!Util.isDigit(annRepeat))
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -344,7 +344,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						String token = st.nextToken();
-						if (!isDigit(token))
+						if (!Util.isDigit(token))
 						{
 							activeChar.sendMessage("Syntax: //announces remove <announcement id>");
 							break;
@@ -376,7 +376,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						String token = st.nextToken();
-						if (!isDigit(token))
+						if (!Util.isDigit(token))
 						{
 							activeChar.sendMessage("Syntax: //announces show <announcement id>");
 							break;
@@ -410,7 +410,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						String token = st.nextToken();
-						if (!isDigit(token))
+						if (!Util.isDigit(token))
 						{
 							activeChar.sendMessage("Syntax: //announces show <announcement id>");
 							break;
@@ -503,19 +503,6 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			}
 		}
 		return false;
-	}
-	
-	public boolean isDigit(String value)
-	{
-		try
-		{
-			Integer.parseInt(value);
-			return true;
-		}
-		catch (Exception e)
-		{
-			return false;
-		}
 	}
 	
 	@Override
