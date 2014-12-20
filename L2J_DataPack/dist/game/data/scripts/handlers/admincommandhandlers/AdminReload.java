@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.datatables.CrestTable;
 import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.datatables.EnchantItemData;
 import com.l2jserver.gameserver.datatables.EnchantItemGroupsData;
+import com.l2jserver.gameserver.datatables.ItemCrystalizationData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.datatables.NpcData;
@@ -245,6 +246,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					TransformData.getInstance().load();
 					AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded transform data.");
+					break;
+				}
+				case "crystalizable":
+				{
+					ItemCrystalizationData.getInstance().load();
+					AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item crystalization data.");
 					break;
 				}
 				default:
