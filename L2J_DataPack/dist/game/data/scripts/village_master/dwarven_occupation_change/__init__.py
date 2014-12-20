@@ -84,7 +84,7 @@ class Quest (JQuest) :
       st.exitQuest(1)
    return htmltext
 
- def onTalk (Self,npc,player) :
+ def onTalk (self,npc,player) :
    htmltext = default
    key      = 0
    npcId    = npc.getId()

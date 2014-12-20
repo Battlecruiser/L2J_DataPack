@@ -126,7 +126,7 @@ class Quest (JQuest) :
         st.exitQuest(1)
     return htmltext
 
- def onTalk (Self,npc,player):
+ def onTalk (self,npc,player):
    htmltext = Quest.getNoQuestMsg(player)
    st = self.getQuestState(player, True)
    if not st : return htmltext
