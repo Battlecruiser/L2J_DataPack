@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="15100" levels="1" name="Noblesse Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 6 hours, buffs and debuffs do not disappear but remain upon death. -->
+		<set name="icon" val="icon.skill1323" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="100" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15101" levels="1" name="Elise' Radiant Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Heals the target with 1488 power. If HP is full, CP is restored with the remaining power. -->
+		<set name="icon" val="icon.skill11755" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15102" levels="1" name="Elise' Radiant Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Heals the target with 1519 power. If HP is full, CP is restored with the remaining power. -->
+		<set name="icon" val="icon.skill11755" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15103" levels="1" name="Elise' Radiant Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Heals the target with 1557 power. If HP is full, CP is restored with the remaining power. -->
+		<set name="icon" val="icon.skill11755" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15104" levels="1" name="Dimensional Trap">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immobilizes the enemy for 15 seconds. -->
+		<set name="icon" val="icon.skill11561" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15105" levels="1" name="Mysterious Shadow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Becomes invisible and decreases speed by 30%. -->
+		<set name="icon" val="icon.skill10784" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="360000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15106" levels="1" name="Mysterious Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sacrifice yourself to attempt a Lethal Strike on the enemy. -->
+		<set name="icon" val="icon.skill10784" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="360000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15107" levels="1" name="Mysterious Sacrifice">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sacrifice. A state in which HP cannot be recovered. -->
+		<set name="icon" val="icon.skill4036" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15108" levels="1" name="Ruler's Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases your battle abilities. -->
+		<set name="icon" val="icon.skill10292" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15109" levels="1" name="Ruler's Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases sleep, bleed, shock, poison, and hold attack bonus by 30. -->
+		<set name="icon" val="icon.skill0335" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15110" levels="1" name="Mandra's Spell">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage around you. -->
+		<set name="icon" val="icon.skill0036" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15111" levels="1" name="Mace of Punishment">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage and hurls one person for a certain distance. -->
+		<set name="icon" val="icon.skill4107" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15112" levels="1" name="Threat">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15113" levels="1" name="Imposing Axe">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15114" levels="1" name="Massive Blade">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15115" levels="1" name="Black Kiss">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage around you. -->
+		<set name="icon" val="icon.skill0036" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15116" levels="1" name="Dreaming Romantic Pig">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 seconds, change one party member's silhouette into that of a pig. -->
+		<set name="icon" val="icon.skill11537" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2500" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15117" levels="1" name="Massacre Execution">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Chooses 3 party members and kills them on the spot. -->
+		<set name="icon" val="icon.skill0223" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="5000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15118" levels="1" name="Induce Mental Illness">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stuns all party members for 5 seconds. -->
+		<set name="icon" val="icon.skill3080" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15119" levels="1" name="Whole Body Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Fully recovers your HP. -->
+		<set name="icon" val="icon.skill11755" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15120" levels="1" name="Death by Execution">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Selects one party member at random and kills him/her on the spot. -->
+		<set name="icon" val="icon.skill0223" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15121" levels="1" name="Rage Explosion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Rage explodes at the death of your child. Uses Petra to greatly decrease HP and greatly increases HP Recovery Rate and P. Atk. -->
+		<set name="icon" val="icon.skill1068" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15122" levels="1" name="Vernier Calipers Hurl">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hurls the opponent with a Vernier Calipers in your hands. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15123" levels="1" name="Sword Cleave">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15124" levels="1" name="Axe Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15125" levels="1" name="Tauti Final Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Tauti's final attack skill when he has lost almost all of his power. -->
+		<set name="icon" val="icon.skill0793" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="83" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="100" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15126" levels="1" name="Tauti Final Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Tauti's final attack skill when he has lost almost all of his power. -->
+		<set name="icon" val="icon.skill0793" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="83" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="100" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15127" levels="1" name="Equip Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Continuously receives new weapons from the weapon stand to increase P. Atk. -->
+		<set name="icon" val="icon.skill1068" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15128" levels="1" name="Equip Armor">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Continuously receives new armor from the armor stand to increase P. Def. -->
+		<set name="icon" val="icon.skill1040" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15129" levels="1" name="Full Buff Knight Lv. 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Knight Full Buff stage 1. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15130" levels="1" name="Full Buff Knight Lv. 2">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Knight Full Buff stage 2. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15131" levels="1" name="Full Buff Knight Lv. 3">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Knight Full Buff stage 3. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15132" levels="1" name="Full Buff Knight Lv. 4">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Knight Full Buff stage 4. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15133" levels="1" name="Full Buff Warrior Lv. 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Warrior Full Buff stage 1. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15134" levels="1" name="Full Buff Warrior Lv. 2">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Warrior Full Buff stage 2. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15135" levels="1" name="Full Buff Warrior Lv. 3">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Warrior Full Buff stage 3. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15136" levels="1" name="Full Buff Warrior Lv. 4">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Warrior Full Buff stage 4. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15137" levels="1" name="Full Buff Wizard Lv. 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Wizard Full Buff stage 1. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15138" levels="1" name="Full Buff Wizard Lv. 2">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Wizard Full Buff stage 2. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15139" levels="1" name="Full Buff Wizard Lv. 3">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Wizard Full Buff stage 3. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15140" levels="1" name="Full Buff Wizard Lv. 4">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Wizard Full Buff stage 4. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15141" levels="1" name="Super CP Lv. 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Wizard Full Buff stage 1. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15142" levels="1" name="Super CP Lv. 2">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Wizard Full Buff stage 2. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15143" levels="1" name="Super CP Lv. 3">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Wizard Full Buff stage 3. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15144" levels="1" name="Super CP Lv. 4">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For test. Wizard Full Buff stage 4. Increases abilities through Kyu's power. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15145" levels="1" name="Ruler's Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max CP/HP/MP + 1000, Weight + 25600, Damage + 8%, Received Damage - 9%, Damage Reflect Resistance + 5%, Inventory Slot + 36, and all Attribute Resistance + 15. -->
+		<set name="icon" val="icon.skill0332" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15146" levels="1" name="Mysterious Belt">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max CP/HP/MP + 500, PvP Damage + 6%, Damage Reflect Resistance + 5%, and Received PvP Damage - 7%. -->
+		<set name="icon" val="icon.skill0332" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15147" levels="1" name="Overheat">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- The machine is overheated. Inflicts continuous damage on the target that harms you. -->
+		<set name="icon" val="icon.skill1492" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15148" levels="1" name="Coolant Leak">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- The machine is overheated. Inflicts a speed decreasing effect on the target that harms you. -->
+		<set name="icon" val="icon.skill0102" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15149" levels="1" name="Self Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recovers your HP. -->
+		<set name="icon" val="icon.skill1216" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15150" levels="1" name="Self Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- The machine is protecting itself. Increases your P. Def. -->
+		<set name="icon" val="icon.skill1389" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15151" levels="1" name="Overheat">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- The machine is burning from overheating and HP is wearing away. -->
+		<set name="icon" val="icon.skill1492" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15152" levels="1" name="Coolant Leak">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Speed is decreased due to the machine's coolant leak. -->
+		<set name="icon" val="icon.skill0102" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15153" levels="1" name="Attention to Draco Incubation">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. -->
+		<set name="icon" val="icon.skill11507" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15154" levels="1" name="Attention to Draco Incubation">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. -->
+		<set name="icon" val="icon.skill11507" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15155" levels="1" name="Petrify">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Petrify status. -->
+		<set name="icon" val="icon.skill1540" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15156" levels="1" name="Flower Planting">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15157" levels="1" name="Flower Planting">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15158" levels="1" name="Flower Planting">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15159" levels="1" name="Flower Planting">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15160" levels="1" name="Flower Planting">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15161" levels="1" name="Flower Planting">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15162" levels="1" name="Flower Planting">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15163" levels="1" name="Tauti Typhoon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Being flung away from shock. Attached characters are fine, but long-range characters are affected by this skill. -->
+		<set name="icon" val="icon.skill3080" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15164" levels="1" name="Tauti Typhoon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Being flung away from shock. Attached characters are fine, but long-range characters are affected by this skill. -->
+		<set name="icon" val="icon.skill3080" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15165" levels="1" name="Tauti Shock Wave">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cannot move due to shock. -->
+		<set name="icon" val="icon.skill0100" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15166" levels="1" name="Tauti Rush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Throws forward toward the target who is holding Tauti to inflict damage and to knock down. -->
+		<set name="icon" val="icon.skill0100" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="100" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15167" levels="1" name="Tauti Leap Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. -->
+		<set name="icon" val="icon.skill3080" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2000" />
+		<set name="hitTime" val="5000" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15168" levels="1" name="Tauti Ultimate Chain Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Pulls in all the PC's who are near Tauti. -->
+		<set name="icon" val="icon.skill10016" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="123" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="1000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15169" levels="1" name="Tauti Great Shout">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- HP is cut down from the roar. HP is decreased by the energy of fire in the roar. -->
+		<set name="icon" val="icon.skill0102" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15170" levels="1" name="Chaos Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. and M. Def. are increased. -->
+		<set name="icon" val="icon.skill1418" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="5000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15171" levels="1" name="Tauti Boomerang">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Skill where Tauti throws crossways and receives back again. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15172" levels="1" name="Tauti Air Binding">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bound in the air from Tauti's gaze. Cannot be removed with a de-buff removing skill. -->
+		<set name="icon" val="icon.skill11276" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="200" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15173" levels="1" name="Tauti Air Binding">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bound in the air from Tauti's gaze. Cannot be removed with a de-buff removing skill. -->
+		<set name="icon" val="icon.skill11276" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="200" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15174" levels="1" name="Petra Injection - Enhance HP Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1434" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2500" />
+		<set name="hitTime" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15175" levels="1" name="Petra Injection - Enhance HP Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Zahak has used its Petra to increase Tauti's HP Recovery. -->
+		<set name="icon" val="icon.skill1434" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15176" levels="1" name="Petra Injection - Enhance P. Def.">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1434" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2500" />
+		<set name="hitTime" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15177" levels="1" name="Petra Injection - Enhance P. Def.">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Zahak has used its Petra to increase Tauti's P. Def. -->
+		<set name="icon" val="icon.skill1434" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15178" levels="1" name="Petra Injection - Enhance M. Def.">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1434" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2500" />
+		<set name="hitTime" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15179" levels="1" name="Petra Injection - Enhance M. Def.">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Zahak has used its Petra to increase Tauti's M. Def. -->
+		<set name="icon" val="icon.skill1434" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15180" levels="1" name="Petra Injection - Enhance P. Atk.">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1434" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2500" />
+		<set name="hitTime" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15181" levels="1" name="Petra Injection - Enhance P. Atk.">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Zahak has used its Petra to increase Tauti's P. Atk. -->
+		<set name="icon" val="icon.skill1434" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2500" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15182" levels="1" name="Adolph's Superior Aggression Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Provokes nearby enemies into attacking you. -->
+		<set name="icon" val="icon.skill10027" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15183" levels="1" name="Adolph's Superior Aggression Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Provokes nearby enemies into attacking you. -->
+		<set name="icon" val="icon.skill10027" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15184" levels="1" name="Adolph's Superior Aggression Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Provokes nearby enemies into attacking you. -->
+		<set name="icon" val="icon.skill10027" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15185" levels="1" name="Adolph's Shield Wave">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
+		<set name="icon" val="icon.skill10012" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15186" levels="1" name="Adolph's Shield Wave">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
+		<set name="icon" val="icon.skill10012" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15187" levels="1" name="Adolph's Shield Wave">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
+		<set name="icon" val="icon.skill10012" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15188" levels="1" name="Hayuk's Multiple Arrow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 23391 power added to P. Atk. -->
+		<set name="icon" val="icon.skill10771" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="350" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15189" levels="1" name="Hayuk's Multiple Arrow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 27459 power added to P. Atk. -->
+		<set name="icon" val="icon.skill10771" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="350" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15190" levels="1" name="Hayuk's Multiple Arrow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 31527 power added to P. Atk. -->
+		<set name="icon" val="icon.skill10771" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="350" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15191" levels="1" name="Hayuk's Heavy Arrow Rain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Rains down arrows like rain on the target and its surrounding area with 22526 power added to P. Atk. -->
+		<set name="icon" val="icon.skill10772" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="350" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15192" levels="1" name="Hayuk's Heavy Arrow Rain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Rains down arrows like rain on the target and its surrounding area with 26448 power added to P. Atk. -->
+		<set name="icon" val="icon.skill10772" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="350" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15193" levels="1" name="Hayuk's Heavy Arrow Rain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Rains down arrows like rain on the target and its surrounding area with 30371 power added to P. Atk. -->
+		<set name="icon" val="icon.skill10772" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="350" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15194" levels="1" name="Eliyah's Mass Exile">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 282 HP per second. -->
+		<set name="icon" val="icon.skill11296" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15195" levels="1" name="Eliyah's Mass Exile">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 296 HP per second. -->
+		<set name="icon" val="icon.skill11296" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15196" levels="1" name="Eliyah's Mass Exile">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 313 HP per second. -->
+		<set name="icon" val="icon.skill11296" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="15197" levels="1" name="Guardian Spirit's Wrath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="20000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15198" levels="1" name="Guardian Spirit's Wrath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="20000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="15199" levels="1" name="Guardian Spirit's Wrath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="20000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>

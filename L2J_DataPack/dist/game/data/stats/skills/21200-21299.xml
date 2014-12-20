@@ -815,4 +815,296 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
+	<skill id="21268" levels="1" name="Jack O'Lantern Crush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts powerful damage on Norhand's neck. -->
+		<set name="icon" val="BranchSys3.Icon.g_halloween_scythe" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1600" />
+		<set name="coolTime" val="100" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21269" levels="1" name="Jack O'Lantern Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Neutralizes Norhand's flint for 7 seconds through the divine power of the Jack O'Lantern. Cooldown is 30 seconds. -->
+		<set name="icon" val="BranchSys.icon.br_golden_jack0_mask_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="800" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21270" levels="1" name="Ride Tame Princess Ant">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Ride a Tame Princess Ant. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21271" levels="1" name="Ride Black Bear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Ride a Black Bear. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21272" levels="1" name="Ride Halloween Witch's Broomstick">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Ride a Halloween Witch's Broomstick. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21273" levels="7" name="Release Agathion's Seal - Valakas">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Removes the Agathion's seal. -->
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21274" levels="6" name="Start of Evolution">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Agathion has a chance of evolving to Lv. 2 at the place to which you were teleported via the Evolution Deliverer. Cooldown is 24 hr. -->
+		<set name="icon" val="BranchSys3.icon.skill22419" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="86400000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21275" levels="1" name="Cloak Inventory Slot Add">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases inventory size when equipped with a cloak. -->
+		<set name="icon" val="icon.skill0332" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21276" levels="1" name="Add Cloak Weight Gauge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Weight Gauge when equipped with a cloak. -->
+		<set name="icon" val="icon.skill0150" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21277" levels="1" name="Miracle of the Tree - Vitality Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 minutes, recovers Vitality when acquiring XP. Cooldown is 4 hours. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21278" levels="1" name="Vitality Recovery Potion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 minutes, recovers Vitality when acquiring XP. -->
+		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21279" levels="1" name="Drake Lord's Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance of inflicting damage and decreasing the enemy's P. Def. when attacking. -->
+		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21280" levels="1" name="Freya's Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance of increasing Water attribute and Water Resistance when attacked. -->
+		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21281" levels="1" name="Spezion's Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance of increasing Atk. Spd. when attacking. -->
+		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21282" levels="1" name="Maliss' Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance of inflicting Stun when attacking. -->
+		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21283" levels="1" name="Steregos' Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance of inflicting Bleed and decreasing the enemy's Speed when attacking. -->
+		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21284" levels="1" name="Ron's Authority">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance of increasing Magic Resistance when attacking. -->
+		<set name="icon" val="BranchSys3.Icon.g_urukmash_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21285" levels="1" name="Scroll of Escape: Uthanka's Tomb">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Return to Pirate Captain Uthanka's Tomb. -->
+		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="20000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21286" levels="1" name="Ride Unicorn">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mount a Unicorn. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21287" levels="1" name="Emergency Ballista Repair">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can repair a Broken Ballista near Aden Castle during a siege. -->
+		<set name="icon" val="icon.skill0818" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="250" />
+		<set name="hitTime" val="5000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21288" levels="1" name="Emergency Ballista Repair">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can repair a Broken Ballista near Rune Castle during a siege. -->
+		<set name="icon" val="icon.skill0818" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="250" />
+		<set name="hitTime" val="5000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21289" levels="1" name="Throw Corrosive Acid">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Use on the Outer Gate of Aden Castle to weaken it. -->
+		<set name="icon" val="icon.skill1167" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="6000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21290" levels="1" name="Throw Corrosive Acid">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Use on the Outer Gate of Rune Castle to weaken it. -->
+		<set name="icon" val="icon.skill1167" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="6000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21291" levels="1" name="Relic Engraving Activation">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Use on the Relic in Aden Castle to activate the Engraving. -->
+		<set name="icon" val="icon.skill0191" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="6000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21292" levels="1" name="Relic Engraving Activation">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Use on the Relic in Rune Castle to activate the Engraving. -->
+		<set name="icon" val="icon.skill0191" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="6000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21293" levels="1" name="Two-handed Weapon of Vampiric Rage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance of absorbing a portion of damage inflicted on enemy as HP when equipped with a two-handed weapon. -->
+		<set name="icon" val="icon.skill1268" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21294" levels="1" name="Transformed: Uthanka">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Pirate Captain Uthanka. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="3" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21295" levels="1" name="Un-equip Uthanka's Ring">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="BranchSys3.lcon.s_g_ring_of_uthanka" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21296" levels="1" name="Exorcist's Punishment">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can eliminate Festering Zombies. Cannot use on self. -->
+		<set name="icon" val="icon.skill1405" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="500" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21297" levels="1" name="Nevit's Touch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can cure the Zombie Plague with Nevit's blessings. Cannot use on self. -->
+		<set name="icon" val="icon.skill5662" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="20000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21298" levels="1" name="Release Agathion's Seal - Lancet">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Releases Agathion's Seal. -->
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="21299" levels="1" name="Release Agathion's Seal - Liposa">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Releases Agathion's Seal. -->
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
 </list>

@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="17701" levels="5" name="Topaz: Spiritshot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 1062. -->
+		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17702" levels="5" name="Jewel: Quick Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores 1500 HP. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17703" levels="5" name="Jewel: Heal Boost">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Received Heal Amount + 3%. -->
+		<set name="icon" val="icon.skill4416_dwarf" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17704" levels="5" name="Obsidian">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Received Damage in PvP - 1%. -->
+		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17705" levels="5" name="Opal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attack Attribute + 10. -->
+		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17706" levels="5" name="Jewel: Atk. Spd. Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. + 33. -->
+		<set name="icon" val="icon.etc_talisman_i02" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17707" levels="5" name="Jewel: Casting Spd. Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Casting Spd. + 33. -->
+		<set name="icon" val="icon.skill17085" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17708" levels="5" name="Diamond">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. + 283, and Received P. Critical Damage - 1%. -->
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17709" levels="5" name="Pearl">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. + 163, and Received P. Critical Damage - 1%. -->
+		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17710" levels="1" name="10th Anniversary Blessing Effect (Free)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17711" levels="24" name="10th Anniversary Blessing - Stage 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You can obtain an item in 1 hr. 23 stages total. (Note:) If you are dead while the item is given, you cannot acquire the 10th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
+		<table name="#castRanges"> 900 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 </table>
+		<set name="icon" val="icon.ev_10th" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="#castRanges" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17712" levels="1" name="10th Anniversary Blessing Effect (Paid)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17713" levels="24" name="10th Anniversary Special Blessing - Stage 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You can obtain an item in 1 hr. 23 stages total. Special Blessings have a higher chance of obtaining items. (Note:) If you are dead while the item is given, you cannot acquire the 10th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
+		<table name="#castRanges"> 900 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 </table>
+		<set name="icon" val="icon.ev_10th" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="#castRanges" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17714" levels="1" name="Dancing Cat's Steps">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 hr., Max HP/MP/CP + 30%, P./M. Def. + 30%, Speed + 20, P. Atk. + 10%, and M. Atk. + 20%. Skill Cooldown - 10%, and Skill MP Consumption - 15%. (Same slot as Art of Seduction buff) -->
+		<set name="icon" val="icon.skill_sing" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17715" levels="1" name="Spirit Hit Lv. 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts 3186 damage to a single target. -->
+		<set name="icon" val="icon.skill3260" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17716" levels="1" name="Spirit Hit Lv. 2">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts 3186 damage to a single target. -->
+		<set name="icon" val="icon.skill3260" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17717" levels="1" name="Spirit Hit Lv. 3">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts 3186 damage to a single target. -->
+		<set name="icon" val="icon.skill3260" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17718" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Antharas Shaper (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17719" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Sealed Antharas Slasher (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17720" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Sealed Antharas Thrower (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17721" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Sealed Antharas Buster (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17722" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Antharas Cutter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17723" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Antharas Stormer (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17724" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Antharas Fighter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17725" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Antharas Avenger (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17726" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Antharas Dual Blunt Weapon (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17727" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Antharas Dualsword (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17728" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Valakas Shaper (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17729" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Valakas Cutter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17730" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Valakas Slasher (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17731" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Valakas Thrower (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17732" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Valakas Buster (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17733" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Valakas Caster (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17734" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Valakas Retributer (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17735" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Lindvior Shaper (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17736" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Lindvior Thrower (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17737" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Lindvior Slasher (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17738" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Lindvior Caster (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17739" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Lindvior Cutter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17740" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Lindvior Shooter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17741" levels="1" name="Dandy's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can obtain Lindvior Dual Dagger (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<set name="icon" val="icon.ev_10th_dandi1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17742" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17743" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17744" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17745" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17746" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17747" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17748" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17749" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17750" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17751" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17752" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17753" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17754" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17755" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17756" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17757" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17758" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17759" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17760" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17761" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17762" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17763" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17764" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17765" levels="1" name="Dandy's Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17766" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17767" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17768" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17769" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17770" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17771" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17772" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17773" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17774" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17775" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17776" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17777" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17778" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17779" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17780" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17781" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17782" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17783" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17784" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17785" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17786" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17787" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17788" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17789" levels="1" name="Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17790" levels="1" name="Great Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17791" levels="1" name="Great Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17792" levels="1" name="Great Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17793" levels="1" name="Great Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Casting Spd. + 1999, M. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17794" levels="1" name="Great Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17795" levels="1" name="Great Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17796" levels="1" name="Great Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17797" levels="1" name="Great Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17798" levels="1" name="Great Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="17799" levels="1" name="Great Assisting Strength">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<set name="icon" val="icon.karma" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>

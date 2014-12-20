@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="10500" levels="1" name="Heavy Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a powerful blow on target. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10501" levels="1" name="Superior Dagger Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and P. Atk. + 344 when a dagger is equipped. Increases Atk. Spd. + 25% and Vital Spot Attack Rate + 5%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your STR. -->
+		<set name="icon" val="icon.skill10501" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10502" levels="1" name="Superior Dual Dagger Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and P. Accuracy + 8. P. Atk. + 344 when using a dual dagger. -->
+		<set name="icon" val="icon.skill10502" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10503" levels="1" name="Superior Light Armor Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2. Max HP + 4880, P. Def. + 1386, P. Evasion + 20, and chance of receiving Critical Damage -35% when equipped with Light Armor. Depending on your DEX, Spd. and P. Skill Critical Rate change. Upon evasion, 10% chance of obtaining an Assassin's Reflex effect that raises Atk. Spd. -->
+		<set name="icon" val="icon.skill10503" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10504" levels="1" name="Superior Movement">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2. While sitting, increases HP Recovery Bonus by 7 and MP recovery bonus by 3.7. While running, increases P. Evasion by 7, HP Recovery Bonus by 6.3, MP recovery bonus by 2.6, and speed by 17. Also increases P. Evasion by 17 when HP is below 30%. -->
+		<set name="icon" val="icon.skill10504" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10505" levels="1" name="Superior Critical Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2, P. Critical Damage + 539 and P. Critical Rate + 60%. + 1000% chance of triggering skill mastery. -->
+		<set name="icon" val="icon.skill10505" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10506" levels="1" name="Superior Spirit Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30. -->
+		<set name="icon" val="icon.skill10506" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10507" levels="1" name="Death Clock">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 200. Also, when using Shadow Flash, triggers the Blind Spot effect that increases P. Atk., Critical Rate, Critical Damage, and Vital Spot Attack Rate. -->
+		<set name="icon" val="icon.skill10507" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10508" levels="8" name="Blood Stab">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Strike's the enemy's unprotected back with 32401 Power and additionally inflicts bleed. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. -->
+		<table name="#mpConsumes"> 59 60 62 64 66 68 71 73 </table>
+		<set name="icon" val="icon.skill10508" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="830" />
+		<set name="coolTime" val="700" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10509" levels="8" name="Heart Breaker">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stabs target's heart with 21344 Power added to P. Atk. to inflict a powerful vital spot attack. Increases Spd. + 40, Evasion + 5, and Rear Critical Damage + 30%. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. -->
+		<table name="#mpConsumes"> 67 68 70 73 75 77 80 82 </table>
+		<set name="icon" val="icon.skill10509" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1030" />
+		<set name="coolTime" val="700" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10510" levels="8" name="Chain Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage with 22718 Power added to P. Atk. Additional Skill Power 20% to damage if used during bleed. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. -->
+		<table name="#mpConsumes"> 71 73 75 78 80 83 86 88 </table>
+		<set name="icon" val="icon.skill10510" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1130" />
+		<set name="coolTime" val="700" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10511" levels="4" name="Reverse">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attempts a vital spot attack with 26320 Power added to P. Atk. Over-hit. Critical. Half-kill. Requires a dagger or dual dagger to be equipped. -->
+		<table name="#mpConsumes"> 90 98 106 112 </table>
+		<set name="icon" val="icon.skill10511" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2030" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10512" levels="8" name="Dagger Explosion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Detonates a blade to attack nearby enemies with 11903 Power added to P. Atk. Requires a dagger/dual dagger. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 125 128 132 136 141 145 150 154 </table>
+		<set name="icon" val="icon.skill10512" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1430" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10513" levels="7" name="Razor Rain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Calls down a rain of blades to attack nearby enemies with 13649 Power added to P. Atk. and inflicts Bleed. Requires a dagger or dual dagger. Over-hit. Critical hit. -->
+		<table name="#mpConsumes"> 138 142 147 152 156 161 166 </table>
+		<set name="icon" val="icon.skill10513" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1530" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10514" levels="5" name="Dark Paralysis">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Seals an enemy with the power of darkness. Causes the enemy's body to go completely rigid for 10 seconds and causes paralysis for 5 seconds. -->
+		<table name="#mpConsumes"> 38 40 42 44 46 </table>
+		<set name="icon" val="icon.skill10514" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10515" levels="6" name="Paralyzed">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Your body is paralyzed. -->
+		<set name="icon" val="icon.skill1170" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1200" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10516" levels="6" name="Shadow Chase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Moves behind an enemy, cancels his target, and inflicts Stun. -->
+		<table name="#mpConsumes"> 38 39 41 43 45 47 </table>
+		<set name="icon" val="icon.skill10516" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="100" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10517" levels="1" name="Shadow Hide">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You go into Hide state, cancel debuffs and Hold effects on you, increase HP Recovery Bonus, and eliminate enemy enmity toward you. -->
+		<set name="icon" val="icon.skill10517" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="400" />
+		<set name="reuseDelay" val="180000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10518" levels="1" name="Assassin's Reflex">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. + 20% for 10 seconds. -->
+		<set name="icon" val="icon.skill10518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="700" />
+		<set name="reuseDelay" val="8000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10520" levels="4" name="Final Ultimate Evasion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., increases P. Evasion by 60, M. Evasion by 60, M. Def. by 20%, P. Skill Evasion Rate by 60% and Debuff Resistance. Has a 40% chance of canceling the enemy's targeting when attacked. -->
+		<table name="#mpConsumes"> 38 41 45 47 </table>
+		<set name="icon" val="icon.skill10520" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="100" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10522" levels="6" name="Poison Zone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sprays poison onto nearby targets for 15 seconds. Decreases P. Atk., Speed, Shield Defense, P. Def., and M. Def. Inflicts Poison that blocks the use of magic. -->
+		<table name="#mpConsumes"> 76 79 83 87 91 95 </table>
+		<set name="icon" val="icon.skill10522" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="800" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10523" levels="6" name="Poisoned">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Poisoned by a toxin cloud. Decreases Speed, P. Atk., Shield Defense, P. Def., and M. Def., and blocks the use of magic. Decreases HP by 687 per second. -->
+		<set name="icon" val="icon.skill1167" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10524" levels="3" name="Evasive Counterstrike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 seconds, evades physical skill attacks and reflects part of the damage received. -->
+		<table name="#mpConsumes"> 42 45 47 </table>
+		<set name="icon" val="icon.skill10524" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="200" />
+		<set name="coolTime" val="100" />
+		<set name="reuseDelay" val="150000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10525" levels="4" name="Shadow Dash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 seconds, increases Speed by 66, P. Evasion by 4, and HP Recovery Bonus by 10. -->
+		<table name="#mpConsumes"> 38 41 45 47 </table>
+		<set name="icon" val="icon.skill10525" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="800" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10526" levels="6" name="Mischief">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts confusion on target to stop him from attacking target with the highest hostility. Speed - 70. -->
+		<table name="#mpConsumes"> 38 39 41 43 45 47 </table>
+		<set name="icon" val="icon.skill10526" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10527" levels="1" name="Mass Trick">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels target of frontal enemies. Eliminates their aggression and prevent them from targeting anything for 3 seconds. -->
+		<set name="icon" val="icon.skill10527" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="92" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10528" levels="1" name="Shadow Fake Death">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Acts dead to stop monsters from attacking. Cannot be targeted until you get back up. Consumes 300 MP per second. -->
+		<set name="icon" val="icon.skill10528" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="800" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10529" levels="1" name="Shadow Flash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Moves behind the enemy, cancels his target, and inflicts Stun. Additionally increases Critical Damage on target, and prevents target's HP from recovering more than 50%. -->
+		<set name="icon" val="icon.skill10529" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="71" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10530" levels="1" name="Blind Spot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Atk., Critical Rate, Critical Damage and Vital Spot Attack Rate. -->
+		<set name="icon" val="icon.skill10529" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="100" />
+		<set name="reuseDelay" val="1000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10531" levels="2" name="Angel of Death">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily increases Speed by 30, P. Evasion by 40, skill Evasion by 75, Vital Spot Attack Rate by 40%, and Debuff Resistance by 80%. Casts Crippling Poison on enemies attacking you. Requires a dagger/dual dagger to be equipped. -->
+		<table name="#mpConsumes"> 45 47 </table>
+		<set name="icon" val="icon.skill10531" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10532" levels="4" name="Clone Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Melt into a target's shadow and summons clones to attack it. Requires a dagger or dual dagger to be equipped. -->
+		<table name="#mpConsumes"> 38 41 45 47 </table>
+		<set name="icon" val="icon.skill10532" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10534" levels="1" name="Toad Poison">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- During normal attacks, has a chance of inflicting Poison on the enemy and blocking the use of magic skills. -->
+		<set name="icon" val="icon.skill10534" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="75" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="100" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10535" levels="4" name="Scorpion Poison">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Injects a poison that decreases an enemy's Spd. during a normal attack or disables magic skills. Increases poison and bleed attack success rate. -->
+		<set name="icon" val="icon.skill10535" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="0" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10537" levels="2" name="Block Magic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Poisoned. Speed is decreased and M. Skills are disabled momentarily. -->
+		<set name="icon" val="icon.skill0129" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="500" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="100" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10538" levels="4" name="Weakness Critical">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicted with Poison. Increases received Critical Damage by 35% momentarily. Increases the chance of receiving a critical attack by 10%. -->
+		<set name="icon" val="icon.skill1222" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="500" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="100" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10539" levels="8" name="Throw Dagger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Throws a dagger at the enemy with 7396 Power added to P. Atk. For 10 sec., Speed - 180. Requires a dagger/dual dagger to be equipped. Over-hit. -->
+		<table name="#mpConsumes"> 71 72 74 77 79 82 84 87 </table>
+		<set name="icon" val="icon.skill10539" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="800" />
+		<set name="hitTime" val="1730" />
+		<set name="coolTime" val="100" />
+		<set name="reuseDelay" val="45000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10540" levels="5" name="Throw Sand">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hurls poisonous sand at the enemy. For 5 seconds, greatly decreases P. accuracy and lures the enemy to you. Requires a dagger/dual dagger to be equipped. -->
+		<table name="#mpConsumes"> 38 40 42 44 46 </table>
+		<set name="icon" val="icon.skill10540" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="800" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10541" levels="6" name="Throw Poison Needle">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Throws a poison needle to cancel the enemy's skill casting. Requires a dagger/dual dagger to be equipped. -->
+		<table name="#mpConsumes"> 38 38 40 43 45 47 </table>
+		<set name="icon" val="icon.skill10541" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="800" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="400" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10542" levels="1" name="Maximum Critical">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Critical Damage + 609 and vital spot attack success rate + 10%. Side Critical Rate + 30% and Critical Damage + 40%. Rear Critical Rate + 60% and Critical Damage + 70%. -->
+		<set name="icon" val="icon.skill10542_1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10543" levels="1" name="Silent Step">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Allows you to move unnoticed by most monsters. Decreases P. Def. by 20% and increases Speed by 20%. MP is consumed continuously. -->
+		<set name="icon" val="icon.skill10543" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="800" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10544" levels="4" name="Cancel target">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0445" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10545" levels="4" name="Crippling Poison">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Causes the body to gradually become rigid for 4 seconds. Once fully rigid, paralysis lasts for 5 seconds. -->
+		<set name="icon" val="icon.skill1170" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10546" levels="4" name="Uppercut">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Delivers a powerful blow to Knock Down target for 2 seconds. Requires a dagger or dual dagger to be equipped. -->
+		<table name="#mpConsumes"> 40 43 45 47 </table>
+		<set name="icon" val="icon.skill10546" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1800" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10547" levels="1" name="Shadow Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Not in use. -->
+		<set name="icon" val="icon.skill0263" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="114" />
+		<set name="castRange" val="50" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="400" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10548" levels="8" name="Plunder">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Steals an item from the enemy. -->
+		<table name="#mpConsumes"> 38 39 40 42 43 45 46 47 </table>
+		<set name="icon" val="icon.skill10548" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="800" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10549" levels="5" name="Kick">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerfully Knock Back target with a kick. -->
+		<table name="#mpConsumes"> 38 40 42 44 46 </table>
+		<set name="icon" val="icon.skill10549" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10550" levels="4" name="Illusion Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a powerful vital spot attack and decreases speed by 23% for 7 seconds. -->
+		<table name="#mpConsumes"> 106 115 125 129 </table>
+		<set name="icon" val="icon.skill10550" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1080" />
+		<set name="coolTime" val="720" />
+		<set name="reuseDelay" val="4000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10551" levels="4" name="Illusion Trick">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels the enemy's target and stops him from targeting for 1 second. -->
+		<table name="#mpConsumes"> 58 63 68 71 </table>
+		<set name="icon" val="icon.skill10551" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="4000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10552" levels="1" name="Superior Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2, M. Def. + 199, and Fire/Water/Wind/Earth Resistance + 20. When receiving damage, M. Def. and Attribute Resistance momentarily increase. -->
+		<set name="icon" val="icon.skill10005" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10553" levels="8" name="Dagger Storm">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attack nearby enemies with 6871 Power added to P. Atk. Over-hit. -->
+		<table name="#mpConsumes"> 133 135 140 145 149 154 159 164 </table>
+		<set name="icon" val="icon.skill0005" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1530" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10554" levels="1" name="Power Bluff">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., turns the enemy's back to you and Stuns them. Requires a dagger or dual dagger. -->
+		<set name="icon" val="icon.skill10554" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="40" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="8000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10555" levels="1" name="Impaired">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cannot move for 5 seconds. -->
+		<set name="icon" val="icon.skill1201" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1200" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10556" levels="1" name="Illusion Hide">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Becomes hidden momentarily. -->
+		<set name="icon" val="icon.skill10517" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="reuseDelay" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10557" levels="2" name="Maximize Critical">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 20 sec., side Critical Rate + 30% and rear Critical Rate + 60%. During a critical attack, 50 % chance of triggering Critical level 2. -->
+		<table name="#icons"> icon.skill10542 icon.skill10542_2 </table>
+		<set name="icon" val="#icons" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="800" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10558" levels="1" name="Elusive Mirage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., has a chance of cancelling target of the enemy that attacked you. Requires a dagger or dual dagger. -->
+		<set name="icon" val="icon.skill11861" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="72" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10559" levels="1" name="Elusive Mirage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cannot target for 2 sec. -->
+		<set name="icon" val="icon.skill11861" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10560" levels="1" name="Maximum Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 20 sec., Vital Spot Attack Rate + 10%. Requires a dagger or dual dagger. -->
+		<set name="icon" val="icon.skill11877" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10561" levels="4" name="Superior Vitality">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP and CP + 7%. Increases resistance to poison, bleed, and stun + 4. -->
+		<set name="icon" val="icon.skill11864" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10562" levels="1" name="Critical Adventures">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 min., Critical Damage + 304 and vital spot attack success rate + 10%. Front Critical Damage - 30%, Side Critical Rate + 20% and Critical Damage + 20%. Rear Critical Rate + 40% and Critical Damage + 40%. Requires a dagger or dual dagger. -->
+		<set name="icon" val="icon.skill10562" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="36" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>

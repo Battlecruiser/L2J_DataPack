@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="11500" levels="1" name="Heavy Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a powerful blow on target. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="71" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11501" levels="1" name="Superior Dual Weapon Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When a dualsword/blunt is equipped, P. Atk. + 20%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, Speed + 13, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. -->
+		<set name="icon" val="icon.skill10252" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11502" levels="1" name="Superior Robe Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 4636 and P. Def. + 1033 when equipped with a Robe. -->
+		<set name="icon" val="icon.skill11252" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11503" levels="1" name="Superior Light Armor Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 4636, P. Def. + 1040 and MP Recovery Bonus + 25% when equipped with Light Armor. -->
+		<set name="icon" val="icon.skill10254" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11504" levels="1" name="Superior Heavy Armor Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 4636 and P. Def. + 1194 when equipped with Heavy Armor. -->
+		<set name="icon" val="icon.skill10002" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11505" levels="1" name="Superior Anti Magic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. + 139 and Magic Attack Resistance + 35%. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. -->
+		<set name="icon" val="icon.skill10004" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11506" levels="1" name="Superior HP Boost">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and Max HP + 366. -->
+		<set name="icon" val="icon.skill0211" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11507" levels="1" name="Superior MP Boost">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and Max MP + 313. -->
+		<set name="icon" val="icon.skill0213" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11508" levels="6" name="Assault Rush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Rushes the enemy to inflict Stun for 1 second. Requires a sword, dualsword or dual blunt to be equipped. -->
+		<table name="#mpConsumes"> 38 39 41 43 45 47 </table>
+		<set name="icon" val="icon.skill11508" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11509" levels="8" name="Crippling Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 14608 Power added to P. Atk. For 20 seconds, P. Def. and M. Def. - 40% and P. Evasion - 15. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 46 47 48 50 52 53 55 57 </table>
+		<set name="icon" val="icon.skill11509" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="910" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11510" levels="8" name="Shadow Blade">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 14608 Power added to P. Atk. For 20 seconds, P. Atk. and M. Atk. - 40%. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 50 51 53 55 57 59 60 62 </table>
+		<set name="icon" val="icon.skill11510" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1010" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11511" levels="8" name="Death Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 21642 Power added to P. Atk. Requires a sword, blunt, dualsword, or dual blunt weapon. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 73 74 76 79 82 84 87 90 </table>
+		<set name="icon" val="icon.skill11511" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1410" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11513" levels="8" name="Mass Crippling Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target and nearby enemies with 10263 Power added to P. Atk. For 20 seconds, decreases target's P. Def. and M. Def. by 40% and P. Evasion by 15. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 130 132 136 142 146 150 156 160 </table>
+		<set name="icon" val="icon.skill11513" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1210" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11514" levels="8" name="Mass Shadow Blade">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target and nearby enemies with 11722 Power added to P. Atk. For 20 seconds, decreases P. Atk. and M. Atk. by 40%. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 146 150 156 160 166 172 176 182 </table>
+		<set name="icon" val="icon.skill11514" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1410" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11515" levels="5" name="Confusion Bomber">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Curses target with darkness. For 5 seconds, decreases Speed and Atk. Spd. by 5%. After 5 seconds, detonates target to inflict damage nearby. Requires a sword, dualsword or dual blunt to be equipped. -->
+		<table name="#mpConsumes"> 76 80 84 88 92 </table>
+		<set name="icon" val="icon.skill11515" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="200" />
+		<set name="hitTime" val="1210" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="180000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11516" levels="15" name="Curse Explosion">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1170" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11517" levels="4" name="Horn Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 20 minutes, all party members' P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. -->
+		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<set name="icon" val="icon.skill11517" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11518" levels="4" name="Drum Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, party members' Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 20, Critical Damage during a normal attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%, damage received from critical attacks - 30% and Speed - 15%. Party members equipped with melee weapons/bows/crossbows have increased Critical Damage after receiving an amount of damage. -->
+		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<set name="icon" val="icon.skill11522" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11519" levels="4" name="Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, party members' Max HP + 37%, Max MP + 37%, Max CP + 37%, and HP Recovery Bonus + 20%. -->
+		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<set name="icon" val="icon.skill11519" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11520" levels="4" name="Guitar Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, party members' P. Critical Rate + 32%, P. Critical Damage + 35%, M. Critical Rate + 20 , and MP Consumption - 20% for physical skills and - 10% for magic skills. Iss Enchanter's Enchant Skill MP Consumption - 20%. -->
+		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<set name="icon" val="icon.skill11520" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11521" levels="4" name="Harp Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, party members' P. Accuracy + 5, P. and M. Evasion + 5, Speed + 34 and received Critical Damage - 30%. -->
+		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<set name="icon" val="icon.skill11521" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11522" levels="4" name="Lute Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, party members' Atk. Spd. + 34% and Casting Spd. + 31%. Also has a chance of triggering a 9% Vampiric Rage effect during a normal attack. -->
+		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<set name="icon" val="icon.skill11518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11523" levels="1" name="Knight's Harmony">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, the selected party member's P. Atk. + 12%, P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30% and Shield Defense + 50%. -->
+		<set name="icon" val="icon.skill11523" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="140" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11524" levels="1" name="Warrior's Harmony">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, the selected party member's P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8% and Speed + 8. -->
+		<set name="icon" val="icon.skill11524" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="140" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11525" levels="1" name="Wizard's Harmony">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, the selected party member's M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Speed + 8, M. Def. + 14%, MP Recovery Bonus + 20%, MP Consumption for magic skills - 15% and physical skills -5%, and Cooldown - 20%. -->
+		<set name="icon" val="icon.skill11525" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="140" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11526" levels="1" name="Superior Sword/Blunt Weapon Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When a sword or blunt weapon is equipped, P. Atk. +20%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. -->
+		<set name="icon" val="icon.skill10001" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11529" levels="1" name="Prevailing Sonata">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes. -->
+		<set name="icon" val="icon.skill11529" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="140" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11530" levels="1" name="Daring Sonata">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases party members' P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4 for 5 minutes. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
+		<set name="icon" val="icon.skill11530" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="140" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11532" levels="1" name="Refreshing Sonata">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases party members' HP Recovery Bonus by 20%, P.ﾠAccuracy by 4, P.ﾠEvasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10% for 5 minutes. -->
+		<set name="icon" val="icon.skill11532" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="140" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11533" levels="1" name="Blood Requiem">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Party members receives 80% Vampiric Rage effect for 15 seconds. -->
+		<set name="icon" val="icon.skill11546" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="342" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11534" levels="5" name="Angel's Touch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 7 seconds, renders target immune to debuffs. -->
+		<table name="#mpConsumes"> 70 75 80 85 90 </table>
+		<set name="icon" val="icon.skill11534" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11536" levels="6" name="Divine Cancel">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance of canceling up to 2 of the buff effects on target. -->
+		<table name="#mpConsumes"> 70 70 75 80 85 90 </table>
+		<set name="icon" val="icon.skill11536" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11537" levels="7" name="Transform">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms target into a harmless creature and decrease its Speed by 20% for 15 seconds. The effect is canceled if the transformed target is attacked. -->
+		<table name="#mpConsumes"> 126 126 135 139 148 157 166 </table>
+		<set name="icon" val="icon.skill11537" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11538" levels="4" name="Mass Giant Root">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts Hold on nearby enemies for 15 seconds. -->
+		<table name="#mpConsumes"> 252 558 612 666 </table>
+		<set name="icon" val="icon.skill11538" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11539" levels="8" name="Petrify">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Petrifies target for 15 seconds. -->
+		<table name="#mpConsumes"> 70 72 76 78 82 85 88 92 </table>
+		<set name="icon" val="icon.skill11539" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11540" levels="4" name="Quick Escape">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms yourself into a cute pig for 15 seconds. P. Def. and M. Def. + 3000, and Speed + 30%. -->
+		<table name="#mpConsumes"> 70 77 85 92 </table>
+		<set name="icon" val="icon.skill11540" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11541" levels="1" name="Polymorph">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms yourself into a stone for 15 seconds to eliminate nearby enemies' aggression and keep them from targeting you. Greatly decreases Speed while transformed. Cannot be used while Disparition is active. -->
+		<set name="icon" val="icon.skill11541" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11543" levels="3" name="Disperse">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., transforms yourself and nearby party members to increase P. Def. and M. Def. + 2000 and Speed + 44. Decreases P. Atk. and M. Atk. + 80%. -->
+		<table name="#mpConsumes"> 330 350 370 </table>
+		<set name="icon" val="icon.skill11543" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="900000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11544" levels="1" name="Battle Rhapsody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., doubles all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. -->
+		<set name="icon" val="icon.skill11544" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="916" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11545" levels="1" name="Crazy Nocturne">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 sec., decreases standard attack and M. Skill's Critical Rate targeting party members by 50%. -->
+		<set name="icon" val="icon.skill11545" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1032" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11546" levels="1" name="Chaos Symphony">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts 38826 damage on target and nearby enemies. Decreases nearby enemies' P. Atk., P. Def., M. Atk., M. Def. and Speed by 50% for 10 seconds. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
+		<set name="icon" val="icon.skill11533" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1767" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11547" levels="1" name="Superior HP Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and HP Recovery Bonus + 2.8. -->
+		<set name="icon" val="icon.skill0212" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11548" levels="1" name="Superior Quick Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and Cooldown for magic skills - 25%. -->
+		<set name="icon" val="icon.skill11004" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11549" levels="1" name="Superior Mana Steal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance of recovering MP during a normal attack when equipped with a sword, blunt, dualsword, or dual blunt weapon. -->
+		<set name="icon" val="icon.skill11505" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11550" levels="1" name="Superior Mana Steal">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill11505" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11551" levels="1" name="Superior Mental Attack Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30. -->
+		<set name="icon" val="icon.skill10257" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11552" levels="4" name="Superior Divine Lore">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- MP Consumption for skills is decreased by 6%. -->
+		<set name="icon" val="icon.skill11506" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11553" levels="1" name="Superior Focus Mind">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and increases MP recovery bonus by 8.4. -->
+		<set name="icon" val="icon.skill11187" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11554" levels="1" name="Superior Sixth Sense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and when HP is below 30%, increases P. Evasion by 17. -->
+		<set name="icon" val="icon.skill11504" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11555" levels="1" name="Superior Fast Spell Casting">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Casting Spd. by 15%. -->
+		<set name="icon" val="icon.skill11788" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11556" levels="1" name="Cancel Transform">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill01703" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11557" levels="1" name="Ultimate Scourge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Disables nearby enemies' natural HP Recovery for 2 minutes. -->
+		<set name="icon" val="icon.skill11557" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="423" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11558" levels="1" name="Ultimate Oblivion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels nearby enemies' targets. -->
+		<set name="icon" val="icon.skill11558" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="423" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11559" levels="1" name="Ultimate Suspension">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. -->
+		<set name="icon" val="icon.skill11559" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="423" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11560" levels="2" name="Celestial Aegis">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Makes all party members invincible for 30 seconds. -->
+		<table name="#mpConsumes"> 423 557 </table>
+		<set name="icon" val="icon.skill11560" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11561" levels="4" name="Giant Root">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts Hold on the enemy for 15 seconds. -->
+		<table name="#mpConsumes"> 126 139 153 166 </table>
+		<set name="icon" val="icon.skill11561" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11562" levels="1" name="Devil's Movement">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Prevents all party members from being attacked preemptively by monsters for 2 minutes. But if any party member initiates an attack, the effect will be canceled. -->
+		<set name="icon" val="icon.skill11562" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11563" levels="1" name="Quick Return">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<set name="icon" val="icon.skill11819" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="75000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11564" levels="3" name="Angel's Resurrection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Resurrects a dead target and restores 40% of the XP lost. -->
+		<set name="icon" val="icon.skill1016" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="60" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11565" levels="1" name="Elemental Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases party members' Fire/Water/Wind/Earth Resistance by 30 for 30 minutes. -->
+		<set name="icon" val="icon.skill11565" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="140" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11566" levels="1" name="Holy Attack Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases party members' Holy/Dark Attack Resistance by 30, and Poison/Bleed Resistance by 50% for 30 minutes. -->
+		<set name="icon" val="icon.skill11567" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="140" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11567" levels="1" name="Mental Attack Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases party members' Hold/Sleep/Mental Attack Resistance by 50, Buff-canceling Attack Resistance by 30 and Debuff Resistance by 20 for 30 minutes. -->
+		<set name="icon" val="icon.skill11824" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="140" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11569" levels="1" name="Critical Damage Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Critical Damage is greatly increased through Poem of Drum. -->
+		<set name="icon" val="icon.skill1542" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11570" levels="1" name="Healing Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. -->
+		<set name="icon" val="icon.skill11570" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="582" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11571" levels="1" name="Recovery Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores target's CP by 1000. -->
+		<set name="icon" val="icon.skill11571" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="120" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="5000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11580" levels="4" name="Mass Transform">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
+		<table name="#mpConsumes"> 126 139 153 166 </table>
+		<set name="icon" val="icon.skill11580" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1410" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11581" levels="4" name="Superior Advantage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Skill Cooldown - 5%, Skill Power + 5%, MP Recovery Rate + 5, and Max HP, MP, and CP + 5%. Skill mastery effect + 10%. -->
+		<set name="icon" val="icon.skill11841" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11582" levels="4" name="Mass Song of Silence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Plays the Song of Silence. For 10 sec., enemies' P. Skills and M. Skills are locked. -->
+		<table name="#mpConsumes"> 126 139 153 166 </table>
+		<set name="icon" val="icon.skill11839" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1410" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11583" levels="4" name="Superior Song of Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def./ M. Def. + 5%. Skill Power + 5%. -->
+		<set name="icon" val="icon.skill0153" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11584" levels="4" name="Mass Medusa's Dance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Performs that evokes the mirage of a Medusa. For 10 sec., Petrifies nearby enemies. -->
+		<table name="#mpConsumes"> 126 139 153 166 </table>
+		<set name="icon" val="icon.skill11840" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1410" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11585" levels="4" name="Superior Dance of Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk./ M. Atk. + 5%. Skill Power + 5%. -->
+		<set name="icon" val="icon.skill0141" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11586" levels="4" name="Pa'agrio's Bravery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., restores clan members' Max CP and increases it by 5%. -->
+		<table name="#mpConsumes"> 126 139 153 166 </table>
+		<set name="icon" val="icon.skill11843" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1410" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11587" levels="4" name="Mass Blockade">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., locks target and nearby enemies' standard attacks during PvP. -->
+		<table name="#mpConsumes"> 252 278 306 332 </table>
+		<set name="icon" val="icon.skill11587" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2110" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11588" levels="4" name="Superior Wizard Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max MP + 10%. -->
+		<set name="icon" val="icon.skill0164" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11589" levels="4" name="Horn Frenzy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., clan members' P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. -->
+		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<set name="icon" val="icon.skill11589" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11590" levels="4" name="Drum Frenzy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., clan members' Max MP + 20%, HP Recovery Bonus + 20%, and M. Critical Rate + 20. During a standard attack,  P. Atk. and Debuff Resistance + 10%, and Critical Damage, P. Def., Atk. Spd., M. Atk., M. Def., and Casting Spd. + 20%. When hit with a critical attack, received damage - 30% and Speed - 15%. Increases Critical Damage during a standard attack for a member equipped with a melee weapon/bow/crossbow who receives more than a certain amount of damage. -->
+		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<set name="icon" val="icon.skill11590" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11591" levels="4" name="Pipe Organ Frenzy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., clan members' Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. -->
+		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<set name="icon" val="icon.skill11591" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11592" levels="4" name="Guitar Frenzy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., clan members' P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. -->
+		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<set name="icon" val="icon.skill11592" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11593" levels="4" name="Harp Frenzy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., clan members' P. Accuracy and P. Evasion/ M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. -->
+		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<set name="icon" val="icon.skill11593" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11594" levels="4" name="Lute Frenzy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., clan members' Atk. Spd. + 34% and Casting Spd. + 31%. Has a chance of applying 9% Vampiric Rage effect. -->
+		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<set name="icon" val="icon.skill11594" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11595" levels="1" name="Knight's Frenzied Harmony">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases clan members' P. Atk. + 12%, P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30%, and Shield Defense + 50%. -->
+		<set name="icon" val="icon.skill11596" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="140" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11596" levels="1" name="Warrior's Frenzied Harmony">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases clan members' P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8%, and Spd. + 8. -->
+		<set name="icon" val="icon.skill11595" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="140" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11597" levels="1" name="Wizard's Frenzied Harmony">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases clan members' M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Spd. + 8, M. Def. + 14%, and MP Recovery Bonus + 20%. Decreases magic skill MP Consumption - 15%, physical skill MP Consumption - 5%, and Skill Cooldown - 20%. -->
+		<set name="icon" val="icon.skill11597" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="140" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11598" levels="4" name="Greater Freezing Flame">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- A powerful cold flame. For 10 sec., decreases enemy's HP by 326. -->
+		<table name="#mpConsumes"> 73 79 86 91 </table>
+		<set name="icon" val="icon.skill11598" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="910" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11599" levels="4" name="Combat Cry">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk./P. Def., M. Atk./M. Def. + 5%, and Skill Power + 5%. MP drains consistently depending on level. -->
+		<set name="icon" val="icon.skill1001" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>

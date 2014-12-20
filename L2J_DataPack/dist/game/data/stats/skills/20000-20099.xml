@@ -97,4 +97,21 @@
 			</effect>
 		</for>
 	</skill>
+	<skill id="20007" levels="1" name="Block Invincibility">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 min., HP/MP Recovery Bonus increase, and Speed + 5. You cannot receive the Celestial Aegis, Celestial Protection, or the Celestial Party Protection effect. -->
+		<set name="icon" val="icon.skill11560" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="20008" levels="1" name="Clan Advent (Event)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When the clan leader logs in, clan members' P. Atk. / P. Def. / M. Def. + 5%, M. Atk. + 6%, HP/MP Recovery Bonus + 5, and XP gain + 100%. -->
+		<set name="icon" val="icon.skill19009" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
 </list>

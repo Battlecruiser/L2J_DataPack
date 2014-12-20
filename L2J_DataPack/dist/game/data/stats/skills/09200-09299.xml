@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="9200" levels="1" name="Elixir: Lute Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Also there is a chance of triggering a 9% Vampiric Rage effect during a normal attack. -->
+		<set name="icon" val="icon.skill11518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9201" levels="1" name="Elixir: Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
+		<set name="icon" val="icon.skill11519" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9202" levels="1" name="Elixir: Guitar Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases P. Critical Rate by 32%, P. Critical Damage by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and buffs skill MP consumption for Iss Enchanters by 20%. -->
+		<set name="icon" val="icon.skill11520" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9203" levels="1" name="Elixir: Harp Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases P. Accuracy by 5, P. Evasion and M. Evasion by 5, and Speed by 34. Decreases received critical damage by 30%. -->
+		<set name="icon" val="icon.skill11521" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9204" levels="1" name="Kukuru">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mounts a Kukuru. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9205" levels="1" name="Sturdy Kukuru">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Feels sturdy while riding a kukuru. -->
+		<set name="icon" val="icon.skill0169" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="45000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9206" levels="1" name="Fast Run">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 seconds, Speed + 95. -->
+		<set name="icon" val="icon.skill9206" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="45000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9207" levels="1" name="Lucky Clover (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9208" levels="1" name="Lucky Clover (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9209" levels="1" name="Kukuru">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mounts a Kukuru. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9210" levels="1" name="Dismount">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Dismounts from a ridable mount. -->
+		<set name="icon" val="icon.skill9210" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9211" levels="1" name="Dismount">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Dismounts from a kukuru. -->
+		<set name="icon" val="icon.skill0217" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9212" levels="1" name="Kukuru Dismount">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Dismounts from a kukuru. -->
+		<set name="icon" val="icon.skilltransform2" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9213" levels="1" name="Kukurin">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mounts a Kukurin. -->
+		<set name="icon" val="icon.skilltransform3" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9214" levels="1" name="Divine Inspiration">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9215" levels="1" name="Divine Inspiration">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9216" levels="1" name="Divine Inspiration">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9217" levels="1" name="Divine Inspiration">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9218" levels="1" name="Elixir of Blessing - Horn Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. -->
+		<set name="icon" val="icon.skill11517" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9219" levels="1" name="Elixir of Blessing - Drum Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Rate + 20%, P. Atk. + 20%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Received Critical Damage - 30% and Speed - 15%. Increases Critical Damage during a standard attack if you receive more than a certain amount of damage. -->
+		<set name="icon" val="icon.skill11522" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9220" levels="1" name="Elixir of Blessing - Lute Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., Atk. Spd. + 34%, and Casting Spd. + 31%. Has a chance of applying 9% Vampiric Rage. -->
+		<set name="icon" val="icon.skill11518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9221" levels="1" name="Elixir of Blessing - Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. -->
+		<set name="icon" val="icon.skill11519" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9222" levels="1" name="Elixir of Blessing - Guitar Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. -->
+		<set name="icon" val="icon.skill11520" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9223" levels="1" name="Elixir of Blessing - Harp Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., P. Accuracy + 5, P. Evasion/M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. -->
+		<set name="icon" val="icon.skill11521" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9224" levels="1" name="Scroll of Escape: Talking Island Village">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="20000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9225" levels="1" name="Specter of Light">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons the Specter of Light. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9226" levels="1" name="Fragment of Light">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="200" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9227" levels="1" name="Mentor's Horn Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mentor's assistance. P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
+		<set name="icon" val="icon.skill11517" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9228" levels="1" name="Mentor's Drum Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mentor's assistance. Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Damage + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. When hit with a critical attack, received damage - 30% and Speed - 15%. Increases Critical Damage during a standard attack for a member equipped with a melee weapon who receives more than a certain amount of damage. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
+		<set name="icon" val="icon.skill11522" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9229" levels="1" name="Mentor's Lute Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mentor's assistance. Atk. Spd. + 34%, Casting Spd. + 31%, and has a chance of applying 9% Vampiric Rage effect. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
+		<set name="icon" val="icon.skill11518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9230" levels="1" name="Mentor's Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mentor's assistance. Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. The buff lasts 5 minutes if your mentor logs out. -->
+		<set name="icon" val="icon.skill11519" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9231" levels="1" name="Mentor's Guitar Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mentor's assistance. P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
+		<set name="icon" val="icon.skill11520" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9232" levels="1" name="Mentor's Harp Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mentor's assistance. P. Accuracy + 5, P. Evasion/M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
+		<set name="icon" val="icon.skill11521" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9233" levels="1" name="Mentor's Guidance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mentor's assistance. Obtained XP/SP + 50%. Buff remains 5 min. after mentor logs out. -->
+		<set name="icon" val="br_cashtex.skill.br_cash_rune_of_exp_buff_1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="3" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9234" levels="1" name="Scroll: Enchant Hair Accessory">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Enchants Hair Accessory. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9235" levels="1" name="Gift of Tersi's Light 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Give a gift. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2700" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="-1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9236" levels="1" name="Gift of Tersi's Light 2">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Give a gift. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2700" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="-1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9237" levels="1" name="Gift of Tersi's Light 3">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Give a gift. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2700" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="-1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9238" levels="1" name="Gift of Tersi's Light 4">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Give a gift. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2700" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="-1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9239" levels="1" name="Gift of Tersi's Light 5">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Give a gift. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2700" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="-1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9240" levels="2" name="XP Rune I (Lv. 1-85)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Obtained XP/SP + 100%. -->
+		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_exp_buff_1 br_cashtex.skill.br_cash_rune_of_exp_buff_2 </table>
+		<set name="icon" val="#icons" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9241" levels="1" name="Giant's Box">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9242" levels="1" name="Bound Box">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9243" levels="1" name="Box of Destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9244" levels="1" name="Giant's Scroll: Enchant Weapon (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9245" levels="1" name="Giant's Scroll: Enchant Armor (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9246" levels="1" name="Giant's Scroll: Enchant Weapon (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9247" levels="1" name="Giant's Scroll: Enchant Armor (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9248" levels="1" name="Giant's Scroll: Enchant Weapon (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9249" levels="1" name="Giant's Scroll: Enchant Armor (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9250" levels="1" name="Giant's Scroll: Enchant Weapon (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9251" levels="1" name="Giant's Scroll: Enchant Armor (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9252" levels="1" name="Giant's Scroll: Enchant Weapon (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9253" levels="1" name="Giant's Scroll: Enchant Armor (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9254" levels="1" name="Giant's Scroll: Enchant Weapon (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9255" levels="1" name="Giant's Scroll: Enchant Armor (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9256" levels="3" name="Mentee's Appreciation">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mentee's appreciation. Obtained XP/SP + 5%. Applied only when mentee is logged in. -->
+		<table name="#isMagics"> 3 0 0 </table>
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="#isMagics" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9257" levels="1" name="Mentor's Scroll: Enchant Weapon (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9258" levels="1" name="Mentor's Scroll: Enchant Armor (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9259" levels="1" name="Mentor's Scroll: Enchant Weapon (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9260" levels="1" name="Mentor's Scroll: Enchant Armor (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9261" levels="1" name="Mentor's Scroll: Enchant Weapon (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9262" levels="1" name="Mentor's Scroll: Enchant Armor (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9263" levels="1" name="Mentor's Scroll: Enchant Weapon (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9264" levels="1" name="Mentor's Scroll: Enchant Armor (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9265" levels="1" name="Mentor's Scroll: Enchant Weapon (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9266" levels="1" name="Mentor's Scroll: Enchant Armor (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9267" levels="1" name="Mentor's Scroll: Enchant Weapon (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9268" levels="1" name="Mentor's Scroll: Enchant Armor (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9269" levels="1" name="Improved Giant's Box">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9270" levels="1" name="Improved Bound Box">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9271" levels="1" name="Improved Box of Destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9272" levels="1" name="Mentor's Surprise Box">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9273" levels="1" name="Player Commendation - Horn Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. PC Cafes only. -->
+		<set name="icon" val="icon.skill11517" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9274" levels="1" name="Player Commendation - Drum Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Rate + 20%, P. Atk. + 20%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Received Critical Damage - 30% and Speed - 15%. Increases Critical Damage during a standard attack if you receive more than a certain amount of damage. PC Cafes only. -->
+		<set name="icon" val="icon.skill11522" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9275" levels="1" name="Player Commendation - Lute Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., Atk. Spd. + 34%, and Casting Spd. + 31%. Has a chance of applying 9% Vampiric Rage. PC Cafes only. -->
+		<set name="icon" val="icon.skill11518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9276" levels="1" name="Player Commendation - Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. PC Cafes only. -->
+		<set name="icon" val="icon.skill11519" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9277" levels="1" name="Player Commendation - Guitar Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. PC Cafes only. -->
+		<set name="icon" val="icon.skill11520" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9278" levels="1" name="Player Commendation - Harp Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., P. Accuracy + 5, P. Evasion/M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. PC Cafes only. -->
+		<set name="icon" val="icon.skill11521" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9279" levels="1" name="PC Progression Support">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Obtained XP/SP + 30%. Not for pets/servitors. PC Cafes only. -->
+		<set name="icon" val="icon.etc_pccafe_exp_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="3" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9280" levels="2" name="Horn Melody - Heavenly Cocktail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def.  + 30%. Buff remains even after death, and cannot be forcefully deleted. -->
+		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9281" levels="2" name="Drum Melody - Heavenly Cocktail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Rate + 20%, P. Atk. + 20%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Received Critical Damage - 30% and Speed - 10%. Increases Critical Damage during a standard attack if you receive more than a certain amount of damage. Buff remains even after death, and cannot be forcefully deleted. -->
+		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9282" levels="2" name="Lute Melody - Heavenly Cocktail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., Atk. Spd. + 34%, and Casting Spd. + 31%. Has a chance of applying 9% Vampiric Rage. Buff remains even after death, and cannot be forcefully deleted. -->
+		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9283" levels="2" name="Pipe Organ Melody - Heavenly Cocktail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. Buff remains even after death, and cannot be forcefully deleted. -->
+		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9284" levels="2" name="Guitar Melody - Heavenly Cocktail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. Buff remains even after death, and cannot be forcefully deleted. -->
+		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9285" levels="2" name="Harp Melody - Heavenly Cocktail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., P. Accuracy + 5, P. Evasion/M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. Buff remains even after death, and cannot be forcefully deleted. -->
+		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9286" levels="1" name="Player Commendation - Scroll: Enchant Weapon (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9287" levels="1" name="Player Commendation - Scroll: Enchant Weapon (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9288" levels="1" name="Player Commendation - Scroll: Enchant Weapon (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9289" levels="1" name="Player Commendation - Scroll: Enchant Weapon (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9290" levels="1" name="Player Commendation - Scroll: Enchant Weapon (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9291" levels="1" name="Player Commendation - Scroll: Enchant Weapon (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9292" levels="1" name="Player Commendation - Quick Healing Potion">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9293" levels="1" name="Player Commendation - Soulshot (No-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9294" levels="1" name="Player Commendation - Soulshot (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9295" levels="1" name="Player Commendation - Soulshot (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9296" levels="1" name="Player Commendation - Soulshot (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9297" levels="1" name="Player Commendation - Soulshot (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9298" levels="1" name="Player Commendation - Soulshot (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="9299" levels="1" name="Player Commendation - Soulshot (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>

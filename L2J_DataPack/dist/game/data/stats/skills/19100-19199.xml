@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="19100" levels="1" name="Light Armor Mastery - Test">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Spd. And Skill Critical Rate increase depending on DEX. -->
+		<set name="icon" val="icon.skill19100" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19101" levels="1" name="Chain Blow - Test">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts damage with 33717 Power added to P. Atk. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. Additional damage occurs with Bleed. -->
+		<set name="icon" val="icon.skill19101" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1130" />
+		<set name="coolTime" val="700" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19102" levels="1" name="Chaos Sympathy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Temporarily makes a participant in the Ceremony of Chaos invincible. -->
+		<set name="icon" val="icon.skill1505" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19103" levels="1" name="Resident Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For clan members owning a residence, Max CP + 700, and PvP Def. + 3%. -->
+		<set name="icon" val="icon.skill0050" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19104" levels="1" name="Resident Power">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For clan members owning a residence, Max CP + 1000, and PvP Def. + 5%. -->
+		<set name="icon" val="icon.skill0050" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19105" levels="1" name="Resident Advantage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For clan members level 1 - 84 owning a residence, Atk. Spd./ Casting Spd/ Speed + 13%. -->
+		<set name="icon" val="icon.skill0820" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19106" levels="1" name="Resident Advantage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For clan members level 1 - 84 owning a residence, Atk. Spd./ Casting Spd/ Speed + 15%. -->
+		<set name="icon" val="icon.skill0820" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19107" levels="1" name="Resident Guidance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For clan members owning a residence, acquired XP + 3%. -->
+		<set name="icon" val="icon.skill0788_3" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19108" levels="1" name="Resident Guidance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For clan members owning a residence, acquired XP + 5%. -->
+		<set name="icon" val="icon.skill0788_5" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19109" levels="4" name="Siege Golem's Spirit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Merge with a powerful Siege Golem. For 5 min., P. Def./ M. Def. + 50%, and resistance to bows/crossbows + 50%. Consumes 10 Crystals (R-grade). -->
+		<set name="icon" val="icon.skill19109" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="hitTime" val="10000" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="1200000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19110" levels="5" name="Clan Resilience">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Clan members' resistance to Knock Back / Knock Down + 12. Elder or above only. -->
+		<set name="icon" val="icon.skill_tough_spirit" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19111" levels="5" name="Clan Steadfastness">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Clan members' resistance to Aerial Yoke + 12. Elder or above only. -->
+		<set name="icon" val="icon.skill_heavy_heart" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19112" levels="1" name="Clan Escape">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Teleports nearby clan members to town. Cannot be used in special places such as GM Consultation Services. Consumes 50 Spirit Ores and 2000 Individual Fame. Viscount or above only. -->
+		<set name="icon" val="icon.skill_pledge_party_recall" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3500" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19113" levels="1" name="Clan Escape Lock">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 sec., blocks target's Escape. Consumes 100 Spirit Ores and 3000 Individual Fame. Marquis or above only. -->
+		<set name="icon" val="icon.skill_recall" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="19114" levels="1" name="Clan Resurrection Lock">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 sec., blocks target's Resurrection. Consumes 150 Spirit Ores and 1000 Clan Reputation. Marquis or above only. -->
+		<set name="icon" val="icon.skill_resurrection" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="19115" levels="1" name="Air Bike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can mount the Air Bike. Must belong to a clan Lv. 5 or above. -->
+		<set name="icon" val="icon.etc_dwarf_craft_vehicle" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19116" levels="1" name="Summon Lyn Draco">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can mount a Lind Rider. -->
+		<set name="icon" val="icon.etc_lind_vehicle" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19117" levels="1" name="Dimensional Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Status defense abilities are greatly increased by receiving dimensional abilities. -->
+		<set name="icon" val="icon.skill14216" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19118" levels="4" name="Bike Ability">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Blend in with enemies to avoid their notice. If you attack in this state, the entire party becomes exposed. -->
+		<table name="#mpConsumes"> 61 63 67 70 </table>
+		<set name="icon" val="icon.skill_transform_etc" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="4000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19119" levels="1" name="Noblesse Grace">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Retains target's buffs/debuffs upon death, except for Noblesse Grace and Lucky Charm. Consumes 1000 Spirit Ore. -->
+		<set name="icon" val="icon.skill1323" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="500" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19120" levels="4" name="Noble Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. + 2%. -->
+		<set name="icon" val="icon.skill19120" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19121" levels="4" name="Noble Magic Barrier">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. + 3%. -->
+		<set name="icon" val="icon.skill19121" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19122" levels="4" name="Noble Blessed Body">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 6%. -->
+		<set name="icon" val="icon.skill1045" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19123" levels="4" name="Noble Haste">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. + 2%. -->
+		<set name="icon" val="icon.skill1086" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19124" levels="2" name="Noble Knight Buffs">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Paralysis/Stun success rate and defense rate + 5%. -->
+		<set name="icon" val="icon.skill19124" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19125" levels="2" name="Noble Critical Focus">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical Skill Critical Rate + 5%. -->
+		<set name="icon" val="icon.skill0193" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19126" levels="2" name="Noble Mindset">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- MP Recovery Bonus + 4. -->
+		<set name="icon" val="icon.skill0229" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19127" levels="2" name="Noble Guidance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15. -->
+		<set name="icon" val="icon.skill19127" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19128" levels="2" name="Noble Sting">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical Skill Critical Damage + 5%. -->
+		<set name="icon" val="icon.skill10655" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19129" levels="2" name="Noble Protection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Critical rate in a normal attack - 2%. -->
+		<set name="icon" val="icon.skill19129" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19130" levels="2" name="Noble Attributes">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attack Attribute + 20. 6 Attributes Resistance + 20. -->
+		<set name="icon" val="icon.skill19130" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19131" levels="2" name="Noble Expertise">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 3% when a melee two-handed weapon is equipped. Atk. Spd. + 3% when a shield is equipped. -->
+		<set name="icon" val="icon.skill19131" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19132" levels="2" name="Noble Mind">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical Skill Cooldown - 3%. -->
+		<set name="icon" val="icon.skill19132" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19133" levels="1" name="Noble Heavy Armor Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with Heavy Armor, P. Def. + 3% and Max MP + 6%. -->
+		<set name="icon" val="icon.skill19133" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19134" levels="4" name="Noble Heavy Armor Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with Heavy Armor, P. Def. + 3%. -->
+		<set name="icon" val="icon.skill19134" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19135" levels="4" name="Noble Heavy Armor Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with Heavy Armor, P. Atk. + 2%. -->
+		<set name="icon" val="icon.skill19135" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19136" levels="3" name="Noble Prayer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Received heal amount + 3%. -->
+		<set name="icon" val="icon.skill1273" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19137" levels="1" name="Noble Guts">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Received damage - 10%. -->
+		<set name="icon" val="icon.skill19137" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19138" levels="1" name="Noble Frenzy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical Skill Power + 10%. -->
+		<set name="icon" val="icon.skill19138" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19139" levels="4" name="Noble Might">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 2%. -->
+		<set name="icon" val="icon.skill19139" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19140" levels="2" name="Noble Cost">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical Skill MP Consumption - 5%. -->
+		<set name="icon" val="icon.skill19140" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19141" levels="2" name="Noble Wind Walk">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Speed + 5. -->
+		<set name="icon" val="icon.skill1204" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19142" levels="2" name="Noble Warrior Buffs">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stun/Restrain success rate and defense rate + 5%. -->
+		<set name="icon" val="icon.skill19142" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19143" levels="2" name="Noble Focus">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Critical Rate + 20. -->
+		<set name="icon" val="icon.skill1077" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19144" levels="2" name="Noble Backfire">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Rear Damage + 3%. -->
+		<set name="icon" val="icon.skill0030" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19145" levels="2" name="Noble Death Whisper">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical Critical Damage + 3%. -->
+		<set name="icon" val="icon.skill4278" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19146" levels="2" name="Noble Protection Magic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Chance of receiving an M. Critical attack - 2%. -->
+		<set name="icon" val="icon.skill19146" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19147" levels="2" name="Noble Ambush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Spd. + 6 when not engaged in battle. -->
+		<set name="icon" val="icon.skill1905" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19148" levels="1" name="Noble Light Armor Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with Light Armor, Max HP + 6% and Max MP + 6%. -->
+		<set name="icon" val="icon.skill19148" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19149" levels="4" name="Noble Anti Magic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with Light Armor, M. Def. + 3%. -->
+		<set name="icon" val="icon.skill0146" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19150" levels="4" name="Noble Light Armor Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with Light Armor, P. Atk. + 2%. -->
+		<set name="icon" val="icon.skill19150" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19151" levels="3" name="Noble Vampiric Rage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- During an attack, there is a chance of restoring 3% of damage as HP. -->
+		<set name="icon" val="icon.skill1268" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19152" levels="1" name="Noble Endurance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage received while immobile decreases - 21%. -->
+		<set name="icon" val="icon.skill19152" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19153" levels="1" name="Noble Critical Boost">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Critical Rate + 50, M. Critical Rate + 20, and Skill Mastery Rate + 50%. -->
+		<set name="icon" val="icon.skill19153" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19154" levels="4" name="Noble Empower">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Atk. + 3% and recovery magic Power + 47. -->
+		<set name="icon" val="icon.skill1059" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19155" levels="2" name="Noble Acumen">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Casting Spd. + 2%. -->
+		<set name="icon" val="icon.skill1085" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19156" levels="2" name="Noble Wizard Buffs">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restrain/Mind success rate and defense rate + 5%. -->
+		<set name="icon" val="icon.skill19156" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19157" levels="2" name="Noble Wild Magic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Critical Rate + 20. -->
+		<set name="icon" val="icon.skill1303" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19158" levels="2" name="Noble Blessed Soul">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max MP + 6%. -->
+		<set name="icon" val="icon.skill1048" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19159" levels="2" name="Noble Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Debuff Resistance + 5%. -->
+		<set name="icon" val="icon.skill11567" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19160" levels="2" name="Noble Magic Death">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Critical Damage + 3% and recovery magic Power + 94. -->
+		<set name="icon" val="icon.skill19160" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19161" levels="2" name="Noble Protection Armor">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Critical Damage during a normal attack - 2%. -->
+		<set name="icon" val="icon.skill19161" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19162" levels="2" name="Noble Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- MP Recovery Bonus + 8 while running. -->
+		<set name="icon" val="icon.skill19162" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19163" levels="2" name="Noble Skill Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Skill Mastery rate + 30%. -->
+		<set name="icon" val="icon.skill0330" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19164" levels="1" name="Noble Robe Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with a Robe, P. Def. + 3% and Max MP + 6%. -->
+		<set name="icon" val="icon.skill19164" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19165" levels="4" name="Noble Robe Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with a Robe, P. Def. + 3%. -->
+		<set name="icon" val="icon.skill19165" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19166" levels="4" name="Noble Robe Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with a Robe, M. Atk. + 3% and recovery skill Power + 47. -->
+		<set name="icon" val="icon.skill19166" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19167" levels="3" name="Noble Heal Boost">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recovery effects not affected by magic + 3%. -->
+		<set name="icon" val="icon.skill19167" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19168" levels="1" name="Noble Gain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- MP Recovery Bonus + 33 and Max MP + 10%. -->
+		<set name="icon" val="icon.skill19168" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19169" levels="1" name="Noble Advance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- MP Recovery Bonus + 33 and magic skill Cooldown - 5%. -->
+		<set name="icon" val="icon.skill19169" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19170" levels="2" name="Noble Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. + 3%. -->
+		<set name="icon" val="icon.skill19120" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19171" levels="4" name="Noble Condition">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 6%. -->
+		<set name="icon" val="icon.skill1045" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19172" levels="2" name="Noble Eagle Eye">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15. -->
+		<set name="icon" val="icon.skill19127" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19173" levels="2" name="Noble Emblem">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attack Attribute + 20. 6 Attributes Resistance + 20. -->
+		<set name="icon" val="icon.skill19130" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19174" levels="4" name="Noble Earth">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical P. Def. + 3%. -->
+		<set name="icon" val="icon.skill19121" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19175" levels="2" name="Noble Life">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 6%. -->
+		<set name="icon" val="icon.skill1045" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19176" levels="2" name="Noble Vision">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15. -->
+		<set name="icon" val="icon.skill19127" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19177" levels="2" name="Noble Spirit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attack Attribute + 20. 6 Attributes Resistance + 20. -->
+		<set name="icon" val="icon.skill19130" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19178" levels="1" name="Knight Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19179" levels="1" name="Warrior Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19180" levels="1" name="Rogue Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19181" levels="1" name="Archer Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19182" levels="1" name="Wizard Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19183" levels="1" name="Enchanter Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19184" levels="1" name="Summoner Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19185" levels="1" name="Healer Hidden Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19186" levels="1" name="Rampage Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a chance of increasing P. Atk. when Shield Defense is successful. Requires Abilities. -->
+		<set name="icon" val="icon.skill19186" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19187" levels="1" name="Blockade">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., blocks target's P./M. Skills. Requires Abilities. -->
+		<set name="icon" val="icon.skill19187" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="34" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="19188" levels="1" name="Snicker">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When hit in PvP, has a chance of canceling target's target. Requires Abilities. -->
+		<set name="icon" val="icon.skill19188" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19189" levels="1" name="Retreating Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 30534 power added to P. Atk., and cancels their target while moving 450 grids backward. Requires Abilities and bow/crossbow. -->
+		<set name="icon" val="icon.skill10858" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="34" />
+		<set name="castRange" val="450" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19190" levels="1" name="Brilliant Magic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Maximum MP + 10%, and MP Recovery Bonus + 8 when running. Requires Abilities. -->
+		<set name="icon" val="icon.skill19190" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19191" levels="1" name="Mist Armor">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage Received - 10%. Requires Abilities. -->
+		<set name="icon" val="icon.skill19191" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19192" levels="1" name="Mass Servitor Berserk">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., servitor's P. Atk. + 15%, and Critical Damage + 15%. Requires Abilities. -->
+		<set name="icon" val="icon.skill19192" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="67" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19193" levels="1" name="Divine Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Healing power and magic power increases when using Radiant Heal. Requires Abilities. -->
+		<set name="icon" val="icon.skill19193" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19196" levels="1" name="Rampage Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 sec., P. Atk. + 30%. Requires a shield. -->
+		<set name="icon" val="icon.skill19186" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19197" levels="1" name="Divine Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 sec., M. Atk. + 16%, and Healing Magic Power + 242. -->
+		<set name="icon" val="icon.skill19193" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19198" levels="1" name="Cancel Target">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0445" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="19199" levels="1" name="Hurricane Sign">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 sec., P./M. Atk. + 10%. -->
+		<set name="icon" val="icon.skill1996" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>

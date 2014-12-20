@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="10244" levels="3" name="True Vanguard">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage inflicted on monsters + 50%, and M. Skill MP Consumption + 30%. -->
+		<set name="icon" val="icon.skill0810" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10245" levels="1" name="Wizard - Individual Passive">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0217" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10246" levels="1" name="Wizard - Individual">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. + 30% for 5 seconds. -->
+		<set name="icon" val="icon.skill1543" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10247" levels="1" name="Knight - Individual Passive">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0217" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10248" levels="1" name="Knight - Individual">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. + 30% for 5 seconds. -->
+		<set name="icon" val="icon.skill1543" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="6000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10249" levels="1" name="Heavy Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a powerful blow on target. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10250" levels="1" name="Heavy Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a powerful blow on target. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10251" levels="1" name="Superior Weapon Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2, P. Atk. + 30%, and Atk. Spd. + 25%. P. Atk. + 1252 and P. Accuracy + 8 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. 50% chance of triggering Lightning Force during a normal attack. Depending on your STR, the Cooldown resets or the duration increases by 2 times. -->
+		<set name="icon" val="icon.skill10251" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10252" levels="1" name="Superior Dual Weapon Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2. P. Atk. + 1252 and P. Accuracy + 8 when using a dualsword, dual blunt, or fist weapon. -->
+		<set name="icon" val="icon.skill10252" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10253" levels="1" name="Superior Heavy Armor Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2. Max HP + 5368 and P. Def. + 1327 when equipped with Heavy Armor. -->
+		<set name="icon" val="icon.skill10253" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10254" levels="1" name="Superior Light Armor Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2. Max HP + 5368, P. Def. + 1271, P. Accuracy + 3, P. Evasion + 6, Spd. + 10, and Atk. Spd. + 10% when equipped with Light Armor. Chance of receiving a critical attack - 35%. -->
+		<set name="icon" val="icon.skill10254" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10255" levels="1" name="Superior Momentum Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Absorbs Momentum by 20% during a normal physical attack and 40% during a critical attack. Can absorb up to 10 Momentum levels. -->
+		<set name="icon" val="icon.skill10255" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10256" levels="1" name="Superior HP Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2, Max HP + 606, Max CP + 296 and HP Recovery Bonus + 7.3. While sitting, HP Recovery Bonus + 7 and MP recovery bonus + 3.7. When HP falls below 60%, P. Atk. + 629. When damaged to a point, has a chance of recovering 10% of Max HP. -->
+		<set name="icon" val="icon.skill10256" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10257" levels="1" name="Superior Spirit Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30. -->
+		<set name="icon" val="icon.skill10257" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10258" levels="8" name="Armor Destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 11159 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 50 52 53 54 57 59 60 62 </table>
+		<set name="icon" val="icon.skill10258" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1090" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10260" levels="8" name="Mega Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 19893 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense. -->
+		<table name="#mpConsumes"> 65 66 69 71 73 76 78 80 </table>
+		<set name="icon" val="icon.skill10260" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1490" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10262" levels="6" name="Power Bomber">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a powerful strike on target with 20483 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Critical. Ignores Shield Defense. -->
+		<table name="#mpConsumes"> 84 89 93 98 102 105 </table>
+		<set name="icon" val="icon.skill10262" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1690" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10263" levels="8" name="Hurricane Blaster">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 551 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. -->
+		<table name="#mpConsumes"> 58 59 61 63 65 67 69 71 </table>
+		<set name="icon" val="icon.skill10263" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10265" levels="8" name="Eruption">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby enemies with 11557 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 122 124 129 133 137 142 146 151 </table>
+		<set name="icon" val="icon.skill10265" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1390" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10266" levels="8" name="Giant Punch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Strikes down at the ground with a fist to Knock Down nearby enemies for 5 sec. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. -->
+		<table name="#mpConsumes"> 76 79 81 84 87 90 92 95 </table>
+		<set name="icon" val="icon.skill10266" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10267" levels="6" name="Hurricane Rush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shoulder charge target to Stun it for 3 seconds. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. -->
+		<table name="#mpConsumes"> 38 39 41 43 44 47 </table>
+		<set name="icon" val="icon.skill10267" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="100" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10268" levels="6" name="Rolling Thunder">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Becomes enveloped with the energy of a whirlwind. Continuously decreases nearby enemies' HP. Continuously decreases your MP. -->
+		<table name="#mpConsumes"> 40 42 43 45 46 47 </table>
+		<set name="icon" val="icon.skill10268" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10269" levels="7" name="Jump Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Jumps to attack frontal enemies with 10508 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. The more Momentum used the more damage inflicted, up to a maximum of 5 Momentum levels. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 111 114 118 122 126 130 134 </table>
+		<set name="icon" val="icon.skill10269" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="890" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10270" levels="1" name="Second Wind">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Instantly recovers 35% of Max HP and 15% of Max CP. For 2 minutes, Max HP + 35% and Max CP + 15%. -->
+		<set name="icon" val="icon.skill10270" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="43" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10271" levels="2" name="Power Provoke">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Provokes nearby enemies. Raises their P. Atk. and Atk. Spd. for 10 seconds but lower their P. Def. -->
+		<table name="#mpConsumes"> 76 83 </table>
+		<set name="icon" val="icon.skill10271" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="4000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10273" levels="4" name="Lightning Disarm">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Disarms nearby enemies for 5 seconds. Lowers P. Atk. and M. Atk. by 10%. -->
+		<set name="icon" val="icon.skill10273" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="92" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10274" levels="4" name="Berserker">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. When HP falls below 30%, increases P. Atk. by 30% and Critical Rate by an additional 300. Can be used when HP is below 70%. -->
+		<table name="#mpConsumes"> 38 41 45 47 </table>
+		<set name="icon" val="icon.skill10274" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10275" levels="1" name="Infinity Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a powerful attack on target with 65085 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. -->
+		<set name="icon" val="icon.skill10275" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1178" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="5000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10276" levels="1" name="Force of Nature">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immediately increases Momentum to its maximum level. -->
+		<set name="icon" val="icon.skill10276" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10277" levels="4" name="Final Cry">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Atk. + 20% and skill damage + 10% for 2 minutes. Increases general/skill attack damage + 5% during PvP. -->
+		<table name="#mpConsumes"> 38 41 45 47 </table>
+		<set name="icon" val="icon.skill10277" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="180000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10278" levels="8" name="Reduce Anger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases the aggression of nearby enemies toward the caster. -->
+		<table name="#mpConsumes"> 76 77 80 83 86 88 91 94 </table>
+		<set name="icon" val="icon.skill10278" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10279" levels="1" name="Giant Barrier">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Removes all debuffs and for 10 seconds, becomes invincible against normal attacks, skills, and debuffs. Spd. + 30%. Available when HP is 70% or lower. -->
+		<set name="icon" val="icon.skill10279" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="42" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10280" levels="1" name="Momentum Charge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Continuously consumes HP to produce Momentum. -->
+		<set name="icon" val="icon.skill10283" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="58" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10281" levels="2" name="Sonic Star">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks and knocks down nearby enemies at the speed of light with 44711 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 1103 1158 </table>
+		<set name="icon" val="icon.skill10281" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="7500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10283" levels="1" name="Increase Momentum">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill10283" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10284" levels="3" name="Lightning Force">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You are imbued with Rage. P. Atk. + 10% and Speed + 5 when equipped with a fist weapon/sword/blunt/dualsword/spear. 20% chance of raising Lightning Force to level 2 during a critical attack. -->
+		<table name="#icons"> icon.skill10284 icon.skill10284_2 icon.skill10284_3 </table>
+		<set name="icon" val="#icons" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10285" levels="1" name="HP Drain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recovers HP by 20%. -->
+		<set name="icon" val="icon.skill10285" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10286" levels="1" name="Superior Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2, M. Def. + 199, and Fire/Water/Wind/Earth Resistance + 20. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. -->
+		<set name="icon" val="icon.skill10005" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10287" levels="6" name="Rolling Thunder">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- HP decreases by 225 per second. -->
+		<set name="icon" val="icon.skill0494" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10288" levels="8" name="Hurricane Storm">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks near the enemy with 11557 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit. -->
+		<table name="#mpConsumes"> 161 163 169 175 180 186 192 198 </table>
+		<set name="icon" val="icon.skill10288" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="500" />
+		<set name="hitTime" val="1790" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10289" levels="4" name="Boost">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases skills' effect by 30% for 60 seconds and normal/skill attack damage by 5% during PvP. -->
+		<set name="icon" val="icon.skill10289" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="143" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="180000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10290" levels="8" name="Hurricane Slasher">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks around the enemy with 11557 Power added to P. Atk. Decreases power - 10% when equipped with a sword/blunt/fist weapon. Increases power + 50% when equipped with a spear. Requires a dagger, blunt, spear, fist weapon, dual blunt weapon, or dualsword to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 138 141 146 150 155 160 165 170 </table>
+		<set name="icon" val="icon.skill0007" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1800" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10291" levels="1" name="Feral Bear Cry">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shouts loudly to invoke the power of the Bear. For 5 minutes, increases your P. Atk. and P. Critical Damage by 30%. -->
+		<set name="icon" val="icon.skill10291" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10292" levels="1" name="Feral Ogre Cry">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shouts loudly to invoke the power of the Ogre. For 5 minutes, increases your P. Atk., P. Def. And M. Def. by 35% and P. Critical Damage and Max HP by 10%. -->
+		<set name="icon" val="icon.skill10292" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10293" levels="1" name="Feral Puma Cry">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shouts loudly to invoke the power of the Puma. For 5 minutes, increases your P. Accuracy by 10 and Atk. Spd. by 20%, and decreases Critical Damage received by 40%. -->
+		<set name="icon" val="icon.skill10293" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10294" levels="1" name="Feral Rabbit Cry">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shouts loudly to invoke the power of the Rabbit. For 5 minutes, increases your Atk. Spd. by 30%, Speed by 35% and P. Evasion by 15. -->
+		<set name="icon" val="icon.skill10294" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10295" levels="1" name="Hawk Cry">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shouts loudly to invoke the power of the Hawk. For 5 minutes, increases your P. Accuracy by 8, Critical Rate by 120 and Critical Damage by 30%. -->
+		<set name="icon" val="icon.skill10295" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10296" levels="1" name="Spirit of the Hunter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases damage against insects/plants/animals + 10%. -->
+		<set name="icon" val="icon.skill0359" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10297" levels="1" name="Spirit of the Slayer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%. -->
+		<set name="icon" val="icon.skill0360" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10298" levels="1" name="Power Revival">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recovers all of your HP. -->
+		<set name="icon" val="icon.skill10298" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10299" levels="1" name="Stun Spear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicted with stun and unable to move for 3 seconds. -->
+		<set name="icon" val="icon.skill10299" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="isDebuff" val="true" />
+	</skill>
+</list>

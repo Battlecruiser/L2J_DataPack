@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="22700" levels="1" name="Dr. Destroy's Sealed Rune of Wisdom">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- INT + 7 permanently, and has a 10% chance of not consuming MP for healing skills. -->
+		<set name="icon" val="br_cashtex.skill.br_cash_rune_of_exp_buff_1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22701" levels="1" name="Harp's Sealed Rune of Power_Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Has a 5% chance of Stunning all enemies within 400 grids for 3 sec. -->
+		<set name="icon" val="icon.skill1551" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22702" levels="1" name="Harp's Sealed Rune of Magic_Trigger_Decrease Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases M. Def. of target and all enemies within 400 grids by 20% for 10 sec. -->
+		<set name="icon" val="icon.skill1263" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="22703" levels="1" name="Flynt's Sealed Rune of Will_Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Becomes invincible for 5 sec. -->
+		<set name="icon" val="icon.skill1551" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="180000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22704" levels="1" name="Flynt's Sealed Rune of Destruction_Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Rune is activated, inflicting a brand and additional damage. -->
+		<set name="icon" val="icon.skill11511" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="30000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22705" levels="1" name="Dr. Destroy's Sealed Rune of Skill">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., Critical Damage and Critical Rage are increased. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22706" levels="1" name="Dr. Destroy's Sealed Rune of Wisdom_Trigger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., skills do not consume MP. -->
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22707" levels="1" name="Vitality Maintaining Potion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Maintains Vitality for 30 min. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22708" levels="1" name="XP Buff 50% (1-hour)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Obtained XP + 50%. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22709" levels="1" name="XP Buff 50% (2-hour)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Obtained XP + 50%. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22710" levels="2" name="Scroll: Increase Vitality">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="259200000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22711" levels="3" name="Scroll: Replenish Vitality">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22712" levels="1" name="Vitality Recovering Potion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., Vitality is replenished with XP gain through hunting. Effect remains even after death. -->
+		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22713" levels="1" name="Letter Collector's Gift">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 2 hr., Atk./Casting Spd. + 15%, and Speed + 20. -->
+		<set name="icon" val="icon.shield_bread_i01" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22714" levels="1" name="Transformation Scroll Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22715" levels="1" name="Heavenly Treasure Chest">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22716" levels="1" name="Fantastical Treasure Chest">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22717" levels="1" name="Glorious Treasure Chest">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22718" levels="1" name="Blessed Griffin Egg">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22719" levels="1" name="Transformation Scroll Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22720" levels="1" name="Brilliant Talisman Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22721" levels="1" name="Scroll: Seal Weapon Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22722" levels="1" name="Scroll: Seal Armor Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22723" levels="1" name="Scroll: Enchant Weapon Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22724" levels="1" name="Scroll: Enchant Armor Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22725" levels="1" name="Blessed Scroll: Enchant Weapon Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22726" levels="1" name="Blessed Scroll: Enchant Armor Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22727" levels="1" name="Transformation Scroll: Saber Tooth Tiger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Saber Tooth Tiger. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22728" levels="1" name="Transformation Scroll: Oel Mahum">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Oel Mahum. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22729" levels="1" name="Transformation Scroll: Doll Blader">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Doll Blader. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22730" levels="1" name="Transformation Scroll: Zaken">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Zaken. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22731" levels="1" name="Transformation Scroll: Anakim">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Anakim. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22732" levels="1" name="Transformation Scroll: Venom">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Venom. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22733" levels="1" name="Transformation Scroll: Gordon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Gordon. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22734" levels="1" name="Transformation Scroll: Ranku">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Ranku. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22735" levels="1" name="Transformation Scroll: Kechi">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Kechi. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22736" levels="1" name="Transformation Scroll: Demon Prince">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into Demon Prince. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22737" levels="1" name="Ink Herb">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="100" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22738" levels="1" name="Ink Gauge Reduced">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="800" />
+		<set name="hitTime" val="100" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22739" levels="1" name="Greater Ink Herb">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="100" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22740" levels="1" name="Greater Ink Gauge Reduced">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="800" />
+		<set name="hitTime" val="100" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22741" levels="1" name="Fantasy Gift Box">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22742" levels="1" name="Fantasy Health Potion">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22743" levels="1" name="Fantasy Mana Potion">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22744" levels="1" name="Fantasy Cookie">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., Speed + 33. -->
+		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22745" levels="1" name="Fantasy Homemade Cookie">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., Max MP + 20%, HP Recovery Bonus + 20%,  M. Critical Rate + 2, Critical Damage + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%, and increases P. Def. when receiving a critical attack. Speed - 15%. Party members equipped with melee weapons/bows/crossbows have increased Critical Damage after receiving an amount of damage. -->
+		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22746" levels="1" name="Fantasy Special Cookie">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., acquired XP/SP + 100%. (Lv.95 or below) -->
+		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22747" levels="1" name="Fantasy Isle Medal of Glory">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Individual Fame + 200. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22748" levels="1" name="Scroll: PK (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22749" levels="1" name="Scroll: PK (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22750" levels="1" name="Scroll: PK (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22751" levels="1" name="Scroll: PK (Top-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22752" levels="1" name="Scroll: Reputation (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22753" levels="1" name="Scroll: Reputation (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22754" levels="1" name="Scroll: Reputation (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22755" levels="1" name="Scroll: Reputation (Top-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22756" levels="1" name="Transform: Ninja Outfit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- CON + 1, MEN + 1, WIT + 1. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_ninja_u" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22757" levels="1" name="Transform: Traditional Taiwanese Costume">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- CON + 1, MEN + 1, WIT + 1. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_u" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22758" levels="1" name="Transform: Military Outfit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- CON + 1, MEN + 1, WIT + 1. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_military_u" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22759" levels="1" name="Transform: Metal Suit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- CON + 1, MEN + 1, WIT + 1. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22760" levels="1" name="Transform: Maid Costume">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- CON + 1, MEN + 1, WIT + 1. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_cutie_maid" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22761" levels="1" name="Transform: Emerald Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, DEX + 1, INT + 1. -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_sword" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22762" levels="1" name="Transform: Japanese Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, DEX + 1, INT + 1. -->
+		<set name="icon" val="BranchSys3.Icon.g_japan_sword" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22763" levels="1" name="Santa Outfit Appearance Stone (14-day)">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22764" levels="1" name="Santa Outfit Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22765" levels="1" name="PC Vitality">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., Vitality is replenished with XP gain through hunting. -->
+		<set name="icon" val="icon.etc_pccafe_point_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="100" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22766" levels="1" name="Vitality Maintaining Potion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Maintains Vitality for 10 min. -->
+		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22767" levels="1" name="Vitality Maintaining Potion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Maintains Vitality for 30 min. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22768" levels="1" name="Metal Suit Top Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22769" levels="1" name="Metal Suit Pants Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22770" levels="1" name="Metal Suit Gloves Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22771" levels="1" name="Metal Suit Shoes Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22772" levels="1" name="Metal Suit Hair Accessory Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22773" levels="1" name="Metal Suit Top Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22774" levels="1" name="Metal Suit Pants Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22775" levels="1" name="Metal Suit Gloves Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22776" levels="1" name="Metal Suit Shoes Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22777" levels="1" name="Metal Suit Hair Accessory Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22778" levels="1" name="Military Top Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22779" levels="1" name="Military Pants Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22780" levels="1" name="Military Gloves Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22781" levels="1" name="Military Shoes Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22782" levels="1" name="Military Hair Accessory Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22783" levels="1" name="Military Top Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22784" levels="1" name="Military Pants Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22785" levels="1" name="Military Gloves Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22786" levels="1" name="Military Shoes Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22787" levels="1" name="Military Hair Accessory Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22788" levels="1" name="Maid Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22789" levels="1" name="Maid Hair Accessory Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22790" levels="1" name="Maid Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22791" levels="1" name="Maid Hair Accessory Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22792" levels="1" name="Automatic Appearance Stone: Emerald Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22793" levels="1" name="Automatic Appearance Stone: Japanese Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22794" levels="1" name="Shining Accessory Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22795" levels="1" name="Vesper Noble Top Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22796" levels="1" name="Vesper Noble Pants Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22797" levels="1" name="Vesper Noble Gloves Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22798" levels="1" name="Vesper Noble Shoes Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="22799" levels="1" name="Vesper Noble Top Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>

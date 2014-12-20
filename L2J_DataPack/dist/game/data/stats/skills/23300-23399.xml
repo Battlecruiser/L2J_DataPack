@@ -383,4 +383,549 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
+	<skill id="23341" levels="1" name="Norhand's Flint">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Temporarily petrified by Norhand's powerful cry. -->
+		<set name="icon" val="icon.skill4111" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="3000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23342" levels="2" name="Norhand's Trace">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Norhand is searching for Skooldie. A trace of its voice remains. -->
+		<set name="icon" val="BranchSys.icon.br_rotten_jack_ghost_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="2000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23344" levels="5" name="Weakened Shilen's Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Is killed and poisoned by Shilen's Breath. Increases Dark Attack Resistance by 5 and HP recovery by 5%. Poison stage increases when killed while poisoned. -->
+		<set name="icon" val="icon.skill5076_c" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23345" levels="1" name="Region Banishment">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="200" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23346" levels="7" name="Valakas Agathion Cute Trick">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- You can see the summoned Valakas' cute tricks. -->
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23347" levels="7" name="Valakas Agathion Special Skill: Valakas' Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23348" levels="1" name="Transform Elpy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into a game Master. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23349" levels="1" name="Tree's Blessing - Stage 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 minutes, increases P. Atk. by 1% and M. Atk. by 2% with the tree's blessing. -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23350" levels="1" name="Tree's Blessing - Stage 2">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 minutes, increases P. Atk. by 2% and M. Atk. by 4% with the tree's blessing. -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23351" levels="1" name="Tree's Blessing - Stage 3">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 20 minutes, increases P. Atk. by 3% and M. Atk. by 6% with the tree's blessing. -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23352" levels="1" name="Tree's Blessing - Stage 4">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 25 minutes, increases P. Atk. by 4% and M. Atk. by 8% with the tree's blessing. -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23353" levels="1" name="Tree's Blessing - Stage 5">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 minutes, increases P. Atk. by 6% and M. Atk. by 12% with the tree's blessing. -->
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23354" levels="1" name="Lingering Tree's Blessing - Stage 1">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 1. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23355" levels="1" name="Lingering Tree's Blessing - Stage 2">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 2. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23356" levels="1" name="Lingering Tree's Blessing - Stage 3">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 3. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23357" levels="1" name="Lingering Tree's Blessing - Stage 4">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 4. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23358" levels="1" name="Lingering Tree's Blessing - Stage 5">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 5. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23359" levels="1" name="Tree's Blessing - Lute Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
+		<set name="icon" val="icon.skill11518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23360" levels="1" name="Tree's Blessing - Lute Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
+		<set name="icon" val="icon.skill11518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23361" levels="1" name="Tree's Blessing - Lute Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 20 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
+		<set name="icon" val="icon.skill11518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23362" levels="1" name="Tree's Blessing - Lute Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 25 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
+		<set name="icon" val="icon.skill11518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23363" levels="1" name="Tree's Blessing - Lute Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
+		<set name="icon" val="icon.skill11518" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23364" levels="1" name="Tree's Blessing - Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
+		<set name="icon" val="icon.skill11519" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23365" levels="1" name="Tree's Blessing - Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
+		<set name="icon" val="icon.skill11519" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23366" levels="1" name="Tree's Blessing - Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 20 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
+		<set name="icon" val="icon.skill11519" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23367" levels="1" name="Tree's Blessing - Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 25 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
+		<set name="icon" val="icon.skill11519" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23368" levels="1" name="Tree's Blessing - Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
+		<set name="icon" val="icon.skill11519" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23369" levels="1" name="Tree's Blessing - Guitar Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
+		<set name="icon" val="icon.skill11520" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23370" levels="1" name="Tree's Blessing - Guitar Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
+		<set name="icon" val="icon.skill11520" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23371" levels="1" name="Tree's Blessing - Guitar Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 20 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
+		<set name="icon" val="icon.skill11520" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23372" levels="1" name="Tree's Blessing - Guitar Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 25 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
+		<set name="icon" val="icon.skill11520" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23373" levels="1" name="Tree's Blessing - Guitar Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
+		<set name="icon" val="icon.skill11520" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23374" levels="1" name="Tree's Blessing - Harp Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
+		<set name="icon" val="icon.skill11521" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23375" levels="1" name="Tree's Blessing - Harp Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
+		<set name="icon" val="icon.skill11521" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23376" levels="1" name="Tree's Blessing - Harp Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 20 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
+		<set name="icon" val="icon.skill11521" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23377" levels="1" name="Tree's Blessing - Harp Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 25 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
+		<set name="icon" val="icon.skill11521" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23378" levels="1" name="Tree's Blessing - Harp Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
+		<set name="icon" val="icon.skill11521" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23379" levels="1" name="Elpy Master">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transforms into a game Master. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23380" levels="1" name="Jermann - Soul Blackmail">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23380" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="reuseDelay" val="1200000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23381" levels="3" name="Jermann - Flow of Destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Magical damage on the enemy. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23381" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="500" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23382" levels="1" name="Jermann - Swiftness">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Teleport 300 grids forward. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23382" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="250" />
+		<set name="castRange" val="700" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="20000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23383" levels="1" name="Jermann - Shadow of Darkness">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summon your mirror image and Hide. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23383" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="500" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23384" levels="3" name="Jermann - Burning Darkness">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Quickly Recover 45000 HP. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23384" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="500" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="50000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23385" levels="3" name="Jermann - Devourer of Nature">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases HP Recovery Bonus. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23385" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="250" />
+		<set name="hitTime" val="800" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23386" levels="3" name="Jermann - Destruction Instinct">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful strike on nearby enemies. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23386" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="500" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="12000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23387" levels="1" name="Jermann">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transform into Jermann. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23388" levels="1" name="Jermann">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transform into Jermann. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23389" levels="1" name="Jermann">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transform into Jermann. -->
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23390" levels="1" name="Mysterious Power of Ancient Kartia's Labyrinth">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Accept this mysterious power to make it yours. Refuse, and you will suffer the consequences. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23380" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23391" levels="1" name="Great Mysterious Power of Ancient Kartia's Labyrinth">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Accept this great power to make it yours. Refuse, and you will suffer grave consequences. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23380" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23392" levels="1" name="Stabilized Power of Ancient Kartia's Labyrinth">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stabilize the Ancient Kartia's Labyrinth to consistently increase your HP. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23380" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23393" levels="1" name="Self-destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- DD + DOT -->
+		<set name="icon" val="icon.skill23393" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23394" levels="1" name="Jermann - Grave of the Sword">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summon the Grave of the Sword to the designated area. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23387" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23395" levels="1" name="Jermann - Death' Calling">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can summon the Warriors of Death if the Grave of the Sword is nearby. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23388" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="500" />
+		<set name="castRange" val="350" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23396" levels="1" name="Jermann - Freezing Cold">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Freeze the ground at the designated area. Enemies on the ice will have momentarily decreased Speed and consistently decreasing HP. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23389" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="500" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="25000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23397" levels="1" name="Jermann - Shard of Ice">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Drop an ice shard at the designated area. Additional damage if the enemy is inflicted with Freezing Cold. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23390" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="500" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="23398" levels="3" name="Grave of the Sword">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Consistently decreases HP. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23387" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="23399" levels="3" name="Freezing Cold">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily decreases Speed and consistently decreases HP. -->
+		<set name="icon" val="BranchSys3.Icon.g_skill23389" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
 </list>

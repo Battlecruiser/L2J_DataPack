@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="11000" levels="1" name="Heavy Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks long-range enemies. Hurls arrows like rain near target to inflict damage with 19158 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="700" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="1800" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11001" levels="1" name="Superior Weapon Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 83, M. Atk. + 104, and Casting Spd. + 23%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. -->
+		<set name="icon" val="icon.skill11251" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11002" levels="1" name="Superior Robe Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + 4447, P. Def. + 1126, and M. Def. + 610 when equipped with a Robe. -->
+		<set name="icon" val="icon.skill11252" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11003" levels="1" name="Superior Anti Magic">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- INT + 2, M. Def. + 139, Magic Attack Resistance + 35%. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance for 10 seconds. -->
+		<set name="icon" val="icon.skill10004" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11004" levels="1" name="Superior Sigil Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery Bonus by 20%. -->
+		<set name="icon" val="icon.skill11791" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11005" levels="1" name="Superior Wizard Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- INT + 2 and increases M. Atk., Casting Spd., and M. Critical Rate + 6%. Decreases skill MP Consumption by 6%. -->
+		<set name="icon" val="icon.skill11253" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11006" levels="1" name="Superior Mental Attack Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- INT + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30. -->
+		<set name="icon" val="icon.skill11006" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11007" levels="1" name="Fire Stance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bestows the property of Fire to magic spells cast. -->
+		<set name="icon" val="icon.skill10305" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11008" levels="1" name="Water Stance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bestows the property of Water to magic spells cast. -->
+		<set name="icon" val="icon.skill10306" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11009" levels="1" name="Wind Stance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bestows the property of Wind to magic spells cast. -->
+		<set name="icon" val="icon.skill10307" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11010" levels="1" name="Earth Stance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Bestows the property of Earth to magic spells cast. -->
+		<set name="icon" val="icon.skill10304" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11011" levels="8" name="Elemental Spike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 133 Power added to attribute damage. In addition, decreases target's attribute resistance according to the Elemental Stance used. Over-hit. -->
+		<table name="#mpConsumes"> 37 38 39 42 43 45 48 50 </table>
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2280" />
+		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11012" levels="8" name="Elemental Spike (Fire)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 133 Power added to attribute damage. In addition, decreases target's attribute resistance according to the Elemental Stance used. Over-hit. -->
+		<table name="#mpConsumes"> 37 38 39 42 43 45 48 50 </table>
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2280" />
+		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11013" levels="8" name="Elemental Spike (Water)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 133 Power added to attribute damage. In addition, decreases target's attribute resistance according to the Elemental Stance used. Over-hit. -->
+		<table name="#mpConsumes"> 37 38 39 42 43 45 48 50 </table>
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2280" />
+		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11014" levels="8" name="Elemental Spike (Wind)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 133 Power added to attribute damage. In addition, decreases target's attribute resistance according to the Elemental Stance used. Over-hit. -->
+		<table name="#mpConsumes"> 37 38 39 42 43 45 48 50 </table>
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2280" />
+		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11015" levels="8" name="Elemental Spike (Earth)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 133 Power added to attribute damage. In addition, decreases target's attribute resistance according to the Elemental Stance used. Over-hit. -->
+		<table name="#mpConsumes"> 37 38 39 42 43 45 48 50 </table>
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2280" />
+		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11016" levels="8" name="Elemental Spike (4 Elements)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 133 Power added to attribute damage. In addition, decreases target's attribute resistance according to the Elemental Stance used. Over-hit. -->
+		<table name="#mpConsumes"> 37 38 39 42 43 45 48 50 </table>
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2280" />
+		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11017" levels="8" name="Elemental Crash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 158 Power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
+		<table name="#mpConsumes"> 53 55 57 60 62 65 67 70 </table>
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2400" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11018" levels="8" name="Elemental Crash (Fire)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 158 Power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
+		<table name="#mpConsumes"> 53 55 57 60 62 65 67 70 </table>
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2400" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11019" levels="8" name="Elemental Crash (Water)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 158 Power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
+		<table name="#mpConsumes"> 53 55 57 60 62 65 67 70 </table>
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2400" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11020" levels="8" name="Elemental Crash (Wind)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 158 Power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
+		<table name="#mpConsumes"> 53 55 57 60 62 65 67 70 </table>
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2400" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11021" levels="8" name="Elemental Crash (Earth)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 158 Power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
+		<table name="#mpConsumes"> 53 55 57 60 62 65 67 70 </table>
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2400" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11022" levels="8" name="Elemental Crash (4 Elements)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 158 Power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
+		<table name="#mpConsumes"> 53 55 57 60 62 65 67 70 </table>
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2400" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11023" levels="8" name="Elemental Destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 431 power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 125 130 135 140 146 151 157 163 </table>
+		<set name="icon" val="icon.skill11023" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="6080" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11024" levels="8" name="Elemental Destruction (Fire)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 431 power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 125 130 135 140 146 151 157 163 </table>
+		<set name="icon" val="icon.skill11023" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="6080" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11025" levels="8" name="Elemental Destruction (Water)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 431 power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 125 130 135 140 146 151 157 163 </table>
+		<set name="icon" val="icon.skill11023" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="6080" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11026" levels="8" name="Elemental Destruction (Wind)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 431 power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 125 130 135 140 146 151 157 163 </table>
+		<set name="icon" val="icon.skill11023" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="6080" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11027" levels="8" name="Elemental Destruction (Earth)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 431 power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 125 130 135 140 146 151 157 163 </table>
+		<set name="icon" val="icon.skill11023" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="6080" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11028" levels="8" name="Elemental Destruction (4 Elements)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target with 431 power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 125 130 135 140 146 151 157 163 </table>
+		<set name="icon" val="icon.skill11023" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="6080" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11029" levels="5" name="Death Breath">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 seconds, decreases target's HP by 480 per second. -->
+		<table name="#mpConsumes"> 68 72 72 80 84 </table>
+		<set name="icon" val="icon.skill11029" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="16700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11030" levels="4" name="Death Lord">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 seconds, drains target's life with 25 Power per second. Absorbs 100% of the damage inflicted as HP. -->
+		<table name="#mpConsumes"> 68 72 84 88 </table>
+		<set name="icon" val="icon.skill11030" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="10000" />
+		<set name="reuseDelay" val="20000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11032" levels="4" name="Death Howl">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby targets with 157 Power and pushes them back. Over-hit. -->
+		<table name="#mpConsumes"> 204 216 252 264 </table>
+		<set name="icon" val="icon.skill11032" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11033" levels="3" name="Damaged Area">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<set name="icon" val="icon.skill11032" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11034" levels="8" name="Elemental Blast">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 210 Power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 213 216 228 234 246 255 264 276 </table>
+		<set name="icon" val="icon.skill11034" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="3780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11035" levels="8" name="Elemental Blast (Fire)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 210 Power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 213 216 228 234 246 255 264 276 </table>
+		<set name="icon" val="icon.skill11034" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="3780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11036" levels="8" name="Elemental Blast (Water)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 210 Power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 213 216 228 234 246 255 264 276 </table>
+		<set name="icon" val="icon.skill11034" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="3780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11037" levels="8" name="Elemental Blast (Wind)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 210 Power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 213 216 228 234 246 255 264 276 </table>
+		<set name="icon" val="icon.skill11034" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="3780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11038" levels="8" name="Elemental Blast (Earth)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 210 Power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 213 216 228 234 246 255 264 276 </table>
+		<set name="icon" val="icon.skill11034" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="3780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11039" levels="8" name="Elemental Blast (4 Elements)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 210 Power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 213 216 228 234 246 255 264 276 </table>
+		<set name="icon" val="icon.skill11034" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="3780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11040" levels="8" name="Elemental Storm">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 264 276 288 300 315 324 336 351 </table>
+		<set name="icon" val="icon.skill11040" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="4780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11041" levels="8" name="Elemental Storm (Fire)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 264 276 288 300 315 324 336 351 </table>
+		<set name="icon" val="icon.skill11040" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="4780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11042" levels="8" name="Elemental Storm (Water)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 264 276 288 300 315 324 336 351 </table>
+		<set name="icon" val="icon.skill11040" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="4780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11043" levels="8" name="Elemental Storm (Wind)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 264 276 288 300 315 324 336 351 </table>
+		<set name="icon" val="icon.skill11040" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="4780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11044" levels="8" name="Elemental Storm (Earth)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 264 276 288 300 315 324 336 351 </table>
+		<set name="icon" val="icon.skill11040" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="4780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11045" levels="8" name="Elemental Storm (4 Elements)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
+		<table name="#mpConsumes"> 264 276 288 300 315 324 336 351 </table>
+		<set name="icon" val="icon.skill11040" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="4780" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="6700" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11046" levels="2" name="Wizard Spirit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., M. Atk. + 20%, M. Critical Rate + 50%, P. Def. and M. Def. + 20%, Evasion + 2, and MP Consumption for magic skills - 50%. When attacked, has a chance of inflicting magic damage on the attacking target. -->
+		<table name="#mpConsumes"> 70 85 </table>
+		<set name="icon" val="icon.skill11046" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11047" levels="6" name="Devil's Curse">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 157 Power. For 20 sec., target's M. Atk. and M. Def. - 30%, Casting Spd., P. Critical Rate, M. Critical Rate, P. Def. and Speed - 10%, and P. Evasion - 6. -->
+		<table name="#mpConsumes"> 70 71 76 81 85 91 </table>
+		<set name="icon" val="icon.skill11047" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="580" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11048" levels="6" name="Mass Devil's Curse">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target and surrounding enemies with 125 power and absorbs 25% of the damage inflicted as HP. Additionally, for 10 seconds, target's M. Atk. and M. Def. - 30%; P. Def., M. Atk., Casting Spd., M. Def., P. Critical Rate, M. Critical Rate, and Speed - 8%; and Accuracy - 12. -->
+		<table name="#mpConsumes"> 211 220 233 247 262 278 </table>
+		<set name="icon" val="icon.skill11048" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="580" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11049" levels="2" name="Ignore Divinity">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels one of target's buffs. -->
+		<table name="#mpConsumes"> 82 91 </table>
+		<set name="icon" val="icon.skill11049" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11050" levels="4" name="Hell Binding">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immobilizes target midair. -->
+		<table name="#mpConsumes"> 70 76 82 88 </table>
+		<set name="icon" val="icon.skill11050" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11051" levels="4" name="Hell Binding">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immobilizes target midair. -->
+		<table name="#mpConsumes"> 70 76 82 88 </table>
+		<set name="icon" val="icon.skill11050" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11052" levels="4" name="Mass Hell Binding">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immobilizes target and nearby enemies midair for 9 seconds and inflicts 100 damage per second. -->
+		<table name="#mpConsumes"> 228 243 257 273 </table>
+		<set name="icon" val="icon.skill11052" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="10000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11053" levels="4" name="Mass Hell Binding">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immobilizes target and nearby enemies midair for 9 seconds and inflicts 100 damage per second. -->
+		<table name="#mpConsumes"> 228 243 257 273 </table>
+		<set name="icon" val="icon.skill1042" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="10000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11054" levels="1" name="Yoke Status">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily immobilized midair. -->
+		<set name="icon" val="icon.skill1042" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11055" levels="7" name="Death Fear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 seconds, inflicts Fear on target and decreases Speed by 40%. -->
+		<table name="#mpConsumes"> 70 72 76 78 82 85 88 </table>
+		<set name="icon" val="icon.skill11055" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11056" levels="8" name="Mass Death Fear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 seconds, inflicts Fear on target and nearby enemies and decreases Speed by 25%. -->
+		<table name="#mpConsumes"> 211 220 228 238 247 257 267 278 </table>
+		<set name="icon" val="icon.skill11056" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11057" levels="6" name="Magical Evasion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby enemies with 133 Power added to M. Atk., inflicting Stun and canceling their targets. Teleports you to the back. -->
+		<table name="#mpConsumes"> 70 72 77 82 87 92 </table>
+		<set name="icon" val="icon.skill11057" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11058" levels="3" name="Shadow Snare">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Pulls enemies in a selected area to the center. -->
+		<table name="#mpConsumes"> 238 252 267 </table>
+		<set name="icon" val="icon.skill11058" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11059" levels="1" name="Shadow Snare Zone">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Pulls nearby enemies to the center. -->
+		<set name="icon" val="icon.skill1469" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11062" levels="4" name="Air Rider">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 seconds, increases Speed by 60. The effect disappears when attacked. -->
+		<table name="#mpConsumes"> 7 8 9 9 </table>
+		<set name="icon" val="icon.skill11062" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11063" levels="1" name="Floating Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill01702" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11064" levels="8" name="Ultimate Body To Mind">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sacrifices 384 HP to recover 400 MP. -->
+		<table name="#hpConsumes"> 384 388 396 404 412 420 428 436 </table>
+		<set name="icon" val="icon.skill11064" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hpConsume" val="#hpConsumes" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11065" levels="1" name="Arcane Barrier">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 20 seconds, decreases incoming damage - 90% and defends against the rest by consuming MP. When attacked, reflects 10% of incoming damage. Ineffective when MP drops to 0. -->
+		<set name="icon" val="icon.skill11065" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11066" levels="1" name="Unleash Hell">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts magical damage on target with 620 Power. Casts Fear and Burn and decreases target's Speed by 40%. Over-hit. -->
+		<set name="icon" val="icon.skill11066" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1655" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="6750" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11067" levels="1" name="Death Mass Unleash Hell">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts magical damage on target and nearby enemies with 620 Power. Casts Fear and Burn and decreases target's Speed by 20%. Over-hit. -->
+		<set name="icon" val="icon.skill11067" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1767" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="10000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11068" levels="4" name="Double Casting">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., you can cast elemental spells with both hands.ﾠDecreases MP Consumption by 50% and magic skill Cooldown by 5%.ﾠEliminates magic cancel during magic use. -->
+		<table name="#mpConsumes"> 210 231 255 276 </table>
+		<set name="icon" val="icon.skill11068" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="4000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="180000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11072" levels="1" name="Fire - Elemental Spike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- target's Fire resistance is decreased. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11073" levels="1" name="Water - Elemental Spike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- target's Water resistance is decreased. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11074" levels="1" name="Wind - Elemental Spike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- target's Wind resistance is decreased. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11075" levels="1" name="Earth - Elemental Spike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- target's Earth resistance is decreased. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11076" levels="1" name="Double Casting - Elemental Spike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- target's Fire/Water/Wind/Earth resistances are decreased. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11077" levels="3" name="Decrease Fire Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases Fire resistance by 20 for 3 seconds. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11078" levels="3" name="Decrease Water Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases Water resistance by 20 for 3 seconds. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11079" levels="3" name="Decrease Wind Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases Wind resistance by 20 for 3 seconds. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11080" levels="3" name="Decrease Earth Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases Earth resistance by 20 for 3 seconds. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11081" levels="3" name="Decrease Fire/Water/Wind/Earth Resistances">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases Fire/Water/Wind/Earth resistances by 20 for 3 seconds. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11082" levels="1" name="Fire - Elemental Crash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- target is inflicted with Fear. -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11083" levels="1" name="Water - Elemental Crash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- target's Speed is reduced. -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11084" levels="1" name="Wind - Elemental Crash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- target is Knocked Back. -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11085" levels="1" name="Earth - Elemental Crash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- target is inflicted with Hold. -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11086" levels="1" name="Double Casting - Elemental Crash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- target is inflicted with Stun. -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11087" levels="3" name="Elemental Crash (Fire)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts fear and hold on target. -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11088" levels="3" name="Elemental Crash (Water)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases target's Speed. -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11089" levels="3" name="Elemental Crash (Wind)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knock Back target. -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11090" levels="3" name="Elemental Crash (Earth)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts hold on target. -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11091" levels="3" name="Elemental Crash (4 Elements)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts stun on target. -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11092" levels="3" name="Damaged Area">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<set name="icon" val="icon.skill11032" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11093" levels="1" name="Crystal Form">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels Poison/Bleed/Hold/Stun effect. Becomes invincible for 10 seconds and rapidly recovers HP and MP. -->
+		<set name="icon" val="icon.skill11093" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="73" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11094" levels="6" name="Magical Charge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby enemies with 133 Power added to M. Atk., inflicting Stun and canceling their targets. Teleports you to the front. -->
+		<table name="#mpConsumes"> 70 72 77 82 87 92 </table>
+		<set name="icon" val="icon.skill11094" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="11095" levels="1" name="Devil's Sway">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Resets the duration of target's paralysis, hold, silence, sleep, shock, fear, petrification, and disarm. -->
+		<set name="icon" val="icon.skill11535" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="190" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11096" levels="1" name="Elemental Destruction: Fire">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Fire Attribute -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11097" levels="1" name="Elemental Destruction: Water">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Water Attribute -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11098" levels="1" name="Elemental Destruction: Wind">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Wind Attribute -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="11099" levels="1" name="Elemental Destruction: Earth">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Earth Attribute -->
+		<set name="icon" val="icon.skill11017" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>

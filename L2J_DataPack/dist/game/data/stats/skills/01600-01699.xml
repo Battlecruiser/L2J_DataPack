@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="1600" levels="1" name="Soul Instinct">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 seconds, awakens party members' destructive instincts to increase P. Atk., P. Critical Rate, M. Atk., and M. Critical Rate by 50%, and Atk. Spd. and Casting Spd. by 20%. -->
+		<set name="icon" val="icon.skill1600" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="148" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1601" levels="1" name="Fishing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attempt to fish at the dock. Put on a fishing rod and bait. -->
+		<set name="icon" val="icon.skill1312" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1602" levels="13" name="Reeling">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Loosen the fishing line when the fish is struggling. -->
+		<set name="icon" val="icon.skill1314" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1603" levels="13" name="Pumping">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Tighten the fishing line when the fish is tired. -->
+		<set name="icon" val="icon.skill1313" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1604" levels="13" name="Fishing Expertise">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Higher expertise gets you better fish. -->
+		<set name="icon" val="icon.skill1315" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1627" levels="1" name="Power Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 60580. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1628" levels="1" name="Super Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 277440. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1629" levels="1" name="Might">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Atk. by 100%. -->
+		<set name="icon" val="icon.skill1068" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1630" levels="1" name="Focus">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Critical Rate/Damage by 100%. -->
+		<set name="icon" val="icon.skill1077" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1631" levels="1" name="Absolute Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster absolute defense. P. Def. and M. Def. + 5000. -->
+		<set name="icon" val="icon.skill0110" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1632" levels="1" name="Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Def. and M. Def. + 20%. -->
+		<set name="icon" val="icon.skill1040" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1633" levels="1" name="Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster heal. Power 1024. -->
+		<set name="icon" val="icon.skill1401" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1634" levels="1" name="Spinning Slasher">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 36675. -->
+		<set name="icon" val="icon.skill0036" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1635" levels="1" name="Blood Siphon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage blood siphon 100%. -->
+		<set name="icon" val="icon.skill1268" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1636" levels="1" name="Petrify">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Petrify -->
+		<set name="icon" val="icon.skill1540" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1637" levels="1" name="Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts stun on the enemy for 7 seconds. -->
+		<set name="icon" val="icon.skill0092" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1638" levels="1" name="Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts stun on the enemy for 7 seconds. -->
+		<set name="icon" val="icon.skill0092" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1639" levels="1" name="Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts stun on the enemy for 7 seconds. -->
+		<set name="icon" val="icon.skill0092" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1640" levels="1" name="Hold">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immobilizes the enemy for 15 seconds. -->
+		<set name="icon" val="icon.skill1201" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1641" levels="1" name="Hold">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immobilizes the enemy for 15 seconds. -->
+		<set name="icon" val="icon.skill1201" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1642" levels="1" name="Hold">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Immobilizes the enemy for 15 seconds. -->
+		<set name="icon" val="icon.skill1201" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1643" levels="1" name="Paralysis">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Causes the enemy's body to go completely rigid for 15 seconds and causes paralysis for 10 seconds. -->
+		<set name="icon" val="icon.skill1170" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1644" levels="1" name="Damage Reflect">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Reflect damage 50% -->
+		<set name="icon" val="icon.skill0086" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1645" levels="1" name="Debuff Invincibility">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Becomes invincible from debuffs for 30 seconds. Can only be used on party members. -->
+		<set name="icon" val="icon.skill1411" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1646" levels="1" name="Mana Burn">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mana burn. Power 110. Enchant Power: Increases the effect. -->
+		<set name="icon" val="icon.skill1398" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1647" levels="1" name="50% Instant Herb of Mana">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="100" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1648" levels="1" name="MP Recovery Herb">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Herb's effect increases MP Recovery. -->
+		<set name="icon" val="icon.etc_herb_red_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="100" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1649" levels="1" name="MP Regen">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases MP recovery for 10 seconds. -->
+		<set name="icon" val="icon.skill4106" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1650" levels="1" name="Absolute Defense">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster absolute defense. Defense increased 50000. -->
+		<set name="icon" val="icon.skill0110" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1651" levels="1" name="Melee Weapon Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Resistant to melee weapon attacks. -->
+		<set name="icon" val="icon.skill4071" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1652" levels="1" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 54355. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1653" levels="1" name="Super Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 50937. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1654" levels="1" name="Long Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 49414. -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1655" levels="1" name="Long Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 50937. -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1656" levels="1" name="Mass Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 54355. -->
+		<set name="icon" val="icon.skill1181" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="2000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1657" levels="1" name="Self-destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 237492. -->
+		<set name="icon" val="icon.skill1181" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="5000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1658" levels="1" name="Self-destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 500000. -->
+		<set name="icon" val="icon.skill1181" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="5000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1659" levels="1" name="Wild Sweep">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 54355. -->
+		<set name="icon" val="icon.skill0245" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1080" />
+		<set name="coolTime" val="720" />
+		<set name="reuseDelay" val="4000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1660" levels="1" name="Spinning Slasher">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 100000. -->
+		<set name="icon" val="icon.skill0036" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="1067" />
+		<set name="coolTime" val="733" />
+		<set name="reuseDelay" val="4000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1661" levels="1" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 54355. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1662" levels="1" name="Super Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 296865. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1663" levels="1" name="Berserker">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Triples Atk. Spd. for 1 minute. -->
+		<set name="icon" val="icon.skill1092" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1664" levels="1" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 6984. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1665" levels="1" name="Mana Burn">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mana burn. Power 110. Enchant Power: Increases the effect. -->
+		<set name="icon" val="icon.skill1398" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1666" levels="1" name="Cancellation">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels multiple enemy buffs. -->
+		<set name="icon" val="icon.skill1056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1667" levels="1" name="Long Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 6984. -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1668" levels="1" name="Vampiric Touch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster Blood Siphon Range Attack -->
+		<set name="icon" val="icon.skill1668" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1669" levels="1" name="Sleep">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sleep -->
+		<set name="icon" val="icon.skill1669" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1670" levels="1" name="Silence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- No magic use -->
+		<set name="icon" val="icon.skill1670" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="8000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1671" levels="1" name="Disarm">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Disarms equipment. -->
+		<set name="icon" val="icon.skill01671" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="8000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1672" levels="1" name="Gust">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Blow -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1673" levels="1" name="Death">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- 1 HP after 15 seconds -->
+		<set name="icon" val="icon.skill1673" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1674" levels="1" name="Death">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- hp1 -->
+		<set name="icon" val="icon.skill1170" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1675" levels="1" name="Flood">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Atk., Critical rage/damage, and Atk. Spd. by 100%. -->
+		<set name="icon" val="icon.skill1068" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1676" levels="1" name="Crazy After-effect">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Aftereffect of going insane. -->
+		<set name="icon" val="icon.skill1170" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1677" levels="1" name="Spinning Slasher">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 54355. -->
+		<set name="icon" val="icon.skill0036" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="hitTime" val="300" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1678" levels="1" name="Self-destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Self-destruction after 5 seconds -->
+		<set name="icon" val="icon.skill1678" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1679" levels="1" name="Self-destruction">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Self-destruction -->
+		<set name="icon" val="icon.skill1170" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1680" levels="1" name="Smokescreen">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1681" levels="1" name="Haste">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Atk. Spd. -->
+		<set name="icon" val="icon.skill1681" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1682" levels="1" name="Aggression">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Look at me -->
+		<set name="icon" val="icon.skill0028" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="6000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1683" levels="1" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 45844. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1684" levels="1" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 60580. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1685" levels="1" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 60580. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1686" levels="1" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 60580. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1687" levels="1" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 50937. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1688" levels="1" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 60580. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1689" levels="1" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 60580. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1690" levels="1" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 60580. -->
+		<set name="icon" val="icon.skill0003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1691" levels="1" name="Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster Rush -->
+		<set name="icon" val="icon.skill0493" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1692" levels="1" name="Power Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 50937. -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1693" levels="1" name="Power Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 49414. -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1694" levels="1" name="Power Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 49414. -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1695" levels="1" name="Power Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Monster attack! Power 49414. -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1696" levels="1" name="Power Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- slowly -->
+		<set name="icon" val="icon.skill0354" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="1697" levels="1" name="Prominence">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1230" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="1200" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1698" levels="1" name="Rain of Fire">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1296" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="castRange" val="500" />
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="1699" levels="1" name="Blink">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1448" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="2" />
+		<set name="hitTime" val="300" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+</list>

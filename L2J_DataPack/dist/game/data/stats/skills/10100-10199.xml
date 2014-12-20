@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="10100" levels="4" name="Guardian's Frenzy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 min., P./M. Def. +50%, Attribute Resistance + 10, Speed + 10. When equipped with a sword or blunt weapon, Accuracy + 4, Atk. Spd. + 10%, Critical Rate + 30, Critical Damage + 30%. -->
+		<table name="#mpConsumes"> 20 21 23 24 </table>
+		<set name="icon" val="icon.skill10100" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10101" levels="4" name="Templar's Frenzy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 min., P. Skill Power + 5%, P./M. Def. + 50%, Speed + 10. When equipped with a sword or blunt weapon, Accuracy + 4, Atk. Spd. + 10%, Critical Rate + 30, Critical Damage + 30%. -->
+		<table name="#mpConsumes"> 20 21 23 24 </table>
+		<set name="icon" val="icon.skill10101" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10102" levels="3" name="Shadow Slash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a Dark Panther to attack enemies in front of you with 33505 Power added to P. Atk. and knocks them down. Requires a shield. Consumes 6 Soulstones. Over-hit. -->
+		<table name="#mpConsumes"> 185 191 197 </table>
+		<set name="icon" val="icon.skill10102" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10103" levels="4" name="Mass Freezing Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Freezes the air, inflicting 18151 damage to target and nearby enemies, and for 10 sec., decreases enemy Speed by 100. Consumes 6 Soulstones. -->
+		<table name="#mpConsumes"> 185 191 197 197 </table>
+		<set name="icon" val="icon.skill10103" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+</list>

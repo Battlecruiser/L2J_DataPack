@@ -1528,4 +1528,34 @@
 			<effect name="NoblesseBless" />
 		</for>
 	</skill>
+	<skill id="7097" levels="1" name="Cancel Shadow Move">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill01702" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="7098" levels="1" name="Clan-exclusive Pet Heal">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recovers all of your HP. Power 3000 -->
+		<set name="icon" val="icon.skill1401" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="5" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="7099" levels="1" name="Clan-exclusive Pet Fear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts fear on the target for 3 seconds. -->
+		<set name="icon" val="icon.skill4108" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="5" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
 </list>

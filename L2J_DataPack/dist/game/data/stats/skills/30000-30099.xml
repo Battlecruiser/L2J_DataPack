@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="30000" levels="1" name="Hydro Attack: Debuff">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stacks Storm Marks when using Hydro Attack. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="0" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30001" levels="25" name="Hydro Attack">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 6 Power added to M. Atk. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+		<table name="#mpConsumes"> 3 8 10 13 16 18 20 21 23 25 27 29 30 31 32 32 33 33 33 34 34 34 34 34 35 </table>
+		<set name="icon" val="icon.skill30001" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="80" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30002" levels="3" name="Storm Sign">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. - 30%, Speed - 70. -->
+		<set name="icon" val="icon.skill30027" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30003" levels="17" name="Hydro Flare">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Eliminates Storm Sign and attacks target with 110 Power added to M. Atk. 10% more damage if target is debuffed. Storm Sign Stage 3 only. Requires a sword or blunt weapon. -->
+		<table name="#mpConsumes"> 47 51 54 58 60 62 64 65 66 67 67 68 68 68 69 69 70 </table>
+		<set name="icon" val="icon.skill30003" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="80" />
+		<set name="hitTime" val="4000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30004" levels="22" name="Hydro Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 57 Power added to M. Atk., and knocks out target in a windy trap for 5 sec. Must be blended into wind. Requires a sword or blunt weapon. -->
+		<table name="#mpConsumes"> 31 34 38 41 45 49 53 56 59 62 63 64 65 66 67 67 68 68 69 69 69 70 </table>
+		<set name="icon" val="icon.skill30004" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="80" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30005" levels="1" name="Storm Sign">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. - 50%, Speed - 100. -->
+		<set name="icon" val="icon.skill30027" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30006" levels="8" name="Storm Rage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 255 Power added to M. Atk. and blows them away. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+		<table name="#mpConsumes"> 134 135 136 137 138 138 139 141 </table>
+		<set name="icon" val="icon.skill30006" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1800" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30007" levels="12" name="Hydro Drain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Eliminates Storm Sign and attacks target with 123 Power added to M. atk. and recovers 10% HP and 5% MP. Over-hit. Storm Sign Stage 3 only. Requires a sword or blunt weapon. -->
+		<table name="#mpConsumes"> 63 64 65 66 67 67 68 68 68 69 69 70 </table>
+		<set name="icon" val="icon.skill30007" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="80" />
+		<set name="hitTime" val="4000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30008" levels="5" name="Wind Blend">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- for 10 sec., blends into the wind and Speed + 70. Canceled when using normal attacks or attack skills. Requires a sword or blunt weapon. -->
+		<table name="#mpConsumes"> 16 67 68 69 70 </table>
+		<table name="#reuseDelays"> 50000 50000 40000 30000 25000 </table>
+		<set name="icon" val="icon.skill30008" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="reuseDelay" val="#reuseDelays" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30009" levels="10" name="Deceptive Blink">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 sec., blends into the wind and teleports backward, and Speed + 100. Requires a sword or blunt weapon. -->
+		<table name="#mpConsumes"> 77 78 79 80 81 82 82 83 83 84 </table>
+		<set name="icon" val="icon.skill30009" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30010" levels="1" name="Windy Refuge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels all debuffs and recovers HP/MP for 10 sec. inside a refuge of wind. Cannot move. -->
+		<set name="icon" val="icon.skill30010" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="180000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30011" levels="12" name="Threatening Wind">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sends a slashing wind to brand target with Storm Sign Stage 3. Requires a sword or blunt Weapon. -->
+		<table name="#mpConsumes"> 31 31 32 32 33 33 34 34 34 34 34 35 </table>
+		<set name="icon" val="icon.skill30011" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30012" levels="22" name="Air Rush">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knocks down target and attacks with 57 Power added to M. Atk. 10% more damage if target is debuffed. If target has Storm Sign, eliminates it and inflicts additional damage. Requires a sword or blunt weapon. -->
+		<table name="#mpConsumes"> 31 34 38 41 45 49 53 56 59 62 63 64 65 66 67 67 68 68 69 69 69 70 </table>
+		<set name="icon" val="icon.skill30012" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30013" levels="1" name="Switch Places">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Trades places with target. Requires a sword or blunt weapon. PC targets only. -->
+		<set name="icon" val="icon.skill30005" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="705" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30014" levels="12" name="Compelling Wind">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+		<table name="#mpConsumes"> 31 31 32 32 33 33 34 34 34 34 34 35 </table>
+		<set name="icon" val="icon.skill30014" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30015" levels="1" name="Mass Compelling Wind">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sends a breeze that pushes target and nearby enemies toward you. -->
+		<set name="icon" val="icon.skill0028" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30016" levels="3" name="Eye of the Storm">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., M. Critical Rate + 100%, P./M. Def. + 30%. -->
+		<table name="#mpConsumes"> 18 37 40 </table>
+		<set name="icon" val="icon.skill30016" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30017" levels="3" name="Squall">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 min., Received P./M. Critical Damage - 15%, and Has a chance of striking target with lightning. -->
+		<table name="#mpConsumes"> 18 37 40 </table>
+		<set name="icon" val="icon.skill30017" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30018" levels="1" name="Windy Illusion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Removes all debuffs and becomes invincible against targeting for 10 sec. -->
+		<set name="icon" val="icon.skill30018" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="41" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30019" levels="8" name="Sayha's Word">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 533 Power added to M. Atk., and decreases their Atk./Casting Spd. by 30% and Speed by 180 for 10 sec. Instantly brands target with Storm Sign Stage 3. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+		<table name="#mpConsumes"> 670 677 682 687 690 694 699 705 </table>
+		<set name="icon" val="icon.skill30019" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="80" />
+		<set name="hitTime" val="5500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30020" levels="1" name="Sayha's Fury">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., Received P./M. Critical Damage - 50%, and Speed + 70. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage 4. Requires a sword or blunt weapon. -->
+		<set name="icon" val="icon.skill30020" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30022" levels="1" name="Sayha's Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., nearby party members' Speed + 50, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 30. Requires a sword or blunt weapon. -->
+		<set name="icon" val="icon.skill30022" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="84" />
+		<set name="hitTime" val="5500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30023" levels="1" name="Decoy Lock">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cannot change target. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30026" levels="3" name="Lightning Squall">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 50 Power added to M. Atk., and decreases Speed by 20. -->
+		<set name="icon" val="icon.skill30026" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30027" levels="1" name="Destructive Bolt">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 300 Power added to M. Atk. and has a 10% chance of branding target with Storm Sign Stage 4. -->
+		<set name="icon" val="icon.skill30026" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30029" levels="1" name="Divine Storm">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby target with 448 Power added to M. Atk. and locks them inside a storm for 5 sec. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+		<set name="icon" val="icon.iconskill30007" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1405" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="7" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30030" levels="1" name="Storm Captivity">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Trapped by a storm that gives continuous damage. -->
+		<set name="icon" val="icon.skill1042" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30031" levels="1" name="Magic Potential">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max. M. Critical Rate to 550. -->
+		<set name="icon" val="icon.skill30025" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="0" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30040" levels="11" name="Eminent Blunt Weapon Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with a blunt weapon, M. Atk. +17% and + 10, Casting Spd. + 5%. -->
+		<set name="icon" val="icon.skill30023" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30041" levels="11" name="Eminent Robe Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When equipped with a robe, P. Def. +7. Shields and Sigils are not worn, as you move with the wind. -->
+		<set name="icon" val="icon.skill30024" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30042" levels="7" name="Eminent Quick Recovery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max. MP + 33, MP Recovery Bonus + 1, and M. Skill Cooldown - 10%. -->
+		<table name="#icons"> icon.skill11004 icon.skill10504 icon.skill10504 icon.skill10504 icon.skill10504 icon.skill10504 icon.skill10504 </table>
+		<set name="icon" val="#icons" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30043" levels="2" name="Eminent Attribute Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Wind Resistance + 30. -->
+		<set name="icon" val="icon.skill11006" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30044" levels="2" name="Eminent Trait Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hold/Mental Resistance + 30. -->
+		<set name="icon" val="icon.skill10005" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30045" levels="3" name="Eminent Ability">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- INT + 2. -->
+		<set name="icon" val="icon.skill11253" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>

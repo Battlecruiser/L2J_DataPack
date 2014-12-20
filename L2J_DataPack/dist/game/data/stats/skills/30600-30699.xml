@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="30600" levels="1" name="Additional Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful hit on target. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30601" levels="1" name="Additional Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Powerful hit on target. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30602" levels="1" name="Eviscerator Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Casts Eviscerator Force on entire party, which increases P. Skill Critical Rate + 1%. -->
+		<set name="icon" val="icon.icon_lender" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="3" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30603" levels="1" name="Eviscerator Force">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Skill Critical Rate + 1%. -->
+		<set name="icon" val="icon.icon_lender_01" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="3" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30604" levels="1" name="Block Eviscerator Force">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Blocks Eviscerator Force. -->
+		<set name="icon" val="icon.icon_lender" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30605" levels="1" name="Sayha's Seer Aura">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Casts Sayha's Seer Force on entire party, which increases M. Critical Rate + 1%. -->
+		<set name="icon" val="icon.icon_Er_wizard" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="3" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30606" levels="1" name="Sayha's Seer Force">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Critical Rate + 1%. -->
+		<set name="icon" val="icon.icon_Er_wizard_01" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="3" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="30607" levels="1" name="Block Sayha's Seer Force">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Blocks Sayha's Seer Force. -->
+		<set name="icon" val="icon.icon_Er_wizard" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>

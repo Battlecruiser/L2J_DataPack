@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="10700" levels="4" name="Mug">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts 11903 damage onto nearby enemies and steals their item. Requires a dagger or dual dagger. -->
+		<table name="#mpConsumes"> 18 21 24 27 </table>
+		<set name="icon" val="icon.skill10700" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1030" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10701" levels="4" name="Superior Vitality">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP and CP + 5%. P. Atk. + 5%. Increases damage inflicted on an NPC by 30%. -->
+		<set name="icon" val="icon.skill0211" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10702" levels="4" name="Plunder">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts 13580 damage onto target and steals their item. Requires a dagger or dual dagger. -->
+		<table name="#mpConsumes"> 12 14 16 18 </table>
+		<set name="icon" val="icon.skill10548" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="830" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10747" levels="1" name="Rogue - Individual Passive">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0217" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10748" levels="1" name="Rogue - Individual">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Pierce through target to inflict a fatal blow. Attacks with 8875 Power added to P. Atk. Over-hit. Half-kill. -->
+		<set name="icon" val="icon.skill1543" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="50" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="400" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10749" levels="1" name="Heavy Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a powerful blow on target. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10750" levels="1" name="Heavy Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts a powerful blow on target. -->
+		<set name="icon" val="icon.skill10317" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10751" levels="1" name="Superior Bow/Crossbow Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and P. Accuracy + 8. P. Atk. + 1316 and Atk. Spd. + 12% when using a bow or crossbow. Depending on your STR, the Cooldown resets or the abnormal status duration increases + 2 times. -->
+		<set name="icon" val="icon.skill10751" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10752" levels="1" name="Superior Light Armor Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2. Max HP + 4783, P. Def. + 1386, P. Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor. Spd. and P. Skill Critical Rate change depending on DEX. -->
+		<set name="icon" val="icon.skill10752" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10753" levels="1" name="Superior Hawkeye Mastery">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When using a bow/crossbow, increases range by 500 and Max MP by 25%, and decreases MP consumption upon skill use by 30%. -->
+		<set name="icon" val="icon.skill0113" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10754" levels="1" name="Superior Survival Ability">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2, speed + 17, terrain damage - 30% and weight limit + 50%. When inflicting a critical during a normal Bow/Crossbow attack, Survival Movement is triggered. Once Survival Movement is triggered, it will not trigger again for 30 seconds. -->
+		<set name="icon" val="icon.skill0295" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10755" levels="1" name="Superior Mental Attack Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2. Resistance + 20 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun. In addition, has a chance of reflecting debuffs back to the attacker. -->
+		<set name="icon" val="icon.skill10005" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10756" levels="1" name="Superior Critical Arrow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2, Critical Rate + 25%, and Critical Damage + 774. Increases Skill Mastery rate + 1000%. -->
+		<set name="icon" val="icon.skill10756" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10757" levels="4" name="Dead Eye Stance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., P. Atk. + 10%, and skill power + 5% when equipped with a bow or crossbow. -->
+		<set name="icon" val="icon.skill10757" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="10" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10758" levels="4" name="Rapid Fire Stance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., P. Atk. + 10% and P. Skill Cooldown - 5% when a bow or crossbow is equipped. -->
+		<set name="icon" val="icon.skill10758" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="10" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10759" levels="4" name="Sniper Stance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., P. Atk. + 10% and Atk. Spd. + 5% when a bow or crossbow is equipped. -->
+		<set name="icon" val="icon.skill10759" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="10" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10760" levels="8" name="Tornado Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 20814 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 98 100 103 107 110 114 117 121 </table>
+		<set name="icon" val="icon.skill10760" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="350" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10761" levels="8" name="Bow Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knocks back frontal enemies. Attacks target with 2681 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 60 61 63 65 67 69 71 74 </table>
+		<set name="icon" val="icon.skill10761" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="350" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10762" levels="8" name="Quick Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 19477 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 79 82 84 87 90 93 96 99 </table>
+		<set name="icon" val="icon.skill10762" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1800" />
+		<set name="coolTime" val="250" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10763" levels="8" name="Pinpoint Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Aims for target's weak points to attack with 22198 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. -->
+		<table name="#mpConsumes"> 117 119 123 128 132 136 140 144 </table>
+		<set name="icon" val="icon.skill10763" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="850" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10764" levels="1" name="Knock Back">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knock Back -->
+		<set name="icon" val="icon.skill0101" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10765" levels="1" name="Knock Back">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Knock Back -->
+		<set name="icon" val="icon.skill0101" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10766" levels="1" name="Additional Effect">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Critical Exposure -->
+		<set name="icon" val="icon.skill0522" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="600" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10767" levels="1" name="Half-kill">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Half-kill. -->
+		<set name="icon" val="icon.skill0056" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10768" levels="1" name="Blink">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Evasion -->
+		<set name="icon" val="icon.skill10768" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="300" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10769" levels="5" name="Impact Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Fires an arrow at the enemy with 19867 Power added to P. Atk. Stuns the enemy for 5 seconds. Requires a bow or crossbow to be equipped. Over-hit. -->
+		<table name="#mpConsumes"> 98 103 108 114 119 </table>
+		<set name="icon" val="icon.skill10769" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="350" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10770" levels="8" name="Recoil Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shoots an arrow with 24888 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. -->
+		<table name="#mpConsumes"> 102 106 109 113 116 120 124 127 </table>
+		<set name="icon" val="icon.skill10770" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="450" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10771" levels="8" name="Multiple Arrow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks frontal enemies with 23391 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 124 128 133 137 142 146 151 155 </table>
+		<set name="icon" val="icon.skill10771" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2900" />
+		<set name="coolTime" val="350" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10772" levels="8" name="Heavy Arrow Rain">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 22526 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<table name="#mpConsumes"> 125 127 131 136 140 145 149 154 </table>
+		<set name="icon" val="icon.skill10772" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2900" />
+		<set name="coolTime" val="350" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10773" levels="1" name="Not in Use">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Not in use -->
+		<set name="icon" val="icon.skill0773" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10774" levels="4" name="Quick Evasion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Momentarily teleports 300 backward. -->
+		<table name="#castRanges"> 300 350 400 450 </table>
+		<table name="#mpConsumes"> 27 32 33 33 </table>
+		<set name="icon" val="icon.skill10774" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="#castRanges" />
+		<set name="hitTime" val="700" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10775" levels="3" name="Confusion Decoy">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a decoy that receives attacks for you. -->
+		<table name="#mpConsumes"> 60 66 72 </table>
+		<set name="icon" val="icon.skill10775" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10776" levels="4" name="Final Ultimate Escape">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., P. Evasion + 60, M. Evasion + 60, M. Def. + 20%, Debuff Resistance + 95%, and P. Skill Evasion Rate + 80%. -->
+		<table name="#mpConsumes"> 58 63 68 72 </table>
+		<set name="icon" val="icon.skill10776" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="900000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10777" levels="1" name="Lure Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Draws in the enemy's attention. -->
+		<set name="icon" val="icon.skill10777" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="77" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10778" levels="1" name="Diversion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Transfer the aggression of nearby enemies around target to another party member. -->
+		<set name="icon" val="icon.skill10778" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="85" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10779" levels="4" name="Quick Fire">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., Atk. Spd. + 20% when equipped with a bow/crossbow. -->
+		<table name="#mpConsumes"> 39 42 46 48 </table>
+		<set name="icon" val="icon.skill10779" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10780" levels="6" name="Slow Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 9338 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped. -->
+		<table name="#mpConsumes"> 94 96 101 106 111 116 </table>
+		<set name="icon" val="icon.skill10780" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="2100" />
+		<set name="coolTime" val="350" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10781" levels="1" name="Phoenix Arrow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Shoots a magical arrow to obliterate an area. Attacks targets within the skill's range with 45215 power. -->
+		<set name="icon" val="icon.skill10781" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1067" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="7500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10782" levels="1" name="Deadly Move 2">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Death blow! Please do not use. -->
+		<set name="icon" val="icon.skill10782" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="226" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10783" levels="4" name="Mind's Eye">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 minute, opens the eye of infinity to increase Accuracy + 25, Critical Rate + 200, and Critical Damage + 70%. -->
+		<table name="#mpConsumes"> 54 59 64 64 </table>
+		<set name="icon" val="icon.skill10783" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10784" levels="1" name="Camouflage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., blends into the environment and hides. Decreases Speed by 30%. -->
+		<set name="icon" val="icon.skill10784" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="9" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10785" levels="1" name="Flare">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Fires a Flare to reveal nearby hiding enemies or traps. Requires a bow or crossbow to be equipped. -->
+		<set name="icon" val="icon.skill10785" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="70" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="20000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10786" levels="3" name="Time Bomb">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Plants a bomb on target that detonates after 10 seconds to inflict damage with 30000 power. While the bomb is being installed, target's P. Accuracy decreases by 10. -->
+		<table name="#mpConsumes"> 66 69 72 </table>
+		<set name="icon" val="icon.skill10786" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10787" levels="8" name="Summon Thunder Hawk">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons a Thunder Hawk. -->
+		<table name="#mpConsumes"> 123 127 132 136 140 145 149 154 </table>
+		<set name="icon" val="icon.skill10787" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10788" levels="1" name="Remote Control">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Remotely controls a trap to set it off. -->
+		<set name="icon" val="icon.skill10788" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="10" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10789" levels="1" name="Flash Trap">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Flash Trap -->
+		<set name="icon" val="icon.skill0517" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="47" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="45000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10790" levels="1" name="Explosion Trap">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage Trap -->
+		<set name="icon" val="icon.skill0514" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="39" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="45000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10791" levels="1" name="Frost Trap">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Plants a Frost Trap, decreasing the enemy's Speed, Atk. Spd. and Casting Spd. -->
+		<set name="icon" val="icon.skill10791" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="39" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="45000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10792" levels="1" name="Gravity Trap">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Plants a Gravity Trap, immobilizing the enemy. -->
+		<set name="icon" val="icon.skill10792" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="39" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="45000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10793" levels="1" name="Flash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels targets of nearby enemies. Increases Speed + 50 for 5 seconds and prevents enemies from targeting you. -->
+		<set name="icon" val="icon.skill10793" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="77" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10794" levels="8" name="Thunder Flight">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Flies straight into the enemy. -->
+		<set name="icon" val="icon.skill6041" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="400" />
+		<set name="hitTime" val="800" />
+		<set name="coolTime" val="750" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10795" levels="1" name="Thunder Purity">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Purifies the master. -->
+		<set name="icon" val="icon.skill6042" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="96" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="180000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10796" levels="1" name="Hawk Gust">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Pushes the enemies around the master. -->
+		<set name="icon" val="icon.skill0092" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="46" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="100" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10797" levels="8" name="Thunder Feather Blast">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Hurls feathers toward the enemy. -->
+		<table name="#mpConsumes"> 71 78 84 86 86 86 86 86 </table>
+		<set name="icon" val="icon.skill6044" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1080" />
+		<set name="coolTime" val="770" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10798" levels="8" name="Thunder Sharp Claw">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks the enemy with sharp talon to inflict bleed. -->
+		<table name="#mpConsumes"> 71 78 84 86 86 86 86 86 </table>
+		<set name="icon" val="icon.skill0096" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1080" />
+		<set name="coolTime" val="770" />
+		<set name="reuseDelay" val="25000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="10799" levels="1" name="Superior M. Def.">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2 and M. Def. + 199. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. -->
+		<set name="icon" val="icon.skill10004" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>

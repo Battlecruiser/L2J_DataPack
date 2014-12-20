@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="10606" levels="1" name="Shadow Dodge">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., has a 90% of evading melee and ranged P. Skill attacks. Requires a dagger or dual dagger. -->
+		<set name="icon" val="icon.skill11862" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10607" levels="1" name="Maximum Mortality">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 min., Vital Spot Attack Rate + 20%. Requires a dagger or dual dagger. -->
+		<set name="icon" val="icon.skill10607" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10608" levels="4" name="Superior Haste">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Physical skill Cooldown - 5%. Spd. + 5. -->
+		<set name="icon" val="icon.skill10608" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10609" levels="1" name="Critical Chances">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 min., Critical Damage + 304 and vital spot attack success rate + 15%. Front Critical Damage - 30%, Side Critical Rate + 30% and Critical Damage + 30%. Rear Critical Rate + 50% and Critical Damage + 50%. Requires a dagger or dual dagger. -->
+		<set name="icon" val="icon.skill10878" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="36" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10610" levels="1" name="Critical Expansions">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max P. Critical increases. Applies when a dagger or dual dagger is equipped. -->
+		<set name="icon" val="icon.skill0819" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10653" levels="1" name="Melee Reflect">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec, has a 90% chance of reflecting physical skill damage to the attacker. Requires a dagger or dual dagger. -->
+		<set name="icon" val="icon.skill11863" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10654" levels="1" name="Maximum Mortality">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 min., Vital Spot Attack Rate + 20%. Requires a dagger or dual dagger. -->
+		<set name="icon" val="icon.skill10607" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10655" levels="4" name="Superior Critical Damage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Critical Damage + 5%, Speed + 2. -->
+		<set name="icon" val="icon.skill10655" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="10656" levels="1" name="Critical Prowess">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 5 min., Critical Damage + 608 and vital spot attack success rate + 5%. Front Critical Damage - 30%, Side Critical Rate + 30% and Critical Damage + 30%. Rear Critical Rate + 50% and Critical Damage + 50%. Requires a dagger or dual dagger. -->
+		<set name="icon" val="icon.skill10656" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="36" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>

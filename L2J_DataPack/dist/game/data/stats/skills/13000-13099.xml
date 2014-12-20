@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="13000" levels="1" name="Vitality Recovering Cake Buff">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recovers vitality upon acquiring XP. The effect lasts for 20 minutes. -->
+		<set name="icon" val="BranchSys.icon.br_birthday_cake_i00" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="500" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13001" levels="4" name="Vesper Heavy Armor Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Def. by 5.57%. -->
+		<set name="icon" val="icon.armor_t94_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13002" levels="4" name="Vesper Noble Heavy Armor Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Def. by 5.57%. -->
+		<set name="icon" val="icon.armor_t94_u_i01" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13003" levels="4" name="Vesper Light Armor Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases MP Recovery Rate by 5%. -->
+		<set name="icon" val="icon.armor_t95_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13004" levels="4" name="Vesper Noble Light Armor Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases MP Recovery Rate by 5%. -->
+		<set name="icon" val="icon.armor_t95_u_i01" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13005" levels="4" name="Vesper Robe Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases MP Recovery Rate by 5.57%. -->
+		<set name="icon" val="icon.armor_t96_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13006" levels="4" name="Vesper Noble Robe Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases MP Recovery Rate by 5.57%. -->
+		<set name="icon" val="icon.armor_t96_u_i01" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13007" levels="1" name="Vesper Heavy Armor Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage incurred during PvP. Chance of decreasing all speeds of the attacker. -->
+		<set name="icon" val="icon.armor_t94_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13008" levels="1" name="Vesper Noble Heavy Armor Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage incurred during PvP. Chance of decreasing all speeds of the attacker. -->
+		<set name="icon" val="icon.armor_t94_u_i01" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13009" levels="1" name="Vesper Light Armor Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage incurred during PvP. Chance of hurling the target at the opponent when attacked. -->
+		<set name="icon" val="icon.armor_t95_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13010" levels="1" name="Vesper Noble Light Armor Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage incurred during PvP. Chance of hurling the target at the opponent when attacked. -->
+		<set name="icon" val="icon.armor_t95_u_i01" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13011" levels="1" name="Vesper Robe Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage incurred during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->
+		<set name="icon" val="icon.armor_t96_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13012" levels="1" name="Vesper Noble Robe Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage incurred during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->
+		<set name="icon" val="icon.armor_t96_u_i01" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13013" levels="4" name="Moirai Heavy Armor Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases M. Def. by 2%. -->
+		<set name="icon" val="icon.armor_t100_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13014" levels="4" name="Moirai Light Armor Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Speed by 3%. -->
+		<set name="icon" val="icon.armor_t101_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13015" levels="4" name="Moirai Robe Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Casting Spd. by 5%. -->
+		<set name="icon" val="icon.armor_t102_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13016" levels="4" name="Vorpal Heavy Armor Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Def. by 8.47%. -->
+		<set name="icon" val="icon.armor_t94_u_i03" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13017" levels="4" name="Vorpal Leather Armor Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Def. by 5.57%. -->
+		<set name="icon" val="icon.armor_t95_u_i03" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13018" levels="4" name="Vorpal Robe Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Speed by 7. -->
+		<set name="icon" val="icon.armor_t96_u_i03" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13019" levels="4" name="Elegia Heavy Armor Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP by 550. -->
+		<set name="icon" val="icon.armor_t97_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13020" levels="4" name="Elegia Leather Armor Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Speed by 3%. -->
+		<set name="icon" val="icon.armor_t98_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13021" levels="4" name="Elegia Robe Set">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Speed by 7. -->
+		<set name="icon" val="icon.armor_t99_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13022" levels="1" name="Moirai Heavy Armor Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage received during PvP. Chance of decreasing all speeds of the attacker. -->
+		<set name="icon" val="icon.armor_t100_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13023" levels="1" name="Moirai Light Armor Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage received during PvP. Chance of hurling the target at the opponent when attacked. -->
+		<set name="icon" val="icon.armor_t101_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13024" levels="1" name="Moirai Robe Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage received during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->
+		<set name="icon" val="icon.armor_t102_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13025" levels="1" name="Vorpal Heavy Armor Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage received during PvP. Chance of decreasing all speeds of the attacker. -->
+		<set name="icon" val="icon.armor_t94_u_i03" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13026" levels="1" name="Vorpal Leather Armor Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage received during PvP. Chance of hurling the target at the opponent when attacked. -->
+		<set name="icon" val="icon.armor_t95_u_i03" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13027" levels="1" name="Vorpal Robe Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage received during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->
+		<set name="icon" val="icon.armor_t96_u_i03" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13028" levels="1" name="Elegia Heavy Armor Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage received during PvP. Chance of decreasing all speeds of the attacker. -->
+		<set name="icon" val="icon.armor_t97_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13029" levels="1" name="Elegia Leather Armor Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage received during PvP. Chance of hurling the target at the opponent when attacked. -->
+		<set name="icon" val="icon.armor_t98_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13030" levels="1" name="Elegia Robe Set - PvP">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage received during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->
+		<set name="icon" val="icon.armor_t99_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13031" levels="1" name="Fire Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Fire Resistance by 5. -->
+		<set name="icon" val="icon.skill4009" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13032" levels="1" name="Earth Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Earth Resistance by 5. -->
+		<set name="icon" val="icon.skill4012" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13033" levels="1" name="Dark Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Dark Resistance by 5. -->
+		<set name="icon" val="icon.skill4333" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13034" levels="1" name="Water Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Water Resistance by 5. -->
+		<set name="icon" val="icon.skill4010" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13035" levels="1" name="Wind Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Wind Resistance by 5. -->
+		<set name="icon" val="icon.skill4011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13036" levels="1" name="Divinity Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Divinity Resistance by 5. -->
+		<set name="icon" val="icon.skill4337" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13037" levels="1" name="Fire Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Fire Resistance by 10. -->
+		<set name="icon" val="icon.skill4009" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13038" levels="1" name="Earth Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Earth Resistance by 10. -->
+		<set name="icon" val="icon.skill4012" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13039" levels="1" name="Dark Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Dark Resistance by 10. -->
+		<set name="icon" val="icon.skill4333" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13040" levels="1" name="Water Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Water Resistance by 10. -->
+		<set name="icon" val="icon.skill4010" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13041" levels="1" name="Wind Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Wind Resistance by 10. -->
+		<set name="icon" val="icon.skill4011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13042" levels="1" name="Divinity Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Divinity Resistance by 10. -->
+		<set name="icon" val="icon.skill4337" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13043" levels="1" name="Fire Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Fire Resistance by 15. -->
+		<set name="icon" val="icon.skill4009" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13044" levels="1" name="Earth Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Earth Resistance by 15. -->
+		<set name="icon" val="icon.skill4012" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13045" levels="1" name="Dark Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Dark Resistance by 15. -->
+		<set name="icon" val="icon.skill4333" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13046" levels="1" name="Water Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Water Resistance by 15. -->
+		<set name="icon" val="icon.skill4010" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13047" levels="1" name="Wind Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Wind Resistance by 15. -->
+		<set name="icon" val="icon.skill4011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13048" levels="1" name="Divinity Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Divinity Resistance by 15. -->
+		<set name="icon" val="icon.skill4337" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13049" levels="1" name="Fire Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Fire Resistance by 20. -->
+		<set name="icon" val="icon.skill4009" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13050" levels="1" name="Earth Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Earth Resistance by 20. -->
+		<set name="icon" val="icon.skill4012" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13051" levels="1" name="Dark Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Dark Resistance by 20. -->
+		<set name="icon" val="icon.skill4333" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13052" levels="1" name="Water Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Water Resistance by 20. -->
+		<set name="icon" val="icon.skill4010" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13053" levels="1" name="Wind Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Wind Resistance by 20. -->
+		<set name="icon" val="icon.skill4011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13054" levels="1" name="Divinity Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Divinity Resistance by 20. -->
+		<set name="icon" val="icon.skill4337" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13055" levels="1" name="Fire Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Fire Resistance by 25. -->
+		<set name="icon" val="icon.skill4009" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13056" levels="1" name="Earth Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Earth Resistance by 25. -->
+		<set name="icon" val="icon.skill4012" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13057" levels="1" name="Dark Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Dark Resistance by 25. -->
+		<set name="icon" val="icon.skill4333" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13058" levels="1" name="Water Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Water Resistance by 25. -->
+		<set name="icon" val="icon.skill4010" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13059" levels="1" name="Wind Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Wind Resistance by 25. -->
+		<set name="icon" val="icon.skill4011" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13060" levels="1" name="Divinity Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Divinity Resistance by 25. -->
+		<set name="icon" val="icon.skill4337" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13061" levels="1" name="Special Ability: Long Blow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases bow/crossbow range. Inflicts additional damage during PvP. -->
+		<set name="icon" val="icon.skill0113" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13062" levels="5" name="Special Ability: Damage Up">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Atk. Inflicts additional damage during PvP. -->
+		<set name="icon" val="icon.skill1068" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13063" levels="1" name="Cloak Slot Activation (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Opens a cloak slot. -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13064" levels="4" name="Set Effect - Immortal Heavy Armor 2 Piece (Defense Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- CON + 1 and HP + 463. -->
+		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13065" levels="4" name="Set Effect - Immortal Heavy Armor 2 Piece (Attack Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1 -->
+		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13066" levels="4" name="Set Effect - Twilight Heavy Armor 2 Piece (Defense Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- CON + 2, STR -1, HP + 487. -->
+		<set name="icon" val="icon.armor_t601_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13067" levels="4" name="Set Effect - Twilight Heavy Armor 2 Piece (Attack Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2, CON -1 -->
+		<set name="icon" val="icon.armor_t601_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13068" levels="4" name="Set Effect - Seraph Heavy Armor 2 Piece (Defense Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- CON + 3, STR -2, HP 511. -->
+		<set name="icon" val="icon.armor_t401_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13069" levels="4" name="Set Effect - Seraph Heavy Armor 2 Piece (Attack Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 3, CON -2 -->
+		<set name="icon" val="icon.armor_t401_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13070" levels="4" name="Set Effect - Eternal Heavy Armor 2 Piece (Defense Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- CON + 3, STR -1, HP + 521. -->
+		<set name="icon" val="icon.armor_t701_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13071" levels="4" name="Set Effect - Eternal Heavy Armor 2 Piece (Attack Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 3, CON -1 -->
+		<set name="icon" val="icon.armor_t701_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13072" levels="4" name="Set Effect - R99 Rare Heavy Armor 2 Piece (Defense Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- CON + 4, STR -2, HP + 536. -->
+		<set name="icon" val="icon.armor_t94_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13073" levels="4" name="Set Effect - R99 Rare Heavy Armor 2 Piece (Attack Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 4, CON -2, Atk. Spd. + 3%. -->
+		<set name="icon" val="icon.armor_t94_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13074" levels="4" name="Set Effect - Immortal Light Armor 2 Piece (Assassin Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- DEX + 1 -->
+		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13075" levels="4" name="Set Effect - Immortal Light Armor 2 Piece (Enchant Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 1, P. Atk. + 155. -->
+		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13076" levels="4" name="Set Effect - Twilight Light Armor 2 Piece (Assassin Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- DEX + 2, STR -1 -->
+		<set name="icon" val="icon.armor_t602_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13077" levels="4" name="Set Effect - Twilight Light Armor 2 Piece (Enchant Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2, CON -1, P. Atk. + 180. -->
+		<set name="icon" val="icon.armor_t602_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13078" levels="4" name="Set Effect - Seraph Light Armor 2 Piece (Assassin Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- DEX + 3, STR -2 -->
+		<set name="icon" val="icon.armor_t402_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13079" levels="4" name="Set Effect - Seraph Light Armor 2 Piece (Enchant Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 3, CON -2, P. Atk. + 214. -->
+		<set name="icon" val="icon.armor_t402_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13080" levels="4" name="Set Effect - Eternal Light Armor 2 Piece (Assassin Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- DEX + 3, STR -1 -->
+		<set name="icon" val="icon.armor_t702_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13081" levels="4" name="Set Effect - Eternal Light Armor 2 Piece (Enchant Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 3, CON -1, P. Atk. + 246. -->
+		<set name="icon" val="icon.armor_t702_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13082" levels="4" name="Set Effect - R99 Rare Light Armor 2 Piece (Assassin Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- DEX + 4, STR -2. Atk. Spd. + 3%. -->
+		<set name="icon" val="icon.armor_t702_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13083" levels="4" name="Set Effect - R99 Rare Light Armor 2 Piece (Enchant Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 4, CON -2, P. Atk. + 255. -->
+		<set name="icon" val="icon.armor_t702_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13084" levels="4" name="Set Effect - Immortal Robe 2 Piece (Magic Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- INT + 1. Casting Spd. + 3%. -->
+		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13085" levels="4" name="Set Effect - Immortal Robe 2 Piece (Recovery Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- WIT + 1. Casting Spd. + 3%. -->
+		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13086" levels="4" name="Set Effect - Twilight Robe 2 Piece (Magic Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- INT + 2. MEN -1. Casting Spd. + 3%. -->
+		<set name="icon" val="icon.armor_t603_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13087" levels="4" name="Set Effect - Twilight Robe 2 Piece (Recovery Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- WIT+ 2. MEN -1. Casting Spd. + 3%. -->
+		<set name="icon" val="icon.armor_t603_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13088" levels="4" name="Set Effect - Seraph Robe 2 Piece (Magic Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- INT + 3. MEN -2. Casting Spd. + 3%. -->
+		<set name="icon" val="icon.armor_t403_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13089" levels="4" name="Set Effect - Seraph Robe 2 Piece (Recovery Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- WIT+ 3. MEN -2. Casting Spd. + 3%. -->
+		<set name="icon" val="icon.armor_t403_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13090" levels="4" name="Set Effect - Eternal Robe 2 Piece (Magic Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- INT + 3. MEN -1. Casting Spd. + 3%. -->
+		<set name="icon" val="icon.armor_t703_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13091" levels="4" name="Set Effect - Eternal Robe 2 Piece (Recovery Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- WIT+ 3. MEN -1. Casting Spd. + 3%. -->
+		<set name="icon" val="icon.armor_t703_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13092" levels="4" name="Set Effect - R99 Rare Robe 2 Piece (Magic Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- INT + 4. MEN -2. Casting Spd. + 15%. -->
+		<set name="icon" val="icon.armor_t703_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13093" levels="4" name="Set Effect - R99 Rare Robe 2 Piece (Recovery Type)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- WIT+ 4. MEN -2. Casting Spd. + 15%. -->
+		<set name="icon" val="icon.armor_t703_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13094" levels="4" name="R1 2 set">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13095" levels="4" name="R1 2 set">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13096" levels="4" name="R1 2 set">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13097" levels="4" name="R2 2 set">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.armor_t601_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13098" levels="4" name="R2 2 set">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.armor_t602_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+	<skill id="13099" levels="4" name="R2 2 set">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.armor_t603_u_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="false" />
+	</skill>
+</list>
