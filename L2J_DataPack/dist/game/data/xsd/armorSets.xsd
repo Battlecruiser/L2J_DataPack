@@ -6,40 +6,41 @@
 				<xs:element name="set" maxOccurs="unbounded" minOccurs="1">
 					<xs:complexType>
 						<xs:sequence maxOccurs="1" minOccurs="1">
-							<xs:element name="chest" maxOccurs="1" minOccurs="1">
+							<xs:element name="chest" maxOccurs="5" minOccurs="1">
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="legs" maxOccurs="2" minOccurs="0">
+							<xs:element name="legs" maxOccurs="5" minOccurs="0">
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="head" maxOccurs="2" minOccurs="0">
+							<xs:element name="head" maxOccurs="5" minOccurs="0">
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="gloves" maxOccurs="2" minOccurs="0">
+							<xs:element name="gloves" maxOccurs="5" minOccurs="0">
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="feet" maxOccurs="2" minOccurs="0">
+							<xs:element name="feet" maxOccurs="5" minOccurs="0">
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="shield" maxOccurs="2" minOccurs="0">
+							<xs:element name="shield" maxOccurs="5" minOccurs="0">
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="skill" maxOccurs="unbounded" minOccurs="1">
+							<xs:element name="skill" maxOccurs="unbounded" minOccurs="0">
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="level" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="minimumPieces" type="xs:positiveInteger" use="optional" />
 								</xs:complexType>
 							</xs:element>
 							<xs:element name="shield_skill" maxOccurs="2" minOccurs="0">
@@ -85,7 +86,8 @@
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute name="id" use="required" type="xs:positiveInteger" />
+						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="minimumPieces" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

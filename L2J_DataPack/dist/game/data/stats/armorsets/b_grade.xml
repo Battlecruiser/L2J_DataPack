@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/armorSets.xsd">
 	<!-- B GRADE Armor Sets -->
-	<set id="25">
+	<set id="25" minimumPieces="5">
 		<chest id="357" /> <!-- Zubei's Breastplate -->
 		<legs id="383" /> <!-- Zubei's Gaiters -->
 		<legs id="11355" /> <!-- Zubei's Gaiters -->
@@ -15,7 +15,7 @@
 		<skill id="3518" level="1" /> <!-- Zubei's Heavy Armor Set -->
 		<enchant6skill id="3617" level="1" /> <!-- Enchant Heavy Armor (B Grade) -->
 	</set>
-	<set id="26">
+	<set id="26" minimumPieces="5">
 		<chest id="2376" /> <!-- Avadon Breastplate -->
 		<legs id="2379" /> <!-- Avadon Gaiters -->
 		<legs id="11375" /> <!-- Avadon Gaiters -->
@@ -32,7 +32,7 @@
 		<shield_skill id="3548" level="1" /> <!-- Equipped with Shield -->
 		<enchant6skill id="3617" level="1" /> <!-- Enchant Heavy Armor (B Grade) -->
 	</set>
-	<set id="27">
+	<set id="27" minimumPieces="5">
 		<chest id="2384" /> <!-- Zubei's Leather Shirt -->
 		<legs id="2388" /> <!-- Zubei's Leather Gaiters -->
 		<legs id="11353" /> <!-- Zubei's Leather Gaiters -->
@@ -46,7 +46,7 @@
 		<skill id="3520" level="1" /> <!-- Zubei's Leather Shirt Light Armor Set -->
 		<enchant6skill id="3618" level="1" /> <!-- Enchant Light Armor (B Grade) -->
 	</set>
-	<set id="28">
+	<set id="28" minimumPieces="4">
 		<chest id="2390" /> <!-- Avadon Leather Armor -->
 		<head id="2415" /> <!-- Avadon Circlet -->
 		<head id="12980" /> <!-- Avadon Circlet - Light Use -->
@@ -58,7 +58,7 @@
 		<skill id="3521" level="1" /> <!-- Avadon Light Armor Set -->
 		<enchant6skill id="3618" level="1" /> <!-- Enchant Light Armor (B Grade) -->
 	</set>
-	<set id="29">
+	<set id="29" minimumPieces="5">
 		<chest id="2397" /> <!-- Tunic of Zubei -->
 		<legs id="2402" /> <!-- Stockings of Zubei -->
 		<legs id="11378" /> <!-- Stockings of Zubei -->
@@ -72,7 +72,7 @@
 		<skill id="3522" level="1" /> <!-- Tunic of Zubei Robe Set -->
 		<enchant6skill id="3619" level="1" /> <!-- Enchant Robe (B Grade) -->
 	</set>
-	<set id="30">
+	<set id="30" minimumPieces="4">
 		<chest id="2406" /> <!-- Avadon Robe -->
 		<head id="2415" /> <!-- Avadon Circlet -->
 		<head id="12981" /> <!-- Avadon Circlet - Robe -->
@@ -93,7 +93,7 @@
 	<!-- <skill id="3006" level="1" /> -->
 	<!-- <enchant6skill id="3619" level="1" /> -->
 	<!-- </set> -->
-	<set id="32">
+	<set id="32" minimumPieces="5">
 		<chest id="358" /> <!-- Blue Wolf Breastplate -->
 		<legs id="2380" /> <!-- Blue Wolf Gaiters -->
 		<legs id="11394" /> <!-- Blue Wolf Gaiters -->
@@ -110,7 +110,7 @@
 		<con val="-1" />
 		<dex val="-2" />
 	</set>
-	<set id="33">
+	<set id="33" minimumPieces="4">
 		<chest id="2381" /> <!-- Doom Plate Armor -->
 		<head id="2417" /> <!-- Doom Helmet -->
 		<head id="11387" /> <!-- Doom Helmet - Heavy -->
@@ -127,7 +127,7 @@
 		<str val="-3" />
 		<con val="3" />
 	</set>
-	<set id="34">
+	<set id="34" minimumPieces="4">
 		<chest id="2391" /> <!-- Blue Wolf Leather Armor -->
 		<head id="2416" /> <!-- Blue Wolf Helmet -->
 		<head id="12984" /> <!-- Blue Wolf Helmet - Light Use -->
@@ -142,7 +142,7 @@
 		<men val="3" />
 		<wit val="-1" />
 	</set>
-	<set id="35">
+	<set id="35" minimumPieces="4">
 		<chest id="2392" /> <!-- Leather Armor of Doom -->
 		<head id="2417" /> <!-- Doom Helmet -->
 		<head id="12982" /> <!-- Doom Helmet - Light Use -->
@@ -157,7 +157,7 @@
 		<con val="-2" />
 		<dex val="3" />
 	</set>
-	<set id="36">
+	<set id="36" minimumPieces="5">
 		<chest id="2398" /> <!-- Blue Wolf Tunic -->
 		<legs id="2403" /> <!-- Blue Wolf Stockings -->
 		<legs id="11404" /> <!-- Blue Wolf Stockings -->
@@ -174,7 +174,7 @@
 		<men val="-1" />
 		<wit val="3" />
 	</set>
-	<set id="37">
+	<set id="37" minimumPieces="5">
 		<chest id="2399" /> <!-- Tunic of Doom -->
 		<legs id="2404" /> <!-- Stockings of Doom -->
 		<legs id="11406" /> <!-- Stockings of Doom -->

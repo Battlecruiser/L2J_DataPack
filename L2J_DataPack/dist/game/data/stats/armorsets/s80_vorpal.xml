@@ -1,44 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/armorSets.xsd">
 	<!-- S84 Vorpal Armor Sets -->
-	<set id="185">
+	<set id="185" minimumPieces="2">
 		<chest id="15592" /> <!-- Vorpal Breastplate -->
 		<legs id="15595" /> <!-- Vorpal Gaiter -->
 		<head id="15589" /> <!-- Vorpal Helmet -->
 		<gloves id="15598" /> <!-- Vorpal Gauntlet -->
 		<feet id="15601" /> <!-- Vorpal Boots -->
 		<shield id="15604" /> <!-- Vorpal Shield -->
-		<skill id="3006" level="1" /> <!-- Equip Set Items -->
-		<skill id="8400" level="1" /> <!-- Vorpal Heavy Armor Set -->
+		<skill id="13016" level="1" minimumPieces="2" /> <!-- Vorpal Heavy Armor Set -->
+		<skill id="13016" level="2" minimumPieces="3" /> <!-- Vorpal Heavy Armor Set -->
+		<skill id="13016" level="3" minimumPieces="4" /> <!-- Vorpal Heavy Armor Set -->
+		<skill id="13016" level="4" minimumPieces="5" /> <!-- Vorpal Heavy Armor Set -->
 		<shield_skill id="8495" level="1" /> <!-- Vorpal Shield -->
 		<enchant6skill id="8461" level="1" /> <!-- Enchant Heavy Armor (S Grade) -->
-		<str val="-2" />
-		<con val="2" />
 	</set>
-	<set id="186">
+	<set id="186" minimumPieces="2">
 		<chest id="15593" /> <!-- Vorpal Leather Breastplate -->
 		<legs id="15596" /> <!-- Vorpal Leather Legging -->
 		<head id="15590" /> <!-- Vorpal Leather Helmet -->
 		<gloves id="15599" /> <!-- Vorpal Leather Gloves -->
 		<feet id="15602" /> <!-- Vorpal Leather Boots -->
-		<skill id="3006" level="1" /> <!-- Equip Set Items -->
-		<skill id="8401" level="1" /> <!-- Vorpal Leather Armor Set -->
+		<skill id="13017" level="1" minimumPieces="2" /> <!-- Vorpal Light Armor Set -->
+		<skill id="13017" level="2" minimumPieces="3" /> <!-- Vorpal Light Armor Set -->
+		<skill id="13017" level="3" minimumPieces="4" /> <!-- Vorpal Light Armor Set -->
+		<skill id="13017" level="4" minimumPieces="5" /> <!-- Vorpal Light Armor Set -->
 		<enchant6skill id="8462" level="1" /> <!-- Enchant Light Armor (S Grade) -->
-		<str val="1" />
-		<con val="-3" />
-		<dex val="2" />
 	</set>
-	<set id="187">
+	<set id="187" minimumPieces="2">
 		<chest id="15594" /> <!-- Vorpal Tunic -->
 		<legs id="15597" /> <!-- Vorpal Stockings -->
 		<head id="15591" /> <!-- Vorpal Circlet -->
 		<gloves id="15600" /> <!-- Vorpal Gloves -->
 		<feet id="15603" /> <!-- Vorpal Shoes -->
-		<skill id="3006" level="1" /> <!-- Equip Set Items -->
-		<skill id="8402" level="1" /> <!-- Vorpal Robe Set -->
+		<skill id="13018" level="1" minimumPieces="2" /> <!-- Vorpal Robe Set -->
+		<skill id="13018" level="2" minimumPieces="3" /> <!-- Vorpal Robe Set -->
+		<skill id="13018" level="3" minimumPieces="4" /> <!-- Vorpal Robe Set -->
+		<skill id="13018" level="4" minimumPieces="5" /> <!-- Vorpal Robe Set -->
 		<enchant6skill id="8463" level="1" /> <!-- Enchant Robe (S Grade) -->
-		<int val="-1" />
-		<men val="-1" />
-		<wit val="2" />
 	</set>
 </list>
