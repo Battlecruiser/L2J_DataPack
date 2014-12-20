@@ -63,7 +63,6 @@ public class ChatTell implements IChatHandler
 			return;
 		}
 		
-		CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 		L2PcInstance receiver = null;
 		
 		receiver = L2World.getInstance().getPlayer(target);
@@ -93,8 +92,8 @@ public class ChatTell implements IChatHandler
 					activeChar.addSilenceModeExcluded(receiver.getObjectId());
 				}
 				
-				receiver.sendPacket(cs);
-				activeChar.sendPacket(new CreatureSay(activeChar.getObjectId(), type, "->" + receiver.getName(), text));
+				receiver.sendPacket(new CreatureSay(activeChar, receiver, activeChar.getName(), type, text));
+				activeChar.sendPacket(new CreatureSay(activeChar, receiver, "->" + receiver.getName(), type, text));
 			}
 			else
 			{
