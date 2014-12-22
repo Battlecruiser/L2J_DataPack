@@ -57,6 +57,7 @@ public final class EffectMasterHandler
 		ChangeHairColor.class,
 		ChangeHairStyle.class,
 		ClanGate.class,
+		ClassChange.class,
 		Confuse.class,
 		ConsumeBody.class,
 		ConvertItem.class,

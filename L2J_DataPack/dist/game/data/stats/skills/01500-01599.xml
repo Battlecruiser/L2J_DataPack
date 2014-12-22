@@ -2030,7 +2030,6 @@
 		</enchant1for>
 	</skill>
 	<skill id="1566" levels="1" name="Class Change">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Change the class. -->
 		<set name="icon" val="icon.skill0810" />
 		<set name="operateType" val="A1" />
@@ -2038,9 +2037,16 @@
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isDebuff" val="false" />
+		<cond>
+			<player canSwitchSubClass="0" />
+		</cond>
+		<for>
+			<effect name="ClassChange">
+				<param index="0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1567" levels="1" name="Class Change">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Change the class. -->
 		<set name="icon" val="icon.skill0810" />
 		<set name="operateType" val="A1" />
@@ -2048,9 +2054,16 @@
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isDebuff" val="false" />
+		<cond>
+			<player canSwitchSubClass="1" />
+		</cond>
+		<for>
+			<effect name="ClassChange">
+				<param index="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1568" levels="1" name="Class Change">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Change the class. -->
 		<set name="icon" val="icon.skill0810" />
 		<set name="operateType" val="A1" />
@@ -2058,9 +2071,16 @@
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isDebuff" val="false" />
+		<cond>
+			<player canSwitchSubClass="2" />
+		</cond>
+		<for>
+			<effect name="ClassChange">
+				<param index="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1569" levels="1" name="Class Change">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Change the class. -->
 		<set name="icon" val="icon.skill0810" />
 		<set name="operateType" val="A1" />
@@ -2068,16 +2088,37 @@
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isDebuff" val="false" />
+		<cond>
+			<player canSwitchSubClass="3" />
+		</cond>
+		<for>
+			<effect name="ClassChange">
+				<param index="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1570" levels="1" name="Identity Crisis">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 seconds, you are going through an Identity Crisis. Battle abilities are decreased and skills and items cannot be used. However, consumables items can still be used. Also, you cannot switch between main, dual, or sub classes while under the effect of Identity Crisis. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="CHANGE_CLASS" />
 		<set name="icon" val="icon.skill1570" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="Buff">
+				<add stat="runSpd" val="33" />
+				<mul stat="pAtkSpd" val="0.65" />
+				<mul stat="mAtkSpd" val="0.65" />
+				<mul stat="pAtk" val="0.25" />
+				<mul stat="mAtk" val="0.25" />
+			</effect>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+		</for>
 	</skill>
 	<skill id="1571" levels="1" name="Inventory Increase">
 		<!-- AUTO GENERATED SKILL -->
