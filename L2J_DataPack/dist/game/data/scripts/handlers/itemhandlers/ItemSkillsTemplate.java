@@ -167,7 +167,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				}
 			}
 		}
-		return hasConsumeSkill;
+		return false;
 	}
 	
 	/**
