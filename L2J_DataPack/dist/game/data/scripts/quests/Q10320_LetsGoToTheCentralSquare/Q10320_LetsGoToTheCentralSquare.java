@@ -22,8 +22,14 @@ import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.events.EventType;
+import com.l2jserver.gameserver.model.events.ListenerRegisterType;
+import com.l2jserver.gameserver.model.events.annotations.RegisterEvent;
+import com.l2jserver.gameserver.model.events.annotations.RegisterType;
+import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerCreate;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 
@@ -97,33 +103,26 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated())
+		
+		switch (qs.getState())
 		{
-			if (npc.getId() == PANTHEON)
+			case State.CREATED:
 			{
-				htmltext = "32972-01.htm";
+				if (npc.getId() == PANTHEON)
+				{
+					htmltext = "32972-01.htm";
+				}
+				break;
 			}
-		}
-		else if (qs.isStarted())
-		{
-			if (npc.getId() == PANTHEON)
+			case State.STARTED:
 			{
-				htmltext = "32972-04.html";
+				htmltext = npc.getId() == PANTHEON ? "32972-04.html" : "32975-01.html";
+				break;
 			}
-			else if (npc.getId() == THEODORE)
+			case State.COMPLETED:
 			{
-				htmltext = "32975-01.html";
-			}
-		}
-		else if (qs.isCompleted())
-		{
-			if (npc.getId() == PANTHEON)
-			{
-				htmltext = "32972-05.html";
-			}
-			else if (npc.getId() == THEODORE)
-			{
-				htmltext = "32975-03.html";
+				htmltext = npc.getId() == PANTHEON ? "32972-05.html" : "32975-03.html";
+				break;
 			}
 		}
 		return htmltext;
@@ -132,30 +131,31 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 	@Override
 	public String onEnterZone(L2Character character, L2ZoneType zone)
 	{
-		if ((zone.getId() == TALKING_ISLAND_PRESENTATION_MOVIE_ZONE) && character.isPlayer())
+		if (character.isPlayer())
 		{
 			final L2PcInstance player = character.getActingPlayer();
 			
-			if (!player.getVariables().getBoolean(MOVIE_VAR, false))
+			if (player.getVariables().getBoolean(MOVIE_VAR, false))
 			{
 				if (player.getLevel() <= MAX_LEVEL)
 				{
 					final QuestState qs = getQuestState(player, false);
-					
-					if ((qs != null) && qs.isStarted())
-					{
-						player.showQuestMovie(SCENE_SI_ILLUSION_02_QUE);
-					}
-					else
-					{
-						player.showQuestMovie(SCENE_SI_ILLUSION_01_QUE);
-					}
+					player.showQuestMovie(((qs != null) && qs.isStarted()) ? SCENE_SI_ILLUSION_02_QUE : SCENE_SI_ILLUSION_01_QUE);
 				}
-				
-				player.getVariables().set(MOVIE_VAR, true);
+				player.getVariables().remove(MOVIE_VAR);
 			}
 		}
-		
 		return super.onEnterZone(character, zone);
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_CREATE)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void OnPlayerCreate(OnPlayerCreate event)
+	{
+		final L2PcInstance player = event.getActiveChar();
+		if (player.getRace() != Race.ERTHEIA)
+		{
+			player.getVariables().set(MOVIE_VAR, true);
+		}
 	}
 }
