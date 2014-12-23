@@ -288,6 +288,7 @@ import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenS
 import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
 import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
+import quests.Q10322_SearchingForTheMysteriousPower.Q10322_SearchingForTheMysteriousPower;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
 import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
@@ -572,6 +573,7 @@ public class QuestMasterHandler
 		Q10294_SevenSignsToTheMonasteryOfSilence.class,
 		Q10320_LetsGoToTheCentralSquare.class,
 		Q10321_QualificationsOfTheSeeker.class,
+		Q10322_SearchingForTheMysteriousPower.class,
 		Q10501_ZakenEmbroideredSoulCloak.class,
 		Q10502_FreyaEmbroideredSoulCloak.class,
 		Q10503_FrintezzaEmbroideredSoulCloak.class,
