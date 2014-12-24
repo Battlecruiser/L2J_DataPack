@@ -95,7 +95,7 @@ public final class DisciplesNecropolisPast extends Quest
 	private static final NpcStringId[] LILITH_SHOUT =
 	{
 		NpcStringId.HOW_DARE_YOU_TRY_TO_CONTEND_AGAINST_ME_IN_STRENGTH_RIDICULOUS,
-		NpcStringId.ANAKIM_IN_THE_NAME_OF_GREAT_SHILIEN_I_WILL_CUT_YOUR_THROAT,
+		NpcStringId.ANAKIM_IN_THE_NAME_OF_GREAT_SHILEN_I_WILL_CUT_YOUR_THROAT,
 		NpcStringId.YOU_CANNOT_BE_THE_MATCH_OF_LILITH_ILL_TEACH_YOU_A_LESSON
 	};
 	
@@ -252,7 +252,7 @@ public final class DisciplesNecropolisPast extends Quest
 						{
 							if (caster.isScriptValue(0))
 							{
-								caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.YOU_SUCH_A_FOOL_THE_VICTORY_OVER_THIS_WAR_BELONGS_TO_SHILIEN));
+								caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.YOU_SUCH_A_FOOL_THE_VICTORY_OVER_THIS_WAR_BELONGS_TO_SHILEN));
 								caster.setScriptValue(1);
 							}
 							else if (getRandom(100) < 10)
@@ -296,7 +296,7 @@ public final class DisciplesNecropolisPast extends Quest
 										caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.ILL_SHOW_YOU_THE_REAL_POWER_OF_EINHASAD));
 										if (Util.checkIfInRange(2000, caster, player, true))
 										{
-											player.sendPacket(new NpcSay(caster.getObjectId(), Say2.TELL, caster.getId(), NpcStringId.LILITHS_ATTACK_IS_GETTING_STRONGER_GO_AHEAD_AND_TURN_IT_ON));
+											player.sendPacket(new NpcSay(caster.getObjectId(), Say2.TELL, caster.getId(), NpcStringId.LILITH_ATTACK_IS_GETTING_STRONGER_GO_AHEAD_AND_TURN_IT_ON));
 										}
 										break;
 									}

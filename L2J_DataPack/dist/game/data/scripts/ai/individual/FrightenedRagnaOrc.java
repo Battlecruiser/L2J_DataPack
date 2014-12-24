@@ -64,7 +64,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 		else if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.2)) && npc.isScriptValue(1))
 		{
 			startQuestTimer("reward", 10000, npc, attacker);
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WAIT_WAIT_STOP_SAVE_ME_AND_ILL_GIVE_YOU_10000000_ADENA);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WAIT_WAIT_STOP_SAVE_ME_AND_ILL_GIVE_YOU_10_000_000_ADENA);
 			npc.setScriptValue(2);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
@@ -102,7 +102,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 				{
 					if (getRandom(100000) < CHANCE2)
 					{
-						final NpcStringId msg = getRandomBoolean() ? NpcStringId.TH_THANKS_I_COULD_HAVE_BECOME_GOOD_FRIENDS_WITH_YOU : NpcStringId.ILL_GIVE_YOU_10000000_ADENA_LIKE_I_PROMISED_I_MIGHT_BE_AN_ORC_WHO_KEEPS_MY_PROMISES;
+						final NpcStringId msg = getRandomBoolean() ? NpcStringId.TH_THANKS_I_COULD_HAVE_BECOME_GOOD_FRIENDS_WITH_YOU : NpcStringId.ILL_GIVE_YOU_10_000_000_ADENA_LIKE_I_PROMISED_I_MIGHT_BE_AN_ORC_WHO_KEEPS_MY_PROMISES;
 						broadcastNpcSay(npc, Say2.NPC_ALL, msg);
 						npc.setScriptValue(3);
 						npc.doCast(SKILL.getSkill());
@@ -124,7 +124,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 					}
 					else
 					{
-						final NpcStringId msg = getRandomBoolean() ? NpcStringId.THANKS_BUT_THAT_THING_ABOUT_10000000_ADENA_WAS_A_LIE_SEE_YA : NpcStringId.YOURE_PRETTY_DUMB_TO_BELIEVE_ME;
+						final NpcStringId msg = getRandomBoolean() ? NpcStringId.THANKS_BUT_THAT_THING_ABOUT_10_000_000_ADENA_WAS_A_LIE_SEE_YA : NpcStringId.YOURE_PRETTY_DUMB_TO_BELIEVE_ME;
 						broadcastNpcSay(npc, Say2.NPC_ALL, msg);
 					}
 					startQuestTimer("despawn", 1000, npc, null);

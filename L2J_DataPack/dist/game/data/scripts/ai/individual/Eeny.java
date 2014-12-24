@@ -49,7 +49,7 @@ public final class Eeny extends AbstractNpcAI
 			{
 				case "SPAM_TEXT":
 				{
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THE_LAND_OF_ADEN_IS_IN_NEED_OF_MATERIALS_TO_REBUILD_FROM_SHILENS_DESTURCTION);
+					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THE_LAND_OF_ADEN_IS_IN_NEED_OF_MATERIALS_TO_REBUILD_FROM_SHILENS_DESTRUCTION);
 					startQuestTimer("SPAM_TEXT2", 1000, npc, null);
 					break;
 				}

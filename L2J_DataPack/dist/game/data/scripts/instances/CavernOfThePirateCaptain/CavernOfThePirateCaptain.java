@@ -378,7 +378,7 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 					{
 						if (world._is83)
 						{
-							manageScreenMsg(world, NpcStringId.WHO_DARES_AWKAWEN_THE_MIGHTY_ZAKEN);
+							manageScreenMsg(world, NpcStringId.WHO_DARES_AWAKEN_THE_MIGHTY_ZAKEN);
 						}
 						world._zaken.setInvisible(false);
 						world._zaken.setIsParalyzed(false);

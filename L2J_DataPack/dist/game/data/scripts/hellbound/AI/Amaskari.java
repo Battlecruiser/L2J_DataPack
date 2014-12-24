@@ -18,6 +18,7 @@
  */
 package hellbound.AI;
 
+import hellbound.HellboundEngine;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -29,8 +30,6 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-
-import hellbound.HellboundEngine;
 
 /**
  * Manages Amaskari's and minions' chat and some skill usage.
@@ -63,7 +62,7 @@ public final class Amaskari extends AbstractNpcAI
 		NpcStringId.AHH_MY_LIFE_IS_BEING_DRAINED_OUT,
 		NpcStringId.THANK_YOU_FOR_SAVING_ME,
 		NpcStringId.IT_WILL_KILL_EVERYONE,
-		NpcStringId.EEEK_I_FEEL_SICKYOW
+		NpcStringId.EEEK_I_FEEL_SICK_YOW
 	};
 	
 	public Amaskari()

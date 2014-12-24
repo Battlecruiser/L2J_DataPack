@@ -161,7 +161,7 @@ public final class Keltas extends AbstractNpcAI
 			final L2Npc keltas = _spawnedKeltas;
 			if ((keltas != null) && !keltas.isDead())
 			{
-				broadcastNpcSay(keltas, Say2.NPC_SHOUT, NpcStringId.THAT_IS_IT_FOR_TODAYLETS_RETREAT_EVERYONE_PULL_BACK);
+				broadcastNpcSay(keltas, Say2.NPC_SHOUT, NpcStringId.THAT_IS_IT_FOR_TODAY_LETS_RETREAT_EVERYONE_PULL_BACK);
 				keltas.deleteMe();
 				keltas.getSpawn().decreaseCount(keltas);
 				despawnMinions();

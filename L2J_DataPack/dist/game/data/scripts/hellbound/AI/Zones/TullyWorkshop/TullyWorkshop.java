@@ -1223,7 +1223,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 					{
 						if ((_npc != null) && (_npc.getId() == INGENIOUS_CONTRAPTION))
 						{
-							broadcastNpcSay(_npc, Say2.NPC_SHOUT, NpcStringId.S1_MINUTES_REMAINING, Integer.toString((countdownTime / 60000)));
+							broadcastNpcSay(_npc, Say2.NPC_SHOUT, NpcStringId.S1_MINUTE_S_ARE_REMAINING, Integer.toString((countdownTime / 60000)));
 						}
 					}
 				}
@@ -1257,11 +1257,11 @@ public final class TullyWorkshop extends AbstractNpcAI
 				{
 					if ((_npc != null) && (_npc.getId() == INGENIOUS_CONTRAPTION))
 					{
-						broadcastNpcSay(_npc, Say2.NPC_SHOUT, NpcStringId.S1_SECONDS_REMAINING, Integer.toString((countdownTime / 1000)));
+						broadcastNpcSay(_npc, Say2.NPC_SHOUT, NpcStringId.S1_SECOND_S_REMAINING, Integer.toString((countdownTime / 1000)));
 					}
 				}
 			}, 60000, 10000);
-			broadcastNpcSay(postMortemSpawn.get(0), Say2.NPC_SHOUT, NpcStringId.DETONATOR_INITIALIZATION_TIME_S1_MINUTES_FROM_NOW, Integer.toString((countdownTime / 60000)));
+			broadcastNpcSay(postMortemSpawn.get(0), Say2.NPC_SHOUT, NpcStringId.DETONATOR_INITIALIZATION_TIME_SET_FOR_S1_MINUTE_S_FROM_NOW, Integer.toString((countdownTime / 60000)));
 		}
 		else if ((npcId == TIMETWISTER_GOLEM) && (_countdown != null))
 		{

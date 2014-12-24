@@ -38,11 +38,11 @@ public final class Seyo extends AbstractNpcAI
 	// Misc
 	private static final NpcStringId[] TEXT =
 	{
-		NpcStringId.NO_ONE_ELSE_DONT_WORRY_I_DONT_BITE_HAHA,
-		NpcStringId.OK_MASTER_OF_LUCK_THATS_YOU_HAHA_WELL_ANYONE_CAN_COME_AFTER_ALL,
-		NpcStringId.SHEDDING_BLOOD_IS_A_GIVEN_ON_THE_BATTLEFIELD_AT_LEAST_ITS_SAFE_HERE,
-		NpcStringId.OK_WHOS_NEXT_IT_ALL_DEPENDS_ON_YOUR_FATE_AND_LUCK_RIGHT_AT_LEAST_COME_AND_TAKE_A_LOOK,
-		NpcStringId.THERE_WAS_SOMEONE_WHO_WON_10000_FROM_ME_A_WARRIOR_SHOULDNT_JUST_BE_GOOD_AT_FIGHTING_RIGHT_YOUVE_GOTTA_BE_GOOD_IN_EVERYTHING
+		NpcStringId.NO_ONE_ELSE_DONT_WORRY__I_DONT_BITE_HAHA,
+		NpcStringId.OK__MASTER_OF_LUCK_THATS_YOU_HAHA__WELL_ANYONE_CAN_COME_AFTER_ALL,
+		NpcStringId.SHEDDING_BLOOD_IS_A_GIVEN_ON_THE_BATTLEGROUND_AT_LEAST_ITS_SAFE_HERE,
+		NpcStringId.OK__WHOS_NEXT_IT_ALL_DEPENDS_ON_YOUR_FATE_AND_LUCK_RIGHT_AT_LEAST_COME_AND_TAKE_A_LOOK,
+		NpcStringId.THERE_WAS_SOMEONE_WHO_WON_10_000_FROM_ME_A_WARRIOR_SHOULDNT_JUST_BE_GOOD_AT_FIGHTING_RIGHT_YOUVE_GOTTA_BE_GOOD_IN_EVERYTHING
 	};
 	
 	public Seyo()
@@ -116,7 +116,7 @@ public final class Seyo extends AbstractNpcAI
 					final int chance = getRandom(100);
 					if (chance < 20)
 					{
-						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.AHEM_S1_HAS_NO_LUCK_AT_ALL_TRY_PRAYING, player.getName());
+						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.AHEM__S1_HAS_NO_LUCK_AT_ALL_TRY_PRAYING, player.getName());
 					}
 					else if (chance < 80)
 					{
@@ -127,7 +127,7 @@ public final class Seyo extends AbstractNpcAI
 					{
 						final int itemCount = getRandom(10, 16);
 						giveItems(player, STONE_FRAGMENT, itemCount);
-						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.S1_PULLED_ONE_WITH_S2_DIGITS_LUCKY_NOT_BAD, player.getName(), String.valueOf(itemCount));
+						broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.S1_PULLED_ONE_WITH_S2_DIGITS_LUCKY__NOT_BAD, player.getName(), String.valueOf(itemCount));
 					}
 					startQuestTimer("TRICKERY_TIMER", 5000, npc, null);
 				}

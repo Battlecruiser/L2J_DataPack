@@ -53,7 +53,7 @@ public final class GiantsCave extends AbstractNpcAI
 		{
 			if (npc.getId() == SCOUTS[0]) // Gamlin
 			{
-				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId._INTRUDER_DETECTED);
+				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.INTRUDER_DETECTED);
 			}
 			else
 			{
