@@ -26,18 +26,18 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Mahram AI.
+ * Shannon AI.
  * @author St3eT
  */
-public final class Mahram extends AbstractNpcAI
+public final class Shannon extends AbstractNpcAI
 {
 	// NPCs
-	private static final int MAHRAM = 33271;
+	private static final int SHANNON = 32974;
 	
-	private Mahram()
+	private Shannon()
 	{
-		super(Mahram.class.getSimpleName(), "ai/individual");
-		addSpawnId(MAHRAM);
+		super(Shannon.class.getSimpleName(), "ai/individual");
+		addSpawnId(SHANNON);
 	}
 	
 	@Override
@@ -45,7 +45,7 @@ public final class Mahram extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.ALCHEMY_IS_A_SCIENCE_AND_AN_ART);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.LOOK_AT_ALL_THE_NEWBIES_HA_HA_HA);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -53,12 +53,12 @@ public final class Mahram extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("SPAM_TEXT", 10000, npc, null, true);
+		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Mahram();
+		new Shannon();
 	}
 }
