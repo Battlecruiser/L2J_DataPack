@@ -1,0 +1,1 @@
+UPDATE `character_quests` SET `value` = '1' WHERE `var` = '2ND_CLASS_DIAMOND_REWARD' AND `value` = 'true';

@@ -111,10 +111,10 @@ public final class Q00211_TrialOfTheChallenger extends Quest
 				if (qs.isCreated())
 				{
 					final PlayerVariables vars = player.getVariables();
-					if (!vars.getBoolean("2ND_CLASS_DIAMOND_REWARD", false))
+					if (vars.getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
 					{
 						giveItems(player, DIMENSIONAL_DIAMONDS);
-						vars.set("2ND_CLASS_DIAMOND_REWARD", true);
+						vars.set("2ND_CLASS_DIAMOND_REWARD", 1);
 						htmltext = event;
 					}
 					else
@@ -339,10 +339,10 @@ public final class Q00211_TrialOfTheChallenger extends Quest
 						
 						// redundant retail check - already rewarded at beginning of quest
 						final PlayerVariables vars = talker.getVariables();
-						if (!vars.getBoolean("2ND_CLASS_DIAMOND_REWARD", false))
+						if (vars.getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
 						{
 							giveItems(talker, DIMENSIONAL_DIAMONDS);
-							vars.set("2ND_CLASS_DIAMOND_REWARD", true);
+							vars.set("2ND_CLASS_DIAMOND_REWARD", 1);
 						}
 						
 						talker.sendPacket(new SocialAction(talker.getObjectId(), 3));
