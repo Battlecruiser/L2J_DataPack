@@ -104,7 +104,7 @@ public final class Q00457_LostAndFound extends Quest
 			}
 			case "TALK_TIME3":
 			{
-				broadcastNpcSay(npc, player, NpcStringId.I_GUESS_YOURE_THE_SILENT_TYPE_THEN_ARE_YOU_LOOKING_FOR_TREASURE_LIKE_ME, false);
+				broadcastNpcSay(npc, player, NpcStringId.I_GUESS_YOU_RE_THE_SILENT_TYPE_THEN_ARE_YOU_LOOKING_FOR_TREASURE_LIKE_ME, false);
 				break;
 			}
 			case "TIME_LIMIT":
@@ -125,12 +125,12 @@ public final class Q00457_LostAndFound extends Quest
 					}
 					else if (npc.isScriptValue(0))
 					{
-						broadcastNpcSay(npc, player, NpcStringId.HEY_DONT_GO_SO_FAST, true);
+						broadcastNpcSay(npc, player, NpcStringId.HEY_DON_T_GO_SO_FAST, true);
 						npc.setScriptValue(1);
 					}
 					else if (npc.isScriptValue(1))
 					{
-						broadcastNpcSay(npc, player, NpcStringId.ITS_HARD_TO_FOLLOW, true);
+						broadcastNpcSay(npc, player, NpcStringId.IT_S_HARD_TO_FOLLOW, true);
 						npc.setScriptValue(2);
 					}
 					else if (npc.isScriptValue(2))

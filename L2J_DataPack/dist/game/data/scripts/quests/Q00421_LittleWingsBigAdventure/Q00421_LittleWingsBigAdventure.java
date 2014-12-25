@@ -70,10 +70,10 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 	private static final Map<Integer, NpcData> NPC_DATA = new HashMap<>();
 	static
 	{
-		NPC_DATA.put(TREE_OF_WIND, new NpcData(NpcStringId.HEY_YOUVE_ALREADY_DRUNK_THE_ESSENCE_OF_WIND, 2, 1, 270));
-		NPC_DATA.put(TREE_OF_STAR, new NpcData(NpcStringId.HEY_YOUVE_ALREADY_DRUNK_THE_ESSENCE_OF_A_STAR, 4, 2, 400));
-		NPC_DATA.put(TREE_OF_TWILIGHT, new NpcData(NpcStringId.HEY_YOUVE_ALREADY_DRUNK_THE_ESSENCE_OF_DUSK, 8, 4, 150));
-		NPC_DATA.put(TREE_OF_ABYSS, new NpcData(NpcStringId.HEY_YOUVE_ALREADY_DRUNK_THE_ESSENCE_OF_THE_ABYSS, 16, 8, 270));
+		NPC_DATA.put(TREE_OF_WIND, new NpcData(NpcStringId.HEY_YOU_VE_ALREADY_DRUNK_THE_ESSENCE_OF_WIND, 2, 1, 270));
+		NPC_DATA.put(TREE_OF_STAR, new NpcData(NpcStringId.HEY_YOU_VE_ALREADY_DRUNK_THE_ESSENCE_OF_A_STAR, 4, 2, 400));
+		NPC_DATA.put(TREE_OF_TWILIGHT, new NpcData(NpcStringId.HEY_YOU_VE_ALREADY_DRUNK_THE_ESSENCE_OF_DUSK, 8, 4, 150));
+		NPC_DATA.put(TREE_OF_ABYSS, new NpcData(NpcStringId.HEY_YOU_VE_ALREADY_DRUNK_THE_ESSENCE_OF_THE_ABYSS, 16, 8, 270));
 	}
 	
 	public Q00421_LittleWingsBigAdventure()

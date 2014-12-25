@@ -124,17 +124,17 @@ public final class DarkCloudMansion extends Quest
 	
 	private static NpcStringId[] _spawnChat =
 	{
-		NpcStringId.IM_THE_REAL_ONE,
+		NpcStringId.I_M_THE_REAL_ONE,
 		NpcStringId.PICK_ME,
 		NpcStringId.TRUST_ME,
-		NpcStringId.NOT_THAT_DUDE_IM_THE_REAL_ONE,
-		NpcStringId.DONT_BE_FOOLED_DONT_BE_FOOLED_IM_THE_REAL_ONE
+		NpcStringId.NOT_THAT_DUDE_I_M_THE_REAL_ONE,
+		NpcStringId.DON_T_BE_FOOLED_DON_T_BE_FOOLED_I_M_THE_REAL_ONE
 	};
 	
 	private static NpcStringId[] _decayChat =
 	{
-		NpcStringId.IM_THE_REAL_ONE_PHEW,
-		NpcStringId.CANT_YOU_EVEN_FIND_OUT,
+		NpcStringId.I_M_THE_REAL_ONE_PHEW,
+		NpcStringId.CAN_T_YOU_EVEN_FIND_OUT,
 		NpcStringId.FIND_ME
 	};
 	
@@ -142,14 +142,14 @@ public final class DarkCloudMansion extends Quest
 	{
 		NpcStringId.HUH_HOW_DID_YOU_KNOW_IT_WAS_ME,
 		NpcStringId.EXCELLENT_CHOICE_TEEHEE,
-		NpcStringId.YOUVE_DONE_WELL,
+		NpcStringId.YOU_VE_DONE_WELL,
 		NpcStringId.OH_VERY_SENSIBLE
 	};
 	
 	private static NpcStringId[] _faildChat =
 	{
-		NpcStringId.YOUVE_BEEN_FOOLED,
-		NpcStringId.SORRY_BUT_IM_THE_FAKE_ONE
+		NpcStringId.YOU_VE_BEEN_FOOLED,
+		NpcStringId.SORRY_BUT_I_M_THE_FAKE_ONE
 	};
 	
 	// Second room - random monolith order

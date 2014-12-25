@@ -130,7 +130,7 @@ public final class SanctumOftheLordsOfDawn extends AbstractNpcAI
 					}
 					case GUARDS_OF_THE_DAWN_3:
 					{
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.WHO_ARE_YOU_A_NEW_FACE_LIKE_YOU_CANT_APPROACH_THIS_PLACE));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.WHO_ARE_YOU_A_NEW_FACE_LIKE_YOU_CAN_T_APPROACH_THIS_PLACE));
 						break;
 					}
 				}

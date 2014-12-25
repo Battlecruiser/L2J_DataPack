@@ -101,10 +101,10 @@ public final class Rooney extends AbstractNpcAI
 					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.I_AM_NOT_THAT_TYPE_OF_PERSON_WHO_STAYS_IN_ONE_PLACE_FOR_A_LONG_TIME);
 					break;
 				case 3:
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.ITS_HARD_FOR_ME_TO_KEEP_STANDING_LIKE_THIS);
+					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.IT_S_HARD_FOR_ME_TO_KEEP_STANDING_LIKE_THIS);
 					break;
 				case 4:
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WHY_DONT_I_GO_THAT_WAY_THIS_TIME);
+					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WHY_DON_T_I_GO_THAT_WAY_THIS_TIME);
 					break;
 				default:
 					npc.teleToLocation(LOCATIONS[getRandom(LOCATIONS.length)], false);

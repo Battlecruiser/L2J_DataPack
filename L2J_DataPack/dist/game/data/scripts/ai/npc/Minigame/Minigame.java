@@ -90,7 +90,7 @@ public final class Minigame extends AbstractNpcAI
 				
 				takeItems(player, UNLIT_TORCHLIGHT, 1);
 				giveItems(player, TORCHLIGHT, 1);
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.ILL_START_THE_FURNACE_MECHANISM_WATCH_FOR_THE_PATTERN);
+				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.I_LL_START_THE_FURNACE_MECHANISM_WATCH_FOR_THE_PATTERN);
 				
 				room.getManager().setTarget(player);
 				room.setParticipant(player);
@@ -287,7 +287,7 @@ public final class Minigame extends AbstractNpcAI
 							else
 							{
 								addSpawn(TREASURE_BOX, room.getParticipant().getLocation(), true, 0);
-								broadcastNpcSay(room.getManager(), Say2.NPC_ALL, NpcStringId.THATS_IT_YOUVE_DONE_IT);
+								broadcastNpcSay(room.getManager(), Say2.NPC_ALL, NpcStringId.THAT_S_IT_YOU_VE_DONE_IT);
 								room.setCurrentPot(0);
 								room.burnThemAll();
 								startQuestTimer("off", 2000, room.getManager(), null);
@@ -298,7 +298,7 @@ public final class Minigame extends AbstractNpcAI
 						{
 							if (room.getAttemptNumber() == MAX_ATTEMPTS)
 							{
-								broadcastNpcSay(room.getManager(), Say2.NPC_ALL, NpcStringId.IVE_FAILED_ANY_FURTHER_ATTEMPTS_WOULD_BE_WASTEFUL);
+								broadcastNpcSay(room.getManager(), Say2.NPC_ALL, NpcStringId.I_VE_FAILED_ANY_FURTHER_ATTEMPTS_WOULD_BE_WASTEFUL);
 								room.burnThemAll();
 								startQuestTimer("off", 2000, room.getManager(), null);
 								room.getParticipant().removeListenerIf(EventType.ON_CREATURE_SKILL_USE, listener -> listener.getOwner() == room);

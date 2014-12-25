@@ -85,7 +85,7 @@ public final class CrimsonHatuOtis extends AbstractNpcAI
 		}
 		else if (npc.isScriptValue(1) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.3)))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.IVE_HAD_IT_UP_TO_HERE_WITH_YOU_ILL_TAKE_CARE_OF_YOU);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.I_VE_HAD_IT_UP_TO_HERE_WITH_YOU_I_LL_TAKE_CARE_OF_YOU);
 			npc.setScriptValue(2);
 			startQuestTimer("BUFF", 1000, npc, null);
 		}

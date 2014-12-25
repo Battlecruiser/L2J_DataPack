@@ -122,7 +122,7 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 		}
 		if (npcId == LIDIA)
 		{
-			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.GRARR_FOR_THE_NEXT_2_MINUTES_OR_SO_THE_GAME_ARENA_ARE_WILL_BE_CLEANED_THROW_ANY_ITEMS_YOU_DONT_NEED_TO_THE_FLOOR_NOW);
+			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.GRARR_FOR_THE_NEXT_2_MINUTES_OR_SO_THE_GAME_ARENA_ARE_WILL_BE_CLEANED_THROW_ANY_ITEMS_YOU_DON_T_NEED_TO_THE_FLOOR_NOW);
 			_missionAccomplished = true;
 			synchronized (this)
 			{

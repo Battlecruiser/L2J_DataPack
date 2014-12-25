@@ -183,7 +183,7 @@ public final class AnomicFoundry extends AbstractNpcAI
 		{
 			if (getRandom(10000) < 8000)
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.PROCESS_SHOULDNT_BE_DELAYED_BECAUSE_OF_ME);
+				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.PROCESS_SHOULDN_T_BE_DELAYED_BECAUSE_OF_ME);
 				if (respawnTime < respawnMax)
 				{
 					respawnTime += 10000;

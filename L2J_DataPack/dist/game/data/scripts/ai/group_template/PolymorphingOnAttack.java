@@ -62,7 +62,7 @@ public final class PolymorphingOnAttack extends AbstractNpcAI
 		new NpcStringId[]
 		{
 			NpcStringId.ENOUGH_FOOLING_AROUND_GET_READY_TO_DIE,
-			NpcStringId.YOU_IDIOT_IVE_JUST_BEEN_TOYING_WITH_YOU,
+			NpcStringId.YOU_IDIOT_I_VE_JUST_BEEN_TOYING_WITH_YOU,
 			NpcStringId.NOW_THE_FUN_STARTS
 		},
 		new NpcStringId[]
@@ -74,7 +74,7 @@ public final class PolymorphingOnAttack extends AbstractNpcAI
 		new NpcStringId[]
 		{
 			NpcStringId.PREPARE_TO_DIE,
-			NpcStringId.ILL_DOUBLE_MY_STRENGTH,
+			NpcStringId.I_LL_DOUBLE_MY_STRENGTH,
 			NpcStringId.YOU_HAVE_MORE_SKILL_THAN_I_THOUGHT
 		}
 	};

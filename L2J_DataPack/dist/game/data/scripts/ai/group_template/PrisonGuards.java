@@ -94,7 +94,7 @@ public final class PrisonGuards extends AbstractNpcAI
 			{
 				npc.setTarget(player);
 				npc.doCast(STONE.getSkill());
-				broadcastNpcSay(npc, Say2.ALL, NpcStringId.ITS_NOT_EASY_TO_OBTAIN);
+				broadcastNpcSay(npc, Say2.ALL, NpcStringId.IT_S_NOT_EASY_TO_OBTAIN);
 			}
 		}
 		else
@@ -103,7 +103,7 @@ public final class PrisonGuards extends AbstractNpcAI
 			{
 				npc.setTarget(player);
 				npc.doCast(STONE.getSkill());
-				broadcastNpcSay(npc, Say2.ALL, NpcStringId.YOURE_OUT_OF_YOUR_MIND_COMING_HERE);
+				broadcastNpcSay(npc, Say2.ALL, NpcStringId.YOU_RE_OUT_OF_YOUR_MIND_COMING_HERE);
 			}
 		}
 		return super.onAttack(npc, player, damage, isSummon);

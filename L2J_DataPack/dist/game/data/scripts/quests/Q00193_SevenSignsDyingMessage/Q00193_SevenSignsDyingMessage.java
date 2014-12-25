@@ -177,7 +177,7 @@ public final class Q00193_SevenSignsDyingMessage extends Quest
 			{
 				if (!npc.isInsideRadius(player, 600, true, false))
 				{
-					NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.LOOK_HERE_S1_DONT_FALL_TOO_FAR_BEHIND);
+					NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.LOOK_HERE_S1_DON_T_FALL_TOO_FAR_BEHIND);
 					ns.addStringParameter(player.getName());
 					npc.broadcastPacket(ns);
 				}

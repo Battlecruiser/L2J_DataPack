@@ -177,7 +177,7 @@ public final class Quarry extends AbstractNpcAI
 						startQuestTimer("DECAY", 1000, npc, null);
 						try
 						{
-							broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THANK_YOU_FOR_THE_RESCUE_ITS_A_SMALL_GIFT);
+							broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THANK_YOU_FOR_THE_RESCUE_IT_S_A_SMALL_GIFT);
 						}
 						catch (Exception e)
 						{

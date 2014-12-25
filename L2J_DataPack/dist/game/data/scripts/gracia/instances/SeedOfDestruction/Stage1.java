@@ -653,7 +653,7 @@ public final class Stage1 extends Quest
 						// handled elsewhere
 						return true;
 					case 4:
-						ExShowScreenMessage message2 = new ExShowScreenMessage(NpcStringId.OBELISK_HAS_COLLAPSED_DONT_LET_THE_ENEMIES_JUMP_AROUND_WILDLY_ANYMORE, 5, 1);
+						ExShowScreenMessage message2 = new ExShowScreenMessage(NpcStringId.OBELISK_HAS_COLLAPSED_DON_T_LET_THE_ENEMIES_JUMP_AROUND_WILDLY_ANYMORE, 5, 1);
 						sendScreenMessage(world, message2);
 						for (int i : SQUARE_DOORS)
 						{

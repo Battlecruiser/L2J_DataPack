@@ -1371,7 +1371,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			}
 			else
 			{
-				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.S1_ILL_BE_BACK_DONT_GET_COMFORTABLE, killer.getName());
+				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.S1_I_LL_BE_BACK_DON_T_GET_COMFORTABLE, killer.getName());
 			}
 		}
 		else if (((npcId == TEMENIR) || (npcId == DRAXIUS) || (npcId == KIRETCENAH)) && spawnedFollowers.contains(npc))

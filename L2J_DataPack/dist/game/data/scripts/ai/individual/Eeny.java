@@ -49,7 +49,7 @@ public final class Eeny extends AbstractNpcAI
 			{
 				case "SPAM_TEXT":
 				{
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THE_LAND_OF_ADEN_IS_IN_NEED_OF_MATERIALS_TO_REBUILD_FROM_SHILENS_DESTRUCTION);
+					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THE_LAND_OF_ADEN_IS_IN_NEED_OF_MATERIALS_TO_REBUILD_FROM_SHILEN_S_DESTRUCTION);
 					startQuestTimer("SPAM_TEXT2", 1000, npc, null);
 					break;
 				}
@@ -61,7 +61,7 @@ public final class Eeny extends AbstractNpcAI
 				}
 				case "SPAM_TEXT3":
 				{
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOULL_RECEIVE_A_GIFT_FOR_ANY_APPLICABLE_DONATION);
+					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_LL_RECEIVE_A_GIFT_FOR_ANY_APPLICABLE_DONATION);
 					break;
 				}
 			}

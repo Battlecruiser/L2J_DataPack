@@ -96,7 +96,7 @@ public final class DisciplesNecropolisPast extends Quest
 	{
 		NpcStringId.HOW_DARE_YOU_TRY_TO_CONTEND_AGAINST_ME_IN_STRENGTH_RIDICULOUS,
 		NpcStringId.ANAKIM_IN_THE_NAME_OF_GREAT_SHILEN_I_WILL_CUT_YOUR_THROAT,
-		NpcStringId.YOU_CANNOT_BE_THE_MATCH_OF_LILITH_ILL_TEACH_YOU_A_LESSON
+		NpcStringId.YOU_CANNOT_BE_THE_MATCH_OF_LILITH_I_LL_TEACH_YOU_A_LESSON
 	};
 	
 	// Bosses Spawn
@@ -274,7 +274,7 @@ public final class DisciplesNecropolisPast extends Quest
 								caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.FOR_THE_ETERNITY_OF_EINHASAD));
 								if (Util.checkIfInRange(2000, caster, player, true))
 								{
-									player.sendPacket(new NpcSay(caster.getObjectId(), Say2.TELL, caster.getId(), NpcStringId.MY_POWERS_WEAKENING_HURRY_AND_TURN_ON_THE_SEALING_DEVICE));
+									player.sendPacket(new NpcSay(caster.getObjectId(), Say2.TELL, caster.getId(), NpcStringId.MY_POWER_S_WEAKENING_HURRY_AND_TURN_ON_THE_SEALING_DEVICE));
 								}
 								caster.setScriptValue(1);
 							}
@@ -284,7 +284,7 @@ public final class DisciplesNecropolisPast extends Quest
 								{
 									case 0:
 									{
-										caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.DEAR_SHILLIENS_OFFSPRINGS_YOU_ARE_NOT_CAPABLE_OF_CONFRONTING_US));
+										caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.DEAR_SHILLIEN_S_OFFSPRINGS_YOU_ARE_NOT_CAPABLE_OF_CONFRONTING_US));
 										if (Util.checkIfInRange(2000, caster, player, true))
 										{
 											player.sendPacket(new NpcSay(caster.getObjectId(), Say2.TELL, caster.getId(), NpcStringId.ALL_4_SEALING_DEVICES_MUST_BE_TURNED_ON));
@@ -293,7 +293,7 @@ public final class DisciplesNecropolisPast extends Quest
 									}
 									case 1:
 									{
-										caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.ILL_SHOW_YOU_THE_REAL_POWER_OF_EINHASAD));
+										caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.I_LL_SHOW_YOU_THE_REAL_POWER_OF_EINHASAD));
 										if (Util.checkIfInRange(2000, caster, player, true))
 										{
 											player.sendPacket(new NpcSay(caster.getObjectId(), Say2.TELL, caster.getId(), NpcStringId.LILITH_ATTACK_IS_GETTING_STRONGER_GO_AHEAD_AND_TURN_IT_ON));

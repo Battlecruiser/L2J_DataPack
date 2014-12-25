@@ -446,7 +446,7 @@ public final class UrbanArea extends AbstractNpcAI
 					if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead())
 					{
 						world.spawnedAmaskari.teleToLocation(_caller.getLocation());
-						world.spawnedAmaskari.broadcastPacket(new NpcSay(world.spawnedAmaskari.getObjectId(), Say2.NPC_ALL, world.spawnedAmaskari.getId(), NpcStringId.ILL_MAKE_YOU_FEEL_SUFFERING_LIKE_A_FLAME_THAT_IS_NEVER_EXTINGUISHED));
+						world.spawnedAmaskari.broadcastPacket(new NpcSay(world.spawnedAmaskari.getObjectId(), Say2.NPC_ALL, world.spawnedAmaskari.getId(), NpcStringId.I_LL_MAKE_YOU_FEEL_SUFFERING_LIKE_A_FLAME_THAT_IS_NEVER_EXTINGUISHED));
 					}
 				}
 			}

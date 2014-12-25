@@ -275,7 +275,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 					receiver.setIsNoRndWalk(true); // Moving to fire - i_ai0 = 1
 					receiver.getVariables().set("BUSY_STATE", 1); // Eating - i_ai3 = 1
 					receiver.setIsRunning(true);
-					broadcastNpcSay(receiver, Say2.NPC_ALL, (getRandom(3) < 1) ? NpcStringId.LOOKS_DELICIOUS : NpcStringId.LETS_GO_EAT);
+					broadcastNpcSay(receiver, Say2.NPC_ALL, (getRandom(3) < 1) ? NpcStringId.LOOKS_DELICIOUS : NpcStringId.LET_S_GO_EAT);
 					final Location loc = sender.getPointInRange(100, 200);
 					loc.setHeading(receiver.getHeading());
 					receiver.stopMove(null);

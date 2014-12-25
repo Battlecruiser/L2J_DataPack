@@ -135,10 +135,10 @@ public final class TowerOfNaia extends AbstractNpcAI
 	//@formatter:on
 	private static final NpcStringId[] SPORES_NPCSTRING_ID =
 	{
-		NpcStringId.ITS_S1,
+		NpcStringId.IT_S_S1,
 		NpcStringId.S1_IS_STRONG,
-		NpcStringId.ITS_ALWAYS_S1,
-		NpcStringId.S1_WONT_DO
+		NpcStringId.IT_S_ALWAYS_S1,
+		NpcStringId.S1_WON_T_DO
 	};
 	
 	private static Map<Integer, int[]> DOORS = new HashMap<>();

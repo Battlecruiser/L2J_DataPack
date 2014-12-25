@@ -157,7 +157,7 @@ public class Q00450_GraveRobberRescue extends Quest
 				}
 				else
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.GRUNT_WHATS_WRONG_WITH_ME));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.GRUNT_WHAT_S_WRONG_WITH_ME));
 				}
 				npc.deleteMe();
 				htmltext = null;

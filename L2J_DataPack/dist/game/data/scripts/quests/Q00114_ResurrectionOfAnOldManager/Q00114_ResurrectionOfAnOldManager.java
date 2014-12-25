@@ -348,7 +348,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				st.takeItems(DETCTOR, 1);
 				st.giveItems(DETCTOR2, 1);
 				st.setCond(18, true);
-				showOnScreenMsg(creature.getActingPlayer(), NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING__A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500);
+				showOnScreenMsg(creature.getActingPlayer(), NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500);
 			}
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
