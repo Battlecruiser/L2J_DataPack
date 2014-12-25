@@ -272,7 +272,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				final L2PcInstance player = L2World.getInstance().getPlayer(name);
 				if (player == null)
 				{
-					activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+					activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 					return false;
 				}
 				teleportHome(player);
@@ -286,7 +286,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 			}
 		}
@@ -370,7 +370,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
@@ -390,13 +390,13 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
 		if (player.getObjectId() == activeChar.getObjectId())
 		{
-			player.sendPacket(SystemMessageId.CANNOT_USE_ON_YOURSELF);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ON_YOURSELF);
 		}
 		else
 		{
@@ -454,7 +454,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	{
 		if (target == null)
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
@@ -465,13 +465,13 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
 		if (player.getObjectId() == activeChar.getObjectId())
 		{
-			player.sendPacket(SystemMessageId.CANNOT_USE_ON_YOURSELF);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ON_YOURSELF);
 		}
 		else
 		{
@@ -621,12 +621,12 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendPacket(SystemMessageId.TARGET_CANT_FOUND);
+				activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
 			}
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 	}
 	

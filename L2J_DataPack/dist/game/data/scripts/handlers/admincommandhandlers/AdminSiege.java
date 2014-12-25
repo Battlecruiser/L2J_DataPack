@@ -98,7 +98,7 @@ public class AdminSiege implements IAdminCommandHandler
 						case "admin_clanhallset":
 							if ((player == null) || (player.getClan() == null))
 							{
-								activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+								activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 								return false;
 							}
 							
@@ -192,7 +192,7 @@ public class AdminSiege implements IAdminCommandHandler
 					case "admin_add_attacker":
 						if (player == null)
 						{
-							activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+							activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 						}
 						else
 						{
@@ -202,7 +202,7 @@ public class AdminSiege implements IAdminCommandHandler
 					case "admin_add_defender":
 						if (player == null)
 						{
-							activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+							activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 						}
 						else
 						{
@@ -237,7 +237,7 @@ public class AdminSiege implements IAdminCommandHandler
 					case "admin_setcastle":
 						if ((player == null) || (player.getClan() == null))
 						{
-							activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+							activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 						}
 						else
 						{

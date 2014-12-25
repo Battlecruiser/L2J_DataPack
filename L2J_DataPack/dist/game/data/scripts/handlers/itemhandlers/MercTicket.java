@@ -38,7 +38,7 @@ public class MercTicket implements IItemHandler
 	{
 		if (!playable.isPlayer())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
@@ -59,7 +59,7 @@ public class MercTicket implements IItemHandler
 		}
 		else if (!activeChar.isCastleLord(castleId))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_POSITION_MERCENARIES);
+			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_POSITION_MERCENARIES);
 			return false;
 		}
 		else if ((castle != null) && castle.getSiege().isInProgress())
@@ -80,13 +80,13 @@ public class MercTicket implements IItemHandler
 		}
 		else if (MercTicketManager.getInstance().isTooCloseToAnotherTicket(activeChar.getX(), activeChar.getY(), activeChar.getZ()))
 		{
-			activeChar.sendPacket(SystemMessageId.POSITIONING_CANNOT_BE_DONE_BECAUSE_DISTANCE_BETWEEN_MERCENARIES_TOO_SHORT);
+			activeChar.sendPacket(SystemMessageId.POSITIONING_CANNOT_BE_DONE_HERE_BECAUSE_THE_DISTANCE_BETWEEN_MERCENARIES_IS_TOO_SHORT);
 			return false;
 		}
 		
 		MercTicketManager.getInstance().addTicket(item.getId(), activeChar);
 		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false); // Remove item from char's inventory
-		activeChar.sendPacket(SystemMessageId.PLACE_CURRENT_LOCATION_DIRECTION);
+		activeChar.sendPacket(SystemMessageId.PLACE_S1_IN_THE_CURRENT_LOCATION_AND_DIRECTION_DO_YOU_WISH_TO_CONTINUE);
 		return true;
 	}
 }

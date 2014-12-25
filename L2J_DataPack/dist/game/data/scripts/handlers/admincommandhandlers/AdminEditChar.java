@@ -123,7 +123,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
 		else if (command.startsWith("admin_character_list"))
@@ -196,7 +196,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
 		// Karma control commands
@@ -240,7 +240,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 			}
 			catch (Exception e)
@@ -271,7 +271,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 			}
 			catch (Exception e)
@@ -302,7 +302,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 			}
 			catch (Exception e)
@@ -334,7 +334,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 			}
 			catch (Exception e)
@@ -531,7 +531,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
 		else if (command.startsWith("admin_remove_clan_penalty"))
@@ -636,7 +636,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			
 			if (pl == null)
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			
@@ -778,7 +778,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 			
 		}
@@ -812,7 +812,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if ((target == null) || !target.isCharacter())
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				((L2Character) target).setCurrentHp(Double.parseDouble(data[1]));
@@ -830,7 +830,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if ((target == null) || !target.isCharacter())
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				((L2Character) target).setCurrentMp(Double.parseDouble(data[1]));
@@ -848,7 +848,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if ((target == null) || !target.isCharacter())
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				((L2Character) target).setCurrentCp(Double.parseDouble(data[1]));
@@ -865,7 +865,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if ((target == null) || !target.isPlayable())
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				final L2Playable playable = ((L2Playable) target);
@@ -1036,7 +1036,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			// update karma
 			player.setKarma(newKarma);
 			// Common character information
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_KARMA_HAS_BEEN_CHANGED_TO_S1);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1);
 			sm.addInt(newKarma);
 			player.sendPacket(sm);
 			// Admin information

@@ -186,7 +186,7 @@ public final class DisciplesNecropolisPast extends Quest
 		{
 			if (!(world instanceof DNPWorld))
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return 0;
 			}
 			teleportPlayer(player, loc, world.getInstanceId());
@@ -380,7 +380,7 @@ public final class DisciplesNecropolisPast extends Quest
 				if (npc.getCurrentHp() < (npc.getMaxHp() * 0.1))
 				{
 					giveItems(player, SEAL_OF_BINDING, 1);
-					player.sendPacket(SystemMessageId.THE_SEALING_DEVICE_ACTIVATION_COMPLETE);
+					player.sendPacket(SystemMessageId.THE_SEALING_DEVICE_GLITTERS_AND_MOVES_ACTIVATION_COMPLETE_NORMALLY);
 					npc.setScriptValue(1);
 					startQuestTimer("FINISH", 1000, npc, player);
 					cancelQuestTimer("FIGHT", npc, player);

@@ -40,7 +40,7 @@ public class L2SummonAction implements IActionHandler
 		// Aggression target lock effect
 		if (activeChar.isLockedTarget() && (activeChar.getLockedTarget() != target))
 		{
-			activeChar.sendPacket(SystemMessageId.FAILED_CHANGE_TARGET);
+			activeChar.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ENMITY);
 			return false;
 		}
 		

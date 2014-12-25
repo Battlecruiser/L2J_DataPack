@@ -171,7 +171,7 @@ public class AdminSkill implements IAdminCommandHandler
 			final L2Object target = activeChar.getTarget();
 			if ((target == null) || !target.isPlayer())
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			final L2PcInstance player = target.getActingPlayer();
@@ -219,7 +219,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final L2Object target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		final L2PcInstance player = target.getActingPlayer();
@@ -239,7 +239,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final L2Object target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
@@ -248,7 +248,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		if (clan == null)
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_MUST_BE_IN_CLAN);
+			activeChar.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
 			return;
 		}
 		
@@ -286,7 +286,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final L2Object target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			return;
 		}
 		
@@ -341,7 +341,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final L2Object target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		final L2PcInstance player = target.getActingPlayer();
@@ -361,13 +361,13 @@ public class AdminSkill implements IAdminCommandHandler
 		final L2Object target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		final L2PcInstance player = target.getActingPlayer();
 		if (player.getName().equals(activeChar.getName()))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_USE_ON_YOURSELF);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ON_YOURSELF);
 		}
 		else
 		{
@@ -395,7 +395,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final L2Object target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		final L2PcInstance player = target.getActingPlayer();
@@ -440,7 +440,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final L2Object target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			showMainPage(activeChar);
 			return;
 		}
@@ -497,7 +497,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final L2Object target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		final L2PcInstance player = target.getActingPlayer();
@@ -532,7 +532,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final L2Object target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			showMainPage(activeChar);
 			return;
 		}
@@ -560,7 +560,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		
 		String skillname = skill.getName();
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_SKILL_S1_ADDED);
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED);
 		sm.addSkillName(skill);
 		player.sendPacket(sm);
 		final L2Clan clan = player.getClan();

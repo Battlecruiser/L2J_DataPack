@@ -125,7 +125,7 @@ public final class MasterOfEnchanting extends LongTimeEvent
 				int minutes = ((int) _remaining_time % 3600) / 60;
 				if (hours > 0)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ITEM_PURCHASABLE_IN_S1_HOURS_S2_MINUTES);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_HOUR_S_AND_S2_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_PURCHASED_AGAIN);
 					sm.addInt(hours);
 					sm.addInt(minutes);
 					player.sendPacket(sm);
@@ -133,7 +133,7 @@ public final class MasterOfEnchanting extends LongTimeEvent
 				}
 				else if (minutes > 0)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ITEM_PURCHASABLE_IN_S1_MINUTES);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_PURCHASED_AGAIN);
 					sm.addInt(minutes);
 					player.sendPacket(sm);
 					htmltext = "32599-scroll24.htm";

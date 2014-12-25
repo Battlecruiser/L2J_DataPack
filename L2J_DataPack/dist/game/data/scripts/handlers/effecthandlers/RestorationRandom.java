@@ -100,7 +100,7 @@ public final class RestorationRandom extends AbstractEffect
 		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (creationList.isEmpty())
 		{
-			player.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
+			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 			return;
 		}
 		

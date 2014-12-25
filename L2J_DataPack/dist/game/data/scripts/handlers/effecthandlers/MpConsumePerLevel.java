@@ -50,7 +50,7 @@ public final class MpConsumePerLevel extends AbstractEffect
 		final double consume = (info.getAbnormalTime() > 0) ? ((info.getEffected().getLevel() - 1) / 7.5) * base * info.getAbnormalTime() : base;
 		if (consume > info.getEffected().getCurrentMp())
 		{
-			info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+			info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
 			return false;
 		}
 		

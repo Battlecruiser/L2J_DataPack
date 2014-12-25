@@ -48,7 +48,7 @@ public class ChatTrade implements IChatHandler
 	{
 		if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
 		{
-			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
+			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
 			return;
 		}
 		

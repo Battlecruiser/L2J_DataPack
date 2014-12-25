@@ -41,7 +41,7 @@ public class ExtractableItems implements IItemHandler
 	{
 		if (!playable.isPlayer())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
@@ -92,7 +92,7 @@ public class ExtractableItems implements IItemHandler
 		
 		if (!created)
 		{
-			activeChar.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
+			activeChar.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 		}
 		return true;
 	}

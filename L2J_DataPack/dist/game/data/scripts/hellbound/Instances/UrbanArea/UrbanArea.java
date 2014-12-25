@@ -352,7 +352,7 @@ public final class UrbanArea extends AbstractNpcAI
 		
 		if (!party.isLeader(player))
 		{
-			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			return false;
 		}
 		
@@ -360,7 +360,7 @@ public final class UrbanArea extends AbstractNpcAI
 		{
 			if (partyMember.getLevel() < 78)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -368,7 +368,7 @@ public final class UrbanArea extends AbstractNpcAI
 			
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -376,7 +376,7 @@ public final class UrbanArea extends AbstractNpcAI
 			
 			if (InstanceManager.getInstance().getPlayerWorld(player) != null)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -396,7 +396,7 @@ public final class UrbanArea extends AbstractNpcAI
 				teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
 				return;
 			}
-			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+			player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 			return;
 		}
 		

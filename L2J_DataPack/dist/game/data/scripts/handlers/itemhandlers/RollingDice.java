@@ -36,7 +36,7 @@ public class RollingDice implements IItemHandler
 	{
 		if (!playable.isPlayer())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
@@ -45,7 +45,7 @@ public class RollingDice implements IItemHandler
 		
 		if (activeChar.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
 			return false;
 		}
 		
@@ -58,7 +58,7 @@ public class RollingDice implements IItemHandler
 		
 		Broadcast.toSelfAndKnownPlayers(activeChar, new Dice(activeChar.getObjectId(), itemId, number, activeChar.getX() - 30, activeChar.getY() - 30, activeChar.getZ()));
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ROLLED_S2);
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ROLLED_A_S2);
 		sm.addString(activeChar.getName());
 		sm.addInt(number);
 		

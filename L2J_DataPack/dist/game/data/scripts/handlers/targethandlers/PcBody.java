@@ -85,7 +85,7 @@ public class PcBody implements ITargetTypeHandler
 						if (targetPlayer.isInsideZone(ZoneId.SIEGE) && !targetPlayer.isInSiege())
 						{
 							condGood = false;
-							activeChar.sendPacket(SystemMessageId.CANNOT_BE_RESURRECTED_DURING_SIEGE);
+							activeChar.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
 						}
 					}
 				}
@@ -104,7 +104,7 @@ public class PcBody implements ITargetTypeHandler
 				}
 			}
 		}
-		activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+		activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 		return EMPTY_TARGET_LIST;
 	}
 	

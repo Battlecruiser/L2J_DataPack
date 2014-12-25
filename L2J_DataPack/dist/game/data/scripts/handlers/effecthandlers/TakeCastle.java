@@ -54,6 +54,6 @@ public final class TakeCastle extends AbstractEffect
 		
 		Castle castle = CastleManager.getInstance().getCastle(info.getEffector());
 		castle.engrave(info.getEffector().getActingPlayer().getClan(), info.getEffected());
-		castle.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.OPPONENT_STARTED_ENGRAVING), false);
+		castle.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.THE_OPPOSING_CLAN_HAS_STARTED_S1), false);
 	}
 }

@@ -56,7 +56,7 @@ public final class TakeFortStart extends AbstractEffect
 			final L2Clan clan = player.getClan();
 			if ((fort != null) && (clan != null))
 			{
-				fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.S1_TRYING_RAISE_FLAG), clan.getName());
+				fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_IS_TRYING_TO_DISPLAY_A_FLAG), clan.getName());
 			}
 		}
 	}

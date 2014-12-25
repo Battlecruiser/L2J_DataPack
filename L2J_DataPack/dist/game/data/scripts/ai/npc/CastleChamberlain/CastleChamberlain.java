@@ -730,7 +730,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 						}
 						else
 						{
-							player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
+							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 						}
 					}
 					htmltext = "chamberlain-01.html";

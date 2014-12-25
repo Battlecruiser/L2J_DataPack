@@ -88,7 +88,7 @@ public final class Lethal extends AbstractEffect
 				target.notifyDamageReceived(target.getCurrentHp() - 1, info.getEffector(), info.getSkill(), true, false);
 				target.setCurrentHp(1);
 			}
-			activeChar.sendPacket(SystemMessageId.LETHAL_STRIKE_SUCCESSFUL);
+			activeChar.sendPacket(SystemMessageId.HIT_WITH_LETHAL_STRIKE);
 		}
 		// Half-Kill
 		else if (Rnd.get(100) < (_halfLethal * chanceMultiplier))
@@ -98,7 +98,7 @@ public final class Lethal extends AbstractEffect
 			{
 				target.setCurrentCp(1);
 				target.sendPacket(SystemMessageId.HALF_KILL);
-				target.sendPacket(SystemMessageId.CP_DISAPPEARS_WHEN_HIT_WITH_A_HALF_KILL_SKILL);
+				target.sendPacket(SystemMessageId.YOUR_CP_WAS_DRAINED_BECAUSE_YOU_WERE_HIT_WITH_A_HALF_KILL_SKILL);
 			}
 			// for Monsters HP is set to 50%.
 			else if (target.isMonster() || target.isSummon())

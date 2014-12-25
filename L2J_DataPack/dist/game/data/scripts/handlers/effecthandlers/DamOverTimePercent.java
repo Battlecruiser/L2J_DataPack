@@ -61,7 +61,7 @@ public final class DamOverTimePercent extends AbstractEffect
 		{
 			if (info.getSkill().isToggle())
 			{
-				info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_HP);
+				info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_HP);
 				return false;
 			}
 			

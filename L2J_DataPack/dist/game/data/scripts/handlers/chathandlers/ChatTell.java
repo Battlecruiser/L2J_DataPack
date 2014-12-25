@@ -47,13 +47,13 @@ public class ChatTell implements IChatHandler
 	{
 		if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
 		{
-			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
+			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
 			return;
 		}
 		
 		if (Config.JAIL_DISABLE_CHAT && activeChar.isJailed() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 		{
-			activeChar.sendPacket(SystemMessageId.CHATTING_PROHIBITED);
+			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
 			return;
 		}
 		
@@ -76,7 +76,7 @@ public class ChatTell implements IChatHandler
 			}
 			if (receiver.isChatBanned())
 			{
-				activeChar.sendPacket(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
+				activeChar.sendPacket(SystemMessageId.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
 				return;
 			}
 			if ((receiver.getClient() == null) || receiver.getClient().isDetached())
@@ -97,12 +97,12 @@ public class ChatTell implements IChatHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
+				activeChar.sendPacket(SystemMessageId.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
 			}
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+			activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 		}
 	}
 	

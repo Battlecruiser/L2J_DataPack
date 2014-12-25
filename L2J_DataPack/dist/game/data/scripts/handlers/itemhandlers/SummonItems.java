@@ -37,7 +37,7 @@ public class SummonItems extends ItemSkillsTemplate
 	{
 		if (!playable.isPlayer())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
@@ -54,7 +54,7 @@ public class SummonItems extends ItemSkillsTemplate
 		
 		if (activeChar.isSitting())
 		{
-			activeChar.sendPacket(SystemMessageId.CANT_MOVE_SITTING);
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
 			return false;
 		}
 		
@@ -66,7 +66,7 @@ public class SummonItems extends ItemSkillsTemplate
 		
 		if (activeChar.isAttackingNow())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_IN_COMBAT);
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_DURING_COMBAT);
 			return false;
 		}
 		

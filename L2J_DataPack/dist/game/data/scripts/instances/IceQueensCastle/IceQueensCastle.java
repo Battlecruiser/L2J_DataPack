@@ -202,7 +202,7 @@ public final class IceQueensCastle extends AbstractNpcAI
 				teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 				return;
 			}
-			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+			player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 			return;
 		}
 		
@@ -225,7 +225,7 @@ public final class IceQueensCastle extends AbstractNpcAI
 	{
 		if (player.getLevel() < MIN_LV)
 		{
-			player.sendPacket(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+			player.sendPacket(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 			return false;
 		}
 		return true;

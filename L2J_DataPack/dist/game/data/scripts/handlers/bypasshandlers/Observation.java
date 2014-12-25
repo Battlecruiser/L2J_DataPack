@@ -99,7 +99,7 @@ public class Observation implements IBypassHandler
 		
 		if (activeChar.hasSummon())
 		{
-			activeChar.sendPacket(SystemMessageId.NO_OBSERVE_WITH_PET);
+			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_SIEGE_WITH_A_PET_OR_SERVITOR_SUMMONED);
 			return false;
 		}
 		if (activeChar.isOnEvent())
@@ -139,7 +139,7 @@ public class Observation implements IBypassHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.ONLY_VIEW_SIEGE);
+					activeChar.sendPacket(SystemMessageId.OBSERVATION_IS_ONLY_POSSIBLE_DURING_A_SIEGE);
 				}
 				return true;
 			}

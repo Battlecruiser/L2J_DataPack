@@ -36,7 +36,7 @@ public class EventItem implements IItemHandler
 	{
 		if (!playable.isPlayer())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
@@ -64,7 +64,7 @@ public class EventItem implements IItemHandler
 		final int blockCheckerArena = castor.getBlockCheckerArena();
 		if (blockCheckerArena == -1)
 		{
-			SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			msg.addItemName(item);
 			castor.sendPacket(msg);
 			return false;

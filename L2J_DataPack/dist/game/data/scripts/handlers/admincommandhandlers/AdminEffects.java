@@ -144,7 +144,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter())
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			final L2Character target = (L2Character) activeChar.getTarget();
@@ -604,7 +604,7 @@ public class AdminEffects implements IAdminCommandHandler
 				}
 				if (!(obj instanceof L2Character))
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 				else
 				{
@@ -624,7 +624,7 @@ public class AdminEffects implements IAdminCommandHandler
 			L2Object target = activeChar.getTarget();
 			if (!(target instanceof L2Npc))
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			L2Npc npc = (L2Npc) target;

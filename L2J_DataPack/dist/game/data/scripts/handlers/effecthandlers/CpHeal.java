@@ -72,7 +72,7 @@ public final class CpHeal extends AbstractEffect
 			target.setCurrentCp(amount + target.getCurrentCp());
 		}
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
 		sm.addInt((int) amount);
 		target.sendPacket(sm);
 	}

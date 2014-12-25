@@ -72,7 +72,7 @@ public class BlackJudge extends AbstractNpcAI
 					{
 						takeItems(player, Inventory.ADENA_ID, cost);
 						player.setDeathPenaltyBuffLevel(player.getDeathPenaltyBuffLevel() - 1);
-						player.sendPacket(SystemMessageId.DEATH_PENALTY_LIFTED);
+						player.sendPacket(SystemMessageId.SHILEN_S_BREATH_HAS_BEEN_PURIFIED);
 						player.sendPacket(new EtcStatusUpdate(player));
 					}
 					else

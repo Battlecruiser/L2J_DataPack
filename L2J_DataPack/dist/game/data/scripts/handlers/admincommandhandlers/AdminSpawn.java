@@ -111,7 +111,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
 		else if (command.startsWith("admin_spawn_index"))
@@ -215,7 +215,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_unspawnall"))
 		{
-			Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.NPC_SERVER_NOT_OPERATING));
+			Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.THE_NPC_SERVER_IS_NOT_OPERATING_AT_THIS_TIME));
 			RaidBossSpawnManager.getInstance().cleanUp();
 			DayNightSpawnManager.getInstance().cleanUp();
 			L2World.getInstance().deleteVisibleNpcSpawns();
@@ -459,7 +459,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_CANT_FOUND);
+			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
 		}
 	}
 	

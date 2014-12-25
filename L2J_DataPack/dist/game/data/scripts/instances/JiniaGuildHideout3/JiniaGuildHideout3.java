@@ -74,7 +74,7 @@ public final class JiniaGuildHideout3 extends Quest
 		{
 			if (!(world instanceof JGH2World))
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return 0;
 			}
 			teleportPlayer(player, loc, world.getInstanceId(), false);

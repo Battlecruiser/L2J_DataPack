@@ -68,7 +68,7 @@ public class AdminLevel implements IAdminCommandHandler
 			{
 				if (!(targetChar instanceof L2PcInstance))
 				{
-					activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT); // incorrect target!
+					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET); // incorrect target!
 					return false;
 				}
 				L2PcInstance targetPlayer = (L2PcInstance) targetChar;

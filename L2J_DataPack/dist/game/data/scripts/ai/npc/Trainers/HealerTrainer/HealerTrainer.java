@@ -97,7 +97,7 @@ public final class HealerTrainer extends AbstractNpcAI
 				final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransferSkills(player);
 				if (skills.isEmpty())
 				{
-					player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
+					player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 				}
 				else
 				{
@@ -121,7 +121,7 @@ public final class HealerTrainer extends AbstractNpcAI
 				
 				if (player.getAdena() < Config.FEE_DELETE_TRANSFER_SKILLS)
 				{
-					player.sendPacket(SystemMessageId.CANNOT_RESET_SKILL_LINK_BECAUSE_NOT_ENOUGH_ADENA);
+					player.sendPacket(SystemMessageId.YOU_CANNOT_RESET_THE_SKILL_LINK_BECAUSE_THERE_IS_NOT_ENOUGH_ADENA);
 					break;
 				}
 				

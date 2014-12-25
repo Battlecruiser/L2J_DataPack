@@ -408,7 +408,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			{
 				if (player.getParty() == null)
 				{
-					player.sendPacket(SystemMessageId.CAN_OPERATE_MACHINE_WHEN_IN_PARTY);
+					player.sendPacket(SystemMessageId.YOU_MUST_BE_IN_A_PARTY_IN_ORDER_TO_OPERATE_THE_MACHINE);
 					return null;
 				}
 				return "manager.htm";
@@ -587,7 +587,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.CAN_OPERATE_MACHINE_WHEN_IN_PARTY);
+				player.sendPacket(SystemMessageId.YOU_MUST_BE_IN_A_PARTY_IN_ORDER_TO_OPERATE_THE_MACHINE);
 			}
 		}
 		return htmltext;

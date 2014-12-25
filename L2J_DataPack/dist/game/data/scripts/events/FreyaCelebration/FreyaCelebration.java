@@ -105,7 +105,7 @@ public final class FreyaCelebration extends LongTimeEvent
 					long remainingTime = (_reuse_time - System.currentTimeMillis()) / 1000;
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime % 3600) / 60);
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
 					sm.addItemName(FREYA_POTION);
 					sm.addInt(hours);
 					sm.addInt(minutes);
@@ -114,7 +114,7 @@ public final class FreyaCelebration extends LongTimeEvent
 			}
 			else
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_UNIT_OF_THE_ITEM_S1_REQUIRED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S);
 				sm.addItemName(Inventory.ADENA_ID);
 				sm.addInt(1);
 				player.sendPacket(sm);

@@ -110,7 +110,7 @@ public abstract class AirShipController extends Quest
 	private static final int STARSTONE = 13277;
 	private static final int SUMMON_COST = 5;
 	
-	private static final SystemMessage SM_NEED_MORE = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_MORE_S1).addItemName(STARSTONE);
+	private static final SystemMessage SM_NEED_MORE = SystemMessage.getSystemMessage(SystemMessageId.AN_AIRSHIP_CANNOT_BE_SUMMONED_BECAUSE_YOU_DON_T_HAVE_ENOUGH_S1).addItemName(STARSTONE);
 	
 	public AirShipController(int questId, String name, String descr)
 	{
@@ -126,29 +126,29 @@ public abstract class AirShipController extends Quest
 			{
 				if (_dockedShip.isOwner(player))
 				{
-					player.sendPacket(SystemMessageId.THE_AIRSHIP_IS_ALREADY_EXISTS);
+					player.sendPacket(SystemMessageId.THE_CLAN_OWNED_AIRSHIP_ALREADY_EXISTS);
 				}
 				return null;
 			}
 			if (_isBusy)
 			{
-				player.sendPacket(SystemMessageId.ANOTHER_AIRSHIP_ALREADY_SUMMONED);
+				player.sendPacket(SystemMessageId.ANOTHER_AIRSHIP_HAS_ALREADY_BEEN_SUMMONED_PLEASE_TRY_AGAIN_LATER);
 				return null;
 			}
 			if (!player.hasClanPrivilege(ClanPrivilege.CL_SUMMON_AIRSHIP))
 			{
-				player.sendPacket(SystemMessageId.THE_AIRSHIP_NO_PRIVILEGES);
+				player.sendPacket(SystemMessageId.AIRSHIP_SUMMON_LICENSE_REGISTRATION_CAN_ONLY_BE_DONE_BY_THE_CLAN_LEADER);
 				return null;
 			}
 			int ownerId = player.getClanId();
 			if (!AirShipManager.getInstance().hasAirShipLicense(ownerId))
 			{
-				player.sendPacket(SystemMessageId.THE_AIRSHIP_NEED_LICENSE_TO_SUMMON);
+				player.sendPacket(SystemMessageId.AN_AIRSHIP_CANNOT_BE_SUMMONED_BECAUSE_EITHER_YOU_HAVE_NOT_REGISTERED_YOUR_AIRSHIP_LICENSE_OR_THE_AIRSHIP_HAS_NOT_YET_BEEN_SUMMONED);
 				return null;
 			}
 			if (AirShipManager.getInstance().hasAirShip(ownerId))
 			{
-				player.sendPacket(SystemMessageId.THE_AIRSHIP_ALREADY_USED);
+				player.sendPacket(SystemMessageId.YOUR_CLAN_S_AIRSHIP_IS_ALREADY_BEING_USED_BY_ANOTHER_CLAN_MEMBER);
 				return null;
 			}
 			if (!player.destroyItemByItemId("AirShipSummon", STARSTONE, SUMMON_COST, npc, true))
@@ -224,7 +224,7 @@ public abstract class AirShipController extends Quest
 			}
 			else if (player.isCursedWeaponEquipped())
 			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHEN_A_CURSED_WEAPON_IS_EQUIPPED);
 				return null;
 			}
 			else if (player.isCombatFlagEquipped())
@@ -239,7 +239,7 @@ public abstract class AirShipController extends Quest
 			}
 			else if (player.isFlyingMounted())
 			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_NOT_MEET_REQUEIREMENTS);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
 				return null;
 			}
 			
@@ -254,18 +254,18 @@ public abstract class AirShipController extends Quest
 		{
 			if ((player.getClan() == null) || (player.getClan().getLevel() < 5))
 			{
-				player.sendPacket(SystemMessageId.THE_AIRSHIP_NEED_CLANLVL_5_TO_SUMMON);
+				player.sendPacket(SystemMessageId.IN_ORDER_TO_ACQUIRE_AN_AIRSHIP_THE_CLAN_S_LEVEL_MUST_BE_LEVEL_5_OR_ABOVE);
 				return null;
 			}
 			if (!player.isClanLeader())
 			{
-				player.sendPacket(SystemMessageId.THE_AIRSHIP_NO_PRIVILEGES);
+				player.sendPacket(SystemMessageId.AIRSHIP_SUMMON_LICENSE_REGISTRATION_CAN_ONLY_BE_DONE_BY_THE_CLAN_LEADER);
 				return null;
 			}
 			final int ownerId = player.getClanId();
 			if (AirShipManager.getInstance().hasAirShipLicense(ownerId))
 			{
-				player.sendPacket(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ALREADY_ACQUIRED);
+				player.sendPacket(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_HAS_ALREADY_BEEN_ACQUIRED);
 				return null;
 			}
 			if (!player.destroyItemByItemId("AirShipLicense", LICENSE, 1, npc, true))
@@ -275,7 +275,7 @@ public abstract class AirShipController extends Quest
 			}
 			
 			AirShipManager.getInstance().registerLicense(ownerId);
-			player.sendPacket(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ENTERED);
+			player.sendPacket(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_HAS_BEEN_ENTERED_YOUR_CLAN_CAN_NOW_SUMMON_THE_AIRSHIP);
 			return null;
 		}
 		else

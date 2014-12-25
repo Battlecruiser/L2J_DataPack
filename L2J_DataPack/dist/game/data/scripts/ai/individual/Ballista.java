@@ -81,7 +81,7 @@ public final class Ballista extends AbstractNpcAI
 				if ((caster.getClan() != null) && (caster.getClan().getLevel() >= MIN_CLAN_LV))
 				{
 					caster.getClan().addReputationScore(Config.BALLISTA_POINTS, true);
-					caster.sendPacket(SystemMessageId.BALLISTA_DESTROYED_CLAN_REPU_INCREASED);
+					caster.sendPacket(SystemMessageId.THE_BALLISTA_HAS_BEEN_SUCCESSFULLY_DESTROYED_THE_CLAN_REPUTATION_WILL_BE_INCREASED);
 				}
 			}
 			npc.doDie(caster);

@@ -85,7 +85,7 @@ public final class Unsummon extends AbstractEffect
 			summon.stopAllEffects();
 			
 			summon.unSummon(summonOwner);
-			summonOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED);
+			summonOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED_YOU_LL_NEED_TO_SUMMON_A_NEW_ONE);
 		}
 	}
 }

@@ -45,7 +45,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		List<L2Character> targetList = new ArrayList<>();
 		if (!checkTarget(activeChar, target) && (skill.getCastRange() >= 0))
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			return EMPTY_TARGET_LIST;
 		}
 		

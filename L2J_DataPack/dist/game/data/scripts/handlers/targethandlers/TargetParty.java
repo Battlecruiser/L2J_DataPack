@@ -42,7 +42,7 @@ public class TargetParty implements ITargetTypeHandler
 		// Check for null target or any other invalid target
 		if ((target == null) || target.isDead() || (target == activeChar))
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			return EMPTY_TARGET_LIST;
 		}
 		

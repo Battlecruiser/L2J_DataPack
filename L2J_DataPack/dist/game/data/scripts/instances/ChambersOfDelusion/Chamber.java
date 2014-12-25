@@ -211,13 +211,13 @@ public abstract class Chamber extends Quest
 		final L2Party party = player.getParty();
 		if (party == null)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
 			return false;
 		}
 		
 		if (party.getLeader() != player)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
 			return false;
 		}
 		
@@ -225,7 +225,7 @@ public abstract class Chamber extends Quest
 		{
 			if (partyMember.getLevel() < 80)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -233,7 +233,7 @@ public abstract class Chamber extends Quest
 			
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -245,7 +245,7 @@ public abstract class Chamber extends Quest
 				
 				if (System.currentTimeMillis() < reentertime)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 					sm.addPcName(partyMember);
 					party.broadcastPacket(sm);
 					return false;
@@ -268,7 +268,7 @@ public abstract class Chamber extends Quest
 			{
 				reenter.add(Calendar.DAY_OF_WEEK, 1);
 			}
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.getTemplateId()));
 			// set instance reenter time for all allowed players
 			for (int objectId : world.getAllowed())
@@ -412,7 +412,7 @@ public abstract class Chamber extends Quest
 		{
 			if (!(world instanceof CDWorld))
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON));
 				return 0;
 			}
 			final CDWorld currentWorld = (CDWorld) world;

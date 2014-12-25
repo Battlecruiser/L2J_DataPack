@@ -95,7 +95,7 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 		{
 			if (!(world instanceof MoSWorld))
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 			}
 			else
 			{

@@ -140,7 +140,7 @@ public class Q00510_AClansPrestige extends Quest
 					st.playSound(QuestSound.ITEMSOUND_QUEST_FANFARE_1);
 					st.takeItems(TYRANNOSAURUS_CLAW, -1);
 					clan.addReputationScore(reward, true);
-					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addInt(reward));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINT_S_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION).addInt(reward));
 					clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 					htmltext = "31331-7.html";
 				}

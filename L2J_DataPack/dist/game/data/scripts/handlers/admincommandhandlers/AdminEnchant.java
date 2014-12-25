@@ -188,7 +188,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		

@@ -40,7 +40,7 @@ public class SoulShots implements IItemHandler
 	{
 		if (!playable.isPlayer())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
@@ -73,7 +73,7 @@ public class SoulShots implements IItemHandler
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
 			{
-				activeChar.sendPacket(SystemMessageId.SOULSHOTS_GRADE_MISMATCH);
+				activeChar.sendPacket(SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON);
 			}
 			return false;
 		}
@@ -98,7 +98,7 @@ public class SoulShots implements IItemHandler
 			{
 				if (!activeChar.disableAutoShot(itemId))
 				{
-					activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS);
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SOULSHOTS_FOR_THAT);
 				}
 				return false;
 			}
@@ -111,7 +111,7 @@ public class SoulShots implements IItemHandler
 		}
 		
 		// Send message to client
-		activeChar.sendPacket(SystemMessageId.ENABLED_SOULSHOT);
+		activeChar.sendPacket(SystemMessageId.YOUR_SOULSHOTS_ARE_ENABLED);
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
 		return true;
 	}

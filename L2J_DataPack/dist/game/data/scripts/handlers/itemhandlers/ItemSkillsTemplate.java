@@ -52,7 +52,7 @@ public class ItemSkillsTemplate implements IItemHandler
 		// Pets can use items only when they are tradable.
 		if (playable.isPet() && !item.isTradeable())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
@@ -111,7 +111,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				// Send message to the master.
 				if (playable.isPet())
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PET_USES_S1);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_USES_S1);
 					sm.addSkillName(itemSkill);
 					playable.sendPacket(sm);
 				}
@@ -140,7 +140,7 @@ public class ItemSkillsTemplate implements IItemHandler
 		{
 			if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
 			{
-				playable.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+				playable.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
 				return false;
 			}
 		}
@@ -190,7 +190,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				SystemMessage sm = null;
 				if (hours > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
 					if ((skill == null) || skill.isStatic())
 					{
 						sm.addItemName(item);
@@ -204,7 +204,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				}
 				else if (minutes > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
 					if ((skill == null) || skill.isStatic())
 					{
 						sm.addItemName(item);
@@ -217,7 +217,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				}
 				else
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S2_SECONDS_REMAINING_FOR_REUSE_S1);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
 					if ((skill == null) || skill.isStatic())
 					{
 						sm.addItemName(item);

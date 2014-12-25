@@ -73,7 +73,7 @@ public class CharmOfCourage implements IItemHandler
 		
 		if (itemLevel < level)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(item.getId());
 			activeChar.sendPacket(sm);
 			return false;

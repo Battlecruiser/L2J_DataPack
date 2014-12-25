@@ -65,13 +65,13 @@ public class AdminPetition implements IAdminCommandHandler
 		{
 			if (PetitionManager.getInstance().isPlayerInConsultation(activeChar))
 			{
-				activeChar.sendPacket(SystemMessageId.ONLY_ONE_ACTIVE_PETITION_AT_TIME);
+				activeChar.sendPacket(SystemMessageId.YOU_MAY_ONLY_SUBMIT_ONE_PETITION_ACTIVE_AT_A_TIME);
 				return true;
 			}
 			
 			if (PetitionManager.getInstance().isPetitionInProcess(petitionId))
 			{
-				activeChar.sendPacket(SystemMessageId.PETITION_UNDER_PROCESS);
+				activeChar.sendPacket(SystemMessageId.YOUR_PETITION_IS_BEING_PROCESSED);
 				return true;
 			}
 			
@@ -84,7 +84,7 @@ public class AdminPetition implements IAdminCommandHandler
 		{
 			if (!PetitionManager.getInstance().rejectPetition(activeChar, petitionId))
 			{
-				activeChar.sendPacket(SystemMessageId.FAILED_CANCEL_PETITION_TRY_LATER);
+				activeChar.sendPacket(SystemMessageId.FAILED_TO_CANCEL_PETITION_PLEASE_TRY_AGAIN_LATER);
 			}
 			PetitionManager.getInstance().sendPendingPetitionList(activeChar);
 		}
@@ -92,7 +92,7 @@ public class AdminPetition implements IAdminCommandHandler
 		{
 			if (PetitionManager.getInstance().isPetitionInProcess())
 			{
-				activeChar.sendPacket(SystemMessageId.PETITION_UNDER_PROCESS);
+				activeChar.sendPacket(SystemMessageId.YOUR_PETITION_IS_BEING_PROCESSED);
 				return false;
 			}
 			PetitionManager.getInstance().clearPendingPetitions();
@@ -105,7 +105,7 @@ public class AdminPetition implements IAdminCommandHandler
 				L2Object targetChar = activeChar.getTarget();
 				if ((targetChar == null) || !(targetChar instanceof L2PcInstance))
 				{
-					activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 					return false;
 				}
 				L2PcInstance targetPlayer = (L2PcInstance) targetChar;

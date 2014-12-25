@@ -37,14 +37,14 @@ public class Recipes implements IItemHandler
 	{
 		if (!playable.isPlayer())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		if (activeChar.isInCraftMode())
 		{
-			activeChar.sendPacket(SystemMessageId.CANT_ALTER_RECIPEBOOK_WHILE_CRAFTING);
+			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
 			return false;
 		}
 		
@@ -56,7 +56,7 @@ public class Recipes implements IItemHandler
 		
 		if (activeChar.hasRecipeList(rp.getId()))
 		{
-			activeChar.sendPacket(SystemMessageId.RECIPE_ALREADY_REGISTERED);
+			activeChar.sendPacket(SystemMessageId.THAT_RECIPE_IS_ALREADY_REGISTERED);
 			return false;
 		}
 		
@@ -78,19 +78,19 @@ public class Recipes implements IItemHandler
 		
 		if (!canCraft)
 		{
-			activeChar.sendPacket(SystemMessageId.CANT_REGISTER_NO_ABILITY_TO_CRAFT);
+			activeChar.sendPacket(SystemMessageId.THE_RECIPE_CANNOT_BE_REGISTERED_YOU_DO_NOT_HAVE_THE_ABILITY_TO_CREATE_ITEMS);
 			return false;
 		}
 		
 		if (recipeLevel)
 		{
-			activeChar.sendPacket(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER);
+			activeChar.sendPacket(SystemMessageId.YOUR_CREATE_ITEM_LEVEL_IS_TOO_LOW_TO_REGISTER_THIS_RECIPE);
 			return false;
 		}
 		
 		if (recipeLimit)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_BE_REGISTERED);
 			sm.addInt(rp.isDwarvenRecipe() ? activeChar.getDwarfRecipeLimit() : activeChar.getCommonRecipeLimit());
 			activeChar.sendPacket(sm);
 			return false;
@@ -106,7 +106,7 @@ public class Recipes implements IItemHandler
 		}
 		
 		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ADDED);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED);
 		sm.addItemName(item);
 		activeChar.sendPacket(sm);
 		return true;

@@ -44,7 +44,7 @@ public class AdminDebug implements IAdminCommandHandler
 				target = L2World.getInstance().getPlayer(commandSplit[1].trim());
 				if (target == null)
 				{
-					activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+					activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 					return true;
 				}
 			}

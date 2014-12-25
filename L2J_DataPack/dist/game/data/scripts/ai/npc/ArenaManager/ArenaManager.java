@@ -78,7 +78,7 @@ public class ArenaManager extends AbstractNpcAI
 				}
 				else
 				{
-					player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				}
 				break;
 			}
@@ -100,7 +100,7 @@ public class ArenaManager extends AbstractNpcAI
 				}
 				else
 				{
-					player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				}
 				break;
 			}
@@ -126,7 +126,7 @@ public class ArenaManager extends AbstractNpcAI
 				}
 				else
 				{
-					player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				}
 				break;
 			}

@@ -125,7 +125,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		{
 			if (activeChar.getTarget() == null)
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			
@@ -137,7 +137,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		{
 			if (activeChar.getTarget() == null)
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			

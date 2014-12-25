@@ -80,7 +80,7 @@ public final class Pumping extends AbstractEffect
 		if (fish == null)
 		{
 			// Pumping skill is available only while fishing
-			player.sendPacket(SystemMessageId.CAN_USE_PUMPING_ONLY_WHILE_FISHING);
+			player.sendPacket(SystemMessageId.YOU_MAY_ONLY_USE_THE_PUMPING_SKILL_WHILE_YOU_ARE_FISHING);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -102,7 +102,7 @@ public final class Pumping extends AbstractEffect
 		// Penalty 5% less damage dealt
 		if (player.getSkillLevel(1315) <= (info.getSkill().getLevel() - 2)) // 1315 - Fish Expertise
 		{
-			player.sendPacket(SystemMessageId.REELING_PUMPING_3_LEVELS_HIGHER_THAN_FISHING_PENALTY);
+			player.sendPacket(SystemMessageId.DUE_TO_YOUR_REELING_AND_OR_PUMPING_SKILL_BEING_THREE_OR_MORE_LEVELS_HIGHER_THAN_YOUR_FISHING_SKILL_A_S1_DAMAGE_PENALTY_WILL_BE_APPLIED);
 			pen = (int) (dmg * 0.05);
 			dmg = dmg - pen;
 		}

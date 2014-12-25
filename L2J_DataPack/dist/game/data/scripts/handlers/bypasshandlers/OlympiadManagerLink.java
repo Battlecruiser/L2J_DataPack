@@ -223,7 +223,7 @@ public class OlympiadManagerLink implements IBypassHandler
 							iu.addModifiedItem(item);
 							activeChar.sendPacket(iu);
 							
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S2_S1_S);
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 							sm.addLong(passes);
 							sm.addItemName(item);
 							activeChar.sendPacket(sm);

@@ -101,7 +101,7 @@ public class AdminGeodata implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 				break;
 			}
@@ -116,12 +116,12 @@ public class AdminGeodata implements IAdminCommandHandler
 					}
 					else
 					{
-						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANT_SEE_TARGET));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 					}
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 				break;
 			}

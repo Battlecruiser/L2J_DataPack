@@ -74,7 +74,7 @@ public final class TrapRemove extends AbstractEffect
 		{
 			if (info.getEffector().isPlayer())
 			{
-				info.getEffector().sendPacket(SystemMessageId.INCORRECT_TARGET);
+				info.getEffector().sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 			return;
 		}
@@ -90,7 +90,7 @@ public final class TrapRemove extends AbstractEffect
 		trap.unSummon();
 		if (info.getEffector().isPlayer())
 		{
-			info.getEffector().sendPacket(SystemMessageId.A_TRAP_DEVICE_HAS_BEEN_STOPPED);
+			info.getEffector().sendPacket(SystemMessageId.THE_TRAP_DEVICE_HAS_BEEN_STOPPED);
 		}
 	}
 }

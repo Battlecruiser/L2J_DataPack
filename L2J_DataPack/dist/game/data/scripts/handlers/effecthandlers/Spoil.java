@@ -55,20 +55,20 @@ public final class Spoil extends AbstractEffect
 	{
 		if (!info.getEffected().isMonster() || info.getEffected().isDead())
 		{
-			info.getEffector().sendPacket(SystemMessageId.INCORRECT_TARGET);
+			info.getEffector().sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
 		final L2MonsterInstance target = (L2MonsterInstance) info.getEffected();
 		if (target.isSpoil())
 		{
-			info.getEffector().sendPacket(SystemMessageId.ALREADY_SPOILED);
+			info.getEffector().sendPacket(SystemMessageId.IT_HAS_ALREADY_BEEN_SPOILED);
 			return;
 		}
 		
 		target.setSpoil(true);
 		target.setIsSpoiledBy(info.getEffector().getObjectId());
-		info.getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
+		info.getEffector().sendPacket(SystemMessageId.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED);
 		target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, info.getEffector());
 	}
 }

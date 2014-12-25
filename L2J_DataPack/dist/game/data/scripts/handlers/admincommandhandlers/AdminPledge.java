@@ -56,7 +56,7 @@ public class AdminPledge implements IAdminCommandHandler
 		L2Clan clan = targetPlayer != null ? targetPlayer.getClan() : null;
 		if (targetPlayer == null)
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			showMainPage(activeChar);
 			return false;
 		}

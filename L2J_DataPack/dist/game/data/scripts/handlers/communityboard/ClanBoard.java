@@ -144,7 +144,7 @@ public class ClanBoard implements IWriteBoardHandler
 		{
 			if (cl.getLevel() < 2)
 			{
-				activeChar.sendPacket(SystemMessageId.NO_CB_IN_MY_CLAN);
+				activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_COMMUNITIES_IN_MY_CLAN_CLAN_COMMUNITIES_ARE_ALLOWED_FOR_CLANS_WITH_SKILL_LEVELS_OF_2_AND_HIGHER);
 				parseCommunityBoardCommand("_bbsclan_clanlist", activeChar);
 			}
 			else
@@ -261,7 +261,7 @@ public class ClanBoard implements IWriteBoardHandler
 		{
 			if (cl.getLevel() < 2)
 			{
-				activeChar.sendPacket(SystemMessageId.NO_CB_IN_MY_CLAN);
+				activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_COMMUNITIES_IN_MY_CLAN_CLAN_COMMUNITIES_ARE_ALLOWED_FOR_CLANS_WITH_SKILL_LEVELS_OF_2_AND_HIGHER);
 				parseCommunityBoardCommand("_bbsclan_clanlist", activeChar);
 			}
 			else

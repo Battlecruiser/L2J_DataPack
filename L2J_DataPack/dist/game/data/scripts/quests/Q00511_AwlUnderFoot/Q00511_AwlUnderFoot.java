@@ -271,7 +271,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		{
 			if (!(world instanceof FAUWorld))
 			{
-				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return "";
 			}
 			teleportPlayer(player, coords, world.getInstanceId());

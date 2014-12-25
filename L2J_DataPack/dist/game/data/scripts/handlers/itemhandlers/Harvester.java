@@ -43,7 +43,7 @@ public final class Harvester implements IItemHandler
 		}
 		else if (!playable.isPlayer())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
@@ -58,7 +58,7 @@ public final class Harvester implements IItemHandler
 		final L2Object target = activeChar.getTarget();
 		if ((target == null) || !target.isMonster() || !((L2Character) target).isDead())
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}

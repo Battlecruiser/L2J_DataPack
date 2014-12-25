@@ -69,7 +69,7 @@ public class PartyOther implements ITargetTypeHandler
 			}
 			return EMPTY_TARGET_LIST;
 		}
-		activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+		activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 		return EMPTY_TARGET_LIST;
 	}
 	

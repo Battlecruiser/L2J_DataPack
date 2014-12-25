@@ -52,7 +52,7 @@ public class ItemAuctionLink implements IBypassHandler
 		
 		if (!Config.ALT_ITEM_AUCTION_ENABLED)
 		{
-			activeChar.sendPacket(SystemMessageId.NO_AUCTION_PERIOD);
+			activeChar.sendPacket(SystemMessageId.IT_IS_NOT_AN_AUCTION_PERIOD);
 			return true;
 		}
 		
@@ -89,7 +89,7 @@ public class ItemAuctionLink implements IBypassHandler
 				
 				if (currentAuction == null)
 				{
-					activeChar.sendPacket(SystemMessageId.NO_AUCTION_PERIOD);
+					activeChar.sendPacket(SystemMessageId.IT_IS_NOT_AN_AUCTION_PERIOD);
 					
 					if (nextAuction != null)
 					{
@@ -113,7 +113,7 @@ public class ItemAuctionLink implements IBypassHandler
 				}
 				if (!returned)
 				{
-					activeChar.sendPacket(SystemMessageId.NO_OFFERINGS_OWN_OR_MADE_BID_FOR);
+					activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_OFFERINGS_I_OWN_OR_I_MADE_A_BID_FOR);
 				}
 			}
 			else

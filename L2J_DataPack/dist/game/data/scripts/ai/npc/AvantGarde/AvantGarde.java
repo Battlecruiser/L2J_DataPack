@@ -294,7 +294,7 @@ public class AvantGarde extends AbstractNpcAI
 		
 		if (subClassSkills.isEmpty())
 		{
-			player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
+			player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 		}
 		else
 		{
@@ -316,13 +316,13 @@ public class AvantGarde extends AbstractNpcAI
 			if (minlevel > 0)
 			{
 				// No more skills to learn, come back when you level.
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.DO_NOT_HAVE_FURTHER_SKILLS_TO_LEARN_S1);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
 				sm.addInt(minlevel);
 				player.sendPacket(sm);
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
+				player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 			}
 		}
 		else

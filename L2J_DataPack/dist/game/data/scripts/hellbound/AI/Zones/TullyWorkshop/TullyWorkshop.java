@@ -849,15 +849,15 @@ public final class TullyWorkshop extends AbstractNpcAI
 			final L2Party party = player.getParty();
 			if (party == null)
 			{
-				player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
+				player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
 			}
 			else if (party.getLeaderObjectId() != player.getObjectId())
 			{
-				player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+				player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			}
 			else if (!Util.checkIfInRange(4000, player, npc, true))
 			{
-				player.sendPacket(SystemMessageId.TOO_FAR_FROM_NPC);
+				player.sendPacket(SystemMessageId.YOU_ARE_TOO_FAR_FROM_THE_NPC_FOR_THAT_TO_WORK);
 			}
 			else
 			{
@@ -946,7 +946,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 				{
 					if (party.getLeaderObjectId() != player.getObjectId())
 					{
-						player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+						player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 					}
 					else
 					{
@@ -1050,7 +1050,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			{
 				if (party.getLeaderObjectId() != player.getObjectId())
 				{
-					player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+					player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 					return null;
 				}
 				
@@ -1081,7 +1081,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			{
 				if (!party.isLeader(player))
 				{
-					player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+					player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 				}
 				else if (!Util.checkIfInRange(3000, player, npc, true))
 				{

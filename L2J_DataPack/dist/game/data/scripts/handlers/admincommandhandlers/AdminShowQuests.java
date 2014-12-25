@@ -120,7 +120,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
 		

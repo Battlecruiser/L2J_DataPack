@@ -44,7 +44,7 @@ public class FishShots implements IItemHandler
 	{
 		if (!playable.isPlayer())
 		{
-			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
@@ -75,7 +75,7 @@ public class FishShots implements IItemHandler
 		
 		if (!gradeCheck)
 		{
-			activeChar.sendPacket(SystemMessageId.WRONG_FISHINGSHOT_GRADE);
+			activeChar.sendPacket(SystemMessageId.THAT_IS_THE_WRONG_GRADE_OF_SOULSHOT_FOR_THAT_FISHING_POLE);
 			return false;
 		}
 		

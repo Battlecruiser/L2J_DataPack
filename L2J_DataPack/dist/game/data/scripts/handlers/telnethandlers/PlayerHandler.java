@@ -94,7 +94,7 @@ public class PlayerHandler implements ITelnetHandler
 					InventoryUpdate iu = new InventoryUpdate();
 					iu.addItem(item);
 					player.sendPacket(iu);
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 					sm.addItemName(itemId);
 					sm.addLong(amount);
 					player.sendPacket(sm);
