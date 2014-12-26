@@ -1731,7 +1731,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" canBeSown="true" />
+		<status attackable="false" talkable="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -2076,7 +2076,7 @@
 				<run ground="160" />
 			</speed>
 		</stats>
-		<status attackable="false" undying="false" canBeSown="true" />
+		<status attackable="false" talkable="false" undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4032" level="10" /> <!--NPC Strike -->
 			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
@@ -2117,7 +2117,7 @@
 				<run ground="160" />
 			</speed>
 		</stats>
-		<status attackable="false" undying="false" canBeSown="true" />
+		<status attackable="false" talkable="false" undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4032" level="10" /> <!--NPC Strike -->
 			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
