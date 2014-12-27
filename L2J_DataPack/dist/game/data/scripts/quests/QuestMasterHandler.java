@@ -170,6 +170,7 @@ import quests.Q00167_DwarvenKinship.Q00167_DwarvenKinship;
 import quests.Q00168_DeliverSupplies.Q00168_DeliverSupplies;
 import quests.Q00169_OffspringOfNightmares.Q00169_OffspringOfNightmares;
 import quests.Q00170_DangerousSeduction.Q00170_DangerousSeduction;
+import quests.Q00171_ActsOfEvil.Q00171_ActsOfEvil;
 import quests.Q00172_NewHorizons.Q00172_NewHorizons;
 import quests.Q00173_ToTheIsleOfSouls.Q00173_ToTheIsleOfSouls;
 import quests.Q00174_SupplyCheck.Q00174_SupplyCheck;
@@ -628,6 +629,7 @@ public class QuestMasterHandler
 		Q00168_DeliverSupplies.class,
 		Q00169_OffspringOfNightmares.class,
 		Q00170_DangerousSeduction.class,
+		Q00171_ActsOfEvil.class,
 		Q00172_NewHorizons.class,
 		Q00173_ToTheIsleOfSouls.class,
 		Q00174_SupplyCheck.class,
