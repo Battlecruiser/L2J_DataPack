@@ -100,6 +100,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 				if (qs.isCond(1))
 				{
 					qs.setCond(2, true);
+					htmltext = event;
 				}
 				break;
 			}
@@ -156,7 +157,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState qs = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		if (qs.isCompleted())
@@ -170,11 +171,11 @@ public class Q10323_TrainLikeItsReal extends Quest
 			{
 				if (qs.isCreated())
 				{
-					return "33464-01.htm";
+					htmltext = "33464-01.htm";
 				}
 				else if (qs.isStarted())
 				{
-					return "33464-03.htm";
+					htmltext = "33464-03.htm";
 				}
 				break;
 			}
