@@ -11,23 +11,22 @@
 		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="13001" levels="4" name="Vesper Heavy Armor Set">
-		<!-- Done by WilliamFS -->
-		<!-- Increases P. Def. by 5.57%, Max HP + 531, increases P. Atk by 5.57%, Sleep/Hold Resistance by 70%, STR+ 2, DEX-2. -->
+		<!-- Ertheia Skill -->
 		<table name="#Trait">0 0 0 70</table>
-		<table name="#base">0 0 0 2</table>		
+		<table name="#base">0 0 0 2</table>
 		<table name="#maxHp">0 531 531 531</table>
 		<table name="#pAtk">1 1 1.0557 1.0557</table>
-		<set name="icon" val="icon.armor_t94_u_i00"/>
+		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="STR" val="#base"/>
-				<sub stat="DEX" val="#base"/>
-				<mul stat="pAtk" val="#pAtk"/>
-				<mul stat="pDef" val="1.0557"/>
-				<add stat="maxHp" val="#maxHp"/>
+				<add stat="STR" val="#base" />
+				<sub stat="DEX" val="#base" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pDef" val="1.0557" />
+				<add stat="maxHp" val="#maxHp" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="#Trait" />
@@ -36,159 +35,153 @@
 		</for>
 	</skill>
 	<skill id="13002" levels="4" name="Vesper Noble Heavy Armor Set">
-		<!-- Done by WilliamFS -->
-		<!-- P. Def. + 5.57%, Max HP + 540, Accuracy + 4, Speed + 5.57%, P. Atk + 5.57%, Sleep/Hold Resistance + 70%, and M. Def. + 1%. Can wear cloak. STR+ 2, DEX-2. -->
-		<table name="#accCombat">0 4 4 4</table>	
-		<table name="#base">0 0 0 2</table>		
+		<!-- Ertheia Skill -->
+		<table name="#accCombat">0 4 4 4</table>
+		<table name="#base">0 0 0 2</table>
 		<table name="#Trait">0 0 0 70</table>
 		<table name="#magicSuccRes">1 1 1 1.01</table>
 		<table name="#runSpd">0 0 1.0557 1.0557</table>
 		<table name="#maxHp">0 540 540 540</table>
 		<table name="#pAtk">1 1 1.0557 1.0557</table>
-		<set name="icon" val="icon.armor_t94_u_i01"/>
+		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="STR" val="#base"/>
-				<sub stat="DEX" val="#base"/>			
-				<add stat="accCombat" val="#accCombat"/>
-				<mul stat="runSpd" val="#runSpd"/>
-				<mul stat="magicSuccRes" val="#magicSuccRes"/>
-				<mul stat="pAtk" val="#pAtk"/>
-				<mul stat="pDef" val="1.0557"/>
-				<add stat="maxHp" val="#maxHp"/>
+				<add stat="STR" val="#base" />
+				<sub stat="DEX" val="#base" />
+				<add stat="accCombat" val="#accCombat" />
+				<mul stat="runSpd" val="#runSpd" />
+				<mul stat="magicSuccRes" val="#magicSuccRes" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pDef" val="1.0557" />
+				<add stat="maxHp" val="#maxHp" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="#Trait" />
 				<param HOLD="#Trait" />
 			</effect>
-			<effect name="EnableCloak" />			
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="13003" levels="4" name="Vesper Light Armor Set">
-		<!-- Done by WilliamFS -->
-		<!-- Increases MP Recovery Rate by 5%, Max MP + 347, P. Atk by 5.57%, P. Atk Speed by 5%. STR+ 1, CON-2, DEX+ 1. -->
+		<!-- Ertheia Skill -->
 		<table name="#base">0 0 0 1</table>
-		<table name="#base1">0 0 0 2</table>			
+		<table name="#base1">0 0 0 2</table>
 		<table name="#maxMp">0 347 347 347</table>
 		<table name="#pAtk">1 1 1.0557 1.0557</table>
 		<table name="#pAtkSpd">1 1 1 1.0557</table>
-		<set name="icon" val="icon.armor_t95_u_i00"/>
+		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="STR" val="#base"/>
-				<sub stat="CON" val="#base1"/>
-				<add stat="DEX" val="#base"/>				
-				<mul stat="pAtk" val="#pAtk"/>
-				<mul stat="pAtkSpd" val="#pAtkSpd"/>
-				<mul stat="regMp" val="1.0557"/>
-				<add stat="maxMp" val="#maxMp"/>
-			</effect>	
+				<add stat="STR" val="#base" />
+				<sub stat="CON" val="#base1" />
+				<add stat="DEX" val="#base" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="regMp" val="1.0557" />
+				<add stat="maxMp" val="#maxMp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="13004" levels="4" name="Vesper Noble Light Armor Set">
-		<!-- Done by WilliamFS -->
-		<!-- Increases MP Recovery Rate by 5%, Max MP + 354, Evasion + 3, P. Atk by 5.57%, Critical Damage + 172, P. Atk Speed by 5%, Paralysis Resistance by 50%. Can wear cloak. STR+ 1, CON-2, DEX+ 1 -->
+		<!-- Ertheia Skill -->
 		<table name="#base">0 0 0 1</table>
-		<table name="#base1">0 0 0 2</table>			
+		<table name="#base1">0 0 0 2</table>
 		<table name="#rCrit">0 3 3 3</table>
 		<table name="#cAtkAdd">0 0 172 172</table>
 		<table name="#Trait">0 0 0 50</table>
 		<table name="#maxMp">0 354 354 354</table>
 		<table name="#pAtk">1 1 1.0557 1.0557</table>
-		<table name="#pAtkSpd">1 1 1 1.0557</table>	
-		<set name="icon" val="icon.armor_t95_u_i01"/>
+		<table name="#pAtkSpd">1 1 1 1.0557</table>
+		<set name="icon" val="icon.armor_t95_u_i01" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="STR" val="#base"/>
-				<sub stat="CON" val="#base1"/>
-				<add stat="DEX" val="#base"/>			
-				<add stat="rCrit" val="#rCrit"/>
-				<add stat="cAtkAdd" val="#cAtkAdd"/>
-				<mul stat="pAtk" val="#pAtk"/>
-				<mul stat="pAtkSpd" val="#pAtkSpd"/>
-				<mul stat="regMp" val="1.0557"/>
-				<add stat="maxMp" val="#maxMp"/>
+				<add stat="STR" val="#base" />
+				<sub stat="CON" val="#base1" />
+				<add stat="DEX" val="#base" />
+				<add stat="rCrit" val="#rCrit" />
+				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="regMp" val="1.0557" />
+				<add stat="maxMp" val="#maxMp" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="#Trait" />
 			</effect>
-			<effect name="EnableCloak" />			
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="13005" levels="4" name="Vesper Robe Set">
-		<!-- Done by WilliamFS -->
-		<!-- Increases MP Recovery Rate by 5.57%, M. Atk. by 8.47%, Casting Spd. by 15%, Stun Resistance by 50%. Decreases magic-cancelling damage by 30. INT+ 1, MEN-2, WIT+ 1. -->
+		<!-- Ertheia Skill -->
 		<table name="#base">0 0 0 1</table>
-		<table name="#base1">0 0 0 2</table>	
+		<table name="#base1">0 0 0 2</table>
 		<table name="#Trait">0 0 0 50</table>
 		<table name="#cancel">0 0 0 30</table>
 		<table name="#mAtk">1 1.0847 1.0847 1.0847</table>
-		<table name="#mAtkSpd">1 1 1.15 1.15</table>	
-		<set name="icon" val="icon.armor_t96_u_i00"/>
+		<table name="#mAtkSpd">1 1 1.15 1.15</table>
+		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="INT" val="#base"/>
-				<sub stat="MEN" val="#base1"/>
-				<add stat="WIT" val="#base"/>			
-				<mul stat="mAtk" val="#mAtk"/>
-				<mul stat="mAtkSpd" val="#mAtkSpd"/>
-				<mul stat="regMp" val="1.0557"/>
+				<add stat="INT" val="#base" />
+				<sub stat="MEN" val="#base1" />
+				<add stat="WIT" val="#base" />
+				<mul stat="mAtk" val="#mAtk" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<mul stat="regMp" val="1.0557" />
 				<sub stat="cancel" val="#cancel" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="#Trait" />
-			</effect>			
+			</effect>
 		</for>
 	</skill>
 	<skill id="13006" levels="4" name="Vesper Noble Robe Set">
-		<!-- Done by WilliamFS -->
-		<!-- Increases MP Recovery Rate by 5.57%, M. Atk. by 8.47%, Casting Spd by 15%, Speed + 7, Stun Resistance by 50%. Decreases magic-cancelling damage by 30, Magic Skill MP Consumption 3%. Can wear cloak. INT+ 1, MEN-2, WIT+ 1 -->
+		<!-- Ertheia Skill -->
 		<table name="#base">0 0 0 1</table>
-		<table name="#base1">0 0 0 2</table>			
+		<table name="#base1">0 0 0 2</table>
 		<table name="#runSpd">0 0 7 7</table>
 		<table name="#MagicalMpConsumeRate">1 1 1 0.97</table>
 		<table name="#Trait">0 0 0 50</table>
 		<table name="#cancel">0 30 30 30</table>
 		<table name="#mAtk">1 1.0847 1.0847 1.0847</table>
-		<table name="#mAtkSpd">1 1 1.15 1.15</table>	
-		<set name="icon" val="icon.armor_t96_u_i01"/>
+		<table name="#mAtkSpd">1 1 1.15 1.15</table>
+		<set name="icon" val="icon.armor_t96_u_i01" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="INT" val="#base"/>
-				<sub stat="MEN" val="#base1"/>
-				<add stat="WIT" val="#base"/>			
-				<add stat="runSpd" val="#runSpd"/>
-				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate"/>
-				<mul stat="mAtk" val="#mAtk"/>
-				<mul stat="mAtkSpd" val="#mAtkSpd"/>
-				<mul stat="regMp" val="1.0557"/>
+				<add stat="INT" val="#base" />
+				<sub stat="MEN" val="#base1" />
+				<add stat="WIT" val="#base" />
+				<add stat="runSpd" val="#runSpd" />
+				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+				<mul stat="mAtk" val="#mAtk" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<mul stat="regMp" val="1.0557" />
 				<sub stat="cancel" val="#cancel" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="#Trait" />
 			</effect>
-			<effect name="EnableCloak" />				
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="13007" levels="1" name="Vesper Heavy Armor Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of decreasing all speeds of the attacker. -->	
-		<set name="icon" val="icon.armor_t94_u_i00"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -197,7 +190,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -205,12 +198,11 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-		</for>	
+		</for>
 	</skill>
 	<skill id="13008" levels="1" name="Vesper Noble Heavy Armor Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of decreasing all speeds of the attacker. -->	
-		<set name="icon" val="icon.armor_t94_u_i01"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -219,7 +211,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -227,12 +219,11 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-		</for>	
+		</for>
 	</skill>
 	<skill id="13009" levels="1" name="Vesper Light Armor Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of hurling the target at the opponent when attacked. -->	
-		<set name="icon" val="icon.armor_t95_u_i00"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -241,7 +232,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -252,9 +243,8 @@
 		</for>
 	</skill>
 	<skill id="13010" levels="1" name="Vesper Noble Light Armor Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of hurling the target at the opponent when attacked. -->	
-		<set name="icon" val="icon.armor_t95_u_i01"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t95_u_i01" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -263,7 +253,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -274,9 +264,8 @@
 		</for>
 	</skill>
 	<skill id="13011" levels="1" name="Vesper Robe Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->	
-		<set name="icon" val="icon.armor_t96_u_i00"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -285,7 +274,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -296,9 +285,8 @@
 		</for>
 	</skill>
 	<skill id="13012" levels="1" name="Vesper Noble Robe Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->		
-		<set name="icon" val="icon.armor_t96_u_i01"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t96_u_i01" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -307,7 +295,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -318,35 +306,27 @@
 		</for>
 	</skill>
 	<skill id="13013" levels="4" name="Moirai Heavy Armor Set">
-		<!-- Done by WilliamFS -->
-		<!--
-		
-		2 Pieces: Increases M. Def. by 2%.
-		3 Pieces: Increases M. Def. by 2%, P. Atk by 4.26%.
-		4 Pieces: Increases M. Def. by 2%, P. Atk by 4.26%, P. Atk Spd 4%.
-		5 Pieces: Increases M. Def. by 2%, P. Atk by 4.26%, P. Atk Spd 4%, Stun Resistance by 50%, Fire/Water/Wind/Earth Resistance + 3. Can wear cloak. STR+ 2, CON-2.
-
-		-->
+		<!-- 2 Pieces: Increases M. Def. by 2%. 3 Pieces: Increases M. Def. by 2%, P. Atk by 4.26%. 4 Pieces: Increases M. Def. by 2%, P. Atk by 4.26%, P. Atk Spd 4%. 5 Pieces: Increases M. Def. by 2%, P. Atk by 4.26%, P. Atk Spd 4%, Stun Resistance by 50%, Fire/Water/Wind/Earth Resistance + 3. Can wear cloak. STR+ 2, CON-2. -->
 		<table name="#Trait">0 0 0 50</table>
 		<table name="#base">0 0 0 2</table>
-		<table name="#resist">0 0 0 3</table>			
+		<table name="#resist">0 0 0 3</table>
 		<table name="#pAtk">1 1.0426 1.0426 1.0426</table>
-		<table name="#pAtkSpd">1 1 1.04 1.04</table>				
+		<table name="#pAtkSpd">1 1 1.04 1.04</table>
 		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">	
-				<add stat="STR" val="#base"/>
-				<sub stat="CON" val="#base"/>
-				<mul stat="pAtk" val="#pAtk"/>
-				<mul stat="magicSuccRes" val="1.02"/>				
-				<mul stat="pAtkSpd" val="#pAtkSpd"/>				
-				<add stat="fireRes" val="#resist"/>
-				<add stat="waterRes" val="#resist"/>
-				<add stat="windRes" val="#resist"/>
-				<add stat="earthRes" val="#resist"/>				
+			<effect name="Buff">
+				<add stat="STR" val="#base" />
+				<sub stat="CON" val="#base" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="magicSuccRes" val="1.02" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<add stat="fireRes" val="#resist" />
+				<add stat="waterRes" val="#resist" />
+				<add stat="windRes" val="#resist" />
+				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="#Trait" />
@@ -355,333 +335,269 @@
 		</for>
 	</skill>
 	<skill id="13014" levels="4" name="Moirai Light Armor Set">
-		<!-- Done by WilliamFS -->
-		<!-- 
-
-		2 Pieces: Increases Speed by 3%.
-		3 Pieces: Increases Speed by 3%, P. Atk by 4.26%.
-		4 Pieces: Increases Speed by 3%, P. Atk by 4.26%, P. Atk Spd by 4%.
-		5 Pieces: Increases Speed by 3%, P. Atk by 4.26%, P. Atk Spd by 4%, Hold Resistance by 50%, Fire/Water/Wind/Earth Resistance + 3. Can wear cloak. DEX+ 2, CON-2.
-
-		-->
+		<!-- 2 Pieces: Increases Speed by 3%. 3 Pieces: Increases Speed by 3%, P. Atk by 4.26%. 4 Pieces: Increases Speed by 3%, P. Atk by 4.26%, P. Atk Spd by 4%. 5 Pieces: Increases Speed by 3%, P. Atk by 4.26%, P. Atk Spd by 4%, Hold Resistance by 50%, Fire/Water/Wind/Earth Resistance + 3. Can wear cloak. DEX+ 2, CON-2. -->
 		<table name="#base">0 0 0 2</table>
-		<table name="#resist">0 0 0 3</table>		
+		<table name="#resist">0 0 0 3</table>
 		<table name="#Trait">0 0 0 50</table>
 		<table name="#pAtk">1 1.0426 1.0426 1.0426</table>
-		<table name="#pAtkSpd">1 1 1.04 1.04</table>	
+		<table name="#pAtkSpd">1 1 1.04 1.04</table>
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="DEX" val="#base"/>
-				<sub stat="CON" val="#base"/>
-				<mul stat="runSpd" val="1.03"/>			
-				<mul stat="pAtk" val="#pAtk"/>
-				<mul stat="pAtkSpd" val="#pAtkSpd"/>
-				<add stat="fireRes" val="#resist"/>
-				<add stat="waterRes" val="#resist"/>
-				<add stat="windRes" val="#resist"/>
-				<add stat="earthRes" val="#resist"/>
+				<add stat="DEX" val="#base" />
+				<sub stat="CON" val="#base" />
+				<mul stat="runSpd" val="1.03" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<add stat="fireRes" val="#resist" />
+				<add stat="waterRes" val="#resist" />
+				<add stat="windRes" val="#resist" />
+				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param HOLD="#Trait" />
-			</effect>			
+			</effect>
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="13015" levels="4" name="Moirai Robe Set">
-		<!-- Done by WilliamFS -->
-		<!-- 
-
-		2 Pieces: Increases Casting Spd. by 5%.
-		3 Pieces: Increases Casting Spd. by 5%, Magic by 8.11%.
-		4 Pieces: Increases Casting Spd. by 15%, Magic by 8.11%.
-		5 Pieces: Increases Casting Spd. by 15%, Magic by 8.11%, Paralysis Resistance by 50%, Fire/Water/Wind/Earth Resistance + 5 . Can wear cloak. WIT+ 2, MEN-2.
-
-		-->
+		<!-- 2 Pieces: Increases Casting Spd. by 5%. 3 Pieces: Increases Casting Spd. by 5%, Magic by 8.11%. 4 Pieces: Increases Casting Spd. by 15%, Magic by 8.11%. 5 Pieces: Increases Casting Spd. by 15%, Magic by 8.11%, Paralysis Resistance by 50%, Fire/Water/Wind/Earth Resistance + 5 . Can wear cloak. WIT+ 2, MEN-2. -->
 		<table name="#base">0 0 0 2</table>
-		<table name="#resist">0 0 0 5</table>			
+		<table name="#resist">0 0 0 5</table>
 		<table name="#Trait">0 0 0 50</table>
 		<table name="#mAtk">1 1.0811 1.0811 1.0811</table>
-		<table name="#mAtkSpd">1.05 1.05 1.15 1.15</table>	
+		<table name="#mAtkSpd">1.05 1.05 1.15 1.15</table>
 		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub stat="MEN" val="#base"/>
-				<add stat="WIT" val="#base"/>			
-				<mul stat="mAtk" val="#mAtk"/>
-				<mul stat="mAtkSpd" val="#mAtkSpd"/>
-				<add stat="fireRes" val="#resist"/>
-				<add stat="waterRes" val="#resist"/>
-				<add stat="windRes" val="#resist"/>
-				<add stat="earthRes" val="#resist"/>
+				<sub stat="MEN" val="#base" />
+				<add stat="WIT" val="#base" />
+				<mul stat="mAtk" val="#mAtk" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<add stat="fireRes" val="#resist" />
+				<add stat="waterRes" val="#resist" />
+				<add stat="windRes" val="#resist" />
+				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="#Trait" />
 			</effect>
-			<effect name="EnableCloak" />			
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="13016" levels="4" name="Vorpal Heavy Armor Set">
-		<!-- Done by WilliamFS -->
-		<!-- 
-
-		2 Pieces: Increases P. Def. by 8.47%.
-		3 Pieces: Increases P. Def. by 8.47%., Max HP + 541, Speed + 7.
-		4 Pieces: Increases P. Def. by 8.47%., Max HP + 541, Speed + 7., P. Atk by 5.57%, Accuracy + 4.
-		5 Pieces: Increases P. Def. by 8.47%., Max HP + 541, Speed + 7., P. Atk by 5.57%, Accuracy + 4, M. Def. by 2%, Bleeding/Hold/Sleep Resistance by 50%, Fire/Water/Wind/Earth Resistance + 5. Can wear cloak. CON+2. STR-2.
-
-		-->
+		<!-- 2 Pieces: Increases P. Def. by 8.47%. 3 Pieces: Increases P. Def. by 8.47%., Max HP + 541, Speed + 7. 4 Pieces: Increases P. Def. by 8.47%., Max HP + 541, Speed + 7., P. Atk by 5.57%, Accuracy + 4. 5 Pieces: Increases P. Def. by 8.47%., Max HP + 541, Speed + 7., P. Atk by 5.57%, Accuracy + 4, M. Def. by 2%, Bleeding/Hold/Sleep Resistance by 50%, Fire/Water/Wind/Earth Resistance + 5. Can wear cloak. CON+2. STR-2. -->
 		<table name="#Trait">0 0 0 50</table>
-		<table name="#base">0 0 0 2</table>		
+		<table name="#base">0 0 0 2</table>
 		<table name="#maxHp">0 541 541 541</table>
 		<table name="#pAtk">1 1 1.0557 1.0557</table>
 		<table name="#runSpd">0 7 7 7</table>
 		<table name="#accCombat">0 0 4 4</table>
 		<table name="#magicSuccRes">1 1 1 1.02</table>
-		<table name="#resist">0 0 0 5</table>			
+		<table name="#resist">0 0 0 5</table>
 		<set name="icon" val="icon.armor_t94_u_i03" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub stat="STR" val="#base"/>
-				<add stat="CON" val="#base"/>
-				<mul stat="pAtk" val="#pAtk"/>
-				<mul stat="pDef" val="1.0847"/>
-				<add stat="maxHp" val="#maxHp"/>
-				<add stat="runSpd" val="#runSpd"/>
-				<add stat="accCombat" val="#accCombat"/>
-				<mul stat="magicSuccRes" val="#magicSuccRes"/>
-				<add stat="fireRes" val="#resist"/>
-				<add stat="waterRes" val="#resist"/>
-				<add stat="windRes" val="#resist"/>
-				<add stat="earthRes" val="#resist"/>				
+				<sub stat="STR" val="#base" />
+				<add stat="CON" val="#base" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pDef" val="1.0847" />
+				<add stat="maxHp" val="#maxHp" />
+				<add stat="runSpd" val="#runSpd" />
+				<add stat="accCombat" val="#accCombat" />
+				<mul stat="magicSuccRes" val="#magicSuccRes" />
+				<add stat="fireRes" val="#resist" />
+				<add stat="waterRes" val="#resist" />
+				<add stat="windRes" val="#resist" />
+				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="#Trait" />
 				<param HOLD="#Trait" />
-				<param BLEED="#Trait" />				
+				<param BLEED="#Trait" />
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="13017" levels="4" name="Vorpal Leather Armor Set">
-		<!-- Done by WilliamFS -->
-		<!-- 
-
-		2 Pieces: Increases P. Def. by 5.57%.
-		3 Pieces: Increases P. Def. by 5.57%., Max.MP + 360, Speed by 3%.
-		4 Pieces: Increases P. Def. by 5.57%., Max.MP + 360, Speed by 3%, P. Atk by 5.57%, Atk Spd by 5%.
-		5 Pieces: Increases P. Def. by 5.57%., Max.MP + 360, Speed by 3%, P. Atk by 5.57%, Atk Spd by 5%, Critical Damage + 182, Stun Resistance 50%, Fire/Water/Wind/Earth Resistance + 5. Can wear cloak. STR+ 1, DEX+ 2, CON-3.
-
-		-->
+		<!-- 2 Pieces: Increases P. Def. by 5.57%. 3 Pieces: Increases P. Def. by 5.57%., Max.MP + 360, Speed by 3%. 4 Pieces: Increases P. Def. by 5.57%., Max.MP + 360, Speed by 3%, P. Atk by 5.57%, Atk Spd by 5%. 5 Pieces: Increases P. Def. by 5.57%., Max.MP + 360, Speed by 3%, P. Atk by 5.57%, Atk Spd by 5%, Critical Damage + 182, Stun Resistance 50%, Fire/Water/Wind/Earth Resistance + 5. Can wear cloak. STR+ 1, DEX+ 2, CON-3. -->
 		<table name="#Trait">0 0 0 50</table>
 		<table name="#base">0 0 0 1</table>
 		<table name="#base1">0 0 0 2</table>
-		<table name="#base2">0 0 0 3</table>		
+		<table name="#base2">0 0 0 3</table>
 		<table name="#maxHp">0 360 360 360</table>
 		<table name="#pAtk">1 1 1.0557 1.0557</table>
 		<table name="#runSpd">1 1.03 1.03 1.03</table>
-		<table name="#cAtkAdd">0 0 0 182</table>			
-		<table name="#resist">0 0 0 5</table>			
+		<table name="#cAtkAdd">0 0 0 182</table>
+		<table name="#resist">0 0 0 5</table>
 		<set name="icon" val="icon.armor_t95_u_i03" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="STR" val="#base"/>
-				<add stat="DEX" val="#base1"/>				
-				<sub stat="CON" val="#base2"/>
-				<mul stat="pAtk" val="#pAtk"/>
-				<mul stat="pDef" val="1.0557"/>
-				<add stat="maxHp" val="#maxHp"/>
-				<mul stat="runSpd" val="#runSpd"/>
-				<add stat="cAtkAdd" val="#cAtkAdd"/>
-				<add stat="fireRes" val="#resist"/>
-				<add stat="waterRes" val="#resist"/>
-				<add stat="windRes" val="#resist"/>
-				<add stat="earthRes" val="#resist"/>				
+				<add stat="STR" val="#base" />
+				<add stat="DEX" val="#base1" />
+				<sub stat="CON" val="#base2" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pDef" val="1.0557" />
+				<add stat="maxHp" val="#maxHp" />
+				<mul stat="runSpd" val="#runSpd" />
+				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="fireRes" val="#resist" />
+				<add stat="waterRes" val="#resist" />
+				<add stat="windRes" val="#resist" />
+				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
-				<param SHOCK="#Trait" />			
+				<param SHOCK="#Trait" />
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="13018" levels="4" name="Vorpal Robe Set">
-		<!-- Done by WilliamFS -->
-		<!-- 
-
-		2 Pieces: Increases Speed by 7.
-		3 Pieces: Increases speed by 7, Max MP + 92, M. Atk. + 8.7%, and MP Recovery Rate + 5%.
-		4 Pieces: Increases Speed by 7, Max MP + 92, casting Spd by 15%, M. Atk. by 8.7%, MP recovery speed by 5%.
-		5 Pieces: Increases Speed by 7, Max MP + 92, casting Spd by 15%, M. Atk. by 8.7%, MP recovery speed by 5%, Stun Resistance by 50%, Fire/Water/Wind/Earth Resistance + 5. Can wear cloak. WIT+ 2, MEN-1, INT-1.
-
-		-->
+		<!-- 2 Pieces: Increases Speed by 7. 3 Pieces: Increases speed by 7, Max MP + 92, M. Atk. + 8.7%, and MP Recovery Rate + 5%. 4 Pieces: Increases Speed by 7, Max MP + 92, casting Spd by 15%, M. Atk. by 8.7%, MP recovery speed by 5%. 5 Pieces: Increases Speed by 7, Max MP + 92, casting Spd by 15%, M. Atk. by 8.7%, MP recovery speed by 5%, Stun Resistance by 50%, Fire/Water/Wind/Earth Resistance + 5. Can wear cloak. WIT+ 2, MEN-1, INT-1. -->
 		<table name="#base">0 0 0 1</table>
-		<table name="#base1">0 0 0 2</table>	
+		<table name="#base1">0 0 0 2</table>
 		<table name="#Trait">0 0 0 50</table>
 		<table name="#maxMp">0 92 92 92</table>
 		<table name="#mAtk">1 1.0870 1.0870 1.0870</table>
-		<table name="#regMp">1 1.05 1.05 1.05</table>			
+		<table name="#regMp">1 1.05 1.05 1.05</table>
 		<table name="#mAtkSpd">1 1 1.15 1.15</table>
-		<table name="#resist">0 0 0 5</table>		
+		<table name="#resist">0 0 0 5</table>
 		<set name="icon" val="icon.armor_t96_u_i03" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<sub stat="INT" val="#base"/>
-				<sub stat="MEN" val="#base"/>
-				<add stat="WIT" val="#base1"/>
-				<add stat="runSpd" val="7"/>
-				<add stat="maxMp" val="#maxMp"/>
-				<mul stat="mAtk" val="#mAtk"/>
-				<mul stat="mAtkSpd" val="#mAtkSpd"/>
-				<mul stat="regMp" val="#regMp"/>
-				<add stat="fireRes" val="#resist"/>
-				<add stat="waterRes" val="#resist"/>
-				<add stat="windRes" val="#resist"/>
-				<add stat="earthRes" val="#resist"/>				
+				<sub stat="INT" val="#base" />
+				<sub stat="MEN" val="#base" />
+				<add stat="WIT" val="#base1" />
+				<add stat="runSpd" val="7" />
+				<add stat="maxMp" val="#maxMp" />
+				<mul stat="mAtk" val="#mAtk" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<mul stat="regMp" val="#regMp" />
+				<add stat="fireRes" val="#resist" />
+				<add stat="waterRes" val="#resist" />
+				<add stat="windRes" val="#resist" />
+				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="#Trait" />
 			</effect>
-			<effect name="EnableCloak" />		
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="13019" levels="4" name="Elegia Heavy Armor Set">
-		<!-- Done by WilliamFS -->
-		<!-- 
-
-		2 Pieces: Increases Max HP by 550.
-		3 Pieces: Increases Max HP by 550, P. Atk by 6.59%.
-		4 Pieces: Increases Max HP by 550, P. Atk by 6.59%, Critical Rate + 12.74, M. Def. by 2%.
-		5 Pieces: Increases Max HP by 550, P. Atk by 6.59%, Critical Rate + 12.74, M. Def. by 2%, Bleeding/Hold/Sleep Resistance by 50%, Fire/Water/Wind/Earth Resistance + 5, restores HP by using some of the damage inflicted upon the enemy with a certain probability. Can wear cloak. STR+ 3, CON-2.
-
-		-->
-		<table name="#Trait">0 0 0 50</table>		
+		<!-- 2 Pieces: Increases Max HP by 550. 3 Pieces: Increases Max HP by 550, P. Atk by 6.59%. 4 Pieces: Increases Max HP by 550, P. Atk by 6.59%, Critical Rate + 12.74, M. Def. by 2%. 5 Pieces: Increases Max HP by 550, P. Atk by 6.59%, Critical Rate + 12.74, M. Def. by 2%, Bleeding/Hold/Sleep Resistance by 50%, Fire/Water/Wind/Earth Resistance + 5, restores HP by using some of the damage inflicted upon the enemy with a certain probability. Can wear cloak. STR+ 3, CON-2. -->
+		<table name="#Trait">0 0 0 50</table>
 		<table name="#base">0 0 0 3</table>
-		<table name="#base1">0 0 0 2</table>		
+		<table name="#base1">0 0 0 2</table>
 		<table name="#pAtk">1 1.0659 1.0659 1.0659</table>
 		<table name="#rCrit">0 0 12.74 12.74</table>
 		<table name="#resist">0 0 0 5</table>
-		<table name="#absorbDam">0 0 0 3</table>		
-		<table name="#magicSuccRes">1 1 1.02 1.02</table>		
+		<table name="#absorbDam">0 0 0 3</table>
+		<table name="#magicSuccRes">1 1 1.02 1.02</table>
 		<set name="icon" val="icon.armor_t97_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="STR" val="#base"/>
-				<sub stat="CON" val="#base1"/>
-				<mul stat="pAtk" val="#pAtk"/>
-				<add stat="rCrit" val="#rCrit"/>
-				<add stat="maxHp" val="550"/>
-				<mul stat="magicSuccRes" val="#magicSuccRes"/>
-				<add stat="absorbDam" val="#absorbDam" /> 				
-				<add stat="fireRes" val="#resist"/>
-				<add stat="waterRes" val="#resist"/>
-				<add stat="windRes" val="#resist"/>
-				<add stat="earthRes" val="#resist"/>				
+				<add stat="STR" val="#base" />
+				<sub stat="CON" val="#base1" />
+				<mul stat="pAtk" val="#pAtk" />
+				<add stat="rCrit" val="#rCrit" />
+				<add stat="maxHp" val="550" />
+				<mul stat="magicSuccRes" val="#magicSuccRes" />
+				<add stat="absorbDam" val="#absorbDam" />
+				<add stat="fireRes" val="#resist" />
+				<add stat="waterRes" val="#resist" />
+				<add stat="windRes" val="#resist" />
+				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="#Trait" />
 				<param HOLD="#Trait" />
-				<param BLEED="#Trait" />				
+				<param BLEED="#Trait" />
 			</effect>
-			<effect name="EnableCloak"/>
+			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="13020" levels="4" name="Elegia Leather Armor Set">
-		<!-- Done by WilliamFS -->
-		<!-- 
-
-		2 Pieces: Increases Speed by 3%.
-		3 Pieces: Increases Speed by 3%, P. Atk by 6.59%.
-		4 Pieces: Increases Speed by 3%, P. Atk by 6.59%, Critical Rate + 17.05.
-		5 Pieces: Increases Speed by 3%, P. Atk by 6.59%, Critical Rate + 17.05, P. Atk Spd by 6%, Paralysis Resistance by 50%, Fire/Water/Wind/Earth Resistance + 5. Can wear cloak. STR+ 1, DEX+ 2, CON-2.
-
-		-->
+		<!-- 2 Pieces: Increases Speed by 3%. 3 Pieces: Increases Speed by 3%, P. Atk by 6.59%. 4 Pieces: Increases Speed by 3%, P. Atk by 6.59%, Critical Rate + 17.05. 5 Pieces: Increases Speed by 3%, P. Atk by 6.59%, Critical Rate + 17.05, P. Atk Spd by 6%, Paralysis Resistance by 50%, Fire/Water/Wind/Earth Resistance + 5. Can wear cloak. STR+ 1, DEX+ 2, CON-2. -->
 		<table name="#base">0 0 0 1</table>
 		<table name="#base1">0 0 0 2</table>
 		<table name="#Trait">0 0 0 50</table>
 		<table name="#pAtk">1 1.0659 1.0659 1.0659</table>
 		<table name="#pAtkSpd">1 1 1 1.06</table>
-		<table name="#resist">0 0 0 5</table>		
-		<table name="#rCrit">0 0 17.05 17.05</table>	
+		<table name="#resist">0 0 0 5</table>
+		<table name="#rCrit">0 0 17.05 17.05</table>
 		<set name="icon" val="icon.armor_t98_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="STR" val="#base"/>
-				<sub stat="CON" val="#base1"/>
-				<add stat="DEX" val="#base1"/>
-				<mul stat="runSpd" val="1.03"/>
-				<add stat="rCrit" val="#rCrit"/>
-				<mul stat="pAtk" val="#pAtk"/>
-				<mul stat="pAtkSpd" val="#pAtkSpd"/>
-				<add stat="fireRes" val="#resist"/>
-				<add stat="waterRes" val="#resist"/>
-				<add stat="windRes" val="#resist"/>
-				<add stat="earthRes" val="#resist"/>				
+				<add stat="STR" val="#base" />
+				<sub stat="CON" val="#base1" />
+				<add stat="DEX" val="#base1" />
+				<mul stat="runSpd" val="1.03" />
+				<add stat="rCrit" val="#rCrit" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<add stat="fireRes" val="#resist" />
+				<add stat="waterRes" val="#resist" />
+				<add stat="windRes" val="#resist" />
+				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="#Trait" />
-			</effect>			
+			</effect>
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="13021" levels="4" name="Elegia Robe Set">
-		<!-- Done by WilliamFS -->
-		<!-- 
-
-		2 Pieces: Increases Speed by 7.
-		3 Pieces: Increases Speed by 7, Magic by 10%, Max MP + 97.
-		4 Pieces: Increases Speed by 7, Magic by 10%, Max MP + 97, Casting Spd. by 15%, MP Recovery Bonus by 5%.
-		5 Pieces: Increases Speed by 7, Magic by 10%, Max MP + 97, Casting Spd. by 15%, MP Recovery Bonus by 5%., Stun Resistance by 50%, Fire/Water/Wind/Earth Resistance + 5. Decreases Magic Skill MP Consumption by 3% . Can wear cloak. WIT+ 2, INT+ 1, MEN-2.
-
-		-->
+		<!-- 2 Pieces: Increases Speed by 7. 3 Pieces: Increases Speed by 7, Magic by 10%, Max MP + 97. 4 Pieces: Increases Speed by 7, Magic by 10%, Max MP + 97, Casting Spd. by 15%, MP Recovery Bonus by 5%. 5 Pieces: Increases Speed by 7, Magic by 10%, Max MP + 97, Casting Spd. by 15%, MP Recovery Bonus by 5%., Stun Resistance by 50%, Fire/Water/Wind/Earth Resistance + 5. Decreases Magic Skill MP Consumption by 3% . Can wear cloak. WIT+ 2, INT+ 1, MEN-2. -->
 		<table name="#base">0 0 0 2</table>
-		<table name="#base1">0 0 0 1</table>	
+		<table name="#base1">0 0 0 1</table>
 		<table name="#Trait">0 0 0 50</table>
-		<table name="#MpConsumeRate">1 1 1 0.97</table>	
-		<table name="#maxMp">0 97 97 97</table>		
+		<table name="#MpConsumeRate">1 1 1 0.97</table>
+		<table name="#maxMp">0 97 97 97</table>
 		<table name="#resist">0 0 0 5</table>
 		<table name="#mAtk">1 1.1 1.1 1.1</table>
 		<table name="#mAtkSpd">1 1 1.15 1.15</table>
-		<table name="#regMp">1 1 1.0557 1.0557</table>		
+		<table name="#regMp">1 1 1.0557 1.0557</table>
 		<set name="icon" val="icon.armor_t99_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="INT" val="#base1"/>
-				<sub stat="MEN" val="#base"/>
-				<add stat="WIT" val="#base"/>
-				<add stat="maxMp" val="#maxMp"/>
-				<add stat="runSpd" val="7"/>
-				<mul stat="mAtk" val="#mAtk"/>
-				<mul stat="mAtkSpd" val="#mAtkSpd"/>
-				<mul stat="regMp" val="#regMp"/>
-				<mul stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
-				<add stat="fireRes" val="#resist"/>
-				<add stat="waterRes" val="#resist"/>
-				<add stat="windRes" val="#resist"/>
-				<add stat="earthRes" val="#resist"/>
+				<add stat="INT" val="#base1" />
+				<sub stat="MEN" val="#base" />
+				<add stat="WIT" val="#base" />
+				<add stat="maxMp" val="#maxMp" />
+				<add stat="runSpd" val="7" />
+				<mul stat="mAtk" val="#mAtk" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<mul stat="regMp" val="#regMp" />
+				<mul stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
+				<add stat="fireRes" val="#resist" />
+				<add stat="waterRes" val="#resist" />
+				<add stat="windRes" val="#resist" />
+				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="#Trait" />
@@ -690,9 +606,8 @@
 		</for>
 	</skill>
 	<skill id="13022" levels="1" name="Moirai Heavy Armor Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of decreasing all speeds of the attacker. -->	
-		<set name="icon" val="icon.armor_t100_u_i00"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -701,7 +616,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -709,12 +624,11 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-		</for>	
+		</for>
 	</skill>
 	<skill id="13023" levels="1" name="Moirai Light Armor Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of hurling the target at the opponent when attacked. -->	
-		<set name="icon" val="icon.armor_t101_u_i00"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -723,7 +637,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -734,9 +648,8 @@
 		</for>
 	</skill>
 	<skill id="13024" levels="1" name="Moirai Robe Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->		
-		<set name="icon" val="icon.armor_t102_u_i00"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -745,7 +658,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -756,9 +669,8 @@
 		</for>
 	</skill>
 	<skill id="13025" levels="1" name="Vorpal Heavy Armor Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of decreasing all speeds of the attacker. -->	
-		<set name="icon" val="icon.armor_t94_u_i03"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t94_u_i03" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -767,7 +679,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -775,12 +687,11 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-		</for>	
+		</for>
 	</skill>
 	<skill id="13026" levels="1" name="Vorpal Leather Armor Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of hurling the target at the opponent when attacked. -->	
-		<set name="icon" val="icon.armor_t95_u_i03"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t95_u_i03" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -789,7 +700,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -800,9 +711,8 @@
 		</for>
 	</skill>
 	<skill id="13027" levels="1" name="Vorpal Robe Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->		
-		<set name="icon" val="icon.armor_t96_u_i03"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t96_u_i03" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -811,7 +721,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -822,9 +732,8 @@
 		</for>
 	</skill>
 	<skill id="13028" levels="1" name="Elegia Heavy Armor Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of decreasing all speeds of the attacker. -->	
-		<set name="icon" val="icon.armor_t97_u_i00"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t97_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -833,7 +742,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -844,9 +753,8 @@
 		</for>
 	</skill>
 	<skill id="13029" levels="1" name="Elegia Leather Armor Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of hurling the target at the opponent when attacked. -->	
-		<set name="icon" val="icon.armor_t98_u_i00"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t98_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -855,7 +763,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -866,9 +774,8 @@
 		</for>
 	</skill>
 	<skill id="13030" levels="1" name="Elegia Robe Set - PvP">
-		<!-- Done by WilliamFS -->
-		<!-- Decreases damage incurred during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->		
-		<set name="icon" val="icon.armor_t99_u_i00"/>
+		<!-- Ertheia Skill -->
+		<set name="icon" val="icon.armor_t99_u_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -877,7 +784,7 @@
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>		
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
