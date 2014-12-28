@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package village_master.ProofOfCourage;
+package village_master.ProofOfJustice;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -31,26 +31,28 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
 
 /**
- * Proof Of Courage implementation.
+ * Proof Of Justice implementation.
  * @author St3eT
  */
-public final class ProofOfCourage extends AbstractNpcAI
+public final class ProofOfJustice extends AbstractNpcAI
 {
 	// Misc
 	private static final Map<Integer, List<ClassId>> CLASSLIST = new HashMap<>();
 	static
 	{
-		CLASSLIST.put(32146, Arrays.asList(ClassId.TROOPER, ClassId.WARDER));
-		CLASSLIST.put(32147, Arrays.asList(ClassId.ELVEN_KNIGHT, ClassId.ELVEN_SCOUT, ClassId.ELVEN_WIZARD, ClassId.ORACLE));
-		CLASSLIST.put(32150, Arrays.asList(ClassId.ORC_RAIDER, ClassId.ORC_MONK));
-		CLASSLIST.put(32153, Arrays.asList(ClassId.WARRIOR, ClassId.KNIGHT, ClassId.ROGUE, ClassId.WIZARD, ClassId.CLERIC));
-		CLASSLIST.put(32157, Arrays.asList(ClassId.SCAVENGER, ClassId.ARTISAN));
-		CLASSLIST.put(32160, Arrays.asList(ClassId.PALUS_KNIGHT, ClassId.ASSASSIN, ClassId.DARK_WIZARD, ClassId.SHILLIEN_ORACLE));
+		CLASSLIST.put(30505, Arrays.asList(ClassId.DESTROYER, ClassId.TYRANT, ClassId.OVERLORD, ClassId.WARCRYER));
+		CLASSLIST.put(30504, Arrays.asList(ClassId.BOUNTY_HUNTER, ClassId.WARSMITH));
+		CLASSLIST.put(30288, Arrays.asList(ClassId.GLADIATOR, ClassId.WARLORD, ClassId.PALADIN, ClassId.DARK_AVENGER, ClassId.TREASURE_HUNTER, ClassId.HAWKEYE));
+		CLASSLIST.put(30297, Arrays.asList(ClassId.SHILLIEN_KNIGHT, ClassId.BLADEDANCER, ClassId.ABYSS_WALKER, ClassId.PHANTOM_RANGER, ClassId.SPELLHOWLER, ClassId.PHANTOM_SUMMONER, ClassId.SHILLIEN_ELDER));
+		CLASSLIST.put(30158, Arrays.asList(ClassId.SPELLSINGER, ClassId.ELEMENTAL_SUMMONER, ClassId.ELDER));
+		CLASSLIST.put(30155, Arrays.asList(ClassId.TEMPLE_KNIGHT, ClassId.SWORDSINGER, ClassId.PLAINS_WALKER, ClassId.SILVER_RANGER));
+		CLASSLIST.put(30289, Arrays.asList(ClassId.SORCERER, ClassId.NECROMANCER, ClassId.WARLOCK, ClassId.BISHOP, ClassId.PROPHET));
+		CLASSLIST.put(32196, Arrays.asList(ClassId.BERSERKER, ClassId.MALE_SOULBREAKER, ClassId.FEMALE_SOULBREAKER, ClassId.ARBALESTER));
 	}
 	
-	private ProofOfCourage()
+	private ProofOfJustice()
 	{
-		super(ProofOfCourage.class.getSimpleName(), "village_master");
+		super(ProofOfJustice.class.getSimpleName(), "village_master");
 		addStartNpc(CLASSLIST.keySet());
 		addTalkId(CLASSLIST.keySet());
 	}
@@ -58,7 +60,7 @@ public final class ProofOfCourage extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		if (talker.getClassId().level() == 0)
+		if (talker.getClassId().level() < 2)
 		{
 			return npc.getId() + "-noclass.html";
 		}
@@ -66,12 +68,12 @@ public final class ProofOfCourage extends AbstractNpcAI
 		{
 			return npc.getId() + "-no.html";
 		}
-		MultisellData.getInstance().separateAndSend(717, talker, npc, false);
+		MultisellData.getInstance().separateAndSend(718, talker, npc, false);
 		return super.onTalk(npc, talker);
 	}
 	
 	public static void main(String[] args)
 	{
-		new ProofOfCourage();
+		new ProofOfJustice();
 	}
 }
