@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.L2Item;
+import com.l2jserver.gameserver.network.serverpackets.ExAdenaInvenCount;
 
 /**
  * This class handles following admin commands: - itemcreate = show menu - create_item <id> [num] = creates num items with respective id, if num is not specified, assumes 1.
@@ -227,6 +228,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			target.sendMessage("Admin spawned " + num + " " + template.getName() + " in your inventory.");
 		}
 		activeChar.sendMessage("You have spawned " + num + " " + template.getName() + "(" + id + ") in " + target.getName() + " inventory.");
+		target.sendPacket(new ExAdenaInvenCount(target));
 	}
 	
 	private int getCoinId(String name)
