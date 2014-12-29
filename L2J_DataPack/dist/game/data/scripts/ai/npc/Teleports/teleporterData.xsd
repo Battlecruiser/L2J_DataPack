@@ -3,7 +3,7 @@
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="npc">
+				<xs:element name="npc" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="location" maxOccurs="unbounded" minOccurs="0">
