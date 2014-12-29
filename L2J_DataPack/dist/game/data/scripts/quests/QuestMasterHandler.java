@@ -298,6 +298,7 @@ import quests.Q10504_JewelOfAntharas.Q10504_JewelOfAntharas;
 import quests.Q10505_JewelOfValakas.Q10505_JewelOfValakas;
 import quests.Q10732_AForeignLand.Q10732_AForeignLand;
 import quests.Q10733_TheTestForSurvival.Q10733_TheTestForSurvival;
+import quests.Q10734_DoOrDie.Q10734_DoOrDie;
 
 /**
  * @author NosBit
@@ -584,7 +585,8 @@ public class QuestMasterHandler
 		Q10504_JewelOfAntharas.class,
 		Q10505_JewelOfValakas.class,
 		Q10732_AForeignLand.class,
-		Q10733_TheTestForSurvival.class
+		Q10733_TheTestForSurvival.class,
+		Q10734_DoOrDie.class
 	};
 	
 	public static void main(String[] args)
