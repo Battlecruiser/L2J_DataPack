@@ -93,12 +93,16 @@ public class Q10733_TheTestForSurvival extends Quest
 				htmltext = event;
 				break;
 			}
-			case "34005-05.htm":
+			case "33942-02.htm":
+			case "33943-02.htm":
 			{
-				giveAdena(player, 5000, true);
-				addExpAndSp(player, 295, 2);
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isCond(2) || qs.isCond(3))
+				{
+					giveAdena(player, 5000, true);
+					addExpAndSp(player, 295, 2);
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}
