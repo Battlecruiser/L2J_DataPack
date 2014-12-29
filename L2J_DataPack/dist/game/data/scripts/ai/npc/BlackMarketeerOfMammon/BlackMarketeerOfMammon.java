@@ -25,6 +25,7 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * Black Marketeer of Mammon AI.
@@ -46,35 +47,42 @@ public final class BlackMarketeerOfMammon extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("32020-01.html"))
+		if (event.equals("31092-01.html"))
 		{
 			return event;
 		}
 		else if (event.startsWith("exchange"))
 		{
 			final StringTokenizer st = new StringTokenizer(event, " ");
+			event = st.nextToken();
 			
 			if (!st.hasMoreElements())
 			{
-				return "32020-02.html";
+				return "31092-02.html";
 			}
 			
-			final long count = Integer.parseInt(st.nextToken());
+			final String value = st.nextToken();
+			if (!Util.isDigit(value))
+			{
+				return "31092-02.html";
+			}
+			
+			final long count = Integer.parseInt(value);
 			final long AAcount = player.getAncientAdena();
 			
 			if (count < 1)
 			{
-				return "32020-02.html";
+				return "31092-02.html";
 			}
 			
 			if (count > AAcount)
 			{
-				return "32020-03.html";
+				return "31092-03.html";
 				
 			}
 			takeItems(player, Inventory.ANCIENT_ADENA_ID, count);
 			giveAdena(player, count, false);
-			return "32020-04.html";
+			return "31092-04.html";
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
