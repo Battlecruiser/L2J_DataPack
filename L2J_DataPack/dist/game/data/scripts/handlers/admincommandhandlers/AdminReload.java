@@ -37,6 +37,7 @@ import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
+import com.l2jserver.gameserver.datatables.TeleportersData;
 import com.l2jserver.gameserver.datatables.TransformData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
@@ -166,6 +167,7 @@ public class AdminReload implements IAdminCommandHandler
 				case "teleport":
 				{
 					TeleportLocationTable.getInstance().reloadAll();
+					TeleportersData.getInstance().load();
 					AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Teleports.");
 					break;
 				}
