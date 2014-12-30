@@ -236,67 +236,164 @@
 		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="9227" levels="1" name="Mentor's Horn Melody">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
+		<set name="abnormalTime" val="-1" />
+		<set name="canBeDispeled" val="false" />
 		<set name="icon" val="icon.skill11517" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.17" />
+				<mul stat="pDef" val="1.15" />
+				<mul stat="mAtk" val="1.79" />
+				<mul stat="mDef" val="1.30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9228" levels="1" name="Mentor's Drum Melody">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Damage + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. When hit with a critical attack, received damage - 30% and Speed - 15%. Increases Critical Damage during a standard attack for a member equipped with a melee weapon who receives more than a certain amount of damage. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
+		<set name="abnormalTime" val="-1" />
+		<set name="canBeDispeled" val="false" />
 		<set name="icon" val="icon.skill11522" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="80" />
+				<param skillId="6059" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="maxMp" val="1.2" />
+				<mul stat="regHp" val="1.2" />
+				<add stat="mCritRate" val="20" />
+				<mul stat="rCrit" val="1.2" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pDef" val="1.2" />
+				<mul stat="pAtkSpd" val="1.2" />
+				<mul stat="mAtk" val="1.2" />
+				<mul stat="mDef" val="1.2" />
+				<mul stat="mAtkSpd" val="1.2" />
+				<sub stat="debuffVuln" val="10" />
+				<mul stat="runSpd" val="0.85" />
+				<!-- TODO: increases P. Def. upon evading a critical attack ??? -->
+			</effect>
+		</for>
 	</skill>
 	<skill id="9229" levels="1" name="Mentor's Lute Melody">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. Atk. Spd. + 34%, Casting Spd. + 31%, and has a chance of applying 9% Vampiric Rage effect. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
+		<set name="abnormalTime" val="-1" />
+		<set name="canBeDispeled" val="false" />
 		<set name="icon" val="icon.skill11518" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="Buff">
+				<add stat="absorbDam" val="9" />
+				<mul stat="pAtkSpd" val="1.34" />
+				<mul stat="mAtkSpd" val="1.31" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9230" levels="1" name="Mentor's Pipe Organ Melody">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. The buff lasts 5 minutes if your mentor logs out. -->
+		<set name="abnormalTime" val="-1" />
+		<set name="canBeDispeled" val="false" />
 		<set name="icon" val="icon.skill11519" />
-		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
+		<set name="magicLvl" val="99" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="1.37" />
+				<mul stat="maxMp" val="1.37" />
+				<mul stat="maxCp" val="1.37" />
+				<mul stat="regHp" val="1.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9231" levels="1" name="Mentor's Guitar Melody">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
+		<set name="abnormalTime" val="-1" />
+		<set name="canBeDispeled" val="false" />
 		<set name="icon" val="icon.skill11520" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="rCrit" val="1.32" />
+				<mul stat="cAtk" val="1.35" />
+				<add stat="mCritRate" val="20" />
+				<mul stat="MagicalMpConsumeRate" val="0.9" />
+				<mul stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul stat="DanceMpConsumeRate" val="0.8" />
+				<mul stat="MagicalMpConsumeRate" val="0.8">
+					<player class_id_restriction="144" />
+				</mul>
+			</effect>
+		</for>
 	</skill>
 	<skill id="9232" levels="1" name="Mentor's Harp Melody">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. P. Accuracy + 5, P. Evasion/M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
+		<set name="abnormalTime" val="-1" />
+		<set name="canBeDispeled" val="false" />
 		<set name="icon" val="icon.skill11521" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="Buff">
+				<add stat="runSpd" val="34" />
+				<add stat="rEvas" val="5" />
+				<add stat="mEvas" val="5" />
+				<add stat="accCombat" val="5" />
+				<mul stat="defCritRate" val="0.7" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9233" levels="1" name="Mentor's Guidance">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. Obtained XP/SP + 50%. Buff remains 5 min. after mentor logs out. -->
+		<set name="abnormalTime" val="-1" />
+		<set name="canBeDispeled" val="false" />
 		<set name="icon" val="br_cashtex.skill.br_cash_rune_of_exp_buff_1" />
+		<set name="isMagic" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="3" />
-		<set name="isDebuff" val="false" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="bonusExp" val="1.50" />
+				<mul stat="bonusSp" val="1.50" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9234" levels="1" name="Scroll: Enchant Hair Accessory">
 		<!-- AUTO GENERATED SKILL -->
@@ -480,10 +577,18 @@
 		<!-- Mentee's appreciation. Obtained XP/SP + 5%. Applied only when mentee is logged in. -->
 		<table name="#isMagics"> 3 0 0 </table>
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
+		<set name="abnormalTime" val="-1" />
+		<set name="canBeDispeled" val="false" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
+		<set name="isMentoring" val="true" />
 		<set name="isMagic" val="#isMagics" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<mul stat="bonusExp" val="1.05" />
+				<mul stat="bonusSp" val="1.05" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9257" levels="1" name="Mentor's Scroll: Enchant Weapon (D-grade)">
 		<!-- AUTO GENERATED SKILL -->
