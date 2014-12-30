@@ -24,6 +24,7 @@ import java.util.concurrent.ScheduledFuture;
 
 import javolution.util.FastList;
 
+import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
@@ -41,7 +42,7 @@ import com.l2jserver.util.Rnd;
  * Tar Beetle zone spawn
  * @author malyelfik
  */
-public class TarBeetleSpawn extends DocumentParser
+public class TarBeetleSpawn implements DocumentParser
 {
 	private final List<SpawnZone> zones = new ArrayList<>();
 	private ScheduledFuture<?> spawnTask;
@@ -64,10 +65,10 @@ public class TarBeetleSpawn extends DocumentParser
 	}
 	
 	@Override
-	protected void parseDocument()
+	public void parseDocument(Document doc)
 	{
 		int i = 0;
-		for (Node d = getCurrentDocument().getFirstChild(); d != null; d = d.getNextSibling())
+		for (Node d = doc.getFirstChild(); d != null; d = d.getNextSibling())
 		{
 			if (d.getNodeName().equals("list"))
 			{

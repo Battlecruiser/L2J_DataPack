@@ -24,6 +24,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 
+import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
@@ -33,7 +34,7 @@ import com.l2jserver.gameserver.model.StatsSet;
 /**
  * @author UnAfraid
  */
-public class NpcBuffersData extends DocumentParser
+public class NpcBuffersData implements DocumentParser
 {
 	private final Map<Integer, NpcBufferData> _npcBuffers = new HashMap<>();
 	
@@ -46,16 +47,16 @@ public class NpcBuffersData extends DocumentParser
 	public void load()
 	{
 		parseDatapackFile("data/scripts/ai/npc/NpcBuffers/NpcBuffersData.xml");
-		_log.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _npcBuffers.size() + " buffers data.");
+		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _npcBuffers.size() + " buffers data.");
 	}
 	
 	@Override
-	protected void parseDocument()
+	public void parseDocument(Document doc)
 	{
 		StatsSet set;
 		Node attr;
 		NamedNodeMap attrs;
-		for (Node n = getCurrentDocument().getFirstChild(); n != null; n = n.getNextSibling())
+		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{

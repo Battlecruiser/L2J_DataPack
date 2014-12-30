@@ -21,6 +21,7 @@ package hellbound;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
@@ -30,7 +31,7 @@ import com.l2jserver.gameserver.engines.DocumentParser;
  * Point data parser.
  * @author Zoey76
  */
-public final class HellboundPointData extends DocumentParser
+public final class HellboundPointData implements DocumentParser
 {
 	private final Map<Integer, int[]> _pointsInfo = new HashMap<>();
 	
@@ -44,13 +45,13 @@ public final class HellboundPointData extends DocumentParser
 	{
 		_pointsInfo.clear();
 		parseDatapackFile("data/scripts/hellbound/hellboundTrustPoints.xml");
-		_log.info(getClass().getSimpleName() + ": Loaded " + _pointsInfo.size() + " trust point reward data.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _pointsInfo.size() + " trust point reward data.");
 	}
 	
 	@Override
-	protected void parseDocument()
+	public void parseDocument(Document doc)
 	{
-		for (Node n = getCurrentDocument().getFirstChild(); n != null; n = n.getNextSibling())
+		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equals(n.getNodeName()))
 			{
@@ -74,36 +75,35 @@ public final class HellboundPointData extends DocumentParser
 			Node att = attrs.getNamedItem("id");
 			if (att == null)
 			{
-				_log.severe(getClass().getSimpleName() + ": Missing NPC ID, skipping record!");
+				LOGGER.severe(getClass().getSimpleName() + ": Missing NPC ID, skipping record!");
 				return;
 			}
 			
-			int npcId = Integer.parseInt(att.getNodeValue());
-			
+			final int npcId = Integer.parseInt(att.getNodeValue());
 			att = attrs.getNamedItem("points");
 			if (att == null)
 			{
-				_log.severe("[Hellbound Trust Points Info] Missing reward point info for NPC ID " + npcId + ", skipping record");
+				LOGGER.severe("[Hellbound Trust Points Info] Missing reward point info for NPC ID " + npcId + ", skipping record");
 				return;
 			}
-			int points = Integer.parseInt(att.getNodeValue());
 			
+			final int points = Integer.parseInt(att.getNodeValue());
 			att = attrs.getNamedItem("minHellboundLvl");
 			if (att == null)
 			{
-				_log.severe("[Hellbound Trust Points Info] Missing minHellboundLvl info for NPC ID " + npcId + ", skipping record");
+				LOGGER.severe("[Hellbound Trust Points Info] Missing minHellboundLvl info for NPC ID " + npcId + ", skipping record");
 				return;
 			}
-			int minHbLvl = Integer.parseInt(att.getNodeValue());
 			
+			final int minHbLvl = Integer.parseInt(att.getNodeValue());
 			att = attrs.getNamedItem("maxHellboundLvl");
 			if (att == null)
 			{
-				_log.severe("[Hellbound Trust Points Info] Missing maxHellboundLvl info for NPC ID " + npcId + ", skipping record");
+				LOGGER.severe("[Hellbound Trust Points Info] Missing maxHellboundLvl info for NPC ID " + npcId + ", skipping record");
 				return;
 			}
-			int maxHbLvl = Integer.parseInt(att.getNodeValue());
 			
+			final int maxHbLvl = Integer.parseInt(att.getNodeValue());
 			att = attrs.getNamedItem("lowestTrustLimit");
 			final int lowestTrustLimit = (att == null) ? 0 : Integer.parseInt(att.getNodeValue());
 			
