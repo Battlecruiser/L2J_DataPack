@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * Copyright (C) 2004-2014 L2J DataPack
+ * 
+ * This file is part of L2J DataPack.
+ * 
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.npc.MentorGuide;
 
@@ -19,6 +23,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.logging.Level;
 
+import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import ai.npc.AbstractNpcAI;
@@ -54,9 +59,10 @@ import com.l2jserver.gameserver.network.serverpackets.mentoring.ExMentorList;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Mentor Guide.
  * @author Gnacik, UnAfraid
  */
-public class MentorGuide extends AbstractNpcAI
+public class MentorGuide extends AbstractNpcAI implements DocumentParser
 {
 	// NPCs
 	private static final int MENTOR_GUIDE = 33587;
@@ -97,38 +103,31 @@ public class MentorGuide extends AbstractNpcAI
 	
 	static final Map<Integer, Integer> MENTEE_COINS = new HashMap<>();
 	
-	// TODO: Update me when DocumentParser becomes an interface.
-	static
+	@Override
+	public void load()
 	{
-		new DocumentParser()
+		parseDatapackFile("config/MentorCoins.xml");
+		LOGGER.log(Level.INFO, MentorGuide.class.getSimpleName() + ": Loaded: " + MENTEE_COINS.size() + " mentee coins");
+	}
+	
+	@Override
+	public void parseDocument(Document doc)
+	{
+		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
-			@Override
-			public void load()
+			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{
-				parseDatapackFile("config/MentorCoins.xml");
-				_log.log(Level.INFO, MentorGuide.class.getSimpleName() + ": Loaded: " + MENTEE_COINS.size() + " mentee coins");
-			}
-			
-			@Override
-			protected void parseDocument()
-			{
-				for (Node n = getCurrentDocument().getFirstChild(); n != null; n = n.getNextSibling())
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
-					if ("list".equalsIgnoreCase(n.getNodeName()))
+					if ("mentee".equalsIgnoreCase(d.getNodeName()))
 					{
-						for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-						{
-							if ("mentee".equalsIgnoreCase(d.getNodeName()))
-							{
-								final int level = parseInteger(d.getAttributes(), "level");
-								final int coins = parseInteger(d.getAttributes(), "coins");
-								MENTEE_COINS.put(level, coins);
-							}
-						}
+						final int level = parseInteger(d.getAttributes(), "level");
+						final int coins = parseInteger(d.getAttributes(), "coins");
+						MENTEE_COINS.put(level, coins);
 					}
 				}
 			}
-		}.load();
+		}
 	}
 	
 	private MentorGuide()
@@ -199,7 +198,7 @@ public class MentorGuide extends AbstractNpcAI
 		// Add the mentee skill
 		event.getMentee().addSkill(MENTEE_MENTOR_SUMMON.getSkill(), true);
 		
-		// Send mail with the headpone
+		// Send mail with the headphone
 		sendMail(event.getMentee(), MENTEE_ADDED_TITLE, MENTEE_ADDED_BODY, MENTEE_HEADPHONE, 1);
 	}
 	
