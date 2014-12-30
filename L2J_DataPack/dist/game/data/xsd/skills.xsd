@@ -85,6 +85,7 @@
 				<xs:attribute type="xs:string" name="class_id_restriction" use="optional" />
 				<xs:attribute type="xs:short" name="siegeZone" use="optional" />
 				<xs:attribute type="xs:byte" name="siegeSide" use="optional" />
+				<xs:attribute type="xs:string" name="incombat" use="optional" />
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -255,6 +256,7 @@
 			<xs:enumeration value="rShld" />
 			<xs:enumeration value="rEvas" />
 			<xs:enumeration value="mEvas" />
+			<xs:enumeration value="accMagic" />
 			<xs:enumeration value="cAtk" />
 			<xs:enumeration value="runSpd" />
 			<xs:enumeration value="reflectDam" />

@@ -23,10 +23,15 @@
 													<xs:simpleType>
 														<xs:restriction base="xs:positiveInteger">
 															<xs:minInclusive value="1" />
-															<xs:maxInclusive value="85" />
+															<xs:maxInclusive value="99" />
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="remove" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 											</xs:complexType>
 										</xs:element>
 										<xs:element name="socialClass" minOccurs="0" maxOccurs="1">
@@ -66,6 +71,7 @@
 													<xs:enumeration value="ORC" />
 													<xs:enumeration value="DWARF" />
 													<xs:enumeration value="KAMAEL" />
+													<xs:enumeration value="ERTHEIA" />
 												</xs:restriction>
 											</xs:simpleType>
 										</xs:element>
@@ -87,7 +93,7 @@
 										<xs:simpleType>
 											<xs:restriction base="xs:positiveInteger">
 												<xs:minInclusive value="1" />
-												<xs:maxInclusive value="85" />
+												<xs:maxInclusive value="99" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
@@ -105,7 +111,7 @@
 							<xs:simpleType>
 								<xs:restriction base="xs:nonNegativeInteger">
 									<xs:minInclusive value="0" />
-									<xs:maxInclusive value="136" />
+									<xs:maxInclusive value="189" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
@@ -113,13 +119,15 @@
 							<xs:simpleType>
 								<xs:restriction base="xs:nonNegativeInteger">
 									<xs:minInclusive value="0" />
-									<xs:maxInclusive value="136" />
+									<xs:maxInclusive value="189" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
 						<xs:attribute name="type" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
+									<xs:enumeration value="abilitySkillTree" />
+									<xs:enumeration value="alchemySkillTree" />
 									<xs:enumeration value="classSkillTree" />
 									<xs:enumeration value="collectSkillTree" />
 									<xs:enumeration value="fishingSkillTree" />
@@ -128,11 +136,34 @@
 									<xs:enumeration value="heroSkillTree" />
 									<xs:enumeration value="nobleSkillTree" />
 									<xs:enumeration value="pledgeSkillTree" />
+									<xs:enumeration value="raceSkillTree" />
+									<xs:enumeration value="revelationSkillTree" />
 									<xs:enumeration value="subClassSkillTree" />
 									<xs:enumeration value="subClassChangeSkillTree" />
 									<xs:enumeration value="subPledgeSkillTree" />
 									<xs:enumeration value="transferSkillTree" />
 									<xs:enumeration value="transformSkillTree" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="race" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="HUMAN" />
+									<xs:enumeration value="ELF" />
+									<xs:enumeration value="DARK_ELF" />
+									<xs:enumeration value="ORC" />
+									<xs:enumeration value="DWARF" />
+									<xs:enumeration value="KAMAEL" />
+									<xs:enumeration value="ERTHEIA" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="subType" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="BASECLASS" />
+									<xs:enumeration value="DUALCLASS" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>

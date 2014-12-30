@@ -25,6 +25,7 @@ import javax.script.ScriptException;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
+import com.l2jserver.gameserver.datatables.AbilityPointsData;
 import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.datatables.BuyListData;
 import com.l2jserver.gameserver.datatables.CrestTable;
@@ -254,6 +255,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					ItemCrystalizationData.getInstance().load();
 					AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item crystalization data.");
+					break;
+				}
+				case "ability":
+				{
+					AbilityPointsData.getInstance().load();
+					AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded ability points data.");
 					break;
 				}
 				default:
