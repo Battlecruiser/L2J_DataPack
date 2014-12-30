@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.individual;
+package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
@@ -26,18 +26,22 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Eeny AI.
+ * Aden Reconstructor Manager AI.
  * @author St3eT
  */
-public final class Eeny extends AbstractNpcAI
+public final class AdenReconstructorManager extends AbstractNpcAI
 {
 	// NPCs
-	private static final int EENY = 33581;
-	
-	private Eeny()
+	private static final int[] NPCS =
 	{
-		super(Eeny.class.getSimpleName(), "ai/individual");
-		addSpawnId(EENY);
+		33584, // Moe
+		33581, // Eeny
+	};
+	
+	private AdenReconstructorManager()
+	{
+		super(AdenReconstructorManager.class.getSimpleName(), "ai/individual");
+		addSpawnId(NPCS);
 	}
 	
 	@Override
@@ -78,6 +82,6 @@ public final class Eeny extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Eeny();
+		new AdenReconstructorManager();
 	}
 }
