@@ -1239,34 +1239,22 @@ public class AdminEditChar implements IAdminCommandHandler
 	 */
 	private void findCharactersPerAccount(L2PcInstance activeChar, String characterName) throws IllegalArgumentException
 	{
-		if (characterName.matches(Config.CNAME_TEMPLATE))
+		L2PcInstance player = L2World.getInstance().getPlayer(characterName);
+		if (player == null)
 		{
-			String account = null;
-			Map<Integer, String> chars;
-			L2PcInstance player = L2World.getInstance().getPlayer(characterName);
-			if (player == null)
-			{
-				throw new IllegalArgumentException("Player doesn't exist");
-			}
-			chars = player.getAccountChars();
-			account = player.getAccountName();
-			final StringBuilder replyMSG = new StringBuilder(chars.size() * 20);
-			final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-			adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/accountinfo.htm");
-			for (String charname : chars.values())
-			{
-				StringUtil.append(replyMSG, charname, "<br1>");
-			}
-			
-			adminReply.replace("%characters%", replyMSG.toString());
-			adminReply.replace("%account%", account);
-			adminReply.replace("%player%", characterName);
-			activeChar.sendPacket(adminReply);
+			throw new IllegalArgumentException("Player doesn't exist");
 		}
-		else
-		{
-			throw new IllegalArgumentException("Malformed character name");
-		}
+		
+		final Map<Integer, String> chars = player.getAccountChars();
+		final StringBuilder replyMSG = new StringBuilder(chars.size() * 20);
+		chars.values().stream().forEachOrdered(name -> StringUtil.append(replyMSG, name, "<br1>"));
+		
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
+		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/accountinfo.htm");
+		adminReply.replace("%account%", player.getAccountName());
+		adminReply.replace("%player%", characterName);
+		adminReply.replace("%characters%", replyMSG.toString());
+		activeChar.sendPacket(adminReply);
 	}
 	
 	/**
