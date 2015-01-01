@@ -711,13 +711,38 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="14571" levels="5" name="Shilen's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Ertheia skill -->
 		<!-- Is killed and poisoned by Shilen's Breath. Increases Dark Attack Resistance by 5 and HP recovery by 5%. If killed while poisoned, the poison stage increases. -->
+		<!-- TODO: confirm me! -->
+		<table name="#val1"> 1 1 0.73 0.66 0.6 </table>
+		<table name="#val2"> 0 0 13 17 21 </table>
+		<table name="#abnormalTime"> 600 600 300 300 300 </table>
+		<table name="#darkRes">5 5 0 0 0</table>
+		<table name="#regHp">1.05 1.1 0 0 0</table>
+		<table name="#bonusExp">1 1.01 1 1 1</table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="icon" val="icon.skill5076_c" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="canBeDispeled" val="false" />
+		<set name="stayOnSubclassChange" val="true" />
+		<for>
+			<effect name="Debuff">
+				<add stat="darkRes" val="#darkRes"/>
+				<mul stat="regHp" val="#regHp"/>
+				<mul stat="bonusExp" val="#bonusExp"/>
+				<mul stat="pAtk" val="#val1" />
+				<mul stat="mAtk" val="#val1" />
+				<mul stat="pAtkSpd" val="#val1" />
+				<mul stat="mAtkSpd" val="#val1" />
+				<sub stat="rEvas" val="#val2" />
+				<sub stat="accCombat" val="#val2" />
+			</effect>
+			<effect name="ShilensBreath" />
+		</for>
 	</skill>
 	<skill id="14572" levels="1" name="Rose Reduction">
 		<!-- AUTO GENERATED SKILL -->

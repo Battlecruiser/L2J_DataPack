@@ -152,6 +152,7 @@ public final class EffectMasterHandler
 		Root.class,
 		ServitorShare.class,
 		SetSkill.class,
+		ShilensBreath.class,
 		SilentMove.class,
 		SkillTurning.class,
 		Sleep.class,
