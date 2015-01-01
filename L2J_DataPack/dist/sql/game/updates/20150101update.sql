@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00340_SubjugationOfLizardmen' WHERE name='340_SubjugationOfLizardmen'; 
