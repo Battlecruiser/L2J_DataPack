@@ -13,5 +13,8 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `isLocked` enum('true','false') DEFAULT 'false' NOT NULL,
   `sendBySystem` tinyint(1) NOT NULL DEFAULT 0,
   `isReturned` enum('true','false') DEFAULT 'false' NOT NULL,
+  `itemId` INT(11) NOT NULL DEFAULT '0',
+  `enchantLvl` INT(3) NOT NULL DEFAULT '0',
+  `elementals` VARCHAR(25),
   PRIMARY KEY (`messageId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -31,6 +31,7 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.engines.DocumentParser;
 import com.l2jserver.gameserver.enums.CategoryType;
+import com.l2jserver.gameserver.enums.MailType;
 import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.instancemanager.MentorManager;
 import com.l2jserver.gameserver.model.L2Mentee;
@@ -38,7 +39,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassLevel;
 import com.l2jserver.gameserver.model.entity.Message;
-import com.l2jserver.gameserver.model.entity.Message.SendBySystem;
 import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.ListenerRegisterType;
 import com.l2jserver.gameserver.model.events.annotations.RegisterEvent;
@@ -451,9 +451,7 @@ public class MentorGuide extends AbstractNpcAI implements DocumentParser
 	
 	private void sendMail(L2PcInstance player, String title, String body, int itemId, long amount)
 	{
-		// TODO: Update me when mail system is updated
-		// final Message msg = new Message(MENTOR_GUIDE, player.getObjectId(), title, body, MailType.MENTOR_NPC);
-		final Message msg = new Message(player.getObjectId(), title, body, SendBySystem.ALEGRIA);
+		final Message msg = new Message(MENTOR_GUIDE, player.getObjectId(), title, body, MailType.MENTOR_NPC);
 		msg.createAttachments().addItem(getName(), itemId, amount, null, player);
 		
 		MailManager.getInstance().sendMessage(msg);
