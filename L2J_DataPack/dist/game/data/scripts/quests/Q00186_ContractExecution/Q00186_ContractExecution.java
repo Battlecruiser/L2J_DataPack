@@ -18,12 +18,16 @@
  */
 package quests.Q00186_ContractExecution;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
+
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -33,8 +37,8 @@ import com.l2jserver.gameserver.util.Util;
 public final class Q00186_ContractExecution extends Quest
 {
 	// NPCs
-	private static final int RESEARCHER_LORAIN = 30673;
 	private static final int MAESTRO_NIKOLA = 30621;
+	private static final int RESEARCHER_LORAIN = 30673;
 	private static final int BLUEPRINT_SELLER_LUKA = 31437;
 	// Items
 	private static final int LORAINES_CERTIFICATE = 10362;
@@ -44,64 +48,71 @@ public final class Q00186_ContractExecution extends Quest
 	private static final int MIN_LEVEL = 41;
 	private static final int MAX_LEVEL_FOR_EXP_SP = 47;
 	// Monsters
-	private static final int[] MONSTERS = new int[]
+	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
+	static
 	{
-		20577, // Leto Lizardman
-		20578, // Leto Lizardman Archer
-		20579, // Leto Lizardman Soldier
-		20580, // Leto Lizardman Warrior
-		20581, // Leto Lizardman Shaman
-		20582, // Leto Lizardman Overlord
-	};
+		MONSTERS.put(20577, 40); // Leto Lizardman
+		MONSTERS.put(20578, 44); // Leto Lizardman Archer
+		MONSTERS.put(20579, 46); // Leto Lizardman Soldier
+		MONSTERS.put(20580, 88); // Leto Lizardman Warrior
+		MONSTERS.put(20581, 50); // Leto Lizardman Shaman
+		MONSTERS.put(20582, 100); // Leto Lizardman Overlord
+	}
 	
 	public Q00186_ContractExecution()
 	{
 		super(186, Q00186_ContractExecution.class.getSimpleName(), "Contract Execution");
 		addStartNpc(RESEARCHER_LORAIN);
 		addTalkId(RESEARCHER_LORAIN, BLUEPRINT_SELLER_LUKA, MAESTRO_NIKOLA);
-		addKillId(MONSTERS);
+		addKillId(MONSTERS.keySet());
 		registerQuestItems(METALLOGRAPH_RESEARCH_REPORT, LETO_LIZARDMAN_ACCESSORY);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
+		
 		String htmltext = null;
 		switch (event)
 		{
-			case "30621-02.html":
-			{
-				htmltext = event;
-				break;
-			}
 			case "30673-03.htm":
 			{
-				if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(LORAINES_CERTIFICATE))
+				if ((player.getLevel() >= MIN_LEVEL) && hasQuestItems(player, LORAINES_CERTIFICATE))
 				{
-					st.startQuest();
-					st.giveItems(METALLOGRAPH_RESEARCH_REPORT, 1);
-					st.takeItems(LORAINES_CERTIFICATE, -1);
+					qs.startQuest();
+					qs.setMemoState(1);
+					giveItems(player, METALLOGRAPH_RESEARCH_REPORT, 1);
+					takeItems(player, LORAINES_CERTIFICATE, -1);
+					htmltext = event;
+				}
+				break;
+			}
+			case "30621-02.html":
+			{
+				if (qs.isMemoState(1))
+				{
 					htmltext = event;
 				}
 				break;
 			}
 			case "30621-03.html":
 			{
-				if (st.isCond(1))
+				if (qs.isMemoState(1))
 				{
-					st.setCond(2, true);
+					qs.setMemoState(2);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "31437-03.html":
 			{
-				if (st.isCond(2) && st.hasQuestItems(LETO_LIZARDMAN_ACCESSORY))
+				if (qs.isMemoState(2) && hasQuestItems(player, LETO_LIZARDMAN_ACCESSORY))
 				{
 					htmltext = event;
 				}
@@ -109,23 +120,23 @@ public final class Q00186_ContractExecution extends Quest
 			}
 			case "31437-04.html":
 			{
-				if (st.isCond(2) && st.hasQuestItems(LETO_LIZARDMAN_ACCESSORY))
+				if (qs.isMemoState(2) && hasQuestItems(player, LETO_LIZARDMAN_ACCESSORY))
 				{
-					st.setCond(3);
+					qs.setMemoState(3);
 					htmltext = event;
 				}
 				break;
 			}
 			case "31437-06.html":
 			{
-				if (st.isCond(3))
+				if (qs.isMemoState(3))
 				{
-					st.giveAdena(105083, true);
+					giveAdena(player, 105083, true);
 					if (player.getLevel() < MAX_LEVEL_FOR_EXP_SP)
 					{
-						st.addExpAndSp(285935, 18711);
+						addExpAndSp(player, 285935, 18711);
 					}
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -137,13 +148,13 @@ public final class Q00186_ContractExecution extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(2) && Util.checkIfInRange(1500, npc, killer, false))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isMemoState(2) && Util.checkIfInRange(1500, npc, killer, false) && (getRandom(100) < MONSTERS.get(npc.getId())))
 		{
-			if (!st.hasQuestItems(LETO_LIZARDMAN_ACCESSORY))
+			if (!hasQuestItems(killer, LETO_LIZARDMAN_ACCESSORY))
 			{
-				st.giveItems(LETO_LIZARDMAN_ACCESSORY, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				giveItems(killer, LETO_LIZARDMAN_ACCESSORY, 1);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -152,68 +163,70 @@ public final class Q00186_ContractExecution extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		final QuestState qs = getQuestState(player, true);
+		final int memoState = qs.getMemoState();
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		if (qs.isCreated())
 		{
-			return htmltext;
+			if (npc.getId() == RESEARCHER_LORAIN)
+			{
+				final QuestState q184 = player.getQuestState(Q00184_ArtOfPersuasion.class.getSimpleName());
+				if ((q184 != null) && q184.isCompleted() && hasQuestItems(player, LORAINES_CERTIFICATE))
+				{
+					htmltext = player.getLevel() >= MIN_LEVEL ? "30673-01.htm" : "30673-02.htm";
+				}
+			}
 		}
-		
-		switch (npc.getId())
+		else if (qs.isStarted())
 		{
-			case RESEARCHER_LORAIN:
+			switch (npc.getId())
 			{
-				switch (st.getState())
+				case RESEARCHER_LORAIN:
 				{
-					case State.CREATED:
+					if (memoState >= 1)
 					{
-						final QuestState qs = player.getQuestState("184_Nikolas_Cooperation_Contract");
-						if ((qs != null) && qs.isCompleted() && st.hasQuestItems(LORAINES_CERTIFICATE))
-						{
-							htmltext = player.getLevel() >= MIN_LEVEL ? "30673-01.htm" : "30673-02.htm";
-						}
-						break;
+						htmltext = "30673-04.html";
 					}
-					case State.STARTED:
-					{
-						if (st.getCond() >= 1)
-						{
-							htmltext = "30673-04.html";
-						}
-						break;
-					}
-					case State.COMPLETED:
-					{
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-					}
+					break;
 				}
-				break;
-			}
-			case MAESTRO_NIKOLA:
-			{
-				if (st.isStarted())
+				case MAESTRO_NIKOLA:
 				{
-					htmltext = st.isCond(1) ? "30621-01.html" : "30621-04.html";
-				}
-				break;
-			}
-			case BLUEPRINT_SELLER_LUKA:
-			{
-				switch (st.getCond())
-				{
-					case 2:
+					if (memoState == 1)
 					{
-						htmltext = st.hasQuestItems(LETO_LIZARDMAN_ACCESSORY) ? "31437-02.html" : "31437-01.html";
-						break;
+						htmltext = "30621-01.html";
 					}
-					case 3:
+					else if (memoState == 2)
+					{
+						htmltext = "30621-04.html";
+					}
+					break;
+				}
+				case BLUEPRINT_SELLER_LUKA:
+				{
+					if (memoState == 2)
+					{
+						if (hasQuestItems(player, LETO_LIZARDMAN_ACCESSORY))
+						{
+							htmltext = "31437-02.html";
+						}
+						else
+						{
+							htmltext = "31437-01.html";
+						}
+					}
+					else if (memoState == 3)
 					{
 						htmltext = "31437-05.html";
-						break;
 					}
+					break;
 				}
-				break;
+			}
+		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == RESEARCHER_LORAIN)
+			{
+				htmltext = getAlreadyCompletedMsg(player);
 			}
 		}
 		return htmltext;

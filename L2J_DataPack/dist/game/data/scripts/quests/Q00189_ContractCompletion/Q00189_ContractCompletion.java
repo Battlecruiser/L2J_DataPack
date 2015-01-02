@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Contract Completion (189)
@@ -33,10 +32,10 @@ import com.l2jserver.gameserver.model.quest.State;
 public final class Q00189_ContractCompletion extends Quest
 {
 	// NPCs
-	private static final int BLUEPRINT_SELLER_LUKA = 31437;
+	private static final int SHEGFIELD = 30068;
 	private static final int HEAD_BLACKSMITH_KUSTO = 30512;
 	private static final int RESEARCHER_LORAIN = 30673;
-	private static final int SHEGFIELD = 30068;
+	private static final int BLUEPRINT_SELLER_LUKA = 31437;
 	// Items
 	private static final int SCROLL_OF_DECODING = 10370;
 	// Misc
@@ -54,58 +53,65 @@ public final class Q00189_ContractCompletion extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
+		
 		String htmltext = null;
 		switch (event)
 		{
-			case "30068-02.html":
-			{
-				htmltext = event;
-				break;
-			}
 			case "31437-03.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
-					st.giveItems(SCROLL_OF_DECODING, 1);
+					qs.startQuest();
+					qs.setMemoState(1);
+					giveItems(player, SCROLL_OF_DECODING, 1);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30512-02.html":
 			{
-				if (st.isCond(4))
+				if (qs.isMemoState(4))
 				{
-					st.giveAdena(121527, true);
+					giveAdena(player, 121527, true);
 					if (player.getLevel() < MAX_LEVEL_FOR_EXP_SP)
 					{
-						st.addExpAndSp(309467, 20614);
+						addExpAndSp(player, 309467, 20614);
 					}
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30673-02.html":
 			{
-				if (st.isCond(1))
+				if (qs.isMemoState(1))
 				{
-					st.setCond(2, true);
-					st.takeItems(SCROLL_OF_DECODING, -1);
+					qs.setMemoState(2);
+					qs.setCond(2, true);
+					takeItems(player, SCROLL_OF_DECODING, -1);
+					htmltext = event;
+				}
+				break;
+			}
+			case "30068-02.html":
+			{
+				if (qs.isMemoState(2))
+				{
 					htmltext = event;
 				}
 				break;
 			}
 			case "30068-03.html":
 			{
-				if (st.isCond(2))
+				if (qs.isMemoState(2))
 				{
-					st.setCond(3, true);
+					qs.setMemoState(3);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
@@ -117,96 +123,92 @@ public final class Q00189_ContractCompletion extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		if (qs.isCreated())
 		{
-			return htmltext;
+			if (npc.getId() == BLUEPRINT_SELLER_LUKA)
+			{
+				final QuestState q186 = player.getQuestState(Q00186_ContractExecution.class.getSimpleName());
+				if ((q186 != null) && q186.isCompleted())
+				{
+					htmltext = (player.getLevel() >= MIN_LEVEL) ? "31437-01.htm" : "31437-02.htm";
+				}
+			}
 		}
-		
-		switch (npc.getId())
+		else if (qs.isStarted())
 		{
-			case BLUEPRINT_SELLER_LUKA:
+			switch (npc.getId())
 			{
-				switch (st.getState())
+				case BLUEPRINT_SELLER_LUKA:
 				{
-					case State.CREATED:
+					if (qs.getMemoState() >= 1)
 					{
-						final QuestState qs = player.getQuestState(Q00186_ContractExecution.class.getSimpleName());
-						if ((qs != null) && qs.isCompleted())
+						htmltext = "31437-04.html";
+					}
+					break;
+				}
+				case HEAD_BLACKSMITH_KUSTO:
+				{
+					if (qs.isMemoState(4))
+					{
+						htmltext = "30512-01.html";
+					}
+					break;
+				}
+				case RESEARCHER_LORAIN:
+				{
+					switch (qs.getCond())
+					{
+						case 1:
 						{
-							htmltext = (player.getLevel() >= MIN_LEVEL) ? "31437-01.htm" : "31437-02.htm";
+							htmltext = "30673-01.html";
+							break;
 						}
-						break;
-					}
-					case State.STARTED:
-					{
-						if (st.getCond() >= 1)
+						case 2:
 						{
-							htmltext = "31437-04.html";
+							htmltext = "30673-03.html";
+							break;
 						}
-						break;
+						case 3:
+						{
+							qs.setMemoState(4);
+							qs.setCond(4, true);
+							htmltext = "30673-04.html";
+							break;
+						}
+						case 4:
+						{
+							htmltext = "30673-05.html";
+							break;
+						}
 					}
-					case State.COMPLETED:
-					{
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-					}
+					break;
 				}
-				break;
-			}
-			case HEAD_BLACKSMITH_KUSTO:
-			{
-				if (st.isCond(4))
+				case SHEGFIELD:
 				{
-					htmltext = "30512-01.html";
+					switch (qs.getCond())
+					{
+						case 2:
+						{
+							htmltext = "30068-01.html";
+							break;
+						}
+						case 3:
+						{
+							htmltext = "30068-04.html";
+							break;
+						}
+					}
+					break;
 				}
-				break;
 			}
-			case RESEARCHER_LORAIN:
+		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == BLUEPRINT_SELLER_LUKA)
 			{
-				switch (st.getCond())
-				{
-					case 1:
-					{
-						htmltext = "30673-01.html";
-						break;
-					}
-					case 2:
-					{
-						htmltext = "30673-03.html";
-						break;
-					}
-					case 3:
-					{
-						st.setCond(4, true);
-						htmltext = "30673-04.html";
-						break;
-					}
-					case 4:
-					{
-						htmltext = "30673-05.html";
-						break;
-					}
-				}
-				break;
-			}
-			case SHEGFIELD:
-			{
-				switch (st.getCond())
-				{
-					case 2:
-					{
-						htmltext = "30068-01.html";
-						break;
-					}
-					case 3:
-					{
-						htmltext = "30068-04.html";
-						break;
-					}
-				}
-				break;
+				htmltext = getAlreadyCompletedMsg(player);
 			}
 		}
 		return htmltext;
