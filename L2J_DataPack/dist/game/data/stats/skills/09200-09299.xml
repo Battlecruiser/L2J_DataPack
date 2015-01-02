@@ -37,14 +37,24 @@
 		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="9204" levels="1" name="Kukuru">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mounts a Kukuru. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="137" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9205" levels="1" name="Sturdy Kukuru">
 		<!-- AUTO GENERATED SKILL -->
@@ -88,13 +98,21 @@
 		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="9210" levels="1" name="Dismount">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Dismounts from a ridable mount. -->
 		<set name="icon" val="icon.skill9210" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2500" />
-		<set name="isDebuff" val="false" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canUntransform="true" />
+		</cond>
+		<for>
+			<effect name="DispelBySlot">
+				<param dispel="TRANSFORM,-1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9211" levels="1" name="Dismount">
 		<!-- AUTO GENERATED SKILL -->
