@@ -44,7 +44,6 @@ public final class ShilensBreath extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer() && !info.getEffected().isDead())
 		{
-			_log.info("Time je: " + info.getAbnormalTime());
 			final L2PcInstance player = (L2PcInstance) info.getEffected();
 			int nextLv = info.getSkill().getLevel() - 1;
 			
