@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/teleporterData.xsd">
+	<npc id="30006"> <!-- Milia -->
+		<teleport type="NORMAL">
+			<location npcStringId="1010004" x="-80684" y="149770" z="-3040" feeCount="18000" /> <!-- The Village of Gludin -->
+			<location npcStringId="1010156" x="11167" y="16012" z="-4584" feeCount="24000" /> <!-- Dark Elf Village -->
+			<location npcStringId="1010158" x="115357" y="-178212" z="-928" feeCount="46000" /> <!-- Dwarven Village -->
+			<location npcStringId="1010155" x="44734" y="49210" z="-3056" feeCount="23000" /> <!-- Elven Village -->
+			<location npcStringId="1010008" x="-44124" y="-113390" z="-240" feeCount="35000" /> <!-- Orc Village -->
+			<location npcStringId="1010648" x="-117001" y="46589" z="360" feeCount="20000" /> <!-- Kamael Village -->
+			<location npcStringId="1010005" x="-14593" y="123936" z="-3120" feeCount="12000" /> <!-- The Town of Gludio -->
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeId="13722" feeCount="1" /> <!-- Gludin Arena -->
+			<location npcStringId="1010507" x="73579" y="142709" z="-3763" feeId="13722" feeCount="1" /> <!-- Giran Arena -->
+			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeId="13722" feeCount="1" /> <!-- Coliseum -->
+			<location npcStringId="1010731" x="-186306" y="242822" z="2552" feeId="13722" feeCount="100" /> <!-- Keucereus Alliance Base -->
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeCount="1000" /> <!-- Gludin Arena -->
+			<location npcStringId="1010507" x="73579" y="142709" z="-3763" feeCount="1000" /> <!-- Giran Arena -->
+			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeCount="1000" /> <!-- Coliseum -->
+			<location npcStringId="1010731" x="-186306" y="242822" z="2552" feeCount="100000" /> <!-- Keucereus Alliance Base -->
+		</teleport>
+	</npc>
+</list>
