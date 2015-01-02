@@ -33,11 +33,14 @@ import com.l2jserver.gameserver.network.serverpackets.ExAcquirableSkillListByCla
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 
 /**
+ * Zephyra AI.
  * @author Sdw
  */
-public class Zephyra extends AbstractNpcAI
+public final class Zephyra extends AbstractNpcAI
 {
+	// NPCs
 	private static final int ZEPHYRA = 33978;
+	// Misc
 	private static final String TUTORIAL_LINK = "..\\L2text\\QT_026_alchemy_01.htm";
 	
 	private Zephyra()
