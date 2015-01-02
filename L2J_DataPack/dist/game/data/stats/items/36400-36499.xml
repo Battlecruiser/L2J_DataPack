@@ -1,133 +1,133 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36400" name="XP Buff 50% (1-hour)" additionalName="" type="EtcItem">
 		<!-- Hourglass that increases acquired XP by an additional 50% for 1 hours. Available for all levels. -->
-		<set name="icon" val="icon.etc_dragons_blood_i03"/>
-		<set name="weight" val="1"/>
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36401" name="Lucky Pouch" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 2 Scrolls: Midsummer Passion and 1 Vitality Replenishing Star Candy. -->
-		<set name="icon" val="icon.etc_pouch_gold_i00"/>
+		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36402" name="Lucky Pouch (High-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 6 Scrolls: Midsummer Passion, 2 Vitality Replenishing Star Candies, 2 Feathers of Blessing, 2 Heavenly Cocktails, and 1 High-grade Lucky Enchant Stone: Armor (R-grade). -->
-		<set name="icon" val="icon.etc_pouch_gold_i00"/>
+		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36403" name="Lucky Pouch (Top-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 12 Scrolls: Midsummer Passion, 2 Vitality Replenishing Star Candies, 3 Feathers of Blessing, 2 Heavenly Cocktails, 2 unit s of Energy of Destruction, and a Rare Accessory Pack (Expiratory). If you are very lucky, you might get a Rare Accessory Pack (Permanent), a Weapon Pack (R99-grade), and an Unbind Scroll Pack additionally. -->
-		<set name="icon" val="icon.etc_pouch_gold_i00"/>
+		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36404" name="Scroll: Midsummer Passion" additionalName="Event" type="EtcItem">
 		<!-- Increases acquired XP and SP by 30% for 1 hour. -->
-		<set name="icon" val="icon.etc_aidcharm_cancel_deathfire_i00"/>
+		<set name="icon" val="icon.etc_aidcharm_cancel_deathfire_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36405" name="Rare Accessory Pack (Expiratory)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, and Earth Wyrm Heart Ring for 14 days. -->
-		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36406" name="Rare Accessory Pack (Permanent)" additionalName="Event" type="EtcItem">
 		<!-- Double-click for one of the following items: Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
-		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36407" name="Weapon Pack (R99-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 1 unidentified Amaranthine weapon. -->
-		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36408" name="Unbind Scroll Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 1 of the following: R, R95 or R99 weapon/armor Unbind Scroll -->
-		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36409" name="Blessed Antharas' Earring (14-day)" additionalName="Event" type="Armor">
 		<!-- MP + 59, Bleed Resistance + 50%, Bleed Atk. Rate + 50%. Increases Heal Amount, Vampiric Rage Effect, Stun/Mental Attack Resistance + 40%, Stun/Mental Atk. Rate + 40%. Decreases physical/magic skill MP consumption. Increases Earth/Holy defense. CON + 3, MEN + 3. Increases P. Def. and M. Def. Can use Stun canceling skills. Momentarily increases Stun Resistance + 100%. Only one effect is applied when two of the same earrings are equipped. -->
-		<set name="icon" val="icon.accessory_earring_of_antaras_i00"/>
+		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="170.0"/>
+			<add stat="mDef" val="170.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="36410" name="Blessed Valakas' Necklace (14-day)" additionalName="Event" type="Armor">
 		<!-- Increases HP by 625, MP by 79, Sleep Resistance by 50%, Sleep Attack Rate by 50%, Fire Resistance by 30, Dark Resistance by 20, STR by 3, INT by 3, P. Skill Power by 5%, P. Atk. by 10%, and M. Atk. by 20%. Decreases M. Skill and P. Skill cooldown, and creates a Wild Magic Effect and Damage Shield effect. Can use Cancel Hold and momentarily makes Hold Resistance 100%. -->
-		<set name="icon" val="icon.accessory_necklace_of_valakas_i00"/>
+		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="226.0"/>
+			<add stat="mDef" val="226.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="36411" name="Tauti's Ring (14-day)" additionalName="Event" type="Armor">
 		<!-- Tauti's Ring. Increases Fire/Dark Resistance by 25, MP by 38, Critical Damage by 15%, Skill Atk. Power by 5%, damage inflicted during PvP by 5%, Paralyze/Yoke/Banishment Resistance by 10, Damage Reflect Resistance by 5, and Blood Siphon Resistance by 5. Decreases damage received during PvP by 5%, and increases Critical by 54 when equipped with a blunt. Wearing two of these rings will give you the effect of wearing one (excluding Attribute Resistance or M. Def.). -->
-		<set name="icon" val="icon.accessary_tauti_ring"/>
+		<set name="icon" val="icon.accessary_tauti_ring" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="108.0"/>
+			<add stat="mDef" val="108.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="36412" name="Earth Wyrm Heart Ring (14-day)" additionalName="Event" type="Armor">
 		<!-- Increases MP by 38, Poison Resistance by 50%, Poison Attack Rate by 50%, Knock Back/Knock Down/Pulling Resistance by 20, and Physical/Magic Attack Resistance, MP Regeneration, Critical Damage, Accuracy, Atk. Spd., Casting Spd., and Wind/Water Resistance. Can increase party members' Atk. Spd., Casting Spd., and Vampiric Rage, and use Poison Cancellation. Wearing two of these rings will give you the effect of wearing one. -->
-		<set name="icon" val="icon.ring_earthworm_heart"/>
+		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="108.0"/>
+			<add stat="mDef" val="108.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="36413" name="Single Mesh Armor" additionalName="" type="Armor">
 		<!-- Changes into single mesh in a certain area. -->
-		<set name="icon" val="icon.armor_t2000_ul_i00"/>
+		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1000"/>
+		<set name="weight" val="1000" />
 		<set name="price" val="2500000" />
 	</item>
 	<item id="36414" name="Dragon Claw" additionalName="" type="EtcItem">
 		<!-- Material for making a dragon weapon. -->
-		<set name="icon" val="icon.etc_toenail_dragon"/>
-		<set name="weight" val="2"/>
+		<set name="icon" val="icon.etc_toenail_dragon" />
+		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36415" name="Dragon Blood" additionalName="" type="EtcItem">
 		<!-- Item consumed when using a skill of a dragon weapon. -->
-		<set name="icon" val="icon.etc_blood_gragon"/>
-		<set name="weight" val="2"/>
+		<set name="icon" val="icon.etc_blood_gragon" />
+		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36416" name="Dragon Tooth" additionalName="" type="EtcItem">
 		<!-- Item consumed when using a skill of a dragon weapon. -->
-		<set name="icon" val="icon.etc_tooth_gragon"/>
-		<set name="weight" val="2"/>
+		<set name="icon" val="icon.etc_tooth_gragon" />
+		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36417" name="Antharas Shaper" additionalName="Fragment" type="Weapon">
 		<!-- Antharas' Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_dagger_i00"/>
+		<set name="icon" val="icon.weapon_antaras_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1039.0"/>
+			<add stat="pAtk" val="1039.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -135,11 +135,11 @@
 	</item>
 	<item id="36418" name="Antharas Slasher" additionalName="Fragment" type="Weapon">
 		<!-- Antharas' Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_twohand_sword_i00"/>
+		<set name="icon" val="icon.weapon_antaras_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="1445.0"/>
+			<add stat="pAtk" val="1445.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -147,11 +147,11 @@
 	</item>
 	<item id="36419" name="Antharas Thrower" additionalName="Fragment" type="Weapon">
 		<!-- Antharas' Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_bow_i00"/>
+		<set name="icon" val="icon.weapon_antaras_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2339.0"/>
+			<add stat="pAtk" val="2339.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
@@ -159,11 +159,11 @@
 	</item>
 	<item id="36420" name="Antharas Buster" additionalName="Fragment" type="Weapon">
 		<!-- Antharas' Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i00"/>
+		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="950.0"/>
+			<add stat="pAtk" val="950.0" />
 			<add stat="mAtk" val="690.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -171,11 +171,11 @@
 	</item>
 	<item id="36421" name="Antharas Cutter" additionalName="Fragment" type="Weapon">
 		<!-- Antharas' Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_onehand_sword_i00"/>
+		<set name="icon" val="icon.weapon_antaras_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1188.0"/>
+			<add stat="pAtk" val="1188.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -183,11 +183,11 @@
 	</item>
 	<item id="36422" name="Antharas Stormer" additionalName="Fragment" type="Weapon">
 		<!-- Antharas' Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_spear_i00"/>
+		<set name="icon" val="icon.weapon_antaras_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="2010"/>
+		<set name="weight" val="2010" />
 		<for>
-			<add stat="pAtk" val="1188.0"/>
+			<add stat="pAtk" val="1188.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -195,11 +195,11 @@
 	</item>
 	<item id="36423" name="Antharas Fighter" additionalName="Fragment" type="Weapon">
 		<!-- Antharas' Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_fist_i00"/>
+		<set name="icon" val="icon.weapon_antaras_fist_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1550"/>
+		<set name="weight" val="1550" />
 		<for>
-			<add stat="pAtk" val="1445.0"/>
+			<add stat="pAtk" val="1445.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
@@ -208,11 +208,11 @@
 	</item>
 	<item id="36424" name="Antharas Avenger" additionalName="Fragment" type="Weapon">
 		<!-- Antharas' Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i00"/>
+		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="1188.0"/>
+			<add stat="pAtk" val="1188.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
@@ -221,11 +221,11 @@
 	</item>
 	<item id="36425" name="Antharas Dual Blunt Weapon" additionalName="Fragment" type="Weapon">
 		<!-- Antharas' Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_dual_blunt_i00"/>
+		<set name="icon" val="icon.weapon_antaras_dual_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="1445.0"/>
+			<add stat="pAtk" val="1445.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
@@ -234,11 +234,11 @@
 	</item>
 	<item id="36426" name="Antharas Dualsword" additionalName="Fragment" type="Weapon">
 		<!-- Antharas' Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_dual_sword_i00"/>
+		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1445.0"/>
+			<add stat="pAtk" val="1445.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -246,11 +246,11 @@
 	</item>
 	<item id="36427" name="Valakas Shaper" additionalName="Fragment" type="Weapon">
 		<!-- Valakas' Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_dagger_i00"/>
+		<set name="icon" val="icon.weapon_valrakas_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1039.0"/>
+			<add stat="pAtk" val="1039.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -258,11 +258,11 @@
 	</item>
 	<item id="36428" name="Valakas Cutter" additionalName="Fragment" type="Weapon">
 		<!-- Valakas' Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i00"/>
+		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1188.0"/>
+			<add stat="pAtk" val="1188.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -270,11 +270,11 @@
 	</item>
 	<item id="36429" name="Valakas Slasher" additionalName="Fragment" type="Weapon">
 		<!-- Valakas' Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i00"/>
+		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="1445.0"/>
+			<add stat="pAtk" val="1445.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -282,11 +282,11 @@
 	</item>
 	<item id="36430" name="Valakas Thrower" additionalName="Fragment" type="Weapon">
 		<!-- Valakas' Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_bow_i00"/>
+		<set name="icon" val="icon.weapon_valrakas_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2339.0"/>
+			<add stat="pAtk" val="2339.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
@@ -294,11 +294,11 @@
 	</item>
 	<item id="36431" name="Valakas Buster" additionalName="Fragment" type="Weapon">
 		<!-- Valakas' Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i00"/>
+		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="950.0"/>
+			<add stat="pAtk" val="950.0" />
 			<add stat="mAtk" val="690.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -306,11 +306,11 @@
 	</item>
 	<item id="36432" name="Valakas Caster" additionalName="Fragment" type="Weapon">
 		<!-- Valakas' Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i00"/>
+		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1080"/>
+		<set name="weight" val="1080" />
 		<for>
-			<add stat="pAtk" val="950.0"/>
+			<add stat="pAtk" val="950.0" />
 			<add stat="mAtk" val="690.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
@@ -319,11 +319,11 @@
 	</item>
 	<item id="36433" name="Valakas Retributer" additionalName="Fragment" type="Weapon">
 		<!-- Valakas' Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i00"/>
+		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1080"/>
+		<set name="weight" val="1080" />
 		<for>
-			<add stat="pAtk" val="1157.0"/>
+			<add stat="pAtk" val="1157.0" />
 			<add stat="mAtk" val="759.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
@@ -333,11 +333,11 @@
 	</item>
 	<item id="36434" name="Lindvior Shaper" additionalName="Fragment" type="Weapon">
 		<!-- Lindvior's Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_dagger_i00"/>
+		<set name="icon" val="icon.weapon_lind_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1039.0"/>
+			<add stat="pAtk" val="1039.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -345,11 +345,11 @@
 	</item>
 	<item id="36435" name="Lindvior Thrower" additionalName="Fragment" type="Weapon">
 		<!-- Lindvior's Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_bow_i00"/>
+		<set name="icon" val="icon.weapon_lind_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2339.0"/>
+			<add stat="pAtk" val="2339.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
@@ -357,11 +357,11 @@
 	</item>
 	<item id="36436" name="Lindvior Slasher" additionalName="Fragment" type="Weapon">
 		<!-- Lindvior's Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_twohand_sword_i00"/>
+		<set name="icon" val="icon.weapon_lind_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="1445.0"/>
+			<add stat="pAtk" val="1445.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -369,11 +369,11 @@
 	</item>
 	<item id="36437" name="Lindvior Caster" additionalName="Fragment" type="Weapon">
 		<!-- Lindvior's Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i00"/>
+		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="950.0"/>
+			<add stat="pAtk" val="950.0" />
 			<add stat="mAtk" val="690.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -381,11 +381,11 @@
 	</item>
 	<item id="36438" name="Lindvior Cutter" additionalName="Fragment" type="Weapon">
 		<!-- Lindvior's Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_onehand_sword_i00"/>
+		<set name="icon" val="icon.weapon_lind_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1188.0"/>
+			<add stat="pAtk" val="1188.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -393,11 +393,11 @@
 	</item>
 	<item id="36439" name="Lindvior Shooter" additionalName="Fragment" type="Weapon">
 		<!-- Lindvior's Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_crossbow_i00"/>
+		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1580"/>
+		<set name="weight" val="1580" />
 		<for>
-			<add stat="pAtk" val="2106.0"/>
+			<add stat="pAtk" val="2106.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="12.0" />
@@ -405,11 +405,11 @@
 	</item>
 	<item id="36440" name="Lindvior Dual Dagger" additionalName="Fragment" type="Weapon">
 		<!-- Lindvior's Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_dual_dagger_i00"/>
+		<set name="icon" val="icon.weapon_lind_dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="2050"/>
+		<set name="weight" val="2050" />
 		<for>
-			<add stat="pAtk" val="1188.0"/>
+			<add stat="pAtk" val="1188.0" />
 			<add stat="mAtk" val="517.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -417,11 +417,11 @@
 	</item>
 	<item id="36441" name="Antharas Shaper" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_dagger_i01"/>
+		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1877.0"/>
+			<add stat="pAtk" val="1877.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -429,11 +429,11 @@
 	</item>
 	<item id="36442" name="Antharas Slasher" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01"/>
+		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="2611.0"/>
+			<add stat="pAtk" val="2611.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -441,11 +441,11 @@
 	</item>
 	<item id="36443" name="Antharas Thrower" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_bow_i01"/>
+		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="4225.0"/>
+			<add stat="pAtk" val="4225.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
@@ -453,11 +453,11 @@
 	</item>
 	<item id="36444" name="Antharas Buster" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01"/>
+		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1716.0"/>
+			<add stat="pAtk" val="1716.0" />
 			<add stat="mAtk" val="1247.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -465,11 +465,11 @@
 	</item>
 	<item id="36445" name="Antharas Cutter" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01"/>
+		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2146.0"/>
+			<add stat="pAtk" val="2146.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -477,11 +477,11 @@
 	</item>
 	<item id="36446" name="Antharas Stormer" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_spear_i01"/>
+		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="2010"/>
+		<set name="weight" val="2010" />
 		<for>
-			<add stat="pAtk" val="2146.0"/>
+			<add stat="pAtk" val="2146.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -489,11 +489,11 @@
 	</item>
 	<item id="36447" name="Antharas Fighter" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_fist_i01"/>
+		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1550"/>
+		<set name="weight" val="1550" />
 		<for>
-			<add stat="pAtk" val="2611.0"/>
+			<add stat="pAtk" val="2611.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
@@ -502,11 +502,11 @@
 	</item>
 	<item id="36448" name="Antharas Avenger" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01"/>
+		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="2146.0"/>
+			<add stat="pAtk" val="2146.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
@@ -515,11 +515,11 @@
 	</item>
 	<item id="36449" name="Antharas Dual Blunt Weapon" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01"/>
+		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="2611.0"/>
+			<add stat="pAtk" val="2611.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
@@ -528,11 +528,11 @@
 	</item>
 	<item id="36450" name="Antharas Dualsword" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_dual_sword_i01"/>
+		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2611.0"/>
+			<add stat="pAtk" val="2611.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -540,11 +540,11 @@
 	</item>
 	<item id="36451" name="Valakas Shaper" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_dagger_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1877.0"/>
+			<add stat="pAtk" val="1877.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -552,11 +552,11 @@
 	</item>
 	<item id="36452" name="Valakas Cutter" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2146.0"/>
+			<add stat="pAtk" val="2146.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -564,11 +564,11 @@
 	</item>
 	<item id="36453" name="Valakas Slasher" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="2611.0"/>
+			<add stat="pAtk" val="2611.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -576,11 +576,11 @@
 	</item>
 	<item id="36454" name="Valakas Thrower" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_bow_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="4225.0"/>
+			<add stat="pAtk" val="4225.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
@@ -588,11 +588,11 @@
 	</item>
 	<item id="36455" name="Valakas Buster" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Casting Speed by 300, M. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1716.0"/>
+			<add stat="pAtk" val="1716.0" />
 			<add stat="mAtk" val="1247.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -600,11 +600,11 @@
 	</item>
 	<item id="36456" name="Valakas Caster" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Casting Speed by 300, M. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1080"/>
+		<set name="weight" val="1080" />
 		<for>
-			<add stat="pAtk" val="1716.0"/>
+			<add stat="pAtk" val="1716.0" />
 			<add stat="mAtk" val="1247.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
@@ -613,11 +613,11 @@
 	</item>
 	<item id="36457" name="Valakas Retributer" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Casting Speed by 300, M. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1080"/>
+		<set name="weight" val="1080" />
 		<for>
-			<add stat="pAtk" val="2090.0"/>
+			<add stat="pAtk" val="2090.0" />
 			<add stat="mAtk" val="1371.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
@@ -627,11 +627,11 @@
 	</item>
 	<item id="36458" name="Lindvior Shaper" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_dagger_i01"/>
+		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1877.0"/>
+			<add stat="pAtk" val="1877.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -639,11 +639,11 @@
 	</item>
 	<item id="36459" name="Lindvior Thrower" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_bow_i01"/>
+		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="4225.0"/>
+			<add stat="pAtk" val="4225.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
@@ -651,11 +651,11 @@
 	</item>
 	<item id="36460" name="Lindvior Slasher" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_twohand_sword_i01"/>
+		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="2611.0"/>
+			<add stat="pAtk" val="2611.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -663,11 +663,11 @@
 	</item>
 	<item id="36461" name="Lindvior Caster" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01"/>
+		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1716.0"/>
+			<add stat="pAtk" val="1716.0" />
 			<add stat="mAtk" val="1247.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -675,11 +675,11 @@
 	</item>
 	<item id="36462" name="Lindvior Cutter" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_onehand_sword_i01"/>
+		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2146.0"/>
+			<add stat="pAtk" val="2146.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -687,11 +687,11 @@
 	</item>
 	<item id="36463" name="Lindvior Shooter" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_crossbow_i01"/>
+		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1580"/>
+		<set name="weight" val="1580" />
 		<for>
-			<add stat="pAtk" val="3804.0"/>
+			<add stat="pAtk" val="3804.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="12.0" />
@@ -699,11 +699,11 @@
 	</item>
 	<item id="36464" name="Lindvior Dual Dagger" additionalName="Standard" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_dual_dagger_i01"/>
+		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="2050"/>
+		<set name="weight" val="2050" />
 		<for>
-			<add stat="pAtk" val="2146.0"/>
+			<add stat="pAtk" val="2146.0" />
 			<add stat="mAtk" val="935.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -711,11 +711,11 @@
 	</item>
 	<item id="36465" name="Antharas Shaper" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_dagger_i01"/>
+		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2177.0"/>
+			<add stat="pAtk" val="2177.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -723,11 +723,11 @@
 	</item>
 	<item id="36466" name="Antharas Slasher" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01"/>
+		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="3027.0"/>
+			<add stat="pAtk" val="3027.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -735,11 +735,11 @@
 	</item>
 	<item id="36467" name="Antharas Thrower" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_bow_i01"/>
+		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="4898.0"/>
+			<add stat="pAtk" val="4898.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
@@ -747,11 +747,11 @@
 	</item>
 	<item id="36468" name="Antharas Buster" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01"/>
+		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1990.0"/>
+			<add stat="pAtk" val="1990.0" />
 			<add stat="mAtk" val="1446.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -759,11 +759,11 @@
 	</item>
 	<item id="36469" name="Antharas Cutter" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01"/>
+		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2488.0"/>
+			<add stat="pAtk" val="2488.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -771,11 +771,11 @@
 	</item>
 	<item id="36470" name="Antharas Stormer" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_spear_i01"/>
+		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="2010"/>
+		<set name="weight" val="2010" />
 		<for>
-			<add stat="pAtk" val="2488.0"/>
+			<add stat="pAtk" val="2488.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -783,11 +783,11 @@
 	</item>
 	<item id="36471" name="Antharas Fighter" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_fist_i01"/>
+		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1550"/>
+		<set name="weight" val="1550" />
 		<for>
-			<add stat="pAtk" val="3027.0"/>
+			<add stat="pAtk" val="3027.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
@@ -796,11 +796,11 @@
 	</item>
 	<item id="36472" name="Antharas Avenger" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01"/>
+		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="2488.0"/>
+			<add stat="pAtk" val="2488.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
@@ -809,11 +809,11 @@
 	</item>
 	<item id="36473" name="Antharas Dual Blunt Weapon" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01"/>
+		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="3027.0"/>
+			<add stat="pAtk" val="3027.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
@@ -822,11 +822,11 @@
 	</item>
 	<item id="36474" name="Antharas Dualsword" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_dual_sword_i01"/>
+		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="3027.0"/>
+			<add stat="pAtk" val="3027.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -834,11 +834,11 @@
 	</item>
 	<item id="36475" name="Valakas Shaper" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_dagger_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2177.0"/>
+			<add stat="pAtk" val="2177.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -846,11 +846,11 @@
 	</item>
 	<item id="36476" name="Valakas Cutter" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2488.0"/>
+			<add stat="pAtk" val="2488.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -858,11 +858,11 @@
 	</item>
 	<item id="36477" name="Valakas Slasher" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="3027.0"/>
+			<add stat="pAtk" val="3027.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -870,11 +870,11 @@
 	</item>
 	<item id="36478" name="Valakas Thrower" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_bow_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="4898.0"/>
+			<add stat="pAtk" val="4898.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
@@ -882,11 +882,11 @@
 	</item>
 	<item id="36479" name="Valakas Buster" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Casting Speed by 300, M. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1990.0"/>
+			<add stat="pAtk" val="1990.0" />
 			<add stat="mAtk" val="1446.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -894,11 +894,11 @@
 	</item>
 	<item id="36480" name="Valakas Caster" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Casting Speed by 300, M. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1080"/>
+		<set name="weight" val="1080" />
 		<for>
-			<add stat="pAtk" val="1990.0"/>
+			<add stat="pAtk" val="1990.0" />
 			<add stat="mAtk" val="1446.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
@@ -907,11 +907,11 @@
 	</item>
 	<item id="36481" name="Valakas Retributer" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Valakas Watchman Klein. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Casting Speed by 300, M. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1080"/>
+		<set name="weight" val="1080" />
 		<for>
-			<add stat="pAtk" val="2423.0"/>
+			<add stat="pAtk" val="2423.0" />
 			<add stat="mAtk" val="1590.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
@@ -921,11 +921,11 @@
 	</item>
 	<item id="36482" name="Lindvior Shaper" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_dagger_i01"/>
+		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2177.0"/>
+			<add stat="pAtk" val="2177.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -933,11 +933,11 @@
 	</item>
 	<item id="36483" name="Lindvior Thrower" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_bow_i01"/>
+		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="4898.0"/>
+			<add stat="pAtk" val="4898.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
@@ -945,11 +945,11 @@
 	</item>
 	<item id="36484" name="Lindvior Slasher" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Attack Speed by 300, P. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_twohand_sword_i01"/>
+		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="3027.0"/>
+			<add stat="pAtk" val="3027.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -957,11 +957,11 @@
 	</item>
 	<item id="36485" name="Lindvior Caster" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\n PVP damage + 15%, HP/MP/CP + 30%, Casting Spd. + 300, M. Critical Rate + 100, and additional damage on dragons + 100%.\n(Active)\nProtection: For 2 min., your gain Speed + 100 and resistance to all debuffs. Skill usage requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be equipped in the Olympiad or Ceremony of Chaos, appearance-modified, enchanted, bestowed an attribute, or enchanted with a soul crystal. -->
-		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01"/>
+		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="1990.0"/>
+			<add stat="pAtk" val="1990.0" />
 			<add stat="mAtk" val="1446.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -969,11 +969,11 @@
 	</item>
 	<item id="36486" name="Lindvior Cutter" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Casting Speed by 300, M. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_onehand_sword_i01"/>
+		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2488.0"/>
+			<add stat="pAtk" val="2488.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -981,11 +981,11 @@
 	</item>
 	<item id="36487" name="Lindvior Shooter" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Casting Speed by 300, M. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_crossbow_i01"/>
+		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1580"/>
+		<set name="weight" val="1580" />
 		<for>
-			<add stat="pAtk" val="4411.0"/>
+			<add stat="pAtk" val="4411.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="12.0" />
@@ -993,11 +993,11 @@
 	</item>
 	<item id="36488" name="Lindvior Dual Dagger" additionalName="High-grade" type="Weapon">
 		<!-- Can be upgraded to a higher grade through Aden's Wizard Jenna. Requires a Dragon Claw and various materials.\n(Passive)\nIncreases PVP damage by 15%, HP/MP/CP by 30%, Casting Speed by 300, M. Critical Rate by 100 and additional damage on dragons by 100%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\nCannot be worn in the Olympiad/Ceremony of Chaos. Its appearance cannot be modified. Cannot be crystallized, enchanted or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_lind_dual_dagger_i01"/>
+		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="2050"/>
+		<set name="weight" val="2050" />
 		<for>
-			<add stat="pAtk" val="2488.0"/>
+			<add stat="pAtk" val="2488.0" />
 			<add stat="mAtk" val="1084.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -1005,11 +1005,11 @@
 	</item>
 	<item id="36489" name="Antharas Shaper" additionalName="Top-grade" type="Weapon">
 		<!-- Dragon's Weapon (Top-grade).\n(Passive)\nIncreases PVP damage by 30%, HP/MP by 100%, CP by 200%, Attack Speed by 1500, P. Critical Rate by 500 and additional damage on dragons by 300%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases the Attack/Casting/Movement Speed of nearby enemies by 90% and gradually makes their bodies rigid, paralyzing them for 10 seconds eventually. Using the skill requires 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Strike: Depletes CP of all enemies nearby. Using the skill consumes 1 unit of Dragon Blood. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be enchanted, crystallized, modified, or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_dagger_i01"/>
+		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2523.0"/>
+			<add stat="pAtk" val="2523.0" />
 			<add stat="mAtk" val="1257.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -1017,11 +1017,11 @@
 	</item>
 	<item id="36490" name="Antharas Slasher" additionalName="Top-grade" type="Weapon">
 		<!-- Dragon's Weapon (Top-grade).\n(Passive)\nIncreases PVP damage by 30%, HP/MP by 100%, CP by 200%, Attack Speed by 1500, P. Critical Rate by 500 and additional damage on dragons by 300%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases the Attack/Casting/Movement Speed of nearby enemies by 90% and gradually makes their bodies rigid, paralyzing them for 10 seconds eventually. Using the skill requires 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Strike: Depletes CP of all enemies nearby. Using the skill consumes 1 unit of Dragon Blood. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be enchanted, crystallized, modified, or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01"/>
+		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="3509.0"/>
+			<add stat="pAtk" val="3509.0" />
 			<add stat="mAtk" val="1257.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -1029,11 +1029,11 @@
 	</item>
 	<item id="36491" name="Antharas Thrower" additionalName="Top-grade" type="Weapon">
 		<!-- Dragon's Weapon (Top-grade).\n(Passive)\nIncreases PVP damage by 30%, HP/MP by 100%, CP by 200%, Attack Speed by 1500, P. Critical Rate by 500 and additional damage on dragons by 300%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases the Attack/Casting/Movement Speed of nearby enemies by 90% and gradually makes their bodies rigid, paralyzing them for 10 seconds eventually. Using the skill requires 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Strike: Depletes CP of all enemies nearby. Using the skill consumes 1 unit of Dragon Blood. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be enchanted, crystallized, modified, or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_bow_i01"/>
+		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="5678.0"/>
+			<add stat="pAtk" val="5678.0" />
 			<add stat="mAtk" val="1257.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
@@ -1041,11 +1041,11 @@
 	</item>
 	<item id="36492" name="Antharas Buster" additionalName="Top-grade" type="Weapon">
 		<!-- Dragon's Weapon (Top-grade).\n(Passive)\nIncreases PVP damage by 30%, HP/MP by 100%, CP by 200%, Casting Speed by 1999, M. Critical Rate by 500, and additional damage on dragons by 300%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases the Attack/Casting/Movement Speed of nearby enemies by 90% and gradually makes their bodies rigid, paralyzing them for 10 seconds eventually. Using the skill requires 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Strike: Depletes CP of all enemies nearby. Using the skill consumes 1 unit of Dragon Blood. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be enchanted, crystallized, modified, or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01"/>
+		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2307.0"/>
+			<add stat="pAtk" val="2307.0" />
 			<add stat="mAtk" val="1676.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -1053,11 +1053,11 @@
 	</item>
 	<item id="36493" name="Antharas Cutter" additionalName="Top-grade" type="Weapon">
 		<!-- Dragon's Weapon (Top-grade).\n(Passive)\nIncreases PVP damage by 30%, HP/MP by 100%, CP by 200%, Attack Speed by 1500, P. Critical Rate by 500 and additional damage on dragons by 300%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases the Attack/Casting/Movement Speed of nearby enemies by 90% and gradually makes their bodies rigid, paralyzing them for 10 seconds eventually. Using the skill requires 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Strike: Depletes CP of all enemies nearby. Using the skill consumes 1 unit of Dragon Blood. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be enchanted, crystallized, modified, or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01"/>
+		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2884.0"/>
+			<add stat="pAtk" val="2884.0" />
 			<add stat="mAtk" val="1257.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -1065,11 +1065,11 @@
 	</item>
 	<item id="36494" name="Antharas Stormer" additionalName="Top-grade" type="Weapon">
 		<!-- Dragon's Weapon (Top-grade).\n(Passive)\nIncreases PVP damage by 30%, HP/MP by 100%, CP by 200%, Attack Speed by 1500, P. Critical Rate by 500 and additional damage on dragons by 300%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases the Attack/Casting/Movement Speed of nearby enemies by 90% and gradually makes their bodies rigid, paralyzing them for 10 seconds eventually. Using the skill requires 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Strike: Depletes CP of all enemies nearby. Using the skill consumes 1 unit of Dragon Blood. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be enchanted, crystallized, modified, or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_spear_i01"/>
+		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="2010"/>
+		<set name="weight" val="2010" />
 		<for>
-			<add stat="pAtk" val="2884.0"/>
+			<add stat="pAtk" val="2884.0" />
 			<add stat="mAtk" val="1257.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -1077,11 +1077,11 @@
 	</item>
 	<item id="36495" name="Antharas Fighter" additionalName="Top-grade" type="Weapon">
 		<!-- Dragon's Weapon (Top-grade).\n(Passive)\nIncreases PVP damage by 30%, HP/MP by 100%, CP by 200%, Attack Speed by 1500, P. Critical Rate by 500 and additional damage on dragons by 300%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases the Attack/Casting/Movement Speed of nearby enemies by 90% and gradually makes their bodies rigid, paralyzing them for 10 seconds eventually. Using the skill requires 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Strike: Depletes CP of all enemies nearby. Using the skill consumes 1 unit of Dragon Blood. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be enchanted, crystallized, modified, or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_fist_i01"/>
+		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1550"/>
+		<set name="weight" val="1550" />
 		<for>
-			<add stat="pAtk" val="3509.0"/>
+			<add stat="pAtk" val="3509.0" />
 			<add stat="mAtk" val="1257.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
@@ -1090,11 +1090,11 @@
 	</item>
 	<item id="36496" name="Antharas Avenger" additionalName="Top-grade" type="Weapon">
 		<!-- Dragon's Weapon (Top-grade).\n(Passive)\nIncreases PVP damage by 30%, HP/MP by 100%, CP by 200%, Attack Speed by 1500, P. Critical Rate by 500 and additional damage on dragons by 300%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases the Attack/Casting/Movement Speed of nearby enemies by 90% and gradually makes their bodies rigid, paralyzing them for 10 seconds eventually. Using the skill requires 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Strike: Depletes CP of all enemies nearby. Using the skill consumes 1 unit of Dragon Blood. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be enchanted, crystallized, modified, or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01"/>
+		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="2884.0"/>
+			<add stat="pAtk" val="2884.0" />
 			<add stat="mAtk" val="1257.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
@@ -1103,11 +1103,11 @@
 	</item>
 	<item id="36497" name="Antharas Dual Blunt Weapon" additionalName="Top-grade" type="Weapon">
 		<!-- Dragon's Weapon (Top-grade).\n(Passive)\nIncreases PVP damage by 30%, HP/MP by 100%, CP by 200%, Attack Speed by 1500, P. Critical Rate by 500 and additional damage on dragons by 300%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases the Attack/Casting/Movement Speed of nearby enemies by 90% and gradually makes their bodies rigid, paralyzing them for 10 seconds eventually. Using the skill requires 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Strike: Depletes CP of all enemies nearby. Using the skill consumes 1 unit of Dragon Blood. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be enchanted, crystallized, modified, or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01"/>
+		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1740"/>
+		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="3509.0"/>
+			<add stat="pAtk" val="3509.0" />
 			<add stat="mAtk" val="1257.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
@@ -1116,11 +1116,11 @@
 	</item>
 	<item id="36498" name="Antharas Dualsword" additionalName="Top-grade" type="Weapon">
 		<!-- Dragon's Weapon (Top-grade).\n(Passive)\nIncreases PVP damage by 30%, HP/MP by 100%, CP by 200%, Attack Speed by 1500, P. Critical Rate by 500 and additional damage on dragons by 300%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases the Attack/Casting/Movement Speed of nearby enemies by 90% and gradually makes their bodies rigid, paralyzing them for 10 seconds eventually. Using the skill requires 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Strike: Depletes CP of all enemies nearby. Using the skill consumes 1 unit of Dragon Blood. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be enchanted, crystallized, modified, or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_antaras_dual_sword_i01"/>
+		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="3509.0"/>
+			<add stat="pAtk" val="3509.0" />
 			<add stat="mAtk" val="1257.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -1128,11 +1128,11 @@
 	</item>
 	<item id="36499" name="Valakas Shaper" additionalName="Top-grade" type="Weapon">
 		<!-- Dragon's Weapon (Top-grade).\n(Passive)\nIncreases PVP damage by 30%, HP/MP by 100%, CP by 200%, Attack Speed by 1500, P. Critical Rate by 500 and additional damage on dragons by 300%.\n(Used Skill)\n1. Protection: Your movement speed increases by 100 and you become immune to all debuffs for 2 min. Using the skill requires 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Valakas' Breath: Decreases the Attack/Casting/Movement Speed of nearby enemies by 90% and gradually makes their bodies rigid, paralyzing them for 10 seconds eventually. Using the skill requires 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Valakas' Meteor: Depletes CP of all enemies nearby. Using the skill consumes 1 unit of Dragon Blood. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be enchanted, crystallized, modified, or assigned an attribute. -->
-		<set name="icon" val="icon.weapon_valrakas_dagger_i01"/>
+		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="1520"/>
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2523.0"/>
+			<add stat="pAtk" val="2523.0" />
 			<add stat="mAtk" val="1257.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />

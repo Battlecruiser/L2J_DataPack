@@ -1,632 +1,632 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="37500" name="Water Stone" additionalName="Event" type="EtcItem">
 		<!-- Water attack attribute increases by 5 when bestowed on a weapon. Fire defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
-		<set name="icon" val="icon.etc_water_stone_i00"/>
-		<set name="weight" val="1"/>
+		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37501" name="Earth Stone" additionalName="Event" type="EtcItem">
 		<!-- Earth attack attribute increases by 5 when bestowed on a weapon. Wind defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
-		<set name="icon" val="icon.etc_earth_stone_i00"/>
-		<set name="weight" val="1"/>
+		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37502" name="Wind Stone" additionalName="Event" type="EtcItem">
 		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
-		<set name="icon" val="icon.etc_wind_stone_i00"/>
-		<set name="weight" val="1"/>
+		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37503" name="Dark Stone" additionalName="Event" type="EtcItem">
 		<!-- Darkness Elemental attack attribute increases by 5 when bestowed on a weapon. Holy defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
-		<set name="icon" val="icon.etc_unholy_stone_i00"/>
-		<set name="weight" val="1"/>
+		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37504" name="Holy Stone" additionalName="Event" type="EtcItem">
 		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Darkness Elemental defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
-		<set name="icon" val="icon.etc_holy_stone_i00"/>
-		<set name="weight" val="1"/>
+		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37505" name="Octavis Crystal" additionalName="" type="EtcItem">
 		<!-- Collect and take 10 of these to Lydia to exchange an Octavis' Accessory for an enhanced one. -->
-		<set name="icon" val="icon.etc_shinecryst_green_i00"/>
+		<set name="icon" val="icon.etc_shinecryst_green_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37506" name="Istina Crystal" additionalName="" type="EtcItem">
 		<!-- Collect and take 10 of these to Rumiese to exchange an Istina's Accessory for an enhanced one. -->
-		<set name="icon" val="icon.etc_shinecryst_red_i00"/>
+		<set name="icon" val="icon.etc_shinecryst_red_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37507" name="Enhanced Octavis' Ring" additionalName="Warrior" type="Armor">
 		<!-- MP + 37, Atk. Spd. + 3%, P. Critical Rate + 10, and P. Critical Damage + 15%. Wearing two of these rings will give you the effect of wearing one. -->
-		<set name="icon" val="icon.octavis_ring_i00"/>
+		<set name="icon" val="icon.octavis_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="987"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="987" />
+		<set name="weight" val="150" />
 		<set name="price" val="23155500" />
 		<for>
-			<add stat="mDef" val="103.0"/>
+			<add stat="mDef" val="103.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37508" name="Enhanced Octavis' Earring" additionalName="Warrior" type="Armor">
 		<!-- MP + 56, Def. + 3%, P. Skill MP consumption - 5%, and Vampiric Rage + 5%. Wearing two of these earrings will give you the effect of wearing one. -->
-		<set name="icon" val="icon.octavis_earring_i00"/>
+		<set name="icon" val="icon.octavis_earring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="1481"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1481" />
+		<set name="weight" val="150" />
 		<set name="price" val="34733000" />
 		<for>
-			<add stat="mDef" val="154.0"/>
+			<add stat="mDef" val="154.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37509" name="Enhanced Octavis' Necklace" additionalName="Warrior" type="Armor">
 		<!-- MP + 74, P. Atk. + 3%, P. Skill Cooldown - 10%, and Damage Reflection + 5%. -->
-		<set name="icon" val="icon.octavis_necklace_i00"/>
+		<set name="icon" val="icon.octavis_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="1975"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1975" />
+		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
 		<for>
-			<add stat="mDef" val="205.0"/>
+			<add stat="mDef" val="205.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37510" name="Enhanced Istina's Ring" additionalName="Warrior" type="Armor">
 		<!-- MP + 37, Atk. Spd. + 2%, P. Critical Rate + 10, and P. Critical Damage + 10%. Wearing two of these rings will give you the effect of wearing one. -->
-		<set name="icon" val="icon.istina_ring_i00"/>
+		<set name="icon" val="icon.istina_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="987"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="987" />
+		<set name="weight" val="150" />
 		<set name="price" val="23155500" />
 		<for>
-			<add stat="mDef" val="103.0"/>
+			<add stat="mDef" val="103.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37511" name="Enhanced Istina's Earring" additionalName="Warrior" type="Armor">
 		<!-- MP + 56, Def. + 2%, P. Skill MP consumption - 3%, and Vampiric Rage + 5%. Wearing two of these earrings will give you the effect of wearing one. -->
-		<set name="icon" val="icon.istina_earring_i00"/>
+		<set name="icon" val="icon.istina_earring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="1481"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1481" />
+		<set name="weight" val="150" />
 		<set name="price" val="34733000" />
 		<for>
-			<add stat="mDef" val="154.0"/>
+			<add stat="mDef" val="154.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37512" name="Enhanced Istina's Necklace" additionalName="Warrior" type="Armor">
 		<!-- MP + 74, P. Atk. + 2%, P. Skill Cooldown - 5%, and Damage Reflection + 5%. -->
-		<set name="icon" val="icon.istina_necklace_i00"/>
+		<set name="icon" val="icon.istina_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="1975"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1975" />
+		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
 		<for>
-			<add stat="mDef" val="205.0"/>
+			<add stat="mDef" val="205.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37513" name="Enhanced Octavis' Ring" additionalName="Wizard" type="Armor">
 		<!-- MP + 37, Casting Spd. + 2%, M. Critical Rate + 10, and M. Critical Damage + 10%. Wearing two of these rings will give you the effect of wearing one. -->
-		<set name="icon" val="icon.octavis_ring_i00"/>
+		<set name="icon" val="icon.octavis_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="987"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="987" />
+		<set name="weight" val="150" />
 		<set name="price" val="23155500" />
 		<for>
-			<add stat="mDef" val="103.0"/>
+			<add stat="mDef" val="103.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37514" name="Enhanced Octavis' Earring" additionalName="Wizard" type="Armor">
 		<!-- MP + 56, M. Def. + 2%, M. Skill MP consumption - 3%, and Vampiric Rage + 5%. Wearing two of these earrings will give you the effect of wearing one. -->
-		<set name="icon" val="icon.octavis_earring_i00"/>
+		<set name="icon" val="icon.octavis_earring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="1481"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1481" />
+		<set name="weight" val="150" />
 		<set name="price" val="34733000" />
 		<for>
-			<add stat="mDef" val="154.0"/>
+			<add stat="mDef" val="154.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37515" name="Enhanced Octavis' Necklace" additionalName="Wizard" type="Armor">
 		<!-- MP + 74, M. Atk. + 3%, M. Skill Cooldown - 5%, and Damage Reflection + 5%. -->
-		<set name="icon" val="icon.octavis_necklace_i00"/>
+		<set name="icon" val="icon.octavis_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="1975"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1975" />
+		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
 		<for>
-			<add stat="mDef" val="205.0"/>
+			<add stat="mDef" val="205.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37516" name="Enhanced Istina's Ring" additionalName="Wizard" type="Armor">
 		<!-- MP + 37, Casting Spd. + 3%, M. Critical Rate + 10, and M. Critical Damage + 15%. Wearing two of these rings will give you the effect of wearing one. -->
-		<set name="icon" val="icon.istina_ring_i00"/>
+		<set name="icon" val="icon.istina_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="987"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="987" />
+		<set name="weight" val="150" />
 		<set name="price" val="23155500" />
 		<for>
-			<add stat="mDef" val="103.0"/>
+			<add stat="mDef" val="103.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37517" name="Enhanced Istina's Earring" additionalName="Wizard" type="Armor">
 		<!-- MP + 56, M. Def. + 3%, M. Skill MP consumption - 5%, and Vampiric Rage + 5%. Wearing two of these earrings will give you the effect of wearing one. -->
-		<set name="icon" val="icon.istina_earring_i00"/>
+		<set name="icon" val="icon.istina_earring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="1481"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1481" />
+		<set name="weight" val="150" />
 		<set name="price" val="34733000" />
 		<for>
-			<add stat="mDef" val="154.0"/>
+			<add stat="mDef" val="154.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37518" name="Enhanced Istina's Necklace" additionalName="Wizard" type="Armor">
 		<!-- MP + 74, M. Atk. + 5%, M. Skill Cooldown - 10% and Damage Reflection + 5%. -->
-		<set name="icon" val="icon.istina_necklace_i00"/>
+		<set name="icon" val="icon.istina_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="1975"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1975" />
+		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
 		<for>
-			<add stat="mDef" val="205.0"/>
+			<add stat="mDef" val="205.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37519" name="Bottle of Frintezza's Soul" additionalName="" type="EtcItem">
 		<!-- Take it to Rafforty to bestow Frintezza's Soul on Frintezza's Necklace. -->
-		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01"/>
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37520" name="Bottle of Baium's Soul" additionalName="" type="EtcItem">
 		<!-- Take it to Rafforty to bestow Baium's Soul on Baium's Ring. -->
-		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09"/>
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37521" name="Baium's Soul Ring" additionalName="" type="Armor">
 		<!-- MP + 31, Shock/Hold/Mental Resistance + 25%, Shock/Hold/Mental Attack Rate + 25%, P./M. Critical Damage + 15%, Atk./Casting Spd. + 5%, and P./M. Accuracy + 4. Wearing two of these rings will give you the effect of wearing one. -->
-		<set name="icon" val="icon.accessory_ring_of_baium_i00"/>
+		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="36"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="36" />
+		<set name="weight" val="150" />
 		<set name="price" val="865000" />
 		<for>
-			<add stat="mDef" val="79.0"/>
+			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37522" name="Frintezza's Soul Necklace" additionalName="" type="Armor">
 		<!-- MP + 62, Poison/Bleed/Shock/Hold/Paralysis Resistance + 20%, Poison/Bleed/Shock/Hold/Paralysis Attack Rate + 20%, Skill Cooldown - 10%, Damage Reflection + 5%, and Speed + 5. -->
-		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00"/>
+		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="73"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="weight" val="150" />
 		<set name="price" val="1725000" />
 		<for>
-			<add stat="mDef" val="158.0"/>
+			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37523" name="Summon Scroll: Pomona" additionalName="" type="EtcItem">
 		<!-- Scroll for summoning Pomona once. You receive a power-up buff and may also receive a gift box. -->
-		<set name="icon" val="icon.etc_star_scroll_baekisung"/>
+		<set name="icon" val="icon.etc_star_scroll_baekisung" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37524" name="Passion Treasure Chest" additionalName="" type="EtcItem">
 		<!-- Treasure Chest with Pomona's gift. -->
-		<set name="icon" val="icon.event_high_oriental_park_i00"/>
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37525" name="Agathion - Pomona" additionalName="90-day" type="Armor">
 		<!-- Bracelet for summoning Pomona Agathion. 90-day.\n(Active Skill)\nPomona Agathion Teleport\nLets you teleport to various strongholds. (Cooldown is 30 min.) -->
-		<set name="icon" val="icon.bracelet_agathion_bm_i01"/>
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="time" val="7776000" />
 	</item>
 	<item id="37527" name="Transformation Sealbook: Part-time Seller" additionalName="One-eyed ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into an One-eyed ParaPara Cat. -->
-		<set name="icon" val="icon.etc_transform_warrior_i00"/>
+		<set name="icon" val="icon.etc_transform_warrior_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37528" name="Transformation Sealbook: Part-time Seller" additionalName="Smiling ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into a Smiling ParaPara Cat. -->
-		<set name="icon" val="icon.etc_transform_warrior_i00"/>
+		<set name="icon" val="icon.etc_transform_warrior_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37529" name="Transformation Sealbook: Part-time Seller" additionalName="Charming ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into a Charming ParaPara Cat. -->
-		<set name="icon" val="icon.etc_transform_warrior_i00"/>
+		<set name="icon" val="icon.etc_transform_warrior_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37530" name="Transformation Sealbook: Part-time Seller" additionalName="Ferocious ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into a Ferocious ParaPara Cat. -->
-		<set name="icon" val="icon.etc_transform_warrior_i00"/>
+		<set name="icon" val="icon.etc_transform_warrior_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37531" name="Transformation Sealbook: Part-time Seller" additionalName="Merchant ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into a Merchant ParaPara Cat. -->
-		<set name="icon" val="icon.etc_transform_warrior_i00"/>
+		<set name="icon" val="icon.etc_transform_warrior_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37532" name="Lindvior's Egg" additionalName="" type="EtcItem">
 		<!-- Wind Dragon's egg. 10th anniversary item that brings you luck. -->
-		<set name="icon" val="icon.etc_ev_lind_egg"/>
+		<set name="icon" val="icon.etc_ev_lind_egg" />
 	</item>
 	<item id="37533" name="NC Messenger's Hat" additionalName="" type="Armor">
 		<!-- NC Messenger's Hat. Uses 2 hair accessory slots. When equipped, STR/DEX/INT/WIT each increase by 1. -->
-		<set name="icon" val="icon.nc_hair_acc"/>
+		<set name="icon" val="icon.nc_hair_acc" />
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="37534" name="Santa Suit" additionalName="" type="Armor">
 		<!-- Santa Suit. -->
-		<set name="icon" val="icon.armor_ev_santas_clothes"/>
+		<set name="icon" val="icon.armor_ev_santas_clothes" />
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="37535" name="Santa Hat" additionalName="" type="Armor">
 		<!-- Santa Hat. -->
-		<set name="icon" val="icon.accessory_santas_cap_i00"/>
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="37536" name="Santa's Blessing" additionalName="" type="EtcItem">
 		<!-- Double-click to change your appearance to that of a Santa for 3 hours. STR/INT/CON/DEX/WIT/MEN + 1. Buff remains even after death.\n\nNote: If you use an item that changes your appearance, such as Letter Collector's Gift, the Santa appearance might disappear. -->
-		<set name="icon" val="BranchSys.icon.br_xmas_present_fun_i00"/>
+		<set name="icon" val="BranchSys.icon.br_xmas_present_fun_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37537" name="Pomona's Gift Box" additionalName="" type="EtcItem">
 		<!-- Double-click to receive 10 Rose Essences as well as a Passion Treasure Chest at a low probability. -->
-		<set name="icon" val="icon.event_oriental_park_i00"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.event_oriental_park_i00" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37538" name="Pomona Agathion Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to receive a Pomona Agathion (90-day). Cannot be used in the Olympiad. -->
-		<set name="icon" val="icon.etc_pi_box_wish_pack"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.etc_pi_box_wish_pack" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37539" name="Enchant Scroll Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to receive 1 Scroll: Enchant Armor (R-grade) and 1 Scroll: Enchant Weapon (R-grade). Cannot be used in the Olympiad. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37540" name="Giant's Enchant Scroll Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to receive 1 Giant's Scroll: Enchant Armor (R-grade) and 1 Giant's Scroll: Enchant Weapon (R-grade). Cannot be used in the Olympiad. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37541" name="Blessed Enchant Scroll Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to receive 1 Blessed Scroll: Enchant Armor (R-grade) and 1 Blessed Scroll: Enchant Weapon (R-grade). Cannot be used in the Olympiad. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37542" name="Summon Scroll: Bae Kisung" additionalName="Test" type="EtcItem">
 		<!-- Scroll for summoning Bae Kisung once. From the summoned Bae Kisung, you can receive power-up buff and additionally Bae Kisung's gift box that has special gifts. -->
-		<set name="icon" val="icon.etc_star_scroll_baekisung"/>
+		<set name="icon" val="icon.etc_star_scroll_baekisung" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37543" name="Nectar" additionalName="" type="EtcItem">
 		<!-- Go to Santa to trade in for Wintermelon Seed or Large Wintermelon Seed. You can also use it to grow Wintermelon and Large Wintermelon. -->
-		<set name="icon" val="icon.etc_nectar_i01"/>
+		<set name="icon" val="icon.etc_nectar_i01" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37544" name="Snowball" additionalName="" type="EtcItem">
 		<!-- Shaken off of a Wintermelon, this snow lump is popular among merchants as a bringer of fortune. Perhaps you could invest this in Aden Reconstruction for the future? -->
-		<set name="icon" val="BranchSys2.icon.g_illumination_white"/>
+		<set name="icon" val="BranchSys2.icon.g_illumination_white" />
 		<set name="price" val="2500" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37545" name="Large Snowball" additionalName="" type="EtcItem">
 		<!-- Shaken off of a Large Wintermelon, this snow lump is popular among merchants as a bringer of fortune. Perhaps you could invest this in Aden Reconstruction for the future? -->
-		<set name="icon" val="BranchSys2.icon.g_illumination_white"/>
+		<set name="icon" val="BranchSys2.icon.g_illumination_white" />
 		<set name="price" val="15000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37546" name="Rudolph's Gift" additionalName="Stage 1" type="EtcItem">
 		<!-- Winter Holiday Gift for 2013. Gives 10 Nectars for the Wintermelon Event. Deleted after event. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37547" name="Rudolph's Gift" additionalName="Stage 2" type="EtcItem">
 		<!-- Winter Holiday Gift for 2013. Gives 15 Nectars for the Wintermelon Event. Deleted after event. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37548" name="Rudolph's Gift" additionalName="Stage 3" type="EtcItem">
 		<!-- Winter Holiday Gift for 2013. Gives 25 Nectars for the Wintermelon Event. Deleted after event. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37549" name="Rudolph's Gift" additionalName="Stage 4" type="EtcItem">
 		<!-- Winter Holiday Gift for 2013. Gives 60 Nectars for the Wintermelon Event. Deleted after event. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37550" name="Snowman's Buff" additionalName="" type="EtcItem">
 		<!-- Replenishes Vitality for 3 hr. in a peace zone. -->
-		<set name="icon" val="icon.weapon_snowman_stick_i00"/>
-		<set name="weight" val="120"/>
+		<set name="icon" val="icon.weapon_snowman_stick_i00" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37551" name="Winter Holiday Gift" additionalName="" type="EtcItem">
 		<!-- Double click to acquire one of the following: Bottle of Orfen's Soul, Bottle of Frintezza's Soul, Bottle of Queen Ant's Soul, or Bottle of Baium's Soul. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37552" name="Wintermelon Seed" additionalName="" type="EtcItem">
 		<!-- Double-click to have a Young Wintermelon appear. -->
-		<set name="icon" val="icon.etc_gourd_i10"/>
+		<set name="icon" val="icon.etc_gourd_i10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37553" name="Large Wintermelon Seed" additionalName="" type="EtcItem">
 		<!-- Double-click to have a Young Large Wintermelon appear. -->
-		<set name="icon" val="icon.etc_gourd_i11"/>
+		<set name="icon" val="icon.etc_gourd_i11" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37554" name="Kisung's Cherry Nose Buff Scroll" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive Bae Kisung's Power Up buff for 30 min. Cooldown is 15 sec. Cannot be used in the Olympiad. -->
-		<set name="icon" val="icon.etc_star_scroll_baekisung"/>
+		<set name="icon" val="icon.etc_star_scroll_baekisung" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37555" name="Snow Crystal" additionalName="" type="EtcItem">
 		<!-- PC event item for 2013. One received per hour spent in a PC Caf￩. The more you have, the better your chances to win! -->
-		<set name="icon" val="icon.etc_int_symbol_i01"/>
+		<set name="icon" val="icon.etc_int_symbol_i01" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37556" name="Promise Cube" additionalName="100-day" type="EtcItem">
 		<!-- Promise Cube. Double click to acquire one of the following: Dark/Bloody Eternal Enhancement Stone (Annihilation/Hellfire/Desire), Blessed Scroll of Resurrection, High-grade Elixir Box, or Energy of Destruction. Can use 1 time per 1 day. Cannot be used in the Olympiad. -->
-		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00"/>
+		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
 		<set name="time" val="8640000" />
 	</item>
 	<item id="37557" name="Promise Cube (1-time use)" additionalName="" type="EtcItem">
 		<!-- Double click to acquire one of the following: Dark/Bloody Eternal Enhancement Stone (Annihilation/Hellfire/Desire), Blessed Scroll of Resurrection, High-grade Elixir Box, or Energy of Destruction. Cannot be used in the Olympiad. (disappears after 1 time use) -->
-		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37558" name="High-grade Elixir Pack" additionalName="Event" type="EtcItem">
 		<!-- Double click to acquire 5 each of high-grade elixirs of life, mind, and CP. Cannot be used in the Olympiad. -->
-		<set name="icon" val="icon.etc_box_of_adventure_3_i00"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37559" name="Shiny Coin" additionalName="" type="EtcItem">
 		<!-- Sparkling coin. Used to exchange for special items through the dimensional merchant. -->
-		<set name="icon" val="icon.etc_recall_token"/>
+		<set name="icon" val="icon.etc_recall_token" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37560" name="Emperor's Vitality Tonic" additionalName="" type="EtcItem">
 		<!-- Vitality extract containing the emperor's strength. 1 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. The limit on usage of 5 times per week does not apply. -->
-		<set name="icon" val="icon.etc_recall_potion3"/>
+		<set name="icon" val="icon.etc_recall_potion3" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37561" name="Emperor's Vitality Tonic (Medium)" additionalName="" type="EtcItem">
 		<!-- Medium vitality extract containing the emperor's strength. 2 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. The limit on usage of 5 times per week does not apply. -->
-		<set name="icon" val="icon.etc_recall_potion2"/>
+		<set name="icon" val="icon.etc_recall_potion2" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37562" name="Emperor's Vitality Tonic (Large)" additionalName="" type="EtcItem">
 		<!-- Special vitality extract containing the emperor's strength. 3 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. The limit on usage of 5 times per week does not apply. -->
-		<set name="icon" val="icon.etc_recall_potion1"/>
+		<set name="icon" val="icon.etc_recall_potion1" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37563" name="Emperor's Growth Scroll" additionalName="" type="EtcItem">
 		<!-- When used, the emperor's experience is infused so that the character's acquired XP and SP are increased by 30% for one hour. Cannot be used in the Olympiad. -->
-		<set name="icon" val="icon.etc_recall_exp_scroll"/>
+		<set name="icon" val="icon.etc_recall_exp_scroll" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37564" name="Emperor's Rune" additionalName="" type="EtcItem">
 		<!-- 8-hour limited item. While in possession, the character's acquired XP and SP increase by 30%. -->
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 	</item>
 	<item id="37565" name="Emperor's Rune Pack" additionalName="" type="EtcItem">
 		<!-- Open the box to obtain the Emperor's Rune (8-hour). Cannot be used in the Olympiad. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37566" name="Blessed Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 10% for weapons (R-grade) when using Blessed Scroll: Enchant Weapon. Only for items enchanted between + 3 and + 9. Not for items enchanted to + 10 or above. -->
-		<set name="icon" val="icon.bless_ench_wp_stone_i05"/>
-		<set name="weight" val="120"/>
+		<set name="icon" val="icon.bless_ench_wp_stone_i05" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37567" name="Blessed Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
-		<!-- Enchant success rate + 10% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9.  For one-piece armor, enchant must be between + 4 and + 9. -->
-		<set name="icon" val="icon.bless_ench_amr_stone_i05"/>
-		<set name="weight" val="120"/>
+		<!-- Enchant success rate + 10% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<set name="icon" val="icon.bless_ench_amr_stone_i05" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37568" name="Legendary Card Pouch: Dragon" additionalName="" type="EtcItem">
 		<!-- Pouch of legendary cards brimming with magic. Double-click to obtain either the Antharas, Valakas, or Lindvior. -->
-		<set name="icon" val="icon.card_event_dragon_pocket"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.card_event_dragon_pocket" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37569" name="Legendary Card Pouch: Hero" additionalName="" type="EtcItem">
 		<!-- Pouch of legendary cards brimming with magic. Double-click to obtain either the Astair van Halter, Amadeo Cadmus, Lionel Hunter, or Elcadia. -->
-		<set name="icon" val="icon.card_event_hero_pocket"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.card_event_hero_pocket" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37570" name="Legendary Card Pouch: Demon" additionalName="" type="EtcItem">
 		<!-- Pouch of legendary cards brimming with magic. Double-click to obtain either the Baium, Beleth, or Tiat card. -->
-		<set name="icon" val="icon.card_event_devil_pocket"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.card_event_devil_pocket" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37571" name="Legendary Card: Antharas" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_dragon_anta"/>
+		<set name="icon" val="icon.card_dragon_anta" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37572" name="Legendary Card: Valakas" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_dragon_vala"/>
+		<set name="icon" val="icon.card_dragon_vala" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37573" name="Legendary Card: Lindvior" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_dragon_rind"/>
+		<set name="icon" val="icon.card_dragon_rind" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37574" name="Legendary Card: Astair van Halter" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_hero_holter"/>
+		<set name="icon" val="icon.card_hero_holter" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37575" name="Legendary Card: Amadeo Cadmus" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_hero_amadeose"/>
+		<set name="icon" val="icon.card_hero_amadeose" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37576" name="Legendary Card: Lionel Hunter" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_hero_hunter"/>
+		<set name="icon" val="icon.card_hero_hunter" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37577" name="Legendary Card: Sieghardt Ein" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_hero_zigharte"/>
+		<set name="icon" val="icon.card_hero_zigharte" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37578" name="Legendary Card: Elcadia" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_hero_elcardia"/>
+		<set name="icon" val="icon.card_hero_elcardia" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37579" name="Legendary Card: Baium" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_devil_baium"/>
+		<set name="icon" val="icon.card_devil_baium" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37580" name="Legendary Card: Beleth" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_devil_verese"/>
+		<set name="icon" val="icon.card_devil_verese" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37581" name="Legendary Card: Tiat" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_devil_tiate"/>
+		<set name="icon" val="icon.card_devil_tiate" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37582" name="Legendary Card: Lilith" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_devil_lilith"/>
+		<set name="icon" val="icon.card_devil_lilith" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37583" name="Legendary Card: Paulina" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_angel_polline"/>
+		<set name="icon" val="icon.card_angel_polline" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37584" name="Legendary Card: Anakim" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_angel_anakim"/>
+		<set name="icon" val="icon.card_angel_anakim" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37585" name="Aspiring Orc Ruler of Aden" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_orc"/>
+		<set name="icon" val="icon.card_orc" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37586" name="Hidden Card" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.card_hidden"/>
+		<set name="icon" val="icon.card_hidden" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37587" name="Legendary Card: Lucky Pouch" additionalName="" type="EtcItem">
 		<!-- Test your luck! You could receive up to 4 cards including Lindvior, Lionel Hunter, Beleth, and Paulina - or you could receive nothing at all. -->
-		<set name="icon" val="icon.card_event_luck_pocket"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.card_event_luck_pocket" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37588" name="Snake's Gift" additionalName="Not in Use" type="EtcItem">
 		<!-- Snake's Gift for the Year of the Black Snake. Double-click for a chance to obtain a card excluding the Hidden Card. -->
-		<set name="icon" val="icon.card_event_snake_gift"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.card_event_snake_gift" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37589" name="Lord of the Western Winds" additionalName="" type="EtcItem">
 		<!-- Golden card obtained from combining the Lord of the Western Winds. For 30 min., CON + 5, MEN + 5, and Damage Reflect + 20%. -->
-		<set name="icon" val="icon.card_dragon_gold"/>
+		<set name="icon" val="icon.card_dragon_gold" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37590" name="Successors of Destiny" additionalName="" type="EtcItem">
 		<!-- Red card obtained from combining the Successors of Destiny. For 30 min., STR + 5, INT + 5, and P. Def. + 10%. -->
-		<set name="icon" val="icon.card_hero_red"/>
+		<set name="icon" val="icon.card_hero_red" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37591" name="Dragon Rising" additionalName="" type="EtcItem">
 		<!-- Black card obtained from combining the Dragon Rising. For 30 min., STR + 5, INT + 5, and M. Def. + 10%. -->
-		<set name="icon" val="icon.card_devil_black"/>
+		<set name="icon" val="icon.card_devil_black" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37592" name="Awakening Darkness" additionalName="" type="EtcItem">
 		<!-- Blue card obtained from combining the Awakening Darkness. For 30 min., STR + 5, INT + 5, and Attribute Resistance + 100. -->
-		<set name="icon" val="icon.card_angel_blue"/>
+		<set name="icon" val="icon.card_angel_blue" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37593" name="Returning Hero's Vitality Replenishing Juice" additionalName="Event" type="EtcItem">
 		<!-- 1 out of 4 bars on the vitality gauge are replenished. -->
-		<set name="icon" val="icon.etc_recall_potion3"/>
+		<set name="icon" val="icon.etc_recall_potion3" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37594" name="Returning Hero's Vitality Replenishing Juice 4-unit Pack" additionalName="Event" type="EtcItem">
 		<!-- It contains 4 Returning Hero's Vitality Replenishing Juices that can replenish 1 out of 4 bars on the vitality gauge. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i00"/>
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37595" name="Returning Hero's Potion Pack" additionalName="Event" type="EtcItem">
 		<!-- Gift box containing 30 Returning Hero's Health Potion, 1 Returning Hero's Vitality Replenishing Juice 4-unit Pack, and 6 Heavenly Cocktails. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37596" name="Weapon Coupon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Take this to Snake in town to obtain a weapon (R-grade) for a small fee. Temporary event item. -->
-		<set name="icon" val="icon.etc_level_bustup_ticket_i02"/>
+		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37597" name="Weapon Coupon (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Take this to Snake in town to obtain a weapon (R95-grade) for a small fee. Temporary event item. -->
-		<set name="icon" val="icon.etc_level_bustup_ticket_i02"/>
+		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37598" name="Weapon Coupon (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Take this to Snake in town to obtain a weapon (R99-grade) for a small fee. Temporary event item. -->
-		<set name="icon" val="icon.etc_level_bustup_ticket_i02"/>
+		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37599" name="Weapon Coupon (S-grade)" additionalName="" type="EtcItem">
 		<!-- Take this to Snake in town to obtain a weapon (S-grade) for a small fee. Temporary event item. -->
-		<set name="icon" val="icon.etc_level_bustup_ticket_i02"/>
+		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_stackable" val="true" />
 	</item>
 </list>

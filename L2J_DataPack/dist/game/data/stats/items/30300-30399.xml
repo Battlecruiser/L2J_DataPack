@@ -1,262 +1,262 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="30300" name="Superior Giant's Codex - Oblivion" additionalName="" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed to restore a previous enchantment after Awakening. -->
-		<set name="icon" val="icon.codex_of_incuse_forgetting"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.codex_of_incuse_forgetting" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30301" name="Superior Giant's Codex Manuscript " additionalName="" type="EtcItem">
 		<!-- Superior Giant's Codex. Item needed for skill enchantment after Awakening. -->
-		<set name="icon" val="icon.codex_of_incuse"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.codex_of_incuse" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30302" name="Superior Giant's Codex Manuscript - Mastery" additionalName="" type="EtcItem">
 		<!-- Superior Giant's Codex. Item needed for blessed skill enchantment after Awakening. -->
-		<set name="icon" val="icon.codex_of_incuse_dexterity"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.codex_of_incuse_dexterity" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30303" name="Superior Giant's Codex Manuscript - Discipline" additionalName="" type="EtcItem">
 		<!-- Superior Giant's Codex. Item needed for changing the skill enchantment method after Awakening. -->
-		<set name="icon" val="icon.codex_of_incuse_training"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.codex_of_incuse_training" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30304" name="Superior Giant's Codex Manuscript - Oblivion" additionalName="" type="EtcItem">
 		<!-- Superior Giant's Codex. Item needed to restore a previous skill enchantment after Awakening. -->
-		<set name="icon" val="icon.codex_of_incuse_forgetting"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.codex_of_incuse_forgetting" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30305" name="Check Test Item" additionalName="" type="EtcItem">
 		<!-- Check Test Item -->
-		<set name="icon" val="icon.weapon_vesper_shaper_i00"/>
-		<set name="weight" val="100"/>
+		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
+		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30306" name="Essence of the Lesser Giants" additionalName="" type="EtcItem">
 		<!-- Ravidoff in the Reliquary of the Giants will exchange these items for Superior Giant's Codexes. -->
-		<set name="icon" val="icon.essence_of_giant"/>
-		<set name="weight" val="2"/>
+		<set name="icon" val="icon.essence_of_giant" />
+		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30307" name="R99 (Rare) Belt" additionalName="" type="Armor">
-		<set name="icon" val="icon.armor_belt_i03"/>
+		<set name="icon" val="icon.armor_belt_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist"/>
-		<set name="crystal_type" val="R99"/>
-		<set name="crystal_count" val="758"/>
-		<set name="weight" val="440"/>
+		<set name="bodypart" val="waist" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="758" />
+		<set name="weight" val="440" />
 		<set name="price" val="17782500" />
 		<for>
-			<add stat="pDef" val="25.0"/>
+			<add stat="pDef" val="25.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="30308" name="R99 (Rare) Bracelet" additionalName="" type="Armor">
-		<set name="icon" val="icon.etc_rbracelet_s_i03"/>
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC"/>
-		<set name="crystal_type" val="R99"/>
-		<set name="crystal_count" val="75"/>
-		<set name="weight" val="150"/>
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="75" />
+		<set name="weight" val="150" />
 		<set name="price" val="1778000" />
 	</item>
 	<item id="30309" name="R99 (Rare) Shirt" additionalName="" type="Armor">
-		<set name="icon" val="icon.etc_stripe_shirts_s_i05"/>
+		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC"/>
-		<set name="crystal_type" val="R99"/>
-		<set name="crystal_count" val="1517"/>
-		<set name="weight" val="130"/>
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="1517" />
+		<set name="weight" val="130" />
 		<set name="price" val="35565500" />
 		<for>
-			<add stat="pDef" val="50.0"/>
+			<add stat="pDef" val="50.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="30310" name="Abelius Cloak" additionalName="Sigel Knight" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Abelius. M. Def. + 40. -->
-		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="220"/>
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="50.0"/>
-			<add stat="mDef" val="40.0"/>
+			<add stat="pDef" val="50.0" />
+			<add stat="mDef" val="40.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30311" name="Sapyros Cloak" additionalName="Tyrr Warrior" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Sapyros. M. Def. + 40. -->
-		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="220"/>
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="50.0"/>
-			<add stat="mDef" val="40.0"/>
+			<add stat="pDef" val="50.0" />
+			<add stat="mDef" val="40.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30312" name="Ashagen Cloak" additionalName="Othell Rogue" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Ashagen. M. Def. + 40. -->
-		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="220"/>
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="50.0"/>
-			<add stat="mDef" val="40.0"/>
+			<add stat="pDef" val="50.0" />
+			<add stat="mDef" val="40.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30313" name="Cranigg Cloak" additionalName="Yul Archer" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Cranigg. M. Def. + 40. -->
-		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="220"/>
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="50.0"/>
-			<add stat="mDef" val="40.0"/>
+			<add stat="pDef" val="50.0" />
+			<add stat="mDef" val="40.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30314" name="Soltkreig Cloak" additionalName="Feoh Wizard" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Soltkreig. M. Def. + 40. -->
-		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="220"/>
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="50.0"/>
-			<add stat="mDef" val="40.0"/>
+			<add stat="pDef" val="50.0" />
+			<add stat="mDef" val="40.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30315" name="Naviarope Cloak" additionalName="Wynn Summoner" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Naviarope. M. Def. + 40. -->
-		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="220"/>
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="50.0"/>
-			<add stat="mDef" val="40.0"/>
+			<add stat="pDef" val="50.0" />
+			<add stat="mDef" val="40.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30316" name="Leister Cloak" additionalName="Iss Enchanter" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Leister. M. Def. + 40. -->
-		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="220"/>
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="50.0"/>
-			<add stat="mDef" val="40.0"/>
+			<add stat="pDef" val="50.0" />
+			<add stat="mDef" val="40.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30317" name="Lakcis Cloak" additionalName="Aeore Healer" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Lakcis. M. Def. + 40. -->
-		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="220"/>
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="50.0"/>
-			<add stat="mDef" val="40.0"/>
+			<add stat="pDef" val="50.0" />
+			<add stat="mDef" val="40.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30318" name="Dusk Report" additionalName="" type="EtcItem">
 		<!-- Report regarding the findings of the expedition team of the Dusk that was found in the Catacomb and the Necropolis. Click to check its content. -->
-		<set name="icon" val="icon.etc_old_evil_book_i00"/>
-		<set name="weight" val="10"/>
+		<set name="icon" val="icon.etc_old_evil_book_i00" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="30319" name="Mark of Effort" additionalName="" type="EtcItem">
 		<!-- Mark that symbolizes the efforts of a returned adventurer. It represents the right to receive each type of support through the adventure guildsmen. Also, if you possess Marks of Effort, that benefit accumulates. Increases. -->
-		<set name="icon" val="icon.armor_soul_i00"/>
+		<set name="icon" val="icon.armor_soul_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30320" name="Tamlin Orc's Badge" additionalName="" type="EtcItem">
 		<!-- Tamlin Orc's badge that retired adventurer Isael Silvershadow of Hunter Village asks you to collect. -->
-		<set name="icon" val="icon.etc_badge_silver_i00"/>
+		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30321" name="Memorial Crystal" additionalName="" type="EtcItem">
 		<!-- Mark that retired adventurer Isael Silvershadow of Hunter Village asks you to collect. By hunting with a sponsor, you can acquire tremendous experience in a short period of time. -->
-		<set name="icon" val="icon.etc_crystal_cave_crystal_i02"/>
+		<set name="icon" val="icon.etc_crystal_cave_crystal_i02" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30322" name="Flame Ashes" additionalName="" type="EtcItem">
 		<!-- Flame Ashes that Head Blacksmith Peris of the Town of Aden asks you to collect. -->
-		<set name="icon" val="icon.etc_fire_crystal_i00"/>
+		<set name="icon" val="icon.etc_fire_crystal_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30323" name="Crystals of Experience" additionalName="" type="EtcItem">
 		<!-- Marks that Head Blacksmith Peris of the Town of Aden asks you to collect. By hunting with a sponsor, you can acquire tremendous experience in a short period of time. -->
-		<set name="icon" val="icon.etc_crystal_cave_crystal_i03"/>
+		<set name="icon" val="icon.etc_crystal_cave_crystal_i03" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30324" name="Enhanced Pailaka Ring" additionalName="" type="EtcItem">
 		<!-- Pailaka forgotten temple reward item. Ring with great M. Def. Has the effect of MP + 15. Cannot be enchanted. -->
-		<set name="icon" val="icon.accessary_mithril_ring_i00"/>
-		<set name="weight" val="2"/>
+		<set name="icon" val="icon.accessary_mithril_ring_i00" />
+		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30325" name="Returning Adventurer's Mark" additionalName="" type="EtcItem">
 		<!-- Mark of a returned adventurer It represents the right to receive each type of support through the adventure guildsmen. 30 day limited period. -->
-		<set name="icon" val="icon.etc_permit_card_i00"/>
-		<set name="weight" val="2"/>
+		<set name="icon" val="icon.etc_permit_card_i00" />
+		<set name="weight" val="2" />
 	</item>
 	<item id="30326" name="Antharas' Symbol Dye" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.dragon_dye_i01"/>
-		<set name="weight" val="150"/>
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30327" name="Valakas' Symbol Dye" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.dragon_dye_i01"/>
-		<set name="weight" val="150"/>
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30328" name="Earth Wyrm's Symbol Dye" additionalName="" type="EtcItem">
-		<set name="icon" val="icon.etc_str_hena_i02"/>
-		<set name="weight" val="150"/>
+		<set name="icon" val="icon.etc_str_hena_i02" />
+		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30329" name="Envoy Weapon" additionalName="" type="Weapon">
 		<!-- Envoy Weapon -->
-		<set name="icon" val="icon.weapon_monster_i00"/>
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rhand"/>
-		<set name="weapon_type" val="DAGGER"/>
-		<set name="crystal_type" val="D"/>
-		<set name="crystal_count" val="743"/>
-		<set name="weight" val="300"/>
-		<set name="soulshots" val="2"/>
-		<set name="spiritshots" val="2"/>
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="743" />
+		<set name="weight" val="300" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="5.0"/>
+			<add stat="pAtk" val="5.0" />
 			<add stat="mAtk" val="5.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -264,590 +264,590 @@
 	</item>
 	<item id="30330" name="Top-grade Gludio Water Resistance Necklace" additionalName="" type="Armor">
 		<!-- Necklace given to the guardian of Gludio. Water Resistance + 30. -->
-		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0"/>
+			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30331" name="Top-grade Dion Holy Resistance Necklace" additionalName="" type="Armor">
 		<!-- Necklace given to the guardian of Dion. Holy Resistance + 30. -->
-		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0"/>
+			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30332" name="Top-grade Giran Wind Resistance Necklace" additionalName="" type="Armor">
 		<!-- Necklace given to the guardian of Giran. Wind Resistance + 30. -->
-		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0"/>
+			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30333" name="Top-grade Oren Dark Resistance Necklace" additionalName="" type="Armor">
 		<!-- Necklace given to the guardian of Oren. Dark Resistance + 30. -->
-		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0"/>
+			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30334" name="Top-grade Aden Earth Resistance Necklace" additionalName="" type="Armor">
 		<!-- Necklace given to the guardian of Aden. Earth Resistance + 30. -->
-		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0"/>
+			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30335" name="Top-grade Innadril Water Resistance Necklace" additionalName="" type="Armor">
 		<!-- Necklace given to the guardian of Innadril. Water Resistance + 30. -->
-		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0"/>
+			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30336" name="Top-grade Goddard Fire Resistance Necklace" additionalName="" type="Armor">
 		<!-- Necklace given to the guardian of Goddard. Fire Resistance + 30. -->
-		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0"/>
+			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30337" name="Top-grade Rune Fire Resistance Necklace" additionalName="" type="Armor">
 		<!-- Necklace given to the guardian of Rune. Fire Resistance + 30. -->
-		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0"/>
+			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30338" name="Top-grade Schuttgart Wind Resistance Necklace" additionalName="" type="Armor">
 		<!-- Necklace given to the guardian of Schuttgart. Wind Resistance + 30. -->
-		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0"/>
+			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30339" name="Top-grade Gludio Water Resistance Earring" additionalName="" type="Armor">
 		<!-- Earring given to the guardian of Gludio. Stun attack + 15%, Bleed Resistance + 15%, Water Resistance + 10. CP + 5%. Only one effect is applied when two earrings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="118.0"/>
+			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30340" name="Top-grade Dion Holy Resistance Earring" additionalName="" type="Armor">
 		<!-- Earring given to the guardian of Dion. Hold attack + 15%, Poison Resistance + 15%, Holy Resistance + 10. CP + 5%. Only one effect is applied when two earrings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="118.0"/>
+			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30341" name="Top-grade Giran Wind Resistance Earring" additionalName="" type="Armor">
 		<!-- Earring given to the guardian of Giran. Bleed attack + 15%, Paralysis Resistance + 15%, Wind Resistance + 10. CP + 5%. Only one effect is applied when two earrings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="118.0"/>
+			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30342" name="Top-grade Oren Dark Resistance Earring" additionalName="" type="Armor">
 		<!-- Earring given to the guardian of Oren. Paralysis attack + 15%, Hold Resistance + 15%, Dark Resistance + 10. CP + 5%. Only one effect is applied when two earrings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="118.0"/>
+			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30343" name="Top-grade Aden Earth Resistance Earring" additionalName="" type="Armor">
 		<!-- Earring given to the guardian of Aden. Mental attack + 15%, Stun Resistance + 15%, Earth Resistance + 10. CP + 5%. Only one effect is applied when two earrings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="118.0"/>
+			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30344" name="Top-grade Innadril Water Resistance Earring" additionalName="" type="Armor">
 		<!-- Earring given to the guardian of Innadril. Sleep attack + 15%, Stun Resistance + 15%, Water Resistance + 10. CP + 5%. Only one effect is applied when two earrings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="118.0"/>
+			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30345" name="Top-grade Goddard Fire Resistance Earring" additionalName="" type="Armor">
 		<!-- Earring given to the guardian of Goddard. Stun attack + 15%, Sleep Resistance + 15%, Fire Resistance + 10. CP + 5%. Only one effect is applied when two earrings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="118.0"/>
+			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30346" name="Top-grade Rune Fire Resistance Earring" additionalName="" type="Armor">
 		<!-- Earring given to the guardian of Rune. Poison attack + 15%, Hold Resistance + 15%, Fire Resistance + 10. CP + 5%. Only one effect is applied when two earrings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="118.0"/>
+			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30347" name="Top-grade Schuttgart Wind Resistance Earring" additionalName="" type="Armor">
 		<!-- Earring given to the guardian of Schuttgart. Hold attack + 15%, Mental Resistance + 15%, Wind Resistance + 10. CP + 5%. Only one effect is applied when two earrings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="118.0"/>
+			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30348" name="Top-grade Gludio Earth Resistance Earring" additionalName="" type="Armor">
 		<!-- Ring given to the guardian of Gludio. Earth Resistance + 15. Only one effect is applied when two rings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="79.0"/>
+			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30349" name="Top-grade Dion Water Resistance Ring" additionalName="" type="Armor">
 		<!-- Ring given to the guardian of Dion. Water Resistance + 15. Only one effect is applied when two rings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="79.0"/>
+			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30350" name="Top-grade Giran Fire Resistance Ring" additionalName="" type="Armor">
 		<!-- Ring given to the guardian of Giran. Fire Resistance + 15. Only one effect is applied when two rings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="79.0"/>
+			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30351" name="Top-grade Oren Earth Resistance Ring" additionalName="" type="Armor">
 		<!-- Ring given to the guardian of Oren. Earth Resistance + 15. Only one effect is applied when two rings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="79.0"/>
+			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30352" name="Top-grade Aden Holy Resistance Ring" additionalName="" type="Armor">
 		<!-- Ring given to the guardian of Aden. Holy Resistance + 15. Only one effect is applied when two rings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="79.0"/>
+			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30353" name="Top-grade Innadril Holy Resistance Ring" additionalName="" type="Armor">
 		<!-- Ring given to the guardian of Innadril. Holy Resistance + 15. Only one effect is applied when two rings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="79.0"/>
+			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30354" name="Top-grade Goddard Dark Resistance Ring" additionalName="" type="Armor">
 		<!-- Ring given to the guardian of Goddard. Dark Resistance + 15. Only one effect is applied when two rings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="79.0"/>
+			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30355" name="Top-grade Rune Wind Resistance Ring" additionalName="" type="Armor">
 		<!-- Ring given to the guardian of Rune. Wind Resistance + 15. Only one effect is applied when two rings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="79.0"/>
+			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30356" name="Top-grade Schuttgart Dark Resistance Ring" additionalName="" type="Armor">
 		<!-- Ring given to the guardian of Schuttgart. Dark Resistance + 15. Only one effect is applied when two rings with the same effect are equipped. -->
-		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="79.0"/>
+			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30357" name="Elixir of Life (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers HP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
-		<set name="icon" val="icon.etc_super_potion_i02"/>
-		<set name="weight" val="5"/>
+		<set name="icon" val="icon.etc_super_potion_i02" />
+		<set name="weight" val="5" />
 		<set name="price" val="8750" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30358" name="Elixir of Mind (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers MP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
-		<set name="icon" val="icon.etc_super_potion_i00"/>
-		<set name="weight" val="5"/>
+		<set name="icon" val="icon.etc_super_potion_i00" />
+		<set name="weight" val="5" />
 		<set name="price" val="9400" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30359" name="Elixir of CP (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers CP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
-		<set name="icon" val="icon.etc_super_potion_i01"/>
-		<set name="weight" val="5"/>
+		<set name="icon" val="icon.etc_super_potion_i01" />
+		<set name="weight" val="5" />
 		<set name="price" val="3500" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30360" name="Superior Elixir of Life (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers HP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
-		<set name="icon" val="icon.etc_super_potion_i02"/>
-		<set name="weight" val="5"/>
+		<set name="icon" val="icon.etc_super_potion_i02" />
+		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30361" name="Superior Elixir of Mind (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers MP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
-		<set name="icon" val="icon.etc_super_potion_i00"/>
-		<set name="weight" val="5"/>
+		<set name="icon" val="icon.etc_super_potion_i00" />
+		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30362" name="Superior Elixir of CP (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers CP. Only characters below level 85 can use on themselves. Cooldown is 2 min. -->
-		<set name="icon" val="icon.etc_super_potion_i01"/>
-		<set name="weight" val="5"/>
+		<set name="icon" val="icon.etc_super_potion_i01" />
+		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30363" name="Soul Crystal" additionalName="" type="EtcItem">
 		<!-- Soul Crystal -->
-		<set name="icon" val="icon.etc_soul_stone_i00"/>
-		<set name="weight" val="20"/>
+		<set name="icon" val="icon.etc_soul_stone_i00" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="30364" name="Life Stone" additionalName="" type="EtcItem">
 		<!-- Life Stone -->
-		<set name="icon" val="icon.etc_mineral_general_i00"/>
-		<set name="weight" val="2"/>
+		<set name="icon" val="icon.etc_mineral_general_i00" />
+		<set name="weight" val="2" />
 		<set name="price" val="2500" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30365" name="Headgear" additionalName="" type="Armor">
 		<!-- Headgear crafting ingredient -->
-		<set name="icon" val="icon.armor_helmet_i00"/>
+		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="head"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="25"/>
-		<set name="weight" val="530"/>
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="25" />
+		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="114.0"/>
+			<add stat="pDef" val="114.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="30366" name="Boots" additionalName="" type="Armor">
 		<!-- Boots crafting ingredient -->
-		<set name="icon" val="icon.armor_t97_b_i00"/>
+		<set name="icon" val="icon.armor_t97_b_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="feet"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="17"/>
-		<set name="weight" val="1070"/>
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="17" />
+		<set name="weight" val="1070" />
 		<for>
-			<add stat="pDef" val="76.0"/>
+			<add stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="30367" name="Gloves" additionalName="" type="Armor">
 		<!-- Gloves crafting ingredient -->
-		<set name="icon" val="icon.armor_t97_g_i00"/>
+		<set name="icon" val="icon.armor_t97_g_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="17"/>
-		<set name="weight" val="510"/>
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="17" />
+		<set name="weight" val="510" />
 		<for>
-			<add stat="pDef" val="76.0"/>
+			<add stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="30368" name="T-shirt" additionalName="" type="Armor">
 		<!-- T-shirt -->
-		<set name="icon" val="icon.etc_stripe_shirts_s_i05"/>
+		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="85"/>
-		<set name="weight" val="130"/>
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="85" />
+		<set name="weight" val="130" />
 		<set name="price" val="1998500" />
 		<for>
-			<add stat="pDef" val="38.0"/>
+			<add stat="pDef" val="38.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="30369" name="Belt" additionalName="" type="Armor">
 		<!-- Belt -->
-		<set name="icon" val="icon.armor_belt_i03"/>
+		<set name="icon" val="icon.armor_belt_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="42"/>
-		<set name="weight" val="440"/>
+		<set name="bodypart" val="waist" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="42" />
+		<set name="weight" val="440" />
 		<set name="price" val="999000" />
 		<for>
-			<add stat="pDef" val="19.0"/>
+			<add stat="pDef" val="19.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="30370" name="Bracelet" additionalName="" type="Armor">
 		<!-- Bracelet -->
-		<set name="icon" val="icon.etc_rbracelet_s_i03"/>
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC"/>
-		<set name="crystal_type" val="R"/>
-		<set name="crystal_count" val="75"/>
-		<set name="weight" val="150"/>
+		<set name="weapon_type" val="ETC" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="75" />
+		<set name="weight" val="150" />
 		<set name="price" val="1778000" />
 	</item>
 	<item id="30371" name="Box Containing Magic Power" additionalName="" type="EtcItem">
 		<!-- Box filled with M. Atk. It contains a useful item. -->
-		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30372" name="Hero's Cloak" additionalName="" type="Armor">
 		<!-- The cloak of a sacred hero. Increases Max HP and CP. M. Def. + 80. DEX/MEN/STR/CON/WIT/INT + 2, and Attribute Resistance + 10. -->
-		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="220"/>
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="100.0"/>
-			<add stat="mDef" val="80.0"/>
+			<add stat="pDef" val="100.0" />
+			<add stat="mDef" val="80.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30373" name="Glorious Cloak" additionalName="" type="Armor">
 		<!-- Glorious Cloak. Increases Max HP and CP. M. Def. + 50,. DEX/MEN/STR/CON/WIT/INT + 1, and Attribute Resistance + 5.\n\nNote: Item disappears when you change classes. -->
-		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="220"/>
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="60.0"/>
-			<add stat="mDef" val="50.0"/>
+			<add stat="pDef" val="60.0" />
+			<add stat="mDef" val="50.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30374" name="Magic Filled Box" additionalName="" type="EtcItem">
 		<!-- Box filled with M. Atk. It contains a useful item. -->
-		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30375" name="Infinite Orichalcum Quiver" additionalName="Additional Hit" type="EtcItem">
-		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
+		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
 	</item>
 	<item id="30376" name="Infinite Orichalcum Quiver" additionalName="Critical Hit" type="EtcItem">
-		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
+		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
 	</item>
 	<item id="30377" name="Infinite Orichalcum Quiver" additionalName="Bleed Hit" type="EtcItem">
-		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
+		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
 	</item>
 	<item id="30378" name="Infinite Orichalcum Bolt Container" additionalName="Additional Hit" type="EtcItem">
-		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
+		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
 	</item>
 	<item id="30379" name="Infinite Orichalcum Bolt Container" additionalName="Critical Hit" type="EtcItem">
-		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
+		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
 	</item>
 	<item id="30380" name="Infinite Orichalcum Bolt Container" additionalName="Bleed Hit" type="EtcItem">
-		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
+		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
 	</item>
 	<item id="30381" name="Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 10% for weapons (R-grade). Only for items enchanted between + 3 and + 9. -->
-		<set name="icon" val="icon.ench_wp_potion_violet_i00"/>
-		<set name="weight" val="120"/>
+		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30382" name="Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 15% for armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
-		<set name="icon" val="icon.ench_am_potion_violet_i00"/>
-		<set name="weight" val="120"/>
+		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30383" name="Mentor Ring" additionalName="" type="Armor">
 		<!-- Ring received by an academy member after training with his sponsor. Produces the effect of MP + 22. -->
-		<set name="icon" val="icon.accessary_enchanted_ring_i00"/>
+		<set name="icon" val="icon.accessary_enchanted_ring_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger"/>
-		<set name="crystal_type" val="A"/>
-		<set name="weight" val="150"/>
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="A" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="55.0"/>
+			<add stat="mDef" val="55.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="30384" name="Certificate of Promise" additionalName="" type="EtcItem">
 		<!-- Proof given to those who successfully complete a mission. Can be exchanged for equipment. -->
-		<set name="icon" val="icon.item_normal52"/>
+		<set name="icon" val="icon.item_normal52" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30385" name="Certificate of Life" additionalName="" type="EtcItem">
 		<!-- Proof given to those who successfully complete a mission. Can be exchanged for equipment. -->
-		<set name="icon" val="icon.item_normal52"/>
+		<set name="icon" val="icon.item_normal52" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30386" name="Certificate of Hero" additionalName="" type="EtcItem">
 		<!-- Proof given to those who successfully complete a mission. Can be exchanged for equipment. -->
-		<set name="icon" val="icon.item_normal52"/>
+		<set name="icon" val="icon.item_normal52" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30387" name="Certificate of Hell" additionalName="" type="EtcItem">
 		<!-- Proof given to those who successfully complete a mission. Can be exchanged for equipment. -->
-		<set name="icon" val="icon.item_normal52"/>
+		<set name="icon" val="icon.item_normal52" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30388" name="Returning Adventurer's Support Box (S-grade)" additionalName="" type="EtcItem">
 		<!-- Box containing support items for a returner. Contains S-grade equipment and weapon. Double-click to use. -->
-		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
-		<set name="weight" val="100"/>
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30389" name="Returning Adventurer's Support Box (A-grade)" additionalName="" type="EtcItem">
 		<!-- Box containing support items for a returner. Contains A-grade equipment and weapon. Double-click to use. -->
-		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
-		<set name="weight" val="100"/>
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30390" name="Returning Adventurer's Support Box (B-grade)" additionalName="" type="EtcItem">
 		<!-- Box containing support items for a returner. Contains B-grade equipment and weapon. Double-click to use. -->
-		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
-		<set name="weight" val="100"/>
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30391" name="Returning Adventurer's Support Box (C-grade)" additionalName="" type="EtcItem">
 		<!-- Box containing support items for a returner. Contains C-grade equipment and weapon. Double-click to use. -->
-		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
-		<set name="weight" val="100"/>
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30392" name="Infinity Shaper" additionalName="" type="Weapon">
 		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
-		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01"/>
+		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rhand"/>
-		<set name="weapon_type" val="DAGGER"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="1300"/>
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="881.0"/>
+			<add stat="pAtk" val="881.0" />
 			<add stat="mAtk" val="521.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
@@ -855,14 +855,14 @@
 	</item>
 	<item id="30393" name="Infinity Cutter" additionalName="" type="Weapon">
 		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
-		<set name="icon" val="icon.weapon_the_sword_of_hero_i01"/>
+		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rhand"/>
-		<set name="weapon_type" val="SWORD"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="1300"/>
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1007.0"/>
+			<add stat="pAtk" val="1007.0" />
 			<add stat="mAtk" val="521.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
@@ -870,14 +870,14 @@
 	</item>
 	<item id="30394" name="Infinity Slasher" additionalName="" type="Weapon">
 		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
-		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01"/>
+		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand"/>
-		<set name="weapon_type" val="SWORD"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="1300"/>
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1225.0"/>
+			<add stat="pAtk" val="1225.0" />
 			<add stat="mAtk" val="521.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -885,14 +885,14 @@
 	</item>
 	<item id="30395" name="Infinity Avenger" additionalName="" type="Weapon">
 		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
-		<set name="icon" val="icon.weapon_the_axe_of_hero_i01"/>
+		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rhand"/>
-		<set name="weapon_type" val="BLUNT"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="1300"/>
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1007.0"/>
+			<add stat="pAtk" val="1007.0" />
 			<add stat="mAtk" val="521.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
@@ -901,14 +901,14 @@
 	</item>
 	<item id="30396" name="Infinity Fighter" additionalName="" type="Weapon">
 		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
-		<set name="icon" val="icon.weapon_the_fist_of_hero_i01"/>
+		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand"/>
-		<set name="weapon_type" val="DUALFIST"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="1300"/>
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1225.0"/>
+			<add stat="pAtk" val="1225.0" />
 			<add stat="mAtk" val="521.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
@@ -917,14 +917,14 @@
 	</item>
 	<item id="30397" name="Infinity Stormer" additionalName="" type="Weapon">
 		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
-		<set name="icon" val="icon.weapon_the_pole_of_hero_i01"/>
+		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand"/>
-		<set name="weapon_type" val="POLE"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="1300"/>
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1007.0"/>
+			<add stat="pAtk" val="1007.0" />
 			<add stat="mAtk" val="521.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
@@ -932,14 +932,14 @@
 	</item>
 	<item id="30398" name="Infinity Thrower" additionalName="" type="Weapon">
 		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
-		<set name="icon" val="icon.weapon_the_bow_of_hero_i01"/>
+		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand"/>
-		<set name="weapon_type" val="BOW"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="1300"/>
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1983.0"/>
+			<add stat="pAtk" val="1983.0" />
 			<add stat="mAtk" val="521.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
@@ -947,14 +947,14 @@
 	</item>
 	<item id="30399" name="Infinity Shooter" additionalName="" type="Weapon">
 		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
-		<set name="icon" val="icon.weapon_infinity_shooter_i01"/>
+		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand"/>
-		<set name="weapon_type" val="CROSSBOW"/>
-		<set name="crystal_type" val="R"/>
-		<set name="weight" val="1300"/>
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1786.0"/>
+			<add stat="pAtk" val="1786.0" />
 			<add stat="mAtk" val="521.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="12.0" />
