@@ -1,4 +1,4 @@
-Copyright 2004-2014 L2J-DataPack team
+Copyright 2004-2015 L2J-DataPack team
 
 This file is part of the L2J-DataPack.
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="L2J_DataPack" default="zip" basedir=".">
 	<description>
-		Copyright (C) 2004-2014 L2J DataPack
+		Copyright (C) 2004-2015 L2J DataPack
 		
 		This file is part of L2J DataPack.
 		
@@ -26,7 +26,9 @@
 	</target>
 
 	<target name="zip" depends="init">
-		<tstamp description="Initialize ${DSTAMP}, which is in format yyyyMMdd" />
-		<zip destfile="${build}/L2J_DataPack-${DSTAMP}.zip" basedir="dist" level="9" />
+		<tstamp>
+			<format property="build.date" pattern="yyyy-MM-dd"/>
+		</tstamp>
+		<zip destfile="${build}/L2J_DataPack_${build.date}.zip" basedir="dist" level="9" />
 	</target>
 </project>
