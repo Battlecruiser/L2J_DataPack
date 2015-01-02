@@ -1,4 +1,4 @@
-CREATE TABLE `pledge_applicant` (
+CREATE TABLE IF NOT EXISTS `pledge_applicant` (
   `charId` int(10) NOT NULL,
   `clanId` int(10) NOT NULL,
   `karma` tinyint(1) NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE `pledge_applicant` (
   PRIMARY KEY (`charId`,`clanId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `pledge_recruit` (
+CREATE TABLE IF NOT EXISTS `pledge_recruit` (
   `clan_id` int(10) NOT NULL,
   `karma` tinyint(1) NOT NULL,
   `information` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE `pledge_recruit` (
   PRIMARY KEY (`clan_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `pledge_waiting_list` (
+CREATE TABLE IF NOT EXISTS `pledge_waiting_list` (
   `char_id` int(10) NOT NULL,
   `karma` tinyint(1) NOT NULL,
   PRIMARY KEY (`char_id`)
