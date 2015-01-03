@@ -1,4 +1,4 @@
-This directory contains tables needed for L2J "cs", ls and "gs" DataBases in order to run an L2J Server.
+This directory contains tables needed for Login Server and Game Server databases in order to run a L2J Server.
 
 Additionally, there are directories whose content serve different purposes.
 You should read documentation.txt files included inside these directories for further explanation about them.
@@ -18,7 +18,7 @@ In general, and unless otherwise stated by specific conventions or guidelines th
 - Since L2J supports MySQL as its one and only data management backend, we should not hesitate to introduce any standards extension or column type MySQL provides as a non-portable feature.
   This statement applies particularly when we could obtain any gain either from a readability, code maintenance or system performance perspective.
 
-- During data dump queries, no quotes should be used for numeric values and spaces after field separation commas should be ommited.
+- During data dump queries, no quotes should be used for numeric values and spaces after field separation commas should be omitted.
   This is in order to reduce file sizes.
 
 - Comments should be used at the developers discretion, to either serve as separators between structure and data, description of the ingame meaning of an statement or any other form of documentation intended to help administrators to understand the way they should use a table, or how could it be customized.
