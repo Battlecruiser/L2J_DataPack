@@ -121,8 +121,8 @@ public class QuestLink implements IBypassHandler
 				state = quest.isCustomQuest() ? " (Done)" : "03";
 				color = "787878";
 			}
-			StringUtil.append(sb, "<a action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
-			StringUtil.append(sb, "<font color=\"" + color + "\">[");
+			StringUtil.append(sb, "<font color=\"" + color + "\">");
+			StringUtil.append(sb, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
 			
 			if (quest.isCustomQuest())
 			{
@@ -141,7 +141,7 @@ public class QuestLink implements IBypassHandler
 				}
 				StringUtil.append(sb, "<fstring>", String.valueOf(questId), state, "</fstring>");
 			}
-			sb.append("]</font></a><br>");
+			sb.append("</button></font><br>");
 		}
 		sb.append("</body></html>");
 		
