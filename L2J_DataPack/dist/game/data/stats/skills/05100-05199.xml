@@ -578,7 +578,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />		
+		<set name="elementPower" val="20" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
@@ -592,7 +592,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="element" val="1" /> <!-- Water -->
-		<set name="elementPower" val="20" />		
+		<set name="elementPower" val="20" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
@@ -606,7 +606,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="element" val="2" /> <!-- Wind -->
-		<set name="elementPower" val="20" />		
+		<set name="elementPower" val="20" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
@@ -620,7 +620,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />		
+		<set name="elementPower" val="20" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
@@ -840,8 +840,8 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA_CORPSE_MOB" />
 		<for>
-			<effect name="MagicalAttack" />
 			<effect name="ConsumeBody" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5143" levels="1" name="Sailren Use Blow">
