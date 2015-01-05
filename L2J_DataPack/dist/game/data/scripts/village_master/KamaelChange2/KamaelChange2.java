@@ -19,6 +19,7 @@
 package village_master.KamaelChange2;
 
 import quests.Q00064_CertifiedBerserker.Q00064_CertifiedBerserker;
+import quests.Q00065_CertifiedSoulBreaker.Q00065_CertifiedSoulBreaker;
 import quests.Q00066_CertifiedArbalester.Q00066_CertifiedArbalester;
 import ai.npc.AbstractNpcAI;
 
@@ -183,7 +184,7 @@ public final class KamaelChange2 extends AbstractNpcAI
 					}
 					else if (classId == 128)
 					{
-						QuestState qs = player.getQuestState("65_CertifiedSoulBreaker");
+						QuestState qs = player.getQuestState(Q00065_CertifiedSoulBreaker.class.getSimpleName());
 						if (player.getLevel() < 40)
 						{
 							if ((qs != null) && qs.isCompleted())
@@ -226,7 +227,7 @@ public final class KamaelChange2 extends AbstractNpcAI
 				{
 					if (classId == 129)
 					{
-						QuestState qs = player.getQuestState("65_CertifiedSoulBreaker");
+						QuestState qs = player.getQuestState(Q00065_CertifiedSoulBreaker.class.getSimpleName());
 						if (player.getLevel() < 40)
 						{
 							if ((qs != null) && qs.isCompleted())
