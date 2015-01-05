@@ -54,6 +54,8 @@ public class Q10735_ASpecialPower extends Quest
 	private static final Location MOB_1 = new Location(-75112, 240760, -3615);
 	private static final Location MOB_2 = new Location(-75016, 240456, -3628);
 	
+	private static final int KILL_COUNT_ID = 0;
+	
 	public Q10735_ASpecialPower()
 	{
 		super(10735, Q10735_ASpecialPower.class.getSimpleName(), "A Special Power");
@@ -238,16 +240,16 @@ public class Q10735_ASpecialPower extends Quest
 			{
 				if ((cond == 2) || (cond == 4))
 				{
-					final int value = qs.getInt("ex") + 1;
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					final int value = qs.getMemoStateEx(KILL_COUNT_ID) + 1;
+					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					if (value >= 2)
 					{
 						qs.setCond(cond + 1, true);
-						qs.set("ex", 0);
+						qs.setMemoStateEx(KILL_COUNT_ID, 0);
 					}
 					else
 					{
-						qs.set("ex", value);
+						qs.setMemoStateEx(KILL_COUNT_ID, value);
 					}
 				}
 			}
@@ -255,17 +257,17 @@ public class Q10735_ASpecialPower extends Quest
 			{
 				if (cond == 6)
 				{
-					final int value = qs.getInt("ex") + 1;
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					final int value = qs.getMemoStateEx(KILL_COUNT_ID) + 1;
+					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					if (value >= 2)
 					{
 						qs.setCond(cond + 1, true);
-						qs.set("ex", 0);
+						qs.setMemoStateEx(KILL_COUNT_ID, 0);
 						showOnScreenMsg(killer, NpcStringId.TALK_TO_AYANTHE_TO_LEAVE_THE_TRAINING_GROUNDS, ExShowScreenMessage.TOP_CENTER, 4500);
 					}
 					else
 					{
-						qs.set("ex", value);
+						qs.setMemoStateEx(KILL_COUNT_ID, value);
 					}
 				}
 			}
