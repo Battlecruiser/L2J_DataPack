@@ -300,6 +300,8 @@ import quests.Q10505_JewelOfValakas.Q10505_JewelOfValakas;
 import quests.Q10732_AForeignLand.Q10732_AForeignLand;
 import quests.Q10733_TheTestForSurvival.Q10733_TheTestForSurvival;
 import quests.Q10734_DoOrDie.Q10734_DoOrDie;
+import quests.Q10735_ASpecialPower.Q10735_ASpecialPower;
+import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
 
 /**
  * @author NosBit
@@ -588,7 +590,9 @@ public class QuestMasterHandler
 		Q10505_JewelOfValakas.class,
 		Q10732_AForeignLand.class,
 		Q10733_TheTestForSurvival.class,
-		Q10734_DoOrDie.class
+		Q10734_DoOrDie.class,
+		Q10735_ASpecialPower.class,
+		Q10736_ASpecialPower.class
 	};
 	
 	public static void main(String[] args)
