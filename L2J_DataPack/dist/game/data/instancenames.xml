@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/instancenames.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/instancenames.xsd">
 	<instance id="1" name="Party Duel" />
 	<instance id="2" name="Urban Area" />
 	<instance id="3" name="Tower of Infinitum Demon Prince" />
@@ -122,10 +123,10 @@
 	<instance id="120" name="Seed of Infinity (Hall of Erosion)" />
 	<instance id="121" name="Seed of Infinity (Heart of Infinity)" />
 	<instance id="122" name="Seed of Infinity (Heart of Infinity)" />
-	<instance id="123" name="Seed of Destruction (Chamblain's Mounted Troop)" />
-	<instance id="124" name="Seed of Destruction (Soldier's Mounted Troop)" />
-	<instance id="125" name="Seed of Destruction (Warrior's Mounted Troop)" />
-	<instance id="126" name="Seed of Destruction (Great Warrior's Mounted Troop)" />
+	<instance id="123" name="Seed of Destruction (Dragonkin Servant)" />
+	<instance id="124" name="Seed of Destruction (Dragonkin Sentinel)" />
+	<instance id="125" name="Seed of Destruction (Dragonkin Warrior)" />
+	<instance id="126" name="Seed of Destruction  (Dragonkin Crusher)" />
 	<instance id="127" name="Delusion Chamber (Eastern Seal)" />
 	<instance id="128" name="Delusion Chamber (Western Seal)" />
 	<instance id="129" name="Delusion Chamber (Eastern Seal)" />
@@ -134,8 +135,8 @@
 	<instance id="132" name="Delusion Chamber (Tower of Seal)" />
 	<instance id="133" name="Cavern of the Pirate Captain (Daydream)" />
 	<instance id="134" name="Kamaloka (Labyrinth of the Abyss)" />
-	<instance id="135" name="Cavern of the Pirate Captain (Daydream)" />
-	<instance id="136" name="Final Emperial Tomb" />
+	<instance id="135" name="Cavern of the Pirate Captain (Distant Daydream)" />
+	<instance id="136" name="Last Emperial Tomb" />
 	<instance id="137" name="Ice Queen's Castle" />
 	<instance id="138" name="Mithril Mine" />
 	<instance id="139" name="Ice Queen's Castle" />
@@ -143,7 +144,7 @@
 	<instance id="141" name="Jinia Guild Hideout" />
 	<instance id="142" name="Tower of Infinitum (5th Floor)" />
 	<instance id="143" name="Tower of Infinitum (10th Floor)" />
-	<instance id="144" name="Ice Queen's Castle (Ultimate Battle)" />
+	<instance id="144" name="Ice Queen's Castle (Epic)" />
 	<instance id="145" name="Jinia Guild Hideout" />
 	<instance id="146" name="Jinia Guild Hideout" />
 	<instance id="147" name="Olympiad" />
@@ -157,7 +158,105 @@
 	<instance id="155" name="Monastery of Silence" />
 	<instance id="156" name="Library of Sages" />
 	<instance id="157" name="Underground Library of Sages" />
-	<instance id="158" name="Elcadia's Tent" />
-	<instance id="159" name="Penal Colony of Darkness Raid" />
-	<instance id="160" name="Rim Kamaloka" />
+	<instance id="158" name="Elcadia's Cabin" />
+	<instance id="159" name="Prison of Darkness" />
+	<instance id="160" name="Teredor Warzone" />
+	<instance id="161" name="Kimerian" />
+	<instance id="162" name="Kimerian (Epic)" />
+	<instance id="163" name="Emerald Square" />
+	<instance id="164" name="Steam Corridor" />
+	<instance id="165" name="Coral Garden" />
+	<instance id="166" name="Baylor Warzone" />
+	<instance id="167" name="Balok Warzone" />
+	<instance id="168" name="Coral Garden Hall" />
+	<instance id="169" name="Istina's Cavern" />
+	<instance id="170" name="Istina's Cavern (Epic)" />
+	<instance id="171" name="Nursery" />
+	<instance id="172" name="Lachik Dwelling Warzone" />
+	<instance id="173" name="Lachik Dwelling Warzone" />
+	<instance id="174" name="Lachik Dwelling Warzone (Epic)" />
+	<instance id="175" name="Lachik Dwelling Warzone (Epic)" />
+	<instance id="176" name="Underground Military Compound" />
+	<instance id="177" name="Underground Military Compound" />
+	<instance id="178" name="Labyrinth of Belis" />
+	<instance id="179" name="Fortuna" />
+	<instance id="180" name="Octavis Warzone" />
+	<instance id="181" name="Octavis Warzone (Epic)" />
+	<instance id="182" name="Museum Dungeon" />
+	<instance id="183" name="Balthus Knights - Antharas Expedition" />
+	<instance id="184" name="Valakas Warzone" />
+	<instance id="185" name="Evil Incubator" />
+	<instance id="186" name="Orchid Hall" />
+	<instance id="187" name="Ellia Hall" />
+	<instance id="188" name="Laurell Hall" />
+	<instance id="189" name="Orchid Hall" />
+	<instance id="190" name="Ellia Hall" />
+	<instance id="191" name="Laurell Hall" />
+	<instance id="192" name="Tainted Dimension" />
+	<instance id="193" name="Altar of Shilen" />
+	<instance id="194" name="Altar of Shilen" />
+	<instance id="195" name="Harnak Underground Ruins" />
+	<instance id="196" name="Prison of Darkness (Epic)" />
+	<instance id="197" name="Elcadia's Cabin" />
+	<instance id="198" name="Legacy of Cruma Tower" />
+	<instance id="199" name="Rim Kamaloka" />
+	<instance id="200" name="Memory of Disaster" />
+	<instance id="201" name="Harnak Underground Ruins" />
+	<instance id="202" name="Kimerian" />
+	<instance id="203" name="Kimerian (Epic)" />
+	<instance id="204" name="Evolved Agathion's Place" />
+	<instance id="205" name="Kartia's Labyrinth - Tainted Dimension Attacker" />
+	<instance id="206" name="Kartia's Labyrinth - Tainted Dimension Attacker" />
+	<instance id="207" name="Kartia's Labyrinth - Tainted Dimension Attacker" />
+	<instance id="208" name="Kartia's Labyrinth" />
+	<instance id="209" name="Kartia's Labyrinth" />
+	<instance id="210" name="Kartia's Labyrinth" />
+	<instance id="211" name="Advent of Delusion" />
+	<instance id="212" name="Verdof's Room (Devil's Island)" />
+	<instance id="213" name="Verdof's Room (Devil's Island)" />
+	<instance id="214" name="Verdof's Room (Devil's Island)" />
+	<instance id="215" name="Verdof's Room (Devil's Island)" />
+	<instance id="216" name="Verdof's Room (Devil's Island)" />
+	<instance id="217" name="Eva's Hidden Space" />
+	<instance id="218" name="Tauti Warzone" />
+	<instance id="219" name="Tauti Warzone (Epic)" />
+	<instance id="220" name="Arena 1" />
+	<instance id="221" name="Arena 2" />
+	<instance id="222" name="Arena 3" />
+	<instance id="223" name="Arena 4" />
+	<instance id="224" name="Battle Tournament Stadium 1" />
+	<instance id="225" name="Battle Tournament Stadium 2" />
+	<instance id="226" name="Battle Tournament Stadium 3" />
+	<instance id="227" name="Battle Tournament Stadium 4" />
+	<instance id="228" name="Ancient Kartia's Labyrinth - A Secret of Two Races" />
+	<instance id="229" name="Ancient Kartia's Labyrinth - A Secret of Two Races" />
+	<instance id="230" name="Ancient Kartia's Labyrinth - A Secret of Two Races" />
+	<instance id="231" name="Nornil's Garden - Spicula Raid" />
+	<instance id="232" name="Fortress of the Dead" />
+	<instance id="233" name="Fortress of the Dead" />
+	<instance id="234" name="Devastated Castle" />
+	<instance id="235" name="Devastated Castle" />
+	<instance id="236" name="Fortress of Resistance" />
+	<instance id="237" name="Fortress of Resistance" />
+	<instance id="238" name="Bronze Key Guild's Request Zone" />
+	<instance id="239" name="Black Anvil Guild's Request Zone" />
+	<instance id="240" name="Golden Wheel Guild's Request Zone" />
+	<instance id="241" name="Talking Island (Past)" />
+	<instance id="242" name="Bronze Key Guild's Request Zone" />
+	<instance id="243" name="Black Anvil Guild's Request Zone" />
+	<instance id="244" name="Golden Wheel Guild's Request Zone" />
+	<instance id="245" name="Nornil's Garden" />
+	<instance id="246" name="Verdof's Room (Devil's Island)" />
+	<instance id="247" name="Prelude to Lindvior" />
+	<instance id="248" name="Prelude to Lindvior" />
+	<instance id="249" name="Seed of Infinity" />
+	<instance id="250" name="Dimensional Warp" />
+	<instance id="251" name="Faeron Training Grounds" />
+	<instance id="252" name="Faeron Training Grounds" />
+	<instance id="253" name="Karaphon Habitat" />
+	<instance id="254" name="Fortress of the Dead" />
+	<instance id="255" name="Chamber of Prophecies" />
+	<instance id="256" name="Infernal Kamaloka" />
+	<instance id="257" name="Lunatic Kamaloka" />
+	<instance id="258" name="Nightmare Kamaloka" />	
 </list>
