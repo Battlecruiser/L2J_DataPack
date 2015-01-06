@@ -31,7 +31,11 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
+import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
+import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
+import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * Let's Go To The Central Square (10320)
@@ -92,6 +96,7 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 				addExpAndSp(player, 30, 5);
 				qs.exitQuest(false, true);
 				htmltext = event;
+				Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getTemplate().getDisplayId(), NpcStringId.WAIT_WAIT_A_MINUTE_I_STILL_HAVE_TIME));
 				break;
 			}
 		}
