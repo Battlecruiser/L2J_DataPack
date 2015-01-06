@@ -780,124 +780,326 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="27437" level="85" type="L2Npc" name="Krakia Bathus" title="Tyrr Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="27437" level="86" type="L2Monster" name="Krakia Bathus" title="Tyrr Warrior">
+		<!-- TODO: Must be confirmed -->
+		<sex>MALE</sex>
+		<acquire expRate="0" sp="0" />
+		<stats str="89" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="21720" hpRegen="8.5" mp="2797" mpRegen="4" />
+			<attack physical="971" magical="663" critical="4" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" default="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="32" />
+			<height normal="55" />
 		</collision>
+		<skill_list>
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14612" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14613" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14614" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14676" level="1" /> <!-- Cry of Destiny - Armor Destruction -->
+			<skill id="14678" level="1" /> <!-- Cry of Destiny - Power Bomber -->
+		</skill_list>
+		<drop_lists>
+			<corpse>
+				<group chance="100.0">
+					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+				</group>
+				<group chance="100.0">
+					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+				</group>
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="27438" level="85" type="L2Npc" name="Krakia Carcass" title="Yul Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="27438" level="86" type="L2Monster" name="Krakia Carcass" title="Yul Archer">
+		<!-- TODO: Must be confirmed -->
+		<sex>MALE</sex>
+		<acquire expRate="0" sp="0" />
+		<stats str="89" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="21720" hpRegen="8.5" mp="2797" mpRegen="4" />
+			<attack physical="971" magical="663" critical="4" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" default="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="32" />
+			<height normal="55" />
 		</collision>
+		<skill_list>
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14612" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14613" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14614" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14682" level="1" /> <!-- Cry of Destiny - Pinpoint Shot -->
+			<skill id="14683" level="1" /> <!-- Cry of Destiny - Quick Fire -->
+		</skill_list>
+		<drop_lists>
+			<corpse>
+				<group chance="100.0">
+					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+				</group>
+				<group chance="100.0">
+					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+				</group>
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="27439" level="85" type="L2Npc" name="Krakia Lotus" title="Wynn Summoner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="27439" level="86" type="L2Monster" name="Krakia Lotus" title="Wynn Summoner">
+		<!-- TODO: Must be confirmed -->
+		<sex>MALE</sex>
+		<acquire expRate="0" sp="0" />
+		<stats str="89" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="21720" hpRegen="8.5" mp="2797" mpRegen="4" />
+			<attack physical="971" magical="663" critical="4" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" default="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="32" />
+			<height normal="55" />
 		</collision>
+		<skill_list>
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14612" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14613" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14614" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14688" level="1" /> <!-- Cry of Destiny - Mark of Weakness -->
+			<skill id="14689" level="1" /> <!-- Cry of Destiny - Mark of Plague -->
+		</skill_list>
+		<drop_lists>
+			<corpse>
+				<group chance="100.0">
+					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+				</group>
+				<group chance="100.0">
+					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+				</group>
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="27440" level="85" type="L2Npc" name="Rakzan" title="Sigel Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="27440" level="86" type="L2Monster" name="Rakzan" title="Sigel Knight">
+		<!-- TODO: Must be confirmed -->
+		<sex>MALE</sex>
+		<acquire expRate="0" sp="0" />
+		<stats str="89" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="21720" hpRegen="8.5" mp="2797" mpRegen="4" />
+			<attack physical="971" magical="663" critical="4" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" default="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="32" />
+			<height normal="55" />
 		</collision>
+		<skill_list>
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14612" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14613" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14614" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14673" level="1" /> <!-- Cry of Destiny - Shield Charge -->
+			<skill id="14674" level="1" /> <!-- Cry of Destiny - Chain Strike -->
+		</skill_list>
+		<drop_lists>
+			<corpse>
+				<group chance="100.0">
+					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+				</group>
+				<group chance="100.0">
+					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+				</group>
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="27441" level="85" type="L2Npc" name="Weiss Khan" title="Feoh Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="27441" level="86" type="L2Monster" name="Weiss Khan" title="Feoh Wizard">
+		<!-- TODO: Must be confirmed -->
+		<sex>MALE</sex>
+		<acquire expRate="0" sp="0" />
+		<stats str="89" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="21720" hpRegen="8.5" mp="2797" mpRegen="4" />
+			<attack physical="971" magical="663" critical="4" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" default="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="32" />
+			<height normal="55" />
 		</collision>
+		<skill_list>
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14612" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14613" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14614" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14685" level="1" /> <!-- Cry of Destiny - Elemental Spike -->
+			<skill id="14686" level="1" /> <!-- Cry of Destiny - Elemental Crash -->
+		</skill_list>
+		<drop_lists>
+			<corpse>
+				<group chance="100.0">
+					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+				</group>
+				<group chance="100.0">
+					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+				</group>
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="27442" level="85" type="L2Npc" name="Bamonti" title="Othell Rogue">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="27442" level="86" type="L2Monster" name="Bamonti" title="Othell Rogue">
+		<!-- TODO: Must be confirmed -->
+		<sex>MALE</sex>
+		<acquire expRate="0" sp="0" />
+		<stats str="89" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="21720" hpRegen="8.5" mp="2797" mpRegen="4" />
+			<attack physical="971" magical="663" critical="4" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" default="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="32" />
+			<height normal="55" />
 		</collision>
+		<skill_list>
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14612" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14613" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14614" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14679" level="1" /> <!-- Cry of Destiny - Heart Breaker -->
+		</skill_list>
+		<drop_lists>
+			<corpse>
+				<group chance="100.0">
+					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+				</group>
+				<group chance="100.0">
+					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+				</group>
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="27443" level="85" type="L2Npc" name="Seknus" title="Iss Enchanter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="27443" level="86" type="L2Monster" name="Seknus" title="Iss Enchanter">
+		<!-- TODO: Must be confirmed -->
+		<sex>MALE</sex>
+		<acquire expRate="0" sp="0" />
+		<stats str="89" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="21720" hpRegen="8.5" mp="2797" mpRegen="4" />
+			<attack physical="971" magical="663" critical="4" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" default="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="32" />
+			<height normal="55" />
 		</collision>
+		<skill_list>
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14612" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14613" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14614" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14691" level="1" /> <!-- Cry of Destiny - Crippling Attack -->
+			<skill id="14692" level="1" /> <!-- Cry of Destiny - Death Strike -->
+			<skill id="14693" level="1" /> <!-- Cry of Destiny - Pipe Organ Melody -->
+		</skill_list>
+		<drop_lists>
+			<corpse>
+				<group chance="100.0">
+					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+				</group>
+				<group chance="100.0">
+					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+				</group>
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="27444" level="85" type="L2Npc" name="Noctum" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -916,22 +1118,52 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="27445" level="85" type="L2Npc" name="Harnak's Wraith" title="Giant's Watchman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="27445" level="87" type="L2Monster" name="Harnak's Wraith" title="Giant's Watchman">
+		<!-- TODO: Must be confirmed -->
+		<sex>MALE</sex>
+		<acquire expRate="0" sp="0" />
+		<stats str="89" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="86882" hpRegen="8.5" mp="4196" mpRegen="4" />
+			<attack physical="971" magical="663" critical="4" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="241" magical="200" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" default="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="40" />
+			<height normal="100" />
 		</collision>
+		<skill_list>
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14612" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14613" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14614" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14673" level="1" />
+			<skill id="14674" level="1" />
+			<skill id="14676" level="1" /> <!-- Cry of Destiny - Armor Destruction -->
+			<skill id="14678" level="1" /> <!-- Cry of Destiny - Power Bomber -->
+			<skill id="14679" level="1" />
+			<skill id="14682" level="1" />
+			<skill id="14683" level="1" />
+			<skill id="14685" level="1" />
+			<skill id="14686" level="1" />
+			<skill id="14688" level="1" />
+			<skill id="14689" level="1" />
+			<skill id="14691" level="1" />
+			<skill id="14692" level="1" />
+			<skill id="14693" level="1" />
+			<skill id="14694" level="1" />
+		</skill_list>
 	</npc>
 	<npc id="27446" level="85" type="L2Npc" name="Demonic Bathus" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1069,22 +1301,51 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="27454" level="85" type="L2Npc" name="Weiss Ele" title="Aeore Healer">
+	<npc id="27454" level="85" type="L2Monster" name="Weiss Ele" title="Aeore Healer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<sex>MALE</sex>
+		<acquire expRate="0" sp="0" />
+		<stats str="89" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="21720" hpRegen="8.5" mp="2797" mpRegen="4" />
+			<attack physical="971" magical="663" critical="4" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" default="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="32" />
+			<height normal="55" />
 		</collision>
+		<skill_list>
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14612" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14613" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14614" level="1" /> <!-- Press the icon to use the chain skill. -->
+			<skill id="14694" level="1" /> <!-- Cry of Destiny - Pipe Organ Melody -->
+		</skill_list>
+		<drop_lists>
+			<corpse>
+				<group chance="100.0">
+					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+				</group>
+				<group chance="100.0">
+					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+				</group>
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="27456" level="85" type="L2Npc" name="Wisp" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

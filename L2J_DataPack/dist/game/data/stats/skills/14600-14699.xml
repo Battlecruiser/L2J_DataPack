@@ -240,14 +240,15 @@
 	<skill id="14625" levels="1" name="Release of Power">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Shares power with the target. -->
-		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="10000" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="1" />
+		<set name="icon" val="icon.skill1042" />
 		<set name="isDebuff" val="false" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="30000" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="14626" levels="1" name="Mental Attack Resistance">
 		<!-- AUTO GENERATED SKILL -->

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="Harnak Underground Ruins" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<activityTime val="21" />
+	<allowSummon val="false" />
+	<emptyDestroyTime val="1" />
+	<showTimer val="false" />
+	<spawnPoint spawnX="-107910" spawnY="205828" spawnZ="-10872" />
+	<doorlist>
+		<door doorId="16240100" />
+		<door doorId="16240102" />
+	</doorlist>
+	<spawnlist>
+		<group name="first_room">
+			<!-- Krakia Bathus -->
+			<spawn npcId="27437" x="-107648" y="206592" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<!-- Krakia Carcass -->
+			<spawn npcId="27438" x="-107536" y="206320" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<!-- Krakia Lotus -->
+			<spawn npcId="27439" x="-108320" y="206480" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<!-- Rakzan -->
+			<spawn npcId="27440" x="-107776" y="206704" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<!-- Weiss Khan -->
+			<spawn npcId="27441" x="-108096" y="206704" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<!-- Bamonti -->
+			<spawn npcId="27442" x="-107536" y="206480" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<!-- Seknus -->
+			<spawn npcId="27443" x="-108208" y="206592" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<!-- Weiss Ele -->
+			<spawn npcId="27454" x="-108320" y="206320" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="power_sources">
+			<!--Source of Power-->
+			<spawn npcId="33501" x="-107827" y="206882" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<!--Source of Power-->
+			<spawn npcId="33556" x="-107937" y="206882" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<!--Source of Power-->
+			<spawn npcId="33557" x="-108030" y="206882" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="power_source">
+			<!-- Source of Power -->
+			<spawn npcId="33501" x="-107929" y="208863" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_1_27437">
+			<!-- Krakia Bathus -->
+			<spawn npcId="27437" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_1_27438">
+			<!-- Krakia Carcass -->
+			<spawn npcId="27438" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_1_27439">
+			<!-- Krakia Lotus -->
+			<spawn npcId="27439" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_1_27440">
+			<!-- Rakzan -->
+			<spawn npcId="27440" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_1_27441">
+			<!-- Weiss Khan -->
+			<spawn npcId="27441" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_1_27442">
+			<!-- Bamonti -->
+			<spawn npcId="27442" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_1_27443">
+			<!-- Seknus -->
+			<spawn npcId="27443" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_1_27454">
+			<!-- Weiss Ele -->
+			<spawn npcId="27454" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_2_27437">
+			<!-- Krakia Bathus -->
+			<spawn npcId="27437" x="-107726" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_2_27438">
+			<!-- Krakia Carcass -->
+			<spawn npcId="27438" x="-107726" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_2_27439">
+			<!-- Krakia Lotus -->
+			<spawn npcId="27439" x="-107726" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_2_27440">
+			<!-- Rakzan -->
+			<spawn npcId="27440" x="-107726" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_2_27441">
+			<!-- Weiss Khan -->
+			<spawn npcId="27441" x="-107726" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_2_27442">
+			<!-- Bamonti -->
+			<spawn npcId="27442" x="-107726" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_2_27443">
+			<!-- Seknus -->
+			<spawn npcId="27443" x="-107726" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_2_27454">
+			<!-- Weiss Ele -->
+			<spawn npcId="27454" x="-107726" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_3_27437">
+			<!-- Krakia Bathus -->
+			<spawn npcId="27437" x="-107776" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-108206" y="209134" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-108314" y="209022" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-108314" y="208699" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-107650" y="209142" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-108314" y="208855" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-107542" y="209024" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-107541" y="208857" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-107541" y="208697" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_3_27438">
+			<!-- Krakia Carcass -->
+			<spawn npcId="27438" x="-107776" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-108206" y="209134" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-108314" y="209022" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-108314" y="208699" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-107650" y="209142" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-108314" y="208855" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-107542" y="209024" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-107541" y="208857" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-107541" y="208697" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_3_27439">
+			<!-- Krakia Lotus -->
+			<spawn npcId="27439" x="-107776" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-108206" y="209134" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-108314" y="209022" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-108314" y="208699" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-107650" y="209142" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-108314" y="208855" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-107542" y="209024" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-107541" y="208857" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-107541" y="208697" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_3_27440">
+			<!-- Rakzan -->
+			<spawn npcId="27440" x="-107776" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-108206" y="209134" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-108314" y="209022" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-108314" y="208699" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-107650" y="209142" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-108314" y="208855" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-107542" y="209024" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-107541" y="208857" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-107541" y="208697" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_3_27441">
+			<!-- Weiss Khan -->
+			<spawn npcId="27441" x="-107776" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-108206" y="209134" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-108314" y="209022" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-108314" y="208699" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-107650" y="209142" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-108314" y="208855" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-107542" y="209024" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-107541" y="208857" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-107541" y="208697" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_3_27442">
+			<!-- Bamonti -->
+			<spawn npcId="27442" x="-107776" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-108206" y="209134" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-108314" y="209022" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-108314" y="208699" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-107650" y="209142" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-108314" y="208855" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-107542" y="209024" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-107541" y="208857" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-107541" y="208697" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_3_27443">
+			<!-- Seknus -->
+			<spawn npcId="27443" x="-107776" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-108206" y="209134" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-108314" y="209022" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-108314" y="208699" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-107650" y="209142" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-108314" y="208855" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-107542" y="209024" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-107541" y="208857" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-107541" y="208697" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="second_room_wave_3_27454">
+			<!-- Weiss Ele -->
+			<spawn npcId="27454" x="-107776" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-108206" y="209134" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-108314" y="209022" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-108314" y="208699" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-108096" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-107650" y="209142" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-108314" y="208855" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-107542" y="209024" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-107541" y="208857" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-107541" y="208697" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-107926" y="209248" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="third_room">
+			<!-- Hermuncus -->
+			<spawn npcId="33340" x="-107926" y="212489" z="-10824" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<!-- Source of Power -->
+			<spawn npcId="33501" x="-107926" y="210899" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<!--Harnak's Wraith-->
+			<spawn npcId="27445" x="-107926" y="211407" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="third_room_27437">
+			<!-- Krakia Bathus -->
+			<spawn npcId="27437" x="-108500" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-108500" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-107349" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27437" x="-107349" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="third_room_27438">
+			<!-- Krakia Carcass -->
+			<spawn npcId="27438" x="-108500" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-108500" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-107349" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27438" x="-107349" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="third_room_27439">
+			<!-- Krakia Lotus -->
+			<spawn npcId="27439" x="-108500" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-108500" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-107349" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27439" x="-107349" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="third_room_27440">
+			<!-- Rakzan -->
+			<spawn npcId="27440" x="-108500" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-108500" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-107349" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27440" x="-107349" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="third_room_27441">
+			<!-- Weiss Khan -->
+			<spawn npcId="27441" x="-108500" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-108500" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-107349" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27441" x="-107349" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="third_room_27442">
+			<!-- Bamonti -->
+			<spawn npcId="27442" x="-108500" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-108500" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-107349" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27442" x="-107349" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="third_room_27443">
+			<!-- Seknus -->
+			<spawn npcId="27443" x="-108500" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-108500" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-107349" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27443" x="-107349" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="third_room_27454">
+			<!-- Weiss Ele -->
+			<spawn npcId="27454" x="-108500" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-108500" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-107349" y="211596" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="27454" x="-107349" y="211232" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="seal">
+			<!-- Seal Control Device -->
+			<spawn npcId="33548" x="-107790" y="211409" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+			<spawn npcId="33548" x="-108046" y="211409" z="-10872" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+		<group name="hermuncus">
+			<!-- Hermuncus -->
+			<spawn npcId="33340" x="-107926" y="212489" z="-10824" heading="49536" respawn="0" allowRandomWalk="false"  />
+		</group>
+	</spawnlist>
+</instance>

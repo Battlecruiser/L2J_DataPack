@@ -105,6 +105,7 @@ public final class EffectMasterHandler
 		HealPercent.class,
 		Hide.class,
 		HpByLevel.class,
+		HpCpHeal.class,
 		HpDrain.class,
 		ImmobileBuff.class,
 		ImmobilePetBuff.class,

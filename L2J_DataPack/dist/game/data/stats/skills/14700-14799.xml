@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="14700" levels="1" name="Maximum Defense">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 minute, increases one's own P. Atk. by 25%, M. Atk. by 50%, P. Def. by 1800, M. Def. by 1620, HP recovery speed by 300, MP recovery speed by 300%, and Buff-canceling Attack Resistance by 80%. -->
-		<set name="icon" val="icon.skill0110" />
-		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
+		<!-- TO BE CONFIRMED -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
+		<set name="abnormalType" val="ULTIMATE_BUFF" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="268" />
 		<set name="hitTime" val="700" />
-		<set name="isDebuff" val="false" />
+		<set name="icon" val="icon.skill0110" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="25" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.25" />
+				<mul stat="mAtk" val="1.5" />
+				<add stat="pDef" val="1800" />
+				<add stat="regHp" val="300" />
+				<mul stat="regMp" val="3" />
+				<mul stat="cancelVuln" val="0.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="14701" levels="1" name="Brutal Agony">
 		<!-- AUTO GENERATED SKILL -->
@@ -300,15 +315,25 @@
 		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="14736" levels="1" name="Light Heal">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores the target's HP with 1488 Power. Once HP is filled, the remaining effect stores CP. -->
-		<set name="icon" val="icon.skill11755" />
-		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
+		<!-- TO BE CONFIRMED -->
 		<set name="castRange" val="600" />
+		<set name="effectRange" val="1400" />
+		<set name="effectPoint" val="1825" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="0" />
+		<set name="mpInitialConsume" val="0" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
+		<set name="icon" val="icon.skill11755" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HpCpHeal">
+				<param power="1488" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="14737" levels="1" name="Seal">
 		<!-- AUTO GENERATED SKILL -->
