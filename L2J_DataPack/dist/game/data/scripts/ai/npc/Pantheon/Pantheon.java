@@ -69,6 +69,7 @@ public final class Pantheon extends AbstractNpcAI
 					player.teleToLocation(MUSEUM);
 				}
 				htmltext = "32972-noteleport.html";
+				break;
 			}
 			case "TEXT_SPAM":
 			{
