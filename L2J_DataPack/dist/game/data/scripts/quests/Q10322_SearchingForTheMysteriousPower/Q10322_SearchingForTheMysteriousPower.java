@@ -60,31 +60,22 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 	// Buffs
 	private static final SkillHolder[] FIGHTER_BUFFS =
 	{
-		new SkillHolder(5182, 1), // Blessing of Protection
-		new SkillHolder(15642, 1), // Horn Melody
-		new SkillHolder(15643, 1), // Drum Melody
-		new SkillHolder(15644, 1), // Pipe Organ Melody
-		new SkillHolder(15645, 1), // Guitar Melody
-		new SkillHolder(15646, 1), // Harp Melody
-		new SkillHolder(15647, 1), // Lute Melody
-		new SkillHolder(15651, 1), // Prevailing Sonata
-		new SkillHolder(15652, 1), // Daring Sonata
-		new SkillHolder(15653, 1), // Refreshing Sonata
-		new SkillHolder(15649, 1), // Warrior Harmony
+		new SkillHolder(4322, 1), // Wind Walk
+		new SkillHolder(4323, 1), // Shield
+		new SkillHolder(5637, 1), // Magic Barrier
+		new SkillHolder(4324, 1), // Bless the Body
+		new SkillHolder(4325, 1), // Vampiric Rage
+		new SkillHolder(4326, 1), // Regeneration
 	};
 	private static final SkillHolder[] MAGE_BUFFS =
 	{
-		new SkillHolder(5182, 1), // Blessing of Protection
-		new SkillHolder(15642, 1), // Horn Melody
-		new SkillHolder(15643, 1), // Drum Melody
-		new SkillHolder(15644, 1), // Pipe Organ Melody
-		new SkillHolder(15645, 1), // Guitar Melody
-		new SkillHolder(15646, 1), // Harp Melody
-		new SkillHolder(15647, 1), // Lute Melody
-		new SkillHolder(15651, 1), // Prevailing Sonata
-		new SkillHolder(15652, 1), // Daring Sonata
-		new SkillHolder(15653, 1), // Refreshing Sonata
-		new SkillHolder(15650, 1), // Wizard Harmony
+		new SkillHolder(4322, 1), // Wind Walk
+		new SkillHolder(4323, 1), // Shield
+		new SkillHolder(5637, 1), // Magic Barrier
+		new SkillHolder(4328, 1), // Bless the Soul
+		new SkillHolder(4329, 1), // Acumen
+		new SkillHolder(4330, 1), // Concentration
+		new SkillHolder(4331, 1), // Empower
 	};
 	
 	public Q10322_SearchingForTheMysteriousPower()
