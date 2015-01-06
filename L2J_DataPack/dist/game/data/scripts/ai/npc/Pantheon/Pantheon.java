@@ -67,6 +67,7 @@ public final class Pantheon extends AbstractNpcAI
 				if (player.getLevel() >= MIN_LEVEL)
 				{
 					player.teleToLocation(MUSEUM);
+					break;
 				}
 				htmltext = "32972-noteleport.html";
 				break;
