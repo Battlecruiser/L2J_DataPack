@@ -35,6 +35,15 @@
 	<xs:complexType name="playerType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
+				<xs:attribute name="isOnSide" use="optional">
+					<xs:simpleType>
+						<xs:restriction base="xs:token">
+							<xs:enumeration value="NEUTRAL" />
+							<xs:enumeration value="LIGHT" />
+							<xs:enumeration value="DARK" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
 				<xs:attribute type="xs:string" name="Charges" use="optional" />
 				<xs:attribute type="xs:string" name="canSummon" use="optional" />
 				<xs:attribute type="xs:string" name="canResurrect" use="optional" />
@@ -143,6 +152,7 @@
 	<xs:complexType name="paramType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
+				<xs:attribute type="xs:string" name="side" use="optional" />
 				<xs:attribute type="xs:string" name="chance" use="optional" />
 				<xs:attribute type="xs:string" name="power" use="optional" />
 				<xs:attribute type="xs:string" name="index" use="optional" />

@@ -331,95 +331,225 @@
 		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19032" levels="1" name="Ability of Light">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO: confirm me -->
 		<!-- Imbued with the Ability of Light. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Effects do not apply when in Chaotic state. Can be used by a Marquis or higher. -->
 		<set name="icon" val="icon.skill19008" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<cond msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<add stat="maxCp" val="3000" />
+				<mul stat="pvpPhysDmg" val="1.10" />
+				<mul stat="pvpPhysSkillsDmg" val="1.10" />
+				<mul stat="pvpMagicalDmg" val="1.10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19033" levels="1" name="Ability of Darkness">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO: confirm me -->
 		<!-- Imbued with the Ability of Darkness. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Can be used by a Marquis or higher. -->
 		<set name="icon" val="icon.skill19008" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<cond msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<add stat="maxCp" val="3000" />
+				<mul stat="pvpPhysDmg" val="1.10" />
+				<mul stat="pvpPhysSkillsDmg" val="1.10" />
+				<mul stat="pvpMagicalDmg" val="1.10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19034" levels="1" name="Imprint of Light">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Engraves the Imprint of Light on the ancient relic that guards the castle. -->
-		<set name="icon" val="icon.skill0246" />
-		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
 		<set name="castRange" val="85" />
-		<set name="hitTime" val="120000" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="180000" />
+		<set name="icon" val="icon.skill0246" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="30" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isDebuff" val="false" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="HOLY" />
+		<cond>
+			<player canTakeCastle="true" />
+		</cond>
+		<startEffects>
+			<effect name="TakeCastleStart" />
+		</startEffects>
+		<for>
+			<effect name="TakeCastle">
+				<param side="LIGHT" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19035" levels="1" name="Imprint of Darkness">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Engraves the Imprint of Darkness on the ancient relic that guards the castle. -->
-		<set name="icon" val="icon.skill0246" />
-		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
 		<set name="castRange" val="85" />
-		<set name="hitTime" val="120000" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="180000" />
+		<set name="icon" val="icon.skill0246" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="30" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isDebuff" val="false" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="HOLY" />
+		<cond>
+			<player canTakeCastle="true" />
+		</cond>
+		<startEffects>
+			<effect name="TakeCastleStart" />
+		</startEffects>
+		<for>
+			<effect name="TakeCastle">
+				<param side="DARK" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19036" levels="1" name="Blessing of Light">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO: Confir me -->
 		<!-- Acquires 3% additional XP and SP through the blessing of the Guardian of Light. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
-		<set name="isDebuff" val="false" />
+		<set name="abnormalTime" val="3600" />		
+		<for>
+			<effect name="Buff">
+				<add stat="bonusExp" val="3" />
+				<add stat="bonusSp" val="3" />				
+			</effect>
+		</for>		
 	</skill>
 	<skill id="19037" levels="1" name="Cloak of Radiant Light">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO: Confirm me -->
 		<!-- STR/MEN/DEX/CON/INT/WIT + 3, decreased damage received during PvP by 15%. Ineffective in Chaotic state. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<cond msgId="113">
+			<player chaotic="false" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpPhysDef" val="1.15" />
+				<mul stat="pvpMagicalDef" val="1.15" />
+				<mul stat="pvpPhysSkillsDef" val="1.15" />
+				<add stat="STR" val="3" />
+				<add stat="DEX" val="3" />
+				<add stat="CON" val="3" />
+				<add stat="INT" val="3" />
+				<add stat="WIT" val="3" />
+				<add stat="MEN" val="3" />
+				<add stat="pDef" val="100.0" />
+				<add stat="mDef" val="80.0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19038" levels="1" name="Cold Cloak of Darkness">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO: Confirm me -->
 		<!-- STR/MEN/DEX/CON/INT/WIT + 3, decreased damage received during PvP by 15%. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpPhysDef" val="1.15" />
+				<mul stat="pvpMagicalDef" val="1.15" />
+				<mul stat="pvpPhysSkillsDef" val="1.15" />
+				<add stat="STR" val="3" />
+				<add stat="DEX" val="3" />
+				<add stat="CON" val="3" />
+				<add stat="INT" val="3" />
+				<add stat="WIT" val="3" />
+				<add stat="MEN" val="3" />
+				<add stat="pDef" val="100.0" />
+				<add stat="mDef" val="80.0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19039" levels="1" name="Cloak of Light">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO: Confirm me -->
 		<!-- STR/MEN/DEX/CON/INT/WIT + 2, decreased damage received during PvP by 5%. Ineffective in Chaotic state. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+			<for>
+				<effect name="Buff">
+					<mul stat="pvpPhysDef" val="1.05" />
+					<mul stat="pvpMagicalDef" val="1.05" />
+					<mul stat="pvpPhysSkillsDef" val="1.05" />
+					<add stat="STR" val="2" />
+					<add stat="DEX" val="2" />
+					<add stat="CON" val="2" />
+					<add stat="INT" val="2" />
+					<add stat="WIT" val="2" />
+					<add stat="MEN" val="2" />
+					<add stat="pDef" val="50.0" />
+					<add stat="mDef" val="40.0" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="19040" levels="1" name="Cloak of Darkness">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO: Confirm me -->
 		<!-- STR/MEN/DEX/CON/INT/WIT + 2, decreased damage received during PvP by 5%. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpPhysDef" val="1.05" />
+				<mul stat="pvpMagicalDef" val="1.05" />
+				<mul stat="pvpPhysSkillsDef" val="1.05" />
+				<add stat="STR" val="2" />
+				<add stat="DEX" val="2" />
+				<add stat="CON" val="2" />
+				<add stat="INT" val="2" />
+				<add stat="WIT" val="2" />
+				<add stat="MEN" val="2" />
+				<add stat="pDef" val="50.0" />
+				<add stat="mDef" val="40.0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19041" levels="1" name="Escape: Castle">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO: Confirm me -->
 		<!-- Return to Castle. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="20000" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="isDebuff" val="false" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Escape">
+				<param escapeType="CASTLE" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19042" levels="1" name="Blessed Scroll of Escape: Castle">
 		<!-- AUTO GENERATED SKILL -->
