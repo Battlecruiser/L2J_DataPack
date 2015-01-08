@@ -89,6 +89,7 @@ public class Q10733_TheTestForSurvival extends Quest
 			case "33942-01.htm":
 			case "33943-01.htm":
 			case "34005-02.htm":
+			case "34005-05.htm":
 			{
 				htmltext = event;
 				break;
