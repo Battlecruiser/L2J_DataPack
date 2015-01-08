@@ -18,7 +18,6 @@
  */
 package quests.Q10740_NeverForget;
 
-import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -175,14 +174,9 @@ public class Q10740_NeverForget extends Quest
 		
 		if ((qs != null) && qs.isCond(1))
 		{
-			giveItemRandomly(killer, npc, UNNAMED_RELICS, 1, 20, 1.0, true);
-			if (qs.getQuestItemsCount(UNNAMED_RELICS) == 20)
+			if (giveItemRandomly(killer, npc, UNNAMED_RELICS, 1, 20, 1.0, true))
 			{
-				qs.setCond(2, true);
-			}
-			else
-			{
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				qs.setCond(2);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
