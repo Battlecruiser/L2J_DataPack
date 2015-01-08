@@ -305,6 +305,7 @@ import quests.Q10735_ASpecialPower.Q10735_ASpecialPower;
 import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
 import quests.Q10737_GrakonsWarehouse.Q10737_GrakonsWarehouse;
 import quests.Q10738_AnInnerBeauty.Q10738_AnInnerBeauty;
+import quests.Q10739_SupplyAndDemand.Q10739_SupplyAndDemand;
 
 /**
  * @author NosBit
@@ -598,7 +599,8 @@ public class QuestMasterHandler
 		Q10735_ASpecialPower.class,
 		Q10736_ASpecialPower.class,
 		Q10737_GrakonsWarehouse.class,
-		Q10738_AnInnerBeauty.class
+		Q10738_AnInnerBeauty.class,
+		Q10739_SupplyAndDemand.class
 	};
 	
 	public static void main(String[] args)
