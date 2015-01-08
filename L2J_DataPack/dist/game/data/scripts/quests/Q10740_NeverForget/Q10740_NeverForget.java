@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author Sdw
@@ -174,10 +173,10 @@ public class Q10740_NeverForget extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs != null) && qs.isCond(1) && Util.contains(MOBS, npc.getId()))
+		if ((qs != null) && qs.isCond(1))
 		{
-			qs.giveItems(UNNAMED_RELICS, 1);
-			if (qs.getQuestItemsCount(UNNAMED_RELICS) >= 20)
+			giveItemRandomly(killer, npc, UNNAMED_RELICS, 1, 20, 1.0, true);
+			if (qs.getQuestItemsCount(UNNAMED_RELICS) == 20)
 			{
 				qs.setCond(2, true);
 			}
