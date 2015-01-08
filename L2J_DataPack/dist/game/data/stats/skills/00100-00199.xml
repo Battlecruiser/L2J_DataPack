@@ -1211,7 +1211,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="mAtkSpd" val="0.5">
+				<mul stat="mAtkSpd" val="0.7">
 					<not>
 						<using kind="MAGIC" />
 					</not>
