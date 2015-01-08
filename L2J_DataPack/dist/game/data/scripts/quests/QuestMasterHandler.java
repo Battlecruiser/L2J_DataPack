@@ -420,6 +420,7 @@ import quests.Q00651_RunawayYouth.Q00651_RunawayYouth;
 import quests.Q00652_AnAgedExAdventurer.Q00652_AnAgedExAdventurer;
 import quests.Q00653_WildMaiden.Q00653_WildMaiden;
 import quests.Q00654_JourneyToASettlement.Q00654_JourneyToASettlement;
+import quests.Q00655_AGrandPlanForTamingWildBeasts.Q00655_AGrandPlanForTamingWildBeasts;
 import quests.Q00659_IdRatherBeCollectingFairyBreath.Q00659_IdRatherBeCollectingFairyBreath;
 import quests.Q00660_AidingTheFloranVillage.Q00660_AidingTheFloranVillage;
 import quests.Q00661_MakingTheHarvestGroundsSafe.Q00661_MakingTheHarvestGroundsSafe;
@@ -881,6 +882,7 @@ public class QuestMasterHandler
 		Q00652_AnAgedExAdventurer.class,
 		Q00653_WildMaiden.class,
 		Q00654_JourneyToASettlement.class,
+		Q00655_AGrandPlanForTamingWildBeasts.class,
 		Q00659_IdRatherBeCollectingFairyBreath.class,
 		Q00660_AidingTheFloranVillage.class,
 		Q00661_MakingTheHarvestGroundsSafe.class,

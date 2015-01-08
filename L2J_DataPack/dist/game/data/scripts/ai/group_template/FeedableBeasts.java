@@ -22,17 +22,15 @@ import java.util.Map;
 
 import javolution.util.FastMap;
 import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
+import quests.Q00655_AGrandPlanForTamingWildBeasts.Q00655_AGrandPlanForTamingWildBeasts;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TamedBeastInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
@@ -422,10 +420,12 @@ public final class FeedableBeasts extends AbstractNpcAI
 				}
 			}
 			
-			L2NpcTemplate template = NpcData.getInstance().getTemplate(nextNpcId);
-			L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, food - FOODSKILLDIFF, npc.getX(), npc.getY(), npc.getZ());
+			final L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(nextNpcId, player, food - FOODSKILLDIFF, npc.getX(), npc.getY(), npc.getZ());
 			nextNpc.setRunning();
 			Q00020_BringUpWithLove.checkJewelOfInnocence(player);
+			
+			// Support for A Grand Plan for Taming Wild Beasts (655) quest.
+			Q00655_AGrandPlanForTamingWildBeasts.reward(player, nextNpc);
 			
 			// also, perform a rare random chat
 			if (getRandom(20) == 0)
