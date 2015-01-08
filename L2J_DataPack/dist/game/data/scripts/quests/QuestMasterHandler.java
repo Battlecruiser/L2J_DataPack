@@ -303,6 +303,7 @@ import quests.Q10733_TheTestForSurvival.Q10733_TheTestForSurvival;
 import quests.Q10734_DoOrDie.Q10734_DoOrDie;
 import quests.Q10735_ASpecialPower.Q10735_ASpecialPower;
 import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
+import quests.Q10737_GrakonsWarehouse.Q10737_GrakonsWarehouse;
 
 /**
  * @author NosBit
@@ -594,7 +595,8 @@ public class QuestMasterHandler
 		Q10733_TheTestForSurvival.class,
 		Q10734_DoOrDie.class,
 		Q10735_ASpecialPower.class,
-		Q10736_ASpecialPower.class
+		Q10736_ASpecialPower.class,
+		Q10737_GrakonsWarehouse.class
 	};
 	
 	public static void main(String[] args)
