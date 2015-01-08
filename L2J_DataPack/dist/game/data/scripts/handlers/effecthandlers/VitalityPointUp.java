@@ -30,13 +30,13 @@ import com.l2jserver.gameserver.network.serverpackets.UserInfo;
  */
 public final class VitalityPointUp extends AbstractEffect
 {
-	private final float _value;
+	private final int _value;
 	
 	public VitalityPointUp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		
-		_value = params.getFloat("value", 0);
+		_value = params.getInt("value", 0);
 	}
 	
 	@Override
