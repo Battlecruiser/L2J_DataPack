@@ -816,72 +816,232 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23448" level="85" type="L2Npc" name="Floato" title="">
+	<npc id="23448" level="2" type="L2Monster" name="Floato" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire expRate="22" sp="0" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="48.09168" hpRegen="2" mp="47.28" mpRegen="0.9" />
+			<attack physical="9.32203" magical="6.36574" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="46.15385" magical="30.7297498930634" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="23" />
+				<run ground="110" />
 			</speed>
+			<hit_time>370</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4416" level="4" /> <!--Animals -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="60">
+					<item id="57" min="1" max="3" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.9757000207901">
+					<item id="8" min="1" max="1" chance="33" /> <!-- Willow Staff -->
+				</group>
+				<group chance="10.583999633789062">
+					<item id="36526" min="1" max="1" chance="58.3333" /> <!-- Fiber -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36516" min="1" max="1" chance="1.3" /> <!-- Worn Leather -->
+			</corpse>
+		</drop_lists>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="25" />
+			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="23449" level="85" type="L2Npc" name="Keen Floato" title="">
+	<npc id="23449" level="5" type="L2Monster" name="Keen Floato" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<parameters>
+			<param name="MoveAroundSocial" value="42" />
+			<param name="MoveAroundSocial1" value="42" />
+			<param name="MoveAroundSocial2" value="42" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire expRate="7.12656" sp="0" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="80.17319" hpRegen="2" mp="69.6" mpRegen="0.9" />
+			<attack physical="12.34006" magical="8.42666" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="51.60553" magical="34.3595464531323" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="110" />
 			</speed>
+			<hit_time>320</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4416" level="4" /> <!--Animals -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="74">
+					<item id="57" min="1" max="6" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.9757000207901">
+					<item id="8" min="1" max="1" chance="33" /> <!-- Willow Staff -->
+				</group>
+				<group chance="10.583999633789062">
+					<item id="36526" min="1" max="1" chance="58.3333" /> <!-- Fiber -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36516" min="1" max="1" chance="4" /> <!-- Worn Leather -->
+			</corpse>
+		</drop_lists>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="25" />
+			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="23450" level="85" type="L2Npc" name="Ratel" title="">
+	<npc id="23450" level="7" type="L2Monster" name="Ratel" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire expRate="5.0904" sp="0" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="108.42254" hpRegen="2" mp="84.88" mpRegen="0.9" />
+			<attack physical="14.80956" magical="10.11301" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="55.51894" magical="36.965135694682" />
+			<attribute>
+				<defence fire="20" water="20" wind="31" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="80" />
 			</speed>
+			<hit_time>340</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4416" level="4" /> <!--Animals -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="74">
+					<item id="57" min="2" max="10" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.9757000207901">
+					<item id="9" min="1" max="1" chance="33" /> <!-- Cedar Staff -->
+				</group>
+				<group chance="10.583999633789062">
+					<item id="36526" min="1" max="1" chance="58.3333" /> <!-- Fiber -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36516" min="1" max="1" chance="4" /> <!-- Worn Leather -->
+			</corpse>
+		</drop_lists>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23451" level="85" type="L2Npc" name="Robust Ratel" title="">
+	<npc id="23451" level="9" type="L2Monster" name="Robust Ratel" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire expRate="5.93827" sp="0" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="143.17564" hpRegen="2" mp="100.48" mpRegen="0.9" />
+			<attack physical="17.70841" magical="12.09255" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="59.66387" magical="39.7248769407655" />
+			<attribute>
+				<defence fire="-34" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="70" />
+				<run ground="110" />
 			</speed>
+			<hit_time>410</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4416" level="4" /> <!--Animals -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="74">
+					<item id="57" min="2" max="10" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.9757000207901">
+					<item id="9" min="1" max="1" chance="33" /> <!-- Cedar Staff -->
+				</group>
+				<group chance="10.583999633789062">
+					<item id="36526" min="1" max="1" chance="58.3333" /> <!-- Fiber -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36516" min="1" max="1" chance="4" /> <!-- Worn Leather -->
+			</corpse>
+		</drop_lists>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="23452" level="85" type="L2Npc" name="Honeybee" title="">
