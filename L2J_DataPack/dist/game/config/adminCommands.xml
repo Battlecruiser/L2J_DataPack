@@ -27,6 +27,7 @@
 	<admin command="admin_setconfig" accessLevel="7" />
 	<admin command="admin_config_server" accessLevel="7" />
 	<admin command="admin_gmon" accessLevel="7" />
+	<admin command="admin_worldchat" accessLevel="7" />
 
 	<!-- ADMIN ANNOUNCEMENTS -->
 	<admin command="admin_announce" accessLevel="7" />
@@ -36,7 +37,7 @@
 
 	<!-- ADMIN BAN -->
 	<admin command="admin_punishment" accessLevel="7" />
-	<admin command="admin_punishment_add" accessLevel="7" confirmDlg="true"  />
+	<admin command="admin_punishment_add" accessLevel="7" confirmDlg="true" />
 	<admin command="admin_punishment_remove" accessLevel="7" confirmDlg="true" />
 
 	<!-- ADMIN BBS -->
@@ -298,7 +299,7 @@
 	<admin command="admin_grandboss_respawn" accessLevel="7" />
 	<admin command="admin_grandboss_minions" accessLevel="7" />
 	<admin command="admin_grandboss_abort" accessLevel="7" />
-	
+
 	<!-- ADMIN HEAL -->
 	<admin command="admin_heal" accessLevel="7" />
 
@@ -352,7 +353,7 @@
 
 	<!-- ADMIN MANOR -->
 	<admin command="admin_manor" accessLevel="7" />
-	
+
 	<!-- ADMIN MENU -->
 	<admin command="admin_char_manage" accessLevel="7" />
 	<admin command="admin_teleport_character_to_menu" accessLevel="7" />
@@ -429,7 +430,7 @@
 
 	<!-- ADMIN RELOAD -->
 	<admin command="admin_reload" accessLevel="7" confirmDlg="true" />
-	
+
 	<!-- ADMIN REPAIR CHAR -->
 	<admin command="admin_restore" accessLevel="7" />
 	<admin command="admin_repair" accessLevel="7" />

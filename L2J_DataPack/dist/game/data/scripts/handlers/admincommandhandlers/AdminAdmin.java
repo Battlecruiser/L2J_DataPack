@@ -26,11 +26,17 @@ import javolution.text.TextBuilder;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Hero;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
+import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
+import com.l2jserver.gameserver.network.serverpackets.ExWorldChatCnt;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * This class handles following admin commands: - admin|admin1/admin2/admin3/admin4/admin5 = slots for the 5 starting admin menus - gmliston/gmlistoff = includes/excludes active character from /gmlist results - silence = toggles private messages acceptance mode - diet = toggles weight penalty mode -
@@ -64,7 +70,8 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_endolympiad",
 		"admin_setconfig",
 		"admin_config_server",
-		"admin_gmon"
+		"admin_gmon",
+		"admin_worldchat",
 	};
 	
 	@Override
@@ -287,6 +294,87 @@ public class AdminAdmin implements IAdminCommandHandler
 		else if (command.startsWith("admin_gmon"))
 		{
 			// nothing
+		}
+		else if (command.startsWith("admin_worldchat"))
+		{
+			final StringTokenizer st = new StringTokenizer(command);
+			st.nextToken(); // admin_worldchat
+			final String subCmd = st.hasMoreTokens() ? st.nextToken() : "";
+			switch (subCmd)
+			{
+				case "shout":
+				{
+					final StringBuilder sb = new StringBuilder();
+					while (st.hasMoreTokens())
+					{
+						sb.append(st.nextToken());
+						sb.append(" ");
+					}
+					
+					final CreatureSay cs = new CreatureSay(activeChar, Say2.GLOBAL, sb.toString());
+					L2World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
+					break;
+				}
+				case "see":
+				{
+					final L2Object target = activeChar.getTarget();
+					if ((target == null) || !target.isPlayer())
+					{
+						activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+						break;
+					}
+					final L2PcInstance targetPlayer = target.getActingPlayer();
+					if (targetPlayer.getLevel() < Config.WORLD_CHAT_MIN_LEVEL)
+					{
+						activeChar.sendMessage("Your target's level is below the minimum: " + Config.WORLD_CHAT_MIN_LEVEL);
+						break;
+					}
+					activeChar.sendMessage(targetPlayer.getName() + ": has " + targetPlayer.getWorldChatPoints() + " world chat points");
+					break;
+				}
+				case "set":
+				{
+					final L2Object target = activeChar.getTarget();
+					if ((target == null) || !target.isPlayer())
+					{
+						activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+						break;
+					}
+					
+					final L2PcInstance targetPlayer = target.getActingPlayer();
+					if (targetPlayer.getLevel() < Config.WORLD_CHAT_MIN_LEVEL)
+					{
+						activeChar.sendMessage("Your target's level is below the minimum: " + Config.WORLD_CHAT_MIN_LEVEL);
+						break;
+					}
+					
+					if (!st.hasMoreTokens())
+					{
+						activeChar.sendMessage("Incorrect syntax, use: //worldchat set <points>");
+						break;
+					}
+					
+					final String valueToken = st.nextToken();
+					if (!Util.isDigit(valueToken))
+					{
+						activeChar.sendMessage("Incorrect syntax, use: //worldchat set <points>");
+						break;
+					}
+					
+					activeChar.sendMessage(targetPlayer.getName() + ": points changed from " + targetPlayer.getWorldChatPoints() + " to " + valueToken);
+					targetPlayer.setWorldChatPoints(Integer.parseInt(valueToken));
+					targetPlayer.sendPacket(new ExWorldChatCnt(targetPlayer));
+					break;
+				}
+				default:
+				{
+					activeChar.sendMessage("Possible commands:");
+					activeChar.sendMessage(" - Send message: //worldchat shout <text>");
+					activeChar.sendMessage(" - See your target's points: //worldchat see");
+					activeChar.sendMessage(" - Change your target's points: //worldchat set <points>");
+					break;
+				}
+			}
 		}
 		return true;
 	}
