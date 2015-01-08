@@ -304,6 +304,7 @@ import quests.Q10734_DoOrDie.Q10734_DoOrDie;
 import quests.Q10735_ASpecialPower.Q10735_ASpecialPower;
 import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
 import quests.Q10737_GrakonsWarehouse.Q10737_GrakonsWarehouse;
+import quests.Q10738_AnInnerBeauty.Q10738_AnInnerBeauty;
 
 /**
  * @author NosBit
@@ -596,7 +597,8 @@ public class QuestMasterHandler
 		Q10734_DoOrDie.class,
 		Q10735_ASpecialPower.class,
 		Q10736_ASpecialPower.class,
-		Q10737_GrakonsWarehouse.class
+		Q10737_GrakonsWarehouse.class,
+		Q10738_AnInnerBeauty.class
 	};
 	
 	public static void main(String[] args)
