@@ -98,6 +98,7 @@ public final class EffectMasterHandler
 		GiveRecommendation.class,
 		GiveSp.class,
 		Grow.class,
+		HairAccessorySet.class,
 		Harvesting.class,
 		HeadquarterCreate.class,
 		Heal.class,

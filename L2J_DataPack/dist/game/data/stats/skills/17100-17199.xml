@@ -781,13 +781,15 @@
 		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="17192" levels="1" name="Change Hair Accessory">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Change hair accessories. -->
 		<set name="icon" val="icon.skill0810" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="180000" /> <!-- 3 minutes -->
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="180000" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="HairAccessorySet" />
+		</for>
 	</skill>
 	<skill id="17193" levels="1" name="Indomitable Hero's Olympiad Reward Box">
 		<!-- AUTO GENERATED SKILL -->
