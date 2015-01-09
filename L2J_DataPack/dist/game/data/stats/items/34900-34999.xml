@@ -174,22 +174,65 @@
 		</for>
 	</item>
 	<item id="34925" name="Cloak of Light" additionalName="" type="Armor">
+		<!-- TODO: Confirm me -->
 		<!-- Cloak that symbolizes glory and light. Can only be equipped by marquis or higher. P. Def. 50, M. Def. 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:ﾠCastle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="110" />
+		<set name="item_skill" val="19039-1;19041-1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<cond msgId="1518">
+			<and>
+				<player castle="-1" />
+				<player pledgeClass="8" /> 	<!-- Marquis or higher -->
+				<player isOnSide="LIGHT" />
+				<player cloakStatus="true" />
+			</and>
+		</cond>
 		<for>
 			<add stat="pDef" val="50.0" />
 			<add stat="mDef" val="40.0" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
 		</for>
 	</item>
 	<item id="34926" name="Cloak of Darkness" additionalName="" type="Armor">
 		<!-- Cloak that symbolizes avarice and darkness. Can only be equipped by marquis or higher. P. Def. 50, M. Def. 40, STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:ﾠCastle skill. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="default_action" val="EQUIP" />
-		<for>
-			<add stat="pDef" val="50.0" />
-			<add stat="mDef" val="40.0" />
-		</for>
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="110" />
+		<set name="item_skill" val="19040-1;19041-1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<cond msgId="1518">
+			<and>
+				<player castle="-1" />
+				<player pledgeClass="8" /> <!-- Marquis or higher -->
+				<player isOnSide="DARK" />
+				<player cloakStatus="true" />
+			</and>
+		</cond>
+ 		<for>
+ 			<add stat="pDef" val="50.0" />
+ 			<add stat="mDef" val="40.0" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+ 		</for>
 	</item>
 	<item id="34927" name="Dimension Keeper's Blue Box" additionalName="" type="EtcItem">
 		<!-- Blue-colored box bestowed by the kingdom of Aden as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
@@ -585,23 +628,67 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34996" name="Cloak of Radiant Light" additionalName="" type="Armor">
+		<!-- TODO: Confirm me -->
 		<!-- Cloak that symbolizes glory and light. Can only be equipped by a lord. STR/MEN/DEX/WIT/INT/CON + 3. Damage received during PvP decreases by 15%. Can use Escape:ﾠCastle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
-		<for>
-			<add stat="pDef" val="100.0" />
-			<add stat="mDef" val="80.0" />
-		</for>
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="110" />
+		<set name="item_skill" val="19037-1;19041-1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<cond msgId="1518">
+			<and>
+				<player castle="-1" />
+				<player isClanLeader="true" />
+				<player isOnSide="LIGHT" />
+				<player cloakStatus="true" />
+			</and>
+		</cond>
+ 		<for>
+ 			<add stat="pDef" val="100.0" />
+ 			<add stat="mDef" val="80.0" />
+			<add stat="fireRes" val="15" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="holyRes" val="15" />
+			<add stat="darkRes" val="15" />
+ 		</for>
 	</item>
-	<item id="34997" name="Cloak of Cold Darkness" additionalName="" type="Armor">
-		<!-- Cloak that symbolizes avarice and darkness. Can only be equipped by a lord. STR/MEN/DEX/WIT/INT/CON + 3. Damage received during PvP decreases by 15%. Can use Escape:ﾠCastle skill. Cannot be transferred between servers. -->
-		<set name="icon" val="icon.amor_evilness_cloak" />
-		<set name="default_action" val="EQUIP" />
-		<for>
-			<add stat="pDef" val="100.0" />
-			<add stat="mDef" val="80.0" />
-		</for>
-	</item>
+ 	<item id="34997" name="Cloak of Cold Darkness" additionalName="" type="Armor">
+		<!-- TODO: Confirm me -->
+ 		<!-- Cloak that symbolizes avarice and darkness. Can only be equipped by a lord. STR/MEN/DEX/WIT/INT/CON + 3. Damage received during PvP decreases by 15%. Can use Escape:ďľ Castle skill. Cannot be transferred between servers. -->
+ 		<set name="icon" val="icon.amor_evilness_cloak" />
+ 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="110" />
+		<set name="item_skill" val="19038-1;19041-1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<cond msgId="1518">
+			<and>
+				<player castle="-1" />
+				<player isClanLeader="true" />
+				<player isOnSide="DARK" />
+				<player cloakStatus="true" />
+			</and>
+		</cond>
+ 		<for>
+ 			<add stat="pDef" val="100.0" />
+ 			<add stat="mDef" val="80.0" />
+			<add stat="fireRes" val="15" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="holyRes" val="15" />
+			<add stat="darkRes" val="15" />
+ 		</for>
+ 	</item>
 	<item id="34998" name="Tauti's One-handed Axe" additionalName="" type="Weapon">
 		<!-- Weapon augmented from Tauti's Fragment. When equipped, can use Tauti's Rage skill. When equipped, increases Atk. Spd. by about 15%, critical by 150, Max HP by 25%, and P. Atk. by 415. Increases damage inflicted during PvP. Enchantment, attribute, crystallization, augmentation or modification is impossible. -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_axe_i01" />

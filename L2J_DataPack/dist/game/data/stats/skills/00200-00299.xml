@@ -1033,6 +1033,7 @@
 	</skill>
 	<skill id="246" levels="1" name="Seal of Ruler">
 		<!-- Confirmed CT2.5 -->
+		<!-- Not Used Anymore -->
 		<set name="castRange" val="85" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="180000" />
@@ -1048,7 +1049,9 @@
 			<player canTakeCastle="true" />
 		</cond>
 		<for>
-			<effect name="TakeCastle" />
+			<effect name="TakeCastle">
+				<param side="NEUTRAL" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="247" levels="1" name="Build Headquarters">

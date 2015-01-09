@@ -172,6 +172,7 @@ public final class EffectMasterHandler
 		SummonTrap.class,
 		Sweeper.class,
 		TakeCastle.class,
+		TakeCastleStart.class,
 		TakeFort.class,
 		TakeFortStart.class,
 		TalismanSlot.class,

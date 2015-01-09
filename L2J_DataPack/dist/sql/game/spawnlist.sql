@@ -9522,8 +9522,6 @@ INSERT INTO `spawnlist` VALUES
 ("gludio_blacksmith", 1, 35098, -17644, 109616, -2656, 0, 0, 33000, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("gludio_warehouse", 1, 35099, -18130, 110020, -2656, 0, 0, 49152, 60, 0, 0, 0),
--- Sayres
-("gludio_chamberlain_etc", 1, 35100, -18212, 108827, -2472, 0, 0, 16384, 60, 0, 0, 0),
 -- Grad
 ("Wyvern_Manager", 1, 35101, -17952, 108142, -2032, 0, 0, -16384, 60, 0, 0, 0),
 -- Greenspan
@@ -12318,8 +12316,6 @@ INSERT INTO `spawnlist` VALUES
 ("rune_blacksmith", 1, 35507, 12872, -48752, -1088, 0, 0, 33000, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("rune_warehouse", 1, 35508, 12864, -49184, -1088, 0, 0, 39746, 60, 0, 0, 0),
--- Frederick
-("rune_chamberlain_etc", 1, 35509, 10211, -49084, -307, 0, 0, 36736, 60, 0, 0, 0),
 -- Titus
 ("rune_chamberlain_etc", 1, 35510, 12318, -47703, 1296, 0, 0, 22879, 60, 0, 0, 0),
 -- Gompus
@@ -14932,8 +14928,6 @@ INSERT INTO `spawnlist` VALUES
 ("dion_blacksmith", 1, 35140, 21649, 160199, -2850, 0, 0, 61379, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("dion_warehouse", 1, 35141, 22100, 159781, -2877, 0, 0, 6134, 60, 0, 0, 0),
--- Crosby
-("dion_chamberlain_etc", 1, 35142, 22172, 160923, -2666, 0, 0, 49152, 60, 0, 0, 0),
 -- Hodler
 ("Wyvern_Manager", 1, 35143, 21912, 161608, -2226, 0, 0, 0, 60, 0, 0, 0),
 -- Mercenary Manager Sanford
@@ -20837,8 +20831,6 @@ INSERT INTO `spawnlist` VALUES
 ("schuttgart_blacksmith", 1, 35553, 77056, -152960, -904, 0, 0, 16500, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("schuttgart_warehouse", 1, 35554, 78080, -152976, -904, 0, 0, 16500, 60, 0, 0, 0),
--- August
-("schuttgart_chmberlain_etc", 1, 35555, 77488, -153360, -384, 0, 0, 16500, 60, 0, 0, 0),
 -- Gallic
 ("schuttgart_chmberlain_etc", 1, 35556, 77502, -153296, 1224, 0, 0, 16500, 60, 0, 0, 0),
 -- Kendrew
@@ -23701,8 +23693,6 @@ INSERT INTO `spawnlist` VALUES
 ("oren_warehouse", 1, 35224, 82464, 37592, -2450, 0, 0, 44984, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("oren_blacksmith", 1, 35225, 82043, 37132, -2450, 0, 0, 65001, 60, 0, 0, 0),
--- Brasseur
-("oren_chamberlain_etc", 1, 35226, 83171, 37092, -2266, 0, 0, 32768, 60, 0, 0, 0),
 -- Finrod
 ("Wyvern_Manager", 1, 35227, 83853, 37192, -1835, 0, 0, 49000, 60, 0, 0, 0),
 -- Morrison
@@ -30910,8 +30900,6 @@ INSERT INTO `spawnlist` VALUES
 ("giran_blacksmith", 1, 35182, 116494, 145516, -2723, 0, 0, 58824, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("giran_warehouse", 1, 35183, 115910, 145101, -2723, 0, 0, 1353, 60, 0, 0, 0),
--- Saul
-("giran_chamberlain_etc", 1, 35184, 117095, 144997, -2539, 0, 0, 32768, 60, 0, 0, 0),
 -- Bryce
 ("Wyvern_Manager", 1, 35185, 117780, 145257, -2099, 0, 0, 49000, 60, 0, 0, 0),
 -- Arvid
@@ -31687,8 +31675,6 @@ INSERT INTO `spawnlist` VALUES
 ("innadril_blacksmith", 1, 35314, 115649, 249072, -973, 0, 0, 868, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("innadril_warehouse", 1, 35315, 116015, 248558, -946, 0, 0, 18052, 60, 0, 0, 0),
--- Neurath
-("innadrile_chamberlain_etc", 1, 35316, 116123, 249702, -762, 0, 0, 49152, 60, 0, 0, 0),
 -- Tate
 ("Wyvern_Manager", 1, 35317, 115863, 250387, -322, 0, 0, 0, 60, 0, 0, 0),
 -- Solinus
@@ -33674,8 +33660,6 @@ INSERT INTO `spawnlist` VALUES
 ("goddard_blacksmith", 1, 35361, 146992, -48896, -2640, 0, 0, 16000, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("goddard_warehouse", 1, 35362, 147952, -48912, -2640, 0, 0, 16000, 60, 0, 0, 0),
--- Alfred
-("godard03_npc2416_01", 1, 35363, 147408, -49296, -2120, 0, 0, 16500, 60, 0, 0, 0),
 -- Hadley
 ("Wyvern_Manager", 1, 35364, 147470, -49083, -503, 0, 0, 16500, 60, 0, 0, 0),
 -- Rowell
@@ -34538,8 +34522,6 @@ INSERT INTO `spawnlist` VALUES
 ("aden_blacksmith", 1, 35272, 147908, 5595, -884, 0, 0, 48126, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("aden_warehouse", 1, 35273, 147056, 5595, -884, 0, 0, 58383, 60, 0, 0, 0),
--- Logan
-("aden_chamberlain_etc", 1, 35274, 147412, 3355, -46, 0, 0, 16389, 60, 0, 0, 0),
 -- Kruger
 ("Wyvern_Manager", 1, 35275, 147449, 1899, 216, 0, 0, 49000, 60, 0, 0, 0),
 -- Eldon

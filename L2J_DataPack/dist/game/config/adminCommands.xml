@@ -463,26 +463,16 @@
 	<admin command="admin_server_restart" accessLevel="7" confirmDlg="true" />
 	<admin command="admin_server_abort" accessLevel="7" />
 
-	<!-- ADMIN SIEGE -->
-	<admin command="admin_siege" accessLevel="7" />
-	<admin command="admin_add_attacker" accessLevel="7" />
-	<admin command="admin_add_defender" accessLevel="7" />
-	<admin command="admin_add_guard" accessLevel="7" />
-	<admin command="admin_list_siege_clans" accessLevel="7" />
-	<admin command="admin_clear_siege_list" accessLevel="7" />
-	<admin command="admin_move_defenders" accessLevel="7" />
-	<admin command="admin_spawn_doors" accessLevel="7" />
-	<admin command="admin_endsiege" accessLevel="7" />
-	<admin command="admin_startsiege" accessLevel="7" />
-	<admin command="admin_setsiegetime" accessLevel="7" />
-	<admin command="admin_setcastle" accessLevel="7" />
-	<admin command="admin_removecastle" accessLevel="7" />
+	<!-- ADMIN CLAN HALL -->
 	<admin command="admin_clanhall" accessLevel="7" />
 	<admin command="admin_clanhallset" accessLevel="7" />
 	<admin command="admin_clanhalldel" accessLevel="7" />
 	<admin command="admin_clanhallopendoors" accessLevel="7" />
 	<admin command="admin_clanhallclosedoors" accessLevel="7" />
 	<admin command="admin_clanhallteleportself" accessLevel="7" />
+	
+	<!-- ADMIN CASTLE -->
+	<admin command="admin_castlemanage" accessLevel="7" />
 
 	<!-- ADMIN SKILL -->
 	<admin command="admin_show_skills" accessLevel="7" />
