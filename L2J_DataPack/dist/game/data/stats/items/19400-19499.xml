@@ -301,6 +301,12 @@
 	<item id="19443" name="Orichalcum Bolt" additionalName="" type="EtcItem">
 		<!-- Bolt made of Orichalcum. Used as bolts for R-grade Crossbows. -->
 		<set name="icon" val="icon.etc_oricalcum_bolt_i00" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="BOLT" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="price" val="6" />
 		<set name="is_stackable" val="true" />
 	</item>

@@ -517,72 +517,168 @@
 	<item id="32249" name="Infinite Wooden Quiver" additionalName="" type="EtcItem">
 		<!-- Quiver containing arrows made of wood. Used with a No-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_arrows_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
 		<set name="price" val="790" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32250" name="Infinite Bone Quiver" additionalName="" type="EtcItem">
 		<!-- Quiver containing arrows made of sharply ground bone. Used with a D-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_arrows_i00" />
+		<set name="crystal_type" val="D" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="BONE" />
 		<set name="price" val="3660" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32251" name="Infinite Steel Quiver" additionalName="" type="EtcItem">
 		<!-- Quiver containing arrows made of steel. Used with a C-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_fine_steel_arrows_i00" />
+		<set name="crystal_type" val="C" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="5745" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32252" name="Infinite Silver Quiver" additionalName="" type="EtcItem">
 		<!-- Quiver containing steel arrows plated in silver. Used with a B-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_silver_arrows_i00" />
+		<set name="crystal_type" val="B" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="SILVER" />
 		<set name="price" val="17315" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32253" name="Infinite Mithril Quiver" additionalName="" type="EtcItem">
 		<!-- Quiver containing steel arrows plated in mithril. Used with an A-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
+		<set name="crystal_type" val="A" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="price" val="182400" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32254" name="Infinite Quiver of Light" additionalName="" type="EtcItem">
 		<!-- This quiver contains arrows made of unknown material. Used with an S-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_shining_arrows_i00" />
+		<set name="crystal_type" val="S" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="MITHRIL" />
 		<set name="price" val="858000" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32255" name="Infinite Orichalcum Quiver" additionalName="" type="EtcItem">
 		<!-- Quiver containing arrows made of orichalcum. Used with an R-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="price" val="2264400" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32256" name="Infinite Wooden Bolt Container" additionalName="" type="EtcItem">
 		<!-- Container with bolts made of wood. Used with a No-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_bolts_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="BOLT" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
 		<set name="price" val="790" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32257" name="Infinite Bone Bolt Container" additionalName="" type="EtcItem">
 		<!-- Container with bolts made of sharply ground bone. Used with a D-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_bolts_i00" />
+		<set name="crystal_type" val="D" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="BOLT" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="BONE" />
 		<set name="price" val="3660" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32258" name="Infinite Steel Bolt Container" additionalName="" type="EtcItem">
 		<!-- Container with bolts made of steel. Used with a C-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_fine_steel_bolts_i00" />
+		<set name="crystal_type" val="C" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="BOLT" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="5745" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32259" name="Infinite Silver Bolt Container" additionalName="" type="EtcItem">
 		<!-- Container with steel bolts plated in silver. Used with a B-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_silver_bolts_i00" />
+		<set name="crystal_type" val="B" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="BOLT" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="SILVER" />
 		<set name="price" val="17315" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32260" name="Infinite Mithril Bolt Container" additionalName="" type="EtcItem">
 		<!-- Container with steel bolts plated in mithril. Used with an A-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
+		<set name="crystal_type" val="A" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="BOLT" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="MITHRIL" />
 		<set name="price" val="182400" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32261" name="Infinite Light Bolt Container" additionalName="" type="EtcItem">
 		<!-- This container Has bolts made of unknown material. Used with an S-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_shining_bolts_i00" />
+		<set name="crystal_type" val="S" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="BOLT" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="price" val="858000" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32262" name="Infinite Orichalcum Bolt Container" additionalName="" type="EtcItem">
 		<!-- Container with bolts made of orichalcum. Used with an R-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="BOLT" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="price" val="2264400" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32263" name="Awakened Hero's Olympiad Treasure Chest" additionalName="" type="EtcItem">
 		<!-- Awakened Hero's Olympiad Treasure Chest. -->
