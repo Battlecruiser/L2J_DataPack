@@ -1124,7 +1124,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 	// @formatter:off
 	@RegisterEvent(EventType.ON_NPC_MANOR_BYPASS)
 	@RegisterType(ListenerRegisterType.NPC)
-	@Id({35100, 35142, 35184, 35226, 35274,	35316, 35363, 35509, 35555})
+	@Id({35100, 35142, 35184, 35226, 35274,	35316, 35363, 35509, 35555, 36653, 36654, 36655, 36656, 36657, 36658, 36659, 36660, 36661})
 	// @formatter:on
 	public final void onNpcManorBypass(OnNpcManorBypass evt)
 	{
