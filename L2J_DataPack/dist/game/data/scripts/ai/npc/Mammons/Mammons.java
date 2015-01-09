@@ -116,7 +116,6 @@ public final class Mammons extends AbstractNpcAI
 				final L2Npc priest = addSpawn(MAMMONS[2], PRIEST_LOC[town]);
 				_mammons.addAll(Arrays.asList(blacksmith, merchant, priest));
 				
-				Broadcast.toAllOnlinePlayers("Mammon's has been spawned in " + TOWN_NAME[town] + ".", false); // TODO: remove me
 				if (Config.ANNOUNCE_MAMMON_SPAWN)
 				{
 					Broadcast.toAllOnlinePlayers("Mammon's has been spawned in " + TOWN_NAME[town] + ".", false);
