@@ -47,10 +47,20 @@ public final class FeedableBeasts extends AbstractNpcAI
 	private static final int SKILL_GOLDEN_SPICE = 2188;
 	private static final int SKILL_CRYSTAL_SPICE = 2189;
 	private static final int FOODSKILLDIFF = GOLDEN_SPICE - SKILL_GOLDEN_SPICE;
+	// Tamed Wild Beasts
+	private static final int TRAINED_BUFFALO1 = 16013;
+	private static final int TRAINED_BUFFALO2 = 16014;
+	private static final int TRAINED_COUGAR1 = 16015;
+	private static final int TRAINED_COUGAR2 = 16016;
+	private static final int TRAINED_KOOKABURRA1 = 16017;
+	private static final int TRAINED_KOOKABURRA2 = 16018;
+	// private static final int TRAINED_TINY_BABY_BUFFALO = 16020; // TODO: Implement.
+	// private static final int TRAINED_TINY_BABY_COUGAR = 16022; // TODO: Implement.
+	// private static final int TRAINED_TINY_BABY_KOOKABURRA = 16024; // TODO: Implement.
 	// @formatter:off
 	private static final int[] TAMED_BEASTS =
 	{
-		16013, 16014, 16015, 16016, 16017, 16018
+		TRAINED_BUFFALO1, TRAINED_BUFFALO2, TRAINED_COUGAR1, TRAINED_COUGAR2, TRAINED_KOOKABURRA1, TRAINED_KOOKABURRA2
 	};
 	// all mobs that can eat...
 	private static final int[] FEEDABLE_BEASTS =
@@ -61,7 +71,7 @@ public final class FeedableBeasts extends AbstractNpcAI
 		21481, 21482, 21483, 21484, 21485, 21486, 21487, 21488, 21489, 21490,
 		21491, 21492, 21493, 21494, 21495, 21496, 21497, 21498, 21499, 21500,
 		21501, 21502, 21503, 21504, 21505, 21506, 21507, 21824, 21825, 21826,
-		21827, 21828, 21829, 16013, 16014, 16015, 16016, 16017, 16018
+		21827, 21828, 21829, TRAINED_BUFFALO1, TRAINED_BUFFALO2, TRAINED_COUGAR1, TRAINED_COUGAR2, TRAINED_KOOKABURRA1, TRAINED_KOOKABURRA2
 	};
 	// @formatter:on
 	
@@ -184,8 +194,8 @@ public final class FeedableBeasts extends AbstractNpcAI
 		final int[][] Kookabura_1_Gold_2 = {{ 21461, 21463 }};
 		final int[][] Kookabura_1_Crystal_1 = {{ 21464, 21466 }};
 		final int[][] Kookabura_1_Crystal_2 = {{ 21465, 21467 }};
-		final int[][] Kookabura_2_1 = {{ 21468, 21824}, { 16017, 16018 }};
-		final int[][] Kookabura_2_2 = {{ 21469, 21825}, { 16017, 16018 }};
+		final int[][] Kookabura_2_1 = {{ 21468, 21824}, { TRAINED_KOOKABURRA1, TRAINED_KOOKABURRA2 }};
+		final int[][] Kookabura_2_2 = {{ 21469, 21825}, { TRAINED_KOOKABURRA1, TRAINED_KOOKABURRA2 }};
 		
 		final int[][] Buffalo_0_Gold = {{ 21471, 21472, 21473, 21474 }};
 		final int[][] Buffalo_0_Crystal = {{ 21475, 21476, 21477, 21478 }};
@@ -193,17 +203,17 @@ public final class FeedableBeasts extends AbstractNpcAI
 		final int[][] Buffalo_1_Gold_2 = {{ 21481, 21482 }};
 		final int[][] Buffalo_1_Crystal_1 = {{ 21483, 21485 }};
 		final int[][] Buffalo_1_Crystal_2 = {{ 21484, 21486 }};
-		final int[][] Buffalo_2_1 = {{ 21487,21826}, {16013, 16014 }};
-		final int[][] Buffalo_2_2 = {{ 21488,21827}, {16013, 16014 }};
+		final int[][] Buffalo_2_1 = {{ 21487, 21826}, {TRAINED_BUFFALO1, TRAINED_BUFFALO2 }};
+		final int[][] Buffalo_2_2 = {{ 21488, 21827}, {TRAINED_BUFFALO1, TRAINED_BUFFALO2 }};
 		
 		final int[][] Cougar_0_Gold = {{ 21490, 21491, 21492, 21493 }};
-		final int[][] Cougar_0_Crystal = {{ 21494,21495, 21496, 21497 }};
+		final int[][] Cougar_0_Crystal = {{ 21494, 21495, 21496, 21497 }};
 		final int[][] Cougar_1_Gold_1 = {{ 21498, 21500 }};
 		final int[][] Cougar_1_Gold_2 = {{ 21499, 21501 }};
-		final int[][] Cougar_1_Crystal_1 = {{ 21502,21504 }};
-		final int[][] Cougar_1_Crystal_2 = {{ 21503,21505 }};
-		final int[][] Cougar_2_1 = {{ 21506, 21828 }, { 16015,16016 }};
-		final int[][] Cougar_2_2 = {{ 21507, 21829 }, { 16015,16016 }};
+		final int[][] Cougar_1_Crystal_1 = {{ 21502, 21504 }};
+		final int[][] Cougar_1_Crystal_2 = {{ 21503, 21505 }};
+		final int[][] Cougar_2_1 = {{ 21506, 21828 }, { TRAINED_COUGAR1, TRAINED_COUGAR2 }};
+		final int[][] Cougar_2_2 = {{ 21507, 21829 }, { TRAINED_COUGAR1, TRAINED_COUGAR2 }};
 		//@formatter:on
 		
 		// Alpen Kookabura

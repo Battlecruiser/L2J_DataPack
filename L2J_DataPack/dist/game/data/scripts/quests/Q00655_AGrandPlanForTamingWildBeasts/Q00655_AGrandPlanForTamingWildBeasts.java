@@ -44,16 +44,6 @@ public final class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 	// Items
 	private static final int CRYSTAL_OF_PURITY = 8084;
 	private static final int TRAINER_LICENSE = 8293;
-	// Tamed Wild Beasts
-	private static final int TRAINED_BUFFALO1 = 16013;
-	private static final int TRAINED_BUFFALO2 = 16014;
-	private static final int TRAINED_COUGAR1 = 16015;
-	private static final int TRAINED_COUGAR2 = 16016;
-	private static final int TRAINED_KOOKABURRA1 = 16017;
-	private static final int TRAINED_KOOKABURRA2 = 16018;
-	private static final int TRAINED_TINY_BABY_BUFFALO = 16020;
-	private static final int TRAINED_TINY_BABY_COUGAR = 16022;
-	private static final int TRAINED_TINY_BABY_KOOKABURRA = 16024;
 	// Misc
 	private static final int REQUIRED_CRYSTAL_COUNT = 10;
 	private static final int REQUIRED_CLAN_LEVEL = 4;
@@ -65,7 +55,6 @@ public final class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 		super(655, Q00655_AGrandPlanForTamingWildBeasts.class.getSimpleName(), "A Grand Plan for Taming Wild Beasts");
 		addStartNpc(MESSENGER);
 		addTalkId(MESSENGER);
-		addSpawnId(TRAINED_BUFFALO1, TRAINED_BUFFALO2, TRAINED_COUGAR1, TRAINED_COUGAR2, TRAINED_KOOKABURRA1, TRAINED_KOOKABURRA2, TRAINED_TINY_BABY_BUFFALO, TRAINED_TINY_BABY_COUGAR, TRAINED_TINY_BABY_KOOKABURRA);
 		registerQuestItems(CRYSTAL_OF_PURITY, TRAINER_LICENSE);
 	}
 	
@@ -116,12 +105,6 @@ public final class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
-	{
-		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
