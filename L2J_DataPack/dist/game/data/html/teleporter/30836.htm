@@ -1,9 +1,10 @@
 <html><body>Gatekeeper Minerva:<br>
-Hardin's Academy is not the kind of place people visit for curiosities sake, stranger. Do you know what kind of people Necromancers are? For them, human blood, flesh, bones, even skin... they're just ingredients for magic. They face death with more apathy than the cruellest of Dark Elves... People inside this place are like Necromancers.<br>
-Are you scared? If you want to leave here now, I will open the door of space and time. No matter how far it may be, you will appear there in the blink of an eye.<br>
-<a action="bypass -h npc_%objectId%_Chat 1">Teleport</a><br>
-<a action="bypass -h npc_%objectId%_multisell 002">Exchange Dimension Diamonds.</a><br>
-<a action="bypass -h npc_%objectId%_Quest NoblesseTeleport">[Noblesse Exclusive] Teleport</a><br>
-<a action="bypass -h npc_%objectId%_Quest CharacterBirthday">Call Alegria</a><br>
-<a action="bypass -h npc_%objectId%_Quest">Quest</a>
+Hardin's Academy is not to be trifled with. I hope you know what kind of people Necromancers are? They see human flesh and blood as an ingredient for their goals. Their apathy toward death is truly disturbing.<br>
+Does this bother you? I can help you get away, if you want, far, far away from here.<br>
+(If your <font color="LEVEL">main class</font> is <font color="LEVEL">Lv. 76 or below</font>, you can teleport for free.)<br>
+<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h npc_%objectId%_showTeleports">"Uh, can I teleport?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 002">"I want to exchange some Dimensional Diamonds."</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_showNoblesSelect">[Noblesse Only] "Teleport me, please."</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_Quest CharacterBirthday">"I need to call Alegria."</Button>
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h npc_%objectId%_Quest">Quest</Button>
 </body></html>
