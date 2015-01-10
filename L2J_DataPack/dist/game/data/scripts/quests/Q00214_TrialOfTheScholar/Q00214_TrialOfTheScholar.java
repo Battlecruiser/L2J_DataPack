@@ -147,7 +147,7 @@ public final class Q00214_TrialOfTheScholar extends Quest
 					{
 						giveItems(player, DIMENSIONAL_DIAMOND, 168);
 						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30461-4a.htm";
+						htmltext = "30461-04a.htm";
 					}
 					else
 					{
