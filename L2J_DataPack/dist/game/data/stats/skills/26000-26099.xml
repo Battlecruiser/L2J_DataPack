@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="26000" levels="1" name="Small fortuna box">
+	<skill id="26000" levels="1" name="Small Fortuna Box">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22006,3,20.55555;22007,2,14.01515;22008,1,6.16666;22014,1,0.86999;22022,3,3.19444;22023,3,6.38888;22024,1,5.75;8743,1,10;8744,1,8.33333;8745,1,6.94444;8753,1,2;8754,1,1.66666;8755,1,1.38888;22025,5,12.77777
@@ -21,7 +21,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="26001" levels="1" name="Middle fortuna box">
+	<skill id="26001" levels="1" name="Medium Fortuna Box">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22007,3,27.27272;22008,2,9;22009,1,5;22014,1,0.93959;22015,1,0.32467;22022,5,3.75;22023,5,7.5;22024,2,5.625;8746,1,9.11458;8747,1,7.875;8748,1,6.5625;8756,1,1.82291;8757,1,1.575;8758,1,1.3125;22025,10,12.5
@@ -42,7 +42,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="26002" levels="1" name="Large fortuna box">
+	<skill id="26002" levels="1" name="Large Fortuna Box">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22008,2,27;22009,1,15;22014,1,0.78299;22015,1,0.27056;22018,1,0.00775;22019,1,0.0027;22022,10,3.75;22023,10,7.5;22024,5,4.5;8749,1,9.75;8750,1,8.125;8751,1,6.77083;8759,1,1.95;8760,1,1.625;8761,1,1.35416;22025,20,12.5
@@ -63,7 +63,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="26003" levels="1" name="Small fortuna cube">
+	<skill id="26003" levels="1" name="Small Fortuna Cube">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22010,3,20.22222;22011,2,13.78787;22012,1,6.06666;22016,1,0.69599;22022,3,3.47222;22023,3,6.94444;22024,1,6.25;8743,1,9.5;8744,1,7.91666;8745,1,6.59722;8753,1,1.9;8754,1,1.58333;8755,1,1.31944;22025,5,13.88888
@@ -84,7 +84,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="26004" levels="1" name="Middle fortuna cube">
+	<skill id="26004" levels="1" name="Medium Fortuna Cube">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22011,3,26.51515;22012,2,8.75;22013,1,4.86111;22016,1,0.91349;22017,1,0.31565;22022,5,3.75;22023,5,7.5;22024,2,5.625;8746,1,9.54861;8747,1,8.25;8748,1,6.875;8756,1,1.90972;8757,1,1.65;8758,1,1.375;22025,10,12.5
@@ -105,7 +105,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="26005" levels="1" name="Large fortuna cube">
+	<skill id="26005" levels="1" name="Large Fortuna Cube">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22012,2,26.25;22013,1,14.58333;22016,1,0.69599;22017,1,0.24049;22020,1,0.00638;22021,1,0.0022;22022,10,3.95833;22023,10,7.91666;22024,5,4.75;8749,1,9.58333;8750,1,7.98611;8751,1,6.65509;8759,1,1.91666;8760,1,1.59722;8761,1,1.33101;22025,20,13.19444
@@ -126,119 +126,119 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="26006" levels="1" name="Weapon Enchant Scroll - D Grade">
+	<skill id="26006" levels="1" name="Scroll: Enchant Weapon (D-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26007" levels="1" name="Weapon Enchant Scroll - C Grade">
+	<skill id="26007" levels="1" name="Scroll: Enchant Weapon (C-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26008" levels="1" name="Weapon Enchant Scroll - B Grade">
+	<skill id="26008" levels="1" name="Scroll: Enchant Weapon (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26009" levels="1" name="Weapon Enchant Scroll - A Grade">
+	<skill id="26009" levels="1" name="Scroll: Enchant Weapon (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26010" levels="1" name="Armor Enchant Scroll - D Grade">
+	<skill id="26010" levels="1" name="Scroll: Enchant Armor (D-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26011" levels="1" name="Armor Enchant Scroll - C Grade">
+	<skill id="26011" levels="1" name="Scroll: Enchant Armor (C-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26012" levels="1" name="Armor Enchant Scroll - B Grade">
+	<skill id="26012" levels="1" name="Scroll: Enchant Armor (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26013" levels="1" name="Armor Enchant Scroll - A Grade">
+	<skill id="26013" levels="1" name="Scroll: Enchant Armor (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26014" levels="1" name="Ancient Weapon Enchant Crystal - B grade">
+	<skill id="26014" levels="1" name="Ancient Scroll: Enchant Weapon (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26015" levels="1" name="Ancient Weapon Enchant Crystal - A grade">
+	<skill id="26015" levels="1" name="Ancient Scroll: Enchant Weapon (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26016" levels="1" name="Ancient Armor Enchant Crystal - B grade">
+	<skill id="26016" levels="1" name="Ancient Scroll: Enchant Armor (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26017" levels="1" name="Ancient Armor Enchant Crystal - A grade">
+	<skill id="26017" levels="1" name="Ancient Scroll: Enchant Armor (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26018" levels="1" name="Divine Weapon Enchant Crystal - B grade">
+	<skill id="26018" levels="1" name="Divine Scroll: Enchant Weapon (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26019" levels="1" name="Divine Weapon Enchant Crystal - A grade">
+	<skill id="26019" levels="1" name="Divine Scroll: Enchant Weapon (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26020" levels="1" name="Divine Armor Enchant Crystal - B grade">
+	<skill id="26020" levels="1" name="Divine Scroll: Enchant Armor (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26021" levels="1" name="Divine Armor Enchant Crystal - A grade">
+	<skill id="26021" levels="1" name="Divine Scroll: Enchant Armor (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26022" levels="1" name="High grade potion which improves attack speed">
+	<skill id="26022" levels="1" name="Greater Haste Potion">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -255,7 +255,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26023" levels="1" name="High grade potion which improves moving speed">
+	<skill id="26023" levels="1" name="Greater Wind Walk Potion">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -272,7 +272,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26024" levels="1" name="Temporary Healing Potion">
+	<skill id="26024" levels="1" name="Quick Healing Potion">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -285,7 +285,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26025" levels="1" name="Powerful Healing Potion">
+	<skill id="26025" levels="1" name="Major Healing Potion">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
@@ -302,7 +302,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26026" levels="1" name="High-grade Healing Potion">
+	<skill id="26026" levels="1" name="Major Healing Potion">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
@@ -359,7 +359,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26029" levels="1" name="Potion of Will">
+	<skill id="26029" levels="1" name="CP Potion">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -372,7 +372,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26030" levels="1" name="Healing medicine for Mana">
+	<skill id="26030" levels="1" name="Mana Potion">
 		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -387,7 +387,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26031" levels="1" name="Wind Walk Scroll">
+	<skill id="26031" levels="1" name="Scroll: Wind Walk">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -407,7 +407,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26032" levels="1" name="Haste Scroll">
+	<skill id="26032" levels="1" name="Scroll: Haste">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -427,7 +427,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26033" levels="1" name="Might Scroll">
+	<skill id="26033" levels="1" name="Scroll: Might">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -447,7 +447,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26034" levels="1" name="Shield Scroll">
+	<skill id="26034" levels="1" name="Scroll: Shield">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -467,7 +467,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26035" levels="1" name="Death Whisper Scroll">
+	<skill id="26035" levels="1" name="Scroll: Death Whisper">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -487,7 +487,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26036" levels="1" name="Guidance Scroll">
+	<skill id="26036" levels="1" name="Scroll: Guidance">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -507,7 +507,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26037" levels="1" name="Empower Scroll">
+	<skill id="26037" levels="1" name="Scroll: Empower">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -527,7 +527,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26038" levels="1" name="Greater Acumen Scroll">
+	<skill id="26038" levels="1" name="Scroll: Greater Acumen">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -547,7 +547,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26039" levels="1" name="Vampiric Rage Scroll">
+	<skill id="26039" levels="1" name="Scroll: Vampiric Rage">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
@@ -567,7 +567,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26040" levels="1" name="Bless the Body Scroll">
+	<skill id="26040" levels="1" name="Scroll: Blessed Body">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
@@ -587,7 +587,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26041" levels="1" name="Berserker Spirit Scroll">
+	<skill id="26041" levels="1" name="Scroll: Berserker Spirit">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
@@ -614,7 +614,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26042" levels="1" name="Magic Barrier Scroll">
+	<skill id="26042" levels="1" name="Scroll: Magic Barrier">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_UP" />
@@ -634,7 +634,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26043" levels="1" name="Bless the Soul Scroll">
+	<skill id="26043" levels="1" name="Scroll: Blessed Soul">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
@@ -654,7 +654,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26044" levels="1" name="Clarity Scroll">
+	<skill id="26044" levels="1" name="Scroll: Clarity">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
@@ -676,7 +676,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26045" levels="1" name="Wild Magic Scroll">
+	<skill id="26045" levels="1" name="Scroll: Wild Magic">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
@@ -696,7 +696,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26046" levels="5" name="Rune of Experience Points">
+	<skill id="26046" levels="5" name="XP Rune III (Lv. 1-99) 10%">
 		<!-- Confirmed CT2.5 -->
 		<table name="#bonusExp"> 10 20 30 40 50 </table>
 		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_exp_buff_1 br_cashtex.skill.br_cash_rune_of_exp_buff_2 br_cashtex.skill.br_cash_rune_of_exp_buff_3 br_cashtex.skill.br_cash_rune_of_exp_buff_4 br_cashtex.skill.br_cash_rune_of_exp_buff_5 </table>
@@ -710,7 +710,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26047" levels="5" name="Rune of SP">
+	<skill id="26047" levels="5" name="SP Rune 10%">
 		<!-- Confirmed CT2.5 -->
 		<table name="#bonusSp"> 10 20 30 40 50 </table>
 		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_sp_buff_1 br_cashtex.skill.br_cash_rune_of_sp_buff_2 br_cashtex.skill.br_cash_rune_of_sp_buff_3 br_cashtex.skill.br_cash_rune_of_sp_buff_4 br_cashtex.skill.br_cash_rune_of_sp_buff_5 </table>
@@ -724,7 +724,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26048" levels="5" name="Rune of Crystal Form">
+	<skill id="26048" levels="5" name="Rune of Crystal (Lv. 1)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#bonus"> 1 2 3 4 5 </table>
 		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_rp_buff_1 br_cashtex.skill.br_cash_rune_of_rp_buff_2 br_cashtex.skill.br_cash_rune_of_rp_buff_3 br_cashtex.skill.br_cash_rune_of_rp_buff_4 br_cashtex.skill.br_cash_rune_of_rp_buff_5 </table>
@@ -744,112 +744,112 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="26050" levels="1" name="Blessed Spiritshot - D grade">
+	<skill id="26050" levels="1" name="Blessed Spiritshot (D-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26051" levels="1" name="Blessed Spiritshot - C grade">
+	<skill id="26051" levels="1" name="Blessed Spiritshot (C-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26052" levels="1" name="Blessed Spiritshot - B grade">
+	<skill id="26052" levels="1" name="Blessed Spiritshot (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26053" levels="1" name="Blessed Spiritshot - A grade">
+	<skill id="26053" levels="1" name="Blessed Spiritshot (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26054" levels="1" name="Blessed Spiritshot - S grade">
+	<skill id="26054" levels="1" name="Blessed Spiritshot (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26055" levels="1" name="Spiritshot - D grade">
+	<skill id="26055" levels="1" name="Spiritshot (D-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26056" levels="1" name="Spiritshot - C grade">
+	<skill id="26056" levels="1" name="Spiritshot (C-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26057" levels="1" name="Spiritshot - B grade">
+	<skill id="26057" levels="1" name="Spiritshot (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26058" levels="1" name="Spiritshot - A grade">
+	<skill id="26058" levels="1" name="Spiritshot (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26059" levels="1" name="Spiritshot - S grade">
+	<skill id="26059" levels="1" name="Spiritshot (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26060" levels="1" name="Soulshot - D grade">
+	<skill id="26060" levels="1" name="Soulshot (D-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26061" levels="1" name="Soulshot - C grade">
+	<skill id="26061" levels="1" name="Soulshot (C-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26062" levels="1" name="Soulshot - B grade">
+	<skill id="26062" levels="1" name="Soulshot (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26063" levels="1" name="Soulshot - A grade">
+	<skill id="26063" levels="1" name="Soulshot (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26064" levels="1" name="Soulshot - S grade">
+	<skill id="26064" levels="1" name="Soulshot (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="26065" levels="1" name="A Scroll Bundle of Fighter">
+	<skill id="26065" levels="1" name="Fighter's Scroll Bundle">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22039,1,22040,1,22047,1,22041,1,22042,1,22043,1,22044,1,22048,1,100
@@ -871,7 +871,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="26066" levels="1" name="A Scroll Bundle of Mage">
+	<skill id="26066" levels="1" name="Mage's Scroll Bundle">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22049,1,22050,1,22051,1,22045,1,22046,1,22052,1,22048,1,22053,1,100
@@ -913,7 +913,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26068" levels="10" name="Blessed Spiritshot Pack">
+	<skill id="26068" levels="10" name="Blessed Spiritshot Pack (D-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#itemCount"> 5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
 		<table name="#itemId"> 22072 22073 22074 22075 22076 22072 22073 22074 22075 22076 </table>
@@ -934,7 +934,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26069" levels="10" name="Spiritshot Pack">
+	<skill id="26069" levels="10" name="Spiritshot Pack (D-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#itemCount"> 5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
 		<table name="#itemId"> 22077 22078 22079 22080 22081 22077 22078 22079 22080 22081 </table>
@@ -955,7 +955,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26070" levels="10" name="Soulshot Pack">
+	<skill id="26070" levels="10" name="Soulshot Pack (D-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#itemCount"> 5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
 		<table name="#itemId"> 22082 22083 22084 22085 22086 22082 22083 22084 22085 22086 </table>
@@ -976,7 +976,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26071" levels="17" name="Wrapped daisy hairpin">
+	<skill id="26071" levels="17" name="Wrapped Daisy Hairpin">
 		<!-- Confirmed CT2.5 -->
 		<table name="#itemId"> 22156 22157 22158 22159 22160 22161 22162 22163 22164 22165 22166 22167 22168 22169 22170 22171 22172 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -996,7 +996,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26072" levels="3" name="Wrapped Pet Exchange Ticket">
+	<skill id="26072" levels="3" name="Wrapped Pet Coupon - Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<table name="#itemId"> 7583 7584 7585 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

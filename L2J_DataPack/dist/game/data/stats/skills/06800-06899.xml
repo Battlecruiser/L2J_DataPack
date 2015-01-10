@@ -236,7 +236,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6813" levels="8" name="Focus Sonic">
+	<skill id="6813" levels="8" name="Sonic Focus">
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
 		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
@@ -441,7 +441,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6832" levels="1" name="Summon Parasite Leech">
+	<skill id="6832" levels="1" name="Summon Parasitic Leech">
 		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
@@ -1318,7 +1318,7 @@
 			<effect name="Petrification" />
 		</for>
 	</skill>
-	<skill id="6883" levels="1" name="Energy Abundance Effect">
+	<skill id="6883" levels="1" name="Vitality Recovery Effect">
 		<!-- "For 5 minutes, energy is filled to stage 4. Returns to before as time goes on." -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
@@ -1367,7 +1367,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6886" levels="1" name="Complete Recovery">
+	<skill id="6886" levels="1" name="Full Recovery">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="2500" />
@@ -1558,19 +1558,19 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="6897" levels="12" name="Shock">
+	<skill id="6897" levels="12" name="Stun">
 		<!-- Temporarily in shock and unable to move. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6898" levels="1" name="84 level Raid Boss">
+	<skill id="6898" levels="1" name="Raid Boss (Lv. 84)">
 		<!-- High Five Skill -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="6899" levels="1" name="84 level Raid Boss">
+	<skill id="6899" levels="1" name="Raid Boss (Lv. 84)">
 		<!-- High Five Skill -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />

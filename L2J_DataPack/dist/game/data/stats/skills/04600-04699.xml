@@ -32,7 +32,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4601" levels="3" name="NPC Clan Buff - Acumen Focus">
+	<skill id="4601" levels="3" name="Acumen Focus">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
@@ -157,7 +157,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4605" levels="12" name="Surrender To Fire">
+	<skill id="4605" levels="12" name="Surrender to Fire">
 		<table name="#abnormalLvls"> 2 3 3 4 4 4 4 4 4 4 4 4 </table>
 		<table name="#fireRes"> 20 25 25 30 30 30 30 30 30 30 30 30 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -245,7 +245,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4608" levels="2" name="NPC Clan Buff - Berserk">
+	<skill id="4608" levels="2" name="Berserker Spirit">
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#magicLvl"> 30 70 </table>
 		<table name="#mAtk"> 1.1 1.16 </table>
@@ -281,7 +281,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4609" levels="4" name="NPC Clan Buff - Vampiric Rage">
+	<skill id="4609" levels="4" name="Vampiric Rage">
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<table name="#absorbDam"> 6 7 8 9 </table>
 		<table name="#magicLvl"> 20 40 60 70 </table>
@@ -305,7 +305,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4610" levels="3" name="NPC Clan Buff - Focus">
+	<skill id="4610" levels="3" name="Focus">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#mpConsume"> 15 27 49 </table>
@@ -329,7 +329,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4611" levels="3" name="NPC Clan Buff - Death Whisper">
+	<skill id="4611" levels="3" name="Death Whisper">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#cAtk"> 1.25 1.3 1.35 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
@@ -353,7 +353,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4612" levels="12" name="NPC Wide Wild Sweep">
+	<skill id="4612" levels="12" name="Wide Sweep">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
 		<table name="#power"> 46 105 216 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
@@ -374,7 +374,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4613" levels="12" name="NPC Clan Heal">
+	<skill id="4613" levels="12" name="Clan Heal">
 		<table name="#amount"> 83 151 245 362 494 627 743 789 823 845 853 853 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 25 44 67 92 120 147 170 182 189 194 197 197 </table>
@@ -394,7 +394,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4614" levels="12" name="NPC Death Bomb">
+	<skill id="4614" levels="12" name="Death Bomb">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
@@ -478,7 +478,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4618" levels="1" name="NPC Cancel PC Target">
+	<skill id="4618" levels="1" name="Target Cancellation">
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
@@ -496,7 +496,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4619" levels="1" name="NPC Dispel Sleep">
+	<skill id="4619" levels="1" name="Dispel Sleep">
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1100" />
@@ -612,7 +612,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4624" levels="12" name="Decrease HP Regeneration Rate">
+	<skill id="4624" levels="12" name="Disease">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -662,7 +662,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4626" levels="12" name="NPC Buff - Physical Barrier">
+	<skill id="4626" levels="12" name="Physical Barrier">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
@@ -685,7 +685,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4627" levels="12" name="NPC Buff - Magical Barrier">
+	<skill id="4627" levels="12" name="Magical Barrier">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 2.33 2.67 3 3.33 </table>
@@ -715,7 +715,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4629" levels="12" name="NPC MR - HP Drain">
+	<skill id="4629" levels="12" name="Drain Energy">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
@@ -739,7 +739,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4630" levels="12" name="NPC MR - Twister">
+	<skill id="4630" levels="12" name="Twister">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
@@ -761,7 +761,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4631" levels="3" name="NPC Buff - Acumen Shield WildMagic">
+	<skill id="4631" levels="3" name="Acumen Shield Wild Magic">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
@@ -788,7 +788,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4632" levels="3" name="NPC Buff - Acumen Empower WildMagic">
+	<skill id="4632" levels="3" name="Acumen Empower Wild Magic">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#mAtk"> 1.55 1.65 1.75 </table>
@@ -815,7 +815,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4633" levels="3" name="NPC Buff - Acumen Empower Berserk">
+	<skill id="4633" levels="3" name="Acumen Berserker Empower">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#mAtk"> 1.71 1.82 2.03 </table>
@@ -850,7 +850,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4634" levels="3" name="NPC Buff - Acumen Empower DamageShield">
+	<skill id="4634" levels="3" name="Acumen Empower Damage Shield">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#mAtk"> 1.55 1.65 1.75 </table>
@@ -877,7 +877,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4635" levels="3" name="NPC Buff - Acumen Berserk WildMagic">
+	<skill id="4635" levels="3" name="Acumen Berserker Wild Magic">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#mAtk"> 1.1 1.1 1.16 </table>
@@ -914,7 +914,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4636" levels="3" name="NPC Buff - Acumen Berserk DamageShield">
+	<skill id="4636" levels="3" name="Acumen Berserker Damage Shield">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#mAtk"> 1.1 1.1 1.16 </table>
@@ -951,7 +951,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4637" levels="3" name="NPC Buff - Acumen WildMagic DamageShield">
+	<skill id="4637" levels="3" name="Acumen Wild Magic Damage Shield">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
@@ -978,7 +978,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4638" levels="3" name="NPC Clan Buff - Acumen Empower WildMagic">
+	<skill id="4638" levels="3" name="Acumen Empower Wild Magic">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#mAtk"> 1.55 1.65 1.75 </table>
@@ -1006,7 +1006,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4639" levels="3" name="NPC Clan Buff - Acumen Empower Berserk">
+	<skill id="4639" levels="3" name="Acumen Empower Berserker">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#mAtk"> 1.71 1.82 2.03 </table>
@@ -1071,7 +1071,7 @@
 			<effect name="Sleep" />
 		</for>
 	</skill>
-	<skill id="4641" levels="12" name="NPC Super Strike">
+	<skill id="4641" levels="12" name="Super Strike">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 37 60 84 114 148 182 212 227 238 247 252 255 </table>
 		<table name="#power"> 137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850 </table>
@@ -1090,7 +1090,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4642" levels="9" name="NPC Fast Spell Casting">
+	<skill id="4642" levels="9" name="Fast Spell Casting">
 		<table name="#magicLvl"> 20 40 60 70 75 80 85 90 95 </table>
 		<table name="#mAtkSpd"> 1.05 1.07 1.1 1.12 1.15 1.17 1.2 1.22 1.25 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -1134,7 +1134,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4644" levels="2" name="Area Buff - Haste">
+	<skill id="4644" levels="2" name="Haste">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 1 2 </table>
@@ -1154,7 +1154,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4645" levels="3" name="Area Buff - Focus">
+	<skill id="4645" levels="3" name="Focus">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
@@ -1174,7 +1174,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4646" levels="3" name="Area Buff - Death Whisper">
+	<skill id="4646" levels="3" name="Death Whisper">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
@@ -1194,7 +1194,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4647" levels="3" name="Area Buff - Might">
+	<skill id="4647" levels="3" name="Might">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
@@ -1214,7 +1214,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4648" levels="3" name="Area Buff - Shield">
+	<skill id="4648" levels="3" name="Shield">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
@@ -1263,7 +1263,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4650" levels="1" name="NPC AE - Dispel Hold">
+	<skill id="4650" levels="1" name="Dispel Hold">
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1279,7 +1279,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4651" levels="3" name="NPC AE - Dispel Slow">
+	<skill id="4651" levels="3" name="Dispel Slow">
 		<table name="#dispelAbnormals"> SPEED_DOWN,1 SPEED_DOWN,2 SPEED_DOWN,3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#mpConsume"> 23 42 66 </table>
@@ -1299,7 +1299,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4652" levels="1" name="NPC AE - Dispel Silence">
+	<skill id="4652" levels="1" name="Dispel Silence">
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1315,7 +1315,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4653" levels="12" name="NPC Corpse Life Drain">
+	<skill id="4653" levels="12" name="Corpse Life Drain">
 		<table name="#amount"> 131 201 271 351 451 551 651 691 731 751 771 781 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -1337,7 +1337,7 @@
 			<effect name="ConsumeBody" />
 		</for>
 	</skill>
-	<skill id="4654" levels="12" name="NPC Death Link">
+	<skill id="4654" levels="12" name="Death Link">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
@@ -1357,7 +1357,7 @@
 			<effect name="DeathLink" />
 		</for>
 	</skill>
-	<skill id="4655" levels="12" name="NPC Death Link - Magic">
+	<skill id="4655" levels="12" name="Death Link">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
@@ -1376,7 +1376,7 @@
 			<effect name="DeathLink" />
 		</for>
 	</skill>
-	<skill id="4656" levels="12" name="NPC Death Link - Slow">
+	<skill id="4656" levels="12" name="Death Link">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
@@ -1604,7 +1604,7 @@
 			<effect name="Sleep" />
 		</for>
 	</skill>
-	<skill id="4663" levels="1" name="NPC Hate">
+	<skill id="4663" levels="1" name="Aggression">
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
@@ -1770,7 +1770,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4670" levels="12" name="Short Stun">
+	<skill id="4670" levels="12" name="Stun">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 10 16 23 31 40 49 57 61 64 66 68 68 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1797,7 +1797,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="4671" levels="1" name="AV - Teleport">
+	<skill id="4671" levels="1" name="Teleport">
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2000" />
 		<set name="magicLvl" val="40" />
@@ -1809,7 +1809,7 @@
 			<effect name="TargetMe" />
 		</for>
 	</skill>
-	<skill id="4672" levels="1" name="NPC Corpse Remove">
+	<skill id="4672" levels="1" name="Corpse Remove">
 		<!-- TODO: Needs to be done -->
 		<set name="castRange" val="900" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1818,7 +1818,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4673" levels="12" name="NPC Dispel Offensive Buff">
+	<skill id="4673" levels="12" name="Dispel Attack">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
 		<table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
@@ -1839,7 +1839,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4674" levels="12" name="NPC Dispel Defensive Buff">
+	<skill id="4674" levels="12" name="Dispel Defense">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
 		<table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
@@ -1860,7 +1860,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4675" levels="12" name="NPC Dispel Fighter Buff">
+	<skill id="4675" levels="12" name="Dispel Fighter">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
 		<table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
@@ -1881,7 +1881,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4676" levels="12" name="NPC Dispel Mage Offensive Buff">
+	<skill id="4676" levels="12" name="Dispel Mage Empower">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
 		<table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
@@ -1902,7 +1902,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4677" levels="12" name="NPC Dispel Fighter Defensive Buff">
+	<skill id="4677" levels="12" name="Dispel Fighter Shield">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
 		<table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
@@ -1923,7 +1923,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4678" levels="12" name="NPC Dispel Mage Defensive Buff">
+	<skill id="4678" levels="12" name="Dispel Mage Barrier">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
 		<table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
@@ -2090,7 +2090,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4685" levels="1" name="Valakas Tail Stomp">
+	<skill id="4685" levels="1" name="Valakas Tail Stamp">
 		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<!-- Valakas Tail Stomp A from Behind -->
@@ -2111,7 +2111,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4686" levels="1" name="Valakas Tail Stomp">
+	<skill id="4686" levels="1" name="Valakas Tail Stamp">
 		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<!-- Valakas Tail Stomp B from Behind -->
@@ -2129,7 +2129,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4687" levels="1" name="Valakas Tail Stomp">
+	<skill id="4687" levels="1" name="Valakas Tail Stamp">
 		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<!-- Valakas Tail Stomp Visual -->
@@ -2225,7 +2225,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4691" levels="5" name="Valakas Regeneration">
+	<skill id="4691" levels="5" name="Valakas Recovery">
 		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<table name="#abnormalLvls"> 11 12 13 14 15 </table>
@@ -2243,7 +2243,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4692" levels="1" name="Quest BOSS Big Body">
+	<skill id="4692" levels="1" name="Body Enlargement">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BIG_BODY" />
@@ -2258,7 +2258,7 @@
 			<effect name="Grow" />
 		</for>
 	</skill>
-	<skill id="4693" levels="1" name="Quest BOSS Dispel Big Body">
+	<skill id="4693" levels="1" name="Annul Enlargement">
 		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -2272,7 +2272,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4694" levels="1" name="Ultimate Debuff">
+	<skill id="4694" levels="1" name="Absolute Curse">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ULTIMATE_DEBUFF" />
@@ -2294,7 +2294,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4695" levels="1" name="Ultimate Debuff">
+	<skill id="4695" levels="1" name="Absolute Curse">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ULTIMATE_DEBUFF" />
@@ -2310,7 +2310,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4696" levels="1" name="Ultimate Debuff">
+	<skill id="4696" levels="1" name="Absolute Curse">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ULTIMATE_DEBUFF" />
@@ -2327,7 +2327,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4697" levels="12" name="NPC Monster Hate">
+	<skill id="4697" levels="12" name="Aggression">
 		<!-- TODO: Needs to be done -->
 		<table name="#effectPoints"> -410 -608 -853 -1134 -1427 -1695 -1903 -1973 -2024 -2064 -2097 -2123 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -2340,7 +2340,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4698" levels="12" name="Area Buff - HP Regeneration">
+	<skill id="4698" levels="12" name="Regeneration">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 3 4 5 6 7 8 9 10 11 12 13 14 </table>

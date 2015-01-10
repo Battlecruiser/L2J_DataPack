@@ -60,7 +60,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5902" levels="1" name="NPC Trigger Target Cancel">
+	<skill id="5902" levels="1" name="Cancel NPC Trigger Target">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="isTriggeredSkill" val="true" />
@@ -250,7 +250,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
-	<skill id="5913" levels="1" name="Putrefection Cleanse">
+	<skill id="5913" levels="1" name="Putrefaction Cleanse">
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="P" />
 		<for>
@@ -316,7 +316,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5918" levels="10" name="Physical Root Weakness">
+	<skill id="5918" levels="10" name="Physical Root Vulnerability">
 		<table name="#trait_root_physically"> -10 -20 -30 -40 -50 -60 -70 -80 -90 -99 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 80 90 95 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -675,7 +675,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5938" levels="5" name="Attack Ability Up">
+	<skill id="5938" levels="5" name="P. Atk. Up">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="PA_UP" />
@@ -768,7 +768,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5946" levels="1" name="Large Firework">
+	<skill id="5946" levels="1" name="Large Firecracker">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -776,7 +776,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5947" levels="1" name="Large Firework">
+	<skill id="5947" levels="1" name="Large Firecracker">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -784,7 +784,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5948" levels="1" name="Large Firework">
+	<skill id="5948" levels="1" name="Large Firecracker">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -792,7 +792,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5949" levels="1" name="Large Firework">
+	<skill id="5949" levels="1" name="Large Firecracker">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -800,7 +800,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5950" levels="1" name="Birthday Cake">
+	<skill id="5950" levels="1" name="Birthday Gift">
 		<!-- Confirmed CT2.5 -->
 		<!-- Birthday Skill -->
 		<set name="abnormalLvl" val="9" />
@@ -850,7 +850,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5954" levels="1" name="Agathion Cute Trick - Tin Plate Golem">
+	<skill id="5954" levels="1" name="Agathion Cute Trick - Tinplate Golem">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -871,7 +871,7 @@
 			<player agathionId="16056" />
 		</cond>
 	</skill>
-	<skill id="5956" levels="1" name="Agathion Cute Trick - Anger">
+	<skill id="5956" levels="1" name="Agathion Cute Trick - Angry Devil">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -895,7 +895,7 @@
 			<player agathionId="16057" />
 		</cond>
 	</skill>
-	<skill id="5958" levels="1" name="Agathion Cute Trick - Teddy Bear Boy">
+	<skill id="5958" levels="1" name="Agathion Cute Trick - Teddy Boy">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -907,7 +907,7 @@
 			<player agathionId="16059" />
 		</cond>
 	</skill>
-	<skill id="5959" levels="1" name="Agathion Cute Trick - Teddy Bear Girl">
+	<skill id="5959" levels="1" name="Agathion Cute Trick - Teddy Girl">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -969,14 +969,14 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5964" levels="1" name="Fairy Flame">
+	<skill id="5964" levels="1" name="Star Shard">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5965" levels="1" name="Firework">
+	<skill id="5965" levels="1" name="Fireworks">
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -985,7 +985,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5966" levels="1" name="Large Firework">
+	<skill id="5966" levels="1" name="Large Firecracker">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -993,7 +993,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5967" levels="2" name="Hate Aura">
+	<skill id="5967" levels="2" name="Aggression Aura">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
@@ -1165,7 +1165,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5978" levels="1" name="Death Strike">
+	<skill id="5978" levels="1" name="Devil Strike">
 		<set name="effectPoint" val="-653" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
@@ -1174,7 +1174,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5979" levels="1" name="Forced Move">
+	<skill id="5979" levels="1" name="Forced Teleport">
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1380,7 +1380,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5989" levels="1" name="Invincible">
+	<skill id="5989" levels="1" name="Invincibility">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="INVINCIBILITY" />
@@ -1412,7 +1412,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5992" levels="12" name="NPC Hate">
+	<skill id="5992" levels="12" name="Aggression">
 		<table name="#effectPoints"> -1371 -2031 -2850 -3787 -4761 -5657 -6349 -6582 -6752 -6887 -6997 -7082 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
@@ -1427,7 +1427,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5993" levels="1" name="Command of Anger">
+	<skill id="5993" levels="1" name="Command of Anchor">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="abnormalLvl" val="8" />
@@ -1464,7 +1464,7 @@
 			<effect name="PhysicalMute" />
 		</for>
 	</skill>
-	<skill id="5994" levels="1" name="Effect of Doubt">
+	<skill id="5994" levels="1" name="Mysterious Effect">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BIG_HEAD" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5300" levels="9" name="NPC(party) - Physical Range Long Range Attack - Dark">
+	<skill id="5300" levels="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
@@ -317,7 +317,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5310" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
+	<skill id="5310" levels="9" name="Aura Burn">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -338,7 +338,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5311" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
+	<skill id="5311" levels="9" name="Aura Flare">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -358,7 +358,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5312" levels="9" name="NPC(party) -Magic Single Long Range DD - Fire">
+	<skill id="5312" levels="9" name="Blaze">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -382,7 +382,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5313" levels="9" name="NPC(party) -Magic Range Long Range DD - Fire">
+	<skill id="5313" levels="9" name="Flame Strike">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -406,7 +406,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5314" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire">
+	<skill id="5314" levels="9" name="Blazing Circle">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -428,7 +428,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5315" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction)">
+	<skill id="5315" levels="9" name="Blazing Circle">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<set name="affectRange" val="200" />
@@ -445,7 +445,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5316" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
+	<skill id="5316" levels="9" name="Hydro Blast">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -469,7 +469,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5317" levels="9" name="NPC(party) -Magic Range Long Range DD - Water">
+	<skill id="5317" levels="9" name="Mass Hydro Blast">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -493,7 +493,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5318" levels="9" name="NPC(party) -Magic Range Close Range DD - Water">
+	<skill id="5318" levels="9" name="Frost Wall">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -515,7 +515,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5319" levels="9" name="NPC(party) -Magic Single Long Range DD - Wind">
+	<skill id="5319" levels="9" name="Hurricane">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -524,7 +524,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5320" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
+	<skill id="5320" levels="9" name="Tempest">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -533,7 +533,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5321" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
+	<skill id="5321" levels="9" name="Tempest">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -542,7 +542,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5322" levels="9" name="NPC(party) -Magic Single Long Range DD - Earth">
+	<skill id="5322" levels="9" name="Rock Strike">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -551,7 +551,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5323" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
+	<skill id="5323" levels="9" name="Earthquake">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -560,7 +560,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5324" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
+	<skill id="5324" levels="9" name="Earthquake">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -569,7 +569,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5325" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
+	<skill id="5325" levels="9" name="Holy Strike">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -578,7 +578,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5326" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+	<skill id="5326" levels="9" name="Holy Blast">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -587,7 +587,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5327" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+	<skill id="5327" levels="9" name="Holy Circle">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -596,7 +596,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5328" levels="9" name="NPC(party) -Magic Single Long Range DD - Dark">
+	<skill id="5328" levels="9" name="Unholy Strike">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -620,7 +620,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5329" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+	<skill id="5329" levels="9" name="Unholy Blast">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -644,7 +644,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5330" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+	<skill id="5330" levels="9" name="Unholy Circle">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -666,7 +666,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5331" levels="9" name="NPC HP Drain">
+	<skill id="5331" levels="9" name="Drain Energy">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 69 72 73 75 77 77 78 78 79 </table>
 		<set name="castRange" val="600" />
@@ -685,7 +685,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5332" levels="9" name="NPC MP Burn">
+	<skill id="5332" levels="9" name="Mana Burn">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -741,7 +741,7 @@
 			<effect name="Debuff" />
 		</for>
 	</skill>
-	<skill id="5334" levels="9" name="NPC(party) - Physical Single Close Range Attack">
+	<skill id="5334" levels="9" name="Power Strike">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -760,7 +760,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5335" levels="9" name="NPC(party) - Physical Single Long Range Attack">
+	<skill id="5335" levels="9" name="Power Shot">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34070 47031 48135 48433 48691 48886 49012 49012 49012 </table>
@@ -778,7 +778,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5336" levels="9" name="NPC(party) - Physical Range Close Range Attack">
+	<skill id="5336" levels="9" name="Spinning Slasher">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
@@ -795,7 +795,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5337" levels="9" name="NPC(party) - Physical Range Long Range Attack">
+	<skill id="5337" levels="9" name="Burst Shot">
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
@@ -804,7 +804,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5338" levels="9" name="NPC(party) - Physical Single Close Range Attack - Fire">
+	<skill id="5338" levels="9" name="Power Strike">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -825,7 +825,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5339" levels="9" name="NPC(party) - Physical Single Long Range Attack - Fire">
+	<skill id="5339" levels="9" name="Power Shot">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
@@ -833,7 +833,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5340" levels="9" name="NPC(party) - Physical Range Close Range Attack - Fire">
+	<skill id="5340" levels="9" name="Spinning Slasher">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
@@ -853,7 +853,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5341" levels="9" name="NPC(party) - Physical Range Long Range Attack - Fire">
+	<skill id="5341" levels="9" name="Burst Shot">
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
@@ -862,7 +862,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5342" levels="9" name="NPC(party) - Physical Single Close Range Attack - Water">
+	<skill id="5342" levels="9" name="Power Strike">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -883,7 +883,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5343" levels="9" name="NPC(party) - Physical Single Long Range Attack - Water">
+	<skill id="5343" levels="9" name="Power Shot">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
@@ -891,7 +891,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5344" levels="9" name="NPC(party) - Physical Range Close Range Attack - Water">
+	<skill id="5344" levels="9" name="Spinning Slasher">
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
@@ -900,7 +900,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5345" levels="9" name="NPC(party) - Physical Range Long Range Attack - Water">
+	<skill id="5345" levels="9" name="Burst Shot">
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
@@ -909,7 +909,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5346" levels="9" name="NPC(party) - Physical Single Close Range Attack - Wind">
+	<skill id="5346" levels="9" name="Power Strike">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -930,7 +930,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5347" levels="9" name="NPC(party) - Physical Single Long Range Attack - Wind">
+	<skill id="5347" levels="9" name="Power Shot">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
@@ -938,7 +938,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5348" levels="9" name="NPC(party) - Physical Range Close Range Attack - Wind">
+	<skill id="5348" levels="9" name="Spinning Slasher">
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
@@ -947,7 +947,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5349" levels="9" name="NPC(party) - Physical Range Long Range Attack - Wind">
+	<skill id="5349" levels="9" name="Burst Shot">
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
@@ -956,7 +956,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5350" levels="9" name="NPC(party) - Physical Single Close Range Attack - Earth">
+	<skill id="5350" levels="9" name="Power Strike">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -977,7 +977,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5351" levels="9" name="NPC(party) - Physical Single Long Range Attack - Earth">
+	<skill id="5351" levels="9" name="Power Shot">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
@@ -985,7 +985,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5352" levels="9" name="NPC(party) - Physical Range Close Range Attack - Earth">
+	<skill id="5352" levels="9" name="Spinning Slasher">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
@@ -1004,7 +1004,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5353" levels="9" name="NPC(party) - Physical Range Long Range Attack - Earth">
+	<skill id="5353" levels="9" name="Burst Shot">
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
@@ -1013,7 +1013,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5354" levels="9" name="NPC(party) - Physical Single Close Range Attack - Holy">
+	<skill id="5354" levels="9" name="Power Strike">
 		<set name="coolTime" val="660" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="830" />
@@ -1022,7 +1022,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5355" levels="9" name="NPC(party) - Physical Single Long Range Attack - Holy">
+	<skill id="5355" levels="9" name="Power Shot">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
@@ -1030,7 +1030,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5356" levels="9" name="NPC(party) - Physical Range Close Range Attack - Holy">
+	<skill id="5356" levels="9" name="Spinning Slasher">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
@@ -1049,7 +1049,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5357" levels="9" name="NPC(party) - Physical Range Long Range Attack - Holy">
+	<skill id="5357" levels="9" name="Burst Shot">
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
@@ -1058,7 +1058,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5358" levels="9" name="NPC(party) - Physical Single Close Range Attack - Dark">
+	<skill id="5358" levels="9" name="Power Strike">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -1079,7 +1079,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5359" levels="9" name="NPC(party) - Physical Single Long Range Attack - Dark">
+	<skill id="5359" levels="9" name="Power Shot">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34070 47031 48135 48433 48691 48886 49012 49012 49012 </table>
@@ -1099,7 +1099,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5360" levels="9" name="NPC(party) - Physical Range Close Range Attack - Dark">
+	<skill id="5360" levels="9" name="Spinning Slasher">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
@@ -1118,7 +1118,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5361" levels="9" name="NPC(party) - Physical Range Long Range Attack - Dark">
+	<skill id="5361" levels="9" name="Burst Shot">
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
@@ -1395,7 +1395,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
 	</skill>
-	<skill id="5371" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
+	<skill id="5371" levels="9" name="Aura Burn">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -1416,7 +1416,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5372" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
+	<skill id="5372" levels="9" name="Aura Flare">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -1436,7 +1436,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5373" levels="9" name="NPC(party) -Magic Single Long Range DD - Fire">
+	<skill id="5373" levels="9" name="Blaze">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1445,7 +1445,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5374" levels="9" name="NPC(party) -Magic Range Long Range DD - Fire">
+	<skill id="5374" levels="9" name="Flame Strike">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -1469,7 +1469,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5375" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire">
+	<skill id="5375" levels="9" name="Blazing Circle">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1478,7 +1478,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5376" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction)">
+	<skill id="5376" levels="9" name="Blazing Circle">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
@@ -1497,7 +1497,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5377" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
+	<skill id="5377" levels="9" name="Hydro Blast">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1506,7 +1506,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5378" levels="9" name="NPC(party) -Magic Range Long Range DD - Water">
+	<skill id="5378" levels="9" name="Mass Hydro Blast">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1515,7 +1515,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5379" levels="9" name="NPC(party) -Magic Range Close Range DD - Water">
+	<skill id="5379" levels="9" name="Frost Wall">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1524,7 +1524,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5380" levels="9" name="NPC(party) -Magic Single Long Range DD - Wind">
+	<skill id="5380" levels="9" name="Hurricane">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -1547,7 +1547,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5381" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
+	<skill id="5381" levels="9" name="Tempest">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1556,7 +1556,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5382" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
+	<skill id="5382" levels="9" name="Tempest">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -1577,7 +1577,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5383" levels="9" name="NPC(party) -Magic Single Long Range DD - Earth">
+	<skill id="5383" levels="9" name="Rock Strike">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -1600,7 +1600,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5384" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
+	<skill id="5384" levels="9" name="Earthquake">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1609,7 +1609,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5385" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
+	<skill id="5385" levels="9" name="Earthquake">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1618,7 +1618,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5386" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
+	<skill id="5386" levels="9" name="Holy Strike">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1627,7 +1627,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5387" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+	<skill id="5387" levels="9" name="Holy Blast">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1636,7 +1636,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5388" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+	<skill id="5388" levels="9" name="Holy Circle">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1645,7 +1645,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5389" levels="9" name="NPC(party) -Magic Single Long Range DD - Dark">
+	<skill id="5389" levels="9" name="Unholy Strike">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -1668,7 +1668,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5390" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+	<skill id="5390" levels="9" name="Unholy Blast">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -1692,7 +1692,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5391" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+	<skill id="5391" levels="9" name="Unholy Circle">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -1714,7 +1714,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5392" levels="9" name="NPC HP Drain">
+	<skill id="5392" levels="9" name="Drain Energy">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -1739,7 +1739,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5393" levels="9" name="NPC MP Burn">
+	<skill id="5393" levels="9" name="Mana Burn">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -1797,7 +1797,7 @@
 			<effect name="Debuff" />
 		</for>
 	</skill>
-	<skill id="5395" levels="3" name="NPC Clan Buff - Super Might Haste">
+	<skill id="5395" levels="3" name="Super Might Haste">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#mpConsume"> 23 42 78 </table>
@@ -1825,7 +1825,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5396" levels="1" name="NPC - Spell Stance">
+	<skill id="5396" levels="1" name="Spell Stance">
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="400" />
 		<set name="channelingSkillId" val="5397" />
@@ -1836,7 +1836,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 	</skill>
-	<skill id="5397" levels="3" name="NPC - Spell Force">
+	<skill id="5397" levels="3" name="Spell Force">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
@@ -1848,7 +1848,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5398" levels="1" name="NPC - Combination Force">
+	<skill id="5398" levels="1" name="Final Burn">
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="500" />
 		<set name="effectPoint" val="-100" />

@@ -103,7 +103,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2506" levels="1" name="Chant of Critical Attack">
+	<skill id="2506" levels="1" name="Chant of Critical">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -211,7 +211,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2511" levels="1" name="Scroll of Transformation - Gatekeeper">
+	<skill id="2511" levels="1" name="Transformation Scroll: Gatekeeper">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -231,7 +231,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2512" levels="1" name="Herb of Vampiric Rage">
+	<skill id="2512" levels="1" name="Herb of HP Drain">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="4" />
@@ -254,7 +254,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2513" levels="1" name="Herb of Doubt">
+	<skill id="2513" levels="1" name="Mysterious Herb">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
@@ -285,7 +285,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2514" levels="1" name="Herb of Critical Attack - Power">
+	<skill id="2514" levels="1" name="Herb of Critical Attack - Damage">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="3" />
@@ -308,77 +308,77 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2515" levels="1" name="Lucky Clover - D-Grade">
+	<skill id="2515" levels="1" name="Lucky Clover (D-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2516" levels="1" name="Lucky Clover - C-Grade">
+	<skill id="2516" levels="1" name="Lucky Clover (C-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2517" levels="1" name="Lucky Clover - B-Grade">
+	<skill id="2517" levels="1" name="Lucky Clover (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2518" levels="1" name="Lucky Clover - A-Grade">
+	<skill id="2518" levels="1" name="Lucky Clover (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2519" levels="1" name="Lucky Clover - S-Grade">
+	<skill id="2519" levels="1" name="Lucky Clover (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2520" levels="1" name="Lucky Clover - D-Grade">
+	<skill id="2520" levels="1" name="Lucky Clover (D-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2521" levels="1" name="Lucky Clover - C-Grade">
+	<skill id="2521" levels="1" name="Lucky Clover (C-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2522" levels="1" name="Lucky Clover - B-Grade">
+	<skill id="2522" levels="1" name="Lucky Clover (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2523" levels="1" name="Lucky Clover - A-Grade">
+	<skill id="2523" levels="1" name="Lucky Clover (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2524" levels="1" name="Lucky Clover - S-Grade">
+	<skill id="2524" levels="1" name="Lucky Clover (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2525" levels="1" name="Scroll to move to Kamael Village">
+	<skill id="2525" levels="1" name="Scroll of Escape: Kamael Village">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -502,7 +502,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2530" levels="1" name="Recovery Item for Battlefield Use">
+	<skill id="2530" levels="1" name="Recovery Item (Battleground)">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1676,7 +1676,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2586" levels="2" name="Energy Replenishing Potion">
+	<skill id="2586" levels="2" name="Vitality Replenishing Potion">
 		<!-- Confirmed CT2.5 -->
 		<table name="#value"> 10000 20000 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1708,7 +1708,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2589" levels="1" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss)">
+	<skill id="2589" levels="1" name="Extra Pass: Kamaloka (Hall of the Abyss)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="13010" /> <!-- Extra Entrance Pass - Kamaloka (Hall of the Abyss) -->
@@ -1717,7 +1717,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2590" levels="1" name="Extra Entrance Pass - Near Kamaloka">
+	<skill id="2590" levels="1" name="Extra Pass: Near Kamaloka">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="13011" /> <!-- Extra Entrance Pass - Near Kamaloka -->
@@ -1726,7 +1726,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2591" levels="1" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss)">
+	<skill id="2591" levels="1" name="Extra Pass: Kamaloka (Labyrinth of the Abyss)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="13012" /> <!-- Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) -->
@@ -1767,7 +1767,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2594" levels="1" name="Pailaka Scroll of Escape">
+	<skill id="2594" levels="1" name="Scroll of Escape: Pailaka">
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />

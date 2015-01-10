@@ -36,7 +36,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="22101" levels="1" name="Fortune of Love Box">
+	<skill id="22101" levels="1" name="Fortune Box of Love">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20590,1,40;9207,1,60
@@ -129,7 +129,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22105" levels="1" name="Uldie Summon Scroll (Event)">
+	<skill id="22105" levels="1" name="Summon Scroll: Uldie (Event)">
 		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
@@ -157,7 +157,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22106" levels="1" name="Belldandy Summon Scroll (Event)">
+	<skill id="22106" levels="1" name="Summon Scroll: Belldandy (Event)">
 		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
@@ -185,7 +185,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22107" levels="1" name="Skooldie Summon Scroll (Event)">
+	<skill id="22107" levels="1" name="Summon Scroll: Skooldie (Event)">
 		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
@@ -257,7 +257,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="22110" levels="1" name="Lucky Sky Lantern Summon">
+	<skill id="22110" levels="1" name="Summon Lucky Lamp">
 		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -273,7 +273,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22111" levels="1" name="Ambient Sky Lantern Summon">
+	<skill id="22111" levels="1" name="Summon Environment Lamp">
 		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -289,7 +289,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22112" levels="1" name="Sway Sky Lantern Summon">
+	<skill id="22112" levels="1" name="Summon Rolling Lamp">
 		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -305,7 +305,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22113" levels="1" name="Comfort Sky Lantern Summon">
+	<skill id="22113" levels="1" name="Summon Comfort Sky Lantern">
 		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -321,7 +321,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22114" levels="1" name="Morph Scroll Box">
+	<skill id="22114" levels="1" name="Transformation Scroll Pack">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20364,1,33;20365,1,33;20366,1,34
@@ -367,7 +367,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="22116" levels="1" name="Summon Flames Box">
+	<skill id="22116" levels="1" name="Summon Flame Box">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="BranchSys.icon.br_fire_box_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -383,7 +383,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22117" levels="1" name="Flames Box Firework">
+	<skill id="22117" levels="1" name="Flame Box Firecracker">
 		<set name="icon" val="icon.skill0788" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -655,7 +655,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22131" levels="1" name="Red Firework Flames">
+	<skill id="22131" levels="1" name="Red Fireworks">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -676,7 +676,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22132" levels="1" name="Gold Firework Flames">
+	<skill id="22132" levels="1" name="Gold Fireworks">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -697,7 +697,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22133" levels="1" name="Blue Firework Flames">
+	<skill id="22133" levels="1" name="Blue Fireworks">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -718,7 +718,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22134" levels="1" name="Pink Firework Flames">
+	<skill id="22134" levels="1" name="Pink Fireworks">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -739,7 +739,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22135" levels="1" name="White Firework Flames">
+	<skill id="22135" levels="1" name="White Firework">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -760,7 +760,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22136" levels="1" name="Silver Firework Flames">
+	<skill id="22136" levels="1" name="Silver Fireworks">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -1184,7 +1184,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22159" levels="1" name="Vesper Super Power">
+	<skill id="22159" levels="1" name="Vesper's Mighty Power">
 		<!-- Increases P. Atk. by 15%, M. Atk. by 20% and Speed by 10 for 10 minutes. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
@@ -1209,7 +1209,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22160" levels="1" name="Vesper Critical Power">
+	<skill id="22160" levels="1" name="Vesper's Critical Damage">
 		<!-- Increases Physical critical attack rate by 15, Magical critical attack rate by 2 and Speed by 10 for 10 minutes. 5% of the standard short-range physical damage inflicted on the enemy is recovered as HP. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
@@ -1329,7 +1329,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22165" levels="1" name="Energy Replenish">
+	<skill id="22165" levels="1" name="Replenish Energy">
 		<!-- 5000 Soul Avatar Energy is replenished. -->
 		<set name="icon" val="icon.skill0788" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1340,7 +1340,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22166" levels="1" name="Energy Replenish">
+	<skill id="22166" levels="1" name="Replenish Energy">
 		<!-- 10000 Soul Avatar Energy is replenished. -->
 		<set name="icon" val="icon.skill0788" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1373,7 +1373,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="22168" levels="1" name="Thirst Quencher">
+	<skill id="22168" levels="1" name="Thirst for Victory Quenching Juice">
 		<!-- Replenishes an Agathion's energy by 2500 -->
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1384,7 +1384,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22169" levels="1" name="Soccer Ball of Cheers Release">
+	<skill id="22169" levels="1" name="Soccer Ball of Cheering Release">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6575,2,45;6573,1,30;6571,1,15;6569,1,9.4;6577,1,0.6
@@ -1488,7 +1488,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22175" levels="1" name="Rune of Life">
+	<skill id="22175" levels="1" name="Good/Bad of Life">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0001" />
 		<set name="magicLvl" val="1" />
@@ -1503,7 +1503,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22176" levels="1" name="Rune of Spirit">
+	<skill id="22176" levels="1" name="State of the Mind">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0001" />
 		<set name="magicLvl" val="1" />
@@ -1596,12 +1596,12 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="22181" levels="1" name="Refined Cubic - 1 time use">
+	<skill id="22181" levels="1" name="Refined Cube - 1 time use">
 		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22182" levels="1" name="Birthday Joy">
+	<skill id="22182" levels="1" name="Birthday Vitality Buff">
 		<!-- "Birthday gift received once a year. For 12 hours, recovers energy when Exp. is acquired through hunting. The buff disappears when the sub-class is changed." -->
 		<!-- Birthday Skill -->
 		<set name="canBeDispeled" val="false" />
@@ -1617,7 +1617,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22183" levels="1" name="Dragon Master Lee Transformation Scroll">
+	<skill id="22183" levels="1" name="Transformation Scroll: Dragon Master Lee">
 		<!-- High Five Skill -->
 		<!-- Transformed into Dragon Master Lee. -->
 		<set name="abnormalTime" val="3600" />
@@ -1631,7 +1631,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22184" levels="1" name="Dragon Master Karin Transformation Scroll">
+	<skill id="22184" levels="1" name="Transformation Scroll: Dragon Master Karin">
 		<!-- High Five Skill -->
 		<!-- Transformed into Dragon Master Karin. -->
 		<set name="abnormalTime" val="3600" />
@@ -1655,7 +1655,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22187" levels="1" name="Honeymoon Ticket - Joy of Energy">
+	<skill id="22187" levels="1" name="Honeymoon Ticket - Joy of Vitality">
 		<!-- State in which the Energy Stage is maintained. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
@@ -1670,7 +1670,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22190" levels="1" name="Transformation Scroll - Blue Block Checker">
+	<skill id="22190" levels="1" name="Transformation Scroll: Treasure Hunter">
 		<!-- High Five Skill -->
 		<!-- Transformed into a cute block checker. Look for a treasure chest on Fantasy Isle. -->
 		<set name="abnormalLvl" val="1" />
@@ -1688,7 +1688,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22191" levels="1" name="Transformation Scroll - Onyx Beast">
+	<skill id="22191" levels="1" name="Transformation Scroll: Onyx Beast">
 		<!-- Transformed into an Onyx Beast. -->
 		<set name="abnormalTime" val="1800" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1697,7 +1697,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22192" levels="1" name="Transformation Scroll - Death Blader">
+	<skill id="22192" levels="1" name="Transformation Scroll: Doom Wraith">
 		<!-- Transformed into a Death Blader. -->
 		<set name="abnormalTime" val="1800" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1706,7 +1706,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22193" levels="1" name="Transformation Scroll - Grail Apostle">
+	<skill id="22193" levels="1" name="Transformation Scroll: Grail Apostle">
 		<!-- Transformed into a Grail Apostle. -->
 		<set name="abnormalTime" val="1800" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1715,7 +1715,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22194" levels="1" name="Transformation Scroll - Unicorn">
+	<skill id="22194" levels="1" name="Transformation Scroll: Unicorn">
 		<!-- Transformed into a Unicorn. -->
 		<set name="abnormalTime" val="1800" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1724,7 +1724,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22195" levels="1" name="Transformation Scroll - Lilim Knight">
+	<skill id="22195" levels="1" name="Transformation Scroll: Lilim Knight">
 		<!-- Transformed into a Lilim Knight. -->
 		<set name="abnormalTime" val="1800" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1733,7 +1733,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22196" levels="1" name="Transformation Scroll - Golem Guardian">
+	<skill id="22196" levels="1" name="Transformation Scroll: Golem Guardian">
 		<!-- Transformed into a Golem Guardian. -->
 		<set name="abnormalTime" val="1800" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1742,7 +1742,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22197" levels="1" name="Transformation Scroll - Inferno Drake">
+	<skill id="22197" levels="1" name="Transformation Scroll: Inferno Drake">
 		<!-- Transformed into an Inferno Drake. -->
 		<set name="abnormalTime" val="1800" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1751,7 +1751,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22198" levels="1" name="Transformation Scroll - Dragon Bomber">
+	<skill id="22198" levels="1" name="Transformation Scroll: Dragon Bomber">
 		<!-- Transformed into a Dragon Bomber. -->
 		<set name="abnormalTime" val="1800" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1760,7 +1760,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22199" levels="1" name="Transformation Scroll - Heretic">
+	<skill id="22199" levels="1" name="Transformation Scroll: Heretic">
 		<!-- Transformed into a Heretic. -->
 		<set name="abnormalTime" val="1800" />
 		<set name="blockedInOlympiad" val="true" />

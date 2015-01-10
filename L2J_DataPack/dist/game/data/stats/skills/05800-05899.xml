@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5800" levels="1" name="Self-Destruction">
+	<skill id="5800" levels="1" name="Self-destruction">
 		<set name="effectPoint" val="-676" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -160,7 +160,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5814" levels="3" name="Self-Destruction">
+	<skill id="5814" levels="3" name="Self-destruction">
 		<table name="#effectPoints"> -635 -659 -676 </table>
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="70" />
@@ -213,7 +213,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5820" levels="1" name="Presentation - Removal">
+	<skill id="5820" levels="1" name="Presentation - Cancel">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="7000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -231,7 +231,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5822" levels="1" name="Drake Bait">
+	<skill id="5822" levels="1" name="Bait for Drakes">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-1000" />
@@ -248,7 +248,7 @@
 			<target npcId="18781" />
 		</cond>
 	</skill>
-	<skill id="5823" levels="1" name="Presentation - District1 Boss Defeat">
+	<skill id="5823" levels="1" name="Boss Defeat">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -257,7 +257,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5824" levels="1" name="Presentation - District1 Boss Arise">
+	<skill id="5824" levels="1" name="Boss Arise">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -413,7 +413,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5832" levels="1" name="Hate Aura">
+	<skill id="5832" levels="1" name="Aggression Aura">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
@@ -529,7 +529,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5837" levels="1" name="Double Throwing Javelin">
+	<skill id="5837" levels="1" name="Double Throw Javelin">
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
@@ -545,7 +545,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5838" levels="1" name="Throwing Javelin">
+	<skill id="5838" levels="1" name="Throw Javelin">
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
@@ -650,7 +650,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5843" levels="1" name="Terror">
+	<skill id="5843" levels="1" name="Fear">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
 		<set name="abnormalLvl" val="1" />
@@ -698,7 +698,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5845" levels="12" name="NPC Trigger Bleed">
+	<skill id="5845" levels="12" name="Trigger Bleed">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#skillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -788,7 +788,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5851" levels="1" name="Shock">
+	<skill id="5851" levels="1" name="Stun">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
@@ -850,7 +850,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5855" levels="1" name="Shock">
+	<skill id="5855" levels="1" name="Stun">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="STUN" />
@@ -866,7 +866,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 	</skill>
-	<skill id="5856" levels="1" name="Transform Tow">
+	<skill id="5856" levels="1" name="Transformation Scroll: Makeshift Bat">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
@@ -887,7 +887,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5857" levels="1" name="Transform Lure Tow">
+	<skill id="5857" levels="1" name="Transformation Scroll: Lady Tow">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
@@ -908,7 +908,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5858" levels="1" name="Transform Heavy Tow">
+	<skill id="5858" levels="1" name="Transformation Scroll: Angry Tow">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
@@ -929,7 +929,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5859" levels="1" name="Transform Wing Tow">
+	<skill id="5859" levels="1" name="Transformation Scroll: Sleepy Tow">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
@@ -1677,7 +1677,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5897" levels="1" name="Spike of Anger">
+	<skill id="5897" levels="1" name="Spike of Anchor">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1705,7 +1705,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5898" levels="2" name="Blast of Anger">
+	<skill id="5898" levels="2" name="Blast of Anchor">
 		<table name="#hitTime"> 2000 22940 </table>
 		<table name="#mpConsume"> 140 150 </table>
 		<set name="abnormalLvl" val="1" />

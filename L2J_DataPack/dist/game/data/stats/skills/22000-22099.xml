@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="22000" levels="1" name="Spicy Kimchee">
+	<skill id="22000" levels="1" name="Spicy Kimchi">
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -16,7 +16,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22001" levels="1" name="Spicy Kimchee">
+	<skill id="22001" levels="1" name="Spicy Kimchi">
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -32,7 +32,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22002" levels="1" name="Spicy Kimchee">
+	<skill id="22002" levels="1" name="Spicy Kimchi">
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -49,7 +49,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22003" levels="1" name="Sweet-and-Sour White Kimchee">
+	<skill id="22003" levels="1" name="Sweet-and-Sour White Kimchi">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
@@ -61,7 +61,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22004" levels="1" name="Energy Ginseng">
+	<skill id="22004" levels="1" name="Vitality Ginseng">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
@@ -84,7 +84,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22005" levels="1" name="Energy Red Ginseng">
+	<skill id="22005" levels="1" name="Vitality Red Ginseng">
 		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="100" />
@@ -102,7 +102,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22006" levels="1" name="Halloween Candy">
+	<skill id="22006" levels="1" name="Revita-Pop">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -115,7 +115,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22007" levels="1" name="Good Luck Lucky Bag">
+	<skill id="22007" levels="1" name="Good Luck Bag">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20083,1,20;20086,1,20;20089,1,20;20084,1,10;20087,1,10;20090,1,10;20085,1,3.33;20088,1,3.33;20091,1,3.33
@@ -179,7 +179,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="22010" levels="1" name="Mysterious Formal Dress">
+	<skill id="22010" levels="1" name="Mysterious Formal Wear">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20098,1,20;20099,1,80
@@ -242,7 +242,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="22013" levels="1" name="Holiday Festival">
+	<skill id="22013" levels="1" name="Winter Holiday Festival">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
@@ -273,7 +273,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22014" levels="1" name="Holiday Festival">
+	<skill id="22014" levels="1" name="Winter Holiday Festival">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
@@ -304,7 +304,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22015" levels="1" name="Holiday Festival">
+	<skill id="22015" levels="1" name="Winter Holiday Festival">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
@@ -334,7 +334,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22016" levels="1" name="Holiday Festival">
+	<skill id="22016" levels="1" name="Winter Holiday Festival">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
@@ -407,7 +407,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="22019" levels="1" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss)">
+	<skill id="22019" levels="1" name="Extra Pass: Kamaloka (Hall of the Abyss)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20026" /> <!-- Extra Entrance Pass - Kamaloka (Hall of the Abyss) -->
@@ -416,7 +416,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22020" levels="1" name="Extra Entrance Pass - Near Kamaloka">
+	<skill id="22020" levels="1" name="Extra Pass: Near Kamaloka">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20027" /> <!-- Extra Entrance Pass - Near Kamaloka -->
@@ -425,7 +425,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22021" levels="1" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss)">
+	<skill id="22021" levels="1" name="Extra Pass: Kamaloka (Labyrinth of the Abyss)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20028" /> <!-- Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) -->
@@ -434,7 +434,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22022" levels="1" name="Premium Valentine Decoration">
+	<skill id="22022" levels="1" name="Miraculous Valentine Cake: Special Ingredient">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20107,1,99.99948;20108,1,0.00051
@@ -499,7 +499,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="22025" levels="1" name="Delectable Valentine Cake">
+	<skill id="22025" levels="1" name="Delicious Valentine Cake">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			947,2,14;951,3,39;20201,1,17;20198,1,30
@@ -575,7 +575,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22029" levels="1" name="Baguette Herb">
+	<skill id="22029" levels="1" name="Baguette's Herb">
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -709,7 +709,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22035" levels="1" name="Birthday Cake Effect">
+	<skill id="22035" levels="1" name="Birthday Cake Vitality Buff">
 		<!-- Confirmed CT2.5 -->
 		<!-- Birthday Skill -->
 		<set name="abnormalLvl" val="1" />
@@ -750,7 +750,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="22039" levels="2" name="Rune of Experience Points">
+	<skill id="22039" levels="2" name="XP Rune III (Lv. 1-99) 30%">
 		<!-- Confirmed CT2.5 -->
 		<table name="#bonusExp"> 30 50 </table>
 		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_exp_buff_3 br_cashtex.skill.br_cash_rune_of_exp_buff_5 </table>
@@ -764,7 +764,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22040" levels="2" name="Rune of SP">
+	<skill id="22040" levels="2" name="SP Rune 30%">
 		<!-- Confirmed CT2.5 -->
 		<table name="#bonusSp"> 30 50 </table>
 		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_sp_buff_3 br_cashtex.skill.br_cash_rune_of_sp_buff_5 </table>
@@ -778,7 +778,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22041" levels="2" name="Rune of Crystal Form Level">
+	<skill id="22041" levels="2" name="Rune of Crystal (Lv. 3)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#bonus"> 3 5 </table>
 		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_rp_buff_3 br_cashtex.skill.br_cash_rune_of_rp_buff_5 </table>
@@ -792,7 +792,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22042" levels="1" name="High Grade Potion of Will">
+	<skill id="22042" levels="1" name="Greater CP Potion">
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -845,7 +845,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22045" levels="1" name="Omen Beast Transformation Scroll">
+	<skill id="22045" levels="1" name="Transformation Scroll: Onyx Beast">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -867,7 +867,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22046" levels="1" name="Death Blader Transformation Scroll">
+	<skill id="22046" levels="1" name="Transformation Scroll: Doom Wraith">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -889,7 +889,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22047" levels="1" name="Grail Apostle Transformation Scroll">
+	<skill id="22047" levels="1" name="Transformation Scroll: Grail Apostle">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -911,7 +911,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22048" levels="1" name="Unicorn Transformation Scroll">
+	<skill id="22048" levels="1" name="Transformation Scroll: Unicorn">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -933,7 +933,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22049" levels="1" name="Lilim Knight Transformation Scroll">
+	<skill id="22049" levels="1" name="Transformation Scroll: Lilim Knight">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -955,7 +955,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22050" levels="1" name="Golem Guardian Transformation Scroll">
+	<skill id="22050" levels="1" name="Transformation Scroll: Golem Guardian">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -977,7 +977,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22051" levels="1" name="Inferno Drake Transformation Scroll">
+	<skill id="22051" levels="1" name="Transformation Scroll: Inferno Drake">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -999,7 +999,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22052" levels="1" name="Dragon Bomber Transformation Scroll">
+	<skill id="22052" levels="1" name="Transformation Scroll: Dragon Bomber">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1021,7 +1021,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22053" levels="19" name="Escape">
+	<skill id="22053" levels="19" name="Scroll of Escape: Talking Island Village">
 		<!-- Confirmed CT2.5 -->
 		<table name="#coordX"> -84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 </table>
 		<table name="#coordY"> 244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 </table>
@@ -1050,7 +1050,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22054" levels="1" name="Potion of Energy Maintenance">
+	<skill id="22054" levels="1" name="Vitality Maintaining Potion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_UP" />
@@ -1069,7 +1069,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22055" levels="1" name="Potion of Energy Replenishing">
+	<skill id="22055" levels="1" name="Vitality Replenishing Potion">
 		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1236,7 +1236,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22065" levels="1" name="Bless the Body">
+	<skill id="22065" levels="1" name="Blessed Body">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
@@ -1294,7 +1294,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22068" levels="1" name="Bless the Soul">
+	<skill id="22068" levels="1" name="Blessed Soul">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
@@ -1389,49 +1389,49 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="22073" levels="1" name="Weapon Enchant Scroll - S Grade">
+	<skill id="22073" levels="1" name="Scroll: Enchant Weapon (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="22074" levels="1" name="Armor Enchant Scroll - S Grade">
+	<skill id="22074" levels="1" name="Scroll: Enchant Armor (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="22075" levels="1" name="Ancient Weapon Enchant Crystal - S grade">
+	<skill id="22075" levels="1" name="Ancient Scroll: Enchant Weapon (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="22076" levels="1" name="Ancient Armor Enchant Crystal - S grade">
+	<skill id="22076" levels="1" name="Ancient Scroll: Enchant Armor (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="22077" levels="1" name="Divine Weapon Enchant Crystal - S grade">
+	<skill id="22077" levels="1" name="Divine Scroll: Enchant Weapon (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="22078" levels="1" name="Divine Armor Enchant Crystal - S grade">
+	<skill id="22078" levels="1" name="Divine Scroll: Enchant Armor (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="22079" levels="1" name="Resist Aqua">
+	<skill id="22079" levels="1" name="Water Resistance">
 		<!-- Increases resistance to water type attacks by 20% for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
@@ -1447,7 +1447,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22080" levels="1" name="Resist Wind">
+	<skill id="22080" levels="1" name="Wind Resistance">
 		<!-- Increases resistance to wind type attacks by 20% for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
@@ -1463,7 +1463,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22081" levels="1" name="Resist Fire">
+	<skill id="22081" levels="1" name="Fire Resistance">
 		<!-- Increases resistance to fire type attacks by 20% for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
@@ -1479,7 +1479,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22082" levels="1" name="Resist Holy">
+	<skill id="22082" levels="1" name="Holy Attack Resistance">
 		<!-- Increases resistance to divinity type attacks by 23% for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
@@ -1495,7 +1495,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="22083" levels="1" name="Resist Unholy">
+	<skill id="22083" levels="1" name="Dark Attack Resistance">
 		<!-- Increases resistance to darkness type attacks by 23% for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
@@ -1576,7 +1576,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22087" levels="1" name="Blessing Shield">
+	<skill id="22087" levels="1" name="Blessed Shield">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
@@ -1675,7 +1675,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22092" levels="1" name="Scroll Master 1">
+	<skill id="22092" levels="1" name="Small Scroll Chest">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20365,1,20;20364,1,20;20366,1,20;20367,1,20;20368,1,20
@@ -1697,7 +1697,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="22093" levels="1" name="Scroll Master 2">
+	<skill id="22093" levels="1" name="Large Scroll Chest">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20554,1,15;20392,1,15;20393,1,35;20394,1,35
@@ -1741,7 +1741,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="22095" levels="1" name="Summon Spirit of Fire">
+	<skill id="22095" levels="1" name="Summon Fire Spirit">
 		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
@@ -1758,7 +1758,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22096" levels="1" name="Summon Reckless Spirit of Fire">
+	<skill id="22096" levels="1" name="Summon Reckless Fire Spirit">
 		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />

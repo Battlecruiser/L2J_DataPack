@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="2400" levels="1" name="Red Coral Treasure Chest Key">
+	<skill id="2400" levels="1" name="Coral Treasure Chest Key">
 		<!-- Confirmed CT2.5 -->
 		<!-- set name="giveContribution" val="10" / -->
 		<set name="castRange" val="40" />
@@ -22,7 +22,7 @@
 			<effect name="OpenChest" />
 		</for>
 	</skill>
-	<skill id="2401" levels="1" name="Lesser Battlefield Mana Potion">
+	<skill id="2401" levels="1" name="Mana Recovery Potion (Battleground)">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -39,7 +39,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2402" levels="1" name="Lesser Battlefield CP Potion">
+	<skill id="2402" levels="1" name="CP Recovery Potion (Battleground)">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -56,7 +56,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2403" levels="1" name="Spring CP Potion">
+	<skill id="2403" levels="1" name="Hot Springs CP Potion">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -178,7 +178,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2410" levels="1" name="Bless Shield">
+	<skill id="2410" levels="1" name="Blessed Shield">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
@@ -531,7 +531,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2428" levels="1" name="Scroll of Transformation - Rabbit">
+	<skill id="2428" levels="1" name="Transformation Scroll: Rabbit">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -553,7 +553,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2429" levels="1" name="Haste Juice">
+	<skill id="2429" levels="1" name="Haste Potion">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
@@ -593,7 +593,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2431" levels="1" name="Critical Power Juice">
+	<skill id="2431" levels="1" name="Critical Damage Juice">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
@@ -613,7 +613,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2432" levels="1" name="Critical Attack Juice">
+	<skill id="2432" levels="1" name="Critical Rate Juice">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
@@ -633,7 +633,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2433" levels="1" name="Casting Speed Juice">
+	<skill id="2433" levels="1" name="Casting Spd. Juice">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
@@ -673,7 +673,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2435" levels="1" name="Magic Power Juice">
+	<skill id="2435" levels="1" name="M. Atk. Juice">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
@@ -693,7 +693,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2436" levels="1" name="Power Juice">
+	<skill id="2436" levels="1" name="P. Atk. Potion">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
@@ -713,7 +713,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2437" levels="1" name="Speed Juice">
+	<skill id="2437" levels="1" name="Wind Walk Juice">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
@@ -733,7 +733,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2438" levels="1" name="Defense Juice">
+	<skill id="2438" levels="1" name="P. Def. Juice">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
@@ -921,7 +921,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2446" levels="1" name="Anti-magic Armor">
+	<skill id="2446" levels="1" name="Anti Magic Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -999,7 +999,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2449" levels="1" name="Song of Wind Storm">
+	<skill id="2449" levels="1" name="Song of Windstorm">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1024,7 +1024,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2450" levels="1" name="Dance of Blade Storm">
+	<skill id="2450" levels="1" name="Blade Storm">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1074,7 +1074,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2452" levels="1" name="Expose Weak Point">
+	<skill id="2452" levels="1" name="Expose Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1624,7 +1624,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2474" levels="1" name="Improve Critical">
+	<skill id="2474" levels="1" name="Improve Critical Attack">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1749,7 +1749,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2479" levels="1" name="Lord of Vampire">
+	<skill id="2479" levels="1" name="Lord of Vampires">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1774,7 +1774,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2480" levels="1" name="Throne Root">
+	<skill id="2480" levels="1" name="Thorn Root">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1824,7 +1824,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2482" levels="1" name="Spirit of Phoenix">
+	<skill id="2482" levels="1" name="Spirit of the Phoenix">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -2004,7 +2004,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2490" levels="1" name="Magic Defense Toolkit for beginners">
+	<skill id="2490" levels="1" name="M. Def. Toolkit (Novice)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			10470,2,10471,2,10472,1,100
@@ -2095,7 +2095,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2496" levels="1" name="Transform Kietch">
+	<skill id="2496" levels="1" name="Transform Kechi">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -2143,7 +2143,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2499" levels="1" name="Bottle of Full Soul">
+	<skill id="2499" levels="1" name="Full Bottle of Souls">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />

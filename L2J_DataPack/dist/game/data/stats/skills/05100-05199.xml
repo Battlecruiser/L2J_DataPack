@@ -126,7 +126,7 @@
 			<effect name="Buff" />
 		</for>
 	</skill>
-	<skill id="5109" levels="1" name="Production - Clan Gate">
+	<skill id="5109" levels="1" name="Presentation -  Clan Gate">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="100" />
@@ -224,7 +224,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="5113" levels="12" name="Castle Self AE Dispell Buff">
+	<skill id="5113" levels="12" name="Buff Dispel">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 5 8 11 14 18 22 26 28 29 30 31 31 </table>
@@ -410,7 +410,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="5121" levels="1" name="Production - Corpse Revival">
+	<skill id="5121" levels="1" name="Presentation -  Corpse Revival">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -455,7 +455,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5124" levels="1" name="Anti-Music">
+	<skill id="5124" levels="1" name="Anti-music">
 		<!-- Confirmed CT2.5 -->
 		<set name="affectRange" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -506,7 +506,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5127" levels="1" name="Recover Force">
+	<skill id="5127" levels="1" name="Recover Momentum">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
@@ -625,7 +625,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5134" levels="1" name="Anti-Summoning Field">
+	<skill id="5134" levels="1" name="Anti-summoning Field">
 		<!-- TODO: Update to H5! -->
 		<set name="abnormalTime" val="15" />
 		<set name="affectRange" val="200" />
@@ -683,7 +683,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5137" levels="1" name="Hold of King">
+	<skill id="5137" levels="1" name="Grip of the Cat">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Feline King Skill -->
 		<set name="abnormalLvl" val="1" />
@@ -822,7 +822,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5142" levels="1" name="Corpse Kaboom">
+	<skill id="5142" levels="1" name="Corpse Burst">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Spectral Lord Skill -->
 		<set name="affectRange" val="150" />
@@ -1336,7 +1336,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5166" levels="10" name="Slow">
+	<skill id="5166" levels="10" name="Decrease Speed">
 		<!-- Confirmed CT2.5 -->
 		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
@@ -1694,21 +1694,21 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5179" levels="1" name="Raid Boss - Level 80">
+	<skill id="5179" levels="1" name="Raid Boss (Lv. 80)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5180" levels="1" name="Raid Boss - Level 80">
+	<skill id="5180" levels="1" name="Raid Boss (Lv. 80)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5181" levels="1" name="Raid Boss - Level 80">
+	<skill id="5181" levels="1" name="Raid Boss (Lv. 80)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />

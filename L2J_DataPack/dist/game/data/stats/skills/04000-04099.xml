@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="4001" levels="12" name="NPC Wind Strike">
+	<skill id="4001" levels="12" name="Gust">
 		<!-- Freya retail confirmed -->
 		<table name="#hitTime"> 4000 4000 4000 4000 4000 4000 4000 1000 1000 1000 1000 1000 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -24,7 +24,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4002" levels="12" name="NPC HP Drain">
+	<skill id="4002" levels="12" name="Blood Siphon">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 17 28 38 49 63 78 92 97 102 105 108 109 </table>
@@ -88,7 +88,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4006" levels="1" name="Blazing Log">
+	<skill id="4006" levels="1" name="Burning Wood">
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -125,28 +125,28 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4009" levels="5" name="Resist Fire">
+	<skill id="4009" levels="5" name="Fire Resistance">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill4009" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4010" levels="5" name="Resist Water">
+	<skill id="4010" levels="5" name="Water Resistance">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill4010" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4011" levels="5" name="Resist Wind">
+	<skill id="4011" levels="5" name="Wind Resistance">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill4011" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4012" levels="5" name="Resist Earth">
+	<skill id="4012" levels="5" name="Earth Resistance">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill4012" />
 		<set name="magicLvl" val="1" />
@@ -177,7 +177,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4017" levels="1" name="Queen Ant Brandish">
+	<skill id="4017" levels="1" name="Queen Ant's Blow">
 		<!-- Confirmed CT2.5 -->
 		<!-- Queen Ant Skills -->
 		<set name="affectRange" val="250" />
@@ -249,7 +249,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4020" levels="1" name="Heal Queen Ant1">
+	<skill id="4020" levels="1" name="Recovery">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="100" />
@@ -279,21 +279,21 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4022" levels="1" name="Body Of Nurse Ant">
+	<skill id="4022" levels="1" name="Body of Nurse Ant">
 		<!-- Confirmer CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4023" levels="1" name="Body Of Royal Guard Ant">
+	<skill id="4023" levels="1" name="Body of Royal Guard Ant">
 		<!-- Confirmer CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4024" levels="1" name="Heal Queen Ant2">
+	<skill id="4024" levels="1" name="Recovery">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="100" />
@@ -373,7 +373,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4028" levels="3" name="NPC Might">
+	<skill id="4028" levels="3" name="Might">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
@@ -397,7 +397,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4029" levels="3" name="NPC Shield">
+	<skill id="4029" levels="3" name="Shield">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#mpConsume"> 10 18 33 </table>
@@ -419,7 +419,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4030" levels="3" name="NPC Clan Might">
+	<skill id="4030" levels="3" name="Might">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
@@ -445,7 +445,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4031" levels="3" name="NPC Clan Aegis">
+	<skill id="4031" levels="3" name="Might">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
@@ -472,7 +472,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4032" levels="12" name="NPC Strike">
+	<skill id="4032" levels="12" name="Power Strike">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -493,7 +493,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4033" levels="12" name="NPC Burn">
+	<skill id="4033" levels="12" name="Aura Burn">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
@@ -513,7 +513,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4034" levels="12" name="Decrease Speed">
+	<skill id="4034" levels="12" name="Ice Bolt">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -676,7 +676,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4039" levels="12" name="NPC MP Drain">
+	<skill id="4039" levels="12" name="Mana Drain">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -697,7 +697,7 @@
 			<effect name="MagicalAttackMp" />
 		</for>
 	</skill>
-	<skill id="4040" levels="12" name="NPC Bow Attack">
+	<skill id="4040" levels="12" name="Power Shot">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
@@ -798,7 +798,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4045" levels="1" name="Resist Full Magic Attack">
+	<skill id="4045" levels="1" name="Full Magic Attack Resistance">
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="50" />
 		<set name="operateType" val="P" />
@@ -876,7 +876,7 @@
 			<effect name="Root" />
 		</for>
 	</skill>
-	<skill id="4048" levels="3" name="NPC Dash">
+	<skill id="4048" levels="3" name="Dash">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 10 10 </table>
 		<table name="#runSpd"> 1.5 1.8 2 </table>
@@ -895,7 +895,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4049" levels="16" name="Cubic Drain">
+	<skill id="4049" levels="16" name="Cubic Strike">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -379 -438 -495 -549 -590 -611 -635 -655 -662 -669 -679 -679 -681 -684 -687 -689 </table>
@@ -911,7 +911,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4050" levels="16" name="Cubic DD">
+	<skill id="4050" levels="16" name="Cubic Drain">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -408 -467 -523 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 </table>
@@ -951,7 +951,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4052" levels="15" name="Poison">
+	<skill id="4052" levels="15" name="Cubic Poison">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 5 6 7 7 7 8 8 8 8 8 8 8 8 8 8 </table>
@@ -1060,7 +1060,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4057" levels="1" name="Insect Weak Point">
+	<skill id="4057" levels="1" name="Insect Vulnerability">
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1071,7 +1071,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4058" levels="1" name="Plant Weak Point">
+	<skill id="4058" levels="1" name="Animal Vulnerability">
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1082,7 +1082,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4059" levels="1" name="Animal Weak Point">
+	<skill id="4059" levels="1" name="Plant Vulnerability">
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1093,7 +1093,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4060" levels="1" name="Beast Weak Point">
+	<skill id="4060" levels="1" name="Beast Vulnerability">
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1104,7 +1104,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4061" levels="1" name="Dragon Weak Point">
+	<skill id="4061" levels="1" name="Dragon Vulnerability">
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1179,7 +1179,7 @@
 			<effect name="Paralyze" />
 		</for>
 	</skill>
-	<skill id="4065" levels="12" name="NPC Heal">
+	<skill id="4065" levels="12" name="Heal">
 		<!-- Freya retail confirmed -->
 		<table name="#amount"> 83 151 245 362 494 628 743 789 826 867 895 913 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1203,7 +1203,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4066" levels="12" name="NPC Twister">
+	<skill id="4066" levels="12" name="Twister">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -1226,7 +1226,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4067" levels="12" name="NPC Mortal Blow">
+	<skill id="4067" levels="12" name="Blow">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -1269,7 +1269,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4069" levels="12" name="NPC Curve Beam Cannon">
+	<skill id="4069" levels="12" name="Curve Beam">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -1312,7 +1312,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4071" levels="5" name="Resist Archery">
+	<skill id="4071" levels="5" name="Bow/Crossbow Resistance">
 		<table name="#icons"> icon.skill4071 icon.skill4071 icon.skill4071 icon.skill4272 icon.skill4272 </table>
 		<table name="#traits"> 10 20 30 40 50 </table>
 		<set name="icon" val="#icons" />
@@ -1326,7 +1326,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4072" levels="12" name="Shock">
+	<skill id="4072" levels="12" name="Stun">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -1357,7 +1357,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="4073" levels="12" name="Shock">
+	<skill id="4073" levels="12" name="Stun">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -1388,7 +1388,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="4074" levels="2" name="NPC Haste">
+	<skill id="4074" levels="2" name="Haste">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#magicLvl"> 30 70 </table>
@@ -1415,7 +1415,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4075" levels="12" name="Shock">
+	<skill id="4075" levels="12" name="Stun">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -1444,7 +1444,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="4076" levels="3" name="Reduction in movement speed">
+	<skill id="4076" levels="3" name="Decrease Speed">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
@@ -1475,7 +1475,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4077" levels="12" name="NPC Aura Burn">
+	<skill id="4077" levels="12" name="Aura Burn">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
@@ -1498,7 +1498,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4078" levels="12" name="NPC Flamestrike">
+	<skill id="4078" levels="12" name="Flame Strike">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
@@ -1610,7 +1610,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4084" levels="11" name="Resist Physical Attack">
+	<skill id="4084" levels="11" name="Physical Attack Resistance">
 		<!-- Freya retail confirmed -->
 		<table name="#pDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2.0 3.33 10 1001 </table>
 		<set name="icon" val="icon.skill4084" />
@@ -1623,7 +1623,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4085" levels="1" name="Critical Power">
+	<skill id="4085" levels="1" name="Critical Damage">
 		<!-- Freya retail confirmed -->
 		<set name="icon" val="icon.skill4085" />
 		<set name="magicLvl" val="1" />
@@ -1647,7 +1647,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4087" levels="12" name="NPC Blaze">
+	<skill id="4087" levels="12" name="Blaze">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -1704,7 +1704,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4089" levels="1" name="NPC Bear Spirit Totem">
+	<skill id="4089" levels="1" name="Spirit Bear">
 		<!-- Freya retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -1724,7 +1724,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4090" levels="1" name="NPC Wolf Spirit Totem">
+	<skill id="4090" levels="1" name="Spirit Wolf">
 		<!-- Freya retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -1743,7 +1743,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4091" levels="3" name="NPC Ogre Spirit Totem">
+	<skill id="4091" levels="3" name="Spirit Ogre">
 		<!-- Confirmed CT2.5 -->
 		<table name="#accCombat"> 3 7 7 </table>
 		<table name="#magicLvl"> 40 60 75 </table>
@@ -1780,7 +1780,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4092" levels="1" name="NPC Puma Spirit Totem">
+	<skill id="4092" levels="1" name="Spirit Puma">
 		<!-- Freya retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -1813,7 +1813,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4094" levels="12" name="NPC Cancel Magic">
+	<skill id="4094" levels="12" name="Cancellation">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
@@ -1845,7 +1845,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4096" levels="3" name="NPC Hawkeye">
+	<skill id="4096" levels="3" name="Hawk Eye">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#accCombat"> 6 8 10 </table>
@@ -1869,7 +1869,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4097" levels="12" name="NPC Chant of Life">
+	<skill id="4097" levels="12" name="Chant of Life">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#hot"> 7 12 18 27 37 46 55 23 32 42 51 58 </table>
@@ -1898,7 +1898,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4098" levels="12" name="Magic Skill Block">
+	<skill id="4098" levels="12" name="Silence">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -1927,7 +1927,7 @@
 			<effect name="Mute" />
 		</for>
 	</skill>
-	<skill id="4099" levels="2" name="NPC Berserk">
+	<skill id="4099" levels="2" name="Berserker Spirit">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#magicLvl"> 40 70 </table>

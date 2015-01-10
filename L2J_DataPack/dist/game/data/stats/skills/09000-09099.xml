@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="9000" levels="1" name="PC room private weapon strengthening order sheet - D grade">
+	<skill id="9000" levels="1" name="Player Commendation - Scroll: Enchant Armor (D-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9001" levels="1" name="PC room private armor strengthening order sheet - C grade">
+	<skill id="9001" levels="1" name="Player Commendation - Scroll: Enchant Armor (C-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9002" levels="1" name="PC room private armor strengthening order sheet - B grade">
+	<skill id="9002" levels="1" name="Player Commendation - Scroll: Enchant Armor (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9003" levels="1" name="PC room private weapon strengthening order sheet - A grade">
+	<skill id="9003" levels="1" name="Player Commendation - Scroll: Enchant Armor (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9004" levels="1" name="PC room private armor strengthening order sheet - S grade">
+	<skill id="9004" levels="1" name="Player Commendation - Scroll: Enchant Armor (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9005" levels="1" name="PC room private blessed weapon strengthening order sheet - D grade">
+	<skill id="9005" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (D-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9006" levels="1" name="PC room private blessed weapon strengthening order sheet - C grade">
+	<skill id="9006" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (C-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9007" levels="1" name="PC room private blessed weapon strengthening order sheet - B grade">
+	<skill id="9007" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9008" levels="1" name="PC room private blessed weapon strengthening order sheet - A grade">
+	<skill id="9008" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9009" levels="1" name="PC room private blessed weapon strengthening order sheet - S grade">
+	<skill id="9009" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9010" levels="1" name="Cool air cannon">
+	<skill id="9010" levels="1" name="Cool Pack">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="200" />
 		<set name="coolTime" val="700" />
@@ -391,7 +391,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9027" levels="1" name="PC cafe personal instant lottery">
+	<skill id="9027" levels="1" name="Player Commendation Instant Lottery Ticket">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			15359,1,0.001;15360,1,0.1;15361,1,2.0;15362,1,20.0;15363,1,77.899
@@ -415,7 +415,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="9028" levels="1" name="Cool air cannon of fortune">
+	<skill id="9028" levels="1" name="Lucky Cool Pack">
 		<set name="coolTime" val="700" />
 		<set name="effectPoint" val="-10000" />
 		<set name="icon" val="icon.skill1184" />
@@ -505,7 +505,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9034" levels="1" name="Vitality Belt Enchant Scroll">
+	<skill id="9034" levels="1" name="Scroll: Enchant Vitality Belt">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15382" /> <!-- Event - Vitality Belt Enchant Scroll -->
@@ -608,7 +608,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9040" levels="1" name="PC Cafe Points">
+	<skill id="9040" levels="1" name="PC Points">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15426" /> <!-- Hero's Summon Point -->
@@ -618,7 +618,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9041" levels="1" name="Sixth Anniversary Cake">
+	<skill id="9041" levels="1" name="6th Anniversary Cake">
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VP_UP" />
@@ -856,7 +856,7 @@
 			<target npcId="18873,18880,18887,18894" />
 		</cond>
 	</skill>
-	<skill id="9053" levels="1" name="S Grade Golden Spice">
+	<skill id="9053" levels="1" name="Golden Spice (S-grade)">
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-150" />
 		<set name="effectRange" val="900" />
@@ -873,7 +873,7 @@
 			<target npcId="18873,18880,18887,18894" />
 		</cond>
 	</skill>
-	<skill id="9054" levels="1" name="S Grade Crystal Spice">
+	<skill id="9054" levels="1" name="Crystal Spice (S-grade)">
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-150" />
 		<set name="effectRange" val="900" />
@@ -940,7 +940,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="9057" levels="1" name="Freezing Core">
+	<skill id="9057" levels="1" name="Frozen Core">
 		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
@@ -964,7 +964,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9058" levels="1" name="Black Freezing Core">
+	<skill id="9058" levels="1" name="Black Frozen Core">
 		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
@@ -1002,7 +1002,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 	</skill>
-	<skill id="9060" levels="1" name="Maguen Machine">
+	<skill id="9060" levels="1" name="Maguen Plasma Collector">
 		<!-- Confirmed CT2.5 -->
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="4000" />
@@ -1013,7 +1013,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 	</skill>
-	<skill id="9061" levels="1" name="Uldie Summon Scroll">
+	<skill id="9061" levels="1" name="Summon Scroll: Uldie">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15431" /> <!-- Event - Uldie Summon Scroll -->
@@ -1023,7 +1023,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9062" levels="1" name="Belldandy Summon Scroll">
+	<skill id="9062" levels="1" name="Summon Scroll: Belldandy">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15432" /> <!-- Event - Belldandy Summon Scroll -->
@@ -1033,7 +1033,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9063" levels="1" name="Skooldie Summon Scroll">
+	<skill id="9063" levels="1" name="Summon Scroll: Skooldie">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15433" /> <!-- Event - Skooldie Summon Scroll -->
@@ -1043,7 +1043,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="9064" levels="1" name="Halloween Toy Chest">
+	<skill id="9064" levels="1" name="Halloween Toy Box">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			15443,1,20;15444,1,20;15445,1,20;15446,1,20;15447,1,20
@@ -1067,7 +1067,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="9065" levels="1" name="Shiny Halloween Toy Chest">
+	<skill id="9065" levels="1" name="Shiny Halloween Toy Box">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			15450,1,20;15451,1,20;15452,1,20;15453,1,20;15449,1,20
@@ -1091,7 +1091,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="9066" levels="1" name="Scroll of Transformation Box">
+	<skill id="9066" levels="1" name="Transformation Scroll Pack">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			10131,1,33;10132,1,33;10133,1,34
@@ -1115,7 +1115,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="9067" levels="1" name="Potion of Vitality Maintenance">
+	<skill id="9067" levels="1" name="Vitality Maintaining Potion">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
@@ -1197,7 +1197,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="9071" levels="1" name="Halloween Pumpkin - event">
+	<skill id="9071" levels="1" name="Halloween Pumpkin (Event)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			15463,1,14055,1,50;15463,1,10649,1,50
@@ -1245,7 +1245,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="9073" levels="1" name="Energy of Vampiric Rage">
+	<skill id="9073" levels="1" name="Energy of HP Drain">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="4" />
@@ -1266,7 +1266,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9074" levels="1" name="Salmon Soup">
+	<skill id="9074" levels="1" name="Salmon Porridge">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1295,7 +1295,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 	</skill>
-	<skill id="9076" levels="1" name="Secret Door Key">
+	<skill id="9076" levels="1" name="Secret Gate Key">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
@@ -1342,7 +1342,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="9078" levels="1" name="Rainbow Springs Potion">
+	<skill id="9078" levels="1" name="Hot Springs Recovery Potion">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
@@ -1421,7 +1421,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="9081" levels="1" name="Christmas Cake">
+	<skill id="9081" levels="1" name="Holiday Cake">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.event_six_party_cake_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1438,7 +1438,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9082" levels="1" name="White Christmas Petition">
+	<skill id="9082" levels="1" name="White Winter Wish Candle">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
@@ -1461,7 +1461,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9083" levels="1" name="Christmas Cake - event">
+	<skill id="9083" levels="1" name="Holiday Cake (Event)">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.event_six_party_cake_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1478,7 +1478,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9084" levels="1" name="White Christmas Petition - event">
+	<skill id="9084" levels="1" name="White Winter Wish Candle (Event)">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
@@ -1739,7 +1739,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9096" levels="1" name="Event - White Baby Tiger Scroll">
+	<skill id="9096" levels="1" name="Event - Summon Scroll: Baby White Tiger">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1755,7 +1755,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9097" levels="1" name="Event - White Baby King-Tiger Scroll">
+	<skill id="9097" levels="1" name="Event - Summon Scroll: Baby White Tiger Captain">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1771,7 +1771,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9098" levels="1" name="Event - Sad White Baby Tiger Scroll">
+	<skill id="9098" levels="1" name="Event - Summon Scroll: Gloomy Baby White Tiger">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1787,7 +1787,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9099" levels="1" name="Event - Sad White Baby King-Tiger Scroll">
+	<skill id="9099" levels="1" name="Event - Summon Scroll: Gloomy Baby White Tiger Captain">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

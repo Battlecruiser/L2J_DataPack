@@ -48,7 +48,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="604" levels="1" name="Residence Resist Typhoon">
+	<skill id="604" levels="1" name="Residence Typhoon Resistance">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0384" />
 		<set name="magicLvl" val="1" />
@@ -61,7 +61,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="605" levels="1" name="Residence Resist Lava">
+	<skill id="605" levels="1" name="Residence Lava Resistance">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0385" />
 		<set name="magicLvl" val="1" />
@@ -255,7 +255,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="618" levels="1" name="Transform Death Blader">
+	<skill id="618" levels="1" name="Transform Doom Wraith">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -279,7 +279,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="619" levels="1" name="Transform Dispel">
+	<skill id="619" levels="1" name="Dispel Transform">
 		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="10" />
 		<set name="hitTime" val="2500" />
@@ -297,7 +297,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="620" levels="1" name="Quiver of Bolts - Grade B">
+	<skill id="620" levels="1" name="Quiver of Bolts (B-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9635,700,30;9635,1400,50;9635,2800,20
@@ -584,7 +584,7 @@
 			<target npcId="13098,900102" />
 		</cond>
 	</skill>
-	<skill id="631" levels="6" name="Emergent Ability - Attack">
+	<skill id="631" levels="6" name="Emergent Ability: Attack">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 60 75 80 80 80 80 </table>
 		<table name="#pAtkAncient"> 9.1 17.4 24.8 31.4 37.2 41.4 </table>
@@ -632,7 +632,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="632" levels="6" name="Emergent Ability - Defense">
+	<skill id="632" levels="6" name="Emergent Ability: Defense">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 60 75 80 80 80 80 </table>
 		<table name="#pDefHeavy"> 17.9 35.7 53.6 71.4 89.3 107.1 </table>
@@ -657,7 +657,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="633" levels="6" name="Emergent Ability - Empower">
+	<skill id="633" levels="6" name="Emergent Ability: Empower">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 60 75 80 80 80 80 </table>
 		<table name="#matk"> 10.5 20.1 28.7 36.3 43 47.8 </table>
@@ -672,7 +672,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="634" levels="6" name="Emergent Ability - Magic Defense">
+	<skill id="634" levels="6" name="Emergent Ability: M. Def.">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 60 75 80 80 80 80 </table>
 		<table name="#mdef"> 15.1 30.2 45.4 60.5 75.6 90.7 </table>
@@ -687,7 +687,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="635" levels="3" name="Not In Use">
+	<skill id="635" levels="3" name="Not in Use">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 60 75 80 </table>
 		<set name="icon" val="icon.skill0635" />
@@ -695,7 +695,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="636" levels="3" name="Not In Use">
+	<skill id="636" levels="3" name="Not in Use">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 60 75 80 </table>
 		<set name="icon" val="icon.skill0636" />
@@ -703,7 +703,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="637" levels="1" name="Master Ability - Attack">
+	<skill id="637" levels="1" name="Master Ability: Attack">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1068" />
@@ -742,7 +742,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="638" levels="1" name="Master Ability - Empower">
+	<skill id="638" levels="1" name="Master Ability: Empower">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1059" />
@@ -755,7 +755,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="639" levels="1" name="Master Ability - Casting">
+	<skill id="639" levels="1" name="Master Ability: Casting">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1085" />
@@ -768,7 +768,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="640" levels="1" name="Master Ability - Focus">
+	<skill id="640" levels="1" name="Master Ability: Focus">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1077" />
@@ -781,7 +781,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="641" levels="1" name="Knight Ability - Boost HP">
+	<skill id="641" levels="1" name="Knight Ability: Boost HP">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0211" />
@@ -794,7 +794,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="642" levels="1" name="Enchanter Ability - Boost Mana">
+	<skill id="642" levels="1" name="Enchanter Ability: Boost Mana">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0213" />
@@ -821,7 +821,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="644" levels="1" name="Rogue Ability - Evasion">
+	<skill id="644" levels="1" name="Rogue Ability: Evasion">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1087" />
@@ -834,7 +834,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="645" levels="1" name="Rogue Ability - Long Shot">
+	<skill id="645" levels="1" name="Rogue Ability: Long Shot">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0113" />
@@ -849,7 +849,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="646" levels="1" name="Wizard Ability - Mana Gain">
+	<skill id="646" levels="1" name="Wizard Ability: Mana Gain">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0285" />
@@ -862,7 +862,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="647" levels="1" name="Enchanter Ability - Mana Recovery">
+	<skill id="647" levels="1" name="Enchanter Ability: Mana Recovery">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0229" />
@@ -875,7 +875,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="648" levels="1" name="Healer Ability - Prayer">
+	<skill id="648" levels="1" name="Healer Ability: Prayer">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1307" />
@@ -888,7 +888,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="650" levels="1" name="Warrior Ability - Resist Trait">
+	<skill id="650" levels="1" name="Warrior Ability: Attribute Resistance">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0287" />
@@ -904,7 +904,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="651" levels="1" name="Warrior Ability - Haste">
+	<skill id="651" levels="1" name="Warrior Ability: Haste">
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: Description says "Excludes damage caused by a skill or ranged attack" but is client typo -->
 		<set name="excludedFromCheck" val="true" />
@@ -922,7 +922,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="652" levels="1" name="Knight Ability - Defense">
+	<skill id="652" levels="1" name="Knight Ability: Defense">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0110" />
@@ -938,7 +938,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="653" levels="1" name="Rogue Ability - Critical Chance">
+	<skill id="653" levels="1" name="Rogue Ability: Critical Chance">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1077" />
@@ -955,7 +955,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="654" levels="1" name="Wizard Ability - Mana Steal">
+	<skill id="654" levels="1" name="Wizard Ability: Mana Steal">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1398" />
@@ -972,7 +972,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="655" levels="1" name="Enchanter Ability - Barrier">
+	<skill id="655" levels="1" name="Enchanter Ability: Barrier">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1418" />
@@ -1370,7 +1370,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="671" levels="1" name="Transform Vale Master">
+	<skill id="671" levels="1" name="Transform Veil Master">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1605,7 +1605,7 @@
 			<effect name="TargetMe" />
 		</for>
 	</skill>
-	<skill id="681" levels="1" name="Divine Knight Hate Aura">
+	<skill id="681" levels="1" name="Divine Knight Aggression Aura">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
@@ -1902,7 +1902,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="692" levels="1" name="Divine Wizard Holy Flare">
+	<skill id="692" levels="1" name="Divine Wizard Divine Flare">
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="MA_DOWN" />
@@ -1952,7 +1952,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="694" levels="1" name="Divine Wizard Holy Curtain">
+	<skill id="694" levels="1" name="Divine Wizard Divine Curtain">
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="100" />
 		<set name="castRange" val="500" />
@@ -1974,7 +1974,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="695" levels="1" name="Divine Wizard Holy Cloud">
+	<skill id="695" levels="1" name="Divine Wizard Divine Cloud">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />

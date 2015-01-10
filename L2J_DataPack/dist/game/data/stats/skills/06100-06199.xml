@@ -9,7 +9,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="6103" levels="5" name="Showdown with the Turkey - 1 Win">
+	<skill id="6103" levels="5" name="Showdown with the Turkey - 1st Win">
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<table name="#icons"> icon.xmas_pcwin1_i00 icon.xmas_pcwin2_i00 icon.xmas_pcwin3_i00 icon.xmas_pcwin4_i00 icon.xmas_pcwin5_i00 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -271,7 +271,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6124" levels="1" name="Agathion Cute Trick - Saerom">
+	<skill id="6124" levels="1" name="Agathion Cute Trick - Neolithica">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -340,7 +340,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6129" levels="1" name="Shock">
+	<skill id="6129" levels="1" name="Stun">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -359,7 +359,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
 	</skill>
-	<skill id="6130" levels="1" name="Curse of the Mutant Animal">
+	<skill id="6130" levels="1" name="Mutant Curse">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -379,7 +379,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
 	</skill>
-	<skill id="6131" levels="1" name="Decrease Spd">
+	<skill id="6131" levels="1" name="Decrease Speed">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -413,7 +413,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6133" levels="1" name="Effect of Doubt">
+	<skill id="6133" levels="1" name="Mysterious Effect">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -428,7 +428,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
-	<skill id="6134" levels="1" name="Curse of the Mutant Animal">
+	<skill id="6134" levels="1" name="Mutant Curse">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ALL_SPEED_DOWN" />
@@ -445,7 +445,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6135" levels="1" name="Cow Basic Attack">
+	<skill id="6135" levels="1" name="Mutant Curse">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
@@ -477,7 +477,7 @@
 			<player agathionId="16064" />
 		</cond>
 	</skill>
-	<skill id="6137" levels="1" name="Agathion Juju - Effect of Doubt">
+	<skill id="6137" levels="1" name="Agathion Juju - Mysterious Effect">
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -493,7 +493,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
-	<skill id="6138" levels="1" name="Agathion Juju - Large Firework">
+	<skill id="6138" levels="1" name="Agathion Juju - Large Firecracker">
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -541,7 +541,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6142" levels="3" name="Tar Spite">
+	<skill id="6142" levels="3" name="Tar Trap">
 		<!-- Lvl 1: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 30% and P. Def. and evasion are decreased 10%. -->
 		<!-- Lvl 2: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 60% and P. Def. and evasion are decreased 20%. -->
 		<!-- Lvl 3: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 90% and P. Def. and evasion are decreased 30%. -->
@@ -822,7 +822,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="HOLD" />
 	</skill>
-	<skill id="6167" levels="12" name="Shock">
+	<skill id="6167" levels="12" name="Stun">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1" />
 		<set name="abnormalType" val="STUN" />
@@ -839,7 +839,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
 	</skill>
-	<skill id="6168" levels="12" name="Shock">
+	<skill id="6168" levels="12" name="Stun">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1" />
 		<set name="abnormalType" val="STUN" />

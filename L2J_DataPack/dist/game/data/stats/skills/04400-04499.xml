@@ -147,7 +147,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4407" levels="2" name="Monster Type">
+	<skill id="4407" levels="2" name="Ordinary Monster">
 		<!-- Confirmed CT2.5 -->
 		<table name="#icons"> icon.skill0000 icon.skill4407 </table>
 		<set name="icon" val="#icons" />
@@ -155,7 +155,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4408" levels="20" name="HP Modifiers">
+	<skill id="4408" levels="20" name="HP Increase (1x)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#icons"> icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill4381 icon.skill4311 icon.skill4303 icon.skill4304 icon.skill4305 icon.skill4306 icon.skill4307 icon.skill4308 icon.skill4309 icon.skill4310 icon.skill4408_x10 icon.skill4408_x11 icon.skill4408_x12 </table>
 		<table name="#maxhp"> 1 1.1 1.21 1.33 1.46 1.61 1.77 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12 </table>
@@ -170,7 +170,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4409" levels="20" name="MP Modifiers">
+	<skill id="4409" levels="20" name="MP Increase (1x)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#icons"> icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill4381 icon.skill4311 icon.skill4303 icon.skill4304 icon.skill4305 icon.skill4306 icon.skill4307 icon.skill4308 icon.skill4309 icon.skill4310 icon.skill4409_x10 icon.skill4409_x11 icon.skill4409_x12 </table>
 		<table name="#maxmp"> 1 1.1 1.21 1.33 1.46 1.61 1.77 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12 </table>
@@ -241,7 +241,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4414" levels="3" name="Armor Type">
+	<skill id="4414" levels="3" name="Heavy Armor Type">
 		<!-- Confirmed CT2.5 -->
 		<table name="#evasion"> -10 0 10 </table>
 		<table name="#icons"> icon.skill4312 icon.skill0000 icon.skill4313 </table>
@@ -257,7 +257,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4415" levels="26" name="Weapon Type">
+	<skill id="4415" levels="26" name="Bare Hands">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pAtk"> 1 1.38 1 1.38 1 1.38 0.87 1.21 2.22 2.5 1 1.38 1.16 1.62 1.16 1.62 1.16 1.62 1.16 1.62 1.08 1.62 0.93 1.62 1.38 1.62 </table>
 		<table name="#pAtkSpd"> 1 0.71 1 0.71 1 0.71 1.14 0.82 0.89 0.64 1 0.71 0.85 0.61 0.85 0.61 0.85 0.61 0.85 0.61 0.92 0.61 1.07 0.61 0.62 0.61 </table>
@@ -271,7 +271,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4416" levels="25" name="Races">
+	<skill id="4416" levels="25" name="Undead">
 		<!-- Confirmed CT2.5 -->
 		<table name="#icons"> icon.skill4290 icon.skill4291 icon.skill4292 icon.skill4293 icon.skill4294 icon.skill4295 icon.skill4296 icon.skill4297 icon.skill4298 icon.skill4299 icon.skill4300 icon.skill4301 icon.skill4302 icon.skill4416_human icon.skill4416_elf icon.skill4416_darkelf icon.skill4416_orc icon.skill4416_dwarf icon.skill4416_etc icon.skill4416_none icon.skill4416_siegeweapon icon.skill4416_castleguard icon.skill4416_mercenary icon.skill4416_none icon.skill4296 </table>
 		<table name="#pDefAnimals"> 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
@@ -307,7 +307,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4417" levels="38" name="Race Types">
+	<skill id="4417" levels="38" name="Animals">
 		<!-- Confirmed CT2.5 -->
 		<table name="#icons"> icon.skill4293 icon.skill4292 icon.skill4292 icon.skill4292 icon.skill4292 icon.skill4301 icon.skill4301 icon.skill4301 icon.skill4291 icon.skill4291 icon.skill4291 icon.skill4298 icon.skill4298 icon.skill4298 icon.skill4297 icon.skill4297 icon.skill4297 icon.skill4299 icon.skill4296 icon.skill4296 icon.skill4296 icon.skill4296 icon.skill4296 icon.skill4302 icon.skill4300 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4294 icon.skill4290 icon.skill4290 icon.skill4290 icon.skill4290 icon.skill4290 </table>
 		<table name="#pDefBleed"> 0 0 0 0 0 0 0 0 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 0 </table>
@@ -335,7 +335,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4418" levels="5" name="Fire Attacks">
+	<skill id="4418" levels="5" name="Fire Attack">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
@@ -349,7 +349,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4419" levels="5" name="Water Attacks">
+	<skill id="4419" levels="5" name="Water Attack">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.etc_water_crystal_i00" />
@@ -363,7 +363,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4420" levels="5" name="Wind Attacks">
+	<skill id="4420" levels="5" name="Wind Attack">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
@@ -377,7 +377,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4421" levels="5" name="Earth Attacks">
+	<skill id="4421" levels="5" name="Earth Attack">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
@@ -391,7 +391,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4422" levels="5" name="Dark Attacks">
+	<skill id="4422" levels="5" name="Dark Attack">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
@@ -405,7 +405,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4423" levels="5" name="Sacred Attacks">
+	<skill id="4423" levels="5" name="Holy Attack">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
@@ -419,7 +419,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4424" levels="5" name="Resist Hand-to-hand Weapons">
+	<skill id="4424" levels="5" name="Fist Weapon Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_dualfist"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.skill4424" />
@@ -432,7 +432,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4425" levels="5" name="Resist Blunt Weapons">
+	<skill id="4425" levels="5" name="Blunt Weapon Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_blunt"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.skill4425" />
@@ -445,7 +445,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4426" levels="5" name="Resist Dual-Sword Weapons">
+	<skill id="4426" levels="5" name="Dualsword Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_dual"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.skill4426" />
@@ -458,7 +458,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4427" levels="5" name="Resist Swords">
+	<skill id="4427" levels="5" name="Sword Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_sword"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.skill4427" />
@@ -471,14 +471,14 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4428" levels="5" name="Resist Two-handed Weapons">
+	<skill id="4428" levels="5" name="Two-handed Weapon Resistance">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill4428" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4429" levels="5" name="Greater Resist Fire Attacks">
+	<skill id="4429" levels="5" name="Greater Fire Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4429" />
@@ -491,7 +491,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4430" levels="5" name="Greater Resist Water Attacks">
+	<skill id="4430" levels="5" name="Greater Water Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4430" />
@@ -504,7 +504,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4431" levels="5" name="Greater Resist Wind Attacks">
+	<skill id="4431" levels="5" name="Greater Wind Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4431" />
@@ -517,7 +517,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4432" levels="5" name="Greater Resist Earth Attacks">
+	<skill id="4432" levels="5" name="Greater Earth Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4432" />
@@ -530,7 +530,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4433" levels="5" name="Greater Resist Sacred Attacks">
+	<skill id="4433" levels="5" name="Greater Holy Attack Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4433" />
@@ -543,7 +543,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4434" levels="5" name="Greater Resist Dark Attacks">
+	<skill id="4434" levels="5" name="Greater Dark Attack Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4434" />
@@ -556,7 +556,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4435" levels="5" name="Greater Resist Stun">
+	<skill id="4435" levels="5" name="Greater Stun Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_shock"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4435" />
@@ -569,7 +569,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4436" levels="5" name="Greater Resist Poison">
+	<skill id="4436" levels="5" name="Greater Poison Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_poison"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4436" />
@@ -582,7 +582,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4437" levels="5" name="Greater Resist Bleeding">
+	<skill id="4437" levels="5" name="Greater Bleed Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_bleed"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4437" />
@@ -595,7 +595,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4438" levels="5" name="Greater Resist Sleep">
+	<skill id="4438" levels="5" name="Greater Sleep Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_sleep"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4286" />
@@ -608,7 +608,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4439" levels="5" name="Greater Resist Hold">
+	<skill id="4439" levels="5" name="Greater Hold Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_hold"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4288" />
@@ -621,7 +621,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4440" levels="5" name="Greater Resist Paralysis">
+	<skill id="4440" levels="5" name="Greater Paralysis Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_paralyze"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4440" />
@@ -634,7 +634,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4441" levels="5" name="Greater Resist Mental Derangement">
+	<skill id="4441" levels="5" name="Greater Mental Attack Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_derangement"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4441" />
@@ -647,7 +647,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4442" levels="5" name="Greater Resist Hand-to-hand Weapons">
+	<skill id="4442" levels="5" name="Greater Fist Weapon Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_dualfist"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4442" />
@@ -660,7 +660,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4443" levels="5" name="Greater Resist Blunt Weapons">
+	<skill id="4443" levels="5" name="Greater Blunt Weapon Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_blunt"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4443" />
@@ -687,7 +687,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4445" levels="5" name="Greater Resist Spear Weapons">
+	<skill id="4445" levels="5" name="Greater Spear Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_pole"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4445" />
@@ -700,7 +700,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4446" levels="5" name="Greater Resist Dual-Sword Weapons">
+	<skill id="4446" levels="5" name="Greater Dualsword Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_dual"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4446" />
@@ -713,7 +713,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4447" levels="5" name="Greater Resist Swords">
+	<skill id="4447" levels="5" name="Greater Sword Resistance">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_sword"> 60 70 80 90 100 </table>
 		<set name="icon" val="icon.skill4447" />
@@ -741,14 +741,14 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4449" levels="5" name="Greater Resist Two-handed Weapons">
+	<skill id="4449" levels="5" name="Greater Two-handed Weapon Resistance">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill4449" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4450" levels="5" name="Stun Attack Weak Point">
+	<skill id="4450" levels="5" name="Stun Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_shock"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4450" />
@@ -761,7 +761,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4451" levels="5" name="Poison Attack Weak Point">
+	<skill id="4451" levels="5" name="Poison Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_poison"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4451" />
@@ -774,7 +774,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4452" levels="5" name="Bleed Attack Weak Point">
+	<skill id="4452" levels="5" name="Bleed Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_bleed"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4452" />
@@ -787,7 +787,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4453" levels="5" name="Sleep Attack Weak Point">
+	<skill id="4453" levels="5" name="Sleep Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_sleep"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4453" />
@@ -800,7 +800,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4454" levels="5" name="Hold Attack Weak Point">
+	<skill id="4454" levels="5" name="Hold Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_hold"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4454" />
@@ -813,7 +813,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4455" levels="5" name="Paralysis Attack Weak Point">
+	<skill id="4455" levels="5" name="Paralysis Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_paralyze"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4455" />
@@ -826,7 +826,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4456" levels="5" name="Mental Attack Weak Point">
+	<skill id="4456" levels="5" name="Mental Attack Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_derangement"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4456" />
@@ -839,7 +839,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4457" levels="5" name="Hand-to-hand Weapon Weak Point">
+	<skill id="4457" levels="5" name="Fist Weapon Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_dualfist"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4457" />
@@ -852,7 +852,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4458" levels="5" name="Spear Weapon Weak Point">
+	<skill id="4458" levels="5" name="Spear Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_pole"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4458" />
@@ -865,7 +865,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4459" levels="5" name="Dual-Sword Weapon Weak Point">
+	<skill id="4459" levels="5" name="Dualsword Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_dual"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4459" />
@@ -878,7 +878,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4460" levels="5" name="Sword Weak Point">
+	<skill id="4460" levels="5" name="Sword Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#trait_sword"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4460" />
@@ -891,7 +891,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4461" levels="5" name="Dagger Weak Point">
+	<skill id="4461" levels="5" name="Dagger/Rapier Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#traits"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4461" />
@@ -906,7 +906,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4462" levels="5" name="Two-handed Weapon Weak Point">
+	<skill id="4462" levels="5" name="Two-handed Weapon Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<table name="#traits"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4462" />
@@ -921,7 +921,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4463" levels="3" name="Surrender To Water">
+	<skill id="4463" levels="3" name="Surrender to Water">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#fire"> 7 12 15 </table>
@@ -956,7 +956,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4464" levels="3" name="Surrender To Wind">
+	<skill id="4464" levels="3" name="Surrender to Wind">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#earth"> 7 12 15 </table>
@@ -991,7 +991,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4465" levels="3" name="Surrender To Earth">
+	<skill id="4465" levels="3" name="Surrender to Earth">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#earth"> 15 25 30 </table>
@@ -1026,7 +1026,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4466" levels="3" name="Surrender To Darkness">
+	<skill id="4466" levels="3" name="Surrender to Dark">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#dark"> 15 25 30 </table>
@@ -1061,7 +1061,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4467" levels="3" name="Surrender To Light">
+	<skill id="4467" levels="3" name="Surrender to Holy">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#dark"> 7 12 15 </table>
@@ -1096,7 +1096,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4468" levels="2" name="Area Buff - Wind Walk">
+	<skill id="4468" levels="2" name="Wind Walk">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 1 2 </table>
@@ -1124,7 +1124,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4470" levels="1" name="NPC Spoils">
+	<skill id="4470" levels="1" name="Spoil">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
@@ -1137,7 +1137,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 	</skill>
-	<skill id="4471" levels="12" name="NPC Anger">
+	<skill id="4471" levels="12" name="Anger">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1163,7 +1163,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4472" levels="12" name="NPC Strike Golem">
+	<skill id="4472" levels="12" name="Golem Strike">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -1214,7 +1214,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="4474" levels="5" name="Area Heal - Per">
+	<skill id="4474" levels="5" name="Restore Life">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#amount"> 20 40 60 80 100 </table>
@@ -1230,7 +1230,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4475" levels="1" name="Perfect Resist Bleeding">
+	<skill id="4475" levels="1" name="Complete Bleed Resistance">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="300" />
@@ -1278,7 +1278,7 @@
 			<effect name="SilentMove" />
 		</for>
 	</skill>
-	<skill id="4477" levels="12" name="NPC Frost Wall">
+	<skill id="4477" levels="12" name="Frost Wall">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
@@ -1305,7 +1305,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4478" levels="1" name="Ice Fairy Aqua Splash">
+	<skill id="4478" levels="1" name="Aqua Splash">
 		<!-- Confirmed CT2.5 -->
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="700" />
@@ -1324,7 +1324,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4479" levels="1" name="Ice Fairy Resist Cold">
+	<skill id="4479" levels="1" name="Ice Fairy's Blessing">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="1800" />
@@ -1349,7 +1349,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4480" levels="1" name="Ice Fairy Curse Gloom">
+	<skill id="4480" levels="1" name="Curse Gloom">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="1800" />
@@ -1373,7 +1373,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4481" levels="1" name="Ice Fairy Hex">
+	<skill id="4481" levels="1" name="Hex">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="1800" />
@@ -1397,7 +1397,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4482" levels="1" name="Ice Fairy Silence">
+	<skill id="4482" levels="1" name="Silence">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="600" />
@@ -1448,7 +1448,7 @@
 			<effect name="Root" />
 		</for>
 	</skill>
-	<skill id="4484" levels="1" name="Eating Follower Heal">
+	<skill id="4484" levels="1" name="Devour Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="100" />
@@ -1464,7 +1464,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4485" levels="1" name="Eating Follower">
+	<skill id="4485" levels="1" name="Devour Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
@@ -1568,7 +1568,7 @@
 			<effect name="Root" />
 		</for>
 	</skill>
-	<skill id="4489" levels="12" name="NPC Death MP Bomb">
+	<skill id="4489" levels="12" name="Death Bomb">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
@@ -1585,7 +1585,7 @@
 			<effect name="MagicalAttackMp" />
 		</for>
 	</skill>
-	<skill id="4490" levels="12" name="NPC Holy Wall">
+	<skill id="4490" levels="12" name="Holy War">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
@@ -1672,7 +1672,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4493" levels="12" name="NPC Debuff Shield Slow">
+	<skill id="4493" levels="12" name="Mystic Immunity">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
@@ -1709,7 +1709,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4495" levels="12" name="BOSS Power Shot">
+	<skill id="4495" levels="12" name="Power Shot">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
@@ -1757,7 +1757,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="4497" levels="1" name="Treasure Chest - Level 21">
+	<skill id="4497" levels="1" name="Treasure Chest (Lv. 21)">
 		<!-- Confirmed CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="icon" val="icon.skill0042" />
@@ -1765,7 +1765,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4498" levels="1" name="Treasure Chest - Level 22">
+	<skill id="4498" levels="1" name="Treasure Chest (Lv. 22)">
 		<!-- Confirmed CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="icon" val="icon.skill0042" />
@@ -1773,7 +1773,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4499" levels="1" name="Treasure Chest - Level 25">
+	<skill id="4499" levels="1" name="Treasure Chest (Lv. 25)">
 		<!-- Confirmed CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="icon" val="icon.skill0042" />

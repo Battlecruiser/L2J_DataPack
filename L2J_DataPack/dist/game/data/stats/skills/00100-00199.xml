@@ -302,7 +302,7 @@
 			<effect name="Passive" />
 		</for>
 	</skill>
-	<skill id="107" levels="9" name="Divine Aura" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="107" levels="9" name="Holy Aura" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#effectPoints"> -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 40 42 43 45 46 48 49 50 51 </table>
@@ -1115,7 +1115,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="147" levels="51" name="Magic Resistance" enchantGroup1="1">
+	<skill id="147" levels="51" name="M. Def." enchantGroup1="1">
 		<table name="#magicLvl"> 18 20 22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#magicSuccRes"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.15 1.15 1.15 1.15 1.15 1.15 1.2 1.2 1.2 1.2 1.2 1.2 </table>
 		<table name="#mDef"> 22 24 26 28 29 31 32 33 36 37 39 42 43 45 48 50 51 53 55 57 59 61 62 64 67 69 71 73 75 77 79 82 84 86 89 91 94 96 98 101 103 106 109 111 114 116 119 122 124 127 130 </table>
@@ -1219,7 +1219,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="164" levels="3" name="Quick Recycle">
+	<skill id="164" levels="3" name="Quick Recovery">
 		<table name="#magicLvl"> 20 30 48 </table>
 		<table name="#reuse"> 0.9 0.85 0.8 </table>
 		<set name="icon" val="icon.skill0164" />
@@ -1241,7 +1241,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="168" levels="3" name="Boost Attack Speed" enchantGroup1="1">
+	<skill id="168" levels="3" name="Boost Atk. Spd." enchantGroup1="1">
 		<table name="#magicLvl"> 36 46 58 </table>
 		<table name="#rate"> 1.05 1.07 1.1 </table>
 		<table name="#ench1rate"> 1.101 1.102 1.103 1.104 1.105 1.106 1.107 1.108 1.109 1.11 1.111 1.112 1.113 1.114 1.115 1.116 1.117 1.118 1.119 1.12 1.121 1.122 1.123 1.124 1.125 1.126 1.127 1.128 1.129 1.13 </table>
@@ -1462,7 +1462,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="193" levels="7" name="Critical Power" enchantGroup1="1">
+	<skill id="193" levels="7" name="Critical Damage" enchantGroup1="1">
 		<table name="#crit"> 32 56 93 177 295 384 406 </table>
 		<table name="#magicLvl"> 24 32 40 52 64 72 74 </table>
 		<table name="#ench1crit"> 430 433 436 439 442 445 448 451 454 457 460 463 466 469 472 474 477 480 483 486 489 492 495 498 501 504 507 510 513 516 </table>
@@ -1491,7 +1491,7 @@
 			<effect name="Lucky" />
 		</for>
 	</skill>
-	<skill id="195" levels="2" name="Breath Boost">
+	<skill id="195" levels="2" name="Boost Breath">
 		<table name="#breath"> 180 300 </table>
 		<table name="#magicLvl"> 20 55 </table>
 		<set name="icon" val="icon.skill0195" />

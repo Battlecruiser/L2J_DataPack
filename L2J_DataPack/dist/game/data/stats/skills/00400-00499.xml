@@ -364,7 +364,7 @@
 			<effect name="PhysicalAttack" />
 		</enchant3for>
 	</skill>
-	<skill id="406" levels="3" name="Angelic Icon" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
+	<skill id="406" levels="3" name="Angelic Archon" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#cAtk"> 1.33 1.66 2 </table>
@@ -1161,7 +1161,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="426" levels="1" name="Battle Force">
+	<skill id="426" levels="1" name="Battle Stance">
 		<!-- Not Used Anymore -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="400" />
@@ -1178,7 +1178,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="PARTY_NOTME" />
 	</skill>
-	<skill id="427" levels="1" name="Spell Force">
+	<skill id="427" levels="1" name="Spell Stance">
 		<!-- Not Used Anymore -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="400" />
@@ -1711,7 +1711,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="446" levels="1" name="Dodge">
+	<skill id="446" levels="1" name="Evasion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="AVOID_SKILL" />
@@ -1906,7 +1906,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="452" levels="5" name="Shock Stomp" enchantGroup1="2">
+	<skill id="452" levels="5" name="Stun Stomp" enchantGroup1="2">
 		<!-- Confirmed CT2.5 -->
 		<table name="#chance"> 40 50 60 70 80 </table>
 		<table name="#magicLvl"> 55 60 64 68 72 </table>
@@ -2750,7 +2750,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="484" levels="1" name="Rush">
+	<skill id="484" levels="1" name="Elementary Rush">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="200" />
@@ -2918,7 +2918,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="491" levels="1" name="Not In Use">
+	<skill id="491" levels="1" name="Not in Use">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0491" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="23200" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
+	<skill id="23200" levels="1" name="Penalty Kick Agathion Special Skill: Soccer Ball of Cheering">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -24,7 +24,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23201" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+	<skill id="23201" levels="1" name="Ball Trapping Gnosian Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -60,7 +60,7 @@
 			<player agathionId="1578" />
 		</cond>
 	</skill>
-	<skill id="23204" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+	<skill id="23204" levels="1" name="Ball Trapping Gnosian Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -96,7 +96,7 @@
 			<player agathionId="1581" />
 		</cond>
 	</skill>
-	<skill id="23207" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+	<skill id="23207" levels="1" name="Ball Trapping Gnosian Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -228,7 +228,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23217" levels="1" name="Granny Tiger Agathion Special Skill - Fundamentals">
+	<skill id="23217" levels="1" name="Granny Tiger Agathion Special Skill: Fundamentals">
 		<!-- For 1 minute(s), 50% of the standard short-range physical damage inflicted on the enemy is recovered as HP. Reuse delay is 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="60" />
@@ -274,7 +274,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23221" levels="1" name="Cheerleader Orodriel Agathion Special Skill - Joy of Cheering">
+	<skill id="23221" levels="1" name="Cheerleader Orodriel Agathion Special Skill: Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
@@ -289,7 +289,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23222" levels="1" name="Cheerleader Lana Agathion Cute Trick">
+	<skill id="23222" levels="1" name="Cheerleader Lanya Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -297,7 +297,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23223" levels="1" name="Cheerleader Lana Agathion Special Skill - Joy of Cheering">
+	<skill id="23223" levels="1" name="Cheerleader Lanya Agathion Special Skill: Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
@@ -320,7 +320,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23225" levels="1" name="Cheerleader Naonin Agathion Special Skill - Joy of Cheering">
+	<skill id="23225" levels="1" name="Cheerleader Naonin Agathion Special Skill: Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
@@ -343,7 +343,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23227" levels="1" name="Cheerleader Mortia Agathion Special Skill - Joy of Cheering">
+	<skill id="23227" levels="1" name="Cheerleader Mortia Agathion Special Skill: Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
@@ -366,7 +366,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23229" levels="1" name="Cheerleader Kaurin Agathion Special Skill - Joy of Cheering">
+	<skill id="23229" levels="1" name="Cheerleader Kaurin Agathion Special Skill: Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
@@ -389,7 +389,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23231" levels="1" name="Cheerleader Meruril Agathion Special Skill - Joy of Cheering">
+	<skill id="23231" levels="1" name="Cheerleader Meruril Agathion Special Skill: Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
@@ -427,22 +427,22 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23234" levels="1" name="Singer Dancer Agathion Cute Trick">
+	<skill id="23234" levels="1" name="Singer and Dancer Agathion Cute Trick">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23235" levels="1" name="Singer Dancer Agathion Special Skill - Song of Hunter">
+	<skill id="23235" levels="1" name="Singer and Dancer Agathion Special Skill: Hunter's Song">
 		<!-- Increases critical attack rate by 100% for 2 minutes. Reuse delay 20 minutes. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23236" levels="1" name="Zaken Spirit Sword Cute Trick">
+	<skill id="23236" levels="1" name="Agathion Cute Trick - Zaken's Spirit Swords">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23237" levels="1" name="Zaken Spirit Sword Special Skill - Song of the Sword">
+	<skill id="23237" levels="1" name="Swords' Song">
 		<!-- "For 30 minutes, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Reuse delay is 2 hours." -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
@@ -735,17 +735,17 @@
 			<effect name="CallParty" />
 		</for>
 	</skill>
-	<skill id="23250" levels="1" name="Kau Agathion Cute Trick">
+	<skill id="23250" levels="1" name="Agathion Cute Trick - Cow">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23251" levels="1" name="Tow Agathion Cute Trick">
+	<skill id="23251" levels="1" name="Agathion Cute Trick - Makeshift Bat">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="23252" levels="1" name="Griffin Agathion Cute Trick">
+	<skill id="23252" levels="1" name="Agathion Cute Trick - Griffin">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />

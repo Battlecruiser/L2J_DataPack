@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="2200" levels="3" name="Item - Jade Treasure Box">
+	<skill id="2200" levels="3" name="Small Jade Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,24,28.5;7609,26,26.0572
@@ -23,7 +23,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2201" levels="3" name="Item - Blue Treasure Box">
+	<skill id="2201" levels="3" name="Small Blue Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,24,39.5;7609,26,36.1144
@@ -46,7 +46,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2202" levels="3" name="Item - Yellow Treasure Box">
+	<skill id="2202" levels="3" name="Small Yellow Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,5.424;6908,28,19.3714;6909,8,18.0799;7609,30,18.08
@@ -69,7 +69,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2203" levels="3" name="Item - Orange Treasure Box">
+	<skill id="2203" levels="3" name="Small Orange Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,7.788;6908,56,13.9072;6909,14,11.5376;7609,60,12.98
@@ -92,7 +92,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2204" levels="3" name="Item - Violet Treasure Box">
+	<skill id="2204" levels="3" name="Small Purple Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,3,58.24
@@ -115,7 +115,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2205" levels="3" name="Item - Red Treasure Box">
+	<skill id="2205" levels="3" name="Small Red Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,3,84.864
@@ -138,7 +138,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2206" levels="3" name="Item - White Treasure Box">
+	<skill id="2206" levels="3" name="Small White Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,6,58.048
@@ -161,7 +161,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2207" levels="3" name="Item - Black Treasure Box">
+	<skill id="2207" levels="3" name="Small Black Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,6,69.312
@@ -184,42 +184,42 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2208" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2208" levels="1" name="Blessed Scroll: Enchant Armor (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2209" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2209" levels="1" name="Blessed Scroll: Enchant Armor (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2210" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2210" levels="1" name="Blessed Scroll: Enchant Armor (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2211" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2211" levels="1" name="Blessed Scroll: Enchant Armor (C-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2212" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2212" levels="1" name="Blessed Scroll: Enchant Armor (D-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2213" levels="22" name="Escape - to X Town">
+	<skill id="2213" levels="22" name="Scroll of Escape: Talking Island Village">
 		<!-- Confirmed CT2.5 -->
 		<table name="#coordX"> -84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 149800 107946 -118092 </table>
 		<table name="#coordY"> 244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 -79999 -52280 46955 </table>
@@ -247,7 +247,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2214" levels="10" name="Scroll of Escape to Talking Island">
+	<skill id="2214" levels="10" name="Scroll of Escape: Talking Island Village">
 		<!-- Confirmed CT2.5 -->
 		<!-- Levels 7, 8 and 9 doesn't exist in client. -->
 		<table name="#coordX"> -84200 46915 9723 -45208 115158 -118092 0 0 0 83378 </table>
@@ -276,7 +276,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2215" levels="4" name="Item - Quest Special Box">
+	<skill id="2215" levels="4" name="Chest Caught with Wind Bait">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			57,100000,8;3456,1,10;3454,1,5.5;3455,1,5.5;3448,1,17.6;3449,1,17;3446,1,18;3468,1,18.4
@@ -300,7 +300,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2216" levels="4" name="Item - Quest Special Fish">
+	<skill id="2216" levels="4" name="Special Fish 1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			57,100,34;1867,1,33;1872,1,33
@@ -324,7 +324,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2217" levels="5" name="Item - Quest Treasure Box">
+	<skill id="2217" levels="5" name="Looted Goods - White Cargo Box">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6697,1,9;6693,1,9;6694,1,9;6696,1,9;7579,1,9;6690,1,9;6688,1,9;6691,1,9;6689,1,9;6695,1,9;57,330000,10
@@ -349,7 +349,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2218" levels="3" name="Item - Quest Sac">
+	<skill id="2218" levels="3" name="Booty - Yellow Pouch">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			1882,3,20;1876,6,16;1879,3,12;1881,1,12;1880,4,10;1874,1,10;1875,3,10;1877,3,10
@@ -372,7 +372,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2219" levels="2" name="Item - Quest Sac">
+	<skill id="2219" levels="2" name="Looted Goods - Brown Pouch">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			1882,20,18;1876,20,16;1879,20,10;1881,20,10;1880,20,5;1874,20,10;1875,20,10;1877,20,11;57,150000,10
@@ -394,7 +394,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2220" levels="9" name="Item - Easy Green Fish">
+	<skill id="2220" levels="9" name="Small Green Nimble Fish (Novice)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,3,55.2
@@ -423,7 +423,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2221" levels="9" name="Item - Easy Jade Fish">
+	<skill id="2221" levels="9" name="Small Jade Nimble Fish (Novice)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,6,57.2
@@ -452,7 +452,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2222" levels="9" name="Item - Easy Blue Fish">
+	<skill id="2222" levels="9" name="Small Blue Nimble Fish (Novice)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,6,65.2
@@ -481,7 +481,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2223" levels="9" name="Item - Easy Yellow Fish">
+	<skill id="2223" levels="9" name="Small Yellow Nimble Fish (Novice)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,1.768;6908,6,29.4664;6909,2,17.6798
@@ -510,7 +510,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2224" levels="9" name="Item - Easy Orange Fish">
+	<skill id="2224" levels="9" name="Small Orange Nimble Fish (Novice)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,2.488;6908,8,33.1732;6909,2,24.88
@@ -539,7 +539,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2225" levels="9" name="Item - Easy Violet Fish">
+	<skill id="2225" levels="9" name="Small Purple Nimble Fish (Novice)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,1,42.048
@@ -568,7 +568,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2226" levels="9" name="Item - Easy Red Fish">
+	<skill id="2226" levels="9" name="Small Red Nimble Fish (Novice)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,2,30.672
@@ -597,7 +597,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2227" levels="9" name="Item - Easy White Fish">
+	<skill id="2227" levels="9" name="Small White Nimble Fish (Novice)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,2,41.952
@@ -626,7 +626,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2228" levels="9" name="Item - Easy Black Fish">
+	<skill id="2228" levels="9" name="Small Black Nimble Fish (Novice)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,2,49.968
@@ -655,7 +655,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2229" levels="8" name="Treasure Chest Key">
+	<skill id="2229" levels="8" name="Deluxe Chest Key - Grade 1">
 		<table name="#effectPoints"> -1 -2 -3 -4 -5 -6 -7 -8 </table>
 		<table name="#itemConsumeId"> 6665 6666 6667 6668 6669 6670 6671 6672 </table>
 		<set name="castRange" val="40" />
@@ -677,7 +677,7 @@
 			<effect name="OpenChest" />
 		</for>
 	</skill>
-	<skill id="2230" levels="1" name="Item - Theme Sound Crystal">
+	<skill id="2230" levels="1" name="Item - Fight Song Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -794,7 +794,7 @@
 			<target npcId="19160002,19160003,19160004,19160005,19160006,19160007,19160008,19160009" />
 		</cond>
 	</skill>
-	<skill id="2236" levels="1" name="Chapel Door Key">
+	<skill id="2236" levels="1" name="Chapel Key">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
@@ -863,7 +863,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2239" levels="1" name="Petrification Scroll">
+	<skill id="2239" levels="1" name="Scroll: Petrifaction">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
@@ -927,7 +927,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2242" levels="1" name="Hot Spring Fountain Water">
+	<skill id="2242" levels="1" name="Hot Spring Water">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="100" />
@@ -947,7 +947,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2243" levels="1" name="Hot Spring Sulfur">
+	<skill id="2243" levels="1" name="Hot Spring Brimstone">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="100" />
@@ -1064,7 +1064,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2248" levels="1" name="Bless of Fire">
+	<skill id="2248" levels="1" name="Blessing of Fire">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -1085,7 +1085,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2249" levels="1" name="Bless of Water">
+	<skill id="2249" levels="1" name="Blessing of Water">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -1106,7 +1106,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2250" levels="1" name="Bless of Wind">
+	<skill id="2250" levels="1" name="Blessing of Wind">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -1127,7 +1127,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2251" levels="1" name="Bless of Earth">
+	<skill id="2251" levels="1" name="Blessing of Earth">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -1148,7 +1148,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2252" levels="1" name="Bless of Darkness">
+	<skill id="2252" levels="1" name="Blessing of Dark">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -1169,7 +1169,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2253" levels="1" name="Bless of Sacredness">
+	<skill id="2253" levels="1" name="Holy Blessing">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -1190,7 +1190,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2254" levels="3" name="Crystal of Fire">
+	<skill id="2254" levels="3" name="Fire Crystal">
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1201,7 +1201,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2255" levels="3" name="Crystal of Water">
+	<skill id="2255" levels="3" name="Water Crystal">
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1212,7 +1212,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2256" levels="3" name="Crystal of Wind">
+	<skill id="2256" levels="3" name="Wind Crystal">
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1223,7 +1223,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2257" levels="3" name="Crystal of Earth">
+	<skill id="2257" levels="3" name="Earth Crystal">
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1234,7 +1234,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2258" levels="3" name="Crystal of Darkness">
+	<skill id="2258" levels="3" name="Dark Shard">
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1245,7 +1245,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2259" levels="3" name="Crystal of Sacredness">
+	<skill id="2259" levels="3" name="Holy Crystal">
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1256,7 +1256,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2260" levels="1" name="Key of Riddles">
+	<skill id="2260" levels="1" name="Key of Enigma">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8059,1,100
@@ -1279,7 +1279,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2261" levels="9" name="Item - Hard Green Fish">
+	<skill id="2261" levels="9" name="Small Green Nimble Fish (High-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,1,11.04;6911,2,18.4;8353,2,27.6
@@ -1308,7 +1308,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2262" levels="9" name="Item - Hard Jade Fish">
+	<skill id="2262" levels="9" name="Small Jade Nimble Fish (High-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,1,22.8;6911,2,28.5;8359,4,19
@@ -1337,7 +1337,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2263" levels="9" name="Item - Hard Blue Fish">
+	<skill id="2263" levels="9" name="Small Blue Nimble Fish (High-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,1,25.28;6911,4,19.75;8355,4,17.5556
@@ -1366,7 +1366,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2264" levels="9" name="Item - Hard Yellow Fish">
+	<skill id="2264" levels="9" name="Small Yellow Nimble Fish (High-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,1,28.288;6911,4,29.4666;8354,2,22.1
@@ -1395,7 +1395,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2265" levels="9" name="Item - Hard Orange Fish">
+	<skill id="2265" levels="9" name="Small Orange Nimble Fish (High-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,2,24.88;6911,8,20.7333;8357,2,19.904
@@ -1424,7 +1424,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2266" levels="9" name="Item - Hard Violet Fish">
+	<skill id="2266" levels="9" name="Small Purple Nimble Fish (High-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6914,1,28;6912,8,19.4445;8358,2,29.1666
@@ -1453,7 +1453,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2267" levels="9" name="Item - Hard Red Fish">
+	<skill id="2267" levels="9" name="Small Red Nimble Fish (High-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6914,2,20.432;6912,9,18.9184;8352,4,18.2428
@@ -1482,7 +1482,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2268" levels="9" name="Item - Hard White Fish">
+	<skill id="2268" levels="9" name="Small White Nimble Fish (High-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6914,2,20.964;6912,9,19.4112;8373,1,2.6205;8356,4,16.3781
@@ -1511,7 +1511,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2269" levels="9" name="Item - Hard Black Fish">
+	<skill id="2269" levels="9" name="Small Black Nimble Fish (High-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6914,2,24.972;6912,9,23.1224;8373,1,3.1215;8351,4,17.3416
@@ -1540,7 +1540,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2270" levels="7" name="Item - Adventurer Box">
+	<skill id="2270" levels="7" name="Adventurer's Box: C-grade Accessory (Low-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			853,1,14.1723;884,1,21.3675;916,1,10.6428
@@ -1567,7 +1567,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2271" levels="1" name="Item - Hot Spring Fish">
+	<skill id="2271" levels="1" name="Old Box">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8034,3,85;2134,3,4;2133,7,11
@@ -1595,7 +1595,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2273" levels="1" name="Item - Red Devil Support Box">
+	<skill id="2273" levels="1" name="Red Devil Support Box">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8552,1,25;8187,1,25;8555,5,25;6406,10,15;6407,5,9.991;5577,1,0.002;5578,1,0.002;5579,1,0.002;5580,1,0.001;5581,1,0.001;5582,1,0.001
@@ -1856,7 +1856,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2285" levels="1" name="Herb of Speed">
+	<skill id="2285" levels="1" name="Wind Walk Herb">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="2" />
@@ -1901,7 +1901,7 @@
 			<effect name="Recovery" />
 		</for>
 	</skill>
-	<skill id="2287" levels="6" name="Elixir of Life">
+	<skill id="2287" levels="6" name="Elixir of Life (No-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 250 650 1100 1500 1900 2300 </table>
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
@@ -1919,7 +1919,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2288" levels="6" name="Elixir of Mental Strength">
+	<skill id="2288" levels="6" name="Elixir of Mind (No-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 60 140 220 290 360 420 </table>
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
@@ -1937,7 +1937,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2289" levels="6" name="Elixir of CP">
+	<skill id="2289" levels="6" name="Elixir of CP (No-grade)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 150 350 600 800 1000 1200 </table>
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>

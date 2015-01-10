@@ -47,7 +47,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="702" levels="1" name="Divine Healer Cleanse">
+	<skill id="702" levels="1" name="Divine Healer Clans">
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="676" />
 		<set name="effectRange" val="1100" />
@@ -615,7 +615,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="722" levels="2" name="Anakim Holy Beam">
+	<skill id="722" levels="2" name="Anakim Divine Beam">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -335 -342 </table>
 		<table name="#magicLvl"> 75 80 </table>
@@ -1099,7 +1099,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="742" levels="3" name="Vale Master Bursting Flame">
+	<skill id="742" levels="3" name="Veil Master Bursting Flame">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#mpConsume"> 68 70 73 </table>
@@ -1125,7 +1125,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="743" levels="3" name="Vale Master Dark Explosion">
+	<skill id="743" levels="3" name="Veil Master Dark Explosion">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -323 -331 -337 </table>
 		<table name="#magicLvl"> 70 73 76 </table>
@@ -1154,7 +1154,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="744" levels="3" name="Vale Master Dark Flare">
+	<skill id="744" levels="3" name="Veil Master Dark Flare">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#mpConsume"> 68 70 73 </table>
@@ -1181,7 +1181,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="745" levels="3" name="Vale Master Dark Cure">
+	<skill id="745" levels="3" name="Veil Master Dark Cure">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> 635 650 662 </table>
 		<table name="#magicLvl"> 70 73 76 </table>
@@ -1685,7 +1685,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="764" levels="1" name="Song of Wind Storm" enchantGroup1="5" enchantGroup2="5">
+	<skill id="764" levels="1" name="Windstorm Song" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench1EffectPoints"> 666 669 673 676 679 681 684 687 689 692 694 696 698 700 702 </table>
 		<table name="#ench2EffectPoints"> 704 706 707 709 710 711 713 714 715 1 1 1 1 1 1 </table>
@@ -1764,7 +1764,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="767" levels="1" name="Expose Weak Point">
+	<skill id="767" levels="1" name="Expose Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0767" />
 		<set name="magicLvl" val="81" />
@@ -2203,7 +2203,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="784" levels="1" name="Spirit of Phoenix">
+	<skill id="784" levels="1" name="Spirit of the Phoenix">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
@@ -2230,7 +2230,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="785" levels="1" name="Flame Icon">
+	<skill id="785" levels="1" name="Flame Archon">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
@@ -2654,7 +2654,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="798" levels="1" name="Divine Warrior Assault Attack">
+	<skill id="798" levels="1" name="Divine Warrior Crippling Attack">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="POISON" />
@@ -2685,7 +2685,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="799" levels="3" name="Master Ability - Defense">
+	<skill id="799" levels="3" name="Master Ability: Defense">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pDefHeavy"> 59.5 119 178.5 </table>
 		<table name="#pDefLight"> 44.625 89.25 133.875 </table>
