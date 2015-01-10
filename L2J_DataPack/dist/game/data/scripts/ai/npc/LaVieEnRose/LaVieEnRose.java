@@ -27,10 +27,12 @@ import com.l2jserver.gameserver.network.serverpackets.ExResponseResetList;
 import com.l2jserver.gameserver.network.serverpackets.ExShowBeautyMenu;
 
 /**
+ * La Vie En Rose AI.
  * @author Sdw
  */
-public class LaVieEnRose extends AbstractNpcAI
+public final class LaVieEnRose extends AbstractNpcAI
 {
+	// NPCs
 	private static final int LA_VIE_EN_ROSE = 33825;
 	
 	private LaVieEnRose()
