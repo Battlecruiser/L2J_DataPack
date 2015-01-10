@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Zephyra;
+package ai.npc.AlchemistManager;
 
 import java.util.List;
 
@@ -33,22 +33,26 @@ import com.l2jserver.gameserver.network.serverpackets.ExAcquirableSkillListByCla
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 
 /**
- * Zephyra AI.
+ * Alchemist Manager AI.
  * @author Sdw
  */
-public final class Zephyra extends AbstractNpcAI
+public final class AlchemistManager extends AbstractNpcAI
 {
 	// NPCs
-	private static final int ZEPHYRA = 33978;
+	private static final int ALCHEMISTS[] =
+	{
+		33978, // Zephyra
+		33977, // Veruti
+	};
 	// Misc
 	private static final String TUTORIAL_LINK = "..\\L2text\\QT_026_alchemy_01.htm";
 	
-	private Zephyra()
+	private AlchemistManager()
 	{
-		super(Zephyra.class.getSimpleName(), "ai/npc");
-		addStartNpc(ZEPHYRA);
-		addTalkId(ZEPHYRA);
-		addFirstTalkId(ZEPHYRA);
+		super(AlchemistManager.class.getSimpleName(), "ai/npc");
+		addStartNpc(ALCHEMISTS);
+		addTalkId(ALCHEMISTS);
+		addFirstTalkId(ALCHEMISTS);
 	}
 	
 	@Override
@@ -58,21 +62,15 @@ public final class Zephyra extends AbstractNpcAI
 		switch (event)
 		{
 			case "33978.html":
+			case "33977.html":
 			{
 				htmltext = event;
 				break;
 			}
 			case "open_tutorial":
 			{
-				if (player.getRace() == Race.ERTHEIA)
-				{
-					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), TUTORIAL_LINK, TutorialShowHtml.LARGE_WINDOW));
-					htmltext = "33978-1.htm";
-				}
-				else
-				{
-					htmltext = "33978-2.htm";
-				}
+				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), TUTORIAL_LINK, TutorialShowHtml.LARGE_WINDOW));
+				htmltext = npc.getId() + "-1.html";
 				break;
 			}
 			case "learn_skill":
@@ -92,7 +90,7 @@ public final class Zephyra extends AbstractNpcAI
 				}
 				else
 				{
-					htmltext = "33978-2.htm";
+					htmltext = npc.getId() + "-2.html";
 				}
 				break;
 			}
@@ -102,6 +100,6 @@ public final class Zephyra extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Zephyra();
+		new AlchemistManager();
 	}
 }
