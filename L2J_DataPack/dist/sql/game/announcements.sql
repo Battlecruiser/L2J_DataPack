@@ -9,4 +9,6 @@ CREATE TABLE IF NOT EXISTS `announcements` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO announcements (`type`, `author`, `content`) VALUES (0, 'L2JServer', 'Thanks for using L2J.');
+INSERT INTO announcements (`type`, `author`, `content`) VALUES 
+(0, 'L2JServer', 'Thanks for using L2J.'),
+(0, 'L2JServer', 'http://www.l2jserver.com/');
