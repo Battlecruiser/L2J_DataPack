@@ -46,7 +46,7 @@ public final class Proclaimer extends AbstractNpcAI
 		36614, // Innadril
 		36615, // Goddard
 		36616, // Rune
-		36617, // Schuttgard
+		36617, // Schuttgart
 	};
 	// Skills
 	private static final SkillHolder XP_BUFF = new SkillHolder(19036, 1); // Blessing of Light

@@ -80,7 +80,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 		35316, 36658, // Innadril
 		35363, 36659, // Goddard
 		35509, 36660, // Rune
-		35555, 36661, // Schuttgard
+		35555, 36661, // Schuttgart
 	};
 	//@formatter:on
 	// Item

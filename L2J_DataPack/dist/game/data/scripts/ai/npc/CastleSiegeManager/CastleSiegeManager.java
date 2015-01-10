@@ -40,7 +40,7 @@ public final class CastleSiegeManager extends AbstractNpcAI
 		35320, // Innadril Castle
 		35367, // Goddard Castle
 		35513, // Rune Castle
-		35559, // Schuttgard Castle
+		35559, // Schuttgart Castle
 		35639, // Fortress of the Dead
 		35420, // Devastated Castle
 	};

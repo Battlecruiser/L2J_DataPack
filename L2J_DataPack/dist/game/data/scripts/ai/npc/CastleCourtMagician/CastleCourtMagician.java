@@ -45,7 +45,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 		35653, // Innadril
 		35654, // Goddard
 		35655, // Rune
-		35656, // Schuttgard
+		35656, // Schuttgart
 	};
 	// Skills
 	private static final int CLAN_GATE = 3632; // Clan Gate
