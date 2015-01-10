@@ -6,7 +6,6 @@
 		<set name="icon" val="icon.skill19100" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19101" levels="1" name="Chain Blow - Test">
 		<!-- AUTO GENERATED SKILL -->
@@ -18,7 +17,6 @@
 		<set name="hitTime" val="1130" />
 		<set name="coolTime" val="700" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19102" levels="1" name="Chaos Sympathy">
 		<!-- AUTO GENERATED SKILL -->
@@ -28,7 +26,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="300" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19103" levels="1" name="Resident Power">
 		<!-- AUTO GENERATED SKILL -->
@@ -36,7 +33,6 @@
 		<set name="icon" val="icon.skill0050" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19104" levels="1" name="Resident Power">
 		<!-- AUTO GENERATED SKILL -->
@@ -52,7 +48,6 @@
 		<set name="icon" val="icon.skill0820" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19106" levels="1" name="Resident Advantage">
 		<!-- AUTO GENERATED SKILL -->
@@ -68,7 +63,6 @@
 		<set name="icon" val="icon.skill0788_3" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19108" levels="1" name="Resident Guidance">
 		<!-- AUTO GENERATED SKILL -->
@@ -89,7 +83,6 @@
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19110" levels="5" name="Clan Resilience">
 		<!-- AUTO GENERATED SKILL -->
@@ -97,7 +90,6 @@
 		<set name="icon" val="icon.skill_tough_spirit" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19111" levels="5" name="Clan Steadfastness">
 		<!-- AUTO GENERATED SKILL -->
@@ -105,7 +97,6 @@
 		<set name="icon" val="icon.skill_heavy_heart" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19112" levels="1" name="Clan Escape">
 		<!-- AUTO GENERATED SKILL -->
@@ -116,7 +107,6 @@
 		<set name="hitTime" val="3500" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19113" levels="1" name="Clan Escape Lock">
 		<!-- AUTO GENERATED SKILL -->
@@ -149,7 +139,6 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19116" levels="1" name="Summon Lyn Draco">
 		<!-- AUTO GENERATED SKILL -->
@@ -158,7 +147,6 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19117" levels="1" name="Dimensional Defense">
 		<!-- AUTO GENERATED SKILL -->
@@ -166,7 +154,6 @@
 		<set name="icon" val="icon.skill14216" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19118" levels="4" name="Bike Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -178,7 +165,6 @@
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="4000" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19119" levels="1" name="Noblesse Grace">
 		<!-- AUTO GENERATED SKILL -->
@@ -189,7 +175,6 @@
 		<set name="mpConsume" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19120" levels="4" name="Noble Shield">
 		<!-- P. Def. + 2%. -->
@@ -949,56 +934,48 @@
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19179" levels="1" name="Warrior Hidden Trigger">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19180" levels="1" name="Rogue Hidden Trigger">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19181" levels="1" name="Archer Hidden Trigger">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19182" levels="1" name="Wizard Hidden Trigger">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19183" levels="1" name="Enchanter Hidden Trigger">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19184" levels="1" name="Summoner Hidden Trigger">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19185" levels="1" name="Healer Hidden Trigger">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19186" levels="1" name="Rampage Shield">
 		<!-- AUTO GENERATED SKILL -->
@@ -1006,7 +983,6 @@
 		<set name="icon" val="icon.skill19186" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19187" levels="1" name="Blockade">
 		<!-- AUTO GENERATED SKILL -->
@@ -1027,7 +1003,6 @@
 		<set name="icon" val="icon.skill19188" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19189" levels="1" name="Retreating Shot">
 		<!-- AUTO GENERATED SKILL -->
@@ -1040,7 +1015,6 @@
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19190" levels="1" name="Brilliant Magic">
 		<!-- AUTO GENERATED SKILL -->
@@ -1048,7 +1022,6 @@
 		<set name="icon" val="icon.skill19190" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19191" levels="1" name="Mist Armor">
 		<!-- AUTO GENERATED SKILL -->
@@ -1056,7 +1029,6 @@
 		<set name="icon" val="icon.skill19191" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19192" levels="1" name="Mass Servitor Berserk">
 		<!-- AUTO GENERATED SKILL -->
@@ -1070,7 +1042,6 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="300000" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19193" levels="1" name="Divine Blessing">
 		<!-- AUTO GENERATED SKILL -->
@@ -1078,7 +1049,6 @@
 		<set name="icon" val="icon.skill19193" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19196" levels="1" name="Rampage Shield">
 		<!-- AUTO GENERATED SKILL -->
@@ -1088,7 +1058,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="15000" />
 		<set name="isMagic" val="4" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19197" levels="1" name="Divine Blessing">
 		<!-- AUTO GENERATED SKILL -->
@@ -1098,7 +1067,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="4" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19198" levels="1" name="Cancel Target">
 		<!-- AUTO GENERATED SKILL -->
@@ -1107,7 +1075,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="reuseDelay" val="10000" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="19199" levels="1" name="Hurricane Sign">
 		<!-- AUTO GENERATED SKILL -->
@@ -1116,6 +1083,5 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
-		<set name="isDebuff" val="false" />
 	</skill>
 </list>
