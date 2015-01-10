@@ -42,11 +42,12 @@ import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 
 /**
+ * AwakeningMaster AI.
  * @author Sdw
  */
-public class AwakeningMaster extends AbstractNpcAI
+public final class AwakeningMaster extends AbstractNpcAI
 {
-	// Masters
+	// NPCs
 	private static final int SIGEL_MASTER = 33397;
 	private static final int TYRR_MASTER = 33398;
 	private static final int OTHELL_MASTER = 33399;
@@ -55,7 +56,6 @@ public class AwakeningMaster extends AbstractNpcAI
 	private static final int ISS_MASTER = 33402;
 	private static final int WYNN_MASTER = 33403;
 	private static final int AEORE_MASTER = 33404;
-	
 	// Items
 	private static final int SCROLL_OF_AFTERLIFE = 17600;
 	private final static int ABELIUS_POWER = 32264;
