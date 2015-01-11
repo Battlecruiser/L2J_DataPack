@@ -582,7 +582,6 @@
 	<item id="1458" type="EtcItem" name="Crystal (D-grade)">
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="D" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="650" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
@@ -591,7 +590,6 @@
 	<item id="1459" type="EtcItem" name="Crystal (C-grade)">
 		<set name="icon" val="icon.etc_crystal_green_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="C" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="3000" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
@@ -600,7 +598,6 @@
 	<item id="1460" type="EtcItem" name="Crystal (B-grade)">
 		<set name="icon" val="icon.etc_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="B" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="9000" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
@@ -609,7 +606,6 @@
 	<item id="1461" type="EtcItem" name="Crystal (A-grade)">
 		<set name="icon" val="icon.etc_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="15000" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
@@ -618,7 +614,6 @@
 	<item id="1462" type="EtcItem" name="Crystal (S-grade)">
 		<set name="icon" val="icon.etc_crystal_gold_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
@@ -628,7 +623,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="D" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="3" />
 		<set name="price" val="14" />
@@ -641,7 +635,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="C" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="3" />
 		<set name="price" val="22" />
@@ -654,7 +647,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="B" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="50" />
@@ -667,7 +659,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="80" />
@@ -680,7 +671,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="100" />
@@ -692,7 +682,6 @@
 	<item id="1468" type="EtcItem" name="Gludin Panacen">
 		<set name="icon" val="icon.etc_reagent_gold_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
@@ -700,7 +689,6 @@
 	<item id="1469" type="EtcItem" name="Gludin Vermouth">
 		<set name="icon" val="icon.etc_fruit_green_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
@@ -708,7 +696,6 @@
 	<item id="1470" type="EtcItem" name="Artemeter">
 		<set name="icon" val="icon.etc_leaf_green_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
@@ -722,7 +709,7 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;300;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="743" />
+		<set name="crystal_count" val="101" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="300" />
@@ -749,7 +736,7 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="743" />
+		<set name="crystal_count" val="101" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="300" />
