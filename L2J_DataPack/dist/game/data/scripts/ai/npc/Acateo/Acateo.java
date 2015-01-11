@@ -53,6 +53,7 @@ public final class Acateo extends AbstractNpcAI
 				if (hasQuestItems(player, ACADEMY_CIRCLET))
 				{
 					htmltext = "33905-3.html";
+					break;
 				}
 				giveItems(player, ACADEMY_CIRCLET, 1);
 				htmltext = "33905-2.html";
