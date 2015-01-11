@@ -201,7 +201,6 @@ public final class DragonValley extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		((L2Attackable) npc).setOnKillDelay(0);
 		if (npc.getId() == EXPLODING_ORC_GHOST)
 		{
 			startQuestTimer("SELF_DESTRUCTION", 3000, npc, null);

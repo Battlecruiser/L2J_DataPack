@@ -18,6 +18,8 @@
  */
 package hellbound.AI;
 
+import hellbound.HellboundEngine;
+
 import java.util.List;
 
 import ai.npc.AbstractNpcAI;
@@ -30,8 +32,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
-
-import hellbound.HellboundEngine;
 
 /**
  * Hellbound Slaves AI.
@@ -61,7 +61,6 @@ public final class Slaves extends AbstractNpcAI
 	public final String onSpawn(L2Npc npc)
 	{
 		((L2MonsterInstance) npc).enableMinions(HellboundEngine.getInstance().getLevel() < 5);
-		((L2MonsterInstance) npc).setOnKillDelay(1000);
 		return super.onSpawn(npc);
 	}
 	

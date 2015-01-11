@@ -173,7 +173,6 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 		addTalkId(SIRRA, JINIA, SUPP_KEGOR);
 		addAttackId(FREYA_THRONE, FREYA_STAND, GLAKIAS, GLACIER, BREATH, KNIGHT);
 		addKillId(GLAKIAS, FREYA_STAND, KNIGHT, GLACIER, BREATH);
-		addSpawnId(GLAKIAS, FREYA_STAND, KNIGHT, GLACIER, BREATH);
 		addSpellFinishedId(GLACIER, BREATH);
 	}
 	
@@ -675,13 +674,6 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
-	}
-	
-	@Override
-	public String onSpawn(L2Npc npc)
-	{
-		((L2Attackable) npc).setOnKillDelay(0);
-		return super.onSpawn(npc);
 	}
 	
 	@Override
