@@ -254,39 +254,39 @@
 	<item id="38149" name="Corroded Normal Bait" additionalName="" type="EtcItem">
 		<!-- Normal Bait that can no longer be used. Get a refund from a fishing guild member. -->
 		<set name="icon" val="icon.etc_normal_lure" />
-		<set name="price" val="500" />
+		<set name="price" val="1000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38150" name="Prize-winning Bait" additionalName="" type="EtcItem">
 		<!-- Prize-winning Bait that can no longer be used. Get a refund from a fishing guild member. -->
 		<set name="icon" val="icon.etc_huge_lure" />
-		<set name="price" val="650" />
+		<set name="price" val="1300" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38151" name="Luminous Bait" additionalName="" type="EtcItem">
 		<!-- Luminous Bait that can no longer be used. Get a refund from a fishing guild member. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
-		<set name="price" val="750" />
+		<set name="price" val="1500" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38152" name="Luminous Prize-winning Bait" additionalName="" type="EtcItem">
 		<!-- Luminous Prize-winning Bait that can no longer be used. Get a refund from a fishing guild member. -->
 		<set name="icon" val="icon.etc_night_huge_lure" />
-		<set name="price" val="900" />
+		<set name="price" val="1800" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38153" name="Normal Fishing Shot" additionalName="" type="EtcItem">
 		<!-- Normal Fishing Shot that can no longer be used. Get a refund from a fishing guild member. -->
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i00" />
 		<set name="weight" val="3" />
-		<set name="price" val="150" />
+		<set name="price" val="300" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38154" name="Fishing Shot" additionalName="" type="EtcItem">
 		<!-- Soulshot for fishing rods. Doubles the fishing success rate. -->
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i05" />
 		<set name="weight" val="3" />
-		<set name="price" val="250" />
+		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38155" name="Fishing Rod (Novice)" additionalName="" type="Weapon">
@@ -294,7 +294,7 @@
 		<set name="icon" val="icon.weapon_fishing_rod_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1000" />
-		<set name="price" val="1000000" />
+		<set name="price" val="2000000" />
 		<for>
 			<add stat="pAtk" val="1.0" />
 			<add stat="mAtk" val="1.0" />
@@ -306,7 +306,7 @@
 		<set name="icon" val="icon.weapon_fishing_rod_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1000" />
-		<set name="price" val="7500000" />
+		<set name="price" val="15000000" />
 		<for>
 			<add stat="pAtk" val="1.0" />
 			<add stat="mAtk" val="1.0" />
@@ -318,7 +318,7 @@
 		<set name="icon" val="icon.weapon_fishing_rod_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1000" />
-		<set name="price" val="100000000" />
+		<set name="price" val="200000000" />
 		<for>
 			<add stat="pAtk" val="1.0" />
 			<add stat="mAtk" val="1.0" />
@@ -410,14 +410,14 @@
 		<!-- Recipe for making an Arrow-pierced Apple. All races. Create Common Item Skill Lv. 6. Success rate is 100%. Has a chance of crafting a hair accessory with pendant options. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="weight" val="30" />
-		<set name="price" val="5000" />
+		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38173" name="Arrow-pierced Apple Chunk" additionalName="" type="EtcItem">
 		<!-- Essential ingredient to making an Arrow-pierced Apple. You can sell in shops. -->
 		<set name="icon" val="icon.piece_apple" />
 		<set name="weight" val="60" />
-		<set name="price" val="2500" />
+		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38174" name="Samurai Long Sword Appearance Stone" additionalName="" type="EtcItem">
