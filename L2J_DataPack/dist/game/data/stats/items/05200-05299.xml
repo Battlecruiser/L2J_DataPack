@@ -213,7 +213,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5220" type="EtcItem" name="Metal Hardener">
+	<item id="5220" type="EtcItem" name="Corroded Metal Hardener">
 		<set name="icon" val="icon.etc_plate_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -341,7 +341,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5232" type="EtcItem" name="White Fabric">
+	<item id="5232" type="EtcItem" name="White Cloth">
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -379,7 +379,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5234" type="EtcItem" name="Mystery Potion">
+	<item id="5234" type="EtcItem" name="Mysterious Potion">
 		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -633,7 +633,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="5250" type="EtcItem" name="Greater Compressed Package of Soulshots (No-Grade)">
+	<item id="5250" type="EtcItem" name="Greater Soulshot Compressed Package (No-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -643,7 +643,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2104-1" />
 	</item>
-	<item id="5251" type="EtcItem" name="Greater Compressed Package of Soulshots (D-Grade)">
+	<item id="5251" type="EtcItem" name="Greater Soulshot Compressed Package (D-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -653,7 +653,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2105-1" />
 	</item>
-	<item id="5252" type="EtcItem" name="Greater Compressed Package of Soulshots (C-Grade)">
+	<item id="5252" type="EtcItem" name="Greater Soulshot Compressed Package (C-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -663,7 +663,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2106-1" />
 	</item>
-	<item id="5253" type="EtcItem" name="Greater Compressed Package of Soulshots (B-Grade)">
+	<item id="5253" type="EtcItem" name="Greater Soulshot Compressed Package (B-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -673,7 +673,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2107-1" />
 	</item>
-	<item id="5254" type="EtcItem" name="Greater Compressed Package of Soulshots (A-Grade)">
+	<item id="5254" type="EtcItem" name="Greater Soulshot Compressed Package (A-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -683,7 +683,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2108-1" />
 	</item>
-	<item id="5255" type="EtcItem" name="Greater Compressed Package of Soulshots (S-Grade)">
+	<item id="5255" type="EtcItem" name="Greater Soulshot Compressed Package (S-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -693,7 +693,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2109-1" />
 	</item>
-	<item id="5256" type="EtcItem" name="Greater Compressed Package of Spiritshots (No-Grade)">
+	<item id="5256" type="EtcItem" name="Greater Spiritshot Compressed Package (No-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -703,7 +703,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2110-1" />
 	</item>
-	<item id="5257" type="EtcItem" name="Greater Compressed Package of Spiritshots (D-Grade)">
+	<item id="5257" type="EtcItem" name="Greater Spiritshot Compressed Package (D-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -713,7 +713,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2111-1" />
 	</item>
-	<item id="5258" type="EtcItem" name="Greater Compressed Package of Spiritshots (C-Grade)">
+	<item id="5258" type="EtcItem" name="Greater Spiritshot Compressed Package (C-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -723,7 +723,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2112-1" />
 	</item>
-	<item id="5259" type="EtcItem" name="Greater Compressed Package of Spiritshots (B-Grade)">
+	<item id="5259" type="EtcItem" name="Greater Spiritshot Compressed Package (B-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -733,7 +733,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2113-1" />
 	</item>
-	<item id="5260" type="EtcItem" name="Greater Compressed Package of Spiritshots (A-Grade)">
+	<item id="5260" type="EtcItem" name="Greater Spiritshot Compressed Package (A-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -743,7 +743,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2114-1" />
 	</item>
-	<item id="5261" type="EtcItem" name="Greater Compressed Package of Spiritshots (S-Grade)">
+	<item id="5261" type="EtcItem" name="Greater Spiritshot Compressed Package (S-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -753,7 +753,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2115-1" />
 	</item>
-	<item id="5262" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (No-Grade)">
+	<item id="5262" type="EtcItem" name="Greater Blessed Spiritshot Compressed Package (No-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -763,7 +763,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2116-1" />
 	</item>
-	<item id="5263" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (D-Grade)">
+	<item id="5263" type="EtcItem" name="Greater Blessed Spiritshot Compressed Package (D-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -773,7 +773,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2117-1" />
 	</item>
-	<item id="5264" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (C-Grade)">
+	<item id="5264" type="EtcItem" name="Greater Blessed Spiritshot Compressed Package (C-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -783,7 +783,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2118-1" />
 	</item>
-	<item id="5265" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (B-Grade)">
+	<item id="5265" type="EtcItem" name="Greater Blessed Spiritshot Compressed Package (B-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -793,7 +793,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2119-1" />
 	</item>
-	<item id="5266" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (A-Grade)">
+	<item id="5266" type="EtcItem" name="Greater Blessed Spiritshot Compressed Package (A-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -803,7 +803,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2120-1" />
 	</item>
-	<item id="5267" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (S-Grade)">
+	<item id="5267" type="EtcItem" name="Greater Blessed Spiritshot Compressed Package (S-grade)">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />

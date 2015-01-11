@@ -114,7 +114,7 @@
 			<add order="0" stat="pDef" val="75" />
 		</for>
 	</item>
-	<item id="710" type="EtcItem" name="Hard Leather Shirt">
+	<item id="710" type="EtcItem" name="Durable Leather Shirt">
 		<set name="icon" val="icon.armor_leather_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
@@ -174,7 +174,7 @@
 			<add order="0" stat="pDef" val="45" />
 		</for>
 	</item>
-	<item id="714" type="EtcItem" name="Hard Leather Pants">
+	<item id="714" type="EtcItem" name="Durable Leather Pants">
 		<set name="icon" val="icon.armor_leather_pants_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
@@ -234,7 +234,7 @@
 			<add order="0" stat="pDef" val="30" />
 		</for>
 	</item>
-	<item id="718" type="EtcItem" name="Hard Leather Gloves">
+	<item id="718" type="EtcItem" name="Durable Leather Gloves">
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -249,7 +249,7 @@
 			<add order="0" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="719" type="EtcItem" name="Crafted Leather Gloves">
+	<item id="719" type="EtcItem" name="Quality Leather Gloves">
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -294,7 +294,7 @@
 			<add order="0" stat="pDef" val="30" />
 		</for>
 	</item>
-	<item id="722" type="EtcItem" name="Hard Leather Boots">
+	<item id="722" type="EtcItem" name="Durable Leather Boots">
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -309,7 +309,7 @@
 			<add order="0" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="723" type="EtcItem" name="Crafted Leather Boots">
+	<item id="723" type="EtcItem" name="Quality Leather Boots">
 		<set name="icon" val="icon.armor_feet99" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -353,7 +353,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="726" type="EtcItem" name="Mana Drug">
+	<item id="726" type="EtcItem" name="Mana Potion">
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -458,7 +458,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="734" type="EtcItem" name="Haste Potion">
+	<item id="734" type="EtcItem" name="Wind Walk Potion">
 		<set name="icon" val="icon.etc_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -476,7 +476,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="735" type="EtcItem" name="Alacrity Potion">
+	<item id="735" type="EtcItem" name="Haste Potion">
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -627,7 +627,7 @@
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="745" type="EtcItem" name="Cobendell Medicine">
+	<item id="745" type="EtcItem" name="Cobendell's Medicine">
 		<set name="icon" val="icon.item_normal40" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -868,7 +868,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="762" type="EtcItem" name="Gray Bone Chip">
+	<item id="762" type="EtcItem" name="Grey Bone Chip">
 		<set name="icon" val="icon.item_normal05" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1000,7 +1000,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="774" type="EtcItem" name="Fallen Sword of Honor">
+	<item id="774" type="EtcItem" name="Fallen Glorious Sword">
 		<set name="icon" val="icon.weapon_1hs04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1011,7 +1011,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="775" type="EtcItem" name="Sword of Honor">
+	<item id="775" type="EtcItem" name="Glorious Sword">
 		<set name="icon" val="icon.weapon_1hs05" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

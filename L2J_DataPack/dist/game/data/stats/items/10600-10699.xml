@@ -48,7 +48,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10606" type="Armor" name="Agathion Seal Bracelet - Rudolph">
+	<item id="10606" type="Armor" name="Agathion - Rudolph">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -61,7 +61,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="5537-1;3425-1;3267-1" />
 	</item>
-	<item id="10607" type="EtcItem" name="Agathion Seal Bracelet - Rudolph">
+	<item id="10607" type="EtcItem" name="Agathion - Rudolph">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -70,7 +70,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10608" type="EtcItem" name="Forgotten Scroll - Chant of Combat">
+	<item id="10608" type="EtcItem" name="Forgotten Scroll: Chant of Combat">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -80,7 +80,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2505-1" />
 	</item>
-	<item id="10609" type="EtcItem" name="Forgotten Scroll - Chant of Critical">
+	<item id="10609" type="EtcItem" name="Forgotten Scroll: Chant of Critical">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -90,7 +90,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2506-1" />
 	</item>
-	<item id="10610" type="EtcItem" name="Forgotten Scroll - Chant of Blood Awakening">
+	<item id="10610" type="EtcItem" name="Forgotten Scroll: Chant of Blood Awakening">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -144,7 +144,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10614" type="Armor" name="White Wool Hat (Event)">
+	<item id="10614" type="Armor" name="White Sheep Hat (Event)">
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -155,7 +155,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10615" type="Armor" name="Black Wool Hat (Event)">
+	<item id="10615" type="Armor" name="Black Sheep Hat (Event)">
 		<set name="icon" val="icon.accessory_sheep_cap_black_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -177,7 +177,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10617" type="Armor" name="Ant Hat - Year 2008">
+	<item id="10617" type="Armor" name="Ant Hat">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -188,7 +188,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10618" type="Armor" name="Ol Mahum Hat - Year 2008">
+	<item id="10618" type="Armor" name="Ol Mahum Hat">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -199,7 +199,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10619" type="Armor" name="Wolf Hat - Year 2008">
+	<item id="10619" type="Armor" name="Wolf Hat">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -210,7 +210,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10620" type="Armor" name="Shadow Item - Ant Hat - Blessed Scroll of Escape">
+	<item id="10620" type="Armor" name="Shadow Item: Ant Hat">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -225,7 +225,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="120" />
 	</item>
-	<item id="10621" type="Armor" name="Shadow Item - Ant Hat - Blessed Scroll of Resurrection">
+	<item id="10621" type="Armor" name="Shadow Item: Ant Hat">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -240,7 +240,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="120" />
 	</item>
-	<item id="10622" type="Armor" name="Shadow Item - Ant Hat - Firework">
+	<item id="10622" type="Armor" name="Shadow Item: Ant Hat">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -255,7 +255,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="10623" type="Armor" name="Shadow Item - Ant Hat - Big Head">
+	<item id="10623" type="Armor" name="Shadow Item: Ant Hat">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -270,7 +270,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="10" />
 	</item>
-	<item id="10624" type="Armor" name="Shadow Item - Ol Mahum Hat - Blessed Scroll of Escape">
+	<item id="10624" type="Armor" name="Shadow Item: Ol Mahum Hat">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -285,7 +285,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="120" />
 	</item>
-	<item id="10625" type="Armor" name="Shadow Item - Ol Mahum Hat - Blessed Scroll of Resurrection">
+	<item id="10625" type="Armor" name="Shadow Item: Ol Mahum Hat">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -300,7 +300,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="120" />
 	</item>
-	<item id="10626" type="Armor" name="Shadow Item - Ol Mahum Hat - Firework">
+	<item id="10626" type="Armor" name="Shadow Item: Ol Mahum Hat">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -315,7 +315,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="10627" type="Armor" name="Shadow Item - Ol Mahum Hat - Big Head">
+	<item id="10627" type="Armor" name="Shadow Item: Ol Mahum Hat">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -330,7 +330,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="10" />
 	</item>
-	<item id="10628" type="Armor" name="Shadow Item - Wolf Hat - Blessed Scroll of Escape">
+	<item id="10628" type="Armor" name="Shadow Item: Wolf Hat">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -345,7 +345,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="120" />
 	</item>
-	<item id="10629" type="Armor" name="Shadow Item - Wolf Hat - Blessed Scroll of Resurrection">
+	<item id="10629" type="Armor" name="Shadow Item: Wolf Hat">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -360,7 +360,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="120" />
 	</item>
-	<item id="10630" type="Armor" name="Shadow Item - Wolf Hat - Firework">
+	<item id="10630" type="Armor" name="Shadow Item: Wolf Hat">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -375,7 +375,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="10631" type="Armor" name="Shadow Item - Wolf Hat - Big Head">
+	<item id="10631" type="Armor" name="Shadow Item: Wolf Hat">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -434,7 +434,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10638" type="EtcItem" name="Rough Black Cubic Piece">
+	<item id="10638" type="EtcItem" name="Rough Black Cube Fragment">
 		<set name="icon" val="icon.event_cubic_piece_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -501,13 +501,13 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10647" type="EtcItem" name="Fine Black Cubic Piece">
+	<item id="10647" type="EtcItem" name="Fine Black Cube Fragment">
 		<set name="icon" val="icon.event_cubic_piece_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10648" type="EtcItem" name="inven_tol_i_ll">
+	<item id="10648" type="EtcItem" name="Inventory2">
 		<!-- Doesn't exist in client. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -574,7 +574,7 @@
 		<set name="price" val="18000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10655" type="EtcItem" name="Herb of Vampiric Rage">
+	<item id="10655" type="EtcItem" name="Herb of HP Drain">
 		<set name="icon" val="BranchSys2.icon.etc_vampiric_rage_herb_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -594,7 +594,7 @@
 		<set name="item_skill" val="2514-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="10657" type="EtcItem" name="Herb of Doubt">
+	<item id="10657" type="EtcItem" name="Mysterious Herb">
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -603,7 +603,7 @@
 		<set name="item_skill" val="2513-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="10658" type="Armor" name="Pet Accessory (Not In Use)">
+	<item id="10658" type="Armor" name="Pet Accessory (Not in Use)">
 		<set name="icon" val="icon.etc_prefect_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -619,7 +619,7 @@
 			<add order="0" stat="mDef" val="7" />
 		</for>
 	</item>
-	<item id="10659" type="Armor" name="Agathion Summon Bracelet - Monkey">
+	<item id="10659" type="Armor" name="Agathion - Monkey">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -633,7 +633,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8254-1;3267-1;5951-1;5953-1" />
 	</item>
-	<item id="10660" type="Armor" name="Agathion Summon Bracelet - Griffin">
+	<item id="10660" type="Armor" name="Agathion - Griffin">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -647,7 +647,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8255-1;3267-1;5952-1;5953-1" />
 	</item>
-	<item id="10661" type="EtcItem" name="Pet Summon Item - Warrior Use">
+	<item id="10661" type="EtcItem" name="Pet Summon Item (Warrior)">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -660,7 +660,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="10662" type="EtcItem" name="Pet Summon Item - Wizard Use">
+	<item id="10662" type="EtcItem" name="Pet Summon Item (Wizard)">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -673,7 +673,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="10663" type="EtcItem" name="Pet Summon Item - Mixing Use">
+	<item id="10663" type="EtcItem" name="Pet Summon Item (All)">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i02" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -686,7 +686,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="10664" type="EtcItem" name="Pet Summon Item - Warrior Pet">
+	<item id="10664" type="EtcItem" name="Pet Summon Item (Warrior Pet)">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -699,7 +699,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="10665" type="EtcItem" name="Pet Summon Item - Warrior Pet">
+	<item id="10665" type="EtcItem" name="Pet Summon Item (Warrior Pet)">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -712,7 +712,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="10666" type="EtcItem" name="Potion of Replenish Vitality">
+	<item id="10666" type="EtcItem" name="Vitality Replenishing Potion">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

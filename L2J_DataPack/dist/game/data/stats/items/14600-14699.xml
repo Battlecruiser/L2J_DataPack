@@ -90,7 +90,7 @@
 		<set name="duration" val="66" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="14605" type="Armor" name="Red Talisman - Territory Guard">
+	<item id="14605" type="Armor" name="Red Talisman - Territory Escort">
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -105,7 +105,7 @@
 		<set name="duration" val="66" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="14606" type="Weapon" name="Gracian Soldier Two-Handed Sword">
+	<item id="14606" type="Weapon" name="Gracian Soldier Two-handed Sword">
 		<set name="icon" val="icon.weapon_mon_gracia_soldier_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -214,7 +214,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
 	</item>
-	<item id="14612" type="EtcItem" name="Christmas Red Sock">
+	<item id="14612" type="EtcItem" name="Holiday Red Sock">
 		<set name="icon" val="icon.xmas_present_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -236,7 +236,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="6097-1;6098-1;6099-1" />
 	</item>
-	<item id="14614" type="EtcItem" name="Lineage II Devotee Scroll">
+	<item id="14614" type="EtcItem" name="Santa's Buff Gift Set">
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -250,7 +250,7 @@
 		<set name="item_skill" val="2856-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14615" type="EtcItem" name="Scroll of Christmas Festival - Mage Type">
+	<item id="14615" type="EtcItem" name="Holiday Scroll (Wizard)">
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -264,7 +264,7 @@
 		<set name="item_skill" val="2857-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14616" type="EtcItem" name="Gift from Santa Claus">
+	<item id="14616" type="EtcItem" name="Santa's Gift">
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -274,7 +274,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2858-1" />
 	</item>
-	<item id="14617" type="Armor" name="Agathion Seal Bracelet - Rudolph">
+	<item id="14617" type="Armor" name="Agathion - Rudolph">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -288,7 +288,7 @@
 		<set name="item_skill" val="5537-1;3425-1;3267-1" />
 		<set name="time" val="20160" />
 	</item>
-	<item id="14618" type="EtcItem" name="Agathion Seal Bracelet - Rudolph">
+	<item id="14618" type="EtcItem" name="Agathion - Rudolph">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -666,7 +666,7 @@
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="14635" type="EtcItem" name="Low Quality Battle Reward Chest">
+	<item id="14635" type="EtcItem" name="Battle Reward Box (Low-grade)">
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -679,7 +679,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2852-1" />
 	</item>
-	<item id="14636" type="EtcItem" name="Middle Quality Battle Reward Chest">
+	<item id="14636" type="EtcItem" name="Battle Reward Box (Mid-grade)">
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -692,7 +692,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2853-1" />
 	</item>
-	<item id="14637" type="EtcItem" name="High-Grade Battle Reward Chest">
+	<item id="14637" type="EtcItem" name="Battle Reward Box (High-grade)">
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -705,7 +705,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2854-1" />
 	</item>
-	<item id="14638" type="EtcItem" name="Best Quality Battle Reward Chest">
+	<item id="14638" type="EtcItem" name="Battle Reward Box (Top-grade)">
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -861,7 +861,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="2499,1,1,100;13421,5,5,100" />
 	</item>
-	<item id="14650" type="EtcItem" name="Event - Samurai Longsword">
+	<item id="14650" type="EtcItem" name="Event - Samurai Long Sword">
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1043,7 +1043,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="2582,1,1,100;13421,3,3,100" />
 	</item>
-	<item id="14664" type="Armor" name="Gludio Protection Earring">
+	<item id="14664" type="Armor" name="Gludio Resistance Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1063,7 +1063,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14665" type="Armor" name="Dion Protection Earring">
+	<item id="14665" type="Armor" name="Dion Resistance Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1083,7 +1083,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14666" type="Armor" name="Giran Protection Earring">
+	<item id="14666" type="Armor" name="Giran Resistance Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1103,7 +1103,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14667" type="Armor" name="Oren Protection Earring">
+	<item id="14667" type="Armor" name="Oren Resistance Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1123,7 +1123,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14668" type="Armor" name="Aden Protection Earring">
+	<item id="14668" type="Armor" name="Aden Resistance Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1143,7 +1143,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14669" type="Armor" name="Innadril Protection Earring">
+	<item id="14669" type="Armor" name="Innadril Resistance Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1163,7 +1163,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14670" type="Armor" name="Goddard Protection Earring">
+	<item id="14670" type="Armor" name="Goddard Resistance Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1183,7 +1183,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14671" type="Armor" name="Rune Protection Earring">
+	<item id="14671" type="Armor" name="Rune Resistance Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1203,7 +1203,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14672" type="Armor" name="Schuttgart Protection Earring">
+	<item id="14672" type="Armor" name="Schuttgart Resistance Earring">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1254,7 +1254,7 @@
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14675" type="Armor" name="Agathion Seal Bracelet - Neolithica">
+	<item id="14675" type="Armor" name="Agathion - Neolithica">
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1289,35 +1289,35 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2866-1" />
 	</item>
-	<item id="14678" type="EtcItem" name="Neolithic Crystal - B">
+	<item id="14678" type="EtcItem" name="Neolithic Crystal (B-grade)">
 		<set name="icon" val="icon.etc_warding_orb_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14679" type="EtcItem" name="Neolithic Crystal - A">
+	<item id="14679" type="EtcItem" name="Neolithic Crystal (A-grade)">
 		<set name="icon" val="icon.etc_warding_orb_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14680" type="EtcItem" name="Neolithic Crystal - S">
+	<item id="14680" type="EtcItem" name="Neolithic Crystal (S-grade)">
 		<set name="icon" val="icon.etc_warding_orb_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14681" type="EtcItem" name="Neolithic Crystal - S80">
+	<item id="14681" type="EtcItem" name="Neolithic Crystal (S80-grade)">
 		<set name="icon" val="icon.etc_warding_orb_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14682" type="EtcItem" name="Greater Elixir of Life (No-Grade)">
+	<item id="14682" type="EtcItem" name="Superior Elixir of Life (No-grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1334,7 +1334,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14683" type="EtcItem" name="Greater Elixir of Life (D-Grade)">
+	<item id="14683" type="EtcItem" name="Superior Elixir of Life (D-grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1352,7 +1352,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14684" type="EtcItem" name="Greater Elixir of Life (C-Grade)">
+	<item id="14684" type="EtcItem" name="Superior Elixir of Life (C-grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1370,7 +1370,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14685" type="EtcItem" name="Greater Elixir of Life (B-Grade)">
+	<item id="14685" type="EtcItem" name="Superior Elixir of Life (B-grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1388,7 +1388,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14686" type="EtcItem" name="Greater Elixir of Life (A-Grade)">
+	<item id="14686" type="EtcItem" name="Superior Elixir of Life (A-grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1406,7 +1406,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14687" type="EtcItem" name="Greater Elixir of Life (S-Grade)">
+	<item id="14687" type="EtcItem" name="Superior Elixir of Life (S-grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1424,7 +1424,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14688" type="EtcItem" name="Greater Elixir of Mental Strength (No-Grade)">
+	<item id="14688" type="EtcItem" name="Superior Elixir of Mind (No-grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1441,7 +1441,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14689" type="EtcItem" name="Greater Elixir of Mental Strength (D-Grade)">
+	<item id="14689" type="EtcItem" name="Superior Elixir of Mind (D-grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1459,7 +1459,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14690" type="EtcItem" name="Greater Elixir of Mental Strength (C-Grade)">
+	<item id="14690" type="EtcItem" name="Superior Elixir of Mind (C-grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1477,7 +1477,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14691" type="EtcItem" name="Greater Elixir of Mental Strength (B-Grade)">
+	<item id="14691" type="EtcItem" name="Superior Elixir of Mind (B-grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1495,7 +1495,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14692" type="EtcItem" name="Greater Elixir of Mental Strength (A-Grade)">
+	<item id="14692" type="EtcItem" name="Superior Elixir of Mind (A-grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1513,7 +1513,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14693" type="EtcItem" name="Greater Elixir of Mental Strength (S-Grade)">
+	<item id="14693" type="EtcItem" name="Superior Elixir of Mind (S-grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1531,7 +1531,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14694" type="EtcItem" name="Greater Elixir of CP (No Grade)">
+	<item id="14694" type="EtcItem" name="Superior Elixir of CP (No-grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1545,7 +1545,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2862-1" />
 	</item>
-	<item id="14695" type="EtcItem" name="Greater Elixir of CP (D-Grade)">
+	<item id="14695" type="EtcItem" name="Superior Elixir of CP (D-grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1560,7 +1560,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2862-2" />
 	</item>
-	<item id="14696" type="EtcItem" name="Greater Elixir of CP (C-Grade)">
+	<item id="14696" type="EtcItem" name="Superior Elixir of CP (C-grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1575,7 +1575,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2862-3" />
 	</item>
-	<item id="14697" type="EtcItem" name="Greater Elixir of CP (B-Grade)">
+	<item id="14697" type="EtcItem" name="Superior Elixir of CP (B-grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1590,7 +1590,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2862-4" />
 	</item>
-	<item id="14698" type="EtcItem" name="Greater Elixir of CP (A-Grade)">
+	<item id="14698" type="EtcItem" name="Superior Elixir of CP (A-grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1605,7 +1605,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2862-5" />
 	</item>
-	<item id="14699" type="EtcItem" name="Greater Elixir of CP (S-Grade)">
+	<item id="14699" type="EtcItem" name="Superior Elixir of CP (S-grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />

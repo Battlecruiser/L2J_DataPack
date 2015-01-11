@@ -511,7 +511,7 @@
 			<add order="0" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="27" type="Armor" name="Hard Leather Shirt">
+	<item id="27" type="Armor" name="Durable Leather Shirt">
 		<set name="icon" val="icon.armor_t30_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -550,7 +550,7 @@
 			<add order="0" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="30" type="Armor" name="Hard Leather Pants">
+	<item id="30" type="Armor" name="Durable Leather Pants">
 		<set name="icon" val="icon.armor_t06_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -592,7 +592,7 @@
 			<add order="0" stat="pDef" val="39" />
 		</for>
 	</item>
-	<item id="33" type="Armor" name="Hard Leather Gaiters">
+	<item id="33" type="Armor" name="Durable Leather Gaiters">
 		<set name="icon" val="icon.armor_t30_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -841,7 +841,7 @@
 			<add order="0" stat="pDef" val="17" />
 		</for>
 	</item>
-	<item id="52" type="Weapon" name="Vesper Dual Sword">
+	<item id="52" type="Weapon" name="Vesper Dualsword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -870,7 +870,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="53" type="EtcItem" name="(Not In Use)">
+	<item id="53" type="EtcItem" name="(Not in Use)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -884,7 +884,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13024,1,1,100" />
 	</item>
-	<item id="54" type="EtcItem" name="(Not In Use)">
+	<item id="54" type="EtcItem" name="(Not in Use)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -898,7 +898,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13025,1,1,100" />
 	</item>
-	<item id="55" type="EtcItem" name="Shiny Agathion 7-Day Pack (Event)">
+	<item id="55" type="EtcItem" name="Agathion - Shiny Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -912,7 +912,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14102,1,1,100" />
 	</item>
-	<item id="56" type="EtcItem" name="Sobbing Agathion 7-Day Pack (Event)">
+	<item id="56" type="EtcItem" name="Agathion - Sobbing Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -973,7 +973,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="60" type="Armor" name="Composite Armor">
+	<item id="60" type="Armor" name="Compound Armor">
 		<set name="icon" val="icon.armor_t61_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -993,7 +993,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="61" type="Armor" name="Mithril Plate Gloves">
+	<item id="61" type="Armor" name="Mithril Gloves">
 		<set name="icon" val="icon.armor_t46_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1041,7 +1041,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="64" type="Armor" name="Composite Boots">
+	<item id="64" type="Armor" name="Compound Boots">
 		<set name="icon" val="icon.armor_t61_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1215,7 +1215,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="72" type="Weapon" name="Stormbringer">
+	<item id="72" type="Weapon" name="StormBringer">
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1404,7 +1404,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="79" type="Weapon" name="Sword of Damascus">
+	<item id="79" type="Weapon" name="Damascus Sword">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1485,7 +1485,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="82" type="Weapon" name="Gaz Blade">
+	<item id="82" type="Weapon" name="Celestial Blade">
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1568,7 +1568,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="85" type="Weapon" name="Phantom Sword">
+	<item id="85" type="Weapon" name="Corroded Phantom Sword">
 		<set name="icon" val="icon.weapon_phantom_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

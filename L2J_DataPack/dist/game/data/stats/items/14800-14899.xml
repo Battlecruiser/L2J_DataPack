@@ -8,7 +8,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14801" type="Armor" name="Gludio Guard Earring">
+	<item id="14801" type="Armor" name="Gludio Royal Guard Earring">
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -218,7 +218,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="14812" type="Armor" name="Red Talisman - Territory Guard">
+	<item id="14812" type="Armor" name="Red Talisman - Territory Royal Guard">
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -248,7 +248,7 @@
 		<set name="duration" val="74" />
 		<set name="useSkillDisTime" val="15" />
 	</item>
-	<item id="14814" type="Armor" name="White Talisman - All Resistance">
+	<item id="14814" type="Armor" name="White Talisman - Attribute Resistance">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -263,7 +263,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="14815" type="EtcItem" name="Territory Health Recovery Potion">
+	<item id="14815" type="EtcItem" name="Superior Elixir of Life (Battleground)">
 		<set name="icon" val="icon.etc_super_hp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -282,7 +282,7 @@
 			<player SiegeZone="126" />
 		</cond>
 	</item>
-	<item id="14816" type="EtcItem" name="Territory Mana Recovery Potion">
+	<item id="14816" type="EtcItem" name="Superior Elixir of Mind (Battleground)">
 		<set name="icon" val="icon.etc_super_mp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -301,7 +301,7 @@
 			<player SiegeZone="126" />
 		</cond>
 	</item>
-	<item id="14817" type="EtcItem" name="Territory CP Recovery Potion">
+	<item id="14817" type="EtcItem" name="Superior Elixir of CP (Battleground)">
 		<set name="icon" val="icon.etc_super_cp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -320,7 +320,7 @@
 			<player SiegeZone="126" />
 		</cond>
 	</item>
-	<item id="14818" type="EtcItem" name="Enriched Pet Food for Wolves">
+	<item id="14818" type="EtcItem" name="Enriched Pet Food">
 		<set name="icon" val="icon.etc_pouch_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -619,7 +619,7 @@
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14847" type="EtcItem" name="Titan Ancient Book">
+	<item id="14847" type="EtcItem" name="Ancient Lesser Giant Book">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -692,7 +692,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14854" type="EtcItem" name="Recipe - Spiteful Soul Energy">
+	<item id="14854" type="EtcItem" name="Recipe: Spiteful Soul Energy">
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
@@ -754,7 +754,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="14860" type="EtcItem" name="Box Containing the Flame of the Holy Spirit">
+	<item id="14860" type="EtcItem" name="Box Containing Flame of Holy Spirit">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -765,7 +765,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="14861" type="EtcItem" name="Cursed Burial Items">
+	<item id="14861" type="EtcItem" name="Cursed Grave Goods">
 		<set name="icon" val="icon.etc_totem_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -853,7 +853,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="14869" type="EtcItem" name="Destroyed machine piece">
+	<item id="14869" type="EtcItem" name="Destroyed Machine Piece">
 		<set name="icon" val="icon.etc_plate_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -864,7 +864,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="14870" type="EtcItem" name="Enchanted Golem Shard">
+	<item id="14870" type="EtcItem" name="Reinforced Golem Shard">
 		<set name="icon" val="icon.etc_plate_glay_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -930,7 +930,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="14876" type="EtcItem" name="Evidence of Migration">
+	<item id="14876" type="EtcItem" name="Proof of Migration">
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -985,7 +985,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="14881" type="EtcItem" name="Soul Core Containing Evil Spirit">
+	<item id="14881" type="EtcItem" name="Evil Freed Soul">
 		<set name="icon" val="icon.etc_evil_soul_core_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

@@ -110,7 +110,7 @@
 		<set name="handler" val="ItemSkillsTemplate" />
 		<set name="item_skill" val="2499-1" />
 	</item>
-	<item id="10411" type="EtcItem" name="Full Bottle of Souls - 5 Souls (For Combat)">
+	<item id="10411" type="EtcItem" name="Full Bottle of Souls - 5 Souls (Battleground)">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -146,7 +146,7 @@
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10414" type="EtcItem" name="Agathion Exchange Coupon">
+	<item id="10414" type="EtcItem" name="Agathion Coupon">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
@@ -154,7 +154,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10415" type="Weapon" name="Icarus Dual Sword">
+	<item id="10415" type="Weapon" name="Icarus Dualsword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -288,7 +288,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="10423" type="Armor" name="Blue Talisman - Self-Destruction">
+	<item id="10423" type="Armor" name="Blue Talisman - Self-destruction">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -418,7 +418,7 @@
 		<set name="item_skill" val="2486-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="10434" type="Weapon" name="Icarus Sawsword - Focus">
+	<item id="10434" type="Weapon" name="Icarus Sawsword">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -447,7 +447,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10435" type="Weapon" name="Icarus Sawsword - Health">
+	<item id="10435" type="Weapon" name="Icarus Sawsword">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -476,7 +476,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10436" type="Weapon" name="Icarus Sawsword - Light">
+	<item id="10436" type="Weapon" name="Icarus Sawsword">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -505,7 +505,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10437" type="Weapon" name="Icarus Heavy Arms - Focus">
+	<item id="10437" type="Weapon" name="Icarus Heavy Arms">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -534,7 +534,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10438" type="Weapon" name="Icarus Heavy Arms - Health">
+	<item id="10438" type="Weapon" name="Icarus Heavy Arms">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -563,7 +563,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10439" type="Weapon" name="Icarus Heavy Arms - Light">
+	<item id="10439" type="Weapon" name="Icarus Heavy Arms">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -592,7 +592,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10440" type="Weapon" name="Icarus Spirit - Acumen">
+	<item id="10440" type="Weapon" name="Icarus Spirit">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -621,7 +621,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10441" type="Weapon" name="Icarus Spirit - Mana Up">
+	<item id="10441" type="Weapon" name="Icarus Spirit">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -650,7 +650,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10442" type="Weapon" name="Icarus Spirit - Conversion">
+	<item id="10442" type="Weapon" name="Icarus Spirit">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -679,7 +679,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10443" type="Weapon" name="Icarus Spitter - Cheap Shot">
+	<item id="10443" type="Weapon" name="Icarus Spitter">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -711,7 +711,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10444" type="Weapon" name="Icarus Spitter - Guidance">
+	<item id="10444" type="Weapon" name="Icarus Spitter">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -743,7 +743,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10445" type="Weapon" name="Icarus Spitter - Focus">
+	<item id="10445" type="Weapon" name="Icarus Spitter">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -775,7 +775,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10446" type="Weapon" name="Icarus Disperser - Focus">
+	<item id="10446" type="Weapon" name="Icarus Disperser">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -804,7 +804,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10447" type="Weapon" name="Icarus Disperser - Evasion">
+	<item id="10447" type="Weapon" name="Icarus Disperser">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -833,7 +833,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10448" type="Weapon" name="Icarus Disperser - Critical Damage">
+	<item id="10448" type="Weapon" name="Icarus Disperser">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -862,7 +862,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10449" type="Weapon" name="Icarus Trident - Anger">
+	<item id="10449" type="Weapon" name="Icarus Trident">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -891,7 +891,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10450" type="Weapon" name="Icarus Trident - Critical Stun">
+	<item id="10450" type="Weapon" name="Icarus Trident">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -922,7 +922,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10451" type="Weapon" name="Icarus Trident - Light">
+	<item id="10451" type="Weapon" name="Icarus Trident">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -951,7 +951,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10452" type="Weapon" name="Icarus Hammer - Anger">
+	<item id="10452" type="Weapon" name="Icarus Hammer">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -980,7 +980,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10453" type="Weapon" name="Icarus Hammer - Health">
+	<item id="10453" type="Weapon" name="Icarus Hammer">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1038,7 +1038,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10455" type="Weapon" name="Icarus Hall - Mana Up">
+	<item id="10455" type="Weapon" name="Icarus Hall">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1068,7 +1068,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10456" type="Weapon" name="Icarus Hall - Conversion">
+	<item id="10456" type="Weapon" name="Icarus Hall">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1098,7 +1098,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10457" type="Weapon" name="Icarus Hall - Acumen">
+	<item id="10457" type="Weapon" name="Icarus Hall">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1157,7 +1157,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10459" type="Weapon" name="Icarus Hand - Focus">
+	<item id="10459" type="Weapon" name="Icarus Hand">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1186,7 +1186,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10460" type="Weapon" name="Icarus Hand - Haste">
+	<item id="10460" type="Weapon" name="Icarus Hand">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1215,7 +1215,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10461" type="Weapon" name="Icarus Stinger - Focus">
+	<item id="10461" type="Weapon" name="Icarus Stinger">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1249,7 +1249,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10462" type="Weapon" name="Icarus Stinger - Health">
+	<item id="10462" type="Weapon" name="Icarus Stinger">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1283,7 +1283,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10463" type="Weapon" name="Icarus Stinger - Light">
+	<item id="10463" type="Weapon" name="Icarus Stinger">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1317,7 +1317,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10464" type="Weapon" name="Icarus Wingblade - Focus">
+	<item id="10464" type="Weapon" name="Icarus Wingblade">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1350,7 +1350,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10465" type="Weapon" name="Icarus Wingblade - Health">
+	<item id="10465" type="Weapon" name="Icarus Wingblade">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1383,7 +1383,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10466" type="Weapon" name="Icarus Wingblade - Light">
+	<item id="10466" type="Weapon" name="Icarus Wingblade">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1416,7 +1416,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10467" type="Weapon" name="Icarus Shooter - Cheap Shot">
+	<item id="10467" type="Weapon" name="Icarus Shooter">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1450,7 +1450,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10468" type="Weapon" name="Icarus Shooter - Guidance">
+	<item id="10468" type="Weapon" name="Icarus Shooter">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1484,7 +1484,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10469" type="Weapon" name="Icarus Shooter - Focus">
+	<item id="10469" type="Weapon" name="Icarus Shooter">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1518,7 +1518,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10470" type="Armor" name="Shadow Item - Red Crescent">
+	<item id="10470" type="Armor" name="Shadow Item: Red Crescent">
 		<set name="icon" val="icon.accessary_red_cresent_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1534,7 +1534,7 @@
 			<add order="0" stat="mDef" val="24" />
 		</for>
 	</item>
-	<item id="10471" type="Armor" name="Shadow Item - Ring of Devotion">
+	<item id="10471" type="Armor" name="Shadow Item: Ring of Devotion">
 		<set name="icon" val="icon.accessary_ring_of_devotion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1550,7 +1550,7 @@
 			<add order="0" stat="mDef" val="16" />
 		</for>
 	</item>
-	<item id="10472" type="Armor" name="Shadow Item - Necklace of Devotion">
+	<item id="10472" type="Armor" name="Shadow Item: Necklace of Devotion">
 		<set name="icon" val="icon.accessary_necklace_of_devotion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1609,7 +1609,7 @@
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="10475" type="Weapon" name="Shadow Item - Bone Club">
+	<item id="10475" type="Weapon" name="Shadow Item: Bone Club">
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1637,7 +1637,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="10476" type="Weapon" name="Shadow Item - Shining Knife">
+	<item id="10476" type="Weapon" name="Shadow Item: Shining Knife">
 		<set name="icon" val="icon.weapon_shining_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1665,7 +1665,7 @@
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="10477" type="Weapon" name="Shadow Item - Cestus">
+	<item id="10477" type="Weapon" name="Shadow Item: Cestus">
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1693,7 +1693,7 @@
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="10478" type="Weapon" name="Shadow Item - Forest Bow">
+	<item id="10478" type="Weapon" name="Shadow Item: Forest Bow">
 		<set name="icon" val="icon.weapon_short_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1723,7 +1723,7 @@
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="10479" type="Weapon" name="Shadow Item - Long Sword">
+	<item id="10479" type="Weapon" name="Shadow Item: Long Sword">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1780,7 +1780,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="10483" type="EtcItem" name="Life Stone - Level 82">
+	<item id="10483" type="EtcItem" name="Life Stone - Lv. 82">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1791,7 +1791,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10484" type="EtcItem" name="Mid-Grade Life Stone - Level 82">
+	<item id="10484" type="EtcItem" name="Mid-grade Life Stone - Lv. 82">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1802,7 +1802,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10485" type="EtcItem" name="High-Grade Life Stone - Level 82">
+	<item id="10485" type="EtcItem" name="High-grade Life Stone - Lv. 82">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1813,7 +1813,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10486" type="EtcItem" name="Top-Grade Life Stone - Level 82">
+	<item id="10486" type="EtcItem" name="Top-grade Life Stone - Lv. 82">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1824,7 +1824,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10487" type="Armor" name="Dynasty Jeweled Leather Armor - Force Master">
+	<item id="10487" type="Armor" name="Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1845,7 +1845,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10488" type="Armor" name="Dynasty Jeweled Leather Armor - Weapon Master">
+	<item id="10488" type="Armor" name="Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1866,7 +1866,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10489" type="Armor" name="Dynasty Jeweled Leather Armor - Enchanter">
+	<item id="10489" type="Armor" name="Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1887,7 +1887,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10490" type="Armor" name="Dynasty Jeweled Leather Armor - Summoner">
+	<item id="10490" type="Armor" name="Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1908,7 +1908,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10491" type="Armor" name="Silk Shirt - HP">
+	<item id="10491" type="Armor" name="Silk Shirt">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1925,7 +1925,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10492" type="Armor" name="Silk Shirt - MP">
+	<item id="10492" type="Armor" name="Silk Shirt">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1942,7 +1942,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10493" type="Armor" name="Silk Shirt - CP">
+	<item id="10493" type="Armor" name="Silk Shirt">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1959,7 +1959,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10494" type="Armor" name="Thin Leather Shirt - HP">
+	<item id="10494" type="Armor" name="Thin Leather Shirt">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1976,7 +1976,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10495" type="Armor" name="Thin Leather Shirt - MP">
+	<item id="10495" type="Armor" name="Thin Leather Shirt">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1993,7 +1993,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10496" type="Armor" name="Thin Leather Shirt - CP">
+	<item id="10496" type="Armor" name="Thin Leather Shirt">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2010,7 +2010,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10497" type="Armor" name="Scale Shirt - HP">
+	<item id="10497" type="Armor" name="Scale Shirt">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2027,7 +2027,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10498" type="Armor" name="Scale Shirt - MP">
+	<item id="10498" type="Armor" name="Scale Shirt">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2044,7 +2044,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10499" type="Armor" name="Scale Shirt - CP">
+	<item id="10499" type="Armor" name="Scale Shirt">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />

@@ -196,7 +196,7 @@
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="1308" type="Armor" name="Compound Scale Mail">
+	<item id="1308" type="Armor" name="Top">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -285,7 +285,7 @@
 			<add stat="maxMp" val="142" />
 		</for>
 	</item>
-	<item id="1313" type="Armor" name="Compound Scale Gaiters">
+	<item id="1313" type="Armor" name="Pants">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -402,7 +402,7 @@
 			<add order="0" stat="pDef" val="14" />
 		</for>
 	</item>
-	<item id="1320" type="Armor" name="Crafted Leather Gloves">
+	<item id="1320" type="Armor" name="Quality Leather Gloves">
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -444,7 +444,7 @@
 			<add order="0" stat="pDef" val="14" />
 		</for>
 	</item>
-	<item id="1323" type="Armor" name="Leather Shoes">
+	<item id="1323" type="Armor" name="Shoes">
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -730,7 +730,7 @@
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1345" type="EtcItem" name="Shining Arrow">
+	<item id="1345" type="EtcItem" name="Arrow of Light">
 		<set name="icon" val="icon.etc_shining_quiver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
@@ -820,7 +820,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1353" type="EtcItem" name="Skull">
+	<item id="1353" type="EtcItem" name="Deadman's Skull">
 		<set name="icon" val="icon.etc_skull_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -831,7 +831,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1354" type="EtcItem" name="Rib Bone">
+	<item id="1354" type="EtcItem" name="Deadman's Rib Bone">
 		<set name="icon" val="icon.etc_rib_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -842,7 +842,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1355" type="EtcItem" name="Spine">
+	<item id="1355" type="EtcItem" name="Deadman's Spine">
 		<set name="icon" val="icon.etc_piece_bone_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -853,7 +853,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1356" type="EtcItem" name="Arm Bone">
+	<item id="1356" type="EtcItem" name="Deadman's Arm Bone">
 		<set name="icon" val="icon.etc_piece_bone_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -864,7 +864,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1357" type="EtcItem" name="Thigh Bone">
+	<item id="1357" type="EtcItem" name="Deadman's Thigh Bone">
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -875,7 +875,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1358" type="EtcItem" name="Complete Skeleton">
+	<item id="1358" type="EtcItem" name="Deadman's Complete Skeleton">
 		<set name="icon" val="icon.etc_ashes_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -996,7 +996,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1369" type="EtcItem" name="Black Lion Mark">
+	<item id="1369" type="EtcItem" name="Black Lion Badge">
 		<set name="icon" val="icon.etc_badge_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1039,7 +1039,7 @@
 		<set name="price" val="600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1374" type="EtcItem" name="Greater Haste Potion">
+	<item id="1374" type="EtcItem" name="Greater Wind Walk Potion">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1057,7 +1057,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="1375" type="EtcItem" name="Greater Swift Attack Potion">
+	<item id="1375" type="EtcItem" name="Greater Haste Potion">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1075,7 +1075,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="1376" type="Weapon" name="Guard Spear">
+	<item id="1376" type="Weapon" name="Royal Guard Spear">
 		<set name="icon" val="icon.weapon_guard_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />

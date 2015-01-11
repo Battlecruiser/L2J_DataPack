@@ -11,7 +11,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="allow_self_resurrection" val="true" />
 	</item>
-	<item id="13301" type="EtcItem" name="My Teleport Spellbook (Event)">
+	<item id="13301" type="EtcItem" name="My Teleport Book (Event)">
 		<set name="icon" val="icon.bookmark_book_i00" />
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="material" val="PAPER" />
@@ -37,7 +37,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="13303" type="EtcItem" name="White Weasel Hunting Helper Necklace (Event)">
+	<item id="13303" type="EtcItem" name="White Weasel Minion Necklace (Event)">
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -54,7 +54,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13304" type="EtcItem" name="Fairy Princess Hunting Helper Necklace (Event)">
+	<item id="13304" type="EtcItem" name="Fairy Princess Minion Necklace (Event)">
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -71,7 +71,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13305" type="EtcItem" name="Wild Beast Fighter Hunting Helper Necklace (Event)">
+	<item id="13305" type="EtcItem" name="Wild Beast Fighter Minion Necklace (Event)">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -88,7 +88,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13306" type="EtcItem" name="Fox Shaman Hunting Helper Necklace (Event)">
+	<item id="13306" type="EtcItem" name="Fox Shaman Minion Necklace (Event)">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -105,7 +105,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13307" type="EtcItem" name="Color Name (Event)">
+	<item id="13307" type="EtcItem" name="Color Title (Event)">
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="NICK_COLOR" />
 		<set name="immediate_effect" val="true" />
@@ -119,7 +119,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="NicknameColor" />
 	</item>
-	<item id="13308" type="Armor" name="Light Purple-Maned Horse Mount Bracelet (Event) - 7-day limited period">
+	<item id="13308" type="Armor" name="Mount - Darkmane Pacer (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -134,7 +134,7 @@
 		<set name="item_skill" val="8247-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13309" type="Armor" name="Agathion of Love (Event) - 30-day limited period">
+	<item id="13309" type="Armor" name="Agathion - Love (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -149,7 +149,7 @@
 		<set name="item_skill" val="5763-1;8245-1;3267-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13310" type="Armor" name="Kat the Cat Hat (Event) - 30-day limited period">
+	<item id="13310" type="Armor" name="Kat the Cat Hat (Event)">
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -162,7 +162,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13311" type="Armor" name="Feline Queen Hat (Event) - 30-day limited period">
+	<item id="13311" type="Armor" name="Feline Queen Hat (Event)">
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -175,7 +175,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13312" type="Armor" name="Monster Eye Hat (Event) - 30-day limited period">
+	<item id="13312" type="Armor" name="Monster Eye Hat (Event)">
 		<set name="icon" val="icon.accessory_monstereye_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -188,7 +188,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13313" type="Armor" name="Brown Bear Hat (Event) - 30-day limited period">
+	<item id="13313" type="Armor" name="Brown Bear Hat (Event)">
 		<set name="icon" val="icon.accessory_brown_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -201,7 +201,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13314" type="Armor" name="Fungus Hat (Event) - 30-day limited period">
+	<item id="13314" type="Armor" name="Fungus Hat (Event)">
 		<set name="icon" val="icon.accessory_fungus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -214,7 +214,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13315" type="Armor" name="Skull Hat (Event) - 30-day limited period">
+	<item id="13315" type="Armor" name="Skull Hat (Event)">
 		<set name="icon" val="icon.accessory_skeleton_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -227,7 +227,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13316" type="Armor" name="Ornithomimus Hat (Event) - 30-day limited period">
+	<item id="13316" type="Armor" name="Ornithomimus Hat (Event)">
 		<set name="icon" val="icon.accessory_ornithomimus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -240,7 +240,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13317" type="Armor" name="Feline King Hat (Event) - 30-day limited period">
+	<item id="13317" type="Armor" name="Feline King Hat (Event)">
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -253,7 +253,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13318" type="Armor" name="Kai the Cat Hat (Event) - 30-day limited period">
+	<item id="13318" type="Armor" name="Kai the Cat Hat (Event)">
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -266,7 +266,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13319" type="Weapon" name="O Stick (Event) - 30-day limited period">
+	<item id="13319" type="Weapon" name="O Stick (Event)">
 		<set name="icon" val="icon.weapon_o_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -288,7 +288,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13320" type="Weapon" name="X Stick (Event) - 30-day limited period">
+	<item id="13320" type="Weapon" name="X Stick (Event)">
 		<set name="icon" val="icon.weapon_x_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -310,7 +310,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13321" type="Weapon" name="Scissors Stick (Event) - 30-day limited period">
+	<item id="13321" type="Weapon" name="Scissors Stick (Event)">
 		<set name="icon" val="icon.weapon_scissors_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -332,7 +332,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13322" type="Weapon" name="Rock-type Stick (Event) - 30-day limited period">
+	<item id="13322" type="Weapon" name="Rock Stick (Event)">
 		<set name="icon" val="icon.weapon_rock_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -354,7 +354,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13323" type="Weapon" name="Paper-type Stick (Event) - 30-day limited period">
+	<item id="13323" type="Weapon" name="Paper Stick (Event)">
 		<set name="icon" val="icon.weapon_diver_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -376,7 +376,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13324" type="Weapon" name="Pumpkin Transformation Stick (Event) - 30-day limited period">
+	<item id="13324" type="Weapon" name="Pumpkin Transformation Stick (Event)">
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -400,7 +400,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13325" type="Armor" name="Kat the Cat Hat (Event) - 7-day limited period">
+	<item id="13325" type="Armor" name="Kat the Cat Hat (Event)">
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -413,7 +413,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13326" type="Armor" name="Feline Queen Hat (Event) - 7-day limited period">
+	<item id="13326" type="Armor" name="Feline Queen Hat (Event)">
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -426,7 +426,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13327" type="Armor" name="Monster Eye Hat (Event) - 7-day limited period">
+	<item id="13327" type="Armor" name="Monster Eye Hat (Event)">
 		<set name="icon" val="icon.accessory_monstereye_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -439,7 +439,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13328" type="Armor" name="Brown Bear Hat (Event) - 7-day limited period">
+	<item id="13328" type="Armor" name="Brown Bear Hat (Event)">
 		<set name="icon" val="icon.accessory_brown_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -452,7 +452,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13329" type="Armor" name="Fungus Hat (Event) - 7-day limited period">
+	<item id="13329" type="Armor" name="Fungus Hat (Event)">
 		<set name="icon" val="icon.accessory_fungus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -465,7 +465,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13330" type="Armor" name="Skull Hat (Event) - 7-day limited period">
+	<item id="13330" type="Armor" name="Skull Hat (Event)">
 		<set name="icon" val="icon.accessory_skeleton_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -478,7 +478,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13331" type="Armor" name="Ornithomimus Hat (Event) - 7-day limited period">
+	<item id="13331" type="Armor" name="Ornithomimus Hat (Event)">
 		<set name="icon" val="icon.accessory_ornithomimus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -491,7 +491,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13332" type="Armor" name="Feline King Hat (Event) - 7-day limited period">
+	<item id="13332" type="Armor" name="Feline King Hat (Event)">
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -504,7 +504,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13333" type="Armor" name="Kai the Cat Hat (Event) - 7-day limited period">
+	<item id="13333" type="Armor" name="Kai the Cat Hat (Event)">
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -517,7 +517,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13334" type="Weapon" name="O Stick (Event) - 7-day limited period">
+	<item id="13334" type="Weapon" name="O Stick (Event)">
 		<set name="icon" val="icon.weapon_o_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -539,7 +539,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13335" type="Weapon" name="X Stick (Event) - 7-day limited period">
+	<item id="13335" type="Weapon" name="X Stick (Event)">
 		<set name="icon" val="icon.weapon_x_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -561,7 +561,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13336" type="Weapon" name="Scissors Stick (Event) - 7-day limited period">
+	<item id="13336" type="Weapon" name="Scissors Stick (Event)">
 		<set name="icon" val="icon.weapon_scissors_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -583,7 +583,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13337" type="Weapon" name="Rock-type Stick (Event) - 7-day limited period">
+	<item id="13337" type="Weapon" name="Rock Stick (Event)">
 		<set name="icon" val="icon.weapon_rock_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -605,7 +605,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13338" type="Weapon" name="Paper-type Stick (Event) - 7-day limited period">
+	<item id="13338" type="Weapon" name="Paper Stick (Event)">
 		<set name="icon" val="icon.weapon_diver_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -627,7 +627,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13339" type="Weapon" name="Pumpkin Transformation Stick (Event) - 7-day limited period">
+	<item id="13339" type="Weapon" name="Pumpkin Transformation Stick (Event)">
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -651,7 +651,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13340" type="Armor" name="Agathion of Love (Event) - 7-day limited period">
+	<item id="13340" type="Armor" name="Agathion - Love (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -666,7 +666,7 @@
 		<set name="item_skill" val="5763-1;8245-1;3267-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13341" type="EtcItem" name="My Teleport Spellbook 1-Book Pack (Event)">
+	<item id="13341" type="EtcItem" name="My Teleport Book Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -680,7 +680,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13301,1,1,100" />
 	</item>
-	<item id="13342" type="EtcItem" name="My Teleport Scroll 30-Sheet Pack (Event)">
+	<item id="13342" type="EtcItem" name="My Teleport Scroll 30-unit Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -694,7 +694,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13302,30,30,100" />
 	</item>
-	<item id="13343" type="EtcItem" name="Feather of Blessing 3-Sheet Pack (Event)">
+	<item id="13343" type="EtcItem" name="Feather of Blessing 3-unit Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -708,7 +708,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13300,3,3,100" />
 	</item>
-	<item id="13344" type="EtcItem" name="Agathion of Love 30-Day Pack (Event)">
+	<item id="13344" type="EtcItem" name="Agathion - Love Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -722,7 +722,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13309,1,1,100" />
 	</item>
-	<item id="13345" type="EtcItem" name="Halloween Gift Box">
+	<item id="13345" type="EtcItem" name="Pumpkin Transformation Stick Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -736,7 +736,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13324,1,1,100" />
 	</item>
-	<item id="13346" type="EtcItem" name="Kamaloka Entrance Pass 3-Sheet Pack (Event)">
+	<item id="13346" type="EtcItem" name="Entrance Pass: Kamaloka 3-unit Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -750,7 +750,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13297,5,5,100;13298,5,5,100;13299,5,5,100" />
 	</item>
-	<item id="13347" type="EtcItem" name="Kat the Cat Hat 30-Day Pack (Event)">
+	<item id="13347" type="EtcItem" name="Kat the Cat Hat Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -764,7 +764,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13310,1,1,100" />
 	</item>
-	<item id="13348" type="EtcItem" name="Feline Queen Hat 30-Day Pack (Event)">
+	<item id="13348" type="EtcItem" name="Feline Queen Hat Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -778,7 +778,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13311,1,1,100" />
 	</item>
-	<item id="13349" type="EtcItem" name="Monster Eye Hat 30-Day Pack (Event)">
+	<item id="13349" type="EtcItem" name="Monster Eye Hat Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -792,7 +792,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13312,1,1,100" />
 	</item>
-	<item id="13350" type="EtcItem" name="Brown Bear Hat 30-Day Pack (Event)">
+	<item id="13350" type="EtcItem" name="Brown Bear Hat Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -806,7 +806,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13313,1,1,100" />
 	</item>
-	<item id="13351" type="EtcItem" name="Fungus Hat 30-Day Pack (Event)">
+	<item id="13351" type="EtcItem" name="Fungus Hat Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -820,7 +820,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13314,1,1,100" />
 	</item>
-	<item id="13352" type="EtcItem" name="Skull Hat 30-Day Pack (Event)">
+	<item id="13352" type="EtcItem" name="Skull Hat Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -834,7 +834,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13315,1,1,100" />
 	</item>
-	<item id="13353" type="EtcItem" name="Ornithomimus Hat 30-Day Pack (Event)">
+	<item id="13353" type="EtcItem" name="Ornithomimus Hat Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -848,7 +848,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13316,1,1,100" />
 	</item>
-	<item id="13354" type="EtcItem" name="Feline King Hat 30-Day Pack (Event)">
+	<item id="13354" type="EtcItem" name="Feline King Hat Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -862,7 +862,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13317,1,1,100" />
 	</item>
-	<item id="13355" type="EtcItem" name="Kai the Cat Hat 30-Day Pack (Event)">
+	<item id="13355" type="EtcItem" name="Kai the Cat Hat Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -876,7 +876,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13318,1,1,100" />
 	</item>
-	<item id="13356" type="EtcItem" name="OX Stick 30-Day Pack (Event)">
+	<item id="13356" type="EtcItem" name="OX Stick Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -890,7 +890,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13319,1,1,100;13320,1,1,100" />
 	</item>
-	<item id="13357" type="EtcItem" name="Rock-Paper-Scissors Stick 30-Day Pack (Event)">
+	<item id="13357" type="EtcItem" name="Rock-Paper-Scissors Stick Pack (30-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -904,7 +904,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13321,1,1,100;13322,1,1,100;13323,1,1,100" />
 	</item>
-	<item id="13358" type="EtcItem" name="Purple Maned Horse 7-Day Pack (Event)">
+	<item id="13358" type="EtcItem" name="Darkmane Pacer Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -918,7 +918,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13308,1,1,100" />
 	</item>
-	<item id="13359" type="EtcItem" name="Color Name 3-Sheet Pack (Event)">
+	<item id="13359" type="EtcItem" name="Color Title 3-unit Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -932,7 +932,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13307,3,3,100" />
 	</item>
-	<item id="13360" type="EtcItem" name="Color Name 1-Sheet Pack (Event)">
+	<item id="13360" type="EtcItem" name="Color Title Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -946,7 +946,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13307,1,1,100" />
 	</item>
-	<item id="13361" type="EtcItem" name="My Teleport Scroll 10-Sheet Pack (Event)">
+	<item id="13361" type="EtcItem" name="My Teleport Scroll 10-unit Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -960,7 +960,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13016,10,10,100" />
 	</item>
-	<item id="13362" type="EtcItem" name="Kamaloka (Hall of the Abyss) 15-Sheet Pack (Event)">
+	<item id="13362" type="EtcItem" name="Kamaloka (Hall of the Abyss) 15-unit Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -974,7 +974,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13297,15,15,100" />
 	</item>
-	<item id="13363" type="EtcItem" name="Near Kamaloka 15-Sheet Pack (Event)">
+	<item id="13363" type="EtcItem" name="Near Kamaloka 15-unit Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -988,7 +988,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13298,15,15,100" />
 	</item>
-	<item id="13364" type="EtcItem" name="Kamaloka (Labyrinth of the Abyss) 15-Sheet Pack (Event)">
+	<item id="13364" type="EtcItem" name="Kamaloka (Labyrinth of the Abyss) 15-unit Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1002,7 +1002,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13299,15,15,100" />
 	</item>
-	<item id="13365" type="EtcItem" name="Kamaloka (Hall of the Abyss) 5-Sheet Pack (Event)">
+	<item id="13365" type="EtcItem" name="Kamaloka (Hall of the Abyss) 5-unit Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1016,7 +1016,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13297,5,5,100" />
 	</item>
-	<item id="13366" type="EtcItem" name="Near Kamaloka 5-Sheet Pack (Event)">
+	<item id="13366" type="EtcItem" name="Near Kamaloka 5-unit Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1030,7 +1030,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13298,5,5,100" />
 	</item>
-	<item id="13367" type="EtcItem" name="Kamaloka (Labyrinth of the Abyss) 5-Sheet Pack (Event)">
+	<item id="13367" type="EtcItem" name="Kamaloka (Labyrinth of the Abyss) 5-unit Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1044,7 +1044,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13299,5,5,100" />
 	</item>
-	<item id="13368" type="EtcItem" name="Feather of Blessing 1-Sheet Pack (Event)">
+	<item id="13368" type="EtcItem" name="Feather of Blessing Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1058,7 +1058,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13300,1,1,100" />
 	</item>
-	<item id="13369" type="EtcItem" name="Agathion of Love 7-Day Pack (Event)">
+	<item id="13369" type="EtcItem" name="Agathion - Love Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1072,7 +1072,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13340,1,1,100" />
 	</item>
-	<item id="13370" type="EtcItem" name="Pumpkin Transformation Stick 7-Day Pack (Event)">
+	<item id="13370" type="EtcItem" name="Pumpkin Transformation Stick Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1086,7 +1086,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13339,1,1,100" />
 	</item>
-	<item id="13371" type="EtcItem" name="Kat the Cat Hat 7-Day Pack (Event)">
+	<item id="13371" type="EtcItem" name="Kat the Cat Hat Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1100,7 +1100,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13325,1,1,100" />
 	</item>
-	<item id="13372" type="EtcItem" name="Feline Queen Hat 7-Day Pack (Event)">
+	<item id="13372" type="EtcItem" name="Feline Queen Hat Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1114,7 +1114,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13326,1,1,100" />
 	</item>
-	<item id="13373" type="EtcItem" name="Monster Eye Hat 7-Day Pack (Event)">
+	<item id="13373" type="EtcItem" name="Monster Eye Hat Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1128,7 +1128,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13327,1,1,100" />
 	</item>
-	<item id="13374" type="EtcItem" name="Brown Bear Hat 7-Day Pack (Event)">
+	<item id="13374" type="EtcItem" name="Brown Bear Hat Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1142,7 +1142,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13328,1,1,100" />
 	</item>
-	<item id="13375" type="EtcItem" name="Fungus Hat 7-Day Pack (Event)">
+	<item id="13375" type="EtcItem" name="Fungus Hat Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1156,7 +1156,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13329,1,1,100" />
 	</item>
-	<item id="13376" type="EtcItem" name="Skull Hat 7-Day Pack (Event)">
+	<item id="13376" type="EtcItem" name="Skull Hat Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1170,7 +1170,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13330,1,1,100" />
 	</item>
-	<item id="13377" type="EtcItem" name="Ornithomimus Hat 7-Day Pack (Event)">
+	<item id="13377" type="EtcItem" name="Ornithomimus Hat Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1184,7 +1184,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13331,1,1,100" />
 	</item>
-	<item id="13378" type="EtcItem" name="Feline King Hat 7-Day Pack (Event)">
+	<item id="13378" type="EtcItem" name="Feline King Hat Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1198,7 +1198,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13332,1,1,100" />
 	</item>
-	<item id="13379" type="EtcItem" name="Kai the Cat Hat 7-Day Pack (Event)">
+	<item id="13379" type="EtcItem" name="Kai the Cat Hat Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1212,7 +1212,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13333,1,1,100" />
 	</item>
-	<item id="13380" type="EtcItem" name="OX Stick 7-Day Pack (Event)">
+	<item id="13380" type="EtcItem" name="OX Stick Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1226,7 +1226,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13334,1,1,100;13335,1,1,100" />
 	</item>
-	<item id="13381" type="EtcItem" name="Rock-Paper-Scissors Stick 7-Day Pack (Event)">
+	<item id="13381" type="EtcItem" name="Rock-Paper-Scissors Stick Pack (7-day) (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1254,7 +1254,7 @@
 		<set name="item_skill" val="2606-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13383" type="EtcItem" name="Hunting Helper Exchange Coupon - 5 hours (Event)">
+	<item id="13383" type="EtcItem" name="Minion Coupon (5-hour) (Event)">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1266,7 +1266,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="13384" type="EtcItem" name="Hunting Helper Exchange Coupon 3-Sheet Pack (Event)">
+	<item id="13384" type="EtcItem" name="Minion Coupon 3-unit Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1280,7 +1280,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13383,3,3,100" />
 	</item>
-	<item id="13385" type="EtcItem" name="Hunting Helper Exchange Coupon 1-Sheet Pack (Event)">
+	<item id="13385" type="EtcItem" name="Minion Coupon Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1309,7 +1309,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2608-1" />
 	</item>
-	<item id="13387" type="EtcItem" name="Green Crystal of Fantasy">
+	<item id="13387" type="EtcItem" name="Fantasy Green Crystal">
 		<set name="icon" val="icon.etc_sp_crystal_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1324,7 +1324,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2608-2" />
 	</item>
-	<item id="13388" type="EtcItem" name="Red Crystal of Fantasy">
+	<item id="13388" type="EtcItem" name="Fantasy Red Crystal">
 		<set name="icon" val="icon.etc_sp_crystal_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1339,7 +1339,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2608-3" />
 	</item>
-	<item id="13389" type="Armor" name="Kratei Barbed Shirt - CP">
+	<item id="13389" type="Armor" name="Kratei Scale Shirt">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1357,7 +1357,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13390" type="Armor" name="Kratei Mithril Shirt - CP">
+	<item id="13390" type="Armor" name="Kratei Mithril Shirt">
 		<set name="icon" val="icon.etc_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1375,7 +1375,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13391" type="Armor" name="Kratei Striped Barbed Shirt - CP">
+	<item id="13391" type="Armor" name="Kratei Striped Scale Shirt">
 		<set name="icon" val="icon.etc_stripe_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1393,7 +1393,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13392" type="Armor" name="Kratei Striped Mithril Shirt - CP">
+	<item id="13392" type="Armor" name="Kratei Striped Mithril Shirt">
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1411,7 +1411,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13393" type="Armor" name="Shadow Item - Monkey Hat">
+	<item id="13393" type="Armor" name="Shadow Item: Monkey Hat">
 		<set name="icon" val="icon.monkey_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1423,7 +1423,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="100" />
 	</item>
-	<item id="13394" type="Armor" name="Shadow Item - Pig Hat">
+	<item id="13394" type="Armor" name="Shadow Item: Pig Hat">
 		<set name="icon" val="icon.event_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />

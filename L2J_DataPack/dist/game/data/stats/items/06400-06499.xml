@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="6400" type="EtcItem" name="Badge of Hyena">
+	<item id="6400" type="EtcItem" name="Hyena Crest">
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -11,7 +11,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="6401" type="EtcItem" name="Badge of Fox">
+	<item id="6401" type="EtcItem" name="Fox Crest">
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -22,7 +22,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="6402" type="EtcItem" name="Badge of Wolf">
+	<item id="6402" type="EtcItem" name="Wolf Crest">
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -52,7 +52,7 @@
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6406" type="EtcItem" name="Firework">
+	<item id="6406" type="EtcItem" name="Firecracker">
 		<set name="icon" val="icon.etc_small_ultra_bomb_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -61,7 +61,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2024-1" />
 	</item>
-	<item id="6407" type="EtcItem" name="Large Firework">
+	<item id="6407" type="EtcItem" name="Large Firecracker">
 		<set name="icon" val="icon.etc_ultra_bomb_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -107,7 +107,7 @@
 		<set name="item_skill" val="2038-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="6411" type="EtcItem" name="Small Nimble Green Fish">
+	<item id="6411" type="EtcItem" name="Small Green Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -119,7 +119,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2190-1" />
 	</item>
-	<item id="6412" type="EtcItem" name="Small Ugly Green Fish">
+	<item id="6412" type="EtcItem" name="Small Green Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -131,7 +131,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2190-2" />
 	</item>
-	<item id="6413" type="EtcItem" name="Small Pudgy Green Fish">
+	<item id="6413" type="EtcItem" name="Small Green Fat Fish">
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -143,7 +143,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2190-3" />
 	</item>
-	<item id="6414" type="EtcItem" name="Nimble Green Fish">
+	<item id="6414" type="EtcItem" name="Green Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -155,7 +155,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2190-4" />
 	</item>
-	<item id="6415" type="EtcItem" name="Ugly Green Fish">
+	<item id="6415" type="EtcItem" name="Green Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -167,7 +167,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2190-5" />
 	</item>
-	<item id="6416" type="EtcItem" name="Pudgy Green Fish">
+	<item id="6416" type="EtcItem" name="Green Fat Fish">
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -179,7 +179,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2190-6" />
 	</item>
-	<item id="6417" type="EtcItem" name="Large Nimble Green Fish">
+	<item id="6417" type="EtcItem" name="Large Green Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -191,7 +191,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2190-7" />
 	</item>
-	<item id="6418" type="EtcItem" name="Large Ugly Green Fish">
+	<item id="6418" type="EtcItem" name="Large Green Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -203,7 +203,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2190-8" />
 	</item>
-	<item id="6419" type="EtcItem" name="Large Pudgy Green Fish">
+	<item id="6419" type="EtcItem" name="Large Green Fat Fish">
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -287,7 +287,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2191-6" />
 	</item>
-	<item id="6426" type="EtcItem" name="Big Jade Nimble Fish">
+	<item id="6426" type="EtcItem" name="Large Jade Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -299,7 +299,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2191-7" />
 	</item>
-	<item id="6427" type="EtcItem" name="Big Jade Ugly Fish">
+	<item id="6427" type="EtcItem" name="Large Jade Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -311,7 +311,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2191-8" />
 	</item>
-	<item id="6428" type="EtcItem" name="Big Jade Fat Fish">
+	<item id="6428" type="EtcItem" name="Large Jade Fat Fish">
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -395,7 +395,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2192-6" />
 	</item>
-	<item id="6435" type="EtcItem" name="Big Blue Nimble Fish">
+	<item id="6435" type="EtcItem" name="Large Blue Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -407,7 +407,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2192-7" />
 	</item>
-	<item id="6436" type="EtcItem" name="Big Blue Ugly Fish">
+	<item id="6436" type="EtcItem" name="Large Blue Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -419,7 +419,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2192-8" />
 	</item>
-	<item id="6437" type="EtcItem" name="Big Blue Fat Fish">
+	<item id="6437" type="EtcItem" name="Large Blue Fat Fish">
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -503,7 +503,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2193-6" />
 	</item>
-	<item id="6444" type="EtcItem" name="Big Yellow Nimble Fish">
+	<item id="6444" type="EtcItem" name="Large Yellow Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -515,7 +515,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2193-7" />
 	</item>
-	<item id="6445" type="EtcItem" name="Big Yellow Ugly Fish">
+	<item id="6445" type="EtcItem" name="Large Yellow Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -527,7 +527,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2193-8" />
 	</item>
-	<item id="6446" type="EtcItem" name="Big Yellow Fat Fish">
+	<item id="6446" type="EtcItem" name="Large Yellow Fat Fish">
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -611,7 +611,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2194-6" />
 	</item>
-	<item id="6453" type="EtcItem" name="Big Orange Nimble Fish">
+	<item id="6453" type="EtcItem" name="Large Orange Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -623,7 +623,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2194-7" />
 	</item>
-	<item id="6454" type="EtcItem" name="Big Orange Ugly Fish">
+	<item id="6454" type="EtcItem" name="Large Orange Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -635,7 +635,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2194-8" />
 	</item>
-	<item id="6455" type="EtcItem" name="Big Orange Fat Fish">
+	<item id="6455" type="EtcItem" name="Large Orange Fat Fish">
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -719,7 +719,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2195-6" />
 	</item>
-	<item id="6462" type="EtcItem" name="Big Purple Nimble Fish">
+	<item id="6462" type="EtcItem" name="Large Purple Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -731,7 +731,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2195-7" />
 	</item>
-	<item id="6463" type="EtcItem" name="Big Purple Ugly Fish">
+	<item id="6463" type="EtcItem" name="Large Purple Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -743,7 +743,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2195-8" />
 	</item>
-	<item id="6464" type="EtcItem" name="Big Purple Fat Fish">
+	<item id="6464" type="EtcItem" name="Large Purple Fat Fish">
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -827,7 +827,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2196-6" />
 	</item>
-	<item id="6471" type="EtcItem" name="Big Red Nimble Fish">
+	<item id="6471" type="EtcItem" name="Large Red Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -839,7 +839,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2196-7" />
 	</item>
-	<item id="6472" type="EtcItem" name="Big Red Ugly Fish">
+	<item id="6472" type="EtcItem" name="Large Red Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -851,7 +851,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2196-8" />
 	</item>
-	<item id="6473" type="EtcItem" name="Big Red Fat Fish">
+	<item id="6473" type="EtcItem" name="Large Red Fat Fish">
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -935,7 +935,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2197-6" />
 	</item>
-	<item id="6480" type="EtcItem" name="Big White Nimble Fish">
+	<item id="6480" type="EtcItem" name="Large White Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -947,7 +947,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2197-7" />
 	</item>
-	<item id="6481" type="EtcItem" name="Big White Ugly Fish">
+	<item id="6481" type="EtcItem" name="Large White Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -959,7 +959,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2197-8" />
 	</item>
-	<item id="6482" type="EtcItem" name="Big White Fat Fish">
+	<item id="6482" type="EtcItem" name="Large White Fat Fish">
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1043,7 +1043,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2198-6" />
 	</item>
-	<item id="6489" type="EtcItem" name="Big Black Nimble Fish">
+	<item id="6489" type="EtcItem" name="Large Black Nimble Fish">
 		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1055,7 +1055,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2198-7" />
 	</item>
-	<item id="6490" type="EtcItem" name="Big Black Ugly Fish">
+	<item id="6490" type="EtcItem" name="Large Black Ugly Fish">
 		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1067,7 +1067,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2198-8" />
 	</item>
-	<item id="6491" type="EtcItem" name="Big Black Fat Fish">
+	<item id="6491" type="EtcItem" name="Large Black Fat Fish">
 		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1103,7 +1103,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2199-2" />
 	</item>
-	<item id="6494" type="EtcItem" name="Big Green Treasure Chest">
+	<item id="6494" type="EtcItem" name="Large Green Treasure Chest">
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1139,7 +1139,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2200-2" />
 	</item>
-	<item id="6497" type="EtcItem" name="Big Jade Treasure Chest">
+	<item id="6497" type="EtcItem" name="Large Jade Treasure Chest">
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />

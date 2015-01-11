@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="12300" type="Armor" name="Common Item - Sealed Imperial Crusader Gauntlet">
+	<item id="12300" type="Armor" name="Common Item - Sealed Imperial Crusader Gauntlets">
 		<set name="icon" val="icon.armor_t88_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -105,7 +105,7 @@
 			<add order="0" stat="pDef" val="128" />
 		</for>
 	</item>
-	<item id="12306" type="Armor" name="Common Item - Imperial Crusader Gauntlet">
+	<item id="12306" type="Armor" name="Common Item - Imperial Crusader Gauntlets">
 		<set name="icon" val="icon.armor_t88_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -235,7 +235,7 @@
 			<add order="0" stat="mDef" val="16" />
 		</for>
 	</item>
-	<item id="12314" type="Armor" name="Common Item - Enchanted Earring">
+	<item id="12314" type="Armor" name="Common Item - Earring of Magic">
 		<set name="icon" val="icon.accessary_enchanted_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -249,7 +249,7 @@
 			<add order="0" stat="mDef" val="27" />
 		</for>
 	</item>
-	<item id="12315" type="Armor" name="Common Item - Enchanted Necklace">
+	<item id="12315" type="Armor" name="Common Item - Magic Necklace">
 		<set name="icon" val="icon.accessary_enchanted_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -263,7 +263,7 @@
 			<add order="0" stat="mDef" val="36" />
 		</for>
 	</item>
-	<item id="12316" type="Armor" name="Common Item - Enchanted Ring">
+	<item id="12316" type="Armor" name="Common Item - Ring of Magic">
 		<set name="icon" val="icon.accessary_enchanted_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -375,7 +375,7 @@
 			<add order="0" stat="mDef" val="24" />
 		</for>
 	</item>
-	<item id="12324" type="Armor" name="Common Item - Necklace of Darkness">
+	<item id="12324" type="Armor" name="Common Item - Dark Necklace">
 		<set name="icon" val="icon.accessary_necklace_of_darkness_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -613,7 +613,7 @@
 			<add order="0" stat="mDef" val="34" />
 		</for>
 	</item>
-	<item id="12341" type="Armor" name="Common Item - Earring of Black Ore">
+	<item id="12341" type="Armor" name="Common Item - Black Ore Earring">
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -627,7 +627,7 @@
 			<add order="0" stat="mDef" val="54" />
 		</for>
 	</item>
-	<item id="12342" type="Armor" name="Common Item - Necklace of Black Ore">
+	<item id="12342" type="Armor" name="Common Item - Black Ore Necklace">
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -641,7 +641,7 @@
 			<add order="0" stat="mDef" val="72" />
 		</for>
 	</item>
-	<item id="12343" type="Armor" name="Common Item - Ring of Black Ore">
+	<item id="12343" type="Armor" name="Common Item - Black Ore Ring">
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -916,7 +916,7 @@
 			<add stat="maxMp" val="31" />
 		</for>
 	</item>
-	<item id="12362" type="EtcItem" name="Weapon-Type Enhance Backup Stone (D-Grade)">
+	<item id="12362" type="EtcItem" name="Lucky Enchant Stone: Weapon (D-grade)">
 		<set name="icon" val="icon.ench_wp_stone_i00" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
@@ -930,7 +930,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2515-1" />
 	</item>
-	<item id="12363" type="EtcItem" name="Weapon-Type Enhance Backup Stone (C-Grade)">
+	<item id="12363" type="EtcItem" name="Lucky Enchant Stone: Weapon (C-grade)">
 		<set name="icon" val="icon.ench_wp_stone_i01" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
@@ -944,7 +944,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2516-1" />
 	</item>
-	<item id="12364" type="EtcItem" name="Weapon-Type Enhance Backup Stone (B-Grade)">
+	<item id="12364" type="EtcItem" name="Lucky Enchant Stone: Weapon (B-grade)">
 		<set name="icon" val="icon.ench_wp_stone_i02" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
@@ -958,7 +958,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2517-1" />
 	</item>
-	<item id="12365" type="EtcItem" name="Weapon-Type Enhance Backup Stone (A-Grade)">
+	<item id="12365" type="EtcItem" name="Lucky Enchant Stone: Weapon (A-grade)">
 		<set name="icon" val="icon.ench_wp_stone_i03" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
@@ -972,7 +972,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2518-1" />
 	</item>
-	<item id="12366" type="EtcItem" name="Weapon-Type Enhance Backup Stone (S-Grade)">
+	<item id="12366" type="EtcItem" name="Lucky Enchant Stone: Weapon (S-grade)">
 		<set name="icon" val="icon.ench_wp_stone_i04" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
 		<set name="immediate_effect" val="true" />
@@ -986,7 +986,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2519-1" />
 	</item>
-	<item id="12367" type="EtcItem" name="Armor-Type Enhance Backup Stone (D-Grade)">
+	<item id="12367" type="EtcItem" name="Lucky Enchant Stone: Armor (D-grade)">
 		<set name="icon" val="icon.ench_am_stone_i00" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1000,7 +1000,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2520-1" />
 	</item>
-	<item id="12368" type="EtcItem" name="Armor-Type Enhance Backup Stone (C-Grade)">
+	<item id="12368" type="EtcItem" name="Lucky Enchant Stone: Armor (C-grade)">
 		<set name="icon" val="icon.ench_am_stone_i01" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1014,7 +1014,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2521-1" />
 	</item>
-	<item id="12369" type="EtcItem" name="Armor-Type Enhance Backup Stone (B-Grade)">
+	<item id="12369" type="EtcItem" name="Lucky Enchant Stone: Armor (B-grade)">
 		<set name="icon" val="icon.ench_am_stone_i02" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1028,7 +1028,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2522-1" />
 	</item>
-	<item id="12370" type="EtcItem" name="Armor-Type Enhance Backup Stone (A-Grade)">
+	<item id="12370" type="EtcItem" name="Lucky Enchant Stone: Armor (A-grade)">
 		<set name="icon" val="icon.ench_am_stone_i03" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1042,7 +1042,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2523-1" />
 	</item>
-	<item id="12371" type="EtcItem" name="Armor-Type Enhance Backup Stone (S-Grade)">
+	<item id="12371" type="EtcItem" name="Lucky Enchant Stone: Armor (S-grade)">
 		<set name="icon" val="icon.ench_am_stone_i04" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1142,7 +1142,7 @@
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="12378" type="EtcItem" name="Foundation Dark Elven Long Bow">
+	<item id="12378" type="EtcItem" name="Foundation Dark Elven Longbow">
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="random_damage" val="5" />
@@ -1356,7 +1356,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12389" type="EtcItem" name="Foundation Hell Knife">
+	<item id="12389" type="EtcItem" name="Foundation Twilight Knife">
 		<set name="icon" val="icon.weapon_hell_knife_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="random_damage" val="5" />
@@ -1375,7 +1375,7 @@
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="12390" type="EtcItem" name="Foundation Guardian Sword">
+	<item id="12390" type="EtcItem" name="Foundation Guardian's Sword">
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="random_damage" val="10" />
@@ -1393,7 +1393,7 @@
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12391" type="EtcItem" name="Foundation Sword of Damascus">
+	<item id="12391" type="EtcItem" name="Foundation Damascus Sword">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="random_damage" val="10" />

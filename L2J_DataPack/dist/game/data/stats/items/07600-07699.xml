@@ -99,13 +99,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7609" type="EtcItem" name="Proof of Catching a Fish">
+	<item id="7609" type="EtcItem" name="Corroded Mark of Fishing">
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7610" type="EtcItem" name="Wind Fishing Lure">
+	<item id="7610" type="EtcItem" name="Wind Bait">
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -115,7 +115,7 @@
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7611" type="EtcItem" name="Icy Air Fishing Lure">
+	<item id="7611" type="EtcItem" name="Icy Air Bait">
 		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -125,7 +125,7 @@
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7612" type="EtcItem" name="Earth Fishing Lure">
+	<item id="7612" type="EtcItem" name="Earth Bait">
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -135,7 +135,7 @@
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7613" type="EtcItem" name="Flaming Fishing Lure">
+	<item id="7613" type="EtcItem" name="Flaming Bait">
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -145,28 +145,28 @@
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7614" type="EtcItem" name="Chest Caught by Wind Fishing Lure">
+	<item id="7614" type="EtcItem" name="Chest Caught with Wind Bait">
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7615" type="EtcItem" name="Chest Caught by Icy Air Fishing Lure">
+	<item id="7615" type="EtcItem" name="Chest Caught with Icy Air Bait">
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7616" type="EtcItem" name="Chest Caught by Earth Fishing Lure">
+	<item id="7616" type="EtcItem" name="Chest Caught with Earth Bait">
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7617" type="EtcItem" name="Chest Caught by using a Flaming Fishing Lure">
+	<item id="7617" type="EtcItem" name="Chest Caught with Flaming Bait">
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -333,7 +333,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2217-3" />
 	</item>
-	<item id="7632" type="EtcItem" name="Looted Goods - Red Cargo Box">
+	<item id="7632" type="EtcItem" name="Looted Goods - Red Document Box">
 		<set name="icon" val="icon.etc_royal_seal_of_lord_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -344,7 +344,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2217-4" />
 	</item>
-	<item id="7633" type="EtcItem" name="Looted Goods - Purple Cargo Box">
+	<item id="7633" type="EtcItem" name="Looted Goods - Purple Document Box">
 		<set name="icon" val="icon.etc_royal_seal_of_lord_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -366,7 +366,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2219-1" />
 	</item>
-	<item id="7635" type="EtcItem" name="Looted Goods - Gray Pouch">
+	<item id="7635" type="EtcItem" name="Looted Goods - Grey Pouch">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -399,7 +399,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2218-2" />
 	</item>
-	<item id="7638" type="EtcItem" name="Spellbook - Mass Summon Storm Cubic">
+	<item id="7638" type="EtcItem" name="Spellbook: Mass Summon Storm Cubic">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -407,7 +407,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7639" type="EtcItem" name="Spellbook - Mass Summon Aqua Cubic">
+	<item id="7639" type="EtcItem" name="Spellbook: Mass Summon Aqua Cubic">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -415,7 +415,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7640" type="EtcItem" name="Spellbook - Mass Summon Phantom Cubic">
+	<item id="7640" type="EtcItem" name="Spellbook: Mass Summon Phantom Cubic">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -423,7 +423,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7641" type="EtcItem" name="Spellbook - Summon Feline Queen">
+	<item id="7641" type="EtcItem" name="Spellbook: Summon Feline Queen">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -431,7 +431,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7642" type="EtcItem" name="Spellbook - Summon Unicorn Seraphim">
+	<item id="7642" type="EtcItem" name="Spellbook: Summon Seraphim the Unicorn">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -439,7 +439,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7643" type="EtcItem" name="Spellbook - Summon Nightshade">
+	<item id="7643" type="EtcItem" name="Spellbook: Summon Nightshade">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -447,7 +447,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7644" type="EtcItem" name="Spellbook - Summon Cursed Man">
+	<item id="7644" type="EtcItem" name="Spellbook: Summon Cursed Man">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -455,7 +455,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7645" type="EtcItem" name="Spellbook - Balance Life">
+	<item id="7645" type="EtcItem" name="Spellbook: Balance Life">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -463,7 +463,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7646" type="EtcItem" name="Spellbook - Curse of Doom">
+	<item id="7646" type="EtcItem" name="Spellbook: Curse of Doom">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -471,7 +471,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7647" type="EtcItem" name="Spellbook - Curse of Abyss">
+	<item id="7647" type="EtcItem" name="Spellbook: Curse of Abyss">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -479,7 +479,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7648" type="EtcItem" name="Spellbook - Arcane Chaos">
+	<item id="7648" type="EtcItem" name="Spellbook: Arcane Chaos">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -487,7 +487,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7649" type="EtcItem" name="Spellbook - Fire Vortex">
+	<item id="7649" type="EtcItem" name="Spellbook: Fire Vortex">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -495,7 +495,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7650" type="EtcItem" name="Spellbook - Ice Vortex">
+	<item id="7650" type="EtcItem" name="Spellbook: Ice Vortex">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -503,7 +503,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7651" type="EtcItem" name="Spellbook - Wind Vortex">
+	<item id="7651" type="EtcItem" name="Spellbook: Wind Vortex">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -511,7 +511,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7652" type="EtcItem" name="Spellbook - Light Vortex">
+	<item id="7652" type="EtcItem" name="Spellbook: Light Vortex">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -519,7 +519,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7653" type="EtcItem" name="Spellbook - Dark Vortex">
+	<item id="7653" type="EtcItem" name="Spellbook: Dark Vortex">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -527,7 +527,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7654" type="EtcItem" name="Spellbook - Mass Warrior Bane">
+	<item id="7654" type="EtcItem" name="Spellbook: Mass Warrior Bane">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -535,7 +535,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7655" type="EtcItem" name="Spellbook - Mass Mage Bane">
+	<item id="7655" type="EtcItem" name="Spellbook: Mass Mage Bane">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -543,7 +543,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7656" type="EtcItem" name="Spellbook - Warrior Servitor">
+	<item id="7656" type="EtcItem" name="Spellbook: Warrior Servitor">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -551,7 +551,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7657" type="EtcItem" name="Spellbook - Wizard Servitor">
+	<item id="7657" type="EtcItem" name="Spellbook: Wizard Servitor">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -559,7 +559,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7658" type="EtcItem" name="Spellbook - Assassin Servitor">
+	<item id="7658" type="EtcItem" name="Spellbook: Assassin Servitor">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -567,7 +567,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7659" type="EtcItem" name="Spellbook - Final Servitor">
+	<item id="7659" type="EtcItem" name="Spellbook: Final Servitor">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -575,7 +575,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7660" type="EtcItem" name="Spellbook - Warrior Bane">
+	<item id="7660" type="EtcItem" name="Spellbook: Warrior Bane">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -583,7 +583,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7661" type="EtcItem" name="Spellbook - Mage Bane">
+	<item id="7661" type="EtcItem" name="Spellbook: Mage Bane">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -591,7 +591,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7662" type="EtcItem" name="Spellbook - Elemental Protection">
+	<item id="7662" type="EtcItem" name="Spellbook: Elemental Resistance">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -599,7 +599,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7663" type="EtcItem" name="Spellbook - Divine Protection">
+	<item id="7663" type="EtcItem" name="Spellbook: Divine Protection">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -607,7 +607,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7664" type="EtcItem" name="Spellbook - Arcane Protection">
+	<item id="7664" type="EtcItem" name="Spellbook: Arcane Protection">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -615,7 +615,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7665" type="EtcItem" name="Spellbook - Prophecy of Water">
+	<item id="7665" type="EtcItem" name="Spellbook: Prophecy of Water">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -623,7 +623,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7666" type="EtcItem" name="Spellbook - Prophecy of Fire">
+	<item id="7666" type="EtcItem" name="Spellbook: Prophecy of Fire">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -631,7 +631,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7667" type="EtcItem" name="Spellbook - Prophecy of Wind">
+	<item id="7667" type="EtcItem" name="Spellbook: Prophecy of Wind">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -639,7 +639,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7668" type="EtcItem" name="Spellbook - Block Shield">
+	<item id="7668" type="EtcItem" name="Spellbook: Block Shield">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -647,7 +647,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7669" type="EtcItem" name="Spellbook - Block Wind Walk">
+	<item id="7669" type="EtcItem" name="Spellbook: Block Wind Walk">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -655,7 +655,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7670" type="EtcItem" name="Spellbook - Mass Block Shield">
+	<item id="7670" type="EtcItem" name="Spellbook: Mass Block Shield">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -663,7 +663,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7671" type="EtcItem" name="Spellbook - Mass Block Wind Walk">
+	<item id="7671" type="EtcItem" name="Spellbook: Mass Block Wind Walk">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -671,7 +671,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7672" type="EtcItem" name="Amulet - Chant of Spirit">
+	<item id="7672" type="EtcItem" name="Amulet: Chant of Spirit">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -679,7 +679,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7673" type="EtcItem" name="Amulet - Chant of Victory">
+	<item id="7673" type="EtcItem" name="Amulet: Chant of Victory">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -703,7 +703,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7676" type="EtcItem" name="Amulet - Seal of Despair">
+	<item id="7676" type="EtcItem" name="Amulet: Seal of Despair">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -783,7 +783,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="7684" type="EtcItem" name="Raccoon Ears Fabric">
+	<item id="7684" type="EtcItem" name="Raccoon Ear Fabric">
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -810,7 +810,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7687" type="EtcItem" name="Rabbit Ears Fabric">
+	<item id="7687" type="EtcItem" name="Rabbit Ear Fabric">
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -819,7 +819,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7688" type="EtcItem" name="Cat Ears Fabric">
+	<item id="7688" type="EtcItem" name="Cat Ear Fabric">
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -924,7 +924,7 @@
 			<player sex="1" />
 		</cond>
 	</item>
-	<item id="7697" type="EtcItem" name="Piece of Forget-me-not Hairpin">
+	<item id="7697" type="EtcItem" name="Forget-me-not Hairpin Fragment">
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

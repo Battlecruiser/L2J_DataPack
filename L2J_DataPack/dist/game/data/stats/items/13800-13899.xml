@@ -114,7 +114,7 @@
 			<add order="0" stat="pDef" val="53" />
 		</for>
 	</item>
-	<item id="13807" type="Armor" name="Guards of the Dawn Trousers">
+	<item id="13807" type="Armor" name="Guards of the Dawn Pants">
 		<set name="icon" val="icon.armor_t08_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -132,7 +132,7 @@
 			<add order="0" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="13808" type="EtcItem" name="Elmoreden Holy Water">
+	<item id="13808" type="EtcItem" name="Elmoreden's Holy Water">
 		<set name="icon" val="icon.etc_holy_water_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -300,7 +300,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="13825" type="EtcItem" name="Grail of Einhasad">
+	<item id="13825" type="EtcItem" name="Einhasad's Grail">
 		<set name="icon" val="icon.etc_holy_grail_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -465,7 +465,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13842" type="Weapon" name="Tiat Two-Handed Weapon">
+	<item id="13842" type="Weapon" name="Tiat Two-handed Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -519,7 +519,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13844" type="EtcItem" name="Star Stone Extraction Scroll">
+	<item id="13844" type="EtcItem" name="Scroll: Extract Star Stone">
 		<set name="icon" val="icon.scroll_of_verification_i06" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -572,7 +572,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="13847" type="EtcItem" name="Piece of Doubt">
+	<item id="13847" type="EtcItem" name="Mysterious Fragment">
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -629,7 +629,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="13853" type="EtcItem" name="Destroyed Darkness Fragment Powder">
+	<item id="13853" type="EtcItem" name="Shards of Broken Darkness">
 		<set name="icon" val="icon.etc_powder_black_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -638,7 +638,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2615-1" />
 	</item>
-	<item id="13854" type="EtcItem" name="Destroyed Light Fragment Powder">
+	<item id="13854" type="EtcItem" name="Shards of Broken Light">
 		<set name="icon" val="icon.etc_powder_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -770,7 +770,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="13867" type="EtcItem" name="Tiat Charm">
+	<item id="13867" type="EtcItem" name="Tiat's Breath">
 		<set name="icon" val="icon.tiat_breath_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -945,7 +945,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13882" type="Weapon" name="Dynasty Dual Daggers">
+	<item id="13882" type="Weapon" name="Dynasty Dual Dagger">
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1291,13 +1291,13 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13898" type="EtcItem" name="Sealed Magic Pin (C-Grade)">
+	<item id="13898" type="EtcItem" name="Sealed Magic Pin (C-grade)">
 		<set name="icon" val="icon.pin_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="13899" type="EtcItem" name="Sealed Magic Pin (B-Grade)">
+	<item id="13899" type="EtcItem" name="Sealed Magic Pin (B-grade)">
 		<set name="icon" val="icon.pin_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />

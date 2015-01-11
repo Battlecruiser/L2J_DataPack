@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="9200" type="Armor" name="Shadow Item - Jester Hat - Firework">
+	<item id="9200" type="Armor" name="Shadow Item: Jester Hat">
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -15,7 +15,7 @@
 		<set name="duration" val="360" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="9201" type="Armor" name="Shadow Item - Wizard Hat - Firework">
+	<item id="9201" type="Armor" name="Shadow Item: Wizard Hat">
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -30,7 +30,7 @@
 		<set name="duration" val="360" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="9202" type="Armor" name="Shadow Item - Dapper Cap - Firework">
+	<item id="9202" type="Armor" name="Shadow Item: Dapper Cap">
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -45,7 +45,7 @@
 		<set name="duration" val="360" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="9203" type="Armor" name="Shadow Item - Romantic Chapeau - Firework">
+	<item id="9203" type="Armor" name="Shadow Item: Romantic Chapeau">
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -60,7 +60,7 @@
 		<set name="duration" val="360" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="9204" type="Armor" name="Shadow Item - Iron Circlet - Firework">
+	<item id="9204" type="Armor" name="Shadow Item: Iron Circlet">
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -84,7 +84,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2322-1" />
 	</item>
-	<item id="9206" type="EtcItem" name="Greater Healing Potion (Event)">
+	<item id="9206" type="EtcItem" name="Major Healing Potion (Event)">
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -540,7 +540,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9222" type="Weapon" name="Epee">
+	<item id="9222" type="Weapon" name="Épée">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -635,7 +635,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9225" type="Weapon" name="Grand Epee">
+	<item id="9225" type="Weapon" name="Grand Épée">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -762,7 +762,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9229" type="Weapon" name="Soldat Estoc - Critical Anger">
+	<item id="9229" type="Weapon" name="Soldat Estoc">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -797,7 +797,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9230" type="Weapon" name="Soldat Estoc - Focus">
+	<item id="9230" type="Weapon" name="Soldat Estoc">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -830,7 +830,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9231" type="Weapon" name="Soldat Estoc - Light">
+	<item id="9231" type="Weapon" name="Soldat Estoc">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -894,7 +894,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9233" type="Weapon" name="Schlager - Critical Damage">
+	<item id="9233" type="Weapon" name="Schlager">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -926,7 +926,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9234" type="Weapon" name="Schlager - Focus">
+	<item id="9234" type="Weapon" name="Schlager">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -958,7 +958,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9235" type="Weapon" name="Schlager - Light">
+	<item id="9235" type="Weapon" name="Schlager">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1022,7 +1022,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9237" type="Weapon" name="Arbalest - Guidance">
+	<item id="9237" type="Weapon" name="Arbalest">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1055,7 +1055,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9238" type="Weapon" name="Arbalest - Evasion">
+	<item id="9238" type="Weapon" name="Arbalest">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1088,7 +1088,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9239" type="Weapon" name="Arbalest - Quick Recovery">
+	<item id="9239" type="Weapon" name="Arbalest">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1152,7 +1152,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9241" type="Weapon" name="Chevalier Rapier - Guidance">
+	<item id="9241" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1185,7 +1185,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9242" type="Weapon" name="Chevalier Rapier - Back Blow">
+	<item id="9242" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1283,7 +1283,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9245" type="Weapon" name="Chevalier Rapier - Focus">
+	<item id="9245" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1316,7 +1316,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9246" type="Weapon" name="Chevalier Rapier - Critical Damage">
+	<item id="9246" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1349,7 +1349,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9247" type="Weapon" name="Chevalier Rapier - Haste">
+	<item id="9247" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1414,7 +1414,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9249" type="Weapon" name="Chevalier Rapier - Critical Damage">
+	<item id="9249" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1447,7 +1447,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9250" type="Weapon" name="Chevalier Rapier - Critical Poison">
+	<item id="9250" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1481,7 +1481,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9251" type="Weapon" name="Chevalier Rapier - Haste">
+	<item id="9251" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1546,7 +1546,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9253" type="Weapon" name="Chevalier Rapier - Focus">
+	<item id="9253" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1579,7 +1579,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9254" type="Weapon" name="Chevalier Rapier - Critical Drain">
+	<item id="9254" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1613,7 +1613,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9255" type="Weapon" name="Chevalier Rapier - Critical Poison">
+	<item id="9255" type="Weapon" name="Chevalier Rapier">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1679,7 +1679,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9257" type="Weapon" name="Ballista - Guidance">
+	<item id="9257" type="Weapon" name="Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1712,7 +1712,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9258" type="Weapon" name="Ballista - Miser">
+	<item id="9258" type="Weapon" name="Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1745,7 +1745,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9259" type="Weapon" name="Ballista - Quick Recovery">
+	<item id="9259" type="Weapon" name="Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1809,7 +1809,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9261" type="Weapon" name="Ballista - Evasion">
+	<item id="9261" type="Weapon" name="Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1842,7 +1842,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9262" type="Weapon" name="Ballista - Miser">
+	<item id="9262" type="Weapon" name="Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1875,7 +1875,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9263" type="Weapon" name="Ballista - Cheap Shot">
+	<item id="9263" type="Weapon" name="Ballista">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1940,7 +1940,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9265" type="Weapon" name="Blinzlasher - Guidance">
+	<item id="9265" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1973,7 +1973,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9266" type="Weapon" name="Blinzlasher - Focus">
+	<item id="9266" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2006,7 +2006,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9267" type="Weapon" name="Blinzlasher - Critical Damage">
+	<item id="9267" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2071,7 +2071,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9269" type="Weapon" name="Blinzlasher - Focus">
+	<item id="9269" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2104,7 +2104,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9270" type="Weapon" name="Blinzlasher - Health">
+	<item id="9270" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2202,7 +2202,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9273" type="Weapon" name="Blinzlasher - Focus">
+	<item id="9273" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2235,7 +2235,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9274" type="Weapon" name="Blinzlasher - Critical Damage">
+	<item id="9274" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2268,7 +2268,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9275" type="Weapon" name="Blinzlasher - Haste">
+	<item id="9275" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2333,7 +2333,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9277" type="Weapon" name="Blinzlasher - Health">
+	<item id="9277" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2366,7 +2366,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9278" type="Weapon" name="Blinzlasher - Focus">
+	<item id="9278" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2399,7 +2399,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9279" type="Weapon" name="Blinzlasher - Light">
+	<item id="9279" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2464,7 +2464,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9281" type="Weapon" name="Blinzlasher - Guidance">
+	<item id="9281" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2497,7 +2497,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9282" type="Weapon" name="Blinzlasher - Critical Drain">
+	<item id="9282" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2531,7 +2531,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9283" type="Weapon" name="Blinzlasher - Health">
+	<item id="9283" type="Weapon" name="Blinzlasher">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2595,7 +2595,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9285" type="Weapon" name="Immortal Edge - Focus">
+	<item id="9285" type="Weapon" name="Immortal Edge">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2627,7 +2627,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9286" type="Weapon" name="Immortal Edge - Health">
+	<item id="9286" type="Weapon" name="Immortal Edge">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2659,7 +2659,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9287" type="Weapon" name="Immortal Edge - Critical Drain">
+	<item id="9287" type="Weapon" name="Immortal Edge">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2724,7 +2724,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9289" type="Weapon" name="Tathlum - Guidance">
+	<item id="9289" type="Weapon" name="Tathlum">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2757,7 +2757,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9290" type="Weapon" name="Tathlum - Evasion">
+	<item id="9290" type="Weapon" name="Tathlum">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2790,7 +2790,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9291" type="Weapon" name="Tathlum - Miser">
+	<item id="9291" type="Weapon" name="Tathlum">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2985,7 +2985,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9297" type="Weapon" name="Saber Tooth - Focus">
+	<item id="9297" type="Weapon" name="Saber Tooth">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3017,7 +3017,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9298" type="Weapon" name="Saber Tooth - Critical Damage">
+	<item id="9298" type="Weapon" name="Saber Tooth">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3049,7 +3049,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9299" type="Weapon" name="Saber Tooth - Haste">
+	<item id="9299" type="Weapon" name="Saber Tooth">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
