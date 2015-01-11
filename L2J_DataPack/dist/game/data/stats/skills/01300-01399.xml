@@ -482,6 +482,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1320" levels="10" name="Create Common Item">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<set name="icon" val="icon.skill0172" />
 		<set name="magicLvl" val="5" />
 		<set name="operateType" val="P" />
@@ -536,6 +537,7 @@
 		</for>
 	</skill>
 	<skill id="1324" levels="2" name="Summon CP Potion">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="20000" />
 		<set name="icon" val="icon.skill1324" />
