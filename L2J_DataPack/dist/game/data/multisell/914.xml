@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isNewMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>33936</npc> <!-- Pelu -->
+	</npcs>
+	<item>
+		<ingredient id="39629" count="2"/> <!-- Fortune Pocket - Stage 1 --> 
+		<production id="39630" count="1"/> <!-- Fortune Pocket - Stage 2 --> 
+		<production id="39630" count="1" chance="50"/> <!-- Fortune Pocket - Stage 2 --> 
+		<production id="39629" count="1" chance="50"/> <!-- Fortune Pocket - Stage 1 --> 
+	</item>
+	<item>
+		<ingredient id="39630" count="2"/> <!-- Fortune Pocket - Stage 2 --> 
+		<production id="39631" count="1"/> <!-- Fortune Pocket - Stage 3 --> 
+		<production id="39631" count="1" chance="44"/> <!-- Fortune Pocket - Stage 3 --> 
+		<production id="39630" count="1" chance="56"/> <!-- Fortune Pocket - Stage 2 --> 
+	</item>
+	<item>
+		<ingredient id="39631" count="2"/> <!-- Fortune Pocket - Stage 3 --> 
+		<production id="39632" count="1"/> <!-- Fortune Pocket - Stage 4 --> 
+		<production id="39632" count="1" chance="50"/> <!-- Fortune Pocket - Stage 4 --> 
+		<production id="39631" count="1" chance="50"/> <!-- Fortune Pocket - Stage 3 --> 
+	</item>
+	<item>
+		<ingredient id="39632" count="2"/> <!-- Fortune Pocket - Stage 4 --> 
+		<production id="39633" count="1"/> <!-- Fortune Pocket - Stage 5 --> 
+		<production id="39633" count="1" chance="45"/> <!-- Fortune Pocket - Stage 5 --> 
+		<production id="39632" count="1" chance="55"/> <!-- Fortune Pocket - Stage 4 --> 
+	</item>
+</list>
