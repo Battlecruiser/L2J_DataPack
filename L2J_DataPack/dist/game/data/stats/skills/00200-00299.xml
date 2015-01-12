@@ -980,9 +980,9 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="239" levels="7" name="Expertise D">
-		<table name="#icons"> icon.skill0239 icon.skill0240 icon.skill0241 icon.skill0242 icon.skill0243 icon.skill0243 icon.skill0243 </table>
-		<table name="#magicLvl"> 20 40 52 61 76 80 84 </table>
+	<skill id="239" levels="10" name="Expertise D">
+		<table name="#icons"> icon.skill0239 icon.skill0240 icon.skill0241 icon.skill0242 icon.skill0243 icon.skill0243 icon.skill0243 icon.skill0243 icon.skill0243 icon.skill0243 </table>
+		<table name="#magicLvl"> 20 40 52 61 76 80 85 90 95 99 </table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1074,8 +1074,9 @@
 			<effect name="HeadquarterCreate" />
 		</for>
 	</skill>
-	<skill id="248" levels="5" name="Crystallize">
-		<table name="#magicLvl"> 20 40 52 60 70 </table>
+	<skill id="248" levels="6" name="Crystallize">
+	    <!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#magicLvl"> 20 40 52 61 76 85 </table>
 		<set name="icon" val="icon.skill0248" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1615,11 +1616,12 @@
 			<effect name="Stun" />
 		</enchant1for>
 	</skill>
-	<skill id="261" levels="22" name="Triple Sonic Slash" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
-		<table name="#effectPoints"> -598 -609 -620 -631 -641 -651 -661 -671 -680 -690 -699 -708 -716 -724 -732 -739 -746 -753 -759 -765 -771 -776 </table>
-		<table name="#magicLvl"> 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
-		<table name="#mpConsume"> 103 105 108 110 113 115 118 120 121 123 125 128 130 132 134 136 139 141 143 145 146 148 </table>
-		<table name="#power"> 1948 2042 2138 2236 2337 2439 2544 2651 2760 2870 2982 3095 3210 3325 3442 3559 3676 3794 3911 4029 4146 4262 </table>
+	<skill id="261" levels="31" name="Triple Sonic Slash" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#effectPoints"> -598 -609 -620 -631 -641 -651 -661 -671 -680 -690 -699 -708 -716 -724 -732 -739 -746 -753 -759 -765 -771 -776 -779 -781 -785 -789 -791 -795 -799 -802 -809 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 74 75 77 79 81 82 83 85 90 95 99 </table> <!-- Confirmed -->
+		<table name="#mpConsume"> 67 68 70 72 73 75 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 105 111 119 </table> <!-- Confirmed -->
+		<table name="#power"> 1948 2042 2138 2236 2337 2439 2544 2651 2760 2870 2982 3095 3210 3325 3442 3559 3676 3794 3911 4029 4146 4262 4299 4415 4645 4875 5106 22531 26017 29503 33377 </table> <!-- Confirmed -->
 		<table name="#ench1Power"> 4299 4338 4376 4415 4453 4491 4530 4568 4607 4645 4683 4722 4760 4799 4837 4875 4914 4952 4991 5029 5067 5106 5144 5183 5221 5259 5298 5336 5375 5413 </table>
 		<table name="#ench2MpConsume"> 147 145 142 140 137 135 133 130 128 125 123 120 118 115 113 111 108 106 103 101 98 96 94 91 89 86 84 81 79 76 </table>
 		<table name="#ench7pvpPower"> 4336 4410 4485 4559 4634 4708 4783 4857 4932 5006 5081 5155 5230 5304 5379 5453 5527 5602 5676 5751 5825 5900 5974 6049 6123 6198 6272 6347 6347 6496 </table>
@@ -1627,10 +1629,10 @@
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="castRange" val="40" />
 		<set name="chargeConsume" val="4" />
-		<set name="coolTime" val="133" />
+		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
-		<set name="hitTime" val="1670" />
+		<set name="hitTime" val="1667" />
 		<set name="icon" val="icon.skill0261" />
 		<set name="ignoreShld" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1638,7 +1640,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
-		<set name="reuseDelay" val="5000" />
+		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2284,13 +2286,13 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="279" levels="5" name="Lightning Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -828 -877 -921 -958 -987 </table>
-		<table name="#magicLvl"> 58 62 66 70 74 </table>
-		<table name="#mpConsume"> 64 69 74 78 82 </table>
-		<table name="#mpInitialConsume"> 16 18 19 20 21 </table>
-		<table name="#power"> 82 89 96 102 108 </table>
+	<skill id="279" levels="14" name="Lightning Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#effectPoints"> -800 -900 -1000 -1100 -1200 -1300 -1400 -1500 -1600 -1700 -1800 -1900 -2000 -2100 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 58 62 66 70 74 75 77 79 81 83 85 90 95 99 </table> <!-- Confirmed -->
+		<table name="#mpConsume"> 64 69 74 78 82 83 85 87 89 91 93 95 103 110 </table> <!-- Confirmed -->
+		<table name="#mpInitialConsume"> 16 18 19 20 21 22 23 24 25 26 27 29 20 30 </table> <!-- Guessed -->
+		<table name="#power"> 2927 3444 3990 4553 5114 5131 5334 5662 5991 6318 15574 18556 20701 22848 </table> <!-- Confirmed -->
 		<table name="#ench1Power"> 109 109 110 111 111 112 113 113 114 115 115 116 116 117 118 118 119 120 120 121 122 122 123 124 124 125 125 126 127 127 </table>
 		<table name="#ench2MpConsume"> 80 79 78 77 76 75 74 72 71 70 69 68 67 65 64 63 62 61 60 59 57 56 55 54 53 52 50 49 48 47 </table>
 		<table name="#ench2MpInitialConsume"> 20 19 19 19 19 18 18 18 17 17 17 17 16 16 16 15 15 15 15 14 14 14 13 13 13 13 12 12 12 11 </table>
@@ -2300,9 +2302,10 @@
 		<set name="activateRate" val="40" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
+		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="900" />
-		<set name="hitTime" val="3000" />
+		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0279" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -2313,7 +2316,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
-		<set name="reuseDelay" val="15000" />
+		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2324,7 +2327,7 @@
 		<enchant3 name="activateRate" val="#ench3ActivateRates" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MagicalAttack" />
+			<effect name="PhysicalAttack" />
 			<effect name="Debuff">
 				<mul stat="pAtkSpd" val="0.5" />
 				<mul stat="runSpd" val="0.5" />
@@ -2613,13 +2616,13 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="286" levels="3" name="Provoke">
-		<!-- Confirmed CT2.5 -->
-		<table name="#affectRange"> 500 700 900 </table>
-		<table name="#effectPoints"> -136 -175 -189 </table>
-		<table name="#magicLvl"> 43 55 60 </table>
-		<table name="#mpConsume"> 57 75 83 </table>
-		<table name="#trait_pole"> -10 -15 -20 </table>
+	<skill id="286" levels="12" name="Provoke">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#affectRange"> 500 700 900 900 900 900 900 900 900 900 900 900 </table> <!-- Guessed -->
+		<table name="#effectPoints"> -110 -120 -130 -140 -150 -160 -170 -180 -190 -200 -210 -220 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 43 55 60 75 77 79 81 83 85 90 95 99 </table> <!-- Confirmed -->
+		<table name="#mpConsume"> 54 55 56 57 58 59 60 61 62 69 75 80  </table> <!-- Confirmed -->
+		<table name="#trait_pole"> -10 -11 -12 -13 -14 -15 -16 -17 -18 -19 -20 -25 </table> <!-- Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="REAL_TARGET" />

@@ -2489,15 +2489,19 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="793" levels="1" name="Rush Impact" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6" enchantGroup8="6">
-		<!-- Confirmed CT2.5 -->
+	<skill id="793" levels="5" name="Rush Impact" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6" enchantGroup8="6">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#abnormalLvl"> 1 2 3 4 5 </table>
+		<table name="#magicLvl"> 78 85 90 95 99 </table>
+		<table name="#mpConsume"> 83 92 98 104 110 </table>
+		<table name="#power"> 4040 11557 13553 15150 16747 </table>
 		<table name="#ench1Power"> 4071 4102 4133 4164 4195 4226 4257 4289 4320 4351 4382 4413 4444 4475 4507 </table>
 		<table name="#ench2Cost"> 80 78 76 74 72 70 68 66 64 62 59 57 55 53 51 </table>
 		<table name="#ench3ActivateRates"> 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#ench8Duel"> 4104 4168 4232 4297 4361 4425 4490 4554 4618 4683 4747 4811 4875 4940 5004 </table>
 		<table name="#enchElementAttack"> 4 7 10 14 17 20 24 27 30 34 37 40 43 47 50 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -2512,14 +2516,15 @@
 		<set name="fanRange" val="0,0,600,60" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
+		<set name="hpConsume" val="28" />
 		<set name="icon" val="icon.skill0793" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="78" />
-		<set name="mpConsume" val="83" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DA2" />
-		<set name="power" val="4040" />
+		<set name="power" val="#power" />
 		<set name="rideState" val="NONE" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="FRONT_AREA" />

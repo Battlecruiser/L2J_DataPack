@@ -978,15 +978,19 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="139" levels="3" name="Guts">
-		<!-- Confirmed CT2.5 -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#effectPoints"> 341 408 495 </table>
-		<table name="#magicLvl"> 36 43 52 </table>
-		<table name="#mpConsume"> 16 19 24 </table>
-		<table name="#pDef"> 2 2.5 3 </table>
+	<skill id="139" levels="9" name="Guts" enchantGroup1="10" enchantGroup2="10">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
+		<table name="#debufResist"> 50 55 60 65 70 75 80 85 90 </table> <!-- Confirmed -->
+		<table name="#effectPoints"> 341 408 495 592 699 816 943 1080 1217 </table> <!-- Custom probably -->
+		<table name="#hp"> 60 60 60 60 60 90 90 90 90 </table> <!-- Confirmed -->
+		<table name="#magicLvl"> 36 43 52 64 74 85 90 95 99 </table> <!-- Confirmed -->
+		<table name="#mpConsume"> 16 19 24 26 28 30 35 40 45 </table> <!-- Confirmed -->
+		<table name="#pDef"> 2 2.1 2.2 2.3 2.4 2.5 2.6 2.8 3 </table> <!-- Confirmed -->
+		<table name="#ench1AbnormalTimes"> 62 64 66 68 70 72 74 76 78 80 </table> <!-- Confirmed -->
+		<table name="#ench2hp"> 91 92 93 94 95 96 97 98 99 100 </table> <!-- Confirmed -->
 		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="90" />
+		<set name="abnormalTime" val="60" /> <!-- Confirmed -->
 		<set name="abnormalType" val="PINCH" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1500" />
@@ -994,15 +998,20 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
-		<set name="reuseDelay" val="600000" />
+		<set name="reuseDelay" val="300000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<cond msgId="113" addName="1">
-			<player hp="30" />
+			<player hp="#hp" />
 		</cond>
+		<enchant2cond msgId="113" addName="1">
+			<player hp="#ench2hp" />
+		</enchant2cond>
 		<for>
 			<effect name="Buff">
 				<mul stat="pDef" val="#pDef" />
+				<sub stat="debuffVuln" val="#debufResist" />
 			</effect>
 		</for>
 	</skill>
@@ -1302,8 +1311,9 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="172" levels="10" name="Create Item">
-		<table name="#magicLvl"> 5 20 28 36 43 49 55 62 70 82 </table>
+	<skill id="172" levels="14" name="Create Item">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#magicLvl"> 5 20 28 36 43 49 55 62 70 82 85 90 95 99 </table>
 		<set name="icon" val="icon.skill0172" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1323,18 +1333,26 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="176" levels="3" name="Frenzy">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#accCombat"> 2 4 6 </table>
-		<table name="#all"> 1.1 1.12 1.15 </table>
-		<table name="#effectPoints"> 303 438 523 </table>
-		<table name="#magicLvl"> 32 46 55 </table>
-		<table name="#mpConsume"> 14 21 25 </table>
-		<table name="#swordblunt"> 1.2 1.3 1.4 </table>
-		<table name="#twohand"> 1.05 1.07 1.1 </table>
+	<skill id="176" levels="9" name="Frenzy" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table> <!-- Confirmed -->
+		<table name="#effectPoints"> 303 438 523 623 723 823 923 1023 1123 </table> <!-- Confirmed -->
+		<table name="#hp"> 60 60 60 60 60 90 90 90 90 </table> <!-- Confirmed -->
+		<table name="#magicLvl"> 32 46 55 64 74 85 90 95 99 </table> <!-- Confirmed -->
+		<table name="#mpConsume"> 14 21 25 31 36 40 43 45 47 </table> <!-- Confirmed -->
+		<table name="#pAtk"> 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.18 1.20 </table> <!-- Confirmed -->
+		<table name="#pAtk2"> 1 1 1 1 1 1.10 1.10 1.10 1.10 </table> <!-- Confirmed -->
+		<table name="#pAtk3"> 1 1 1 1 1 1.10 1.30 1.30 1.30 </table> <!-- Confirmed -->
+		<table name="#pAtkSpd"> 1.10 1.12 1.15 1.17 1.20 1.22 1.25 1.27 1.30 </table> <!-- Confirmed -->
+		<table name="#pCritDmg"> 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.18 1.20 </table> <!-- Confirmed -->
+		<table name="#pCritRate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.18 1.20 </table> <!-- Confir,ed -->
+		<table name="#pCritRate"> 0 0 0 0 0 300 300 300 300 </table> <!-- Confirmed -->
+		<table name="#speed"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.18 1.20 </table> <!-- Confirmed -->
+		<table name="#enchant1mpConsume"> 45 44 43 42 41 40 39 38 37 36 </table> <!-- Guessed! -->
+		<table name="#enchant2abnormalTime"> 62 64 68 70 72 74 76 78 79 80 </table> <!-- Confirmed -->
+		<table name="#enchant3hp"> 61 62 63 64 65 66 67 68 69 70 </table> <!-- Confirmed -->
 		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="90" />
+		<set name="abnormalTime" val="60" /> <!-- Confirmed -->
 		<set name="abnormalType" val="PINCH" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1500" />
@@ -1345,35 +1363,78 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="mpConsume" val="#enchant1mpConsume" />
+		<enchant2 name="abnormalTime" val="#enchant2abnormalTime" />
 		<cond msgId="113" addName="1">
-			<player hp="60" />
+			<player hp="#hp" />
 		</cond>
+		<enchant3cond msgId="113" addName="1">
+			<player hp="#enchant3hp" />
+		</enchant3cond>
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtk" val="#all" />
-				<mul stat="pAtk" val="#swordblunt">
+				<mul stat="pAtk" val="#pAtk">
 					<and>
-						<player hp="60" />
-						<using kind="SWORD,BLUNT" />
+						<using kind="SWORD,BLUNT,POLE" />
 						<using slot="lrhand" />
 					</and>
 				</mul>
-				<mul stat="pAtk" val="#twohand">
+				<mul stat="pAtkSpd" val="#pAtkSpd">
 					<and>
-						<player hp="60" />
-						<using kind="SWORD,BLUNT" />
+						<using kind="SWORD,BLUNT,POLE" />
 						<using slot="lrhand" />
 					</and>
 				</mul>
-				<add stat="accCombat" val="#accCombat">
+				<mul stat="rCrit" val="#pCritRate">
+					<and>
+						<using kind="SWORD,BLUNT,POLE" />
+						<using slot="lrhand" />
+					</and>
+				</mul>
+				<mul stat="cAtk" val="#pCritDmg">
+					<and>
+						<using kind="SWORD,BLUNT,POLE" />
+						<using slot="lrhand" />
+					</and>
+				</mul>
+				<add stat="accCombat" val="8">
+					<and>
+						<using kind="SWORD,BLUNT,POLE" />
+						<using slot="lrhand" />
+					</and>
+				</add>
+				<mul stat="pAtk" val="1.10">
+					<and>
+						<using kind="SWORD,BLUNT,POLE" />
+						<using slot="lrhand" />
+					</and>
+				</mul>
+				<mul stat="pAtk" val="#pAtk2"> <!-- Additional 10% pAtk if wears sword, blunt, spear and below 60% hp -->
 					<and>
 						<player hp="60" />
-						<using kind="SWORD,BLUNT" />
+						<using kind="SWORD,BLUNT,POLE" />
+						<using slot="lrhand" />
+					</and>
+				</mul>
+				<mul stat="pAtk" val="#pAtk3"> <!-- Additional 30% pAtk if wears sword, blunt, spear and below 30% hp -->
+					<and>
+						<player hp="30" />
+						<using kind="SWORD,BLUNT,POLE" />
+						<using slot="lrhand" />
+					</and>
+				</mul>
+				<add stat="rCrit" val="#pCritRate"> <!-- Additional 300 critical rate if wears sword, blunt, spear and below 30% hp -->
+					<and>
+						<player hp="30" />
+						<using kind="SWORD,BLUNT,POLE" />
 						<using slot="lrhand" />
 					</and>
 				</add>
 			</effect>
 		</for>
+		<!-- <enchant4for> -->
+		<!-- TODO: Implement the chance to stun effect. -->
+		<!-- </enchant4for> -->
 	</skill>
 	<skill id="181" levels="1" name="Revival">
 		<set name="effectPoint" val="562" />
