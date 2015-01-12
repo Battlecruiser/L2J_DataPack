@@ -46,7 +46,6 @@ import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExVoteSystemInfo;
 import com.l2jserver.gameserver.network.serverpackets.GMViewItemList;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -235,7 +234,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.setPkKills(pk);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExBrExtraUserInfo(player));
 					player.sendMessage("A GM changed your PK count to " + pk);
 					activeChar.sendMessage(player.getName() + "'s PK count changed to " + pk);
 				}
@@ -266,7 +264,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.setPvpKills(pvp);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExBrExtraUserInfo(player));
 					player.sendMessage("A GM changed your PVP count to " + pvp);
 					activeChar.sendMessage(player.getName() + "'s PVP count changed to " + pvp);
 				}
@@ -297,7 +294,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.setFame(fame);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExBrExtraUserInfo(player));
 					player.sendMessage("A GM changed your Reputation points to " + fame);
 					activeChar.sendMessage(player.getName() + "'s Fame changed to " + fame);
 				}
@@ -328,7 +324,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.setRecomHave(recVal);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExBrExtraUserInfo(player));
 					player.sendPacket(new ExVoteSystemInfo(player));
 					player.sendMessage("A GM changed your Recommend points to " + recVal);
 					activeChar.sendMessage(player.getName() + "'s Recommend changed to " + recVal);

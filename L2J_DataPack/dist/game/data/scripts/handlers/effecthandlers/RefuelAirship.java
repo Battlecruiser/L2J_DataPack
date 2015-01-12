@@ -57,6 +57,6 @@ public final class RefuelAirship extends AbstractEffect
 	{
 		final L2AirShipInstance ship = info.getEffector().getActingPlayer().getAirShip();
 		ship.setFuel(ship.getFuel() + _value);
-		ship.updateAbnormalEffect();
+		ship.updateAbnormalVisualEffects();
 	}
 }

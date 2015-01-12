@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CharInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 
@@ -218,7 +217,6 @@ public class AdminEnchant implements IAdminCommandHandler
 			player.sendPacket(iu);
 			player.broadcastPacket(new CharInfo(player));
 			player.sendPacket(new UserInfo(player));
-			player.broadcastPacket(new ExBrExtraUserInfo(player));
 			
 			// informations
 			activeChar.sendMessage("Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
