@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J DataPack
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
  * This file is part of L2J DataPack.
  * 
@@ -121,7 +121,7 @@ public class Q00177_SplitDestiny extends Quest
 			}
 			case "32615-03.htm":
 			{
-				if (qs.isCond(7))
+				if (qs.isCond(7) && (getQuestItemsCount(player, PETRIFIED_GIANTS_HAND_PIECE) >= 10) && (getQuestItemsCount(player, PETRIFIED_GIANTS_FOOT_PIECE) >= 10))
 				{
 					takeItems(player, PETRIFIED_GIANTS_HAND_PIECE, 10);
 					takeItems(player, PETRIFIED_GIANTS_FOOT_PIECE, 10);
@@ -132,7 +132,7 @@ public class Q00177_SplitDestiny extends Quest
 			}
 			case "33344-25.htm":
 			{
-				if (qs.isCond(9))
+				if (qs.isCond(9) && hasItem(player, PETRIFIED_GIANTS_HAND) && hasItem(player, PETRIFIED_GIANTS_FOOT))
 				{
 					takeItem(player, PETRIFIED_GIANTS_HAND);
 					takeItem(player, PETRIFIED_GIANTS_FOOT);
@@ -306,30 +306,27 @@ public class Q00177_SplitDestiny extends Quest
 				}
 			}
 		}
-		else if (npc.getId() == ISHUMA)
+		else if ((npc.getId() == ISHUMA) && qs.isStarted())
 		{
-			if (qs.isStarted())
+			switch (qs.getCond())
 			{
-				switch (qs.getCond())
+				case 7:
 				{
-					case 7:
-					{
-						htmltext = "32615-01.htm";
-						break;
-					}
-					case 8:
-					{
-						qs.setCond(9, true);
-						giveItems(player, PETRIFIED_GIANTS_HAND);
-						giveItems(player, PETRIFIED_GIANTS_FOOT);
-						htmltext = "32615-04.htm";
-						break;
-					}
-					default:
-					{
-						htmltext = "32615-05.htm";
-						break;
-					}
+					htmltext = "32615-01.htm";
+					break;
+				}
+				case 8:
+				{
+					qs.setCond(9, true);
+					giveItems(player, PETRIFIED_GIANTS_HAND);
+					giveItems(player, PETRIFIED_GIANTS_FOOT);
+					htmltext = "32615-04.htm";
+					break;
+				}
+				default:
+				{
+					htmltext = "32615-05.htm";
+					break;
 				}
 			}
 		}
@@ -340,9 +337,9 @@ public class Q00177_SplitDestiny extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(killer, true);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if (killer.getClassIndex() == qs.getInt(VAR_SUB_INDEX))
+		if ((qs != null) && (killer.getClassIndex() == qs.getInt(VAR_SUB_INDEX)))
 		{
 			switch (qs.getCond())
 			{
