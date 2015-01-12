@@ -86,6 +86,7 @@ import quests.Q00146_TheZeroHour.Q00146_TheZeroHour;
 import quests.Q00147_PathtoBecominganEliteMercenary.Q00147_PathtoBecominganEliteMercenary;
 import quests.Q00148_PathtoBecominganExaltedMercenary.Q00148_PathtoBecominganExaltedMercenary;
 import quests.Q00176_StepsForHonor.Q00176_StepsForHonor;
+import quests.Q00177_SplitDestiny.Q00177_SplitDestiny;
 import quests.Q00183_RelicExploration.Q00183_RelicExploration;
 import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
 import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;
@@ -382,6 +383,7 @@ public class QuestMasterHandler
 		Q00147_PathtoBecominganEliteMercenary.class,
 		Q00148_PathtoBecominganExaltedMercenary.class,
 		Q00176_StepsForHonor.class,
+		Q00177_SplitDestiny.class,
 		Q00183_RelicExploration.class,
 		Q00184_ArtOfPersuasion.class,
 		Q00185_NikolasCooperation.class,
