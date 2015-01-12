@@ -591,7 +591,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="410" levels="8" name="Mortal Strike" enchantGroup1="2" enchantGroup2="2">
-	    <!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- NOTE: This skill increases "Blow Rate" and description in client says "Critical Rate" but is client typo, so please don't change this skill -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#blowRate"> 1.1 1.15 1.2 1.22 1.24 1.26 1.28 1.30 </table>
@@ -1027,7 +1027,6 @@
 		<table name="#mpConsume"> 11 13 14 </table>
 		<table name="#ench1accCombat"> 5 5 5 5 5 5 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 7 </table>
 		<table name="#ench2mpConsume"> 0.49 0.48 0.47 0.46 0.45 0.44 0.43 0.42 0.41 0.4 0.39 0.38 0.37 0.36 0.35 0.34 0.33 0.32 0.31 0.3 0.29 0.28 0.27 0.26 0.25 0.24 0.23 0.22 0.21 0.2 </table>
-		
 		<set name="icon" val="icon.skill0422" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1093,7 +1092,6 @@
 		<table name="#ench1Trait_shock"> 16 16 16 17 17 17 18 18 18 19 19 19 19 20 20 20 21 21 21 22 22 22 22 23 23 23 24 24 24 25 </table>
 		<table name="#ench1Trait_sleep"> 31 31 31 32 32 32 33 33 33 34 34 34 34 35 35 35 36 36 36 37 37 37 37 38 38 38 39 39 39 40 </table>
 		<table name="#ench2mpConsume"> 0.98 0.97 0.96 0.94 0.93 0.92 0.9 0.89 0.88 0.86 0.85 0.84 0.82 0.81 0.8 0.78 0.77 0.76 0.74 0.73 0.72 0.7 0.69 0.68 0.66 0.65 0.64 0.62 0.61 0.6 </table>
-		
 		<set name="icon" val="icon.skill0424" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1160,7 +1158,7 @@
 	</skill>
 	<skill id="426" levels="1" name="Battle Stance">
 		<!-- Not Used Anymore -->
-		
+
 		<set name="castRange" val="400" />
 		<set name="channelingSkillId" val="5104" />
 		<set name="effectPoint" val="1" />
@@ -1177,7 +1175,6 @@
 	</skill>
 	<skill id="427" levels="1" name="Spell Stance">
 		<!-- Not Used Anymore -->
-		
 		<set name="castRange" val="400" />
 		<set name="channelingSkillId" val="5105" />
 		<set name="effectPoint" val="1" />
@@ -2512,7 +2509,6 @@
 	</skill>
 	<skill id="475" levels="1" name="Strike Back">
 		<!-- Confirmed CT2.5 -->
-		
 		<set name="icon" val="icon.skill0475" />
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="T" />
@@ -2632,7 +2628,6 @@
 	</skill>
 	<skill id="479" levels="1" name="Hard March">
 		<!-- Confirmed CT2.5 -->
-		
 		<set name="icon" val="icon.skill0479" />
 		<set name="magicLvl" val="24" />
 		<set name="operateType" val="T" />
@@ -2647,7 +2642,6 @@
 	</skill>
 	<skill id="480" levels="1" name="Dark Blade">
 		<!-- Confirmed CT2.5 -->
-		
 		<set name="icon" val="icon.skill0480" />
 		<set name="magicLvl" val="36" />
 		<set name="operateType" val="T" />
@@ -2663,7 +2657,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#darkRes"> 7 10 </table>
 		<table name="#magicLvl"> 32 43 </table>
-		
+
 		<set name="icon" val="icon.skill0481" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="T" />

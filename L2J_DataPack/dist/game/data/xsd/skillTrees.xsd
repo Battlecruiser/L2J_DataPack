@@ -29,7 +29,7 @@
 												</xs:attribute>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="remove" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="removeSkill" minOccurs="0" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 											</xs:complexType>
