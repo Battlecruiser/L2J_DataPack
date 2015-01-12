@@ -1462,12 +1462,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4271" levels="8" name="Momentum">
-		<!-- Freya retail confirmed -->
-		<table name="#icons"> icon.skill4271_1 icon.skill4271_2 icon.skill4271_3 icon.skill4271_4 icon.skill4271_5 icon.skill4271_6 icon.skill4271_7 icon.skill4271_8 </table>
-		<set name="icon" val="#icons" />
+	<skill id="4271" levels="50" name="Momentum">
+	    <!-- Freya retail confirmed and Updated to Ertheia -->
+		<table name="#icon"> icon.skill_ct3_force01 icon.skill_ct3_force02 icon.skill_ct3_force03 icon.skill_ct3_force04 icon.skill_ct3_force05 icon.skill_ct3_force06 icon.skill_ct3_force07 icon.skill_ct3_force08 icon.skill_ct3_force09 icon.skill_ct3_force10 icon.skill_ct3_force11 icon.skill_ct3_force12 icon.skill_ct3_force13 icon.skill_ct3_force14 icon.skill_ct3_force15 icon.skill_ct3_force16 icon.skill_ct3_force17 icon.skill_ct3_force18 icon.skill_ct3_force19 icon.skill_ct3_force20 icon.skill_ct3_force21 icon.skill_ct3_force22 icon.skill_ct3_force23 icon.skill_ct3_force24 icon.skill_ct3_force25 icon.skill_ct3_force26 icon.skill_ct3_force27 icon.skill_ct3_force28 icon.skill_ct3_force29 icon.skill_ct3_force30 icon.skill_ct3_force31 icon.skill_ct3_force32 icon.skill_ct3_force33 icon.skill_ct3_force34 icon.skill_ct3_force35 icon.skill_ct3_force36 icon.skill_ct3_force37 icon.skill_ct3_force38 icon.skill_ct3_force39 icon.skill_ct3_force40 icon.skill_ct3_force41 icon.skill_ct3_force42 icon.skill_ct3_force43 icon.skill_ct3_force44 icon.skill_ct3_force45 icon.skill_ct3_force46 icon.skill_ct3_force47 icon.skill_ct3_force48 icon.skill_ct3_force49 icon.skill_ct3_force50 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="icon" val="#icon" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4272" levels="1" name="Greater Bow/Crossbow Resistance">

@@ -726,17 +726,16 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5646" levels="2" name="Seraphim the Unicorn - Wild Magic">
-		<!-- Confirmed CT2.5 -->
-		<!-- 3 lvl not_used, don't add it on skill -->
+	<skill id="5646" levels="3" name="Seraphim the Unicorn - Wild Magic">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#abnormalTypes"> MAGIC_CRITICAL_UP MAGIC_CRITICAL_UP HIT_UP </table>
 		<table name="#effectPoints"> 582 635 532 </table>
 		<table name="#icons"> icon.skill1303 icon.skill1303 icon.skill1240 </table>
-		<table name="#magicLvl"> 64 72 </table>
-		<table name="#mCritRate"> 2 3 </table>
-		<table name="#mpConsume"> 46 52 </table>
-		<table name="#mpInitialConsume"> 12 13 </table>
+		<table name="#magicLvl"> 64 72 80 </table> <!-- Guessed -->
+		<table name="#mCritRate"> 2 3 4 </table> <!-- Guessed -->
+		<table name="#mpConsume"> 46 52 42 </table> <!-- Guessed -->
+		<table name="#mpInitialConsume"> 12 13 10 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="#abnormalTypes" />

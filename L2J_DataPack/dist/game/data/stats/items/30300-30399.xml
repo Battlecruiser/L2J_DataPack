@@ -590,41 +590,107 @@
 	<item id="30357" name="Elixir of Life (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers HP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i02" />
-		<set name="weight" val="5" />
-		<set name="price" val="17500" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="17500" />
+		<set name="reuse_delay" val="120000" />
+		<set name="shared_reuse_group" val="6" />
+		<set name="weight" val="5" />
+		<set name="handler" val="Elixir" />
+		<set name="item_skill" val="2287-7" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="30358" name="Elixir of Mind (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers MP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="icon" val="icon.etc_super_potion_i00" />
-		<set name="weight" val="5" />
-		<set name="price" val="18800" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="18800" />
+		<set name="reuse_delay" val="120000" />
+		<set name="shared_reuse_group" val="6" />
+		<set name="weight" val="5" />
+		<set name="handler" val="Elixir" />
+		<set name="item_skill" val="2288-7" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="30359" name="Elixir of CP (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers CP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="icon" val="icon.etc_super_potion_i01" />
-		<set name="weight" val="5" />
-		<set name="price" val="7000" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="7000" />
+		<set name="reuse_delay" val="120000" />
+		<set name="shared_reuse_group" val="7" />
+		<set name="weight" val="5" />
+		<set name="handler" val="Elixir" />
+		<set name="item_skill" val="2289-7" />
 	</item>
 	<item id="30360" name="Superior Elixir of Life (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers HP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="icon" val="icon.etc_super_potion_i02" />
-		<set name="weight" val="5" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="120000" />
+		<set name="shared_reuse_group" val="6" />
+		<set name="weight" val="5" />
+		<set name="handler" val="Elixir" />
+		<set name="item_skill" val="2860-7" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="30361" name="Superior Elixir of Mind (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers MP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="icon" val="icon.etc_super_potion_i00" />
-		<set name="weight" val="5" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="300000" />
+		<set name="shared_reuse_group" val="6" />
+		<set name="weight" val="5" />
+		<set name="handler" val="Elixir" />
+		<set name="item_skill" val="2861-7" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="30362" name="Superior Elixir of CP (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers CP. Only characters below level 85 can use on themselves. Cooldown is 2 min. -->
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="icon" val="icon.etc_super_potion_i01" />
-		<set name="weight" val="5" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="120000" />
+		<set name="shared_reuse_group" val="7" />
+		<set name="weight" val="5" />
+		<set name="handler" val="Elixir" />
+		<set name="item_skill" val="2862-7" />
 	</item>
 	<item id="30363" name="Soul Crystal" additionalName="" type="EtcItem">
 		<!-- Soul Crystal -->

@@ -1457,13 +1457,15 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1244" levels="4" name="Freezing Flame">
-		<table name="#abnormalLvls"> 5 6 7 8 </table>
-		<table name="#dot"> 102 125 144 157 </table>
-		<table name="#effectPoints"> -379 -495 -597 -646 </table>
-		<table name="#magicLvl"> 40 52 64 72 </table>
-		<table name="#mpConsume"> 42 56 71 80 </table>
-		<table name="#mpInitialConsume"> 11 14 18 20 </table>
+	<skill id="1244" levels="10" name="Freezing Flame">
+	    <!-- Updated to Ertheia -->
+		<table name="#abnormalLvls"> 5 6 7 8 9 10 11 12 13 14 </table>
+		<table name="#dot"> 112 137 158 172 198 330 358 377 394 412 </table>
+		<table name="#dotPvP"> 132 162 187 204 234 390 423 445 466 487 </table>
+		<table name="#effectPoints"> -379 -495 -597 -646 -696 -746 -796 -846 -896 -946 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 40 52 64 72 76 80 85 90 95 99</table>
+		<table name="#mpConsume"> 44 46 49 51 54 56 58 63 69 73 </table>
+		<table name="#mpInitialConsume"> 11 12 12 13 13 14 15 16 17 18 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
@@ -1471,11 +1473,12 @@
 		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="900" />
+		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
-		<set name="hitTime" val="4000" />
+		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill1244" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1484,14 +1487,19 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
-		<set name="reuseDelay" val="2000" />
+		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
-		<for>
+		<pvpEffects>
+			<effect name="DamOverTime" ticks="1">
+				<param power="#dotPvP" />
+			</effect>
+		</pvpEffects>
+		<pveEffects>
 			<effect name="DamOverTime" ticks="1">
 				<param power="#dot" />
 			</effect>
-		</for>
+		</pveEffects>
 	</skill>
 	<skill id="1245" levels="14" name="Steal Essence" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#effectPoints"> -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
@@ -2181,10 +2189,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1262" levels="5" name="Transfer Pain" enchantGroup1="1">
-		<table name="#magicLvl"> 40 48 56 58 70 </table>
-		<table name="#mpInitialConsume"> 7 9 11 12 13 </table>
-		<table name="#power"> 10 20 30 40 50 </table>
+	<skill id="1262" levels="10" name="Transfer Pain" enchantGroup1="1">
+		<table name="#magicLvl"> 40 48 56 58 70 80 85 90 95 99 </table>
+		<table name="#mpInitialConsume"> 7 9 11 12 13 14 15 16 17 18 </table>
+		<table name="#power"> 10 20 30 40 50 52 54 56 58 60 </table>
 		<table name="#ench1power"> 51 52 52 53 54 54 55 56 56 57 57 58 59 59 60 61 61 62 63 63 64 64 65 66 66 67 68 68 69 70 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalVisualEffect" val="NONE" />
