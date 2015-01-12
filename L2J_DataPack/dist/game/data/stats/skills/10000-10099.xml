@@ -6,40 +6,256 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="10001" levels="1" name="Superior Sword/Blunt Weapon Mastery">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="10001" levels="1" name="Superior Sword/Blunt Weapon Mastery" enchantGroup1="10">
 		<!-- STR + 2, P. Atk. + 205 when a Sword or Blunt weapon is equipped. Increases enmity toward you 60% of the damage you inflict with a Sword or Blunt weapon. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your STR. -->
+		<table name="#pAtk"> 218 232 245 259 272 286 299 313 326 340 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10001" />
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="205">
+					<using kind="SWORD, BLUNT" />
+				</add>
+				<add stat="STR" val="2">
+					<using kind="SWORD, BLUNT" />
+				</add>
+				<add stat="skillMastery" val="2" />
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" chance="60" />
+				<param skillId="10060" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="pAtk" val="#pAtk">
+					<using kind="SWORD, BLUNT" />
+				</add>
+				<add stat="STR" val="2">
+					<using kind="SWORD, BLUNT" />
+				</add>
+				<add stat="skillMastery" val="2" />
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" chance="60" />
+				<param skillId="10060" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT" />
+			</effect>
+		</enchant1for>
 	</skill>
-	<skill id="10002" levels="1" name="Superior Heavy Armor Mastery">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="10002" levels="1" name="Superior Heavy Armor Mastery" enchantGroup1="10">
 		<!-- STR + 2. Max HP + 6883 and P. Def. + 1592 when equipped with Heavy Armor. MP Recovery Bonus + 8.4 and Critical Damage received - 35%. Reflects 10% of incurred damage back to the opponent. When HP falls below 30%, additional P. Def. + 280 and Evasion + 17. -->
+		<table name="#ench1pDef1"> 1638 1684 1730 1776 1822 1868 1914 1960 2006 2060 </table>
+		<table name="#ench1pDef2"> 298 316 334 353 371 389 408 426 444 463 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10002" />
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="maxHp" val="6883">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="pDef" val="1592">
+					<using kind="HEAVY" />
+				</add>
+				<mul stat="regMp" val="1.84">
+					<using kind="HEAVY" />
+				</mul>
+				<mul stat="defCritDamage" val="1.35">
+					<using kind="HEAVY" />
+				</mul>
+				<add stat="reflectDam" val="10">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="pDef" val="280">
+					<and>
+						<player hp="30" />
+						<using kind="HEAVY" />
+					</and>
+				</add>
+				<add stat="rEvas" val="17">
+					<and>
+						<player hp="30" />
+						<using kind="HEAVY" />
+					</and>
+				</add>
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="STR" val="2">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="maxHp" val="6883">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="pDef" val="#ench1pDef1">
+					<using kind="HEAVY" />
+				</add>
+				<mul stat="regMp" val="1.84">
+					<using kind="HEAVY" />
+				</mul>
+				<mul stat="defCritDamage" val="1.35">
+					<using kind="HEAVY" />
+				</mul>
+				<add stat="reflectDam" val="10">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="pDef" val="#ench1pDef2">
+					<and>
+						<player hp="30" />
+						<using kind="HEAVY" />
+					</and>
+				</add>
+				<add stat="rEvas" val="17">
+					<and>
+						<player hp="30" />
+						<using kind="HEAVY" />
+					</and>
+				</add>
+			</effect>
+		</enchant1for>
 	</skill>
-	<skill id="10003" levels="1" name="Superior Shield Mastery">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="10003" levels="1" name="Superior Shield Mastery" enchantGroup1="10">
 		<!-- STR + 2 and Shield defense becomes possible in all directions. Shield defense success rate + 100%. When Shield defense succeeds, Shield Defense + 80% and an additional + 209. -->
+		<table name="#ench1pDef"> 222 236 249 263 277 290 304 317 331 345 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10003" />
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2">
+					<using kind="SHIELD" />
+				</add>
+				<mul stat="rShld" val="2">
+					<using kind="SHIELD" />
+				</mul>
+				<mul stat="sDef" val="1.8">
+					<using kind="SHIELD" />
+				</mul>
+				<add stat="sDef" val="209">
+					<using kind="SHIELD" />
+				</add>
+				<add stat="shieldDefAngle" val="360">
+					<using kind="SHIELD" />
+				</add>
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="STR" val="2">
+					<using kind="SHIELD" />
+				</add>
+				<mul stat="rShld" val="2">
+					<using kind="SHIELD" />
+				</mul>
+				<mul stat="sDef" val="1.8">
+					<using kind="SHIELD" />
+				</mul>
+				<add stat="sDef" val="#ench1pDef">
+					<using kind="SHIELD" />
+				</add>
+				<add stat="shieldDefAngle" val="360">
+					<using kind="SHIELD" />
+				</add>
+			</effect>
+		</enchant1for>
 	</skill>
-	<skill id="10004" levels="1" name="Superior M. Def.">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="10004" levels="1" name="Superior M. Def." enchantGroup1="10">
 		<!-- STR + 2 and M. Def. + 158. Attack M. Def. rate + 25%. When receiving damage, has a chance of momentarily increasing M. Def. and Attribute Resistance. -->
+		<table name="#ench1mDef"> 168 178 188 199 209 219 230 240 250 261 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10004" />
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="mDef" val="158" />
+				<mul stat="magicSuccRes" val="1.25" />
+			</effect>
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="20" />
+				<param skillId="10058" skillLevel="1" />
+				<param targetType="SELF" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="mDef" val="#ench1mDef" />
+				<mul stat="magicSuccRes" val="1.25" />
+			</effect>
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="20" />
+				<param skillId="10058" skillLevel="1" />
+				<param targetType="SELF" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="10005" levels="1" name="Superior Mental Attack Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 2. Resistance + 20 to Hold, Sleep, Paralysis, Mental attacks, Poison, Bleed, and Stun. In addition, has a chance of reflecting debuffs back to the attacker. -->
+		<table name="#ench1Vuln">21 22 23 24 25 26 27 28 29 30</table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10005" />
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="reflectSkillMagic" val="10" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param HOLD="20" />
+				<param SLEEP="20" />
+				<param PARALYZE="20" />
+				<param DERANGEMENT="20" />
+				<param POISON="20" />
+				<param BLEED="20" />
+				<param SHOCK="20" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="reflectSkillMagic" val="10" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param HOLD="#ench1Vuln" />
+				<param SLEEP="#ench1Vuln" />
+				<param PARALYZE="#ench1Vuln" />
+				<param DERANGEMENT="#ench1Vuln" />
+				<param POISON="#ench1Vuln" />
+				<param BLEED="#ench1Vuln" />
+				<param SHOCK="#ench1Vuln" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="10006" levels="1" name="Last Patience">
 		<!-- AUTO GENERATED SKILL -->
@@ -456,11 +672,40 @@
 		<set name="reuseDelay" val="30000" />
 	</skill>
 	<skill id="10044" levels="1" name="Superior Elemental Mastery">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 2 and Attribute Resistance + 20. -->
+		<table name="#elemRes">21 22 23 24 25 26 27 28 29 30</table>
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill10044" />
+		<set name="isMagic" val="1" />
+		<set name="mpInitialConsume" val="14" />
+		<set name="mpConsume" val="56" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="3000" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="waterRes" val="20" />
+				<add stat="fireRes" val="20" />
+				<add stat="windRes" val="20" />
+				<add stat="earthRes" val="20" />
+				<add stat="holyRes" val="20" />
+				<add stat="darkRes" val="20" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="waterRes" val="#elemRes" />
+				<add stat="fireRes" val="#elemRes" />
+				<add stat="windRes" val="#elemRes" />
+				<add stat="earthRes" val="#elemRes" />
+				<add stat="holyRes" val="#elemRes" />
+				<add stat="darkRes" val="#elemRes" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="10045" levels="3" name="Shield Charge II">
 		<!-- AUTO GENERATED SKILL -->

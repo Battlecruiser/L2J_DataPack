@@ -324,11 +324,39 @@
 		<set name="isMagic" val="4" />
 	</skill>
 	<skill id="30540" levels="11" name="Eminent Fist Weapon Mastery">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- When equipped with a fist weapon, P. Atk. + 10% and + 4. -->
+		<table name="#accCombat"> 0 2 3 3 3 4 4 8 8 8 8 </table>
+		<table name="#cAtkAdd"> 0 0 0 0 0 1.10 1.10 1.45 1.45 1.45 1.45 </table>
+		<table name="#magicLvl"> 5 20 40 52 64 76 80 85 90 95 99 </table>
+		<table name="#pAtkAdd"> 4 13 63 124 208 306 471 2156 2803 3342 4060 </table>
+		<table name="#pAtkMul"> 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.45 1.45 1.45 1.45 </table>
+		<table name="#rCrit"> 0 0 10 10 10 20 20 60 60 60 60 </table>
 		<set name="icon" val="icon.skill30524" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="rCrit" val="#rCrit">
+					<using kind="FIST,DUALFIST" />
+				</add>
+				<mul stat="pAtk" val="#pAtkMul">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+				<add stat="pAtk" val="#pAtkAdd">
+					<using kind="FIST,DUALFIST" />
+				</add>
+				<add stat="accCombat" val="#accCombat">
+					<using kind="FIST,DUALFIST" />
+				</add>
+				<mul stat="cAtkAdd" val="#cAtkAdd">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+				<mul stat="pAtkSpd" val="1.10">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</for>
 	</skill>
 	<skill id="30541" levels="11" name="Eminent Light Armor Mastery">
 		<!-- AUTO GENERATED SKILL -->
@@ -338,18 +366,43 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="30542" levels="7" name="Eminent Stability">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 58, HP Recovery Bonus + 2.5, MP Recovery Bonus + 1.2. -->
+		<table name="#maxHp"> 58 196 473 5961 6077 6194 6349</table>
+		<table name="#maxCp"> 0 0 231 291 347 404 481 </table>
+		<table name="#regHp"> 2.5 4.5 66.5 9 10 11 12 </table>
+		<table name="#regMp"> 1.2 1.8 2.4 3 4 5 6 </table>
+		<table name="#regCp"> 0 0 2.4 3 4 5 6 </table>
+		<table name="#runSpd"> 0 0 10 14 14 14 14 </table>
+		<table name="#magicLvl"> 20 40 76 85 90 95 99 </table>
 		<set name="icon" val="icon.skill11506" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="#maxHp" />
+				<add stat="maxCp" val="#maxCp" />
+				<add stat="regCp" val="#regHp" />
+				<add stat="regHp" val="#regHp" />
+				<add stat="regMp" val="#regMp" />
+				<add stat="runSpd" val="#runSpd" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="30543" levels="2" name="Eminent Attribute Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Wind Resistance + 30. -->
+		<table name="#holyRes"> 0 30</table>
+		<table name="#magicLvl">76 85</table>
 		<set name="icon" val="icon.skill11006" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windRes" val="30" />
+				<add stat="holyRes" val="#holyRes" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="30544" levels="2" name="Eminent Trait Resistance">
 		<!-- AUTO GENERATED SKILL -->

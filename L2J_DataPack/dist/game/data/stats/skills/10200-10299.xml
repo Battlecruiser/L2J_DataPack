@@ -60,33 +60,199 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
-	<skill id="10251" levels="1" name="Superior Weapon Mastery">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="10251" levels="1" name="Superior Weapon Mastery" enchantGroup1="10">
 		<!-- STR + 2, P. Atk. + 30%, and Atk. Spd. + 25%. P. Atk. + 1252 and P. Accuracy + 8 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. 50% chance of triggering Lightning Force during a normal attack. Depending on your STR, the Cooldown resets or the duration increases by 2 times. -->
-		<set name="icon" val="icon.skill10251" />
+		<table name="#ench1pAtk"> 1502 1613 1724 1835 1946 2057 2168 2279 2390 2501 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="icon" val="icon.skill10251" />	
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="1252">
+					<using kind="BLUNT,POLE,SWORD" />
+				</add>
+				<add stat="accCombat" val="8">
+					<using kind="BLUNT,POLE,SWORD" />
+				</add>
+				<mul stat="pAtkSpd" val="1.25" />
+				<mul stat="pAtk" val="1.30" />
+				<add stat="STR" val="2" />
+				<add stat="skillMastery" val="2" />
+				<add stat="atkCountMax" val="8">
+					<using kind="POLE" />
+				</add>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="50" />
+				<param skillId="10284" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="pAtk" val="#ench1pAtk">
+					<using kind="BLUNT,POLE,SWORD" />
+				</add>
+				<add stat="accCombat" val="8">
+					<using kind="BLUNT,POLE,SWORD" />
+				</add>
+				<mul stat="pAtkSpd" val="1.25" />
+				<mul stat="pAtk" val="1.30" />
+				<add stat="STR" val="2" />
+				<add stat="skillMastery" val="2" />
+				<add stat="atkCountMax" val="8">
+					<using kind="POLE" />
+				</add>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param isCritical="false" />
+				<param minDamage="1" chance="50" />
+				<param skillId="10284" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT" />
+			</effect>
+		</enchant1for>
 	</skill>
-	<skill id="10252" levels="1" name="Superior Dual Weapon Mastery">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="10252" levels="1" name="Superior Dual Weapon Mastery" enchantGroup1="10">
 		<!-- STR + 2. P. Atk. + 1252 and P. Accuracy + 8 when using a dualsword, dual blunt, or fist weapon. -->
+		<table name="#ench1pAtk"> 1502 1613 1724 1835 1946 2057 2168 2279 2390 2501 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10252" />
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="1252">
+					<using kind="FIST,DUALFIST,DUALBLUNT,DUAL" />
+				</add>
+				<add stat="accCombat" val="8">
+					<using kind="FIST,DUALFIST,DUALBLUNT,DUAL" />
+				</add>
+				<add stat="STR" val="2" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="pAtk" val="#ench1pAtk">
+					<using kind="FIST,DUALFIST,DUALBLUNT,DUAL" />
+				</add>
+				<add stat="accCombat" val="8">
+					<using kind="FIST,DUALFIST,DUALBLUNT,DUAL" />
+				</add>
+				<add stat="STR" val="2" />
+			</effect>
+		</enchant1for>
 	</skill>
-	<skill id="10253" levels="1" name="Superior Heavy Armor Mastery">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="10253" levels="1" name="Superior Heavy Armor Mastery" enchantGroup1="10">
 		<!-- STR + 2. Max HP + 5368 and P. Def. + 1327 when equipped with Heavy Armor. -->
+		<table name="#ench1pDef"> 1366 1405 1444 1483 1522 1561 1600 1639 1678 1717 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
 		<set name="icon" val="icon.skill10253" />
-		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="pDef" val="1327">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="maxHp" val="5368">
+					<using kind="HEAVY" />
+				</add>
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="STR" val="2">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="pDef" val="#ench1pDef">
+					<using kind="HEAVY" />
+				</add>
+				<add stat="maxHp" val="5368">
+					<using kind="HEAVY" />
+				</add>
+			</effect>
+		</enchant1for>
 	</skill>
-	<skill id="10254" levels="1" name="Superior Light Armor Mastery">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="10254" levels="1" name="Superior Light Armor Mastery" enchantGroup1="10">
 		<!-- STR + 2. Max HP + 5368, P. Def. + 1271, P. Accuracy + 3, P. Evasion + 6, Spd. + 10, and Atk. Spd. + 10% when equipped with Light Armor. Chance of receiving a critical attack - 35%. -->
-		<set name="icon" val="icon.skill10254" />
+		<table name="#ench1pDef"> 1308 1345 1382 1419 1456 1493 1530 1567 1604 1643 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
+		<set name="icon" val="icon.skill10254" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="pDef" val="1271">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="maxHp" val="5368">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="accCombat" val="3">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="rEvas" val="6">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="runSpd" val="10">
+					<using kind="LIGHT" />
+				</add>
+				<mul stat="pAtkSpd" val="1.10">
+					<using kind="LIGHT" />
+				</mul>
+				<mul stat="defCritRate" val="1.35">
+					<using kind="LIGHT" />
+				</mul>
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="STR" val="2">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="pDef" val="#ench1pDef">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="maxHp" val="5368">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="accCombat" val="3">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="rEvas" val="6">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="runSpd" val="10">
+					<using kind="LIGHT" />
+				</add>
+				<mul stat="pAtkSpd" val="1.10">
+					<using kind="LIGHT" />
+				</mul>
+				<mul stat="defCritRate" val="1.35">
+					<using kind="LIGHT" />
+				</mul>
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="10255" levels="1" name="Superior Momentum Mastery">
 		<!-- AUTO GENERATED SKILL -->
