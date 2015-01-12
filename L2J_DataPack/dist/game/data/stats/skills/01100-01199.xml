@@ -403,25 +403,23 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1129" levels="7" name="Summon Reanimated Man" enchantGroup1="1">
-		<table name="#itemConsumeCount"> 11 13 6 9 9 6 9 </table>
-		<table name="#itemConsumeCountOT"> 0 0 1 1 1 2 2 </table>
-		<table name="#itemConsumeSteps"> 0 0 14 14 14 14 14 </table>
-		<table name="#mpConsume"> 62 75 88 95 101 106 109 </table>
-		<table name="#mpInitialConsume"> 16 19 22 24 26 27 28 </table>
-		<table name="#npcIds"> 14001 14002 14003 14004 14005 14006 14007 </table>
+	<skill id="1129" levels="13" name="Summon Reanimated Man" enchantGroup1="1">
+		<table name="#itemConsumeCount"> 11 13 6 9 9 6 9 0 0 0 0 0 0 </table>
+		<table name="#itemConsumeCountOT"> 0 0 1 1 1 2 2 0 0 0 0 0 0 </table>
+		<table name="#itemConsumeSteps"> 0 0 14 14 14 14 14 0 0 0 0 0 0 </table>
+		<table name="#mpConsume"> 62 75 88 95 102 106 110 338 348 358 367 377 386 </table>
+		<table name="#mpInitialConsume"> 16 19 22 24 25 27 27 85 87 89 92 94 97 </table>
+		<table name="#npcIds"> 14001 14002 14003 14004 14005 14006 14007 15148 15149 15150 15151 15152 15153 </table>
 		<table name="#enchNpcId"> 14008 14009 14010 14011 14012 14013 14014 14015 14016 14017 14018 14019 14020 14021 14022 14023 14024 14025 14026 14027 14028 14029 14030 14031 14032 14033 14034 14035 14036 14037 </table>
+		<set name="hitTime" val="3500" />
 		<set name="icon" val="icon.skill1129" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<!-- set name="castRange" val="40" / -->
-		<!-- set name="effectRange" val="400" / -->
-		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<cond>

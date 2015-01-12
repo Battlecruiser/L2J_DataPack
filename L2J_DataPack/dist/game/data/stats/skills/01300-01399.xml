@@ -890,24 +890,23 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1334" levels="7" name="Summon Cursed Man" enchantGroup1="1">
-		<table name="#itemConsumeCount"> 3 5 12 1 2 3 4 </table>
-		<table name="#itemConsumeCountOT"> 1 1 1 2 2 2 2 </table>
-		<table name="#magicLvl"> 56 60 64 68 70 72 74 </table>
-		<table name="#mpConsume"> 82 88 95 101 104 106 109 </table>
-		<table name="#mpInitialConsume"> 21 22 24 26 26 27 28 </table>
-		<table name="#npcIds"> 14074 14075 14076 14077 14078 14079 14080 </table>
+	<skill id="1334" levels="13" name="Summon Cursed Man" enchantGroup1="1">
+		<table name="#itemConsumeCount"> 3 5 12 1 2 3 4 0 0 0 0 0 0 </table>
+		<table name="#itemConsumeCountOT"> 1 1 1 2 2 2 2 0 0 0 0 0 0 </table>
+		<table name="#magicLvl"> 56 60 64 68 70 72 74 77 80 85 90 95 99 </table>
+		<table name="#mpConsume"> 82 88 95 102 104 106 110 338 348 358 367 377 386 </table>
+		<table name="#mpInitialConsume"> 21 22 24 25 26 27 27 85 87 89 92 94 97 </table>
+		<table name="#npcIds"> 14074 14075 14076 14077 14078 14079 14080 15142 15143 15144 15145 15146 15147 </table>
 		<table name="#enchNpcId"> 14081 14082 14083 14084 14085 14086 14087 14088 14089 14090 14091 14092 14093 14094 14095 14096 14097 14098 14099 14100 14101 14102 14103 14104 14105 14106 14107 14108 14109 14110 </table>
 		<set name="icon" val="icon.skill1334" />
+		<set name="coolTime" val="500" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<!-- set name="castRange" val="40" / -->
-		<!-- set name="effectRange" val="400" / -->
-		<set name="hitTime" val="15000" />
+		<set name="hitTime" val="3500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
