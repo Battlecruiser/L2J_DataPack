@@ -845,11 +845,11 @@
 			<effect name="Sleep" />
 		</for>
 	</skill>
-	<skill id="4047" levels="12" name="Hold">
-		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
-		<table name="#mpInitialConsume"> 3 4 6 7 9 11 13 14 15 15 16 16 </table>
+	<skill id="4047" levels="13" name="Hold">
+		<!-- Freya retail confirmed and Updated to Ertheia -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 99 </table> <!-- Confirmed -->
+		<table name="#mpConsume"> 10 16 22 28 36 44 52 55 58 60 62 62 64 </table> <!-- Confirmed -->
+		<table name="#mpInitialConsume"> 3 4 5 7 9 11 13 14 15 15 15 16 16 </table> <!-- Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />

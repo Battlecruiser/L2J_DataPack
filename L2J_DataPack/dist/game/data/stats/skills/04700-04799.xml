@@ -238,11 +238,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4708" levels="10" name="Cursed Strike">
-		<table name="#effectPoints"> -279 -296 -311 -323 -328 -333 -337 -340 -341 -342 </table>
-		<table name="#magicLvl"> 58 62 66 70 72 74 76 78 79 80 </table>
-		<table name="#mpConsume"> 58 62 67 71 73 75 77 78 79 80 </table>
-		<table name="#power"> 1046 1230 1425 1626 1727 1827 1925 2020 2067 2112 </table>
+	<skill id="4708" levels="14" name="Cursed Strike">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#effectPoints"> -279 -296 -311 -323 -328 -333 -337 -340 -341 -342 -343 -344 -345 -346 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 58 62 66 70 72 74 76 78 79 80 85 90 95 99 </table> <!-- Guessed -->
+		<table name="#mpConsume"> 58 62 67 71 73 75 77 78 79 80 80 80 80 80 </table> <!-- Guessed -->
+		<table name="#power"> 1046 1230 1425 1626 1727 1827 1925 2020 2067 2112 6459 6593 7004 7443 </table> <!-- Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -269,11 +270,12 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="4709" levels="10" name="Cursed Blow">
-		<table name="#effectPoints"> -279 -296 -311 -323 -328 -333 -337 -340 -341 -342 </table>
-		<table name="#magicLvl"> 58 62 66 70 72 74 76 78 79 80 </table>
-		<table name="#mpConsume"> 58 62 67 71 73 75 77 78 79 80 </table>
-		<table name="#power"> 4181 4920 5700 6503 6906 7305 7698 8079 8265 8447 </table>
+	<skill id="4709" levels="14" name="Cursed Blow">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#effectPoints"> -279 -296 -311 -323 -328 -333 -337 -340 -341 -342 -343 -344 -345 -346 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 58 62 66 70 72 74 76 78 79 80 85 90 95 99 </table> <!-- Guessed -->
+		<table name="#mpConsume"> 58 62 67 71 73 75 77 78 79 80 80 80 80 80 </table> <!-- Confirmed -->
+		<table name="#power"> 4181 4920 5700 6503 6906 7305 7698 8079 8265 8447 8743 8918 9101 9283 </table> <!-- Confirmed -->
 		<set name="baseCritRate" val="10" />
 		<set name="blowChance" val="20" />
 		<set name="castRange" val="40" />
