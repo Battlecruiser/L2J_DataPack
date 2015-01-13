@@ -177,6 +177,7 @@ import quests.Q00173_ToTheIsleOfSouls.Q00173_ToTheIsleOfSouls;
 import quests.Q00174_SupplyCheck.Q00174_SupplyCheck;
 import quests.Q00175_TheWayOfTheWarrior.Q00175_TheWayOfTheWarrior;
 import quests.Q00176_StepsForHonor.Q00176_StepsForHonor;
+import quests.Q00178_IconicTrinity.Q00178_IconicTrinity;
 import quests.Q00179_IntoTheLargeCavern.Q00179_IntoTheLargeCavern;
 import quests.Q00182_NewRecruits.Q00182_NewRecruits;
 import quests.Q00183_RelicExploration.Q00183_RelicExploration;
@@ -639,6 +640,7 @@ public class QuestMasterHandler
 		Q00174_SupplyCheck.class,
 		Q00175_TheWayOfTheWarrior.class,
 		Q00176_StepsForHonor.class,
+		Q00178_IconicTrinity.class,
 		Q00179_IntoTheLargeCavern.class,
 		Q00182_NewRecruits.class,
 		Q00183_RelicExploration.class,
