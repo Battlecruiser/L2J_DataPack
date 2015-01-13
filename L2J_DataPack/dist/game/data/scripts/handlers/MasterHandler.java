@@ -208,6 +208,7 @@ import handlers.targethandlers.FrontAura;
 import handlers.targethandlers.Ground;
 import handlers.targethandlers.Holy;
 import handlers.targethandlers.One;
+import handlers.targethandlers.OneFriendly;
 import handlers.targethandlers.OwnerPet;
 import handlers.targethandlers.Party;
 import handlers.targethandlers.PartyClan;
@@ -547,6 +548,7 @@ public class MasterHandler
 			Ground.class,
 			Holy.class,
 			One.class,
+			OneFriendly.class,
 			OwnerPet.class,
 			Party.class,
 			PartyClan.class,

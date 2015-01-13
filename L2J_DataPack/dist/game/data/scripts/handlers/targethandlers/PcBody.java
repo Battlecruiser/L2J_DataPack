@@ -95,7 +95,7 @@ public class PcBody implements ITargetTypeHandler
 					if (!onlyFirst)
 					{
 						targetList.add(target);
-						return targetList.toArray(new L2Object[targetList.size()]);
+						return targetList.toArray(new L2Character[targetList.size()]);
 					}
 					return new L2Character[]
 					{

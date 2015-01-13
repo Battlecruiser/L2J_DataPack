@@ -282,16 +282,29 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="11826" levels="1" name="Emblem of Salvation">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Resurrects from death fully recovered. Buffs/debuffs remain in death, but Noblesse Blessing and Lucky Charm disappear. -->
-		<set name="icon" val="icon.skill11826" />
-		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="70" />
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
+		<set name="abnormalTime" val="3600" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill11826" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="70" />
+		<set name="mpInitialConsume" val="14" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="isMagic" val="1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="staticReuse" val="true" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="ResurrectionSpecial">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11827" levels="5" name="Fairy Blessing">
 		<!-- AUTO GENERATED SKILL -->
@@ -301,16 +314,26 @@
 		<set name="reuseDelay" val="4000" />
 	</skill>
 	<skill id="11828" levels="1" name="Progressive Heal">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Heals target and the 10 most injured allies around target by up to 40% of their Max HP. The recovery amount decreases starting from the most injured person. -->
-		<set name="icon" val="icon.skill11828" />
-		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="573" />
+		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="300" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="398" />
+		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill11828" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="573" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="AREA_FRIENDLY" />
+		<for>
+			<effect name="HealPercent">
+				<param power="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11830" levels="1" name="Blessing of Saha">
 		<!-- AUTO GENERATED SKILL -->
@@ -401,30 +424,59 @@
 		<set name="isDebuff" val="#isDebuffs" />
 	</skill>
 	<skill id="11850" levels="4" name="Miraculous Benediction">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores clan members' CP/HP. Can only be used when MP is 50% or below. -->
 		<table name="#mpConsumes"> 185 205 225 243 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mp"> 50 60 70 100 </table>
 		<set name="icon" val="icon.skill11850new" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY_CLAN" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="hitTime" val="10000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="600000" />
 		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<cond msgId="113" addName="1">
+			<player mp="#mp" />
+		</cond>
+		<for>
+			<effect name="CpHealPercent">
+				<param power="100" />
+			</effect>
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11851" levels="4" name="Divine Prayer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' HP heal amount + 5%. -->
-		<table name="#mpConsumes"> 185 205 225 243 </table>
-		<set name="icon" val="icon.skill11859" />
+		<table name="#abnormalLvls"> 4 5 6 7 </table>
+		<table name="#healEffect"> 1.05 1.07 1.1 1.15 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mpInitialConsume"> 37 41 45 49 </table>
+		<table name="#mpConsume"> 185 205 225 243 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="HEAL_EFFECT_UP" />
+		<set name="abnormalTime" val="1800" />
+		<set name="affectRange" val="1000" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="icon" val="icon.skill11859" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="targetType" val="PARTY" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="healEffect" val="#healEffect" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11852" levels="4" name="Mass Mana Gain">
 		<!-- AUTO GENERATED SKILL -->
