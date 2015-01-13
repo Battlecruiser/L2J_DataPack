@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1901" levels="1" name="Aim">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Elemental Resistance + 10. -->
 		<set name="icon" val="icon.skill1901" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windRes" val="10" />
+				<add stat="fireRes" val="10" />
+				<add stat="earthRes" val="10" />
+				<add stat="waterRes" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1902" levels="1" name="Mental Fortress">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Debuff Resistance + 1%. -->
 		<set name="icon" val="icon.skill1902" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<sub stat="debuffVuln" val="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1903" levels="1" name="Fitness">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases HP Recovery bonus by 1 and MP Recovery bonus by 1. -->
 		<set name="icon" val="icon.skill1903" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regHp" val="1.01" />
+				<mul stat="regMp" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1904" levels="2" name="Unbind">
 		<!-- AUTO GENERATED SKILL -->
@@ -31,18 +50,32 @@
 		<set name="reuseDelay" val="600000" />
 	</skill>
 	<skill id="1905" levels="1" name="Swiftness">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Atk. Spd. by 4, Casting Spd. by 3, and Speed when not in combat by 13. -->
 		<set name="icon" val="icon.skill1905" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtkSpd" val="4" />
+				<add stat="mAtkSpd" val="3" />
+				<add stat="runSpd" val="13">
+					<player incombat="false" />
+				</add>
+			</effect>
+		</for>
 	</skill>
 	<skill id="1906" levels="1" name="Blessing of Water">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Water resistance by 20. -->
 		<set name="icon" val="icon.skill1906" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="waterRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1907" levels="2" name="Prevision">
 		<!-- AUTO GENERATED SKILL -->
@@ -54,32 +87,59 @@
 		<set name="reuseDelay" val="600000" />
 	</skill>
 	<skill id="1908" levels="1" name="Delicacy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Critical Rate + 10 and M. Critical Rate + 10. -->
 		<set name="icon" val="icon.skill1908" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="rCrit" val="10" />
+				<add stat="mCritRate" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1909" levels="1" name="Sharpness">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Critical Damage and M. Critical Damage by 1%. -->
 		<set name="icon" val="icon.skill1909" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="cAtk" val="1.01" />
+				<mul stat="mCritPower" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1910" levels="1" name="Dark Presence">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR and INT + 1 at night. -->
 		<set name="icon" val="icon.skill1910" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="1">
+					<game night="true" />
+				</add>
+				<add stat="INT" val="1">
+					<game night="true" />
+				</add>
+			</effect>
+		</for>
 	</skill>
 	<skill id="1911" levels="1" name="Blessing of Wind">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Wind resistance by 20. -->
 		<set name="icon" val="icon.skill1911" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1912" levels="2" name="Disparition">
 		<!-- AUTO GENERATED SKILL -->
@@ -91,11 +151,16 @@
 		<set name="reuseDelay" val="600000" />
 	</skill>
 	<skill id="1913" levels="1" name="Life Siphon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Absorbs 1% of the damage inflicted as HP. -->
 		<set name="icon" val="icon.skill1913" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="absorbDam" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1914" levels="2" name="Savage">
 		<!-- AUTO GENERATED SKILL -->
@@ -107,23 +172,35 @@
 		<set name="reuseDelay" val="600000" />
 	</skill>
 	<skill id="1915" levels="1" name="Blessing of Fire">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Fire resistance by 20. -->
 		<set name="icon" val="icon.skill1915" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="fireRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1916" levels="1" name="Energetic">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- HP/MP/CP + 1%. -->
 		<set name="icon" val="icon.skill1916" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="1.01" />
+				<mul stat="maxMp" val="1.01" />
+				<mul stat="maxCp" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1917" levels="1" name="Undying Will">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- When receiving damage while HP is below 30%, becomes invincible for 5 seconds. 1 time every 5 minutes only. -->
 		<set name="icon" val="icon.skill1917" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
@@ -137,11 +214,17 @@
 		<set name="reuseDelay" val="300000" />
 	</skill>
 	<skill id="1919" levels="1" name="Dexterity">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Skill Cooldown - 1%. -->
 		<set name="icon" val="icon.skill1919" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pReuse" val="0.99" />
+				<mul stat="mReuse" val="0.99" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1920" levels="2" name="Endurance">
 		<!-- AUTO GENERATED SKILL -->
@@ -153,11 +236,16 @@
 		<set name="reuseDelay" val="600000" />
 	</skill>
 	<skill id="1921" levels="1" name="Blessing of Earth">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Earth resistance by 20. -->
 		<set name="icon" val="icon.skill1921" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="earthRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1922" levels="2" name="Earth Tremor">
 		<!-- AUTO GENERATED SKILL -->
@@ -170,18 +258,28 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="1923" levels="1" name="Battle Instinct">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases PvP damage by 1%. -->
 		<set name="icon" val="icon.skill1923" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpPhysDmg" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1924" levels="1" name="Dark Silence">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Dark Attack Resistance by 20. -->
 		<set name="icon" val="icon.skill1924" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1925" levels="2" name="Soul Protection">
 		<!-- AUTO GENERATED SKILL -->

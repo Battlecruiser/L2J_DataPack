@@ -1456,24 +1456,27 @@
 		</for>
 	</skill>
 	<skill id="345" levels="12" name="Sonic Rage">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#magicLevel"> 78 79 81 83 85 86 88 90 92 94 96 98 </table> <!-- Confirmed -->
+		<table name="#mpConsume"> 50 55 56 57 58 59 61 63 65 67 69 71 </table> <!-- Confirmed -->
+		<table name="#power"> 195 205 215 225 551 565 598 630 662 693 725 757 </table> <!-- Confirmed -->
 		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="600" />
+		<set name="coolTime" val="300" />
 		<set name="effectPoint" val="-340" />
 		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="1500" />
-		<set name="hpConsume" val="50" />
+		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill0345" />
-		<set name="magicLvl" val="78" />
-		<set name="mpConsume" val="5" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
+		<set name="power" val="#power" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="DUAL" />
+			<using kind="SWORD,BLUNT,FIST,DUAL,DUALFIST" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />

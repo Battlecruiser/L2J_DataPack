@@ -497,14 +497,14 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_UP_BOW" />
 		<set name="effectPoint" val="138" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill1514" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="58" />
-		<set name="mpConsume" val="22" />
-		<set name="mpInitialConsume" val="6" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
-		<set name="reuseDelay" val="45000" />
+		<set name="reuseDelay" val="300000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
