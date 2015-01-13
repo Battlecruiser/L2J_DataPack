@@ -561,95 +561,183 @@
 		<set name="isMagic" val="3" />
 	</skill>
 	<skill id="1956" levels="4" name="Sub - P. Atk./M. Atk. Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 1%. -->
-		<set name="icon" val="icon.skill0816" />
-		<set name="operateType" val="P" />
+		<table name="#pAtk"> 1.01 1.02 1.03 1.04 </table>
+		<table name="#mAtk"> 1.01 1.03 1.04 1.06 </table>
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0816" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="mAtk" val="#mAtk" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1957" levels="4" name="Sub - P. Def./M. Def. Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 1%, M. Def. + 1%. -->
-		<set name="icon" val="icon.skill0439" />
-		<set name="operateType" val="P" />
+		<table name="#def"> 1.01 1.02 1.03 1.04 </table>
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0439" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="#def" />
+				<mul stat="mDef" val="#def" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1958" levels="4" name="Sub - Atk. Spd./Casting Spd. Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd. + 1%, Casting Spd. + 1%. -->
-		<set name="icon" val="icon.skill0817" />
-		<set name="operateType" val="P" />
+		<table name="#atkSpd"> 1.01 1.02 1.03 1.04 </table>
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0817" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#atkSpd" />
+				<mul stat="mAtkSpd" val="#atkSpd" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1959" levels="4" name="Sub - Critical Rate Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Critical Rate/ M. Critical Rate + 10. -->
-		<set name="icon" val="icon.skill0814" />
-		<set name="operateType" val="P" />
+		<table name="#critRate"> 10 20 30 40 </table>
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0814" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<add stat="rCrit" val="#critRate" />
+				<add stat="mCritRate" val="#critRate" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1960" levels="4" name="Sub - P. Accuracy/ M. Accuracy Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Accuracy + 2, M. Accuracy + 2. -->
-		<set name="icon" val="icon.skill1240" />
-		<set name="operateType" val="P" />
+		<table name="#acc"> 2 4 6 8 </table>
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1240" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<add stat="accCombat" val="#acc" />
+				<add stat="accMagic" val="#acc" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1961" levels="4" name="Sub - P. Evasion/ M. Evasion Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Evasion + 2, M. Evasion + 2. -->
-		<set name="icon" val="icon.skill0198" />
-		<set name="operateType" val="P" />
+		<table name="#evas"> 2 4 6 8 </table>
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0198" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<add stat="rEvas" val="#evas" />
+				<add stat="mEvas" val="#evas" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1962" levels="4" name="Dual - P. Atk./M. Atk. Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 3%, M. Atk. + 4%. -->
-		<set name="icon" val="icon.skill0816" />
-		<set name="operateType" val="P" />
+		<table name="#pAtk"> 1.03 1.06 1.09 1.12 </table>
+		<table name="#mAtk"> 1.04 1.09 1.13 1.18 </table>
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0816" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="mAtk" val="#mAtk" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1963" levels="4" name="Dual - P. Def./M. Def. Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 3%, M. Def. + 3%. -->
-		<set name="icon" val="icon.skill0439" />
-		<set name="operateType" val="P" />
+		<table name="#def"> 1.03 1.06 1.09 1.12 </table>
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0439" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="#def" />
+				<mul stat="mDef" val="#def" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1964" levels="4" name="Dual - Atk. Spd./Casting Spd. Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd. + 3%, Casting Spd. + 3%. -->
-		<set name="icon" val="icon.skill0817" />
-		<set name="operateType" val="P" />
+		<table name="#atkSpd"> 1.03 1.06 1.09 1.12 </table>
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0817" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#atkSpd" />
+				<mul stat="mAtkSpd" val="#atkSpd" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1965" levels="4" name="Dual - Max HP Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 6%. -->
-		<set name="icon" val="icon.skill0211" />
-		<set name="operateType" val="P" />
+		<table name="#maxHp"> 1.06 1.12 1.18 1.24 </table>
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0211" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="#maxHp" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1966" levels="4" name="Dual - Max MP Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max MP + 6%. -->
-		<set name="icon" val="icon.skill0213" />
-		<set name="operateType" val="P" />
+		<table name="#maxMp"> 1.06 1.12 1.18 1.24 </table>
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0213" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="#maxMp" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1967" levels="4" name="Dual - Max CP Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max CP + 6%. -->
-		<set name="icon" val="icon.skill1397" />
-		<set name="operateType" val="P" />
+		<table name="#maxCp"> 1.06 1.12 1.18 1.24 </table>
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill1397" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="#maxCp" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1968" levels="1" name="Dual - HP Drain">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Has a chance of absorbing 5% of damage inflicted upon the enemy as HP when attacking. -->
-		<set name="icon" val="icon.dual_hpsteal" />
-		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.dual_hpsteal" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<add stat="absorbDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1969" levels="1" name="Dual - MP Drain">
 		<!-- AUTO GENERATED SKILL -->
@@ -659,96 +747,192 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1970" levels="1" name="Dual - Specialized for P. Atk.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 9%, P. Def./ M. Def. - 9%. -->
-		<set name="icon" val="icon.dual_atkup" />
-		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.dual_atkup" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.09" />
+				<mul stat="pDef" val="0.91" />
+				<mul stat="mDef" val="0.91" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1971" levels="1" name="Dual - Specialized for M. Atk.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 13%, P. Def./ M. Def. - 9%. -->
-		<set name="icon" val="icon.dual_defup" />
-		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.dual_defup" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.13" />
+				<mul stat="pDef" val="0.91" />
+				<mul stat="mDef" val="0.91" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1972" levels="1" name="Dual - Physical Trait Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases success rate for physical attacks and physical defense by 20%. -->
-		<set name="icon" val="icon.skill4084" />
-		<set name="operateType" val="P" />
+		<!-- Increases success rate for physical attacks and physical defense by 20%. TODO: Verify -->
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill4084" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff">
+				<mul stat="accCombat" val="1.20" />
+				<mul stat="pDef" val="1.20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1973" levels="1" name="Dual - Mental Trait Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases success rate for mental attacks and mental defense by 20%. -->
-		<set name="icon" val="icon.skill4116" />
-		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill4116" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="AttackTrait">
+				<param DERANGEMENT="1.20" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param DERANGEMENT="1.20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1974" levels="1" name="Dual - Berserker's Rage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Has a chance of P. Atk. + 27% when attacking. -->
-		<set name="icon" val="icon.dual_t_atkup" />
-		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
+		<set name="icon" val="icon.dual_t_atkup" />
+		<set name="excludedFromCheck" val="true" />
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="7" />
+				<param skillId="1975" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1975" levels="1" name="Dual - Berserker's Rage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 27% for 15 sec. -->
-		<set name="icon" val="icon.dual_t_atkup" />
-		<set name="operateType" val="A2" />
+		<set name="abnormalTime" val="15" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="20000" />
+		<set name="icon" val="icon.dual_t_atkup" />
 		<set name="isMagic" val="4" />
+		<set name="operateType" val="A2" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.27" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1976" levels="1" name="Dual - Master's Rage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Has a chance of Skill Power + 27% during skill use. -->
-		<set name="icon" val="icon.dual_t_skup" />
-		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
+		<set name="icon" val="icon.dual_t_skup" />
+		<set name="excludedFromCheck" val="true" />
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="7" />
+				<param skillId="1977" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1977" levels="1" name="Dual - Master's Rage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Skill Power + 27% for 15 sec. -->
-		<set name="icon" val="icon.dual_t_skup" />
-		<set name="operateType" val="A2" />
+		<set name="abnormalTime" val="15" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="20000" />
+		<set name="operateType" val="A2" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="icon" val="icon.dual_t_skup" />
 		<set name="isMagic" val="4" />
+		<set name="reuseDelay" val="20000" />
+		<for>
+			<effect name="Buff">
+				<mul stat="physicalSkillPower" val="1.27" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1978" levels="1" name="Dual - Light of Protection">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Has a chance of P. Def./ M. Def. + 27% when attacked. -->
-		<set name="icon" val="icon.dual_t_dmgdef" />
-		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
+		<set name="icon" val="icon.dual_t_dmgdef" />
+		<set name="excludedFromCheck" val="true" />
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="3" />
+				<param skillId="1979" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1979" levels="1" name="Dual - Light of Protection">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def./ M. Def. + 27% for 15 sec. -->
-		<set name="icon" val="icon.dual_t_dmgdef" />
-		<set name="operateType" val="A2" />
+		<set name="abnormalTime" val="15" />
 		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
 		<set name="reuseDelay" val="20000" />
+		<set name="icon" val="icon.dual_t_dmgdef" />
 		<set name="isMagic" val="4" />
+		<set name="operateType" val="A2" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="1.27" />
+				<mul stat="mDef" val="1.27" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1980" levels="1" name="Dual - Light of Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Has a chance of restoring HP when attacked. -->
-		<set name="icon" val="icon.dual_t_dmgheal" />
-		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
+		<set name="icon" val="icon.dual_t_dmgheal" />
+		<set name="excludedFromCheck" val="true" />
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param isCritical="true" />
+				<param minDamage="1" chance="4" />
+				<param skillId="1981" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1981" levels="1" name="Dual - Light of Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores HP. -->
-		<set name="icon" val="icon.dual_t_dmgheal" />
-		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
 		<set name="reuseDelay" val="30000" />
+		<set name="icon" val="icon.dual_t_dmgheal" />
 		<set name="isMagic" val="4" />
+		<set name="operateType" val="A2" />
+		<for>
+			<effect name="HealPercent">
+				<param power="25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1982" levels="1" name="Dual - Shackles of the Giants">
 		<!-- AUTO GENERATED SKILL -->
