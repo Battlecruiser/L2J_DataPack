@@ -87,45 +87,76 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="11755" levels="8" name="Radiant Heal">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Heals target with 1488 Power added to M. Atk. If HP is full, CP is restored. -->
 		<table name="#mpConsumes"> 138 138 141 143 146 148 151 153 </table>
+		<table name="#power"> 1488 1495 1507 1519 1532 1544 1557 1570 </table>
+		<table name="#effectPoints"> 467 484 500 516 530 544 556 559 </table>
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
 		<set name="icon" val="icon.skill11755" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="isMagic" val="1" />
+		<for>
+			<effect name="HpCpHeal">
+				<param power="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11756" levels="8" name="Panic Heal">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Heals target with 1488 Power added to M. Atk. If HP is full, CP is restored. -->
+		<table name="#power"> 1488 1495 1507 1519 1532 1544 1557 1570 </table>
 		<table name="#mpConsumes"> 207 208 212 216 218 222 226 230 </table>
+		<table name="#effectPoints"> 437 444 450 456 462 468 473 479 </table>
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
 		<set name="icon" val="icon.skill11756" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="isMagic" val="1" />
+		<for>
+			<effect name="HpCpHeal">
+				<param power="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11757" levels="8" name="Brilliant Heal">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Heals yourself and nearby party members with 1191 Power added to M. Atk. If HP is full, CP is restored. -->
+		<table name="#power"> 1191 1200 1210 1220 1230 1240 1250 1261 </table>
+		<table name="#effectPoints"> 431 467 500 530 556 566 576 586 </table>
 		<table name="#mpConsumes"> 277 281 286 290 295 300 305 310 </table>
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
 		<set name="icon" val="icon.skill11757" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsumes" />
+		<set name="affectRange" val="1000" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="6500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="isMagic" val="1" />
+		<for>
+			<effect name="HpCpHeal">
+				<param power="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11758" levels="1" name="Celestial Protection">
 		<!-- AUTO GENERATED SKILL -->
@@ -178,29 +209,49 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="11762" levels="1" name="Balance Heal">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Equalizes all party members' HP and restores 333 HP every second for 15 seconds. -->
-		<set name="icon" val="icon.skill11762" />
-		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="178" />
+		<set name="abnormalTime" val="15" />
+		<set name="affectRange" val="1000" />
+		<set name="effectPoint" val="398" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="1000" />
+		<set name="icon" val="icon.skill11762" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="178" />
+		<set name="mpInitialConsume" val="36" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
-		<set name="isMagic" val="1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="PARTY" />
+		<for>
+			<effect name="RebalanceHP" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="333" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11763" levels="1" name="Radiant Purge">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Dispels target's debuffs. Allies only. -->
-		<set name="icon" val="icon.skill11763" />
-		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="35" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
+		<set name="icon" val="icon.skill11763" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="35" />
+		<set name="mpInitialConsume" val="12" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="isMagic" val="1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE_FRIENDLY" />
+		<for>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="100" max="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11764" levels="1" name="Brilliant Purge">
 		<!-- AUTO GENERATED SKILL -->
@@ -255,16 +306,33 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="11768" levels="1" name="Rebirth">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores all party members' HP/MP/CP and has a chance of dispelling their debuffs. -->
 		<set name="icon" val="icon.skill11768" />
+		<set name="affectRange" val="1000" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="66" />
+		<set name="magicLvl" val="85" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="600000" />
+		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<for>
+			<effect name="ManaHealPercent">
+				<param power="100" />
+			</effect>
+			<effect name="CpHealPercent">
+				<param power="100" />
+			</effect>
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="15" max="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11769" levels="6" name="Dark Backfire">
 		<!-- AUTO GENERATED SKILL -->
@@ -442,18 +510,31 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="11784" levels="4" name="Blessed Resurrection">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Resurrects a dead target and restores 85% of the XP lost. -->
-		<table name="#mpConsumes"> 35 38 42 46 </table>
-		<set name="icon" val="icon.skill11784" />
-		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<table name="#mpConsume"> 35 38 42 46 </table>
+		<table name="#power"> 85 90 95 100 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#ench1mpConsume"> 147 142 137 132 127 122 117 112 108 103 </table>
+		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
+		<set name="icon" val="icon.skill11784" />
 		<set name="isMagic" val="4" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="PC_BODY" />
+		<cond>
+			<player canResurrect="true" />
+		</cond>
+		<for>
+			<effect name="Resurrection">
+				<param power="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11785" levels="3" name="Party Resurrection">
 		<!-- AUTO GENERATED SKILL -->
