@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Feoh Soulhound -->
 	<skillTree type="classSkillTree" classId="170" parentClassId="132">
+		<skill skillName="Feoh Aura" skillId="1935" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Hell Binding" skillId="11050" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1069" />
 			<removeSkill id="1447" />
@@ -320,5 +321,13 @@
 		<skill skillName="Death Howl" skillId="11032" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Create Item" skillId="172" skillLvl="14" getLevel="99" autoGet="true" />
 		<skill skillName="Physical Soul Barrier" skillId="11225" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

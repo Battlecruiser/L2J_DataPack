@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Aeore Eva's Saint -->
 	<skillTree type="classSkillTree" classId="180" parentClassId="105">
+		<skill skillName="Aeore Aura" skillId="1939" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Blessing of Saha" skillId="11830" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1311" />
 			<removeSkill id="1355" />
@@ -309,5 +310,16 @@
 		<skill skillName="Dark Rain" skillId="11817" skillLvl="8" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Dark Blast" skillId="11766" skillLvl="8" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Erase Impact" skillId="11831" skillLvl="8" getLevel="99" levelUpSp="5000000" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Limited Melee Weapon Resistance" skillId="11862" skillLvl="1" getLevel="99" levelUpSp="5000000">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

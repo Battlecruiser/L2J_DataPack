@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="135" parentClassId="126">
 		<!-- Confirmed CT2.5 -->
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="79" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="200" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="2000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="9" getLevel="40" levelUpSp="28" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="10" getLevel="40" levelUpSp="28" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="11" getLevel="40" levelUpSp="28" />
@@ -304,8 +304,8 @@
 		<skill skillName="Spite" skillId="1485" skillLvl="3" getLevel="74" levelUpSp="1428" />
 		<skill skillName="Thin Skin" skillId="1483" skillLvl="7" getLevel="74" levelUpSp="1428" />
 
-		<skill skillName="Aura Bird - Falcon" skillId="841" skillLvl="1" getLevel="75" learnedByFS="true" />
-		<skill skillName="Aura Bird - Owl" skillId="842" skillLvl="1" getLevel="75" learnedByFS="true" />
-		<skill skillName="Final Flying Form" skillId="840" skillLvl="1" getLevel="75" learnedByFS="true" />
+		<skill skillName="Aura Bird - Falcon" skillId="841" skillLvl="1" getLevel="75" />
+		<skill skillName="Aura Bird - Owl" skillId="842" skillLvl="1" getLevel="75" />
+		<skill skillName="Final Flying Form" skillId="840" skillLvl="1" getLevel="75" />
 	</skillTree>
 </list>

@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="17" parentClassId="15">
 		<!-- Confirmed CT2.5 -->
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="79" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="200" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="2000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="10" getLevel="40" levelUpSp="30" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="11" getLevel="40" levelUpSp="30" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="12" getLevel="40" levelUpSp="30" />
@@ -353,8 +353,8 @@
 		<skill skillName="Resist Dark" skillId="1393" skillLvl="3" getLevel="74" levelUpSp="1000" />
 		<skill skillName="Erase" skillId="1395" skillLvl="10" getLevel="74" levelUpSp="1000" />
 		<skill skillName="Mana Burn" skillId="1398" skillLvl="10" getLevel="74" levelUpSp="1000" />
-		<skill skillName="Improve Combat" skillId="1499" skillLvl="1" getLevel="70" learnedByFS="true" />
-		<skill skillName="Improve Condition" skillId="1501" skillLvl="1" getLevel="70" learnedByFS="true" />
+		<skill skillName="Improve Combat" skillId="1499" skillLvl="1" getLevel="70" />
+		<skill skillName="Improve Condition" skillId="1501" skillLvl="1" getLevel="70" />
 		<skill skillName="Resist Earth" skillId="1548" skillLvl="1" getLevel="60" levelUpSp="151" />
 		<skill skillName="Resist Earth" skillId="1548" skillLvl="2" getLevel="64" levelUpSp="210" />
 		<skill skillName="Resist Earth" skillId="1548" skillLvl="3" getLevel="68" levelUpSp="478" />

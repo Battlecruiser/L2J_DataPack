@@ -36,7 +36,7 @@
 		<skill skillName="Steel Mind" skillId="30520" skillLvl="1" getLevel="85" levelUpSp="15000" />
 		<skill skillName="Steel Mind" skillId="30520" skillLvl="2" getLevel="99" levelUpSp="7500000" />
 
-		<skill skillName="Eviscerator Aura" skillId="30602" skillLvl="1" getLevel="85" />
+		<skill skillName="Eviscerator Aura" skillId="30602" skillLvl="1" getLevel="85" autoGet="true" />
 
 		<skill skillName="Gravity Barrier" skillId="30516" skillLvl="1" getLevel="93" levelUpSp="660000" />
 
@@ -61,5 +61,13 @@
 		<skill skillName="Reverse Weight" skillId="30518" skillLvl="8" getLevel="98" levelUpSp="7485000" />
 
 		<skill skillName="Warped Space" skillId="30519" skillLvl="1" getLevel="98" levelUpSp="7485000" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

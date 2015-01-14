@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Tyrr Maestro -->
 	<skillTree type="classSkillTree" classId="156" parentClassId="118">
+		<skill skillName="Tyrr Aura" skillId="1929" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Berserker" skillId="10274" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1510" />
 			<removeSkill id="317" />
@@ -21,6 +22,7 @@
 		</skill>
 		<skill skillName="Superior Two-handed Weapon Mastery" skillId="10311" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Superior Polearm Mastery" skillId="10306" skillLvl="1" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Superior Blunt Weapon Mastery" skillId="10329" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Superior Spirit Mastery" skillId="10257" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="328" />
 			<removeSkill id="329" />
@@ -279,5 +281,17 @@
 		<skill skillName="Create Item" skillId="172" skillLvl="14" getLevel="99" autoGet="true" />
 		<skill skillName="Infinity Strike" skillId="10275" skillLvl="1" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="8" getLevel="99" levelUpSp="5000000" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Power Hammer Crush" skillId="10330" skillLvl="1" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Power Hammer Crush" skillId="10330" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Power Hammer Crush" skillId="10330" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Power Hammer Crush" skillId="10330" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

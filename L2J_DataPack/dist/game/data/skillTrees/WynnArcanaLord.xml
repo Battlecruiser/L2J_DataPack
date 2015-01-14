@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Wynn Arcana Lord -->
 	<skillTree type="classSkillTree" classId="176" parentClassId="96">
+		<skill skillName="Wynn Aura" skillId="1937" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Blessing of the Giants" skillId="11297" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1349" />
 		</skill>
@@ -258,5 +259,16 @@
 		<skill skillName="Invoke" skillId="11263" skillLvl="7" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Create Item" skillId="172" skillLvl="14" getLevel="99" autoGet="true" />
 		<skill skillName="Greater Servitor Haste" skillId="11347" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Summon Protection Stone" skillId="11359" skillLvl="1" getLevel="99" levelUpSp="5000000">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

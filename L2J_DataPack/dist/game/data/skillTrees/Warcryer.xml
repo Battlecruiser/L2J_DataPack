@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="52" parentClassId="50">
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="79" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="200" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="2000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
 
 		<skill skillName="Weapon Mastery" skillId="250" skillLvl="10" getLevel="40" levelUpSp="30" />
 		<skill skillName="Weapon Mastery" skillId="250" skillLvl="11" getLevel="40" levelUpSp="30" />
@@ -333,7 +333,7 @@
 		<skill skillName="Fear" skillId="1092" skillLvl="17" getLevel="70" levelUpSp="711" />
 		<skill skillName="Madness" skillId="1105" skillLvl="16" getLevel="70" levelUpSp="711" />
 		<skill skillName="Aura Sink" skillId="1102" skillLvl="6" getLevel="70" levelUpSp="711" />
-		<skill skillName="Chant of Combat" skillId="1517" skillLvl="1" getLevel="70" learnedByFS="true" />
+		<skill skillName="Chant of Combat" skillId="1517" skillLvl="1" getLevel="70" />
 
 		<skill skillName="Hammer Crush" skillId="260" skillLvl="32" getLevel="72" levelUpSp="748" />
 		<skill skillName="Hammer Crush" skillId="260" skillLvl="33" getLevel="72" levelUpSp="748" />
@@ -356,8 +356,8 @@
 		<skill skillName="Madness" skillId="1105" skillLvl="17" getLevel="72" levelUpSp="711" />
 		<skill skillName="Soul Cry" skillId="1001" skillLvl="10" getLevel="72" levelUpSp="711" />
 		<skill skillName="Freezing Flame" skillId="1244" skillLvl="4" getLevel="72" levelUpSp="711" />
-		<skill skillName="Chant of Critical Attack" skillId="1518" skillLvl="1" getLevel="72" learnedByFS="true" />
-		<skill skillName="Chant of Movement" skillId="1535" skillLvl="1" getLevel="72" learnedByFS="true" />
+		<skill skillName="Chant of Critical Attack" skillId="1518" skillLvl="1" getLevel="72" />
+		<skill skillName="Chant of Movement" skillId="1535" skillLvl="1" getLevel="72" />
 
 		<skill skillName="Hammer Crush" skillId="260" skillLvl="34" getLevel="74" levelUpSp="1000" />
 		<skill skillName="Hammer Crush" skillId="260" skillLvl="35" getLevel="74" levelUpSp="1000" />
@@ -384,6 +384,6 @@
 		<skill skillName="War Chant" skillId="1390" skillLvl="3" getLevel="74" levelUpSp="1000" />
 		<skill skillName="Earth Chant" skillId="1391" skillLvl="3" getLevel="74" levelUpSp="1000" />
 		
-		<skill skillName="Chant of Blood Awakening" skillId="1519" skillLvl="1" getLevel="74" learnedByFS="true" />
+		<skill skillName="Chant of Blood Awakening" skillId="1519" skillLvl="1" getLevel="74" levelUpSp="1000" />
 	</skillTree>
 </list>

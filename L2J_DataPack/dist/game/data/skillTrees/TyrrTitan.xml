@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Tyrr Titan -->
 	<skillTree type="classSkillTree" classId="154" parentClassId="113">
+		<skill skillName="Tyrr Aura" skillId="1929" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Frenzy" skillId="176" skillLvl="6" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Hurricane Rush" skillId="10267" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Superior HP Mastery" skillId="10256" skillLvl="1" getLevel="85" levelUpSp="10000">
@@ -266,18 +267,13 @@
 		<skill skillName="Create Item" skillId="172" skillLvl="14" getLevel="99" autoGet="true" />
 		<skill skillName="Infinity Strike" skillId="10275" skillLvl="1" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="8" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Berserker" skillId="10274" skillLvl="1" getLevel="85" levelUpSp="10000">
-			<removeSkill id="1510" />
-			<removeSkill id="317" />
-			<removeSkill id="130" />
-			<removeSkill id="297" />
-			<removeSkill id="292" />
-			<removeSkill id="25" />
-			<removeSkill id="301" />
-			<removeSkill id="176" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
 		</skill>
-		<skill skillName="Berserker" skillId="10274" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Berserker" skillId="10274" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Berserker" skillId="10274" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Tyrr Grand Khavatari -->
 	<skillTree type="classSkillTree" classId="155" parentClassId="114">
+		<skill skillName="Tyrr Aura" skillId="1929" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Berserker" skillId="10274" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1510" />
 			<removeSkill id="317" />
@@ -285,5 +286,26 @@
 		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="6" getLevel="94" levelUpSp="480000" />
 		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="7" getLevel="96" levelUpSp="4970000" />
 		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="8" getLevel="98" levelUpSp="4990000" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Momentum Master" skillId="10324" skillLvl="1" getLevel="97" levelUpSp="4980000">
+			<item id="39738" count="4" />
+		</skill>
+		<skill skillName="Momentum Master" skillId="10324" skillLvl="2" getLevel="98" levelUpSp="4990000">
+			<item id="39738" count="4" />
+		</skill>
+		<skill skillName="Momentum Master" skillId="10324" skillLvl="3" getLevel="99" levelUpSp="5000000">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Momentum Flash" skillId="10327" skillLvl="1" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Momentum Flash" skillId="10327" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Momentum Flash" skillId="10327" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Momentum Flash" skillId="10327" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

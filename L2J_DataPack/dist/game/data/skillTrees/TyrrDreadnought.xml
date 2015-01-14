@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Tyrr Dreadnought -->
 	<skillTree type="classSkillTree" classId="153" parentClassId="89">
+		<skill skillName="Tyrr Aura" skillId="1929" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Berserker" skillId="10274" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1510" />
 			<removeSkill id="317" />
@@ -140,7 +141,6 @@
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="477" />
 			<removeSkill id="497" />
-			<removeSkill id="48" />
 			<removeSkill id="452" />
 			<removeSkill id="260" />
 			<removeSkill id="95" />
@@ -252,7 +252,6 @@
 		<skill skillName="Rolling Thunder" skillId="10268" skillLvl="5" getLevel="97" levelUpSp="4980000" />
 		<skill skillName="Power Provoke" skillId="10271" skillLvl="1" getLevel="97" levelUpSp="4980000">
 			<removeSkill id="503" />
-			<removeSkill id="286" />
 		</skill>
 		<skill skillName="Power Bomber" skillId="10262" skillLvl="5" getLevel="97" levelUpSp="4980000" />
 		<skill skillName="Armor Destruction" skillId="10258" skillLvl="7" getLevel="97" levelUpSp="4980000" />
@@ -281,5 +280,22 @@
 		<skill skillName="Infinity Strike" skillId="10275" skillLvl="1" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="8" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Wrath" skillId="320" skillLvl="14" getLevel="99" levelUpSp="5000000" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Dreadful Roar" skillId="10325" skillLvl="1" getLevel="97" levelUpSp="4980000">
+			<item id="39738" count="4" />
+		</skill>
+		<skill skillName="Dreadful Roar" skillId="10325" skillLvl="2" getLevel="98" levelUpSp="4990000">
+			<item id="39738" count="4" />
+		</skill>
+		<skill skillName="Dreadful Roar" skillId="10325" skillLvl="3" getLevel="99" levelUpSp="5000000">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

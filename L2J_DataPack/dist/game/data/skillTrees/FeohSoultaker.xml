@@ -2,9 +2,9 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Feoh Soultaker -->
 	<skillTree type="classSkillTree" classId="167" parentClassId="95">
+		<skill skillName="Feoh Aura" skillId="1935" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Arcane Barrier" skillId="11065" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1556" />
-			<removeSkill id="1262" />
 		</skill>
 		<skill skillName="Hell Binding" skillId="11050" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1069" />
@@ -104,10 +104,10 @@
 			<removeSkill id="1168" />
 			<removeSkill id="1458" />
 		</skill>
-		<skill skillName="Water Stance" skillId="11008" skillLvl="1" getLevel="85" />
-		<skill skillName="Earth Stance" skillId="11010" skillLvl="1" getLevel="85" />
-		<skill skillName="Wind Stance" skillId="11009" skillLvl="1" getLevel="85" />
-		<skill skillName="Fire Stance" skillId="11007" skillLvl="1" getLevel="85" />
+		<skill skillName="Water Stance" skillId="11008" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Earth Stance" skillId="11010" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Wind Stance" skillId="11009" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Fire Stance" skillId="11007" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLvl="3" getLevel="85" autoGet="true" />
 		<skill skillName="Death Lord" skillId="11030" skillLvl="1" getLevel="85" levelUpSp="10000">
@@ -146,7 +146,6 @@
 			<removeSkill id="1339" />
 			<removeSkill id="1512" />
 			<removeSkill id="1340" />
-			<removeSkill id="1263" />
 			<removeSkill id="1222" />
 			<removeSkill id="1337" />
 			<removeSkill id="1341" />
@@ -329,5 +328,13 @@
 		<skill skillName="Curse Gloom" skillId="1263" skillLvl="21" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Death Howl" skillId="11032" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Create Item" skillId="172" skillLvl="14" getLevel="99" autoGet="true" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

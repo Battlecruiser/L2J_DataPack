@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Tyrr Duelist -->
 	<skillTree type="classSkillTree" classId="152" parentClassId="88">
+		<skill skillName="Tyrr Aura" skillId="1929" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Berserker" skillId="10274" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1510" />
 			<removeSkill id="317" />
@@ -108,7 +109,6 @@
 		</skill>
 		<skill skillName="Power Bomber" skillId="10262" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="498" />
-			<removeSkill id="261" />
 			<removeSkill id="81" />
 			<removeSkill id="315" />
 		</skill>
@@ -268,33 +268,22 @@
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="31" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Infinity Strike" skillId="10275" skillLvl="1" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="8" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Hurricane Blaster" skillId="10263" skillLvl="1" getLevel="85" levelUpSp="10000">
-			<removeSkill id="939" />
-			<removeSkill id="345" />
-			<removeSkill id="346" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Momentum Master" skillId="10324" skillLvl="1" getLevel="97" levelUpSp="4980000">
+			<item id="39738" count="4" />
 		</skill>
-		<skill skillName="Hurricane Blaster" skillId="10263" skillLvl="2" getLevel="86" levelUpSp="50000" />
-		<skill skillName="Hurricane Blaster" skillId="10263" skillLvl="3" getLevel="88" levelUpSp="80000" />
-		<skill skillName="Hurricane Blaster" skillId="10263" skillLvl="4" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Hurricane Blaster" skillId="10263" skillLvl="5" getLevel="92" levelUpSp="420000" />
-		<skill skillName="Hurricane Blaster" skillId="10263" skillLvl="6" getLevel="94" levelUpSp="480000" />
-		<skill skillName="Hurricane Blaster" skillId="10263" skillLvl="7" getLevel="96" levelUpSp="4970000" />
-		<skill skillName="Hurricane Blaster" skillId="10263" skillLvl="8" getLevel="98" levelUpSp="4990000" />
-
-		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="1" getLevel="85" levelUpSp="10000">
-			<removeSkill id="526" />
-			<removeSkill id="347" />
-			<removeSkill id="6" />
-			<removeSkill id="7" />
-			<removeSkill id="54" />
-			<removeSkill id="35" />
+		<skill skillName="Momentum Master" skillId="10324" skillLvl="2" getLevel="98" levelUpSp="4990000">
+			<item id="39738" count="4" />
 		</skill>
-		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="2" getLevel="86" levelUpSp="50000" />
-		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="3" getLevel="88" levelUpSp="80000" />
-		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="4" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="5" getLevel="92" levelUpSp="420000" />
-		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="6" getLevel="94" levelUpSp="480000" />
-		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="7" getLevel="96" levelUpSp="4970000" />
-		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="8" getLevel="98" levelUpSp="4990000" />
+		<skill skillName="Momentum Master" skillId="10324" skillLvl="3" getLevel="99" levelUpSp="5000000">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="43" parentClassId="42">
 		<!-- Confirmed CT2.5 -->
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="79" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="200" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="2000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="10" getLevel="40" levelUpSp="30" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="11" getLevel="40" levelUpSp="30" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="12" getLevel="40" levelUpSp="30" />
@@ -356,7 +356,7 @@
 		<skill skillName="Mana Burn" skillId="1398" skillLvl="10" getLevel="74" levelUpSp="1000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="32" getLevel="74" levelUpSp="1000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="33" getLevel="74" levelUpSp="1000" />
-		<skill skillName="Improve Magic" skillId="1500" skillLvl="1" getLevel="70" learnedByFS="true" />
-		<skill skillName="Improve Critical" skillId="1502" skillLvl="1" getLevel="70" learnedByFS="true" />
+		<skill skillName="Improve Magic" skillId="1500" skillLvl="1" getLevel="70" />
+		<skill skillName="Improve Critical" skillId="1502" skillLvl="1" getLevel="70" />
 	</skillTree>
 </list>

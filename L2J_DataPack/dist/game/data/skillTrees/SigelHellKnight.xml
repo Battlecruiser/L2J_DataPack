@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Sigel Hell Knight -->
 	<skillTree type="classSkillTree" classId="149" parentClassId="91">
+		<skill skillName="Sigel Aura" skillId="1927" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Challenge Aura" skillId="10030" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="982" />
 		</skill>
@@ -70,7 +71,7 @@
 			<removeSkill id="102" />
 			<removeSkill id="127" />
 		</skill>
-		<skill skillName="Knight Frenzy" skillId="10025" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Avenger's Frenzy" skillId="10099" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="449" />
 			<removeSkill id="67" />
 			<removeSkill id="10" />
@@ -149,7 +150,7 @@
 		<skill skillName="Shield Charge" skillId="10008" skillLvl="4" getLevel="90" levelUpSp="370000" />
 		<skill skillName="True Vanguard" skillId="10244" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Justice Punishment" skillId="10010" skillLvl="4" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Knight Frenzy" skillId="10025" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Avenger's Frenzy" skillId="10099" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Summon Blood Panther" skillId="10068" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Summon Knight Cubic" skillId="10043" skillLvl="4" getLevel="90" levelUpSp="370000" />
@@ -187,7 +188,7 @@
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="5" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Spirit of Revenge" skillId="10066" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="True Vanguard" skillId="10244" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Knight Frenzy" skillId="10025" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Avenger's Frenzy" skillId="10099" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="King of Beasts" skillId="10023" skillLvl="1" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Gust Blade" skillId="10013" skillLvl="6" getLevel="95" levelUpSp="1000000" />
@@ -224,7 +225,7 @@
 		<skill skillName="Shield Wave" skillId="10012" skillLvl="7" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Spirit of Revenge" skillId="10066" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Party Rescue" skillId="10024" skillLvl="1" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Knight Frenzy" skillId="10025" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Avenger's Frenzy" skillId="10099" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Gust Blade" skillId="10013" skillLvl="8" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Summon Blood Panther" skillId="10068" skillLvl="4" getLevel="99" levelUpSp="5000000" />
@@ -233,5 +234,22 @@
 		<skill skillName="Chain Hydra" skillId="10016" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Spike Shield" skillId="10021" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Shadow Slash" skillId="10102" skillLvl="1" getLevel="97" levelUpSp="4980000">
+			<item id="39738" count="4" />
+		</skill>
+		<skill skillName="Shadow Slash" skillId="10102" skillLvl="2" getLevel="98" levelUpSp="4990000">
+			<item id="39738" count="4" />
+		</skill>
+		<skill skillName="Shadow Slash" skillId="10102" skillLvl="3" getLevel="99" levelUpSp="5000000">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

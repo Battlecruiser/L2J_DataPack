@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Tyr Doombriner -->
 	<skillTree type="classSkillTree" classId="157" parentClassId="131">
+		<skill skillName="Tyrr Aura" skillId="1929" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Berserker" skillId="10274" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1510" />
 			<removeSkill id="317" />
@@ -161,7 +162,6 @@
 		<skill skillName="Reduce Anger" skillId="10278" skillLvl="2" getLevel="86" levelUpSp="50000" />
 		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="2" getLevel="86" levelUpSp="50000" />
 		<skill skillName="Jump Attack" skillId="10269" skillLvl="1" getLevel="87" levelUpSp="60000">
-			<removeSkill id="793" />
 			<removeSkill id="995" />
 		</skill>
 		<skill skillName="Hurricane Rush" skillId="10267" skillLvl="2" getLevel="87" levelUpSp="60000" />
@@ -198,7 +198,6 @@
 		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="4" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Jump Attack" skillId="10269" skillLvl="3" getLevel="91" levelUpSp="400000" />
 		<skill skillName="Giant Barrier" skillId="10279" skillLvl="1" getLevel="91" levelUpSp="400000">
-			<removeSkill id="1514" />
 			<removeSkill id="442" />
 			<removeSkill id="443" />
 			<removeSkill id="34" />
@@ -285,5 +284,22 @@
 		<skill skillName="Rush Impact" skillId="793" skillLvl="5" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Infinity Strike" skillId="10275" skillLvl="1" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="8" getLevel="99" levelUpSp="5000000" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Soul Berserker" skillId="10328" skillLvl="1" getLevel="97" levelUpSp="4980000">
+			<item id="39738" count="4" />
+		</skill>
+		<skill skillName="Soul Berserker" skillId="10328" skillLvl="2" getLevel="98" levelUpSp="4990000">
+			<item id="39738" count="4" />
+		</skill>
+		<skill skillName="Soul Berserker" skillId="10328" skillLvl="3" getLevel="99" levelUpSp="5000000">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

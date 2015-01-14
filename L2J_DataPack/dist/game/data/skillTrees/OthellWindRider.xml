@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Othell Wind Rider -->
 	<skillTree type="classSkillTree" classId="159" parentClassId="101">
+		<skill skillName="Othell Aura" skillId="1931" skillLvl="1" getLevel="85" autoGet="true" />	
 		<skill skillName="Angel of Death" skillId="10531" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Silent Step" skillId="10543" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="221" />
@@ -56,7 +57,6 @@
 			<removeSkill id="30" />
 			<removeSkill id="409" />
 			<removeSkill id="190" />
-			<removeSkill id="410" />
 			<removeSkill id="321" />
 		</skill>
 		<skill skillName="Weight Limit" skillId="150" skillLvl="3" getLevel="85" autoGet="true" />
@@ -120,9 +120,7 @@
 			<removeSkill id="15" />
 		</skill>
 		<skill skillName="Critical Chances" skillId="10609" skillLvl="1" getLevel="85" levelUpSp="10000" />
-		<skill skillName="Scorpion Poison" skillId="10535" skillLvl="1" getLevel="85" levelUpSp="10000">
-			<removeSkill id="531" />
-		</skill>
+		<skill skillName="Scorpion Poison" skillId="10535" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Throw Poison Needle" skillId="10541" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="129" />
 		</skill>
@@ -254,5 +252,13 @@
 		<skill skillName="Death Clock" skillId="10507" skillLvl="1" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Mischief" skillId="10526" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Scorpion Poison" skillId="10535" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

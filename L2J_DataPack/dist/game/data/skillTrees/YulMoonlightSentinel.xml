@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Yul Moonlight Sentinel -->
 	<skillTree type="classSkillTree" classId="163" parentClassId="102">
+		<skill skillName="Yul Aura" skillId="1933" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Superior Critical Arrow" skillId="10756" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="334" />
 			<removeSkill id="312" />
@@ -246,5 +247,13 @@
 		<skill skillName="Sniper Stance" skillId="10759" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Mind's Eye" skillId="10783" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Multiple Arrow" skillId="10771" skillLvl="8" getLevel="99" levelUpSp="5000000" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

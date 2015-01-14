@@ -15,7 +15,7 @@
 
 		<skill skillName="Sayha's Fury" skillId="30020" skillLvl="1" getLevel="85" levelUpSp="15000" />
 
-		<skill skillName="Sayha's Seer Aura" skillId="30605" skillLvl="1" getLevel="85" />
+		<skill skillName="Sayha's Seer Aura" skillId="30605" skillLvl="1" getLevel="85" autoGet="true" />
 
 		<skill skillName="Windy Refuge" skillId="30010" skillLvl="1" getLevel="88" levelUpSp="120000" />
 
@@ -35,5 +35,13 @@
 		<skill skillName="Divine Storm" skillId="30029" skillLvl="1" getLevel="98" levelUpSp="7485000" />
 
 		<skill skillName="Switch Places" skillId="30013" skillLvl="1" getLevel="99" levelUpSp="7500000" />
+		
+		<!-- Ertheia Update Skill -->
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" />
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" />
+		</skill>
 	</skillTree>
 </list>

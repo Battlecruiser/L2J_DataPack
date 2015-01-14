@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="51" parentClassId="50">
 		<!-- Confirmed CT2.5 -->
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="79" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="200" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="2000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
 		<skill skillName="Weapon Mastery" skillId="250" skillLvl="10" getLevel="40" levelUpSp="30" />
 		<skill skillName="Weapon Mastery" skillId="250" skillLvl="11" getLevel="40" levelUpSp="30" />
 		<skill skillName="Weapon Mastery" skillId="250" skillLvl="12" getLevel="40" levelUpSp="30" />
@@ -487,9 +487,9 @@
 		<skill skillName="Seal of Flame" skillId="1108" skillLvl="4" getLevel="74" levelUpSp="1000" />
 		<skill skillName="The Honor of Pa'agrio" skillId="1305" skillLvl="5" getLevel="74" levelUpSp="1000" />
 		<skill skillName="Ritual of Life" skillId="1306" skillLvl="6" getLevel="74" levelUpSp="1000" />
-		<skill skillName="Combat of Paagrio" skillId="1536" skillLvl="1" getLevel="70" learnedByFS="true" />
-		<skill skillName="Condition of Paagrio" skillId="1538" skillLvl="1" getLevel="72" learnedByFS="true" />
-		<skill skillName="Critical of Paagrio" skillId="1537" skillLvl="1" getLevel="74" learnedByFS="true" />
+		<skill skillName="Combat of Paagrio" skillId="1536" skillLvl="1" getLevel="70" />
+		<skill skillName="Condition of Paagrio" skillId="1538" skillLvl="1" getLevel="72" />
+		<skill skillName="Critical of Paagrio" skillId="1537" skillLvl="1" getLevel="74" levelUpSp="1000" />
 		<skill skillName="Fury of Pa'agrio" skillId="1563" skillLvl="1" getLevel="48" levelUpSp="67" />
 		<skill skillName="Fury of Pa'agrio" skillId="1563" skillLvl="2" getLevel="56" levelUpSp="105" />
 	</skillTree>
