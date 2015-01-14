@@ -232,7 +232,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if (npc.getId() == TRAINING_GOLEM)
+		if ((qs != null) && qs.isStarted())
 		{
 			int killedGolem = qs.getInt(KILL_VAR);
 			
@@ -246,7 +246,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 				else
 				{
 					qs.set(KILL_VAR, killedGolem);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 			else if (qs.isCond(6) || qs.isCond(7))
@@ -259,7 +259,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 				else
 				{
 					qs.set(KILL_VAR, killedGolem);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
