@@ -71,7 +71,7 @@ public class Q10741_ADraughtForTheCold extends Quest
 			case "33951-03.htm":
 			{
 				qs.startQuest();
-				qs.giveItems(EMPTY_HONEY_JAR, 10);
+				giveItems(player, EMPTY_HONEY_JAR, 10);
 				htmltext = event;
 				break;
 			}
@@ -143,7 +143,7 @@ public class Q10741_ADraughtForTheCold extends Quest
 				case HONEY_BEE:
 				case ROBUST_HONEY_BEE:
 				{
-					if (qs.getQuestItemsCount(EMPTY_HONEY_JAR) > 0)
+					if (getQuestItemsCount(killer, EMPTY_HONEY_JAR) > 0)
 					{
 						takeItems(killer, EMPTY_HONEY_JAR, 1);
 						giveItems(killer, SWEET_HONEY, 1);
@@ -158,7 +158,7 @@ public class Q10741_ADraughtForTheCold extends Quest
 				}
 			}
 			
-			if ((qs.getQuestItemsCount(SWEET_HONEY) >= 10) && (qs.getQuestItemsCount(NUTRITIOUS_MEAT) >= 10))
+			if ((getQuestItemsCount(killer, SWEET_HONEY) >= 10) && (getQuestItemsCount(killer, NUTRITIOUS_MEAT) >= 10))
 			{
 				qs.setCond(2, true);
 			}
