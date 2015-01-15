@@ -143,7 +143,7 @@ public class Q10741_ADraughtForTheCold extends Quest
 				case HONEY_BEE:
 				case ROBUST_HONEY_BEE:
 				{
-					if (getQuestItemsCount(killer, EMPTY_HONEY_JAR) > 0)
+					if (hasQuestItems(killer, EMPTY_HONEY_JAR))
 					{
 						takeItems(killer, EMPTY_HONEY_JAR, 1);
 						giveItems(killer, SWEET_HONEY, 1);

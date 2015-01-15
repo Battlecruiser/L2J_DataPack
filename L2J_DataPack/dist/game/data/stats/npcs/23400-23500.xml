@@ -1175,55 +1175,118 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23455" level="85" type="L2Npc" name="Growler" title="">
+	<npc id="23455" level="15" type="L2Monster" name="Growler" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire expRate="1.737" sp="0" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="246.95422" hpRegen="2.5" mp="149.2" mpRegen="1.2" />
+			<attack physical="29.61691" magical="20.22451" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="73.55216" magical="53.82228" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="23" />
+				<run ground="110" />
 			</speed>
+			<hit_time>370</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4416" level="4" /> <!--Animals -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="5" max="12" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.9757000207901">
+					<item id="23" min="1" max="1" chance="33" /> <!-- Wooden Breastplate -->
+				</group>
+				<group chance="10.583999633789062">
+					<item id="36551" min="1" max="1" chance="28.3333" /> <!-- Armor Fragment (Low-grade) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="17" /> <!-- Thin Braid -->
+			</corpse>
+		</drop_lists>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="25" />
+			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="23456" level="85" type="L2Npc" name="Evolved Growler" title="Quest Monster">
+	<npc id="23456" level="17" type="L2Monster" name="Evolved Growler" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire expRate="1.5467" sp="0" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="282.57403" hpRegen="2.5" mp="166.08" mpRegen="1.2" />
+			<attack physical="34.8979" magical="23.83074" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="78.68469" magical="52.3891528929827" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="23" />
+				<run ground="110" />
 			</speed>
+			<hit_time>370</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4416" level="4" /> <!--Animals -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="72">
+					<item id="57" min="5" max="13" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.9757000207901">
+					<item id="23" min="1" max="1" chance="33" /> <!-- Wooden Breastplate -->
+				</group>
+				<group chance="10.583999633789062">
+					<item id="36561" min="1" max="1" chance="28.3333" /> <!-- Cokes -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="17" /> <!-- Thin Braid -->
+			</corpse>
+		</drop_lists>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
-		</collision>
-	</npc>
-	<npc id="23457" level="85" type="L2Npc" name="Treant" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="25" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="23458" level="85" type="L2Npc" name="Leafie" title="">
@@ -1742,21 +1805,61 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23486" level="85" type="L2Npc" name="Robust Growler" title="">
+	<npc id="23486" level="17" type="L2Monster" name="Robust Growler" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire expRate="1.5467" sp="0" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="282.57403" hpRegen="2.5" mp="166.08" mpRegen="1.2" />
+			<attack physical="34.8979" magical="23.83074" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="78.68469" magical="52.3891528929827" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="23" />
+				<run ground="110" />
 			</speed>
+			<hit_time>370</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4416" level="4" /> <!--Animals -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="5" max="13" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.9757000207901">
+					<item id="50" min="1" max="1" chance="33" /> <!-- Leather Gloves -->
+				</group>
+				<group chance="10.583999633789062">
+					<item id="36516" min="1" max="1" chance="28.3333" /> <!-- Worn Leather -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36516" min="1" max="1" chance="18.6" /> <!-- Worn Leather -->
+			</corpse>
+		</drop_lists>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="25" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="23487" level="85" type="L2Npc" name="Magma Ailith" title="">
