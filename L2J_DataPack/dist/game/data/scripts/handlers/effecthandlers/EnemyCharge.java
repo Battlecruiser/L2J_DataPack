@@ -18,7 +18,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
@@ -94,16 +93,12 @@ public final class EnemyCharge extends AbstractEffect
 		int y = curY + (int) ((distance - offset) * sin);
 		int z = info.getEffected().getZ();
 		
-		if (Config.GEODATA > 0)
-		{
-			Location destiny = GeoData.getInstance().moveCheck(info.getEffector().getX(), info.getEffector().getY(), info.getEffector().getZ(), x, y, z, info.getEffector().getInstanceId());
-			x = destiny.getX();
-			y = destiny.getY();
-		}
-		info.getEffector().broadcastPacket(new FlyToLocation(info.getEffector(), x, y, z, FlyType.CHARGE));
+		final Location destination = GeoData.getInstance().moveCheck(info.getEffector().getX(), info.getEffector().getY(), info.getEffector().getZ(), x, y, z, info.getEffector().getInstanceId());
+		
+		info.getEffector().broadcastPacket(new FlyToLocation(info.getEffector(), destination, FlyType.CHARGE));
 		
 		// maybe is need force set X,Y,Z
-		info.getEffector().setXYZ(x, y, z);
+		info.getEffector().setXYZ(destination);
 		info.getEffector().broadcastPacket(new ValidateLocation(info.getEffector()));
 	}
 }
