@@ -309,6 +309,7 @@ import quests.Q10737_GrakonsWarehouse.Q10737_GrakonsWarehouse;
 import quests.Q10738_AnInnerBeauty.Q10738_AnInnerBeauty;
 import quests.Q10739_SupplyAndDemand.Q10739_SupplyAndDemand;
 import quests.Q10740_NeverForget.Q10740_NeverForget;
+import quests.Q10741_ADraughtForTheCold.Q10741_ADraughtForTheCold;
 
 /**
  * @author NosBit
@@ -606,7 +607,8 @@ public class QuestMasterHandler
 		Q10737_GrakonsWarehouse.class,
 		Q10738_AnInnerBeauty.class,
 		Q10739_SupplyAndDemand.class,
-		Q10740_NeverForget.class
+		Q10740_NeverForget.class,
+		Q10741_ADraughtForTheCold.class
 	};
 	
 	public static void main(String[] args)

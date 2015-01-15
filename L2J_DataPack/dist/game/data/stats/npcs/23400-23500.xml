@@ -1044,38 +1044,118 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="23452" level="85" type="L2Npc" name="Honeybee" title="">
+	<npc id="23452" level="10" type="L2Monster" name="Honeybee" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire expRate="2.58" sp="0" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="163.28607" hpRegen="2" mp="108.4" mpRegen="0.9" />
+			<attack physical="19.33758" magical="13.20506" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="52.5514795" magical="37.4524577768779" evasion="10" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="23" />
+				<run ground="110" />
 			</speed>
+			<hit_time>370</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4416" level="4" /> <!--Animals -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="60">
+					<item id="57" min="1" max="3" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.9757000207901">
+					<item id="23" min="1" max="1" chance="33" /> <!-- Willow Staff -->
+				</group>
+				<group chance="10.583999633789062">
+					<item id="36526" min="1" max="1" chance="58.3333" /> <!-- Fiber -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.3" /> <!-- Worn Leather -->
+			</corpse>
+		</drop_lists>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="25" />
+			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="23453" level="85" type="L2Npc" name="Kiku" title="">
+	<npc id="23453" level="12" type="L2Monster" name="Kiku" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire expRate="2.1944" sp="0" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="199.62322" hpRegen="2.5" mp="124.48" mpRegen="1.2" />
+			<attack physical="22.99606" magical="15.70333" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="66.32989" magical="44.163184477748" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="23" />
+				<run ground="110" />
 			</speed>
+			<hit_time>370</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4416" level="4" /> <!--Animals -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="60">
+					<item id="57" min="1" max="3" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.9757000207901">
+					<item id="29" min="1" max="1" chance="33" /> <!-- Willow Staff -->
+				</group>
+				<group chance="10.583999633789062">
+					<item id="36516" min="1" max="1" chance="58.3333" /> <!-- Worn Leather -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="10" /> <!-- Worn Leather -->
+			</corpse>
+		</drop_lists>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="25" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="23454" level="85" type="L2Npc" name="Robust Kiku" title="">
@@ -1588,21 +1668,61 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23484" level="85" type="L2Npc" name="Robust Honeybee" title="">
+	<npc id="23484" level="11" type="L2Monster" name="Robust Honeybee" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire expRate="2.42148" sp="0" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="185.38552" hpRegen="2.5" mp="116.4" mpRegen="1.2" />
+			<attack physical="21.0973" magical="14.40672" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="64.04702" magical="42.6432286072855" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="23" />
+				<run ground="110" />
 			</speed>
+			<hit_time>370</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4416" level="4" /> <!--Animals -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="60">
+					<item id="57" min="1" max="3" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.9757000207901">
+					<item id="44" min="1" max="1" chance="33" /> <!-- Leather Helmet -->
+				</group>
+				<group chance="10.583999633789062">
+					<item id="36532" min="1" max="1" chance="58.3333" /> <!-- Worn Leather -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="10" /> <!-- Worn Leather -->
+			</corpse>
+		</drop_lists>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="25" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="23485" level="85" type="L2Npc" name="Evolved Kiku" title="">
