@@ -42,6 +42,7 @@ import quests.Q00018_MeetingWithTheGoldenRam.Q00018_MeetingWithTheGoldenRam;
 import quests.Q00019_GoToThePastureland.Q00019_GoToThePastureland;
 import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
 import quests.Q00021_HiddenTruth.Q00021_HiddenTruth;
+import quests.Q00023_LidiasHeart.Q00023_LidiasHeart;
 import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheForestOfTheDead;
 import quests.Q00026_TiredOfWaiting.Q00026_TiredOfWaiting;
 import quests.Q00027_ChestCaughtWithABaitOfWind.Q00027_ChestCaughtWithABaitOfWind;
@@ -505,6 +506,7 @@ public class QuestMasterHandler
 		Q00019_GoToThePastureland.class,
 		Q00020_BringUpWithLove.class,
 		Q00021_HiddenTruth.class,
+		Q00023_LidiasHeart.class,
 		Q00024_InhabitantsOfTheForestOfTheDead.class,
 		Q00026_TiredOfWaiting.class,
 		Q00027_ChestCaughtWithABaitOfWind.class,
