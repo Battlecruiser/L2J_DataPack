@@ -415,7 +415,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 				}
 				case HONEY_BEAR:
 				{
-					if (npc.isScriptValue(2) && firstAttacker && ((L2Attackable) npc).isSpoil() && hasQuestItems(killer, BEAR_PICTURE))
+					if (npc.isScriptValue(2) && firstAttacker && ((L2Attackable) npc).isSpoiled() && hasQuestItems(killer, BEAR_PICTURE))
 					{
 						if (giveItemRandomly(killer, npc, HONEY_JAR, 1, 5, 1.0, true))
 						{
@@ -427,7 +427,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 				case HUNTER_TARANTULA:
 				case PLUNDER_TARANTULA:
 				{
-					if (npc.isScriptValue(2) && firstAttacker && ((L2Attackable) npc).isSpoil() && hasQuestItems(killer, TARANTULA_PICTURE))
+					if (npc.isScriptValue(2) && firstAttacker && ((L2Attackable) npc).isSpoiled() && hasQuestItems(killer, TARANTULA_PICTURE))
 					{
 						if (giveItemRandomly(killer, npc, BEAD, 1, 20, 1.0, true))
 						{
