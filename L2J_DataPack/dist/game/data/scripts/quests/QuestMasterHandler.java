@@ -311,6 +311,7 @@ import quests.Q10739_SupplyAndDemand.Q10739_SupplyAndDemand;
 import quests.Q10740_NeverForget.Q10740_NeverForget;
 import quests.Q10741_ADraughtForTheCold.Q10741_ADraughtForTheCold;
 import quests.Q10742_AFurryFriend.Q10742_AFurryFriend;
+import quests.Q10743_StrangeFungus.Q10743_StrangeFungus;
 
 /**
  * @author NosBit
@@ -610,7 +611,8 @@ public class QuestMasterHandler
 		Q10739_SupplyAndDemand.class,
 		Q10740_NeverForget.class,
 		Q10741_ADraughtForTheCold.class,
-		Q10742_AFurryFriend.class
+		Q10742_AFurryFriend.class,
+		Q10743_StrangeFungus.class
 	};
 	
 	public static void main(String[] args)
