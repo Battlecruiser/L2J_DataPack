@@ -312,6 +312,7 @@ import quests.Q10740_NeverForget.Q10740_NeverForget;
 import quests.Q10741_ADraughtForTheCold.Q10741_ADraughtForTheCold;
 import quests.Q10742_AFurryFriend.Q10742_AFurryFriend;
 import quests.Q10743_StrangeFungus.Q10743_StrangeFungus;
+import quests.Q10744_StrongerThanSteel.Q10744_StrongerThanSteel;
 
 /**
  * @author NosBit
@@ -612,7 +613,8 @@ public class QuestMasterHandler
 		Q10740_NeverForget.class,
 		Q10741_ADraughtForTheCold.class,
 		Q10742_AFurryFriend.class,
-		Q10743_StrangeFungus.class
+		Q10743_StrangeFungus.class,
+		Q10744_StrongerThanSteel.class
 	};
 	
 	public static void main(String[] args)
