@@ -33,7 +33,6 @@ public final class StrongholdsTeleports extends AbstractNpcAI
 	// NPCs
 	private final static int[] NPCs =
 	{
-		32163,
 		32181,
 		32184,
 		32186
