@@ -123,7 +123,7 @@ public class Q10744_StrongerThanSteel extends Quest
 				{
 					htmltext = "33954-04.htm";
 					giveAdena(player, 34000, true);
-					addExpAndSp(player, 112001, 2);
+					addExpAndSp(player, 112001, 5);
 					qs.exitQuest(false, true);
 				}
 				break;
