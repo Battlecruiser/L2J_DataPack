@@ -356,6 +356,7 @@ import quests.Q00450_GraveRobberRescue.Q00450_GraveRobberRescue;
 import quests.Q00451_LuciensAltar.Q00451_LuciensAltar;
 import quests.Q00452_FindingtheLostSoldiers.Q00452_FindingtheLostSoldiers;
 import quests.Q00453_NotStrongEnoughAlone.Q00453_NotStrongEnoughAlone;
+import quests.Q00454_CompletelyLost.Q00454_CompletelyLost;
 import quests.Q00455_WingsOfSand.Q00455_WingsOfSand;
 import quests.Q00456_DontKnowDontCare.Q00456_DontKnowDontCare;
 import quests.Q00457_LostAndFound.Q00457_LostAndFound;
@@ -820,6 +821,7 @@ public class QuestMasterHandler
 		Q00451_LuciensAltar.class,
 		Q00452_FindingtheLostSoldiers.class,
 		Q00453_NotStrongEnoughAlone.class,
+		Q00454_CompletelyLost.class,
 		Q00455_WingsOfSand.class,
 		Q00456_DontKnowDontCare.class,
 		Q00457_LostAndFound.class,
