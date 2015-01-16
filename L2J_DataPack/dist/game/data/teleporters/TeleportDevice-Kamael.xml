@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/teleporterData.xsd">
+	<npc id="32163"> <!-- Teleport Device -->
+		<teleport type="NORMAL">
+			<location npcStringId="1010005" x="-14608" y="123920" z="-3128" feeCount="12000" /> <!-- The Town of Gludio -->
+			<location npcStringId="1010023" x="146798" y="25796" z="-2012" feeCount="26000" /> <!-- Town of Aden -->
+			<location npcStringId="1010001" x="-113443" y="256656" z="-1504" feeCount="21000" /> <!-- Talking Island Village -->
+			<location npcStringId="1010156" x="11162" y="16012" z="-4584" feeCount="13000" /> <!-- Dark Elf Village -->
+			<location npcStringId="1010155" x="44730" y="49210" z="-3059" feeCount="16000" /> <!-- Elven Village -->
+			<location npcStringId="1010158" x="115341" y="-178221" z="-928" feeCount="32000" /> <!-- Dwarven Village -->
+			<location npcStringId="1010157" x="-44132" y="-113378" z="-238" feeCount="17000" /> <!-- Orc Village -->
+			<location npcStringId="1010653" x="-122410" y="73205" z="-2867" feeCount="2600" /> <!-- Stronghold I (Lv. 1) -->
+			<location npcStringId="1010654" x="-94895" y="52208" z="-2029" feeCount="2200" /> <!-- Stronghold 2 (Lv. 93) -->
+			<location npcStringId="1010655" x="-85928" y="37095" z="-2043" feeCount="3200" /> <!-- Stronghold 3 (Lv. 93) -->
+			<location npcStringId="1010652" x="-73840" y="53480" z="-3680" feeCount="4300" /> <!-- Isle of Souls Harbor(Lv. 93) -->
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeId="13722" feeCount="1" /> <!-- Gludin Arena -->
+			<location npcStringId="1010507" x="73579" y="142709" z="-3763" feeId="13722" feeCount="1" /> <!-- Giran Arena -->
+			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeId="13722" feeCount="1" /> <!-- Coliseum -->
+			<location npcStringId="1010731" x="-186306" y="242822" z="2552" feeId="13722" feeCount="100" /> <!-- Keucereus Alliance Base -->
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeCount="1000" /> <!-- Gludin Arena -->
+			<location npcStringId="1010507" x="73579" y="142709" z="-3763" feeCount="1000" /> <!-- Giran Arena -->
+			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeCount="1000" /> <!-- Coliseum -->
+			<location npcStringId="1010731" x="-186306" y="242822" z="2552" feeCount="100000" /> <!-- Keucereus Alliance Base -->
+		</teleport>
+	</npc>
+</list>
