@@ -42,11 +42,11 @@ public final class SkillTransfer extends AbstractNpcAI
 	private static final ItemHolder[] PORMANDERS =
 	{
 		// Cardinal (97)
-		new ItemHolder(15307, 1),
+		new ItemHolder(15307, 7),
 		// Eva's Saint (105)
-		new ItemHolder(15308, 1),
+		new ItemHolder(15308, 7),
 		// Shillen Saint (112)
-		new ItemHolder(15309, 4)
+		new ItemHolder(15309, 7)
 	};
 	
 	private SkillTransfer()
