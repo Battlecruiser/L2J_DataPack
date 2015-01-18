@@ -66,17 +66,12 @@ public class MentorGuide extends AbstractNpcAI implements DocumentParser
 {
 	// NPCs
 	private static final int MENTOR_GUIDE = 33587;
-	
-	// ITEMs
+	// Items
 	private static final int MENTEE_CERT = 33800;
 	private static final int MENTEE_MARK = 33804;
 	private static final int MENTEE_HEADPHONE = 34759;
 	private static final int DIPLOMA = 33805;
-	
-	// Misc
-	private static final int MAX_LEVEL = 85;
-	
-	// SKILLs
+	// Skills
 	private final static SkillHolder[] MENTEE_BUFFS =
 	{
 		new SkillHolder(9227, 1), // Mentor's Poem of Horn
@@ -87,20 +82,17 @@ public class MentorGuide extends AbstractNpcAI implements DocumentParser
 		new SkillHolder(9232, 1), // Mentor's Poem of Harp
 		new SkillHolder(9233, 1), // Mentor's Guidance
 	};
-	
 	protected static final SkillHolder[] MENTOR_BUFFS =
 	{
 		new SkillHolder(9256, 1), // Mentee's Appreciation;
 	};
-	
 	private static final SkillHolder MENTEE_MENTOR_SUMMON = new SkillHolder(9379, 1); // Mentee's Mentor Summon
-	
+	// Misc
+	private static final int MAX_LEVEL = 85;
 	private static final String LEVEL_UP_TITLE = "Mentee coin from Mentee leveling";
 	private static final String LEVEL_UP_BODY = "Your mentee %s has reached level %d, so you are receiving some Mentee Coin. After Mentee Coin has successfully been removed and placed into your inventory please be sure to delete this letter. If your mailbox is full when any future letters are sent to you cannot be delivered and you will not receive these items.";
-	
 	private static final String MENTEE_ADDED_TITLE = "Congratulations on becoming a mentee.";
 	private static final String MENTEE_ADDED_BODY = "Greetings. This is the Mentor Guide.\n\nYou will experience a world of unlimited adventures with your mentor, Exciting, isn't it?\n\nWhen you graduate from mentee status (upon awakening at level 85), you will receive a Mentee Certificate. If you bring it to me, I will give you a Diploma that you can exchange for R-grade equipment.";
-	
 	static final Map<Integer, Integer> MENTEE_COINS = new HashMap<>();
 	
 	@Override

@@ -35,9 +35,10 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 
 /**
+ * Monk Ff Chaos AI.
  * @author Sdw
  */
-public class MonkOfChaos extends AbstractNpcAI
+public final class MonkOfChaos extends AbstractNpcAI
 {
 	private static final int MONK_OF_CHAOS = 33880;
 	private static final int MIN_LEVEL = 85;
