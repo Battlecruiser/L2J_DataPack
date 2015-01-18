@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  * Arena Manager AI.
  * @author St3eT
  */
-public class ArenaManager extends AbstractNpcAI
+public final class ArenaManager extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] ARENA_MANAGER =
@@ -131,7 +131,7 @@ public class ArenaManager extends AbstractNpcAI
 				break;
 			}
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	public static void main(String[] args)

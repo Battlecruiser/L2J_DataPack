@@ -26,8 +26,9 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
  * Scarecrow AI.
  * @author ivantotov
  */
-class Scarecrow extends AbstractNpcAI
+public final class Scarecrow extends AbstractNpcAI
 {
+	// NPCs
 	private static final int SCARECROW = 27457;
 	private static final int TRAINING_DUMMY = 19546;
 	

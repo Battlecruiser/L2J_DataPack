@@ -29,6 +29,8 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.util.Broadcast;
 
 /**
@@ -115,6 +117,11 @@ public final class Mammons extends AbstractNpcAI
 				final L2Npc merchant = addSpawn(MAMMONS[1], MERCHANT_LOC[town]);
 				final L2Npc priest = addSpawn(MAMMONS[2], PRIEST_LOC[town]);
 				_mammons.addAll(Arrays.asList(blacksmith, merchant, priest));
+				
+				if (blacksmith != null)
+				{
+					broadcastNpcSay(blacksmith, Say2.NPC_ALL, NpcStringId.I_HAVE_SOME_EXCELLENT_WEAPONS_TO_SHOW_YOU);
+				}
 				
 				if (Config.ANNOUNCE_MAMMON_SPAWN)
 				{

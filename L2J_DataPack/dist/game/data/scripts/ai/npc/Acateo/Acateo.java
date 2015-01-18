@@ -45,32 +45,22 @@ public final class Acateo extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
-		switch (event)
+		if (event.equals("give_circlet"))
 		{
-			case "give_circlet":
+			if (hasQuestItems(player, ACADEMY_CIRCLET))
 			{
-				if (hasQuestItems(player, ACADEMY_CIRCLET))
-				{
-					htmltext = "33905-3.html";
-					break;
-				}
-				giveItems(player, ACADEMY_CIRCLET, 1);
-				htmltext = "33905-2.html";
-				break;
+				return "33905-3.html";
 			}
+			giveItems(player, ACADEMY_CIRCLET, 1);
+			return "33905-2.html";
 		}
-		return htmltext;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.isAcademyMember())
-		{
-			return "33905-1.html";
-		}
-		return "33905.html";
+		return player.isAcademyMember() ? "33905-1.html" : "33905.html";
 	}
 	
 	public static void main(String[] args)

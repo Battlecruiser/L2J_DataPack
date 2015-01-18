@@ -65,7 +65,7 @@ public final class Proclaimer extends AbstractNpcAI
 		String htmltext = null;
 		if (!player.isOnDarkSide())
 		{
-			player.sendPacket(new NpcSay(npc.getObjectId(), Say2.TELL, npc.getId(), NpcStringId.WHEN_THE_WORLD_PLUNGES_INTO_CHAOS_WE_WILL_NEED_YOUR_HELP_WE_HOPE_YOU_JOIN_US_WHEN_THE_TIME_COMES));
+			player.sendPacket(new NpcSay(npc.getObjectId(), Say2.NPC_TELL, npc.getId(), NpcStringId.WHEN_THE_WORLD_PLUNGES_INTO_CHAOS_WE_WILL_NEED_YOUR_HELP_WE_HOPE_YOU_JOIN_US_WHEN_THE_TIME_COMES));
 			
 			final L2Clan ownerClan = npc.getCastle().getOwner();
 			if (ownerClan != null)
