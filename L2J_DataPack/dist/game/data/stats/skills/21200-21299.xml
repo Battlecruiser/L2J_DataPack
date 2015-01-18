@@ -632,10 +632,24 @@
 		</for>
 	</skill>
 	<skill id="21250" levels="1" name="Academy Benefaction">
-		<!-- "Characters between levels 40 to 75, when worn this item decreases death EXP. Penalty by 50%." -->
+		<!-- Can acquire additional 10% XP. The death XP penalty decreases by 50%. Can only be used by characters at Lv.s 1~84. -->
 		<set name="icon" val="icon.accessory_academy_i00" />
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="abnormalTime" val="7200" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="5000" />
+		<cond msgId="113" addName="1">
+			<player levelRange="1;84" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul stat="bonusExp" val="1.1" />
+				<mul stat="reduceExpLostByPvp" val="0.5" />
+				<mul stat="reduceExpLostByMob" val="0.5" />
+				<mul stat="reduceExpLostByRaid" val="0.5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21251" levels="1" name="Shiny Party Hat - Greater Body">
 		<!-- Increases Max HP by 35% for 20 minutes. -->
