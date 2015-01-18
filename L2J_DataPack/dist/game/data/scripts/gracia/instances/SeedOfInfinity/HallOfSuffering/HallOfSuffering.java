@@ -16,11 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package gracia.instances.SeedOfInfinity;
+package gracia.instances.SeedOfInfinity.HallOfSuffering;
 
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.cache.HtmCache;
@@ -29,6 +31,7 @@ import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -36,7 +39,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -50,7 +52,7 @@ import com.l2jserver.gameserver.util.Util;
  * - bound instance to quests<br>
  * @author Gigiikun, ZakaX, Didldak
  */
-public final class HallOfSuffering extends Quest
+public final class HallOfSuffering extends AbstractNpcAI
 {
 	protected class HSWorld extends InstanceWorld
 	{
@@ -65,20 +67,12 @@ public final class HallOfSuffering extends Quest
 		public boolean isRewarded = false;
 	}
 	
-	private static final int TEMPLATE_ID = 115;
-	private static final boolean debug = false;
-	
 	// NPCs
 	private static final int MOUTHOFEKIMUS = 32537;
 	private static final int TEPIOS = 32530;
-	// teleports
-	private static final int[] ENTER_TELEPORT =
-	{
-		-187567,
-		205570,
-		-9538
-	};
-	// mobs
+	// Location
+	private static final Location ENTER_TELEPORT = new Location(-187567, 205570, -9538);
+	// Monsters
 	private static final int KLODEKUS = 25665;
 	private static final int KLANIKUS = 25666;
 	private static final int TUMOR_ALIVE = 18704;
@@ -102,276 +96,68 @@ public final class HallOfSuffering extends Quest
 		22513
 	};
 	// Doors/Walls/Zones
+	// @formatter:off
 	private static final int[][] ROOM_1_MOBS =
 	{
-		{
-			22509,
-			-186296,
-			208200,
-			-9544
-		},
-		{
-			22509,
-			-186161,
-			208345,
-			-9544
-		},
-		{
-			22509,
-			-186296,
-			208403,
-			-9544
-		},
-		{
-			22510,
-			-186107,
-			208113,
-			-9528
-		},
-		{
-			22510,
-			-186350,
-			208200,
-			-9544
-		}
+		{ 22509, -186296, 208200, -9544 },
+		{ 22509, -186161, 208345, -9544 },
+		{ 22509, -186296, 208403, -9544 },
+		{ 22510, -186107, 208113, -9528 },
+		{ 22510, -186350, 208200, -9544 }
 	};
 	private static final int[][] ROOM_2_MOBS =
 	{
-		{
-			22511,
-			-184433,
-			210953,
-			-9536
-		},
-		{
-			22511,
-			-184406,
-			211301,
-			-9536
-		},
-		{
-			22509,
-			-184541,
-			211272,
-			-9544
-		},
-		{
-			22510,
-			-184244,
-			211098,
-			-9536
-		},
-		{
-			22510,
-			-184352,
-			211243,
-			-9536
-		},
-		{
-			22510,
-			-184298,
-			211330,
-			-9528
-		}
+		{ 22511, -184433, 210953, -9536 },
+		{ 22511, -184406, 211301, -9536 },
+		{ 22509, -184541, 211272, -9544 },
+		{ 22510, -184244, 211098, -9536 },
+		{ 22510, -184352, 211243, -9536 },
+		{ 22510, -184298, 211330, -9528 }
 	};
 	private static final int[][] ROOM_3_MOBS =
 	{
-		{
-			22512,
-			-182611,
-			213984,
-			-9520
-		},
-		{
-			22512,
-			-182908,
-			214071,
-			-9520
-		},
-		{
-			22512,
-			-182962,
-			213868,
-			-9512
-		},
-		{
-			22509,
-			-182881,
-			213955,
-			-9512
-		},
-		{
-			22511,
-			-182827,
-			213781,
-			-9504
-		},
-		{
-			22511,
-			-182530,
-			213984,
-			-9528
-		},
-		{
-			22510,
-			-182935,
-			213723,
-			-9512
-		},
-		{
-			22510,
-			-182557,
-			213868,
-			-9520
-		}
+		{ 22512, -182611, 213984, -9520 },
+		{ 22512, -182908, 214071, -9520 },
+		{ 22512, -182962, 213868, -9512 },
+		{ 22509, -182881, 213955, -9512 },
+		{ 22511, -182827, 213781, -9504 },
+		{ 22511, -182530, 213984, -9528 },
+		{ 22510, -182935, 213723, -9512 },
+		{ 22510, -182557, 213868, -9520 }
 	};
 	private static final int[][] ROOM_4_MOBS =
 	{
-		{
-			22514,
-			-180958,
-			216860,
-			-9544
-		},
-		{
-			22514,
-			-181012,
-			216628,
-			-9536
-		},
-		{
-			22514,
-			-181120,
-			216715,
-			-9536
-		},
-		{
-			22513,
-			-180661,
-			216599,
-			-9536
-		},
-		{
-			22513,
-			-181039,
-			216599,
-			-9536
-		},
-		{
-			22511,
-			-180715,
-			216599,
-			-9536
-		},
-		{
-			22511,
-			-181012,
-			216889,
-			-9536
-		},
-		{
-			22512,
-			-180931,
-			216918,
-			-9536
-		},
-		{
-			22512,
-			-180742,
-			216628,
-			-9536
-		}
+		{ 22514, -180958, 216860, -9544 },
+		{ 22514, -181012, 216628, -9536 },
+		{ 22514, -181120, 216715, -9536 },
+		{ 22513, -180661, 216599, -9536 },
+		{ 22513, -181039, 216599, -9536 },
+		{ 22511, -180715, 216599, -9536 },
+		{ 22511, -181012, 216889, -9536 },
+		{ 22512, -180931, 216918, -9536 },
+		{ 22512, -180742, 216628, -9536 }
 	};
 	private static final int[][] ROOM_5_MOBS =
 	{
-		{
-			22512,
-			-177372,
-			217854,
-			-9536
-		},
-		{
-			22512,
-			-177237,
-			218140,
-			-9536
-		},
-		{
-			22512,
-			-177021,
-			217647,
-			-9528
-		},
-		{
-			22513,
-			-177372,
-			217792,
-			-9544
-		},
-		{
-			22513,
-			-177372,
-			218053,
-			-9536
-		},
-		{
-			22514,
-			-177291,
-			217734,
-			-9544
-		},
-		{
-			22514,
-			-177264,
-			217792,
-			-9544
-		},
-		{
-			22514,
-			-177264,
-			218053,
-			-9536
-		},
-		{
-			22515,
-			-177156,
-			217792,
-			-9536
-		},
-		{
-			22515,
-			-177075,
-			217647,
-			-9528
-		}
+		{ 22512, -177372, 217854, -9536 },
+		{ 22512, -177237, 218140, -9536 },
+		{ 22512, -177021, 217647, -9528 },
+		{ 22513, -177372, 217792, -9544 },
+		{ 22513, -177372, 218053, -9536 },
+		{ 22514, -177291, 217734, -9544 },
+		{ 22514, -177264, 217792, -9544 },
+		{ 22514, -177264, 218053, -9536 },
+		{ 22515, -177156, 217792, -9536 },
+		{ 22515, -177075, 217647, -9528 }
 	};
-	private static final int[][] TUMOR_SPAWNS =
+	// @formatter:on
+	private static final Location[] TUMOR_SPAWNS =
 	{
-		{
-			-186327,
-			208286,
-			-9544
-		},
-		{
-			-184429,
-			211155,
-			-9544
-		},
-		{
-			-182811,
-			213871,
-			-9496
-		},
-		{
-			-181039,
-			216633,
-			-9528
-		},
-		{
-			-177264,
-			217760,
-			-9544
-		}
+		new Location(-186327, 208286, -9544),
+		new Location(-184429, 211155, -9544),
+		new Location(-182811, 213871, -9496),
+		new Location(-181039, 216633, -9528),
+		new Location(-177264, 217760, -9544)
 	};
 	private static final int[][] TWIN_SPAWNS =
 	{
@@ -388,25 +174,21 @@ public final class HallOfSuffering extends Quest
 			-9536
 		}
 	};
-	private static final int[] TEPIOS_SPAWN =
-	{
-		-173727,
-		218109,
-		-9536
-	};
-	
-	// etc
-	private static final int BOSS_INVUL_TIME = 30000; // in milisex
-	private static final int BOSS_MINION_SPAWN_TIME = 60000; // in milisex
-	private static final int BOSS_RESSURECT_TIME = 20000; // in milisex
+	private static final Location TEPIOS_SPAWN = new Location(-173727, 218109, -9536);
+	// Boss
+	private static final int BOSS_INVUL_TIME = 30000; // In Milliseconds.
+	private static final int BOSS_MINION_SPAWN_TIME = 60000; // In Milliseconds.
+	private static final int BOSS_RESSURECT_TIME = 20000; // In Milliseconds.
 	// Instance reenter time
-	// default: 24h
-	private static final int INSTANCEPENALTY = 24;
+	private static final int INSTANCE_PENALTY = 24; // Default: 24h
+	// Misc
+	private static final int TEMPLATE_ID = 115;
+	private static final int MIN_LEVEL = 75;
+	private static final boolean debug = false;
 	
 	public HallOfSuffering()
 	{
-		// TODO change name to use actual class name
-		super(-1, "SeedOfInfinity", "gracia/instances");
+		super(HallOfSuffering.class.getSimpleName(), "gracia/instances/SeedOfInfinity/HallOfSuffering");
 		addStartNpc(MOUTHOFEKIMUS, TEPIOS);
 		addTalkId(MOUTHOFEKIMUS, TEPIOS);
 		addFirstTalkId(TEPIOS);
@@ -416,43 +198,46 @@ public final class HallOfSuffering extends Quest
 		addKillId(TUMOR_MOBIDS);
 	}
 	
-	private boolean checkConditions(L2PcInstance player)
+	private static boolean checkConditions(L2PcInstance player)
 	{
 		if (debug)
 		{
 			return true;
 		}
-		L2Party party = player.getParty();
+		
+		final L2Party party = player.getParty();
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
 			return false;
 		}
+		
 		if (party.getLeader() != player)
 		{
 			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
 		}
+		
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			if (partyMember.getLevel() < 75)
+			if (partyMember.getLevel() < MIN_LEVEL)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
-			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
+			final long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
 			if (System.currentTimeMillis() < reentertime)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -461,13 +246,7 @@ public final class HallOfSuffering extends Quest
 		return true;
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
-	{
-		player.setInstanceId(instanceId);
-		player.teleToLocation(coords[0], coords[1], coords[2]);
-	}
-	
-	protected int enterInstance(L2PcInstance player, String template, int[] coords)
+	private void enterInstance(L2PcInstance player, String template, Location loc)
 	{
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -477,15 +256,15 @@ public final class HallOfSuffering extends Quest
 			if (!(world instanceof HSWorld))
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-				return 0;
+				return;
 			}
-			teleportPlayer(player, coords, world.getInstanceId());
-			return world.getInstanceId();
+			teleportPlayer(player, loc, world.getInstanceId());
+			return;
 		}
 		// New instance
 		if (!checkConditions(player))
 		{
-			return 0;
+			return;
 		}
 		L2Party party = player.getParty();
 		final int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
@@ -502,22 +281,21 @@ public final class HallOfSuffering extends Quest
 		// teleport players
 		if (player.getParty() == null)
 		{
-			teleportPlayer(player, coords, instanceId);
+			teleportPlayer(player, loc, instanceId);
 			world.addAllowed(player.getObjectId());
 		}
 		else
 		{
 			for (L2PcInstance partyMember : party.getMembers())
 			{
-				teleportPlayer(partyMember, coords, instanceId);
+				teleportPlayer(partyMember, loc, instanceId);
 				world.addAllowed(partyMember.getObjectId());
 				getQuestState(partyMember, true);
 			}
 		}
-		return instanceId;
 	}
 	
-	protected boolean checkKillProgress(L2Npc mob, HSWorld world)
+	private boolean checkKillProgress(L2Npc mob, HSWorld world)
 	{
 		if (world.npcList.containsKey(mob))
 		{
@@ -533,7 +311,7 @@ public final class HallOfSuffering extends Quest
 		return true;
 	}
 	
-	protected int[][] getRoomSpawns(int room)
+	private int[][] getRoomSpawns(int room)
 	{
 		switch (room)
 		{
@@ -552,14 +330,15 @@ public final class HallOfSuffering extends Quest
 		return new int[][] {};
 	}
 	
-	protected void runTumors(HSWorld world)
+	private void runTumors(HSWorld world)
 	{
 		for (int[] mob : getRoomSpawns(world.getStatus()))
 		{
-			L2Npc npc = addSpawn(mob[0], mob[1], mob[2], mob[3], 0, false, 0, false, world.getInstanceId());
+			final L2Npc npc = addSpawn(mob[0], mob[1], mob[2], mob[3], 0, false, 0, false, world.getInstanceId());
 			world.npcList.put(npc, false);
 		}
-		L2Npc mob = addSpawn(TUMOR_ALIVE, TUMOR_SPAWNS[world.getStatus()][0], TUMOR_SPAWNS[world.getStatus()][1], TUMOR_SPAWNS[world.getStatus()][2], 0, false, 0, false, world.getInstanceId());
+		
+		final L2Npc mob = addSpawn(TUMOR_ALIVE, TUMOR_SPAWNS[world.getStatus()], false, 0, false, world.getInstanceId());
 		mob.disableCoreAI(true);
 		mob.setIsImmobilized(true);
 		mob.setCurrentHp(mob.getMaxHp() * 0.5);
@@ -567,7 +346,7 @@ public final class HallOfSuffering extends Quest
 		world.incStatus();
 	}
 	
-	protected void runTwins(HSWorld world)
+	private void runTwins(HSWorld world)
 	{
 		world.incStatus();
 		world.klodekus = addSpawn(TWIN_SPAWNS[0][0], TWIN_SPAWNS[0][1], TWIN_SPAWNS[0][2], TWIN_SPAWNS[0][3], 0, false, 0, false, world.getInstanceId());
@@ -576,7 +355,7 @@ public final class HallOfSuffering extends Quest
 		world.klodekus.setIsMortal(false);
 	}
 	
-	protected void bossSimpleDie(L2Npc boss)
+	private void bossSimpleDie(L2Npc boss)
 	{
 		// killing is only possible one time
 		synchronized (this)
@@ -670,7 +449,7 @@ public final class HallOfSuffering extends Quest
 	
 	private String getPtLeaderText(L2PcInstance player, HSWorld world)
 	{
-		String htmltext = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/data/scripts/instances/SeedOfInfinity/32530-10.htm");
+		String htmltext = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/data/scripts/instances/SeedOfInfinity/HallOfSuffering/32530-10.htm");
 		htmltext = htmltext.replaceAll("%ptLeader%", String.valueOf(world.ptLeaderName));
 		return htmltext;
 	}
@@ -764,7 +543,7 @@ public final class HallOfSuffering extends Quest
 			{
 				world.isBossesAttacked = true;
 				Calendar reenter = Calendar.getInstance();
-				reenter.add(Calendar.HOUR, INSTANCEPENALTY);
+				reenter.add(Calendar.HOUR, INSTANCE_PENALTY);
 				
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
 				sm.addInstanceName(tmpworld.getTemplateId());
@@ -844,7 +623,7 @@ public final class HallOfSuffering extends Quest
 					cancelQuestTimers("ressurectTwin");
 					cancelQuestTimers("spawnBossGuards");
 					cancelQuestTimers("isTwinSeparated");
-					addSpawn(TEPIOS, TEPIOS_SPAWN[0], TEPIOS_SPAWN[1], TEPIOS_SPAWN[2], 0, false, 0, false, world.getInstanceId());
+					addSpawn(TEPIOS, TEPIOS_SPAWN, false, 0, false, world.getInstanceId());
 				}
 			}
 		}
@@ -879,18 +658,12 @@ public final class HallOfSuffering extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		int npcId = npc.getId();
-		QuestState st = getQuestState(player, false);
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
-		if (npcId == MOUTHOFEKIMUS)
+		getQuestState(player, true);
+		if (npc.getId() == MOUTHOFEKIMUS)
 		{
 			enterInstance(player, "HallOfSuffering.xml", ENTER_TELEPORT);
-			return "";
 		}
-		else if (npcId == TEPIOS)
+		else if (npc.getId() == TEPIOS)
 		{
 			InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 			if (((HSWorld) world).rewardItemId == -1)
@@ -905,13 +678,13 @@ public final class HallOfSuffering extends Quest
 			else if ((player.getParty() != null) && (player.getParty().getLeaderObjectId() == player.getObjectId()))
 			{
 				((HSWorld) world).isRewarded = true;
-				for (L2PcInstance pl : player.getParty().getMembers())
+				for (L2PcInstance member : player.getParty().getMembers())
 				{
-					st = pl.getQuestState(getName());
-					if (st != null)
+					final QuestState qsMember = getQuestState(member, false);
+					if (qsMember != null)
 					{
-						st.giveItems(736, 1);
-						st.giveItems(((HSWorld) world).rewardItemId, 1);
+						qsMember.giveItems(736, 1);
+						qsMember.giveItems(((HSWorld) world).rewardItemId, 1);
 					}
 				}
 				return "";

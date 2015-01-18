@@ -35,7 +35,7 @@ import gracia.AI.NPC.ZealotOfShilen.ZealotOfShilen;
 import gracia.AI.SeedOfAnnihilation.SeedOfAnnihilation;
 import gracia.instances.SecretArea.SecretArea;
 import gracia.instances.SeedOfDestruction.Stage1;
-import gracia.instances.SeedOfInfinity.HallOfSuffering;
+import gracia.instances.SeedOfInfinity.HallOfSuffering.HallOfSuffering;
 import gracia.vehicles.AirShipGludioGracia.AirShipGludioGracia;
 import gracia.vehicles.KeucereusNorthController.KeucereusNorthController;
 import gracia.vehicles.KeucereusSouthController.KeucereusSouthController;
