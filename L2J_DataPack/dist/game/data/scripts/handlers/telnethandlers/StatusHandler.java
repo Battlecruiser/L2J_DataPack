@@ -26,7 +26,7 @@ import java.util.Calendar;
 
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.LoginServerThread;
-import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -103,7 +103,7 @@ public class StatusHandler implements ITelnetHandler
 			int igm = 0;
 			String gmList = "";
 			
-			for (String player : AdminTable.getInstance().getAllGmNames(true))
+			for (String player : AdminData.getInstance().getAllGmNames(true))
 			{
 				gmList = gmList + ", " + player;
 				igm++;
@@ -224,7 +224,7 @@ public class StatusHandler implements ITelnetHandler
 	
 	private int getOnlineGMS()
 	{
-		return AdminTable.getInstance().getAllGms(true).size();
+		return AdminData.getInstance().getAllGms(true).size();
 	}
 	
 	private String getUptime(int time)

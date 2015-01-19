@@ -27,8 +27,8 @@ import java.util.regex.Pattern;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.SevenSigns;
-import com.l2jserver.gameserver.datatables.AdminTable;
-import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
@@ -220,7 +220,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			RaidBossSpawnManager.getInstance().cleanUp();
 			DayNightSpawnManager.getInstance().cleanUp();
 			L2World.getInstance().deleteVisibleNpcSpawns();
-			AdminTable.getInstance().broadcastMessageToGMs("NPC Unspawn completed!");
+			AdminData.getInstance().broadcastMessageToGMs("NPC Unspawn completed!");
 		}
 		else if (command.startsWith("admin_spawnday"))
 		{
@@ -243,7 +243,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			AutoSpawnHandler.getInstance().reload();
 			SevenSigns.getInstance().spawnSevenSignsNPC();
 			QuestManager.getInstance().reloadAllScripts();
-			AdminTable.getInstance().broadcastMessageToGMs("NPC Respawn completed!");
+			AdminData.getInstance().broadcastMessageToGMs("NPC Respawn completed!");
 		}
 		else if (command.startsWith("admin_spawn_monster") || command.startsWith("admin_spawn"))
 		{

@@ -20,7 +20,7 @@ package ai.npc.TerritoryManagers;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.MultisellData;
+import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;

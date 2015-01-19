@@ -31,7 +31,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager.StatusEnum;
@@ -740,7 +740,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			final int[] doors = TULLY_DOORLIST.get(npcId);
 			for (int doorId : doors)
 			{
-				DoorTable.getInstance().getDoor(doorId).closeMe();
+				DoorData.getInstance().getDoor(doorId).closeMe();
 			}
 		}
 		
@@ -837,7 +837,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			final int[] doors = TULLY_DOORLIST.get(npcId);
 			for (int doorId : doors)
 			{
-				DoorTable.getInstance().getDoor(doorId).openMe();
+				DoorData.getInstance().getDoor(doorId).openMe();
 			}
 			
 			startQuestTimer("close", 120000, npc, null);
@@ -1205,8 +1205,8 @@ public final class TullyWorkshop extends AbstractNpcAI
 				postMortemSpawn.add(spawnedNpc);
 			}
 			
-			DoorTable.getInstance().getDoor(19260051).openMe();
-			DoorTable.getInstance().getDoor(19260052).openMe();
+			DoorData.getInstance().getDoor(19260051).openMe();
+			DoorData.getInstance().getDoor(19260052).openMe();
 			
 			countdownTime = 600000;
 			_countdown = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() ->
@@ -1570,8 +1570,8 @@ public final class TullyWorkshop extends AbstractNpcAI
 	
 	private void handleDoorsOnDeath()
 	{
-		DoorTable.getInstance().getDoor(20250005).openMe();
-		DoorTable.getInstance().getDoor(20250004).openMe();
+		DoorData.getInstance().getDoor(20250005).openMe();
+		DoorData.getInstance().getDoor(20250004).openMe();
 		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
 		{
 			20250006,
@@ -1594,8 +1594,8 @@ public final class TullyWorkshop extends AbstractNpcAI
 	
 	private void handleDoorsOnRespawn()
 	{
-		DoorTable.getInstance().getDoor(20250009).closeMe();
-		DoorTable.getInstance().getDoor(20250008).closeMe();
+		DoorData.getInstance().getDoor(20250009).closeMe();
+		DoorData.getInstance().getDoor(20250008).closeMe();
 		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
 		{
 			20250777,
@@ -1627,7 +1627,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			L2DoorInstance door;
 			for (int doorId : _doorIds)
 			{
-				door = DoorTable.getInstance().getDoor(doorId);
+				door = DoorData.getInstance().getDoor(doorId);
 				if (door != null)
 				{
 					switch (_state)

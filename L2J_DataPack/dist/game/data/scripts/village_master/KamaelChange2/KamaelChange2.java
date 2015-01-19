@@ -23,7 +23,7 @@ import quests.Q00065_CertifiedSoulBreaker.Q00065_CertifiedSoulBreaker;
 import quests.Q00066_CertifiedArbalester.Q00066_CertifiedArbalester;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.CategoryData;
+import com.l2jserver.gameserver.data.xml.impl.CategoryData;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;

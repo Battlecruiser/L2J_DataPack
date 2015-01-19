@@ -23,7 +23,7 @@ import java.util.Map;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.ClassListData;
+import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;

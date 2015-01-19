@@ -27,8 +27,8 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.GraciaSeedsManager;
@@ -189,7 +189,7 @@ public class EnergySeeds extends AbstractNpcAI
 		{
 			for (int doorId : SEED_OF_DESTRUCTION_DOORS)
 			{
-				L2DoorInstance doorInstance = DoorTable.getInstance().getDoor(doorId);
+				L2DoorInstance doorInstance = DoorData.getInstance().getDoor(doorId);
 				if (doorInstance != null)
 				{
 					doorInstance.openMe();
@@ -201,7 +201,7 @@ public class EnergySeeds extends AbstractNpcAI
 		{
 			for (int doorId : SEED_OF_DESTRUCTION_DOORS)
 			{
-				L2DoorInstance doorInstance = DoorTable.getInstance().getDoor(doorId);
+				L2DoorInstance doorInstance = DoorData.getInstance().getDoor(doorId);
 				if (doorInstance != null)
 				{
 					doorInstance.closeMe();

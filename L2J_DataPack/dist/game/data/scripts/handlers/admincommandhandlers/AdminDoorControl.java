@@ -18,7 +18,7 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.model.entity.Castle;
  */
 public class AdminDoorControl implements IAdminCommandHandler
 {
-	private static DoorTable _doorTable = DoorTable.getInstance();
+	private static DoorData _doorTable = DoorData.getInstance();
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_open",

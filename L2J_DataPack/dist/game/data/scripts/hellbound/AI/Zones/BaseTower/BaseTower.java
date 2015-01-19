@@ -23,7 +23,7 @@ import java.util.Map;
 import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
@@ -69,7 +69,7 @@ public final class BaseTower extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("CLOSE"))
 		{
-			DoorTable.getInstance().getDoor(20260004).closeMe();
+			DoorData.getInstance().getDoor(20260004).closeMe();
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -95,8 +95,8 @@ public final class BaseTower extends AbstractNpcAI
 			{
 				// Should Kendal be despawned before Guzen's spawn? Or it will be crowd of Kendal's
 				addSpawn(KENDAL, npc.getSpawn().getLocation(), false, npc.getSpawn().getRespawnDelay(), false);
-				DoorTable.getInstance().getDoor(20260003).openMe();
-				DoorTable.getInstance().getDoor(20260004).openMe();
+				DoorData.getInstance().getDoor(20260003).openMe();
+				DoorData.getInstance().getDoor(20260004).openMe();
 				startQuestTimer("CLOSE", 60000, npc, null, false);
 				break;
 			}

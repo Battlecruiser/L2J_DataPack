@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.MultisellData;
+import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.datatables.NpcBufferTable;
 import com.l2jserver.gameserver.datatables.NpcBufferTable.NpcBufferData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
