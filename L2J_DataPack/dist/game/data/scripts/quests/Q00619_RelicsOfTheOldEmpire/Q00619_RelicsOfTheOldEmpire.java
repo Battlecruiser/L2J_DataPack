@@ -68,7 +68,7 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 	private static final int ENTRANCE_PASS_TO_THE_SEPULCHER = 7075;
 	private static final int BROKEN_RELIC_PART = 7254;
 	// Misc
-	private static final int MIN_LEVEL = 75;
+	private static final int MIN_LEVEL = 74;
 	private static final int REQUIRED_RELIC_COUNT = 1000;
 	// Reward
 	private static final int[] RECIPES =
