@@ -18,6 +18,8 @@
  */
 package hellbound.AI.Zones.AnomicFoundry;
 
+import hellbound.HellboundEngine;
+
 import java.util.Map;
 
 import javolution.util.FastMap;
@@ -34,8 +36,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-
-import hellbound.HellboundEngine;
 
 /**
  * Anomic Foundry.

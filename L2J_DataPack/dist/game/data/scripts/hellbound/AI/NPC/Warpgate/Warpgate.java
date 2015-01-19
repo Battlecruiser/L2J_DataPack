@@ -18,6 +18,7 @@
  */
 package hellbound.AI.NPC.Warpgate;
 
+import hellbound.HellboundEngine;
 import quests.Q00130_PathToHellbound.Q00130_PathToHellbound;
 import quests.Q00133_ThatsBloodyHot.Q00133_ThatsBloodyHot;
 import ai.npc.AbstractNpcAI;
@@ -30,8 +31,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
-
-import hellbound.HellboundEngine;
 
 /**
  * Warpgate teleport AI.

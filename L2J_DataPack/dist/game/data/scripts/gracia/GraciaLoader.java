@@ -18,9 +18,6 @@
  */
 package gracia;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import gracia.AI.EnergySeeds;
 import gracia.AI.Lindvior;
 import gracia.AI.Maguen;
@@ -41,6 +38,9 @@ import gracia.vehicles.KeucereusNorthController.KeucereusNorthController;
 import gracia.vehicles.KeucereusSouthController.KeucereusSouthController;
 import gracia.vehicles.SoDController.SoDController;
 import gracia.vehicles.SoIController.SoIController;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Gracia class-loader.

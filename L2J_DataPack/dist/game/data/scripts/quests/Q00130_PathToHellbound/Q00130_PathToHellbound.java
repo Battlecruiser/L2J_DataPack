@@ -18,13 +18,13 @@
  */
 package quests.Q00130_PathToHellbound;
 
+import hellbound.HellboundEngine;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-
-import hellbound.HellboundEngine;
 
 /**
  * Path To Hellbound (130)
