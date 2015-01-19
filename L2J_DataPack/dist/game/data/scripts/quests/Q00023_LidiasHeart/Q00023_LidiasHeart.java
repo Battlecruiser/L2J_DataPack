@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -59,12 +60,24 @@ public final class Q00023_LidiasHeart extends Quest
 		super(23, Q00023_LidiasHeart.class.getSimpleName(), "Lidia's Heart");
 		addStartNpc(HIGH_PRIEST_INNOCENTIN);
 		addTalkId(HIGH_PRIEST_INNOCENTIN, TRADER_VIOLET, TOMBSTONE, GHOST_OF_VON_HELLMANN, BROKEN_BOOKSHELF, BOX);
+		addSpawnId(GHOST_OF_VON_HELLMANN);
 		registerQuestItems(LIDIAS_DIARY, SILVER_KEY, SILVER_SPEAR);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
+		if ("DESPAWN".equals(event))
+		{
+			final L2Npc npc0 = npc.getVariables().getObject("npc0", L2Npc.class);
+			if (npc0 != null)
+			{
+				npc0.getVariables().set("SPAWNED", false);
+			}
+			npc.deleteMe();
+			return super.onAdvEvent(event, npc, player);
+		}
+		
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
@@ -76,13 +89,16 @@ public final class Q00023_LidiasHeart extends Quest
 		{
 			case "ACCEPT":
 			{
-				if ((player.getLevel() < MIN_LEVEL))
+				if (player.getLevel() < MIN_LEVEL)
 				{
 					htmltext = "31328-02.htm";
 				}
 				else
 				{
-					giveItems(player, MAP_FOREST_OF_THE_DEAD, 1);
+					if (!hasQuestItems(player, MAP_FOREST_OF_THE_DEAD))
+					{
+						giveItems(player, MAP_FOREST_OF_THE_DEAD, 1);
+					}
 					giveItems(player, SILVER_KEY, 1);
 					qs.startQuest();
 					qs.setMemoState(1);
@@ -162,11 +178,11 @@ public final class Q00023_LidiasHeart extends Quest
 				if (qs.isMemoState(8) || qs.isMemoState(9))
 				{
 					playSound(player, QuestSound.SKILLSOUND_HORROR_02);
-					if (npc.isScriptValue(0))
+					if (!npc.getVariables().getBoolean("SPAWNED", false))
 					{
-						npc.setScriptValue(1);
-						final L2Npc ghost = addSpawn(npc, GHOST_OF_VON_HELLMANN, GHOST_SPAWN, false, 300000);
-						ghost.broadcastPacket(new NpcSay(ghost.getObjectId(), 0, ghost.getId(), NpcStringId.WHO_AWOKE_ME));
+						npc.getVariables().set("SPAWNED", true);
+						final L2Npc ghost = addSpawn(npc, GHOST_OF_VON_HELLMANN, GHOST_SPAWN, false, 0);
+						ghost.getVariables().set("npc0", npc);
 						htmltext = event;
 					}
 					else
@@ -216,7 +232,10 @@ public final class Q00023_LidiasHeart extends Quest
 			}
 			case "31526-06.html":
 			{
-				giveItems(player, LIDIAS_HAIRPIN, 1);
+				if (!hasQuestItems(player, LIDIAS_HAIRPIN))
+				{
+					giveItems(player, LIDIAS_HAIRPIN, 1);
+				}
 				qs.setMemoState(qs.getMemoState() + 1);
 				if (hasQuestItems(player, LIDIAS_DIARY))
 				{
@@ -478,5 +497,13 @@ public final class Q00023_LidiasHeart extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onSpawn(L2Npc npc)
+	{
+		startQuestTimer("DESPAWN", 300000, npc, null);
+		npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.WHO_AWOKE_ME));
+		return super.onSpawn(npc);
 	}
 }
