@@ -34,6 +34,7 @@ import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.PledgeSkillList;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -183,6 +184,7 @@ public class AdminSkill implements IAdminCommandHandler
 			player.sendMessage("Admin removed all skills from you.");
 			player.sendSkillList();
 			player.broadcastUserInfo();
+			player.sendPacket(new AcquireSkillList(player));
 		}
 		else if (command.startsWith("admin_add_clan_skill"))
 		{
@@ -205,6 +207,7 @@ public class AdminSkill implements IAdminCommandHandler
 			activeChar.addSkill(skill);
 			activeChar.sendSkillList();
 			activeChar.sendMessage("You added yourself skill " + skill.getName() + "(" + id + ") level " + lvl);
+			activeChar.sendPacket(new AcquireSkillList(activeChar));
 		}
 		return true;
 	}
@@ -226,6 +229,7 @@ public class AdminSkill implements IAdminCommandHandler
 		// Notify player and admin
 		activeChar.sendMessage("You gave " + player.giveAvailableSkills(includedByFs, true) + " skills to " + player.getName());
 		player.sendSkillList();
+		player.sendPacket(new AcquireSkillList(player));
 	}
 	
 	/**
