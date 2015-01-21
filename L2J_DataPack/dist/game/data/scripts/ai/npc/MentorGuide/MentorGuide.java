@@ -66,11 +66,13 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 {
 	// NPCs
 	private static final int MENTOR_GUIDE = 33587;
+	
 	// Items
 	private static final int MENTEE_CERT = 33800;
 	private static final int MENTEE_MARK = 33804;
 	private static final int MENTEE_HEADPHONE = 34759;
 	private static final int DIPLOMA = 33805;
+	
 	// Skills
 	private final static SkillHolder[] MENTEE_BUFFS =
 	{
@@ -82,11 +84,14 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		new SkillHolder(9232, 1), // Mentor's Poem of Harp
 		new SkillHolder(9233, 1), // Mentor's Guidance
 	};
+	
 	protected static final SkillHolder[] MENTOR_BUFFS =
 	{
 		new SkillHolder(9256, 1), // Mentee's Appreciation;
 	};
+	
 	private static final SkillHolder MENTEE_MENTOR_SUMMON = new SkillHolder(9379, 1); // Mentee's Mentor Summon
+	
 	// Misc
 	private static final int MAX_LEVEL = 85;
 	private static final String LEVEL_UP_TITLE = "Mentee coin from Mentee leveling";
@@ -101,7 +106,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	public void load()
 	{
 		parseDatapackFile("config/MentorCoins.xml");
-		LOGGER.log(Level.INFO, MentorGuide.class.getSimpleName() + ": Loaded: " + MENTEE_COINS.size() + " mentee coins");
+		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + MENTEE_COINS.size() + " mentee coins");
 	}
 	
 	@Override
@@ -131,6 +136,8 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		addFirstTalkId(MENTOR_GUIDE);
 		addStartNpc(MENTOR_GUIDE);
 		addTalkId(MENTOR_GUIDE);
+		
+		load();
 	}
 	
 	@Override
