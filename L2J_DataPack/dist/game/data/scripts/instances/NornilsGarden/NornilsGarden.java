@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
@@ -237,11 +238,17 @@ public final class NornilsGarden extends Quest
 	{
 		removeBuffs(player);
 		giveBuffs(player);
-		if (player.hasSummon())
+		final L2Summon pet = player.getPet();
+		if (pet != null)
 		{
-			removeBuffs(player.getSummon());
-			giveBuffs(player.getSummon());
+			removeBuffs(pet);
+			giveBuffs(pet);
 		}
+		player.getServitors().values().forEach(s ->
+		{
+			removeBuffs(s);
+			giveBuffs(s);
+		});
 		super.teleportPlayer(player, loc, instanceId);
 	}
 	

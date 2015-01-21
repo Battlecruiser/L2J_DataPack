@@ -127,7 +127,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 			}
 			case "30747-04.html":
 			{
-				final L2Summon summon = player.getSummon();
+				final L2Summon summon = player.getPet();
 				
 				if (summon == null)
 				{
@@ -145,7 +145,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 			}
 			case "30747-05.html":
 			{
-				final L2Summon summon = player.getSummon();
+				final L2Summon summon = player.getPet();
 				
 				if (summon == null)
 				{
@@ -247,7 +247,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 					}
 					case 200:
 					{
-						final L2Summon summon = talker.getSummon();
+						final L2Summon summon = talker.getPet();
 						
 						if (summon == null)
 						{
@@ -293,7 +293,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 					{
 						if (!hasQuestItems(talker, FAIRY_LEAF))
 						{
-							final L2Summon summon = talker.getSummon();
+							final L2Summon summon = talker.getPet();
 							
 							if (summon == null)
 							{
@@ -383,7 +383,8 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 				final NpcData data = NPC_DATA.get(npc.getId());
 				if ((qs.getMemoState() % data.memoStateMod) < data.memoStateValue)
 				{
-					if (attacker.getSummon().getControlObjectId() == qs.getInt("fluteObjectId"))
+					final L2Summon pet = attacker.getPet();
+					if ((pet != null) && (pet.getControlObjectId() == qs.getInt("fluteObjectId")))
 					{
 						final int hits = qs.getInt("hits") + 1;
 						qs.set("hits", hits);

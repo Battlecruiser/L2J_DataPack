@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
@@ -222,10 +223,12 @@ public class CavernOfThePirateCaptain extends AbstractNpcAI
 		if (!world._is83)
 		{
 			player.stopAllEffectsExceptThoseThatLastThroughDeath();
-			if (player.hasSummon())
+			final L2Summon pet = player.getPet();
+			if (pet != null)
 			{
-				player.getSummon().stopAllEffectsExceptThoseThatLastThroughDeath();
+				pet.stopAllEffectsExceptThoseThatLastThroughDeath();
 			}
+			player.getServitors().values().forEach(L2Summon::stopAllEffectsExceptThoseThatLastThroughDeath);
 		}
 		world.playersInside.add(player);
 		world.addAllowed(player.getObjectId());

@@ -150,17 +150,20 @@ public final class GiftOfVitality extends LongTimeEvent
 				{
 					htmltext = "4306-nolevel.htm";
 				}
-				else if (!player.hasServitor())
+				else if (!player.hasServitors())
 				{
 					htmltext = "4306-nosummon.htm";
 				}
 				else
 				{
-					npc.setTarget(player.getSummon());
-					for (SkillHolder sk : SERVITOR_SKILLS)
+					player.getServitors().values().forEach(s ->
 					{
-						npc.doCast(sk.getSkill());
-					}
+						npc.setTarget(s);
+						for (SkillHolder sk : SERVITOR_SKILLS)
+						{
+							npc.doCast(sk.getSkill());
+						}
+					});
 					htmltext = "4306-okbuff.htm";
 				}
 				break;

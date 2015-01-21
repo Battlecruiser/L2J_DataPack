@@ -58,10 +58,18 @@ public class Party implements ITargetTypeHandler
 		}
 		else if (activeChar.isPlayer())
 		{
-			if (Skill.addSummon(activeChar, player, radius, false))
+			if (Skill.addPet(activeChar, player, radius, false))
 			{
-				targetList.add(player.getSummon());
+				targetList.add(player.getPet());
 			}
+			
+			player.getServitors().values().forEach(s ->
+			{
+				if (Skill.addCharacter(activeChar, s, radius, false))
+				{
+					targetList.add(s);
+				}
+			});
 		}
 		
 		if (activeChar.isInParty())
@@ -79,10 +87,18 @@ public class Party implements ITargetTypeHandler
 					targetList.add(partyMember);
 				}
 				
-				if (Skill.addSummon(activeChar, partyMember, radius, false))
+				if (Skill.addPet(activeChar, partyMember, radius, false))
 				{
-					targetList.add(partyMember.getSummon());
+					targetList.add(partyMember.getPet());
 				}
+				
+				partyMember.getServitors().values().forEach(s ->
+				{
+					if (Skill.addCharacter(activeChar, s, radius, false))
+					{
+						targetList.add(s);
+					}
+				});
 			}
 		}
 		return targetList.toArray(new L2Character[targetList.size()]);

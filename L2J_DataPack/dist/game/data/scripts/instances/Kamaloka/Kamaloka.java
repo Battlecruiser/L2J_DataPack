@@ -34,6 +34,7 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
@@ -1315,11 +1316,16 @@ public final class Kamaloka extends Quest
 		};
 		
 		ch.getEffectList().forEach(removeBuffs, false);
-		
-		if (ch.hasSummon())
+		final L2Summon pet = ch.getPet();
+		if (pet != null)
 		{
-			ch.getSummon().getEffectList().forEach(removeBuffs, false);
+			pet.getEffectList().forEach(removeBuffs, false);
 		}
+		
+		ch.getServitors().values().forEach(s ->
+		{
+			s.getEffectList().forEach(removeBuffs, false);
+		});
 	}
 	
 	/**

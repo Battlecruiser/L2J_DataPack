@@ -571,8 +571,9 @@
 		<set name="targetType" val="SELF" />
 		<cond>
 			<and>
-				<player canSummon="true" />
+				<player canSummonServitor="true" />
 				<player canSummonSiegeGolem="true" />
+				<player hasFreeSummonPoints="0" />
 			</and>
 		</cond>
 		<for>
@@ -933,7 +934,10 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">

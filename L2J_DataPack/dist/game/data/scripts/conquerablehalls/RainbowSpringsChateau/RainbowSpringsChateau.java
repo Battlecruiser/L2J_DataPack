@@ -47,6 +47,7 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
@@ -692,10 +693,15 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 			if (pc != null)
 			{
 				pc.stopAllEffects();
-				if (pc.hasSummon())
+				final L2Summon pet = pc.getPet();
+				if (pet != null)
 				{
-					pc.getSummon().unSummon(pc);
+					pet.unSummon(pc);
 				}
+				pc.getServitors().values().forEach(s ->
+				{
+					s.unSummon(pc);
+				});
 				pc.teleToLocation(ARENAS[arena]);
 			}
 		}

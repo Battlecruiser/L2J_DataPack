@@ -60,10 +60,18 @@ public class PartyClan implements ITargetTypeHandler
 		final boolean hasClan = player.getClan() != null;
 		final boolean hasParty = player.isInParty();
 		
-		if (Skill.addSummon(activeChar, player, radius, false))
+		if (Skill.addPet(activeChar, player, radius, false))
 		{
-			targetList.add(player.getSummon());
+			targetList.add(player.getPet());
 		}
+		
+		player.getServitors().values().forEach(s ->
+		{
+			if (Skill.addCharacter(activeChar, s, radius, false))
+			{
+				targetList.add(s);
+			}
+		});
 		
 		// if player in clan and not in party
 		if (!(hasClan || hasParty))
@@ -128,22 +136,22 @@ public class PartyClan implements ITargetTypeHandler
 				continue;
 			}
 			
-			if (!onlyFirst && Skill.addSummon(activeChar, obj, radius, false))
+			if (Skill.addPet(activeChar, obj, radius, false))
 			{
-				targetList.add(obj.getSummon());
+				targetList.add(obj.getPet());
 			}
+			
+			obj.getServitors().values().forEach(s ->
+			{
+				if (Skill.addCharacter(activeChar, s, radius, false))
+				{
+					targetList.add(s);
+				}
+			});
 			
 			if (!Skill.addCharacter(activeChar, obj, radius, false))
 			{
 				continue;
-			}
-			
-			if (onlyFirst)
-			{
-				return new L2Character[]
-				{
-					obj
-				};
 			}
 			
 			if ((maxTargets > 0) && (targetList.size() >= maxTargets))

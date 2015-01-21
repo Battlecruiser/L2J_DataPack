@@ -37,6 +37,7 @@ import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -1170,10 +1171,13 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 			if (world instanceof IQCNBWorld)
 			{
 				player.stopAllEffectsExceptThoseThatLastThroughDeath();
-				if (player.hasSummon())
+				final L2Summon pet = player.getPet();
+				if (pet != null)
 				{
-					player.getSummon().stopAllEffectsExceptThoseThatLastThroughDeath();
+					pet.stopAllEffectsExceptThoseThatLastThroughDeath();
 				}
+				
+				player.getServitors().values().forEach(L2Summon::stopAllEffectsExceptThoseThatLastThroughDeath);
 				
 				if (world.isStatus(4))
 				{
@@ -1222,10 +1226,12 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 	private void managePlayerEnter(L2PcInstance player, IQCNBWorld world)
 	{
 		player.stopAllEffectsExceptThoseThatLastThroughDeath();
-		if (player.hasSummon())
+		final L2Summon pet = player.getPet();
+		if (pet != null)
 		{
-			player.getSummon().stopAllEffectsExceptThoseThatLastThroughDeath();
+			pet.stopAllEffectsExceptThoseThatLastThroughDeath();
 		}
+		player.getServitors().values().forEach(L2Summon::stopAllEffectsExceptThoseThatLastThroughDeath);
 		world.playersInside.add(player);
 		world.addAllowed(player.getObjectId());
 		teleportPlayer(player, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId(), false);

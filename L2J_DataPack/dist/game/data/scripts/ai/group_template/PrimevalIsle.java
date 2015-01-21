@@ -326,7 +326,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 			if ((getRandom(100) <= 80) && npc.isScriptValue(0))
 			{
 				npc.setScriptValue(1);
-				final L2Playable playable = isSummon ? attacker.getSummon() : attacker;
+				final L2Playable playable = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
 				for (L2Character characters : npc.getKnownList().getKnownCharactersInRadius(500))
 				{
 					if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))

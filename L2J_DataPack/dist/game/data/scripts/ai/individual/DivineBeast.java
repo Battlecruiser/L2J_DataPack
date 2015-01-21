@@ -49,14 +49,14 @@ public final class DivineBeast extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if ((player == null) || !player.hasServitor())
+		if ((player == null) || !player.hasServitors())
 		{
 			cancelQuestTimer(event, npc, player);
 		}
 		else if (player.getTransformationId() != TRANSFORMATION_ID)
 		{
 			cancelQuestTimer(event, npc, player);
-			player.getSummon().unSummon(player);
+			player.getServitors().values().forEach(summon -> summon.unSummon(player));
 		}
 		
 		return super.onAdvEvent(event, npc, player);

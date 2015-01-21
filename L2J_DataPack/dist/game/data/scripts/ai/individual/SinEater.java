@@ -53,12 +53,12 @@ public final class SinEater extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("TALK") && (player != null) && (player.getSummon() != null))
+		if (event.equals("TALK") && (player != null) && (player.getPet() != null))
 		{
 			if (getRandom(100) < 30)
 			{
 				final int random = getRandom(100);
-				final L2Summon summon = player.getSummon();
+				final L2Summon summon = player.getPet();
 				
 				if (random < 20)
 				{

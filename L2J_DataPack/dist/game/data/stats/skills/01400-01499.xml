@@ -268,7 +268,10 @@
 		<enchant1 name="mpConsume" val="116" />
 		<enchant1 name="mpInitialConsume" val="29" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -305,7 +308,10 @@
 		<enchant1 name="mpConsume" val="116" />
 		<enchant1 name="mpInitialConsume" val="29" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -344,7 +350,10 @@
 		<enchant1 name="mpConsume" val="116" />
 		<enchant1 name="mpInitialConsume" val="29" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">

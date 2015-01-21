@@ -58,7 +58,7 @@ public class SummonItems extends ItemSkillsTemplate
 			return false;
 		}
 		
-		if (activeChar.hasSummon() || activeChar.isMounted())
+		if (activeChar.hasPet() || activeChar.isMounted())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
 			return false;

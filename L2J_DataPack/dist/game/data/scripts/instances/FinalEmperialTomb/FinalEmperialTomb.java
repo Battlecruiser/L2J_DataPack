@@ -52,6 +52,7 @@ import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -941,10 +942,18 @@ public final class FinalEmperialTomb extends Quest
 									{
 										targetList.add(player);
 									}
-									if (player.hasSummon() && !player.getSummon().isDead())
+									final L2Summon pet = player.getPet();
+									if ((pet != null) && !pet.isDead())
 									{
-										targetList.add(player.getSummon());
+										targetList.add(pet);
 									}
+									player.getServitors().values().forEach(s ->
+									{
+										if (!s.isDead())
+										{
+											targetList.add(s);
+										}
+									});
 								}
 							}
 						}

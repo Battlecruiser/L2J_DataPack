@@ -42,6 +42,7 @@ public final class Summon extends AbstractEffect
 	private final ItemHolder _consumeItem;
 	private final int _lifeTime;
 	private final int _consumeItemInterval;
+	private final int _summonPoints;
 	
 	public Summon(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
@@ -57,6 +58,7 @@ public final class Summon extends AbstractEffect
 		_consumeItem = new ItemHolder(params.getInt("consumeItemId", 0), params.getInt("consumeItemCount", 1));
 		_consumeItemInterval = params.getInt("consumeItemInterval", 0);
 		_lifeTime = params.getInt("lifeTime", 3600) * 1000;
+		_summonPoints = params.getInt("summonPoints", 0);
 	}
 	
 	@Override
@@ -68,7 +70,7 @@ public final class Summon extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (!info.getEffected().isPlayer() || info.getEffected().hasSummon())
+		if (!info.getEffected().isPlayer())
 		{
 			return;
 		}
@@ -99,9 +101,17 @@ public final class Summon extends AbstractEffect
 		summon.setCurrentHp(summon.getMaxHp());
 		summon.setCurrentMp(summon.getMaxMp());
 		summon.setHeading(player.getHeading());
+		summon.setSummonPoints(_summonPoints);
 		
-		player.setPet(summon);
-		
+		if (summon.isPet())
+		{
+			player.setPet(summon);
+		}
+		else
+		{
+			player.addServitor(summon);
+		}
+		summon.setShowSummonAnimation(true);
 		summon.setRunning();
 		summon.spawnMe();
 	}

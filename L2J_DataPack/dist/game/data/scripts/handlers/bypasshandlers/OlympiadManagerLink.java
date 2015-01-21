@@ -279,12 +279,17 @@ public class OlympiadManagerLink implements IBypassHandler
 						
 						target.broadcastPacket(new MagicSkillUse(target, activeChar, skill.getId(), skill.getLevel(), 0, 0));
 						skill.applyEffects(activeChar, activeChar);
-						final L2Summon summon = activeChar.getSummon();
-						if (summon != null)
+						final L2Summon pet = activeChar.getPet();
+						if (pet != null)
 						{
-							target.broadcastPacket(new MagicSkillUse(target, summon, skill.getId(), skill.getLevel(), 0, 0));
-							skill.applyEffects(summon, summon);
+							target.broadcastPacket(new MagicSkillUse(target, pet, skill.getId(), skill.getLevel(), 0, 0));
+							skill.applyEffects(pet, pet);
 						}
+						activeChar.getServitors().values().forEach(s ->
+						{
+							target.broadcastPacket(new MagicSkillUse(target, s, skill.getId(), skill.getLevel(), 0, 0));
+							skill.applyEffects(s, s);
+						});
 					}
 				}
 				

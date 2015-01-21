@@ -50,10 +50,18 @@ public class CommandChannel implements ITargetTypeHandler
 		final L2Party party = player.getParty();
 		final boolean hasChannel = (party != null) && party.isInCommandChannel();
 		
-		if (Skill.addSummon(activeChar, player, radius, false))
+		if (Skill.addPet(activeChar, player, radius, false))
 		{
-			targetList.add(player.getSummon());
+			targetList.add(player.getPet());
 		}
+		
+		player.getServitors().values().forEach(s ->
+		{
+			if (Skill.addCharacter(activeChar, s, radius, false))
+			{
+				targetList.add(s);
+			}
+		});
 		
 		// if player in not in party
 		if (party == null)

@@ -95,7 +95,7 @@ public final class RangeGuard extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
-		final L2Playable playable = (isSummon) ? attacker.getSummon() : attacker;
+		final L2Playable playable = (isSummon) ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
 		final int longRangeGuardRate = npc.getTemplate().getParameters().getInt("LongRangeGuardRate");
 		final double distance = Util.calculateDistance(npc, playable, true, false);
 		

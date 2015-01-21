@@ -45,7 +45,9 @@
 					</xs:simpleType>
 				</xs:attribute>
 				<xs:attribute type="xs:string" name="Charges" use="optional" />
-				<xs:attribute type="xs:string" name="canSummon" use="optional" />
+				<xs:attribute type="xs:string" name="canSummonPet" use="optional" />
+				<xs:attribute type="xs:string" name="canSummonServitor" use="optional" />
+				<xs:attribute type="xs:byte" name="hasFreeSummonPoints" use="optional" />
 				<xs:attribute type="xs:string" name="canResurrect" use="optional" />
 				<xs:attribute type="xs:string" name="canSweep" use="optional" />
 				<xs:attribute type="xs:string" name="canSwitchSubClass" use="optional" />

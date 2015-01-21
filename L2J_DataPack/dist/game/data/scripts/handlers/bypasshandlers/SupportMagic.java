@@ -99,7 +99,7 @@ public class SupportMagic implements IBypassHandler
 	private static void makeSupportMagic(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final int level = player.getLevel();
-		if (isSummon && !player.hasServitor())
+		if (isSummon && !player.hasServitors())
 		{
 			npc.showChatWindow(player, "data/html/default/SupportMagicNoSummon.htm");
 			return;
@@ -122,20 +122,23 @@ public class SupportMagic implements IBypassHandler
 		
 		if (isSummon)
 		{
-			npc.setTarget(player.getSummon());
-			for (SkillHolder skill : SUMMON_BUFFS)
+			player.getServitors().values().forEach(s ->
 			{
-				npc.doCast(skill.getSkill());
-			}
-			
-			if (level >= HASTE_LEVEL_2)
-			{
-				npc.doCast(HASTE_2.getSkill());
-			}
-			else
-			{
-				npc.doCast(HASTE_1.getSkill());
-			}
+				npc.setTarget(s);
+				for (SkillHolder skill : SUMMON_BUFFS)
+				{
+					npc.doCast(skill.getSkill());
+				}
+				
+				if (level >= HASTE_LEVEL_2)
+				{
+					npc.doCast(HASTE_2.getSkill());
+				}
+				else
+				{
+					npc.doCast(HASTE_1.getSkill());
+				}
+			});
 		}
 		else
 		{

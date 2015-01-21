@@ -63,10 +63,18 @@ public class TargetParty implements ITargetTypeHandler
 					targetList.add(partyMember);
 				}
 				
-				if (Skill.addSummon(player, partyMember, radius, false))
+				if (Skill.addPet(player, partyMember, radius, false))
 				{
-					targetList.add(partyMember.getSummon());
+					targetList.add(partyMember.getPet());
 				}
+				
+				partyMember.getServitors().values().forEach(s ->
+				{
+					if (Skill.addCharacter(activeChar, s, radius, false))
+					{
+						targetList.add(s);
+					}
+				});
 			}
 		}
 		else

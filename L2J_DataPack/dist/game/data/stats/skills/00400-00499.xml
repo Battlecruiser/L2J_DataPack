@@ -1758,8 +1758,9 @@
 		<set name="targetType" val="SELF" />
 		<cond>
 			<and>
-				<player canSummon="true" />
+				<player canSummonServitor="true" />
 				<player canSummonSiegeGolem="true" />
+				<player hasFreeSummonPoints="0" />
 			</and>
 		</cond>
 		<for>

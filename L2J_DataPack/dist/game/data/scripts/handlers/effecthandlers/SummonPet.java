@@ -69,7 +69,7 @@ public final class SummonPet extends AbstractEffect
 		
 		final L2PcInstance player = info.getEffector().getActingPlayer();
 		
-		if ((player.hasSummon() || player.isMounted()))
+		if (player.hasPet() || player.isMounted())
 		{
 			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
 			return;

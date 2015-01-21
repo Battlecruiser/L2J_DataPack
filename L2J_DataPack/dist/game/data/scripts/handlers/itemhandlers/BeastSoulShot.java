@@ -18,11 +18,14 @@
  */
 package handlers.itemhandlers;
 
+import java.util.List;
 import java.util.logging.Level;
+import java.util.stream.Collectors;
 
 import com.l2jserver.gameserver.enums.ShotType;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -52,16 +55,40 @@ public class BeastSoulShot implements IItemHandler
 			return false;
 		}
 		
-		if (activeOwner.getSummon().isDead())
+		final L2Summon pet = playable.getPet();
+		if ((pet != null) && pet.isDead())
+		{
+			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET_OR_SERVITOR_SAD_ISN_T_IT);
+			return false;
+		}
+		
+		final List<L2Summon> aliveServitor = playable.getServitors().values().stream().filter(s -> !s.isDead()).collect(Collectors.toList());
+		if (aliveServitor.isEmpty())
 		{
 			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET_OR_SERVITOR_SAD_ISN_T_IT);
 			return false;
 		}
 		
 		final int itemId = item.getId();
-		final short shotConsumption = activeOwner.getSummon().getSoulShotsPerHit();
 		final long shotCount = item.getCount();
 		final SkillHolder[] skills = item.getItem().getSkills();
+		short shotConsumption = 0;
+		
+		if (pet != null)
+		{
+			if (!pet.isChargedShot(ShotType.SOULSHOTS))
+			{
+				shotConsumption += pet.getSoulShotsPerHit();
+			}
+		}
+		
+		for (L2Summon servitors : aliveServitor)
+		{
+			if (!servitors.isChargedShot(ShotType.SOULSHOTS))
+			{
+				shotConsumption += servitors.getSoulShotsPerHit();
+			}
+		}
 		
 		if (skills == null)
 		{
@@ -79,12 +106,6 @@ public class BeastSoulShot implements IItemHandler
 			return false;
 		}
 		
-		if (activeOwner.getSummon().isChargedShot(ShotType.SOULSHOTS))
-		{
-			// SoulShots are already active.
-			return false;
-		}
-		
 		// If the player doesn't have enough beast soulshot remaining, remove any auto soulshot task.
 		if (!activeOwner.destroyItemWithoutTrace("Consume", item.getObjectId(), shotConsumption, null, false))
 		{
@@ -97,9 +118,23 @@ public class BeastSoulShot implements IItemHandler
 		
 		// Pet uses the power of spirit.
 		activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
-		activeOwner.getSummon().setChargedShot(ShotType.SOULSHOTS, true);
+		if (pet != null)
+		{
+			if (!pet.isChargedShot(ShotType.SOULSHOTS))
+			{
+				pet.setChargedShot(ShotType.SOULSHOTS, true);
+				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
+			}
+		}
 		
-		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activeOwner.getSummon(), activeOwner.getSummon(), skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
+		aliveServitor.forEach(s ->
+		{
+			if (!s.isChargedShot(ShotType.SOULSHOTS))
+			{
+				s.setChargedShot(ShotType.SOULSHOTS, true);
+				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
+			}
+		});
 		return true;
 	}
 }

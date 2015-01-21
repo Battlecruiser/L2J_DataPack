@@ -21,6 +21,7 @@ package handlers.targethandlers;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 
@@ -33,11 +34,12 @@ public class Pet implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		if (activeChar.hasPet())
+		final L2Summon pet = activeChar.getPet();
+		if (pet != null)
 		{
 			return new L2Character[]
 			{
-				activeChar.getSummon()
+				pet
 			};
 		}
 		return EMPTY_TARGET_LIST;

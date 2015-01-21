@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
@@ -223,10 +224,12 @@ public final class MonasteryOfSilence1 extends AbstractNpcAI
 	private static final void removeBuffs(L2Character ch)
 	{
 		ch.stopAllEffectsExceptThoseThatLastThroughDeath();
-		if (ch.hasSummon())
+		final L2Summon pet = ch.getPet();
+		if (pet != null)
 		{
-			ch.getSummon().stopAllEffectsExceptThoseThatLastThroughDeath();
+			pet.stopAllEffectsExceptThoseThatLastThroughDeath();
 		}
+		ch.getServitors().values().forEach(L2Summon::stopAllEffectsExceptThoseThatLastThroughDeath);
 	}
 	
 	protected void spawnNPC(L2PcInstance player, MoSWorld world)

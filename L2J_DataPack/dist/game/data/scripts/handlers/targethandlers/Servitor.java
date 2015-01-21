@@ -33,12 +33,10 @@ public class Servitor implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		if (activeChar.hasServitor())
+		if (activeChar.hasServitors())
 		{
-			return new L2Character[]
-			{
-				activeChar.getSummon()
-			};
+			return activeChar.getServitors().values().toArray(new L2Character[activeChar.getServitors().size()]);
+			
 		}
 		return EMPTY_TARGET_LIST;
 	}
