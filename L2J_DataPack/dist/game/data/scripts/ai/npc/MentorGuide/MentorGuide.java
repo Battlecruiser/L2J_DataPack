@@ -93,6 +93,8 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	private static final String LEVEL_UP_BODY = "Your mentee %s has reached level %d, so you are receiving some Mentee Coin. After Mentee Coin has successfully been removed and placed into your inventory please be sure to delete this letter. If your mailbox is full when any future letters are sent to you cannot be delivered and you will not receive these items.";
 	private static final String MENTEE_ADDED_TITLE = "Congratulations on becoming a mentee.";
 	private static final String MENTEE_ADDED_BODY = "Greetings. This is the Mentor Guide.\n\nYou will experience a world of unlimited adventures with your mentor, Exciting, isn't it?\n\nWhen you graduate from mentee status (upon awakening at level 85), you will receive a Mentee Certificate. If you bring it to me, I will give you a Diploma that you can exchange for R-grade equipment.";
+	private static final String MENTEE_GRADUATE_TITLE = "Congratulations on your graduation";
+	private static final String MENTEE_GRADUATE_BODY = "Greetings! This is the Mentor Guide.\nCongratulations!  Did you enjoy the time with a mentor? Here is a Mentee Certificate for graduating.\n\nFind me in town, and I'll give you a Diploma if you show me your Mentee Certificatee. You'll also get a small graduation gift!\n\nNow, on to your next Adventure!";
 	static final Map<Integer, Integer> MENTEE_COINS = new HashMap<>();
 	
 	@Override
@@ -412,8 +414,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 			
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_MENTEE_RELATIONSHIP_WITH_YOUR_MENTOR_S1_HAS_ENDED_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_85_OR_ABOVE_YOU_CAN_NO_LONGER_BE_PAIRED_WITH_A_MENTOR).addPcName(player));
 			
-			// TODO: Find correct message!
-			sendMail(player, MENTEE_ADDED_TITLE, MENTEE_ADDED_BODY, MENTEE_CERT, 1);
+			sendMail(player, MENTEE_GRADUATE_TITLE, MENTEE_GRADUATE_BODY, MENTEE_CERT, 1);
 		}
 	}
 	
