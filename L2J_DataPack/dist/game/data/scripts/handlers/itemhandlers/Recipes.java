@@ -18,7 +18,7 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.datatables.RecipeData;
+import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.actor.L2Playable;

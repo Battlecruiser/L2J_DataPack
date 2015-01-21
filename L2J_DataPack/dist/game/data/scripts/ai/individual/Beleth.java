@@ -27,8 +27,8 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -109,7 +109,7 @@ public final class Beleth extends AbstractNpcAI
 		{
 			GrandBossManager.getInstance().setBossStatus(29118, 0);
 		}
-		DoorTable.getInstance().getDoor(20240001).openMe();
+		DoorData.getInstance().getDoor(20240001).openMe();
 	}
 	
 	protected static L2Npc spawn(int npcId, Location loc)
@@ -143,7 +143,7 @@ public final class Beleth extends AbstractNpcAI
 		public void run()
 		{
 			GrandBossManager.getInstance().setBossStatus(29118, 0);
-			DoorTable.getInstance().getDoor(20240001).openMe();
+			DoorData.getInstance().getDoor(20240001).openMe();
 		}
 	}
 	
@@ -221,7 +221,7 @@ public final class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(6), 2500);
 						break;
 					case 6:
-						L2DoorInstance door = DoorTable.getInstance().getDoor(20240001);
+						L2DoorInstance door = DoorData.getInstance().getDoor(20240001);
 						door.closeMe();
 						ZONE.broadcastPacket(new StaticObject(door, false));
 						ZONE.broadcastPacket(new DoorStatusUpdate(door));
@@ -368,11 +368,11 @@ public final class Beleth extends AbstractNpcAI
 					case 32:
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA2, 800, 180, 0, 0, 4000, 0, 10, 1, 0, 0));
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA2, 800, 180, 0, 0, 4000, 0, 10, 1, 0, 0));
-						L2DoorInstance door2 = DoorTable.getInstance().getDoor(20240002);
+						L2DoorInstance door2 = DoorData.getInstance().getDoor(20240002);
 						door2.openMe();
 						ZONE.broadcastPacket(new StaticObject(door2, false));
 						ZONE.broadcastPacket(new DoorStatusUpdate(door2));
-						DoorTable.getInstance().getDoor(20240003).openMe();
+						DoorData.getInstance().getDoor(20240003).openMe();
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(33), 4000);
 						break;
 					case 33:

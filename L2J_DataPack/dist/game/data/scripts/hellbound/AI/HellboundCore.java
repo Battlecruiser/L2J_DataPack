@@ -18,14 +18,13 @@
  */
 package hellbound.AI;
 
+import hellbound.HellboundEngine;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-
-import hellbound.HellboundEngine;
 
 /**
  * Manages Naia's cast on the Hellbound Core

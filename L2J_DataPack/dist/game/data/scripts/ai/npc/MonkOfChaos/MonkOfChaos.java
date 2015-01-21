@@ -22,8 +22,8 @@ import java.util.List;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.SubclassType;
 import com.l2jserver.gameserver.model.L2SkillLearn;
@@ -35,7 +35,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 
 /**
- * Monk Ff Chaos AI.
+ * Monk of Chaos AI.
  * @author Sdw
  */
 public final class MonkOfChaos extends AbstractNpcAI

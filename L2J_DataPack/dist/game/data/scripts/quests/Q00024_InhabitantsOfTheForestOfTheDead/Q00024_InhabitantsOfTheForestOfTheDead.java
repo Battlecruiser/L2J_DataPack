@@ -18,6 +18,8 @@
  */
 package quests.Q00024_InhabitantsOfTheForestOfTheDead;
 
+import quests.Q00023_LidiasHeart.Q00023_LidiasHeart;
+
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -72,7 +74,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 		{
 		// Dorian
 			case "31389-02.htm":
-				final QuestState qs = player.getQuestState("23_LidiasHeart");
+				final QuestState qs = player.getQuestState(Q00023_LidiasHeart.class.getSimpleName());
 				if ((player.getLevel() >= 65) && (qs != null) && qs.isCompleted())
 				{
 					st.startQuest();

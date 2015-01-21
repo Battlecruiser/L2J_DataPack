@@ -1642,16 +1642,12 @@ public final class CrystalCaverns extends Quest
 		int _y = effector.getY() - (int) (offset * sin);
 		int _z = effected.getZ();
 		
-		if (Config.GEODATA > 0)
-		{
-			Location destiny = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), _x, _y, _z, effected.getInstanceId());
-			_x = destiny.getX();
-			_y = destiny.getY();
-		}
-		effected.broadcastPacket(new FlyToLocation(effected, _x, _y, _z, FlyType.THROW_UP));
+		Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), _x, _y, _z, effected.getInstanceId());
+		
+		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.THROW_UP));
 		
 		// maybe is need force set X,Y,Z
-		effected.setXYZ(_x, _y, _z);
+		effected.setXYZ(destination);
 		effected.broadcastPacket(new ValidateLocation(effected));
 	}
 	

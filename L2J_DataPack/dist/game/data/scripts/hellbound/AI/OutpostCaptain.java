@@ -18,14 +18,13 @@
  */
 package hellbound.AI;
 
+import hellbound.HellboundEngine;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-
-import hellbound.HellboundEngine;
 
 /**
  * Outpost Captain's AI.
@@ -78,7 +77,7 @@ public final class OutpostCaptain extends AbstractNpcAI
 		
 		if (npc.getId() == CAPTAIN)
 		{
-			final L2DoorInstance door = DoorTable.getInstance().getDoor(20250001);
+			final L2DoorInstance door = DoorData.getInstance().getDoor(20250001);
 			if (door != null)
 			{
 				door.closeMe();

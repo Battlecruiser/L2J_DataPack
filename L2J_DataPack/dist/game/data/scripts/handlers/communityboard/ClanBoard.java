@@ -18,7 +18,7 @@
  */
 package handlers.communityboard;
 
-import com.l2jserver.gameserver.datatables.ClanTable;
+import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.handler.IWriteBoardHandler;
 import com.l2jserver.gameserver.model.L2Clan;

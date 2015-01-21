@@ -18,6 +18,8 @@
  */
 package hellbound.Instances.UrbanArea;
 
+import hellbound.HellboundEngine;
+
 import java.util.concurrent.ScheduledFuture;
 
 import ai.npc.AbstractNpcAI;
@@ -40,8 +42,6 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
-
-import hellbound.HellboundEngine;
 
 /**
  * Urban Area instance zone.

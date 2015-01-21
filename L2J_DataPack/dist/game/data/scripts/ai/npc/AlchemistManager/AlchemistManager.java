@@ -22,7 +22,7 @@ import java.util.List;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.SkillTreesData;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.L2Npc;

@@ -46,7 +46,7 @@ public final class Q00357_WarehouseKeepersAmbition extends Quest
 	}
 	// Misc
 	private static final int MIN_LVL = 47;
-
+	
 	public Q00357_WarehouseKeepersAmbition()
 	{
 		super(357, Q00357_WarehouseKeepersAmbition.class.getSimpleName(), "Warehouse Keeper's Ambition");
@@ -55,7 +55,7 @@ public final class Q00357_WarehouseKeepersAmbition extends Quest
 		addKillId(DROP_DATA.keySet());
 		registerQuestItems(JADE_CRYSTAL);
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -119,7 +119,7 @@ public final class Q00357_WarehouseKeepersAmbition extends Quest
 		}
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
@@ -135,7 +135,7 @@ public final class Q00357_WarehouseKeepersAmbition extends Quest
 		}
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{

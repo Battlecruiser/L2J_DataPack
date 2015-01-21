@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 import javolution.text.TextBuilder;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -87,13 +87,13 @@ public class AdminAdmin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_gmliston"))
 		{
-			AdminTable.getInstance().showGm(activeChar);
+			AdminData.getInstance().showGm(activeChar);
 			activeChar.sendMessage("Registered into gm list");
 			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_gmlistoff"))
 		{
-			AdminTable.getInstance().hideGm(activeChar);
+			AdminData.getInstance().hideGm(activeChar);
 			activeChar.sendMessage("Removed from gm list");
 			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}

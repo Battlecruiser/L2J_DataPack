@@ -18,7 +18,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.datatables.TransformData;
+import com.l2jserver.gameserver.data.xml.impl.TransformData;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;

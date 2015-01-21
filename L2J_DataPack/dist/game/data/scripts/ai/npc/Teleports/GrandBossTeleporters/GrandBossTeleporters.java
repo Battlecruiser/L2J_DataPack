@@ -22,7 +22,7 @@ import ai.individual.Valakas;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.Location;
@@ -151,17 +151,17 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 			}
 			case 31384:
 			{
-				DoorTable.getInstance().getDoor(24210004).openMe();
+				DoorData.getInstance().getDoor(24210004).openMe();
 				break;
 			}
 			case 31686:
 			{
-				DoorTable.getInstance().getDoor(24210006).openMe();
+				DoorData.getInstance().getDoor(24210006).openMe();
 				break;
 			}
 			case 31687:
 			{
-				DoorTable.getInstance().getDoor(24210005).openMe();
+				DoorData.getInstance().getDoor(24210005).openMe();
 				break;
 			}
 			case 31540:

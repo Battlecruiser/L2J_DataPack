@@ -21,7 +21,7 @@ package handlers.communityboard;
 import java.util.List;
 
 import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.datatables.ClanTable;
+import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.handler.IWriteBoardHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;

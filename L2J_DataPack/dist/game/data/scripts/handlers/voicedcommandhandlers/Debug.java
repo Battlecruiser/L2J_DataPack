@@ -18,7 +18,7 @@
  */
 package handlers.voicedcommandhandlers;
 
-import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -32,7 +32,7 @@ public class Debug implements IVoicedCommandHandler
 	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
 	{
-		if (!AdminTable.getInstance().hasAccess(command, activeChar.getAccessLevel()))
+		if (!AdminData.getInstance().hasAccess(command, activeChar.getAccessLevel()))
 		{
 			return false;
 		}

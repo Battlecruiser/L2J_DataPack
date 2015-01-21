@@ -23,7 +23,7 @@ import java.util.Arrays;
 import javolution.util.FastList;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.ClassListData;
+import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;

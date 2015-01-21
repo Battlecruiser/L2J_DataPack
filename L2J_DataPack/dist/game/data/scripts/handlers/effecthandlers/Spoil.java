@@ -60,14 +60,13 @@ public final class Spoil extends AbstractEffect
 		}
 		
 		final L2MonsterInstance target = (L2MonsterInstance) info.getEffected();
-		if (target.isSpoil())
+		if (target.isSpoiled())
 		{
 			info.getEffector().sendPacket(SystemMessageId.IT_HAS_ALREADY_BEEN_SPOILED);
 			return;
 		}
 		
-		target.setSpoil(true);
-		target.setIsSpoiledBy(info.getEffector().getObjectId());
+		target.setSpoilerObjectId(info.getEffector().getObjectId());
 		info.getEffector().sendPacket(SystemMessageId.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED);
 		target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, info.getEffector());
 	}

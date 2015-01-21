@@ -18,16 +18,15 @@
  */
 package hellbound.AI.NPC.Natives;
 
+import hellbound.HellboundEngine;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-
-import hellbound.HellboundEngine;
 
 /**
  * Natives AI.
@@ -116,7 +115,7 @@ public final class Natives extends AbstractNpcAI
 					
 					for (int doorId : DOORS)
 					{
-						L2DoorInstance door = DoorTable.getInstance().getDoor(doorId);
+						L2DoorInstance door = DoorData.getInstance().getDoor(doorId);
 						if (door != null)
 						{
 							door.openMe();
@@ -139,7 +138,7 @@ public final class Natives extends AbstractNpcAI
 			{
 				for (int doorId : DOORS)
 				{
-					L2DoorInstance door = DoorTable.getInstance().getDoor(doorId);
+					L2DoorInstance door = DoorData.getInstance().getDoor(doorId);
 					if (door != null)
 					{
 						door.closeMe();

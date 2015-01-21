@@ -18,7 +18,7 @@
  */
 package quests.Q00177_SplitDestiny;
 
-import com.l2jserver.gameserver.datatables.CategoryData;
+import com.l2jserver.gameserver.data.xml.impl.CategoryData;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;

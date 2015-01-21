@@ -30,7 +30,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
@@ -657,7 +657,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 				if (spawned.isEmpty() && DOORS.containsKey(managerId))
 				{
 					int[] doorList = DOORS.get(managerId);
-					DoorTable.getInstance().getDoor(doorList[1]).openMe();
+					DoorData.getInstance().getDoor(doorList[1]).openMe();
 					_spawns.remove(managerId);
 				}
 			}
@@ -666,7 +666,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		{
 			_challengeState = STATE_SPORE_CHALLENGE_IN_PROGRESS;
 			markElpyRespawn();
-			DoorTable.getInstance().getDoor(18250025).closeMe();
+			DoorData.getInstance().getDoor(18250025).closeMe();
 			ZoneManager.getInstance().getZoneById(200100).setEnabled(true);
 			
 			for (int i = 0; i < 10; i++)
@@ -762,7 +762,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		
 		if (npcId == MUTATED_ELPY)
 		{
-			DoorTable.getInstance().getDoor(18250025).openMe();
+			DoorData.getInstance().getDoor(18250025).openMe();
 			ZoneManager.getInstance().getZoneById(200100).setEnabled(false);
 			ZoneManager.getInstance().getZoneById(200101).setEnabled(true);
 			ZoneManager.getInstance().getZoneById(200101).setEnabled(false);
@@ -808,8 +808,8 @@ public final class TowerOfNaia extends AbstractNpcAI
 		if (DOORS.containsKey(managerId))
 		{
 			int[] doorList = DOORS.get(managerId);
-			DoorTable.getInstance().getDoor(doorList[0]).openMe();
-			DoorTable.getInstance().getDoor(doorList[1]).closeMe();
+			DoorData.getInstance().getDoor(doorList[0]).openMe();
+			DoorData.getInstance().getDoor(doorList[1]).closeMe();
 		}
 		
 		if (_spawns.containsKey(managerId) && (_spawns.get(managerId) != null))
@@ -896,7 +896,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		if (DOORS.containsKey(managerId))
 		{
 			int[] doorList = DOORS.get(managerId);
-			DoorTable.getInstance().getDoor(doorList[0]).closeMe();
+			DoorData.getInstance().getDoor(doorList[0]).closeMe();
 		}
 		
 		if (SPAWNS.containsKey(managerId))
