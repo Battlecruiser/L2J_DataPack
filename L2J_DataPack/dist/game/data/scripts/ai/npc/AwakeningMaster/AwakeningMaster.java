@@ -95,7 +95,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 					{
 						case SIGEL_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.SIGEL_GROUP))
+							if (!player.isInCategory(CategoryType.SIGEL_CANDIDATE))
 							{
 								return SIGEL_MASTER + "-no_class.htm";
 							}
@@ -103,7 +103,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case TYRR_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.TYRR_GROUP))
+							if (!player.isInCategory(CategoryType.TYRR_CANDIDATE))
 							{
 								return TYRR_MASTER + "-no_class.htm";
 							}
@@ -111,7 +111,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case OTHELL_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.OTHELL_GROUP))
+							if (!player.isInCategory(CategoryType.OTHELL_CANDIDATE))
 							{
 								return OTHELL_MASTER + "-no_class.htm";
 							}
@@ -119,7 +119,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case YUL_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.YUL_GROUP))
+							if (!player.isInCategory(CategoryType.YUL_CANDIDATE))
 							{
 								return YUL_MASTER + "-no_class.htm";
 							}
@@ -127,7 +127,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case FEOH_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.FEOH_GROUP))
+							if (!player.isInCategory(CategoryType.FEOH_CANDIDATE))
 							{
 								return FEOH_MASTER + "-no_class.htm";
 							}
@@ -135,7 +135,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case ISS_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.ISS_GROUP))
+							if (!player.isInCategory(CategoryType.ISS_CANDIDATE))
 							{
 								return ISS_MASTER + "-no_class.htm";
 							}
@@ -143,7 +143,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case WYNN_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.WYNN_GROUP))
+							if (!player.isInCategory(CategoryType.WYNN_CANDIDATE))
 							{
 								return WYNN_MASTER + "-no_class.htm";
 							}
@@ -151,7 +151,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case AEORE_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.AEORE_GROUP))
+							if (!player.isInCategory(CategoryType.AEORE_CANDIDATE))
 							{
 								return AEORE_MASTER + "-no_class.htm";
 							}
