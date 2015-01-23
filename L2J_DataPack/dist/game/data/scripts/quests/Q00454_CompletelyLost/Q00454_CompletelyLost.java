@@ -96,11 +96,7 @@ public final class Q00454_CompletelyLost extends Quest
 					double dist = Util.calculateDistance(npc, leader, false, false);
 					if (dist > 1000)
 					{
-						if ((dist > 5000) && (dist < 6900))
-						{
-							npc.teleToLocation(leader);
-						}
-						else if ((dist > 31000) && (dist < 32000))
+						if (((dist > 5000) && (dist < 6900)) || ((dist > 31000) && (dist < 32000)))
 						{
 							npc.teleToLocation(leader);
 						}
@@ -182,6 +178,7 @@ public final class Q00454_CompletelyLost extends Quest
 			}
 		}
 		
+		// For NPC-only timers, player is null and no further checks or actions are required.
 		if (player == null)
 		{
 			return null;
@@ -451,10 +448,6 @@ public final class Q00454_CompletelyLost extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (qs.getState())
 		{
