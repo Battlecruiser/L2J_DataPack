@@ -140,7 +140,7 @@ public class TerritoryWarSuperClass extends Quest
 			if (kill >= max)
 			{
 				TerritoryWarManager.getInstance().giveTWQuestPoint(player);
-				st.addExpAndSp(534000, 51000);
+				addExpAndSp(player, 534000, 51000);
 				st.set("doneDate", String.valueOf(Calendar.getInstance().get(Calendar.DAY_OF_YEAR)));
 				st.exitQuest(true);
 				player.sendPacket(new ExShowScreenMessage(npcString[1], 2, 10000));

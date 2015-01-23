@@ -24,12 +24,10 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Dark Elven Change Part 1<br>
- * Original Jython script by DraX and DrLecter
+ * Dark Elven Change Part 1.
  * @author nonom
  */
 public final class DarkElvenChange1 extends Quest
@@ -68,12 +66,6 @@ public final class DarkElvenChange1 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, false);
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
 		if (Util.isDigit(event))
 		{
 			int i = Integer.valueOf(event);
@@ -81,7 +73,7 @@ public final class DarkElvenChange1 extends Quest
 			if ((cid.getRace() == Race.DARK_ELF) && (cid.getId() == CLASSES[i][1]))
 			{
 				int suffix;
-				final boolean item = st.hasQuestItems(CLASSES[i][6]);
+				final boolean item = hasQuestItems(player, CLASSES[i][6]);
 				if (player.getLevel() < 20)
 				{
 					suffix = (!item) ? CLASSES[i][2] : CLASSES[i][3];
@@ -95,13 +87,12 @@ public final class DarkElvenChange1 extends Quest
 					else
 					{
 						suffix = CLASSES[i][5];
-						st.giveItems(SHADOW_WEAPON_COUPON_DGRADE, 15);
-						st.takeItems(CLASSES[i][6], -1);
+						giveItems(player, SHADOW_WEAPON_COUPON_DGRADE, 15);
+						takeItems(player, CLASSES[i][6], -1);
 						player.setClassId(CLASSES[i][0]);
 						player.setBaseClass(CLASSES[i][0]);
-						st.playSound(QuestSound.ITEMSOUND_QUEST_FANFARE_2);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_FANFARE_2);
 						player.broadcastUserInfo();
-						st.exitQuest(false);
 					}
 				}
 				event = npc.getId() + "-" + suffix + ".html";
@@ -114,7 +105,6 @@ public final class DarkElvenChange1 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		getQuestState(player, true);
 		if (player.isSubClassActive())
 		{
 			return htmltext;
