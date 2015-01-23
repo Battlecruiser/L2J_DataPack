@@ -71,17 +71,17 @@ public class Q00005_MinersFavor extends Quest
 		{
 			case "30554-03.htm":
 				st.startQuest();
-				st.giveItems(BOLTERS_LIST, 1);
-				st.giveItems(BOLTERS_SMELLY_SOCKS, 1);
+				giveItems(player, BOLTERS_LIST, 1);
+				giveItems(player, BOLTERS_SMELLY_SOCKS, 1);
 				break;
 			case "30526-02.html":
-				if (!st.hasQuestItems(BOLTERS_SMELLY_SOCKS))
+				if (!hasQuestItems(player, BOLTERS_SMELLY_SOCKS))
 				{
 					return "30526-04.html";
 				}
-				st.takeItems(BOLTERS_SMELLY_SOCKS, -1);
-				st.giveItems(MINERS_PICK, 1);
-				checkProgress(st);
+				takeItems(player, BOLTERS_SMELLY_SOCKS, -1);
+				giveItems(player, MINERS_PICK, 1);
+				checkProgress(player, st);
 				break;
 			case "30554-05.html":
 				break;
@@ -97,11 +97,6 @@ public class Q00005_MinersFavor extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		switch (npc.getId())
 		{
 			case BOLTER:
@@ -117,9 +112,9 @@ public class Q00005_MinersFavor extends Quest
 						}
 						else
 						{
-							st.giveAdena(2466, true);
-							st.addExpAndSp(5672, 446);
-							st.giveItems(NECKLACE, 1);
+							giveAdena(player, 2466, true);
+							addExpAndSp(player, 5672, 446);
+							giveItems(player, NECKLACE, 1);
 							st.exitQuest(false, true);
 							// Newbie Guide
 							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
@@ -134,43 +129,43 @@ public class Q00005_MinersFavor extends Quest
 			case BRUNON:
 				if (st.isStarted())
 				{
-					htmltext = (st.hasQuestItems(MINERS_PICK)) ? "30526-03.html" : "30526-01.html";
+					htmltext = (hasQuestItems(player, MINERS_PICK)) ? "30526-03.html" : "30526-01.html";
 				}
 				break;
 			case REED:
-				htmltext = giveItem(st, npc.getId(), REDSTONE_BEER);
+				htmltext = giveItem(player, st, npc.getId(), REDSTONE_BEER);
 				break;
 			case SHARI:
-				htmltext = giveItem(st, npc.getId(), BOOMBOOM_POWDER);
+				htmltext = giveItem(player, st, npc.getId(), BOOMBOOM_POWDER);
 				break;
 			case GARITA:
-				htmltext = giveItem(st, npc.getId(), MINING_BOOTS);
+				htmltext = giveItem(player, st, npc.getId(), MINING_BOOTS);
 				break;
 		}
 		return htmltext;
 	}
 	
-	private static void checkProgress(QuestState st)
+	private static void checkProgress(L2PcInstance player, QuestState st)
 	{
-		if (st.hasQuestItems(BOLTERS_LIST, MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER))
+		if (hasQuestItems(player, BOLTERS_LIST, MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER))
 		{
 			st.setCond(2, true);
 		}
 	}
 	
-	private static String giveItem(QuestState st, int npcId, int itemId)
+	private static String giveItem(L2PcInstance player, QuestState st, int npcId, int itemId)
 	{
 		if (!st.isStarted())
 		{
 			return getNoQuestMsg(st.getPlayer());
 		}
-		else if (st.hasQuestItems(itemId))
+		else if (hasQuestItems(player, itemId))
 		{
 			return npcId + "-02.html";
 		}
-		st.giveItems(itemId, 1);
-		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		checkProgress(st);
+		giveItems(player, itemId, 1);
+		playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		checkProgress(player, st);
 		return npcId + "-01.html";
 	}
 }

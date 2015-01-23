@@ -89,11 +89,6 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		switch (npc.getId())
 		{
 			case NAKUSIN:
@@ -109,11 +104,11 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 						}
 						else
 						{
-							st.giveItems(CLUB, 1);
+							giveItems(player, CLUB, 1);
 							// Newbie Guide
 							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
-							st.addExpAndSp(4254, 335);
-							st.giveAdena(1850, true);
+							addExpAndSp(player, 4254, 335);
+							giveAdena(player, 1850, true);
 							st.exitQuest(false, true);
 							htmltext = "30578-06.html";
 						}
@@ -124,40 +119,40 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 				}
 				break;
 			case VARKEES:
-				htmltext = giveItem(st, npc.getId(), HONEY_KHANDAR, getRegisteredItemIds());
+				htmltext = giveItem(player, st, npc.getId(), HONEY_KHANDAR, getRegisteredItemIds());
 				break;
 			case URUTU:
-				htmltext = giveItem(st, npc.getId(), DEEP_SEA_ORB, getRegisteredItemIds());
+				htmltext = giveItem(player, st, npc.getId(), DEEP_SEA_ORB, getRegisteredItemIds());
 				break;
 			case HESTUI:
-				htmltext = giveItem(st, npc.getId(), BEAR_FUR_CLOAK, getRegisteredItemIds());
+				htmltext = giveItem(player, st, npc.getId(), BEAR_FUR_CLOAK, getRegisteredItemIds());
 				break;
 			case KUNAI:
-				htmltext = giveItem(st, npc.getId(), SPIDER_DUST, getRegisteredItemIds());
+				htmltext = giveItem(player, st, npc.getId(), SPIDER_DUST, getRegisteredItemIds());
 				break;
 			case USKA:
-				htmltext = giveItem(st, npc.getId(), ANCESTOR_SKULL, getRegisteredItemIds());
+				htmltext = giveItem(player, st, npc.getId(), ANCESTOR_SKULL, getRegisteredItemIds());
 				break;
 			case GROOKIN:
-				htmltext = giveItem(st, npc.getId(), BLOODY_AXE, getRegisteredItemIds());
+				htmltext = giveItem(player, st, npc.getId(), BLOODY_AXE, getRegisteredItemIds());
 				break;
 		}
 		return htmltext;
 	}
 	
-	private static String giveItem(QuestState st, int npcId, int itemId, int... items)
+	private static String giveItem(L2PcInstance player, QuestState st, int npcId, int itemId, int... items)
 	{
 		if (!st.isStarted())
 		{
-			return getNoQuestMsg(st.getPlayer());
+			return getNoQuestMsg(player);
 		}
-		else if (st.hasQuestItems(itemId))
+		else if (hasQuestItems(player, itemId))
 		{
 			return npcId + "-02.html";
 		}
-		st.giveItems(itemId, 1);
-		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		if (st.hasQuestItems(items))
+		giveItems(player, itemId, 1);
+		playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		if (hasQuestItems(player, items))
 		{
 			st.setCond(2, true);
 		}
