@@ -39,7 +39,7 @@ import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 /**
  * Retail AI for Territory Managers.
  * @author Zoey76
- * @version 1.0b
+ * @version 1.1
  */
 public final class TerritoryManagers extends AbstractNpcAI
 {
@@ -289,7 +289,7 @@ public final class TerritoryManagers extends AbstractNpcAI
 			{
 				for (int itemId : itemIds)
 				{
-					qs.takeItems(itemId, -1);
+					takeItems(player, itemId, -1);
 				}
 			}
 			// Completes the quest.

@@ -21,8 +21,6 @@ package events.CharacterBirthday;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -71,8 +69,6 @@ public final class CharacterBirthday extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = getQuestState(player, false);
-		
 		if (event.equalsIgnoreCase("despawn_npc"))
 		{
 			npc.doDie(player);
@@ -83,10 +79,10 @@ public final class CharacterBirthday extends Quest
 		else if (event.equalsIgnoreCase("change"))
 		{
 			// Change Hat
-			if (st.hasQuestItems(10250))
+			if (hasQuestItems(player, 10250))
 			{
-				st.takeItems(10250, 1); // Adventurer Hat (Event)
-				st.giveItems(21594, 1); // Birthday Hat
+				takeItems(player, 10250, 1); // Adventurer Hat (Event)
+				giveItems(player, 21594, 1); // Birthday Hat
 				htmltext = null; // FIXME: Probably has html
 				// Despawn npc
 				npc.doDie(player);
@@ -108,13 +104,10 @@ public final class CharacterBirthday extends Quest
 			return "busy.htm";
 		}
 		
-		QuestState st = getQuestState(player, true);
-		
 		if (!Util.checkIfInRange(10, npc, player, true))
 		{
-			L2Npc spawned = st.addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
-			st.setState(State.STARTED);
-			st.startQuestTimer("despawn_npc", 180000, spawned);
+			L2Npc spawned = addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
+			startQuestTimer("despawn_npc", 180000, spawned, player);
 			SPAWNS++;
 		}
 		else

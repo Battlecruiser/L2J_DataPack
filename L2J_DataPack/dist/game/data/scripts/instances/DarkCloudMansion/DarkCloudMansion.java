@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -1405,11 +1404,10 @@ public final class DarkCloudMansion extends Quest
 			if ((npc.getId() == SOTruth) && (world.getStatus() == 10))
 			{
 				npc.showChatWindow(player);
-				QuestState st = getQuestState(player, true);
 				
-				if (!st.hasQuestItems(CC))
+				if (!hasQuestItems(player, CC))
 				{
-					st.giveItems(CC, 1);
+					giveItems(player, CC, 1);
 				}
 			}
 		}

@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -273,12 +272,6 @@ public final class NpcLocationInfo extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = getQuestState(player, false);
-		
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		if (Util.isDigit(event))
 		{
@@ -295,10 +288,9 @@ public final class NpcLocationInfo extends Quest
 					y = spawn.getY();
 					z = spawn.getZ();
 				}
-				st.addRadar(x, y, z);
+				addRadar(player, x, y, z);
 				htmltext = "MoveToLoc.htm";
 			}
-			st.exitQuest(true);
 		}
 		return htmltext;
 	}
