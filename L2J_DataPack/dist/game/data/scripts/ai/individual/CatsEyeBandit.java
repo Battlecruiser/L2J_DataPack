@@ -18,6 +18,7 @@
  */
 package ai.individual;
 
+import quests.Q00403_PathOfTheRogue.Q00403_PathOfTheRogue;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -49,8 +50,8 @@ public final class CatsEyeBandit extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		final QuestState qs = attacker.getQuestState("403_PathToRogue"); // TODO: Replace with class name.
-		if (npc.isScriptValue(0) && (qs != null) && ((qs.getItemEquipped(Inventory.PAPERDOLL_RHAND) == BOW) || (qs.getItemEquipped(Inventory.PAPERDOLL_RHAND) == DAGGER)))
+		final QuestState qs = attacker.getQuestState(Q00403_PathOfTheRogue.class.getSimpleName());
+		if (npc.isScriptValue(0) && (qs != null) && ((getItemEquipped(attacker, Inventory.PAPERDOLL_RHAND) == BOW) || (getItemEquipped(attacker, Inventory.PAPERDOLL_RHAND) == DAGGER)))
 		{
 			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_CHILDISH_FOOL_DO_YOU_THINK_YOU_CAN_CATCH_ME);
 			npc.setScriptValue(1);
@@ -61,7 +62,7 @@ public final class CatsEyeBandit extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = killer.getQuestState("403_PathToRogue"); // TODO: Replace with class name.
+		final QuestState qs = killer.getQuestState(Q00403_PathOfTheRogue.class.getSimpleName());
 		if (qs != null)
 		{
 			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.I_MUST_DO_SOMETHING_ABOUT_THIS_SHAMEFUL_INCIDENT);
