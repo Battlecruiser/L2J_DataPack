@@ -95,7 +95,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 					{
 						case SIGEL_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.SIGEL_CANDIDATE))
+							if (!player.isInCategory(CategoryType.SIGEL_GROUP))
 							{
 								return SIGEL_MASTER + "-no_class.htm";
 							}
@@ -103,7 +103,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case TYRR_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.TYRR_CANDIDATE))
+							if (!player.isInCategory(CategoryType.TYRR_GROUP))
 							{
 								return TYRR_MASTER + "-no_class.htm";
 							}
@@ -111,7 +111,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case OTHELL_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.OTHELL_CANDIDATE))
+							if (!player.isInCategory(CategoryType.OTHELL_GROUP))
 							{
 								return OTHELL_MASTER + "-no_class.htm";
 							}
@@ -119,7 +119,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case YUL_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.YUL_CANDIDATE))
+							if (!player.isInCategory(CategoryType.YUL_GROUP))
 							{
 								return YUL_MASTER + "-no_class.htm";
 							}
@@ -127,7 +127,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case FEOH_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.FEOH_CANDIDATE))
+							if (!player.isInCategory(CategoryType.FEOH_GROUP))
 							{
 								return FEOH_MASTER + "-no_class.htm";
 							}
@@ -135,7 +135,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case ISS_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.ISS_CANDIDATE))
+							if (!player.isInCategory(CategoryType.ISS_GROUP))
 							{
 								return ISS_MASTER + "-no_class.htm";
 							}
@@ -143,7 +143,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case WYNN_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.WYNN_CANDIDATE))
+							if (!player.isInCategory(CategoryType.WYNN_GROUP))
 							{
 								return WYNN_MASTER + "-no_class.htm";
 							}
@@ -151,7 +151,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case AEORE_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.AEORE_CANDIDATE))
+							if (!player.isInCategory(CategoryType.AEORE_GROUP))
 							{
 								return AEORE_MASTER + "-no_class.htm";
 							}
@@ -238,43 +238,43 @@ public final class AwakeningMaster extends AbstractNpcAI
 			
 			int socialId = 21; // Sigel
 			int itemId = ABELIUS_POWER; // Sigel
-			if (player.isInCategory(CategoryType.TYRR_CANDIDATE))
+			if (player.isInCategory(CategoryType.TYRR_GROUP))
 			{
 				socialId = 22;
 				itemId = SAPYROS_POWER;
 			}
-			else if (player.isInCategory(CategoryType.OTHELL_CANDIDATE))
+			else if (player.isInCategory(CategoryType.OTHELL_GROUP))
 			{
 				socialId = 23;
 				itemId = ASHAGEN_POWER;
 			}
-			else if (player.isInCategory(CategoryType.YUL_CANDIDATE))
+			else if (player.isInCategory(CategoryType.YUL_GROUP))
 			{
 				socialId = 24;
 				itemId = CRANIGG_POWER;
 			}
-			else if (player.isInCategory(CategoryType.FEOH_CANDIDATE))
+			else if (player.isInCategory(CategoryType.FEOH_GROUP))
 			{
 				socialId = 25;
 				itemId = SOLTKREIG_POWER;
 			}
-			else if (player.isInCategory(CategoryType.ISS_CANDIDATE))
+			else if (player.isInCategory(CategoryType.ISS_GROUP))
 			{
 				socialId = 26;
 				itemId = NAVIAROPE_POWER;
 			}
-			else if (player.isInCategory(CategoryType.WYNN_CANDIDATE))
+			else if (player.isInCategory(CategoryType.WYNN_GROUP))
 			{
 				socialId = 27;
 				itemId = LEISTER_POWER;
 			}
-			else if (player.isInCategory(CategoryType.AEORE_CANDIDATE))
+			else if (player.isInCategory(CategoryType.AEORE_GROUP))
 			{
 				socialId = 28;
 				itemId = LAKCIS_POWER;
 			}
 			player.broadcastPacket(new SocialAction(player.getObjectId(), socialId));
-			player.addItem("Awakening", itemId, 1, player, true);
+			giveItems(player, itemId, 1);
 			
 			// TODO: Remove skill which does not level up later are removed
 		}
