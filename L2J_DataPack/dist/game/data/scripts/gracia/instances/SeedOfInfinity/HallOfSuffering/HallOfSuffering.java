@@ -681,8 +681,8 @@ public final class HallOfSuffering extends AbstractNpcAI
 				{
 					if (getQuestState(member, false) != null)
 					{
-						giveItems(talker, 736, 1);
-						giveItems(talker, ((HSWorld) world).rewardItemId, 1);
+						giveItems(member, 736, 1);
+						giveItems(member, ((HSWorld) world).rewardItemId, 1);
 					}
 				}
 				return "";
