@@ -128,8 +128,6 @@ import handlers.bypasshandlers.ReceivePremium;
 import handlers.bypasshandlers.ReleaseAttribute;
 import handlers.bypasshandlers.RentPet;
 import handlers.bypasshandlers.SkillList;
-import handlers.bypasshandlers.SupportBlessing;
-import handlers.bypasshandlers.SupportMagic;
 import handlers.bypasshandlers.TerritoryStatus;
 import handlers.bypasshandlers.TutorialClose;
 import handlers.bypasshandlers.VoiceCommand;
@@ -421,8 +419,6 @@ public class MasterHandler
 			ReleaseAttribute.class,
 			RentPet.class,
 			SkillList.class,
-			SupportBlessing.class,
-			SupportMagic.class,
 			TerritoryStatus.class,
 			TutorialClose.class,
 			VoiceCommand.class,
