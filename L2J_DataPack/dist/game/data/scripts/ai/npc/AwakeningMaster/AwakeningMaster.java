@@ -22,6 +22,7 @@ import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.UserInfoType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -36,6 +37,7 @@ import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerChang
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jserver.gameserver.network.serverpackets.ExChangeToAwakenedClass;
 import com.l2jserver.gameserver.network.serverpackets.ExShowUsm;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
@@ -276,7 +278,9 @@ public final class AwakeningMaster extends AbstractNpcAI
 			player.broadcastPacket(new SocialAction(player.getObjectId(), socialId));
 			giveItems(player, itemId, 1);
 			
-			// TODO: Remove skill which does not level up later are removed
+			SkillTreesData.getInstance().cleanSkillUponAwakening(player);
+			player.sendPacket(new AcquireSkillList(player));
+			player.sendSkillList();
 		}
 		
 		ThreadPoolManager.getInstance().scheduleGeneral(() ->
