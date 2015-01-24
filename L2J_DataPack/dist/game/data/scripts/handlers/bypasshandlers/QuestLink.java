@@ -18,19 +18,15 @@
  */
 package handlers.bypasshandlers;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.Collection;
 import java.util.Set;
-import java.util.logging.Level;
+import java.util.stream.Collectors;
 
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -85,24 +81,28 @@ public class QuestLink implements IBypassHandler
 	 * @param npc The table containing quests of the L2NpcInstance
 	 * @param quests
 	 */
-	public static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Quest[] quests)
+	public static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Collection<Quest> quests)
 	{
 		final StringBuilder sb = StringUtil.startAppend(150, "<html><body>");
 		String state = "";
 		String color = "";
-		int questId = -1;
+		
+		//@formatter:off
+		final Set<Quest> startingQuests = npc.getListeners(EventType.ON_NPC_QUEST_START).stream()
+			.map(AbstractEventListener::getOwner)
+			.filter(Quest.class::isInstance)
+			.map(Quest.class::cast)
+			.distinct()
+			.collect(Collectors.toSet());
+		//@formatter:on
+		
 		for (Quest quest : quests)
 		{
-			if (quest == null)
-			{
-				continue;
-			}
-			
 			final QuestState qs = player.getQuestState(quest.getScriptName());
 			if ((qs == null) || qs.isCreated())
 			{
 				state = quest.isCustomQuest() ? "" : "01";
-				if (quest.canStartQuest(player))
+				if (startingQuests.contains(quest) && quest.canStartQuest(player))
 				{
 					color = "bbaa88";
 				}
@@ -130,16 +130,7 @@ public class QuestLink implements IBypassHandler
 			}
 			else
 			{
-				questId = quest.getId();
-				if (quest.getId() > 10000)
-				{
-					questId -= 5000;
-				}
-				else if (questId == 146)
-				{
-					questId = 640;
-				}
-				StringUtil.append(sb, "<fstring>", String.valueOf(questId), state, "</fstring>");
+				StringUtil.append(sb, "<fstring>", String.valueOf(quest.getId()), state, "</fstring>");
 			}
 			sb.append("</button></font><br>");
 		}
@@ -211,100 +202,29 @@ public class QuestLink implements IBypassHandler
 	}
 	
 	/**
-	 * @param player
-	 * @param npcId The Identifier of the NPC
-	 * @return a table containing all QuestState from the table _quests in which the L2PcInstance must talk to the NPC.
-	 */
-	private static List<QuestState> getQuestsForTalk(final L2PcInstance player, int npcId)
-	{
-		// Create a QuestState table that will contain all QuestState to modify
-		final List<QuestState> states = new ArrayList<>();
-		
-		final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
-		if (template == null)
-		{
-			_log.log(Level.WARNING, QuestLink.class.getSimpleName() + ": " + player.getName() + " requested quests for talk on non existing npc " + npcId);
-			return states;
-		}
-		
-		// Go through the QuestState of the L2PcInstance quests
-		for (AbstractEventListener listener : template.getListeners(EventType.ON_NPC_TALK))
-		{
-			if (listener.getOwner() instanceof Quest)
-			{
-				final Quest quest = (Quest) listener.getOwner();
-				
-				// Copy the current L2PcInstance QuestState in the QuestState table
-				final QuestState st = player.getQuestState(quest.getName());
-				if (st != null)
-				{
-					states.add(st);
-				}
-			}
-		}
-		
-		// Return a table containing all QuestState to modify
-		return states;
-	}
-	
-	/**
 	 * Collect awaiting quests/start points and display a QuestChooseWindow (if several available) or QuestWindow.
 	 * @param player the L2PcInstance that talk with the {@code npc}.
 	 * @param npc the L2NpcInstance that chats with the {@code player}.
 	 */
-	public static void showQuestWindow(L2PcInstance player, L2Npc npc)
+	private static void showQuestWindow(final L2PcInstance player, L2Npc npc)
 	{
-		boolean conditionMeet = false;
-		// collect awaiting quests and start points
-		final Set<Quest> options = new HashSet<>();
+		//@formatter:off
+		final Set<Quest> quests = npc.getListeners(EventType.ON_NPC_TALK).stream()
+			.map(AbstractEventListener::getOwner)
+			.filter(Quest.class::isInstance)
+			.map(Quest.class::cast)
+			.filter(quest -> (quest.getId() > 0) && (quest.getId() < 20000))
+			.distinct()
+			.collect(Collectors.toSet());
+		//@formatter:on
 		
-		// Quests are limited between 1 and 999 because those are the quests that are supported by the client.
-		// By limiting them there, we are allowed to create custom quests at higher IDs without interfering
-		for (QuestState state : getQuestsForTalk(player, npc.getId()))
+		if (quests.size() > 1)
 		{
-			final Quest quest = state.getQuest();
-			if (quest == null)
-			{
-				_log.log(Level.WARNING, player + " Requested incorrect quest state for non existing quest: " + state.getQuestName());
-				continue;
-			}
-			if ((quest.getId() > 0) && (quest.getId() < 20000))
-			{
-				options.add(quest);
-				if (quest.canStartQuest(player))
-				{
-					conditionMeet = true;
-				}
-			}
+			showQuestChooseWindow(player, npc, quests);
 		}
-		
-		for (AbstractEventListener listener : npc.getListeners(EventType.ON_NPC_QUEST_START))
+		else if (quests.size() == 1)
 		{
-			if (listener.getOwner() instanceof Quest)
-			{
-				final Quest quest = (Quest) listener.getOwner();
-				if ((quest.getId() > 0) && (quest.getId() < 20000))
-				{
-					options.add(quest);
-					if (quest.canStartQuest(player))
-					{
-						conditionMeet = true;
-					}
-				}
-			}
-		}
-		
-		if (!conditionMeet)
-		{
-			showQuestWindow(player, npc, "");
-		}
-		else if (options.size() > 1)
-		{
-			showQuestChooseWindow(player, npc, options.toArray(new Quest[options.size()]));
-		}
-		else if (options.size() == 1)
-		{
-			showQuestWindow(player, npc, options.stream().findFirst().get().getName());
+			showQuestWindow(player, npc, quests.stream().findFirst().get().getName());
 		}
 		else
 		{
