@@ -18,7 +18,7 @@
  */
 package instances.FaeronTrainingGrounds1;
 
-import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
+import quests.Q10735_ASpecialPower.Q10735_ASpecialPower;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
@@ -52,7 +52,7 @@ public class FaeronTrainingGrounds1 extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = player.getQuestState(Q10736_ASpecialPower.class.getSimpleName());
+		final QuestState qs = player.getQuestState(Q10735_ASpecialPower.class.getSimpleName());
 		if (qs == null)
 		{
 			return null;
