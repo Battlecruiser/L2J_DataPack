@@ -313,8 +313,11 @@
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="4000" />
 	</skill>
-	<skill id="11828" levels="1" name="Progressive Heal">
+	<skill id="11828" levels="1" name="Progressive Heal" enchantGroup1="10">
 		<!-- Heals target and the 10 most injured allies around target by up to 40% of their Max HP. The recovery amount decreases starting from the most injured person. -->
+		<table name="#ench1Cost"> 62 59 57 54 52 49 47 44 41 38 </table>
+		<table name="#ench1mpConsume"> 448 434 420 405 391 374 360 345 331 316 </table> 
+		<table name="#ench1mpInitialConsume"> 112 108 105 101 97 93 90 86 82 79 </table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="900" />
@@ -324,11 +327,14 @@
 		<set name="icon" val="icon.skill11828" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="mpConsume" val="573" />
+		<set name="mpConsume" val="458" />
+		<set name="mpInitialConsume" val="115" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA_FRIENDLY" />
+		<enchant1 name="mpConsume" val="#ench1mpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1mpInitialConsume" />
 		<for>
 			<effect name="HealPercent">
 				<param power="40" />
@@ -425,13 +431,15 @@
 	</skill>
 	<skill id="11850" levels="4" name="Miraculous Benediction">
 		<!-- Restores clan members' CP/HP. Can only be used when MP is 50% or below. -->
-		<table name="#mpConsumes"> 185 205 225 243 </table>
+		<table name="#mpConsume"> 148 164 180 194 </table>
+		<table name="#mpInitialConsume"> 37 41 45 49 </table>
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mp"> 50 60 70 100 </table>
 		<set name="icon" val="icon.skill11850new" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PARTY_CLAN" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="hitTime" val="10000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="600000" />
@@ -455,8 +463,8 @@
 		<table name="#abnormalLvls"> 4 5 6 7 </table>
 		<table name="#healEffect"> 1.05 1.07 1.1 1.15 </table>
 		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpInitialConsume"> 37 41 45 49 </table>
 		<table name="#mpConsume"> 185 205 225 243 </table>
+		<table name="#mpInitialConsume"> 37 41 45 49 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="HEAL_EFFECT_UP" />
 		<set name="abnormalTime" val="1800" />
@@ -478,18 +486,32 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11852" levels="4" name="Mass Mana Gain">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11854" levels="4" name="Mass Mana Gain">
 		<!-- For 30 min., party members' MP heal amount + 33. -->
-		<table name="#mpConsumes"> 185 205 225 243 </table>
-		<set name="icon" val="icon.skill11852new" />
+		<table name="#abnormalLvls"> 2 3 4 5 </table>
+		<table name="#mpInitialConsume"> 37 41 45 49 </table>
+		<table name="#mpConsume"> 148 164 180 194 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#power"> 33 35 37 40 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="RECHARGE_UP" />
+		<set name="abnormalTime" val="1800" />
+		<set name="affectRange" val="1000" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="icon" val="icon.skill11852new" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="targetType" val="PARTY" />
+		<for>
+			<effect name="Buff">
+				<add stat="manaCharge" val="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11853" levels="4" name="Superior Quick Recovery">
 		<!-- AUTO GENERATED SKILL -->
@@ -499,17 +521,31 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11854" levels="4" name="Mass Mana Gain">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' MP heal amount + 33. -->
-		<table name="#mpConsumes"> 185 205 225 243 </table>
-		<set name="icon" val="icon.skill11852new" />
+		<table name="#abnormalLvls"> 2 3 4 5 </table>
+		<table name="#mpInitialConsume"> 37 41 45 49 </table>
+		<table name="#mpConsume"> 148 164 180 194 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#power"> 33 35 37 40 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="RECHARGE_UP" />
+		<set name="abnormalTime" val="1800" />
+		<set name="affectRange" val="1000" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="icon" val="icon.skill11852new" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="targetType" val="PARTY" />
+		<for>
+			<effect name="Buff">
+				<add stat="manaCharge" val="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11855" levels="4" name="Superior Wizard Combat">
 		<!-- AUTO GENERATED SKILL -->
