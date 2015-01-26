@@ -23,7 +23,7 @@
 				<add stat="STR" val="2">
 					<using kind="SWORD, BLUNT" />
 				</add>
-				<add stat="skillMastery" val="2" />
+				<add stat="skillCritical" val="1" /> <!-- STR -->
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
@@ -41,7 +41,7 @@
 				<add stat="STR" val="2">
 					<using kind="SWORD, BLUNT" />
 				</add>
-				<add stat="skillMastery" val="2" />
+				<add stat="skillCritical" val="1" /> <!-- STR -->
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />

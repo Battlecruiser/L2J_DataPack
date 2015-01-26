@@ -23,7 +23,6 @@ import java.util.Map;
 
 import javolution.util.FastList;
 import javolution.util.FastMap;
-import quests.Q00131_BirdInACage.Q00131_BirdInACage;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
@@ -1903,8 +1902,7 @@ public final class CrystalCaverns extends Quest
 		}
 		else if (npc.getId() == 32279)
 		{
-			final QuestState st = player.getQuestState(Q00131_BirdInACage.class.getSimpleName());
-			return (st != null) && !st.isCompleted() ? "32279-01.htm" : "32279.htm";
+			return "32279.htm";
 		}
 		else if (npc.getId() == CRYSTAL_GOLEM)
 		{

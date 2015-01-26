@@ -604,7 +604,7 @@
 			<effect name="Buff">
 				<add stat="rCrit" val="50" />
 				<add stat="mCritRate" val="20" />
-				<mul stat="skillMastery" val="1.50" />
+				<mul stat="skillCriticalProbability" val="1.50" />
 			</effect>
 		</for>
 	</skill>
@@ -732,7 +732,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="skillMastery" val="#bonus" />
+				<mul stat="skillCriticalProbability" val="#bonus" />
 			</effect>
 		</for>
 	</skill>
