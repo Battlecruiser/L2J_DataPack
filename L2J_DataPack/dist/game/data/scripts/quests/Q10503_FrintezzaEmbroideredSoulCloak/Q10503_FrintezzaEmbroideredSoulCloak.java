@@ -59,17 +59,17 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 		final QuestState st = getQuestState(player, false);
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			final long currentCount = st.getQuestItemsCount(FRINTEZZAS_SOUL_FRAGMENT);
+			final long currentCount = getQuestItemsCount(player, FRINTEZZAS_SOUL_FRAGMENT);
 			final long count = getRandom(1, 3);
 			if (count >= (FRAGMENT_COUNT - currentCount))
 			{
-				st.giveItems(FRINTEZZAS_SOUL_FRAGMENT, FRAGMENT_COUNT - currentCount);
+				giveItems(player, FRINTEZZAS_SOUL_FRAGMENT, FRAGMENT_COUNT - currentCount);
 				st.setCond(2, true);
 			}
 			else
 			{
-				st.giveItems(FRINTEZZAS_SOUL_FRAGMENT, count);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				giveItems(player, FRINTEZZAS_SOUL_FRAGMENT, count);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 	}
@@ -97,11 +97,6 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
 		String htmltext = getNoQuestMsg(player);
 		switch (st.getState())
 		{
@@ -121,10 +116,10 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 					}
 					case 2:
 					{
-						if (st.getQuestItemsCount(FRINTEZZAS_SOUL_FRAGMENT) >= FRAGMENT_COUNT)
+						if (getQuestItemsCount(player, FRINTEZZAS_SOUL_FRAGMENT) >= FRAGMENT_COUNT)
 						{
-							st.giveItems(SOUL_CLOAK_OF_FRINTEZZA, 1);
-							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+							giveItems(player, SOUL_CLOAK_OF_FRINTEZZA, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 							st.exitQuest(false, true);
 							htmltext = "32612-06.html";
 						}

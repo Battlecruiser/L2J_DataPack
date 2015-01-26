@@ -23,6 +23,7 @@ import java.util.Map;
 
 import javolution.util.FastList;
 import javolution.util.FastMap;
+import quests.Q00131_BirdInACage.Q00131_BirdInACage;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
@@ -1872,8 +1873,7 @@ public final class CrystalCaverns extends Quest
 				CCWorld world = (CCWorld) tmpworld;
 				if ((world.getStatus() == 0) && world.oracle.contains(npc))
 				{
-					String htmltext = "32281.htm";
-					return htmltext;
+					return "32281.htm";// TODO: Missing HTML.
 				}
 			}
 			npc.showChatWindow(player);
@@ -1887,8 +1887,7 @@ public final class CrystalCaverns extends Quest
 				CCWorld world = (CCWorld) tmpworld;
 				if (!world.OracleTriggered[npc.getId() - 32275])
 				{
-					String htmltext = "no.htm";
-					return htmltext;
+					return "no.htm"; // TODO: Missing HTML.
 				}
 				npc.showChatWindow(player);
 				return null;
@@ -1899,19 +1898,13 @@ public final class CrystalCaverns extends Quest
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if (tmpworld instanceof CCWorld)
 			{
-				String htmltext = "no.htm";
-				return htmltext;
+				return "no.htm"; // TODO: Missing HTML.
 			}
 		}
 		else if (npc.getId() == 32279)
 		{
-			QuestState st = player.getQuestState("131_BirdInACage");
-			String htmltext = "32279.htm";
-			if ((st != null) && !st.isCompleted())
-			{
-				htmltext = "32279-01.htm";
-			}
-			return htmltext;
+			final QuestState st = player.getQuestState(Q00131_BirdInACage.class.getSimpleName());
+			return (st != null) && !st.isCompleted() ? "32279-01.htm" : "32279.htm";
 		}
 		else if (npc.getId() == CRYSTAL_GOLEM)
 		{
@@ -2485,42 +2478,36 @@ public final class CrystalCaverns extends Quest
 			{
 				if (partyMember.getInstanceId() == instanceId)
 				{
-					final QuestState st = getQuestState(partyMember, true);
-					if (!isBaylor && st.hasQuestItems(CONT_CRYSTAL))
+					if (!isBaylor && hasQuestItems(partyMember, CONT_CRYSTAL))
 					{
-						st.takeItems(CONT_CRYSTAL, 1);
-						st.giveItems(bossCry, 1);
+						takeItems(partyMember, CONT_CRYSTAL, 1);
+						giveItems(partyMember, bossCry, 1);
 					}
 					if (getRandom(10) < 5)
 					{
-						st.giveItems(WHITE_SEED, num);
+						giveItems(partyMember, WHITE_SEED, num);
 					}
 					else
 					{
-						st.giveItems(BLACK_SEED, num);
+						giveItems(partyMember, BLACK_SEED, num);
 					}
 				}
 			}
 		}
 		else if (player.getInstanceId() == instanceId)
 		{
-			QuestState st = getQuestState(player, false);
-			if (st == null)
+			if (!isBaylor && hasQuestItems(player, CONT_CRYSTAL))
 			{
-				st = newQuestState(player);
-			}
-			if (!isBaylor && st.hasQuestItems(CONT_CRYSTAL))
-			{
-				st.takeItems(CONT_CRYSTAL, 1);
-				st.giveItems(bossCry, 1);
+				takeItems(player, CONT_CRYSTAL, 1);
+				giveItems(player, bossCry, 1);
 			}
 			if (getRandom(10) < 5)
 			{
-				st.giveItems(WHITE_SEED, num);
+				giveItems(player, WHITE_SEED, num);
 			}
 			else
 			{
-				st.giveItems(BLACK_SEED, num);
+				giveItems(player, BLACK_SEED, num);
 			}
 		}
 		
@@ -3017,12 +3004,8 @@ public final class CrystalCaverns extends Quest
 							{
 								return "";
 							}
-							QuestState st = ((L2PcInstance) character).getQuestState(getName());
-							if (st == null)
-							{
-								st = newQuestState((L2PcInstance) character);
-							}
-							if (!st.hasQuestItems(RACE_KEY))
+							
+							if (!hasQuestItems((L2PcInstance) character, RACE_KEY))
 							{
 								return "";
 							}
@@ -3031,7 +3014,7 @@ public final class CrystalCaverns extends Quest
 								runEmeraldRooms(world, spawns, room);
 							}
 							door.openMe();
-							st.takeItems(RACE_KEY, 1);
+							takeItems((L2PcInstance) character, RACE_KEY, 1);
 							world.openedDoors.put(door, (L2PcInstance) character);
 							break;
 						}

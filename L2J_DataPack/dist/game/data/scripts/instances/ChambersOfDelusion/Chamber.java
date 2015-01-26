@@ -170,6 +170,8 @@ public abstract class Chamber extends Quest
 	private final String INSTANCE_TEMPLATE;
 	
 	protected Location[] ROOM_ENTER_POINTS;
+	// Misc
+	private static final String RETURN = Chamber.class.getSimpleName() + "_return";
 	
 	protected Chamber(int questId, String name, String descr, int instanceId, String instanceTemplateName, int entranceGKId, int roomGKFirstId, int roomGKLastId, int aenkinelId, int boxId)
 	{
@@ -362,20 +364,18 @@ public abstract class Chamber extends Quest
 		
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			final QuestState st = getQuestState(partyMember, true);
-			
-			if (st.hasQuestItems(DELUSION_MARK))
+			if (hasQuestItems(partyMember, DELUSION_MARK))
 			{
-				st.takeItems(DELUSION_MARK, -1);
+				takeItems(partyMember, DELUSION_MARK, -1);
 			}
 			
 			if (party.isLeader(partyMember))
 			{
-				st.giveItems(DELUSION_MARK, 1);
+				giveItems(partyMember, DELUSION_MARK, 1);
 			}
 			
 			// Save location for teleport back into main hall
-			st.set("return_point", Integer.toString(partyMember.getX()) + ";" + Integer.toString(partyMember.getY()) + ";" + Integer.toString(partyMember.getZ()));
+			partyMember.getVariables().set(RETURN, Integer.toString(partyMember.getX()) + ";" + Integer.toString(partyMember.getY()) + ";" + Integer.toString(partyMember.getZ()));
 			
 			partyMember.setInstanceId(world.getInstanceId());
 			world.addAllowed(partyMember.getObjectId());
@@ -445,26 +445,21 @@ public abstract class Chamber extends Quest
 		}
 		final Instance inst = InstanceManager.getInstance().getInstance(player.getInstanceId());
 		Location ret = inst.getSpawnLoc();
-		final QuestState st = getQuestState(player, false);
-		
-		if (st != null)
+		final String return_point = player.getVariables().getString(RETURN, null);
+		if (return_point != null)
 		{
-			String return_point = st.get("return_point");
-			if (return_point != null)
+			String[] coords = return_point.split(";");
+			if (coords.length == 3)
 			{
-				String[] coords = return_point.split(";");
-				if (coords.length == 3)
+				try
 				{
-					try
-					{
-						int x = Integer.parseInt(coords[0]);
-						int y = Integer.parseInt(coords[1]);
-						int z = Integer.parseInt(coords[2]);
-						ret.setLocation(new Location(x, y, z));
-					}
-					catch (Exception e)
-					{
-					}
+					int x = Integer.parseInt(coords[0]);
+					int y = Integer.parseInt(coords[1]);
+					int z = Integer.parseInt(coords[2]);
+					ret.setLocation(new Location(x, y, z));
+				}
+				catch (Exception e)
+				{
 				}
 			}
 		}
@@ -487,15 +482,8 @@ public abstract class Chamber extends Quest
 		{
 			final CDWorld world = (CDWorld) tmpworld;
 			
-			QuestState st = getQuestState(player, false);
-			
-			if (st == null)
-			{
-				st = newQuestState(player);
-			}
-			
 			// Change room from dialog
-			else if (event.equals("next_room"))
+			if (event.equals("next_room"))
 			{
 				if (player.getParty() == null)
 				{
@@ -509,7 +497,7 @@ public abstract class Chamber extends Quest
 				
 				else if (hasQuestItems(player, DELUSION_MARK))
 				{
-					st.takeItems(DELUSION_MARK, 1);
+					takeItems(player, DELUSION_MARK, 1);
 					world.stopRoomChangeTask();
 					changeRoom(world);
 				}
@@ -519,7 +507,6 @@ public abstract class Chamber extends Quest
 					htmltext = getHtm(player.getHtmlPrefix(), "data/scripts/instances/ChambersOfDelusion/no_item.html");
 				}
 			}
-			
 			else if (event.equals("go_out"))
 			{
 				if (player.getParty() == null)
@@ -545,7 +532,6 @@ public abstract class Chamber extends Quest
 					inst.setEmptyDestroyTime(0);
 				}
 			}
-			
 			else if (event.equals("look_party"))
 			{
 				if ((player.getParty() != null) && (player.getParty() == world.getPartyInside()))

@@ -147,8 +147,8 @@ public final class MithrilMine extends AbstractNpcAI
 				world.removeAllowed(player.getObjectId());
 				player.setInstanceId(0);
 				player.teleToLocation(EXIT_LOC, 0);
-				qs.giveAdena(296425, true);
-				qs.addExpAndSp(921805, 82230);
+				giveAdena(player, 296425, true);
+				addExpAndSp(player, 921805, 82230);
 				qs.exitQuest(false, true);
 				return "18846-03.html";
 			}
@@ -200,9 +200,9 @@ public final class MithrilMine extends AbstractNpcAI
 				final QuestState qs = talker.getQuestState(Q10284_AcquisitionOfDivineSword.class.getSimpleName());
 				if ((qs != null) && qs.isMemoState(2))
 				{
-					if (!qs.hasQuestItems(COLD_RESISTANCE_POTION))
+					if (!hasQuestItems(talker, COLD_RESISTANCE_POTION))
 					{
-						qs.giveItems(COLD_RESISTANCE_POTION, 1);
+						giveItems(talker, COLD_RESISTANCE_POTION, 1);
 					}
 					qs.setCond(4, true);
 					enterInstance(talker, "MithrilMine.xml", START_LOC);
@@ -212,9 +212,9 @@ public final class MithrilMine extends AbstractNpcAI
 			case KEGOR:
 			{
 				final QuestState qs = talker.getQuestState(Q10284_AcquisitionOfDivineSword.class.getSimpleName());
-				if ((qs != null) && qs.isMemoState(2) && qs.hasQuestItems(COLD_RESISTANCE_POTION) && npc.isScriptValue(0))
+				if ((qs != null) && qs.isMemoState(2) && hasQuestItems(talker, COLD_RESISTANCE_POTION) && npc.isScriptValue(0))
 				{
-					qs.takeItems(COLD_RESISTANCE_POTION, -1);
+					takeItems(talker, COLD_RESISTANCE_POTION, -1);
 					qs.setCond(5, true);
 					npc.setScriptValue(1);
 					startQuestTimer("TIMER", 3000, npc, talker);

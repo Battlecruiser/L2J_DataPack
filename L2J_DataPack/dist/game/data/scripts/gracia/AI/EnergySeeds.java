@@ -322,19 +322,19 @@ public class EnergySeeds extends AbstractNpcAI
 			case INFINITY:
 				if ((st != null) && st.isCond(3))
 				{
-					handleQuestDrop(st, 13798);
+					handleQuestDrop(player, 13798);
 				}
 				break;
 			case DESTRUCTION:
 				if ((st != null) && st.isCond(3))
 				{
-					handleQuestDrop(st, 13867);
+					handleQuestDrop(player, 13867);
 				}
 				break;
 			case ANNIHILATION_BISTAKON:
 				if ((st != null) && st.isCond(3))
 				{
-					handleQuestDrop(st, 15535);
+					handleQuestDrop(player, 15535);
 				}
 				if (getRandom(100) < 50)
 				{
@@ -347,7 +347,7 @@ public class EnergySeeds extends AbstractNpcAI
 			case ANNIHILATION_REPTILIKON:
 				if ((st != null) && st.isCond(3))
 				{
-					handleQuestDrop(st, 15535);
+					handleQuestDrop(player, 15535);
 				}
 				if (getRandom(100) < 50)
 				{
@@ -360,7 +360,7 @@ public class EnergySeeds extends AbstractNpcAI
 			case ANNIHILATION_COKRAKON:
 				if ((st != null) && st.isCond(3))
 				{
-					handleQuestDrop(st, 15535);
+					handleQuestDrop(player, 15535);
 				}
 				if (getRandom(100) < 50)
 				{
@@ -386,7 +386,7 @@ public class EnergySeeds extends AbstractNpcAI
 		return monster;
 	}
 	
-	private void handleQuestDrop(QuestState st, int itemId)
+	private void handleQuestDrop(L2PcInstance player, int itemId)
 	{
 		double chance = HOWTOOPPOSEEVIL_CHANCE * Config.RATE_QUEST_DROP;
 		int numItems = (int) (chance / 100);
@@ -397,8 +397,8 @@ public class EnergySeeds extends AbstractNpcAI
 		}
 		if (numItems > 0)
 		{
-			st.giveItems(itemId, numItems);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			giveItems(player, itemId, numItems);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 	}
 	

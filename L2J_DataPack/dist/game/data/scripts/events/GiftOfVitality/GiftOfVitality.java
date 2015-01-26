@@ -22,8 +22,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.event.LongTimeEvent;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -76,6 +74,11 @@ public final class GiftOfVitality extends LongTimeEvent
 		new SkillHolder(5636, 1), // Empower
 	};
 	
+	// Misc
+	private static final int HOURS = 5; // Reuse between buffs
+	private static final int MIN_LEVEL = 75;
+	private static final String REUSE = GiftOfVitality.class.getSimpleName() + "_reuse";
+	
 	private GiftOfVitality()
 	{
 		super(GiftOfVitality.class.getSimpleName(), "events");
@@ -84,29 +87,18 @@ public final class GiftOfVitality extends LongTimeEvent
 		addTalkId(STEVE_SHYAGEL);
 	}
 	
-	// Misc
-	private static final int HOURS = 5; // Reuse between buffs
-	private static final int MIN_LEVEL = 75;
-	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = getQuestState(player, false);
-		
 		switch (event)
 		{
 			case "vitality":
 			{
-				long _reuse = 0;
-				String _streuse = st.get("reuse");
-				if (_streuse != null)
+				final long reuse = player.getVariables().getLong(REUSE, 0);
+				if (reuse > System.currentTimeMillis())
 				{
-					_reuse = Long.parseLong(_streuse);
-				}
-				if (_reuse > System.currentTimeMillis())
-				{
-					long remainingTime = (_reuse - System.currentTimeMillis()) / 1000;
+					long remainingTime = (reuse - System.currentTimeMillis()) / 1000;
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime % 3600) / 60);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
@@ -120,8 +112,7 @@ public final class GiftOfVitality extends LongTimeEvent
 				{
 					player.doCast(GIFT_OF_VITALITY.getSkill());
 					player.doSimultaneousCast(JOY_OF_VITALITY.getSkill());
-					st.setState(State.STARTED);
-					st.set("reuse", String.valueOf(System.currentTimeMillis() + (HOURS * 3600000)));
+					player.getVariables().set(REUSE, System.currentTimeMillis() + (HOURS * 3600000));
 					htmltext = "4306-okvitality.htm";
 				}
 				break;
@@ -175,10 +166,6 @@ public final class GiftOfVitality extends LongTimeEvent
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.getQuestState(getName()) == null)
-		{
-			newQuestState(player);
-		}
 		return "4306.htm";
 	}
 	

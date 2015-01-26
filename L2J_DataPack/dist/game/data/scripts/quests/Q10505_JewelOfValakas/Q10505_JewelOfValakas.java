@@ -59,9 +59,9 @@ public class Q10505_JewelOfValakas extends Quest
 		final QuestState st = getQuestState(player, false);
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			st.takeItems(EMPTY_CRYSTAL, -1);
-			st.giveItems(FILLED_CRYSTAL_VALAKAS_ENERGY, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			takeItems(player, EMPTY_CRYSTAL, -1);
+			giveItems(player, FILLED_CRYSTAL_VALAKAS_ENERGY, 1);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			st.setCond(2, true);
 		}
 	}
@@ -76,7 +76,7 @@ public class Q10505_JewelOfValakas extends Quest
 		}
 		
 		String htmltext = null;
-		if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(VACUALITE_FLOATING_STONE))
+		if ((player.getLevel() >= MIN_LEVEL) && hasQuestItems(player, VACUALITE_FLOATING_STONE))
 		{
 			switch (event)
 			{
@@ -89,7 +89,7 @@ public class Q10505_JewelOfValakas extends Quest
 				case "31540-07.html":
 				{
 					st.startQuest();
-					st.giveItems(EMPTY_CRYSTAL, 1);
+					giveItems(player, EMPTY_CRYSTAL, 1);
 					htmltext = event;
 					break;
 				}
@@ -108,12 +108,7 @@ public class Q10505_JewelOfValakas extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		switch (st.getState())
 		{
@@ -123,7 +118,7 @@ public class Q10505_JewelOfValakas extends Quest
 				{
 					htmltext = "31540-02.html";
 				}
-				else if (!st.hasQuestItems(VACUALITE_FLOATING_STONE))
+				else if (!hasQuestItems(player, VACUALITE_FLOATING_STONE))
 				{
 					htmltext = "31540-04.html";
 				}
@@ -139,21 +134,21 @@ public class Q10505_JewelOfValakas extends Quest
 				{
 					case 1:
 					{
-						if (st.hasQuestItems(EMPTY_CRYSTAL))
+						if (hasQuestItems(player, EMPTY_CRYSTAL))
 						{
 							htmltext = "31540-08.html";
 						}
 						else
 						{
-							st.giveItems(EMPTY_CRYSTAL, 1);
+							giveItems(player, EMPTY_CRYSTAL, 1);
 							htmltext = "31540-09.html";
 						}
 						break;
 					}
 					case 2:
 					{
-						st.giveItems(JEWEL_OF_VALAKAS, 1);
-						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						giveItems(player, JEWEL_OF_VALAKAS, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						st.exitQuest(false, true);
 						htmltext = "31540-10.html";
 						break;

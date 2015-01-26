@@ -69,9 +69,9 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		
-		if (st.hasQuestItems(VACUALITE_FLOATING_STONE))
+		if (hasQuestItems(player, VACUALITE_FLOATING_STONE))
 		{
 			player.teleToLocation(ENTER_HALL_OF_FLAMES);
 			st.set("allowEnter", "1");
@@ -87,12 +87,7 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = getQuestState(player, true);
-		
-		if (st == null)
-		{
-			return null;
-		}
+		final QuestState st = getQuestState(player, true);
 		
 		switch (npc.getId())
 		{

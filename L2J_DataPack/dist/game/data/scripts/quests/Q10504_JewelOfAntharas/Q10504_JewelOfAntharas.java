@@ -59,9 +59,9 @@ public final class Q10504_JewelOfAntharas extends Quest
 		final QuestState st = getQuestState(player, false);
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			st.takeItems(CLEAR_CRYSTAL, -1);
-			st.giveItems(FILLED_CRYSTAL_ANTHARAS_ENERGY, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			takeItems(player, CLEAR_CRYSTAL, -1);
+			giveItems(player, FILLED_CRYSTAL_ANTHARAS_ENERGY, 1);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			st.setCond(2, true);
 		}
 	}
@@ -76,7 +76,7 @@ public final class Q10504_JewelOfAntharas extends Quest
 		}
 		
 		String htmltext = null;
-		if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
+		if ((player.getLevel() >= MIN_LEVEL) && hasQuestItems(player, PORTAL_STONE))
 		{
 			switch (event)
 			{
@@ -89,7 +89,7 @@ public final class Q10504_JewelOfAntharas extends Quest
 				case "30755-07.html":
 				{
 					st.startQuest();
-					st.giveItems(CLEAR_CRYSTAL, 1);
+					giveItems(player, CLEAR_CRYSTAL, 1);
 					htmltext = event;
 					break;
 				}
@@ -118,7 +118,7 @@ public final class Q10504_JewelOfAntharas extends Quest
 				{
 					htmltext = "30755-02.html";
 				}
-				else if (!st.hasQuestItems(PORTAL_STONE))
+				else if (!hasQuestItems(player, PORTAL_STONE))
 				{
 					htmltext = "30755-04.html";
 				}
@@ -134,21 +134,21 @@ public final class Q10504_JewelOfAntharas extends Quest
 				{
 					case 1:
 					{
-						if (st.hasQuestItems(CLEAR_CRYSTAL))
+						if (hasQuestItems(player, CLEAR_CRYSTAL))
 						{
 							htmltext = "30755-08.html";
 						}
 						else
 						{
-							st.giveItems(CLEAR_CRYSTAL, 1);
+							giveItems(player, CLEAR_CRYSTAL, 1);
 							htmltext = "30755-09.html";
 						}
 						break;
 					}
 					case 2:
 					{
-						st.giveItems(JEWEL_OF_ANTHARAS, 1);
-						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						giveItems(player, JEWEL_OF_ANTHARAS, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						st.exitQuest(false, true);
 						htmltext = "30755-10.html";
 						break;

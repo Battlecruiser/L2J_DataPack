@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
  * Newbie Weapon/Accesories Coupons for the Hellbound opening event.<br>
@@ -79,7 +78,6 @@ public final class NewbieCoupons extends Quest
 			return htmltext;
 		}
 		
-		QuestState st = getQuestState(player, false);
 		int newbie = player.getNewbie();
 		int level = player.getLevel();
 		int occupation_level = player.getClassId().level();
@@ -95,7 +93,7 @@ public final class NewbieCoupons extends Quest
 				if ((newbie | NEWBIE_WEAPON) != newbie)
 				{
 					player.setNewbie(newbie | NEWBIE_WEAPON);
-					st.giveItems(COUPON_ONE, 5);
+					giveItems(player, COUPON_ONE, 5);
 					htmltext = "30598-2.htm"; // here's the coupon you requested
 				}
 				else
@@ -116,7 +114,7 @@ public final class NewbieCoupons extends Quest
 				if ((newbie | NEWBIE_ACCESORY) != newbie)
 				{
 					player.setNewbie(newbie | NEWBIE_ACCESORY);
-					st.giveItems(COUPON_TWO, 1);
+					giveItems(player, COUPON_TWO, 1);
 					htmltext = "30598-5.htm"; // here's the coupon you requested
 				}
 				else

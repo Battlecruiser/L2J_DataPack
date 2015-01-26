@@ -39,7 +39,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -586,7 +585,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof HSWorld)
@@ -595,7 +594,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 			
 			if (npc.getId() == TUMOR_ALIVE)
 			{
-				addSpawn(TUMOR_DEAD, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, false, npc.getInstanceId());
+				addSpawn(TUMOR_DEAD, npc, false, 0, false, npc.getInstanceId());
 			}
 			if (world.getStatus() < 5)
 			{
@@ -627,7 +626,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 				}
 			}
 		}
-		return "";
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
@@ -652,46 +651,45 @@ public final class HallOfSuffering extends AbstractNpcAI
 			
 			return getPtLeaderText(player, (HSWorld) world);
 		}
-		return "";
+		return super.onFirstTalk(npc, player);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		getQuestState(player, true);
+		getQuestState(talker, true);
 		if (npc.getId() == MOUTHOFEKIMUS)
 		{
-			enterInstance(player, "HallOfSuffering.xml", ENTER_TELEPORT);
+			enterInstance(talker, "HallOfSuffering.xml", ENTER_TELEPORT);
 		}
 		else if (npc.getId() == TEPIOS)
 		{
-			InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+			InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(talker);
 			if (((HSWorld) world).rewardItemId == -1)
 			{
-				_log.warning("Hall of Suffering: " + player.getName() + "(" + player.getObjectId() + ") is try to cheat!");
-				return getPtLeaderText(player, (HSWorld) world);
+				_log.warning("Hall of Suffering: " + talker.getName() + "(" + talker.getObjectId() + ") is try to cheat!");
+				return getPtLeaderText(talker, (HSWorld) world);
 			}
 			else if (((HSWorld) world).isRewarded)
 			{
 				return "32530-11.htm";
 			}
-			else if ((player.getParty() != null) && (player.getParty().getLeaderObjectId() == player.getObjectId()))
+			else if ((talker.getParty() != null) && (talker.getParty().getLeaderObjectId() == talker.getObjectId()))
 			{
 				((HSWorld) world).isRewarded = true;
-				for (L2PcInstance member : player.getParty().getMembers())
+				for (L2PcInstance member : talker.getParty().getMembers())
 				{
-					final QuestState qsMember = getQuestState(member, false);
-					if (qsMember != null)
+					if (getQuestState(member, false) != null)
 					{
-						qsMember.giveItems(736, 1);
-						qsMember.giveItems(((HSWorld) world).rewardItemId, 1);
+						giveItems(member, 736, 1);
+						giveItems(member, ((HSWorld) world).rewardItemId, 1);
 					}
 				}
 				return "";
 			}
 			
-			return getPtLeaderText(player, (HSWorld) world);
+			return getPtLeaderText(talker, (HSWorld) world);
 		}
-		return "";
+		return super.onTalk(npc, talker);
 	}
 }
