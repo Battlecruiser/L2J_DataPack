@@ -190,7 +190,7 @@ public final class DragonValley extends AbstractNpcAI
 		{
 			spawnGhost(npc, killer, isSummon, 20);
 		}
-		else if (((L2Attackable) npc).isSweepActive())
+		else if (((L2Attackable) npc).isSpoiled())
 		{
 			npc.dropItem(killer, getRandom(GREATER_HERB_OF_MANA, SUPERIOR_HERB_OF_MANA), 1);
 			manageMoraleBoost(killer, npc);

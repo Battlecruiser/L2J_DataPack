@@ -18,6 +18,8 @@
  */
 package handlers.effecthandlers;
 
+import java.util.Collection;
+
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -63,21 +65,19 @@ public final class Sweeper extends AbstractEffect
 			return;
 		}
 		
-		final ItemHolder[] items = monster.takeSweep();
-		if ((items == null) || (items.length == 0))
+		final Collection<ItemHolder> items = monster.takeSweep();
+		if (items != null)
 		{
-			return;
-		}
-		
-		for (ItemHolder item : items)
-		{
-			if (player.isInParty())
+			for (ItemHolder item : items)
 			{
-				player.getParty().distributeItem(player, item, true, monster);
-			}
-			else
-			{
-				player.addItem("Sweeper", item, info.getEffected(), true);
+				if (player.isInParty())
+				{
+					player.getParty().distributeItem(player, item, true, monster);
+				}
+				else
+				{
+					player.addItem("Sweeper", item, info.getEffected(), true);
+				}
 			}
 		}
 	}
