@@ -400,6 +400,8 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		if (mentor != null)
 		{
 			MentorManager.getInstance().setPenalty(mentor.getObjectId(), Config.MENTOR_PENALTY_FOR_MENTEE_COMPLETE);
+			MentorManager.getInstance().deleteMentor(mentor.getObjectId(), player.getObjectId());
+			
 			if (mentor.isOnline())
 			{
 				mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_AWAKENED_AND_THE_MENTOR_MENTEE_RELATIONSHIP_HAS_ENDED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_ONE_DAY_AFTER_THE_MENTEE_S_GRADUATION).addPcName(player));
@@ -410,8 +412,6 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 				}
 				mentor.sendPacket(new ExMentorList(mentor.getPlayerInstance()));
 			}
-			
-			MentorManager.getInstance().deleteMentor(mentor.getObjectId(), player.getObjectId());
 			
 			// Remove the mentee skills
 			player.removeSkill(MENTEE_MENTOR_SUMMON.getSkillId());
@@ -445,13 +445,18 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		int amount = MENTEE_COINS.get(player.getLevel());
 		if (amount > 0)
 		{
-			sendMail(player, LEVEL_UP_TITLE, String.format(LEVEL_UP_BODY, player.getName(), player.getLevel()), MENTEE_MARK, amount);
+			sendMail(mentor.getObjectId(), player, LEVEL_UP_TITLE, String.format(LEVEL_UP_BODY, player.getName(), player.getLevel()), MENTEE_MARK, amount);
 		}
 	}
 	
 	private void sendMail(L2PcInstance player, String title, String body, int itemId, long amount)
 	{
-		final Message msg = new Message(MENTOR_GUIDE, player.getObjectId(), title, body, MailType.MENTOR_NPC);
+		sendMail(player.getObjectId(), player, title, body, itemId, amount);
+	}
+	
+	private void sendMail(int objectId, L2PcInstance player, String title, String body, int itemId, long amount)
+	{
+		final Message msg = new Message(MENTOR_GUIDE, objectId, title, body, MailType.MENTOR_NPC);
 		msg.createAttachments().addItem(getName(), itemId, amount, null, player);
 		
 		MailManager.getInstance().sendMessage(msg);
