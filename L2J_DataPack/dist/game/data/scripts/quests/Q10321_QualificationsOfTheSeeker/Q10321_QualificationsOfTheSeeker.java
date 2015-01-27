@@ -20,16 +20,20 @@ package quests.Q10321_QualificationsOfTheSeeker;
 
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
 
-import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
+import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
+import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * Qualifications Of The Seeker (10321)
- * @author ivantotov
+ * @author ivantotov, Gladicek
  */
 public final class Q10321_QualificationsOfTheSeeker extends Quest
 {
@@ -45,7 +49,6 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 		addStartNpc(THEODORE);
 		addTalkId(THEODORE, SHANNON);
 		addCondMaxLevel(MAX_LEVEL, "32975-01a.htm");
-		addCondNotRace(Race.ERTHEIA, "32975-01b.htm");
 		addCondCompletedQuest(Q10320_LetsGoToTheCentralSquare.class.getSimpleName(), "32975-01a.htm");
 	}
 	
@@ -73,11 +76,12 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32974-02.html":
+			case "32974-02.htm":
 			{
 				giveAdena(player, 50, true);
 				addExpAndSp(player, 40, 5);
 				qs.exitQuest(false, true);
+				Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getTemplate().getDisplayId(), NpcStringId.HM_DON_T_JUST_GO_I_STILL_HAVE_TONS_TO_TEACH_YOU));
 				htmltext = event;
 				break;
 			}
@@ -89,34 +93,24 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated())
+		String htmltext = null;
+		
+		switch (qs.getState())
 		{
-			if (npc.getId() == THEODORE)
+			case State.CREATED:
 			{
-				htmltext = "32975-01.htm";
+				htmltext = npc.getId() == THEODORE ? "32975-01.htm" : "32974-04.htm";
+				break;
 			}
-		}
-		else if (qs.isStarted())
-		{
-			if (npc.getId() == THEODORE)
+			case State.STARTED:
 			{
-				htmltext = "32975-04.html";
+				htmltext = npc.getId() == THEODORE ? "32975-04.htm" : "32974-01.htm";
+				break;
 			}
-			else if (npc.getId() == SHANNON)
+			case State.COMPLETED:
 			{
-				htmltext = "32974-01.html";
-			}
-		}
-		else if (qs.isCompleted())
-		{
-			if (npc.getId() == THEODORE)
-			{
-				htmltext = "32975-05.html";
-			}
-			else if (npc.getId() == SHANNON)
-			{
-				htmltext = "32974-03.html";
+				htmltext = npc.getId() == THEODORE ? "32975-05.htm" : "32974-03.htm";
+				break;
 			}
 		}
 		return htmltext;

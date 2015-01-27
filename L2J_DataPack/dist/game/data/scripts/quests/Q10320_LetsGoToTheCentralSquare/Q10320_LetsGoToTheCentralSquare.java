@@ -39,7 +39,7 @@ import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * Let's Go To The Central Square (10320)
- * @author ivantotov
+ * @author ivantotov, Gladicek
  */
 public final class Q10320_LetsGoToTheCentralSquare extends Quest
 {
@@ -62,8 +62,8 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 		addStartNpc(PANTHEON);
 		addTalkId(PANTHEON, THEODORE);
 		addEnterZoneId(TALKING_ISLAND_PRESENTATION_MOVIE_ZONE);
-		addCondMaxLevel(MAX_LEVEL, "32972-01a.html");
-		addCondNotRace(Race.ERTHEIA, "32972-01b.html");
+		addCondMaxLevel(MAX_LEVEL, "32972-01a.htm");
+		addCondNotRace(Race.ERTHEIA, "32972-01b.htm");
 	}
 	
 	@Override
@@ -90,7 +90,7 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32975-02.html":
+			case "32975-02.htm":
 			{
 				giveAdena(player, 30, true);
 				addExpAndSp(player, 30, 5);
@@ -107,26 +107,23 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
+		String htmltext = null;
 		
 		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == PANTHEON)
-				{
-					htmltext = "32972-01.htm";
-				}
+				htmltext = npc.getId() == PANTHEON ? "32972-01.htm" : "32975-04.htm";
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == PANTHEON ? "32972-04.html" : "32975-01.html";
+				htmltext = npc.getId() == PANTHEON ? "32972-04.htm" : "32975-01.htm";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == PANTHEON ? "32972-05.html" : "32975-03.html";
+				htmltext = npc.getId() == PANTHEON ? "32972-05.htm" : "32975-03.htm";
 				break;
 			}
 		}
