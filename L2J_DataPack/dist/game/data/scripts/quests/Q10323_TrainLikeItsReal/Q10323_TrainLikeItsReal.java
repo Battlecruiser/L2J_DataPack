@@ -21,18 +21,19 @@ package quests.Q10323_TrainLikeItsReal;
 import quests.Q10322_SearchingForTheMysteriousPower.Q10322_SearchingForTheMysteriousPower;
 
 import com.l2jserver.gameserver.enums.QuestSound;
-import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 
 /**
- * @author Sdw
+ * @author Sdw, Gladicek
  */
 public class Q10323_TrainLikeItsReal extends Quest
 {
@@ -44,7 +45,6 @@ public class Q10323_TrainLikeItsReal extends Quest
 	private static final int TRAINING_GOLEM = 27532;
 	// Misc
 	private static final int MAX_LEVEL = 20;
-	private static final String KILL_VAR = "Q10323_KILL";
 	// Items
 	private static final ItemHolder SPIRITSHOTS = new ItemHolder(2509, 500);
 	private static final ItemHolder SOULSHOTS = new ItemHolder(1835, 500);
@@ -55,9 +55,8 @@ public class Q10323_TrainLikeItsReal extends Quest
 		addStartNpc(EVAIN);
 		addTalkId(HOLDEN, EVAIN, SHANNON);
 		addKillId(TRAINING_GOLEM);
-		addCondMaxLevel(MAX_LEVEL, "fixme.htm");
-		addCondNotRace(Race.ERTHEIA, "fixme.htm");
-		addCondCompletedQuest(Q10322_SearchingForTheMysteriousPower.class.getSimpleName(), "fixme.htm");
+		addCondMaxLevel(MAX_LEVEL, "33464-05.htm");
+		addCondCompletedQuest(Q10322_SearchingForTheMysteriousPower.class.getSimpleName(), "33464-05.htm");
 	}
 	
 	@Override
@@ -100,6 +99,9 @@ public class Q10323_TrainLikeItsReal extends Quest
 				if (qs.isCond(1))
 				{
 					qs.setCond(2, true);
+					final ExQuestNpcLogList packet = new ExQuestNpcLogList(getId());
+					packet.addNpc(TRAINING_GOLEM, 0);
+					player.sendPacket(packet);
 					htmltext = event;
 				}
 				break;
@@ -108,7 +110,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 			{
 				if (qs.isCond(3))
 				{
-					qs.set(KILL_VAR, 0);
+					qs.setMemoState(0);
 					if (player.isMageClass())
 					{
 						giveItems(player, SPIRITSHOTS);
@@ -133,7 +135,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 			{
 				if (qs.isCond(8))
 				{
-					qs.setCond(9);
+					qs.setCond(9, true);
 					htmltext = event;
 				}
 				break;
@@ -158,72 +160,87 @@ public class Q10323_TrainLikeItsReal extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
+		String htmltext = null;
 		
-		if (qs.isCompleted())
+		switch (qs.getState())
 		{
-			htmltext = getAlreadyCompletedMsg(player);
-		}
-		
-		switch (npc.getId())
-		{
-			case EVAIN:
+			case State.CREATED:
 			{
-				if (qs.isCreated())
+				if (npc.getId() == EVAIN)
 				{
 					htmltext = "33464-01.htm";
+					break;
 				}
-				else if (qs.isStarted())
+				else if (npc.getId() == SHANNON)
+				{
+					htmltext = "32974-03.htm";
+					break;
+				}
+			}
+			case State.STARTED:
+			{
+				if (npc.getId() == EVAIN)
 				{
 					htmltext = "33464-03.htm";
+					break;
 				}
-				break;
-			}
-			case HOLDEN:
-			{
-				switch (qs.getCond())
+				else if (npc.getId() == HOLDEN)
 				{
-					case 1:
+					switch (qs.getCond())
 					{
-						htmltext = "33194-01.htm";
-						break;
+						case 1:
+						{
+							htmltext = "33194-01.htm";
+							break;
+						}
+						case 3:
+						{
+							htmltext = "33194-04.htm";
+							break;
+						}
+						case 4:
+						{
+							htmltext = "33194-06.htm";
+							qs.setCond(6, true);
+							break;
+						}
+						case 5:
+						{
+							htmltext = "33194-06.htm";
+							qs.setCond(7, true);
+							break;
+						}
+						case 8:
+						{
+							htmltext = "33194-07.htm";
+							break;
+						}
 					}
-					case 3:
-					{
-						htmltext = "33194-04.htm";
-						break;
-					}
-					case 4:
-					{
-						htmltext = "33194-06.htm";
-						qs.setCond(6);
-						break;
-					}
-					case 5:
-					{
-						htmltext = "33194-06.htm";
-						qs.setCond(7);
-						break;
-					}
-					case 8:
-					{
-						htmltext = "33194-07.htm";
-						break;
-					}
+					break;
 				}
-				break;
-			}
-			case SHANNON:
-			{
-				if (qs.isCond(9))
+				else if (npc.getId() == SHANNON)
 				{
-					htmltext = "32974-01.htm";
+					if (qs.isCond(9))
+					{
+						htmltext = "32974-01.htm";
+						break;
+					}
 				}
-				break;
 			}
-			
+			case State.COMPLETED:
+			{
+				if (npc.getId() == EVAIN)
+				{
+					htmltext = "33464-04.htm";
+					break;
+				}
+				else if (npc.getId() == SHANNON)
+				{
+					htmltext = "32974-05.htm";
+					break;
+				}
+			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -234,31 +251,37 @@ public class Q10323_TrainLikeItsReal extends Quest
 		
 		if ((qs != null) && qs.isStarted())
 		{
-			int killedGolem = qs.getInt(KILL_VAR);
+			int killedGolem = qs.getMemoState();
 			
 			if (qs.isCond(2))
 			{
 				killedGolem++;
+				final ExQuestNpcLogList packet = new ExQuestNpcLogList(getId());
+				packet.addNpcString(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM, killedGolem);
+				killer.sendPacket(packet);
 				if (killedGolem >= 4)
 				{
 					qs.setCond(3, true);
 				}
 				else
 				{
-					qs.set(KILL_VAR, killedGolem);
+					qs.setMemoState(killedGolem);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 			else if (qs.isCond(6) || qs.isCond(7))
 			{
 				killedGolem++;
+				final ExQuestNpcLogList packet = new ExQuestNpcLogList(getId());
+				packet.addNpcString(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM2, killedGolem);
+				killer.sendPacket(packet);
 				if (killedGolem >= 4)
 				{
 					qs.setCond(8, true);
 				}
 				else
 				{
-					qs.set(KILL_VAR, killedGolem);
+					qs.setMemoState(killedGolem);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}

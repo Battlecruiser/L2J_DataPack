@@ -20,16 +20,16 @@ package quests.Q10324_FindingMagisterGallint;
 
 import quests.Q10323_TrainLikeItsReal.Q10323_TrainLikeItsReal;
 
-import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 
 /**
  * Finding Magister Gallint (10324)
- * @author ivantotov
+ * @author ivantotov, Gladicek
  */
 public final class Q10324_FindingMagisterGallint extends Quest
 {
@@ -45,7 +45,6 @@ public final class Q10324_FindingMagisterGallint extends Quest
 		addStartNpc(SHANNON);
 		addTalkId(SHANNON, GALLINT);
 		addCondMaxLevel(MAX_LEVEL, "32974-01a.htm");
-		addCondNotRace(Race.ERTHEIA, "32974-01a.htm");
 		addCondCompletedQuest(Q10323_TrainLikeItsReal.class.getSimpleName(), "32974-01a.htm");
 	}
 	
@@ -72,7 +71,7 @@ public final class Q10324_FindingMagisterGallint extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32980-02.html":
+			case "32980-02.htm":
 			{
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
 				giveAdena(player, 110, true);
@@ -89,34 +88,48 @@ public final class Q10324_FindingMagisterGallint extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated())
+		String htmltext = null;
+		
+		switch (qs.getState())
 		{
-			if (npc.getId() == SHANNON)
+			case State.CREATED:
 			{
-				htmltext = "32974-01.htm";
+				if (npc.getId() == SHANNON)
+				{
+					htmltext = "32974-01.htm";
+					break;
+				}
+				else if (npc.getId() == GALLINT)
+				{
+					htmltext = "32980-04.htm";
+					break;
+				}
 			}
-		}
-		else if (qs.isStarted())
-		{
-			if (npc.getId() == SHANNON)
+			case State.STARTED:
 			{
-				htmltext = "32974-04.html";
+				if (npc.getId() == SHANNON)
+				{
+					htmltext = "32974-04.htm";
+					break;
+				}
+				else if (npc.getId() == GALLINT)
+				{
+					htmltext = "32980-01.htm";
+					break;
+				}
 			}
-			else if (npc.getId() == GALLINT)
+			case State.COMPLETED:
 			{
-				htmltext = "32980-01.html";
-			}
-		}
-		else if (qs.isCompleted())
-		{
-			if (npc.getId() == SHANNON)
-			{
-				htmltext = "32974-05.html";
-			}
-			else if (npc.getId() == GALLINT)
-			{
-				htmltext = "32980-03.html";
+				if (npc.getId() == SHANNON)
+				{
+					htmltext = "32974-05.htm";
+					break;
+				}
+				else if (npc.getId() == GALLINT)
+				{
+					htmltext = "32980-03.htm";
+					break;
+				}
 			}
 		}
 		return htmltext;
