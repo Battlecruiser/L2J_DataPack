@@ -236,7 +236,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 					if (powerSource != null)
 					{
 						powerSource.setTarget(player);
-						startQuestTimer("cast_light_heal", 1, powerSource, player);
+						startQuestTimer("cast_light_heal", 3000, powerSource, player);
 					}
 				}
 				break;
@@ -373,7 +373,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 			{
 				final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 				
-				if (world.isStatus(3))
+				if ((npc != null) && (world.isStatus(3) || world.isStatus(4)))
 				{
 					if (npc.calculateDistance(player, true, false) < LIGHT_HEAL.getSkill().getCastRange())
 					{
@@ -381,15 +381,11 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 					}
 					startQuestTimer("cast_light_heal", 3000, npc, player);
 				}
-				else
-				{
-					npc.deleteMe();
-				}
 				break;
 			}
 			case "fail_instance":
 			{
-				player.getKnownList().getKnownCharacters().forEach(L2Character::deleteMe);
+				InstanceManager.getInstance().getInstance(player.getInstanceId()).removeNpcs();
 				player.showQuestMovie(FAILED_ENDING);
 				startQuestTimer("exit", 13500, npc, player);
 				break;
@@ -435,7 +431,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 						if (world.enabledSeal == 2)
 						{
 							cancelQuestTimer("fail_instance", null, player);
-							player.getKnownList().getKnownCharacters().forEach(L2Character::deleteMe);
+							InstanceManager.getInstance().getInstance(world.getInstanceId()).removeNpcs();
 							player.showQuestMovie(SUCCES_ENDING);
 							startQuestTimer("spawn_hermuncus", 25050, npc, player);
 						}
@@ -709,8 +705,8 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 			}
 			else if (npc.getId() == HARNAKS_WRAITH)
 			{
-				cancelQuestTimer("fail_instance", npc, killer);
-				killer.getKnownList().getKnownCharacters().forEach(L2Character::deleteMe);
+				cancelQuestTimer("fail_instance", null, killer);
+				InstanceManager.getInstance().getInstance(world.getInstanceId()).removeNpcs();
 				killer.showQuestMovie(SUCCES_ENDING);
 				startQuestTimer("spawn_hermuncus", 25050, npc, killer);
 			}
