@@ -82,6 +82,9 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		new SkillHolder(9230, 1), // Mentor's Poem of Organ
 		new SkillHolder(9231, 1), // Mentor's Poem of Guitar
 		new SkillHolder(9232, 1), // Mentor's Poem of Harp
+		new SkillHolder(17082, 1), // Mentor's Prevailing Sonata
+		new SkillHolder(17083, 1), // Mentor's Daring Sonata
+		new SkillHolder(17084, 1), // Mentor's Refreshing Sonata
 		new SkillHolder(9233, 1), // Mentor's Guidance
 	};
 	
@@ -91,6 +94,10 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	};
 	
 	private static final SkillHolder MENTEE_MENTOR_SUMMON = new SkillHolder(9379, 1); // Mentee's Mentor Summon
+	
+	private static final SkillHolder MENTOR_KNIGHTS_HARMONY = new SkillHolder(9376, 1); // Mentor's Knight's Harmony
+	private static final SkillHolder MENTOR_WIZARDS_HARMONY = new SkillHolder(9377, 1); // Mentor's Wizard's Harmony
+	private static final SkillHolder MENTOR_WARRIORS_HARMONY = new SkillHolder(9378, 1); // Mentor's Warrior's Harmony
 	
 	// Misc
 	private static final int MAX_LEVEL = 85;
@@ -198,6 +205,11 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		
 		// Add the mentee skill
 		event.getMentee().addSkill(MENTEE_MENTOR_SUMMON.getSkill(), true);
+		
+		// Add the mentor skills
+		event.getMentor().addSkill(MENTOR_KNIGHTS_HARMONY.getSkill(), true);
+		event.getMentor().addSkill(MENTOR_WIZARDS_HARMONY.getSkill(), true);
+		event.getMentor().addSkill(MENTOR_WARRIORS_HARMONY.getSkill(), true);
 		
 		// Send mail with the headphone
 		sendMail(event.getMentee(), MENTEE_ADDED_TITLE, MENTEE_ADDED_BODY, MENTEE_HEADPHONE, 1);
@@ -367,7 +379,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		final L2PcInstance player = event.getMentee();
 		
 		// Remove the mentee skills
-		player.removeSkill(MENTEE_MENTOR_SUMMON.getSkillId());
+		player.removeSkill(MENTEE_MENTOR_SUMMON.getSkill(), true);
 		
 		// Clear mentee status
 		player.sendPacket(new ExMentorList(player));
@@ -378,19 +390,28 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	public void onMenteeRemove(OnPlayerMenteeRemove event)
 	{
 		final L2Mentee mentee = event.getMentee();
+		final L2PcInstance mentor = event.getMentor();
 		final L2PcInstance player = mentee.getPlayerInstance();
 		
 		if (player != null)
 		{
 			// Remove the mentee skills
-			player.removeSkill(MENTEE_MENTOR_SUMMON.getSkillId());
+			player.removeSkill(MENTEE_MENTOR_SUMMON.getSkill(), true);
 			
 			// Clear mentee status
 			player.sendPacket(new ExMentorList(player));
 		}
 		
+		// If player does not have any mentees anymore remove mentor skills.
+		if (MentorManager.getInstance().getMentees(mentor.getObjectId()) == null)
+		{
+			mentor.removeSkill(MENTOR_KNIGHTS_HARMONY.getSkill(), true);
+			mentor.removeSkill(MENTOR_WIZARDS_HARMONY.getSkill(), true);
+			mentor.removeSkill(MENTOR_WARRIORS_HARMONY.getSkill(), true);
+		}
+		
 		// Remove mentee from the list
-		event.getMentor().sendPacket(new ExMentorList(event.getMentor()));
+		event.getMentor().sendPacket(new ExMentorList(mentor));
 	}
 	
 	private void handleGraduateMentee(L2PcInstance player)
@@ -414,7 +435,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 			}
 			
 			// Remove the mentee skills
-			player.removeSkill(MENTEE_MENTOR_SUMMON.getSkillId());
+			player.removeSkill(MENTEE_MENTOR_SUMMON.getSkill(), true);
 			
 			// Clear mentee status
 			player.sendPacket(new ExMentorList(player));
