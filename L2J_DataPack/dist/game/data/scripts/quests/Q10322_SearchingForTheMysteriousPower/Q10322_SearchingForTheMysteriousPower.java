@@ -235,7 +235,7 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 						}
 						case 6:
 						{
-							htmltext = "33464-06.html";
+							htmltext = "33464-06.htm";
 							showOnScreenMsg(player, NpcStringId.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
 							giveItems(player, WOODEN_ARROW, 500);
 							giveItems(player, ADENA, 70);

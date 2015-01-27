@@ -66,7 +66,7 @@ public class Q10326_RespectYourElders extends Quest
 		addSpawnId(HANDERMONKEY);
 		addMoveFinishedId(HANDERMONKEY);
 		addCondMaxLevel(MAX_LEVEL, "32980-04.htm");
-		addCondCompletedQuest(Q10325_SearchingForNewPower.class.getSimpleName(), "32980-5.htm");
+		addCondCompletedQuest(Q10325_SearchingForNewPower.class.getSimpleName(), "32980-05.htm");
 	}
 	
 	@Override
@@ -107,7 +107,7 @@ public class Q10326_RespectYourElders extends Quest
 				final L2PcInstance owner = npc.getVariables().getObject("OWNER", L2PcInstance.class);
 				if (owner != null)
 				{
-					if (npc.calculateDistance(owner, false, false) < 100)
+					if (npc.calculateDistance(owner, false, false) < 120)
 					{
 						npc.getVariables().set("FAIL_COUNT", 0);
 						final int loc_index = npc.getVariables().getInt("MOVE_INDEX", -1) + 1;
@@ -116,7 +116,7 @@ public class Q10326_RespectYourElders extends Quest
 							if (loc_index == 9)
 							{
 								npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getTemplate().getDisplayId(), NpcStringId.GO_GO_GO_CREEK));
-								startQuestTimer("DELETE_NPC", 2000, npc, null);
+								startQuestTimer("DELETE_NPC", 2000, npc, owner);
 								break;
 							}
 							npc.getVariables().set("MOVE_INDEX", loc_index);
