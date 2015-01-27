@@ -21,6 +21,7 @@ package handlers.itemhandlers;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExChooseInventoryAttributeItem;
@@ -42,13 +43,13 @@ public class EnchantAttribute implements IItemHandler
 			return false;
 		}
 		
-		if (activeChar.isEnchanting())
+		if (activeChar.hasItemRequest())
 		{
 			activeChar.sendPacket(SystemMessageId.ANOTHER_ENCHANTMENT_IS_IN_PROGRESS_PLEASE_COMPLETE_THE_PREVIOUS_TASK_THEN_TRY_AGAIN);
 			return false;
 		}
 		
-		activeChar.setActiveEnchantAttrItemId(item.getObjectId());
+		activeChar.addRequest(new EnchantItemAttributeRequest(activeChar, item.getObjectId()));
 		activeChar.sendPacket(new ExChooseInventoryAttributeItem(activeChar, item));
 		return true;
 	}

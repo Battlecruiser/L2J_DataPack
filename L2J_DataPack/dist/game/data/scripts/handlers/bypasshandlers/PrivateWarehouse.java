@@ -50,7 +50,7 @@ public class PrivateWarehouse implements IBypassHandler
 			return false;
 		}
 		
-		if (activeChar.isEnchanting())
+		if (activeChar.hasItemRequest())
 		{
 			return false;
 		}

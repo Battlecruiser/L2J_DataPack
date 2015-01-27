@@ -57,7 +57,7 @@ public final class ConvertItem extends AbstractEffect
 		}
 		
 		final L2PcInstance player = info.getEffected().getActingPlayer();
-		if (player.isEnchanting())
+		if (player.hasItemRequest())
 		{
 			return;
 		}

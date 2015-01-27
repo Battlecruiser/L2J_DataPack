@@ -21,6 +21,7 @@ package handlers.itemhandlers;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.EnchantItemRequest;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ChooseInventoryItem;
@@ -42,13 +43,13 @@ public class EnchantScrolls implements IItemHandler
 			return false;
 		}
 		
-		if (activeChar.isEnchanting())
+		if (activeChar.hasItemRequest())
 		{
 			activeChar.sendPacket(SystemMessageId.ANOTHER_ENCHANTMENT_IS_IN_PROGRESS_PLEASE_COMPLETE_THE_PREVIOUS_TASK_THEN_TRY_AGAIN);
 			return false;
 		}
 		
-		activeChar.setActiveEnchantItemId(item.getObjectId());
+		activeChar.addRequest(new EnchantItemRequest(activeChar, item.getObjectId()));
 		activeChar.sendPacket(new ChooseInventoryItem(item.getId()));
 		return true;
 	}
