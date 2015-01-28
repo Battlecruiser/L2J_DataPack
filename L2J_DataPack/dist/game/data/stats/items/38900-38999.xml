@@ -328,26 +328,36 @@
 		<!-- Appearance stone that changes an armor's appearance for 100 days. Can be used as a top or a one piece. It modifies everything, making the appearance of all armor into that of formalwear. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="38956" name="NC Dinos Appearance Stone (100-day)" additionalName="" type="EtcItem">
 		<!-- Appearance stone that changes an armor's appearance in an NPC Dinos Uniform for 100 days. Can be used as a top or a one piece. It modifies everything, making the appearance of all armor into that of an NC Dinos Uniform. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="38957" name="Wedding Veil Appearance Stone (100-day)" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of a wedding veil for 100 days. Can only be used on hair accessories that use 2 slots. When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="38958" name="Black Phantom Mask Appearance Stone (100-day)" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of a Black Phantom Mask for 100 days. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="38959" name="NC Dinos Hat Appearance Stone (100-day)" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of an NC Dinos Hat for 100 days. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="38960" name="+ 4 Amaranthine Shaper Coupon" additionalName="" type="Weapon">
 		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Shaper. Deleted after event. -->

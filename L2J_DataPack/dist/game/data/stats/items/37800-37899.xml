@@ -129,30 +129,40 @@
 		<!-- Changes the appearance of a hair accessory to that of Metal Shoot hair for 30 days. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37817" name="Metal Suit Breastplate Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Metal Shoot breastplate for 30 days. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37818" name="Metal Suit Gaiters Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a bottom to that of Metal Shoot gaiters for 30 days. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37819" name="Metal Suit Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of Metal Shoot gloves for 30 days. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37820" name="Metal Suit Boots Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of boots to that of Metal Shoot boots for 30 days. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37821" name="Transformation Potion: Metal Suit" additionalName="" type="EtcItem">
@@ -177,240 +187,320 @@
 		<!-- Item that can be exchanged for a special appearance hair accessory appearance stone (15-day limited). The exchange can be done through the Adventurers' Guide. -->
 		<set name="icon" val="icon..etc_level_bustup_ticket_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37825" name="Hair Accessory Appearance Stone Coupon" additionalName="30-day" type="EtcItem">
 		<!-- Item that can be exchanged for a special appearance hair accessory appearance stone (30-day limited). The exchange can be done through the Adventurers' Guide. -->
 		<set name="icon" val="icon..etc_level_bustup_ticket_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37826" name="NC Dinos Hat Appearance Stone" additionalName="15-day" type="EtcItem">
 		<!-- Item that changes the appearance of a hair accessory to that of an NC Dinos Hat (15-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair1" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37827" name="NC Dinos Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Item that changes the appearance of a hair accessory to that of an NC Dinos Hat (30-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair1" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37828" name="Vigilante Hat Appearance Stone" additionalName="15-day" type="EtcItem">
 		<!-- Item that changes the appearance of a hair accessory to that of a Vigilante Hat (15-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37829" name="Vigilante Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Item that changes the appearance of a hair accessory to that of a Vigilante Hat (30-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37830" name="Valentine Appearance Stone Coupon: Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Item that can be exchanged for a special appearance weapon appearance stone (15-day limited). The exchange can be done through the Adventurers' Guide. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37831" name="Valentine Appearance Stone Coupon: Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Item that can be exchanged for a special weapon appearance stone (30-day). The exchange can be done through the Adventurers' Guide. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37832" name="Valentine Appearance Stone: Dagger" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37833" name="Valentine Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37834" name="Valentine Appearance Stone: Two-handed Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37835" name="Valentine Appearance Stone: One-handed Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37836" name="Valentine Appearance Stone: Fist Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37837" name="Valentine Appearance Stone: Spear" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37838" name="Valentine Appearance Stone: Bow" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37839" name="Valentine Appearance Stone: Crossbow" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_crossbow" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37840" name="Valentine Appearance Stone: One-handed Magic Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic sword to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37841" name="Valentine Appearance Stone: One-handed Magic Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic blunt to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37842" name="Valentine Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37843" name="Valentine Appearance Stone: Dualsword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dualsword to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37844" name="Valentine Appearance Stone: Dual Dagger" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37845" name="Valentine Appearance Stone: Dual Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37846" name="Valentine Appearance Stone: Shield" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of a Valentine's Day shield.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_shield" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37847" name="Valentine Appearance Stone: Sigil" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of a Valentine's Day sigil.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="37848" name="Valentine Appearance Stone: Dagger" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of a Valentine's Day weapon.30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37849" name="Valentine Appearance Stone: One-handed Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Valentine's Day weapon.30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37850" name="Valentine Appearance Stone: Two-handed Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of a Valentine's Day weapon.30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37851" name="Valentine Appearance Stone: One-handed Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of a Valentine's Day weapon.30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37852" name="Valentine Appearance Stone: Fist Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of a Valentine's Day weapon.30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37853" name="Valentine Appearance Stone: Spear" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of a Valentine's Day weapon.30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37854" name="Valentine Appearance Stone: Bow" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of a Valentine's Day weapon.30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37855" name="Valentine Appearance Stone: Crossbow" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of a Valentine's Day weapon 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_crossbow" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37856" name="Valentine Appearance Stone: One-handed Magic Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic sword to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37857" name="Valentine Appearance Stone: One-handed Magic Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic blunt to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37858" name="Valentine Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37859" name="Valentine Appearance Stone: Dualsword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dualsword to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37860" name="Valentine Appearance Stone: Dual Dagger" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37861" name="Valentine Appearance Stone: Dual Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37862" name="Valentine Appearance Stone: Shield" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of a Valentine's Day shield. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_shield" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37863" name="Valentine Appearance Stone: Sigil" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of a Valentine's Day sigil. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="37864" name="Hero's SP Scroll (Novice)" additionalName="" type="EtcItem">

@@ -176,6 +176,8 @@
 	<item id="45433" name="NC Dinos Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of an NC Dinos Hat (30-day). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair1" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="45434" name="NC Dinos Hat Appearance Stone Pack (30-day)" additionalName="" type="EtcItem">
@@ -186,6 +188,8 @@
 	<item id="45435" name="NC Dinos Uniform Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of your armor into that of an NC Dinos Uniform. 30-day. Tops and one-pieces only. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
 	</item>
 	<item id="45436" name="NC Dinos Uniform Appearance Stone Pack (30-day)" additionalName="" type="EtcItem">

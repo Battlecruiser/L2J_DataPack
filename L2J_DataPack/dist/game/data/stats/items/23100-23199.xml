@@ -653,6 +653,8 @@
 	<item id="23172" name="Beach Swimsuit Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of a Beach Swimsuit. One pieces are also possible. It modifies everything, making the appearance of all armor into that of swimwear. When changed, the cloak is not visible. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23173" name="Alluring Swimsuit" additionalName="" type="Armor">
@@ -744,51 +746,71 @@
 	<item id="23189" name="Ninja Top Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Ninja outfit. Abilities do not change after modification. Can be used regardless of material. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23190" name="Ninja Pants Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a bottom to that of a Ninja outfit. Abilities do not change after modification. Can be used regardless of material. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23191" name="Ninja Gloves Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of a Ninja outfit. Abilities do not change after modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23192" name="Ninja Shoes Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of shoes to that of a Ninja outfit. Abilities do not change after modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23193" name="Ninja Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of a Ninja outfit. Can only be used on hair accessories that use 2 slots.\n\nWarning: The appearance resets if you bestow a pendant on the appearance-modified hair accessory. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23194" name="Traditional Taiwanese Top Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Traditional Taiwanese outfit. Abilities do not change after modification. Can be used regardless of material. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23195" name="Traditional Taiwanese Pants Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a bottom to that of a Traditional Taiwanese outfit. Abilities do not change after modification. Can be used regardless of material. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23196" name="Traditional Taiwanese Gloves Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of a Traditional Taiwanese outfit. Abilities do not change after modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23197" name="Traditional Taiwanese Shoes Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of shoes to that of a Traditional Taiwanese outfit. Abilities do not change after modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23198" name="Traditional Taiwanese Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of a Traditional Taiwanese outfit. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23199" name="Ninja Outfit Appearance Stone Pack" additionalName="" type="EtcItem">

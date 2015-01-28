@@ -309,6 +309,8 @@
 		<!-- Changes the appearance of your appearance into that of a Dark Assassin Suit. Can use Dark Assassin's Move after appearance modification. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="24135" name="Dark Assassin Top" additionalName="" type="EtcItem">
 		<!-- Take 4 parts to the Assassin Suit (top, pants, gloves, boots) to the Dimensional Merchant to trade in for an Appearance Stone: Dark Assassin Suit. -->

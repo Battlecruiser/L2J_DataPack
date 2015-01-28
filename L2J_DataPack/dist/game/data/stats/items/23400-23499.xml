@@ -443,11 +443,15 @@
 		<!-- Appearance stone that modifies into a Santa outfit. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Santa outfit. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1209600" />
 	</item>
 	<item id="23487" name="Santa Outfit Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Appearance stone that modifies into a Santa outfit. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Santa outfit. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23488" name="Santa Outfit Appearance Stone Pack (14-day)" additionalName="" type="EtcItem">
@@ -478,26 +482,36 @@
 	<item id="23493" name="Metal Suit Top Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Metal Suit. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23494" name="Metal Suit Pants Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Metal Suit. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23495" name="Metal Suit Gloves Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Metal Suit. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23496" name="Metal Suit Shoes Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Metal Suit. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23497" name="Metal Suit Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Metal Suit. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 </list>

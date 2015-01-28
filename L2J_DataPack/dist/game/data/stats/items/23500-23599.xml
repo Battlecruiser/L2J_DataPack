@@ -3,36 +3,50 @@
 	<item id="23503" name="Military Top Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Military look. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23504" name="Military Pants Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Military look. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23505" name="Military Gloves Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Military look. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23506" name="Military Shoes Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Military look. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23507" name="Military Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Military look. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23513" name="Maid Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Maid Costume. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. Female only. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_cutie_maid_stone" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23514" name="Maid Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Maid Costume. Can be used only on hair accessories that take up 2 slots. Female only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23529" name="Fantasy Isle Instant Camera" additionalName="Event" type="Armor">
@@ -44,11 +58,15 @@
 	<item id="23530" name="Automatic Appearance Stone: Emerald Weapon" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of all weapons into those of Emerald Weapons of corresponding types. Can be used on shields and sigils. Double-click to use.\n\nNote: Appearance may reset when the Change Weapon skill is used. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23531" name="Automatic Appearance Stone: Japanese Weapon" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of all weapons into those of Japanese Weapons of corresponding types. Can be used on shields and sigils. Double-click to use.\n\nNote: Appearance may reset when the Change Weapon skill is used. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23532" name="Contender's Mark" additionalName="Event" type="EtcItem">
@@ -69,80 +87,110 @@
 	<item id="23535" name="Hellblade Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Hellblade. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23536" name="Claw of Destruction Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt into that of a Claw of Destruction. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23537" name="Butcher Blades Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger into that of a Butcher Blade. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23538" name="Blades of Delusion Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of a dualsword into that of Blades of Delusion. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23539" name="Blood Brother Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword into that of Blood Brother. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23540" name="Mardil's Fan Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Mardil's Fan. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23541" name="Vesper Noble Light Armor Appearance Stone Set" additionalName="Event" type="EtcItem">
 		<!-- Box that contains a Vesper Noble Light Armor Appearance Stone Set. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23542" name="Vesper Noble Light Armor Top Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of a top into Vesper Noble Light Armor. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23543" name="Vesper Noble Light Armor Pants Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of pants into Vesper Noble Light Armor. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23544" name="Vesper Noble Light Armor Gloves Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of gloves into Vesper Noble Light Armor. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23545" name="Vesper Noble Light Armor Shoes Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of shoes into Vesper Noble Light Armor. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23546" name="Vesper Noble Light Armor Top Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of a top into Vesper Noble Light Armor. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23547" name="Vesper Noble Light Armor Pants Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of pants into Vesper Noble Light Armor. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23548" name="Vesper Noble Light Armor Gloves Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of gloves into Vesper Noble Light Armor. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23549" name="Vesper Noble Light Armor Shoes Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of shoes into Vesper Noble Light Armor. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23550" name="Mysterious Soulshot Small Pack (R-grade)" additionalName="Event" type="EtcItem">
@@ -221,51 +269,71 @@
 		<!-- Changes the appearance of a top into that of a Ninja Outfit. An appearance-modified item has no change in abilities. All armor types. Gives you active skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23565" name="Ninja Pants Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Ninja Outfit. An appearance-modified item has no change in abilities. All armor types. Gives you active skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23566" name="Ninja Gloves Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Ninja Outfit. An appearance-modified item has no change in abilities. Gives you active skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23567" name="Ninja Shoes Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Ninja Outfit. An appearance-modified item has no change in abilities. Gives you active skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23568" name="Ninja Hair Accessory Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Ninja Outfit. Can be used only on hair accessories that take up 2 slots. Gives you active skills upon modification. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23569" name="Ninja Top Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Ninja Outfit. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23570" name="Ninja Pants Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Ninja Outfit. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23571" name="Ninja Gloves Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Ninja Outfit. An appearance-modified item has no change in abilities. Gives you passive skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23572" name="Ninja Shoes Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Ninja Outfit. An appearance-modified item has no change in abilities. Gives you passive skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23573" name="Ninja Hair Accessory Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Ninja Outfit. Can be used only on hair accessories that take up 2 slots. Gives you passive skills upon modification. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23574" name="Agathion - Hussar (Poland)" additionalName="Test Agathion" type="Armor">
 		<!-- Can summon Hussar when equipped. -->
@@ -302,90 +370,122 @@
 		<!-- Box that contains a Vorpal Light Armor Appearance Stone Set. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23581" name="Vorpal Light Armor Top Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of a top into that of Vorpal Light Armor. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23582" name="Vorpal Light Armor Pants Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of pants into that of Vorpal Light Armor. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23583" name="Vorpal Light Armor Gloves Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of Vorpal Light Armor. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23584" name="Vorpal Light Armor Shoes Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of Vorpal Light Armor. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23585" name="Vorpal Light Armor Top Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of a top into that of Vorpal Light Armor. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23586" name="Vorpal Light Armor Pants Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of pants into that of Vorpal Light Armor. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23587" name="Vorpal Light Armor Gloves Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of Vorpal Light Armor. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23588" name="Vorpal Light Armor Shoes Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of Vorpal Light Armor. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23589" name="Monster Weapon Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Appearance Stone for either Hellblade (7-day), Claw of Destruction (7-day), Butcher Blade (7-day), Blades of Delusion (7-day), Blood Brother (7-day), or Mardil's Fan (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23590" name="Hellblade Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Hellblade. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23591" name="Claw of Destruction Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt weapon into that of a Claw of Destruction. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23592" name="Butcher Blades Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger into that of a Butcher Blade. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23593" name="Blades of Delusion Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of a dualsword into that of Blades of Delusion. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23594" name="Blood Brother Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword into that of Blood Brother. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23595" name="Mardil's Fan Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Mardil's Fan. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="23596" name="Blessed Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">

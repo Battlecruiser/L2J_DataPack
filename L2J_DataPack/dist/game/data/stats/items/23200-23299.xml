@@ -66,61 +66,85 @@
 	<item id="23211" name="Drake Maul Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt into that of a Drake Maul. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23212" name="Freya's Staff Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt into that of Freya's Staff. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23213" name="Spezion's Claw Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23214" name="Maliss Stormer Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23215" name="Steregos' Dagger Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a one-handed dagger into that of Steregos' Dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23216" name="Ron's Dual Blunt Weapon Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23217" name="Darion's Hellblade Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of Darion's Hellblade. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23218" name="Doll Blader's Butcher Blades Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger into that of a Doll Blader's Butcher Blade. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23219" name="Tiat's Claw of Destruction Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt into that of Tiat's Claw of Destruction. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23220" name="Aenkinel's Blades of Delusion Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a dualsword into that of Aenkinel's Blades of Delusion. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23221" name="Yehan Klanikus' Blood Brother Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword into that of a Blood Brother. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23222" name="Mardil's Fan Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Mardil's Fan. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23223" name="Monster Weapon Appearance Stone Pack A" additionalName="" type="EtcItem">
@@ -183,11 +207,15 @@
 	<item id="23234" name="Alluring Swimsuit Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of an Alluring Swimsuit. One pieces are also possible. It modifies everything, making the appearance of all armor into that of swimwear. When changed, the cloak is not visible. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23235" name="Seductive Swimsuit Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of a Seductive Swimsuit. One pieces are also possible. It modifies everything, making the appearance of all armor into that of swimwear. When changed, the cloak is not visible. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23236" name="Scroll of Escape: Uthanka's Tomb" additionalName="" type="EtcItem">

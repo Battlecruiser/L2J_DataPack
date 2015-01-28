@@ -310,6 +310,8 @@
 		<!-- Transparent armor appearance stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23854" name="XP Rune II (Lv. 1-95) 100% Pack (3-hour)" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing XP Rune II (Lv. 1-95) 100% (3-hour). -->
@@ -440,6 +442,8 @@
 	<item id="23878" name="Samurai Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit. Only for 2-slot hair accessories.\n\nNote: Bestowing a pendant on a modified hair accessory wil reset the appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23879" name="Samurai Outfit" additionalName="" type="Armor">
@@ -451,6 +455,8 @@
 		<!-- Modifies the appearance of armor into that of a Samurai. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone.\n\nNote: Upgrading or bestowing options on modified armor will reset the appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23881" name="Anakim Outfit" additionalName="" type="Armor">
 		<!-- Anakim's look. -->
@@ -461,6 +467,8 @@
 		<!-- Modifies the appearance of armor into that of Anakim. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone.\n\nNote: Upgrading or bestowing options on modified armor will reset the appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23883" name="Vampire Top" additionalName="" type="Armor">
 		<!-- Vampiric wear. -->
@@ -491,26 +499,36 @@
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23889" name="Vampire Pants Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23890" name="Vampire Gloves Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit. No change in stats. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23891" name="Vampire Shoes Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit. No change in stats. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23892" name="Vampire Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Modifies the appearance of a hair accessory into that of a Vampire Outfit. Only for 2-slot hair accessories. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23893" name="Life Stone Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing various Life Stones. Double-click to obtain either a Life Stone Instilled with Giants' Power, Top-grade Life Stone (R-grade), High-grade Life Stone (R-grade), Mid-grade Life Stone (R-grade), or Life Stone (R-grade). -->

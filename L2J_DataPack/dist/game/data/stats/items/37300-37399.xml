@@ -548,6 +548,8 @@
 	<item id="37378" name="Emerald Weapon Appearance Stone" additionalName="" type="EtcItem">
 		<set name="icon" val="BranchSys.Icon.br_spirit_skill_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="37379" name="Blessed Scroll: Modify Weapon (R-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->

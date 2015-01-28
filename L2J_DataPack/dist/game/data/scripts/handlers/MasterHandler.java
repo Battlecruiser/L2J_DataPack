@@ -153,6 +153,7 @@ import handlers.communityboard.HomepageBoard;
 import handlers.communityboard.MailBoard;
 import handlers.communityboard.MemoBoard;
 import handlers.communityboard.RegionBoard;
+import handlers.itemhandlers.Appearance;
 import handlers.itemhandlers.BeastSoulShot;
 import handlers.itemhandlers.BeastSpiritShot;
 import handlers.itemhandlers.BlessedSpiritShot;
@@ -453,6 +454,7 @@ public class MasterHandler
 		},
 		{
 			// Item Handlers
+			Appearance.class,
 			BeastSoulShot.class,
 			BeastSpiritShot.class,
 			BlessedSpiritShot.class,

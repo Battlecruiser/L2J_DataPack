@@ -3,51 +3,71 @@
 	<item id="22700" name="Equipment Restoration Stone (R-grade)" additionalName="" type="EtcItem">
 		<!-- Restores the original appearance of R-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22701" name="Equipment Restoration Stone (S-grade)" additionalName="" type="EtcItem">
 		<!-- Restores the original appearance of S-grade equipment (weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22702" name="Equipment Restoration Stone (A-grade)" additionalName="" type="EtcItem">
 		<!-- Restores the original appearance of A-grade equipment (weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22703" name="Equipment Restoration Stone (B-grade)" additionalName="" type="EtcItem">
 		<!-- Restores the original appearance of B-grade equipment (weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22704" name="Equipment Restoration Stone (C-grade)" additionalName="" type="EtcItem">
 		<!-- Restores the original appearance of C-grade equipment (weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22705" name="Equipment Restoration Stone (D-grade)" additionalName="" type="EtcItem">
 		<!-- Restores the original appearance of D-grade equipment (weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22706" name="(Test) Formal Wear Appearance Stone" additionalName="" type="EtcItem">
 		<!-- For test use. Changes whole outfit to formal wear. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22707" name="(Test) Immortal Top Appearance Stone" additionalName="" type="EtcItem">
 		<!-- For test use. Top only. Immortal heavy armor. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22708" name="Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="22709" name="Blessed Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting_hair2_stone" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22710" name="Vitality Suspending Potion" additionalName="" type="EtcItem">
@@ -301,81 +321,113 @@
 	<item id="22727" name="Japanese Sword Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Japanese Sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22728" name="Japanese Dagger Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of a Japanese Dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22729" name="Japanese Long Sword Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of a Japanese Long Sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22730" name="Japanese Fist Weapon Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of a Japanese fist weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22731" name="Japanese Great Spear Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of a Japanese Great Spear. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22732" name="Japanese Bow Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of a Japanese Bow. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22733" name="Japanese Crossbow Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of a Japanese crossbow. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_crossbow" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22734" name="Japanese Blunt Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of a Japanese blunt. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22735" name="Japanese Giant Blunt Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt to that of a Japanese blunt. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22736" name="Japanese Magic Blunt Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic blunt to that of a Japanese magic blunt. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22737" name="Japanese Giant Magic Blunt Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt to that of a Japanese giant magic blunt. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22738" name="Japanese Dualsword Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a dualsword to that of a Japanese dualsword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22739" name="Japanese Double Dagger Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger to that of a Japanese Double Dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22740" name="Japanese Double Blunt Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt to that of a Japanese double blunt. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22741" name="Japanese Shield Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of a Japanese shield. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_shield" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22742" name="Japanese Sigil Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of a Japanese sigil. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22743" name="Transformation Scroll: Fairweather Borna" additionalName="" type="EtcItem">

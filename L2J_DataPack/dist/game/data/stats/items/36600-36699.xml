@@ -28,11 +28,15 @@
 		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="36605" name="Blessed Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
 		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="36606" name="Scroll: Modify Weapon (R-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -182,12 +186,16 @@
 		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
 	<item id="36631" name="Blessed Hair Accessory Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.\n\nWarning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36632" name="Emerald Weapon: One-handed Sword" additionalName="" type="Weapon">
@@ -429,96 +437,128 @@
 		<!-- Changes the appearance of a one-handed sword to that of an Emerald one-handed sword. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36649" name="Emerald Weapon Appearance Stone: Dagger" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of an Emerald dagger. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36650" name="Emerald Weapon Appearance Stone: Two-handed Sword" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of an Emerald two-handed sword. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36651" name="Emerald Weapon Appearance Stone: Fist Weapon" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of an Emerald fist weapon. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36652" name="Emerald Weapon Appearance Stone: Spear" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of an Emerald spear. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36653" name="Emerald Weapon Appearance Stone: Bow" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of an Emerald bow. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36654" name="Emerald Weapon Appearance Stone: Crossbow" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of an Emerald crossbow. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_crossbow" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36655" name="Emerald Weapon Appearance Stone: One-handed Blunt Weapon" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of an Emerald one-handed blunt. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36656" name="Emerald Weapon Appearance Stone: Two-handed Blunt Weapon" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt to that of an Emerald two-handed blunt. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36657" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt Weapon" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of an Emerald magic blunt. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36658" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt to that of an Emerald two-handed magic blunt. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36659" name="Emerald Weapon Appearance Stone: Dualsword" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dualsword to that of an Emerald dualsword. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36660" name="Emerald Weapon Appearance Stone: Dual Dagger" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger to that of an Emerald dual dagger. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36661" name="Emerald Weapon Appearance Stone: Dual Blunt Weapon" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt to that of an Emerald dual blunt. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36662" name="Emerald Weapon Appearance Stone: Shield" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of an Emerald shield. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_shield" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36663" name="Emerald Weapon Appearance Stone: Sigil" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of an Emerald sigil. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="time" val="604800" />
 	</item>
 	<item id="36664" name="9th Anniversary Hat" additionalName="" type="Armor">
