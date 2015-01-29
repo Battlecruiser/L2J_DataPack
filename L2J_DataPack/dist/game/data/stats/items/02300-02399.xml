@@ -986,6 +986,7 @@
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1002,6 +1003,7 @@
 		<set name="weight" val="7920" />
 		<set name="price" val="319200" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1082,6 +1084,7 @@
 		<set name="weight" val="3370" />
 		<set name="price" val="309420" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1102,6 +1105,7 @@
 		<set name="weight" val="9980" />
 		<set name="price" val="804400" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FULL_BODY" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1122,6 +1126,7 @@
 		<set name="weight" val="9780" />
 		<set name="price" val="5788000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FULL_BODY" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1142,6 +1147,7 @@
 		<set name="weight" val="9200" />
 		<set name="price" val="8804000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FULL_BODY" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1277,6 +1283,7 @@
 		<set name="weight" val="5500" />
 		<set name="price" val="603400" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FULL_BODY" />
 		<for>
 			<add order="0" stat="pDef" val="202" />
 			<enchant stat="pDef" val="0" />
@@ -1294,6 +1301,7 @@
 		<set name="weight" val="5500" />
 		<set name="price" val="603400" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FULL_BODY" />
 		<for>
 			<add order="0" stat="pDef" val="202" />
 			<enchant stat="pDef" val="0" />
@@ -1311,6 +1319,7 @@
 		<set name="weight" val="5400" />
 		<set name="price" val="4341000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FULL_BODY" />
 		<for>
 			<add order="0" stat="pDef" val="209" />
 			<enchant stat="pDef" val="0" />
@@ -1404,6 +1413,7 @@
 		<set name="weight" val="1920" />
 		<set name="price" val="371400" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>

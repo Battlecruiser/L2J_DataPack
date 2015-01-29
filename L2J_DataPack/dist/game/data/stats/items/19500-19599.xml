@@ -16,61 +16,72 @@
 		<!-- Legendary yellow crystal containing the light of absorbed souls. R-grade . Can bestow an additional special ability on a weapon with a Red Soul Crystal. -->
 		<set name="icon" val="icon.r_soul_stone_i03" />
 		<set name="weight" val="20" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19503" name="Teal Soul Crystal (R-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary Teal crystal containing the light of absorbed souls. R-grade . Can bestow an additional special ability on a weapon with a Green Soul Crystal.ﾠ -->
 		<set name="icon" val="icon.r_soul_stone_i04" />
 		<set name="weight" val="20" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19504" name="Purple Soul Crystal (R-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary purple crystal containing the light of absorbed souls. R-grade . Can bestow an additional special ability on a weapon with a Blue Soul Crystal. -->
 		<set name="icon" val="icon.r_soul_stone_i05" />
 		<set name="weight" val="20" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19505" name="Yellow Soul Crystal (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary yellow crystal containing the light of absorbed souls. R95-grade. Can bestow an additional special ability on a weapon with a Red Soul Crystal. -->
 		<set name="icon" val="icon.r95_soul_stone_i03" />
 		<set name="weight" val="20" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19506" name="Teal Soul Crystal (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary Teal crystal containing the light of absorbed souls. R95-grade . Can bestow an additional special ability on a weapon with a Green Soul Crystal.ﾠ -->
 		<set name="icon" val="icon.r95_soul_stone_i04" />
 		<set name="weight" val="20" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19507" name="Purple Soul Crystal (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary purple crystal containing the light of absorbed souls. R95-grade . Can bestow an additional special ability on a weapon with a Blue Soul Crystal. -->
 		<set name="icon" val="icon.r95_soul_stone_i05" />
 		<set name="weight" val="20" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19508" name="Yellow Soul Crystal Fragment (R-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary yellow crystal fragment containing the light of absorbed souls. R-grade. Collect 10 to make a complete crystal. -->
 		<set name="icon" val="icon.r_soul_stone_piece_i03" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19509" name="Teal Soul Crystal Fragment (R-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary Teal crystal fragment containing the light of absorbed souls. R-grade. Collect 10 to make a complete crystal. -->
 		<set name="icon" val="icon.r_soul_stone_piece_i04" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19510" name="Purple Soul Crystal Fragment (R-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary purple crystal fragment containing the light of absorbed souls. R-grade. Collect 10 to make a complete crystal. -->
 		<set name="icon" val="icon.r_soul_stone_piece_i05" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19511" name="Yellow Soul Crystal Fragment (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary yellow crystal fragment containing the light of absorbed souls. R95-grade. Collect 10 to make a complete crystal. -->
 		<set name="icon" val="icon.r95_soul_stone_piece_i03" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19512" name="Teal Soul Crystal Fragment (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary Teal crystal fragment containing the light of absorbed souls. R95-grade. Collect 10 to make a complete crystal. -->
 		<set name="icon" val="icon.r95_soul_stone_piece_i04" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19513" name="Purple Soul Crystal Fragment (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary purple crystal fragment containing the light of absorbed souls. R95-grade. Collect 10 to make a complete crystal. -->
@@ -142,6 +153,7 @@
 		<set name="crystal_count" val="146" />
 		<set name="weight" val="530" />
 		<set name="price" val="6878552" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add stat="pDef" val="116.0" />
 			<enchant stat="pDef" val="0" />
@@ -156,6 +168,7 @@
 		<set name="crystal_count" val="391" />
 		<set name="weight" val="7520" />
 		<set name="price" val="18342805" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add stat="pDef" val="309.0" />
 			<enchant stat="pDef" val="0" />
@@ -182,6 +195,7 @@
 		<set name="crystal_count" val="97" />
 		<set name="weight" val="510" />
 		<set name="price" val="4585701" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add stat="pDef" val="77.0" />
 			<enchant stat="pDef" val="0" />
@@ -222,6 +236,7 @@
 		<set name="crystal_count" val="146" />
 		<set name="weight" val="530" />
 		<set name="price" val="6878552" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add stat="pDef" val="116.0" />
 			<enchant stat="pDef" val="0" />
@@ -236,6 +251,7 @@
 		<set name="crystal_count" val="391" />
 		<set name="weight" val="4140" />
 		<set name="price" val="18342805" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add stat="pDef" val="247.0" />
 			<add stat="rEvas" val="5.0" />
@@ -251,6 +267,7 @@
 		<set name="crystal_count" val="244" />
 		<set name="weight" val="1320" />
 		<set name="price" val="11464253" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add stat="pDef" val="154.0" />
 			<add stat="rEvas" val="3.0" />
@@ -266,6 +283,7 @@
 		<set name="crystal_count" val="97" />
 		<set name="weight" val="510" />
 		<set name="price" val="4585701" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add stat="pDef" val="77.0" />
 			<enchant stat="pDef" val="0" />
@@ -336,6 +354,7 @@
 		<set name="crystal_count" val="97" />
 		<set name="weight" val="510" />
 		<set name="price" val="4585701" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add stat="pDef" val="77.0" />
 			<enchant stat="pDef" val="0" />
@@ -362,6 +381,7 @@
 		<set name="crystal_count" val="399" />
 		<set name="weight" val="530" />
 		<set name="price" val="18736280" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add stat="pDef" val="128.0" />
 			<enchant stat="pDef" val="0" />
@@ -376,6 +396,7 @@
 		<set name="crystal_count" val="1065" />
 		<set name="weight" val="7520" />
 		<set name="price" val="49963413" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add stat="pDef" val="341.0" />
 			<enchant stat="pDef" val="0" />
@@ -389,6 +410,7 @@
 		<set name="crystal_count" val="666" />
 		<set name="weight" val="3170" />
 		<set name="price" val="31227133" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add stat="pDef" val="213.0" />
 			<enchant stat="pDef" val="0" />
@@ -402,6 +424,7 @@
 		<set name="crystal_count" val="266" />
 		<set name="weight" val="510" />
 		<set name="price" val="12490853" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add stat="pDef" val="85.0" />
 			<enchant stat="pDef" val="0" />
@@ -415,6 +438,7 @@
 		<set name="crystal_count" val="266" />
 		<set name="weight" val="1070" />
 		<set name="price" val="12490853" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add stat="pDef" val="85.0" />
 			<enchant stat="pDef" val="0" />
@@ -429,6 +453,7 @@
 		<set name="crystal_count" val="266" />
 		<set name="weight" val="1130" />
 		<set name="price" val="12490853" />
+		<set name="commissionItemType" val="SHIELD" />
 		<for>
 			<add stat="sDef" val="466.0" />
 			<add stat="rShld" val="20.0" />
@@ -442,6 +467,7 @@
 		<set name="crystal_count" val="399" />
 		<set name="weight" val="530" />
 		<set name="price" val="18736280" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add stat="pDef" val="128.0" />
 			<enchant stat="pDef" val="0" />
@@ -456,6 +482,7 @@
 		<set name="crystal_count" val="1065" />
 		<set name="weight" val="4140" />
 		<set name="price" val="49963413" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add stat="pDef" val="272.0" />
 			<add stat="rEvas" val="5.0" />
@@ -471,6 +498,7 @@
 		<set name="crystal_count" val="666" />
 		<set name="weight" val="1320" />
 		<set name="price" val="31227133" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add stat="pDef" val="170.0" />
 			<add stat="rEvas" val="3.0" />
@@ -486,6 +514,7 @@
 		<set name="crystal_count" val="266" />
 		<set name="weight" val="510" />
 		<set name="price" val="12490853" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add stat="pDef" val="85.0" />
 			<enchant stat="pDef" val="0" />
@@ -499,6 +528,7 @@
 		<set name="crystal_count" val="266" />
 		<set name="weight" val="1070" />
 		<set name="price" val="12490853" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add stat="pDef" val="85.0" />
 			<enchant stat="pDef" val="0" />
@@ -512,6 +542,7 @@
 		<set name="crystal_count" val="399" />
 		<set name="weight" val="530" />
 		<set name="price" val="18736280" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add stat="pDef" val="128.0" />
 			<enchant stat="pDef" val="0" />
@@ -526,6 +557,7 @@
 		<set name="crystal_count" val="1065" />
 		<set name="weight" val="1750" />
 		<set name="price" val="49963413" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add stat="pDef" val="187.0" />
 			<add stat="mDef" val="41.0" />
@@ -541,6 +573,7 @@
 		<set name="crystal_count" val="666" />
 		<set name="weight" val="850" />
 		<set name="price" val="31227133" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add stat="pDef" val="117.0" />
 			<add stat="mDef" val="27.0" />
@@ -556,6 +589,7 @@
 		<set name="crystal_count" val="266" />
 		<set name="weight" val="510" />
 		<set name="price" val="12490853" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add stat="pDef" val="85.0" />
 			<enchant stat="pDef" val="0" />
@@ -569,6 +603,7 @@
 		<set name="crystal_count" val="266" />
 		<set name="weight" val="1070" />
 		<set name="price" val="12490853" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add stat="pDef" val="85.0" />
 			<enchant stat="pDef" val="0" />
@@ -582,6 +617,7 @@
 		<set name="crystal_count" val="1226" />
 		<set name="weight" val="530" />
 		<set name="price" val="57490000" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add stat="pDef" val="141.0" />
 			<enchant stat="pDef" val="0" />
@@ -596,6 +632,7 @@
 		<set name="crystal_count" val="3270" />
 		<set name="weight" val="7520" />
 		<set name="price" val="153308000" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add stat="pDef" val="377.0" />
 			<enchant stat="pDef" val="0" />
@@ -609,6 +646,7 @@
 		<set name="crystal_count" val="2044" />
 		<set name="weight" val="3170" />
 		<set name="price" val="95818000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add stat="pDef" val="235.0" />
 			<enchant stat="pDef" val="0" />
@@ -622,6 +660,7 @@
 		<set name="crystal_count" val="817" />
 		<set name="weight" val="510" />
 		<set name="price" val="38327000" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add stat="pDef" val="94.0" />
 			<enchant stat="pDef" val="0" />
@@ -635,6 +674,7 @@
 		<set name="crystal_count" val="817" />
 		<set name="weight" val="1070" />
 		<set name="price" val="38327000" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add stat="pDef" val="94.0" />
 			<enchant stat="pDef" val="0" />
@@ -662,6 +702,7 @@
 		<set name="crystal_count" val="1226" />
 		<set name="weight" val="530" />
 		<set name="price" val="57490000" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add stat="pDef" val="141.0" />
 			<enchant stat="pDef" val="0" />
@@ -676,6 +717,7 @@
 		<set name="crystal_count" val="3270" />
 		<set name="weight" val="4140" />
 		<set name="price" val="153308000" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add stat="pDef" val="301.0" />
 			<add stat="rEvas" val="5.0" />
@@ -691,6 +733,7 @@
 		<set name="crystal_count" val="2044" />
 		<set name="weight" val="1320" />
 		<set name="price" val="95818000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add stat="pDef" val="188.0" />
 			<add stat="rEvas" val="3.0" />
@@ -706,6 +749,7 @@
 		<set name="crystal_count" val="817" />
 		<set name="weight" val="510" />
 		<set name="price" val="38327000" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add stat="pDef" val="94.0" />
 			<enchant stat="pDef" val="0" />
@@ -719,6 +763,7 @@
 		<set name="crystal_count" val="817" />
 		<set name="weight" val="1070" />
 		<set name="price" val="38327000" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add stat="pDef" val="94.0" />
 			<enchant stat="pDef" val="0" />
@@ -732,6 +777,7 @@
 		<set name="crystal_count" val="1226" />
 		<set name="weight" val="530" />
 		<set name="price" val="57490000" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add stat="pDef" val="141.0" />
 			<enchant stat="pDef" val="0" />
@@ -746,6 +792,7 @@
 		<set name="crystal_count" val="3270" />
 		<set name="weight" val="1750" />
 		<set name="price" val="153308000" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add stat="pDef" val="207.0" />
 			<add stat="mDef" val="47.0" />
@@ -761,6 +808,7 @@
 		<set name="crystal_count" val="2044" />
 		<set name="weight" val="850" />
 		<set name="price" val="95818000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add stat="pDef" val="129.0" />
 			<add stat="mDef" val="31.0" />
@@ -776,6 +824,7 @@
 		<set name="crystal_count" val="817" />
 		<set name="weight" val="510" />
 		<set name="price" val="38327000" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add stat="pDef" val="94.0" />
 			<enchant stat="pDef" val="0" />
@@ -789,6 +838,7 @@
 		<set name="crystal_count" val="817" />
 		<set name="weight" val="1070" />
 		<set name="price" val="38327000" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add stat="pDef" val="94.0" />
 			<enchant stat="pDef" val="0" />
@@ -802,6 +852,7 @@
 		<set name="crystal_count" val="2702" />
 		<set name="weight" val="530" />
 		<set name="price" val="126687000" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add stat="pDef" val="150.0" />
 			<enchant stat="pDef" val="0" />
@@ -816,6 +867,7 @@
 		<set name="crystal_count" val="7207" />
 		<set name="weight" val="7520" />
 		<set name="price" val="337834000" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add stat="pDef" val="400.0" />
 			<enchant stat="pDef" val="0" />
@@ -829,6 +881,7 @@
 		<set name="crystal_count" val="4504" />
 		<set name="weight" val="3170" />
 		<set name="price" val="211146000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add stat="pDef" val="250.0" />
 			<enchant stat="pDef" val="0" />
@@ -842,6 +895,7 @@
 		<set name="crystal_count" val="1801" />
 		<set name="weight" val="510" />
 		<set name="price" val="84458000" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add stat="pDef" val="100.0" />
 			<enchant stat="pDef" val="0" />
@@ -855,6 +909,7 @@
 		<set name="crystal_count" val="1801" />
 		<set name="weight" val="1070" />
 		<set name="price" val="84458000" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add stat="pDef" val="100.0" />
 			<enchant stat="pDef" val="0" />
@@ -882,6 +937,7 @@
 		<set name="crystal_count" val="2702" />
 		<set name="weight" val="530" />
 		<set name="price" val="126687000" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add stat="pDef" val="150.0" />
 			<enchant stat="pDef" val="0" />
@@ -926,6 +982,7 @@
 		<set name="crystal_count" val="1801" />
 		<set name="weight" val="510" />
 		<set name="price" val="84458000" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add stat="pDef" val="100.0" />
 			<enchant stat="pDef" val="0" />
@@ -952,6 +1009,7 @@
 		<set name="crystal_count" val="2702" />
 		<set name="weight" val="530" />
 		<set name="price" val="126687000" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add stat="pDef" val="150.0" />
 			<enchant stat="pDef" val="0" />
@@ -981,6 +1039,7 @@
 		<set name="crystal_count" val="4504" />
 		<set name="weight" val="850" />
 		<set name="price" val="211146000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add stat="pDef" val="137.0" />
 			<add stat="mDef" val="33.0" />
@@ -996,6 +1055,7 @@
 		<set name="crystal_count" val="1801" />
 		<set name="weight" val="510" />
 		<set name="price" val="84458000" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add stat="pDef" val="100.0" />
 			<enchant stat="pDef" val="0" />
@@ -1009,6 +1069,7 @@
 		<set name="crystal_count" val="1801" />
 		<set name="weight" val="1070" />
 		<set name="price" val="84458000" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add stat="pDef" val="100.0" />
 			<enchant stat="pDef" val="0" />

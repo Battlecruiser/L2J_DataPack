@@ -46,6 +46,7 @@
 		<set name="weight" val="60" />
 		<set name="price" val="2000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
 	<item id="40206" name="Specter Fragment" additionalName="" type="EtcItem">
 		<!-- Main ingredient for crafting a random R95-grade item. -->
@@ -53,6 +54,7 @@
 		<set name="weight" val="60" />
 		<set name="price" val="4000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
 	<item id="40207" name="Amaranthine Fragment" additionalName="" type="EtcItem">
 		<!-- Main ingredient for crafting a random R99-grade item. -->
@@ -75,6 +77,7 @@
 		<set name="weight" val="30" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="40211" name="Recipe: R95 (100%)" additionalName="" type="EtcItem">
 		<!-- Recipe for crafting an R95-grade equipment. Results vary. Very high chance of obtaining blessed equipment. Requires Create Item Lv. 13. 100% success rate. Tyrr Maestros only. -->
@@ -82,6 +85,7 @@
 		<set name="weight" val="30" />
 		<set name="price" val="40000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="40212" name="Recipe: R99 (100%)" additionalName="" type="EtcItem">
 		<!-- Recipe for crafting an R99-grade equipment. Results vary. Very high chance of obtaining blessed equipment. Requires Create Item Lv. 14. 100% success rate. Tyrr Maestros only. -->
@@ -399,6 +403,7 @@
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="40254" name="Potion of Protection: Hold" additionalName="Top-grade" type="EtcItem">
 		<!-- Hold Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
@@ -423,6 +428,7 @@
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="40258" name="Potion of Protection: Sleep" additionalName="Top-grade" type="EtcItem">
 		<!-- Sleep Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
@@ -492,6 +498,7 @@
 		<!-- Changes the appearance of your entire armor into that of a Dark Assassit Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="40271" name="Orc's Normal Old Box" additionalName="" type="EtcItem">
 		<!-- A box of relics gathered by the Aspiricing Orc Ruler of Aden. -->

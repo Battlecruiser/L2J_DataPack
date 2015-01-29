@@ -166,6 +166,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="5809" type="EtcItem" name="Spellbook: Aqua Splash">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
@@ -582,6 +583,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2177-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>

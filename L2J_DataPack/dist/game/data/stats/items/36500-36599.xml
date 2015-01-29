@@ -164,18 +164,21 @@
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="GEMSTONE" />
 	</item>
 	<item id="36514" name="Elcyum Crystal" additionalName="" type="EtcItem">
 		<!-- Rare mineral discovered in the deepest part of the Spine Mine area. Take 10 Elcyum Crystals to a Merchant of Mammon to receive Elcyum. -->
 		<set name="icon" val="icon.etc_earth_crystal_1_i00" />
 		<set name="price" val="10000000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="GEMSTONE" />
 	</item>
 	<item id="36515" name="Elcyum" additionalName="" type="EtcItem">
 		<!-- Rare mineral discovered in the deepest part of the Spine Mine area. Use the item to receive various abilities including item enchantment/augmentation. -->
 		<set name="icon" val="icon.etc_crystal_cave_crystal_i0" />
 		<set name="price" val="100000000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="GEMSTONE" />
 	</item>
 	<item id="36516" name="Worn Leather" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Leather (Lv. 2) through a Warsmith. -->
@@ -183,6 +186,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36517" name="Leather" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Durable Leather (Lv. 3), or downgrade to a certain amount of Worn Leather(Lv. 1), through a Warsmith. -->
@@ -190,6 +194,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="4574" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36518" name="Durable Leather" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Quality Leather (Lv. 4), or downgrade to a certain amount of Leather (Lv. 2), through a Warsmith. -->
@@ -197,6 +202,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="23642" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36519" name="Quality Leather" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Exquisite Leather (Lv. 5), or downgrade to a certain amount of Durable Leather (Lv. 3), through a Warsmith. -->
@@ -204,6 +210,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="255084" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36520" name="Exquisite Leather" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Can be downgraded to a certain amount of Quality Leather (Lv. 4) through a Warsmith. -->
@@ -218,6 +225,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="260" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36522" name="Silver" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Adamantite (Lv. 3), or downgrade to a certain number of Iron Ores (Lv. 1), through a Warsmith. -->
@@ -225,6 +233,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="11932" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36523" name="Adamantite" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Orichalcum (Lv. 4), or downgrade to a certain amount of Silver (Lv. 2), through a Warsmith. -->
@@ -232,6 +241,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="61674" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36524" name="Orichalcum" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Durandil (Lv. 5), or downgrade to a certain amount of Adamantite (Lv. 3), through a Warsmith. -->
@@ -239,6 +249,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="665434" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36525" name="Durandil" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Can be downgraded to a certain amount of Orichalcum (Lv. 4) through a Warsmith. -->
@@ -246,6 +257,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="11680552" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36526" name="Fiber" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Synthetic Fiber (Lv. 2) through a Warsmith. -->
@@ -253,6 +265,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="92" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36527" name="Synthetic Fiber" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Metallic Fiber (Lv. 3), or downgrade to a certain amount of Fiber (Lv. 1), through a Warsmith. -->
@@ -260,6 +273,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="4176" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36528" name="Metallic Fiber" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Quality Fiber (Lv. 4), or downgrade to a certain amount of Synthetic Fiber (Lv. 2), through a Warsmith. -->
@@ -267,6 +281,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="21586" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36529" name="Quality Fiber" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Exquisite Fiber (Lv. 5), or downgrade to a certain amount of Metallic Fiber (Lv. 3), through a Warsmith. -->
@@ -274,6 +289,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="232902" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36530" name="Exquisite Fiber" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Can be downgraded to a certain amount of Quality Fiber (Lv. 4) through a Warsmith. -->
@@ -288,6 +304,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="300" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36532" name="Thin Braid" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Synthetic Braid (Lv. 3), or downgrade to a certain amount of Thread (Lv. 1), through a Warsmith. -->
@@ -295,6 +312,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="13722" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36533" name="Synthetic Braid" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Durable Braid (Lv. 4), or downgrade to a certain amount of Thin Braid (Lv. 2), through a Warsmith. -->
@@ -302,6 +320,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="70924" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36534" name="Durable Braid" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Quality Braid (Lv. 5), or downgrade to a certain amount of Synthetic Braid (Lv. 3), through a Warsmith. -->
@@ -309,6 +328,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="765250" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36535" name="Quality Braid" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Can be downgraded to a certain amount of Durable Braid (Lv. 4) through a Warsmith. -->
@@ -316,6 +336,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="13432636" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36536" name="Worn Leather Braid" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Leather Braid (Lv. 2) through a Warsmith. -->
@@ -323,6 +344,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36537" name="Leather Braid" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Durable Leather Braid (Lv. 3), or downgrade to a certain amount of Worn Leather Braid (Lv. 1), through a Warsmith. -->
@@ -337,6 +359,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="94566" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36539" name="Quality Leather Braid" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Exquisite Leather Braid (Lv. 5), or downgrade to a certain amount of Durable Leather Braid (Lv. 3), through a Warsmith. -->
@@ -344,6 +367,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="1020332" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36540" name="Exquisite Leather Braid" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Can be downgraded to a certain amount of Quality Leather Braid (Lv. 4) through a Warsmith. -->
@@ -358,6 +382,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="560" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36542" name="Silver Wire" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Adamantite Wire (Lv. 3), or downgrade to a certain amount of Steel Wire (Lv. 1), through a Warsmith. -->
@@ -365,6 +390,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="25656" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36543" name="Adamantite Wire" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Orichalcum Wire (Lv. 4), or downgrade to a certain amount of Silver Wire (Lv. 2), through a Warsmith. -->
@@ -372,6 +398,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="132598" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36544" name="Orichalcum Wire" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain amount to upgrade to Durandil Wire (Lv. 5), or downgrade to a certain amount of Adamantite Wire (Lv. 3), through a Warsmith. -->
@@ -379,6 +406,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="1430684" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36545" name="Durandil Wire" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Can be downgraded to a certain amount of Orichalcum Wire (Lv. 4) through a Warsmith. -->
@@ -393,6 +421,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="391" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36547" name="Weapon Fragment" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Weapon Fragment (Mid-grade) (Lv. 3), or downgrade to a certain number of Weapon Fragments (Low-grade) (Lv. 1), through a Warsmith. -->
@@ -400,6 +429,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="17899" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36548" name="Weapon Fragment (Mid-grade)" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Weapon Fragment (High-grade) (Lv. 4), or downgrade to a certain number of Weapon Fragments (Low-grade) (Lv. 2), through a Warsmith. -->
@@ -407,6 +437,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="92510" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36549" name="Weapon Fragment (High-grade)" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Weapon Fragment (Top-grade) (Lv. 5), or downgrade to a certain number of Weapon Fragments (Mid-grade) (Lv. 3), through a Warsmith. -->
@@ -414,6 +445,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="998152" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36550" name="Weapon Fragment (Top-grade)" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Can be downgraded to a certain number of Weapon Fragments (High-grade) (Lv. 4) through a Warsmith. -->
@@ -421,6 +453,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="17520829" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36551" name="Armor Fragment (Low-grade)" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Armor Fragment (Lv. 2) through a Warsmith. -->
@@ -428,6 +461,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="443" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36552" name="Armor Fragment" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Armor Fragment (Mid-grade) (Lv. 3), or downgrade to a certain number of Armor Fragments (Low-grade) (Lv. 1), through a Warsmith. -->
@@ -435,6 +469,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="20285" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36553" name="Armor Fragment (Mid-grade)" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Armor Fragment (High-grade) (Lv. 4), or downgrade to a certain number of Armor Fragments (Lv. 2), through a Warsmith. -->
@@ -442,6 +477,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="104845" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36554" name="Armor Fragment (High-grade)" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Armor Fragment (Top-grade) (Lv. 5), or downgrade to a certain number of Armor Fragments (Mid-grade) (Lv. 3), through a Warsmith. -->
@@ -449,6 +485,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="1131239" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36555" name="Armor Fragment (Top-grade)" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Can be downgraded to a certain number of Armor Fragments (High-grade) (Lv. 4) through a Warsmith. -->
@@ -463,6 +500,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="130" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36557" name="Accessory Gem" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Accessory Gem (Mid-grade) (Lv. 3), or downgrade to a certain number of Accessory Gems (Low-grade) (Lv. 1), through a Warsmith. -->
@@ -470,6 +508,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="5966" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36558" name="Accessory Gem (Mid-grade)" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Accessory Gem (High-grade) (Lv. 4), or downgrade to a certain number of Accessory Gems (Lv. 2), through a Warsmith. -->
@@ -477,6 +516,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="30837" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36559" name="Accessory Gem (High-grade)" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Accessory Gem (Top-grade) (Lv. 5), or downgrade to a certain number of Accessory Gems (Mid-grade) (Lv. 3), through a Warsmith. -->
@@ -484,6 +524,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="332717" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36560" name="Accessory Gem (Top-grade)" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Can be downgraded to a certain number of Accessory Gems (High-grade) (Lv. 4) through a Warsmith. -->
@@ -491,6 +532,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="5840276" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36561" name="Cokes" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Greater Cokes (Lv. 2) through a Warsmith. -->
@@ -498,6 +540,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="535" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36562" name="Greater Cokes" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Synthetic Cokes (Lv. 3), or downgrade to a certain number of Cokes (Lv. 1), through a Warsmith. -->
@@ -505,6 +548,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="24462" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36563" name="Synthetic Cokes" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Greater Synthetic Cokes (Lv. 4), or downgrade to a certain number of Greater Cokes (Lv. 2), through a Warsmith. -->
@@ -512,6 +556,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="126430" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36564" name="Greater Synthetic Cokes" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Collect a certain number to upgrade to Exquisite Synthetic Cokes (Lv. 5), or downgrade to a certain number of Synthetic Cokes (Lv. 3), through a Warsmith. -->
@@ -519,6 +564,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="1364141" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36565" name="Exquisite Synthetic Cokes" additionalName="" type="EtcItem">
 		<!-- Ingredient used for Dwarven crafting. Can be sold in general stores. Can be downgraded to a certain number of Greater Synthetic Cokes (Lv. 4) through a Warsmith. -->
@@ -567,6 +613,7 @@
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
 		<set name="icon" val="icon.weapon_change_i06" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36575" name="Scroll: Modify Weapon (S-grade)" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -587,11 +634,13 @@
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="icon.weapon_change_i02" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36579" name="Scroll: Modify Weapon (D-grade)" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="icon.weapon_change_i01" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36580" name="Blessed Scroll: Modify Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -627,6 +676,7 @@
 		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena. -->
 		<set name="icon" val="icon.armor_change_i06" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36587" name="Scroll: Modify Armor (S-grade)" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 50,000 adena. -->
@@ -637,11 +687,13 @@
 		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 24000 adena. -->
 		<set name="icon" val="icon.armor_change_i04" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36589" name="Scroll: Modify Armor (B-grade)" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 8000 adena. -->
 		<set name="icon" val="icon.armor_change_i03" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36590" name="Scroll: Modify Armor (C-grade)" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 1500 adena. -->

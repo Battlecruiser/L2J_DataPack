@@ -80,6 +80,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22299-1" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player insideZoneId="12010, 12001" />
 		</cond>
@@ -735,6 +736,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8296-1" />
 		<set name="item_skill" val="3552-1;21253-1" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<cond msgId="1518">
 			<and>
 				<player level="81" />

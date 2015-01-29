@@ -157,6 +157,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="1420" type="EtcItem" name="Ingredient List">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
@@ -583,6 +584,7 @@
 		<set name="price" val="650" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
 	<item id="1459" type="EtcItem" name="Crystal (C-grade)">
 		<set name="icon" val="icon.etc_crystal_green_i00" />
@@ -591,6 +593,7 @@
 		<set name="price" val="3000" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
 	<item id="1460" type="EtcItem" name="Crystal (B-grade)">
 		<set name="icon" val="icon.etc_crystal_red_i00" />
@@ -599,6 +602,7 @@
 		<set name="price" val="9000" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
 	<item id="1461" type="EtcItem" name="Crystal (A-grade)">
 		<set name="icon" val="icon.etc_crystal_silver_i00" />
@@ -607,6 +611,7 @@
 		<set name="price" val="12500" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
 	<item id="1462" type="EtcItem" name="Crystal (S-grade)">
 		<set name="icon" val="icon.etc_crystal_gold_i00" />
@@ -615,6 +620,7 @@
 		<set name="price" val="15000" />
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
 	<item id="1463" type="EtcItem" name="Soulshot (D-grade)">
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
@@ -627,6 +633,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2150-1" />
+		<set name="commissionItemType" val="SOULSHOT" />
 	</item>
 	<item id="1464" type="EtcItem" name="Soulshot (C-grade)">
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
@@ -639,6 +646,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2151-1" />
+		<set name="commissionItemType" val="SOULSHOT" />
 	</item>
 	<item id="1465" type="EtcItem" name="Soulshot (B-grade)">
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
@@ -651,6 +659,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2152-1" />
+		<set name="commissionItemType" val="SOULSHOT" />
 	</item>
 	<item id="1466" type="EtcItem" name="Soulshot (A-grade)">
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
@@ -663,6 +672,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2153-1" />
+		<set name="commissionItemType" val="SOULSHOT" />
 	</item>
 	<item id="1467" type="EtcItem" name="Soulshot (S-grade)">
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
@@ -675,6 +685,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2154-1" />
+		<set name="commissionItemType" val="SOULSHOT" />
 	</item>
 	<item id="1468" type="EtcItem" name="Gludin Panacen">
 		<set name="icon" val="icon.etc_reagent_gold_i00" />

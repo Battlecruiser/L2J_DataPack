@@ -199,6 +199,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
@@ -223,6 +224,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
@@ -235,6 +237,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
@@ -247,6 +250,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
@@ -283,6 +287,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
@@ -295,6 +300,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
@@ -555,6 +561,7 @@
 		<!-- Can be used at level 85 or above. Double-click to acquire the Talisman - Longing. The acquired Talisman - Longing cannot be exchanged, dropped or sold in a private store. -->
 		<set name="icon" val="icon.accessory_longing_talisman_i01" />
 		<set name="weight" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="35650" name="Summon Scroll: Bratty Angma" additionalName="" type="EtcItem">
 		<!-- Item that can summon a combat-type Bratty Angma. Can be used at levels 76 - 84. If you can reduce the Bratty Angma's HP to 0 within 30 seconds, you will acquire 100 Clan Reputation, 100 individual fame, and receive an additional item. Only PC's who belong to a clan can summon it. The requirements for acquiring individual fame and Clan Reputation must be met. -->
@@ -643,16 +650,19 @@
 		<!-- Scroll that replenishes 10,000 individual fame. -->
 		<set name="icon" val="icon.etc_pvppoint_scroll1" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="35665" name="Scroll: 50,000 Individual Fame" additionalName="" type="EtcItem">
 		<!-- Scroll that replenishes 50,000 individual fame. -->
 		<set name="icon" val="icon.etc_pvppoint_scroll5" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="35666" name="Scroll: 100,000 Individual Fame" additionalName="" type="EtcItem">
 		<!-- Scroll that replenishes 100,000 individual fame. -->
 		<set name="icon" val="icon.etc_pvppoint_scroll10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="35667" name="Tauti's Fragment" additionalName="" type="EtcItem">
 		<!-- It seems to have broken away from a part of Tauti. It contains Tauti's strength. -->

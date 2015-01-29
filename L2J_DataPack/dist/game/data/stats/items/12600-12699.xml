@@ -333,6 +333,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="540" />
 		<set name="price" val="3195000" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="55" />
 		</for>
@@ -411,6 +412,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="550" />
 		<set name="price" val="4793000" />
+		<set name="commissionItemType" val="HELMET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1231,6 +1233,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3210" />
 		<set name="price" val="15248000" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1244,6 +1247,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
+		<set name="commissionItemType" val="GLOVES" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>

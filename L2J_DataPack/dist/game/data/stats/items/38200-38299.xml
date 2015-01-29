@@ -34,6 +34,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="38205" name="Lobster Appearance Stone: Fist Weapon" additionalName="" type="EtcItem">
 		<!-- Turns the appearance of a fist weapon into that of a Lobster . -->
@@ -241,31 +242,37 @@
 		<!-- For 30 min., WIT + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="38223" name="Fish Stew" additionalName="INT" type="EtcItem">
 		<!-- For 30 min., INT + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="38224" name="Fish Stew" additionalName="MEN" type="EtcItem">
 		<!-- For 30 min., MEN + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="38225" name="Fish Stew" additionalName="DEX" type="EtcItem">
 		<!-- For 30 min., DEX + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="38226" name="Fish Stew" additionalName="STR" type="EtcItem">
 		<!-- For 30 min., STR + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="38227" name="Fish Stew" additionalName="CON" type="EtcItem">
 		<!-- For 30 min., CON + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="38228" name="Lady's Hairpin" additionalName="STR" type="Armor">
 		<!-- STR + 3. Female only. -->
@@ -385,6 +392,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38245" name="Party Mask" additionalName="MEN" type="Armor">
 		<!-- MEN + 3. -->
@@ -392,6 +400,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38246" name="Party Mask" additionalName="INT" type="Armor">
 		<!-- INT + 3. -->
@@ -399,6 +408,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38247" name="Party Mask" additionalName="WIT" type="Armor">
 		<!-- WIT + 3. -->
@@ -406,6 +416,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38248" name="Party Mask" additionalName="Critical Rate" type="Armor">
 		<!-- Critical Rate + 50. -->
@@ -413,6 +424,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38249" name="Party Mask" additionalName="Critical Damage" type="Armor">
 		<!-- Critical Damage + 90, M. Critical Damage + 68. -->
@@ -420,6 +432,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38250" name="Party Mask" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5%. -->
@@ -427,6 +440,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38251" name="Party Mask" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5%. -->
@@ -441,6 +455,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38253" name="Party Mask" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5%. -->
@@ -448,6 +463,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38254" name="Party Mask" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10%. -->
@@ -462,6 +478,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38256" name="Monocle" additionalName="STR" type="Armor">
 		<!-- STR + 3. -->
@@ -490,6 +507,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38260" name="Monocle" additionalName="INT" type="Armor">
 		<!-- INT + 3. -->
@@ -518,6 +536,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38264" name="Monocle" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5%. -->
@@ -693,6 +712,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="38289" name="Forget-me-not Hairpin" additionalName="WIT" type="Armor">
 		<!-- WIT + 3. Female only. -->

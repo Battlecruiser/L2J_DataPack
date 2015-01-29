@@ -422,6 +422,7 @@
 		<set name="weight" val="60" />
 		<set name="price" val="66369" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
 	<item id="5547" type="EtcItem" name="Elemental Sword Edge">
 		<set name="icon" val="icon.etc_sword_body_i00" />
@@ -541,6 +542,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2137-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="5561" type="EtcItem" name="Special Holiday Tree">
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
@@ -552,6 +554,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2138-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="5562" type="EtcItem" name="Echo Crystal - 1st Carol">
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
@@ -676,6 +679,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="5576" type="Armor" name="Sound Test Boots">
 		<set name="icon" val="icon.armor_t30_b_i00" />
@@ -725,6 +729,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="5581" type="EtcItem" name="Green Soul Crystal - Stage 12">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
@@ -735,6 +740,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="5582" type="EtcItem" name="Blue Soul Crystal - Stage 12">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
@@ -745,6 +751,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="5583" type="EtcItem" name="Echo Crystal - 6th Carol">
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
@@ -834,6 +841,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="50" />
+		<set name="commissionItemType" val="FEET" />
 	</item>
 	<item id="5591" type="EtcItem" name="CP Potion">
 		<set name="icon" val="icon.etc_cp_potion_i00" />
@@ -848,6 +856,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2166-1" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="5592" type="EtcItem" name="Greater CP Potion">
 		<set name="icon" val="icon.etc_cp_potion_i01" />
@@ -862,6 +871,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2166-2" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="5593" type="EtcItem" name="SP Scroll (Low-grade)">
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />

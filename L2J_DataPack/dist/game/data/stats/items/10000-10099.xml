@@ -25,6 +25,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2340-1" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="10002" type="EtcItem" name="Holy Potion">
 		<set name="icon" val="icon.etc_holy_potion_i00" />
@@ -91,6 +92,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3411-1" />
 		<set name="item_skill" val="3552-1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<for>
 			<set stat="pAtk" val="405" />
 			<set stat="mAtk" val="151" />

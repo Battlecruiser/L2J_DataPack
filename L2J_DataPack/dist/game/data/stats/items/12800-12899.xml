@@ -276,6 +276,7 @@
 		<set name="weight" val="940" />
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SIGIL" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -318,6 +319,7 @@
 		<set name="weight" val="920" />
 		<set name="price" val="12250000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SIGIL" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -441,6 +443,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="28800" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="80" />
 		</cond>

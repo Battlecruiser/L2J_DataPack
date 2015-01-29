@@ -372,11 +372,13 @@
 		<!-- 2nd Week Gift Box prepared for those who truly love Lineage II. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39370" name="3rd Week Gift Box" additionalName="" type="EtcItem">
 		<!-- 3rd Week Gift Box prepared for those who truly love Lineage II. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39371" name="4th Week Gift Box" additionalName="" type="EtcItem">
 		<!-- 4th Week Gift Box prepared for those who truly love Lineage II. -->
@@ -393,6 +395,7 @@
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="39374" name="Scroll: 5,000,000 SP" additionalName="Event" type="EtcItem">
 		<!-- Scroll that replenishes 5,000,000 SP. -->
@@ -440,90 +443,105 @@
 		<set name="icon" val="icon.lv1_wind_dye_cha" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39382" name="Lv. 2 Windy CHA Dye" additionalName="CHA + 2" type="EtcItem">
 		<!-- Lv. 1 Windy CHA Dye (CHA + 2). Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv2_wind_dye_cha" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39383" name="Lv. 3 Windy CHA Dye" additionalName="CHA + 3" type="EtcItem">
 		<!-- Lv. 1 Windy CHA Dye (CHA + 3). Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv3_wind_dye_cha" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39384" name="Lv. 4 Windy CHA Dye" additionalName="CHA + 4" type="EtcItem">
 		<!-- Lv. 1 Windy CHA Dye (CHA + 4). Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv4_wind_dye_cha" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39385" name="Lv. 5 Windy CHA Dye" additionalName="CHA + 5" type="EtcItem">
 		<!-- Lv. 1 Windy CHA Dye (CHA + 5). Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv5_wind_dye_cha" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39386" name="Lv. 1 Windy LUC Dye" additionalName="LUC + 1" type="EtcItem">
 		<!-- Lv. 1 Windy LUC Dye (LUC + 1). Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_wind_dye_luc" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39387" name="Lv. 2 Windy LUC Dye" additionalName="LUC + 2" type="EtcItem">
 		<!-- Lv. 1 Windy LUC Dye (LUC + 2). Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv2_wind_dye_luc" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39388" name="Lv. 3 Windy LUC Dye" additionalName="LUC + 3" type="EtcItem">
 		<!-- Lv. 1 Windy LUC Dye (LUC + 3). Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv3_wind_dye_luc" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39389" name="Lv. 4 Windy LUC Dye" additionalName="LUC + 4" type="EtcItem">
 		<!-- Lv. 1 Windy LUC Dye (LUC + 4). Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv4_wind_dye_luc" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39390" name="Lv. 5 Windy LUC Dye" additionalName="LUC + 5" type="EtcItem">
 		<!-- Lv. 1 Windy LUC Dye (LUC + 5). Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv5_wind_dye_luc" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39391" name="Lv. 1 Legendary STR Dye (Charisma)" additionalName="STR + 3 CHA + 1" type="EtcItem">
 		<!-- Lv. 1 Legendary STR Dye (Charisma) (STR + 3 CHA + 1). Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_unique_dye_str_cha" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39392" name="Lv. 1 Legendary DEX Dye (Charisma)" additionalName="DEX + 3 CHA + 1" type="EtcItem">
 		<!-- Lv. 1 Legendary DEX Dye (Charisma) (DEX + 3 CHA + 1). Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_unique_dye_dex_cha" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39393" name="Lv. 1 Legendary CON Dye (Charisma)" additionalName="CON + 3 CHA + 1" type="EtcItem">
 		<!-- Lv. 1 Legendary CON Dye (Charisma) (CON + 3 CHA + 1). Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_unique_dye_con_cha" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39394" name="Lv. 1 Legendary INT Dye (Charisma)" additionalName="INT + 3 CHA + 1" type="EtcItem">
 		<!-- Lv. 1 Legendary INT Dye (Charisma) (INT + 3 CHA + 1). Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_unique_dye_int_cha" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39395" name="Lv. 1 Legendary WIT Dye (Charisma)" additionalName="WIT + 3 CHA + 1" type="EtcItem">
 		<!-- Lv. 1 Legendary WIT Dye (Charisma) (WIT + 3 CHA + 1). Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_unique_dye_wit_cha" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39396" name="Lv. 1 Legendary MEN Dye (Charisma)" additionalName="MEN + 3 CHA + 1" type="EtcItem">
 		<!-- Lv. 1 Legendary MEN Dye (Charisma) (MEN + 3 CHA + 1). Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
@@ -536,12 +554,14 @@
 		<set name="icon" val="icon.lv2_unique_dye_str_cha" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39398" name="Lv. 2 Legendary DEX Dye (Charisma)" additionalName="DEX + 4 CHA + 2" type="EtcItem">
 		<!-- Lv. 2 Legendary DEX Dye (Charisma) (DEX + 4 CHA + 2). Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv2_unique_dye_dex_cha" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DYES" />
 	</item>
 	<item id="39399" name="Lv. 2 Legendary CON Dye (Charisma)" additionalName="CON + 4 CHA + 2" type="EtcItem">
 		<!-- Lv. 2 Legendary CON Dye (Charisma) (CON + 4 CHA + 2). Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->

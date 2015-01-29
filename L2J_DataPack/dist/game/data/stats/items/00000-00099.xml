@@ -486,6 +486,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="8970" />
 		<set name="price" val="4896" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -703,6 +704,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="660" />
 		<set name="price" val="9" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add order="0" stat="pDef" val="13" />
 		</for>
@@ -770,6 +772,7 @@
 		<set name="weight" val="630" />
 		<set name="price" val="7680" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add order="0" stat="pDef" val="33" />
 			<enchant stat="pDef" val="0" />
@@ -859,6 +862,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3411-1" />
 		<set name="item_skill" val="3552-1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -1017,6 +1021,7 @@
 		<set name="weight" val="1230" />
 		<set name="price" val="19420" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="32" />
 			<enchant stat="pDef" val="0" />
@@ -1049,6 +1054,7 @@
 		<set name="weight" val="1220" />
 		<set name="price" val="37760" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="36" />
 			<enchant stat="pDef" val="0" />
@@ -1176,6 +1182,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="112" />
 			<set stat="mAtk" val="54" />
@@ -1203,6 +1210,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="130" />
 			<set stat="mAtk" val="61" />
@@ -1230,6 +1238,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="107" />
 			<set stat="mAtk" val="61" />
@@ -1392,6 +1401,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="213" />
 			<set stat="mAtk" val="91" />
@@ -1419,6 +1429,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="194" />
 			<set stat="mAtk" val="99" />
@@ -1473,6 +1484,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="282" />
 			<set stat="mAtk" val="114" />
@@ -1555,6 +1567,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<for>
 			<set stat="pAtk" val="111" />
 			<set stat="mAtk" val="101" />
@@ -1907,6 +1920,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3599-1" />
+		<set name="commissionItemType" val="SPEAR" />
 		<for>
 			<set stat="pAtk" val="194" />
 			<set stat="mAtk" val="99" />

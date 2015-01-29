@@ -252,6 +252,7 @@
 		<set name="material" val="PAPER" />
 		<set name="price" val="1000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9913" type="Armor" name="Talisman_Test">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
@@ -1082,6 +1083,7 @@
 		<set name="recipe_id" val="875" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="9971" type="EtcItem" name="Recipe - Dynasty Knife (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />

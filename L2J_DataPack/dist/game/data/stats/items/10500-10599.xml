@@ -46,6 +46,7 @@
 		<set name="price" val="1800000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3459-1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
 			<add order="0" stat="pDef" val="28" />
 			<enchant stat="pDef" val="0" />
@@ -1102,6 +1103,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2470-1" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 	</item>
 	<item id="10579" type="EtcItem" name="Forgotten Scroll: Improve Combat">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />

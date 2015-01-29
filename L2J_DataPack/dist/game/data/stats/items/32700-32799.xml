@@ -24,11 +24,13 @@
 		<!-- Low-grade Magic Pin that can improve the function of an R-grade Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="weight" val="20" />
+		<set name="commissionItemType" val="MAGIC_ORNAMENT" />
 	</item>
 	<item id="32705" name="Mid-grade Magic Ornament (R-grade)" additionalName="" type="EtcItem">
 		<!-- Magic Pin that can improve the function of an R-grade Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="weight" val="20" />
+		<set name="commissionItemType" val="MAGIC_ORNAMENT" />
 	</item>
 	<item id="32706" name="High-grade Magic Ornament (R-grade)" additionalName="" type="EtcItem">
 		<!-- High-grade Magic Pin that can improve the function of an R-grade Belt. -->
@@ -119,6 +121,7 @@
 		<!-- Top-grade Magic Pin that can improve the function of an R99-grade Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i02" />
 		<set name="weight" val="20" />
+		<set name="commissionItemType" val="MAGIC_ORNAMENT" />
 	</item>
 	<item id="32724" name="Guardian Warrior's Reward Box" additionalName="" type="EtcItem">
 		<!-- Reward box containing special item that was crafted to praise the warriors who defeated Shilen's creations. You must open it to see what it contains. Double-click to examine. -->
@@ -246,18 +249,21 @@
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="32745" name="Raccoon Ears" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="32746" name="Cat Ears" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="32747" name="Cat Ears" additionalName="WIT" type="Armor">
 		<!-- WIT + 3 when equipped. -->
@@ -282,6 +288,7 @@
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="32751" name="Angel Circlet" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
@@ -300,6 +307,7 @@
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="32754" name="Demon Circlet" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->

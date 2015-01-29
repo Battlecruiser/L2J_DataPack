@@ -191,6 +191,7 @@
 		<set name="weight" val="120" />
 		<set name="price" val="16000000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="17527" name="Scroll: Enchant Armor (R-grade)" additionalName="" type="EtcItem">
 		<!-- When enchanted, P. Def. + 2 for R-grade armor and accessories, especially starting at + 4. Can be enchanted safely to + 3. When armor is enchanted + 4 or more, HP also increases according to the enchant value. -->
@@ -198,6 +199,7 @@
 		<set name="weight" val="120" />
 		<set name="price" val="1250000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="17528" name="Test-Heavy Armor-Helmet" additionalName="Human Knight" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />

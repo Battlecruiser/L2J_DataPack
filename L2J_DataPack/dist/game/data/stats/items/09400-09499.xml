@@ -294,6 +294,7 @@
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -382,6 +383,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -402,6 +404,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -441,6 +444,7 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player categoryType="DAGGER_MASTER" />
 		</cond>
@@ -483,6 +487,7 @@
 		<set name="price" val="11436000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add order="0" stat="pDef" val="106" />
 			<enchant stat="pDef" val="0" />
@@ -500,6 +505,7 @@
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add order="0" stat="pDef" val="92" />
 			<enchant stat="pDef" val="0" />
@@ -517,6 +523,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="61" />
 			<enchant stat="pDef" val="0" />
@@ -534,6 +541,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="61" />
 			<enchant stat="pDef" val="0" />
@@ -674,6 +682,7 @@
 		<set name="price" val="11436000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -695,6 +704,7 @@
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -783,6 +793,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="333" />
 			<set stat="mAtk" val="151" />
@@ -811,6 +822,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="405" />
 			<set stat="mAtk" val="151" />
@@ -839,6 +851,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<for>
 			<set stat="pAtk" val="267" />
 			<set stat="mAtk" val="202" />
@@ -869,6 +882,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<set stat="pAtk" val="654" />
 			<set stat="mAtk" val="151" />
@@ -897,6 +911,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
 		<for>
 			<set stat="pAtk" val="291" />
 			<set stat="mAtk" val="151" />
@@ -926,6 +941,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3599-1" />
+		<set name="commissionItemType" val="SPEAR" />
 		<for>
 			<set stat="pAtk" val="333" />
 			<set stat="mAtk" val="151" />
@@ -954,6 +970,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="333" />
 			<set stat="mAtk" val="151" />
@@ -983,6 +1000,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="267" />
 			<set stat="mAtk" val="202" />
@@ -1011,6 +1029,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<for>
 			<set stat="pAtk" val="405" />
 			<set stat="mAtk" val="151" />
@@ -1028,6 +1047,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9452" type="Armor" name="Sealed Dynasty Earring">
 		<set name="icon" val="icon.accessary_dynasty_earing_i01" />
@@ -1040,6 +1060,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="4032000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add order="0" stat="mDef" val="71" />
 			<enchant stat="mDef" val="0" />
@@ -1056,6 +1077,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="5376000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add order="0" stat="mDef" val="95" />
 			<enchant stat="mDef" val="0" />
@@ -1072,6 +1094,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="2688000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add order="0" stat="mDef" val="53" />
 			<enchant stat="mDef" val="0" />
@@ -1088,6 +1111,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add order="0" stat="mDef" val="79" />
 			<add stat="maxMp" val="35" />
@@ -1122,6 +1146,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add order="0" stat="mDef" val="60" />
 			<add stat="maxMp" val="23" />

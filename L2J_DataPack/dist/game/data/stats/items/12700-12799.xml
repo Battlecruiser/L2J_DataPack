@@ -26,6 +26,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
+		<set name="commissionItemType" val="FEET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -742,6 +743,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="18000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="67" />
 		</cond>
@@ -764,6 +766,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="24000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="76" />
 		</cond>

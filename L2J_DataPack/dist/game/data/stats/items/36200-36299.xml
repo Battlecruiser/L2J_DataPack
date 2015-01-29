@@ -477,12 +477,14 @@
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36253" name="Bottle of Orfen's Soul" additionalName="" type="EtcItem">
 		<!-- Bring this to Rafforty to bestow Orfen's Earring with Orfen's soul. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36254" name="Queen Ant's Soul Ring" additionalName="" type="Armor">
 		<!-- Ring containing Queen Ant's soul. MP + 31, Stun/Poison/Bleed Resistance + 25%, Stun/Poison/Bleed Attack Rate + 20%, P./M. Critical Damage + 15%, P./M. Critical Rate + 20, and P./M. Accuracy + 4. Wearing two of these rings will give you the effect of wearing one. -->
@@ -493,6 +495,7 @@
 		<set name="crystal_count" val="987" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
@@ -507,6 +510,7 @@
 		<set name="crystal_count" val="1481" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="118.0" />
 			<enchant stat="mDef" val="0" />
@@ -526,6 +530,7 @@
 		<set name="crystal_count" val="1975" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
@@ -653,36 +658,42 @@
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="36286" name="Unbind Scroll: Armor (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Transforms an R95-grade bound armor item into a standard item through the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.cursed_free_r95_armor" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="36287" name="Unbind Scroll: Armor (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Transforms an R99-grade bound armor item into a standard item through the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.cursed_free_r99_armor" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="36288" name="Unbind Scroll: Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Transforms an R-grade bound weapon item into a standard item through the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.cursed_free_r_armor" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="36289" name="Unbind Scroll: Weapon (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Transforms an R95-grade bound weapon item into a standard item through the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.cursed_free_r95" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="36290" name="Unbind Scroll: Weapon (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Transforms an R99-grade bound weapon item into a standard item through the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.cursed_free_r99" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="36291" name="Unbind Scroll: Weapon (R-grade)" additionalName="Campaign" type="EtcItem">
 		<!-- Has a low chance to transform an R-grade bound weapon item into a standard item through the Blacksmith of Mammon. -->

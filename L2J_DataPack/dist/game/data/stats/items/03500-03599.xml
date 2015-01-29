@@ -11,6 +11,7 @@
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>

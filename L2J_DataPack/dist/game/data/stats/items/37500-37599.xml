@@ -49,6 +49,7 @@
 		<set name="crystal_count" val="987" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add stat="mDef" val="103.0" />
 			<enchant stat="mDef" val="0" />
@@ -77,6 +78,7 @@
 		<set name="crystal_count" val="1975" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add stat="mDef" val="205.0" />
 			<enchant stat="mDef" val="0" />
@@ -91,6 +93,7 @@
 		<set name="crystal_count" val="987" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add stat="mDef" val="103.0" />
 			<enchant stat="mDef" val="0" />
@@ -105,6 +108,7 @@
 		<set name="crystal_count" val="1481" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="154.0" />
 			<enchant stat="mDef" val="0" />
@@ -119,6 +123,7 @@
 		<set name="crystal_count" val="1975" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add stat="mDef" val="205.0" />
 			<enchant stat="mDef" val="0" />
@@ -147,6 +152,7 @@
 		<set name="crystal_count" val="1481" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="154.0" />
 			<enchant stat="mDef" val="0" />
@@ -175,6 +181,7 @@
 		<set name="crystal_count" val="987" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add stat="mDef" val="103.0" />
 			<enchant stat="mDef" val="0" />
@@ -189,6 +196,7 @@
 		<set name="crystal_count" val="1481" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="154.0" />
 			<enchant stat="mDef" val="0" />
@@ -203,6 +211,7 @@
 		<set name="crystal_count" val="1975" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add stat="mDef" val="205.0" />
 			<enchant stat="mDef" val="0" />
@@ -212,11 +221,13 @@
 		<!-- Take it to Rafforty to bestow Frintezza's Soul on Frintezza's Necklace. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37520" name="Bottle of Baium's Soul" additionalName="" type="EtcItem">
 		<!-- Take it to Rafforty to bestow Baium's Soul on Baium's Ring. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37521" name="Baium's Soul Ring" additionalName="" type="Armor">
 		<!-- MP + 31, Shock/Hold/Mental Resistance + 25%, Shock/Hold/Mental Attack Rate + 25%, P./M. Critical Damage + 15%, Atk./Casting Spd. + 5%, and P./M. Accuracy + 4. Wearing two of these rings will give you the effect of wearing one. -->
@@ -241,6 +252,7 @@
 		<set name="crystal_count" val="73" />
 		<set name="weight" val="150" />
 		<set name="price" val="3450000" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
@@ -300,11 +312,13 @@
 		<!-- Santa Suit. -->
 		<set name="icon" val="icon.armor_ev_santas_clothes" />
 		<set name="default_action" val="EQUIP" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37535" name="Santa Hat" additionalName="" type="Armor">
 		<!-- Santa Hat. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="37536" name="Santa's Blessing" additionalName="" type="EtcItem">
 		<!-- Double-click to change your appearance to that of a Santa for 3 hours. STR/INT/CON/DEX/WIT/MEN + 1. Buff remains even after death.\n\nNote: If you use an item that changes your appearance, such as Letter Collector's Gift, the Santa appearance might disappear. -->
@@ -474,12 +488,14 @@
 		<set name="icon" val="icon.bless_ench_wp_stone_i05" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="WEAPON_ENCHANT_STONE" />
 	</item>
 	<item id="37567" name="Blessed Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 10% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="icon.bless_ench_amr_stone_i05" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ARMOR_ENCHANT_STONE" />
 	</item>
 	<item id="37568" name="Legendary Card Pouch: Dragon" additionalName="" type="EtcItem">
 		<!-- Pouch of legendary cards brimming with magic. Double-click to obtain either the Antharas, Valakas, or Lindvior. -->

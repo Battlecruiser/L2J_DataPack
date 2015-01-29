@@ -244,6 +244,7 @@
 		<!-- Can be exchanged for an Emerald Weapon Appearance Scroll Ticket (Expiratory) through an Aden Reconstruction Society Member. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37433" name="Scroll: Modify Emerald Weapon Ticket" additionalName="" type="EtcItem">
 		<!-- Can be exchanged for an Emerald Weapon Appearance Scroll Ticket through an Aden Reconstruction Society Member. -->
@@ -696,6 +697,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="37498" name="Energy of Dimensions" additionalName="" type="EtcItem">
 		<!-- Buff for people who share a world with the victorious clan in a dimensional siege. Atk. Spd. + 10%, Casting Spd. + 10%, Speed + 10, and Max HP/MP/CP + 10%. Cooldown is 60 min. Cannot be used in the Olympiad. -->

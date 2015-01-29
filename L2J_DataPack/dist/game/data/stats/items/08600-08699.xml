@@ -180,6 +180,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 	</item>
 	<item id="8620" type="EtcItem" name="Ancient Book: Divine Inspiration (Manuscript)">
 		<set name="icon" val="icon.etc_add_buffslot_i02" />
@@ -949,6 +950,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="251" />
 			<set stat="mAtk" val="121" />
@@ -976,6 +978,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="305" />
 			<set stat="mAtk" val="121" />
@@ -1002,6 +1005,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="251" />
 			<set stat="mAtk" val="121" />
@@ -1029,6 +1033,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="305" />
 			<set stat="mAtk" val="121" />
@@ -1056,6 +1061,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
 		<for>
 			<set stat="pAtk" val="220" />
 			<set stat="mAtk" val="121" />
@@ -1084,6 +1090,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3599-1" />
+		<set name="commissionItemType" val="SPEAR" />
 		<for>
 			<set stat="pAtk" val="251" />
 			<set stat="mAtk" val="121" />
@@ -1114,6 +1121,7 @@
 		<set name="mp_consume" val="5" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<set stat="pAtk" val="570" />
 			<set stat="mAtk" val="133" />
@@ -1141,6 +1149,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<for>
 			<set stat="pAtk" val="305" />
 			<set stat="mAtk" val="121" />
@@ -1169,6 +1178,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<for>
 			<set stat="pAtk" val="202" />
 			<set stat="mAtk" val="161" />
@@ -1196,6 +1206,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="202" />
 			<set stat="mAtk" val="161" />
@@ -1224,6 +1235,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="245" />
 			<set stat="mAtk" val="177" />

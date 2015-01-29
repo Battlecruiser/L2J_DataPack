@@ -19,6 +19,7 @@
 		<!-- Double-click to obtain an SP Rune (High-grade) (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37904" name="Scroll: 1,000,000,000 SP" additionalName="" type="EtcItem">
 		<!-- Scroll the replenishes 1,000,000,000 SP. -->
@@ -460,6 +461,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DAGGER" />
 	</item>
 	<item id="37951" name="Requiem Cutter Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Cutter. -->
@@ -475,6 +477,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 	</item>
 	<item id="37954" name="Requiem Fighter Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Fighter. -->
@@ -485,6 +488,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SPEAR" />
 	</item>
 	<item id="37956" name="Requiem Thrower Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Thrower. -->
@@ -510,6 +514,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 	</item>
 	<item id="37961" name="Immortal Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Helmet. -->
@@ -520,6 +525,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 	</item>
 	<item id="37963" name="Immortal Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gaiter. -->
@@ -540,6 +546,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SHIELD" />
 	</item>
 	<item id="37967" name="Immortal Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Helmet. -->
@@ -550,6 +557,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 	</item>
 	<item id="37969" name="Immortal Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Leggings. -->
@@ -565,6 +573,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 	</item>
 	<item id="37972" name="Immortal Circlet Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Circlet. -->
@@ -585,16 +594,19 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 	</item>
 	<item id="37976" name="Immortal Shoes Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Shoes. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 	</item>
 	<item id="37977" name="Immortal Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SIGIL" />
 	</item>
 	<item id="37978" name="Immortal Necklace Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Necklace. -->
@@ -615,36 +627,43 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="DAGGER" />
 	</item>
 	<item id="37982" name="Apocalypse Cutter Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 	</item>
 	<item id="37983" name="Apocalypse Slasher Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 	</item>
 	<item id="37984" name="Apocalypse Avenger Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 	</item>
 	<item id="37985" name="Apocalypse Fighter Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 	</item>
 	<item id="37986" name="Apocalypse Stormer Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SPEAR" />
 	</item>
 	<item id="37987" name="Apocalypse Thrower Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="BOW" />
 	</item>
 	<item id="37988" name="Apocalypse Shooter Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shooter. -->
@@ -655,11 +674,13 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 	</item>
 	<item id="37990" name="Apocalypse Caster Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 	</item>
 	<item id="37991" name="Apocalypse Retributer Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Retributer. -->
@@ -670,11 +691,13 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 	</item>
 	<item id="37993" name="Twilight Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 	</item>
 	<item id="37994" name="Twilight Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gaiter. -->
@@ -690,20 +713,24 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 	</item>
 	<item id="37997" name="Twilight Shield Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SHIELD" />
 	</item>
 	<item id="37998" name="Twilight Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 	</item>
 	<item id="37999" name="Twilight Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 	</item>
 </list>

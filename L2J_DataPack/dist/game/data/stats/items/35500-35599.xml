@@ -402,6 +402,7 @@
 		<set name="icon" val="icon.etc_talisman_energy_i01" />
 		<set name="price" val="5000000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="35564" name="Ruler's Authority" additionalName="" type="Armor">
 		<!-- Item given to the winner of the Ceremony of Chaos that takes place in the Mysterious Mansion. When equipped, increases Max HP, MP, and CP by 1000, weight by 25600, and damage by 8%. Decreases received damage by 9% and Damage Reflect Resistance by 5%. Increases the number of inventory slots by 36, and Attribute Resistance by 15. -->
@@ -410,6 +411,7 @@
 		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="440" />
+		<set name="commissionItemType" val="BELT" />
 		<for>
 			<add stat="pDef" val="50.0" />
 			<enchant stat="pDef" val="0" />
@@ -432,21 +434,25 @@
 		<!-- Bestows the PvP option on an Amaranthine weapon through the blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are additionally requested. -->
 		<set name="icon" val="icon.energy_condenser_i03" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="35567" name="Dark Eternal Enhancement Stone" additionalName="" type="EtcItem">
 		<!-- Bestows the PvP option on Eternal armor through the blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are additionally requested. -->
 		<set name="icon" val="icon.energy_condenser_i04" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="35568" name="Bloody Amaranthine Enhancement Stone" additionalName="" type="EtcItem">
 		<!-- Bestows the PvE option on an Amaranthine weapon through the blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are additionally requested. -->
 		<set name="icon" val="icon.energy_condenser_i05" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="35569" name="Bloody Eternal Enhancement Stone" additionalName="" type="EtcItem">
 		<!-- Bestows the PvE option on Eternal armor through the blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are additionally requested. -->
 		<set name="icon" val="icon.energy_condenser_i06" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="35570" name="Tauti's Ring" additionalName="" type="Armor">
 		<!-- Tauti's Ring. Fire/Dark Resistance + 25, MP + 38, Critical Damage + 15%, Skill Power + 5%, PvP damage + 5%, Paralysis/Binding/Banishment Resistance + 10, Damage Reflect Resistance + 5, Absorption Resistance + 5, received PvP damage - 5%, and critical + 54 when a blunt is equipped. Even if you wear two identical rings, only the effects of one apply (excluding attributes/M. Def.). -->
@@ -577,6 +583,7 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
@@ -685,6 +692,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
@@ -697,6 +705,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
@@ -709,6 +718,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
@@ -721,6 +731,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
@@ -733,6 +744,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
@@ -745,6 +757,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />

@@ -358,6 +358,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2036-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="1539" type="EtcItem" name="Major Healing Potion">
 		<set name="icon" val="icon.etc_reagent_white_i00" />
@@ -373,6 +374,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2037-1" />
 		<set name="for_npc" val="true" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -391,6 +393,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2038-1" />
 		<set name="for_npc" val="true" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>

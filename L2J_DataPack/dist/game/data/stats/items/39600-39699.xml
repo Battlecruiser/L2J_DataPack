@@ -306,21 +306,25 @@
 		<!-- Use to obtain 400000 XP. Go to Pelu the Grocer in Faeron Village to combine to 2 Stage 1 Pockets. Under Lv. 85 only. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39630" name="Fortune Pocket - Stage 2" additionalName="" type="EtcItem">
 		<!-- Use to obtain 1600000 XP. Go to Pelu the Grocer in Faeron Village to combine to 2 Stage 2 Pockets. Under Lv. 85 only. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39631" name="Fortune Pocket - Stage 3" additionalName="" type="EtcItem">
 		<!-- Use to obtain 6400000 XP, plus a little something else. Go to Pelu the Grocer in Faeron Village to combine to 2 Stage 3 Pockets. Under Lv. 85 only. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39632" name="Fortune Pocket - Stage 4" additionalName="" type="EtcItem">
 		<!-- Use to obtain 80000 SP. Go to Pelu the Grocer in Faeron Village to combine to 2 Stage 4 Pockets. Lv. 85 or above. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39633" name="Fortune Pocket - Stage 5" additionalName="" type="EtcItem">
 		<!-- Use to obtain 256000 SP, plus a little something else. Lv. 85 or above. -->
@@ -333,78 +337,91 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 		<set name="price" val="1000000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39635" name="Venir's Talisman" additionalName="Stage 2" type="Armor">
 		<!-- MEN/WIT + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39636" name="Venir's Talisman" additionalName="Stage 3" type="Armor">
 		<!-- MEN/WIT/CON + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39637" name="Venir's Talisman" additionalName="Stage 4" type="Armor">
 		<!-- MEN/WIT/CON/INT + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39638" name="Venir's Talisman" additionalName="Stage 5" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39639" name="Venir's Talisman" additionalName="Stage 6" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39640" name="Venir's Talisman" additionalName="Stage 7" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39641" name="Venir's Talisman" additionalName="Stage 8" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39642" name="Venir's Talisman" additionalName="Stage 9" type="Armor">
 		<!-- MEN + 2, WIT/CON/INT/DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39643" name="Venir's Talisman" additionalName="Stage 10" type="Armor">
 		<!-- MEN/WIT + 2, CON/INT/DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39644" name="Venir's Talisman" additionalName="Stage 11" type="Armor">
 		<!-- MEN/WIT/CON + 2, INT/DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39645" name="Venir's Talisman" additionalName="Stage 12" type="Armor">
 		<!-- MEN/WIT/CON/INT + 2, DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39646" name="Venir's Talisman" additionalName="Stage 13" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX + 2, STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39647" name="Venir's Talisman" additionalName="Stage 14" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR+ 2, LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->

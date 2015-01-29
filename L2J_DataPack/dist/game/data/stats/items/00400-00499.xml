@@ -231,6 +231,7 @@
 		<set name="weight" val="1600" />
 		<set name="price" val="6020" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add order="0" stat="pDef" val="36" />
 			<enchant stat="pDef" val="0" />
@@ -694,6 +695,7 @@
 		<set name="weight" val="1980" />
 		<set name="price" val="58200" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1354,6 +1356,7 @@
 		<set name="weight" val="970" />
 		<set name="price" val="36420" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1848,6 +1851,7 @@
 		<set name="weight" val="620" />
 		<set name="price" val="22560" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add order="0" stat="pDef" val="45" />
 			<enchant stat="pDef" val="0" />

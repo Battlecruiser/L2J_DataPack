@@ -98,6 +98,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2069-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="4412" type="EtcItem" name="Echo Crystal - Theme of Battle">
 		<set name="icon" val="icon.etc_echo_crystal_i01" />
@@ -120,6 +121,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2070-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="4414" type="EtcItem" name="Echo Crystal - Theme of Solitude">
 		<set name="icon" val="icon.etc_echo_crystal_i03" />
@@ -131,6 +133,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2072-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="4415" type="EtcItem" name="Echo Crystal - Theme of Festival">
 		<set name="icon" val="icon.etc_echo_crystal_i04" />
@@ -142,6 +145,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2071-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="4416" type="EtcItem" name="Echo Crystal - Theme of Celebration">
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
@@ -153,6 +157,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2073-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="4417" type="EtcItem" name="Echo Crystal - Theme of Comedy">
 		<set name="icon" val="icon.etc_echo_crystal_i01" />
@@ -164,6 +169,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2067-1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="4418" type="EtcItem" name="Musical Score - Theme of Celebration">
 		<set name="icon" val="icon.etc_musical_note_i01" />
@@ -208,6 +214,7 @@
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>

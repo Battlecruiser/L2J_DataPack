@@ -207,6 +207,7 @@
 		<set name="weight" val="20" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="5127" type="Weapon" name="Dailaon Knife">
 		<set name="icon" val="icon.weapon_monster_i00" />
@@ -758,6 +759,7 @@
 		<set name="recipe_id" val="494" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="5168" type="EtcItem" name="Strider Food">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />

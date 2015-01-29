@@ -154,6 +154,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="236" />
 			<set stat="mAtk" val="99" />
@@ -465,6 +466,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-1" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<for>
 			<set stat="pAtk" val="155" />
 			<set stat="mAtk" val="132" />
@@ -889,6 +891,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-1" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="236" />
 			<set stat="mAtk" val="99" />
@@ -1651,6 +1654,7 @@
 		<set name="material" val="PAPER" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="8177" type="Armor" name="Raid Challenger's Circlet">
 		<set name="icon" val="icon.accessory_raid_challenger_i00" />
@@ -1752,6 +1756,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8185" type="Armor" name="Chapeau">
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
@@ -1761,6 +1766,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8186" type="Armor" name="Artisan's Goggles">
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
@@ -1770,6 +1776,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8187" type="Armor" name="Red Horn of Victory">
 		<set name="icon" val="icon.accessory_hair_cornu_i00" />
@@ -1787,6 +1794,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8189" type="Armor" name="Fairy Antennae">
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
@@ -1796,6 +1804,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8190" type="Weapon" name="Demonic Sword Zariche">
 		<set name="icon" val="icon.weapon_unique_zariche_i00" />
@@ -1836,6 +1845,7 @@
 		<set name="price" val="3450000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3604-1" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add order="0" stat="mDef" val="95" />
 			<add stat="maxMp" val="42" />

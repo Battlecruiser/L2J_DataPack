@@ -29,16 +29,19 @@
 		<!-- Item that summons a nurture-type clan pet (Raccoon). For 72 hours, you acquire 100 Clan Reputation each time it is summoned, and you have a chance of obtaining an additional item. Only PC's who belong to a clan that is above level 5 can summon it. -->
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
 	</item>
 	<item id="34906" name="Clan-exclusive Pet (White Cat)" additionalName="" type="EtcItem">
 		<!-- Item that summons a nurture-type clan pet (White Cat). For 72 hours, you acquire 100 Clan Reputation each time it is summoned, and you have a chance of obtaining an additional item. Only PC's who belong to a clan that is above level 5 can summon it. -->
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
 	</item>
 	<item id="34907" name="Clan-exclusive Pet (Desert Fox)" additionalName="" type="EtcItem">
 		<!-- Item that summons a nurture-type clan pet (Desert Fox). For 72 hours, you acquire 100 Clan Reputation each time it is summoned, and you have a chance of obtaining an additional item. Only PC's who belong to a clan that is above level 5 can summon it. -->
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
 	</item>
 	<item id="34908" name="Clan-exclusive Pet for Training" additionalName="" type="EtcItem">
 		<!-- Item that summons a Clan-exclusive Pet for Training. If the pet's HP becomes 0 within 30 seconds, you gain 50 Clan Reputation and 10 Individual Fame. -->
@@ -321,6 +324,7 @@
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="34941" name="Life Stone: Hair Accessory" additionalName="Event" type="EtcItem">
 		<!-- Life Stone for Hair Accessories. -->

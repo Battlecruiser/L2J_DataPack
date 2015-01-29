@@ -716,6 +716,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="7563" type="EtcItem" name="Galladucci's Order (Document)">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
@@ -870,6 +871,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<set stat="pAtk" val="581" />
 			<set stat="mAtk" val="132" />
@@ -935,6 +937,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3567-1" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<set stat="pAtk" val="581" />
 			<set stat="mAtk" val="132" />

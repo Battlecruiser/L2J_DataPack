@@ -874,11 +874,13 @@
 		<!-- P. Atk. + 6 for R-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. + 7 for two-handed sword, two-handed blunt, dualsword, two-handed fist weapon, and crossbow. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases starting at + 4. All amounts are increased for blessed weapons. If enchanting fails, the item is not reset but maintains its prior enchant value through the power of the goddess of destruction. Cannot be used on weapons above + 15. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="33479" name="Destruction Scroll: Enchant Armor (R-grade)" additionalName="" type="EtcItem">
 		<!-- When enchanted, P. Def. + 2 for R-grade armor and accessories. Greatly increased starting at + 4. Can be enhanced safely to + 3. When enhanced + 4 or more, HP also increases according to the enchant value. If enchanting fails, the item is not reset but maintains its prior enchant value through the power of the goddess of destruction. Cannot be used on armors above + 6. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="33480" name="WiFi Helmet" additionalName="" type="Armor">
 		<!-- WiFi helmet. -->

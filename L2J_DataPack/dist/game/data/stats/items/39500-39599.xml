@@ -322,6 +322,7 @@
 		<!-- Wrapped Pack containing aLv. 5 CHA/LUC Dye. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39563" name="Talisman - Wind Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman - Wind. -->
@@ -332,21 +333,25 @@
 		<!-- Wrapped Pack containing a Talisman - Wind: P. Critical Damage. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39565" name="Talisman - Wind Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman - Wind: M. Critical Damage. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39566" name="Talisman - Wind Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman - Wind: Defense. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39567" name="Talisman - Wind Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman - Wind: Debuff Resistance. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="39568" name="Talisman - Wind: P. Critical Damage" additionalName="" type="Armor">
 		<!-- P. Skill Critical Damage + 10%. -->
@@ -477,6 +482,7 @@
 		<!-- Precious material gained by dissecting the material world's elements. Used for the greatest of alchemical feats, this can also be double-clicked to gain either a Low/Mid/High-grade Windy Dye Pack or Talisman - Wind. -->
 		<set name="icon" val="icon.trace_of_wind2" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="GEMSTONE" />
 	</item>
 	<item id="39593" name="Scroll of Escape: Town of Dion" additionalName="" type="EtcItem">
 		<!-- Teleports you to Town of Dion. -->

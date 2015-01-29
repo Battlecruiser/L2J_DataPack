@@ -1285,6 +1285,7 @@
 		<set name="weight" val="5400" />
 		<set name="price" val="4341000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FULL_BODY" />
 		<cond msgId="1518">
 			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
@@ -1303,6 +1304,7 @@
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<cond msgId="1518">
 			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
@@ -1321,6 +1323,7 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<cond msgId="1518">
 			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
@@ -1695,6 +1698,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="236" />
 			<set stat="mAtk" val="99" />
@@ -1830,6 +1834,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<for>
 			<set stat="pAtk" val="125" />
 			<set stat="mAtk" val="111" />
@@ -1857,6 +1862,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<for>
 			<set stat="pAtk" val="155" />
 			<set stat="mAtk" val="132" />
@@ -1968,6 +1974,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="155" />
 			<set stat="mAtk" val="132" />
@@ -2132,6 +2139,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="259" />
 			<set stat="mAtk" val="107" />

@@ -44,12 +44,14 @@
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="34708" name="Outlaw's Eyepatch" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="34709" name="Eyepatch" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
@@ -68,6 +70,7 @@
 		<set name="icon" val="icon.accessory_party_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="34712" name="Party Hat" additionalName="Critical Damage" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
@@ -563,24 +566,28 @@
 		<set name="icon" val="icon.bless_scroll_r1" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="34775" name="Scroll of Blessing (R2-grade)" additionalName="Event" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Apocalypse or Twilight equipment for Blessed equipment. Small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r2" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="34776" name="Scroll of Blessing (R95-grade)" additionalName="Event" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Specter or Seraph equipment for Blessed equipment. Small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r95" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="34777" name="Scroll of Blessing (R99-grade)" additionalName="Event" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Amaranthine or Eternal equipment for Blessed equipment. Small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r99" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="34778" name="Squash Ring (Warrior)" additionalName="Event" type="Armor">
 		<!-- Squash ring, warrior-type. Increases P. Critical Damage by 15% and P. Accuracy by 2. 15-day. When two identical rings are equipped, only one effect is applied. -->
@@ -623,6 +630,7 @@
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="34782" name="Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at + 4, P. Def. Increases by 3 and a HP bonus is granted. Enchanting is safe up to + 3, but one-piece body armor can be safely enchanted up to + 4. -->

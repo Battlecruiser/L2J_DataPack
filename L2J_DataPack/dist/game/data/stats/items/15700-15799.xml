@@ -34,6 +34,7 @@
 		<set name="price" val="15784000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add order="0" stat="pDef" val="105" />
 			<enchant stat="pDef" val="0" />
@@ -52,6 +53,7 @@
 		<set name="price" val="15784000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -110,6 +112,7 @@
 		<set name="price" val="8418000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -150,6 +153,7 @@
 		<set name="price" val="8418000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="64" />
 			<enchant stat="pDef" val="0" />
@@ -167,6 +171,7 @@
 		<set name="price" val="8418000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -187,6 +192,7 @@
 		<set name="weight" val="920" />
 		<set name="price" val="8839000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SIGIL" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -207,6 +213,7 @@
 		<set name="weight" val="1190" />
 		<set name="price" val="8839000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SHIELD" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -350,6 +357,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="9088000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add order="0" stat="mDef" val="65" />
 			<add stat="maxMp" val="26" />
@@ -367,6 +375,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="13633000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add order="0" stat="mDef" val="98" />
 			<add stat="maxMp" val="38" />
@@ -885,6 +894,7 @@
 		<set name="price" val="41880000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -946,6 +956,7 @@
 		<set name="price" val="26175000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1170,6 +1181,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="6152000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add order="0" stat="mDef" val="57" />
 			<enchant stat="mDef" val="0" />
@@ -1186,6 +1198,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="9229000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add order="0" stat="mDef" val="86" />
 			<enchant stat="mDef" val="0" />
@@ -1218,6 +1231,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3710000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add order="0" stat="mDef" val="53" />
 			<enchant stat="mDef" val="0" />
@@ -1250,6 +1264,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="7420000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add order="0" stat="mDef" val="101" />
 			<enchant stat="mDef" val="0" />
@@ -1308,6 +1323,7 @@
 		<set name="weight" val="60" />
 		<set name="price" val="29900" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
 	<item id="15775" type="EtcItem" name="Recipe - Sealed Moirai Helmet (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />

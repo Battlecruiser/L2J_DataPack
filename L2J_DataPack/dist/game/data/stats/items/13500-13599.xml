@@ -53,6 +53,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="13506" type="Armor" name="Improved Lord's Crown">
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
@@ -750,6 +751,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2790-1" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 		<cond msgId="113" addName="1">
 			<player level="75" />
 		</cond>

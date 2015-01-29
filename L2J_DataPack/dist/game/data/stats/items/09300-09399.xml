@@ -52,6 +52,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3008-4" />
+		<set name="commissionItemType" val="CROSSBOW" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -3023,6 +3024,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<cond msgId="1518">
 			<player races="ELF" />
 		</cond>

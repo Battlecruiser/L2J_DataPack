@@ -5,6 +5,7 @@
 		<set name="icon" val="icon.codex_of_incuse_forgetting" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="30301" name="Superior Giant's Codex Manuscript " additionalName="" type="EtcItem">
 		<!-- Superior Giant's Codex. Item needed for skill enchantment after Awakening. -->
@@ -650,6 +651,7 @@
 		<set name="weight" val="5" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-7" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -669,6 +671,7 @@
 		<set name="weight" val="5" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-7" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -688,6 +691,7 @@
 		<set name="weight" val="5" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2289-7" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="30360" name="Superior Elixir of Life (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers HP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
@@ -703,6 +707,7 @@
 		<set name="weight" val="5" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2860-7" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -721,6 +726,7 @@
 		<set name="weight" val="5" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2861-7" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -739,6 +745,7 @@
 		<set name="weight" val="5" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2862-7" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="30363" name="Soul Crystal" additionalName="" type="EtcItem">
 		<!-- Soul Crystal -->

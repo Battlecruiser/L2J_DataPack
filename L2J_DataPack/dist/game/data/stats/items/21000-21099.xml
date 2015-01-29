@@ -1534,6 +1534,7 @@
 		<set name="weight" val="10" />
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="21091" type="EtcItem" name="Rune of Experience Points 50% 7-Day Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
@@ -1634,11 +1635,13 @@
 		<set name="icon" val="Branchsys2.icon.shine_cubic_a_piece_i02" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="21099" type="EtcItem" name="Shiny Cube Fragment Armor (A-grade)">
 		<!-- Description: Speak with a warehouse keeper to exchange this for a A Grade Blessed Armor Enchant Scroll. -->
 		<set name="icon" val="Branchsys2.icon.shine_cubic_a_piece_i03" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 </list>

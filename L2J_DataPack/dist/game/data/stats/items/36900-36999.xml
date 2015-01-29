@@ -101,6 +101,7 @@
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="36917" name="Recipe: Weapon Fragment (Mid-grade) - Downgrade" additionalName="" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Weapon Fragment (High-grade) (Lv. 4) into Weapon Fragment (Mid-grade) (Lv. 3). Requires Create Item (Lv. 11). -->
@@ -161,6 +162,7 @@
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="36927" name="Recipe: Armor Fragment (High-grade) - Downgrade" additionalName="" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Armor Fragment (Top-grade) (Lv. 5) into Armor Fragment (High-grade) (Lv. 4). Requires Create Item (Lv. 14). -->
@@ -209,6 +211,7 @@
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="36935" name="Recipe: Accessory Gem (High-grade) - Downgrade" additionalName="" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Accessory Gem (Top-grade) (Lv. 5) into Accessory Gem (High-grade) (Lv. 4). Requires Create Item (Lv. 14). -->
@@ -221,6 +224,7 @@
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="36937" name="Recipe: Accessory Gem (Top-grade) - Upgrade" additionalName="" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Accessory Gem (High-grade) (Lv. 4) into Accessory Gem (Top-grade) (Lv. 5). Requires Create Item (Lv. 14). -->
@@ -257,6 +261,7 @@
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="36943" name="Recipe: Greater Synthetic Cokes - Downgrade" additionalName="" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Exquisite Synthetic Cokes (Lv. 5) into Greater Synthetic Cokes (Lv. 4). Requires Create Item (Lv. 14). -->
@@ -410,24 +415,28 @@
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36967" name="Water Stone (+ 150)" additionalName="" type="EtcItem">
 		<!-- Can bestow water attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36968" name="Earth Stone (+ 150)" additionalName="" type="EtcItem">
 		<!-- Can bestow earth attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36969" name="Wind Stone (+ 150)" additionalName="" type="EtcItem">
 		<!-- Can bestow wind attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36970" name="Dark Stone (+ 150)" additionalName="" type="EtcItem">
 		<!-- Can bestow dark attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
@@ -440,6 +449,7 @@
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36972" name="Fire Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Fire attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
@@ -482,12 +492,14 @@
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36979" name="Life Stone: Hair Accessory" additionalName="" type="EtcItem">
 		<!-- Life Stone for Hair Accessories. -->
 		<set name="icon" val="icon.life_dust_hairacc_general" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 	</item>
 	<item id="36980" name="9th Anniversary Rocket Gun Hat: Chain Fireworks" additionalName="" type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. -->

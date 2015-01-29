@@ -264,21 +264,25 @@
 		<!-- Speak with a warehouse keeper to exchange this for a Scroll: Armor Enchant (R-grade). -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_a_piece_i01" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="34852" name="Cube Fragment Weapon - R" additionalName="" type="EtcItem">
 		<!-- Speak with a warehouse keeper to exchange this for a Scroll: Weapon Enchant (R-grade). -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_w_piece_i01" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="34853" name="Shiny Cube Fragment Armor - R" additionalName="" type="EtcItem">
 		<!-- Speak with a warehouse keeper to exchange this for a Blessed Scroll: Armor Enchant (R-grade). -->
 		<set name="icon" val="Branchsys2.icon.shine_cubic_a_piece_i01" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="34854" name="Shiny Cube Fragment Weapon - R" additionalName="" type="EtcItem">
 		<!-- Speak with a warehouse keeper to exchange this for a Blessed Scroll: Weapon Enchant (R-grade). -->
 		<set name="icon" val="Branchsys2.icon.shine_cubic_w_piece_i01" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="34855" name="Raina's Box" additionalName="" type="EtcItem">
 		<!-- Raina's Box exchanged for the XP Bottle. Small chance of acquiring an Scroll: XP. -->
@@ -340,16 +344,19 @@
 		<!-- Draco Egg that has been purified of evil energy. Double-click on it to summon a Small Draco Egg. When the egg's temperature rises, it can be hatched. -->
 		<set name="icon" val="icon.etc_ev_small_egg" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="34865" name="Large Draco Egg" additionalName="" type="EtcItem">
 		<!-- Draco Egg that has been purified of evil energy. Double-click on it to summon a Large Draco Egg. When the egg's temperature rises, it can be hatched. Multiple players are required to hatch the egg. -->
 		<set name="icon" val="icon.etc_ev_big_egg" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="34866" name="Shattered Egg Shell" additionalName="" type="EtcItem">
 		<!-- You can receive a reward if you bring it to the Flame Servant Aslan. -->
 		<set name="icon" val="icon.etc_ev_broken_egg" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="34867" name="Draco's Gift" additionalName="" type="EtcItem">
 		<!-- Gift from the Draco that was resurrected from a purified Draco Egg. -->
@@ -381,6 +388,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="21" />
 		<set name="weight" val="440" />
+		<set name="commissionItemType" val="BELT" />
 		<for>
 			<add stat="pDef" val="19.0" />
 			<enchant stat="pDef" val="0" />
@@ -433,6 +441,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="21" />
 		<set name="weight" val="440" />
+		<set name="commissionItemType" val="BELT" />
 		<for>
 			<add stat="pDef" val="19.0" />
 			<enchant stat="pDef" val="0" />

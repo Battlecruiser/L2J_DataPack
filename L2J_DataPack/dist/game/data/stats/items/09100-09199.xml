@@ -556,6 +556,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="9139" type="EtcItem" name="Santa's Hat">
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
@@ -580,6 +581,7 @@
 		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3261-1" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<set stat="pAtk" val="1" />
 			<set stat="mAtk" val="1" />
@@ -812,6 +814,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2320-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="9157" type="EtcItem" name="Blessed Scroll of Resurrection (Event)">
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
@@ -839,6 +842,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="9160" type="Armor" name="Pig Wrangler's Cap">
 		<set name="icon" val="icon.Accessary_middle_ages_i00" />

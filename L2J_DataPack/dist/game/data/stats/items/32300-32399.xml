@@ -6,6 +6,7 @@
 		<set name="weight" val="30" />
 		<set name="price" val="2729600" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="32301" name="Recipe: Eternal Belt (60%)" additionalName="" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Eternal Belt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
@@ -13,6 +14,7 @@
 		<set name="weight" val="30" />
 		<set name="price" val="355700" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="32302" name="Recipe: Eternal Bracelet (60%)" additionalName="" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Eternal Bracelet. Requires Create Common Item Lv. 10. Success rate is 60%. -->
@@ -27,6 +29,7 @@
 		<set name="weight" val="30" />
 		<set name="price" val="7113200" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="32304" name="Immortal Belt Fragment" additionalName="" type="EtcItem">
 		<!-- Main ingredient for making an Immortal Belt. -->
@@ -117,12 +120,14 @@
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="32317" name="Recipe: Elixir of Blessing" additionalName="" type="EtcItem">
 		<!-- For those who have completed the fourth class transfer only. Recipe for Elixir of Blessing. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="32318" name="Basic Talisman - P. Atk. Spd." additionalName="" type="Armor">
 		<!-- Atk. Spd. + 2% when equipped. Shadow weapon. -->

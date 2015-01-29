@@ -222,12 +222,14 @@
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="35736" name="Water Stone (+ 150)" additionalName="Event" type="EtcItem">
 		<!-- Increases water attribute by 150 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="35737" name="Earth Stone (+ 150)" additionalName="Event" type="EtcItem">
 		<!-- Increases earth attribute by 150 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
@@ -246,6 +248,7 @@
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="35740" name="Holy Stone (+ 150)" additionalName="Event" type="EtcItem">
 		<!-- Increases holy attribute by 150 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
@@ -258,24 +261,28 @@
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="35742" name="Scroll: Reputation (Low-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to raise Rep. value by 1000. Can only be used while in a chaotic state (Rep. value is below 0). Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. Must be in Floran Village to use. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="35743" name="Draco's Health Potion" additionalName="Event" type="EtcItem">
 		<!-- Upon use, it restores 3000 HP and the remaining power restores CP instantly. Instant effect with no duration. -->
 		<set name="icon" val="icon.etc_ev_draco_hp_bottle" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="35744" name="Draco's Mana Potion" additionalName="Event" type="EtcItem">
 		<!-- Magical potion that restores MP by 100. Instant effect with no duration. Can be exchanged and dropped. Can use a private store. Cannot be used when MP is full. -->
 		<set name="icon" val="icon.etc_ev_draco_mp_bottle" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="35745" name="Draco's Hat Box" additionalName="Event (Not in Use)" type="EtcItem">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
@@ -299,11 +306,13 @@
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="35749" name="Weapon Attribute Change Crystal (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to change the attribute of R, R95, and R99-grade weapons. It can be used when there is an R-grade weapon bestowed in the inventory. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="35750" name="Draco's Blessing (30-minute)" additionalName="Event" type="EtcItem">
 		<!-- For 30 minutes, increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
@@ -320,30 +329,35 @@
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="35753" name="Scroll: PK (High-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to lower PK value by 5. Must be in Floran Village to use. It can only be used when the PK value is above 1. Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="35754" name="Scroll: PK (Top-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to lower PK value by 10. Must be in Floran Village to use. It can only be used when the PK value is above 1. Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="35755" name="Scroll: Reputation (Mid-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to raise Rep. value by 5000. Can only be used while in a chaotic state (Rep. value is below 0). Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. Must be in Floran Village to use. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="35756" name="Scroll: Reputation (High-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to raise Rep. value by 30000. Can only be used while in a chaotic state (Rep. value is below 0). Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. Must be in Floran Village to use. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="35757" name="Scroll: Reputation (Top-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to change Rep. value to 0. Can only be used while in a chaotic state (Rep. value is below 0). Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. Must be in Floran Village to use. -->
@@ -360,6 +374,7 @@
 		<!-- For 1 hour, increases XP and SP acquired in hunt by 100% when used by characters level 1 - 95. Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="35760" name="Draco's Blessing (3-hour)" additionalName="Event" type="EtcItem">
 		<!-- For 3 hours, increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
@@ -371,6 +386,7 @@
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="35762" name="Rabbit Ears" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
@@ -437,6 +453,7 @@
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="35773" name="Raccoon Ears" additionalName="STR" type="Armor">
 		<!-- STR + 3 when equipped. -->
@@ -485,6 +502,7 @@
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="35781" name="Raccoon Ears" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
@@ -587,6 +605,7 @@
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="35798" name="Romantic Chapeau" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->

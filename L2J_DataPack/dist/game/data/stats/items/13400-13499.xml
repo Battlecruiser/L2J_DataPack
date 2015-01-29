@@ -433,6 +433,7 @@
 		<set name="price" val="46668000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -472,6 +473,7 @@
 		<set name="price" val="35000000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -515,6 +517,7 @@
 		<set name="price" val="41880000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add order="0" stat="pDef" val="187" />
 			<enchant stat="pDef" val="0" />
@@ -533,6 +536,7 @@
 		<set name="price" val="41880000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -555,6 +559,7 @@
 		<set name="price" val="29168000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -616,6 +621,7 @@
 		<set name="price" val="21876000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add order="0" stat="pDef" val="117" />
 			<enchant stat="pDef" val="0" />
@@ -808,6 +814,7 @@
 		<set name="price" val="26175000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add order="0" stat="pDef" val="117" />
 			<enchant stat="pDef" val="0" />
@@ -825,6 +832,7 @@
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -842,6 +850,7 @@
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -928,6 +937,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -956,6 +966,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -1011,6 +1022,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
 		<for>
 			<set stat="pAtk" val="346" />
 			<set stat="mAtk" val="176" />
@@ -1068,6 +1080,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3599-1" />
+		<set name="commissionItemType" val="SPEAR" />
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -1124,6 +1137,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -1182,6 +1196,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="386" />
 			<set stat="mAtk" val="257" />
@@ -1213,6 +1228,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<set stat="pAtk" val="724" />
 			<set stat="mAtk" val="176" />
@@ -1535,6 +1551,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="13490" type="Armor" name="Arrow-pierced Apple">
 		<set name="icon" val="icon.accessory_arrow_apple_i00" />
@@ -1553,6 +1570,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="13492" type="Armor" name="Graduation Cap">
 		<set name="icon" val="icon.accessory_graduation_cap_i00" />
@@ -1580,6 +1598,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="13495" type="Armor" name="Refined Devil Horn">
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
@@ -1589,6 +1608,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="13496" type="Armor" name="Refined Pirate Hat">
 		<set name="icon" val="icon.accessory_captain_cap_i00" />
@@ -1598,6 +1618,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="13497" type="Armor" name="Refined Chick Hat">
 		<set name="icon" val="icon.accessory_chicken_cap2_i00" />
@@ -1616,6 +1637,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="13499" type="Armor" name="Refined Jester Hat">
 		<set name="icon" val="icon.accessory_jester_cap_2_i00" />

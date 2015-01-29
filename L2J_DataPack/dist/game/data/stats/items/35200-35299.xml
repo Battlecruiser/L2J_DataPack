@@ -1003,6 +1003,7 @@
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
 		<for>
 			<add stat="pAtk" val="629.0" />
 			<add stat="mAtk" val="313.0" />
@@ -1313,6 +1314,7 @@
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<add stat="pAtk" val="1415.0" />
 			<add stat="mAtk" val="313.0" />
@@ -1774,6 +1776,7 @@
 		<set name="icon" val="icon.honor_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="130" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
 			<add stat="pDef" val="60.0" />
 		</for>
@@ -1791,6 +1794,7 @@
 		<set name="weapon_type" val="ETC" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="commissionItemType" val="BRACELET" />
 	</item>
 	<item id="35294" name="Enhanced Tauti's Bracelet" additionalName="" type="Armor">
 		<!-- Tauti's Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP + 216, Str + 1, Int + 1. -->
@@ -1812,6 +1816,7 @@
 		<set name="weight" val="60" />
 		<set name="price" val="2934420" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
 	<item id="35297" name="Specter Cutter Fragment" additionalName="" type="EtcItem">
 		<!-- Main ingredient for making a Specter Cutter. -->
@@ -1819,6 +1824,7 @@
 		<set name="weight" val="60" />
 		<set name="price" val="2934420" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
 	<item id="35298" name="Specter Slasher Fragment" additionalName="" type="EtcItem">
 		<!-- Main ingredient for making a Specter Slasher. -->
@@ -1826,6 +1832,7 @@
 		<set name="weight" val="60" />
 		<set name="price" val="2934420" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
 	<item id="35299" name="Specter Avenger Fragment" additionalName="" type="EtcItem">
 		<!-- Main ingredient for making a Specter Avenger. -->
@@ -1833,5 +1840,6 @@
 		<set name="weight" val="60" />
 		<set name="price" val="2934420" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
 </list>

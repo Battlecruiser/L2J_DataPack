@@ -47,6 +47,7 @@
 		<set name="icon" val="BranchSys.icon.br_valentine_cake_3_i00" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="37009" name="Blueberry Cake (MP)" additionalName="" type="EtcItem">
 		<!-- Restores MP by 20%. Cooldown is 2 min. -->
@@ -59,21 +60,25 @@
 		<set name="icon" val="BranchSys.icon.br_valentine_cake_1_i00" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="37011" name="9th Anniversary Buff Scroll (P. Atk.)" additionalName="" type="EtcItem">
 		<!-- For 30 minutes, provides the effects of Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, Drum Melody, and Warrior's Harmony Lv. 1. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37012" name="9th Anniversary Buff Scroll (M. Atk.)" additionalName="" type="EtcItem">
 		<!-- For 30 minutes, provides the effects of Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, Drum Melody, and Wizard's Harmony Lv. 1. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37013" name="9th Anniversary Buff Scroll (P. Def.)" additionalName="" type="EtcItem">
 		<!-- For 30 minutes, provides the effects of Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, Drum Melody, and Knight's Harmony Lv. 1. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37014" name="Arcana Reaper" additionalName="" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
@@ -266,6 +271,7 @@
 		<set name="icon" val="icon.etc_evil_soul_core_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="37042" name="Recipe: Divine Protection Elixir" additionalName="" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for making Divine Protection Elixir. Requires Create Item (Lv. 12). Success rate is 100%. -->
@@ -273,6 +279,7 @@
 		<set name="weight" val="30" />
 		<set name="price" val="1500000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="37043" name="Recipe: Divine Protection Elixir" additionalName="" type="EtcItem">
 		<!-- For those who have completed the fourth class transfer only. Recipe for making Divine Protection Elixir. Requires Create Common Item (Lv. 10). Success rate is 100%. -->
@@ -596,6 +603,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37068" name="Monster Weapon Appearance Stone: Sword of Corruption" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Sword of Corruption. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -603,6 +611,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37069" name="Monster Weapon Appearance Stone: Octavis' Sword" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of Octavis's Sword. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -610,6 +619,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37070" name="Monster Weapon Appearance Stone: Tegaffe's Dualsword" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a dualsword to that of Tegaffe's Dualsword. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -617,6 +627,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37071" name="Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic sword to that of Seknus's Sword. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -624,6 +635,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37072" name="Monster Weapon Appearance Stone: Tebot's Axe" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of Tebot's Axe. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -631,6 +643,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37073" name="Monster Weapon Appearance Stone: Glakias' Hammer" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of Glakias' Hammer. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -638,6 +651,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37074" name="Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt to that of Tebot's Dual Blunt. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -645,6 +659,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37075" name="Monster Weapon Appearance Stone: Drakos' Dagger" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of Drakos' Dagger. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -652,6 +667,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37076" name="Monster Weapon Appearance Stone: Drakos' Dual Dagger" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger to that of Drakos' Dual Dagger. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -659,6 +675,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37077" name="Monster Weapon Appearance Stone: Guillotine's Greatsword" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of Guillotine's Greatsword. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -666,6 +683,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37078" name="Monster Weapon Appearance Stone: Thesakar's Spear" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of Thesakar's Spear. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -673,6 +691,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37079" name="Monster Weapon Appearance Stone: Mimilead's Staff" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt to that of Mimilead's Staff. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -680,6 +699,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37080" name="Monster Weapon Appearance Stone: Satyr's Staff" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt to that of Satyr's Staff. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -687,6 +707,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37081" name="Monster Weapon Appearance Stone: Kanadis' Hand" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of Kanadis' Hand. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -694,6 +715,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37082" name="Monster Weapon Appearance Stone: Kanadis' Bow" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of Kanadis' Bow. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -701,6 +723,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37083" name="Monster Weapon Appearance Stone: Centaur's Bow" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of Centaur's Bow. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -708,6 +731,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37084" name="Monster Weapon Appearance Stone: Spicula's Crossbow" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of Spicula's Crossbow. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -715,6 +739,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37085" name="Monster Weapon Appearance Stone: Theor's Shield" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of Theor's Shield. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -722,6 +747,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37086" name="Monster Weapon Appearance Stone: Shield of Corruption" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of a Shield of Corruption. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -729,6 +755,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37087" name="Dimensional Energy - Stage 1" additionalName="" type="EtcItem">
 		<!-- Energy with the power of dimension. Required to receive a reward or increase the stage level through Mermoden. If you use it to increase the stage level, you can later receive more rewards. To increase the level to Stage 2, you have to succeed in defense in the next cycle. 15-day. -->
@@ -792,17 +819,20 @@
 		<set name="icon" val="icon.etc_super_potion_i02" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="37098" name="High-grade Elixir of Mind (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers MP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i00" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="37099" name="High-grade Elixir of CP (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers CP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i01" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 </list>

@@ -32,6 +32,7 @@
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -52,6 +53,7 @@
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="71" />
 			<enchant stat="pDef" val="0" />
@@ -69,6 +71,7 @@
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -168,6 +171,7 @@
 		<set name="price" val="12627000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -189,6 +193,7 @@
 		<set name="price" val="33673000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -289,6 +294,7 @@
 		<set name="price" val="15784000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -367,6 +373,7 @@
 		<set name="price" val="8418000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -709,6 +716,7 @@
 		<set name="weight" val="60" />
 		<set name="price" val="84300" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
 	<item id="15649" type="EtcItem" name="Sealed Moirai Leather Breastplate Piece">
 		<set name="icon" val="icon.etc_sealed_bluelycan_houberk_piece_I00" />
@@ -808,6 +816,7 @@
 		<set name="weight" val="60" />
 		<set name="price" val="22400" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
 	<item id="15660" type="EtcItem" name="Sealed Vesper Helmet Piece">
 		<set name="icon" val="icon.etc_sealed_vesper_helmet_piece_I00" />
@@ -1399,6 +1408,7 @@
 		<set name="price" val="12627000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1419,6 +1429,7 @@
 		<set name="price" val="12627000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add order="0" stat="pDef" val="96" />
 			<enchant stat="pDef" val="0" />
@@ -1436,6 +1447,7 @@
 		<set name="price" val="12627000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1457,6 +1469,7 @@
 		<set name="price" val="33673000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1478,6 +1491,7 @@
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add order="0" stat="pDef" val="169" />
 			<enchant stat="pDef" val="0" />
@@ -1496,6 +1510,7 @@
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>

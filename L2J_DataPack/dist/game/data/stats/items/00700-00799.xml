@@ -413,6 +413,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2006-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="730" type="EtcItem" name="Scroll: Enchant Armor (A-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
@@ -426,6 +427,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2007-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="731" type="EtcItem" name="Crystal Scroll: Enchant Weapon (A-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
@@ -517,6 +519,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2014-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="738" type="Weapon" name="Sword of Solidarity">
 		<set name="icon" val="icon.weapon_long_sword_i00" />

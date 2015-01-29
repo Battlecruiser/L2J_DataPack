@@ -343,6 +343,7 @@
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -433,6 +434,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3566-2" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -789,6 +791,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3567-2" />
+		<set name="commissionItemType" val="DAGGER" />
 		<for>
 			<set stat="pAtk" val="318" />
 			<set stat="mAtk" val="163" />
@@ -1113,6 +1116,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-2" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -1754,6 +1758,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="10481" type="EtcItem" name="Blue Soul Crystal - Stage 15">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
@@ -1764,6 +1769,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="10482" type="EtcItem" name="Green Soul Crystal - Stage 15">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
@@ -1774,6 +1780,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="10483" type="EtcItem" name="Life Stone - Lv. 82">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
@@ -1782,6 +1789,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="34560" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="82" />
 		</cond>
@@ -1793,6 +1801,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="138240" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="82" />
 		</cond>
@@ -1804,6 +1813,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="691200" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="82" />
 		</cond>

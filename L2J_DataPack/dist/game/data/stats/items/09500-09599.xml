@@ -167,6 +167,7 @@
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -188,6 +189,7 @@
 		<set name="price" val="15248000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -208,6 +210,7 @@
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -228,6 +231,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -248,6 +252,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -269,6 +274,7 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add order="0" stat="pDef" val="161" />
 			<enchant stat="pDef" val="0" />
@@ -287,6 +293,7 @@
 		<set name="price" val="11436000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add order="0" stat="pDef" val="100" />
 			<enchant stat="pDef" val="0" />
@@ -304,6 +311,7 @@
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add order="0" stat="pDef" val="92" />
 			<enchant stat="pDef" val="0" />
@@ -321,6 +329,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="61" />
 			<enchant stat="pDef" val="0" />
@@ -338,6 +347,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="61" />
 			<enchant stat="pDef" val="0" />
@@ -356,6 +366,7 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -378,6 +389,7 @@
 		<set name="price" val="11436000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -419,6 +431,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -439,6 +452,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -623,6 +637,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9547" type="EtcItem" name="Water Stone">
 		<set name="icon" val="icon.etc_water_stone_i00" />
@@ -635,6 +650,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9548" type="EtcItem" name="Earth Stone">
 		<set name="icon" val="icon.etc_earth_stone_i00" />
@@ -647,6 +663,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9549" type="EtcItem" name="Wind Stone">
 		<set name="icon" val="icon.etc_wind_stone_i00" />
@@ -659,6 +676,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9550" type="EtcItem" name="Dark Stone">
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
@@ -671,6 +689,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9551" type="EtcItem" name="Holy Stone">
 		<set name="icon" val="icon.etc_holy_stone_i00" />
@@ -683,6 +702,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2333-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9552" type="EtcItem" name="Fire Crystal">
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
@@ -695,6 +715,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9553" type="EtcItem" name="Water Crystal">
 		<set name="icon" val="icon.etc_water_crystal_i00" />
@@ -707,6 +728,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9554" type="EtcItem" name="Earth Crystal">
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
@@ -719,6 +741,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9555" type="EtcItem" name="Wind Crystal">
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
@@ -731,6 +754,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9556" type="EtcItem" name="Dark Crystal">
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
@@ -743,6 +767,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9557" type="EtcItem" name="Holy Crystal">
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
@@ -755,6 +780,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2333-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="9558" type="EtcItem" name="Fire Jewel">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
@@ -897,6 +923,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="9571" type="EtcItem" name="Blue Soul Crystal - Stage 14">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
@@ -907,6 +934,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="9572" type="EtcItem" name="Green Soul Crystal - Stage 14">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
@@ -917,6 +945,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="9573" type="EtcItem" name="Life Stone - Lv. 80">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
@@ -925,6 +954,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="28800" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="80" />
 		</cond>
@@ -936,6 +966,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="115200" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="80" />
 		</cond>
@@ -947,6 +978,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="576000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="80" />
 		</cond>
@@ -958,6 +990,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="2880000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="80" />
 		</cond>
@@ -1079,6 +1112,7 @@
 		<set name="weight" val="130" />
 		<set name="price" val="9800" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
@@ -1159,6 +1193,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="216000" />
 		<set name="item_skill" val="3322-1" />
+		<set name="commissionItemType" val="BRACELET" />
 	</item>
 	<item id="9590" type="Armor" name="Bronze Bracelet">
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />

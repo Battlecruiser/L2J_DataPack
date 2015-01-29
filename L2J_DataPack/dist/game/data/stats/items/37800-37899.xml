@@ -124,6 +124,7 @@
 		<!-- Mysterious box containing 30-day limit appearance stone for Metal Shoot hair accessory, breastplate, gaiters, boots, and gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37816" name="Metal Suit Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of Metal Shoot hair for 30 days. -->
@@ -132,6 +133,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37817" name="Metal Suit Breastplate Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Metal Shoot breastplate for 30 days. -->
@@ -140,6 +142,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37818" name="Metal Suit Gaiters Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a bottom to that of Metal Shoot gaiters for 30 days. -->
@@ -148,6 +151,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37819" name="Metal Suit Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of Metal Shoot gloves for 30 days. -->
@@ -156,6 +160,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37820" name="Metal Suit Boots Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of boots to that of Metal Shoot boots for 30 days. -->
@@ -164,6 +169,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="time" val="2592000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37821" name="Transformation Potion: Metal Suit" additionalName="" type="EtcItem">
 		<!-- Modifies your appearance into that of a Metal Suit for 1 hr. -->
@@ -525,6 +531,7 @@
 		<!-- For 30 minutes, P. Atk. + 10%, M. Atk. by 21%, P. Def. by 15%, M. Def. by 15%, Max HP, MP, and CP by 15%. Does not disappear upon death. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_cave_page_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37868" name="Hero's Weapon: Dagger" additionalName="15-day" type="Weapon">
 		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
@@ -778,6 +785,7 @@
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="180" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="37895" name="SP Rune (Low-grade)" additionalName="7-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 10%. 7-day. -->

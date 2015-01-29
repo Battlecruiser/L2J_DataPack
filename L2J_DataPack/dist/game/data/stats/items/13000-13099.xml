@@ -1113,6 +1113,7 @@
 		<set name="weight" val="20" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="13072" type="EtcItem" name="Blue Soul Crystal - Stage 16">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
@@ -1122,6 +1123,7 @@
 		<set name="weight" val="20" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="13073" type="EtcItem" name="Green Soul Crystal - Stage 16">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
@@ -1131,6 +1133,7 @@
 		<set name="weight" val="20" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="13074" type="Armor" name="Shadow Item: Top Hat">
 		<set name="icon" val="icon.accessory_magicial_cap_i00" />
@@ -1195,6 +1198,7 @@
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8310-1" />
+		<set name="commissionItemType" val="SIGIL" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>

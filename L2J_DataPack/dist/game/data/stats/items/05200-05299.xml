@@ -369,6 +369,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3045-17" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<for>
 			<set stat="pAtk" val="259" />
 			<set stat="mAtk" val="107" />
@@ -991,6 +992,7 @@
 		<set name="recipe_id" val="512" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="5283" type="EtcItem" name="Rice Cake">
 		<set name="icon" val="icon.etc_mochi_i00" />
@@ -1069,6 +1071,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="190" />
 			<set stat="mAtk" val="83" />
@@ -1110,6 +1113,7 @@
 		<set name="weight" val="3320" />
 		<set name="price" val="2226000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1129,6 +1133,7 @@
 		<set name="weight" val="570" />
 		<set name="price" val="1336000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="HELMET" />
 		<for>
 			<add order="0" stat="pDef" val="69" />
 			<enchant stat="pDef" val="0" />
@@ -1145,6 +1150,7 @@
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="46" />
 			<enchant stat="pDef" val="0" />
@@ -1161,6 +1167,7 @@
 		<set name="weight" val="1110" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="46" />
 			<enchant stat="pDef" val="0" />
@@ -1234,6 +1241,7 @@
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="46" />
 			<enchant stat="pDef" val="0" />
@@ -1250,6 +1258,7 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="46" />
 			<enchant stat="pDef" val="0" />
@@ -1284,6 +1293,7 @@
 		<set name="weight" val="1480" />
 		<set name="price" val="1670000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add order="0" stat="pDef" val="80" />
 			<enchant stat="pDef" val="0" />

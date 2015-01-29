@@ -95,6 +95,7 @@
 		<set name="recipe_id" val="23" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="1808" type="EtcItem" name="Recipe: Soulshot (S-Grade)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
@@ -325,6 +326,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2040-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>

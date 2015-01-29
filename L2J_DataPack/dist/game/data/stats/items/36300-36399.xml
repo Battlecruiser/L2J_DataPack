@@ -29,12 +29,14 @@
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="36310" name="Battleground Scroll: Remove Invincibility" additionalName="" type="EtcItem">
 		<!-- Removes the target's invincibility. Battleground only. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="36311" name="Battleground Scroll: Damage Reflect Resistance" additionalName="" type="EtcItem">
 		<!-- Becomes resistant to Damage Reflect. Battleground only. -->
@@ -113,11 +115,13 @@
 		<!-- Gift from a Lyn Draco that hatched from a purified Draco Egg. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36326" name="Draco's Shiny Gift" additionalName="Event" type="EtcItem">
 		<!-- Gift from a Draco that hatched from a purified Draco Egg. It shines. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36327" name="Birthday Vitality Potion" additionalName="1-hour" type="EtcItem">
 		<!-- Upon use, for 1 hour, Vitality is recovered when XP is acquired through hunting. Vitality item with limited usage. -->
@@ -167,11 +171,13 @@
 		<!-- Energy drink meant to make one run like the wind. Speed + 15. Formulated for special events, the recipe remains a secret. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
 		<set name="icon" val="icon.etc_oblivion_yellow_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="36335" name="Caffeine Energy Drink" additionalName="Event" type="EtcItem">
 		<!-- Energy drink that boosts dexterity and clears one's mind with a single cup. DEX + 10. Formulated for special events, this energy drink should be used with care as it can raise pulse rate and blood pressure. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
 		<set name="icon" val="icon.etc_oblivion_green_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="36336" name="Protein Energy Drink" additionalName="Event" type="EtcItem">
 		<!-- Energy drink that creates monstrous muscle mass. STR + 10. Formulated for special events, this energy drink makes one extremely powerful. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
@@ -187,6 +193,7 @@
 		<!-- Energy drink that stimulates the nerves, activating the neurons in the brain. WIT + 10. Formulated for special events, this energy drink is said to help with Mental activity. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
 		<set name="icon" val="icon.etc_oblivion_white_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="36339" name="Medal of Glory" additionalName="Event" type="EtcItem">
 		<!-- Medal used in the festival hosted by Amadeo Cadmus, the king of Aden. It is rarer and more precious than the Medal of Victory and the Medal of Friendship. Event Manager Cocoring can exchange it for a Golden Chest for you. -->
@@ -321,6 +328,7 @@
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="36362" name="Red Horns" additionalName="Evasion (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. Evasion + 5% when equipped. -->
@@ -469,6 +477,7 @@
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_r" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="36387" name="Giant's Scroll: Enchant Weapon (S-grade)" additionalName="" type="EtcItem">
 		<!-- Upon enchantment, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, dualsword, and crossbow + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. When weapons are enchanted to +4 or above, P. Atk. and M. Atk. double. Weapons are randomly enchanted between + 1 and + 3. -->
@@ -487,12 +496,14 @@
 		<set name="icon" val="icon.giant_scrl_of_ench_am_r" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="36390" name="Giant's Scroll: Enchant Armor (S-grade)" additionalName="" type="EtcItem">
 		<!-- P. Def. for S-grade armor and accessories increases by 1, and by 3 starting from +4. Armor and accessories can be safely enchanted up to +3. One-piece armor can be safely enchanted up to +4. When armor is enchanted to +4 or above, HP also increases according to the enchant value. Armor and accessories are randomly enchanted between +1 and +3. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_s" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="36391" name="Giant's Scroll: Enchant Armor (A-grade)" additionalName="" type="EtcItem">
 		<!-- P. Def. for A-grade armor and accessories increases by 1, and by 3 starting from +4. Armor and accessories can be safely enchanted up to +3. One-piece armor can be safely enchanted up to +4. When armor is enchanted to +4 or above, HP also increases according to the enchant value. Armor and accessories are randomly enchanted between +1 and +3. -->

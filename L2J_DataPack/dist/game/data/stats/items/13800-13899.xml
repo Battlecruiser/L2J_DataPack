@@ -1000,6 +1000,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8296-1" />
 		<set name="item_skill" val="3552-1" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
@@ -1064,6 +1065,7 @@
 		<set name="weight" val="940" />
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SIGIL" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1106,6 +1108,7 @@
 		<set name="weight" val="920" />
 		<set name="price" val="12250000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SIGIL" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1161,6 +1164,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<set name="price" val="28671000" />
+		<set name="commissionItemType" val="CLOAK" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
@@ -1233,6 +1237,7 @@
 		<set name="weight" val="500" />
 		<set name="price" val="45100" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="BELT" />
 		<for>
 			<add order="0" stat="pDef" val="10" />
 			<enchant stat="pDef" val="0" />

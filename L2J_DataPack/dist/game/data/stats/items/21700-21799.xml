@@ -144,6 +144,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3559-2" />
 		<set name="price" val="11394000" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add order="0" stat="mDef" val="94" />
 			<add stat="maxMp" val="37" />
@@ -156,6 +157,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="price" val="29674485" />
 		<set name="weight" val="220" />
+		<set name="commissionItemType" val="CLOAK" />
 	</item>
 	<item id="21714" type="EtcItem" name="Sealed Cloak of Freya">
 		<!-- Description: When the seal is released, P. Def. and attribute resistance increase, and special skills can be used. It can be equipped only after releasing the seal through the weavers Olf Kanore in Aden or Olf Adams in Rune. Enchantment, attribute, and refining are impossible. Can be exchanged or dropped. -->
@@ -163,6 +165,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="price" val="32971650" />
 		<set name="weight" val="220" />
+		<set name="commissionItemType" val="CLOAK" />
 	</item>
 	<item id="21715" type="EtcItem" name="Frintezza's Sealed Cloak">
 		<!-- Description: When the seal is released, P. Def. and attribute resistance increase, and special skills can be used. It can be equipped only after releasing the seal through the weavers Olf Kanore in Aden or Olf Adams in Rune. Enchantment, attribute, and refining are impossible. Can be exchanged or dropped. -->
@@ -170,6 +173,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="price" val="29674485" />
 		<set name="weight" val="220" />
+		<set name="commissionItemType" val="CLOAK" />
 	</item>
 	<item id="21716" type="Armor" name="Zaken's Cloak">
 		<!-- Description: Cloak that makes you feel Zaken's sorrow. Increases P. Def. and attribute resistance. Unlocks a skill to move to the boss area. Can only be equipped when the cloak slot is open. Enchantment, attribute, and refining are impossible. Can be exchanged or dropped. -->
@@ -182,6 +186,7 @@
 		<set name="price" val="29674485" />
 		<set name="weight" val="220" />
 		<set name="item_skill" val="21242-1" />
+		<set name="commissionItemType" val="CLOAK" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
@@ -206,6 +211,7 @@
 		<set name="price" val="32971650" />
 		<set name="weight" val="220" />
 		<set name="item_skill" val="21243-1" />
+		<set name="commissionItemType" val="CLOAK" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
@@ -230,6 +236,7 @@
 		<set name="price" val="29674485" />
 		<set name="weight" val="220" />
 		<set name="item_skill" val="21244-1" />
+		<set name="commissionItemType" val="CLOAK" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
@@ -421,6 +428,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="21731" type="Weapon" name="Maingauche">
 		<!-- Description: Letter Collector's Maingauche of Memory -->

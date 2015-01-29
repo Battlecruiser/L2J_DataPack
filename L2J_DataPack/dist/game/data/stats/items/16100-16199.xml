@@ -26,6 +26,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="16103" type="Armor" name="Chic Gold Horn Cap">
 		<set name="icon" val="icon.accessory_horn01_hat_i00" />
@@ -35,6 +36,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="16104" type="Armor" name="Chic Silver Horn Cap">
 		<set name="icon" val="icon.accessory_horn01_hat_i01" />
@@ -53,6 +55,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="16106" type="Armor" name="Refined Brown Turban">
 		<set name="icon" val="icon.accessory_turban_yellow_hat_i00" />
@@ -80,6 +83,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="16109" type="Armor" name="Refined Cow Hat">
 		<set name="icon" val="icon.accessory_cow_of_cap_i00" />
@@ -1000,6 +1004,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3411-1" />
 		<set name="item_skill" val="3552-1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<for>
 			<set stat="pAtk" val="505" />
 			<set stat="mAtk" val="183" />
@@ -1132,6 +1137,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3411-1" />
 		<set name="item_skill" val="3552-1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<for>
 			<set stat="pAtk" val="532" />
 			<set stat="mAtk" val="192" />
@@ -1200,6 +1206,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="994800" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="85" />
 		</cond>
@@ -1222,6 +1229,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="59616" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="85" />
 		</cond>
@@ -1233,6 +1241,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="238752" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="85" />
 		</cond>
@@ -1244,6 +1253,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="1193760" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="85" />
 		</cond>
