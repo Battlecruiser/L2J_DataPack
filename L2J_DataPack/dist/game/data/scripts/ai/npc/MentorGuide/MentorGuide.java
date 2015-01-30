@@ -204,12 +204,10 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		event.getMentor().sendPacket(new ExMentorList(event.getMentor()));
 		
 		// Add the mentee skill
-		event.getMentee().addSkill(MENTEE_MENTOR_SUMMON.getSkill(), true);
+		handleMenteeSkills(event.getMentee());
 		
-		// Add the mentor skills
-		event.getMentor().addSkill(MENTOR_KNIGHTS_HARMONY.getSkill(), true);
-		event.getMentor().addSkill(MENTOR_WIZARDS_HARMONY.getSkill(), true);
-		event.getMentor().addSkill(MENTOR_WARRIORS_HARMONY.getSkill(), true);
+		// Give mentor's buffs only if he didn't had them.
+		handleMentorSkills(event.getMentor());
 		
 		// Send mail with the headphone
 		sendMail(event.getMentee(), MENTEE_ADDED_TITLE, MENTEE_ADDED_BODY, MENTEE_HEADPHONE, 1);
@@ -248,6 +246,9 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 				{
 					sk.getSkill().applyEffects(player, player);
 				}
+				
+				// Add the mentee skill
+				handleMenteeSkills(player);
 				
 				mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTEE_S1_HAS_CONNECTED).addCharName(player));
 				mentor.sendPacket(new ExMentorList(mentor.getPlayerInstance()));
@@ -313,6 +314,9 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 				}
 			}
 			
+			// Give mentor's buffs only if he didn't had them.
+			handleMentorSkills(player);
+			
 			player.sendPacket(new ExMentorList(player));
 		}
 		else
@@ -332,11 +336,20 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	{
 		final L2PcInstance player = event.getActiveChar();
 		
+		if (player.isMentor())
+		{
+			// Give mentor's buffs only if he didn't had them.
+			handleMentorSkills(player);
+			return;
+		}
+		
 		// Not a mentee
 		if (!player.isMentee())
 		{
 			return;
 		}
+		
+		handleMenteeSkills(player);
 		
 		if (player.isInCategory(CategoryType.AWAKEN_GROUP))
 		{
@@ -377,9 +390,20 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	public void onMenteeLeft(OnPlayerMenteeLeft event)
 	{
 		final L2PcInstance player = event.getMentee();
-		
+		final L2PcInstance mentor = event.getMentor().getPlayerInstance();
 		// Remove the mentee skills
 		player.removeSkill(MENTEE_MENTOR_SUMMON.getSkill(), true);
+		
+		// If player does not have any mentees anymore remove mentor skills.
+		if ((mentor != null) && (MentorManager.getInstance().getMentees(mentor.getObjectId()) == null))
+		{
+			mentor.removeSkill(MENTOR_KNIGHTS_HARMONY.getSkill(), true);
+			mentor.removeSkill(MENTOR_WIZARDS_HARMONY.getSkill(), true);
+			mentor.removeSkill(MENTOR_WARRIORS_HARMONY.getSkill(), true);
+			
+			// Clear the mentee
+			mentor.sendPacket(new ExMentorList(mentor));
+		}
 		
 		// Clear mentee status
 		player.sendPacket(new ExMentorList(player));
@@ -412,6 +436,28 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		
 		// Remove mentee from the list
 		event.getMentor().sendPacket(new ExMentorList(mentor));
+	}
+	
+	private void handleMenteeSkills(L2PcInstance player)
+	{
+		// Give mentee's buffs only if he didn't had them.
+		if (player.getKnownSkill(MENTEE_MENTOR_SUMMON.getSkillId()) == null)
+		{
+			// Add the mentee skills
+			player.addSkill(MENTEE_MENTOR_SUMMON.getSkill(), false);
+		}
+	}
+	
+	private void handleMentorSkills(L2PcInstance player)
+	{
+		// Give mentor's buffs only if he didn't had them.
+		if (player.getKnownSkill(MENTOR_KNIGHTS_HARMONY.getSkillId()) == null)
+		{
+			// Add the mentor skills
+			player.addSkill(MENTOR_KNIGHTS_HARMONY.getSkill(), false);
+			player.addSkill(MENTOR_WIZARDS_HARMONY.getSkill(), false);
+			player.addSkill(MENTOR_WARRIORS_HARMONY.getSkill(), false);
+		}
 	}
 	
 	private void handleGraduateMentee(L2PcInstance player)
