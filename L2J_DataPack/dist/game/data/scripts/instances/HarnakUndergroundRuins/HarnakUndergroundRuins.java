@@ -18,12 +18,12 @@
  */
 package instances.HarnakUndergroundRuins;
 
+import instances.AbstractInstance;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-
-import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.CategoryType;
@@ -32,30 +32,36 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.ExSendUIEvent;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Harnak Underground Ruins Instance Zone.
  * @author Sdw
  */
-public class HarnakUndergroundRuins extends AbstractNpcAI
+public final class HarnakUndergroundRuins extends AbstractInstance
 {
-	private static final int TEMPLATE_ID = 195;
-	// Locations
-	private static final Location START_LOC = new Location(-107910, 205828, -10872);
-	private static final Location NPC_ROOM1_LOC = new Location(-107930, 206328, -10872);
-	private static final Location EXIT_LOC = new Location(-114962, 226564, -2864);
-	// Doors
-	private static final int DOOR_ONE = 16240100;
-	private static final int DOOR_TWO = 16240102;
+	protected class HuRWorld extends InstanceWorld
+	{
+		protected int wave = 0;
+		protected int currentNpc = 0;
+		protected int waveNpcId = 0;
+		protected int maximalDefenseCounter = 0;
+		protected int timerCount = 0;
+		protected int enabledSeal = 0;
+		protected Set<L2Npc> spawnedNpc = Collections.newSetFromMap(new ConcurrentHashMap<L2Npc, Boolean>());
+		protected boolean openingPlayed = false;
+		protected boolean harnakMessage1 = false;
+		protected boolean harnakMessage2 = false;
+		protected boolean harnakMessage3 = false;
+	}
+	
 	// NPCs
 	private static final int HADEL = 33344;
 	private static final int KRAKIA_BATHUS = 27437;
@@ -75,37 +81,28 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 		33556,
 		33557
 	};
+	// Locations
+	private static final Location START_LOC = new Location(-107910, 205828, -10872);
+	private static final Location NPC_ROOM1_LOC = new Location(-107930, 206328, -10872);
+	private static final Location EXIT_LOC = new Location(-114962, 226564, -2864);
 	// Skills
 	private static final SkillHolder RELEASE_OF_POWER = new SkillHolder(14625, 1);
 	private static final SkillHolder MAXIMUM_DEFENSE = new SkillHolder(14700, 1);
 	private static final SkillHolder LIGHT_HEAL = new SkillHolder(14736, 1);
 	private static final SkillHolder ULTIMATE_BUFF = new SkillHolder(4318, 1);
-	// Zones
+	// Misc
+	private static final int TEMPLATE_ID = 195;
 	private static final int ZONE_ROOM_2 = 200032;
 	private static final int ZONE_ROOM_3 = 200033;
-	// Movies
 	private static final int LAST_ROOM_OPENING = 46;
 	private static final int SUCCES_ENDING = 47;
 	private static final int FAILED_ENDING = 48;
+	private static final int DOOR_ONE = 16240100;
+	private static final int DOOR_TWO = 16240102;
 	
-	protected class HuRWorld extends InstanceWorld
+	public HarnakUndergroundRuins()
 	{
-		protected int wave = 0;
-		protected int currentNpc = 0;
-		protected int waveNpcId = 0;
-		protected int maximalDefenseCounter = 0;
-		protected int timerCount = 0;
-		protected int enabledSeal = 0;
-		protected Set<L2Npc> spawnedNpc = Collections.newSetFromMap(new ConcurrentHashMap<L2Npc, Boolean>());
-		protected boolean openingPlayed = false;
-		protected boolean harnakMessage1 = false;
-		protected boolean harnakMessage2 = false;
-		protected boolean harnakMessage3 = false;
-	}
-	
-	private HarnakUndergroundRuins()
-	{
-		super(HarnakUndergroundRuins.class.getSimpleName(), "instances");
+		super(HarnakUndergroundRuins.class.getSimpleName());
 		registerMobs(KRAKIA_BATHUS, KRAKIA_CARCASS, KRAKIA_LOTUS, RAKZAN, WEISS_KHAN, BAMONTI, SEKNUS, WEISS_ELE, HARNAKS_WRAITH);
 		addSeeCreatureId(POWER_SOURCES);
 		addEnterZoneId(ZONE_ROOM_2, ZONE_ROOM_3);
@@ -122,7 +119,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 		{
 			case "enter_instance":
 			{
-				enterInstance(player, "HarnakUndergroundRuins.xml");
+				enterInstance(player, new HuRWorld(), "HarnakUndergroundRuins.xml", TEMPLATE_ID);
 				break;
 			}
 			case "message1":
@@ -200,9 +197,8 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 				final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 				if (tmpworld instanceof HuRWorld)
 				{
-					HuRWorld world = (HuRWorld) tmpworld;
-					Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-					List<L2Npc> spawnedNpcs = inst.spawnGroup("first_room");
+					final HuRWorld world = (HuRWorld) tmpworld;
+					final List<L2Npc> spawnedNpcs = spawnGroup("first_room", world.getInstanceId());
 					world.spawnedNpc.addAll(spawnedNpcs);
 					final L2Npc razkan = spawnedNpcs.stream().filter(n -> n.getId() == RAKZAN).findFirst().orElse(null);
 					if (razkan != null)
@@ -219,8 +215,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 			case "spawn_npc2":
 			{
 				openDoor(DOOR_ONE, player.getInstanceId());
-				final Instance inst = InstanceManager.getInstance().getInstance(player.getInstanceId());
-				inst.spawnGroup("power_sources");
+				spawnGroup("power_sources", player.getInstanceId());
 				break;
 			}
 			case "spawn_npc3":
@@ -228,10 +223,9 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 				final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 				if (tmpworld instanceof HuRWorld)
 				{
-					HuRWorld world = (HuRWorld) tmpworld;
+					final HuRWorld world = (HuRWorld) tmpworld;
 					world.incStatus();
-					Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-					List<L2Npc> spawnedNpcs = inst.spawnGroup("third_room");
+					final List<L2Npc> spawnedNpcs = spawnGroup("third_room", world.getInstanceId());
 					final L2Npc powerSource = spawnedNpcs.stream().filter(n -> n.getId() == POWER_SOURCE).findFirst().orElse(null);
 					if (powerSource != null)
 					{
@@ -289,8 +283,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 					if (tmpworld instanceof HuRWorld)
 					{
 						final HuRWorld world = (HuRWorld) tmpworld;
-						final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-						final List<L2Npc> spawnedNpcs = inst.spawnGroup("second_room_wave_1_" + npcId);
+						final List<L2Npc> spawnedNpcs = spawnGroup("second_room_wave_1_" + npcId, world.getInstanceId());
 						world.spawnedNpc.addAll(spawnedNpcs);
 						world.waveNpcId = npcId;
 						for (L2Npc spawnedNpc : spawnedNpcs)
@@ -308,8 +301,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 				if (tmpworld instanceof HuRWorld)
 				{
 					final HuRWorld world = (HuRWorld) tmpworld;
-					final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-					final List<L2Npc> spawnedNpcs = inst.spawnGroup("second_room_wave_2_" + world.waveNpcId);
+					final List<L2Npc> spawnedNpcs = spawnGroup("second_room_wave_2_" + world.waveNpcId, world.getInstanceId());
 					world.spawnedNpc.addAll(spawnedNpcs);
 					for (L2Npc spawnedNpc : spawnedNpcs)
 					{
@@ -325,15 +317,14 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 				final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 				if (tmpworld instanceof HuRWorld)
 				{
-					HuRWorld world = (HuRWorld) tmpworld;
-					final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-					List<L2Npc> spawnedNpcs = inst.spawnGroup("second_room_wave_3_" + world.waveNpcId);
+					final HuRWorld world = (HuRWorld) tmpworld;
+					final List<L2Npc> spawnedNpcs = spawnGroup("second_room_wave_3_" + world.waveNpcId, world.getInstanceId());
 					world.spawnedNpc.addAll(spawnedNpcs);
 					for (L2Npc spawnedNpc : spawnedNpcs)
 					{
 						addAttackPlayerDesire(spawnedNpc, player);
 					}
-					final List<L2Npc> powersources = inst.spawnGroup("power_source");
+					final List<L2Npc> powersources = spawnGroup("power_source", world.getInstanceId());
 					for (L2Npc powersource : powersources)
 					{
 						powersource.setTarget(player);
@@ -348,7 +339,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 				final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 				if (tmpworld instanceof HuRWorld)
 				{
-					HuRWorld world = (HuRWorld) tmpworld;
+					final HuRWorld world = (HuRWorld) tmpworld;
 					if (npc.calculateDistance(player, true, false) < MAXIMUM_DEFENSE.getSkill().getCastRange())
 					{
 						npc.doCast(MAXIMUM_DEFENSE.getSkill());
@@ -403,13 +394,12 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 				if (tmpworld instanceof HuRWorld)
 				{
 					final HuRWorld world = (HuRWorld) tmpworld;
-					final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-					List<L2Npc> spawnedNpcs = inst.spawnGroup("third_room_" + world.waveNpcId);
+					List<L2Npc> spawnedNpcs = spawnGroup("third_room_" + world.waveNpcId, world.getInstanceId());
 					for (L2Npc spawnedNpc : spawnedNpcs)
 					{
 						addAttackPlayerDesire(spawnedNpc, player);
 					}
-					spawnedNpcs = inst.spawnGroup("seal");
+					spawnedNpcs = spawnGroup("seal", world.getInstanceId());
 					for (L2Npc spawnedNpc : spawnedNpcs)
 					{
 						broadcastNpcSay(spawnedNpc, Say2.NPC_ALL, NpcStringId.DISABLE_DEVICE_WILL_GO_OUT_OF_CONTROL_IN_1_MINUTE);
@@ -423,7 +413,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 				final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 				if (tmpworld instanceof HuRWorld)
 				{
-					HuRWorld world = (HuRWorld) tmpworld;
+					final HuRWorld world = (HuRWorld) tmpworld;
 					if (npc.getScriptValue() == 0)
 					{
 						npc.setScriptValue(1);
@@ -512,8 +502,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 			}
 			case "spawn_hermuncus":
 			{
-				final Instance inst = InstanceManager.getInstance().getInstance(player.getInstanceId());
-				inst.spawnGroup("hermuncus");
+				spawnGroup("hermuncus", player.getInstanceId());
 				break;
 			}
 			case "cast_release_power":
@@ -536,34 +525,18 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private void enterInstance(L2PcInstance player, String template)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (world instanceof HuRWorld)
-			{
-				teleportPlayer(player, START_LOC, world.getInstanceId());
-				return;
-			}
-			player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
-			return;
+			startQuestTimer("fail_instance", 1260000, null, player);
+			startQuestTimer("message1", 2500, null, player);
+			startQuestTimer("message2", 5000, null, player);
+			startQuestTimer("message3", 8500, null, player);
+			startQuestTimer("spawn_npc1", 10000, null, player);
 		}
-		world = new HuRWorld();
-		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(TEMPLATE_ID);
-		world.addAllowed(player.getObjectId());
-		world.setStatus(0);
-		InstanceManager.getInstance().addWorld(world);
-		
 		teleportPlayer(player, START_LOC, world.getInstanceId());
-		
-		startQuestTimer("fail_instance", 1260000, null, player);
-		startQuestTimer("message1", 2500, null, player);
-		startQuestTimer("message2", 5000, null, player);
-		startQuestTimer("message3", 8500, null, player);
-		startQuestTimer("spawn_npc1", 10000, null, player);
 	}
 	
 	@Override
@@ -572,7 +545,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(killer);
 		if ((tmpworld instanceof HuRWorld))
 		{
-			HuRWorld world = (HuRWorld) tmpworld;
+			final HuRWorld world = (HuRWorld) tmpworld;
 			if (world.isStatus(0))
 			{
 				world.spawnedNpc.remove(npc);
@@ -800,7 +773,6 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 				}
 			}
 		}
-		
 		return super.onAttack(npc, player, damage, isSummon);
 	}
 	
@@ -854,10 +826,5 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 			}
 		}
 		return super.onEnterZone(character, zone);
-	}
-	
-	public static void main(String[] args)
-	{
-		new HarnakUndergroundRuins();
 	}
 }

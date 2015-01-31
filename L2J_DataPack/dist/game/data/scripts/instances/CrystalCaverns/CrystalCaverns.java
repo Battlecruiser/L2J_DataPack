@@ -18,6 +18,8 @@
  */
 package instances.CrystalCaverns;
 
+import instances.AbstractInstance;
+
 import java.util.List;
 import java.util.Map;
 
@@ -34,6 +36,7 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -44,7 +47,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2TrapInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
@@ -70,13 +72,13 @@ import com.l2jserver.gameserver.util.Util;
  * 4. Baylor Raid is missing a lot of things This script takes the best elements of different versions and combines them into one script to get the most optimal and retail-like experience.<br>
  * Original sources: theone, L2JEmu, L2JOfficial, L2JFree Contributing authors: TGS, Lantoc, Janiii, Gigiikun, RosT Please maintain consistency between the Crystal Caverns scripts.
  */
-public final class CrystalCaverns extends Quest
+public final class CrystalCaverns extends AbstractInstance
 {
 	protected static class CrystalGolem
 	{
-		public L2ItemInstance foodItem = null;
-		public boolean isAtDestination = false;
-		public Location oldLoc = null;
+		protected L2ItemInstance foodItem = null;
+		protected boolean isAtDestination = false;
+		protected Location oldLoc = null;
 	}
 	
 	private class CCWorld extends InstanceWorld
@@ -127,9 +129,6 @@ public final class CrystalCaverns extends Quest
 		}
 	}
 	
-	private static final int TEMPLATE_ID = 10;
-	private static final boolean debug = false;
-	
 	// Items
 	private static final int WHITE_SEED = 9597;
 	private static final int BLACK_SEED = 9598;
@@ -140,7 +139,6 @@ public final class CrystalCaverns extends Quest
 	private static final int BOSS_CRYSTAL_1 = 9695; // Clear Crystal
 	private static final int BOSS_CRYSTAL_2 = 9696; // Clear Crystal
 	private static final int BOSS_CRYSTAL_3 = 9697; // Clear Crystal
-	
 	// NPCs
 	private static final int ORACLE_GUIDE_1 = 32281;
 	private static final int ORACLE_GUIDE_2 = 32278;
@@ -155,18 +153,14 @@ public final class CrystalCaverns extends Quest
 		-11886,
 		16384
 	};
-	
-	// mobs
 	private static final int GK1 = 22275;
 	private static final int GK2 = 22277;
-	
 	private static final int TOURMALINE = 22292;
 	private static final int TEROD = 22301;
 	private static final int DOLPH = 22299;
 	private static final int WEYLIN = 22298;
 	private static final int GUARDIAN = 22303;
 	private static final int GUARDIAN2 = 22304;
-	
 	private static final int TEARS = 25534;
 	private static final int TEARS_COPY = 25535;
 	private static final int KECHI = 25532;
@@ -174,7 +168,6 @@ public final class CrystalCaverns extends Quest
 	private static final int BAYLOR = 29099;
 	private static final int DARNEL = 25531;
 	private final static int ALARMID = 18474;
-	
 	// private static final int[] BOSSCR = {9695,9696,9697};
 	private static final int[] CGMOBS =
 	{
@@ -221,7 +214,11 @@ public final class CrystalCaverns extends Quest
 		22420
 	};
 	
-	// Doors/Walls/Zones
+	// Locations
+	private static final Location START_LOC = new Location(143348, 148707, -11972);
+	// Misc
+	private static final int TEMPLATE_ID = 10;
+	private static final boolean debug = false;
 	private static final int DOOR1 = 24220021;
 	private static final int DOOR2 = 24220024;
 	private static final int DOOR3 = 24220023;
@@ -234,1239 +231,277 @@ public final class CrystalCaverns extends Quest
 		20106,
 		20107
 	};
-	
-	// Baylor alarm spawns
+	// @formatter:off
 	private final static int[][] ALARMSPAWN =
 	{
-		{
-			153572,
-			141277,
-			-12738
-		},
-		{
-			153572,
-			142852,
-			-12738
-		},
-		{
-			154358,
-			142075,
-			-12738
-		},
-		{
-			152788,
-			142075,
-			-12738
-		}
+		{153572, 141277, -12738},
+		{153572, 142852, -12738},
+		{154358, 142075, -12738},
+		{152788, 142075, -12738}
 	};
-	
 	// Oracle order
 	private static final int[][] ordreOracle1 =
 	{
-		{
-			32274,
-			147090,
-			152505,
-			-12169,
-			31613
-		},
-		{
-			32275,
-			147090,
-			152575,
-			-12169,
-			31613
-		},
-		{
-			32274,
-			147090,
-			152645,
-			-12169,
-			31613
-		},
-		{
-			32274,
-			147090,
-			152715,
-			-12169,
-			31613
-		}
+		{32274, 147090, 152505, -12169, 31613},
+		{32275, 147090, 152575, -12169, 31613},
+		{32274, 147090, 152645, -12169, 31613},
+		{32274, 147090, 152715, -12169, 31613}
 	};
 	
 	private static final int[][] ordreOracle2 =
 	{
-		{
-			32274,
-			149783,
-			152505,
-			-12169,
-			31613
-		},
+		{32274, 149783, 152505, -12169, 31613},
 		// {32274, 149783, 152575, -12169, 31613},
-		{
-			32274,
-			149783,
-			152645,
-			-12169,
-			31613
-		},
-		{
-			32276,
-			149783,
-			152715,
-			-12169,
-			31613
-		}
+		{32274, 149783, 152645, -12169, 31613},
+		{32276, 149783, 152715, -12169, 31613}
 	};
 	
 	private static final int[][] ordreOracle3 =
 	{
-		{
-			32274,
-			152461,
-			152505,
-			-12169,
-			31613
-		},
+		{32274, 152461, 152505, -12169, 31613},
 		// {32274, 152461, 152575, -12169, 31613},
-		{
-			32277,
-			152461,
-			152645,
-			-12169,
-			31613
-		}
-	// {32274, 152461, 152715, -12169, 31613}
+		{32277, 152461, 152645, -12169, 31613},
+		// {32274, 152461, 152715, -12169, 31613}
 	};
-	
-	// Hall spawns
-	private static int[][] SPAWNS =
+	private static int[][] HALL_SPAWNS =
 	{
-		{
-			141842,
-			152556,
-			-11814,
-			50449
-		},
-		{
-			141503,
-			153395,
-			-11814,
-			40738
-		},
-		{
-			141070,
-			153201,
-			-11814,
-			39292
-		},
-		{
-			141371,
-			152986,
-			-11814,
-			35575
-		},
-		{
-			141602,
-			154188,
-			-11814,
-			24575
-		},
-		{
-			141382,
-			154719,
-			-11814,
-			37640
-		},
-		{
-			141376,
-			154359,
-			-11814,
-			12054
-		},
-		{
-			140895,
-			154383,
-			-11814,
-			37508
-		},
-		{
-			140972,
-			154740,
-			-11814,
-			52690
-		},
-		{
-			141045,
-			154504,
-			-11814,
-			50674
-		},
-		{
-			140757,
-			152740,
-			-11814,
-			39463
-		},
-		{
-			140406,
-			152376,
-			-11814,
-			16599
-		},
-		{
-			140268,
-			152007,
-			-11817,
-			45316
-		},
-		{
-			139996,
-			151485,
-			-11814,
-			47403
-		},
-		{
-			140378,
-			151190,
-			-11814,
-			58116
-		},
-		{
-			140521,
-			150711,
-			-11815,
-			55997
-		},
-		{
-			140816,
-			150215,
-			-11814,
-			53682
-		},
-		{
-			141528,
-			149909,
-			-11814,
-			22020
-		},
-		{
-			141644,
-			150360,
-			-11817,
-			13283
-		},
-		{
-			142048,
-			150695,
-			-11815,
-			5929
-		},
-		{
-			141852,
-			151065,
-			-11817,
-			27071
-		},
-		{
-			142408,
-			151211,
-			-11815,
-			2402
-		},
-		{
-			142481,
-			151762,
-			-11815,
-			12876
-		},
-		{
-			141929,
-			152193,
-			-11815,
-			27511
-		},
-		{
-			142083,
-			151791,
-			-11814,
-			47176
-		},
-		{
-			141435,
-			150402,
-			-11814,
-			41798
-		},
-		{
-			140390,
-			151199,
-			-11814,
-			50069
-		},
-		{
-			140557,
-			151849,
-			-11814,
-			45293
-		},
-		{
-			140964,
-			153445,
-			-11814,
-			56672
-		},
-		{
-			142851,
-			154109,
-			-11814,
-			24920
-		},
-		{
-			142379,
-			154725,
-			-11814,
-			30342
-		},
-		{
-			142816,
-			154712,
-			-11814,
-			33193
-		},
-		{
-			142276,
-			154223,
-			-11814,
-			33922
-		},
-		{
-			142459,
-			154490,
-			-11814,
-			33184
-		},
-		{
-			142819,
-			154372,
-			-11814,
-			21318
-		},
-		{
-			141157,
-			154541,
-			-11814,
-			27090
-		},
-		{
-			141095,
-			150281,
-			-11814,
-			55186
-		}
+		{141842, 152556, -11814, 50449},
+		{141503, 153395, -11814, 40738},
+		{141070, 153201, -11814, 39292},
+		{141371, 152986, -11814, 35575},
+		{141602, 154188, -11814, 24575},
+		{141382, 154719, -11814, 37640},
+		{141376, 154359, -11814, 12054},
+		{140895, 154383, -11814, 37508},
+		{140972, 154740, -11814, 52690},
+		{141045, 154504, -11814, 50674},
+		{140757, 152740, -11814, 39463},
+		{140406, 152376, -11814, 16599},
+		{140268, 152007, -11817, 45316},
+		{139996, 151485, -11814, 47403},
+		{140378, 151190, -11814, 58116},
+		{140521, 150711, -11815, 55997},
+		{140816, 150215, -11814, 53682},
+		{141528, 149909, -11814, 22020},
+		{141644, 150360, -11817, 13283},
+		{142048, 150695, -11815, 5929},
+		{141852, 151065, -11817, 27071},
+		{142408, 151211, -11815, 2402},
+		{142481, 151762, -11815, 12876},
+		{141929, 152193, -11815, 27511},
+		{142083, 151791, -11814, 47176},
+		{141435, 150402, -11814, 41798},
+		{140390, 151199, -11814, 50069},
+		{140557, 151849, -11814, 45293},
+		{140964, 153445, -11814, 56672},
+		{142851, 154109, -11814, 24920},
+		{142379, 154725, -11814, 30342},
+		{142816, 154712, -11814, 33193},
+		{142276, 154223, -11814, 33922},
+		{142459, 154490, -11814, 33184},
+		{142819, 154372, -11814, 21318},
+		{141157, 154541, -11814, 27090},
+		{141095, 150281, -11814, 55186}
 	};
 	
 	// first spawns
 	private static int[][] FIRST_SPAWNS =
 	{
-		{
-			22276,
-			148109,
-			149601,
-			-12132,
-			34490
-		},
-		{
-			22276,
-			148017,
-			149529,
-			-12132,
-			33689
-		},
-		{
-			22278,
-			148065,
-			151202,
-			-12132,
-			35323
-		},
-		{
-			22278,
-			147966,
-			151117,
-			-12132,
-			33234
-		},
-		{
-			22279,
-			144063,
-			150238,
-			-12132,
-			29654
-		},
-		{
-			22279,
-			144300,
-			149118,
-			-12135,
-			5520
-		},
-		{
-			22279,
-			144397,
-			149337,
-			-12132,
-			644
-		},
-		{
-			22279,
-			144426,
-			150639,
-			-12132,
-			50655
-		},
-		{
-			22282,
-			145841,
-			151097,
-			-12132,
-			31810
-		},
-		{
-			22282,
-			144387,
-			149958,
-			-12132,
-			61173
-		},
-		{
-			22282,
-			145821,
-			149498,
-			-12132,
-			31490
-		},
-		{
-			22282,
-			146619,
-			149694,
-			-12132,
-			33374
-		},
-		{
-			22282,
-			146669,
-			149244,
-			-12132,
-			31360
-		},
-		{
-			22284,
-			144147,
-			151375,
-			-12132,
-			58395
-		},
-		{
-			22284,
-			144485,
-			151067,
-			-12132,
-			64786
-		},
-		{
-			22284,
-			144356,
-			149571,
-			-12132,
-			63516
-		},
-		{
-			22285,
-			144151,
-			150962,
-			-12132,
-			664
-		},
-		{
-			22285,
-			146657,
-			151365,
-			-12132,
-			33154
-		},
-		{
-			22285,
-			146623,
-			150857,
-			-12132,
-			28034
-		},
-		{
-			22285,
-			147046,
-			151089,
-			-12132,
-			32941
-		},
-		{
-			22285,
-			145704,
-			151255,
-			-12132,
-			32523
-		},
-		{
-			22285,
-			145359,
-			151101,
-			-12132,
-			32767
-		},
-		{
-			22285,
-			147785,
-			150817,
-			-12132,
-			27423
-		},
-		{
-			22285,
-			147727,
-			151375,
-			-12132,
-			37117
-		},
-		{
-			22285,
-			145428,
-			149494,
-			-12132,
-			890
-		},
-		{
-			22285,
-			145601,
-			149682,
-			-12132,
-			32442
-		},
-		{
-			22285,
-			147003,
-			149476,
-			-12132,
-			31554
-		},
-		{
-			22285,
-			147738,
-			149210,
-			-12132,
-			20971
-		},
-		{
-			22285,
-			147769,
-			149757,
-			-12132,
-			34980
-		}
+		{22276, 148109, 149601, -12132, 34490},
+		{22276, 148017, 149529, -12132, 33689},
+		{22278, 148065, 151202, -12132, 35323},
+		{22278, 147966, 151117, -12132, 33234},
+		{22279, 144063, 150238, -12132, 29654},
+		{22279, 144300, 149118, -12135, 5520},
+		{22279, 144397, 149337, -12132, 644},
+		{22279, 144426, 150639, -12132, 50655},
+		{22282, 145841, 151097, -12132, 31810},
+		{22282, 144387, 149958, -12132, 61173},
+		{22282, 145821, 149498, -12132, 31490},
+		{22282, 146619, 149694, -12132, 33374},
+		{22282, 146669, 149244, -12132, 31360},
+		{22284, 144147, 151375, -12132, 58395},
+		{22284, 144485, 151067, -12132, 64786},
+		{22284, 144356, 149571, -12132, 63516},
+		{22285, 144151, 150962, -12132, 664},
+		{22285, 146657, 151365, -12132, 33154},
+		{22285, 146623, 150857, -12132, 28034},
+		{22285, 147046, 151089, -12132, 32941},
+		{22285, 145704, 151255, -12132, 32523},
+		{22285, 145359, 151101, -12132, 32767},
+		{22285, 147785, 150817, -12132, 27423},
+		{22285, 147727, 151375, -12132, 37117},
+		{22285, 145428, 149494, -12132, 890},
+		{22285, 145601, 149682, -12132, 32442},
+		{22285, 147003, 149476, -12132, 31554},
+		{22285, 147738, 149210, -12132, 20971},
+		{22285, 147769, 149757, -12132, 34980}
 	};
 	
 	// Emerald Square
 	private static int[][] EMERALD_SPAWNS =
 	{
-		{
-			22280,
-			144437,
-			143395,
-			-11969,
-			34248
-		},
-		{
-			22281,
-			149241,
-			143735,
-			-12230,
-			24575
-		},
-		{
-			22281,
-			147917,
-			146861,
-			-12289,
-			60306
-		},
-		{
-			22281,
-			144406,
-			147782,
-			-12133,
-			14349
-		},
-		{
-			22281,
-			144960,
-			146881,
-			-12039,
-			23881
-		},
-		{
-			22281,
-			144985,
-			147679,
-			-12135,
-			27594
-		},
-		{
-			22283,
-			147784,
-			143540,
-			-12222,
-			2058
-		},
-		{
-			22283,
-			149091,
-			143491,
-			-12230,
-			24836
-		},
-		{
-			22287,
-			144479,
-			147569,
-			-12133,
-			20723
-		},
-		{
-			22287,
-			145158,
-			146986,
-			-12058,
-			21970
-		},
-		{
-			22287,
-			145142,
-			147175,
-			-12092,
-			24420
-		},
-		{
-			22287,
-			145110,
-			147133,
-			-12088,
-			22465
-		},
-		{
-			22287,
-			144664,
-			146604,
-			-12028,
-			14861
-		},
-		{
-			22287,
-			144596,
-			146600,
-			-12028,
-			14461
-		},
-		{
-			22288,
-			143925,
-			146773,
-			-12037,
-			10813
-		},
-		{
-			22288,
-			144415,
-			147070,
-			-12069,
-			8568
-		},
-		{
-			22288,
-			143794,
-			145584,
-			-12027,
-			14849
-		},
-		{
-			22288,
-			143429,
-			146166,
-			-12030,
-			4078
-		},
-		{
-			22288,
-			144477,
-			147009,
-			-12056,
-			8752
-		},
-		{
-			22289,
-			142577,
-			145319,
-			-12029,
-			5403
-		},
-		{
-			22289,
-			143831,
-			146902,
-			-12051,
-			9717
-		},
-		{
-			22289,
-			143714,
-			146705,
-			-12028,
-			10044
-		},
-		{
-			22289,
-			143937,
-			147134,
-			-12078,
-			7517
-		},
-		{
-			22293,
-			143356,
-			145287,
-			-12027,
-			8126
-		},
-		{
-			22293,
-			143462,
-			144352,
-			-12008,
-			25905
-		},
-		{
-			22293,
-			143745,
-			142529,
-			-11882,
-			17102
-		},
-		{
-			22293,
-			144574,
-			144032,
-			-12005,
-			34668
-		},
-		{
-			22295,
-			143992,
-			142419,
-			-11884,
-			19697
-		},
-		{
-			22295,
-			144671,
-			143966,
-			-12004,
-			32088
-		},
-		{
-			22295,
-			144440,
-			143269,
-			-11957,
-			34169
-		},
-		{
-			22295,
-			142642,
-			146362,
-			-12028,
-			281
-		},
-		{
-			22295,
-			143865,
-			142707,
-			-11881,
-			21326
-		},
-		{
-			22295,
-			143573,
-			142530,
-			-11879,
-			16141
-		},
-		{
-			22295,
-			143148,
-			146039,
-			-12031,
-			65014
-		},
-		{
-			22295,
-			143001,
-			144853,
-			-12014,
-			0
-		},
-		{
-			22296,
-			147505,
-			146580,
-			-12260,
-			59041
-		},
-		{
-			22296,
-			149366,
-			146932,
-			-12358,
-			39407
-		},
-		{
-			22296,
-			149284,
-			147029,
-			-12352,
-			41120
-		},
-		{
-			22296,
-			149439,
-			143940,
-			-12230,
-			23189
-		},
-		{
-			22296,
-			147698,
-			143995,
-			-12220,
-			27028
-		},
-		{
-			22296,
-			141885,
-			144969,
-			-12007,
-			2526
-		},
-		{
-			22296,
-			147843,
-			143763,
-			-12220,
-			28386
-		},
-		{
-			22296,
-			144753,
-			143650,
-			-11982,
-			35429
-		},
-		{
-			22296,
-			147613,
-			146760,
-			-12271,
-			56296
-		}
+		{22280, 144437, 143395, -11969, 34248},
+		{22281, 149241, 143735, -12230, 24575},
+		{22281, 147917, 146861, -12289, 60306},
+		{22281, 144406, 147782, -12133, 14349},
+		{22281, 144960, 146881, -12039, 23881},
+		{22281, 144985, 147679, -12135, 27594},
+		{22283, 147784, 143540, -12222, 2058},
+		{22283, 149091, 143491, -12230, 24836},
+		{22287, 144479, 147569, -12133, 20723},
+		{22287, 145158, 146986, -12058, 21970},
+		{22287, 145142, 147175, -12092, 24420},
+		{22287, 145110, 147133, -12088, 22465},
+		{22287, 144664, 146604, -12028, 14861},
+		{22287, 144596, 146600, -12028, 14461},
+		{22288, 143925, 146773, -12037, 10813},
+		{22288, 144415, 147070, -12069, 8568},
+		{22288, 143794, 145584, -12027, 14849},
+		{22288, 143429, 146166, -12030, 4078},
+		{22288, 144477, 147009, -12056, 8752},
+		{22289, 142577, 145319, -12029, 5403},
+		{22289, 143831, 146902, -12051, 9717},
+		{22289, 143714, 146705, -12028, 10044},
+		{22289, 143937, 147134, -12078, 7517},
+		{22293, 143356, 145287, -12027, 8126},
+		{22293, 143462, 144352, -12008, 25905},
+		{22293, 143745, 142529, -11882, 17102},
+		{22293, 144574, 144032, -12005, 34668},
+		{22295, 143992, 142419, -11884, 19697},
+		{22295, 144671, 143966, -12004, 32088},
+		{22295, 144440, 143269, -11957, 34169},
+		{22295, 142642, 146362, -12028, 281},
+		{22295, 143865, 142707, -11881, 21326},
+		{22295, 143573, 142530, -11879, 16141},
+		{22295, 143148, 146039, -12031, 65014},
+		{22295, 143001, 144853, -12014, 0},
+		{22296, 147505, 146580, -12260, 59041},
+		{22296, 149366, 146932, -12358, 39407},
+		{22296, 149284, 147029, -12352, 41120},
+		{22296, 149439, 143940, -12230, 23189},
+		{22296, 147698, 143995, -12220, 27028},
+		{22296, 141885, 144969, -12007, 2526},
+		{22296, 147843, 143763, -12220, 28386},
+		{22296, 144753, 143650, -11982, 35429},
+		{22296, 147613, 146760, -12271, 56296}
 	};
 	
 	private static int[][] ROOM1_SPAWNS =
 	{
-		{
-			22288,
-			143114,
-			140027,
-			-11888,
-			15025
-		},
-		{
-			22288,
-			142173,
-			140973,
-			-11888,
-			55698
-		},
-		{
-			22289,
-			143210,
-			140577,
-			-11888,
-			17164
-		},
-		{
-			22289,
-			142638,
-			140107,
-			-11888,
-			6571
-		},
-		{
-			22297,
-			142547,
-			140938,
-			-11888,
-			48556
-		},
-		{
-			22298,
-			142690,
-			140479,
-			-11887,
-			7663
-		}
+		{22288, 143114, 140027, -11888, 15025},
+		{22288, 142173, 140973, -11888, 55698},
+		{22289, 143210, 140577, -11888, 17164},
+		{22289, 142638, 140107, -11888, 6571},
+		{22297, 142547, 140938, -11888, 48556},
+		{22298, 142690, 140479, -11887, 7663}
 	};
 	
 	private static int[][] ROOM2_SPAWNS =
 	{
-		{
-			22303,
-			146276,
-			141483,
-			-11880,
-			34643
-		},
-		{
-			22287,
-			145707,
-			142161,
-			-11880,
-			28799
-		},
-		{
-			22288,
-			146857,
-			142129,
-			-11880,
-			33647
-		},
-		{
-			22288,
-			146869,
-			142000,
-			-11880,
-			31215
-		},
-		{
-			22289,
-			146897,
-			140880,
-			-11880,
-			19210
-		}
+		{22303, 146276, 141483, -11880, 34643},
+		{22287, 145707, 142161, -11880, 28799},
+		{22288, 146857, 142129, -11880, 33647},
+		{22288, 146869, 142000, -11880, 31215},
+		{22289, 146897, 140880, -11880, 19210}
 	};
 	
 	private static int[][] ROOM3_SPAWNS =
 	{
-		{
-			22302,
-			145123,
-			143713,
-			-12808,
-			65323
-		},
-		{
-			22294,
-			145188,
-			143331,
-			-12808,
-			496
-		},
-		{
-			22294,
-			145181,
-			144104,
-			-12808,
-			64415
-		},
-		{
-			22293,
-			144994,
-			143431,
-			-12808,
-			65431
-		},
-		{
-			22293,
-			144976,
-			143915,
-			-12808,
-			61461
-		}
+		{22302, 145123, 143713, -12808, 65323},
+		{22294, 145188, 143331, -12808, 496},
+		{22294, 145181, 144104, -12808, 64415},
+		{22293, 144994, 143431, -12808, 65431},
+		{22293, 144976, 143915, -12808, 61461}
 	};
 	
 	private static int[][] ROOM4_SPAWNS =
 	{
-		{
-			22304,
-			150563,
-			142240,
-			-12108,
-			16454
-		},
-		{
-			22294,
-			150769,
-			142495,
-			-12108,
-			16870
-		},
-		{
-			22281,
-			150783,
-			141995,
-			-12108,
-			20033
-		},
-		{
-			22283,
-			150273,
-			141983,
-			-12108,
-			16043
-		},
-		{
-			22294,
-			150276,
-			142492,
-			-12108,
-			13540
-		}
+		{22304, 150563, 142240, -12108, 16454},
+		{22294, 150769, 142495, -12108, 16870},
+		{22281, 150783, 141995, -12108, 20033},
+		{22283, 150273, 141983, -12108, 16043},
+		{22294, 150276, 142492, -12108, 13540}
 	};
 	
 	// Steam Corridor
 	private static int[][] STEAM1_SPAWNS =
 	{
-		{
-			22305,
-			145260,
-			152387,
-			-12165,
-			32767
-		},
-		{
-			22305,
-			144967,
-			152390,
-			-12165,
-			30464
-		},
-		{
-			22305,
-			145610,
-			152586,
-			-12165,
-			17107
-		},
-		{
-			22305,
-			145620,
-			152397,
-			-12165,
-			8191
-		},
-		{
-			22418,
-			146081,
-			152847,
-			-12165,
-			31396
-		},
-		{
-			22418,
-			146795,
-			152641,
-			-12165,
-			33850
-		}
-	// {22308, 145093, 152502, -12165, 31841},{22308, 146158, 152776, -12165, 30810},
-	// {22308, 146116, 152976, -12133, 32571},
+		{22305, 145260, 152387, -12165, 32767},
+		{22305, 144967, 152390, -12165, 30464},
+		{22305, 145610, 152586, -12165, 17107},
+		{22305, 145620, 152397, -12165, 8191},
+		{22418, 146081, 152847, -12165, 31396},
+		{22418, 146795, 152641, -12165, 33850},
+		// {22308, 145093, 152502, -12165, 31841},
+		// {22308, 146158, 152776, -12165, 30810},
+		// {22308, 146116, 152976, -12133, 32571}
 	
 	};
 	private static int[][] STEAM2_SPAWNS =
 	{
-		{
-			22306,
-			147740,
-			152767,
-			-12165,
-			65043
-		},
-		{
-			22306,
-			148215,
-			152828,
-			-12165,
-			970
-		},
-		{
-			22306,
-			147743,
-			152846,
-			-12165,
-			64147
-		},// {22308, 147849, 152854, -12165, 60534},
-			// {22308, 147754, 152908, -12141, 59827},{22308, 148194, 152681, -12165, 63620},
-			// {22308, 147767, 152939, -12133, 63381},{22309, 147737, 152671, -12165, 65320},
-		{
-			22418,
-			148207,
-			152725,
-			-12165,
-			61801
-		},
-		{
-			22419,
-			149058,
-			152828,
-			-12165,
-			64564
-		}
+		{22306, 147740, 152767, -12165, 65043},
+		{22306, 148215, 152828, -12165, 970},
+		{22306, 147743, 152846, -12165, 64147},
+		// {22308, 147849, 152854, -12165, 60534},
+		// {22308, 147754, 152908, -12141, 59827},
+		// {22308, 148194, 152681, -12165, 63620},
+		// {22308, 147767, 152939, -12133, 63381},
+		// {22309, 147737, 152671, -12165, 65320},
+		{22418, 148207, 152725, -12165, 61801},
+		{22419, 149058, 152828, -12165, 64564}
 	};
 	
 	private static int[][] STEAM3_SPAWNS =
 	{
-		{
-			22307,
-			150735,
-			152316,
-			-12145,
-			31930
-		},
-		{
-			22307,
-			150725,
-			152467,
-			-12165,
-			33635
-		},
-		{
-			22307,
-			151058,
-			152316,
-			-12146,
-			65342
-		},
-		{
-			22307,
-			151057,
-			152461,
-			-12165,
-			2171
-		}
-	/*
-	 * {22308, 150794, 152455, -12165, 31613},{22308, 150665, 152383, -12165, 32767}, {22308, 151697, 152621, -12167, 31423},{22309, 151061, 152581, -12165, 6228}, {22309, 150653, 152253, -12132, 31343},{22309, 150628, 152431, -12165, 33022}, {22309, 151620, 152487, -12165, 30114},{22309, 151672,
-	 * 152544, -12165, 31846}, {22309, 150488, 152350, -12165, 29072},{22310, 151139, 152238, -12132, 1069}
-	 */
+		{22307, 150735, 152316, -12145, 31930},
+		{22307, 150725, 152467, -12165, 33635},
+		{22307, 151058, 152316, -12146, 65342},
+		{22307, 151057, 152461, -12165, 2171},
+		// {22308, 150794, 152455, -12165, 31613},
+		// {22308, 150665, 152383, -12165, 32767},
+		// {22308, 151697, 152621, -12167, 31423},
+		// {22309, 151061, 152581, -12165, 6228},
+		// {22309, 150653, 152253, -12132, 31343},
+		// {22309, 150628, 152431, -12165, 33022},
+		// {22309, 151620, 152487, -12165, 30114},
+		// {22309, 151672, 152544, -12165, 31846},
+		// {22309, 150488, 152350, -12165, 29072},
+		// {22310, 151139, 152238, -12132, 1069}
 	};
 	
 	private static int[][] STEAM4_SPAWNS =
-	{// {22308, 151707, 150199, -12165, 32859},{22308, 152091, 150140, -12165, 32938},
-		// {22308, 149757, 150204, -12138, 65331},{22308, 149950, 150307, -12132, 62437},
-		// {22308, 149901, 150322, -12132, 62136},{22309, 150071, 150173, -12165, 64943},
-		{
-			22416,
-			151636,
-			150280,
-			-12142,
-			36869
-		},
-		{
-			22416,
-			149893,
-			150232,
-			-12165,
-			64258
-		},
-		{
-			22416,
-			149864,
-			150110,
-			-12165,
-			65054
-		},
-		{
-			22416,
-			151926,
-			150218,
-			-12165,
-			31613
-		},
-		{
-			22420,
-			149986,
-			150051,
-			-12165,
-			105
-		},
-		{
-			22420,
-			151970,
-			149997,
-			-12165,
-			32170
-		},
-		{
-			22420,
-			150744,
-			150006,
-			-12165,
-			63
-		}
-	// ,{22417, 149782, 150188, -12151, 64001}
+	{
+		// {22308, 151707, 150199, -12165, 32859},
+		// {22308, 152091, 150140, -12165, 32938},
+		// {22308, 149757, 150204, -12138, 65331},
+		// {22308, 149950, 150307, -12132, 62437},
+		// {22308, 149901, 150322, -12132, 62136},
+		// {22309, 150071, 150173, -12165, 64943},
+		{22416, 151636, 150280, -12142, 36869},
+		{22416, 149893, 150232, -12165, 64258},
+		{22416, 149864, 150110, -12165, 65054},
+		{22416, 151926, 150218, -12165, 31613},
+		{22420, 149986, 150051, -12165, 105},
+		{22420, 151970, 149997, -12165, 32170},
+		{22420, 150744, 150006, -12165, 63},
+		// {22417, 149782, 150188, -12151, 64001}
 	};
-	
-	// Instance reenter time
-	// default: 86400000ms(24h)
-	private static final int INSTANCEPENALTY = 86400000;
+	// @formatter:on
 	private static final int DRAGONSCALETIME = 3000;
 	private static final int DRAGONCLAWTIME = 3000;
 	
-	private CrystalCaverns()
+	public CrystalCaverns()
 	{
-		super(-1, CrystalCaverns.class.getSimpleName(), "instances");
-		addStartNpc(ORACLE_GUIDE_1);
-		addTalkId(ORACLE_GUIDE_1);
-		addTalkId(ORACLE_GUIDE_3);
-		addStartNpc(ORACLE_GUIDE_4);
-		addFirstTalkId(ORACLE_GUIDE_4);
-		addTalkId(ORACLE_GUIDE_4);
-		addFirstTalkId(CRYSTAL_GOLEM);
-		addAttackId(TEARS);
+		super(CrystalCaverns.class.getSimpleName());
+		addStartNpc(ORACLE_GUIDE_1, ORACLE_GUIDE_4);
+		addTalkId(ORACLE_GUIDE_1, ORACLE_GUIDE_3, ORACLE_GUIDE_4, 32275, 32276, 32277);
+		addFirstTalkId(ORACLE_GUIDE_1, ORACLE_GUIDE_2, ORACLE_GUIDE_4, CRYSTAL_GOLEM, 32274, 32275, 32276, 32277);
+		addKillId(TEARS, GK1, GK2, TEROD, WEYLIN, DOLPH, DARNEL, KECHI, GUARDIAN, GUARDIAN2, TOURMALINE, BAYLOR, ALARMID);
+		addSkillSeeId(BAYLOR, 25534, 32275, 32276, 32277);
 		addTrapActionId(DOOR_OPENING_TRAP[0]);
-		addKillId(TEARS);
-		addKillId(GK1);
-		addKillId(GK2);
-		addKillId(TEROD);
-		addKillId(WEYLIN);
-		addKillId(DOLPH);
-		addKillId(DARNEL);
-		addKillId(KECHI);
-		addKillId(GUARDIAN);
-		addKillId(GUARDIAN2);
-		addKillId(TOURMALINE);
-		addKillId(BAYLOR);
 		addSpellFinishedId(BAYLOR);
-		addKillId(ALARMID);
-		addFirstTalkId(32274, 32275, 32276, 32277, ORACLE_GUIDE_1, ORACLE_GUIDE_2);
-		addTalkId(32275, 32276, 32277);
-		addSkillSeeId(25534, 32275, 32276, 32277, BAYLOR);
+		addAttackId(TEARS);
 		addKillId(MOBLIST);
 		addKillId(CGMOBS);
 		for (int zones : ZONES)
@@ -1476,13 +511,18 @@ public final class CrystalCaverns extends Quest
 		}
 	}
 	
-	private boolean checkConditions(L2PcInstance player)
+	@Override
+	protected boolean checkConditions(L2PcInstance player)
 	{
-		if (debug)
+		if (debug || player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
 		{
-			return true;
+			if (debug)
+			{
+				return true;
+			}
 		}
-		L2Party party = player.getParty();
+		
+		final L2Party party = player.getParty();
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
@@ -1651,55 +691,33 @@ public final class CrystalCaverns extends Quest
 		effected.broadcastPacket(new ValidateLocation(effected));
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, Location loc)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		// check for existing instances for this player
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		// existing instance
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (!(world instanceof CCWorld))
+			if (player.getParty() == null)
 			{
-				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
-				return 0;
+				// this can happen only if debug is true
+				player.sendMessage("Welcome to Crystal Caverns.");
+				teleportPlayer(player, START_LOC, world.getInstanceId());
+				world.addAllowed(player.getObjectId());
 			}
-			teleportPlayer(player, loc, world.getInstanceId());
-			return world.getInstanceId();
-		}
-		
-		// New instance
-		if (!checkConditions(player))
-		{
-			return 0;
-		}
-		L2Party party = player.getParty();
-		int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-		world = new CCWorld(System.currentTimeMillis() + 5400000);
-		world.setInstanceId(instanceId);
-		world.setTemplateId(TEMPLATE_ID);
-		InstanceManager.getInstance().addWorld(world);
-		_log.info("Crystal Caverns started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-		runOracle((CCWorld) world);
-		// teleport players
-		if (player.getParty() == null)
-		{
-			// this can happen only if debug is true
-			player.sendMessage("Welcome to Crystal Caverns.");
-			InstanceManager.getInstance().setInstanceTime(player.getObjectId(), TEMPLATE_ID, ((System.currentTimeMillis() + INSTANCEPENALTY)));
-			teleportPlayer(player, loc, world.getInstanceId());
-			world.isAllowed(player.getObjectId());
+			else
+			{
+				for (L2PcInstance partyMember : player.getParty().getMembers())
+				{
+					partyMember.sendMessage("Welcome to Crystal Caverns.");
+					teleportPlayer(partyMember, START_LOC, world.getInstanceId());
+					world.addAllowed(partyMember.getObjectId());
+				}
+			}
+			runOracle((CCWorld) world);
 		}
 		else
 		{
-			for (L2PcInstance partyMember : party.getMembers())
-			{
-				partyMember.sendMessage("Welcome to Crystal Caverns.");
-				InstanceManager.getInstance().setInstanceTime(partyMember.getObjectId(), TEMPLATE_ID, ((System.currentTimeMillis() + INSTANCEPENALTY)));
-				teleportPlayer(partyMember, loc, world.getInstanceId());
-				world.addAllowed(partyMember.getObjectId());
-			}
+			teleportPlayer(player, START_LOC, world.getInstanceId());
 		}
-		return instanceId;
 	}
 	
 	protected void stopAttack(L2PcInstance player)
@@ -1757,7 +775,7 @@ public final class CrystalCaverns extends Quest
 	{
 		world.setStatus(2);
 		
-		for (int[] spawn : SPAWNS)
+		for (int[] spawn : HALL_SPAWNS)
 		{
 			L2Npc mob = addSpawn(CGMOBS[getRandom(CGMOBS.length)], spawn[0], spawn[1], spawn[2], spawn[3], false, 0, false, world.getInstanceId());
 			world.npcList1.put(mob, false);
@@ -2755,7 +1773,7 @@ public final class CrystalCaverns extends Quest
 		}
 		if (npcId == ORACLE_GUIDE_1)
 		{
-			enterInstance(player, "CrystalCaverns.xml", new Location(143348, 148707, -11972));
+			enterInstance(player, new CCWorld(System.currentTimeMillis() + 5400000), "CrystalCaverns.xml", TEMPLATE_ID);
 			return "";
 		}
 		
@@ -3066,11 +2084,5 @@ public final class CrystalCaverns extends Quest
 			}
 		}
 		return super.onExitZone(character, zone);
-	}
-	
-	public static void main(String[] args)
-	{
-		// now call the constructor (starts up the)
-		new CrystalCaverns();
 	}
 }

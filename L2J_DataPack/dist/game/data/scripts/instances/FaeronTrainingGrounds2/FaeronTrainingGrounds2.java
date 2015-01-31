@@ -18,8 +18,8 @@
  */
 package instances.FaeronTrainingGrounds2;
 
+import instances.AbstractInstance;
 import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
-import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
@@ -28,21 +28,21 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
+ * Fearon Training Grounds Instance Zone.
  * @author Sdw
  */
-public class FaeronTrainingGrounds2 extends AbstractNpcAI
+public final class FaeronTrainingGrounds2 extends AbstractInstance
 {
-	// Locations
-	private static final Location START_LOC = new Location(-74903, 240618, -3584);
-	private static final Location EXIT_LOC = new Location(-82088, 249880, -3392);
 	// NPC's
 	private static final int KATALIN = 33943;
 	private static final int KATALIN_2 = 33945;
-	// Instance
+	// Locations
+	private static final Location START_LOC = new Location(-74903, 240618, -3584);
+	private static final Location EXIT_LOC = new Location(-82088, 249880, -3392);
+	// Misc
 	private static final int TEMPLATE_ID = 252;
 	
 	protected class FTGWorld extends InstanceWorld
@@ -60,7 +60,7 @@ public class FaeronTrainingGrounds2 extends AbstractNpcAI
 		
 		if (event.equals("enter_instance"))
 		{
-			enterInstance(player, "FaeronTrainingGrounds2.xml");
+			enterInstance(player, new FTGWorld(), "FaeronTrainingGrounds2.xml", TEMPLATE_ID);
 		}
 		else if (event.equals("exit_instance"))
 		{
@@ -72,39 +72,21 @@ public class FaeronTrainingGrounds2 extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	private FaeronTrainingGrounds2()
+	public FaeronTrainingGrounds2()
 	{
-		super(FaeronTrainingGrounds2.class.getSimpleName(), "instances");
+		super(FaeronTrainingGrounds2.class.getSimpleName());
 		addStartNpc(KATALIN, KATALIN_2);
 		addTalkId(KATALIN, KATALIN_2);
 	}
 	
-	private void enterInstance(L2PcInstance player, String template)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (world instanceof FTGWorld)
-			{
-				teleportPlayer(player, START_LOC, world.getInstanceId());
-				return;
-			}
-			player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
-			return;
+			world.addAllowed(player.getObjectId());
+			showOnScreenMsg(player, NpcStringId.TALK_TO_MASTER_KATALIN, ExShowScreenMessage.TOP_CENTER, 4500);
 		}
-		world = new FTGWorld();
-		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-		world.setTemplateId(TEMPLATE_ID);
-		world.addAllowed(player.getObjectId());
-		world.setStatus(0);
-		InstanceManager.getInstance().addWorld(world);
 		teleportPlayer(player, START_LOC, world.getInstanceId());
-		showOnScreenMsg(player, NpcStringId.TALK_TO_MASTER_KATALIN, ExShowScreenMessage.TOP_CENTER, 4500);
-	}
-	
-	public static void main(String[] args)
-	{
-		new FaeronTrainingGrounds2();
 	}
 }

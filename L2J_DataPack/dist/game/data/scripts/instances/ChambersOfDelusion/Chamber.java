@@ -18,6 +18,8 @@
  */
 package instances.ChambersOfDelusion;
 
+import instances.AbstractInstance;
+
 import java.util.Calendar;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
@@ -35,7 +37,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
@@ -50,7 +51,7 @@ import com.l2jserver.gameserver.util.Util;
  * Chambers of Delusion superclass.
  * @author GKR
  */
-public abstract class Chamber extends Quest
+public abstract class Chamber extends AbstractInstance
 {
 	protected class CDWorld extends InstanceWorld
 	{
@@ -173,9 +174,9 @@ public abstract class Chamber extends Quest
 	// Misc
 	private static final String RETURN = Chamber.class.getSimpleName() + "_return";
 	
-	protected Chamber(int questId, String name, String descr, int instanceId, String instanceTemplateName, int entranceGKId, int roomGKFirstId, int roomGKLastId, int aenkinelId, int boxId)
+	protected Chamber(String name, String descr, int instanceId, String instanceTemplateName, int entranceGKId, int roomGKFirstId, int roomGKLastId, int aenkinelId, int boxId)
 	{
-		super(questId, name, descr);
+		super(name, descr);
 		
 		INSTANCEID = instanceId;
 		INSTANCE_TEMPLATE = instanceTemplateName;
@@ -208,7 +209,8 @@ public abstract class Chamber extends Quest
 		return (world.currentRoom == (ROOM_ENTER_POINTS.length - 1));
 	}
 	
-	private boolean checkConditions(L2PcInstance player)
+	@Override
+	protected boolean checkConditions(L2PcInstance player)
 	{
 		final L2Party party = player.getParty();
 		if (party == null)
@@ -402,39 +404,18 @@ public abstract class Chamber extends Quest
 		}
 	}
 	
-	protected int enterInstance(L2PcInstance player)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		int instanceId = 0;
-		// check for existing instances for this player
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		// existing instance
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (!(world instanceof CDWorld))
-			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON));
-				return 0;
-			}
+			enter((CDWorld) world);
+		}
+		else
+		{
 			final CDWorld currentWorld = (CDWorld) world;
 			teleportPlayer(player, ROOM_ENTER_POINTS[currentWorld.currentRoom], world.getInstanceId());
-			return instanceId;
 		}
-		
-		// New instance
-		if (!checkConditions(player))
-		{
-			return 0;
-		}
-		final L2Party party = player.getParty();
-		instanceId = InstanceManager.getInstance().createDynamicInstance(INSTANCE_TEMPLATE);
-		world = new CDWorld(party);
-		world.setInstanceId(instanceId);
-		world.setTemplateId(INSTANCEID);
-		world.setStatus(0);
-		InstanceManager.getInstance().addWorld(world);
-		_log.info("Chamber Of Delusion started " + INSTANCE_TEMPLATE + " Instance: " + instanceId + " created by player: " + player.getName());
-		enter((CDWorld) world);
-		return instanceId;
 	}
 	
 	protected void exitInstance(L2PcInstance player)
@@ -635,7 +616,6 @@ public abstract class Chamber extends Quest
 		{
 			npc.doDie(player);
 		}
-		
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
@@ -652,7 +632,11 @@ public abstract class Chamber extends Quest
 		
 		if (npcId == ENTRANCE_GATEKEEPER)
 		{
-			enterInstance(player);
+			if (checkConditions(player))
+			{
+				final L2Party party = player.getParty();
+				enterInstance(player, new CDWorld(party), INSTANCE_TEMPLATE, INSTANCEID);
+			}
 		}
 		
 		return "";
