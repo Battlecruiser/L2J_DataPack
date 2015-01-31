@@ -88,8 +88,8 @@
 		<for>
 			<effect name="Buff">
 				<add stat="runSpd" val="7" /> <!-- Speed +7 -->
-				<add order="0x10" stat="WIT" val="1" /> <!-- WIT + 1 -->
-				<sub order="0x10" stat="INT" val="1" /> <!-- INT - 1 -->
+				<add stat="WIT" val="1" /> <!-- WIT + 1 -->
+				<sub stat="INT" val="1" /> <!-- INT - 1 -->
 			</effect>
 		</for>
 	</skill>
@@ -135,8 +135,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add order="0x10" stat="STR" val="4" /> <!-- STR + 4 -->
-				<sub order="0x10" stat="CON" val="1" /> <!-- CON - 1 -->
+				<add stat="STR" val="4" /> <!-- STR + 4 -->
+				<sub stat="CON" val="1" /> <!-- CON - 1 -->
 			</effect>
 		</for>
 	</skill>
@@ -159,8 +159,8 @@
 		<for>
 			<effect name="Buff">
 				<sub stat="maxHp" val="269.65" /> <!-- HP -269.65 -->
-				<add order="0x10" stat="INT" val="4" /> <!-- INT + 4 -->
-				<sub order="0x10" stat="WIT" val="1" /> <!-- WIT - 1 -->
+				<add stat="INT" val="4" /> <!-- INT + 4 -->
+				<sub stat="WIT" val="1" /> <!-- WIT - 1 -->
 			</effect>
 		</for>
 	</skill>
@@ -206,8 +206,8 @@
 			<effect name="Buff">
 				<mul stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
 				<add stat="maxMp" val="170.62" /> <!-- MP +170.62 -->
-				<add order="0x10" stat="WIT" val="1" /> <!-- WIT + 1 -->
-				<sub order="0x10" stat="INT" val="1" /> <!-- INT - 1 -->
+				<add stat="WIT" val="1" /> <!-- WIT + 1 -->
+				<sub stat="INT" val="1" /> <!-- INT - 1 -->
 			</effect>
 		</for>
 	</skill>
@@ -290,9 +290,9 @@
 			<effect name="Buff">
 				<add stat="runSpd" val="7" /> <!-- Speed +7 -->
 				<mul stat="regHp" val="1.0526" /> <!-- HP Regeneration +5.26% -->
-				<add order="0x10" stat="STR" val="3" /> <!-- STR + 3 -->
-				<sub order="0x10" stat="CON" val="1" /> <!-- CON - 1 -->
-				<sub order="0x10" stat="DEX" val="2" /> <!-- DEX - 2 -->
+				<add stat="STR" val="3" /> <!-- STR + 3 -->
+				<sub stat="CON" val="1" /> <!-- CON - 1 -->
+				<sub stat="DEX" val="2" /> <!-- DEX - 2 -->
 			</effect>
 		</for>
 	</skill>
@@ -305,8 +305,8 @@
 			<effect name="Buff">
 				<add stat="maxHp" val="320" /> <!-- HP +320 -->
 				<add stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
-				<add order="0x10" stat="CON" val="3" /> <!-- CON + 3 -->
-				<sub order="0x10" stat="STR" val="3" /> <!-- STR - 3 -->
+				<add stat="CON" val="3" /> <!-- CON + 3 -->
+				<sub stat="STR" val="3" /> <!-- STR - 3 -->
 			</effect>
 		</for>
 	</skill>
@@ -319,9 +319,9 @@
 			<effect name="Buff">
 				<mul stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
 				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-				<add order="0x10" stat="MEN" val="3" /> <!-- MEN + 3 -->
-				<sub order="0x10" stat="WIT" val="1" /> <!-- WIT - 1 -->
-				<sub order="0x10" stat="INT" val="2" /> <!-- INT - 2 -->
+				<add stat="MEN" val="3" /> <!-- MEN + 3 -->
+				<sub stat="WIT" val="1" /> <!-- WIT - 1 -->
+				<sub stat="INT" val="2" /> <!-- INT - 2 -->
 			</effect>
 		</for>
 	</skill>
@@ -335,9 +335,9 @@
 				<add stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
 				<mul stat="pAtk" val="1.027" /> <!-- P. Atk. +2.7% -->
 				<mul stat="regMp" val="1.025" /> <!-- MP Regeneration +2.5% -->
-				<add order="0x10" stat="DEX" val="3" /> <!-- DEX + 3 -->
-				<sub order="0x10" stat="STR" val="1" /> <!-- STR - 1 -->
-				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
+				<add stat="DEX" val="3" /> <!-- DEX + 3 -->
+				<sub stat="STR" val="1" /> <!-- STR - 1 -->
+				<sub stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="20" />
@@ -353,9 +353,9 @@
 			<effect name="Buff">
 				<add stat="maxMp" val="206" /> <!-- MP +206 -->
 				<mul stat="regMp" val="1.0524" /> <!-- MP Regeneration +5.24% -->
-				<add order="0x10" stat="WIT" val="3" /> <!-- WIT + 3 -->
-				<sub order="0x10" stat="MEN" val="1" /> <!-- MEN - 1 -->
-				<sub order="0x10" stat="INT" val="2" /> <!-- INT - 2 -->
+				<add stat="WIT" val="3" /> <!-- WIT + 3 -->
+				<sub stat="MEN" val="1" /> <!-- MEN - 1 -->
+				<sub stat="INT" val="2" /> <!-- INT - 2 -->
 			</effect>
 		</for>
 	</skill>
@@ -369,9 +369,9 @@
 				<add stat="runSpd" val="7" /> <!-- Speed + 7 -->
 				<add stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
 				<mul stat="regMp" val="1.0526" /> <!-- MP Regeneration +5.26% -->
-				<add order="0x10" stat="INT" val="2" /> <!-- INT + 2 -->
-				<add order="0x10" stat="MEN" val="1" /> <!-- MEN + 1 -->
-				<sub order="0x10" stat="WIT" val="3" /> <!-- WIT - 3 -->
+				<add stat="INT" val="2" /> <!-- INT + 2 -->
+				<add stat="MEN" val="1" /> <!-- MEN + 1 -->
+				<sub stat="WIT" val="3" /> <!-- WIT - 3 -->
 			</effect>
 		</for>
 	</skill>
@@ -383,8 +383,8 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="healEffect" val="1.04" /> <!-- Heal +4% -->
-				<add order="0x10" stat="CON" val="2" /> <!-- CON + 2 -->
-				<sub order="0x10" stat="STR" val="2" /> <!-- STR - 2 -->
+				<add stat="CON" val="2" /> <!-- CON + 2 -->
+				<sub stat="STR" val="2" /> <!-- STR - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
@@ -400,8 +400,8 @@
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.08" /> <!-- Atk. Spd. +8% -->
 				<add stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
-				<add order="0x10" stat="STR" val="2" /> <!-- STR + 2 -->
-				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
+				<add stat="STR" val="2" /> <!-- STR + 2 -->
+				<sub stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="80" />
@@ -418,8 +418,8 @@
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
 				<mul stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
-				<add order="0x10" stat="STR" val="1" /> <!-- STR + 1 -->
-				<sub order="0x10" stat="CON" val="1" /> <!-- CON - 1 -->
+				<add stat="STR" val="1" /> <!-- STR + 1 -->
+				<sub stat="CON" val="1" /> <!-- CON - 1 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
@@ -435,8 +435,8 @@
 			<effect name="Buff">
 				<mul stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
 				<add stat="maxMp" val="222" /> <!-- MP +222 -->
-				<add order="0x10" stat="MEN" val="2" /> <!-- MEN + 2 -->
-				<sub order="0x10" stat="WIT" val="2" /> <!-- WIT - 2 -->
+				<add stat="MEN" val="2" /> <!-- MEN + 2 -->
+				<sub stat="WIT" val="2" /> <!-- WIT - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="80" />
@@ -453,8 +453,8 @@
 			<effect name="Buff">
 				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 				<mul stat="mDef" val="1.08" /> <!-- M. Def. +8% -->
-				<add order="0x10" stat="WIT" val="2" /> <!-- WIT + 2 -->
-				<sub order="0x10" stat="INT" val="2" /> <!-- INT - 2 -->
+				<add stat="WIT" val="2" /> <!-- WIT + 2 -->
+				<sub stat="INT" val="2" /> <!-- INT - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="80" />
@@ -473,8 +473,8 @@
 				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 				<add stat="runSpd" val="7" /> <!-- Speed +7 -->
 				<sub stat="cancel" val="50" /> <!-- Small decrease in chance of spell interruption -->
-				<add order="0x10" stat="WIT" val="2" /> <!-- WIT + 2 -->
-				<sub order="0x10" stat="MEN" val="2" /> <!-- MEN - 2 -->
+				<add stat="WIT" val="2" /> <!-- WIT + 2 -->
+				<sub stat="MEN" val="2" /> <!-- MEN - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
@@ -489,8 +489,8 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
-				<add order="0x10" stat="CON" val="2" /> <!-- CON + 2 -->
-				<sub order="0x10" stat="DEX" val="2" /> <!-- DEX - 2 -->
+				<add stat="CON" val="2" /> <!-- CON + 2 -->
+				<sub stat="DEX" val="2" /> <!-- DEX - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="70" />
@@ -507,8 +507,8 @@
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 				<add stat="accCombat" val="3.1" /> <!-- Accuracy +3.1 -->
-				<add order="0x10" stat="STR" val="2" /> <!-- STR + 2 -->
-				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
+				<add stat="STR" val="2" /> <!-- STR + 2 -->
+				<sub stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
@@ -524,8 +524,8 @@
 			<effect name="Buff">
 				<mul stat="mDef" val="1.04" /> <!-- M. Def. +4% -->
 				<add stat="absorbDam" val="3" /> <!-- Restores 3% of melee damage inflicted on the enemy to oneself -->
-				<add order="0x10" stat="DEX" val="1" /> <!-- DEX + 1 -->
-				<sub order="0x10" stat="CON" val="1" /> <!-- CON - 1 -->
+				<add stat="DEX" val="1" /> <!-- DEX + 1 -->
+				<sub stat="CON" val="1" /> <!-- CON - 1 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="70" />
@@ -545,8 +545,8 @@
 				</mul>
 				<add stat="maxMp" val="240" /> <!-- MP +240 -->
 				<add stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
-				<add order="0x10" stat="DEX" val="1" /> <!-- DEX + 1 -->
-				<sub order="0x10" stat="CON" val="1" /> <!-- CON - 1 -->
+				<add stat="DEX" val="1" /> <!-- DEX + 1 -->
+				<sub stat="CON" val="1" /> <!-- CON - 1 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
@@ -562,8 +562,8 @@
 			<effect name="Buff">
 				<mul stat="regMp" val="1.04" /> <!-- MP Regeneration +4% -->
 				<mul stat="mAtk" val="1.08" /> <!-- M. Atk. +8% -->
-				<add order="0x10" stat="INT" val="2" /> <!-- INT + 2 -->
-				<sub order="0x10" stat="WIT" val="2" /> <!-- WIT - 2 -->
+				<add stat="INT" val="2" /> <!-- INT + 2 -->
+				<sub stat="WIT" val="2" /> <!-- WIT - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="70" />
@@ -581,8 +581,8 @@
 				<add stat="maxMp" val="240" /> <!-- MP +240 -->
 				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 				<mul stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
-				<add order="0x10" stat="MEN" val="2" /> <!-- MEN + 1 -->
-				<sub order="0x10" stat="INT" val="2" /> <!-- INT - 1 -->
+				<add stat="MEN" val="2" /> <!-- MEN + 1 -->
+				<sub stat="INT" val="2" /> <!-- INT - 1 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />
@@ -738,8 +738,8 @@
 			<effect name="Buff">
 				<mul stat="pDef" val="1.08" /> <!-- P Def. +8% -->
 				<add stat="maxHp" val="445" /> <!-- Maximum HP +445 -->
-				<add order="0x10" stat="STR" val="2" /> <!-- STR + 2 -->
-				<sub order="0x10" stat="DEX" val="2" /> <!-- DEX - 2 -->
+				<add stat="STR" val="2" /> <!-- STR + 2 -->
+				<sub stat="DEX" val="2" /> <!-- DEX - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="70" />
@@ -771,9 +771,9 @@
 				<mul stat="pAtk" val="1.04" /> <!-- P. Atk +4% -->
 				<add stat="maxMp" val="289" /> <!-- Maximum MP +289 -->
 				<add stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
-				<add order="0x10" stat="STR" val="1" /> <!-- STR + 1 -->
-				<add order="0x10" stat="DEX" val="1" /> <!-- DEX + 1 -->
-				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
+				<add stat="STR" val="1" /> <!-- STR + 1 -->
+				<add stat="DEX" val="1" /> <!-- DEX + 1 -->
+				<sub stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 		</for>
 	</skill>
@@ -788,9 +788,9 @@
 				<add stat="runSpd" val="7" /> <!-- Movement Speed +7 -->
 				<sub stat="cancel" val="50" /> <!-- Casting Cancel Probability -50% -->
 				<add stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
-				<add order="0x10" stat="WIT" val="1" /> <!-- WIT + 1 -->
-				<add order="0x10" stat="INT" val="1" /> <!-- INT + 1 -->
-				<sub order="0x10" stat="MEN" val="2" /> <!-- MEN - 2 -->
+				<add stat="WIT" val="1" /> <!-- WIT + 1 -->
+				<add stat="INT" val="1" /> <!-- INT + 1 -->
+				<sub stat="MEN" val="2" /> <!-- MEN - 2 -->
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="50" />

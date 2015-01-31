@@ -21,8 +21,8 @@
 				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
 				<add stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
 				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-				<add order="0x10" stat="CON" val="2" /> <!-- CON + 2 -->
-				<sub order="0x10" stat="STR" val="2" /> <!-- STR - 2 -->
+				<add stat="CON" val="2" /> <!-- CON + 2 -->
+				<sub stat="STR" val="2" /> <!-- STR - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -46,9 +46,9 @@
 				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
 				<add stat="cAtkAdd" val="182" /> <!-- Increases Critical Damage by 182 -->
 				<add stat="maxMp" val="360" /> <!-- Increases Max MP by 360 -->
-				<add order="0x10" stat="STR" val="1" /> <!-- STR + 1 -->
-				<add order="0x10" stat="DEX" val="2" /> <!-- DEX + 2 -->
-				<sub order="0x10" stat="CON" val="3" /> <!-- CON - 3 -->
+				<add stat="STR" val="1" /> <!-- STR + 1 -->
+				<add stat="DEX" val="2" /> <!-- DEX + 2 -->
+				<sub stat="CON" val="3" /> <!-- CON - 3 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -71,9 +71,9 @@
 				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
 				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
 				<add stat="maxMp" val="92" /> <!-- Increases Max MP by 92 -->
-				<add order="0x10" stat="WIT" val="2" /> <!-- WIT + 2 -->
-				<sub order="0x10" stat="INT" val="1" /> <!-- INT - 1 -->
-				<sub order="0x10" stat="MEN" val="1" /> <!-- MEN - 1 -->
+				<add stat="WIT" val="2" /> <!-- WIT + 2 -->
+				<sub stat="INT" val="1" /> <!-- INT - 1 -->
+				<sub stat="MEN" val="1" /> <!-- MEN - 1 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -98,8 +98,8 @@
 				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
 				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
 				<add stat="absorbDam" val="3" /> <!-- Steal opponent's HP on attack -->
-				<add order="0x10" stat="STR" val="3" /> <!-- STR + 3 -->
-				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
+				<add stat="STR" val="3" /> <!-- STR + 3 -->
+				<sub stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -121,9 +121,9 @@
 				<add stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
 				<add stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
 				<add stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-				<add order="0x10" stat="STR" val="1" /> <!-- STR + 1 -->
-				<add order="0x10" stat="DEX" val="2" /> <!-- DEX + 2 -->
-				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
+				<add stat="STR" val="1" /> <!-- STR + 1 -->
+				<add stat="DEX" val="2" /> <!-- DEX + 2 -->
+				<sub stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -147,9 +147,9 @@
 				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
 				<add stat="maxMp" val="92" /> <!-- Increases Max MP by 97 -->
 				<mul stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
-				<add order="0x10" stat="WIT" val="2" /> <!-- WIT + 2 -->
-				<add order="0x10" stat="INT" val="1" /> <!-- INT + 1 -->
-				<sub order="0x10" stat="MEN" val="2" /> <!-- MEN - 2 -->
+				<add stat="WIT" val="2" /> <!-- WIT + 2 -->
+				<add stat="INT" val="1" /> <!-- INT + 1 -->
+				<sub stat="MEN" val="2" /> <!-- MEN - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -180,8 +180,8 @@
 				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="STR" val="2" /> <!-- STR + 2 -->
-				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
+				<add stat="STR" val="2" /> <!-- STR + 2 -->
+				<sub stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -212,8 +212,8 @@
 				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="DEX" val="2" /> <!-- DEX + 2 -->
-				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
+				<add stat="DEX" val="2" /> <!-- DEX + 2 -->
+				<sub stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -243,8 +243,8 @@
 				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="WIT" val="2" /> <!-- WIT + 2 -->
-				<sub order="0x10" stat="MEN" val="2" /> <!-- MEN - 2 -->
+				<add stat="WIT" val="2" /> <!-- WIT + 2 -->
+				<sub stat="MEN" val="2" /> <!-- MEN - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -280,8 +280,8 @@
 				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="CON" val="2" /> <!-- CON + 2 -->
-				<sub order="0x10" stat="STR" val="2" /> <!-- STR - 2 -->
+				<add stat="CON" val="2" /> <!-- CON + 2 -->
+				<sub stat="STR" val="2" /> <!-- STR - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -315,9 +315,9 @@
 				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="STR" val="1" /> <!-- STR + 1 -->
-				<add order="0x10" stat="DEX" val="2" /> <!-- DEX + 2 -->
-				<sub order="0x10" stat="CON" val="3" /> <!-- CON - 3 -->
+				<add stat="STR" val="1" /> <!-- STR + 1 -->
+				<add stat="DEX" val="2" /> <!-- DEX + 2 -->
+				<sub stat="CON" val="3" /> <!-- CON - 3 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -350,9 +350,9 @@
 				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="WIT" val="2" /> <!-- WIT + 2 -->
-				<sub order="0x10" stat="INT" val="1" /> <!-- INT - 1 -->
-				<sub order="0x10" stat="MEN" val="1" /> <!-- MEN - 1 -->
+				<add stat="WIT" val="2" /> <!-- WIT + 2 -->
+				<sub stat="INT" val="1" /> <!-- INT - 1 -->
+				<sub stat="MEN" val="1" /> <!-- MEN - 1 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -387,8 +387,8 @@
 				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="STR" val="3" /> <!-- STR + 3 -->
-				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
+				<add stat="STR" val="3" /> <!-- STR + 3 -->
+				<sub stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -420,9 +420,9 @@
 				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="STR" val="1" /> <!-- STR + 1 -->
-				<add order="0x10" stat="DEX" val="2" /> <!-- DEX + 2 -->
-				<sub order="0x10" stat="CON" val="2" /> <!-- CON - 2 -->
+				<add stat="STR" val="1" /> <!-- STR + 1 -->
+				<add stat="DEX" val="2" /> <!-- DEX + 2 -->
+				<sub stat="CON" val="2" /> <!-- CON - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -456,9 +456,9 @@
 				<mul stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 				<mul stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-				<add order="0x10" stat="WIT" val="2" /> <!-- WIT + 2 -->
-				<add order="0x10" stat="INT" val="1" /> <!-- INT + 1 -->
-				<sub order="0x10" stat="MEN" val="2" /> <!-- MEN - 2 -->
+				<add stat="WIT" val="2" /> <!-- WIT + 2 -->
+				<add stat="INT" val="1" /> <!-- INT + 1 -->
+				<sub stat="MEN" val="2" /> <!-- MEN - 2 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>

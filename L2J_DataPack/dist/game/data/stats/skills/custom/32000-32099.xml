@@ -11,14 +11,14 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-				<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" /> <!-- Decrease MP consumption -5% -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-				<add order="0x10" stat="MEN" val="2" /> <!-- MEN + 2 -->
-				<sub order="0x10" stat="WIT" val="1" /> <!-- WIT - 1 -->
-				<sub order="0x10" stat="INT" val="1" /> <!-- INT - 1 -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<sub stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
+				<mul stat="MagicalMpConsumeRate" val="0.95" /> <!-- Decrease MP consumption -5% -->
+				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add stat="MEN" val="2" /> <!-- MEN + 2 -->
+				<sub stat="WIT" val="1" /> <!-- WIT - 1 -->
+				<sub stat="INT" val="1" /> <!-- INT - 1 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -34,14 +34,14 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-				<sub order="0x40" stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% -->
-				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-				<add order="0x10" stat="MEN" val="2" /> <!-- MEN + 2 -->
-				<sub order="0x10" stat="WIT" val="1" /> <!-- WIT - 1 -->
-				<sub order="0x10" stat="INT" val="1" /> <!-- INT - 1 -->
+				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<sub stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
+				<mul stat="MagicalMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% -->
+				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add stat="MEN" val="2" /> <!-- MEN + 2 -->
+				<sub stat="WIT" val="1" /> <!-- WIT - 1 -->
+				<sub stat="INT" val="1" /> <!-- INT - 1 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
