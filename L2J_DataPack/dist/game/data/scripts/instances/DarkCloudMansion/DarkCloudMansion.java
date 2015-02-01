@@ -18,17 +18,18 @@
  */
 package instances.DarkCloudMansion;
 
+import instances.AbstractInstance;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -40,15 +41,12 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 /**
  * Dark Cloud Mansion instance zone.
  */
-public final class DarkCloudMansion extends Quest
+public final class DarkCloudMansion extends AbstractInstance
 {
-	private static final int TEMPLATE_ID = 9;
-	
-	private static boolean debug = false;
-	private static boolean noRndWalk = true;
-	
-	// Items
-	private static int CC = 9690; // Contaminated Crystal
+	protected class DMCWorld extends InstanceWorld
+	{
+		protected FastMap<String, DMCRoom> rooms = new FastMap<>();
+	}
 	
 	// NPCs
 	private static int YIYEN = 32282;
@@ -58,7 +56,6 @@ public final class DarkCloudMansion extends Quest
 	private static int SOTruth = 32291; // Symbol of Truth
 	private static int BSM = 32324; // Black Stone Monolith
 	private static int SC = 22402; // Shadow Column
-	
 	// Mobs
 	private static int[] CCG =
 	{
@@ -106,7 +103,10 @@ public final class DarkCloudMansion extends Quest
 		22264
 	};
 	
-	// Doors/Walls
+	// Items
+	private static int CC = 9690; // Contaminated Crystal
+	// Misc
+	private static final int TEMPLATE_ID = 9;
 	private static int D1 = 24230001; // Starting Room
 	private static int D2 = 24230002; // First Room
 	private static int D3 = 24230005; // Second Room
@@ -120,7 +120,8 @@ public final class DarkCloudMansion extends Quest
 	// private static int W5 = 24230011; // Wall 5
 	// private static int W6 = 24230012; // Wall 6
 	// private static int W7 = 24230013; // Wall 7
-	
+	private static boolean debug = false;
+	private static boolean noRndWalk = true;
 	private static NpcStringId[] _spawnChat =
 	{
 		NpcStringId.I_M_THE_REAL_ONE,
@@ -129,14 +130,12 @@ public final class DarkCloudMansion extends Quest
 		NpcStringId.NOT_THAT_DUDE_I_M_THE_REAL_ONE,
 		NpcStringId.DON_T_BE_FOOLED_DON_T_BE_FOOLED_I_M_THE_REAL_ONE
 	};
-	
 	private static NpcStringId[] _decayChat =
 	{
 		NpcStringId.I_M_THE_REAL_ONE_PHEW,
 		NpcStringId.CAN_T_YOU_EVEN_FIND_OUT,
 		NpcStringId.FIND_ME
 	};
-	
 	private static NpcStringId[] _successChat =
 	{
 		NpcStringId.HUH_HOW_DID_YOU_KNOW_IT_WAS_ME,
@@ -144,312 +143,74 @@ public final class DarkCloudMansion extends Quest
 		NpcStringId.YOU_VE_DONE_WELL,
 		NpcStringId.OH_VERY_SENSIBLE
 	};
-	
 	private static NpcStringId[] _faildChat =
 	{
 		NpcStringId.YOU_VE_BEEN_FOOLED,
 		NpcStringId.SORRY_BUT_I_M_THE_FAKE_ONE
 	};
-	
+	// @formatter:off
 	// Second room - random monolith order
 	private static int[][] MonolithOrder = new int[][]
 	{
-		{
-			1,
-			2,
-			3,
-			4,
-			5,
-			6
-		},
-		{
-			6,
-			5,
-			4,
-			3,
-			2,
-			1
-		},
-		{
-			4,
-			5,
-			6,
-			3,
-			2,
-			1
-		},
-		{
-			2,
-			6,
-			3,
-			5,
-			1,
-			4
-		},
-		{
-			4,
-			1,
-			5,
-			6,
-			2,
-			3
-		},
-		{
-			3,
-			5,
-			1,
-			6,
-			2,
-			4
-		},
-		{
-			6,
-			1,
-			3,
-			4,
-			5,
-			2
-		},
-		{
-			5,
-			6,
-			1,
-			2,
-			4,
-			3
-		},
-		{
-			5,
-			2,
-			6,
-			3,
-			4,
-			1
-		},
-		{
-			1,
-			5,
-			2,
-			6,
-			3,
-			4
-		},
-		{
-			1,
-			2,
-			3,
-			6,
-			5,
-			4
-		},
-		{
-			6,
-			4,
-			3,
-			1,
-			5,
-			2
-		},
-		{
-			3,
-			5,
-			2,
-			4,
-			1,
-			6
-		},
-		{
-			3,
-			2,
-			4,
-			5,
-			1,
-			6
-		},
-		{
-			5,
-			4,
-			3,
-			1,
-			6,
-			2
-		},
+		{1, 2, 3, 4, 5, 6},
+		{6, 5, 4, 3, 2, 1},
+		{4 ,5, 6, 3, 2, 1},
+		{2, 6, 3, 5, 1, 4},
+		{4, 1, 5, 6, 2, 3},
+		{3, 5, 1, 6, 2, 4},
+		{6, 1, 3, 4, 5, 2},
+		{5, 6, 1, 2, 4, 3},
+		{5, 2, 6, 3, 4, 1},
+		{1, 5, 2, 6, 3, 4},
+		{1, 2, 3, 6, 5, 4},
+		{6, 4, 3, 1, 5, 2},
+		{3, 5, 2, 4, 1, 6},
+		{3, 2, 4, 5, 1, 6},
+		{5, 4, 3, 1, 6, 2},
 	};
-	
 	// Second room - golem spawn locatons - random
 	private static int[][] GolemSpawn = new int[][]
 	{
-		{
-			CCG[0],
-			148060,
-			181389
-		},
-		{
-			CCG[1],
-			147910,
-			181173
-		},
-		{
-			CCG[0],
-			147810,
-			181334
-		},
-		{
-			CCG[1],
-			147713,
-			181179
-		},
-		{
-			CCG[0],
-			147569,
-			181410
-		},
-		{
-			CCG[1],
-			147810,
-			181517
-		},
-		{
-			CCG[0],
-			147805,
-			181281
-		}
+		{CCG[0], 148060, 181389},
+		{CCG[1], 147910, 181173},
+		{CCG[0], 147810, 181334},
+		{CCG[1], 147713, 181179},
+		{CCG[0], 147569, 181410},
+		{CCG[1], 147810, 181517},
+		{CCG[0], 147805, 181281},
 	};
 	
 	// forth room - random shadow column
 	private static int[][] ColumnRows = new int[][]
 	{
-		{
-			1,
-			1,
-			0,
-			1,
-			0
-		},
-		{
-			0,
-			1,
-			1,
-			0,
-			1
-		},
-		{
-			1,
-			0,
-			1,
-			1,
-			0
-		},
-		{
-			0,
-			1,
-			0,
-			1,
-			1
-		},
-		{
-			1,
-			0,
-			1,
-			0,
-			1
-		}
+		{1, 1, 0, 1, 0},
+		{0, 1, 1, 0, 1},
+		{1, 0, 1, 1, 0},
+		{0, 1, 0, 1, 1},
+		{1, 0, 1, 0, 1},
 	};
 	
 	// Fifth room - beleth order
 	private static int[][] Beleths = new int[][]
 	{
-		{
-			1,
-			0,
-			1,
-			0,
-			1,
-			0,
-			0
-		},
-		{
-			0,
-			0,
-			1,
-			0,
-			1,
-			1,
-			0
-		},
-		{
-			0,
-			0,
-			0,
-			1,
-			0,
-			1,
-			1
-		},
-		{
-			1,
-			0,
-			1,
-			1,
-			0,
-			0,
-			0
-		},
-		{
-			1,
-			1,
-			0,
-			0,
-			0,
-			1,
-			0
-		},
-		{
-			0,
-			1,
-			0,
-			1,
-			0,
-			1,
-			0
-		},
-		{
-			0,
-			0,
-			0,
-			1,
-			1,
-			1,
-			0
-		},
-		{
-			1,
-			0,
-			1,
-			0,
-			0,
-			1,
-			0
-		},
-		{
-			0,
-			1,
-			1,
-			0,
-			0,
-			0,
-			1
-		}
+		{1, 0, 1, 0, 1, 0, 0},
+		{0, 0, 1, 0, 1, 1, 0},
+		{0, 0, 0, 1, 0, 1, 1},
+		{1, 0, 1, 1, 0, 0, 0},
+		{1, 1, 0, 0, 0, 1, 0},
+		{0, 1, 0, 1, 0, 1, 0},
+		{0, 0, 0, 1, 1, 1, 0},
+		{1, 0, 1, 0, 0, 1, 0},
+		{0, 1, 1, 0, 0, 0, 1},
 	};
+	// @formatter:on
 	
-	private DarkCloudMansion()
+	public DarkCloudMansion()
 	{
-		super(-1, DarkCloudMansion.class.getSimpleName(), "instances");
-		addFirstTalkId(BSM);
-		addFirstTalkId(SOTruth);
+		super(DarkCloudMansion.class.getSimpleName());
+		addFirstTalkId(BSM, SOTruth);
 		addStartNpc(YIYEN);
-		addTalkId(YIYEN);
-		addTalkId(SOTruth);
+		addTalkId(YIYEN, SOTruth);
 		addAttackId(SC);
 		addAttackId(BS);
 		addAttackId(CCG);
@@ -475,19 +236,15 @@ public final class DarkCloudMansion extends Quest
 		public int[] Order;
 	}
 	
-	protected class DMCWorld extends InstanceWorld
+	@Override
+	protected boolean checkConditions(L2PcInstance player)
 	{
-		public FastMap<String, DMCRoom> rooms = new FastMap<>();
-	}
-	
-	private boolean checkConditions(L2PcInstance player)
-	{
-		if (debug)
+		if (debug || player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
 		{
 			return true;
 		}
 		
-		L2Party party = player.getParty();
+		final L2Party party = player.getParty();
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
@@ -524,46 +281,34 @@ public final class DarkCloudMansion extends Quest
 		return true;
 	}
 	
-	protected void enterInstance(L2PcInstance player, String template, Location loc)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (!(world instanceof DMCWorld))
+			runStartRoom((DMCWorld) world);
+			// teleport players
+			if (debug && (player.getParty() == null))
 			{
-				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
-				return;
+				world.addAllowed(player.getObjectId());
+				teleportPlayer(player, new Location(146534, 180464, -6117), world.getInstanceId());
 			}
-			teleportPlayer(player, loc, world.getInstanceId());
-			return;
-		}
-		
-		if (!checkConditions(player))
-		{
-			return;
-		}
-		L2Party party = player.getParty();
-		final int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-		world = new DMCWorld();
-		world.setInstanceId(instanceId);
-		world.setTemplateId(TEMPLATE_ID);
-		InstanceManager.getInstance().addWorld(world);
-		_log.info("DarkCloudMansion: started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-		runStartRoom((DMCWorld) world);
-		// teleport players
-		if (debug && (party == null))
-		{
-			world.addAllowed(player.getObjectId());
-			teleportPlayer(player, loc, instanceId);
+			else
+			{
+				for (L2PcInstance partyMember : player.getParty().getMembers())
+				{
+					if (partyMember.getQuestState(getName()) == null)
+					{
+						newQuestState(partyMember);
+					}
+					world.addAllowed(partyMember.getObjectId());
+					teleportPlayer(partyMember, new Location(146534, 180464, -6117), world.getInstanceId());
+				}
+			}
 		}
 		else
 		{
-			for (L2PcInstance partyMember : party.getMembers())
-			{
-				getQuestState(partyMember, true);
-				world.addAllowed(partyMember.getObjectId());
-				teleportPlayer(partyMember, loc, instanceId);
-			}
+			teleportPlayer(player, new Location(146534, 180464, -6117), world.getInstanceId());
 		}
 	}
 	
@@ -1200,8 +945,8 @@ public final class DarkCloudMansion extends Quest
 			return "";
 		}
 		
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		DMCWorld world;
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final DMCWorld world;
 		if (tmpworld instanceof DMCWorld)
 		{
 			world = (DMCWorld) tmpworld;
@@ -1262,8 +1007,8 @@ public final class DarkCloudMansion extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		DMCWorld world;
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final DMCWorld world;
 		if (tmpworld instanceof DMCWorld)
 		{
 			world = (DMCWorld) tmpworld;
@@ -1336,15 +1081,14 @@ public final class DarkCloudMansion extends Quest
 				killedBelethSample(world, npc);
 			}
 		}
-		
 		return "";
 	}
 	
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon, Skill skill)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		DMCWorld world;
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final DMCWorld world;
 		if (tmpworld instanceof DMCWorld)
 		{
 			world = (DMCWorld) tmpworld;
@@ -1418,10 +1162,10 @@ public final class DarkCloudMansion extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		if (npcId == YIYEN)
 		{
-			enterInstance(player, "DarkCloudMansion.xml", new Location(146534, 180464, -6117));
+			enterInstance(player, new DMCWorld(), "DarkCloudMansion.xml", TEMPLATE_ID);
 		}
 		else
 		{
@@ -1457,10 +1201,5 @@ public final class DarkCloudMansion extends Quest
 			}
 		}
 		return "";
-	}
-	
-	public static void main(String[] args)
-	{
-		new DarkCloudMansion();
 	}
 }

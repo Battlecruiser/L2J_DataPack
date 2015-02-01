@@ -37,6 +37,61 @@
 						<xs:attribute name="spawnZ" type="xs:integer" use="required" />
 					</xs:complexType>
 				</xs:element>
+				<xs:element name="reenter" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="reset" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="day">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="Monday" />
+												<xs:enumeration value="Tuesday" />
+												<xs:enumeration value="Wednesday" />
+												<xs:enumeration value="Thursday" />
+												<xs:enumeration value="Friday" />
+												<xs:enumeration value="Saturday" />
+												<xs:enumeration value="Sunday" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="time" type="xs:long" />
+									<xs:attribute name="hour" type="xs:positiveInteger" />
+									<xs:attribute name="minute" type="xs:positiveInteger" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="additionStyle">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+										<xs:enumeration value="NONE" />
+										<xs:enumeration value="ON_INSTANCE_ENTER" />
+										<xs:enumeration value="ON_INSTANCE_FINISH" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="removeBuffs" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="skill" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:integer" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="type">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+										<xs:enumeration value="ALL" />
+										<xs:enumeration value="WHITELIST" />
+										<xs:enumeration value="BLACKLIST" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
 				<xs:element name="doorlist" minOccurs="0" maxOccurs="1">
 					<xs:complexType>
 						<xs:sequence minOccurs="1" maxOccurs="1">

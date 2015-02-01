@@ -18,6 +18,8 @@
  */
 package instances.Kamaloka;
 
+import instances.AbstractInstance;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -38,13 +40,12 @@ import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-public final class Kamaloka extends Quest
+public final class Kamaloka extends AbstractInstance
 {
 	/*
 	 * Reset time for all kamaloka Default: 6:30AM on server time
@@ -1176,9 +1177,9 @@ public final class Kamaloka extends Quest
 		public L2Npc boss = null; // boss
 	}
 	
-	private Kamaloka()
+	public Kamaloka()
 	{
-		super(-1, Kamaloka.class.getSimpleName(), "instances");
+		super(Kamaloka.class.getSimpleName());
 		addFirstTalkId(TELEPORTER);
 		addTalkId(TELEPORTER);
 		for (int cap : CAPTAINS)
@@ -1418,7 +1419,8 @@ public final class Kamaloka extends Quest
 	 * Called on instance finish and handles reenter time for instance
 	 * @param world instanceWorld
 	 */
-	private static final void finishInstance(InstanceWorld world)
+	@Override
+	protected final void finishInstance(InstanceWorld world)
 	{
 		if (world instanceof KamaWorld)
 		{
@@ -1725,8 +1727,9 @@ public final class Kamaloka extends Quest
 		return super.onKill(npc, player, isSummon);
 	}
 	
-	public static void main(String[] args)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		new Kamaloka();
+		
 	}
 }

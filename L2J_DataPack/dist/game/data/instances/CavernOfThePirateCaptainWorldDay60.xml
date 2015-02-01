@@ -4,4 +4,9 @@
 	<allowSummon val="false"/>
 	<showTimer val="true" increase="true" text="Elapsed Time :" />
 	<spawnPoint spawnX="52212" spawnY="218998" spawnZ="-3208" />
+	<reenter additionStyle="ON_INSTANCE_FINISH" >
+		<reset day="Monday" hour="6" minute="30" />
+		<reset day="Wednesday" hour="6" minute="30" />
+		<reset day="Friday" hour="6" minute="30" />
+	</reenter>
 </instance>
