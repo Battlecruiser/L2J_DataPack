@@ -231,6 +231,14 @@ public final class AwakeningMaster extends AbstractNpcAI
 		for (ClassId newClass : player.getClassId().getNextClassIds())
 		{
 			player.setClassId(newClass.getId());
+			if (player.isDualClassActive())
+			{
+				player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
+			}
+			else
+			{
+				player.setBaseClass(player.getActiveClass());
+			}
 			player.sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER);
 			final UserInfo ui = new UserInfo(player, false);
 			ui.addComponentType(UserInfoType.BASIC_INFO);
@@ -238,44 +246,36 @@ public final class AwakeningMaster extends AbstractNpcAI
 			player.sendPacket(ui);
 			player.broadcastInfo();
 			
-			int socialId = 21; // Sigel
 			int itemId = ABELIUS_POWER; // Sigel
 			if (player.isInCategory(CategoryType.TYRR_GROUP))
 			{
-				socialId = 22;
 				itemId = SAPYROS_POWER;
 			}
 			else if (player.isInCategory(CategoryType.OTHELL_GROUP))
 			{
-				socialId = 23;
 				itemId = ASHAGEN_POWER;
 			}
 			else if (player.isInCategory(CategoryType.YUL_GROUP))
 			{
-				socialId = 24;
 				itemId = CRANIGG_POWER;
 			}
 			else if (player.isInCategory(CategoryType.FEOH_GROUP))
 			{
-				socialId = 25;
 				itemId = SOLTKREIG_POWER;
 			}
 			else if (player.isInCategory(CategoryType.ISS_GROUP))
 			{
-				socialId = 26;
 				itemId = NAVIAROPE_POWER;
 			}
 			else if (player.isInCategory(CategoryType.WYNN_GROUP))
 			{
-				socialId = 27;
 				itemId = LEISTER_POWER;
 			}
 			else if (player.isInCategory(CategoryType.AEORE_GROUP))
 			{
-				socialId = 28;
 				itemId = LAKCIS_POWER;
 			}
-			player.broadcastPacket(new SocialAction(player.getObjectId(), socialId));
+			player.broadcastPacket(new SocialAction(player.getObjectId(), 20));
 			giveItems(player, itemId, 1);
 			
 			SkillTreesData.getInstance().cleanSkillUponAwakening(player);
