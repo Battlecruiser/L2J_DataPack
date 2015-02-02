@@ -80,27 +80,26 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		
 		if (checkConditions(player))
 		{
-			final InstanceWorld playerWorld = instance;
-			playerWorld.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			playerWorld.setTemplateId(templateId);
-			playerWorld.setStatus(0);
-			InstanceManager.getInstance().addWorld(playerWorld);
-			onEnterInstance(player, playerWorld, true);
+			instance.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
+			instance.setTemplateId(templateId);
+			instance.setStatus(0);
+			InstanceManager.getInstance().addWorld(instance);
+			onEnterInstance(player, instance, true);
 			
-			final Instance inst = InstanceManager.getInstance().getInstance(playerWorld.getInstanceId());
+			final Instance inst = InstanceManager.getInstance().getInstance(instance.getInstanceId());
 			if (inst.getReenterType() == InstanceReenterType.ON_INSTANCE_ENTER)
 			{
-				handleReenterTime(playerWorld);
+				handleReenterTime(instance);
 			}
 			
 			if (inst.isRemoveBuffEnabled())
 			{
-				handleRemoveBuffs(playerWorld);
+				handleRemoveBuffs(instance);
 			}
 			
 			if (Config.DEBUG_INSTANCES)
 			{
-				_log.info("Instance " + InstanceManager.getInstance().getInstance(playerWorld.getInstanceId()).getName() + " (" + playerWorld.getTemplateId() + ") has been created by player " + player.getName());
+				_log.info("Instance " + inst.getName() + " (" + instance.getTemplateId() + ") has been created by player " + player.getName());
 			}
 		}
 	}
