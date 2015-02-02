@@ -536,6 +536,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 			startQuestTimer("message3", 8500, null, player);
 			startQuestTimer("spawn_npc1", 10000, null, player);
 		}
+		world.addAllowed(player.getObjectId());
 		teleportPlayer(player, START_LOC, world.getInstanceId());
 	}
 	
