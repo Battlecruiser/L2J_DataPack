@@ -67,9 +67,6 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	// Items
 	private static final int VORPAL_RING = 15763; // Sealed Vorpal Ring
 	private static final int VORPAL_EARRING = 15764; // Sealed Vorpal Earring
-	private static final int FIRE = 15280; // Transparent 1HS (for NPC)
-	private static final int RED = 15281; // Transparent 1HS (for NPC)
-	private static final int BLUE = 15302; // Transparent Bow (for NPC)
 	// Locations
 	private static final Location[] ENTER_LOC =
 	{
@@ -305,9 +302,9 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 				{
 					case "BURN_BLUE":
 					{
-						if (npc.getRightHandItem() == 0)
+						if (npc.getDisplayEffect() == 0)
 						{
-							npc.setRHandId(FIRE);
+							npc.setDisplayEffect(1); // Burning
 							startQuestTimer("BURN_BLUE2", 3000, npc, player);
 							if (world._blueFounded == 4)
 							{
@@ -318,27 +315,27 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 					}
 					case "BURN_BLUE2":
 					{
-						if (npc.getRightHandItem() == FIRE)
+						if (npc.getDisplayEffect() == 1) // Burning
 						{
-							npc.setRHandId(BLUE);
+							npc.setDisplayEffect(3); // Blue glow
 						}
 						break;
 					}
 					case "BURN_RED":
 					{
-						if (npc.getRightHandItem() == 0)
+						if (npc.getDisplayEffect() == 0)
 						{
-							npc.setRHandId(FIRE);
+							npc.setDisplayEffect(1); // Burning
 							startQuestTimer("BURN_RED2", 3000, npc, player);
 						}
 						break;
 					}
 					case "BURN_RED2":
 					{
-						if (npc.getRightHandItem() == FIRE)
+						if (npc.getDisplayEffect() == 1) // Burning
 						{
 							final int room = getRoomByCandle(npc);
-							npc.setRHandId(RED);
+							npc.setDisplayEffect(2); // Red glow
 							manageScreenMsg(world, NpcStringId.THE_CANDLES_CAN_LEAD_YOU_TO_ZAKEN_DESTROY_HIM);
 							spawnNpc(world._is83 ? DOLL_BLADER_83 : DOLL_BLADER_60, room, player, world);
 							spawnNpc(world._is83 ? VALE_MASTER_83 : VALE_MASTER_60, room, player, world);
@@ -471,7 +468,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		{
 			if ((players != null) && (players.getInstanceId() == world.getInstanceId()))
 			{
-				showOnScreenMsg(players, stringId, 2, 6000);
+				showOnScreenMsg(players, stringId, 5, 6000);
 			}
 		}
 	}
