@@ -302,9 +302,9 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 				{
 					case "BURN_BLUE":
 					{
-						if (npc.getDisplayEffect() == 0)
+						if (npc.isState(0))
 						{
-							npc.setDisplayEffect(1); // Burning
+							npc.setState(1); // Burning
 							startQuestTimer("BURN_BLUE2", 3000, npc, player);
 							if (world._blueFounded == 4)
 							{
@@ -315,27 +315,27 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 					}
 					case "BURN_BLUE2":
 					{
-						if (npc.getDisplayEffect() == 1) // Burning
+						if (npc.isState(1)) // Burning
 						{
-							npc.setDisplayEffect(3); // Blue glow
+							npc.setState(3); // Blue glow
 						}
 						break;
 					}
 					case "BURN_RED":
 					{
-						if (npc.getDisplayEffect() == 0)
+						if (npc.isState(0))
 						{
-							npc.setDisplayEffect(1); // Burning
+							npc.setState(1); // Burning
 							startQuestTimer("BURN_RED2", 3000, npc, player);
 						}
 						break;
 					}
 					case "BURN_RED2":
 					{
-						if (npc.getDisplayEffect() == 1) // Burning
+						if (npc.isState(1)) // Burning
 						{
 							final int room = getRoomByCandle(npc);
-							npc.setDisplayEffect(2); // Red glow
+							npc.setState(2); // Red glow
 							manageScreenMsg(world, NpcStringId.THE_CANDLES_CAN_LEAD_YOU_TO_ZAKEN_DESTROY_HIM);
 							spawnNpc(world._is83 ? DOLL_BLADER_83 : DOLL_BLADER_60, room, player, world);
 							spawnNpc(world._is83 ? VALE_MASTER_83 : VALE_MASTER_60, room, player, world);

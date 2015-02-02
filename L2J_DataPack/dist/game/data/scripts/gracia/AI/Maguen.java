@@ -121,7 +121,7 @@ public final class Maguen extends AbstractNpcAI
 			{
 				npc.getAI().stopFollow();
 				final int randomEffect = getRandom(1, 3);
-				npc.setDisplayEffect(randomEffect);
+				npc.setState(randomEffect);
 				npc.getVariables().set("NPC_EFFECT", randomEffect);
 				startQuestTimer("SECOND_TIMER", 5000 + getRandom(300), npc, player);
 				npc.broadcastSocialAction(getRandom(1, 3));
@@ -130,8 +130,7 @@ public final class Maguen extends AbstractNpcAI
 			case "SECOND_TIMER":
 			{
 				final int randomEffect = getRandom(1, 3);
-				npc.setDisplayEffect(4);
-				npc.setDisplayEffect(randomEffect);
+				npc.setState(randomEffect);
 				npc.getVariables().set("NPC_EFFECT", randomEffect);
 				startQuestTimer("THIRD_TIMER", 4600 + getRandom(600), npc, player);
 				npc.broadcastSocialAction(getRandom(1, 3));
@@ -140,8 +139,7 @@ public final class Maguen extends AbstractNpcAI
 			case "THIRD_TIMER":
 			{
 				final int randomEffect = getRandom(1, 3);
-				npc.setDisplayEffect(4);
-				npc.setDisplayEffect(randomEffect);
+				npc.setState(randomEffect);
 				npc.getVariables().set("NPC_EFFECT", randomEffect);
 				startQuestTimer("FORTH_TIMER", 4200 + getRandom(900), npc, player);
 				npc.broadcastSocialAction(getRandom(1, 3));
@@ -150,7 +148,7 @@ public final class Maguen extends AbstractNpcAI
 			case "FORTH_TIMER":
 			{
 				npc.getVariables().set("NPC_EFFECT", 0);
-				npc.setDisplayEffect(4);
+				npc.setState(4);
 				startQuestTimer("END_TIMER", 500, npc, player);
 				npc.broadcastSocialAction(getRandom(1, 3));
 				break;
@@ -251,7 +249,7 @@ public final class Maguen extends AbstractNpcAI
 		{
 			startQuestTimer("END_TIMER", 1000, npc, player);
 		}
-		npc.setDisplayEffect(4);
+		npc.setState(4);
 		return super.onSpellFinished(npc, player, skill);
 	}
 	

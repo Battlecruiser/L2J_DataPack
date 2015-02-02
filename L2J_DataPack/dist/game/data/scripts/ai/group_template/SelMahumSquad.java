@@ -125,16 +125,16 @@ public final class SelMahumSquad extends AbstractNpcAI
 			case "fire":
 			{
 				startQuestTimer("fire", 30000 + getRandom(5000), npc, null);
-				npc.setDisplayEffect(FIRE_EFFECT_NONE);
+				npc.setState(FIRE_EFFECT_NONE);
 				
 				if (getRandom(GameTimeController.getInstance().isNight() ? 2 : 4) < 1)
 				{
-					npc.setDisplayEffect(FIRE_EFFECT_BURN); // fire burns
+					npc.setState(FIRE_EFFECT_BURN); // fire burns
 					npc.broadcastEvent("SCE_CAMPFIRE_START", 600, null);
 				}
 				else
 				{
-					npc.setDisplayEffect(FIRE_EFFECT_NONE); // fire goes out
+					npc.setState(FIRE_EFFECT_NONE); // fire goes out
 					npc.broadcastEvent("SCE_CAMPFIRE_END", 600, null);
 				}
 				break;
@@ -148,12 +148,12 @@ public final class SelMahumSquad extends AbstractNpcAI
 				if (npc.isNoRndWalk())
 				{
 					npc.doCast(SkillData.getInstance().getSkill(6331, 1));
-					npc.setDisplayEffect(MAHUM_EFFECT_SLEEP);
+					npc.setState(MAHUM_EFFECT_SLEEP);
 				}
 				if (npc.getVariables().getInt("BUSY_STATE") == 1) // Eating
 				{
 					npc.doCast(SkillData.getInstance().getSkill(6332, 1));
-					npc.setDisplayEffect(MAHUM_EFFECT_EAT);
+					npc.setState(MAHUM_EFFECT_EAT);
 				}
 				
 				startQuestTimer("remove_effects", 300000, npc, null);
@@ -168,7 +168,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 			{
 				// myself.i_quest0 = 0;
 				npc.setIsRunning(true);
-				npc.setDisplayEffect(MAHUM_EFFECT_NONE);
+				npc.setState(MAHUM_EFFECT_NONE);
 				break;
 			}
 			case "reset_full_bottle_prize":
@@ -226,7 +226,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 			{
 				if (receiver.getId() == FIRE)
 				{
-					receiver.setDisplayEffect(FIRE_EFFECT_BURN);
+					receiver.setState(FIRE_EFFECT_BURN);
 					final L2Npc stove = addSpawn(STOVE, receiver.getX(), receiver.getY(), receiver.getZ() + 100, 0, false, 0);
 					stove.setSummoner(receiver);
 					startQuestTimer("notify_dinner", 2000, receiver, null); // @SCE_DINNER_EAT
@@ -353,7 +353,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 		}
 		else if (Util.contains(SQUAD_LEADERS, npc.getId()))
 		{
-			npc.setDisplayEffect(3);
+			npc.setState(3);
 			npc.setIsNoRndWalk(false);
 		}
 		return super.onSpawn(npc);
@@ -390,7 +390,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 		cancelQuestTimer("remove_effects", attacked, null);
 		attacked.getVariables().remove("BUSY_STATE");
 		attacked.setIsNoRndWalk(false);
-		attacked.setDisplayEffect(MAHUM_EFFECT_NONE);
+		attacked.setState(MAHUM_EFFECT_NONE);
 		if (attacked.getRightHandItem() == OHS_Weapon)
 		{
 			attacked.setRHandId(THS_Weapon);

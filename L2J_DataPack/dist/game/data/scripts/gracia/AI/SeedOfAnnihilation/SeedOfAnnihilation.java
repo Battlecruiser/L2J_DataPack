@@ -268,7 +268,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 			for (int j = 0; j < _regionsData[i].af_spawns.length; j++)
 			{
 				_regionsData[i].af_npcs[j] = addSpawn(ANNIHILATION_FURNACE, _regionsData[i].af_spawns[j][0], _regionsData[i].af_spawns[j][1], _regionsData[i].af_spawns[j][2], _regionsData[i].af_spawns[j][3], false, 0);
-				_regionsData[i].af_npcs[j].setDisplayEffect(_regionsData[i].activeBuff);
+				_regionsData[i].af_npcs[j].setState(_regionsData[i].activeBuff);
 			}
 			ZoneManager.getInstance().getZoneById(_regionsData[i].buff_zone, L2EffectZone.class).addSkill(ZONE_BUFFS[_regionsData[i].activeBuff], 1);
 		}
@@ -311,7 +311,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 				
 				for (L2Npc af : _regionsData[i].af_npcs)
 				{
-					af.setDisplayEffect(_regionsData[i].activeBuff);
+					af.setState(_regionsData[i].activeBuff);
 				}
 				
 				L2EffectZone zone = ZoneManager.getInstance().getZoneById(_regionsData[i].buff_zone, L2EffectZone.class);

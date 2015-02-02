@@ -60,7 +60,7 @@ public final class Anais extends AbstractNpcAI
 	private void burnerOnAttack(int pot, L2Npc anais)
 	{
 		L2Npc npc = _divineBurners.get(pot);
-		npc.setDisplayEffect(1);
+		npc.setState(1);
 		npc.setIsRunning(false);
 		if (pot < 4)
 		{
@@ -99,7 +99,7 @@ public final class Anais extends AbstractNpcAI
 					}
 					final L2Npc b = _divineBurners.get(_pot);
 					_pot = _pot + 1;
-					b.setDisplayEffect(1);
+					b.setState(1);
 					b.setIsRunning(false);
 					L2Npc ward = addSpawn(GRAIL_WARD, new Location(b.getX(), b.getY(), b.getZ()), true, 0);
 					((L2Attackable) ward).addDamageHate(_nextTarget, 0, 999);
@@ -134,7 +134,7 @@ public final class Anais extends AbstractNpcAI
 				cancelQuestTimer("GUARD_ATTACK", npc, _nextTarget);
 				if (_current != null)
 				{
-					_current.setDisplayEffect(2);
+					_current.setState(2);
 					_current.setIsRunning(false);
 					_current = null;
 				}
@@ -186,7 +186,7 @@ public final class Anais extends AbstractNpcAI
 		cancelQuestTimer("CHECK", npc, null);
 		if (_current != null)
 		{
-			_current.setDisplayEffect(2);
+			_current.setState(2);
 			_current.setIsRunning(false);
 			_current = null;
 		}

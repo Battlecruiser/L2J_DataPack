@@ -210,7 +210,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			case "RIGHT_BOOK1":
 			{
 				qs.set("good1", "1");
-				npc.setDisplayEffect(1);
+				npc.setState(1);
 				startQuestTimer("SPAWN_MOBS", 22000, npc, player);
 				htmltext = "32821-02.html";
 				if (hasCheckedAllRightBooks(qs))
@@ -222,7 +222,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			case "RIGHT_BOOK2":
 			{
 				qs.set("good2", "1");
-				npc.setDisplayEffect(1);
+				npc.setState(1);
 				npc.setTarget(player);
 				npc.doCast(VAMPIRIC_RAGE.getSkill());
 				htmltext = "32821-02.html";
@@ -235,7 +235,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			case "RIGHT_BOOK3":
 			{
 				qs.set("good3", "1");
-				npc.setDisplayEffect(1);
+				npc.setState(1);
 				final L2Npc jude = addSpawn(JUDE_VAN_ETINA, 85783, -253471, -8320, 65, false, 0, false, player.getInstanceId());
 				jude.setTarget(player);
 				jude.doCast(RESIST_HOLY.getSkill());
@@ -249,7 +249,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			case "RIGHT_BOOK4":
 			{
 				qs.set("good4", "1");
-				npc.setDisplayEffect(1);
+				npc.setState(1);
 				final L2Npc solina = addSpawn(SOLINAS_EVIL_THOUGHTS, 85793, -247581, -8320, 0, false, 0, false, player.getInstanceId());
 				solina.setTarget(player);
 				solina.doCast(RESIST_HOLY.getSkill());

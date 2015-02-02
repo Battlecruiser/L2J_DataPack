@@ -639,7 +639,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				String type = st.nextToken();
 				int diplayeffect = Integer.parseInt(type);
-				npc.setDisplayEffect(diplayeffect);
+				npc.setState(diplayeffect);
 			}
 			catch (Exception e)
 			{
