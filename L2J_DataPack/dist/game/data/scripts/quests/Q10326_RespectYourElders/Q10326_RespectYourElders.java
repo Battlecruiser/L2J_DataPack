@@ -191,7 +191,11 @@ public class Q10326_RespectYourElders extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == GALLINT ? "32980-01.htm" : "32972-01a.htm";
+				if (npc.getId() == GALLINT)
+				{
+					htmltext = "32980-01.htm";
+					break;
+				}
 				break;
 			}
 			case State.STARTED:
