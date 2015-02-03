@@ -109,11 +109,6 @@ public final class Warpgate extends AbstractNpcAI
 	
 	private static boolean canEnter(L2PcInstance player)
 	{
-		if (player.isFlying())
-		{
-			return false;
-		}
-		
-		return true;
+		return !player.isFlying();
 	}
 }
