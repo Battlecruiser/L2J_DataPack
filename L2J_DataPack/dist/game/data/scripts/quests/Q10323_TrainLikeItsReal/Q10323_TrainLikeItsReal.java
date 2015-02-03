@@ -18,17 +18,20 @@
  */
 package quests.Q10323_TrainLikeItsReal;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import quests.Q10322_SearchingForTheMysteriousPower.Q10322_SearchingForTheMysteriousPower;
 
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
+import com.l2jserver.gameserver.model.holders.NpcLogListHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 
@@ -99,9 +102,6 @@ public class Q10323_TrainLikeItsReal extends Quest
 				if (qs.isCond(1))
 				{
 					qs.setCond(2, true);
-					final ExQuestNpcLogList packet = new ExQuestNpcLogList(getId());
-					packet.addNpc(TRAINING_GOLEM, 0);
-					player.sendPacket(packet);
 					htmltext = event;
 				}
 				break;
@@ -256,9 +256,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 			if (qs.isCond(2))
 			{
 				killedGolem++;
-				final ExQuestNpcLogList packet = new ExQuestNpcLogList(getId());
-				packet.addNpcString(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM, killedGolem);
-				killer.sendPacket(packet);
+				
 				if (killedGolem >= 4)
 				{
 					qs.setCond(3, true);
@@ -266,15 +264,14 @@ public class Q10323_TrainLikeItsReal extends Quest
 				else
 				{
 					qs.setMemoState(killedGolem);
+					sendNpcLogList(killer);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 			else if (qs.isCond(6) || qs.isCond(7))
 			{
 				killedGolem++;
-				final ExQuestNpcLogList packet = new ExQuestNpcLogList(getId());
-				packet.addNpcString(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM2, killedGolem);
-				killer.sendPacket(packet);
+				
 				if (killedGolem >= 4)
 				{
 					qs.setCond(8, true);
@@ -282,11 +279,30 @@ public class Q10323_TrainLikeItsReal extends Quest
 				else
 				{
 					qs.setMemoState(killedGolem);
+					sendNpcLogList(killer);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
-		
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	{
+		final QuestState qs = getQuestState(activeChar, false);
+		final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
+		
+		if ((qs != null) && (qs.isCond(2)))
+		{
+			npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM, qs.getMemoState()));
+			return npcLogList;
+		}
+		else if ((qs != null) && (qs.isCond(6) || qs.isCond(7)))
+		{
+			npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM2, qs.getMemoState()));
+			return npcLogList;
+		}
+		return super.getNpcLogList(activeChar);
 	}
 }
