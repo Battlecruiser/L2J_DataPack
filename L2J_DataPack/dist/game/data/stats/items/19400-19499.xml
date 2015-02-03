@@ -289,17 +289,29 @@
 	<item id="19441" name="Spiritshot (R-grade)" additionalName="" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. Can be used with an R-grade weapon. -->
 		<set name="icon" val="icon.spiritshot_r_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
-		<set name="price" val="300" />
+		<set name="price" val="350" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<set name="item_skill" val="9194-1" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 	</item>
 	<item id="19442" name="Blessed Spiritshot (R-grade)" additionalName="" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. significantly. Can be used with an R-grade weapon. -->
 		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="750" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="item_skill" val="9195-1" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 	</item>
 	<item id="19443" name="Orichalcum Bolt" additionalName="" type="EtcItem">

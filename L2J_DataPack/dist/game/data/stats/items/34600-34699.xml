@@ -49,7 +49,14 @@
 	<item id="34609" name="Mysterious Soulshot (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with an R-grade weapon. -->
 		<set name="icon" val="icon.soulshot_r_i00" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="crystal_type" val="R" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1000" />
+		<set name="handler" val="SoulShots" />
+		<set name="item_skill" val="9193-1" />
 	</item>
 	<item id="34610" name="Mysterious Blessed No-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with No-grade weapons. -->
@@ -84,7 +91,15 @@
 	<item id="34616" name="Mysterious Blessed Spiritshot (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. significantly. Can be used with an R-grade weapon. -->
 		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="350" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="item_skill" val="9195-1" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 	</item>
 	<item id="34617" name="Player Commendation - Agathion's Gift" additionalName="PC-exclusive" type="EtcItem">

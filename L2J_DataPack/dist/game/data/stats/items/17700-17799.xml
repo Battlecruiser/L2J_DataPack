@@ -357,9 +357,15 @@
 	<item id="17754" name="Soulshot (R-grade)" additionalName="" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with an R-grade weapon. -->
 		<set name="icon" val="icon.soulshot_r_i00" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="crystal_type" val="R" />
 		<set name="weight" val="1" />
-		<set name="price" val="200" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="200" />
+		<set name="handler" val="SoulShots" />
+		<set name="item_skill" val="9193-1" />
 		<set name="commissionItemType" val="SOULSHOT" />
 	</item>
 	<item id="17755" name="Human Male Wig - A" additionalName="" type="Armor">
