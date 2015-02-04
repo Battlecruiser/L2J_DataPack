@@ -21,15 +21,12 @@ package gracia.AI;
 import java.util.Map;
 
 import javolution.util.FastMap;
-import quests.Q00692_HowtoOpposeEvil.Q00692_HowtoOpposeEvil;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
-import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.GraciaSeedsManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
@@ -41,7 +38,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -54,7 +50,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class EnergySeeds extends AbstractNpcAI
 {
-	private static final int HOWTOOPPOSEEVIL_CHANCE = 60;
 	private static final int RATE = 1;
 	private static final int RESPAWN = 480000;
 	private static final int RANDOM_RESPAWN_OFFSET = 180000;
@@ -316,26 +311,9 @@ public class EnergySeeds extends AbstractNpcAI
 		{
 			return;
 		}
-		QuestState st = player.getQuestState(Q00692_HowtoOpposeEvil.class.getSimpleName());
 		switch (seedType)
 		{
-			case INFINITY:
-				if ((st != null) && st.isCond(3))
-				{
-					handleQuestDrop(player, 13798);
-				}
-				break;
-			case DESTRUCTION:
-				if ((st != null) && st.isCond(3))
-				{
-					handleQuestDrop(player, 13867);
-				}
-				break;
 			case ANNIHILATION_BISTAKON:
-				if ((st != null) && st.isCond(3))
-				{
-					handleQuestDrop(player, 15535);
-				}
 				if (getRandom(100) < 50)
 				{
 					L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[0][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[0].length)]);
@@ -345,10 +323,6 @@ public class EnergySeeds extends AbstractNpcAI
 				}
 				break;
 			case ANNIHILATION_REPTILIKON:
-				if ((st != null) && st.isCond(3))
-				{
-					handleQuestDrop(player, 15535);
-				}
 				if (getRandom(100) < 50)
 				{
 					L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[1][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[1].length)]);
@@ -358,10 +332,6 @@ public class EnergySeeds extends AbstractNpcAI
 				}
 				break;
 			case ANNIHILATION_COKRAKON:
-				if ((st != null) && st.isCond(3))
-				{
-					handleQuestDrop(player, 15535);
-				}
 				if (getRandom(100) < 50)
 				{
 					L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[2][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[2].length)]);
@@ -384,22 +354,6 @@ public class EnergySeeds extends AbstractNpcAI
 		monster.spawnMe(energy.getX(), energy.getY(), energy.getZ());
 		startQuestTimer("DeSpawnTask", 30000, monster, null);
 		return monster;
-	}
-	
-	private void handleQuestDrop(L2PcInstance player, int itemId)
-	{
-		double chance = HOWTOOPPOSEEVIL_CHANCE * Config.RATE_QUEST_DROP;
-		int numItems = (int) (chance / 100);
-		chance = chance % 100;
-		if (getRandom(100) < chance)
-		{
-			numItems++;
-		}
-		if (numItems > 0)
-		{
-			giveItems(player, itemId, numItems);
-			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
 	}
 	
 	private void addSpawnsToList()
