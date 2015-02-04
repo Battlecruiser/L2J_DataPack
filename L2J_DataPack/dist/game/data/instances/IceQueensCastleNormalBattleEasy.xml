@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="Ice Queen's Castle" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<activityTime val="120" />
+	<allowSummon val="false" />
+	<emptyDestroyTime val="600" />
+	<spawnPoint spawnX="115717" spawnY="-125734" spawnZ="-3392" />
+	<reenter additionStyle="ON_INSTANCE_FINISH" >
+		<reset day="Wednesday" hour="6" minute="30" />
+		<reset day="Saturday" hour="6" minute="30" />
+	</reenter>
+	<removeBuffs type="ALL"/>
+	<doorlist>
+		<door doorId="23140101" />
+	</doorlist>
+	<spawnlist>
+		<group name="general">
+			<!-- Sirra -->
+			<spawn npcId="32762" x="114766" y="-113141" z="-11200" heading="15956" respawn="0" />
+		</group>
+	</spawnlist>
+</instance>
