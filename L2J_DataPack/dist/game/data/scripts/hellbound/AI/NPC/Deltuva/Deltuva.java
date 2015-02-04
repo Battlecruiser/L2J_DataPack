@@ -18,13 +18,11 @@
  */
 package hellbound.AI.NPC.Deltuva;
 
-import quests.Q00132_MatrasCuriosity.Q00132_MatrasCuriosity;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
  * Deltuva AI.
@@ -49,11 +47,6 @@ public final class Deltuva extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("teleport"))
 		{
-			final QuestState hostQuest = player.getQuestState(Q00132_MatrasCuriosity.class.getSimpleName());
-			if ((hostQuest == null) || !hostQuest.isCompleted())
-			{
-				return "32313-02.htm";
-			}
 			player.teleToLocation(TELEPORT);
 		}
 		return super.onAdvEvent(event, npc, player);
