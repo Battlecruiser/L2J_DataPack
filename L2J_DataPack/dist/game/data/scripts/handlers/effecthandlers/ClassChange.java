@@ -20,6 +20,7 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SkillData;
+import com.l2jserver.gameserver.enums.SubclassInfoType;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
@@ -81,7 +82,7 @@ public class ClassChange extends AbstractEffect
 				player.sendPacket(msg);
 				
 				player.broadcastUserInfo();
-				player.sendPacket(new ExSubjobInfo(player));
+				player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 			}, 1000);
 		}
 	}

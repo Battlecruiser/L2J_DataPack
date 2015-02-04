@@ -39,6 +39,7 @@ import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.enums.SubclassInfoType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
@@ -54,6 +55,7 @@ import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcMenuSelect;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
+import com.l2jserver.gameserver.network.serverpackets.ExSubjobInfo;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -456,10 +458,10 @@ public final class Raina extends AbstractNpcAI
 					return;
 				}
 				
-				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "addSuccess.html");
 				player.setActiveClass(player.getTotalSubClasses());
+				player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NEW_SLOT_USED));
 				player.sendPacket(SystemMessageId.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
-				player.sendPacket(html);
+				player.sendPacket(getNpcHtmlMessage(player, npc, "addSuccess.html"));
 				break;
 			}
 			case 2: // Remove (change) subclass list
@@ -521,10 +523,8 @@ public final class Raina extends AbstractNpcAI
 					player.stopAllEffectsNotStayOnSubclassChange();
 					player.stopCubics();
 					player.setActiveClass(classIndex);
-					
-					final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "addSuccess.html");
-					
-					player.sendPacket(html);
+					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
+					player.sendPacket(getNpcHtmlMessage(player, npc, "addSuccess.html"));
 					player.sendPacket(SystemMessageId.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
 				}
 				break;
@@ -563,9 +563,8 @@ public final class Raina extends AbstractNpcAI
 					player.stopAllEffectsNotStayOnSubclassChange();
 					player.stopCubics();
 					player.setActiveClass(classIndex);
-					
-					final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "reawakenSuccess.html");
-					player.sendPacket(html);
+					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
+					player.sendPacket(getNpcHtmlMessage(player, npc, "reawakenSuccess.html"));
 					SkillTreesData.getInstance().cleanSkillUponAwakening(player);
 					player.sendPacket(new AcquireSkillList(player));
 					player.sendSkillList();
@@ -589,10 +588,10 @@ public final class Raina extends AbstractNpcAI
 				
 				if (player.addSubClass(classId, player.getTotalSubClasses() + 1, true))
 				{
-					final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "addSuccess.html");
 					player.setActiveClass(player.getTotalSubClasses());
+					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NEW_SLOT_USED));
 					player.sendPacket(SystemMessageId.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
-					player.sendPacket(html);
+					player.sendPacket(getNpcHtmlMessage(player, npc, "addSuccess.html"));
 					SkillTreesData.getInstance().cleanSkillUponAwakening(player);
 					player.sendPacket(new AcquireSkillList(player));
 					player.sendSkillList();
