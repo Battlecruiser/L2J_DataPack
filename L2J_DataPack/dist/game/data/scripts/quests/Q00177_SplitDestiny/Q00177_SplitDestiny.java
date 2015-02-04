@@ -20,6 +20,7 @@ package quests.Q00177_SplitDestiny;
 
 import com.l2jserver.gameserver.data.xml.impl.CategoryData;
 import com.l2jserver.gameserver.enums.CategoryType;
+import com.l2jserver.gameserver.enums.SubclassInfoType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -158,7 +159,7 @@ public class Q00177_SplitDestiny extends Quest
 					msg.addClassId(player.getClassId().getId());
 					player.sendPacket(msg);
 					
-					player.sendPacket(new ExSubjobInfo(player));
+					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 					player.broadcastSocialAction(SocialAction.LEVEL_UP);
 					
 					if (event.equals("red_crystal"))
