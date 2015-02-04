@@ -249,6 +249,9 @@
 				<xs:attribute type="xs:short" name="skillId1" use="optional" />
 				<xs:attribute type="xs:short" name="skillId2" use="optional" />
 				<xs:attribute type="xs:short" name="skillId3" use="optional" />
+				<xs:attribute type="xs:string" name="KNOCKDOWN" use="optional" />
+				<xs:attribute type="xs:integer" name="speed" use="optional" />
+				<xs:attribute type="xs:integer" name="distance" use="optional" />
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
