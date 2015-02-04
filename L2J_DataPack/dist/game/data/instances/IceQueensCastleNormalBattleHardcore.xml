@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<instance name="Ice Queen's Castle" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+<instance name="Ice Queen's Castle (Epic)" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
 	<activityTime val="120" />
 	<allowSummon val="false" />
 	<emptyDestroyTime val="600" />
@@ -8,6 +8,7 @@
 		<reset day="Wednesday" hour="6" minute="30" />
 		<reset day="Saturday" hour="6" minute="30" />
 	</reenter>
+	<removeBuffs type="ALL"/>
 	<doorlist>
 		<door doorId="23140101" />
 	</doorlist>

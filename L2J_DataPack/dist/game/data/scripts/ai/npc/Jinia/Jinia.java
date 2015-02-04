@@ -90,16 +90,16 @@ public final class Jinia extends AbstractNpcAI
 		final QuestState st = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
 		if ((st != null) && (player.getLevel() >= MIN_LEVEL))
 		{
-			if (st.isCompleted())
-			{
-				return "32781-02.html";
-			}
-			else if (st.isCond(5) || st.isCond(6))
+			if (st.isCond(5) || st.isCond(6))
 			{
 				return "32781-09.html";
 			}
+			else if (st.isCond(7))
+			{
+				return "32781-01.html";
+			}
 		}
-		return "32781-01.html";
+		return "32781-02.html";
 	}
 	
 	public static void main(String[] args)
