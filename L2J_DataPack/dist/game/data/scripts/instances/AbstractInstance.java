@@ -242,6 +242,8 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		{
 			case ALL:
 			{
+				player.stopAllEffectsExceptThoseThatLastThroughDeath();
+				
 				final L2Summon pet = player.getPet();
 				if (pet != null)
 				{
