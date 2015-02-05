@@ -224,12 +224,6 @@ public final class Trandon extends AbstractNpcAI
 				{
 					htmltext = "33490-25.html";
 				}
-				else if ((player.getLevel() < DUAL_SKILL_LEVELS[0]) || (player.getStat().getBaseLevel() < DUAL_SKILL_LEVELS[0])) // Dual or main class level is lower than 85
-				{
-					// TODO: What happens here?
-					player.sendMessage("Your level is too low.");
-					htmltext = null;
-				}
 				break;
 			}
 			case "dualCertify":
@@ -335,7 +329,6 @@ public final class Trandon extends AbstractNpcAI
 			giveSkills(player, "DualSkillList");
 		}
 		giveSkills(player, "SubSkillList");
-		player.sendSkillList();
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
