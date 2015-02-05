@@ -39,7 +39,7 @@ public final class Milia extends AbstractNpcAI
 	
 	private Milia()
 	{
-		super(Milia.class.getSimpleName(), "ai/npc/Teleports");
+		super(Milia.class.getSimpleName(), "ai/npc");
 		addSpawnId(MILIA);
 		addStartNpc(MILIA);
 		addTalkId(MILIA);

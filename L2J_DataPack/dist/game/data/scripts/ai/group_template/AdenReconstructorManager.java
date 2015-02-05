@@ -40,7 +40,7 @@ public final class AdenReconstructorManager extends AbstractNpcAI
 	
 	private AdenReconstructorManager()
 	{
-		super(AdenReconstructorManager.class.getSimpleName(), "ai/individual");
+		super(AdenReconstructorManager.class.getSimpleName(), "ai/group_template");
 		addSpawnId(NPCS);
 	}
 	
