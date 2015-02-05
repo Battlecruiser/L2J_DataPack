@@ -63,7 +63,7 @@ public final class Luderic extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("SPAM_TEXT", 10000, npc, null, true);
+		startQuestTimer("SPAM_TEXT", 7000, npc, null, true);
 		startQuestTimer("SOCIAL_ACTION", 3000, npc, null, true);
 		return super.onSpawn(npc);
 	}

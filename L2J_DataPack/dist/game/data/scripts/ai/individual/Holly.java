@@ -45,11 +45,11 @@ public final class Holly extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.OCCASIONALLY_RARE_JEWELS_OF_GIANTS_ARE_DISCOVERED_IN_THE_BEACH);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.GIRAN_SHUTTLE_DOES_NOT_COME_ANYMORE_IT_S_ALL_IN_THE_PAST);
 		}
 		else if (event.equals("SOCIAL_ACTION") && (npc != null))
 		{
-			npc.broadcastSocialAction(3);
+			npc.broadcastSocialAction(6);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -58,7 +58,7 @@ public final class Holly extends AbstractNpcAI
 	public String onSpawn(L2Npc npc)
 	{
 		startQuestTimer("SPAM_TEXT", 10000, npc, null, true);
-		startQuestTimer("SOCIAL_ACTION", 3000, npc, null, true);
+		startQuestTimer("SOCIAL_ACTION", 2000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
