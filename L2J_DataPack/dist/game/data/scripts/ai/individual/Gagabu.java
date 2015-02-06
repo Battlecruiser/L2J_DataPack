@@ -20,73 +20,51 @@ package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Karonf AI.
+ * Gagabu AI.
  * @author Gladicek
  */
-public final class Karonf extends AbstractNpcAI
+public final class Gagabu extends AbstractNpcAI
 {
-	// NPC
-	private static final int KARONF = 33242;
+	// NPCs
+	private static final int GAGABU = 33284;
 	// Misc
-	private static final NpcStringId[] KARONF_SHOUT =
+	private static final NpcStringId[] GAGABU_SHOUT =
 	{
-		NpcStringId.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON,
-		NpcStringId.SOME_FOLKS_DON_T_KNOW_WHAT_THEY_ARE_DOING
-	};
-	private final static Location[] KARONF_LOC =
-	{
-		new Location(-113984, 259782, -1203),
-		new Location(-113786, 259475, -1203),
-		new Location(-113977, 259035, -1203),
-		new Location(-114012, 259290, -1203),
-		new Location(-113812, 259522, -1203),
-		new Location(-113621, 259281, -1203),
-		new Location(-114354, 259048, -1193),
-		new Location(-113864, 259293, -1203),
-		new Location(-114052, 259351, -1203),
-		new Location(-114175, 259243, -1203),
+		NpcStringId.SPIRITSHOTS_ARE_MIXED,
+		NpcStringId.WHEN_WILL_I_ORGANIZE_THIS_ALL
 	};
 	
-	private Karonf()
+	private Gagabu()
 	{
-		super(Karonf.class.getSimpleName(), "ai/individual");
-		addSpawnId(KARONF);
+		super(Gagabu.class.getSimpleName(), "ai/individual");
+		addSpawnId(GAGABU);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("npc_move") && (npc != null))
+		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			if (getRandom(100) > 40)
-			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, KARONF_SHOUT[getRandom(2)], 1000);
-				addMoveToDesire(npc, KARONF_LOC[getRandom(10)], 0);
-			}
-			else
-			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, KARONF_SHOUT[getRandom(2)]);
-			}
+			broadcastNpcSay(npc, Say2.NPC_ALL, GAGABU_SHOUT[getRandom(2)], 1000);
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("npc_move", 8000, npc, null, true);
+		startQuestTimer("SPAM_TEXT", 8000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Karonf();
+		new Gagabu();
 	}
 }

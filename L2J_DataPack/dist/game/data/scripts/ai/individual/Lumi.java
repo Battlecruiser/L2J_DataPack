@@ -20,73 +20,52 @@ package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Karonf AI.
+ * Lumi AI.
  * @author Gladicek
  */
-public final class Karonf extends AbstractNpcAI
+public final class Lumi extends AbstractNpcAI
 {
-	// NPC
-	private static final int KARONF = 33242;
+	// NPCs
+	private static final int LUMI = 33025;
 	// Misc
-	private static final NpcStringId[] KARONF_SHOUT =
+	private static final NpcStringId[] LUMI_SHOUT =
 	{
-		NpcStringId.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON,
-		NpcStringId.SOME_FOLKS_DON_T_KNOW_WHAT_THEY_ARE_DOING
-	};
-	private final static Location[] KARONF_LOC =
-	{
-		new Location(-113984, 259782, -1203),
-		new Location(-113786, 259475, -1203),
-		new Location(-113977, 259035, -1203),
-		new Location(-114012, 259290, -1203),
-		new Location(-113812, 259522, -1203),
-		new Location(-113621, 259281, -1203),
-		new Location(-114354, 259048, -1193),
-		new Location(-113864, 259293, -1203),
-		new Location(-114052, 259351, -1203),
-		new Location(-114175, 259243, -1203),
+		NpcStringId.TO_YOUR_RIGHT_THE_ADMINISTRATIVE_DISTRICT_AND_TO_THE_LEFT_IS_THE_MUSEUM,
+		NpcStringId.WHEN_YOU_USE_THE_TELEPORTER_YOU_CAN_GO_TO_THE_RUINS_OF_YE_SAGIRA,
+		NpcStringId.HAVE_YOU_BEEN_TO_RUINS_OF_YE_SAGIRA_YOU_HAVE_TO_GO_AT_LEAST_ONCE,
 	};
 	
-	private Karonf()
+	private Lumi()
 	{
-		super(Karonf.class.getSimpleName(), "ai/individual");
-		addSpawnId(KARONF);
+		super(Lumi.class.getSimpleName(), "ai/individual");
+		addSpawnId(LUMI);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("npc_move") && (npc != null))
+		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			if (getRandom(100) > 40)
-			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, KARONF_SHOUT[getRandom(2)], 1000);
-				addMoveToDesire(npc, KARONF_LOC[getRandom(10)], 0);
-			}
-			else
-			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, KARONF_SHOUT[getRandom(2)]);
-			}
+			broadcastNpcSay(npc, Say2.NPC_ALL, LUMI_SHOUT[getRandom(3)], 1000);
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("npc_move", 8000, npc, null, true);
+		startQuestTimer("SPAM_TEXT", 8000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Karonf();
+		new Lumi();
 	}
 }

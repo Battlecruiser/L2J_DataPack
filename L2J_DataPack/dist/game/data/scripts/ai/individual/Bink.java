@@ -45,7 +45,7 @@ public final class Bink extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.TALKING_ISLAND_VILLAGE_IS_REALLY_BEAUTIFUL);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.TALKING_ISLAND_VILLAGE_IS_REALLY_BEAUTIFUL, 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

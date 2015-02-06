@@ -67,12 +67,12 @@ public final class Eleve extends AbstractNpcAI
 		{
 			if (getRandom(100) > 40)
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, ELEVE_SHOUT[getRandom(2)]);
+				broadcastNpcSay(npc, Say2.NPC_ALL, ELEVE_SHOUT[getRandom(2)], 1000);
 				addMoveToDesire(npc, ELEVE_LOC[getRandom(10)], 0);
 			}
 			else
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, ELEVE_SHOUT[getRandom(2)]);
+				broadcastNpcSay(npc, Say2.NPC_ALL, ELEVE_SHOUT[getRandom(2)], 1000);
 			}
 		}
 		return null;

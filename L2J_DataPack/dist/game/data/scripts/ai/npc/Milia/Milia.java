@@ -54,7 +54,7 @@ public final class Milia extends AbstractNpcAI
 		}
 		else if (event.equals("TEXT_SPAM") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.SPEAK_WITH_ME_ABOUT_TRAVELING_AROUND_ADEN);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.SPEAK_WITH_ME_ABOUT_TRAVELING_AROUND_ADEN, 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

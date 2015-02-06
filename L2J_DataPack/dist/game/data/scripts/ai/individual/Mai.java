@@ -45,7 +45,7 @@ public final class Mai extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.EVERY_RACE_BUILT_A_PIECE_OF_THIS_VILLAGE);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.EVERY_RACE_BUILT_A_PIECE_OF_THIS_VILLAGE, 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

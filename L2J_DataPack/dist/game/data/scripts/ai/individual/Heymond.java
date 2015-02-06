@@ -20,73 +20,52 @@ package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Karonf AI.
+ * Heymond AI.
  * @author Gladicek
  */
-public final class Karonf extends AbstractNpcAI
+public final class Heymond extends AbstractNpcAI
 {
-	// NPC
-	private static final int KARONF = 33242;
+	// NPCs
+	private static final int HEYMOND = 33026;
 	// Misc
-	private static final NpcStringId[] KARONF_SHOUT =
+	private static final NpcStringId[] HEYMOND_SHOUT =
 	{
-		NpcStringId.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON,
-		NpcStringId.SOME_FOLKS_DON_T_KNOW_WHAT_THEY_ARE_DOING
-	};
-	private final static Location[] KARONF_LOC =
-	{
-		new Location(-113984, 259782, -1203),
-		new Location(-113786, 259475, -1203),
-		new Location(-113977, 259035, -1203),
-		new Location(-114012, 259290, -1203),
-		new Location(-113812, 259522, -1203),
-		new Location(-113621, 259281, -1203),
-		new Location(-114354, 259048, -1193),
-		new Location(-113864, 259293, -1203),
-		new Location(-114052, 259351, -1203),
-		new Location(-114175, 259243, -1203),
+		NpcStringId.VIEW_OUR_WIDE_VARIETY_OF_ACCESSORIES,
+		NpcStringId.THE_BEST_WEAPON_DOESN_T_MAKE_YOU_THE_BEST,
+		NpcStringId.WE_BUY_AND_SELL_COME_TAKE_A_LOOK
 	};
 	
-	private Karonf()
+	private Heymond()
 	{
-		super(Karonf.class.getSimpleName(), "ai/individual");
-		addSpawnId(KARONF);
+		super(Heymond.class.getSimpleName(), "ai/individual");
+		addSpawnId(HEYMOND);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("npc_move") && (npc != null))
+		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			if (getRandom(100) > 40)
-			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, KARONF_SHOUT[getRandom(2)], 1000);
-				addMoveToDesire(npc, KARONF_LOC[getRandom(10)], 0);
-			}
-			else
-			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, KARONF_SHOUT[getRandom(2)]);
-			}
+			broadcastNpcSay(npc, Say2.NPC_ALL, HEYMOND_SHOUT[getRandom(3)], 1000);
 		}
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("npc_move", 8000, npc, null, true);
+		startQuestTimer("SPAM_TEXT", 7000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Karonf();
+		new Heymond();
 	}
 }

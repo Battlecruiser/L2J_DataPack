@@ -45,7 +45,7 @@ public final class Theodore extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.AND_NOW_YOUR_JOURNEY_BEGINS);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.AND_NOW_YOUR_JOURNEY_BEGINS, 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

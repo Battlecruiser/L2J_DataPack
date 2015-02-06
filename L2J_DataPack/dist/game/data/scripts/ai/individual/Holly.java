@@ -45,7 +45,7 @@ public final class Holly extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.GIRAN_SHUTTLE_DOES_NOT_COME_ANYMORE_IT_S_ALL_IN_THE_PAST);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.GIRAN_SHUTTLE_DOES_NOT_COME_ANYMORE_IT_S_ALL_IN_THE_PAST, 1000);
 		}
 		else if (event.equals("SOCIAL_ACTION") && (npc != null))
 		{
