@@ -20,45 +20,55 @@ package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Shannon AI.
- * @author St3eT
+ * Handermonkey AI.
+ * @author Gladicek
  */
-public final class Shannon extends AbstractNpcAI
+public final class Handermonkey extends AbstractNpcAI
 {
-	// NPCs
-	private static final int SHANNON = 32974;
+	// NPC
+	private static final int HANDERMONKEY = 33203;
 	
-	private Shannon()
+	private Handermonkey()
 	{
-		super(Shannon.class.getSimpleName(), "ai/individual");
-		addSpawnId(SHANNON);
+		super(Handermonkey.class.getSimpleName(), "ai/npc");
+		addSpawnId(HANDERMONKEY);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("SPAM_TEXT") && (npc != null))
+		if (event.equalsIgnoreCase("npc_move"))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.LOOK_AT_ALL_THE_NEWBIES_HA_HA_HA, 1000);
+			if (getRandom(100) > 30)
+			{
+				final int locX = (npc.getSpawn().getX() - 70) + getRandom(100);
+				final int locY = (npc.getSpawn().getY() - 70) + getRandom(100);
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(locX, locY, npc.getZ(), 0));
+			}
+			else
+			{
+				npc.broadcastSocialAction(9);
+			}
 		}
-		return super.onAdvEvent(event, npc, player);
+		return null;
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
+		npc.setRunning();
+		startQuestTimer("npc_move", 5000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Shannon();
+		new Handermonkey();
 	}
 }

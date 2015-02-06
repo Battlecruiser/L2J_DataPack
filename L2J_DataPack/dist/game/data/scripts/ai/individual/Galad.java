@@ -26,18 +26,18 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Shannon AI.
- * @author St3eT
+ * Galad AI.
+ * @author Gladicek
  */
-public final class Shannon extends AbstractNpcAI
+public final class Galad extends AbstractNpcAI
 {
 	// NPCs
-	private static final int SHANNON = 32974;
+	private static final int GALAD = 33572;
 	
-	private Shannon()
+	private Galad()
 	{
-		super(Shannon.class.getSimpleName(), "ai/individual");
-		addSpawnId(SHANNON);
+		super(Galad.class.getSimpleName(), "ai/individual");
+		addSpawnId(GALAD);
 	}
 	
 	@Override
@@ -45,7 +45,9 @@ public final class Shannon extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.LOOK_AT_ALL_THE_NEWBIES_HA_HA_HA, 1000);
+			npc.broadcastSocialAction(3);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.OCCASIONALLY_RARE_JEWELS_OF_GIANTS_ARE_DISCOVERED_IN_THE_BEACH, 1000);
+			
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -53,12 +55,12 @@ public final class Shannon extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
+		startQuestTimer("SPAM_TEXT", 8000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Shannon();
+		new Galad();
 	}
 }

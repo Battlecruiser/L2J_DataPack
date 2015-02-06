@@ -21,44 +21,31 @@ package ai.individual;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Shannon AI.
- * @author St3eT
+ * Training Golem AI.
+ * @author Gladicek
  */
-public final class Shannon extends AbstractNpcAI
+public final class TrainingGolem extends AbstractNpcAI
 {
 	// NPCs
-	private static final int SHANNON = 32974;
+	private static final int TRAINING_GOLEM = 27532;
 	
-	private Shannon()
+	private TrainingGolem()
 	{
-		super(Shannon.class.getSimpleName(), "ai/individual");
-		addSpawnId(SHANNON);
-	}
-	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equals("SPAM_TEXT") && (npc != null))
-		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.LOOK_AT_ALL_THE_NEWBIES_HA_HA_HA, 1000);
-		}
-		return super.onAdvEvent(event, npc, player);
+		super(TrainingGolem.class.getSimpleName(), "ai/individual");
+		addSpawnId(TRAINING_GOLEM);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
+		npc.setIsImmobilized(true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Shannon();
+		new TrainingGolem();
 	}
 }

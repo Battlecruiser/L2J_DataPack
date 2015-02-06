@@ -26,18 +26,18 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Shannon AI.
- * @author St3eT
+ * Guard Soldier AI.
+ * @author Gladicek
  */
-public final class Shannon extends AbstractNpcAI
+public final class TomaJunior extends AbstractNpcAI
 {
 	// NPCs
-	private static final int SHANNON = 32974;
+	private static final int TOMA_JUNIOR = 33571;
 	
-	private Shannon()
+	private TomaJunior()
 	{
-		super(Shannon.class.getSimpleName(), "ai/individual");
-		addSpawnId(SHANNON);
+		super(GuardSoldier.class.getSimpleName(), "ai/individual");
+		addSpawnId(TOMA_JUNIOR);
 	}
 	
 	@Override
@@ -45,7 +45,13 @@ public final class Shannon extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.LOOK_AT_ALL_THE_NEWBIES_HA_HA_HA, 1000);
+			npc.broadcastSocialAction(3);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THE_BEACH_WHERE_RELICS_OF_GIANTS_HAD_FALLEN_HAS_NOW_BECOME_CLEAN, 1000);
+			
+		}
+		else if (event.equals("SOCIAL_ACTION") && (npc != null))
+		{
+			npc.broadcastSocialAction(6);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -53,12 +59,13 @@ public final class Shannon extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
+		startQuestTimer("SPAM_TEXT", 9000, npc, null, true);
+		startQuestTimer("SOCIAL_ACTION", 15000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Shannon();
+		new TomaJunior();
 	}
 }

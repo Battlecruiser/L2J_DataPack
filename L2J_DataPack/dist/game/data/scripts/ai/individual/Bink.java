@@ -26,18 +26,18 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Shannon AI.
- * @author St3eT
+ * Bink AI.
+ * @author Gladicek
  */
-public final class Shannon extends AbstractNpcAI
+public final class Bink extends AbstractNpcAI
 {
 	// NPCs
-	private static final int SHANNON = 32974;
+	private static final int BINK = 33223;
 	
-	private Shannon()
+	private Bink()
 	{
-		super(Shannon.class.getSimpleName(), "ai/individual");
-		addSpawnId(SHANNON);
+		super(Bink.class.getSimpleName(), "ai/individual");
+		addSpawnId(BINK);
 	}
 	
 	@Override
@@ -45,7 +45,7 @@ public final class Shannon extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.LOOK_AT_ALL_THE_NEWBIES_HA_HA_HA, 1000);
+			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.TALKING_ISLAND_VILLAGE_IS_REALLY_BEAUTIFUL, 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -53,12 +53,12 @@ public final class Shannon extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
+		startQuestTimer("SPAM_TEXT", 10000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Shannon();
+		new Bink();
 	}
 }

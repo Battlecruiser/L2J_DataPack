@@ -26,18 +26,25 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Shannon AI.
- * @author St3eT
+ * Banette AI.
+ * @author Gladicek
  */
-public final class Shannon extends AbstractNpcAI
+public final class Banette extends AbstractNpcAI
 {
 	// NPCs
-	private static final int SHANNON = 32974;
-	
-	private Shannon()
+	private static final int BANETTE = 33114;
+	// Misc
+	private static final NpcStringId[] BANETTE_SHOUT =
 	{
-		super(Shannon.class.getSimpleName(), "ai/individual");
-		addSpawnId(SHANNON);
+		NpcStringId.TRAINING_GROUND_IS_LOCATED_STRAIGHT_AHEAD,
+		NpcStringId.WHILE_TRAINING_IN_THE_TRAINING_GROUNDS_IT_BECOMES_PROGRESSIVELY_DIFFICULT,
+		NpcStringId.TRAINING_GROUNDS_ACCESS_YOU_NEED_TO_SPEAK_WITH_PANTHEON_IN_THE_MUSEUM
+	};
+	
+	private Banette()
+	{
+		super(Banette.class.getSimpleName(), "ai/individual");
+		addSpawnId(BANETTE);
 	}
 	
 	@Override
@@ -45,7 +52,7 @@ public final class Shannon extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.LOOK_AT_ALL_THE_NEWBIES_HA_HA_HA, 1000);
+			broadcastNpcSay(npc, Say2.NPC_ALL, BANETTE_SHOUT[getRandom(3)], 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -53,12 +60,12 @@ public final class Shannon extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
+		startQuestTimer("SPAM_TEXT", 5000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Shannon();
+		new Banette();
 	}
 }

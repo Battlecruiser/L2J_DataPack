@@ -26,18 +26,24 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Shannon AI.
- * @author St3eT
+ * Luderic AI.
+ * @author Gladicek
  */
-public final class Shannon extends AbstractNpcAI
+public final class Luderic extends AbstractNpcAI
 {
 	// NPCs
-	private static final int SHANNON = 32974;
-	
-	private Shannon()
+	private static final int LUDERIC = 33575;
+	// Misc
+	private static final NpcStringId[] LUDERIC_SHOUT =
 	{
-		super(Shannon.class.getSimpleName(), "ai/individual");
-		addSpawnId(SHANNON);
+		NpcStringId.THERE_IS_A_DAY_WHERE_YOU_CAN_SEE_EVEN_THE_ADEN_CONTINENT_IF_THE_WEATHER_IS_GOOD,
+		NpcStringId.IF_I_M_HERE_IT_FEELS_LIKE_TIME_HAS_STOPPED
+	};
+	
+	private Luderic()
+	{
+		super(Luderic.class.getSimpleName(), "ai/individual");
+		addSpawnId(LUDERIC);
 	}
 	
 	@Override
@@ -45,7 +51,11 @@ public final class Shannon extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.LOOK_AT_ALL_THE_NEWBIES_HA_HA_HA, 1000);
+			broadcastNpcSay(npc, Say2.NPC_ALL, LUDERIC_SHOUT[getRandom(2)], 1000);
+		}
+		else if (event.equals("SOCIAL_ACTION") && (npc != null))
+		{
+			npc.broadcastSocialAction(1);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -53,12 +63,13 @@ public final class Shannon extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
+		startQuestTimer("SPAM_TEXT", 7000, npc, null, true);
+		startQuestTimer("SOCIAL_ACTION", 3000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Shannon();
+		new Luderic();
 	}
 }

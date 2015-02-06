@@ -26,18 +26,24 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Shannon AI.
- * @author St3eT
+ * Sodian AI.
+ * @author Gladicek
  */
-public final class Shannon extends AbstractNpcAI
+public final class Sodian extends AbstractNpcAI
 {
 	// NPCs
-	private static final int SHANNON = 32974;
-	
-	private Shannon()
+	private static final int SODIAN = 33229;
+	// Misc
+	private static final NpcStringId[] SODIAN_SHOUT =
 	{
-		super(Shannon.class.getSimpleName(), "ai/individual");
-		addSpawnId(SHANNON);
+		NpcStringId.COME_BROWSE_OUR_INVENTORY,
+		NpcStringId.INCREDIBLE_WEAPONS_FOR_SALE
+	};
+	
+	private Sodian()
+	{
+		super(Sodian.class.getSimpleName(), "ai/individual");
+		addSpawnId(SODIAN);
 	}
 	
 	@Override
@@ -45,7 +51,7 @@ public final class Shannon extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.LOOK_AT_ALL_THE_NEWBIES_HA_HA_HA, 1000);
+			broadcastNpcSay(npc, Say2.NPC_ALL, SODIAN_SHOUT[getRandom(2)], 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -53,12 +59,12 @@ public final class Shannon extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
+		startQuestTimer("SPAM_TEXT", 8000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Shannon();
+		new Sodian();
 	}
 }

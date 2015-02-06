@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Milia;
+package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
@@ -27,47 +27,66 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Milia AI.
- * @author St3eT
+ * Karonf AI.
+ * @author Gladicek
  */
-public final class Milia extends AbstractNpcAI
+public final class Karonf extends AbstractNpcAI
 {
-	// NPCs
-	private static final int MILIA = 30006;
-	// Locations
-	private static final Location GLUDIO_AIRSHIP = new Location(-149406, 255247, -80);
-	
-	private Milia()
+	// NPC
+	private static final int KARONF = 33242;
+	// Misc
+	private static final NpcStringId[] KARONF_SHOUT =
 	{
-		super(Milia.class.getSimpleName(), "ai/npc");
-		addSpawnId(MILIA);
-		addStartNpc(MILIA);
-		addTalkId(MILIA);
+		NpcStringId.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON,
+		NpcStringId.SOME_FOLKS_DON_T_KNOW_WHAT_THEY_ARE_DOING
+	};
+	private final static Location[] KARONF_LOC =
+	{
+		new Location(-113984, 259782, -1203),
+		new Location(-113786, 259475, -1203),
+		new Location(-113977, 259035, -1203),
+		new Location(-114012, 259290, -1203),
+		new Location(-113812, 259522, -1203),
+		new Location(-113621, 259281, -1203),
+		new Location(-114354, 259048, -1193),
+		new Location(-113864, 259293, -1203),
+		new Location(-114052, 259351, -1203),
+		new Location(-114175, 259243, -1203),
+	};
+	
+	private Karonf()
+	{
+		super(Karonf.class.getSimpleName(), "ai/individual");
+		addSpawnId(KARONF);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("gludioAirship"))
+		if (event.equalsIgnoreCase("npc_move") && (npc != null))
 		{
-			player.teleToLocation(GLUDIO_AIRSHIP);
+			if (getRandom(100) > 40)
+			{
+				broadcastNpcSay(npc, Say2.NPC_ALL, KARONF_SHOUT[getRandom(2)], 1000);
+				addMoveToDesire(npc, KARONF_LOC[getRandom(10)], 0);
+			}
+			else
+			{
+				broadcastNpcSay(npc, Say2.NPC_ALL, KARONF_SHOUT[getRandom(2)]);
+			}
 		}
-		else if (event.equals("TEXT_SPAM") && (npc != null))
-		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.SPEAK_WITH_ME_ABOUT_TRAVELING_AROUND_ADEN, 1000);
-		}
-		return super.onAdvEvent(event, npc, player);
+		return null;
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("TEXT_SPAM", 10000, npc, null, true);
+		startQuestTimer("npc_move", 8000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Milia();
+		new Karonf();
 	}
 }

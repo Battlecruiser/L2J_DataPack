@@ -26,18 +26,25 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Shannon AI.
- * @author St3eT
+ * Lumi AI.
+ * @author Gladicek
  */
-public final class Shannon extends AbstractNpcAI
+public final class Lumi extends AbstractNpcAI
 {
 	// NPCs
-	private static final int SHANNON = 32974;
-	
-	private Shannon()
+	private static final int LUMI = 33025;
+	// Misc
+	private static final NpcStringId[] LUMI_SHOUT =
 	{
-		super(Shannon.class.getSimpleName(), "ai/individual");
-		addSpawnId(SHANNON);
+		NpcStringId.TO_YOUR_RIGHT_THE_ADMINISTRATIVE_DISTRICT_AND_TO_THE_LEFT_IS_THE_MUSEUM,
+		NpcStringId.WHEN_YOU_USE_THE_TELEPORTER_YOU_CAN_GO_TO_THE_RUINS_OF_YE_SAGIRA,
+		NpcStringId.HAVE_YOU_BEEN_TO_RUINS_OF_YE_SAGIRA_YOU_HAVE_TO_GO_AT_LEAST_ONCE,
+	};
+	
+	private Lumi()
+	{
+		super(Lumi.class.getSimpleName(), "ai/individual");
+		addSpawnId(LUMI);
 	}
 	
 	@Override
@@ -45,7 +52,7 @@ public final class Shannon extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.LOOK_AT_ALL_THE_NEWBIES_HA_HA_HA, 1000);
+			broadcastNpcSay(npc, Say2.NPC_ALL, LUMI_SHOUT[getRandom(3)], 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -53,12 +60,12 @@ public final class Shannon extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
+		startQuestTimer("SPAM_TEXT", 8000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Shannon();
+		new Lumi();
 	}
 }

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Milia;
+package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
@@ -27,47 +27,66 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * Milia AI.
- * @author St3eT
+ * Eleve AI.
+ * @author Gladicek
  */
-public final class Milia extends AbstractNpcAI
+public final class Eleve extends AbstractNpcAI
 {
-	// NPCs
-	private static final int MILIA = 30006;
-	// Locations
-	private static final Location GLUDIO_AIRSHIP = new Location(-149406, 255247, -80);
-	
-	private Milia()
+	// NPC
+	private static final int ELEVE = 33246;
+	// Misc
+	private static final NpcStringId[] ELEVE_SHOUT =
 	{
-		super(Milia.class.getSimpleName(), "ai/npc");
-		addSpawnId(MILIA);
-		addStartNpc(MILIA);
-		addTalkId(MILIA);
+		NpcStringId.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP,
+		NpcStringId.DO_YOU_SEE_A_SCROLL_ICON_GO_THAT_LOCATION
+	};
+	private final static Location[] ELEVE_LOC =
+	{
+		new Location(-114936, 259918, -1203),
+		new Location(-114687, 259872, -1203),
+		new Location(-114552, 259699, -1203),
+		new Location(-114689, 259453, -1203),
+		new Location(-114990, 259335, -1203),
+		new Location(-115142, 259523, -1203),
+		new Location(-114894, 259137, -1203),
+		new Location(-114832, 259363, -1203),
+		new Location(-114809, 259260, -1203),
+		new Location(-115036, 260006, -1203),
+	};
+	
+	private Eleve()
+	{
+		super(Eleve.class.getSimpleName(), "ai/individual");
+		addSpawnId(ELEVE);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("gludioAirship"))
+		if (event.equalsIgnoreCase("npc_move") && (npc != null))
 		{
-			player.teleToLocation(GLUDIO_AIRSHIP);
+			if (getRandom(100) > 40)
+			{
+				broadcastNpcSay(npc, Say2.NPC_ALL, ELEVE_SHOUT[getRandom(2)], 1000);
+				addMoveToDesire(npc, ELEVE_LOC[getRandom(10)], 0);
+			}
+			else
+			{
+				broadcastNpcSay(npc, Say2.NPC_ALL, ELEVE_SHOUT[getRandom(2)], 1000);
+			}
 		}
-		else if (event.equals("TEXT_SPAM") && (npc != null))
-		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.SPEAK_WITH_ME_ABOUT_TRAVELING_AROUND_ADEN, 1000);
-		}
-		return super.onAdvEvent(event, npc, player);
+		return null;
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("TEXT_SPAM", 10000, npc, null, true);
+		startQuestTimer("npc_move", 6000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Milia();
+		new Eleve();
 	}
 }
