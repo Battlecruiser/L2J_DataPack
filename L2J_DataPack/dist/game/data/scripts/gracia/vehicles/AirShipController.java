@@ -23,6 +23,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.AirShipManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.ClanPrivilege;
@@ -38,7 +39,6 @@ import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.type.L2ScriptZone;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -168,7 +168,7 @@ public abstract class AirShipController extends Quest
 				
 				if (_arrivalMessage == null)
 				{
-					_arrivalMessage = new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getId(), NpcStringId.THE_AIRSHIP_HAS_BEEN_SUMMONED_IT_WILL_AUTOMATICALLY_DEPART_IN_5_MINUTES);
+					_arrivalMessage = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.THE_AIRSHIP_HAS_BEEN_SUMMONED_IT_WILL_AUTOMATICALLY_DEPART_IN_5_MINUTES);
 				}
 				
 				npc.broadcastPacket(_arrivalMessage);

@@ -20,10 +20,10 @@ package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Lumi AI.
@@ -52,7 +52,7 @@ public final class Lumi extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, LUMI_SHOUT[getRandom(3)], 1000);
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, LUMI_SHOUT[getRandom(3)], 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

@@ -19,6 +19,7 @@
 package quests.Q00450_GraveRobberRescue;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.Location;
@@ -29,7 +30,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -153,11 +153,11 @@ public class Q00450_GraveRobberRescue extends Quest
 			{
 				if (getRandom(100) < 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.GRUNT_OH));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.GRUNT_OH));
 				}
 				else
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.GRUNT_WHAT_S_WRONG_WITH_ME));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.GRUNT_WHAT_S_WRONG_WITH_ME));
 				}
 				npc.deleteMe();
 				htmltext = null;

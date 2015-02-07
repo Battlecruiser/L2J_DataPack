@@ -24,11 +24,11 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -70,13 +70,13 @@ public final class GeneralDilios extends AbstractNpcAI
 			int value = Integer.parseInt(event.substring(8));
 			if (value < 6)
 			{
-				_general.broadcastPacket(new NpcSay(_general.getObjectId(), Say2.NPC_ALL, GENERAL_ID, NpcStringId.STABBING_THREE_TIMES));
+				_general.broadcastPacket(new NpcSay(_general.getObjectId(), ChatType.NPC_GENERAL, GENERAL_ID, NpcStringId.STABBING_THREE_TIMES));
 				startQuestTimer("guard_animation_0", 3400, null, null);
 			}
 			else
 			{
 				value = -1;
-				_general.broadcastPacket(new NpcSay(_general.getObjectId(), Say2.NPC_SHOUT, GENERAL_ID, DILIOS_TEXT[getRandom(DILIOS_TEXT.length)]));
+				_general.broadcastPacket(new NpcSay(_general.getObjectId(), ChatType.NPC_SHOUT, GENERAL_ID, DILIOS_TEXT[getRandom(DILIOS_TEXT.length)]));
 			}
 			startQuestTimer("command_" + (value + 1), 60000, null, null);
 		}

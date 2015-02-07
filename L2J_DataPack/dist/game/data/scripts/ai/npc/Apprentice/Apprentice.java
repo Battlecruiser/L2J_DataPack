@@ -20,11 +20,11 @@ package ai.npc.Apprentice;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Apprentice AI.
@@ -57,12 +57,12 @@ public final class Apprentice extends AbstractNpcAI
 			}
 			else
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_CAN_T_RIDE_A_KUKURI_NOW);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_CAN_T_RIDE_A_KUKURI_NOW);
 			}
 		}
 		else if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.TRY_RIDING_A_KUKURI, 1000);
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.TRY_RIDING_A_KUKURI, 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

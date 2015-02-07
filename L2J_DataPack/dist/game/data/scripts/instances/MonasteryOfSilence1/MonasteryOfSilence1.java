@@ -20,6 +20,7 @@ package instances.MonasteryOfSilence1;
 
 import instances.AbstractInstance;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -27,7 +28,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Monastery of Silence instance zone.
@@ -171,13 +171,13 @@ public final class MonasteryOfSilence1 extends AbstractInstance
 				npc.getAI().startFollow(player);
 				if (player.isInCombat())
 				{
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOUR_WORK_HERE_IS_DONE_SO_RETURN_TO_THE_CENTRAL_GUARDIAN);
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOUR_WORK_HERE_IS_DONE_SO_RETURN_TO_THE_CENTRAL_GUARDIAN);
 					npc.setTarget(player);
 					npc.doCast(BUFFS[getRandom(BUFFS.length)].getSkill());
 				}
 				else
 				{
-					broadcastNpcSay(npc, Say2.NPC_ALL, ELCADIA_DIALOGS[getRandom(ELCADIA_DIALOGS.length)]);
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, ELCADIA_DIALOGS[getRandom(ELCADIA_DIALOGS.length)]);
 				}
 				startQuestTimer("FOLLOW", 10000, npc, player);
 				break;

@@ -28,6 +28,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.MountType;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2CommandChannel;
@@ -50,7 +51,6 @@ import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.variables.NpcVariables;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ExChangeClientEffectInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExSendUIEvent;
@@ -691,22 +691,22 @@ public final class IceQueensCastleNormalBattle extends AbstractInstance
 							{
 								case 0:
 								{
-									broadcastNpcSay(npc, Say2.SHOUT, NpcStringId.ARCHER_GIVE_YOUR_BREATH_FOR_THE_INTRUDER);
+									broadcastNpcSay(npc, ChatType.SHOUT, NpcStringId.ARCHER_GIVE_YOUR_BREATH_FOR_THE_INTRUDER);
 									break;
 								}
 								case 1:
 								{
-									broadcastNpcSay(npc, Say2.SHOUT, NpcStringId.MY_KNIGHTS_SHOW_YOUR_LOYALTY);
+									broadcastNpcSay(npc, ChatType.SHOUT, NpcStringId.MY_KNIGHTS_SHOW_YOUR_LOYALTY);
 									break;
 								}
 								case 2:
 								{
-									broadcastNpcSay(npc, Say2.SHOUT, NpcStringId.I_CAN_TAKE_IT_NO_LONGER);
+									broadcastNpcSay(npc, ChatType.SHOUT, NpcStringId.I_CAN_TAKE_IT_NO_LONGER);
 									break;
 								}
 								case 3:
 								{
-									broadcastNpcSay(npc, Say2.SHOUT, NpcStringId.ARCHER_HEED_MY_CALL);
+									broadcastNpcSay(npc, ChatType.SHOUT, NpcStringId.ARCHER_HEED_MY_CALL);
 									for (int i = 0; i < 3; i++)
 									{
 										final L2Attackable breath = (L2Attackable) addSpawn(BREATH, npc.getLocation(), true, 0, false, world.getInstanceId());

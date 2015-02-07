@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
@@ -32,7 +33,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
 
@@ -401,7 +401,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 						{
 							if (hasQuestItems(attacker, FAIRY_LEAF))
 							{
-								npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.GIVE_ME_A_FAIRY_LEAF));
+								npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.GIVE_ME_A_FAIRY_LEAF));
 								takeItems(attacker, FAIRY_LEAF, 1);
 								qs.setMemoState(qs.getMemoState() + data.memoStateValue);
 								qs.unset("hits");
@@ -420,13 +420,13 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 					switch (getRandom(3))
 					{
 						case 0:
-							npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.WHY_DO_YOU_BOTHER_ME_AGAIN));
+							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WHY_DO_YOU_BOTHER_ME_AGAIN));
 							break;
 						case 1:
-							npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, data.message));
+							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, data.message));
 							break;
 						case 2:
-							npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.LEAVE_NOW_BEFORE_YOU_INCUR_THE_WRATH_OF_THE_GUARDIAN_GHOST));
+							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.LEAVE_NOW_BEFORE_YOU_INCUR_THE_WRATH_OF_THE_GUARDIAN_GHOST));
 							break;
 					}
 				}

@@ -21,6 +21,7 @@ package quests.Q00463_IMustBeaGenius;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -29,7 +30,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -187,7 +187,7 @@ public class Q00463_IMustBeaGenius extends Quest
 			
 			if (msg)
 			{
-				final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
+				final NpcSay ns = new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
 				ns.addStringParameter(player.getName());
 				ns.addStringParameter(String.valueOf(number));
 				npc.broadcastPacket(ns);

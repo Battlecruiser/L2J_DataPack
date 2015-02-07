@@ -20,10 +20,10 @@ package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Holly AI.
@@ -45,7 +45,7 @@ public final class Holly extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.GIRAN_SHUTTLE_DOES_NOT_COME_ANYMORE_IT_S_ALL_IN_THE_PAST, 1000);
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.GIRAN_SHUTTLE_DOES_NOT_COME_ANYMORE_IT_S_ALL_IN_THE_PAST, 1000);
 		}
 		else if (event.equals("SOCIAL_ACTION") && (npc != null))
 		{

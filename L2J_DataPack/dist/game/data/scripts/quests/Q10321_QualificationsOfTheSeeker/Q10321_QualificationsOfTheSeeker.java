@@ -20,13 +20,13 @@ package quests.Q10321_QualificationsOfTheSeeker;
 
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jserver.gameserver.util.Broadcast;
@@ -81,7 +81,7 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 				giveAdena(player, 50, true);
 				addExpAndSp(player, 40, 5);
 				qs.exitQuest(false, true);
-				Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getTemplate().getDisplayId(), NpcStringId.HM_DON_T_JUST_GO_I_STILL_HAVE_TONS_TO_TEACH_YOU));
+				Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.HM_DON_T_JUST_GO_I_STILL_HAVE_TONS_TO_TEACH_YOU));
 				htmltext = event;
 				break;
 			}

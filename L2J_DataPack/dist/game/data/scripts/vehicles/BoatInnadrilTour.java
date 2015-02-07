@@ -22,11 +22,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.BoatManager;
 import com.l2jserver.gameserver.model.VehiclePathPoint;
 import com.l2jserver.gameserver.model.actor.instance.L2BoatInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
@@ -97,17 +97,17 @@ public class BoatInnadrilTour implements Runnable
 	{
 		_boat = boat;
 		
-		ARRIVED_AT_INNADRIL = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_HAS_ARRIVED_IT_WILL_ANCHOR_FOR_TEN_MINUTES);
-		LEAVE_INNADRIL5 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_LEAVE_IN_FIVE_MINUTES);
-		LEAVE_INNADRIL1 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_LEAVE_IN_ONE_MINUTE);
-		LEAVE_INNADRIL0 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_BE_LEAVING_SOON);
-		LEAVING_INNADRIL = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_IS_LEAVING);
+		ARRIVED_AT_INNADRIL = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_HAS_ARRIVED_IT_WILL_ANCHOR_FOR_TEN_MINUTES);
+		LEAVE_INNADRIL5 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_LEAVE_IN_FIVE_MINUTES);
+		LEAVE_INNADRIL1 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_LEAVE_IN_ONE_MINUTE);
+		LEAVE_INNADRIL0 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_BE_LEAVING_SOON);
+		LEAVING_INNADRIL = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_IS_LEAVING);
 		
-		ARRIVAL20 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_ARRIVE_IN_APPROXIMATELY_20_MINUTES);
-		ARRIVAL15 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_ARRIVE_IN_APPROXIMATELY_15_MINUTES);
-		ARRIVAL10 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_ARRIVE_IN_APPROXIMATELY_10_MINUTES);
-		ARRIVAL5 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_ARRIVE_IN_APPROXIMATELY_5_MINUTES);
-		ARRIVAL1 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_ARRIVE_IN_APPROXIMATELY_1_MINUTE);
+		ARRIVAL20 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_ARRIVE_IN_APPROXIMATELY_20_MINUTES);
+		ARRIVAL15 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_ARRIVE_IN_APPROXIMATELY_15_MINUTES);
+		ARRIVAL10 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_ARRIVE_IN_APPROXIMATELY_10_MINUTES);
+		ARRIVAL5 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_ARRIVE_IN_APPROXIMATELY_5_MINUTES);
+		ARRIVAL1 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_INNADRIL_PLEASURE_BOAT_WILL_ARRIVE_IN_APPROXIMATELY_1_MINUTE);
 		
 		INNADRIL_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), DOCK.getX(), DOCK.getY(), DOCK.getZ());
 	}

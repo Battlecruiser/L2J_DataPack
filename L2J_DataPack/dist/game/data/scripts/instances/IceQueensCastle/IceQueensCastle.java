@@ -22,6 +22,7 @@ import instances.AbstractInstance;
 import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -34,7 +35,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Ice Queen's Castle instance zone.
@@ -104,7 +104,7 @@ public final class IceQueensCastle extends AbstractInstance
 			}
 			case "TIMER_BLIZZARD":
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.I_CAN_NO_LONGER_STAND_BY);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.I_CAN_NO_LONGER_STAND_BY);
 				npc.stopMove(null);
 				npc.setTarget(player);
 				npc.doCast(ETHERNAL_BLIZZARD.getSkill());
@@ -154,7 +154,7 @@ public final class IceQueensCastle extends AbstractInstance
 					startQuestTimer("ATTACK_KNIGHT", 5000, npc, null);
 				}
 			}
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU, creature.getName());
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU, creature.getName());
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
 	}

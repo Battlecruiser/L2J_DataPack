@@ -25,12 +25,12 @@ import java.util.Map.Entry;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Fortress of the Dead clan hall siege script.
@@ -63,15 +63,15 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 	{
 		if (npc.getId() == LIDIA)
 		{
-			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.HMM_THOSE_WHO_ARE_NOT_OF_THE_BLOODLINE_ARE_COMING_THIS_WAY_TO_TAKE_OVER_THE_CASTLE_HUMPH_THE_BITTER_GRUDGES_OF_THE_DEAD_YOU_MUST_NOT_MAKE_LIGHT_OF_THEIR_POWER);
+			broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.HMM_THOSE_WHO_ARE_NOT_OF_THE_BLOODLINE_ARE_COMING_THIS_WAY_TO_TAKE_OVER_THE_CASTLE_HUMPH_THE_BITTER_GRUDGES_OF_THE_DEAD_YOU_MUST_NOT_MAKE_LIGHT_OF_THEIR_POWER);
 		}
 		else if (npc.getId() == ALFRED)
 		{
-			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.HEH_HEH_I_SEE_THAT_THE_FEAST_HAS_BEGUN_BE_WARY_THE_CURSE_OF_THE_HELLMANN_FAMILY_HAS_POISONED_THIS_LAND);
+			broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.HEH_HEH_I_SEE_THAT_THE_FEAST_HAS_BEGUN_BE_WARY_THE_CURSE_OF_THE_HELLMANN_FAMILY_HAS_POISONED_THIS_LAND);
 		}
 		else if (npc.getId() == GISELLE)
 		{
-			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.ARISE_MY_FAITHFUL_SERVANTS_YOU_MY_PEOPLE_WHO_HAVE_INHERITED_THE_BLOOD_IT_IS_THE_CALLING_OF_MY_DAUGHTER_THE_FEAST_OF_BLOOD_WILL_NOW_BEGIN);
+			broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.ARISE_MY_FAITHFUL_SERVANTS_YOU_MY_PEOPLE_WHO_HAVE_INHERITED_THE_BLOOD_IT_IS_THE_CALLING_OF_MY_DAUGHTER_THE_FEAST_OF_BLOOD_WILL_NOW_BEGIN);
 		}
 		return null;
 	}
@@ -118,11 +118,11 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 		
 		if ((npcId == ALFRED) || (npcId == GISELLE))
 		{
-			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.AARGH_IF_I_DIE_THEN_THE_MAGIC_FORCE_FIELD_OF_BLOOD_WILL);
+			broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.AARGH_IF_I_DIE_THEN_THE_MAGIC_FORCE_FIELD_OF_BLOOD_WILL);
 		}
 		if (npcId == LIDIA)
 		{
-			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.GRARR_FOR_THE_NEXT_2_MINUTES_OR_SO_THE_GAME_ARENA_ARE_WILL_BE_CLEANED_THROW_ANY_ITEMS_YOU_DON_T_NEED_TO_THE_FLOOR_NOW);
+			broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.GRARR_FOR_THE_NEXT_2_MINUTES_OR_SO_THE_GAME_ARENA_ARE_WILL_BE_CLEANED_THROW_ANY_ITEMS_YOU_DON_T_NEED_TO_THE_FLOOR_NOW);
 			_missionAccomplished = true;
 			synchronized (this)
 			{

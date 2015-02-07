@@ -19,6 +19,7 @@
 package handlers.chathandlers;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.BlockList;
@@ -27,35 +28,38 @@ import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Shout chat handler.
  * @author durgus
  */
-public class ChatShout implements IChatHandler
+public final class ChatShout implements IChatHandler
 {
-	private static final int[] COMMAND_IDS =
+	private static final ChatType[] CHAT_TYPES =
 	{
-		1
+		ChatType.SHOUT,
 	};
 	
-	/**
-	 * Handle chat type 'shout'
-	 */
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
+	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
 	{
-		if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
+		if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 		{
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
+			return;
+		}
+		
+		if ((activeChar.getLevel() < Config.MINIMUM_CHAT_LEVEL) && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
+		{
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLAYERS_CAN_SHOUT_AFTER_LV_S1).addInt(Config.MINIMUM_CHAT_LEVEL));
 			return;
 		}
 		
 		final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 		if (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("on") || (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("gm") && activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)))
 		{
-			int region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
+			final int region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
 			for (L2PcInstance player : L2World.getInstance().getPlayers())
 			{
 				if ((region == MapRegionManager.getInstance().getMapRegionLocId(player)) && !BlockList.isBlocked(player, activeChar) && (player.getInstanceId() == activeChar.getInstanceId()))
@@ -82,12 +86,9 @@ public class ChatShout implements IChatHandler
 		}
 	}
 	
-	/**
-	 * Returns the chat types registered to this handler.
-	 */
 	@Override
-	public int[] getChatTypeList()
+	public ChatType[] getChatTypeList()
 	{
-		return COMMAND_IDS;
+		return CHAT_TYPES;
 	}
 }

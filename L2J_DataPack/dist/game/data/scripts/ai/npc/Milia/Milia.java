@@ -20,11 +20,11 @@ package ai.npc.Milia;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Milia AI.
@@ -54,7 +54,7 @@ public final class Milia extends AbstractNpcAI
 		}
 		else if (event.equals("TEXT_SPAM") && (npc != null))
 		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.SPEAK_WITH_ME_ABOUT_TRAVELING_AROUND_ADEN, 1000);
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.SPEAK_WITH_ME_ABOUT_TRAVELING_AROUND_ADEN, 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

@@ -18,44 +18,42 @@
  */
 package handlers.chathandlers;
 
-import java.util.Collection;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 import com.l2jserver.gameserver.model.BlockList;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * A chat handler
+ * General Chat Handler.
  * @author durgus
  */
-public class ChatAll implements IChatHandler
+public final class ChatAll implements IChatHandler
 {
 	private static Logger _log = Logger.getLogger(ChatAll.class.getName());
 	
-	private static final int[] COMMAND_IDS =
+	private static final ChatType[] CHAT_TYPES =
 	{
-		0
+		ChatType.GENERAL,
 	};
 	
-	/**
-	 * Handle chat type 'all'
-	 */
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String params, String text)
+	public void handleChat(ChatType type, L2PcInstance activeChar, String params, String text)
 	{
 		boolean vcd_used = false;
 		if (text.startsWith("."))
 		{
-			StringTokenizer st = new StringTokenizer(text);
-			IVoicedCommandHandler vch;
+			final StringTokenizer st = new StringTokenizer(text);
+			final IVoicedCommandHandler vch;
 			String command = "";
 			
 			if (st.countTokens() > 1)
@@ -87,44 +85,36 @@ public class ChatAll implements IChatHandler
 				vcd_used = false;
 			}
 		}
+		
 		if (!vcd_used)
 		{
-			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
+			if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 			{
 				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
 				return;
 			}
 			
-			/**
-			 * Match the character "." literally (Exactly 1 time) Match any character that is NOT a . character. Between one and unlimited times as possible, giving back as needed (greedy)
-			 */
-			if (text.matches("\\.{1}[^\\.]+"))
+			if ((activeChar.getLevel() < Config.MINIMUM_CHAT_LEVEL) && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_SYNTAX);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLAYERS_CAN_USE_GENERAL_CHAT_AFTER_LV_S1).addInt(Config.MINIMUM_CHAT_LEVEL));
+				return;
 			}
-			else
+			
+			final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
+			for (L2PcInstance player : activeChar.getKnownList().getKnownPlayers().values())
 			{
-				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
-				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
-				for (L2PcInstance player : plrs)
+				if ((player != null) && activeChar.isInsideRadius(player, 1250, false, true) && !BlockList.isBlocked(player, activeChar))
 				{
-					if ((player != null) && activeChar.isInsideRadius(player, 1250, false, true) && !BlockList.isBlocked(player, activeChar))
-					{
-						player.sendPacket(cs);
-					}
+					player.sendPacket(cs);
 				}
-				
-				activeChar.sendPacket(cs);
 			}
+			activeChar.sendPacket(cs);
 		}
 	}
 	
-	/**
-	 * Returns the chat types registered to this handler.
-	 */
 	@Override
-	public int[] getChatTypeList()
+	public ChatType[] getChatTypeList()
 	{
-		return COMMAND_IDS;
+		return CHAT_TYPES;
 	}
 }

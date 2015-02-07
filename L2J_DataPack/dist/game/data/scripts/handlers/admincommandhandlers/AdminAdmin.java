@@ -25,6 +25,7 @@ import javolution.text.TextBuilder;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.AdminData;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -32,7 +33,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Hero;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.ExWorldChatCnt;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -311,7 +311,7 @@ public class AdminAdmin implements IAdminCommandHandler
 						sb.append(" ");
 					}
 					
-					final CreatureSay cs = new CreatureSay(activeChar, Say2.GLOBAL, sb.toString());
+					final CreatureSay cs = new CreatureSay(activeChar, ChatType.GLOBAL, sb.toString());
 					L2World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
 					break;
 				}

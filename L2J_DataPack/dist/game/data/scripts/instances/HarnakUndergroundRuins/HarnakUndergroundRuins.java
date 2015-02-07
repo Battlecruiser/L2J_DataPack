@@ -27,6 +27,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.CategoryType;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -36,7 +37,6 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.ExSendUIEvent;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.util.Util;
@@ -154,42 +154,42 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 			}
 			case "razkan_say":
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.COME_ATTACK_ME_IF_YOU_DARE);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.COME_ATTACK_ME_IF_YOU_DARE);
 				break;
 			}
 			case "bathus_say":
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.IT_S_THE_END_FOR_YOU_TRAITOR);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.IT_S_THE_END_FOR_YOU_TRAITOR);
 				break;
 			}
 			case "bamonti_say":
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.I_WANT_TO_HEAR_YOU_CRY);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.I_WANT_TO_HEAR_YOU_CRY);
 				break;
 			}
 			case "carcass_say":
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.I_WANT_TO_HEAR_YOU_CRY);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.I_WANT_TO_HEAR_YOU_CRY);
 				break;
 			}
 			case "khan_say":
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_LL_HAVE_TO_KILL_US_FIRST);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_LL_HAVE_TO_KILL_US_FIRST);
 				break;
 			}
 			case "seknus_say":
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.LETS_SEE_WHAT_YOU_ARE_MADE_OF);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.LETS_SEE_WHAT_YOU_ARE_MADE_OF);
 				break;
 			}
 			case "lotus_say":
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.REPENT_AND_YOUR_DEATH_WILL_BE_QUICK);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.REPENT_AND_YOUR_DEATH_WILL_BE_QUICK);
 				break;
 			}
 			case "ele_say":
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.DIE_TRAITOR);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.DIE_TRAITOR);
 				break;
 			}
 			case "spawn_npc1":
@@ -205,7 +205,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 					{
 						world.currentNpc = RAKZAN;
 						razkan.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, NPC_ROOM1_LOC);
-						broadcastNpcSay(razkan, Say2.NPC_ALL, NpcStringId.ARE_YOU_AGAINST_THE_WILL_OF_LIGHT);
+						broadcastNpcSay(razkan, ChatType.NPC_GENERAL, NpcStringId.ARE_YOU_AGAINST_THE_WILL_OF_LIGHT);
 						startQuestTimer("razkan_say", 1600, razkan, player);
 					}
 					world.setStatus(1);
@@ -402,7 +402,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 					spawnedNpcs = spawnGroup("seal", world.getInstanceId());
 					for (L2Npc spawnedNpc : spawnedNpcs)
 					{
-						broadcastNpcSay(spawnedNpc, Say2.NPC_ALL, NpcStringId.DISABLE_DEVICE_WILL_GO_OUT_OF_CONTROL_IN_1_MINUTE);
+						broadcastNpcSay(spawnedNpc, ChatType.NPC_GENERAL, NpcStringId.DISABLE_DEVICE_WILL_GO_OUT_OF_CONTROL_IN_1_MINUTE);
 						startQuestTimer("seal_say", 10000, spawnedNpc, player);
 					}
 				}
@@ -439,52 +439,52 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 					{
 						case 0:
 						{
-							broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING41);
+							broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING41);
 							break;
 						}
 						case 1:
 						{
-							broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING42);
+							broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING42);
 							break;
 						}
 						case 2:
 						{
-							broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING43);
+							broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING43);
 							break;
 						}
 						case 3:
 						{
-							broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING44);
+							broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING44);
 							break;
 						}
 						case 4:
 						{
-							broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING45);
+							broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING45);
 							break;
 						}
 						case 5:
 						{
-							broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.SECONDS);
+							broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.SECONDS);
 							break;
 						}
 						case 6:
 						{
-							broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.SECONDS2);
+							broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.SECONDS2);
 							break;
 						}
 						case 7:
 						{
-							broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.SECONDS3);
+							broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.SECONDS3);
 							break;
 						}
 						case 8:
 						{
-							broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.SECONDS4);
+							broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.SECONDS4);
 							break;
 						}
 						case 9:
 						{
-							broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.SECOND);
+							broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.SECOND);
 							break;
 						}
 					}
@@ -515,8 +515,8 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 			{
 				showOnScreenMsg(player, NpcStringId.I_HERMUNCUS_GIVE_MY_POWER_TO_THOSE_WHO_FIGHT_FOR_ME, ExShowScreenMessage.TOP_CENTER, 5000);
 				
-				broadcastNpcSay(npc, Say2.TELL, NpcStringId.RECEIVE_THIS_POWER_FORM_THE_ANCIENT_GIANT);
-				broadcastNpcSay(npc, Say2.TELL, NpcStringId.USE_THIS_NEW_POWER_WHEN_THE_TIME_IS_RIGHT);
+				broadcastNpcSay(npc, ChatType.TELL, NpcStringId.RECEIVE_THIS_POWER_FORM_THE_ANCIENT_GIANT);
+				broadcastNpcSay(npc, ChatType.TELL, NpcStringId.USE_THIS_NEW_POWER_WHEN_THE_TIME_IS_RIGHT);
 				
 				startQuestTimer("message4", 3000, npc, player);
 			}
@@ -567,7 +567,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 						if (bathius != null)
 						{
 							bathius.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, NPC_ROOM1_LOC);
-							broadcastNpcSay(bathius, Say2.NPC_ALL, NpcStringId.ARE_YOU_PLANNING_TO_BETRAY_THE_GODS_AND_FOLLOW_A_GIANT);
+							broadcastNpcSay(bathius, ChatType.NPC_GENERAL, NpcStringId.ARE_YOU_PLANNING_TO_BETRAY_THE_GODS_AND_FOLLOW_A_GIANT);
 							startQuestTimer("bathus_say", 2600, bathius, killer);
 							world.currentNpc = KRAKIA_BATHUS;
 						}
@@ -579,7 +579,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 						if (bamonti != null)
 						{
 							bamonti.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, NPC_ROOM1_LOC);
-							broadcastNpcSay(bamonti, Say2.NPC_ALL, NpcStringId.HAHA);
+							broadcastNpcSay(bamonti, ChatType.NPC_GENERAL, NpcStringId.HAHA);
 							startQuestTimer("bamonti_say", 2600, bamonti, killer);
 							world.currentNpc = BAMONTI;
 						}
@@ -591,7 +591,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 						if (carcass != null)
 						{
 							carcass.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, NPC_ROOM1_LOC);
-							broadcastNpcSay(carcass, Say2.NPC_ALL, NpcStringId.HAHA);
+							broadcastNpcSay(carcass, ChatType.NPC_GENERAL, NpcStringId.HAHA);
 							startQuestTimer("carcass_say", 2600, carcass, killer);
 							world.currentNpc = KRAKIA_CARCASS;
 						}
@@ -603,7 +603,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 						if (khan != null)
 						{
 							khan.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, NPC_ROOM1_LOC);
-							broadcastNpcSay(khan, Say2.NPC_ALL, NpcStringId.YOU_WILL_NOT_FREE_HERMUNCUS);
+							broadcastNpcSay(khan, ChatType.NPC_GENERAL, NpcStringId.YOU_WILL_NOT_FREE_HERMUNCUS);
 							startQuestTimer("khan_say", 2600, khan, killer);
 							world.currentNpc = WEISS_KHAN;
 						}
@@ -615,7 +615,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 						if (seknus != null)
 						{
 							seknus.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, NPC_ROOM1_LOC);
-							broadcastNpcSay(seknus, Say2.NPC_ALL, NpcStringId.MORTAL);
+							broadcastNpcSay(seknus, ChatType.NPC_GENERAL, NpcStringId.MORTAL);
 							startQuestTimer("seknus_say", 2600, seknus, killer);
 							world.currentNpc = SEKNUS;
 						}
@@ -627,7 +627,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 						if (lotus != null)
 						{
 							lotus.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, NPC_ROOM1_LOC);
-							broadcastNpcSay(lotus, Say2.NPC_ALL, NpcStringId.TRYING_TO_FREE_HERMUNCUS);
+							broadcastNpcSay(lotus, ChatType.NPC_GENERAL, NpcStringId.TRYING_TO_FREE_HERMUNCUS);
 							startQuestTimer("lotus_say", 2600, lotus, killer);
 							world.currentNpc = KRAKIA_LOTUS;
 						}
@@ -639,7 +639,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 						if (ele != null)
 						{
 							ele.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, NPC_ROOM1_LOC);
-							broadcastNpcSay(ele, Say2.NPC_ALL, NpcStringId.YOU_WILL_NEVER_BREAK_THE_SEAL);
+							broadcastNpcSay(ele, ChatType.NPC_GENERAL, NpcStringId.YOU_WILL_NEVER_BREAK_THE_SEAL);
 							startQuestTimer("ele_say", 2600, ele, killer);
 							world.currentNpc = WEISS_ELE;
 						}

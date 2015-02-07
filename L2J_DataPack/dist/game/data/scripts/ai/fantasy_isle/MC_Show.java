@@ -28,11 +28,11 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
@@ -318,7 +318,7 @@ public class MC_Show extends AbstractNpcAI
 		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new StartMCShow(), diff, 14400000L);
 	}
 	
-	private void autoChat(L2Npc npc, NpcStringId npcString, int type)
+	private void autoChat(L2Npc npc, NpcStringId npcString, ChatType type)
 	{
 		npc.broadcastPacket(new NpcSay(npc.getObjectId(), type, npc.getId(), npcString));
 	}
@@ -331,7 +331,7 @@ public class MC_Show extends AbstractNpcAI
 			switch (npc.getId())
 			{
 				case 32433:
-					autoChat(npc, MESSAGES[0], Say2.NPC_SHOUT);
+					autoChat(npc, MESSAGES[0], ChatType.NPC_SHOUT);
 					startQuestTimer("1", 30000, npc, null);
 					break;
 				case 32431:
@@ -383,7 +383,7 @@ public class MC_Show extends AbstractNpcAI
 			// TODO switch on event
 			if (event.equalsIgnoreCase("6"))
 			{
-				autoChat(npc, MESSAGES[6], Say2.NPC_SHOUT);
+				autoChat(npc, MESSAGES[6], ChatType.NPC_SHOUT);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-56511, -56647, -2008, 36863));
 				npc.broadcastPacket(new PlaySound(1, "NS22_F", 0, 0, 0, 0, 0));
 				addSpawn(SINGERS[0], -56344, -56328, -2008, 32768, false, 224000);
@@ -400,7 +400,7 @@ public class MC_Show extends AbstractNpcAI
 				switch (npc.getId())
 				{
 					case 32433:
-						autoChat(npc, MESSAGES[7], Say2.NPC_SHOUT);
+						autoChat(npc, MESSAGES[7], ChatType.NPC_SHOUT);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-56698, -56430, -2008, 32768));
 						startQuestTimer("8", 12000, npc, null);
 						break;
@@ -430,7 +430,7 @@ public class MC_Show extends AbstractNpcAI
 				switch (npc.getId())
 				{
 					case 32433:
-						autoChat(npc, MESSAGES[11], Say2.NPC_SHOUT);
+						autoChat(npc, MESSAGES[11], ChatType.NPC_SHOUT);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-56698, -56430, -2008, 32768));
 						startQuestTimer("12", 5000, npc, null);
 						break;
@@ -446,7 +446,7 @@ public class MC_Show extends AbstractNpcAI
 			}
 			else if (event.equalsIgnoreCase("17"))
 			{
-				autoChat(npc, MESSAGES[16], Say2.NPC_SHOUT);
+				autoChat(npc, MESSAGES[16], ChatType.NPC_SHOUT);
 				startQuestTimer("social1", 2000, addSpawn(INDIVIDUALS[1], -56700, -56340, -2008, 32768, false, 32000), null);
 				startQuestTimer("18", 9000, npc, null);
 			}
@@ -467,7 +467,7 @@ public class MC_Show extends AbstractNpcAI
 			}
 			else if (event.equalsIgnoreCase("28"))
 			{
-				autoChat(npc, MESSAGES[23], Say2.NPC_ALL);
+				autoChat(npc, MESSAGES[23], ChatType.NPC_GENERAL);
 				startQuestTimer("social1", 1, npc, null);
 			}
 			else if (event.equalsIgnoreCase("29"))
@@ -492,7 +492,7 @@ public class MC_Show extends AbstractNpcAI
 					final ShoutInfo si = talks.get(event);
 					if (si != null)
 					{
-						autoChat(npc, si.getNpcStringId(), Say2.NPC_SHOUT);
+						autoChat(npc, si.getNpcStringId(), ChatType.NPC_SHOUT);
 						startQuestTimer(si.getNextEvent(), si.getTime(), npc, null);
 					}
 				}

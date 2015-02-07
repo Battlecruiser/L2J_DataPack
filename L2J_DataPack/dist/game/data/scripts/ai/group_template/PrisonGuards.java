@@ -20,6 +20,7 @@ package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -27,7 +28,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Prison Guards AI.
@@ -94,7 +94,7 @@ public final class PrisonGuards extends AbstractNpcAI
 			{
 				npc.setTarget(player);
 				npc.doCast(STONE.getSkill());
-				broadcastNpcSay(npc, Say2.ALL, NpcStringId.IT_S_NOT_EASY_TO_OBTAIN);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.IT_S_NOT_EASY_TO_OBTAIN);
 			}
 		}
 		else
@@ -103,7 +103,7 @@ public final class PrisonGuards extends AbstractNpcAI
 			{
 				npc.setTarget(player);
 				npc.doCast(STONE.getSkill());
-				broadcastNpcSay(npc, Say2.ALL, NpcStringId.YOU_RE_OUT_OF_YOUR_MIND_COMING_HERE);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_RE_OUT_OF_YOUR_MIND_COMING_HERE);
 			}
 		}
 		return super.onAttack(npc, player, damage, isSummon);

@@ -20,6 +20,7 @@ package quests.Q10326_RespectYourElders;
 
 import quests.Q10325_SearchingForNewPower.Q10325_SearchingForNewPower;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -27,7 +28,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.ExRotation;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
@@ -115,7 +115,7 @@ public class Q10326_RespectYourElders extends Quest
 						{
 							if (loc_index == 9)
 							{
-								npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getTemplate().getDisplayId(), NpcStringId.GO_GO_GO_CREEK));
+								npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.GO_GO_GO_CREEK));
 								startQuestTimer("DELETE_NPC", 2000, npc, owner);
 								break;
 							}
@@ -138,7 +138,7 @@ public class Q10326_RespectYourElders extends Quest
 						
 						if (getRandom(100) < 10)
 						{
-							npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getTemplate().getDisplayId(), NpcStringId.COME_ON_CREEK));
+							npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.COME_ON_CREEK));
 						}
 					}
 				}
@@ -170,7 +170,7 @@ public class Q10326_RespectYourElders extends Quest
 	@Override
 	public void onMoveFinished(L2Npc npc)
 	{
-		npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getTemplate().getDisplayId(), NpcStringId.COME_ON_CREEK));
+		npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.COME_ON_CREEK));
 		final L2PcInstance owner = npc.getVariables().getObject("OWNER", L2PcInstance.class);
 		
 		if (owner != null)

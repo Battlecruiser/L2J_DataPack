@@ -26,6 +26,7 @@ import java.util.Map;
 import javolution.util.FastList;
 import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmperor;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -35,7 +36,6 @@ import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
 
@@ -224,12 +224,12 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 						{
 							if (caster.isScriptValue(0))
 							{
-								caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.YOU_SUCH_A_FOOL_THE_VICTORY_OVER_THIS_WAR_BELONGS_TO_SHILEN));
+								caster.broadcastPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_SHOUT, caster.getId(), NpcStringId.YOU_SUCH_A_FOOL_THE_VICTORY_OVER_THIS_WAR_BELONGS_TO_SHILEN));
 								caster.setScriptValue(1);
 							}
 							else if (getRandom(100) < 10)
 							{
-								caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), LILITH_SHOUT[getRandom(3)]));
+								caster.broadcastPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_SHOUT, caster.getId(), LILITH_SHOUT[getRandom(3)]));
 							}
 						}
 					}
@@ -243,10 +243,10 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 						{
 							if (caster.isScriptValue(0))
 							{
-								caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.FOR_THE_ETERNITY_OF_EINHASAD));
+								caster.broadcastPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_SHOUT, caster.getId(), NpcStringId.FOR_THE_ETERNITY_OF_EINHASAD));
 								if (Util.checkIfInRange(2000, caster, player, true))
 								{
-									player.sendPacket(new NpcSay(caster.getObjectId(), Say2.TELL, caster.getId(), NpcStringId.MY_POWER_S_WEAKENING_HURRY_AND_TURN_ON_THE_SEALING_DEVICE));
+									player.sendPacket(new NpcSay(caster.getObjectId(), ChatType.TELL, caster.getId(), NpcStringId.MY_POWER_S_WEAKENING_HURRY_AND_TURN_ON_THE_SEALING_DEVICE));
 								}
 								caster.setScriptValue(1);
 							}
@@ -256,28 +256,28 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 								{
 									case 0:
 									{
-										caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.DEAR_SHILLIEN_S_OFFSPRINGS_YOU_ARE_NOT_CAPABLE_OF_CONFRONTING_US));
+										caster.broadcastPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_SHOUT, caster.getId(), NpcStringId.DEAR_SHILLIEN_S_OFFSPRINGS_YOU_ARE_NOT_CAPABLE_OF_CONFRONTING_US));
 										if (Util.checkIfInRange(2000, caster, player, true))
 										{
-											player.sendPacket(new NpcSay(caster.getObjectId(), Say2.TELL, caster.getId(), NpcStringId.ALL_4_SEALING_DEVICES_MUST_BE_TURNED_ON));
+											player.sendPacket(new NpcSay(caster.getObjectId(), ChatType.TELL, caster.getId(), NpcStringId.ALL_4_SEALING_DEVICES_MUST_BE_TURNED_ON));
 										}
 										break;
 									}
 									case 1:
 									{
-										caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.I_LL_SHOW_YOU_THE_REAL_POWER_OF_EINHASAD));
+										caster.broadcastPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_SHOUT, caster.getId(), NpcStringId.I_LL_SHOW_YOU_THE_REAL_POWER_OF_EINHASAD));
 										if (Util.checkIfInRange(2000, caster, player, true))
 										{
-											player.sendPacket(new NpcSay(caster.getObjectId(), Say2.TELL, caster.getId(), NpcStringId.LILITH_ATTACK_IS_GETTING_STRONGER_GO_AHEAD_AND_TURN_IT_ON));
+											player.sendPacket(new NpcSay(caster.getObjectId(), ChatType.TELL, caster.getId(), NpcStringId.LILITH_ATTACK_IS_GETTING_STRONGER_GO_AHEAD_AND_TURN_IT_ON));
 										}
 										break;
 									}
 									case 2:
 									{
-										caster.broadcastPacket(new NpcSay(caster.getObjectId(), Say2.NPC_SHOUT, caster.getId(), NpcStringId.DEAR_MILITARY_FORCE_OF_LIGHT_GO_DESTROY_THE_OFFSPRINGS_OF_SHILLIEN));
+										caster.broadcastPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_SHOUT, caster.getId(), NpcStringId.DEAR_MILITARY_FORCE_OF_LIGHT_GO_DESTROY_THE_OFFSPRINGS_OF_SHILLIEN));
 										if (Util.checkIfInRange(2000, caster, player, true))
 										{
-											player.sendPacket(new NpcSay(caster.getObjectId(), Say2.TELL, caster.getId(), NpcStringId.DEAR_S1_GIVE_ME_MORE_STRENGTH).addStringParameter(player.getName()));
+											player.sendPacket(new NpcSay(caster.getObjectId(), ChatType.TELL, caster.getId(), NpcStringId.DEAR_S1_GIVE_ME_MORE_STRENGTH).addStringParameter(player.getName()));
 										}
 										break;
 									}
@@ -303,7 +303,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 			{
 				if (npc.isScriptValue(0))
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.THIS_PLACE_ONCE_BELONGED_TO_LORD_SHILEN));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.THIS_PLACE_ONCE_BELONGED_TO_LORD_SHILEN));
 					npc.setScriptValue(1);
 				}
 				break;
@@ -313,7 +313,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 			{
 				if (npc.isScriptValue(0))
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.WHO_DARES_ENTER_THIS_PLACE));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.WHO_DARES_ENTER_THIS_PLACE));
 					npc.setScriptValue(1);
 				}
 				break;
@@ -323,7 +323,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 			{
 				if (npc.isScriptValue(0))
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.THOSE_WHO_ARE_AFRAID_SHOULD_GET_AWAY_AND_THOSE_WHO_ARE_BRAVE_SHOULD_FIGHT));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.THOSE_WHO_ARE_AFRAID_SHOULD_GET_AWAY_AND_THOSE_WHO_ARE_BRAVE_SHOULD_FIGHT));
 					npc.setScriptValue(1);
 				}
 				break;
@@ -332,7 +332,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 			{
 				if (npc.isScriptValue(0))
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.LEAVE_NOW));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.LEAVE_NOW));
 					npc.setScriptValue(1);
 				}
 				break;
@@ -388,19 +388,19 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 			case LILIM_MAGUS:
 			case LILIM_GREAT_MAGUS:
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.LORD_SHILEN_SOME_DAY_YOU_WILL_ACCOMPLISH_THIS_MISSION));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.LORD_SHILEN_SOME_DAY_YOU_WILL_ACCOMPLISH_THIS_MISSION));
 				break;
 			}
 			case LILIM_KNIGHT_ERRANT:
 			case LILIM_KNIGHT:
 			case LILIM_GUARD_KNIGHT:
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.WHY_ARE_YOU_GETTING_IN_OUR_WAY));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.WHY_ARE_YOU_GETTING_IN_OUR_WAY));
 				break;
 			}
 			case LILIM_SLAYER:
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.FOR_SHILEN));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.FOR_SHILEN));
 				break;
 			}
 		}

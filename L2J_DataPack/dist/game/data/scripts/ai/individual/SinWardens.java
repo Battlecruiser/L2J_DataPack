@@ -23,11 +23,11 @@ import java.util.Map;
 import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -75,7 +75,7 @@ public final class SinWardens extends AbstractNpcAI
 				
 				if ((killedCount) == 5)
 				{
-					master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getId(), NpcStringId.WE_MIGHT_NEED_NEW_SLAVES_I_LL_BE_BACK_SOON_SO_WAIT));
+					master.broadcastPacket(new NpcSay(master.getObjectId(), ChatType.NPC_GENERAL, master.getId(), NpcStringId.WE_MIGHT_NEED_NEW_SLAVES_I_LL_BE_BACK_SOON_SO_WAIT));
 					master.doDie(killer);
 					killedMinionsCount.remove(master.getObjectId());
 				}

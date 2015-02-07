@@ -20,11 +20,11 @@ package ai.individual;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Karonf AI.
@@ -67,12 +67,12 @@ public final class Karonf extends AbstractNpcAI
 		{
 			if (getRandom(100) > 40)
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, KARONF_SHOUT[getRandom(2)], 1000);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, KARONF_SHOUT[getRandom(2)], 1000);
 				addMoveToDesire(npc, KARONF_LOC[getRandom(10)], 0);
 			}
 			else
 			{
-				broadcastNpcSay(npc, Say2.NPC_ALL, KARONF_SHOUT[getRandom(2)]);
+				broadcastNpcSay(npc, ChatType.NPC_GENERAL, KARONF_SHOUT[getRandom(2)]);
 			}
 		}
 		return null;

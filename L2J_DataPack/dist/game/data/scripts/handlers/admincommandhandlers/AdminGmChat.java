@@ -19,12 +19,12 @@
 package handlers.admincommandhandlers;
 
 import com.l2jserver.gameserver.data.xml.impl.AdminData;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 
 /**
@@ -115,7 +115,7 @@ public class AdminGmChat implements IAdminCommandHandler
 				offset = 13;
 			}
 			text = command.substring(offset);
-			CreatureSay cs = new CreatureSay(0, Say2.ALLIANCE, activeChar.getName(), text);
+			CreatureSay cs = new CreatureSay(0, ChatType.ALLIANCE, activeChar.getName(), text);
 			AdminData.getInstance().broadcastToGMs(cs);
 		}
 		catch (StringIndexOutOfBoundsException e)

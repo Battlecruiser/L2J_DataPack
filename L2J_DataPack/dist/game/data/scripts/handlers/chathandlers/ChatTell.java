@@ -19,6 +19,7 @@
 package handlers.chathandlers;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.L2World;
@@ -26,26 +27,23 @@ import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Tell chat handler.
  * @author durgus
  */
-public class ChatTell implements IChatHandler
+public final class ChatTell implements IChatHandler
 {
-	private static final int[] COMMAND_IDS =
+	private static final ChatType[] CHAT_TYPES =
 	{
-		2
+		ChatType.TELL,
 	};
 	
-	/**
-	 * Handle chat type 'tell'
-	 */
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
+	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
 	{
-		if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
+		if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 		{
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
 			return;
@@ -63,9 +61,7 @@ public class ChatTell implements IChatHandler
 			return;
 		}
 		
-		L2PcInstance receiver = null;
-		
-		receiver = L2World.getInstance().getPlayer(target);
+		final L2PcInstance receiver = L2World.getInstance().getPlayer(target);
 		
 		if ((receiver != null) && !receiver.isSilenceMode(activeChar.getObjectId()))
 		{
@@ -74,17 +70,22 @@ public class ChatTell implements IChatHandler
 				activeChar.sendMessage("Player is in jail.");
 				return;
 			}
-			if (receiver.isChatBanned())
+			else if (receiver.isChatBanned())
 			{
 				activeChar.sendPacket(SystemMessageId.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
 				return;
 			}
-			if ((receiver.getClient() == null) || receiver.getClient().isDetached())
+			else if ((receiver.getClient() == null) || receiver.getClient().isDetached())
 			{
 				activeChar.sendMessage("Player is in offline mode.");
 				return;
 			}
-			if (!BlockList.isBlocked(receiver, activeChar))
+			else if ((activeChar.getLevel() < Config.MINIMUM_CHAT_LEVEL) && !activeChar.getWhisperers().contains(receiver.getObjectId()) && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
+			{
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLAYERS_CAN_RESPOND_TO_A_WHISPER_BUT_CANNOT_INITIATE_A_WHISPER_UNTIL_LV_S1).addInt(Config.MINIMUM_CHAT_LEVEL));
+				return;
+			}
+			else if (!BlockList.isBlocked(receiver, activeChar))
 			{
 				// Allow reciever to send PMs to this char, which is in silence mode.
 				if (Config.SILENCE_MODE_EXCLUDE && activeChar.isSilenceMode())
@@ -92,6 +93,7 @@ public class ChatTell implements IChatHandler
 					activeChar.addSilenceModeExcluded(receiver.getObjectId());
 				}
 				
+				receiver.getWhisperers().add(activeChar.getObjectId());
 				receiver.sendPacket(new CreatureSay(activeChar, receiver, activeChar.getName(), type, text));
 				activeChar.sendPacket(new CreatureSay(activeChar, receiver, "->" + receiver.getName(), type, text));
 			}
@@ -106,12 +108,9 @@ public class ChatTell implements IChatHandler
 		}
 	}
 	
-	/**
-	 * Returns the chat types registered to this handler.
-	 */
 	@Override
-	public int[] getChatTypeList()
+	public ChatType[] getChatTypeList()
 	{
-		return COMMAND_IDS;
+		return CHAT_TYPES;
 	}
 }

@@ -20,13 +20,13 @@ package ai.npc.CastleTeleporter;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Siege;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -74,7 +74,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("teleport"))
 		{
 			final int region = MapRegionManager.getInstance().getMapRegionLocId(npc.getX(), npc.getY());
-			final NpcSay msg = new NpcSay(npc, Say2.NPC_SHOUT, NpcStringId.THE_DEFENDERS_OF_S1_CASTLE_WILL_BE_TELEPORTED_TO_THE_INNER_CASTLE);
+			final NpcSay msg = new NpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.THE_DEFENDERS_OF_S1_CASTLE_WILL_BE_TELEPORTED_TO_THE_INNER_CASTLE);
 			msg.addStringParameter(npc.getCastle().getName());
 			npc.getCastle().oustAllPlayers();
 			npc.setScriptValue(0);

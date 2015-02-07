@@ -20,10 +20,10 @@ package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
  * Aden Reconstructor Manager AI.
@@ -53,19 +53,19 @@ public final class AdenReconstructorManager extends AbstractNpcAI
 			{
 				case "SPAM_TEXT":
 				{
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THE_LAND_OF_ADEN_IS_IN_NEED_OF_MATERIALS_TO_REBUILD_FROM_SHILEN_S_DESTRUCTION);
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THE_LAND_OF_ADEN_IS_IN_NEED_OF_MATERIALS_TO_REBUILD_FROM_SHILEN_S_DESTRUCTION);
 					startQuestTimer("SPAM_TEXT2", 1000, npc, null);
 					break;
 				}
 				case "SPAM_TEXT2":
 				{
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.PLEASE_DONATE_ANY_UNUSED_MATERIALS_YOU_HAVE_TO_HELP_REBUILD_ADEN);
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.PLEASE_DONATE_ANY_UNUSED_MATERIALS_YOU_HAVE_TO_HELP_REBUILD_ADEN);
 					startQuestTimer("SPAM_TEXT3", 1000, npc, null);
 					break;
 				}
 				case "SPAM_TEXT3":
 				{
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_LL_RECEIVE_A_GIFT_FOR_ANY_APPLICABLE_DONATION);
+					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_LL_RECEIVE_A_GIFT_FOR_ANY_APPLICABLE_DONATION);
 					break;
 				}
 			}

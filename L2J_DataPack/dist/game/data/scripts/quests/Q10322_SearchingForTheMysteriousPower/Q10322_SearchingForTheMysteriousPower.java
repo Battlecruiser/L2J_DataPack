@@ -20,6 +20,7 @@ package quests.Q10322_SearchingForTheMysteriousPower;
 
 import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -27,7 +28,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
@@ -247,7 +247,7 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 							giveItems(player, APPRENTICE_ADVENTURERS_BOW, 1);
 							giveItems(player, APPRENTICE_ADVENTURERS_LONG_SWORD, 1);
 							addExpAndSp(player, 300, 5);
-							Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getTemplate().getDisplayId(), NpcStringId.THERE_S_THE_NEXT_TRAINING_STEP));
+							Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.THERE_S_THE_NEXT_TRAINING_STEP));
 							qs.exitQuest(false, true);
 							break;
 						}

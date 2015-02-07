@@ -20,12 +20,12 @@ package ai.npc.Proclaimer;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
@@ -65,7 +65,7 @@ public final class Proclaimer extends AbstractNpcAI
 		String htmltext = null;
 		if (!player.isOnDarkSide())
 		{
-			player.sendPacket(new NpcSay(npc.getObjectId(), Say2.NPC_TELL, npc.getId(), NpcStringId.WHEN_THE_WORLD_PLUNGES_INTO_CHAOS_WE_WILL_NEED_YOUR_HELP_WE_HOPE_YOU_JOIN_US_WHEN_THE_TIME_COMES));
+			player.sendPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_TELL, npc.getId(), NpcStringId.WHEN_THE_WORLD_PLUNGES_INTO_CHAOS_WE_WILL_NEED_YOUR_HELP_WE_HOPE_YOU_JOIN_US_WHEN_THE_TIME_COMES));
 			
 			final L2Clan ownerClan = npc.getCastle().getOwner();
 			if (ownerClan != null)

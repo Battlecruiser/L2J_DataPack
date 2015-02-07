@@ -19,6 +19,7 @@
 package handlers.chathandlers;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.BlockList;
@@ -27,28 +28,31 @@ import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Trade chat handler.
  * @author durgus
  */
-public class ChatTrade implements IChatHandler
+public final class ChatTrade implements IChatHandler
 {
-	private static final int[] COMMAND_IDS =
+	private static final ChatType[] CHAT_TYPES =
 	{
-		8
+		ChatType.TRADE,
 	};
 	
-	/**
-	 * Handle chat type 'trade'
-	 */
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
+	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
 	{
-		if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
+		if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 		{
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
+			return;
+		}
+		
+		if (activeChar.getLevel() < 20)
+		{
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLAYERS_CAN_USE_TRADE_CHAT_AFTER_LV_S1).addInt(20));
 			return;
 		}
 		
@@ -82,12 +86,9 @@ public class ChatTrade implements IChatHandler
 		}
 	}
 	
-	/**
-	 * Returns the chat types registered to this handler.
-	 */
 	@Override
-	public int[] getChatTypeList()
+	public ChatType[] getChatTypeList()
 	{
-		return COMMAND_IDS;
+		return CHAT_TYPES;
 	}
 }
