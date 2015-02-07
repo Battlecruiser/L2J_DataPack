@@ -154,6 +154,7 @@ public final class Raina extends AbstractNpcAI
 			case "33491-02.html":
 			case "33491-03.html":
 			case "33491-04.html":
+			case "33491-05.html":
 			case "reawakenCancel.html":
 			{
 				htmltext = event;
