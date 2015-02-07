@@ -18,8 +18,8 @@
  */
 package instances.IceQueensCastle;
 
+import instances.AbstractInstance;
 import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
-import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
@@ -40,7 +40,7 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
  * Ice Queen's Castle instance zone.
  * @author Adry_85
  */
-public final class IceQueensCastle extends AbstractNpcAI
+public final class IceQueensCastle extends AbstractInstance
 {
 	protected class IQCWorld extends InstanceWorld
 	{
@@ -65,9 +65,9 @@ public final class IceQueensCastle extends AbstractNpcAI
 	private static final int ICE_QUEEN_DOOR = 23140101;
 	private static final int MIN_LV = 82;
 	
-	private IceQueensCastle()
+	public IceQueensCastle()
 	{
-		super(IceQueensCastle.class.getSimpleName(), "instances");
+		super(IceQueensCastle.class.getSimpleName());
 		addStartNpc(JINIA);
 		addTalkId(JINIA);
 		addSeeCreatureId(BATTALION_LEADER, LEGIONNAIRE, MERCENARY_ARCHER);
@@ -187,52 +187,30 @@ public final class IceQueensCastle extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		enterInstance(talker, "IceQueensCastle.xml");
+		enterInstance(talker, new IQCWorld(), "IceQueensCastle.xml", TEMPLATE_ID);
 		return super.onTalk(npc, talker);
 	}
 	
-	private void enterInstance(L2PcInstance player, String template)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (world instanceof IQCWorld)
-			{
-				teleportPlayer(player, START_LOC, world.getInstanceId(), false);
-				return;
-			}
-			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-			return;
-		}
-		
-		if (checkConditions(player))
-		{
-			world = new IQCWorld();
-			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			world.setTemplateId(TEMPLATE_ID);
-			world.setStatus(0);
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("Ice Queen's Castle started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
-			teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 			world.addAllowed(player.getObjectId());
 			((IQCWorld) world).player = player;
 			openDoor(ICE_QUEEN_DOOR, world.getInstanceId());
 		}
+		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 	}
 	
-	private boolean checkConditions(L2PcInstance player)
+	@Override
+	protected boolean checkConditions(L2PcInstance player)
 	{
 		if (player.getLevel() < MIN_LV)
 		{
-			player.sendPacket(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+			player.sendPacket(SystemMessageId.C1_S_LEVEL_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 			return false;
 		}
 		return true;
-	}
-	
-	public static void main(String[] args)
-	{
-		new IceQueensCastle();
 	}
 }

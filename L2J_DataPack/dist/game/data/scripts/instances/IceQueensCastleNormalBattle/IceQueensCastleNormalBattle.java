@@ -18,14 +18,14 @@
  */
 package instances.IceQueensCastleNormalBattle;
 
+import instances.AbstractInstance;
+
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
-import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.MountType;
@@ -62,19 +62,19 @@ import com.l2jserver.gameserver.util.Util;
  * Ice Queen's Castle (Normal Battle) instance zone.
  * @author St3eT
  */
-public final class IceQueensCastleNormalBattle extends AbstractNpcAI
+public final class IceQueensCastleNormalBattle extends AbstractInstance
 {
 	protected class IQCNBWorld extends InstanceWorld
 	{
-		List<L2PcInstance> playersInside = new ArrayList<>();
-		List<L2Npc> knightStatues = new ArrayList<>();
-		List<L2Attackable> spawnedMobs = new CopyOnWriteArrayList<>();
-		L2NpcInstance controller = null;
-		L2GrandBossInstance freya = null;
-		L2QuestGuardInstance supp_Jinia = null;
-		L2QuestGuardInstance supp_Kegor = null;
-		boolean isSupportActive = false;
-		boolean canSpawnMobs = true;
+		protected List<L2PcInstance> playersInside = new ArrayList<>();
+		protected List<L2Npc> knightStatues = new ArrayList<>();
+		protected List<L2Attackable> spawnedMobs = new CopyOnWriteArrayList<>();
+		protected L2NpcInstance controller = null;
+		protected L2GrandBossInstance freya = null;
+		protected L2QuestGuardInstance supp_Jinia = null;
+		protected L2QuestGuardInstance supp_Kegor = null;
+		protected boolean isSupportActive = false;
+		protected boolean canSpawnMobs = true;
 	}
 	
 	// Npcs
@@ -158,16 +158,12 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 	private static final int MAX_PLAYERS = 27;
 	private static final int MIN_PLAYERS = 10;
 	private static final int MIN_LEVEL = 82;
-	private static final int RESET_HOUR = 6;
-	private static final int RESET_MIN = 30;
-	private static final int RESET_DAY_1 = 4; // Wednesday
-	private static final int RESET_DAY_2 = 7; // Saturday
 	private static final int TEMPLATE_ID = 139; // Ice Queen's Castle
 	private static final int DOOR_ID = 23140101;
 	
-	private IceQueensCastleNormalBattle()
+	public IceQueensCastleNormalBattle()
 	{
-		super(IceQueensCastleNormalBattle.class.getSimpleName(), "instances");
+		super(IceQueensCastleNormalBattle.class.getSimpleName());
 		addStartNpc(SIRRA, SUPP_KEGOR, SUPP_JINIA);
 		addFirstTalkId(SUPP_KEGOR, SUPP_JINIA);
 		addTalkId(SIRRA, JINIA, SUPP_KEGOR);
@@ -182,7 +178,7 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 	{
 		if (event.equals("enter"))
 		{
-			enterInstance(player, "IceQueensCastleNormalBattle.xml");
+			enterInstance(player, new IQCNBWorld(), "IceQueensCastleNormalBattle.xml", TEMPLATE_ID);
 		}
 		else
 		{
@@ -1076,41 +1072,10 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 				}
 				case FREYA_STAND:
 				{
-					for (L2PcInstance player : world.playersInside)
-					{
-						if ((player != null) && (player.getInstanceId() == world.getInstanceId()))
-						{
-							Calendar reenter = Calendar.getInstance();
-							Calendar.getInstance().set(Calendar.MINUTE, RESET_MIN);
-							Calendar.getInstance().set(Calendar.HOUR_OF_DAY, RESET_HOUR);
-							
-							if (reenter.getTimeInMillis() <= System.currentTimeMillis())
-							{
-								reenter.add(Calendar.DAY_OF_MONTH, 1);
-							}
-							if (reenter.get(Calendar.DAY_OF_WEEK) <= RESET_DAY_1)
-							{
-								while (reenter.get(Calendar.DAY_OF_WEEK) != RESET_DAY_1)
-								{
-									reenter.add(Calendar.DAY_OF_MONTH, 1);
-								}
-							}
-							else
-							{
-								while (reenter.get(Calendar.DAY_OF_WEEK) != RESET_DAY_2)
-								{
-									reenter.add(Calendar.DAY_OF_MONTH, 1);
-								}
-							}
-							InstanceManager.getInstance().setInstanceTime(player.getObjectId(), TEMPLATE_ID, reenter.getTimeInMillis());
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
-							sm.addInstanceName(TEMPLATE_ID);
-							player.sendPacket(sm);
-						}
-					}
 					world.isSupportActive = false;
 					manageMovie(world, 19);
 					manageDespawnMinions(world);
+					finishInstance(world);
 					DecayTaskManager.getInstance().cancel(world.freya);
 					cancelQuestTimer("ATTACK_FREYA", world.supp_Jinia, null);
 					cancelQuestTimer("ATTACK_FREYA", world.supp_Kegor, null);
@@ -1169,43 +1134,11 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private void enterInstance(L2PcInstance player, String template)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (world instanceof IQCNBWorld)
-			{
-				player.stopAllEffectsExceptThoseThatLastThroughDeath();
-				if (player.hasSummon())
-				{
-					player.getSummon().stopAllEffectsExceptThoseThatLastThroughDeath();
-				}
-				
-				if (world.isStatus(4))
-				{
-					teleportPlayer(player, BATTLE_PORT, world.getInstanceId());
-				}
-				else
-				{
-					teleportPlayer(player, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId(), false);
-				}
-				return;
-			}
-			player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
-			return;
-		}
-		
-		if (checkConditions(player))
-		{
-			world = new IQCNBWorld();
-			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
-			world.setTemplateId(TEMPLATE_ID);
-			world.setStatus(0);
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("Ice Queen Castle started (Normal Battle)" + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
-			
 			if (!player.isInParty())
 			{
 				managePlayerEnter(player, (IQCNBWorld) world);
@@ -1225,21 +1158,21 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 				}
 			}
 		}
+		else
+		{
+			teleportPlayer(player, world.isStatus(4) ? BATTLE_PORT : ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId());
+		}
 	}
 	
 	private void managePlayerEnter(L2PcInstance player, IQCNBWorld world)
 	{
-		player.stopAllEffectsExceptThoseThatLastThroughDeath();
-		if (player.hasSummon())
-		{
-			player.getSummon().stopAllEffectsExceptThoseThatLastThroughDeath();
-		}
 		world.playersInside.add(player);
 		world.addAllowed(player.getObjectId());
 		teleportPlayer(player, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId(), false);
 	}
 	
-	private boolean checkConditions(L2PcInstance player)
+	@Override
+	protected boolean checkConditions(L2PcInstance player)
 	{
 		final L2Party party = player.getParty();
 		final L2CommandChannel channel = party != null ? party.getCommandChannel() : null;
@@ -1273,21 +1206,21 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 		{
 			if (channelMember.getLevel() < MIN_LEVEL)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 				sm.addPcName(channelMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
 			else if (!Util.checkIfInRange(1000, player, channelMember, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(channelMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
 			else if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), TEMPLATE_ID))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 				sm.addPcName(channelMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -1364,10 +1297,5 @@ public final class IceQueensCastleNormalBattle extends AbstractNpcAI
 				players.showQuestMovie(movie);
 			}
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new IceQueensCastleNormalBattle();
 	}
 }

@@ -156,7 +156,7 @@ public final class CallPc extends AbstractEffect
 		if (activeChar.getInstanceId() > 0)
 		{
 			Instance summonerInstance = InstanceManager.getInstance().getInstance(activeChar.getInstanceId());
-			if (!Config.ALLOW_SUMMON_TO_INSTANCE || !summonerInstance.isSummonAllowed())
+			if (!Config.ALLOW_SUMMON_IN_INSTANCE || !summonerInstance.isSummonAllowed())
 			{
 				activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
 				return false;
